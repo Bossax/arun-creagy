@@ -1,5 +1,5 @@
 ---
-status: current
+status: evergreen
 tags:
   - CRI
   - Adaptation

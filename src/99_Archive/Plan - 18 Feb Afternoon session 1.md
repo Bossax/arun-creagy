@@ -3,7 +3,7 @@ created: 2026-02-18
 project:
   - DCCE_CRI
 tags:
-status: current
+status: archived
 type: "plan "
 ---
 # Session Plan: 18 Feb 2026 - CRI Phase 2 methodology hypothesis testing

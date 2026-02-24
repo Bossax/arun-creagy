@@ -1,12 +1,18 @@
 ---
 status: evergreen
-tags: [subsea-deployment, mooring-design, oceanography, acoustic-risks, sensor-placement]
+tags:
+  - subsea-deployment
+  - mooring-design
+  - oceanography
+  - acoustic-risks
+  - sensor-placement
 created: 2026-02-08
 last_updated: 2026-02-11
 AI_prompt: false
 AI_output: true
 project: "[[DMCR Marine Soundscape Project]]"
-type: artifact
+type:
+  - deep_research
 ---
 
 **Context:** Shallow Water (Reef) Acoustic Monitoring **Date:** October 26, 2023

@@ -1,6 +1,6 @@
 ---
 type: literature
-status: current
+status: evergreen
 tags:
   - adaptive_capacity
   - Adaptation

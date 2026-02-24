@@ -1,10 +1,9 @@
 ---
 created: 2026-02-18
-status: draft
+status: current
 type: execution_checklist
 source_plan: Plan - 18 Feb Afternoon session 1.md
-project:
-  - DCCE_CRI
+project: DCCE_CRI
 ---
 # Execution Checklist: 18 Feb 2026 - CRI Phase 2 methodology hypothesis testing
 

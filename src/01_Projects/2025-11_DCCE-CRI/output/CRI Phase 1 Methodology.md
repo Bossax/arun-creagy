@@ -1,6 +1,5 @@
 ---
-type:
-  - Artifact
+type: strategy
 status: current
 last_updated: 2026-02-18
 version: 4

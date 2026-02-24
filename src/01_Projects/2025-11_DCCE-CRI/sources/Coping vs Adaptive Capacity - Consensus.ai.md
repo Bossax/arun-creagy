@@ -1,5 +1,5 @@
 ---
-status: current
+status: evergreen
 tags:
   - adaptive_capacity
 created: 2026-01-30
@@ -17,7 +17,7 @@ use_case:
   - capacity_concepts
   - conceptual_framework
 project:
-type:
+type: artifact
 sticker: emoji//1f916
 ---
 ## **Coping Capacity vs. Adaptive Capacity in DRR and Climate Resilience**

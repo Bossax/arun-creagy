@@ -1,14 +1,18 @@
 ---
-type: idea-note-artifact
+type:
+  - note
 status: evergreen
-tags: [fish-chorus, signal-processing, machine-learning, RRPCA]
+tags:
+  - fish-chorus
+  - signal-processing
+  - machine-learning
+  - RRPCA
 created: 2025-08-14
 last_updated: 2026-02-11
 AI_prompt: false
 AI_output: false
 project: "[[DMCR Marine Soundscape Project]]"
 ---
-
 # Characteristic features of fish calls
 These features are typically low frequency (generally less than 3-5 kHz, often 40–1000 Hz), short duration (less than 5 seconds), repetitive sound elements, and often exhibiting multiple frequency harmonics
 

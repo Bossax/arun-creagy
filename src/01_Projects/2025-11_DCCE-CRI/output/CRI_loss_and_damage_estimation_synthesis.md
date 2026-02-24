@@ -1,11 +1,11 @@
 ---
-type:
-  - artifact
+type: knowledge_artifact
 status: current
 project:
   - DCCE_CRI
 title: CRI – Historical Loss and Damage Estimation (Synthesis)
 description: Synthesis of methods for estimating historical disaster loss and damage with limited data for CRI Phase 1
+sticker: emoji//1f345
 ---
 
 # CRI – Historical Loss and Damage Estimation (Synthesis)

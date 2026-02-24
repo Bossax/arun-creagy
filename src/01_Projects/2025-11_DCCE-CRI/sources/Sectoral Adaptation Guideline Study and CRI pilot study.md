@@ -6,7 +6,7 @@ tags:
   - DCCE
 creation_date: 2025-10-09
 project:
-status: current
+status: archived
 type: evergreen
 last_updated: 2026-01-09
 ---

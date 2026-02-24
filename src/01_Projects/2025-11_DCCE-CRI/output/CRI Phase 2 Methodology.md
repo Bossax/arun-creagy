@@ -1,6 +1,5 @@
 ---
-type:
-  - Artifact
+type: strategy
 status:
   - current
 version: 3
@@ -9,6 +8,7 @@ last_updated: 2026-02-18
 project:
   - DCCE_CRI
 related_hypothesis: "[[CRI pivoting to social-ecological system and context focused]]"
+color: var(--mk-color-purple)
 ---
 
 
@@ -44,7 +44,7 @@ To transition DCCE from a "Disaster Management" mindset to a "Resilience" mindse
 >Unlike asset‑based vulnerability indices, these capacity tiers are **process‑ and governance‑oriented**: they prioritise mechanisms such as planning, coordination, information flows and institutional agency over static stocks of infrastructure or capital.
 
 Need to be revised by
-[[Execution Checklist - 18 Feb Afternoon session 1]]
+[[2026-02-18-CRI2-planning-and-structuring-of-research-plan]]
 
 ## 2.1 Coping Capacity 
 
@@ -87,6 +87,8 @@ Need to be revised by
 # 3. Operational Methodology: The "Tagging" Protocol
 
 Since creating new data streams is outside the scope/timeline, we will execute a **Systematic Categorization** of available administrative data.
+
+> **Tagging Dictionary (v1):** The classification rules and nominal indicator list are documented in [`CRI_Capacity_Tagging_Dictionary.md`](../output/CRI_Capacity_Tagging_Dictionary.md). This dictionary is grounded in municipal governance case studies and process-indicator literature, and will be used as the baseline for tagging LPA and other administrative indicators.
 
 ## Step 1: Data Inventory & Review
 

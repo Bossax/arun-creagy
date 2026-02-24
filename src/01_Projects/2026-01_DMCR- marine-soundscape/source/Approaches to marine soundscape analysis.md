@@ -1,21 +1,23 @@
 ---
-type: literature
+type:
+  - note
 status: evergreen
-tags: [marine-soundscape, acoustic-metrics, comparative-analysis]
+tags:
+  - marine-soundscape
+  - acoustic-metrics
+  - comparative-analysis
 source:
 authors: []
 year:
 relevance_to: "[[DMCR Marine Soundscape Project]]"
 key_findings:
-  - "US study relies on SPL and automated detection, while Adriatic study uses ACI as a primary proxy for biological sounds."
-  - "US study emphasizes integrating contextual data (AIS, wind, tides); Adriatic study uses in-situ biodiversity sampling."
-  - "Australia study shows soundscapes driven by biology (whales, fish), with vessel noise not significantly impacting long-term patterns."
+  - US study relies on SPL and automated detection, while Adriatic study uses ACI as a primary proxy for biological sounds.
+  - US study emphasizes integrating contextual data (AIS, wind, tides); Adriatic study uses in-situ biodiversity sampling.
+  - Australia study shows soundscapes driven by biology (whales, fish), with vessel noise not significantly impacting long-term patterns.
 ---
 
 This note contains comparison results of different studies
 # Pair 1
-
-
 
 The two studies, "Advancing the Interpretation of Shallow Water Marine Soundscapes" (US study) and "Marine Soundscape as an additional biodiversity monitoring tool - a case study from the Adriatic Sea" (Adriatic Sea study), exhibit distinct approaches to assessing ecosystems, primarily differing in their scale, chosen acoustic metrics, integration of contextual data, and direct methods for noise handling.
 
@@ -45,7 +47,6 @@ Recognizes the challenge of "comparing sound levels in isolation" due to interwo
 Directly utilizes the **ACI as a tool to differentiate biological signals from anthropogenic noise**. It explicitly states that ACI "could effectively filter out noise inputs from technophonies", indicating a more direct application of an acoustic index for noise segregation within its methodological framework. The study notes how noise influenced PSD but not ACI in certain instances, highlighting ACI's utility in discerning biological activity even amidst noise.
 
 # Pair 2
-
 
 The US study, "Advancing the Interpretation of Shallow Water Marine Soundscapes," and the Australia study, "Biological Sound Sources Drive Soundscape Characteristics of Two Australian Marine Parks," both contribute to understanding marine soundscapes but differ significantly in their **objectives, geographical scale, approach to data interpretation, and findings regarding the primary drivers of soundscape characteristics**.
 

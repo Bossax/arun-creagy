@@ -1,20 +1,23 @@
 ---
-type: literature
+type: artifact
 status: evergreen
-tags: [marine-soundscape, methodology, statistical-analysis, acoustic-metrics, PSD]
+tags:
+  - marine-soundscape
+  - methodology
+  - statistical-analysis
+  - acoustic-metrics
+  - PSD
 capture_date: 2025-08-28
 source:
 authors: []
 year:
 relevance_to: "[[DMCR Marine Soundscape Project]]"
 key_findings:
-  - "Statistical tests (Pearson's Chi Square, Kruskal-Wallis) are used to link environmental conditions (wind, light) to sound source presence."
-  - "Linear regression and correlation coefficients quantify relationships between acoustic metrics (BPL, ACI) and soundscape components (shrimp, fish, wind, vessels)."
-  - "Power Spectral Density methods, including TOB SPLs and exceedance levels, are primary metrics for detailed frequency analysis."
-  - "LTSAs are used for visualizing long-term acoustic patterns."
+  - Statistical tests (Pearson's Chi Square, Kruskal-Wallis) are used to link environmental conditions (wind, light) to sound source presence.
+  - Linear regression and correlation coefficients quantify relationships between acoustic metrics (BPL, ACI) and soundscape components (shrimp, fish, wind, vessels).
+  - Power Spectral Density methods, including TOB SPLs and exceedance levels, are primary metrics for detailed frequency analysis.
+  - LTSAs are used for visualizing long-term acoustic patterns.
 ---
-
-
 # 1. Statistical Tests for Environmental Conditions and Sound Source Presence
     
 - The [[Biological Sound Sources Drive Soundscape Characteristics of Two Australian Marine Parks]] study used **Pearson's Chi Square tests** to characterize and compare typical wind conditions among different deployment periods and between study sites, linking this environmental factor to observed seasonal soundscape patterns.

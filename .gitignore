@@ -2,9 +2,10 @@
 .awaken-state.json
 
 # Ignore obsidian artifact
-src/.makemd/
-src/.obsidian/
-src/.space/
+src/.makemd/*
+src/.obsidian/*
+src/.space/*
+**/.space/**
 
 # --- Google Drive & System Artifacts (CRITICAL) ---
 desktop.ini

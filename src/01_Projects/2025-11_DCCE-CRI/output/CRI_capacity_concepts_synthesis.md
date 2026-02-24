@@ -1,11 +1,11 @@
 ---
-type:
-  - artifact
+type: knowledge_artifact
 status: current
 project:
   - DCCE_CRI
 title: CRI – Capacity Concepts (Coping, Adaptive, Transformative)
 description: Synthesis of evidence on coping, adaptive, and transformative capacity to support the CRI Phase 2 capacity model
+sticker: emoji//1f951
 ---
 
 # CRI – Capacity Concepts (Coping, Adaptive, Transformative)

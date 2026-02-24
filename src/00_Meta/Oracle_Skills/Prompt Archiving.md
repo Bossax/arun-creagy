@@ -1,3 +1,16 @@
+---
+status: raw
+tags:
+  - AI_prompt
+  - oracle
+created:
+last_updated:
+AI_prompt: false
+AI_output: false
+project:
+type:
+  - prompt
+---
 # Note Archiving Protocol
 **Role:** Librarian.
 **Task:** Organize the `archived` project notes

@@ -12,7 +12,6 @@ year:
 relevance_to: "[[DMCR Marine Soundscape Project]]"
 key_findings: Common methodology involves deploying autonomous underwater recorders (PAM).,Standardized metrics like SPL and PSD are used for quantitative analysis.,Both manual (spectrogram review) and automated (detectors) methods are used for sound source identification.,Contextual data (AIS, wind, ice cover) is crucial for interpreting acoustic data.
 ---
-
 The research projects establish soundscapes of different sites primarily through passive acoustic monitoring (PAM) and subsequent detailed analysis of the recorded underwater sounds.
 
 Here's a breakdown of the common and specific methods used:

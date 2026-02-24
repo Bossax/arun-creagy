@@ -9,6 +9,8 @@
 
 import { spawnSync } from "node:child_process";
 
+const DEBUG = process.env.GITBASH_DEBUG === "1";
+
 const cmd = process.argv.slice(2).join(" ").trim();
 if (!cmd) {
   console.error('Usage: bun tools/gitbash.ts "<bash command>"');
@@ -35,6 +37,13 @@ if (!bashExe) {
   console.error("ERROR: Git Bash executable not found. Tried:");
   for (const c of candidates) console.error("- " + c);
   process.exit(1);
+}
+
+if (DEBUG) {
+  // Use forward slashes in logs so they are shell-agnostic and easier to read.
+  const normalizedExe = bashExe.replace(/\\/g, "/");
+  console.error(`[GITBASH_DEBUG] exe=${normalizedExe}`);
+  console.error(`[GITBASH_DEBUG] cmd=${cmd}`);
 }
 
 const res = spawnSync(bashExe, ["-lc", cmd], {

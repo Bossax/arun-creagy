@@ -1,10 +1,21 @@
-# Consultancy Session Workflow
+---
+project: ""
+---
+# Session Workflow
 
-This document outlines a structured workflow for consultancy sessions, designed to enhance focus, document strategic reasoning, and ensure a clear audit trail of decisions and actions.
+This document outlines a structured workflow for a work session, designed to enhance focus, document strategic reasoning, and ensure a clear audit trail of decisions and actions.
 
 ## The Workflow Cycle
 
-The workflow is a cycle of **Plan -> Execute -> Reflect**.
+The workflow is a cycle of **Plan -> Execute -> Knowledge Organization & Indexing -> Reflect**.
+
+### 0. Pre-flight: Load Workflow
+
+At the start of a session, load this workflow to anchor the session to the canonical cycle and reduce drift.
+
+*   **Skim the cycle** to confirm you will complete Plan → Execute → Knowledge Organization & Indexing → Reflect.
+*   **Decide the intensity** of the Knowledge Organization & Indexing pass (lightweight vs full) based on session scope.
+*   **Confirm the SOP** reference if the session involves research synthesis: `src/00_Meta/Knowledge_Organization_and_Indexing_SOP.md`.
 
 ### 1. Plan: The Session Plan
 
@@ -24,7 +35,19 @@ During the session, work through the tasks outlined in your session plan. The ke
 *   **Atomic Commits**: Use git to make small, atomic commits that correspond to the tasks in your session plan. Each commit message should be clear and reference the task it completes. This creates a granular history of your work.
 *   **Feature Branches**: For any significant piece of work, create a dedicated feature branch. This keeps your main branch clean and allows for focused development and review.
 
-### 3. Reflect: The Retrospective
+### 3. Knowledge Organization & Indexing
+
+After sometime, ask the user if they want to run a **Knowledge Organization & Indexing** pass for the session. The goal is to compress raw notes and research into structured, project‑aligned knowledge artifacts and indices.
+
+At a minimum:
+*   **Scan and select inputs**: Identify candidate inputs from the session (by default, files with `AI_output: true` plus any other relevant notes such as web pages, literature summaries, or meeting notes).
+*   **Synthesize**: Produce one or more synthesis notes or artifacts that answer specific project questions, using [[Knowledge Artifact]] template.
+*   **Index the evidence**: Update or create an evidence index for the project that maps sources → synthesis notes → methodology or guidance sections.
+*   **Align methodologies**: Where relevant, update methodology or guidance documents so that key design choices are explicitly anchored to synthesis notes and indexed evidence.
+
+For details, see the dedicated SOP in [[00_Meta/Knowledge_Organization_and_Indexing_SOP.md|Knowledge_Organization_and_Indexing_SOP.md]].
+
+### 4. Reflect: The Retrospective
 
 At the end of each session, a retrospective is created. This is a chance to reflect on the session and capture key learnings. The retrospective should include:
 

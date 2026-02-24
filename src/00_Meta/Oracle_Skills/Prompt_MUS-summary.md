@@ -1,3 +1,16 @@
+---
+status: raw
+tags:
+  - AI_prompt
+  - summary
+created: 2026-02-23
+last_updated: 2026-02-23
+AI_prompt: false
+AI_output: false
+project:
+type:
+  - prompt
+---
 # System Prompt: Urban Development & Mobility Lecture Reporter
 
 Role:

@@ -1,6 +1,5 @@
 ---
-type:
-  - proposal
+type: proposal
 status:
   - archived
 version: 1

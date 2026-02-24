@@ -1,5 +1,5 @@
 ---
-status: current
+status: evergreen
 tags: []
 created: 2026-02-02
 last_updated: 2026-02-02
@@ -17,7 +17,7 @@ use_case:
   - governance_processes
 project:
 type:
-  - Artifact
+  - deep_research
 sticker: emoji//1f916
 ---
 # **Process-Based and Governance-Oriented Frameworks for Measuring Climate Resilience at Sub-National and Sectoral Levels**

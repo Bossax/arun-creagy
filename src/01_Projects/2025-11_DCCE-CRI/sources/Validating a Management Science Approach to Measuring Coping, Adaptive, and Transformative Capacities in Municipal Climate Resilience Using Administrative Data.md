@@ -1,16 +1,19 @@
 ---
-type:
-  - deep_research
+type: deep_research
 tags: []
 source: https://consensus.app/search/climate-resilience-indicator-research/BQfYBEeISCecS6G3g5FhDA/?utm_source=share&utm_medium=clipboard
 authors: []
 year:
 relevance_to: "[[]]"
 key_findings: []
-status: evergreen
+status: current
 sticker: emoji//1f916
+created: 2026-02-19
+last_updated: 2026-02-19
+AI_prompt: false
+AI_output: true
+project:
 ---
-# ****
 
 # 1. Introduction
 

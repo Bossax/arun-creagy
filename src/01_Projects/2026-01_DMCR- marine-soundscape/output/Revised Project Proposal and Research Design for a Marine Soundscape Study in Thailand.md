@@ -1,3 +1,14 @@
+---
+type: strategy
+status: raw
+version:
+created: 2025-09-30
+project:
+  - DMCR_Soundscape2026
+related_hypothesis: "[[ ]]"
+---
+>[!note] Change Log
+
 
 
 ## Introduction

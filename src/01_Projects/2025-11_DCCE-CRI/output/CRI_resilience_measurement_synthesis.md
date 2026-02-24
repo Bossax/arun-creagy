@@ -1,11 +1,11 @@
 ---
-type:
-  - artifact
+type: knowledge_artifact
 status: current
 project:
   - DCCE_CRI
 title: CRI – Resilience Measurement and Indicator Design (Synthesis)
 description: Synthesis of evidence on resilience indicators and process-based measurement to support CRI Phase 1 and Phase 2 methodologies
+sticker: emoji//1f349
 ---
 
 # CRI – Resilience Measurement & Indicator Design (Synthesis)

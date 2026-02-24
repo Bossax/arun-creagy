@@ -20,7 +20,6 @@ type: "plan "
 *   [ ] Specific action item 1
 *   [ ] Specific action item 2
 *   [ ] Specific action item 3
-
 ## Expected Outcome
 
 *  What will be the tangible output of this session? (e.g., a refined document, a set of interview questions, a committed change to the codebase).

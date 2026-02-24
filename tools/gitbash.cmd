@@ -15,8 +15,13 @@ if not exist "%BASH%" (
 )
 
 if "%~1"=="" (
-  echo Usage: tools\gitbash.cmd "<bash command>"
+  echo Usage: tools/gitbash.cmd "<bash command>"
   exit /b 2
+)
+
+if "%GITBASH_DEBUG%"=="1" (
+  echo [GITBASH_DEBUG] exe=%BASH%
+  echo [GITBASH_DEBUG] cmd=%~1
 )
 
 "%BASH%" -lc "%~1"

@@ -1,6 +1,5 @@
 ---
-type:
-  - strategy
+type: strategy
 status:
   - current
 version: 5

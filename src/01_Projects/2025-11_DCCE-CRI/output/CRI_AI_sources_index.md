@@ -1,11 +1,11 @@
 ---
-type:
-  - artifact
+type: knowledge_artifact
 status: current
 project:
   - DCCE_CRI
 title: CRI AI Evidence Index
 description: Mapping AI_output research notes to CRI Phase 1 and Phase 2 methodology sections
+sticker: emoji//1f347
 ---
 
 # CRI AI Evidence Index

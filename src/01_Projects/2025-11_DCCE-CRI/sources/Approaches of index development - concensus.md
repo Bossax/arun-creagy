@@ -1,5 +1,5 @@
 ---
-status: current
+status: evergreen
 tags: []
 created: 2026-01-29
 last_updated:
@@ -17,7 +17,7 @@ use_case:
   - methodology_review
 project:
 type:
-  - Artifact
+  - deep_research
 sticker: emoji//1f916
 ---
 ## **Adaptive Capacity in Risk Indices:** Evidence shows heavy reliance on static “stocks,” frequent conflation with coping, and weak treatment of transformation, agency, and governance.

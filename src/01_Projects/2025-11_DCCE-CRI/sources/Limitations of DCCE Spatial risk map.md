@@ -1,6 +1,6 @@
 ---
 type: note
-status: current
+status: evergreen
 tags:
   - DCCE
 created: 2025-10-28
