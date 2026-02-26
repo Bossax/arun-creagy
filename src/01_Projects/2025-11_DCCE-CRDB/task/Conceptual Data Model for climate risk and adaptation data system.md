@@ -207,7 +207,7 @@ erDiagram
 
 ---
 ## Associative Entities
-## 1)`ATTRIBUTION_LINK`
+### 1)`ATTRIBUTION_LINK`
 `{C}ATTRIBUTION_LINK`solves the hardest problem identified in the technical analysis: 
 >[!warning] How to store "Slow-Onset" losses (like Sea Level Rise) in a database designed for "Disaster Events" (like Floods).
 
@@ -238,7 +238,7 @@ erDiagram
 > - The `ATTRIBUTION_LINK` entity can hold an attribute like `Confidence_Level` (e.g., "High Confidence" vs. "Medium Confidence"). A simple foreign key cannot capture this nuance.
 
 
-## 2) `FRAMEWORK_MAPPING` and `VULNERABILITY_DETERMINANT`
+### 2) `FRAMEWORK_MAPPING` and `VULNERABILITY_DETERMINANT`
 
 `VULNERABILITY_FRAMEWORK` contains the theory  used to conceptualize vulnerability.
 `FRAMEWORK_MAPPING` then contains the implementation of the theory to what group (sensitivity, coping capacity, lack of adaptive capacity, adaptive capacity, transformative capacity, readiness) how the `VULNERABILITY_DETERMINANT` is assigned. 
@@ -380,7 +380,7 @@ erDiagram
 
 Based on benchmarking with **A-PLAT (Japan)**, **KLiVO (Germany)**, and **Climate-ADAPT (EU)**, and analysis of DCCE "Orphaned" products (SAR, Eco-School, T-PLAT), the CDM is expanded into three new domains to bridge the "Science-to-Action" gap.
 
-## 1. Adaptation & Response Domain
+### 1. Adaptation & Response Domain
 *Focus: Transforming risk information into fundable projects and tracking implementation.*
 
 - **`ADAPTATION_OPTION`**
@@ -392,7 +392,7 @@ Based on benchmarking with **A-PLAT (Japan)**, **KLiVO (Germany)**, and **Climat
 - **`FUNDING_SOURCE`**
     - **Definition:** Tracking the origin of capital (Budget, GCF, GEF, Private).
 
-## 2. Activity & Audit Domain (Management Tracking)
+### 2. Activity & Audit Domain (Management Tracking) (not implemented in this phase)
 *Focus: Accommodating DCCE management platforms like Eco-School and Green City (SAR).*
 
 - **`MANAGEMENT_PROGRAM`**
@@ -403,7 +403,7 @@ Based on benchmarking with **A-PLAT (Japan)**, **KLiVO (Germany)**, and **Climat
     - **Definition:** The result of a self-assessment or external audit (e.g., SAR scores).
     - **Business Rule:** Allows querying "Risk vs. Preparedness" (e.g., "Show me Eco-School scores in High-Flood-Risk basins").
 
-## 3. Knowledge & Content Domain
+### 3. Knowledge & Content Domain (not implemented in this phase)
 *Focus: Bridging the "Awareness" gap via T-PLAT qualitative content.*
 
 - **`KNOWLEDGE_ASSET`**
@@ -431,12 +431,62 @@ erDiagram
 ```
 
 
----
 
-# E) To-do
+Refinement on 16 Feb
 1. Refine Adaptation Planning subject. The current structure is based on ISO 14090
 	1. research on ISO 14090, focusing on Adaptation Plan section [[ISO 14090 2019   “Adaptation to climate change — Principles, requirements and guidelines]]
 	2. extract "decision-making" space processes and entities from [[Comprehensive Risk Management (CRM) - Full structure]]
 	3. analyze common structures 
 	4. design a new Adaptation Planning subject
 		1. [[Adaptation Planning refinement]] this note contains a summary of what I am thinking
+
+---
+
+# E) Refined IVRA Domain (Feb 25)
+### Subject Area 1: Physical Climate (The Cause)
+_Focus: From raw observations to drivers._
+- **`CLIMATE_DRIVER` (Stressors):** Based on IPCC CID and GCOS ECVs. Attributes include domain (Atmosphere/Land/Ocean), spatial/temporal resolution, and uncertainty estimates.
+- **`CLIMATE_SCENARIO`:** Projections (SSP/RCP) from CMIP6 models that simulate drivers.
+- **`HAZARDOUS_EVENT` (Shocks):** Discrete occurrences (e.g., a specific cyclone) with WMO-CHE UUIDs.
+- **`SATELLITE_OBSERVATION`:** Remote sensing observation capturing hazard extent and supporting observed hazard maps.
+### Subject Area 2: Risk & Impact Assessment (The Calculation)
+_Focus: The core engine combining Hazard, Exposure, and Vulnerability._
+#### 2.1 Hazard Modeling
+- **`HAZARD_MODELS`:** The computational engines.
+    - _Inputs:_ `CLIMATE_DRIVER`, `METEOROLOGICAL_OBSERVATION`, and static environmental data (`TOPOGRAPHY`, `ENVIRONMENT`).
+- **`HAZARD_MAP`:** A spatial representation of hazard intensity that can be **modeled** (from `HAZARD_MODELS`) or **observed** (from satellite-derived historical extent maps).
+#### 2.2 Vulnerability & Exposure
+- **`SPATIAL_UNIT`:** The geometric foundation (DGGS, HydroBASINS, Admin).
+- **`EXPOSED_ASSET`:** Societal elements (Population, Infrastructure) mapped to GED4ALL taxonomies.
+- **`VULNERABILITY_DEFINITION`:** The abstract definition of a vulnerability curve or index.
+    - **`IMPACT_FUNCTION`:** Math-based (e.g., Depth-Damage curves) for actuarial calculations.
+    - **`VULNERABILITY_FRAMEWORK`:** Indicator-based (e.g., Social Vulnerability Index) for policy scoring.
+        
+- **`FRAMEWORK_STRUCTURE`:** The logic layer mapping a generic variable to a specific framework dimension (e.g., mapping "Poverty Rate" to "Sensitivity").
+    
+- **`VULNERABILITY_DETERMINANT`:** A neutral library of social/economic indicators used as variables.
+#### 2.4 Risk Assessment Outputs
+- **`RISK_ASSESSMENT`:** The event of running a calculation that can be **physical** (via `HAZARD_MAP`) or **index-based** (via `CLIMATE_DRIVER`).
+- **`RISK_METRIC`:** Probabilistic, quantitative outputs (e.g., Average Annual Loss) derived from `IMPACT_FUNCTION`.
+- **`COMPOSITE_INDEX`:** Qualitative or normalized scores (1-10) derived from `VULNERABILITY_FRAMEWORK`.
+#### 2.5 Impact (Loss & Damage)
+- **`DISASTER_RECORD`:** A single observed occurrence of a disaster event with summary statistics (affected population/assets, duration, total losses).
+- **`LOSS_DAMAGE_RECORD`:** Historical data on actual impacts sustained by assets.
+- **`ATTRIBUTION_LINK`:** An aggregated attribution summary linked to a `LOSS_DAMAGE_RECORD` and `CLIMATE_DRIVER`. This entity might be ahead of time but included for the sake of logical consistency. 
+    
+### Key Decisions (2026-02-25)
+1. **Dual-path Risk Assessment (Physical + Index-Based)**
+   - **Decision:** `RISK_ASSESSMENT` can reference `HAZARD_MAP` (physical modeling) and/or `CLIMATE_DRIVER` (index-based assessment).
+   - **Reason:** Keeps a single assessment structure while supporting both hazard-extent modeling and climate-index workflows without duplicating schema.
+
+2. **Observed vs Modeled Hazard Maps**
+   - **Decision:** `HAZARD_MAP` can be produced by `HAZARD_MODELS` or derived from `SATELLITE_OBSERVATION` (subtypes can remain implicit).
+   - **Reason:** Reflects real practice where historical hazard extents are compiled from satellite imagery while future scenarios are modeled outputs.
+
+3. **Loss-Driven Attribution**
+   - **Decision:** `ATTRIBUTION_LINK` attaches only to `LOSS_DAMAGE_RECORD` as an aggregated attribution summary; no direct event/driver attribution.
+   - **Reason:** Attribution is only defensible when loss evidence exists; avoids speculative causal links without impact data.
+
+4. **Disaster Record Definition**
+   - **Decision:** `DISASTER_RECORD` represents a single observed occurrence with summary statistics (1:1 with `HAZARDOUS_EVENT`).
+   - **Reason:** Maintains a clean event registry while allowing separate, granular loss entries via `LOSS_DAMAGE_RECORD`.

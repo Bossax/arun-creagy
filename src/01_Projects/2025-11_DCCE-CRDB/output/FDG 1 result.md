@@ -1,6 +1,5 @@
 ---
-status:
-  - current
+status: evergreen
 tags: []
 created: 2026-02-10
 last_updated: 2026-02-10

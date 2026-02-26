@@ -8,7 +8,7 @@ AI_output: true
 project:
   - DCCE_CRDB
 type:
-  - Artifact
+  - strategy
 ---
 # NCAIF Material Synthesis: Findings from Inception Report (Chapter 3)
 
@@ -71,3 +71,4 @@ Based on the Inception Report findings and the cross-analysis, the NCAIF structu
 1.  **Extract Terms for Glossary:** Scrape definitions from the "IPCC AR6" and "Sendai Framework" references mentioned in the Inception Report.
 2.  **Map Risk MAP Variables:** Audit the specific variables used in DCCE's Risk MAP to populate the Stage 2 Logical Model.
 3.  **FGD 1 Preparation:** Use the "Stakeholder Mapping" from the Inception Report to identify participants for validating the NCAIF hierarchy.
+

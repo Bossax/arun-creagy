@@ -1,6 +1,9 @@
+---
+status: archived
+---
 # NCAIF Sitemap and Key Content Options
 
-## Option 1: Thematic-Based Sitemap
+## Option 1: Thematic-Based Sitemap [[NCAIF_Draft_Option1]]
 
 This sitemap organizes content around key climate change themes, providing a clear and straightforward navigation structure for users seeking specific information.
 
@@ -41,7 +44,7 @@ This sitemap organizes content around key climate change themes, providing a cle
 
 ---
 
-## Option 2: User-Journey-Based Sitemap
+## Option 2: User-Journey-Based Sitemap [[NCAIF_Draft_Option2]]
 
 This sitemap is designed to guide different user personas through their specific information needs and decision-making journeys, providing a more tailored and actionable user experience.
 

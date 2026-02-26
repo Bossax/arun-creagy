@@ -1,6 +1,11 @@
 ---
-status: draft
-tags: [governance, classification, security, policy, NCAIF]
+status: current
+tags:
+  - governance
+  - classification
+  - security
+  - policy
+  - NCAIF
 created: 2026-02-16
 last_updated: 2026-02-16
 project: DCCE-CRDB

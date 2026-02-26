@@ -1,7 +1,6 @@
 ---
 type: strategy
-status:
-  - evergreen
+status: evergreen
 version: 1
 created: 2025-12-08
 project:

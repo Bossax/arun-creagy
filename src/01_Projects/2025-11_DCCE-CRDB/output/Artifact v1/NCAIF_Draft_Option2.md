@@ -1,3 +1,6 @@
+---
+status: current
+---
 # National Climate Adaptation Information Framework (NCAIF) - Option 2: User-Journey-Based
 
 This artifact outlines the key content and structure for a user-journey-based NCAIF, designed to provide a tailored experience for different user groups.

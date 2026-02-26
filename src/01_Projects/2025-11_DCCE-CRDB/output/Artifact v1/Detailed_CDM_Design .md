@@ -1,5 +1,5 @@
 ---
-status: raw
+status: current
 tags: []
 created: 2026-02-10
 last_updated: 2026-02-16
@@ -27,6 +27,8 @@ _Focus: From raw observations to drivers._
 - **`CLIMATE_SCENARIO`:** Projections (SSP/RCP) from CMIP6 models that simulate drivers.
     
 - **`HAZARDOUS_EVENT` (Shocks):** Discrete occurrences (e.g., a specific cyclone) with WMO-CHE UUIDs.
+
+- **`SATELLITE_OBSERVATION`:** Remote sensing observation capturing hazard extent and supporting observed hazard maps.
     
 
 ### Subject Area 2: Risk & Impact Assessment (The Calculation)
@@ -39,7 +41,7 @@ _Focus: The core engine combining Hazard, Exposure, and Vulnerability._
     
     - _Inputs:_ `CLIMATE_DRIVER`, `METEOROLOGICAL_OBSERVATION`, and static environmental data (`TOPOGRAPHY`, `ENVIRONMENT`).
         
-- **`HAZARD_MAP`:** The spatial output of a model (e.g., flood depth grid) used to determine intensity at a specific location.
+- **`HAZARD_MAP`:** A spatial representation of hazard intensity that can be **modeled** (from `HAZARD_MODELS`) or **observed** (from satellite-derived historical extent maps).
     
 
 #### 2.2 Vulnerability & Exposure
@@ -61,7 +63,7 @@ _Focus: The core engine combining Hazard, Exposure, and Vulnerability._
 
 #### 2.4 Risk Assessment Outputs
 
-- **`RISK_ASSESSMENT`:** The event of running a calculation.
+- **`RISK_ASSESSMENT`:** The event of running a calculation that can be **physical** (via `HAZARD_MAP`) or **index-based** (via `CLIMATE_DRIVER`).
     
 - **`RISK_METRIC`:** Probabilistic, quantitative outputs (e.g., Average Annual Loss) derived from `IMPACT_FUNCTION`.
     
@@ -70,9 +72,11 @@ _Focus: The core engine combining Hazard, Exposure, and Vulnerability._
 
 #### 2.5 Impact (Loss & Damage)
 
+- **`DISASTER_RECORD`:** A single observed occurrence of a disaster event with summary statistics (affected population/assets, duration, total losses).
+    
 - **`LOSS_DAMAGE_RECORD`:** Historical data on actual impacts sustained by assets.
     
-- **`ATTRIBUTION_LINK`:** A polymorphic bridge connecting a Loss Record to either a `HAZARDOUS_EVENT` (discrete) or a `CLIMATE_DRIVER` (slow-onset).
+- **`ATTRIBUTION_LINK`:** An aggregated attribution summary linked to a `LOSS_DAMAGE_RECORD` and `CLIMATE_DRIVER`. This entity might be ahead of time but included for the sake of logical consistency. 
     
 
 ### Subject Area 3: Resilience Assessment (The Capacity)
@@ -80,11 +84,8 @@ _Focus: The core engine combining Hazard, Exposure, and Vulnerability._
 _Focus: Hierarchical scoring of adaptive capacity (distinct from physical risk)._
 
 - **`RESILIENCE_FRAMEWORK`:** The governing methodology (e.g., "National Community Resilience Index").
-    
 - **`RESILIENCE_DIMENSION`:** The thematic pillars (e.g., Social, Economic, Institutional).
-    
 - **`RESILIENCE_STRUCTURE`:** Defines the weighting and aggregation logic for specific determinants within a dimension.
-    
 - **`RESILIENCE_ASSESSMENT`:** The application of a framework to a spatial unit to generate a `COMPOSITE_INDEX` (supports recursive index-of-indices).
     
 
@@ -112,6 +113,7 @@ _Focus: The ISO 14090 Adaptation Cycle and iterative decision support._
     - _Feedback Loop:_ Results link back to `COMPOSITE_INDEX`, showing how a project improves a score.
 ## 3. ERD for National Climate Adaptation Information Framework (NCAIF)
 
+
 ```mermaid
 erDiagram
 	SPATIAL_UNIT ||--|{ CLIMATE_DRIVER : reference_for
@@ -125,8 +127,9 @@ erDiagram
 	%% =======================================================
     %% SUBJECT AREA 1: Climate Science 
 	%% =======================================================
-        CLIMATE_SCENARIO ||--|{ CLIMATE_DRIVER : simulates
-        CLIMATE_DRIVER ||--o{ HAZARDOUS_EVENT : manifests_as
+        CLIMATE_SCENARIO ||--|{ CLIMATE_DRIVER : simulates
+        CLIMATE_DRIVER }o--o{ HAZARDOUS_EVENT : manifests_as
+        HAZARDOUS_EVENT ||--o{ SATELLITE_OBSERVATION : extent_observed_by
    
   
     %% =======================================================
@@ -135,11 +138,12 @@ erDiagram
 
      
 	 %% ========= Sub-area 2.1: Hazard modeling ===============
-		 CLIMATE_DRIVER }|--|{ HAZARD_MODELS : input_of
-		 METEOROLOGICAL_OBSERVATION }|--|{ HAZARD_MODELS : input_of
-		 TOPOGRAPHY }|--|{ HAZARD_MODELS : input_of
-		 ENVIRONMENT }|--|{ HAZARD_MODELS : input_of
-		 HAZARD_MODELS }|-- || HAZARD_MAP: simulates
+        CLIMATE_DRIVER }o--o{ HAZARD_MODELS : input_of
+        METEOROLOGICAL_OBSERVATION }o--o{ HAZARD_MODELS : input_of
+        TOPOGRAPHY }o--o{ HAZARD_MODELS : input_of
+        ENVIRONMENT }o--o{ HAZARD_MODELS : input_of
+        HAZARD_MODELS }o--o| HAZARD_MAP: simulates
+        SATELLITE_OBSERVATION }o--o| HAZARD_MAP : produces
         
 	 %% ========= Sub-area 2.2 : vulnerability and exposure ============
    
@@ -157,8 +161,8 @@ erDiagram
         }
   
 	 %% =========Sub-area 2.4 : risk assessment ===============
-		 CLIMATE_DRIVER ||--o{ RISK_ASSESSMENT : intensity_of
-		 HAZARD_MAP ||--|{ RISK_ASSESSMENT : intensity_of
+        CLIMATE_DRIVER }o--o{ RISK_ASSESSMENT : index_of
+        HAZARD_MAP }o--o{ RISK_ASSESSMENT : intensity_of
 	     EXPOSED_ASSET ||--|{ RISK_ASSESSMENT : subject_of
 	     
 	     RISK_ASSESSMENT ||--|{ RISK_METRIC :produces_probabilistic
@@ -166,10 +170,11 @@ erDiagram
 
     
 	 %% =========Sub-area 2.5 : Impact L&D ===============
-		 LOSS_DAMAGE_RECORD ||--|{ ATTRIBUTION_LINK : explained_by
-		 ATTRIBUTION_LINK }|..o| HAZARDOUS_EVENT : attributed_to_event
-	     ATTRIBUTION_LINK }|..o| CLIMATE_DRIVER : attributed_to_driver
-	     EXPOSED_ASSET ||--o{ LOSS_DAMAGE_RECORD : sustains
+        HAZARDOUS_EVENT ||--|| DISASTER_RECORD : documented_in
+        DISASTER_RECORD }o--o{ HAZARD_MAP : documents
+        DISASTER_RECORD ||--|{ LOSS_DAMAGE_RECORD : includes
+        LOSS_DAMAGE_RECORD ||--o| ATTRIBUTION_LINK : explained_by
+          EXPOSED_ASSET ||--o{ LOSS_DAMAGE_RECORD : sustains
 	     
     %% =======================================================
     %% SUBJECT AREA 3:Resilience Assessment
@@ -270,6 +275,24 @@ erDiagram
 
 ## 4. Key Design Decisions & Logic 
 
+### 4.1 CDM Review Decisions (2026-02-25)
+
+1. **Dual-path Risk Assessment (Physical + Index-Based)**
+   - **Decision:** `RISK_ASSESSMENT` can reference `HAZARD_MAP` (physical modeling) and/or `CLIMATE_DRIVER` (index-based assessment).
+   - **Reason:** Keeps a single assessment structure while supporting both hazard-extent modeling and climate-index workflows without duplicating schema.
+
+2. **Observed vs Modeled Hazard Maps**
+   - **Decision:** `HAZARD_MAP` can be produced by `HAZARD_MODELS` or derived from `SATELLITE_OBSERVATION` (subtypes can remain implicit).
+   - **Reason:** Reflects real practice where historical hazard extents are compiled from satellite imagery while future scenarios are modeled outputs.
+
+3. **Loss-Driven Attribution**
+   - **Decision:** `ATTRIBUTION_LINK` attaches only to `LOSS_DAMAGE_RECORD` as an aggregated attribution summary; no direct event/driver attribution.
+   - **Reason:** Attribution is only defensible when loss evidence exists; avoids speculative causal links without impact data.
+
+4. **Disaster Record Definition**
+   - **Decision:** `DISASTER_RECORD` represents a single observed occurrence with summary statistics (1:1 with `HAZARDOUS_EVENT`).
+   - **Reason:** Maintains a clean event registry while allowing separate, granular loss entries via `LOSS_DAMAGE_RECORD`.
+
 ### Data Structure & Reusability Logic
 
 1. **Determinant Neutrality (The "Build Once, Use Everywhere" Pattern):**
@@ -283,9 +306,9 @@ erDiagram
     - _Decision:_ The system supports infinite hierarchy depth (e.g., _National Index → Provincial Sub-Index → Thematic Score → Indicator Score_) without requiring schema changes. This allows complex indices (like INFORM or ND-GAIN) to be fully represented.
         
 3. **The "Universal Adapter" (Attribution Link)**
-	- **Logic:** Climate impacts are driven by two fundamentally different time-scales: discrete "shocks" (e.g., a 3-day cyclone) and continuous "stressors" (e.g., decadal sea-level rise). Traditional databases struggle to link a single loss record to both types without creating redundant tables.
+	- **Logic:** Attribution should only be asserted when loss and damage evidence exists; otherwise, causal claims remain speculative.
 	    
-	- **Decision:** The `ATTRIBUTION_LINK` entity is implemented as a polymorphic bridge. It allows a `LOSS_DAMAGE_RECORD` to reference _either_ a `HAZARDOUS_EVENT` (Event UUID) _or_ a `CLIMATE_DRIVER` (Trend ID), unifying slow-onset and rapid-onset attribution in a single table.
+	- **Decision:** The `ATTRIBUTION_LINK` entity is **loss-driven** and connects **only** to `LOSS_DAMAGE_RECORD` as an aggregated attribution summary. Direct links from `HAZARDOUS_EVENT` or `CLIMATE_DRIVER` are removed to avoid premature attribution.
 
  4. **Polymorphic Vulnerability**
 	- **Logic:** The system must serve two distinct masters: the **Insurance/Actuarial** domain (which requires strict mathematical depth-damage curves) and the **Policy/Social** domain (which requires relative vulnerability indices).

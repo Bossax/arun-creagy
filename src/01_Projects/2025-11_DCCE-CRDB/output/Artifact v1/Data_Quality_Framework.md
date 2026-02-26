@@ -1,5 +1,5 @@
 ---
-status: raw
+status: current
 tags:
   - governance
   - framework

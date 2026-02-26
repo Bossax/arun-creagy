@@ -1,5 +1,5 @@
 ---
-status: current
+status: archived
 tags: []
 created: 2026-01-09
 last_updated: 2026-01-18

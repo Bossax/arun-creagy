@@ -1,6 +1,10 @@
 ---
-status: draft
-tags: [governance, charter, NCAIF, CDM]
+status: current
+tags:
+  - governance
+  - charter
+  - NCAIF
+  - CDM
 created: 2026-02-16
 last_updated: 2026-02-16
 project: DCCE-CRDB

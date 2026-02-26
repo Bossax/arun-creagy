@@ -1,7 +1,6 @@
 ---
 color: var(--mk-color-green)
-status:
-  - In-progress
+status: In Progress
 start date: 2026-01-05T00:00:00.000Z
 type: task
 project:

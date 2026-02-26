@@ -1,6 +1,8 @@
 ---
-status: raw
-tags: [summary, archive]
+status: evergreen
+tags:
+  - summary
+  - archive
 created: 02/10/2026
 last_updated: 02/10/2026
 AI_prompt: false

@@ -1,5 +1,5 @@
 ---
-status:
+status: evergreen
 tags: []
 created: 2026-02-10
 last_updated: 2026-02-10
@@ -8,7 +8,7 @@ AI_output: true
 project:
   - DCCE_CRDB
 type:
-  - Artifact
+  - meeting_note
 ---
 File: 20260113_DCCE Data Value Chain.pptx
 ## Slide 2 & 3: 

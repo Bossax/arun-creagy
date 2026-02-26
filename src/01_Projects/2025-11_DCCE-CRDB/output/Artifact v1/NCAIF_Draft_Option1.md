@@ -1,3 +1,6 @@
+---
+status: current
+---
 # National Climate Adaptation Information Framework (NCAIF) - Option 1: Thematic-Based
 
 This artifact outlines the key content and structure for a thematic-based NCAIF.

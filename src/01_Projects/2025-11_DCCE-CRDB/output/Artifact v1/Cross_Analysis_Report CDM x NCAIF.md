@@ -1,3 +1,13 @@
+---
+status: current
+tags: []
+created: 2026-02-16
+last_updated: 2026-02-16
+AI_prompt: false
+AI_output: true
+project:
+type: artifact
+---
 # Cross-Analysis of CDM and NCAIF Design Options
 
 This report analyzes the suitability of the two proposed Conceptual Data Model (CDM) options for the Adaptation Planning subject area to support the two proposed designs for the National Climate Adaptation Information Framework (NCAIF).

@@ -1,7 +1,6 @@
 ---
 type: strategy
-status:
-  - current
+status: current
 version: 9
 created: 2025-12-16
 last_updated: 2026-02-10
@@ -257,7 +256,7 @@ The project is organized into six work packages (WPs) that collectively deliver 
     
 - [x] **Baseline review of international platforms and DCCE systems (Dec 2025 – Jan 2026).** Conduct desk research on adaptation information platforms and DCCE systems to inform conceptual model. This aligns with task 5.2.1 and now concludes by January 2026
     
-- [ ] **Joint Risk Review (Jan 2026):** Collaborate with BTR/CRI teams to review climate risks across 6 NAP Sectors (Water, Agriculture, Tourism, Health, Natural Resources, Human Settlement) to inform the initial Data Landscape.
+- [x] **Joint Risk Review (Jan 2026):** Collaborate with BTR/CRI teams to review climate risks across 6 NAP Sectors (Water, Agriculture, Tourism, Health, Natural Resources, Human Settlement) to inform the initial Data Landscape.
 
 **Deliverable:** Inception report (submitted Jan 7, 2026) and stakeholder engagement plan.
 
@@ -277,15 +276,15 @@ The project is organized into six work packages (WPs) that collectively deliver 
 
 - [x] **Desk research & benchmarking (Dec 2025 – Jan 2026).** Analyze international adaptation platforms’ data models and governance structures and compare these with DCCE’s current systems. This work overlaps with the end of task 5.2.1 and the start of tasks 5.3.1–5.3.2. Document Business Logic
 
-- **Preliminary Use Case Drafting (Jan – Feb 2026).** Develop "seed" use cases (e.g., specific flood risk scenarios) to guide stakeholder discussions, ensuring they can react to concrete examples rather than abstract concepts.
+- [ ] **Preliminary Use Case Drafting (Jan – Feb 2026).** Develop "seed" use cases (e.g., specific flood risk scenarios) to guide stakeholder discussions, ensuring they can react to concrete examples rather than abstract concepts.
 
-- **Disaster Risk Management Landscape research (Dec 2025 - Jan 2026):** review DDPM's documents on disaster data collection and PDNA [[Post Disaster Needs Assessment report by DDPM]] implementation progress. Linked to the ongoing PDNA capacity building in the human settlement sector
+- [x] **Disaster Risk Management Landscape research (Dec 2025 - Jan 2026):** review DDPM's documents on disaster data collection and PDNA [[Post Disaster Needs Assessment report by DDPM]] implementation progress. Linked to the ongoing PDNA capacity building in the human settlement sector
+
+- [x] **Current‑state assessment (Dec 2025 – Jan 2026).** Document existing datasets, data flows, storage formats and metadata practices at DCCE and partner agencies. Task 5.3.1 in the workplan begins in December.
     
-- **Current‑state assessment (Dec 2025 – Jan 2026).** Document existing datasets, data flows, storage formats and metadata practices at DCCE and partner agencies. Task 5.3.1 in the workplan begins in December.
+- [ ] **User‑requirement interviews (Feb – Mar 2026).** Conduct at least ten interviews with data producers and consumers, capturing use cases, pain points and required metadata. Interview activities now commence in the first week of February and extend through March.
     
-- **User‑requirement interviews (Feb – Mar 2026).** Conduct at least ten interviews with data producers and consumers, capturing use cases, pain points and required metadata. Interview activities now commence in the first week of February and extend through March.
-    
-- **Data Quality & Schema Assessment (Feb 2026):** Evaluate "Risk Assessment" datasets to prepare for Technical Metadata extraction.
+- [ ] **Data Quality & Schema Assessment (Feb 2026):** Evaluate "Risk Assessment" datasets to prepare for Technical Metadata extraction.
     
 
 **Deliverable:** Data landscape & gap report, interview summaries and system diagrams, due by the second week of March 2026.
@@ -322,6 +321,7 @@ The project is organized into six work packages (WPs) that collectively deliver 
 3. **Develop Logical Model for Loss & Damage (Mar-Apr 2026):**
     - Translate CDM's LOSS_DAMAGE_RECORD entity into detailed specifications
     - Align with DDPM PDNA and Sendai Framework
+
 4. **Map CDM to Data Lakehouse Architecture (Mar-Apr 2026):**
     - Show how Bronze raw data feeds Silver CDM entities
     - Define Gold layer products derived from CDM relationships

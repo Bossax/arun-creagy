@@ -5,7 +5,7 @@ tags:
   - subsea-deployment
   - soundscape-analysis
   - hydrophone
-status: current
+status: archived
 type: "plan "
 ---
 # Session Plan 

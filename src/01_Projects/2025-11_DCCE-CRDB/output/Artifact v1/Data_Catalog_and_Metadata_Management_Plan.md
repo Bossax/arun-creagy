@@ -1,5 +1,5 @@
 ---
-status: draft
+status: current
 tags:
   - governance
   - metadata

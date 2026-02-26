@@ -1,6 +1,11 @@
 ---
-status: draft
-tags: [governance, stewardship, policy, NCAIF, CDM]
+status: current
+tags:
+  - governance
+  - stewardship
+  - policy
+  - NCAIF
+  - CDM
 created: 2026-02-16
 last_updated: 2026-02-16
 project: DCCE-CRDB
