@@ -1,17 +1,17 @@
 ---
 project: ""
 ---
-# Session Workflow
+# Research Workflow
 
-This document outlines a structured workflow for a work session, designed to enhance focus, document strategic reasoning, and ensure a clear audit trail of decisions and actions.
+This document outlines a structured workflow for a research‑focused session, designed to enhance focus, document strategic reasoning, and ensure a clear audit trail of decisions and actions.
 
 ## The Workflow Cycle
 
 The workflow is a cycle of **Plan -> Execute -> Knowledge Organization & Indexing -> Reflect**.
 
-### 0. Pre-flight: Load Workflow
+### 0. Pre-flight: Load Workflow (Research Only)
 
-At the start of a session, load this workflow to anchor the session to the canonical cycle and reduce drift.
+Use this workflow only when the session is research‑heavy (explicitly invoked by the user).
 
 *   **Skim the cycle** to confirm you will complete Plan → Execute → Knowledge Organization & Indexing → Reflect.
 *   **Decide the intensity** of the Knowledge Organization & Indexing pass (lightweight vs full) based on session scope.
@@ -34,6 +34,21 @@ During the session, work through the tasks outlined in your session plan. The ke
 
 *   **Atomic Commits**: Use git to make small, atomic commits that correspond to the tasks in your session plan. Each commit message should be clear and reference the task it completes. This creates a granular history of your work.
 *   **Feature Branches**: For any significant piece of work, create a dedicated feature branch. This keeps your main branch clean and allows for focused development and review.
+
+### 2.1 Research Workflow (Optional)
+
+For research‑heavy sessions, follow this optional flow. This is **separate** from the NotebookLM skill, which only feeds prompts and archives notes.
+
+1. **Define research questions** in the session plan.
+2. **Run AI research tools** (e.g., Deep Research, Consensus) using those questions.
+3. **Capture AI responses** in the session plan.
+4. **Select sources** to upload into NotebookLM based on the AI responses.
+5. **Record the NotebookLM prompt** and **NotebookLM session link** in the session plan.
+6. **Run** [`/notebookLM-research`](../../.roo/skills/notebookLM-research/SKILL.md:1) **to send the prompt and archive atomic notes.**
+
+**Session plan sections used by the NotebookLM skill:**
+- `## NotebookLM Prompt`
+- `## NotebookLM Session Link`
 
 ### 3. Knowledge Organization & Indexing
 
