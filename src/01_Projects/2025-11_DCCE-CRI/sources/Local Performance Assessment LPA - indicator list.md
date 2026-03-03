@@ -105,18 +105,16 @@ list of indicators
 ### I. Planning and Governance (Domain 1)
 
 1. **Local Development Plan (แผนพัฒนาท้องถิ่น)**: This is a core indicator (Indicator 1).
-    
     - The evaluation assesses the **percentage of projects from the local development plan (2023–2027) that are included and funded in the annual expenditure budget** (including annual/additional appropriation ordinances/acts, accumulated funds, or specific subsidies).
     - Compliance requires submitting the **Local Development Plan (2023-2027)**, specifically focusing on the year 2024.
     - The relevant governing documents include the Ministry of Interior Regulation on preparing local government organization (SAOs) development plans (2005 and its amendments).
 2. **Community Plan (แผนชุมชน)**: This is a pilot indicator (Indicator 7, not scored) relevant for SAOs (Tessaban Nakhon, Tessaban Muang, Tessaban Tambon).
-    
-    - The goal is for SAOs to **create a Community Plan for 2024**.
+    The goal is for SAOs to **create a Community Plan for 2024**.
     - The plan must include a **complete five-part structure** (General data, data analysis, projects/plans, plan review, and other matters).
     - Crucially, the assessment checks if the **SAOs incorporated the Community Plan into the Local Development Plan (2023–2027)** (at least 5%) and subsequently funded those derived projects in the annual budget (at least 2%).
     - _Related Requirement:_ The SAOs must also prepare a **Local Development Plan Tracking and Evaluation Report** for the 2024 fiscal year.
-3. **Risk Management Plan (แผนการบริหารจัดการความเสี่ยง)**: This indicator focuses on institutionalizing risk management.
     
+3. **Risk Management Plan (แผนการบริหารจัดการความเสี่ยง)**: This indicator focuses on institutionalizing risk management.
     - The SAOs must **prepare a Risk Management Plan** according to designated reports (Forms BS. 1 - BS. 3) at least once per year.
     - Key actions include appointing responsible staff, holding meetings to define the risk management policy, communicating the policy to internal divisions, and performing continuous monitoring, evaluation, and annual review of the plan.
 

@@ -1,6 +1,6 @@
 ---
 type: ai_output
-status: current
+status: evergreen
 tags:
   - resilience
   - adaptation

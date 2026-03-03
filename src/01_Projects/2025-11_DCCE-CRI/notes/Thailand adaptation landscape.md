@@ -1,7 +1,7 @@
 ---
 type:
   - meeting
-status: archived
+status: evergreen
 version: 1
 parent_hypothesis: "[[ ]]"
 created: 2025-10-29

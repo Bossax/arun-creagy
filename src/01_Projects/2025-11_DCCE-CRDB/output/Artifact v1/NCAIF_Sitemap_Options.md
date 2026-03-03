@@ -49,9 +49,9 @@ This sitemap organizes content around key climate change themes, providing a cle
 This sitemap is designed to guide different user personas through their specific information needs and decision-making journeys, providing a more tailored and actionable user experience.
 
 *   **Home**
-    *   I am a... (Planner, Researcher, Community Leader, etc.)
-    *   Quick Links to Key Tools
-    *   Current Climate Alerts
+    *   I am a... (Policy Maker/Planner; Disaster Management; Local Leader/LAO; secondary: Researcher; Community)
+    *   Quick Links: Map Viewer, Data Catalog (MVP), Glossary, Spatial Reference, Export/Printable packs
+    *   Current Climate Alerts (with “event reality” framing: freshness + limitations)
 *   **For Policy Makers & Planners**
     *   **Understand the Risks:**
         *   National & Provincial Risk Assessments
@@ -74,7 +74,7 @@ This sitemap is designed to guide different user personas through their specific
     *   **Publish:**
         *   Journal of Climate Adaptation
         *   Working Paper Series
-*   **For Communities & Local Leaders**
+*   **For Local Leaders / LAO planners**
     *   **What's Happening in My Area?:**
         *   Local Risk Maps
         *   Community Vulnerability Assessments
@@ -86,3 +86,8 @@ This sitemap is designed to guide different user personas through their specific
     *   Projects & Initiatives
     *   News & Events
     *   About Us
+
+*   **For Disaster Management (DDPM / operations support)**
+    *   Prepare & pre-position (risk context dashboard + briefing exports)
+    *   Post-event impact assessment (standard report view + quality flags + versioned updates)
+    *   Governance dependencies (event schema, boundaries, publishing gates)

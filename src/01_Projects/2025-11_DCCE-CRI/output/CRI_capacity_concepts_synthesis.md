@@ -16,8 +16,8 @@ This note synthesizes key literature-based insights on capacity concepts that un
 
 Sources:
 
-- [`Approaches of index development - concensus.md`](Approaches%20of%20index%20development%20-%20concensus.md)
-- [`Studies on adaptive capacity to climate change a synthesis of changing concepts, dimensions, and indicators.md`](Studies%20on%20adaptive%20capacity%20to%20climate%20change%20a%20synthesis%20of%20changing%20concepts%2C%20dimensions%2C%20and%20indicators.md)
+- [`Approaches of index development - concensus.md`](../sources/Approaches%20of%20index%20development%20-%20concensus.md)
+- [`Studies on adaptive capacity to climate change a synthesis of changing concepts, dimensions, and indicators.md`](../sources/Studies%20on%20adaptive%20capacity%20to%20climate%20change%20a%20synthesis%20of%20changing%20concepts%2C%20dimensions%2C%20and%20indicators.md)
 
 **Key points**
 
@@ -34,7 +34,7 @@ Sources:
 
 Source:
 
-- [`Coping vs Adaptive Capacity - Consensus.ai.md`](Coping%20vs%20Adaptive%20Capacity%20-%20Consensus.ai.md)
+- [`Coping vs Adaptive Capacity - Consensus.ai.md`](../sources/Coping%20vs%20Adaptive%20Capacity%20-%20Consensus.ai.md)
 
 **Key points**
 
@@ -52,9 +52,9 @@ Source:
 
 Sources:
 
-- [`Approaches of index development - concensus.md`](Approaches%20of%20index%20development%20-%20concensus.md)
-- [`The Calculus of Socio-Ecological Resilience - The Climate Resilience Index Equation .md`](The%20Calculus%20of%20Socio-Ecological%20Resilience%20-%20The%20Climate%20Resilience%20Index%20Equation%20.md)
-- [`Climate Resilient Development (CRD).md`](Climate%20Resilient%20Development%20(CRD).md)
+- [`Approaches of index development - concensus.md`](../sources/Approaches%20of%20index%20development%20-%20concensus.md)
+- [`The Calculus of Socio-Ecological Resilience - The Climate Resilience Index Equation .md`](../sources/The%20Calculus%20of%20Socio-Ecological%20Resilience%20-%20The%20Climate%20Resilience%20Index%20Equation%20.md)
+- [`Climate Resilient Development (CRD).md`](../sources/Climate%20Resilient%20Development%20(CRD).md)
 
 **Key points**
 
@@ -77,3 +77,22 @@ The CRI Phase 2 methodology translates these concepts into a practical **capacit
 - Composite scores are interpreted as **structural readiness** in each tier, not as definitive performance.
 - Radar-chart profiles visualize imbalances (e.g., strong coping but weak transformative capacity) to guide policy dialogue.
 
+### 4.1 Baseline proxies vs Target metrics (two-speed capacity interpretation)
+
+Sources:
+
+- [`CRI_Capacity_Tagging_Dictionary.md`](CRI_Capacity_Tagging_Dictionary.md)
+- [`Local Performance Assessment LPA - indicator list.md`](../sources/Local%20Performance%20Assessment%20LPA%20-%20indicator%20list.md)
+
+**Key points**
+
+- Capacity tiers are conceptual (coping/adaptive/transformative), but the available evidence is uneven.
+- At baseline, administrative indicators (especially LPA) mainly observe **mechanism existence** and compliance artifacts.
+- Therefore, each tier should be communicated as:
+  - “Structural readiness (baseline proxy)” with explicit uncertainty, plus
+  - “Process quality (target)” as the next measurement frontier.
+
+**Implications for CRI**
+
+- Do not over-interpret baseline adaptive or transformative capacity as true learning/reform ability.
+- Use data-richness (0–3) to avoid false precision when comparing provinces.

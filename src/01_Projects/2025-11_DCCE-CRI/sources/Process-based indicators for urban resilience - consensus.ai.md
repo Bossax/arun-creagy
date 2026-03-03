@@ -1,7 +1,7 @@
 ---
 type: deep_research
 tags: []
-status: current
+status: evergreen
 sticker: emoji//1f916
 created: 2026-02-17
 last_updated: 2026-02-18

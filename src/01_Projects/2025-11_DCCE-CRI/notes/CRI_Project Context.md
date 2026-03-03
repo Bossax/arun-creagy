@@ -1,8 +1,7 @@
 ---
 type:
   - idea
-status:
-  - current
+status: archived
 tags:
   - CRI
   - Adaptation

@@ -1,6 +1,6 @@
 ---
 created: 2026-02-18
-status: current
+status: archived
 type: execution_checklist
 source_plan: Plan - 18 Feb Afternoon session 1.md
 project: DCCE_CRI

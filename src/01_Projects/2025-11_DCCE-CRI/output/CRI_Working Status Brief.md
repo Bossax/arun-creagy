@@ -1,7 +1,6 @@
 ---
 type: strategy
-status:
-  - current
+status: current
 version: 4
 created: 2026-02-03T08:13:47.000Z
 last_updated: 2026-02-18
