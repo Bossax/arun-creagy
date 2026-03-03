@@ -19,3 +19,6 @@ Icon?
 *.xlxs
 *.csv
 *.pdf
+
+# Generated / diagnostic artifacts (keep on disk, don't commit)
+output/watch/**
