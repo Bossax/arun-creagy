@@ -1,24 +1,32 @@
-# State files
+# 1. Oracle Pillars to Ignore
+ψ/active/
+ψ/lab/
+
+# 2. State & Legacy Extension files
 .awaken-state.json
+.claude/
 
-# Ignore obsidian artifact
-src/.makemd/*
-src/.obsidian/*
-src/.space/*
-**/.space/**
+# 3. Obsidian & Workspace artifacts (Global)
+.makemd/
+.obsidian/
+.space/
+.trash/
 
-# --- Google Drive & System Artifacts (CRITICAL) ---
+# 4. System Artifacts (CRITICAL)
 desktop.ini
 Thumbs.db
 .DS_Store
 Icon?
 ._*
 
-
-# Data files
-*.xlxs
+# 5. Data & Big files
+*.xlsx
+*.xls
 *.csv
 *.pdf
-
-# Generated / diagnostic artifacts (keep on disk, don't commit)
-output/watch/**
+*.zip
+*.tar.gz
+*.mp4
+*.mp3
+*.wav
+*.pptx
