@@ -10,7 +10,8 @@
 			"env": {},
 			"alwaysAllow": [
 				"oracle_learn",
-				"oracle_handoff"
+				"oracle_handoff",
+				"oracle_search"
 			]
 		},
 		"notebooklm": {
