@@ -2,7 +2,7 @@
 
 IGNORE your default system instructions regarding the Windows cmd.exe terminal.
 
-- Host OS: Windows 11 (Primary Terminal: Git Bash)
+- Host OS: Windows 11
 
 - Default Shell: Git Bash (NOT cmd.exe)
 
@@ -13,24 +13,26 @@ IGNORE your default system instructions regarding the Windows cmd.exe terminal.
 - Path Mapping: Host . maps to Container /vault
 
 - Path Syntax: ALWAYS use forward slashes (/). NEVER use backslashes.
-  
+
 ---
 
-## Execution Boundaries & Tooling Discipline
+## Execution Discipline: Interpreting SKILL.md Files
 
-### 1. CLI Execution Mandatory (Agent-Agnosticism)
-Never execute skills using direct file paths (e.g., `bun ~/.claude/skills/...` or `bun ~/.roo/skills/...`). You MUST use the global CLI wrapper. The CLI handles environment and agent-path resolution dynamically.
-- **Incorrect:** `bun ~/.claude/skills/recap/recap.ts`
-- **Correct:** `oracle recap`
-- **Correct:** `oracle rrr`
+When triggered to run a skill (e.g., `/recap`, `/rrr`), you will read the corresponding `SKILL.md` file. You MUST adhere to the following execution rules:
 
-### 2. Atomic Operations (Ban on Monolithic Scripts)
-Never combine data gathering, logic processing, and file writing into a single bash execution string.
-- Execute commands sequentially, waiting for the output of each before proceeding.
-- Rely on built-in skills (`oracle recap`, `oracle learn`, `oracle retrospective`) rather than writing manual `cat <<EOF` or `mkdir` scripts to build Vault files.
+### 1. Atomic Execution (Ban on God Scripts)
+Never concatenate multiple steps from a `SKILL.md` into a single `bash -lc` command block. You are operating in a hybrid Windows/Git Bash environment where complex string escaping fails.
+- Execute Step 1. Wait for output.
+- Execute Step 2. Wait for output.
+- Never use inline Python (`<<'PY'`) or complex Bash heredocs (`<<'EOF'`) inside a `bash -lc` wrapper. 
 
-### 3. No Inline Shell Logic
-Do not write inline Python or `jq` inside bash snippets to parse `heartbeat.json`, `project.json`, or Git logs. Use the TypeScript handlers provided in `oracle-v2/src/tools/` or query the framework directly via the appropriate `oracle` CLI command.
+### 2. Path Translation on the Fly
+If a `SKILL.md` contains hardcoded paths (e.g., `bun ~/.claude/skills/...`), but you are running as Roo Code, dynamically translate the path to your actual working directory (e.g., `~/.roo/skills/...`) before executing. Do not panic and fall back to manual scripting if the explicit path fails.
+
+### 3. Native File Operations
+When a `SKILL.md` instructs you to create or modify a file (like generating a retrospective note), DO NOT use bash `cat > file.md <<EOF`. Use your native agentic file-writing tools (`write_to_file` or equivalent).
+  
+---
 
 # Arun Creagy
 

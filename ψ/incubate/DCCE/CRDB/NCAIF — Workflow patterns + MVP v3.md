@@ -75,6 +75,15 @@ This aligns with the **Minimum Viable Dataset (MVD)** and the **Loss & Damage lo
 - [ψ/writing/2025-11_DCCE-CRDB/output/CRDB - TOR.md](ψ/writing/2025-11_DCCE-CRDB/output/CRDB%20-%20TOR.md)
 - [ψ/writing/2025-11_DCCE-CRDB/output/CRDB - Implementation Plan.md](ψ/writing/2025-11_DCCE-CRDB/output/CRDB%20-%20Implementation%20Plan.md)
 
+### C0.5 CDM subject areas (non-technical framing)
+
+For FGD2 communication, it can help to describe the CDM as 4 subject areas (what we need to represent consistently), while MVPs describe the products/workflows we ship first:
+
+- **Physical Climate**
+- **Risk & Impact Assessment**
+- **Adaptation Planning**
+- **Monitoring and Evaluation**
+
 ---
 
 ## A) Workflow patterns (procedural steps emphasized)
@@ -164,7 +173,8 @@ This aligns with the **Minimum Viable Dataset (MVD)** and the **Loss & Damage lo
 **What it is**
 
 - A **structured ingestion and quarantine gateway** for DDPM disaster data into DCCE’s boundary.
-- Not necessarily automated; emphasizes **traceable intake**, validation flags, and revision history.
+- Phase 1 is **not necessarily automated**; it emphasizes a **repeatable, traceable intake workflow** (manual or batch is acceptable), validation flags, and revision history.
+- Automation (“routine pipeline”) should be treated as a **roadmap** item unless Phase 1 scope explicitly includes it.
 - Establishes **data governance for Disaster + Loss & Damage** as a CDM domain and sets the foundation for the **MVD / L&D logical model**.
 
 **Phase 1 deliverables (groundwork)**

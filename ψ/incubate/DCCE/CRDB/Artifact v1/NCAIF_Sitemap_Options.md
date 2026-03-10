@@ -65,6 +65,13 @@ This sitemap organizes content around key climate change themes, providing a cle
 - **MVP-4 (Uncertainty guidance):** under **Data & Resources**:
   - **How to interpret probabilistic layers** (standard wording + examples of misuse)
 
+**Slide-deck alignment note (FGD2 framing)**
+
+- “Physical Climate” content typically carries **MVP-4** (how to interpret projections/probabilistic layers)
+- “Risk & impacts” pages typically expose **MVP-1** outputs (packs)
+- “Loss & damage” pages surface **MVP-2** outputs (post-event reports)
+- “Data & governance” pages surface **MVP-3** (recommended baselines) + publishing workflow
+
 ---
 
 ## Option 2: User-Journey-Based Sitemap [[NCAIF_Draft_Option2]]
@@ -128,6 +135,12 @@ This sitemap is designed to guide different user personas through their specific
   - For Researchers & Academia → Access Data (recommended baselines + provenance)
 - **MVP-4 (Uncertainty guidance):**
   - Home → Quick Links (“How to read probabilistic maps”) and within each hazard/scenario page
+
+**Slide-deck alignment note (FGD2 framing)**
+
+- Policy/planning journeys emphasize **MVP-1** (exportable packs) and **MVP-3** (recommended baselines)
+- Disaster journeys emphasize **MVP-2** (post-event assessment + freshness/revision flags)
+- Cross-cutting “how to interpret uncertainty” is **MVP-4** and should appear wherever probabilistic layers appear
 
 ---
 

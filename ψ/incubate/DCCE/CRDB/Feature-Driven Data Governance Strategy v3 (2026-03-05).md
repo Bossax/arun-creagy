@@ -78,6 +78,21 @@ Use these rails as the default operating model for Phase 1–2.
 
 **Implication:** Phase 1 NCAIF can be a **catalog + clearinghouse** even if data physically remains distributed; hosting is not required to deliver value.
 
+### Non-technical summary (for FGD2)
+
+Data governance in Phase 1 can be explained simply as defining **who is responsible**, **what checks happen**, and **what standards apply**, so publishing becomes safe and repeatable:
+
+- **People**: clear roles like Data Owner and Data Steward
+- **Process**: quality gates + approval steps before publishing
+- **Policy & Standards**: minimum metadata, classification, and interpretation rules
+
+**Minimum Phase 1 rules (practical):**
+
+1) **Data model governance**: agree on the CDM terms/structure used for Phase 1 products
+2) **Minimum metadata**: every dataset/product must list source, owner/steward, cadence, limitations/uncertainty
+3) **Endorsement authority**: define who can publish a “recommended baseline” decision
+4) **Data classification**: decide whether each asset is Internal vs GDX vs Open Data, and its access path
+
 ---
 ## 2) Updated Phase 1 focus: MVP-first, with DGA-enabled gates
 

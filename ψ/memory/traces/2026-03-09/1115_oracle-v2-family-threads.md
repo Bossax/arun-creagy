@@ -1,4 +1,4 @@
-﻿## Oracle Family & Introductions (captured via gh issue view)
+## Oracle Family & Introductions (captured via gh issue view)
 
 ## Note (2026-03-09)
 
