@@ -35,7 +35,7 @@ Reference: [`ψ/incubate/DCCE/CRDB/inbox/active/phase1_decision_log.md`](ψ/incu
 - **Interim Report milestone**: 20 March 2026 finalized report
 - **Practical submission / billing constraint**: **23 Mar 2026**
 
-Reference: [`ψ/incubate/DCCE/CRDB/CRDB - Implementation Plan.md`](ψ/incubate/DCCE/CRDB/CRDB%20-%20Implementation%20Plan.md)
+Reference: [`ψ/incubate/DCCE/CRDB/CRDB - Implementation Plan.md`](CRDB%20-%20Implementation%20Plan.md)
 
 ## 5) Key watchpoints
 

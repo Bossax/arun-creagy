@@ -185,7 +185,7 @@ Goal: questions that produce answers you can directly use to justify **design ch
 
 ### Sitemap-only poll set (4 questions) — use when validating the proposed structure
 
-These 4 are designed to validate (or falsify) the proposed **Hybrid / workflow-pattern-first** structure (Option 3 in [`ψ/incubate/DCCE/CRDB/Artifact v1/NCAIF_Sitemap_Options.md`](ψ/incubate/DCCE/CRDB/Artifact%20v1/NCAIF_Sitemap_Options.md)).
+These 4 are designed to validate (or falsify) the proposed **Hybrid / workflow-pattern-first** structure (Option 3 in [`ψ/incubate/DCCE/CRDB/Artifact v1/NCAIF_Sitemap_Options.md`](NCAIF_Sitemap_Options.md)).
 
 **S1) Agreement check (structure-level)**
 

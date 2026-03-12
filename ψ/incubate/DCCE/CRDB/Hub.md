@@ -10,19 +10,23 @@
 
 ## Latest (FGD2)
 
-- Project status (current): [`ψ/incubate/DCCE/CRDB/CRDB - Project Status (Current).md`](ψ/incubate/DCCE/CRDB/CRDB%20-%20Project%20Status%20(Current).md)
-- FGD2 action summary: [`ψ/incubate/DCCE/CRDB/inbox/writing_notes/2026-03-11_FGD2_action_summary.md`](ψ/incubate/DCCE/CRDB/inbox/writing_notes/2026-03-11_FGD2_action_summary.md)
-- FGD2 transcript (cleaned): [`ψ/incubate/DCCE/CRDB/inbox/writing_notes/2026-03-11_FGD2_transcript_clean.md`](ψ/incubate/DCCE/CRDB/inbox/writing_notes/2026-03-11_FGD2_transcript_clean.md)
+- Project status (current): [`ψ/incubate/DCCE/CRDB/CRDB - Project Status (Current).md`](CRDB%20-%20Project%20Status%20(Current).md)
+- FGD2 action summary: [`ψ/incubate/DCCE/CRDB/inbox/writing_notes/2026-03-11_FGD2_action_summary.md`](2026-03-11_FGD2_action_summary.md)
+- FGD2 transcript (cleaned): [`ψ/incubate/DCCE/CRDB/inbox/writing_notes/2026-03-11_FGD2_transcript_clean.md`](2026-03-11_FGD2_transcript_clean.md)
 - FGD2 transcript (raw): [`ψ/inbox/(External Onsite) DCCE Focus Group Discussion 2 on National Climate Adaptation Information Framework-20260311_093601.vtt`](ψ/inbox/(External%20Onsite)%20DCCE%20Focus%20Group%20Discussion%202%20on%20National%20Climate%20Adaptation%20Information%20Framework-20260311_093601.vtt)
+- Pack A evidence (risk‑map product + limitations): [`ψ/inbox/2026-03-12 - รายงานฐานข้อมูลความเสี่ยงเชิงพื้นที่จากการเปลี่ยนแปลงสภาพภูมิอากาศไทยฉบับสมบูรณ์  -notebooklm extraction.md`](ψ/inbox/2026-03-12%20-%20รายงานฐานข้อมูลความเสี่ยงเชิงพื้นที่จากการเปลี่ยนแปลงสภาพภูมิอากาศไทยฉบับสมบูรณ์%20%20-notebooklm%20extraction.md)
 
 ## Key docs
 - Plan: [`ψ/incubate/DCCE/CRDB/plan.md`](ψ/incubate/DCCE/CRDB/plan.md)
-- Knowledge digest (onboarding): [`ψ/incubate/DCCE/CRDB/inbox/active/dcce-crdb_knowledge_digest.md`](ψ/incubate/DCCE/CRDB/inbox/active/dcce-crdb_knowledge_digest.md)
-- Phase 1 decision log (confirmed): [`ψ/incubate/DCCE/CRDB/inbox/active/phase1_decision_log.md`](ψ/incubate/DCCE/CRDB/inbox/active/phase1_decision_log.md)
+- Knowledge digest (onboarding): [`ψ/incubate/DCCE/CRDB/inbox/active/dcce-crdb_knowledge_digest.md`](dcce-crdb_knowledge_digest.md)
+- Phase 1 decision log (confirmed): [`ψ/incubate/DCCE/CRDB/inbox/active/phase1_decision_log.md`](phase1_decision_log.md)
 - MVP/workflow anchor (current): [`ψ/incubate/DCCE/CRDB/NCAIF — Workflow patterns + MVP v3.md`](ψ/incubate/DCCE/CRDB/NCAIF%20%E2%80%94%20Workflow%20patterns%20%2B%20MVP%20v3.md)
-- Governance rails (v3): [`ψ/incubate/DCCE/CRDB/Feature-Driven Data Governance Strategy v3 (2026-03-05).md`](ψ/incubate/DCCE/CRDB/Feature-Driven%20Data%20Governance%20Strategy%20v3%20(2026-03-05).md)
-- CDM anchor: [`ψ/incubate/DCCE/CRDB/Conceptual Data Model for climate risk and adaptation data system.md`](ψ/incubate/DCCE/CRDB/Conceptual%20Data%20Model%20for%20climate%20risk%20and%20adaptation%20data%20system.md)
-- Assets: [`ψ/incubate/DCCE/CRDB/assets/`](ψ/incubate/DCCE/CRDB/assets/)
+- Governance rails (v3): [`ψ/incubate/DCCE/CRDB/Feature-Driven Data Governance Strategy v3 (2026-03-05).md`](Feature-Driven%20Data%20Governance%20Strategy%20v3%20(2026-03-05).md)
+- CDM anchor: [`ψ/incubate/DCCE/CRDB/Conceptual Data Model for climate risk and adaptation data system.md`](Conceptual%20Data%20Model%20for%20climate%20risk%20and%20adaptation%20data%20system.md)
+- National Climate Adaptation Information Framework anchor [[National Climate Adaptation Information Framework]]
+- Interim report writing plan: [`ψ/incubate/DCCE/CRDB/Interim Report Writing Plan.md`](2026-03-12-Interim%20Report%20Writing%20Plan.md)
+- Interim report outline (working): [`ψ/incubate/DCCE/CRDB/inbox/writing_notes/CRDB interim report.md`](CRDB%20interim%20report.md)
+- Task 5.5 scope note: [`ψ/incubate/DCCE/CRDB/Task 5.5 Scope.md`](2026-03-12-Task%205.5%20Scope.md)
 
 ## Scope + roles (operating model)
 
@@ -35,10 +39,11 @@
 - **Workflow patterns (P1–P4) + MVP shortlist** (Phase 1) with tiering (Tier 1 export-first vs Tier 2 advanced).
 - **Governance rails + Phase 1 minimum gates (G1–G5)** for safe publishing and endorsement.
 - **CDM (IVRA-first)** with explicit handling of drivers vs events, attribution links, and vulnerability strategy pattern.
+- **Task 5.5 knowledge sets**: articles + infographics + roll‑ups mapped to NCAIF explainers and sector pages (Phase‑1 content layer).
 
 ## MVP decisions (confirmed stance)
 
-Anchor: [`ψ/incubate/DCCE/CRDB/inbox/active/phase1_decision_log.md`](ψ/incubate/DCCE/CRDB/inbox/active/phase1_decision_log.md)
+Anchor: [`ψ/incubate/DCCE/CRDB/inbox/active/phase1_decision_log.md`](phase1_decision_log.md)
 
 - Phase 1 core: **MVP-3 Recommended Baseline Registry** + **MVP-2 Disaster data ingestion + Loss & Damage groundwork**.
 - Keep **MVP-1** (briefing pack templates) and **MVP-4** (uncertainty/publishing standard) as **lightweight documentation + templates** to avoid scope creep.

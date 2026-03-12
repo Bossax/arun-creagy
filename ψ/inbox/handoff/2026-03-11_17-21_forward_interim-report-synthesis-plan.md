@@ -16,11 +16,14 @@
 - [ ] Draft Interim Report structure (TOR mapping) and start writing sections with the newest FGD1/FGD2 evidence.
 - [ ] Produce Interim Report-ready inserts:
   - [ ] “What FGD2 validated / changed” (1–2 pages)
-  - [ ] Sitemap vNext drill-down + sitemap change process
-  - [ ] MVP‑3 Baseline Registry schema
-  - [ ] MVP‑2 intake/quarantine template (groundwork)
-  - [ ] Publishing rails checklist (SECAN/data.go.th + GDX + internal)
-  - [ ] One-pager: “Backend enables sitemap” (expectation management)
+  - [ ] Sitemap vNext drill-down + sitemap change process 
+	- [x] [[2026-03-12_dcce-website-content-gap-analysis-plan]]
+	- [ ] create a new plan from [[2026-03-12-update-info-and-benchmark-UI-NCAIF]]
+- [x] MVP‑3 Baseline Registry schema %%No need%%
+- [x] MVP‑2 intake/quarantine template  %%No need%%
+- [ ] Publishing rails checklist (CKAN/data.go.th + GDX + internal)
+- [x] One-pager: “Backend enables sitemap”  %%No need%%
+- Package the report submission requirement: **23 Mar 10:00**
 - [ ] Package “send report by Mar 23 10:00” requirement into writing schedule.
 
 ## Next Session (Interim Report writing focus)
@@ -39,7 +42,7 @@
 
 - CRDB plan (now includes dated action table): [`ψ/incubate/DCCE/CRDB/plan.md`](ψ/incubate/DCCE/CRDB/plan.md)
 - FGD2 synthesis (minutes-first): [`ψ/incubate/DCCE/CRDB/inbox/writing_notes/2026-03-11_FGD2_action_summary.md`](ψ/incubate/DCCE/CRDB/inbox/writing_notes/2026-03-11_FGD2_action_summary.md:99)
-- FGD2 meeting minutes (ground truth): [`ψ/incubate/DCCE/CRDB/inbox/writing_notes/2026-03-11-FGD2-Meeting-Minute.md`](ψ/incubate/DCCE/CRDB/inbox/writing_notes/2026-03-11-FGD2-Meeting-Minute.md)
+- FGD2 meeting minutes (ground truth): [`ψ/incubate/DCCE/CRDB/inbox/writing_notes/2026-03-11-FGD2-Meeting-Minute.md`](2026-03-11-FGD2-Meeting-Minute.md)
 - Current CRDB status note: [`ψ/incubate/DCCE/CRDB/CRDB - Project Status (Current).md`](ψ/incubate/DCCE/CRDB/CRDB%20-%20Project%20Status%20(Current).md:1)
 - Insight logs:
   - [`ψ/memory/logs/info/2026-03-11_16-59_fgd2-sitemap-focus-platform-framing.md`](ψ/memory/logs/info/2026-03-11_16-59_fgd2-sitemap-focus-platform-framing.md:1)

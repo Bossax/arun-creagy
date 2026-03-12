@@ -12,7 +12,7 @@ type:
 ---
 # NCAIF Material Synthesis: Findings from Inception Report (Chapter 3)
 
-This document synthesizes findings from the Inception Report's benchmarking (Section 3.1) and current state assessment (Section 3.2) to inform the development of the **National Climate Adaptation Information Framework (NCAIF)**, as per the [Data System Artifact Guide](../notes/Data%20System%20Artifact%20Guide.md) and [Implementation Plan](./CRDB%20-%20Implementation%20Plan.md).
+This document synthesizes findings from the Inception Report's benchmarking (Section 3.1) and current state assessment (Section 3.2) to inform the development of the **National Climate Adaptation Information Framework (NCAIF)**, as per the [Data System Artifact Guide](../notes/Data%20System%20Artifact%20Guide.md) and [Implementation Plan](CRDB%20-%20Implementation%20Plan.md).
 
 ## 1. Benchmarking Insights for NCAIF Business Taxonomy
 

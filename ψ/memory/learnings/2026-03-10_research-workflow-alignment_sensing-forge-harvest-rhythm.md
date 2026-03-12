@@ -18,8 +18,9 @@ tags:
 
 **File-system support**:
 - Raw/temporary items land in inbox queues (triage later):
-  - [`ψ/inbox/_triage_from_active/`](ψ/inbox/_triage_from_active/:1)
-  - [`ψ/inbox/_triage_from_writing_notes/`](ψ/inbox/_triage_from_writing_notes/:1)
+  - [`ψ/inbox/]
+  - [`ψ/incubate/[Project]/inbox/]
+  
 
 ### 2) Forge (project deliverables)
 **Goal**: keep project boundaries + drafting context tight.

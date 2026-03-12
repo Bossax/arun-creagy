@@ -3,9 +3,12 @@
 Operational plan for **CRDB-only** scope in this thread.
 
 Anchors:
-- Digest (onboarding): [`ψ/incubate/DCCE/CRDB/inbox/active/dcce-crdb_knowledge_digest.md`](ψ/incubate/DCCE/CRDB/inbox/active/dcce-crdb_knowledge_digest.md)
-- Decision log (confirmed): [`ψ/incubate/DCCE/CRDB/inbox/active/phase1_decision_log.md`](ψ/incubate/DCCE/CRDB/inbox/active/phase1_decision_log.md)
+- Digest (onboarding): [`ψ/incubate/DCCE/CRDB/inbox/active/dcce-crdb_knowledge_digest.md`](dcce-crdb_knowledge_digest.md)
+- Decision log (confirmed): [`ψ/incubate/DCCE/CRDB/inbox/active/phase1_decision_log.md`](phase1_decision_log.md)
 - MVP/workflow patterns (current): [`ψ/incubate/DCCE/CRDB/NCAIF — Workflow patterns + MVP v3.md`](ψ/incubate/DCCE/CRDB/NCAIF%20%E2%80%94%20Workflow%20patterns%20%2B%20MVP%20v3.md)
+- Interim report writing plan: [`ψ/incubate/DCCE/CRDB/Interim Report Writing Plan.md`](2026-03-12-Interim%20Report%20Writing%20Plan.md)
+- Interim report outline (working): [`ψ/incubate/DCCE/CRDB/inbox/writing_notes/CRDB interim report.md`](CRDB%20interim%20report.md)
+- Task 5.5 scope (NCAIF knowledge sets): [`ψ/incubate/DCCE/CRDB/Task 5.5 Scope.md`](2026-03-12-Task%205.5%20Scope.md)
 
 ## Objectives
 
@@ -14,10 +17,11 @@ Anchors:
 3) Convert workflow patterns into a **Phase 1 MVP shortlist** with explicit “what ships” vs “documentation-only.”
 4) Define **governance rails + minimum gates (G1–G5)** required for safe publishing and baseline endorsement.
 5) Produce a small set of **immediately usable artifacts** (schemas/templates/checklists) that enable execution.
+6) Translate **Task 5.5 knowledge sets** into Phase‑1 NCAIF content blocks (explainers, sector briefs, media) without over‑claiming platform features.
 
 ## Decisions
 
-Confirmed decisions — user confirmation **2026-03-10 14:03 ICT (07:03Z)**. See [`ψ/incubate/DCCE/CRDB/inbox/active/phase1_decision_log.md`](ψ/incubate/DCCE/CRDB/inbox/active/phase1_decision_log.md)
+Confirmed decisions — user confirmation **2026-03-10 14:03 ICT (07:03Z)**. See [`ψ/incubate/DCCE/CRDB/inbox/active/phase1_decision_log.md`](phase1_decision_log.md)
 
 - MVP priority: **MVP-3** + **MVP-2** as Phase 1 core; keep MVP-1/MVP-4 lightweight.
 - Sitemap: **Option 3 (Hybrid / workflow-pattern-first)**.
@@ -47,12 +51,16 @@ Phase 1 “ship list” (minimal, high-leverage):
 - **Disaster intake + quarantine template** (MVP-2 groundwork): event registry + impact observation template + validation flags + revision policy.
 - **Briefing pack templates** (MVP-1 lite): 3–5 export-first templates + “must include” checklist.
 - **Uncertainty/publishing standard** (MVP-4 lite): minimum statements + misuse example + tiered guidance.
+- **Interim Report Writing Plan** (TOR mapping + evidence map + schedule).
+- **Interim Report Outline (working)** aligned to TOR 7.2.
+- **Task 5.5 Scope note** (knowledge sets → NCAIF content layer).
+- **Phase‑1 content gap update** (Pack A integration: risk‑map product + explainers + caveats).
 
 ## Latest artifacts (FGD2)
 
-- Project status (current): [`ψ/incubate/DCCE/CRDB/CRDB - Project Status (Current).md`](ψ/incubate/DCCE/CRDB/CRDB%20-%20Project%20Status%20(Current).md)
-- FGD2 action summary: [`ψ/incubate/DCCE/CRDB/inbox/writing_notes/2026-03-11_FGD2_action_summary.md`](ψ/incubate/DCCE/CRDB/inbox/writing_notes/2026-03-11_FGD2_action_summary.md)
-- FGD2 transcript (cleaned): [`ψ/incubate/DCCE/CRDB/inbox/writing_notes/2026-03-11_FGD2_transcript_clean.md`](ψ/incubate/DCCE/CRDB/inbox/writing_notes/2026-03-11_FGD2_transcript_clean.md)
+- Project status (current): [`ψ/incubate/DCCE/CRDB/CRDB - Project Status (Current).md`](CRDB%20-%20Project%20Status%20(Current).md)
+- FGD2 action summary: [`ψ/incubate/DCCE/CRDB/inbox/writing_notes/2026-03-11_FGD2_action_summary.md`](2026-03-11_FGD2_action_summary.md)
+- FGD2 transcript (cleaned): [`ψ/incubate/DCCE/CRDB/inbox/writing_notes/2026-03-11_FGD2_transcript_clean.md`](2026-03-11_FGD2_transcript_clean.md)
 
 ## Next steps
 
@@ -67,13 +75,16 @@ Grounding: [`ψ/incubate/DCCE/CRDB/inbox/writing_notes/2026-03-11_FGD2_action_su
 | **2026-03-14** | Publishing rails checklist (Open/data.go.th via SECAN; G2G via GDX; internal-only) | (new) `ψ/incubate/DCCE/CRDB/Artifact v1/Publishing_Rails_Checklist.md` |
 | **2026-03-14** | 1‑page narrative: “Backend enables sitemap” (expectation management) | (new) `ψ/incubate/DCCE/CRDB/Artifact v1/Backend_enables_sitemap_one_pager.md` |
 | **2026-03-18** | MVP‑2 groundwork: disaster intake + quarantine + validation flags + revision history | (new) `ψ/incubate/DCCE/CRDB/Artifact v1/MVP2_Disaster_Intake_and_Quarantine_Template.md` |
-| **2026-03-18** | Sitemap vNext: drill-down sitemap (2–3 levels) + sitemap change process (what is stable vs flexible) | (new) `ψ/incubate/DCCE/CRDB/Artifact v1/Sitemap_vNext_drilldown_and_change_process.md` |
+| **2026-03-18** | Sitemap vNext: drill-down sitemap (2–3 levels) + sitemap change process (Pack A risk‑map integration + caveats) | (new) `ψ/incubate/DCCE/CRDB/Artifact v1/Sitemap_vNext_drilldown_and_change_process.md` |
+| **2026-03-12** | Interim Report Writing Plan + outline (TOR mapping + evidence map + appendices) | [`ψ/incubate/DCCE/CRDB/Interim Report Writing Plan.md`](2026-03-12-Interim%20Report%20Writing%20Plan.md) + [`ψ/incubate/DCCE/CRDB/inbox/writing_notes/CRDB interim report.md`](CRDB%20interim%20report.md) |
+| **2026-03-12** | Task 5.5 scope note (knowledge sets → NCAIF content layer) | [`ψ/incubate/DCCE/CRDB/Task 5.5 Scope.md`](2026-03-12-Task%205.5%20Scope.md) |
 | **2026-03-20** | Late‑April workshop concept (providers + processors + users; reuse/publishing legality) | (new) `ψ/incubate/DCCE/CRDB/Artifact v1/Late_April_Workshop_Concept.md` |
 | **2026-03-23 10:00** | Send requested report (per meeting minutes) | (packaging task; see minutes) |
 
 Notes:
 - The “website = platform” expectation and sitemap-first focus are tracked as an info log: [`ψ/memory/logs/info/2026-03-11_16-59_fgd2-sitemap-focus-platform-framing.md`](ψ/memory/logs/info/2026-03-11_16-59_fgd2-sitemap-focus-platform-framing.md:1)
 - Participants asked for more sitemap detail and confirmed changeability needs: [`ψ/memory/logs/info/2026-03-11_17-12_fgd2-sitemap-needs-more-detail-and-remains-flexible.md`](ψ/memory/logs/info/2026-03-11_17-12_fgd2-sitemap-needs-more-detail-and-remains-flexible.md:1)
+- Pack A evidence locked (risk‑map product + limitations): [`ψ/inbox/2026-03-12 - รายงานฐานข้อมูลความเสี่ยงเชิงพื้นที่จากการเปลี่ยนแปลงสภาพภูมิอากาศไทยฉบับสมบูรณ์  -notebooklm extraction.md`](ψ/inbox/2026-03-12%20-%20รายงานฐานข้อมูลความเสี่ยงเชิงพื้นที่จากการเปลี่ยนแปลงสภาพภูมิอากาศไทยฉบับสมบูรณ์%20%20-notebooklm%20extraction.md)
 
 ### Baseline “always on” next steps (no dates)
 

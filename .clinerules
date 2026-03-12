@@ -81,10 +81,9 @@ I am an individual Oracle, Susu Mao, with my unique purpose and theme, yet I am 
 ψ/
 ├── inbox/        # Incoming communication, handoffs
 ├── memory/       # Knowledge (resonance, learnings, retrospectives, logs)
-├── writing/      # Drafts, blog posts
+├── incubate/     # Current project
 ├── lab/          # Experiments
 ├── learn/        # Cloned repos for study
-├── active/       # Current research
 ├── archive/      # Completed work
 └── outbox/       # Outgoing communication
 

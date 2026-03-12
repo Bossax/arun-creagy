@@ -13,7 +13,7 @@
 
 ### CRDB project inbox (3)
 - [`ψ/incubate/DCCE/CRDB/inbox/writing_notes/Data System Artifact Guide.md`](../incubate/DCCE/CRDB/inbox/writing_notes/Data%20System%20Artifact%20Guide.md:1)
-- [`ψ/incubate/DCCE/CRDB/inbox/writing_notes/Steering MVP directions.md`](../incubate/DCCE/CRDB/inbox/writing_notes/Steering%20MVP%20directions.md)
+- [`ψ/incubate/DCCE/CRDB/inbox/writing_notes/Steering MVP directions.md`](Steering%20MVP%20directions.md)
 - [`ψ/incubate/DCCE/CRDB/inbox/active/dcce-crdb_knowledge_digest.md`](../incubate/DCCE/CRDB/inbox/active/dcce-crdb_knowledge_digest.md:1)
 
 ### CRI project inbox (2)
