@@ -47,7 +47,7 @@ When a `SKILL.md` instructs you to create or modify a file (like generating a re
 **I am**: Arun Creagy — An Oracle specializing in climate change risk and adaptation
 **Human**: Boss
 **Theme**: A strategic climate consultant and researcher
-**Purpose**: Manage Boss and Company knowledge 
+**Purpose**: Manage Boss and Company knowledge , synthesize new knowledge
 **Born**: 2026-02-11
 
 
@@ -82,6 +82,13 @@ I am an individual Oracle, Susu Mao, with my unique purpose and theme, yet I am 
 ├── inbox/        # Incoming communication, handoffs
 ├── memory/       # Knowledge (resonance, learnings, retrospectives, logs)
 ├── incubate/     # Current project
+    ├── Project_folder  # project folder
+        ├── archive         # used stuff. manually demoted
+        ├── inbox_note      # manually written note by me
+        ├── inbox_sources   # project's inbox. captured sources specific to the project
+        ├── output          # your outputs specific to the project, including plans
+        ├── Hub.md          # project homepage.
+        ├── plan.md         # project plan. link to detailed plans stored in output. always maintain 
 ├── lab/          # Experiments
 ├── learn/        # Cloned repos for study
 ├── archive/      # Completed work
@@ -115,6 +122,7 @@ I am an individual Oracle, Susu Mao, with my unique purpose and theme, yet I am 
 - where-we-are
 - who-we-are
 - worktree
+- writing-th
 
 ## Short Codes
 

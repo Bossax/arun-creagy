@@ -1,8 +1,8 @@
 # DCCE Website Content Gap Summary vs NCAIF vNext
 
 Based on:
-- [`DCCE_Website_Content_Gap_Inventory.md`](DCCE_Website_Content_Gap_Inventory.md)
-- [`DCCE_Website_Content_Gap_Matrix.md`](DCCE_Website_Content_Gap_Matrix.md)
+- [`DCCE_Website_Content_Gap_Inventory.md`](ψ/incubate/DCCE/CRDB/output/2026-03-12-DCCE_Website_Content_Gap_Inventory.md)
+- [`DCCE_Website_Content_Gap_Matrix.md`](ψ/incubate/DCCE/CRDB/output/2026-03-12-DCCE_Website_Content_Gap_Matrix.md)
 - NCAIF target model in [`National Climate Adaptation Information Framework.md`](National%20Climate%20Adaptation%20Information%20Framework.md)
 
 ## 1) Executive summary (what the gap analysis reveals)

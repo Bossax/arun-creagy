@@ -29,7 +29,7 @@ This document outlines the chosen implementation strategy for the DCCE-CRDB proj
 
 >[!Document]
 >1. [[Data_Governance_Charter]] Main data governance artifact. The rest is in [[Artifact v1]]
->2. [[Detailed_CDM_Design ]] - Current Conceptual Data Model
+>2. [[ψ/incubate/DCCE/CRDB/output/2026-02-26-Detailed_CDM_Design]] - Current Conceptual Data Model
 >3. [[Conceptual Data Model for climate risk and adaptation data system]] - Human-readable note on the progress of CDM development
 >4. [[NCAIF_Draft_Option1]] and [[NCAIF_Draft_Option2]] design detail of NCAIF
 >5. [[Cross_Analysis_Report CDM x NCAIF]] analysis report on suitability of NCAIF design options and detail of CDM

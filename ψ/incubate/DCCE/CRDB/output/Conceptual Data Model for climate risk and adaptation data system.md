@@ -434,7 +434,7 @@ erDiagram
 
 Refinement on 16 Feb
 1. Refine Adaptation Planning subject. The current structure is based on ISO 14090
-	1. research on ISO 14090, focusing on Adaptation Plan section [[ISO 14090 2019   “Adaptation to climate change — Principles, requirements and guidelines]]
+	1. research on ISO 14090, focusing on Adaptation Plan section [[ψ/incubate/DCCE/CRDB/inbox_source/2026-02-16-ISO 14090 2019   “Adaptation to climate change — Principles, requirements and guidelines]]
 	2. extract "decision-making" space processes and entities from [[Comprehensive Risk Management (CRM) - Full structure]]
 	3. analyze common structures 
 	4. design a new Adaptation Planning subject

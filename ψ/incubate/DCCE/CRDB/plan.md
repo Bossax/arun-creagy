@@ -3,12 +3,13 @@
 Operational plan for **CRDB-only** scope in this thread.
 
 Anchors:
-- Digest (onboarding): [`ψ/incubate/DCCE/CRDB/inbox/active/dcce-crdb_knowledge_digest.md`](dcce-crdb_knowledge_digest.md)
-- Decision log (confirmed): [`ψ/incubate/DCCE/CRDB/inbox/active/phase1_decision_log.md`](phase1_decision_log.md)
-- MVP/workflow patterns (current): [`ψ/incubate/DCCE/CRDB/NCAIF — Workflow patterns + MVP v3.md`](ψ/incubate/DCCE/CRDB/NCAIF%20%E2%80%94%20Workflow%20patterns%20%2B%20MVP%20v3.md)
-- Interim report writing plan: [`ψ/incubate/DCCE/CRDB/Interim Report Writing Plan.md`](2026-03-12-Interim%20Report%20Writing%20Plan.md)
-- Interim report outline (working): [`ψ/incubate/DCCE/CRDB/inbox/writing_notes/CRDB interim report.md`](CRDB%20interim%20report.md)
-- Task 5.5 scope (NCAIF knowledge sets): [`ψ/incubate/DCCE/CRDB/Task 5.5 Scope.md`](2026-03-12-Task%205.5%20Scope.md)
+- Digest (onboarding): [`ψ/incubate/DCCE/CRDB/inbox_source/dcce-crdb_knowledge_digest.md`](ψ/incubate/DCCE/CRDB/inbox_source/dcce-crdb_knowledge_digest.md)
+- Decision log (confirmed): [`ψ/incubate/DCCE/CRDB/output/phase1_decision_log.md`](ψ/incubate/DCCE/CRDB/output/phase1_decision_log.md)
+- MVP/workflow patterns (current): [`ψ/incubate/DCCE/CRDB/output/NCAIF — Workflow patterns + MVP v3.md`](ψ/incubate/DCCE/CRDB/output/NCAIF%20%E2%80%94%20Workflow%20patterns%20%2B%20MVP%20v3.md)
+- Interim report writing plan: [`ψ/incubate/DCCE/CRDB/output/2026-03-12-Interim Report Writing Plan.md`](ψ/incubate/DCCE/CRDB/output/2026-03-12-Interim%20Report%20Writing%20Plan.md)
+- Interim report outline (working): [`ψ/incubate/DCCE/CRDB/inbox_note/CRDB interim report.md`](ψ/incubate/DCCE/CRDB/inbox_note/CRDB%20interim%20report.md)
+- Section 1 synthesis analysis: [`ψ/incubate/DCCE/CRDB/output/2026-03-12_crdb-section1-cdm-mvp-evidence-analysis.md`](ψ/incubate/DCCE/CRDB/output/2026-03-12_crdb-section1-cdm-mvp-evidence-analysis.md)
+- Task 5.5 scope (NCAIF knowledge sets): [`ψ/incubate/DCCE/CRDB/output/2026-03-12-Task 5.5 Scope.md`](ψ/incubate/DCCE/CRDB/output/2026-03-12-Task%205.5%20Scope.md)
 
 ## Objectives
 
@@ -53,6 +54,7 @@ Phase 1 “ship list” (minimal, high-leverage):
 - **Uncertainty/publishing standard** (MVP-4 lite): minimum statements + misuse example + tiered guidance.
 - **Interim Report Writing Plan** (TOR mapping + evidence map + schedule).
 - **Interim Report Outline (working)** aligned to TOR 7.2.
+- **Section 1 synthesis analysis** (methodology + CDM/MVP positioning + evidence logic).
 - **Task 5.5 Scope note** (knowledge sets → NCAIF content layer).
 - **Phase‑1 content gap update** (Pack A integration: risk‑map product + explainers + caveats).
 
@@ -76,8 +78,8 @@ Grounding: [`ψ/incubate/DCCE/CRDB/inbox/writing_notes/2026-03-11_FGD2_action_su
 | **2026-03-14** | 1‑page narrative: “Backend enables sitemap” (expectation management) | (new) `ψ/incubate/DCCE/CRDB/Artifact v1/Backend_enables_sitemap_one_pager.md` |
 | **2026-03-18** | MVP‑2 groundwork: disaster intake + quarantine + validation flags + revision history | (new) `ψ/incubate/DCCE/CRDB/Artifact v1/MVP2_Disaster_Intake_and_Quarantine_Template.md` |
 | **2026-03-18** | Sitemap vNext: drill-down sitemap (2–3 levels) + sitemap change process (Pack A risk‑map integration + caveats) | (new) `ψ/incubate/DCCE/CRDB/Artifact v1/Sitemap_vNext_drilldown_and_change_process.md` |
-| **2026-03-12** | Interim Report Writing Plan + outline (TOR mapping + evidence map + appendices) | [`ψ/incubate/DCCE/CRDB/Interim Report Writing Plan.md`](2026-03-12-Interim%20Report%20Writing%20Plan.md) + [`ψ/incubate/DCCE/CRDB/inbox/writing_notes/CRDB interim report.md`](CRDB%20interim%20report.md) |
-| **2026-03-12** | Task 5.5 scope note (knowledge sets → NCAIF content layer) | [`ψ/incubate/DCCE/CRDB/Task 5.5 Scope.md`](2026-03-12-Task%205.5%20Scope.md) |
+| **2026-03-12** | Interim Report Writing Plan + outline + Section 1 synthesis anchor | [`ψ/incubate/DCCE/CRDB/output/2026-03-12-Interim Report Writing Plan.md`](ψ/incubate/DCCE/CRDB/output/2026-03-12-Interim%20Report%20Writing%20Plan.md) + [`ψ/incubate/DCCE/CRDB/inbox_note/CRDB interim report.md`](ψ/incubate/DCCE/CRDB/inbox_note/CRDB%20interim%20report.md) + [`ψ/incubate/DCCE/CRDB/output/2026-03-12_crdb-section1-cdm-mvp-evidence-analysis.md`](ψ/incubate/DCCE/CRDB/output/2026-03-12_crdb-section1-cdm-mvp-evidence-analysis.md) |
+| **2026-03-12** | Task 5.5 scope note (knowledge sets → NCAIF content layer) | [`ψ/incubate/DCCE/CRDB/output/2026-03-12-Task 5.5 Scope.md`](ψ/incubate/DCCE/CRDB/output/2026-03-12-Task%205.5%20Scope.md) |
 | **2026-03-20** | Late‑April workshop concept (providers + processors + users; reuse/publishing legality) | (new) `ψ/incubate/DCCE/CRDB/Artifact v1/Late_April_Workshop_Concept.md` |
 | **2026-03-23 10:00** | Send requested report (per meeting minutes) | (packaging task; see minutes) |
 

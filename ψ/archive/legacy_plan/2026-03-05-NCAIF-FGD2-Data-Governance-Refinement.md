@@ -28,7 +28,7 @@ type: "plan "
 	- [ ] Demonstration of user journeys using NCAIF and MVPs: DCCE communication and engagement team, adaptation measure development team, international  cooperation team (handle reporting and standard compliance)  
 - [ ] Refine [[FGD2_Slide_Deck_Guide]] to include exact wording and visual guide. The slide number can increase
 	- [ ] Slide 5 includes the interview plan and status. and how we use the interview results for
-	- [ ] The explanation of CDM must include the design principles; why the domains are grouped this way, key decisions (pick those that are relevant to most of the stakeholders) documented in  [[Conceptual Data Model for climate risk and adaptation data system]] and [[Detailed_CDM_Design ]]. This is crucial to secure the buy-in
+	- [ ] The explanation of CDM must include the design principles; why the domains are grouped this way, key decisions (pick those that are relevant to most of the stakeholders) documented in  [[Conceptual Data Model for climate risk and adaptation data system]] and [[ψ/incubate/DCCE/CRDB/output/2026-02-26-Detailed_CDM_Design]]. This is crucial to secure the buy-in
 	- [ ] Give exact Mentimeter questions. Provide extra for me to choose
 	- [ ] Take the user journeys from the above NCAIF documents to demonstrate in the meeting (slide 8 of the current structure, one journey per one slide)
 	- [ ] Governance phasing include background of data governance importance. refer to DGA recommendations and best practices
