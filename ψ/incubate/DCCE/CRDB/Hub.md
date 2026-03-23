@@ -7,6 +7,13 @@
 
 ## Current status
 - CRDB onboarding pack + Phase 1 decision log have been triaged into CRDB incubate inbox.
+- Interim report drafting in progress — latest working drafts:
+  - [`ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-Interim-Report-Chapter-1-Draft-v3 edited.md`](ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-Interim-Report-Chapter-1-Draft-v3%20edited.md)
+  - [`ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-Interim-Report-Chapter-1-review-v4.md`](ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-Interim-Report-Chapter-1-review-v4.md)
+  - [`ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-Interim-Report-Chapter-2-draft-edited.md`](ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-Interim-Report-Chapter-2-draft-edited.md)
+  - [`ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-Interim-Report-Chapter-2-review-v2.md`](ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-Interim-Report-Chapter-2-review-v2.md)
+  - [`ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-Interim-Report-Appendices-draft.md`](ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-Interim-Report-Appendices-draft.md)
+- Next-session writing focus captured in: [`ψ/incubate/DCCE/CRDB/output/2026-03-17-Next-Session-Plan-CRDB-Interim-Report.md`](ψ/incubate/DCCE/CRDB/output/2026-03-17-Next-Session-Plan-CRDB-Interim-Report.md)
 
 ## Latest (FGD2)
 
@@ -26,8 +33,15 @@
 - National Climate Adaptation Information Framework anchor [[National Climate Adaptation Information Framework]]
 - Interim report writing plan: [`ψ/incubate/DCCE/CRDB/output/2026-03-12-Interim Report Writing Plan.md`](ψ/incubate/DCCE/CRDB/output/2026-03-12-Interim%20Report%20Writing%20Plan.md)
 - Interim report outline (working): [`ψ/incubate/DCCE/CRDB/inbox_note/CRDB interim report.md`](ψ/incubate/DCCE/CRDB/inbox_note/CRDB%20interim%20report.md)
-- Section 1 synthesis analysis: [`ψ/incubate/DCCE/CRDB/output/2026-03-12_crdb-section1-cdm-mvp-evidence-analysis.md`](ψ/incubate/DCCE/CRDB/output/2026-03-12_crdb-section1-cdm-mvp-evidence-analysis.md)
-- Task 5.5 scope note: [`ψ/incubate/DCCE/CRDB/output/2026-03-12-Task 5.5 Scope.md`](ψ/incubate/DCCE/CRDB/output/2026-03-12-Task%205.5%20Scope.md)
+- Interim report chapter drafts (latest):
+  - [`ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-Interim-Report-Chapter-1-Draft-v3 edited.md`](ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-Interim-Report-Chapter-1-Draft-v3%20edited.md)
+  - [`ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-Interim-Report-Chapter-1-review-v4.md`](ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-Interim-Report-Chapter-1-review-v4.md)
+  - [`ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-Interim-Report-Chapter-2-draft-edited.md`](ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-Interim-Report-Chapter-2-draft-edited.md)
+  - [`ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-Interim-Report-Chapter-2-review-v2.md`](ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-Interim-Report-Chapter-2-review-v2.md)
+  - [`ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-Interim-Report-Appendices-draft.md`](ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-Interim-Report-Appendices-draft.md)
+  - [`ψ/incubate/DCCE/CRDB/output/2026-03-17-Next-Session-Plan-CRDB-Interim-Report.md`](ψ/incubate/DCCE/CRDB/output/2026-03-17-Next-Session-Plan-CRDB-Interim-Report.md)
+  - Section 1 synthesis analysis: [`ψ/incubate/DCCE/CRDB/output/2026-03-12_crdb-section1-cdm-mvp-evidence-analysis.md`](ψ/incubate/DCCE/CRDB/output/2026-03-12_crdb-section1-cdm-mvp-evidence-analysis.md)
+  - Task 5.5 scope note: [`ψ/incubate/DCCE/CRDB/output/2026-03-12-Task 5.5 Scope.md`](ψ/incubate/DCCE/CRDB/output/2026-03-12-Task%205.5%20Scope.md)
 
 ## Scope + roles (operating model)
 
