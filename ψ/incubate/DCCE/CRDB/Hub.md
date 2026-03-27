@@ -11,6 +11,14 @@
 - Evidence coverage map: [`ψ/incubate/DCCE/CRDB/output/CRDB-Evidence-Coverage-Map.md`](ψ/incubate/DCCE/CRDB/output/CRDB-Evidence-Coverage-Map.md)
 - Interim report writing anchor: [`ψ/incubate/DCCE/CRDB/output/2026-03-12-Interim Report Writing Plan.md`](ψ/incubate/DCCE/CRDB/output/2026-03-12-Interim%20Report%20Writing%20Plan.md)
 
+## Recent decision / meeting anchors (keep current)
+
+- Progress-meeting decisions (team synthesis, 2026-03-24): [`ψ/incubate/DCCE/CRDB/output/2026-03-24_CRDB-Progress-Meeting-Decisions.md`](ψ/incubate/DCCE/CRDB/output/2026-03-24_CRDB-Progress-Meeting-Decisions.md)
+- Progress-meeting summary (human notes, Dir Toey, 2026-03-27): [`ψ/incubate/DCCE/CRDB/output/2026-03-27_progress-meeting-summary_dir-toey.md`](ψ/incubate/DCCE/CRDB/output/2026-03-27_progress-meeting-summary_dir-toey.md)
+- DCCE org restructure context for CDM + data governance alignment: [`ψ/memory/logs/info/2026-03-27_09-24_dcce-org-restructure-cdm-data-governance-must-align.md`](ψ/memory/logs/info/2026-03-27_09-24_dcce-org-restructure-cdm-data-governance-must-align.md)
+- Dir Toey note: coordinate with Digital Tech group / unclear consultant scope: [`ψ/memory/logs/info/2026-03-27_09-22_dcce-digital-tech-group-consultant-scope-unclear.md`](ψ/memory/logs/info/2026-03-27_09-22_dcce-digital-tech-group-consultant-scope-unclear.md)
+- Interim report submission status note (edited version submitted; compare later): [`ψ/memory/logs/info/2026-03-27_10-17_submitted-edited-interim-report-compare-with-draft.md`](ψ/memory/logs/info/2026-03-27_10-17_submitted-edited-interim-report-compare-with-draft.md)
+
 ## Active architecture and synthesis anchors
 - NCAIF anchor: [`ψ/incubate/DCCE/CRDB/output/National Climate Adaptation Information Framework.md`](ψ/incubate/DCCE/CRDB/output/National%20Climate%20Adaptation%20Information%20Framework.md)
 - Workflow patterns and MVP stance: [`ψ/incubate/DCCE/CRDB/output/NCAIF — Workflow patterns + MVP v3.md`](ψ/incubate/DCCE/CRDB/output/NCAIF%20%E2%80%94%20Workflow%20patterns%20%2B%20MVP%20v3.md)
@@ -62,5 +70,8 @@ Use the evidence system below as the working entry point for non-archived CRDB e
   - Chapter 2 v3: [`ψ/incubate/DCCE/CRDB/output/2026-03-23-CRDB-Interim-Report-Chapter-2-review-v3.md`](ψ/incubate/DCCE/CRDB/output/2026-03-23-CRDB-Interim-Report-Chapter-2-review-v3.md)
   - Chapter 3 draft: [`ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-Interim-Report-Chapter-3-draft.md`](ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-Interim-Report-Chapter-3-draft.md)
   - Executive summary draft: [`ψ/incubate/DCCE/CRDB/output/2026-03-18-CRDB-Interim-Report-Executive-Summary-draft.md`](ψ/incubate/DCCE/CRDB/output/2026-03-18-CRDB-Interim-Report-Executive-Summary-draft.md)
+
+Submission (edited version):
+- Edited/submitted interim report snapshot (2026-03-27): [`ψ/incubate/DCCE/CRDB/inbox_source/2026-03-27-CRDB-interim-report-v3-edited.md`](ψ/incubate/DCCE/CRDB/inbox_source/2026-03-27-CRDB-interim-report-v3-edited.md)
 
 Status: The **23-Mar interim submission** recorded in [`ψ/inbox/handoff/2026-03-18_02-03_crdb-interim-report-23mar-submission-wrap.md`](ψ/inbox/handoff/2026-03-18_02-03_crdb-interim-report-23mar-submission-wrap.md) is a historical milestone, and the **planned Head-of-CCE interview pathway noted in late-March 2026 was dropped**; interview-dependent plans should now be treated as historical reference only.

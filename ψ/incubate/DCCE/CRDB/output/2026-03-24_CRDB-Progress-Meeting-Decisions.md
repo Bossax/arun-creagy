@@ -5,6 +5,8 @@
 - Source transcripts:
   - Base team meeting transcript: [`ψ/inbox/2026-03-24-transcript-climate-adapataiton-team.txt`](ψ/inbox/2026-03-24-transcript-climate-adapataiton-team.txt)
   - Additional context: [`ψ/inbox/2026-03-24-team-meeting-additional-context-transcript.md`](ψ/inbox/2026-03-24-team-meeting-additional-context-transcript.md)
+- Additional human summary (Thai working notes): [`ψ/incubate/DCCE/CRDB/output/2026-03-27_progress-meeting-summary_dir-toey.md`](ψ/incubate/DCCE/CRDB/output/2026-03-27_progress-meeting-summary_dir-toey.md)
+- Related org-structure context (for CDM/governance alignment): [`ψ/memory/logs/info/2026-03-27_09-24_dcce-org-restructure-cdm-data-governance-must-align.md`](ψ/memory/logs/info/2026-03-27_09-24_dcce-org-restructure-cdm-data-governance-must-align.md)
 - Focus: Decisions and directions affecting the **CRDB** project, especially the upcoming **progress meeting** and interim-report revision.
 
 ---

@@ -20,7 +20,8 @@
 				"oracle_supersede",
 				"oracle_inbox",
 				"oracle_trace_get",
-				"oracle_learn"
+				"oracle_learn",
+				"oracle_verify"
 			]
 		},
 		"notebooklm": {

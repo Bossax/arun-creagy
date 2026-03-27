@@ -2,6 +2,18 @@
 
 Operational plan for **CRDB-only** scope in this thread.
 
+Status (as of **2026-03-27**, ICT)
+
+- Latest sponsor/progress-meeting anchors:
+  - Decisions (structured): [`ψ/incubate/DCCE/CRDB/output/2026-03-24_CRDB-Progress-Meeting-Decisions.md`](ψ/incubate/DCCE/CRDB/output/2026-03-24_CRDB-Progress-Meeting-Decisions.md)
+  - Human summary (verbatim): [`ψ/incubate/DCCE/CRDB/output/2026-03-27_progress-meeting-summary_dir-toey.md`](ψ/incubate/DCCE/CRDB/output/2026-03-27_progress-meeting-summary_dir-toey.md)
+- Interim report: edited version submitted; keep a compare/diff task on the backlog:
+  - Status note: [`ψ/memory/logs/info/2026-03-27_10-17_submitted-edited-interim-report-compare-with-draft.md`](ψ/memory/logs/info/2026-03-27_10-17_submitted-edited-interim-report-compare-with-draft.md)
+  - Submitted snapshot: [`ψ/incubate/DCCE/CRDB/inbox_source/2026-03-27-CRDB-interim-report-v3-edited.md`](ψ/incubate/DCCE/CRDB/inbox_source/2026-03-27-CRDB-interim-report-v3-edited.md)
+- Governance watchpoints from sponsor context:
+  - Org restructure alignment: [`ψ/memory/logs/info/2026-03-27_09-24_dcce-org-restructure-cdm-data-governance-must-align.md`](ψ/memory/logs/info/2026-03-27_09-24_dcce-org-restructure-cdm-data-governance-must-align.md)
+  - Digital Tech group / consultant scope unclear: [`ψ/memory/logs/info/2026-03-27_09-22_dcce-digital-tech-group-consultant-scope-unclear.md`](ψ/memory/logs/info/2026-03-27_09-22_dcce-digital-tech-group-consultant-scope-unclear.md)
+
 Anchors:
 - Digest (onboarding): [`ψ/incubate/DCCE/CRDB/inbox_source/dcce-crdb_knowledge_digest.md`](ψ/incubate/DCCE/CRDB/inbox_source/dcce-crdb_knowledge_digest.md)
 - Decision log (confirmed): [`ψ/incubate/DCCE/CRDB/output/phase1_decision_log.md`](ψ/incubate/DCCE/CRDB/output/phase1_decision_log.md)
@@ -11,6 +23,32 @@ Anchors:
 - Section 1 synthesis analysis: [`ψ/incubate/DCCE/CRDB/output/2026-03-12_crdb-section1-cdm-mvp-evidence-analysis.md`](ψ/incubate/DCCE/CRDB/output/2026-03-12_crdb-section1-cdm-mvp-evidence-analysis.md)
 - Task 5.5 scope (NCAIF knowledge sets): [`ψ/incubate/DCCE/CRDB/output/2026-03-12-Task 5.5 Scope.md`](ψ/incubate/DCCE/CRDB/output/2026-03-12-Task%205.5%20Scope.md)
 - Interview ingestion traceability (FTI/UDDC/BMA/DPT): [2026-03-23-CRDB-Interview-Ingestion-Traceability-Note.md](ψ/incubate/DCCE/CRDB/output/2026-03-23-CRDB-Interview-Ingestion-Traceability-Note.md)
+
+Recent (keep current):
+- Progress-meeting decisions (team synthesis, 2026-03-24): [`ψ/incubate/DCCE/CRDB/output/2026-03-24_CRDB-Progress-Meeting-Decisions.md`](ψ/incubate/DCCE/CRDB/output/2026-03-24_CRDB-Progress-Meeting-Decisions.md)
+- Progress-meeting summary (human notes, Dir Toey, 2026-03-27): [`ψ/incubate/DCCE/CRDB/output/2026-03-27_progress-meeting-summary_dir-toey.md`](ψ/incubate/DCCE/CRDB/output/2026-03-27_progress-meeting-summary_dir-toey.md)
+- Interim report submission status note (edited version submitted; compare later): [`ψ/memory/logs/info/2026-03-27_10-17_submitted-edited-interim-report-compare-with-draft.md`](ψ/memory/logs/info/2026-03-27_10-17_submitted-edited-interim-report-compare-with-draft.md)
+- Edited/submitted interim report snapshot (2026-03-27): [`ψ/incubate/DCCE/CRDB/inbox_source/2026-03-27-CRDB-interim-report-v3-edited.md`](ψ/incubate/DCCE/CRDB/inbox_source/2026-03-27-CRDB-interim-report-v3-edited.md)
+- DCCE org restructure context for CDM + data governance alignment: [`ψ/memory/logs/info/2026-03-27_09-24_dcce-org-restructure-cdm-data-governance-must-align.md`](ψ/memory/logs/info/2026-03-27_09-24_dcce-org-restructure-cdm-data-governance-must-align.md)
+- Dir Toey note: coordinate with Digital Tech group / unclear consultant scope: [`ψ/memory/logs/info/2026-03-27_09-22_dcce-digital-tech-group-consultant-scope-unclear.md`](ψ/memory/logs/info/2026-03-27_09-22_dcce-digital-tech-group-consultant-scope-unclear.md)
+
+## Now / next / later (actionable)
+
+Now (this week)
+
+- [ ] Rewrite interim report v3 sections into **DCCE-facing prose** (paragraph-first; TOR headings only) and keep **internal traceability** in separate internal notes (do not mix internal “missing data” notes into public-facing prose).
+  - Workflow anchor/handoff: [`ψ/inbox/handoff/2026-03-26_08-30_crdb-interim-v3-style-mismatch-and-prose-rewrite.md`](ψ/inbox/handoff/2026-03-26_08-30_crdb-interim-v3-style-mismatch-and-prose-rewrite.md)
+- [ ] Create a short **management evidence pack** (1–2 pages) summarizing: progress, what changed after the meeting, and the next decisions needed.
+  - Decisions anchor: [`ψ/incubate/DCCE/CRDB/output/2026-03-24_CRDB-Progress-Meeting-Decisions.md`](ψ/incubate/DCCE/CRDB/output/2026-03-24_CRDB-Progress-Meeting-Decisions.md)
+- [ ] Update governance role-mapping prompts to reflect the planned DCCE re-org (avoid locking roles to an outdated org chart).
+  - Org restructure context: [`ψ/memory/logs/info/2026-03-27_09-24_dcce-org-restructure-cdm-data-governance-must-align.md`](ψ/memory/logs/info/2026-03-27_09-24_dcce-org-restructure-cdm-data-governance-must-align.md)
+
+Next (1–2 weeks)
+
+- [ ] Coordinate with the Digital Tech group / consultant initiative so CRDB “catalog-first” work aligns with any platform work (scope currently unclear).
+  - Coordination note: [`ψ/memory/logs/info/2026-03-27_09-22_dcce-digital-tech-group-consultant-scope-unclear.md`](ψ/memory/logs/info/2026-03-27_09-22_dcce-digital-tech-group-consultant-scope-unclear.md)
+- [ ] Compare submitted interim-report snapshot vs working drafts and record deltas (for traceability and style calibration).
+  - Submitted snapshot: [`ψ/incubate/DCCE/CRDB/inbox_source/2026-03-27-CRDB-interim-report-v3-edited.md`](ψ/incubate/DCCE/CRDB/inbox_source/2026-03-27-CRDB-interim-report-v3-edited.md)
 
 ## Objectives
 
@@ -23,7 +61,7 @@ Anchors:
 
 ## Decisions
 
-Confirmed decisions — user confirmation **2026-03-10 14:03 ICT (07:03Z)**. See [`ψ/incubate/DCCE/CRDB/inbox/active/phase1_decision_log.md`](phase1_decision_log.md)
+Confirmed decisions — user confirmation **2026-03-10 14:03 ICT (07:03Z)**. See [`ψ/incubate/DCCE/CRDB/output/phase1_decision_log.md`](ψ/incubate/DCCE/CRDB/output/phase1_decision_log.md)
 
 - MVP priority: **MVP-3** + **MVP-2** as Phase 1 core; keep MVP-1/MVP-4 lightweight.
 - Sitemap: **Option 3 (Hybrid / workflow-pattern-first)**.
@@ -74,11 +112,11 @@ Phase 1 “ship list” (minimal, high-leverage):
 
 ### FGD2-derived action plan (dated)
 
-Grounding: [`ψ/incubate/DCCE/CRDB/inbox/writing_notes/2026-03-11_FGD2_action_summary.md`](ψ/incubate/DCCE/CRDB/inbox/writing_notes/2026-03-11_FGD2_action_summary.md:99)
+Grounding: [`ψ/incubate/DCCE/CRDB/inbox/writing_notes/2026-03-11_FGD2_action_summary.md`](ψ/incubate/DCCE/CRDB/inbox/writing_notes/2026-03-11_FGD2_action_summary.md)
 
 | Due (ICT) | Action | Output artifact (planned) |
 |---|---|---|
-| **2026-03-12** | Update current CRDB project status (supersede outdated brief) | [`ψ/incubate/DCCE/CRDB/CRDB - Project Status (Current).md`](ψ/incubate/DCCE/CRDB/CRDB%20-%20Project%20Status%20(Current).md:1) |
+| **2026-03-12** | Update current CRDB project status (supersede outdated brief) | [`ψ/incubate/DCCE/CRDB/CRDB - Project Status (Current).md`](ψ/incubate/DCCE/CRDB/CRDB%20-%20Project%20Status%20(Current).md) |
 | **2026-03-14** | MVP‑3: Baseline Registry schema (include endorsement + intended use + recency/version + rail) | (new) `ψ/incubate/DCCE/CRDB/Artifact v1/Baseline_Registry_Schema.md` |
 | **2026-03-14** | Publishing rails checklist (Open/data.go.th via SECAN; G2G via GDX; internal-only) | (new) `ψ/incubate/DCCE/CRDB/Artifact v1/Publishing_Rails_Checklist.md` |
 | **2026-03-14** | 1‑page narrative: “Backend enables sitemap” (expectation management) | (new) `ψ/incubate/DCCE/CRDB/Artifact v1/Backend_enables_sitemap_one_pager.md` |
@@ -90,8 +128,8 @@ Grounding: [`ψ/incubate/DCCE/CRDB/inbox/writing_notes/2026-03-11_FGD2_action_su
 | **2026-03-23 10:00** | Send requested report (per meeting minutes) | (packaging task; see minutes) |
 
 Notes:
-- The “website = platform” expectation and sitemap-first focus are tracked as an info log: [`ψ/memory/logs/info/2026-03-11_16-59_fgd2-sitemap-focus-platform-framing.md`](ψ/memory/logs/info/2026-03-11_16-59_fgd2-sitemap-focus-platform-framing.md:1)
-- Participants asked for more sitemap detail and confirmed changeability needs: [`ψ/memory/logs/info/2026-03-11_17-12_fgd2-sitemap-needs-more-detail-and-remains-flexible.md`](ψ/memory/logs/info/2026-03-11_17-12_fgd2-sitemap-needs-more-detail-and-remains-flexible.md:1)
+- The “website = platform” expectation and sitemap-first focus are tracked as an info log: [`ψ/memory/logs/info/2026-03-11_16-59_fgd2-sitemap-focus-platform-framing.md`](ψ/memory/logs/info/2026-03-11_16-59_fgd2-sitemap-focus-platform-framing.md)
+- Participants asked for more sitemap detail and confirmed changeability needs: [`ψ/memory/logs/info/2026-03-11_17-12_fgd2-sitemap-needs-more-detail-and-remains-flexible.md`](ψ/memory/logs/info/2026-03-11_17-12_fgd2-sitemap-needs-more-detail-and-remains-flexible.md)
 - Pack A evidence locked (risk‑map product + limitations): [`ψ/inbox/2026-03-12 - รายงานฐานข้อมูลความเสี่ยงเชิงพื้นที่จากการเปลี่ยนแปลงสภาพภูมิอากาศไทยฉบับสมบูรณ์  -notebooklm extraction.md`](ψ/inbox/2026-03-12%20-%20รายงานฐานข้อมูลความเสี่ยงเชิงพื้นที่จากการเปลี่ยนแปลงสภาพภูมิอากาศไทยฉบับสมบูรณ์%20%20-notebooklm%20extraction.md)
 
 ### Baseline “always on” next steps (no dates)
