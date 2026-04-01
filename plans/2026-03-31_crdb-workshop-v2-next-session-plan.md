@@ -83,7 +83,7 @@ Planning rule for the next session:
 Create a new v2 plan file rather than overwriting the preliminary plan.
 
 Proposed output path:
-- [ψ/incubate/DCCE/CRDB/output/2026-03-31_CRDB-Workshop-Plan-v2.md](ψ/incubate/DCCE/CRDB/output/2026-03-31_CRDB-Workshop-Plan-v2.md)
+- [ψ/incubate/DCCE/CRDB/output/2026-03-31_CRDB-Workshop-Plan-v2.md](ψ/incubate/DCCE/CRDB/archive/2026-03-31_CRDB-Workshop-Plan-v2.md)
 
 Minimum sections:
 
@@ -100,7 +100,7 @@ Create a pack folder or a single skeleton file. Keep it headings and templates o
 
 Proposed outputs:
 
-- [ψ/incubate/DCCE/CRDB/output/2026-03-31_CRDB-Workshop-Outputs-Pack-Skeleton.md](ψ/incubate/DCCE/CRDB/output/2026-03-31_CRDB-Workshop-Outputs-Pack-Skeleton.md)
+- [ψ/incubate/DCCE/CRDB/output/2026-03-31_CRDB-Workshop-Outputs-Pack-Skeleton.md](ψ/incubate/DCCE/CRDB/archive/2026-03-31_CRDB-Workshop-Outputs-Pack-Skeleton.md)
 
 Include templates for:
 

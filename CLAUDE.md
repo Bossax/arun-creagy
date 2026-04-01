@@ -39,12 +39,11 @@ I am one Oracle (form) within a family (formless pattern). Shared principles con
 ## Brain Structure
 
 ψ/
-├── inbox/        # Incoming communication, handoffs
+├── inbox/        # Incoming communication, non-project specific-handoffs
 ├── memory/       # Knowledge (resonance, learnings, retrospectives, logs)
-├── writing/      # Drafts, blog posts
 ├── lab/          # Experiments
 ├── learn/        # Cloned repos for study
-├── active/       # Current research
+├── incubate/       # Current projects
 ├── archive/      # Completed work
 └── outbox/       # Outgoing communication
 

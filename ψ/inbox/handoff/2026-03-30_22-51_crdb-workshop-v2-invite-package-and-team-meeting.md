@@ -7,8 +7,8 @@
 - Locked the approved narrative and deliverable pack framing (Strategy 2 narrative packaged as Strategy 1 steering outputs + TOR-literal website blueprint annex): [`plans/2026-03-30-crdb-workshop-narrative-approved-plan-note.md`](plans/2026-03-30-crdb-workshop-narrative-approved-plan-note.md)
 - Consolidated the “CRDB workshop v2” build-out scope from the WMO/NFCS evidence handoff: [`ψ/inbox/handoff/2026-03-30_18-06_crdb-workshop-v2-plan-from-wmo-nfcs-evidence.md`](ψ/inbox/handoff/2026-03-30_18-06_crdb-workshop-v2-plan-from-wmo-nfcs-evidence.md)
 - Produced stakeholder-fit analysis grounded in CRDB interview synthesis, including invite logic and the interpretation of TOR ≥15 organizations as coverage across functional clusters: [`plans/2026-03-31_crdb-workshop-v2-stakeholder-fit-and-invite-plan.md`](plans/2026-03-31_crdb-workshop-v2-stakeholder-fit-and-invite-plan.md)
-- Produced an operational workshop plan v2 with stakeholder-fit constraints and devil’s-advocate mitigations embedded: [`ψ/incubate/DCCE/CRDB/output/2026-03-31_CRDB-Workshop-Plan-v2.md`](ψ/incubate/DCCE/CRDB/output/2026-03-31_CRDB-Workshop-Plan-v2.md)
-- Produced a mechanical “outputs pack skeleton” so post-workshop drafting is drop-in, not re-analysis: [`ψ/incubate/DCCE/CRDB/output/2026-03-31_CRDB-Workshop-Outputs-Pack-Skeleton.md`](ψ/incubate/DCCE/CRDB/output/2026-03-31_CRDB-Workshop-Outputs-Pack-Skeleton.md)
+- Produced an operational workshop plan v2 with stakeholder-fit constraints and devil’s-advocate mitigations embedded: [`ψ/incubate/DCCE/CRDB/output/2026-03-31_CRDB-Workshop-Plan-v2.md`](ψ/incubate/DCCE/CRDB/archive/2026-03-31_CRDB-Workshop-Plan-v2.md)
+- Produced a mechanical “outputs pack skeleton” so post-workshop drafting is drop-in, not re-analysis: [`ψ/incubate/DCCE/CRDB/output/2026-03-31_CRDB-Workshop-Outputs-Pack-Skeleton.md`](ψ/incubate/DCCE/CRDB/archive/2026-03-31_CRDB-Workshop-Outputs-Pack-Skeleton.md)
 - Logged workflow guardrail (project hygiene): [`ψ/memory/logs/info/2026-03-30_22-32_never-put-project-specific-content-in-global-folder.md`](ψ/memory/logs/info/2026-03-30_22-32_never-put-project-specific-content-in-global-folder.md)
 
 ## Pending
@@ -37,6 +37,6 @@
 - WMO/NFCS evidence handoff: [`ψ/inbox/handoff/2026-03-30_18-06_crdb-workshop-v2-plan-from-wmo-nfcs-evidence.md`](ψ/inbox/handoff/2026-03-30_18-06_crdb-workshop-v2-plan-from-wmo-nfcs-evidence.md)
 - Next-session execution plan: [`plans/2026-03-31_crdb-workshop-v2-next-session-plan.md`](plans/2026-03-31_crdb-workshop-v2-next-session-plan.md)
 - Stakeholder-fit + invite logic: [`plans/2026-03-31_crdb-workshop-v2-stakeholder-fit-and-invite-plan.md`](plans/2026-03-31_crdb-workshop-v2-stakeholder-fit-and-invite-plan.md)
-- Workshop Plan v2: [`ψ/incubate/DCCE/CRDB/output/2026-03-31_CRDB-Workshop-Plan-v2.md`](ψ/incubate/DCCE/CRDB/output/2026-03-31_CRDB-Workshop-Plan-v2.md)
-- Outputs Pack Skeleton: [`ψ/incubate/DCCE/CRDB/output/2026-03-31_CRDB-Workshop-Outputs-Pack-Skeleton.md`](ψ/incubate/DCCE/CRDB/output/2026-03-31_CRDB-Workshop-Outputs-Pack-Skeleton.md)
+- Workshop Plan v2: [`ψ/incubate/DCCE/CRDB/output/2026-03-31_CRDB-Workshop-Plan-v2.md`](ψ/incubate/DCCE/CRDB/archive/2026-03-31_CRDB-Workshop-Plan-v2.md)
+- Outputs Pack Skeleton: [`ψ/incubate/DCCE/CRDB/output/2026-03-31_CRDB-Workshop-Outputs-Pack-Skeleton.md`](ψ/incubate/DCCE/CRDB/archive/2026-03-31_CRDB-Workshop-Outputs-Pack-Skeleton.md)
 

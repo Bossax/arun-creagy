@@ -17,6 +17,9 @@ Thumbs.db
 Icon?
 ._*
 
+# 4.1 Local secrets / MCP config (do not commit)
+.roo/mcp.json
+
 # 5. Data & Big files
 *.xlsx
 *.xls

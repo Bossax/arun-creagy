@@ -6,8 +6,8 @@
   - WMO/NFCS evidence and build-out handoff: [`ψ/inbox/handoff/2026-03-30_18-06_crdb-workshop-v2-plan-from-wmo-nfcs-evidence.md`](ψ/inbox/handoff/2026-03-30_18-06_crdb-workshop-v2-plan-from-wmo-nfcs-evidence.md)
   - Next-session execution plan: [`plans/2026-03-31_crdb-workshop-v2-next-session-plan.md`](plans/2026-03-31_crdb-workshop-v2-next-session-plan.md)
   - Stakeholder-fit and invite logic: [`plans/2026-03-31_crdb-workshop-v2-stakeholder-fit-and-invite-plan.md`](plans/2026-03-31_crdb-workshop-v2-stakeholder-fit-and-invite-plan.md)
-  - Workshop Plan v2 (sessions, roles, devil s-advocate mitigations): [`ψ/incubate/DCCE/CRDB/output/2026-03-31_CRDB-Workshop-Plan-v2.md`](ψ/incubate/DCCE/CRDB/output/2026-03-31_CRDB-Workshop-Plan-v2.md)
-  - Outputs Pack Skeleton (post-workshop drafting): [`ψ/incubate/DCCE/CRDB/output/2026-03-31_CRDB-Workshop-Outputs-Pack-Skeleton.md`](ψ/incubate/DCCE/CRDB/output/2026-03-31_CRDB-Workshop-Outputs-Pack-Skeleton.md)
+  - Workshop Plan v2 (sessions, roles, devil s-advocate mitigations): [`ψ/incubate/DCCE/CRDB/output/2026-03-31_CRDB-Workshop-Plan-v2.md`](ψ/incubate/DCCE/CRDB/archive/2026-03-31_CRDB-Workshop-Plan-v2.md)
+  - Outputs Pack Skeleton (post-workshop drafting): [`ψ/incubate/DCCE/CRDB/output/2026-03-31_CRDB-Workshop-Outputs-Pack-Skeleton.md`](ψ/incubate/DCCE/CRDB/archive/2026-03-31_CRDB-Workshop-Outputs-Pack-Skeleton.md)
 - Handoff for this step: [`ψ/inbox/handoff/2026-03-30_22-51_crdb-workshop-v2-invite-package-and-team-meeting.md`](ψ/inbox/handoff/2026-03-30_22-51_crdb-workshop-v2-invite-package-and-team-meeting.md)
 
 You will have a **team meeting** before the next AI session, and you aim to:
