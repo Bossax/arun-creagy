@@ -509,3 +509,8 @@ For each subsection, record:
 
 - QA worksheet file: [ψ/lab/2026-03-29_foresight-2590-qa.md](ψ/lab/2026-03-29_foresight-2590-qa.md)
 - LLM execution instructions (personas + guardrails): [ψ/lab/2026-03-29_foresight-2590-agent-instructions.md](ψ/lab/2026-03-29_foresight-2590-agent-instructions.md)
+
+## 10) Link to Draft 2 writing plan (2026-04-02)
+
+- แผนร่างที่ 2 (issue-analysis-based) อยู่ที่: [ψ/lab/foresight-report-wrting/2026-04-02_foresight-2590-writing-plan-draft2.md](ψ/lab/foresight-report-wrting/2026-04-02_foresight-2590-writing-plan-draft2.md)
+- ใช้โครง canonical outline ในไฟล์ปัจจุบันเป็น “โครงหลัก” และใช้แผนร่างที่ 2 เป็นตัวกำหนดลำดับการแก้ไขและกติกา citation/semantic isolation

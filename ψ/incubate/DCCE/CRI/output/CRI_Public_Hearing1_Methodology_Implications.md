@@ -9,7 +9,7 @@ This note interprets Hearing 1 signals specifically for **CRI methodology** and 
 
 It should be read together with:
 
-- Hearing 1 summary (working note): [`2026-03-CRI_Phase2_Public_Hearing1_summary.md`](../inbox_note/2026-03-CRI_Phase2_Public_Hearing1_summary.md)
+- Hearing 1 summary (working note): [`2026-03-CRI_Phase2_Public_Hearing1_summary.md`](ψ/incubate/DCCE/CRI/inbox_note/2026-03-16-CRI_Phase2_Public_Hearing1_summary.md)
 - Decisions and signals: [`CRI_Phase2_Public_Hearing1_decisions_and_signals.md`](CRI_Phase2_Public_Hearing1_decisions_and_signals.md)
 
 ## 2. Impact Index (Phase 1) implications

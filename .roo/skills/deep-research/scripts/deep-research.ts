@@ -253,9 +253,14 @@ const chatPayload = {
 };
 logPayload("chat", chatPayload);
 await mqttPub(chatPayload);
-await logResponse("chat", { id: chatPayload.id }, 12);
-await Bun.sleep(6000);
-console.log("   ✓ Prompt sent");
+await logResponse("chat", { id: chatPayload.id }, 30);
+
+// Give Gemini enough time (≈30s) to generate the Deep Research plan
+// before attempting to click the "Start research" button. This aligns
+// with your requirement that the wait must happen **after step 3**.
+console.log("   ⏱ Waiting ~30s for Deep Research plan to be generated before clicking 'Start research'...");
+await Bun.sleep(30000);
+console.log("   ✓ Plan-generation wait after prompt complete");
 
 // Step 4: Click "Start research" button
 console.log("4️⃣ Starting research...");
@@ -267,11 +272,12 @@ const clickPayload = {
 };
 logPayload("clickText(Start research)", clickPayload);
 await mqttPub(clickPayload);
-await logResponse("clickText(Start research)", { id: clickPayload.id }, 12);
+// Allow a longer window for the browser to acknowledge the click
+await logResponse("clickText(Start research)", { id: clickPayload.id }, 30);
 console.log("   ✓ Research started!");
 
 // Step 5: Poll for results and auto-fetch
-console.log("5️⃣ Polling for Deep Research results...");
+console.log("5️⃣ Polling for Deep Research results (non-blocking for markdown export)...");
 await pollForResponse(240, 5000);
 
-console.log("\n🎉 Deep Research is running! Check your Gemini tab.\n");
+console.log("\n🎉 Deep Research automation steps complete (including wait after step 3). Check your Gemini tab for the live research status and results.\n");

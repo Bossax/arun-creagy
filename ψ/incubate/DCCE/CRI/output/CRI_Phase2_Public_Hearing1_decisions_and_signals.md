@@ -4,7 +4,7 @@
 
 This note distils **design stances, stakeholder requirements, tensions and open questions** emerging from **CRI Phase 2 Public Hearing 1**. It should be read together with:
 
-- Hearing 1 summary (working note): [`2026-03-CRI_Phase2_Public_Hearing1_summary.md`](../inbox_note/2026-03-CRI_Phase2_Public_Hearing1_summary.md)
+- Hearing 1 summary (working note): [`2026-03-CRI_Phase2_Public_Hearing1_summary.md`](ψ/incubate/DCCE/CRI/inbox_note/2026-03-16-CRI_Phase2_Public_Hearing1_summary.md)
 - Cleaned transcripts:
   - [`2026-03-CRI_Public_Hearing_Phase2_Framework_Part1_transcript_clean.md`](../inbox_source/2026-03-CRI_Public_Hearing_Phase2_Framework_Part1_transcript_clean.md)
   - [`2026-03-CRI_Public_Hearing_Phase2_Framework_Part2_transcript_clean.md`](../inbox_source/2026-03-CRI_Public_Hearing_Phase2_Framework_Part2_transcript_clean.md)
