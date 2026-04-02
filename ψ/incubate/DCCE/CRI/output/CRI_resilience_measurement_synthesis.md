@@ -19,9 +19,9 @@ This note summarizes key insights from AI_output reviews on resilience measureme
 
 Sources:
 
-- [`Approaches of resilience measurement.md`](../sources/Approaches%20of%20resilience%20measurement.md)
-- [`Climate and disaster resilience measurement - Persistent gaps in multiple hazards, methods, and practicability.md`](../sources/Climate%20and%20disaster%20resilience%20measurement%20-%20Persistent%20gaps%20in%20multiple%20hazards%2C%20methods%2C%20and%20practicability.md)
-- [`Process-Based and Governance-Oriented Frameworks for Measuring Climate Resilience - Consensus.AI.md`](../sources/Process-Based%20and%20Governance-Oriented%20Frameworks%20for%20Measuring%20Climate%20Resilience%20-%20Consensus.AI.md)
+- [[ψ/incubate/DCCE/CRI/inbox_source/Approaches of resilience measurement|Approaches of resilience measurement]]
+- [[ψ/incubate/DCCE/CRI/inbox_source/Climate and disaster resilience measurement - Persistent gaps in multiple hazards, methods, and practicability|Climate and disaster resilience measurement - Persistent gaps in multiple hazards, methods, and practicability]]
+- [[ψ/incubate/DCCE/CRI/inbox_source/Process-Based and Governance-Oriented Frameworks for Measuring Climate Resilience - Consensus.AI|Process-Based and Governance-Oriented Frameworks for Measuring Climate Resilience - Consensus.AI]]
 
 **Key points**
 
@@ -40,9 +40,8 @@ Sources:
 
 Sources:
 
-- [`The search for the perfect indicator Reflections on monitoring and evaluation of resilience for improved climate risk m.md`](../sources/The%20search%20for%20the%20perfect%20indicator%20Reflections%20on%20monitoring%20and%20evaluation%20of%20resilience%20for%20improved%20climate%20risk%20m.md)
-- [`Approaches of resilience measurement.md`](../sources/Approaches%20of%20resilience%20measurement.md)
-
+- [[ψ/incubate/DCCE/CRI/inbox_source/The search for the perfect indicator Reflections on monitoring and evaluation of resilience for improved climate risk m|The search for the perfect indicator Reflections on monitoring and evaluation of resilience for improved climate risk m]]
+- [[ψ/incubate/DCCE/CRI/inbox_source/Approaches of resilience measurement|Approaches of resilience measurement]]
 **Key points**
 
 - Aggregated quantitative indicators can create **perverse incentives** (e.g., rewarding projects that protect wealthy areas because they maximize "assets saved").
@@ -58,18 +57,18 @@ Sources:
 
 Sources:
 
-- [`Process-Based and Governance-Oriented Frameworks for Measuring Climate Resilience - Consensus.AI.md`](../sources/Process-Based%20and%20Governance-Oriented%20Frameworks%20for%20Measuring%20Climate%20Resilience%20-%20Consensus.AI.md)
-- [`Local Performance Assessment LPA - indicator list.md`](../sources/Local%20Performance%20Assessment%20LPA%20-%20indicator%20list.md)
-- [`Sustainable City Assessment- DCCE.md`](../sources/Sustainable%20City%20Assessment-%20DCCE.md)
+- [[ψ/incubate/DCCE/CRI/inbox_source/Process-Based and Governance-Oriented Frameworks for Measuring Climate Resilience - Consensus.AI|Process-Based and Governance-Oriented Frameworks for Measuring Climate Resilience - Consensus.AI]]
+- [[ψ/incubate/DCCE/CRI/inbox_source/Local Performance Assessment LPA - indicator list|Local Performance Assessment LPA - indicator list]]
+- [[ψ/incubate/DCCE/CRI/inbox_source/Sustainable City Assessment- DCCE|Sustainable City Assessment- DCCE]]
 
-Note: these three sources live under the project `sources/` directory.
+Note: these three sources live under the project `inbox_source/` directory.
 
 **Key points**
 
 - Process-based frameworks evaluate:
-  - Inclusivity and participation in planning.
-  - Institutional learning and flexibility.
-  - Collaboration and multi-actor governance.
+	- Inclusivity and participation in planning.
+	- Institutional learning and flexibility.
+	- Collaboration and multi-actor governance.
 - Many tools combine **expert judgment, participatory workshops, and structured rubrics** rather than relying only on survey data.
 
 **Implications for CRI**
@@ -81,9 +80,9 @@ Note: these three sources live under the project `sources/` directory.
 
 Sources:
 
-- [`CRI_Capacity_Tagging_Dictionary.md`](CRI_Capacity_Tagging_Dictionary.md)
-- [`CRI_Capacity_Tagging_Dictionary_Observations.md`](../notes/CRI_Capacity_Tagging_Dictionary_Observations.md)
-- [`Local Performance Assessment LPA - indicator list.md`](../sources/Local%20Performance%20Assessment%20LPA%20-%20indicator%20list.md)
+- [[ψ/incubate/DCCE/CRI/output/CRI_Capacity_Tagging_Dictionary|CRI_Capacity_Tagging_Dictionary]]
+- [[ψ/incubate/DCCE/CRI/inbox_note/CRI_Capacity_Tagging_Dictionary_Observations|CRI_Capacity_Tagging_Dictionary_Observations]]
+- [[ψ/incubate/DCCE/CRI/inbox_source/Local Performance Assessment LPA - indicator list|Local Performance Assessment LPA - indicator list]]
 
 **Key points**
 
@@ -104,7 +103,7 @@ Sources:
 
 Sources:
 
-- [`Climate and disaster resilience measurement - Persistent gaps in multiple hazards, methods, and practicability.md`](Climate%20and%20disaster%20resilience%20measurement%20-%20Persistent%20gaps%20in%20multiple%20hazards%2C%20methods%2C%20and%20practicability.md)
+- [[ψ/incubate/DCCE/CRI/inbox_source/Climate and disaster resilience measurement - Persistent gaps in multiple hazards, methods, and practicability|Climate and disaster resilience measurement - Persistent gaps in multiple hazards, methods, and practicability]]
 
 **Key points**
 

@@ -7,21 +7,26 @@ This hub is for **DCCE / CRI only**.
 - **Out-of-scope:** CRDB and other streams (unless explicitly referenced as a dependency).
 
 ## Purpose
-Single navigation + execution entry point for CRI: plan, status, key docs, and the triaged inbox.
+Single navigation + execution entry point for CRI: project overview, canonical project-management ledgers, key methodology docs, and the local source inbox.
 
-## Current status (as of 2026-03-10)
-- CRI inbox folders created (mirroring CRDB pattern):
-	- Active reference material: [inbox/active/](inbox/active/)
-	- Writing notes / drafts: [inbox/writing_notes/](inbox/writing_notes/)
-- Triage completed: CRI items moved from the global triage folders into the CRI inbox.
+## Project navigation
+- Project plan (operating surface): [plan.md](plan.md)
 
-## Key docs (anchors)
-- Plan (execution checklist): [plan.md](plan.md)
+### Project management anchors (CRI canonical ledgers)
+These ledgers are the canonical, append-first management surfaces for CRI. Use them as the primary way to record why/what/when things changed, rather than updating prose checklists in this hub.
+
+- Trigger Log: [CRI-Trigger-Log.md](CRI-Trigger-Log.md)
+- Deliverable Map: [CRI-Deliverable-Map.md](CRI-Deliverable-Map.md)
+- Claim Register: [CRI-Claim-Register.md](CRI-Claim-Register.md)
+- Submission Log: [CRI-Submission-Log.md](CRI-Submission-Log.md)
+- Change Log: [CRI-Change-Log.md](CRI-Change-Log.md)
+
+### Key docs (methodology & analysis anchors)
 - Phase 1 methodology (Impact Index / Fiscal Relief framing, hybrid data model): [CRI Phase 1 Methodology.md](CRI Phase 1 Methodology.md)
 - Phase 2 methodology (SES pivot, capacity multi-scores/profiles, asset vs process structure, two-speed measurement): [CRI Phase 2 Methodology.md](CRI Phase 2 Methodology.md)
 - Urban resilience frameworks analysis (profiling pattern, confidence overlay): [CRI_Urban_Resilience_Frameworks_Analysis.md](CRI_Urban_Resilience_Frameworks_Analysis.md)
 - Capacity tagging dictionary (indicator rules + crosswalk): [CRI_Capacity_Tagging_Dictionary.md](CRI_Capacity_Tagging_Dictionary.md)
-- Scratchpad output: [output.md](output.md)
+
 
 ## Evidence & registries
 
@@ -31,27 +36,21 @@ Single navigation + execution entry point for CRI: plan, status, key docs, and t
 - Working status brief (snapshot of early Phase 2 strategy; evidence only): [output/CRI_Working Status Brief.md](output/CRI_Working Status Brief.md)
 - AI evidence index (map of AI-assisted sources to methodology sections): [output/CRI_AI_sources_index.md](output/CRI_AI_sources_index.md)
 
-## Inbox (triaged)
-### Active (reference material)
-- [inbox/active/](inbox/active/)
-- Clarification notes are stored under the CRI active inbox (e.g., [Clarification on CRI project.md](inbox/active/Clarification on CRI project.md)).
+## Inbox / triage
+### Source intake
+- Local source intake for CRI (project inbox): [inbox_source/](inbox_source/)
 
-### Writing notes (draft thinking)
-- [inbox/writing_notes/](inbox/writing_notes/)
+### Notes
+- Project-level scratchpad / notes: [inbox_note/](inbox_note/)
 
 ## Assets
 - Assets root: [assets/](assets/)
 - Attachments: [assets/attachments/](assets/attachments/)
 
-## Immediate priorities
-- Confirm CRI scope + output contract: **multi-scores by capacity type + profile + gap diagnostics + confidence overlay**.
-  - No single composite resilience score.
-  - Capacity indicators should be structured as **asset vs process** (via the tagging dictionary).
-- Use the triaged inbox to:
-  - capture decisions directly in the plan (no dedicated decision log artifact)
-  - tighten citations for Phase 1–2 methodology
-  - shortlist candidate indicators for capacity tagging
-- Prepare a consultation storyline that clearly explains:
-  - why **Fiscal Relief** is not “total loss”
-  - why “0” may mean missing (administrative gap)
-  - why capacity **profiles** are more actionable than a single rank
+## Immediate priorities (reading order, not a task list)
+- Use the **Project management anchors** section above as the primary entry point for status and history (Triggers, Deliverables, Claims, Submissions, Changes).
+- Treat this hub as a navigation aid into:
+	- the plan: [plan.md](plan.md)
+	- methodology anchors (Phase 1 / Phase 2 / tagging / frameworks)
+	- evidence registries.
+- When new events, decisions, or submissions occur, append rows to the relevant ledgers rather than updating this section.

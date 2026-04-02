@@ -9,6 +9,17 @@ This plan is for **DCCE / CRI only**.
 ## Purpose
 Operational plan for CRI: what we are producing, what we depend on, and what to do next.
 
+This plan is **not** a standalone task tracker. It works together with the CRI project-management ledgers, which are the canonical, append-first surfaces for triggers, deliverables, claims, submissions, and changes.
+
+### Project management anchors (CRI canonical ledgers)
+For day-to-day management and history, use these ledgers as the primary control surfaces. When tasks, decisions, or scope changes occur, record them by appending new rows to the relevant ledger rather than editing past entries in this plan.
+
+- Trigger Log (why something started or changed): [CRI-Trigger-Log.md](CRI-Trigger-Log.md)
+- Deliverable Map (what exists / must exist): [CRI-Deliverable-Map.md](CRI-Deliverable-Map.md)
+- Claim Register (what we are asserting): [CRI-Claim-Register.md](CRI-Claim-Register.md)
+- Submission Log (what we sent to whom, when): [CRI-Submission-Log.md](CRI-Submission-Log.md)
+- Change Log (what we changed and why): [CRI-Change-Log.md](CRI-Change-Log.md)
+
 ## Key outputs (deliverables)
 1) **Impact Index (Phase 1):** “Fiscal Relief” + Human Impact composite, with explicit data lineage and gap flags.
    - Anchor: [CRI Phase 1 Methodology.md](CRI Phase 1 Methodology.md)
@@ -32,17 +43,17 @@ Operational plan for CRI: what we are producing, what we depend on, and what to 
 ### Data dependencies
 - **DDPM**: deaths + affected series for Human Impact pillar (Phase 1).
 - **Fiscal relief / emergency support (Phase 1 economic pillar proxy):** use the **best available proxy for all sectors**, not agriculture-only.
-  - **Central emergency funds (เงินทดรองราชการ)** may be the better cross-sector proxy even if incomplete.
-  - **OAE** agricultural relief payments remain a useful partial stream (esp. agriculture), but should not be treated as the only numerator by default.
+	- **Central emergency funds (เงินทดรองราชการ)** may be the better cross-sector proxy even if incomplete.
+	- **OAE** agricultural relief payments remain a useful partial stream (esp. agriculture), but should not be treated as the only numerator by default.
 - **NESDC**: GPP denominator (explicitly document whether total vs sectoral; note known bias when only total GPP is available).
 - **DOPA**: official population registration (Tabien Baan) totals for constrained redistribution.
 - **Global / spatial**: WorldPop, ESA WorldCover, hazard masks (GISTDA) for redistribution and gap-flagging.
 
 ### Method dependencies
 - **Constrained Redistribution** (non-negotiable): global data used to disaggregate, totals constrained to official stats.
-  - Anchor: [CRI Phase 1 Methodology.md](CRI Phase 1 Methodology.md)
+  - Anchor: [[ψ/incubate/DCCE/CRI/output/CRI Phase 1 Methodology|CRI Phase 1 Methodology]]
 - **Two-speed measurement stance**: baseline administrative proxies now; target process-quality metrics later.
-  - Anchor: [CRI Phase 2 Methodology.md](CRI Phase 2 Methodology.md)
+  - Anchor: [[ψ/incubate/DCCE/CRI/output/CRI Phase 2 Methodology|CRI Phase 2 Methodology]]
 
 ## Working baseline (what is already “locked”)
 Based on current CRI docs, treat these as the default baseline unless we explicitly revise them:
@@ -54,12 +65,12 @@ Based on current CRI docs, treat these as the default baseline unless we explici
   - Indicators structured as **asset vs process** (via the tagging dictionary).
 
 ## Triage (where the working materials now live)
-- Active reference material: [inbox/active/](inbox/active/)
-- Writing notes / drafts: [inbox/writing_notes/](inbox/writing_notes/)
+- Source intake (local project inbox for CRI): [inbox_source/](inbox_source/)
+- Inbox note (local scratchpad / guidance note for this project): [inbox_note/](inbox_note/)
 
 ## Immediate priorities (next 1–2 weeks)
 
-> Decisions and tasking under this section should be backed by entries in `output/CRI-Evidence-Registry.md` and reflected in `output/CRI-Evidence-Coverage-Map.md` as evidence is locked in.
+> Decisions and tasking under this section should be backed by entries in `output/CRI-Evidence-Registry.md` and reflected in `output/CRI-Evidence-Coverage-Map.md` as evidence is locked in. Where a decision changes scope, outputs, or commitments, also append a corresponding row in the CRI Change Log and/or Trigger Log.
 1) **Operationalize the gap-flag protocol**
    - Define the rule precisely: hazard observed AND admin relief=0 ⇒ “Administrative Gap” (not low risk).
    - Implement + document in a short “Data Quality Flag” note inside the Phase 1 pipeline.

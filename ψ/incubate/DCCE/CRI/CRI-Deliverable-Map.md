@@ -1,0 +1,38 @@
+# CRI Deliverable Map
+
+## Purpose
+
+This ledger tracks **key deliverable units** for the CRI project and connects them to triggers, decisions, and evidence. It implements the "deliverable unit" pattern used in [`ψ/incubate/DCCE/CRDB/CRDB-Deliverable-Map.md`](ψ/incubate/DCCE/CRDB/CRDB-Deliverable-Map.md) and supports end-to-end traceability from question or requirement to submission, for **DCCE / CRI**.
+
+## Usage and maintenance
+
+- Focus on **high-leverage deliverables** (methodology packs, hearing summaries, indicator designs, governance notes) rather than every micro-note.
+- Add one row when a deliverable becomes operationally important (drafting, review, or submission).
+- When a deliverable supersedes a previous one, add a new row and reference the earlier ID in **Notes**; do not delete older rows.
+- Keep links consistent with:
+  - triggers in [`CRI-Trigger-Log.md`](ψ/incubate/DCCE/CRI/CRI-Trigger-Log.md)
+  - evidence in [`output/CRI-Evidence-Registry.md`](ψ/incubate/DCCE/CRI/output/CRI-Evidence-Registry.md) and the coverage map [`output/CRI-Evidence-Coverage-Map.md`](ψ/incubate/DCCE/CRI/output/CRI-Evidence-Coverage-Map.md)
+  - submissions in [`CRI-Submission-Log.md`](ψ/incubate/DCCE/CRI/CRI-Submission-Log.md)
+  - any CRI decision / change logs introduced in later steps
+
+> [!pattern]
+> Treat this file as the **canonical index for CRI deliverables**. It should answer "what exists", "what is planned", and "how it connects" without requiring readers to scan all folders.
+
+## Deliverable map
+
+| Deliverable ID | Output artifact                                                   | Audience                                      | Purpose                                                                                                                                                | Related triggers                            | Decision dependencies                                                                    | Evidence basis                                   | Current status | Next review / checkpoint                                                       | Notes                                                                                                                                                                         |
+| -------------- | ----------------------------------------------------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| D-CRI-001      | (this file) `CRI-Deliverable-Map.md`                              | Project team, Oracle                          | Canonical index for CRI deliverables and their dependencies.                                                                                           | T-CRI-001 (and later triggers, once logged) | CRI project-management migration stance (captured in CRI PM planning notes)              | Summary across evidence registry entries E-CRI-* | Active         | Review whenever a new major CRI deliverable is created or a submission occurs. | This file is itself a deliverable; keep fields stable and expand rows over time.                                                                                              |
+| D-CRI-002      | `output/CRI_Phase2_Public_Hearing1_decisions_and_signals.md`      | DCCE, project team, Oracle, methodology users | Distil validated design stances, stakeholder requirements, tensions and open questions from Public Hearing 1 for Phase 1 and Phase 2 methodology work. | T-CRI-001                                   | CRI Phase 2 methodology stance (impact vs capacity; profile-over-ranking; data-richness) | E-CRI-010, E-CRI-011, E-CRI-012, E-CRI-013       | Active         | Revisit after Hearing 2 when methodology revisions are drafted.                | Treat as the canonical design-signal companion to Phase 2 methodology for the hearing phase; supersede with a new deliverable ID if later hearings materially change stances. |
+| D-CRI-003      | `output/CRI_Public_Hearing1_Methodology_Implications.md`          | Methodology authors, technical reviewers      | Translate Public Hearing 1 discussion into concrete implications and recommended edits for Phase 1 and Phase 2 methodology documents.                  | T-CRI-001                                   | Updates to CRI Phase 1 and Phase 2 methodology docs                                      | E-CRI-012, E-CRI-013, E-CRI-014                  | Active         | When Phase 1 and Phase 2 methodology documents are next revised.               | Functions as an internal bridge between hearing evidence and formal methodology text; log superseding deliverables if and when the methodologies are updated.                 |
+| D-CRI-004      | `output/CRI_Public_Hearing1_Implementation_Governance_Signals.md` | DCCE, DLA, line ministries, city networks     | Capture how agencies expect to use CRI and what enabling conditions, tooling and capacity-building they need for implementation and governance.        | T-CRI-001                                   | Future CRI implementation and governance decisions                                       | E-CRI-012, E-CRI-013, E-CRI-015                  | Active         | Once a CRI implementation plan or governance contract is drafted.              | Serves as the implementation/governance companion to the methodology implications note; should be linked from any CRI implementation plan.                                    |
+
+## Practical reading order
+
+1. Start here to identify **which CRI deliverables exist** and which are planned.
+2. For a given deliverable row, follow:
+   - **Related triggers** → [`CRI-Trigger-Log.md`](ψ/incubate/DCCE/CRI/CRI-Trigger-Log.md)
+   - **Decision dependencies** → CRI decision / change logs (once established)
+   - **Evidence basis** → [`output/CRI-Evidence-Registry.md`](ψ/incubate/DCCE/CRI/output/CRI-Evidence-Registry.md) and the coverage map
+3. Use [`CRI-Submission-Log.md`](ψ/incubate/DCCE/CRI/CRI-Submission-Log.md) to see when a deliverable was actually sent or frozen.
+
