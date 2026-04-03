@@ -92,16 +92,27 @@ Notes:
 
 ## Style precedence (important)
 
-This skill uses **layered style**:
+This skill uses **layered style**, with two phases:
 
-1) **Example report (session reference)** — PRIMARY for terminology + section flow.
-2) **Session style pack summary (written into the plan)** — explicit “what we decided today”.
+### Phase A — Before any project session style pack exists
+
+1) **Example report (session reference)** — primary for terminology + section flow, within bounds of the layers below.
+2) **Project style brief (if present)** — binding voice/tone/concept framing for this deliverable.
 3) **Persistent resonance (safety rails)** — baseline constraints that must not be violated:
    - [`ψ/memory/resonance/writing-style-th.md`](ψ/memory/resonance/writing-style-th.md)
    - [`ψ/memory/resonance/citation-style-th.md`](ψ/memory/resonance/citation-style-th.md)
-4) **Learnings tagged writing-th** — evolving patterns.
+4) **Learnings tagged writing-th** — evolving patterns from previous projects/sessions.
 
-If example style conflicts with resonance safety rails (citations, hedging, no hallucinated sources), **resonance wins**.
+### Phase B — After a project session style pack exists
+
+1) **Example report (session reference)** — primary for terminology + section flow, **within the bounds of the layers below**.
+2) **Project Session Style Pack file** — project-specific rules that crystallized from human-edited drafts and `/writing-th-learn` patterns (e.g., `plans/<project>-writing-style-pack.md`).
+3) **Project style brief (if present)** — binding voice/tone/concept framing for the deliverable.
+4) **Persistent resonance (safety rails)** — global constraints for writing and citations.
+5) **Learnings tagged writing-th** — additional global patterns.
+
+If example style conflicts with a project Session Style Pack, project style brief, or resonance, **the pack + brief + resonance win**.
+
 
 ---
 
@@ -125,7 +136,7 @@ If example style conflicts with resonance safety rails (citations, hedging, no h
 
 ---
 
-## Workflow (Option C: session pack + optional promotion)
+## Workflow
 
 ### Step 0 — Decide mode
 
@@ -150,49 +161,51 @@ Then read the user-provided example report file (path from the writing plan) to 
 - paragraph rhythm (length, transitions)
 - typical “summary blocks” vs narrative
 
-### Step 2 — Write Session Style Pack Summary into the plan (append-only)
+### Step 2 — Session Style Pack handling
 
-Append a new block to the writing plan:
+There are two cases:
 
-```
-## Session Style Pack Summary (YYYY-MM-DD HH:MM)
+1) **No project Session Style Pack yet (first drafting phase)**
 
-### Primary reference
-- Example report: <path>
+- Do **not** create a Session Style Pack file yet.
+- Use only:
+  - resonance (writing-style-th + citation-style-th),
+  - existing learnings tagged `writing-th`,
+  - example report(s),
+  - project style brief (ถ้ามี).
+- Proceed to Step 3 (Outline) and Step 4 (Draft) using these layers.
 
-### Terminology (preferred)
-- ...
+2) **Project Session Style Pack exists**
 
-### Section flow
-- ...
+- Load the Session Style Pack file referenced in the writing plan (เช่น `plans/<project>-writing-style-pack.md`).
+- Append a new "Session Style Pack Summary" block into that file (append-only):
 
-### Voice + constraints (safety rails)
-- (from resonance)
+  ```markdown
+  ## Session Style Pack Summary (YYYY-MM-DD HH:MM)
 
-### Citations
-- ...
+  ### Primary reference
+  - Example report: <path>
+  - Project style brief (if any): <path>
 
-### Placeholders
-- [ต้องเติมตัวเลข] / [ต้องเติมแหล่งอ้างอิง] ...
-```
+  ### Terminology (preferred)
+  - ...
+
+  ### Section flow
+  - ...
+
+  ### Voice + constraints (safety rails)
+  - (from resonance + project brief)
+
+  ### Citations
+  - ...
+
+  ### Placeholders
+  - [ต้องเติมตัวเลข] / [ต้องเติมแหล่งอ้างอิง] ...
 
 Notes:
 
 - The summary is **session-scoped** and must not overwrite past summaries.
 
-#### Summary-only vs full style-pack file
-
-Default is **summary-only** (in the plan). Create a separate full style-pack file when:
-
-- The deliverable is multi-section / long-running (many drafts over days), or
-- Multiple humans contribute edits (need one shared contract), or
-- You need a reusable “mini-standard” for a specific sponsor/program.
-
-Recommended full-pack naming (example):
-
-- `YYYY-MM-DD_writing-th-style-pack_<project-or-deliverable>.md`
-
-Store it near the deliverable (typically in the project output folder), and link it from the plan’s Session Style Pack Summary.
 
 ### Step 3 — Outline first, then STOP
 
@@ -211,6 +224,13 @@ After confirmation:
 - Recommended naming:
   - `<topic-slug>-v1-draft.md`
   - If re-drafting: increment version (`v2`, `v3`, ...).
+
+
+### Step 4b — Post-section sanity check (mechanical style validation)
+
+After completing a substantial section (เช่น หัวข้อย่อยที่มีหมายเลข หรือหนึ่งบทเต็ม) ให้รัน **sanity check แบบเชิงกล** เปรียบเทียบร่างกับ writing style pack ที่ใช้งานอยู่ (resonance + project style brief ถ้ามี + Session Style Pack Summary):
+
+หากข้อใดข้อหนึ่งไม่ผ่าน ให้แก้ไขส่วนดังกล่าวภายใต้ style pack เดียวกันก่อนจะนับว่าเป็นร่างที่พร้อมสำหรับให้มนุษย์ทบทวน
 
 ### Step 5 — Human edit handshake
 
@@ -235,16 +255,6 @@ Goal of learn-back:
 
 - extract patterns in word choice + semantic arrangement
 - store as `ψ/memory/learnings/YYYY-MM-DD_writing-th-<mode>-learn.md`
-
-### Step 7 — Optional promotion rule (session → resonance)
-
-If a session rule repeats across **2+ sessions** (or you explicitly approve it), propose promotion:
-
-- Append-only update into resonance:
-  - [`ψ/memory/resonance/writing-style-th.md`](ψ/memory/resonance/writing-style-th.md)
-  - [`ψ/memory/resonance/citation-style-th.md`](ψ/memory/resonance/citation-style-th.md)
-
-Never overwrite resonance; only append with date + rationale.
 
 ---
 

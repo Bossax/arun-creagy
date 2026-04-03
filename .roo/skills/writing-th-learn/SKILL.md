@@ -102,6 +102,33 @@ description: Extracts Thai writing patterns by comparing draft vs edited version
 
    - If a writing plan exists, append an “Learn-back recorded” line into the plan (append-only) with a link to the learning note.
 
+
+8) **Optional promotion to resonance (with explicit human approval)**
+
+- Useได้เมื่อ:
++  - pattern เดิม (เช่น วิธีตั้งประโยค วิธีจัดลำดับบริบท → ประเด็นหลัก → นัยเชิงยุทธศาสตร์) ปรากฏซ้ำใน **อย่างน้อย 2 session** และ
++  - คุณในฐานะมนุษย์ตัดสินใจแล้วว่าอยากให้ pattern นั้นกลายเป็น “กติกาถาวร” ของการเขียน (ไม่ใช่แค่ preference ชั่วคราวของโปรเจกต์เดียว)
+
+- ขั้นตอน:
++  1. เปิด learning note ล่าสุดที่เกี่ยวข้อง (ใน `ψ/memory/learnings/YYYY-MM-DD_writing-th-<mode>-learn.md`) และเลือกเฉพาะ pattern ที่ควรโปรโมต
++  2. สร้างบล็อกข้อความสั้น ๆ ในรูปแบบ:
++     ```markdown
++     ## YYYY-MM-DD — promoted from writing-th-learn (mode: report/article)
++
++     - บรรยาย pattern เชิงกติกาแบบสั้น กระชับ และทั่วไปพอใช้ได้ข้ามโปรเจกต์
++     - ระบุว่าเรียนรู้จาก draft/edited คู่ใด (ลิงก์ path แบบย่อ)
++     ```
++  3. เพิ่มบล็อกนี้แบบ append-only ลงใน
++     - [`ψ/memory/resonance/writing-style-th.md`](ψ/memory/resonance/writing-style-th.md)
++     - หรือ [`ψ/memory/resonance/citation-style-th.md`](ψ/memory/resonance/citation-style-th.md) ถ้าเป็นเรื่อง citation โดยเฉพาะ
++
++- Guardrail:
++  - ห้ามลบบรรทัดเก่าใน resonance (Nothing is Deleted)
++  - ต้องมี “เหตุผล” ที่ชัดเจนว่าทำไม pattern นี้จึงควรใช้ข้ามโปรเจกต์ ไม่ใช่ข้อยกเว้นเฉพาะกรณี
++  - การตัดสินใจโปรโมตยังคงต้องอาศัยการยืนยันของมนุษย์ ไม่ใช่ agent ตัดสินใจเองลำพัง
+
+
+
 ## Notes for /rrr integration
 
 - `/rrr` should **not** recreate this logic; instead, it can:
