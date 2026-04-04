@@ -9,8 +9,8 @@
 
 ## 1) Ground-truth sources (allowed facts)
 - [`ψ/lab/foresight-report-wrting/artifacts/source/ข้อมูลจากดุลย์ - เก็บข้อมูลรายงานกลุ่ม 5G.md`](ψ/lab/foresight-report-wrting/artifacts/source/ข้อมูลจากดุลย์%20-%20เก็บข้อมูลรายงานกลุ่ม%205G.md)
-- [`ψ/lab/foresight-report-wrting/artifacts/การนำเสนอแผนยุทธศาสตร์  - ฉากทัศน์ชายแดนใต้ - เมื่อวันที่ 24 กุมภาพันธ์.md`](ψ/lab/foresight-report-wrting/artifacts/การนำเสนอแผนยุทธศาสตร์%20%20-%20ฉากทัศน์ชายแดนใต้%20-%20เมื่อวันที่%2024%20กุมภาพันธ์.md)
-- [`ψ/lab/foresight-report-wrting/artifacts/สาระสำคัญจากการประชุมกลุ่ม 5G เพื่อจัดทำรายงานฉบับสุดท้าย.md`](ψ/lab/foresight-report-wrting/artifacts/สาระสำคัญจากการประชุมกลุ่ม%205G%20เพื่อจัดทำรายงานฉบับสุดท้าย.md)
+- [`ψ/lab/foresight-report-wrting/artifacts/การนำเสนอแผนยุทธศาสตร์  - ฉากทัศน์ชายแดนใต้ - เมื่อวันที่ 24 กุมภาพันธ์.md`](ψ/lab/foresight-report-wrting/artifacts/source/การนำเสนอแผนยุทธศาสตร์%20%20-%20ฉากทัศน์ชายแดนใต้%20-%20เมื่อวันที่%2024%20กุมภาพันธ์.md)
+- [`ψ/lab/foresight-report-wrting/artifacts/สาระสำคัญจากการประชุมกลุ่ม 5G เพื่อจัดทำรายงานฉบับสุดท้าย.md`](ψ/lab/foresight-report-wrting/artifacts/source/สาระสำคัญจากการประชุมกลุ่ม%205G%20เพื่อจัดทำรายงานฉบับสุดท้าย.md)
 
 ## 2) Example report (style reference)
 - Path: [`ψ/lab/foresight-report-wrting/2026-04-02_foresight-2590-integrated-rewrite-v3-edited.md`](ψ/lab/foresight-report-wrting/2026-04-02_foresight-2590-integrated-rewrite-v3-edited.md)

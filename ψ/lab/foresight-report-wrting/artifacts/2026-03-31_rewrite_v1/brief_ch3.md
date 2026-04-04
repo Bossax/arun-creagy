@@ -1,7 +1,7 @@
 # Chapter Brief — Chapter 3 (บทที่ 3 ภาพอนาคต)
 
 Base structure (must match)
-- From [`ψ/lab/foresight-report-wrting/artifacts/base_report.md`](ψ/lab/foresight-report-wrting/artifacts/base_report.md)
+- From [`ψ/lab/foresight-report-wrting/artifacts/base_report.md`](ψ/lab/foresight-report-wrting/artifacts/source/base_report.md)
   - `# บทที่ 3 ภาพอนาคต`
   - `## ภาพอนาคตฐาน`
     - `### ภาพอนาคตฐานตามแนวโน้ม`

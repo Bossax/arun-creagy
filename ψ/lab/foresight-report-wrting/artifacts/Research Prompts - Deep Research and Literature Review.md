@@ -5,7 +5,7 @@ Purpose:
 - แต่ละ prompt ถูกออกแบบให้ป้อนเข้า LLM researcher หรือ workflow แบบ deep research ได้โดยตรง
 
 Primary context files:
-- [`base_report.md`](ψ/lab/foresight-report-wrting/artifacts/base_report.md)
+- [`base_report.md`](ψ/lab/foresight-report-wrting/artifacts/source/base_report.md)
 - [`Research Plan - Desk Research to Close Evidence Gaps.md`](ψ/lab/foresight-report-wrting/artifacts/Research%20Plan%20-%20Desk%20Research%20to%20Close%20Evidence%20Gaps.md)
 - [`Evidence Pack - Youth Baseline.md`](ψ/lab/foresight-report-wrting/artifacts/source/Evidence%20Pack%20-%20Youth%20Baseline.md)
 - [`Evidence Pack - Education Governance and Legal Feasibility.md`](ψ/lab/foresight-report-wrting/artifacts/source/Evidence%20Pack%20-%20Education%20Governance%20and%20Legal%20Feasibility.md)

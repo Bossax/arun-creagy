@@ -36,7 +36,7 @@ Legend
 |---|---|---|---|
 
 Notes (append-only)
-- 2026-03-31: Chapter 1 drafting uses the two Empty heading slots in [`ψ/lab/foresight-report-wrting/artifacts/base_report.md`](ψ/lab/foresight-report-wrting/artifacts/base_report.md) as containers for (1) reader-primer definitions and (2) how-to-read + evidence hygiene, without introducing new titled headings. This preserves the required structure positionally but leaves an editorial dependency on HG-009 for final layout decisions.
+- 2026-03-31: Chapter 1 drafting uses the two Empty heading slots in [`ψ/lab/foresight-report-wrting/artifacts/base_report.md`](ψ/lab/foresight-report-wrting/artifacts/source/base_report.md) as containers for (1) reader-primer definitions and (2) how-to-read + evidence hygiene, without introducing new titled headings. This preserves the required structure positionally but leaves an editorial dependency on HG-009 for final layout decisions.
 
 - 2026-03-31: Chapter 2 rewrite v1 treats field/interview notes as non-citable in sponsor-facing prose (qualitative synthesis only). This maintains evidence hygiene but leaves an explicit dependency on a traceable source ledger for scanning outputs (HG-004) and on baseline numeric claims (HG-002) before the chapter can safely include any statistics.
 

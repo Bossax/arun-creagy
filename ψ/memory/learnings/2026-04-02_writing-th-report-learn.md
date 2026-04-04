@@ -35,7 +35,7 @@
 - Edited-draft issue analysis: [plans/2026-04-02_foresight-report-edited-draft-issue-analysis.md](plans/2026-04-02_foresight-report-edited-draft-issue-analysis.md)
 - Draft file: [ψ/lab/foresight-report-wrting/2026-03-31_foresight-2590-integrated-rewrite-v2.md](ψ/lab/foresight-report-wrting/2026-03-31_foresight-2590-integrated-rewrite-v2.md)
 - Edited file: [ψ/lab/foresight-report-wrting/2026-04-02_foresight-2590-integrated-rewrite-v3.md](ψ/lab/foresight-report-wrting/2026-04-02_foresight-2590-integrated-rewrite-v3.md)
-- Example report: [ψ/inbox/Foresight report - output report reference.md](ψ/inbox/Foresight%20report%20-%20output%20report%20reference.md)
+- Example report: [ψ/inbox/Foresight report - output report reference.md](ψ/lab/foresight-report-wrting/artifacts/source/Foresight%20report%20-%20output%20report%20reference.md)
 
 เรียนรู้จากการเปรียบเทียบฉบับร่างและฉบับแก้ไขสำหรับ writing-th (mode: report)
 

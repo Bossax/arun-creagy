@@ -5,7 +5,7 @@ Purpose
 - It prevents drift in: scope, key definitions, narrative through-line, and cross-chapter promises.
 
 Hard constraints
-- The rewrite must follow the exact heading structure in [`ψ/lab/foresight-report-wrting/artifacts/base_report.md`](ψ/lab/foresight-report-wrting/artifacts/base_report.md).
+- The rewrite must follow the exact heading structure in [`ψ/lab/foresight-report-wrting/artifacts/base_report.md`](ψ/lab/foresight-report-wrting/artifacts/source/base_report.md).
 - Style/depth anchor: [`ψ/inbox/Foresight Report - writing style reference.md`](ψ/inbox/Foresight%20Report%20-%20writing%20style%20reference.md).
 - Final report prose is paragraph-based and final-facing. Avoid process language. Avoid quotation marks for emphasis.
 

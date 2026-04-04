@@ -38,7 +38,7 @@ It combines:
 Canonical outline + style references:
 
 - Canonical writing plan: [`ψ/lab/foresight-report-wrting/2026-03-29_foresight-2590-writing-plan.md`](ψ/lab/foresight-report-wrting/2026-03-29_foresight-2590-writing-plan.md)
-- Output report reference: [`ψ/inbox/Foresight report - output report reference.md`](ψ/inbox/Foresight%20report%20-%20output%20report%20reference.md)
+- Output report reference: [`ψ/inbox/Foresight report - output report reference.md`](ψ/lab/foresight-report-wrting/artifacts/source/Foresight%20report%20-%20output%20report%20reference.md)
 - Writing style reference: [`ψ/inbox/Foresight Report - writing style reference.md`](ψ/inbox/Foresight%20Report%20-%20writing%20style%20reference.md)
 
 หลักการใช้ example reports:

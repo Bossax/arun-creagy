@@ -43,7 +43,7 @@ Purpose:
 ## 2) References for this session
 
 ### 2.1 Structure reference (expected topics + sub-topics)
-- Path: [ψ/inbox/Foresight report - output report reference.md](ψ/inbox/Foresight%20report%20-%20output%20report%20reference.md)
+- Path: [ψ/inbox/Foresight report - output report reference.md](ψ/lab/foresight-report-wrting/artifacts/source/Foresight%20report%20-%20output%20report%20reference.md)
 - Permission to use as structure reference: yes
 - Mimic scope: โครงสร้างหัวข้อ/ลำดับการเล่าเรื่อง (no verbatim copying)
 
@@ -63,7 +63,7 @@ Purpose:
 ## 4) Session Style Pack Summary (2026-03-29)
 
 ### Primary reference
-- Structure: [ψ/inbox/Foresight report - output report reference.md](ψ/inbox/Foresight%20report%20-%20output%20report%20reference.md)
+- Structure: [ψ/inbox/Foresight report - output report reference.md](ψ/lab/foresight-report-wrting/artifacts/source/Foresight%20report%20-%20output%20report%20reference.md)
 - Voice/depth: [ψ/inbox/Foresight Report - writing style reference.md](ψ/inbox/Foresight%20Report%20-%20writing%20style%20reference.md)
 
 ### Voice + rhetorical moves (what the draft should feel like)
@@ -109,7 +109,7 @@ Purpose:
 ## Session Style Pack Summary (2026-03-29 17:08) — Chapter 2 Round 1 package (3 จชต.)
 
 ### Primary reference
-- Structure: [ψ/inbox/Foresight report - output report reference.md](ψ/inbox/Foresight%20report%20-%20output%20report%20reference.md)
+- Structure: [ψ/inbox/Foresight report - output report reference.md](ψ/lab/foresight-report-wrting/artifacts/source/Foresight%20report%20-%20output%20report%20reference.md)
 - Voice/depth: [ψ/inbox/Foresight Report - writing style reference.md](ψ/inbox/Foresight%20Report%20-%20writing%20style%20reference.md)
 
 ### Scope lock (hard)
@@ -172,7 +172,7 @@ Purpose:
 
 ## 5) Canonical outline (บทที่ 1–5)
 
-> โครงนี้ยึด “บทที่ 1–5” ตาม [ψ/inbox/Foresight report - output report reference.md](ψ/inbox/Foresight%20report%20-%20output%20report%20reference.md) และปรับภาษาวิเคราะห์ให้ได้ความลึกตาม [ψ/inbox/Foresight Report - writing style reference.md](ψ/inbox/Foresight%20Report%20-%20writing%20style%20reference.md)
+> โครงนี้ยึด “บทที่ 1–5” ตาม [ψ/inbox/Foresight report - output report reference.md](ψ/lab/foresight-report-wrting/artifacts/source/Foresight%20report%20-%20output%20report%20reference.md) และปรับภาษาวิเคราะห์ให้ได้ความลึกตาม [ψ/inbox/Foresight Report - writing style reference.md](ψ/inbox/Foresight%20Report%20-%20writing%20style%20reference.md)
 
 0. บทคัดย่อ
    - 0.1 สาระสำคัญและข้อค้นพบหลัก (Key messages)
@@ -489,7 +489,7 @@ For each subsection, record:
 ## 9) Rewrite workflow + base-report structure lock (2026-03-31)
 
 ### 9.1 Canonical structure lock (must not drift)
-- The rewrite must follow the exact topic structure of [`ψ/lab/foresight-report-wrting/artifacts/base_report.md`](ψ/lab/foresight-report-wrting/artifacts/base_report.md)
+- The rewrite must follow the exact topic structure of [`ψ/lab/foresight-report-wrting/artifacts/base_report.md`](ψ/lab/foresight-report-wrting/artifacts/source/base_report.md)
 - Extracted structure + chapter workflow is documented here: [`ψ/lab/foresight-report-wrting/artifacts/2026-03-31_rewrite-workflow_chapter-by-chapter.md`](ψ/lab/foresight-report-wrting/artifacts/2026-03-31_rewrite_v1/2026-03-31_rewrite-workflow_chapter-by-chapter.md)
 
 ### 9.2 Intermediate artifacts (recommended contracts across chapter subtasks)

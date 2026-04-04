@@ -13,6 +13,6 @@ If structure is not locked early, the document can silently shift genre (brief v
 4) Keep the report prose paragraph-driven; reserve lists for true enumeration.
 
 ## Where this was applied
-- [`ψ/lab/foresight-report-wrting/artifacts/base_report.md`](ψ/lab/foresight-report-wrting/artifacts/base_report.md)
+- [`ψ/lab/foresight-report-wrting/artifacts/base_report.md`](ψ/lab/foresight-report-wrting/artifacts/source/base_report.md)
 - [`ψ/lab/foresight-report-wrting/artifacts/2026-03-31_rewrite-workflow_chapter-by-chapter.md`](ψ/lab/foresight-report-wrting/artifacts/2026-03-31_rewrite_v1/2026-03-31_rewrite-workflow_chapter-by-chapter.md)
 - [`ψ/lab/foresight-report-wrting/artifacts/PM - HOLD-GAP Register (rewrite).md`](ψ/lab/foresight-report-wrting/artifacts/archive/PM%20-%20HOLD-GAP%20Register%20(rewrite).md)

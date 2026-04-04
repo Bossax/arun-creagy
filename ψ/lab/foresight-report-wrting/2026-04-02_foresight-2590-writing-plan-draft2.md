@@ -19,7 +19,7 @@
 
 1. Canonical outline + style pack
    - [ψ/lab/foresight-report-wrting/2026-03-29_foresight-2590-writing-plan.md](ψ/lab/foresight-report-wrting/2026-03-29_foresight-2590-writing-plan.md)
-   - [ψ/inbox/Foresight report - output report reference.md](ψ/inbox/Foresight%20report%20-%20output%20report%20reference.md)
+   - [ψ/inbox/Foresight report - output report reference.md](ψ/lab/foresight-report-wrting/artifacts/source/Foresight%20report%20-%20output%20report%20reference.md)
    - [ψ/inbox/Foresight Report - writing style reference.md](ψ/inbox/Foresight%20Report%20-%20writing%20style%20reference.md)
 
 2. Integrated draft v3 (post issue-analysis rewrite target)
@@ -47,7 +47,7 @@
    - Learning pathways: [ψ/lab/foresight-report-wrting/artifacts/Learning Pathways.md](ψ/lab/foresight-report-wrting/artifacts/source/Fragmented%20Learning%20Pathways%20and%20Systemic%20Discontinuities%20in%20the%20Southern%20Border%20Provinces.md)
    - Youth livelihoods: [ψ/lab/foresight-report-wrting/artifacts/Livelihoods in the Deep South.md](ψ/lab/foresight-report-wrting/artifacts/source/Youth%20Livelihoods%20in%20the%20Deep%20South%20and%20Opportunity%20Structures.md)
    - Belonging and identity: [ψ/lab/foresight-report-wrting/artifacts/Belonging, identity, and cultural capital.md](ψ/lab/foresight-report-wrting/artifacts/source/Belonging,%20identity,%20and%20cultural%20capital.md)
-   - Vulnerable children overview: [ψ/lab/foresight-report-wrting/artifacts/สถานการณ์พื้นฐานเด็กและเยาวชนกลุ่มเปราะบางในพื้นที่จังหวัดชายแดนภาคใต้.md](ψ/lab/foresight-report-wrting/artifacts/source/0-edited-สถานการณ์พื้นฐานเด็กและเยาวชนกลุ่มเปราะบางในพื้นที่จังหวัดชายแดนภาคใต้.md)
+   - Vulnerable children overview: [ψ/lab/foresight-report-wrting/artifacts/สถานการณ์พื้นฐานเด็กและเยาวชนกลุ่มเปราะบางในพื้นที่จังหวัดชายแดนภาคใต้.md](ψ/lab/foresight-report-wrting/artifacts/source/สถานการณ์พื้นฐานเด็กและเยาวชนกลุ่มเปราะบางในพื้นที่จังหวัดชายแดนภาคใต้.md)
 
 3. Legal and policy base
    - Education laws: 
@@ -293,7 +293,7 @@ flowchart TD
 ### Session Style Pack Summary (2026-04-02, mode report, subsection 2.1.2)
 
 #### Primary reference
-- Example report: [ψ/inbox/Foresight report - output report reference.md](ψ/inbox/Foresight%20report%20-%20output%20report%20reference.md)
+- Example report: [ψ/inbox/Foresight report - output report reference.md](ψ/lab/foresight-report-wrting/artifacts/source/Foresight%20report%20-%20output%20report%20reference.md)
 - Canonical plan spine: [ψ/lab/foresight-report-wrting/2026-03-29_foresight-2590-writing-plan.md](ψ/lab/foresight-report-wrting/2026-03-29_foresight-2590-writing-plan.md)
 
 #### Terminology (preferred for Chapter 2 signals section)

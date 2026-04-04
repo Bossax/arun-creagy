@@ -1,7 +1,7 @@
 # Evidence Pack - Youth Baseline
 
 Primary use:
-- ใช้เป็น evidence pack สำหรับเติมบท `1.2` และ `2.1.2` ใน [`base_report.md`](ψ/lab/foresight-report-wrting/artifacts/base_report.md)
+- ใช้เป็น evidence pack สำหรับเติมบท `1.2` และ `2.1.2` ใน [`base_report.md`](ψ/lab/foresight-report-wrting/artifacts/source/base_report.md)
 - ทำให้ภาพของเด็กและเยาวชนกลุ่มเปราะบางในพื้นที่มีฐานข้อมูลที่ชัด ก่อนแปลงเป็น prose เชิงรายงาน
 
 Status:
@@ -71,7 +71,7 @@ Usable claims already visible:
 - มีสัญญาณว่าพื้นที่อยากเห็นเยาวชนเชื่อมทักษะกับเศรษฐกิจฮาลาล งานสร้างสรรค์ ภาษา และการประกอบการขนาดเล็ก
 
 Source leads:
-- [`สาระสำคัญจากการประชุมกลุ่ม 5G เพื่อจัดทำรายงานฉบับสุดท้าย.md`](ψ/lab/foresight-report-wrting/artifacts/%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%B0%E0%B8%AA%E0%B8%B3%E0%B8%84%E0%B8%B1%E0%B8%8D%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%8A%E0%B8%B8%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B8%E0%B9%88%E0%B8%A1%205G%20%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%97%E0%B8%B3%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%A2.md)
+- [`สาระสำคัญจากการประชุมกลุ่ม 5G เพื่อจัดทำรายงานฉบับสุดท้าย.md`](ψ/lab/foresight-report-wrting/artifacts/source/สาระสำคัญจากการประชุมกลุ่ม%205G%20เพื่อจัดทำรายงานฉบับสุดท้าย.md)
 - [`ข้อมูลจากดุลย์ - เก็บข้อมูลรายงานกลุ่ม 5G.md`](ψ/lab/foresight-report-wrting/artifacts/source/ข้อมูลจากดุลย์%20-%20เก็บข้อมูลรายงานกลุ่ม%205G.md)
 
 ---

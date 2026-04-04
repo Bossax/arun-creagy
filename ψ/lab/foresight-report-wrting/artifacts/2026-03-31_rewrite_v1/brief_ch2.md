@@ -1,7 +1,7 @@
 # Chapter Brief — Chapter 2 (บทที่ 2 สัญญาณชีวิตเด็กและเยาวชนไทย)
 
 Base structure (must match)
-- From [`ψ/lab/foresight-report-wrting/artifacts/base_report.md`](ψ/lab/foresight-report-wrting/artifacts/base_report.md)
+- From [`ψ/lab/foresight-report-wrting/artifacts/base_report.md`](ψ/lab/foresight-report-wrting/artifacts/source/base_report.md)
   - `# บทที่ 2 สัญญาณชีวิตเด็กและเยาวชนไทย`
   - `## 2.1 การกวาดสัญญาณ`
     - `### 2.1.1 สัญญาณแนวโน้มหลักและปัจจัยขับเคลื่อนสำคัญ`

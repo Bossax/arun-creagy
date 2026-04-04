@@ -1,7 +1,7 @@
 # Chapter Brief — Chapter 5 (บทที่ 5 สรุป)
 
 Base structure (must match)
-- From [`ψ/lab/foresight-report-wrting/artifacts/base_report.md`](ψ/lab/foresight-report-wrting/artifacts/base_report.md)
+- From [`ψ/lab/foresight-report-wrting/artifacts/base_report.md`](ψ/lab/foresight-report-wrting/artifacts/source/base_report.md)
   - `# บทที่ 5 สรุป`
   - `## สรุปผลการคาดการณ์คาดเชิงยุทธศาสตร์`
   - `## นัยเชิงนโยบาย`

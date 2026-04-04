@@ -125,7 +125,7 @@ This is not mainly a copyediting problem. It is a substantive revision problem i
 #### D1. Section 2.1.1 does not follow the base report format
 - Edited source: [ψ/lab/foresight-report-wrting/2026-03-31_foresight-2590-integrated-rewrite-v1-edited.md](ψ/lab/foresight-report-wrting/2026-03-31_foresight-2590-integrated-rewrite-v1-edited.md)
 - Base source: [ψ/lab/foresight-report-wrting/2026-03-31_foresight-2590-integrated-rewrite-v1.md](ψ/lab/foresight-report-wrting/2026-03-31_foresight-2590-integrated-rewrite-v1.md)
-- Problem: the rewritten section shifted into continuous narrative without preserving the expected structural format [[ψ/lab/foresight-report-wrting/artifacts/base_report|base_report]]
+- Problem: the rewritten section shifted into continuous narrative without preserving the expected structural format [[ψ/lab/foresight-report-wrting/artifacts/source/base_report|base_report]]
 - Impact: may conflict with sponsor expectations or internal consistency
 
 #### D2. The objectives should likely be presented as a formal list

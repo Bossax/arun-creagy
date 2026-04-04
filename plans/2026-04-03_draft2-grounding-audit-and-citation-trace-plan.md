@@ -62,7 +62,7 @@ Initial priority evidence notes:
 - [`ψ/lab/foresight-report-wrting/artifacts/Evidence Pack - Youth Baseline.md`](ψ/lab/foresight-report-wrting/artifacts/source/Evidence%20Pack%20-%20Youth%20Baseline.md)
 - [`ψ/lab/foresight-report-wrting/artifacts/Evidence Pack - Education Governance and Legal Feasibility.md`](ψ/lab/foresight-report-wrting/artifacts/source/Evidence%20Pack%20-%20Education%20Governance%20and%20Legal%20Feasibility.md)
 - [`ψ/lab/foresight-report-wrting/artifacts/ข้อมูลจากดุลย์ - เก็บข้อมูลรายงานกลุ่ม 5G.md`](ψ/lab/foresight-report-wrting/artifacts/source/ข้อมูลจากดุลย์%20-%20เก็บข้อมูลรายงานกลุ่ม%205G.md)
-- [`ψ/lab/foresight-report-wrting/artifacts/นวัตกรรมการปกครองและทางเลือกทางการศึกษาในจังหวัดชายแดนภาคใต้ - การวิเคราะห์ความยืดหยุ่นเชิงกฎหมายและคอขวดทางนโยบาย.md`](ψ/lab/foresight-report-wrting/artifacts/source/0-edited-นวัตกรรมการปกครองและทางเลือกทางการศึกษาในจังหวัดชายแดนภาคใต้%20-%20การวิเคราะห์ความยืดหยุ่นเชิงกฎหมายและคอขวดทางนโยบาย.md)
+- [`ψ/lab/foresight-report-wrting/artifacts/นวัตกรรมการปกครองและทางเลือกทางการศึกษาในจังหวัดชายแดนภาคใต้ - การวิเคราะห์ความยืดหยุ่นเชิงกฎหมายและคอขวดทางนโยบาย.md`](ψ/lab/foresight-report-wrting/artifacts/source/นวัตกรรมการปกครองและทางเลือกทางการศึกษาในจังหวัดชายแดนภาคใต้%20-%20การวิเคราะห์ความยืดหยุ่นเชิงกฎหมายและคอขวดทางนโยบาย.md)
 
 ## Grounding test standard
 

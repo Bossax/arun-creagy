@@ -1,7 +1,7 @@
 # Chapter Brief — Chapter 4 (บทที่ 4 ยุทธศาสตร์และการวางแผน)
 
 Base structure (must match)
-- From [`ψ/lab/foresight-report-wrting/artifacts/base_report.md`](ψ/lab/foresight-report-wrting/artifacts/base_report.md)
+- From [`ψ/lab/foresight-report-wrting/artifacts/base_report.md`](ψ/lab/foresight-report-wrting/artifacts/source/base_report.md)
   - `# บทที่ 4 ยุทธศาสตร์และการวางแผน`
   - (Table) ตารางยุทธศาสตร์: ยุทธศาสตร์ / H1 baseline / H2 transitional / H3 transformational / คานงัด / ทดสอบความทนทาน / นวัตกรรม
   - `## เส้นทางยุทธศาสตร์`

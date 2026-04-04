@@ -1,7 +1,7 @@
 # Chapter Brief — Chapter 1 (บทที่ 1 บทนำ)
 
 Base structure (must match)
-- From [`ψ/lab/foresight-report-wrting/artifacts/base_report.md`](ψ/lab/foresight-report-wrting/artifacts/base_report.md)
+- From [`ψ/lab/foresight-report-wrting/artifacts/base_report.md`](ψ/lab/foresight-report-wrting/artifacts/source/base_report.md)
   - `# บทที่ 1 บทนำ`
   - `## ที่มาและความสำคัญ`
   - `## สังคมชายแดนใต้ บริบทในมิติต่าง ๆ`

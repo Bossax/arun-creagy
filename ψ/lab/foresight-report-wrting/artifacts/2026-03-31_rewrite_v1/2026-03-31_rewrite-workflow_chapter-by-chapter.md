@@ -1,7 +1,7 @@
 # Rewrite Workflow (chapter-by-chapter) — Foresight 2590 (3 จชต.)
 
 Purpose of this artifact:
-- Lock the rewrite to the **exact topic structure** of [`ψ/lab/foresight-report-wrting/artifacts/base_report.md`](ψ/lab/foresight-report-wrting/artifacts/base_report.md)
+- Lock the rewrite to the **exact topic structure** of [`ψ/lab/foresight-report-wrting/artifacts/base_report.md`](ψ/lab/foresight-report-wrting/artifacts/source/base_report.md)
 - Define a **chapter-by-chapter workflow** and the **intermediate artifacts** needed to keep later subtasks aligned on evidence, style, and continuity
 - Avoid drafting any audience-facing prose (planning only)
 

@@ -1,7 +1,7 @@
 # Research Plan - Desk Research to Close Evidence Gaps
 
 Primary context:
-- Working report scaffold: [base_report.md](ψ/lab/foresight-report-wrting/artifacts/base_report.md)
+- Working report scaffold: [base_report.md](ψ/lab/foresight-report-wrting/artifacts/source/base_report.md)
 - Coordination spine: [PM - Evidence Spine.md](ψ/lab/foresight-report-wrting/artifacts/archive/PM%20-%20Evidence%20Spine.md)
 - Readiness tracker: [PM - Report Readiness Board.md](ψ/lab/foresight-report-wrting/artifacts/archive/PM%20-%20Report%20Readiness%20Board.md)
 - Conversion workflow: [PM - Analysis Conversion Queue.md](ψ/lab/foresight-report-wrting/artifacts/archive/PM%20-%20Analysis%20Conversion%20Queue.md)
@@ -73,7 +73,7 @@ Primary context:
 
 ### Completion criteria
 - ทุกไฟล์ใน [artifacts](ψ/lab/foresight-report-wrting/artifacts/) ถูกจัดหมวด
-- ทุก chapter section ใน [base_report.md](ψ/lab/foresight-report-wrting/artifacts/base_report.md) มีสถานะว่า covered / partial / gap
+- ทุก chapter section ใน [base_report.md](ψ/lab/foresight-report-wrting/artifacts/source/base_report.md) มีสถานะว่า covered / partial / gap
 
 ---
 

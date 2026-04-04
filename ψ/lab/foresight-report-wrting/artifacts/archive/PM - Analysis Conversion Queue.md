@@ -12,7 +12,7 @@ Purpose:
 ไฟล์ต้นทางที่มีข้อมูลดิบ/บันทึก/ผลประชุม/research memo
 
 Examples:
-- [`base_report.md`](ψ/lab/foresight-report-wrting/artifacts/base_report.md)
+- [`base_report.md`](ψ/lab/foresight-report-wrting/artifacts/source/base_report.md)
 - [`Source mapping.md`](ψ/lab/foresight-report-wrting/artifacts/Source%20mapping.md)
 - [`Evidence collection to support the final draft of the report.md`](ψ/lab/foresight-report-wrting/artifacts/archive/Evidence%20collection%20to%20support%20the%20final%20draft%20of%20the%20report.md)
 - [`Analysis and actor assignment.md`](ψ/lab/foresight-report-wrting/artifacts/2026-03-31_rewrite_v1/Analysis%20and%20actor%20assignment.md)
