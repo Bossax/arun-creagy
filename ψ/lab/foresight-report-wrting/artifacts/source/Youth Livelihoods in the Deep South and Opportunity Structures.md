@@ -1,4 +1,3 @@
-**
 
 # Youth Livelihood Futures and Opportunity Structures in Thailand’s Southern Border Provinces
 

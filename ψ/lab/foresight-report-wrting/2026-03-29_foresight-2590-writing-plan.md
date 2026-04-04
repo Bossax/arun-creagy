@@ -32,10 +32,10 @@ Purpose:
 
 ### 1B.2 Legal sources (traceable URLs embedded in the artifact copies)
 - [ψ/lab/foresight-report-wrting/artifacts/พระราชบัญญัติการศึกษาแห่งชาติพ.ศ. ๒๕๔๒.md](ψ/lab/foresight-report-wrting/artifacts/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%9A%E0%B8%B1%E0%B8%8D%E0%B8%8D%E0%B8%B1%E0%B8%95%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4%E0%B8%9E%E0%B8%A8.%20%E0%B9%92%E0%B9%95%E0%B9%94%E0%B9%92.md)
-- [ψ/lab/foresight-report-wrting/artifacts/พระราชบัญญัติพื้นที่นวัตกรรมการศึกษา พ.ศ. ๒๕๖๒.md](ψ/lab/foresight-report-wrting/artifacts/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%9A%E0%B8%B1%E0%B8%8D%E0%B8%8D%E0%B8%B1%E0%B8%95%E0%B8%B4%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%99%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2%20%E0%B8%9E.%E0%B8%A8.%20%E0%B9%92%E0%B9%95%E0%B9%96%E0%B9%92.md)
+- [ψ/lab/foresight-report-wrting/artifacts/พระราชบัญญัติพื้นที่นวัตกรรมการศึกษา พ.ศ. ๒๕๖๒.md](ψ/lab/foresight-report-wrting/artifacts/source/พระราชบัญญัติพื้นที่นวัตกรรมการศึกษา%20พ.ศ.%20๒๕๖๒.md)
 
 ### 1B.3 Discovery aide (not a final source by itself)
-- [ψ/lab/foresight-report-wrting/artifacts/2nd round research output - Perplexity.md](ψ/lab/foresight-report-wrting/artifacts/2nd%20round%20research%20output%20-%20Perplexity.md)
+- [ψ/lab/foresight-report-wrting/artifacts/2nd round research output - Perplexity.md](ψ/lab/foresight-report-wrting/artifacts/archive/2nd%20round%20research%20output%20-%20Perplexity.md)
 
 ### 1B.4 Round 1 evidence base artifact (claim-to-source map)
 - [ψ/lab/foresight-report-wrting/2026-03-30_foresight-2590-evidence-base-round1.md](ψ/lab/foresight-report-wrting/2026-03-30_foresight-2590-evidence-base-round1.md)
@@ -490,11 +490,11 @@ For each subsection, record:
 
 ### 9.1 Canonical structure lock (must not drift)
 - The rewrite must follow the exact topic structure of [`ψ/lab/foresight-report-wrting/artifacts/base_report.md`](ψ/lab/foresight-report-wrting/artifacts/base_report.md)
-- Extracted structure + chapter workflow is documented here: [`ψ/lab/foresight-report-wrting/artifacts/2026-03-31_rewrite-workflow_chapter-by-chapter.md`](ψ/lab/foresight-report-wrting/artifacts/2026-03-31_rewrite-workflow_chapter-by-chapter.md)
+- Extracted structure + chapter workflow is documented here: [`ψ/lab/foresight-report-wrting/artifacts/2026-03-31_rewrite-workflow_chapter-by-chapter.md`](ψ/lab/foresight-report-wrting/artifacts/2026-03-31_rewrite_v1/2026-03-31_rewrite-workflow_chapter-by-chapter.md)
 
 ### 9.2 Intermediate artifacts (recommended contracts across chapter subtasks)
 - Continuity Spine (rewrite): `ψ/lab/foresight-report-wrting/artifacts/PM - Continuity Spine (rewrite).md`
-- Evidence Spine (extend existing): [`ψ/lab/foresight-report-wrting/artifacts/PM - Evidence Spine.md`](ψ/lab/foresight-report-wrting/artifacts/PM%20-%20Evidence%20Spine.md)
+- Evidence Spine (extend existing): [`ψ/lab/foresight-report-wrting/artifacts/PM - Evidence Spine.md`](ψ/lab/foresight-report-wrting/artifacts/archive/PM%20-%20Evidence%20Spine.md)
 - Glossary/Reader primer (rewrite): `ψ/lab/foresight-report-wrting/artifacts/PM - Glossary and reader primer (rewrite).md`
 - HOLD/GAP Register (rewrite): `ψ/lab/foresight-report-wrting/artifacts/PM - HOLD-GAP Register (rewrite).md`
 

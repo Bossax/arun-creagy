@@ -68,8 +68,8 @@ Suggested internal sources to consult
   - [`ψ/lab/foresight-report-wrting/artifacts/2026-03-29_ch3-round1-draft.md`](ψ/lab/foresight-report-wrting/artifacts/2026-03-29_ch3-round1-draft.md)
   - [`ψ/lab/foresight-report-wrting/artifacts/2026-03-29_ch3-round1-evidence-trace.md`](ψ/lab/foresight-report-wrting/artifacts/2026-03-29_ch3-round1-evidence-trace.md)
 - Scenario narrative seed:
-  - [`ψ/lab/foresight-report-wrting/artifacts/Four scenario narratives (year 2047).md`](ψ/lab/foresight-report-wrting/artifacts/Four%20scenario%20narratives%20%28year%202047%29.md)
+  - [`ψ/lab/foresight-report-wrting/artifacts/Four scenario narratives (year 2047).md`](ψ/lab/foresight-report-wrting/artifacts/source/Four%20scenario%20narratives%20(year%202047).md)
 - System and drivers context:
   - [`ψ/lab/foresight-report-wrting/artifacts/System map.md`](ψ/lab/foresight-report-wrting/artifacts/System%20map.md)
-  - [`ψ/lab/foresight-report-wrting/artifacts/PM - Evidence Spine.md`](ψ/lab/foresight-report-wrting/artifacts/PM%20-%20Evidence%20Spine.md)
+  - [`ψ/lab/foresight-report-wrting/artifacts/PM - Evidence Spine.md`](ψ/lab/foresight-report-wrting/artifacts/archive/PM%20-%20Evidence%20Spine.md)
 

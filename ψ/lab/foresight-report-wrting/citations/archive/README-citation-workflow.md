@@ -9,11 +9,11 @@ The system is designed to support a trace chain:
 Use the files in this folder together:
 
 1. **Canonical source registry** – long-lived record of all sources
-   - [ψ/lab/foresight-report-wrting/citations/citation-registry.md](ψ/lab/foresight-report-wrting/citations/citation-registry.md)
+   - [ψ/lab/foresight-report-wrting/citations/citation-registry.md](ψ/lab/foresight-report-wrting/citations/archive/citation-registry.md)
 2. **Artifact → source mapping** – how each artifact paragraph and local ref number connects to sources
-   - [ψ/lab/foresight-report-wrting/citations/artifact-paragraph-source-map.md](ψ/lab/foresight-report-wrting/citations/artifact-paragraph-source-map.md)
+   - [ψ/lab/foresight-report-wrting/citations/artifact-paragraph-source-map.md](ψ/lab/foresight-report-wrting/citations/archive/artifact-paragraph-source-map.md)
 3. **Report claim → evidence mapping** – how each report claim is backed by artifacts and sources
-   - [ψ/lab/foresight-report-wrting/citations/report-claim-evidence-map.md](ψ/lab/foresight-report-wrting/citations/report-claim-evidence-map.md)
+   - [ψ/lab/foresight-report-wrting/citations/report-claim-evidence-map.md](ψ/lab/foresight-report-wrting/citations/archive/report-claim-evidence-map.md)
 
 All tables are designed for incremental filling by humans and agents.
 
@@ -21,7 +21,7 @@ All tables are designed for incremental filling by humans and agents.
 
 ## 1. Canonical source registry
 
-File: [ψ/lab/foresight-report-wrting/citations/citation-registry.md](ψ/lab/foresight-report-wrting/citations/citation-registry.md)
+File: [ψ/lab/foresight-report-wrting/citations/citation-registry.md](ψ/lab/foresight-report-wrting/citations/archive/citation-registry.md)
 
 - One row per *canonical* source (report, article, dataset, transcript, law, interview, etc.).
 - Each source gets a stable **`SRC_ID`** (e.g. `SRC-TH-LAW-2542-EDU`, `SRC-UNICEF-2024-YOUTH-SB`).
@@ -39,7 +39,7 @@ Suggested workflow:
 
 ## 2. Artifact paragraph → source mapping
 
-File: [ψ/lab/foresight-report-wrting/citations/artifact-paragraph-source-map.md](ψ/lab/foresight-report-wrting/citations/artifact-paragraph-source-map.md)
+File: [ψ/lab/foresight-report-wrting/citations/artifact-paragraph-source-map.md](ψ/lab/foresight-report-wrting/citations/archive/artifact-paragraph-source-map.md)
 
 Purpose:
 
@@ -59,7 +59,7 @@ This file makes it possible to answer: *“Where did this artifact paragraph com
 
 ## 3. Report claim → artifact → source mapping
 
-File: [ψ/lab/foresight-report-wrting/citations/report-claim-evidence-map.md](ψ/lab/foresight-report-wrting/citations/report-claim-evidence-map.md)
+File: [ψ/lab/foresight-report-wrting/citations/report-claim-evidence-map.md](ψ/lab/foresight-report-wrting/citations/archive/report-claim-evidence-map.md)
 
 Purpose:
 

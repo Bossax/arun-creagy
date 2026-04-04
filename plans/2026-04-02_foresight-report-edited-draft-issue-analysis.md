@@ -221,9 +221,9 @@ This is not mainly a copyediting problem. It is a substantive revision problem i
 - [ ] Align section 2.1.1 with the format of [ψ/lab/foresight-report-wrting/2026-03-31_foresight-2590-integrated-rewrite-v1.md](ψ/lab/foresight-report-wrting/2026-03-31_foresight-2590-integrated-rewrite-v1.md)
 - [ ] Rework the chapter 3 scenario axes and indicator framework
 - [ ] Rewrite the desirable-future section with clearer vision language and operational meaning
-- [ ] Run a claim-to-source audit for chapters 1 to 3 (populate claim IDs in [ψ/lab/foresight-report-wrting/citations/report-claim-evidence-map.md](ψ/lab/foresight-report-wrting/citations/report-claim-evidence-map.md))
-- [ ] Build an initial inline citation map using author-year placeholders where evidence is already known (using `SRC_ID`s from [ψ/lab/foresight-report-wrting/citations/citation-registry.md](ψ/lab/foresight-report-wrting/citations/citation-registry.md))
-- [ ] Build a real reference list instead of the current placeholder section (drawing from [ψ/lab/foresight-report-wrting/citations/citation-registry.md](ψ/lab/foresight-report-wrting/citations/citation-registry.md))
+- [ ] Run a claim-to-source audit for chapters 1 to 3 (populate claim IDs in [ψ/lab/foresight-report-wrting/citations/report-claim-evidence-map.md](ψ/lab/foresight-report-wrting/citations/archive/report-claim-evidence-map.md))
+- [ ] Build an initial inline citation map using author-year placeholders where evidence is already known (using `SRC_ID`s from [ψ/lab/foresight-report-wrting/citations/citation-registry.md](ψ/lab/foresight-report-wrting/citations/archive/citation-registry.md))
+- [ ] Build a real reference list instead of the current placeholder section (drawing from [ψ/lab/foresight-report-wrting/citations/citation-registry.md](ψ/lab/foresight-report-wrting/citations/archive/citation-registry.md))
 
 ## Bottom-line diagnosis
 

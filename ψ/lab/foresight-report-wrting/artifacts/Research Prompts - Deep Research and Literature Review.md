@@ -7,8 +7,8 @@ Purpose:
 Primary context files:
 - [`base_report.md`](ψ/lab/foresight-report-wrting/artifacts/base_report.md)
 - [`Research Plan - Desk Research to Close Evidence Gaps.md`](ψ/lab/foresight-report-wrting/artifacts/Research%20Plan%20-%20Desk%20Research%20to%20Close%20Evidence%20Gaps.md)
-- [`Evidence Pack - Youth Baseline.md`](ψ/lab/foresight-report-wrting/artifacts/Evidence%20Pack%20-%20Youth%20Baseline.md)
-- [`Evidence Pack - Education Governance and Legal Feasibility.md`](ψ/lab/foresight-report-wrting/artifacts/Evidence%20Pack%20-%20Education%20Governance%20and%20Legal%20Feasibility.md)
+- [`Evidence Pack - Youth Baseline.md`](ψ/lab/foresight-report-wrting/artifacts/source/Evidence%20Pack%20-%20Youth%20Baseline.md)
+- [`Evidence Pack - Education Governance and Legal Feasibility.md`](ψ/lab/foresight-report-wrting/artifacts/source/Evidence%20Pack%20-%20Education%20Governance%20and%20Legal%20Feasibility.md)
 
 Research rules for all prompts:
 - Prioritize sources from the last 5–10 years unless a classic legal or conceptual source is necessary.
@@ -123,7 +123,7 @@ Required output structure:
 ```
 
 ### Expected artifact from the research
-- update [`Evidence Pack - Youth Baseline.md`](ψ/lab/foresight-report-wrting/artifacts/Evidence%20Pack%20-%20Youth%20Baseline.md)
+- update [`Evidence Pack - Youth Baseline.md`](ψ/lab/foresight-report-wrting/artifacts/source/Evidence%20Pack%20-%20Youth%20Baseline.md)
 - `Analysis Note - Youth baseline and life-path constraints.md`
 
 ---
@@ -156,7 +156,7 @@ Required output structure:
 ```
 
 ### Expected artifact from the research
-- update [`Evidence Pack - Education Governance and Legal Feasibility.md`](ψ/lab/foresight-report-wrting/artifacts/Evidence%20Pack%20-%20Education%20Governance%20and%20Legal%20Feasibility.md)
+- update [`Evidence Pack - Education Governance and Legal Feasibility.md`](ψ/lab/foresight-report-wrting/artifacts/source/Evidence%20Pack%20-%20Education%20Governance%20and%20Legal%20Feasibility.md)
 - `Legal Matrix - Education Governance.md`
 - `Analysis Note - Education governance, Article 12, and credential recognition.md`
 

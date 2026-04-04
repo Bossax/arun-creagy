@@ -36,8 +36,8 @@ Status:
 
 ### 3.1 Baseline life realities
 Source leads:
-- [`ข้อมูลจากดุลย์ - เก็บข้อมูลรายงานกลุ่ม 5G.md`](ψ/lab/foresight-report-wrting/artifacts/%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%94%E0%B8%B8%E0%B8%A5%E0%B8%A2%E0%B9%8C%20-%20%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%9A%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%A5%E0%B8%B8%E0%B9%88%E0%B8%A1%205G.md)
-- [`Evidence collection to support the final draft of the report.md`](ψ/lab/foresight-report-wrting/artifacts/Evidence%20collection%20to%20support%20the%20final%20draft%20of%20the%20report.md)
+- [`ข้อมูลจากดุลย์ - เก็บข้อมูลรายงานกลุ่ม 5G.md`](ψ/lab/foresight-report-wrting/artifacts/source/ข้อมูลจากดุลย์%20-%20เก็บข้อมูลรายงานกลุ่ม%205G.md)
+- [`Evidence collection to support the final draft of the report.md`](ψ/lab/foresight-report-wrting/artifacts/archive/Evidence%20collection%20to%20support%20the%20final%20draft%20of%20the%20report.md)
 
 Usable claims already visible:
 - เด็กกลุ่มเปราะบางยังเข้าถึงการศึกษาได้ “บางส่วนแต่ไม่ทั่วถึง”
@@ -72,7 +72,7 @@ Usable claims already visible:
 
 Source leads:
 - [`สาระสำคัญจากการประชุมกลุ่ม 5G เพื่อจัดทำรายงานฉบับสุดท้าย.md`](ψ/lab/foresight-report-wrting/artifacts/%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%B0%E0%B8%AA%E0%B8%B3%E0%B8%84%E0%B8%B1%E0%B8%8D%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%8A%E0%B8%B8%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B8%E0%B9%88%E0%B8%A1%205G%20%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%97%E0%B8%B3%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%A2.md)
-- [`ข้อมูลจากดุลย์ - เก็บข้อมูลรายงานกลุ่ม 5G.md`](ψ/lab/foresight-report-wrting/artifacts/%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%94%E0%B8%B8%E0%B8%A5%E0%B8%A2%E0%B9%8C%20-%20%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%9A%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%A5%E0%B8%B8%E0%B9%88%E0%B8%A1%205G.md)
+- [`ข้อมูลจากดุลย์ - เก็บข้อมูลรายงานกลุ่ม 5G.md`](ψ/lab/foresight-report-wrting/artifacts/source/ข้อมูลจากดุลย์%20-%20เก็บข้อมูลรายงานกลุ่ม%205G.md)
 
 ---
 

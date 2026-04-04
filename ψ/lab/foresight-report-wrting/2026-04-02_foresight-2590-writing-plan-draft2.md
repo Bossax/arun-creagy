@@ -8,7 +8,7 @@
   - เติมตรรกะเชิงเหตุและผล (causal bridges) ให้ครบตามกลุ่ม C
   - แก้ภาษาไทยให้เป็นธรรมชาติ (กลุ่ม B) โดยไม่ลด depth เชิงวิเคราะห์
   - ทำให้สถาปัตยกรรมฉากทัศน์บทที่ 3 เสถียรมากพอสำหรับการขัดเกลาเพิ่มเติม (กลุ่ม E)
-- ทำให้ร่างที่ 2 พร้อมสำหรับการ **ผูกกับระบบอ้างอิง** ตามโครง [ψ/lab/foresight-report-wrting/citations/README-citation-workflow.md](ψ/lab/foresight-report-wrting/citations/README-citation-workflow.md)
+- ทำให้ร่างที่ 2 พร้อมสำหรับการ **ผูกกับระบบอ้างอิง** ตามโครง [ψ/lab/foresight-report-wrting/citations/README-citation-workflow.md](ψ/lab/foresight-report-wrting/citations/archive/README-citation-workflow.md)
 - เตรียมเนื้อหาให้สามารถแตกเป็น **unit การทำงานระดับ subsection** เพื่อให้เอเจนต์/LLM ทำงานแบบ semantic isolation ได้ในรอบถัดไป
 
 ---
@@ -43,22 +43,22 @@
      - [ψ/lab/foresight-report-wrting/artifacts/2026-03-29_ch4-round1-evidence-trace.md](ψ/lab/foresight-report-wrting/artifacts/2026-03-29_ch4-round1-evidence-trace.md)
 
 2. Deep research and analytical memos
-   - Conflict, vulnerability, access, trust: [ψ/lab/foresight-report-wrting/artifacts/Child and Youth Vulnerability in Thailand’s Southern Border Provinces.md](ψ/lab/foresight-report-wrting/artifacts/Child%20and%20Youth%20Vulnerability%20in%20Thailand%E2%80%99s%20Southern%20Border%20Provinces.md)
-   - Learning pathways: [ψ/lab/foresight-report-wrting/artifacts/Learning Pathways.md](ψ/lab/foresight-report-wrting/artifacts/Learning%20Pathways.md)
-   - Youth livelihoods: [ψ/lab/foresight-report-wrting/artifacts/Livelihoods in the Deep South.md](ψ/lab/foresight-report-wrting/artifacts/Livelihoods%20in%20the%20Deep%20South.md)
-   - Belonging and identity: [ψ/lab/foresight-report-wrting/artifacts/Belonging, identity, and cultural capital.md](ψ/lab/foresight-report-wrting/artifacts/Belonging,%20identity,%20and%20cultural%20capital.md)
-   - Vulnerable children overview: [ψ/lab/foresight-report-wrting/artifacts/สถานการณ์พื้นฐานเด็กและเยาวชนกลุ่มเปราะบางในพื้นที่จังหวัดชายแดนภาคใต้.md](ψ/lab/foresight-report-wrting/artifacts/%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B9%8C%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%90%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%81%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%A2%E0%B8%B2%E0%B8%A7%E0%B8%8A%E0%B8%99%E0%B8%81%E0%B8%A5%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B9%80%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%B0%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B9%83%E0%B8%99%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%88%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%8A%E0%B8%B2%E0%B8%A2%E0%B9%81%E0%B8%94%E0%B8%99%E0%B8%A0%E0%B8%B2%E0%B8%84%E0%B9%83%E0%B8%95%E0%B9%89.md)
+   - Conflict, vulnerability, access, trust: [ψ/lab/foresight-report-wrting/artifacts/Child and Youth Vulnerability in Thailand’s Southern Border Provinces.md](ψ/lab/foresight-report-wrting/artifacts/source/Child%20and%20Youth%20Vulnerability%20in%20Thailand’s%20Southern%20Border%20Provinces.md)
+   - Learning pathways: [ψ/lab/foresight-report-wrting/artifacts/Learning Pathways.md](ψ/lab/foresight-report-wrting/artifacts/source/Fragmented%20Learning%20Pathways%20and%20Systemic%20Discontinuities%20in%20the%20Southern%20Border%20Provinces.md)
+   - Youth livelihoods: [ψ/lab/foresight-report-wrting/artifacts/Livelihoods in the Deep South.md](ψ/lab/foresight-report-wrting/artifacts/source/Youth%20Livelihoods%20in%20the%20Deep%20South%20and%20Opportunity%20Structures.md)
+   - Belonging and identity: [ψ/lab/foresight-report-wrting/artifacts/Belonging, identity, and cultural capital.md](ψ/lab/foresight-report-wrting/artifacts/source/Belonging,%20identity,%20and%20cultural%20capital.md)
+   - Vulnerable children overview: [ψ/lab/foresight-report-wrting/artifacts/สถานการณ์พื้นฐานเด็กและเยาวชนกลุ่มเปราะบางในพื้นที่จังหวัดชายแดนภาคใต้.md](ψ/lab/foresight-report-wrting/artifacts/source/0-edited-สถานการณ์พื้นฐานเด็กและเยาวชนกลุ่มเปราะบางในพื้นที่จังหวัดชายแดนภาคใต้.md)
 
 3. Legal and policy base
    - Education laws: 
      - [ψ/lab/foresight-report-wrting/artifacts/พระราชบัญญัติการศึกษาแห่งชาติพ.ศ. ๒๕๔๒.md](ψ/lab/foresight-report-wrting/artifacts/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%9A%E0%B8%B1%E0%B8%8D%E0%B8%8D%E0%B8%B1%E0%B8%95%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4%E0%B8%9E%E0%B8%A8.%20%E0%B9%92%E0%B9%95%E0%B9%94%E0%B9%92.md)
-     - [ψ/lab/foresight-report-wrting/artifacts/พระราชบัญญัติพื้นที่นวัตกรรมการศึกษา พ.ศ. ๒๕๖๒.md](ψ/lab/foresight-report-wrting/artifacts/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%9A%E0%B8%B1%E0%B8%8D%E0%B8%8D%E0%B8%B1%E0%B8%95%E0%B8%B4%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%99%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2%20%E0%B8%9E.%E0%B8%A8.%20%E0%B9%92%E0%B9%95%E0%B9%96%E0%B9%92.md)
+     - [ψ/lab/foresight-report-wrting/artifacts/พระราชบัญญัติพื้นที่นวัตกรรมการศึกษา พ.ศ. ๒๕๖๒.md](ψ/lab/foresight-report-wrting/artifacts/source/พระราชบัญญัติพื้นที่นวัตกรรมการศึกษา%20พ.ศ.%20๒๕๖๒.md)
 
 ### 1.3 Hierarchy rule for Draft 2
 
 - **First anchor**: project-grounded artifacts and internal evidence under `ψ/lab/foresight-report-wrting/artifacts/`.
 - **Second anchor**: deep research memos (Gemini/Perplexity-based) only where they can be matched to traceable sources via the citation system.
-- **Third anchor**: external web findings *only after* they are registered into [ψ/lab/foresight-report-wrting/citations/citation-registry.md](ψ/lab/foresight-report-wrting/citations/citation-registry.md) with a `SRC_ID`.
+- **Third anchor**: external web findings *only after* they are registered into [ψ/lab/foresight-report-wrting/citations/citation-registry.md](ψ/lab/foresight-report-wrting/citations/archive/citation-registry.md) with a `SRC_ID`.
 - No new claim in Draft 2 may rely **only** on generic foresight logic with no evidence anchor; such claims must be either:
   - downgraded to clearly marked synthesis with explicit uncertainty, or
   - held with a `[HOLD: ต้องเติมแหล่งอ้างอิงจริง]` note.
@@ -72,8 +72,8 @@ Draft 2 is the first pass that must be structurally compatible with the new cita
 ### 2.1 Required behaviours while drafting
 
 - ทุก subsection ที่มีข้อกล่าวอ้างสำคัญต้อง:
-  - ระบุ **`CLAIM_ID`** ใน [ψ/lab/foresight-report-wrting/citations/report-claim-evidence-map.md](ψ/lab/foresight-report-wrting/citations/report-claim-evidence-map.md)
-  - เชื่อมกับอย่างน้อยหนึ่ง **`ART_PAR_ID`** ใน [ψ/lab/foresight-report-wrting/citations/artifact-paragraph-source-map.md](ψ/lab/foresight-report-wrting/citations/artifact-paragraph-source-map.md)
+  - ระบุ **`CLAIM_ID`** ใน [ψ/lab/foresight-report-wrting/citations/report-claim-evidence-map.md](ψ/lab/foresight-report-wrting/citations/archive/report-claim-evidence-map.md)
+  - เชื่อมกับอย่างน้อยหนึ่ง **`ART_PAR_ID`** ใน [ψ/lab/foresight-report-wrting/citations/artifact-paragraph-source-map.md](ψ/lab/foresight-report-wrting/citations/archive/artifact-paragraph-source-map.md)
   - ดึง `SRC_ID` ตาม chain `CLAIM_ID → ART_PAR_ID → SRC_ID`
 - เมื่อไม่พบหลักฐานเพียงพอ:
   - ใช้สถานะ `Evidence_Adequacy = none` หรือ `weak` ในตาราง claim map
@@ -84,12 +84,12 @@ Draft 2 is the first pass that must be structurally compatible with the new cita
 ก่อนปิด Draft 2 ต้องมีอย่างน้อย:
 
 1. Registry
-   - อย่างน้อย 10–20 แหล่งหลักที่ใช้บ่อยใน [ψ/lab/foresight-report-wrting/citations/citation-registry.md](ψ/lab/foresight-report-wrting/citations/citation-registry.md)
+   - อย่างน้อย 10–20 แหล่งหลักที่ใช้บ่อยใน [ψ/lab/foresight-report-wrting/citations/citation-registry.md](ψ/lab/foresight-report-wrting/citations/archive/citation-registry.md)
 2. Artifact mapping
-   - Artifact registry: บันทึก `ART_ID` สำหรับ artifacts หลัก 5–10 ชิ้นแรกใน [ψ/lab/foresight-report-wrting/citations/artifact-paragraph-source-map.md](ψ/lab/foresight-report-wrting/citations/artifact-paragraph-source-map.md)
+   - Artifact registry: บันทึก `ART_ID` สำหรับ artifacts หลัก 5–10 ชิ้นแรกใน [ψ/lab/foresight-report-wrting/citations/artifact-paragraph-source-map.md](ψ/lab/foresight-report-wrting/citations/archive/artifact-paragraph-source-map.md)
    - Paragraph map: อย่างน้อย 2–3 `ART_PAR_ID` ต่อบท สำหรับบทที่ 1–3
 3. Claim mapping
-   - อย่างน้อย 3–5 `CLAIM_ID` ต่อบท ใน [ψ/lab/foresight-report-wrting/citations/report-claim-evidence-map.md](ψ/lab/foresight-report-wrting/citations/report-claim-evidence-map.md)
+   - อย่างน้อย 3–5 `CLAIM_ID` ต่อบท ใน [ψ/lab/foresight-report-wrting/citations/report-claim-evidence-map.md](ψ/lab/foresight-report-wrting/citations/archive/report-claim-evidence-map.md)
 
 ### 2.3 Inline citation strategy
 

@@ -22,7 +22,7 @@ Round 1 chapter-separated drafts exist for Chapters 2–4, with per-chapter evid
   - [2026-03-29_ch4-round1-evidence-trace.md](ψ/lab/foresight-report-wrting/artifacts/2026-03-29_ch4-round1-evidence-trace.md)
 - T1 (45–60 min): Trace top 10 claims to real sources (URLs / official docs), then update the ledgers with citation-ready entries.
 - T2 (30–45 min): Actor map extraction from:
-  - [ข้อมูลจากดุลย์ - เก็บข้อมูลรายงานกลุ่ม 5G.md](ψ/lab/foresight-report-wrting/artifacts/ข้อมูลจากดุลย์%20-%20เก็บข้อมูลรายงานกลุ่ม%205G.md)
+  - [ข้อมูลจากดุลย์ - เก็บข้อมูลรายงานกลุ่ม 5G.md](ψ/lab/foresight-report-wrting/artifacts/source/ข้อมูลจากดุลย์%20-%20เก็บข้อมูลรายงานกลุ่ม%205G.md)
 - T3 (45–60 min): Produce Chapter 3 audience-facing v0.1:
   - Start from [2026-03-29_ch3-round1-draft.md](ψ/lab/foresight-report-wrting/artifacts/2026-03-29_ch3-round1-draft.md)
   - Remove resolved HOLD/GAP, keep only claims with citations (per [citation-style-th.md](ψ/memory/resonance/citation-style-th.md))

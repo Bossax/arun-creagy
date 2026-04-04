@@ -20,10 +20,10 @@ Status:
 ## 2. Source base already available
 
 ### 2.1 Primary legal-feasibility source
-- [`ความเป็นไปได้ในการจัดตั้งพื้นที่นวัตกรรมนโยบาย (Policy Sandbox) ในจังหวัดชายแดนภาคใต้ -นวัตกรรมระบบงบประมาณแบบผสมผสานและงบประมาณตามผลลัพธ์เพื่อการเปลี่ยนผ่านสู่ความมั่นคงและมั่งคั่งอย่างยั่งยืน พ.ศ. 2590.md`](ψ/lab/foresight-report-wrting/artifacts/Policy%20sandbox%20possibility.md)
+- [[ψ/lab/foresight-report-wrting/artifacts/source/Policy sandbox possibility in the south|Policy sandbox possibility in the south]]
 
 ### 2.2 Primary field/practice source
-- [`ข้อมูลจากดุลย์ - เก็บข้อมูลรายงานกลุ่ม 5G.md`](ψ/lab/foresight-report-wrting/artifacts/%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%94%E0%B8%B8%E0%B8%A5%E0%B8%A2%E0%B9%8C%20-%20%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%9A%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%A5%E0%B8%B8%E0%B9%88%E0%B8%A1%205G.md)
+- [`ข้อมูลจากดุลย์ - เก็บข้อมูลรายงานกลุ่ม 5G.md`](ψ/lab/foresight-report-wrting/artifacts/source/ข้อมูลจากดุลย์%20-%20เก็บข้อมูลรายงานกลุ่ม%205G.md)
 
 ### 2.3 Strategic reframing source
 - [`สาระสำคัญจากการประชุมกลุ่ม 5G เพื่อจัดทำรายงานฉบับสุดท้าย.md`](ψ/lab/foresight-report-wrting/artifacts/%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%B0%E0%B8%AA%E0%B8%B3%E0%B8%84%E0%B8%B1%E0%B8%8D%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%8A%E0%B8%B8%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B8%E0%B9%88%E0%B8%A1%205G%20%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%97%E0%B8%B3%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%A2.md)
@@ -59,7 +59,7 @@ The materials repeatedly point to a core uncertainty:
 
 This is already visible in:
 - [`base_report.md`](ψ/lab/foresight-report-wrting/artifacts/base_report.md)
-- [`ข้อมูลจากดุลย์ - เก็บข้อมูลรายงานกลุ่ม 5G.md`](ψ/lab/foresight-report-wrting/artifacts/%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%94%E0%B8%B8%E0%B8%A5%E0%B8%A2%E0%B9%8C%20-%20%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%9A%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%A5%E0%B8%B8%E0%B9%88%E0%B8%A1%205G.md)
+- [`ข้อมูลจากดุลย์ - เก็บข้อมูลรายงานกลุ่ม 5G.md`](ψ/lab/foresight-report-wrting/artifacts/source/ข้อมูลจากดุลย์%20-%20เก็บข้อมูลรายงานกลุ่ม%205G.md)
 - [`สาระสำคัญจากการประชุมกลุ่ม 5G เพื่อจัดทำรายงานฉบับสุดท้าย.md`](ψ/lab/foresight-report-wrting/artifacts/%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%B0%E0%B8%AA%E0%B8%B3%E0%B8%84%E0%B8%B1%E0%B8%8D%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%8A%E0%B8%B8%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B8%E0%B9%88%E0%B8%A1%205G%20%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%97%E0%B8%B3%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%A2.md)
 
 ---

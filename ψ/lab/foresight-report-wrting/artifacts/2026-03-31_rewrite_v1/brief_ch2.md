@@ -70,7 +70,7 @@ Suggested internal sources to consult
   - [`ψ/lab/foresight-report-wrting/artifacts/2026-03-29_ch2-round1-evidence-trace.md`](ψ/lab/foresight-report-wrting/artifacts/2026-03-29_ch2-round1-evidence-trace.md)
 - Supporting artifacts:
   - [`ψ/lab/foresight-report-wrting/artifacts/System map.md`](ψ/lab/foresight-report-wrting/artifacts/System%20map.md)
-  - [`ψ/lab/foresight-report-wrting/artifacts/signal_database.md`](ψ/lab/foresight-report-wrting/artifacts/signal_database.md)
-  - [`ψ/lab/foresight-report-wrting/artifacts/PM - Evidence Spine.md`](ψ/lab/foresight-report-wrting/artifacts/PM%20-%20Evidence%20Spine.md)
+  - [`ψ/lab/foresight-report-wrting/artifacts/signal_database.md`](ψ/lab/foresight-report-wrting/artifacts/source/signal_database.md)
+  - [`ψ/lab/foresight-report-wrting/artifacts/PM - Evidence Spine.md`](ψ/lab/foresight-report-wrting/artifacts/archive/PM%20-%20Evidence%20Spine.md)
   - [`ψ/lab/foresight-report-wrting/2026-03-30_foresight-2590-evidence-base-round1.md`](ψ/lab/foresight-report-wrting/2026-03-30_foresight-2590-evidence-base-round1.md)
 

@@ -24,7 +24,7 @@
 ## Pending
 - [ ] Replace HOLD/GAP claims by tracing to underlying real sources and inserting academic-style citations per [citation-style-th.md](ψ/memory/resonance/citation-style-th.md)
 - [ ] Build/complete canonical source ledger (one row per real source; map to chapter sections; confidence + locality)
-- [ ] Build actor-network + implementation capacity map anchored in: [ข้อมูลจากดุลย์ - เก็บข้อมูลรายงานกลุ่ม 5G.md](ψ/lab/foresight-report-wrting/artifacts/ข้อมูลจากดุลย์%20-%20เก็บข้อมูลรายงานกลุ่ม%205G.md)
+- [ ] Build actor-network + implementation capacity map anchored in: [ข้อมูลจากดุลย์ - เก็บข้อมูลรายงานกลุ่ม 5G.md](ψ/lab/foresight-report-wrting/artifacts/source/ข้อมูลจากดุลย์%20-%20เก็บข้อมูลรายงานกลุ่ม%205G.md)
 - [ ] Create scenario descriptor matrix aligned to the education × economy axes (for Chapter 3)
 - [ ] Create strategy build sheet (H1/H2/H3, leverage points, ownership, quick wins) (for Chapter 4)
 - [ ] Decide consistent handling of “Duly file” in citations (e.g., “personal communication” / “unpublished memo”) and apply consistently
@@ -41,7 +41,7 @@
 ## Key Files
 - Round 1 drafts: [2026-03-29_ch2-round1-draft.md](ψ/lab/foresight-report-wrting/artifacts/2026-03-29_ch2-round1-draft.md), [2026-03-29_ch3-round1-draft.md](ψ/lab/foresight-report-wrting/artifacts/2026-03-29_ch3-round1-draft.md), [2026-03-29_ch4-round1-draft.md](ψ/lab/foresight-report-wrting/artifacts/2026-03-29_ch4-round1-draft.md)
 - Evidence trace ledgers: [2026-03-29_ch2-round1-evidence-trace.md](ψ/lab/foresight-report-wrting/artifacts/2026-03-29_ch2-round1-evidence-trace.md), [2026-03-29_ch3-round1-evidence-trace.md](ψ/lab/foresight-report-wrting/artifacts/2026-03-29_ch3-round1-evidence-trace.md), [2026-03-29_ch4-round1-evidence-trace.md](ψ/lab/foresight-report-wrting/artifacts/2026-03-29_ch4-round1-evidence-trace.md)
-- Evidence workflow: [PM - Evidence Spine.md](ψ/lab/foresight-report-wrting/artifacts/PM%20-%20Evidence%20Spine.md), [PM - Report Readiness Board.md](ψ/lab/foresight-report-wrting/artifacts/PM%20-%20Report%20Readiness%20Board.md)
-- Core actor anchor: [ข้อมูลจากดุลย์ - เก็บข้อมูลรายงานกลุ่ม 5G.md](ψ/lab/foresight-report-wrting/artifacts/ข้อมูลจากดุลย์%20-%20เก็บข้อมูลรายงานกลุ่ม%205G.md)
+- Evidence workflow: [PM - Evidence Spine.md](ψ/lab/foresight-report-wrting/artifacts/archive/PM%20-%20Evidence%20Spine.md), [PM - Report Readiness Board.md](ψ/lab/foresight-report-wrting/artifacts/archive/PM%20-%20Report%20Readiness%20Board.md)
+- Core actor anchor: [ข้อมูลจากดุลย์ - เก็บข้อมูลรายงานกลุ่ม 5G.md](ψ/lab/foresight-report-wrting/artifacts/source/ข้อมูลจากดุลย์%20-%20เก็บข้อมูลรายงานกลุ่ม%205G.md)
 - Citation standard: [citation-style-th.md](ψ/memory/resonance/citation-style-th.md)
 

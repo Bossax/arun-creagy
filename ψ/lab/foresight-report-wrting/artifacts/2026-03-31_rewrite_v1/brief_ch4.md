@@ -77,10 +77,10 @@ Suggested internal sources to consult
   - [`ψ/lab/foresight-report-wrting/artifacts/2026-03-29_ch4-round1-evidence-trace.md`](ψ/lab/foresight-report-wrting/artifacts/2026-03-29_ch4-round1-evidence-trace.md)
   - [`ψ/lab/foresight-report-wrting/artifacts/2026-03-29_ch4-writing-plan.md`](ψ/lab/foresight-report-wrting/artifacts/2026-03-29_ch4-writing-plan.md)
 - Strategy/actors context:
-  - [`ψ/lab/foresight-report-wrting/artifacts/Analysis and actor assignment.md`](ψ/lab/foresight-report-wrting/artifacts/Analysis%20and%20actor%20assignment.md)
+  - [`ψ/lab/foresight-report-wrting/artifacts/Analysis and actor assignment.md`](ψ/lab/foresight-report-wrting/artifacts/2026-03-31_rewrite_v1/Analysis%20and%20actor%20assignment.md)
   - [`ψ/lab/foresight-report-wrting/artifacts/Source mapping.md`](ψ/lab/foresight-report-wrting/artifacts/Source%20mapping.md)
 - Legal pack sources:
-  - [`ψ/lab/foresight-report-wrting/artifacts/Evidence Pack - Education Governance and Legal Feasibility.md`](ψ/lab/foresight-report-wrting/artifacts/Evidence%20Pack%20-%20Education%20Governance%20and%20Legal%20Feasibility.md)
+  - [`ψ/lab/foresight-report-wrting/artifacts/Evidence Pack - Education Governance and Legal Feasibility.md`](ψ/lab/foresight-report-wrting/artifacts/source/Evidence%20Pack%20-%20Education%20Governance%20and%20Legal%20Feasibility.md)
   - [`ψ/lab/foresight-report-wrting/artifacts/พระราชบัญญัติการศึกษาแห่งชาติพ.ศ. ๒๕๔๒.md`](ψ/lab/foresight-report-wrting/artifacts/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%9A%E0%B8%B1%E0%B8%8D%E0%B8%8D%E0%B8%B1%E0%B8%95%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4%E0%B8%9E%E0%B8%A8.%20%E0%B9%92%E0%B9%95%E0%B9%94%E0%B9%92.md)
-  - [`ψ/lab/foresight-report-wrting/artifacts/พระราชบัญญัติพื้นที่นวัตกรรมการศึกษา พ.ศ. ๒๕๖๒.md`](ψ/lab/foresight-report-wrting/artifacts/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%9A%E0%B8%B1%E0%B8%8D%E0%B8%8D%E0%B8%B1%E0%B8%95%E0%B8%B4%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%99%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2%20%E0%B8%9E.%E0%B8%A8.%20%E0%B9%92%E0%B9%95%E0%B9%96%E0%B9%92.md)
+  - [`ψ/lab/foresight-report-wrting/artifacts/พระราชบัญญัติพื้นที่นวัตกรรมการศึกษา พ.ศ. ๒๕๖๒.md`](ψ/lab/foresight-report-wrting/artifacts/source/พระราชบัญญัติพื้นที่นวัตกรรมการศึกษา%20พ.ศ.%20๒๕๖๒.md)
 

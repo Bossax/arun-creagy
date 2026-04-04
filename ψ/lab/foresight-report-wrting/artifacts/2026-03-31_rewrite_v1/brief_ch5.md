@@ -59,8 +59,8 @@ Outputs this chapter promises to later packaging
 - Any synthesis claim that implies evidence closure must cross-check against the HOLD/GAP register.
 
 Suggested internal sources to consult
-- [`ψ/lab/foresight-report-wrting/artifacts/PM - Evidence Spine.md`](ψ/lab/foresight-report-wrting/artifacts/PM%20-%20Evidence%20Spine.md)
-- [`ψ/lab/foresight-report-wrting/artifacts/PM - HOLD-GAP Register (rewrite).md`](ψ/lab/foresight-report-wrting/artifacts/PM%20-%20HOLD-GAP%20Register%20%28rewrite%29.md)
+- [`ψ/lab/foresight-report-wrting/artifacts/PM - Evidence Spine.md`](ψ/lab/foresight-report-wrting/artifacts/archive/PM%20-%20Evidence%20Spine.md)
+- [`ψ/lab/foresight-report-wrting/artifacts/PM - HOLD-GAP Register (rewrite).md`](ψ/lab/foresight-report-wrting/artifacts/archive/PM%20-%20HOLD-GAP%20Register%20(rewrite).md)
 - Chapter draft packages (for synthesis only):
   - [`ψ/lab/foresight-report-wrting/artifacts/2026-03-29_ch2-round1-draft.md`](ψ/lab/foresight-report-wrting/artifacts/2026-03-29_ch2-round1-draft.md)
   - [`ψ/lab/foresight-report-wrting/artifacts/2026-03-29_ch3-round1-draft.md`](ψ/lab/foresight-report-wrting/artifacts/2026-03-29_ch3-round1-draft.md)

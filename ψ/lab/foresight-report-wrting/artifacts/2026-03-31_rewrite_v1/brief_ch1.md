@@ -64,7 +64,7 @@ Outputs this chapter promises to later chapters
 - HG-009 empty heading slot handling decision.
 
 Suggested internal sources to consult
-- [`ψ/lab/foresight-report-wrting/artifacts/PM - Evidence Spine.md`](ψ/lab/foresight-report-wrting/artifacts/PM%20-%20Evidence%20Spine.md)
+- [`ψ/lab/foresight-report-wrting/artifacts/PM - Evidence Spine.md`](ψ/lab/foresight-report-wrting/artifacts/archive/PM%20-%20Evidence%20Spine.md)
 - [`ψ/lab/foresight-report-wrting/2026-03-29_foresight-2590-writing-plan.md`](ψ/lab/foresight-report-wrting/2026-03-29_foresight-2590-writing-plan.md)
 - [`ψ/lab/foresight-report-wrting/2026-03-30_foresight-2590-evidence-base-round1.md`](ψ/lab/foresight-report-wrting/2026-03-30_foresight-2590-evidence-base-round1.md)
 

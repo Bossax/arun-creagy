@@ -2,13 +2,13 @@
 
 Primary context:
 - Working report scaffold: [base_report.md](ψ/lab/foresight-report-wrting/artifacts/base_report.md)
-- Coordination spine: [PM - Evidence Spine.md](ψ/lab/foresight-report-wrting/artifacts/PM%20-%20Evidence%20Spine.md)
-- Readiness tracker: [PM - Report Readiness Board.md](ψ/lab/foresight-report-wrting/artifacts/PM%20-%20Report%20Readiness%20Board.md)
-- Conversion workflow: [PM - Analysis Conversion Queue.md](ψ/lab/foresight-report-wrting/artifacts/PM%20-%20Analysis%20Conversion%20Queue.md)
+- Coordination spine: [PM - Evidence Spine.md](ψ/lab/foresight-report-wrting/artifacts/archive/PM%20-%20Evidence%20Spine.md)
+- Readiness tracker: [PM - Report Readiness Board.md](ψ/lab/foresight-report-wrting/artifacts/archive/PM%20-%20Report%20Readiness%20Board.md)
+- Conversion workflow: [PM - Analysis Conversion Queue.md](ψ/lab/foresight-report-wrting/artifacts/archive/PM%20-%20Analysis%20Conversion%20Queue.md)
 - Existing prompt bank: [Research prompts for final report.md](ψ/lab/foresight-report-wrting/artifacts/Research%20prompts%20for%20final%20report.md)
 - Completed baseline packs:
-  - [Evidence Pack - Youth Baseline.md](ψ/lab/foresight-report-wrting/artifacts/Evidence%20Pack%20-%20Youth%20Baseline.md)
-  - [Evidence Pack - Education Governance and Legal Feasibility.md](ψ/lab/foresight-report-wrting/artifacts/Evidence%20Pack%20-%20Education%20Governance%20and%20Legal%20Feasibility.md)
+  - [Evidence Pack - Youth Baseline.md](ψ/lab/foresight-report-wrting/artifacts/source/Evidence%20Pack%20-%20Youth%20Baseline.md)
+  - [Evidence Pack - Education Governance and Legal Feasibility.md](ψ/lab/foresight-report-wrting/artifacts/source/Evidence%20Pack%20-%20Education%20Governance%20and%20Legal%20Feasibility.md)
 
 ---
 
@@ -80,7 +80,7 @@ Primary context:
 ## 3.2 Workstream B — Youth baseline completion
 
 ### Objective
-เติมช่องว่างเชิง desk research ให้ [Evidence Pack - Youth Baseline.md](ψ/lab/foresight-report-wrting/artifacts/Evidence%20Pack%20-%20Youth%20Baseline.md) โดยเฉพาะข้อมูลเชิงปริมาณและ pathway ของเด็กกลุ่มเปราะบาง
+เติมช่องว่างเชิง desk research ให้ [Evidence Pack - Youth Baseline.md](ψ/lab/foresight-report-wrting/artifacts/source/Evidence%20Pack%20-%20Youth%20Baseline.md) โดยเฉพาะข้อมูลเชิงปริมาณและ pathway ของเด็กกลุ่มเปราะบาง
 
 ### Priority gaps to close
 - จำนวนเด็กกำพร้า/เด็กเปราะบาง/เด็กนอกระบบในพื้นที่
@@ -96,7 +96,7 @@ Primary context:
 - UNICEF / UNFPA / World Bank ที่เกี่ยวกับ child vulnerability
 
 ### Outputs
-- update [Evidence Pack - Youth Baseline.md](ψ/lab/foresight-report-wrting/artifacts/Evidence%20Pack%20-%20Youth%20Baseline.md)
+- update [Evidence Pack - Youth Baseline.md](ψ/lab/foresight-report-wrting/artifacts/source/Evidence%20Pack%20-%20Youth%20Baseline.md)
 - `Analysis Note - Youth baseline and life-path constraints.md`
 
 ### Completion criteria
@@ -109,7 +109,7 @@ Primary context:
 ## 3.3 Workstream C — Education governance and legal feasibility completion
 
 ### Objective
-เติมฐานกฎหมายและฐานปฏิบัติให้ [Evidence Pack - Education Governance and Legal Feasibility.md](ψ/lab/foresight-report-wrting/artifacts/Evidence%20Pack%20-%20Education%20Governance%20and%20Legal%20Feasibility.md) พร้อมใช้เป็นฐานเหตุผลของ chapter 2–4
+เติมฐานกฎหมายและฐานปฏิบัติให้ [Evidence Pack - Education Governance and Legal Feasibility.md](ψ/lab/foresight-report-wrting/artifacts/source/Evidence%20Pack%20-%20Education%20Governance%20and%20Legal%20Feasibility.md) พร้อมใช้เป็นฐานเหตุผลของ chapter 2–4
 
 ### Priority gaps to close
 - ตัวบท vs การใช้จริงของ `มาตรา 12`
@@ -124,7 +124,7 @@ Primary context:
 - งานวิจัยเกี่ยวกับปอเนาะ / การศึกษาอิสลาม / recognition gap
 
 ### Outputs
-- update [Evidence Pack - Education Governance and Legal Feasibility.md](ψ/lab/foresight-report-wrting/artifacts/Evidence%20Pack%20-%20Education%20Governance%20and%20Legal%20Feasibility.md)
+- update [Evidence Pack - Education Governance and Legal Feasibility.md](ψ/lab/foresight-report-wrting/artifacts/source/Evidence%20Pack%20-%20Education%20Governance%20and%20Legal%20Feasibility.md)
 - `Analysis Note - Education governance, Article 12, and credential recognition.md`
 - `Legal Matrix - Education Governance.md`
 
@@ -146,8 +146,8 @@ Primary context:
 - ความเสี่ยงของการ romanticize creative economy คืออะไร
 
 ### Existing internal anchors
-- [ยุทธศาสตร์และภาพอนาคตทางเศรษฐกิจของกลุ่มประเทศ Nusantara 2045-2050 - การยกระดับแรงงานทักษะดิจิทัลและเศรษฐกิจฮาลาลสร้างสรรค์เพื่อโอกาสของเยาวชนชายแดนใต้.md](ψ/lab/foresight-report-wrting/artifacts/Strategy%20of%20Nusantara%202045-2050%20-%20digital%20worker%20upskill.md)
-- [ข้อมูลจากดุลย์ - เก็บข้อมูลรายงานกลุ่ม 5G.md](ψ/lab/foresight-report-wrting/artifacts/%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%94%E0%B8%B8%E0%B8%A5%E0%B8%A2%E0%B9%8C%20-%20%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%9A%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%A5%E0%B8%B8%E0%B9%88%E0%B8%A1%205G.md)
+- [ยุทธศาสตร์และภาพอนาคตทางเศรษฐกิจของกลุ่มประเทศ Nusantara 2045-2050 - การยกระดับแรงงานทักษะดิจิทัลและเศรษฐกิจฮาลาลสร้างสรรค์เพื่อโอกาสของเยาวชนชายแดนใต้.md](ψ/lab/foresight-report-wrting/artifacts/source/Strategy%20of%20Nusantara%202045-2050%20-%20digital%20worker%20upskill.md)
+- [ข้อมูลจากดุลย์ - เก็บข้อมูลรายงานกลุ่ม 5G.md](ψ/lab/foresight-report-wrting/artifacts/source/ข้อมูลจากดุลย์%20-%20เก็บข้อมูลรายงานกลุ่ม%205G.md)
 
 ### Outputs
 - `Evidence Pack - Economy Opportunity.md`
@@ -167,7 +167,7 @@ Primary context:
 - ใครมี delivery capacity
 
 ### Existing internal anchors
-- [Analysis and actor assignment.md](ψ/lab/foresight-report-wrting/artifacts/Analysis%20and%20actor%20assignment.md)
+- [Analysis and actor assignment.md](ψ/lab/foresight-report-wrting/artifacts/2026-03-31_rewrite_v1/Analysis%20and%20actor%20assignment.md)
 - [ข้อมูลจากดุลย์ - เก็บข้อมูลรายงานกลุ่ม 5G.md](ψ/lab/foresight-report-wrting/artifacts/%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%94%E0%B8%B8%E0%B8%A5%E0%B8%A2%E0%B9%8C%20-%20%E0%B9%80%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%9A%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%A5%E0%B8%B8%E0%B9%88%E0%B8%A1%205G.md)
 
 ### Outputs

@@ -14,9 +14,9 @@ Purpose:
 Examples:
 - [`base_report.md`](ψ/lab/foresight-report-wrting/artifacts/base_report.md)
 - [`Source mapping.md`](ψ/lab/foresight-report-wrting/artifacts/Source%20mapping.md)
-- [`Evidence collection to support the final draft of the report.md`](ψ/lab/foresight-report-wrting/artifacts/Evidence%20collection%20to%20support%20the%20final%20draft%20of%20the%20report.md)
-- [`Analysis and actor assignment.md`](ψ/lab/foresight-report-wrting/artifacts/Analysis%20and%20actor%20assignment.md)
-- [`Four scenario narratives (year 2047).md`](ψ/lab/foresight-report-wrting/artifacts/Four%20scenario%20narratives%20%28year%202047%29.md)
+- [`Evidence collection to support the final draft of the report.md`](ψ/lab/foresight-report-wrting/artifacts/archive/Evidence%20collection%20to%20support%20the%20final%20draft%20of%20the%20report.md)
+- [`Analysis and actor assignment.md`](ψ/lab/foresight-report-wrting/artifacts/2026-03-31_rewrite_v1/Analysis%20and%20actor%20assignment.md)
+- [`Four scenario narratives (year 2047).md`](ψ/lab/foresight-report-wrting/artifacts/source/Four%20scenario%20narratives%20(year%202047).md)
 
 ### Layer B — Evidence card
 รูปแบบสั้นที่ตอบให้ได้ว่า source นี้ใช้รองรับ “claim ไหน”
