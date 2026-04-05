@@ -1,42 +1,49 @@
 graph TD
-    %% Central Node
-    Violence((สถานการณ์ความรุนแรง))
+    %% --- 1. วงจรเศรษฐกิจ (Economy Cycle) ---
+    subgraph Economy_Cycle
+        EC[การพัฒนาเศรษฐกิจเมือง] -->|(+)| PA[โอกาสทางอาชีพของผู้ปกครอง]
+        PA -->|(+)| FI[รายได้ของครอบครัว]
+        EXP[รายจ่ายครัวเรือน] -->|(+)| DH[ภาระหนี้สิน]
+        FI -->|(+)| FES[สถานะทางเศรษฐกิจของครอบครัว]
+        DH -->|(-)| FES
+        FES -->|(+)| LC[ความต่อเนื่องของการเรียนรู้]
+        LC -->|(+)| YC[ทักษะและโอกาสทางอาชีพของเยาวชน]
+        YC -->|(+)| EC
+    end
 
-    %% Top Left: Climate & Social
-    Climate[Climate change] --> QoL[คุณภาพชีวิตของประชาชน]
-    Social[Social values] --> Accept[การยอมรับความหลากหลาย]
-    Accept --> QoL
-    QoL -- "-" --> Violence
+    %% --- 2. วงจรการศึกษาและการเรียนรู้ (Education & Learning Cycle) ---
+    subgraph Education_Learning_Cycle
+        POL[นโยบายการศึกษาแบบรวมศูนย์] -->|(-)| DLP[เส้นทางการเรียนรู้ที่หลากหลาย]
+        ID[อัตลักษณ์และวัฒนธรรมท้องถิ่น] -->|(+)| DLP
+        DLP -->|(+)| CRT[การรับรองวุฒิและการเทียบโอน]
+        CRT -->|(+)| YC
+        LC -->|(+)| CRT
+    end
 
-    %% Middle Left: Medical & Economy
-    MedTech[Medical Technology] --> LifeExp[อายุขัยเฉลี่ย]
-    Economy[เศรษฐกิจ] --> Household[รายจ่ายของครัวเรือน]
-    Household --> Debt[ปัญหาหนี้สิน]
-    Debt -- "+" --> Violence
-    EconGrowth[เศรษฐกิจของภูมิภาค] -- "-" --> Violence
+    %% --- 3. วงจรความไม่สงบและความเชื่อใจ (Unrest & Trust Cycle) ---
+    subgraph Unrest_Trust_Cycle
+        VIO[สถานการณ์ความรุนแรง] -->|(-)| SEC[ความปลอดภัยในชีวิตประจำวัน]
+        INJ[ประสบการณ์ความไม่เป็นธรรม] -->|(-)| TRU[ความไว้วางใจต่อสถาบันสาธารณะ]
+        SEC -->|(+)| TRU
+        TRU -->|(+)| AW[การเข้าถึงสวัสดิการและการคุ้มครอง]
+        AW -->|(+)| LC
+        AW -->|(-)| DH
+        SC[ทุนทางสังคมและเครือข่ายชุมชน] -->|(+)| TRU
+        SC -->|(+)| AW
+    end
 
-    %% Bottom: AI & Education
-    AGI[ความก้าวหน้าของ AGI] --> AIChat[AI Chatbot ในการเรียนรู้]
-    AGI --> EduQuality[คุณภาพการศึกษา]
-    AIChat --> EduQuality
-    EduQuality --> YouthSkill[ทักษะอาชีพของเด็ก]
-    YouthSkill --> JobOpp[โอกาสในการทำงาน]
-    JobOpp -- "-" --> Violence
+    %% --- 4. คุณภาพชีวิตเด็ก (Child Quality of Life) ---
+    subgraph Quality_of_Life
+        YC -->|(+)| CQL[คุณภาพชีวิตเด็ก]
+        SEC -->|(+)| CQL
+        AW -->|(+)| CQL
+        LC -->|(+)| CQL
+        SC -->|(+)| CQL
+    end
 
-    %% Right: Robotics & Geopolitics
-    Robotics[Robotics] --> MilTech[เทคโนโลยีการทหารแบบแม่นยำ]
-    MilTech -- "+" --> Violence
-    Geopolitics[Geopolitics] --> Border[ความขัดแย้งชายแดน]
-    Border -- "+" --> Violence
-
-    %% Far Right: Unrest
-    Unrest[ความไม่สงบ] --> Religion[ความขัดแย้งทางศาสนา]
-    Religion -- "+" --> Violence
-    GovTrust[ความเชื่อมั่นในรัฐบาล] -- "-" --> Unrest
-    Unrest -- "+" --> Violence
-
-    %% Styling
-    style Violence fill:#f96,stroke:#333,stroke-width:4px
-    style Economy fill:#f99
-    style Education fill:#ff9
-    style AI_Section fill:#ccf
+    %% --- การเชื่อมโยงข้ามส่วน (Systemic Links) ---
+    VIO -->|(-)| EC
+    ENV[ความเสี่ยงสิ่งแวดล้อมและภัยพิบัติ] -->|(-)| FI
+    ENV -->|(-)| SEC
+    DIG[สภาพแวดล้อมออนไลน์และดิจิทัล] -->|(+)| YC
+    DIG -->|(-)| CQL

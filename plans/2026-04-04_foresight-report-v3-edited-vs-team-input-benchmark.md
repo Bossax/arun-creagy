@@ -297,6 +297,23 @@ Use [`ψ/lab/foresight-report-wrting/artifacts/source/Foresight report - output 
 - If a passage is strong in content but misplaced by section function, move or rewrite it.
 - If a section uses beautiful prose but does not do its assigned analytical job, treat it as incomplete.
 
+## Cross-cutting writing lens for every revision pass
+
+Use [`plans/foresight-report-writing-style-pack.md`](plans/foresight-report-writing-style-pack.md) as the prose-control companion to this benchmark. In practice:
+
+- this file decides **what the section must do**
+- [`plans/foresight-report-writing-style-pack.md`](plans/foresight-report-writing-style-pack.md) decides **how the section should sound and move while doing it**
+
+During revision, apply these cross-cutting style tests to every section:
+
+- write in **Thai-first** prose, not Thai that preserves translated English sentence logic
+- keep the analysis **actor-first and child-centred** so readers can see who is acting, who is affected, and whose pathway is narrowing or opening
+- make paragraphs **mechanism-first** by showing what drives what, not merely naming themes
+- keep **one paragraph, one function** so section roles stay visible
+- when writing about learning, frame it as an enabler of **agency, protection, safety, and trust**, not only as formal schooling
+- domesticate technical terminology so foresight tools serve the analysis instead of becoming the voice of the report
+- keep analytical claims concrete through precise actor naming, lived impacts, and section-appropriate causal logic
+
 ## Section-level edit suggestions
 
 Use this section as the revision guide for [`ψ/lab/foresight-report-wrting/2026-04-02_foresight-2590-integrated-rewrite-v3-edited.md`](ψ/lab/foresight-report-wrting/2026-04-02_foresight-2590-integrated-rewrite-v3-edited.md). During revision, evidence checks can be cross-consulted against [`ψ/lab/foresight-report-wrting/citations/citation-library.md`](ψ/lab/foresight-report-wrting/citations/citation-library.md) so that strengthened passages are not only more team-anchored but also easier to support with the current source base.
