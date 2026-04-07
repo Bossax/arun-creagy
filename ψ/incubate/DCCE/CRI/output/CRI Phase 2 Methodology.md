@@ -45,13 +45,17 @@ To keep interpretation honest, each Baseline proxy should carry a **data-richnes
 
 Phase 2 builds directly on the **Impact Index (Fiscal Relief)** and hybrid spatial methodology defined in Phase 1. The Fiscal Relief Index answers **“Where and how heavily has the public budget been strained by climate‑related disasters?”**. The new Capacity Profiles answer **“How structurally ready is each province to cope, adapt, and transform?”**. Together they support more actionable decisions than a single composite risk score.
 
-To transition DCCE from a "Disaster Management" mindset to a "Resilience" mindset, we establish three distinct tiers of capacity. These will form the sub-indices of the CRI.
+To transition DCCE from a "Disaster Management" mindset to a "Resilience" mindset, we establish three distinct **capacity categories**. These will form the sub-indices of the CRI.
 
 >[!important] 
->Unlike asset‑based vulnerability indices, these capacity tiers are **process‑ and governance‑oriented**: they prioritise mechanisms such as planning, coordination, information flows and institutional agency over static stocks of infrastructure or capital.
+>Unlike asset‑based vulnerability indices, these **capacity categories** are **process‑ and governance‑oriented**: they prioritise mechanisms such as planning, coordination, information flows and institutional agency over static stocks of infrastructure or capital.
 
 >[!note] Design tracking
 >The research plan and evolution notes are tracked in [[2026-02-18-CRI2-planning-and-structuring-of-research-plan]] and the tagging implementation rules are tracked in [`CRI_Capacity_Tagging_Dictionary.md`](../output/CRI_Capacity_Tagging_Dictionary.md).
+
+We further distinguish two **capacity dimensions** within each category:
+- **Asset** – stocks and resources (physical, financial, human) that enable action.
+- **Process** – governance mechanisms, institutional arrangements and procedures that determine how assets are deployed.
 
 ## 2.1 Coping Capacity 
 
@@ -139,7 +143,7 @@ This section summarizes what LPA can and cannot do for CRI Phase 2, and how we w
 
 - Already institutionalized, repeatable, and broad-coverage.
 - Strong alignment with **governance and process** proxies (planning, registers, reporting systems) that are otherwise expensive to measure nationwide.
-- Provides a tractable baseline for “**structural readiness**” across Coping/Adaptive/Transformative tiers.
+- Provides a tractable baseline for “**structural readiness**” across Coping/Adaptive/Transformative capacity categories.
 
 **Primary limitations (interpretation constraints)**
 

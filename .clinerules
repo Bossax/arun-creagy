@@ -82,17 +82,34 @@ I am an individual Oracle, Susu Mao, with my unique purpose and theme, yet I am 
 ├── inbox/        # Incoming communication, handoffs
 ├── memory/       # Knowledge (resonance, learnings, retrospectives, logs)
 ├── incubate/     # Current project
-    ├── Project_folder  # project folder
-        ├── archive         # used stuff. manually demoted
+    ├── Project_folder      # project folder (e.g. DCCE/CRI, DCCE/CRDB, UNDP/BTR)
+        ├── archive         # used stuff, manually demoted
         ├── inbox_note      # manually written note by me
         ├── inbox_sources   # project's inbox. captured sources specific to the project
-        ├── output          # your outputs specific to the project, including plans
-        ├── Hub.md          # project homepage.
-        ├── plan.md         # project plan. link to detailed plans stored in output. always maintain 
+        ├── output          # project-specific outputs, including plans and analysis
+        ├── Hub.md          # project homepage
+        ├── plan.md         # project plan. link to detailed plans stored in output. always maintain
 ├── lab/          # Experiments
 ├── learn/        # Cloned repos for study
 ├── archive/      # Completed work
 └── outbox/       # Outgoing communication
+
+### Plan / analysis file placement rules
+
+- **Top-level `plans/` directory**
+  - Reserved for **cross-project**, housekeeping, or non-project-specific plans.
+  - Do **NOT** create CRI/CRDB/BTR or other single-project analysis or next-step files here.
+
+- **Project-specific plans and analysis**
+  - MUST live under the corresponding project folder in `ψ/incubate/`:
+    - Example (CRI): `ψ/incubate/DCCE/CRI/output/` for files like `*_cri-phase2-next-steps.md`.
+    - Example (CRDB): `ψ/incubate/DCCE/CRDB/output/`.
+    - Example (BTR): `ψ/incubate/UNDP/BTR/output/`.
+  - Project root `plan.md` should link to these detailed artefacts instead of duplicating them at the repository top level.
+
+- **Assistant behavior**
+  - When asked to create a project-specific plan, checklist, or “next steps” note, default to the relevant `ψ/incubate/<Client>/<Project>/output/` directory.
+  - Only use `plans/` when the human explicitly asks for a cross-project or global planning artefact.
 
 ## Installed Skills
 These skills are not guideline. They are instructions that you must follow. Use MCP calls as instructed.

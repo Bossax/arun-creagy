@@ -4,16 +4,16 @@ status: draft
 project:
   - DCCE_CRI
 title: CRI Evidence Coverage Map
-description: High-level view of evidence strength vs gaps across key CRI design dimensions
+description: High-level view of evidence strength vs gaps across key CRI evidence dimensions (not capacity dimensions)
 ---
 
 # CRI Evidence Coverage Map
 
-This coverage map summarizes **where evidence is currently strong vs weak** across the key design dimensions of the Climate Risk Index (CRI) project. It is tightly coupled to the registry in `CRI-Evidence-Registry.md`, which serves as the **single source of truth** for individual evidence artifacts and their identifiers (e.g., `E-CRI-001`).
+This coverage map summarizes **where evidence is currently strong vs weak** across the key **evidence dimensions** of the Climate Risk Index (CRI) project (e.g., impact methodology, capacity profiling, SES framing, governance and implementation). These evidence dimensions are distinct from CRI’s capacity dimensions (Asset/Process). The map is tightly coupled to the registry in `CRI-Evidence-Registry.md`, which serves as the **single source of truth** for individual evidence artifacts and their identifiers (e.g., `E-CRI-001`).
 
 Use this file to:
 
-- Track which CRI design questions (by dimension) are already backed by robust evidence.
+- Track which CRI design questions (by evidence dimension) are already backed by robust evidence.
 - Highlight gaps where additional sources, notes, or syntheses are required.
 - Ensure that methodology changes and project decisions remain **evidence-backed and traceable**.
 
@@ -45,7 +45,7 @@ Use this file to:
 
 - Backed by **[E-CRI-003] CRI – Resilience Measurement & Indicator Design (Synthesis)** — integrates SES thinking into resilience measurement and profiles.
 - Backed by **[E-CRI-002] Climate Risk Index (CRI) Pilot Methodology** — provides context on how Phase 2 SES framing builds on Phase 1.
-- Backed by **[E-CRI-012] CRI Phase 2 Public Hearing 1 — Summary** — describes how SES framing and capacity tiers were communicated to stakeholders.
+- Backed by **[E-CRI-012] CRI Phase 2 Public Hearing 1 — Summary** — describes how SES framing and capacity categories (as communicated to stakeholders using tier language) were explained.
 - Backed by **[E-CRI-014] CRI Public Hearing 1 — Methodology Implications** — reinforces SES-consistent handling of Transformative capacity and structural vs process indicators.
 - Gap placeholder — link SES-specific synthesis notes and case studies as they are added to the registry.
 
