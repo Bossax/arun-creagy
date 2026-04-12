@@ -1,3 +1,9 @@
+---
+title: Lesson: Structuring Thai report-writing learn-back
+status: superseded
+superseded_by: 2026-03-28_lesson-writing-th-option-c-skill-redesign-oracle.md
+---
+
 ## Lesson: Structuring Thai report-writing learn-back
 
 - **Decouple drafting from learning**: ใช้ `/writing-th` สำหรับออกแบบโครงและเขียนร่าง ใช้ `/writing-th-learn` สำหรับเปรียบเทียบร่างกับฉบับแก้ไขและสกัด pattern การเขียน แทนที่จะพยายามทำทุกอย่างในสกิลเดียว.

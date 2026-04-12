@@ -1,7 +1,7 @@
 ---
 date: 2026-03-24
 type: learning
-status: raw
+status: superseded
 concepts:
   - crdb
   - interim-report

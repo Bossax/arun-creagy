@@ -11,8 +11,16 @@ When the user wants Thai drafting that can closely mimic a specific “example r
 
 ## Execution / learning separation
 
-- [`/writing-th`](.roo/skills/writing-th/SKILL.md) handles MCP-first retrieval, session style-pack summary, outline-stop, drafting.
-- [`/writing-th-learn`](.roo/skills/writing-th-learn/SKILL.md) handles draft-vs-edited pattern extraction and durable learning notes.
+- [`/writing-th`](.roo/skills/writing-th/SKILL.md) handles the **Option C handshake before drafting**:
+  - MCP-first retrieval via tools like `oracle_concepts()` and `oracle_search()` to pull style and citation patterns from resonance notes (for example, `ψ/memory/resonance/writing-style.md` and `ψ/memory/resonance/citation-style.md`).
+  - Minimal intake: ask only for mode (`--report`/`--article`), objective, audience, length, constraints, and sources.
+  - Outline-stop: always produce a numbered Thai outline first and **stop for human confirmation** before any drafting.
+  - Drafting: after approval, generate Thai-first text that follows the outline and applies the layered style system and safety rails.
+
+- [`/writing-th-learn`](.roo/skills/writing-th-learn/SKILL.md) handles the **diff-based learn-back loop**:
+  - Take the draft, the edited version, and any human-written edit-pattern analysis notes as inputs.
+  - Distil "rules of writing" and structural patterns (not paragraphs of report text) into a learning note under `ψ/memory/learnings/` with clear session context.
+  - Call `oracle_learn()` with these distilled patterns and tags so they become reusable, cross-session Oracle learnings, keeping promotion of long-lived rules into resonance explicit and append-only.
 
 ## Operational guardrail
 

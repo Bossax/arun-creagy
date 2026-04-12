@@ -47,9 +47,12 @@ From the handoff:
   - Mark early, more local CRDB notes as superseded or as "example" learnings.
 
 3. **Phase 2.2 Oracle DB backfill from learnings**
-- [ ] Select 3–5 additional oracle-framework & skills-governance learnings (e.g. vector vs FTS behaviour, oracle-skills fork sync, MCP diagnostics) and insert them into Oracle via `arra_learn`.
-- [ ] Select 2–4 PM ledger / execution-spine learnings that are already canonical and backfill them into Oracle.
-- [ ] Update `backfill-index.md` with `Source type = learning` rows for each new DB entry.
+- [x] Select 3–5 additional oracle-framework & skills-governance learnings (e.g. vector vs FTS behaviour, oracle-skills fork sync, MCP diagnostics) and insert them into Oracle via `arra_learn`.
+- [x] Select 2–4 PM ledger / execution-spine learnings that are already canonical and backfill them into Oracle.
+- [x] Update `backfill-index.md` with `Source type = learning` rows for each new DB entry.
+- [x] Synthesize Phase 2.2 canonical notes for:
+  - oracle-framework & skills-governance backfill targeting (see [`ψ/memory/learnings/2026-04-11_oracle-db-phase2.2-oracle-framework-and-skills-governance-backfill.md`](ψ/memory/learnings/2026-04-11_oracle-db-phase2.2-oracle-framework-and-skills-governance-backfill.md)).
+  - PM ledgers and execution-spine backfill targeting (see [`ψ/memory/learnings/2026-04-11_oracle-db-phase2.2-pm-ledgers-and-execution-spine-backfill.md`](ψ/memory/learnings/2026-04-11_oracle-db-phase2.2-pm-ledgers-and-execution-spine-backfill.md)).
 
 4. **Design and/or implement helper backfill tooling**
 - [ ] Define a simple interface (even if just documented) for a backfill helper:
@@ -72,4 +75,3 @@ From the handoff:
 
 - Handoff: [`ψ/inbox/handoff/2026-04-09_15-57_oracle-db-backfill-handoff.md`](ψ/inbox/handoff/2026-04-09_15-57_oracle-db-backfill-handoff.md)
 - Learning classification & merge map: [`plans/2026-04-09-learnings-indexing-map.md`](plans/2026-04-09-learnings-indexing-map.md)
-

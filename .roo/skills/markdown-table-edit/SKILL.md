@@ -1,6 +1,6 @@
 ---
 name: markdown-table-edit
-description: Guides agents to robustly edit Markdown tables (add/update rows, normalize structure) by using block replacement via scripts/replace-md-table.ts instead of line-based patches.
+description: Use this skill when table editing is required. Do not try using apply_path tool. 
 ---
 
 # Markdown Table Edit
@@ -78,7 +78,7 @@ You do not need to preserve raw spacing or pipe alignment; only the **column ord
 ### 3. Write the new table to a temporary file
 
 1. Choose a temporary path inside the repo, for example:  
-   `.roo/skills/markdown-table-edit/tmp/new-table.md`
+   `project_root/tmp/new-table.md`
 2. Use your native file-write tool to write **only the new table block** to that file:
 
    - The file should contain:

@@ -3,6 +3,8 @@ title: writing_th skill — MCP-first retrieval + outline-stop + learn-back
 tags: [writing_th, skill, mcp, workflow, thai-writing]
 created: 2026-03-11
 source: rrr: Arun_Creagy
+status: superseded
+superseded_by: 2026-03-28_lesson-writing-th-option-c-skill-redesign-oracle.md
 ---
 
 # writing_th skill — MCP-first retrieval + outline-stop + learn-back

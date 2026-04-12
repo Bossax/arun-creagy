@@ -1,3 +1,9 @@
+---
+title: rrr — writing-th Option C skill redesign (Oracle-aligned)
+status: superseded
+superseded_by: 2026-03-28_lesson-writing-th-option-c-skill-redesign-oracle.md
+---
+
 # Lesson — writing-th Option C skill redesign (Oracle-aligned)
 
 ## Pattern

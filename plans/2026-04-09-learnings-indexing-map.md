@@ -105,13 +105,12 @@ Phase 2 (analysis of learnings) is complete. Here is the structured summary of l
   - [`AF and GCF Indicator Frameworks at the project-level.md`](ψ/memory/learnings/AF and GCF Indicator Frameworks at the project-level.md)
   - [`National MEL System for Climate Change Adaptation.md`](ψ/memory/learnings/National MEL System for Climate Change Adaptation.md)
   - [`Climate Risk Index (CRI) phase 1 for Thailand - DCCE and TEI report.md`](ψ/memory/learnings/Climate Risk Index (CRI) phase 1 for Thailand - DCCE and TEI report.md)
-
 ### 2.12 ecoacoustics & marine sound monitoring
 - **~16 learnings**
 - Patterns: PAM methods, hydrophone rig, marine soundscape indices and monitoring case studies.
 - Examples:
   - [`Inline Hydrophone Frame.md`](ψ/memory/learnings/Inline Hydrophone Frame.md)
-  - [`Elise et al. 2019 - An Optimised Passive Acoustic Sampling Scheme to Discriminate among Coral Reefs’ Ecological States..md`](ψ/memory/learnings/Elise et al. 2019 - An Optimised Passive Acoustic Sampling Scheme to Discriminate among Coral Reefs’ Ecological States..md)
+  - [`Elise et al. 2019 - An Optimised Passive Acoustic Sampling Scheme to Discriminate among Coral Reefs’ Ecological States.md`](ψ/memory/learnings/Elise et al. 2019 - An Optimised Passive Acoustic Sampling Scheme to Discriminate among Coral Reefs’ Ecological States.md)
   - [`Semi-Supervised Categorization of Shallow Marine Soundscapes.md`](ψ/memory/learnings/Semi-Supervised Categorization of Shallow Marine Soundscapes.md)
 
 (Counts per category are approximate; totals sum to the 207 documents.)
@@ -181,6 +180,8 @@ Phase 2 (analysis of learnings) is complete. Here is the structured summary of l
   - [`2026-04-09_when-an-interim-report-is-explicitly-scheduled-for.md`](ψ/memory/learnings/2026-04-09_when-an-interim-report-is-explicitly-scheduled-for.md)
 - **Proposed primary:** [`2026-04-09_for-multi-stage-reports-separate-final-report-str.md`](ψ/memory/learnings/2026-04-09_for-multi-stage-reports-separate-final-report-str.md)
 - **Pattern:** For multi-stage reports, separate final report structure from interim structures and treat scheduled revisions/progress reports as explicit drivers of structural change.
+
+> Backfill status (2026-04-11): All seven groups now have canonical Oracle DB entries, with Group 1–5 canonicals under [`ψ/memory/learnings`](ψ/memory/learnings) dated 2026-04-11 and Groups 6–7 jointly represented by [`ψ/memory/learnings/2026-04-11_oracle-db-backfill-group6-7-canonicalisation.md`](ψ/memory/learnings/2026-04-11_oracle-db-backfill-group6-7-canonicalisation.md). See [`ψ/memory/logs/info/backfill-index.md`](ψ/memory/logs/info/backfill-index.md) for Oracle IDs and backfill metadata.
 
 ---
 ## 4. Summary of learning patterns and stats (for this phase)

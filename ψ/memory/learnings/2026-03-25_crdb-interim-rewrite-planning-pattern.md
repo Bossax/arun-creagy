@@ -1,3 +1,15 @@
+---
+date: 2026-03-25
+type: learning
+status: superseded
+concepts:
+  - crdb
+  - interim-report
+  - rewrite-planning
+  - evidence-plan
+superseded_by: 2026-04-09_for-multi-stage-reports-separate-final-report-str.md
+---
+
 # Learning — CRDB Interim Report Rewrite Planning Pattern (v1 → v2)
 
 ## Pattern
