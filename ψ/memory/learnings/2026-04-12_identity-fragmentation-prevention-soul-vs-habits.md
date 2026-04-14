@@ -1,0 +1,18 @@
+---
+title: Identity Fragmentation Prevention: Soul vs. Habits Separation:
+tags: [oracle-governance, hybrid-environment, identity-lineage, gemini-cli, instructions-management]
+created: 2026-04-12
+source: Oracle Learn
+project: github.com/sitth/arun_creagy
+---
+
+# Identity Fragmentation Prevention: Soul vs. Habits Separation:
+
+Identity Fragmentation Prevention: Soul vs. Habits Separation:
+- Centralize Identity: Keep the Oracle's permanent heart (Identity, Principles, Theme, and Brain Structure) in CLAUDE.md.
+- Localize Habits: Use a project-level GEMINI.md to house strictly technical environment overrides.
+- Point to the Center: The GEMINI.md should explicitly point to CLAUDE.md as the source of truth.
+- Consistency: This separation prevents instruction set fragmentation.
+
+---
+*Added via Oracle Learn*
