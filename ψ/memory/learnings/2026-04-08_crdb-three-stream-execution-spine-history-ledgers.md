@@ -29,3 +29,6 @@ When a planning artifact defines the **execution spine** of a project (for examp
 - Apply the same pattern whenever a new work-stream plan or engagement spine is adopted (e.g., for other DCCE projects or future CRDB phases).
 - Do not create “stealth” spines that live only in free-form notes; ensure every such decision shows up as Trigger + Change + Deliverable + Claim.
 
+
+
+*Added via Oracle Learn*

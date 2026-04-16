@@ -27,3 +27,6 @@ Without that alignment, the project drifts into a state where the most current w
   - Update the **schedule** with the next day’s actionable tasks, expressed in human language.
 - Treat this triad (plan + hub + schedule) as the minimal package that must be kept in sync with handoffs and retrospectives.
 
+
+
+*Added via Oracle Learn*

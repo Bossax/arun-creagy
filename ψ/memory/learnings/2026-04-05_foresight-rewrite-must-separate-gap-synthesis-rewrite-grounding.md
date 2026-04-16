@@ -32,3 +32,6 @@ Use this pattern whenever a report:
 - workflow
 - section-function
 - citation-discipline
+
+
+*Added via Oracle Learn*

@@ -83,3 +83,5 @@ These notes are part of the “project-management & PM ledgers (cross-project)�
   - reference CRDB-specific learnings as provenance/examples from this canonical,
   - log the Oracle ID for this pattern under `Source type = learning` in [`ψ/memory/logs/info/backfill-index.md`](ψ/memory/logs/info/backfill-index.md).
 
+*Added via Oracle Learn*
+

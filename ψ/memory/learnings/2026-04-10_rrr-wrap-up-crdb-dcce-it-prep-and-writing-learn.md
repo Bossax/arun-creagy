@@ -23,3 +23,5 @@
 - Example meeting note: [`ψ/incubate/DCCE/CRDB/output/ร่างระเบียบวาระ (ย่อ)  สำหรับส่งให้ทีมเตรียมตัวก่อนประชุม 29 เมษายน 2569.md`](ψ/incubate/DCCE/CRDB/output/ร่างระเบียบวาระ (ย่อ)  สำหรับส่งให้ทีมเตรียมตัวก่อนประชุม 29 เมษายน 2569.md)
 - Learn-back recorded for reuse in future CRDB/CRI Thai meeting notes.
 
+*Added via Oracle Learn*
+

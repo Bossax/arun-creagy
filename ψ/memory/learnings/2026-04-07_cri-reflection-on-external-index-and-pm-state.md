@@ -24,3 +24,6 @@ This session revisited the CRI project after a long run of foresight work. I rel
 - CRI sessions should be judged on whether they move the evidence spine and profiles forward, not on how elegant the narrative explanation sounds. Time spent should result in additional rows/links in the registry and at least one new profile or analysis note.
 - For memory and reproducibility, all critical CRI decisions and reflections should exist as concrete artefacts in this repo (retros, learnings, design notes), not only as Oracle MCP entries.
 
+
+
+*Added via Oracle Learn*

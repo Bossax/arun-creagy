@@ -63,3 +63,5 @@ The narrative anchor for this canonical is the consolidated guardrail in the pro
   - Tag the entry with concepts: `oracle-db`, `oracle_learn`, `guardrail`, `durable-capture`, `workflow-integrity`, `backfill`.
   - Record the resulting Oracle ID in [`ψ/memory/logs/info/backfill-index.md`](ψ/memory/logs/info/backfill-index.md) under *Group 1 canonical backfill*.
 
+*Added via Oracle Learn*
+

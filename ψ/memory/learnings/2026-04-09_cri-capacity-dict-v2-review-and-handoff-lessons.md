@@ -28,3 +28,6 @@
   - `ψ/incubate/DCCE/CRI/output/2026-04-09_cri-capacity-dict-v2-review-summary.md`
   - `ψ/incubate/DCCE/CRI/output/2026-04-09_cri-capacity-dict-v2-next-session-plan.md`
 
+
+
+*Added via Oracle Learn*

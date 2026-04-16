@@ -68,3 +68,6 @@
 - concepts: ["foresight", "thai-writing", "style-pack", "editing-discipline", "translationese", "metaphor-control"]
 - source: "rrr: Arun_Creagy"
 
+
+
+*Added via Oracle Learn*

@@ -64,3 +64,5 @@ The proposed primary note provides the overarching policy; the others contribute
   - Tag it with concepts: `oracle-db`, `notebooklm`, `extraction`, `harmonisation`, `source-fidelity`, `guardrails`, `prompt-design`.
   - Record the Oracle ID in [`ψ/memory/logs/info/backfill-index.md`](ψ/memory/logs/info/backfill-index.md) under *Group 5 canonical backfill*.
 
+*Added via Oracle Learn*
+

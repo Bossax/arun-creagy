@@ -57,3 +57,5 @@ These notes describe the same incident and resolution from slightly different an
   - Tag it with concepts: `oracle-db`, `notebooklm`, `mcp`, `timeouts`, `environment-tuning`, `reliability`.
   - Record the Oracle ID in [`ψ/memory/logs/info/backfill-index.md`](ψ/memory/logs/info/backfill-index.md) under *Group 4 canonical backfill*.
 
+*Added via Oracle Learn*
+

@@ -38,3 +38,6 @@ Subtasks should be sized so that each one can be described cleanly and completed
 3. Prefer to leave a partial but well-documented artifact (e.g. crosswalk with 10–15 rows + mapping types) over trying to “finish everything” in one pass.  
 4. Use retrospectives (`/rrr`) to capture these patterns while they are fresh and then encode them into `ψ/memory/learnings` plus any relevant project plans.
 
+
+
+*Added via Oracle Learn*

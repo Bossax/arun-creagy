@@ -19,3 +19,5 @@ When designing a municipal-level climate resilience index (CRI), focusing on fun
 - **Actionability**: It identifies gaps in specific departments rather than assigning a generic "vulnerability" score.
 - **Feasibility**: Administrative traces (secondary data) are already structured by governance responsibility, making the index scalable across many jurisdictions (e.g., 76 provinces) without primary data collection.
 - **Scientifically Validated**: Aligning functional levers with agent capacities (responsiveness, resourcefulness, learning) reflects the modern evolution of resilience theory.
+
+*Added via Oracle Learn*

@@ -14,3 +14,6 @@ Source fidelity must also be treated as a hard gate, not a cleanup preference. R
 If the sources cannot be resolved or are not present in the notebook, the batch should stop. A superficially useful raw output is not enough if the source-binding rule was violated. Clean evidence workflows require explicit parameters, title resolution from content, and fail-fast handling of missing sources.
 
 Logged from `/rrr` on 2026-04-08.
+
+
+*Added via Oracle Learn*

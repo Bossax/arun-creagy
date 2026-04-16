@@ -52,3 +52,6 @@ See [`2026-04-08_notebooklm-title-probe-and-guardrail-implementation.md`](ψ/mem
 - [`2026-04-08_notebooklm-prompt-design-principles-of-extraction.md`](ψ/memory/learnings/2026-04-08_notebooklm-prompt-design-principles-of-extraction.md)
 - [`2026-04-08_notebooklm-source-fidelity-and-parameter-discipline.md`](ψ/memory/learnings/2026-04-08_notebooklm-source-fidelity-and-parameter-discipline.md)
 - [`2026-04-08_notebooklm-title-probe-and-guardrail-implementation.md`](ψ/memory/learnings/2026-04-08_notebooklm-title-probe-and-guardrail-implementation.md)
+
+
+*Added via Oracle Learn*

@@ -21,3 +21,6 @@ Implications for the guardrail skill:
 
 This learning underpins the title-resolution and source-packet sections in [`notebooklm-mcp-ruleset.md`](.roo/skills/notebooklm-rules/references/notebooklm-mcp-ruleset.md) and should be considered a non-negotiable constraint when designing future NotebookLM extraction batches.
 
+
+
+*Added via Oracle Learn*

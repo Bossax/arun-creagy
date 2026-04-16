@@ -62,3 +62,5 @@ The proposed primary provides the clearest articulation of the template design r
   - Tag it with concepts: `oracle-db`, `notebooklm`, `atomic-notes`, `skill-scope`, `research-workflow`, `templates`.
   - Record the Oracle ID in [`ψ/memory/logs/info/backfill-index.md`](ψ/memory/logs/info/backfill-index.md) under *Group 3 canonical backfill*.
 
+*Added via Oracle Learn*
+

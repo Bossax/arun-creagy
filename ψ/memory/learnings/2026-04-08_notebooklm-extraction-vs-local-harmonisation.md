@@ -20,3 +20,6 @@ Recommended discipline:
 - Treat NotebookLM later-pass outputs as supporting evidence unless they strictly match the expected transform shape.
 
 Logged from retrospective workflow on 2026-04-08.
+
+
+*Added via Oracle Learn*

@@ -18,3 +18,5 @@ When a conceptual state becomes the active contract for a project, the most reli
 A secondary learning is procedural: when editing ledger tables in this repo, the reliable method is not patching rows but replacing the full table block using [`replace-md-table.ts`](.roo/skills/markdown-table-edit/scripts/replace-md-table.ts). The combination of full table reconstruction plus anchor-based replacement reduces context-match failures and makes operation receipts easier to reason about afterward.
 
 Practical rule: if the human asks to “update ledgers,” treat it as a request to synchronize the artifact-centered PM system, not just to write a prose note or plan. First make the new artifacts visible in the evidence spine, then propagate that state through trigger, deliverable, claim, and change surfaces.
+
+*Added via Oracle Learn*

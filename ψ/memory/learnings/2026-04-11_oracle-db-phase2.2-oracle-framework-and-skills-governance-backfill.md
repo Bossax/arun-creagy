@@ -104,3 +104,5 @@ These notes were previously analysed under the “oracle-framework & skills-gove
   - keep more granular notes (vector outage incident, specific sync-branch walkthroughs) as provenance examples linked from this file,
   - ensure backfill tooling and logs (e.g. [`ψ/memory/logs/info/backfill-index.md`](ψ/memory/logs/info/backfill-index.md)) reference this canonical when recording Oracle IDs for this pattern.
 
+*Added via Oracle Learn*
+

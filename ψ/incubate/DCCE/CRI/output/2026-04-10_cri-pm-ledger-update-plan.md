@@ -1,6 +1,6 @@
 ---
 type: plan
-status: draft
+status: archived
 project:
   - DCCE_CRI
 title: CRI PM Ledger Update Plan after v3 Governance Freeze

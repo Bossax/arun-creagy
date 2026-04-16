@@ -47,3 +47,6 @@ This pattern protects both **data integrity** (no broken tables, no silent misal
 - Any project that uses Markdown table ledgers for triggers, changes, deliverables, or evidence (e.g. CRI, NFCS) should adopt the same `markdown-table-edit` + block replacement approach.
 - Any time a new external benchmark or synthesis note emerges (like Thaiwater), follow Evidence → Trigger → Change ordering and avoid reusing old decision logs as live stance.
 
+
+
+*Added via Oracle Learn*

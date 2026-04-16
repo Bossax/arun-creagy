@@ -20,3 +20,5 @@
 ## Oracle Alignment
 - **Nothing is Deleted**: Localizing knowledge means adding a new perspective or "view" of the data, not discarding the source language version.
 - **Mechanism-first**: A citation list is a mechanism for building trust. The conversion should sharpen this mechanism for the target audience.
+
+*Added via Oracle Learn*

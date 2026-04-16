@@ -6,3 +6,6 @@ If I allowed CBI’s dimensions and weights to become the new top-level structur
 
 This pattern is transferable: when integrating any external index or scoring system into an existing project, I should (1) lock a conceptual anchor, (2) build a one-way crosswalk from the external system into that anchor, and (3) keep the external scores as Baseline evidence rather than the primary product.
 
+
+
+*Added via Oracle Learn*

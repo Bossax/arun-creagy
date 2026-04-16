@@ -77,3 +77,5 @@
 - project: รายงานการคาดการณ์อนาคตเด็กและเยาวชนในพื้นที่สามจังหวัดชายแดนภาคใต้ พ.ศ. 2590
 - บันทึกนี้เรียนรู้จากการเปรียบเทียบฉบับร่างและฉบับแก้ไขสำหรับ writing-th (mode: report) และตั้งใจให้ discoverable โดย `/writing-th` ผ่าน Oracle MCP search (concepts: writing-th, report, foresight, deep-south-youth).
 
+*Added via Oracle Learn*
+

@@ -60,3 +60,5 @@ The proposed primary note provides the main narrative for this canonical; the ea
   - Tag it with concepts: `oracle-db`, `rrr`, `retrospectives`, `oracle_learn`, `sync-discipline`, `workflow-integrity`.
   - Record the resulting Oracle ID in [`ψ/memory/logs/info/backfill-index.md`](ψ/memory/logs/info/backfill-index.md) under *Group 2 canonical backfill*.
 
+*Added via Oracle Learn*
+

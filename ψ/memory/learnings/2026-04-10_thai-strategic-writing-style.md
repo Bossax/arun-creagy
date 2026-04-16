@@ -18,4 +18,7 @@ When writing the "Foresight 2590" report for the 3 Southern Border Provinces (Th
 
 ## Action for Future Sessions
 -   When using the `writing-th` skill, specifically look for "Matrix-style" English concepts and convert them to "List-style" Thai structures.
--   Use explicit levels (ระดับผลกระทบ: สูง) as structured metadata within the document to aid readability.
+- Use explicit levels (ระดับผลกระทบ: สูง) as structured metadata within the document to aid readability.
+
+*Added via Oracle Learn*
+

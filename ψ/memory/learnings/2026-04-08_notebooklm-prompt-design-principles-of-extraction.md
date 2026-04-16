@@ -15,3 +15,6 @@ related:
 
 Treat NotebookLM as a **data extraction engine**, not an extension of the Oracle’s brain: design prompts around what information to extract, keep them short enough to type in about a minute, summarize prohibitions instead of listing every rule, and break oversized tasks into atomic extraction passes (or move general instructions into a separate system prompt). This preserves context for sources and keeps NotebookLM runs focused on high‑value extraction instead of brittle, rule‑heavy control scripts.
 
+
+
+*Added via Oracle Learn*

@@ -51,6 +51,8 @@ In this session, two merge groups were finalised:
 3. Backfill only the canonical note into Oracle DB via `arra_learn()` (or confirm an existing `oracle_learn()` entry) and record the canonical Oracle ID alongside the source file path in [`ψ/memory/logs/info/backfill-index.md`](ψ/memory/logs/info/backfill-index.md).
 4. For future selection, filter learnings by `status != superseded` when proposing candidates for backfill.
 
+*Added via Oracle Learn*
+
 ## Confidence
 
 High. The pattern is already applied to Groups 3–7 and aligns with the existing Oracle DB snapshot and backfill index, preserving history while keeping the DB projection small and curated.

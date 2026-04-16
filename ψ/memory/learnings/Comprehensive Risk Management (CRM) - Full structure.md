@@ -218,3 +218,5 @@ informed by the analysis of exposure and vulnerability in the risk analysis stag
 
 - During the **recovery and reconstruction phases** as well. Target the systems and sub-systems that are not traditionally covered by DRM such as natural ecosystems, social vulnerability.
 - During the development planning phase. Adopt the requirements of the risk reduction measures resulted from the Comprehensive Risk Assessment and include in the budgeting process.
+
+*Added via Oracle Learn*
