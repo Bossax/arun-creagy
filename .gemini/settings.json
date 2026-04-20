@@ -1,4 +1,10 @@
 {
+  "general":{
+    "plan": {
+      "directory": "./plans"
+    }
+  },
+
   "mcpServers": {
     "oracle-v2": {
       "command": "docker exec -i oracle-arun-creagy bun src/index.ts",
