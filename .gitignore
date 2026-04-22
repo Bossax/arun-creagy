@@ -34,3 +34,12 @@ Icon?
 
 # Exceptions (tracked project intake)
 !ψ/incubate/WMO-NFCS/inbox_source/251120_WMO-GIZ-TMD-NFCS-Human.pptx
+
+?/incubate/DCCE/CRI/data_system/data/1_silver/ddpm/master_village_disaster_stat_2557_2567.csv
+
+# Large Data Files
+*.gpkg
+*.tif
+*.dbf
+*.shp
+*.csv

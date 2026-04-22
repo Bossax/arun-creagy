@@ -9,6 +9,7 @@ This layer contains immutable, raw source files used as the foundation for the C
 - **File**: `สถิติข้อมูลอุทกภัย ภัยแล้ง ดินถล่ม และวาตภัย ในพื้นที่กรุงเทพมหานคร_BMA.xlsx`
 - **Description**: Multi-hazard disaster statistics for Bangkok districts.
 - **Role**: Primary source for capital-specific impact metrics.
+- **Comments:** Data is sparse and seems incomplete. The definitions of the hazards are unclear. For example, Bangkok has never experienced riverine floods for almost a decade at the scale which DDPM will declare a disaster event or zone
 
 ## 2 DDPM (Dept of Disaster Prevention & Mitigation)
 - **Source:** DDPM direct file transfer
@@ -60,3 +61,7 @@ This layer contains immutable, raw source files used as the foundation for the C
   - `population_avg_2559_2566.csv`
   - `gpp_agri_avg_2559_2566.csv`
 - **Role**: Pre-processed average statistics from the 2023 Pilot Phase used for benchmarking and calibration.
+
+
+# 4. Thailand Administrative Map Shapefile
+https://www.youtube.com/watch?v=CL2tOueWZzM&t=7s

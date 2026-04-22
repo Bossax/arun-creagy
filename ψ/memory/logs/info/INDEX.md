@@ -1,5 +1,11 @@
 # Info Log Index
 
+- [2026-04-21 12:30] 💡 Applying dasymetric mapping using population introduces bias toward densely populated areas; historical hazard maps are a better proxy.
+  - File: ψ/memory/logs/info/2026-04-21_12-30_dasymetric-bias-hazard-proxy.md
+
+- [2026-04-21 09:05] CRI Stage 3 execution preference: from `ψ/incubate/DCCE/CRI/data_system/`, run Python with `./.venv/Scripts/python.exe` directly
+  - File: ψ/memory/logs/info/2026-04-21_09-05_cri-stage3-python-execution-use-project-venv-direct.md
+
 - [2026-04-08 05:28] NotebookLM prompt design: focus on extraction, not brain extension; prompts <800 words; prioritize 'what' to extract; retain structure but summarize prohibitions
   - File: ψ/memory/logs/info/2026-04-08_05-28_notebooklm-prompt-design.md
 
