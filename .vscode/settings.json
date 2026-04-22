@@ -1,4 +1,9 @@
 {
     "python-envs.defaultEnvManager": "ms-python.python:pyenv",
-    "python-envs.pythonProjects": []
+    "python-envs.pythonProjects": [],
+    "python.defaultInterpreterPath": "ψ/incubate/DCCE/CRI/data_system/.venv/Scripts/python.exe",
+    "python.analysis.extraPaths": [
+        "./ψ/incubate/DCCE/CRI/data_system"
+    ],
+    "jupyter.notebookEditor.defaultInterpreterPath": "ψ/incubate/DCCE/CRI/data_system/.venv/Scripts/python.exe"
 }

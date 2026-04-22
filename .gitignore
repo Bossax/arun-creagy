@@ -19,6 +19,13 @@ Icon?
 
 # 4.1 Local secrets / MCP config (do not commit)
 .roo/mcp.json
+.gemini/settings.json
+.gemini/mandates
+.roo/rules
+.vscode/
+tmp/
+plans/
+tools/
 
 # 5. Data & Big files
 *.xlsx
@@ -32,14 +39,18 @@ Icon?
 *.wav
 *.pptx
 
-# Exceptions (tracked project intake)
-!ψ/incubate/WMO-NFCS/inbox_source/251120_WMO-GIZ-TMD-NFCS-Human.pptx
 
-?/incubate/DCCE/CRI/data_system/data/1_silver/ddpm/master_village_disaster_stat_2557_2567.csv
 
 # Large Data Files
 *.gpkg
 *.tif
+#shapefile artifacts
 *.dbf
 *.shp
-*.csv
+*.shx
+*.prj
+*.sbn
+*.CPG
+*.qpj
+
+ 

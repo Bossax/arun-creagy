@@ -37,13 +37,16 @@ Implemented in a Jupyter Notebook to ensure a human-readable, report-style narra
 
 ### Analytical Steps:
 1.  **Load & Join:** Read the prepared Silver tables (`provincial_casualties_clean.csv`, `tambon_climate_affected_household_aggregate_ddpm_village_stat.csv`, and the WorldPop zonal stats CSV) and merge them smoothly on `subdistrict_code` and `province_code`.
-2.  **Model A (Exposure-Based Dasymetric):** 
+2.  **Model A (Population-Based Dasymetric):** 
     *   Calculate each Tambon's share of the total Provincial Population.
     *   Distribute the TEI Provincial Casualties to the Tambon level using this population weight.
-3.  **Model B (Impact-Based Dasymetric):** 
-    *   Calculate each Tambon's share of the total Provincial Historical Affected Households.
-    *   Distribute the TEI Provincial Casualties to the Tambon level using this historical impact weight.
-4.  **Synthesis & Visualization:** 
-    *   Generate comparative delta maps showing where the exposure model diverges from the historical impact model.
-    *   Provide narrative markdown explaining the anomalies (e.g., highly populated areas with low historical climate casualties vs. sparsely populated areas with high casualties).
-5.  **Publish to Gold:** Export the final analytical tables to the `2_gold/` directory for downstream use in dashboards or index calculations.
+3.  **Model B (Empirical Dasymetric):** 
+    *   Calculate each Tambon's share of the total Provincial Historical Affected Households (using DDPM empirical data).
+    *   Distribute the TEI Provincial Casualties to the Tambon level using this empirical weight.
+4.  **Model C (Synthetic Hybrid Dasymetric):**
+    *   Combine Population and Empirical weights ($Weight = Population \times Empirical$) to correct for density bias.
+    *   Distribute the TEI Provincial Casualties using this hybrid weight to identify "True Hotspots."
+5.  **Synthesis & Visualization:** 
+    *   Generate comparative delta maps showing where the population model diverges from the empirical and hybrid models.
+    *   Provide narrative markdown explaining the anomalies (e.g., highly populated areas with low historical climate casualties vs. moderate-density areas with high casualties).
+6.  **Publish to Gold:** Export the final analytical tables to the `2_gold/` directory for downstream use in dashboards or index calculations.

@@ -12,7 +12,7 @@
 
 ## Pending
 - [ ] Run the final analysis in the notebook to generate the `human_impact_casualties_by_tambon_comparative.csv` Gold file.
-- [ ] Identify and document the Top 10 "Bias Zones" (Urban centers where Model A overestimated risk).
+- [ ] Identify and document the Top 10 "Bias Zones" (Urban centers where Model A (Population-based) overestimated risk).
 
 ## Next Session
 - [ ] **Pillar 2 Implementation**: Begin `prep_building_exposure.py` using WorldPop building metrics to disaggregate housing damage.

@@ -14,7 +14,7 @@ def normalize_admin_name(value):
     return s.replace("ฯ", "").strip()
 
 def main():
-    base_path = Path(__file__).resolve().parent.parent
+    base_path = Path(__file__).resolve().parent.parent.parent
     gold_spine_path = base_path / "data/2_gold/dim_location_master.csv"
     tambon_shp_path = base_path / "data/0_bronze/dopa/thailanda-administrative-boundary/THA_Tambon.shp"
     prov_shp_path = base_path / "data/0_bronze/dopa/thailanda-administrative-boundary/THA_Province.shp"

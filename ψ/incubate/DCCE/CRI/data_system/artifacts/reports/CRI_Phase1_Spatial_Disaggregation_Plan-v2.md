@@ -10,7 +10,7 @@ Based on the Phase 1 audit and the shift towards a true dasymetric disaggregatio
 
 1. **The TEI Anchor (Pillar 1):** We use the **TEI Provincial Baseline** (`casualties_by_hazard_2559_2566.csv`) as the primary basis for human impact. Audited provincial totals provide a stable historical metric compared to raw village counts.
 2. **Prioritize Dense Administrative Indicators:** `Affected Households` and `Housing Damage` are the only indicators with sufficient density. Sparse indicators (livestock, utilities) are **dropped** to avoid "false precision."
-3. **Comparative & Synthetic Disaggregation (Pillar 1):** We produce three models (Exposure, Impact, and Hybrid) to identify and correct population bias in urban centers.
+3. **Comparative & Synthetic Disaggregation (Pillar 1):** We produce three models (Population, Empirical, and Hybrid) to identify and correct population bias in urban centers.
 4. **The "Meta-Sector" Relief Grouping (Pillar 3/4):** DDPM financial relief categories are grouped into **Meta-Sectors** to reliably disaggregate funds based on physical assets (buildings) or land cover (agriculture).
 5. **Bangkok Integration:** Bangkok is included by anchoring TEI provincial BMA records to the Bangkok sub-district structure, ensuring a complete national risk surface.
 
@@ -36,15 +36,15 @@ Based on the Phase 1 audit and the shift towards a true dasymetric disaggregatio
 
 ### Pillar 1: High Confidence - Human Impact Pipeline (Comparative)
 We disaggregate TEI Provincial Casualties using three distinct weighting models:
-*   **Model A (Exposure-Based)**: 
+*   **Model A (Population-Based)**: 
     *   *Weight*: Tambon share of Provincial Population.
     *   *Bias*: Systematically overestimates risk in safe, high-density urban areas.
-*   **Model B (Impact-Based)**: 
+*   **Model B (Empirical)**: 
     *   *Weight*: Tambon share of Historical Climate Impact (DDPM).
     *   *Bias*: Subject to self-reporting gaps and administrative variance.
 *   **Model C (The Synthetic Hybrid - Bias Correction)**: 
     History is used as a spatial gate for population. We evaluate two options:
-    * [x]   **Option 1: Probability Weight**: $Weight = Population \times History$. Magnitude-scales risk by frequency.
+    * [x]   **Option 1: Probability Weight**: $Weight = Population \times Empirical (Affected-Household)$. Magnitude-scales risk by frequency.
     * [ ]   **Option 2: Binary Masked**: $Weight = Population$ (only in areas with any history). Uses history strictly as a footprint.
 
 ### Pillar 2: High Confidence - Residential/Structural Pipeline

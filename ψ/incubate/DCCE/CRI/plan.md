@@ -68,44 +68,31 @@ Based on current CRI docs, treat these as the default baseline unless we explici
 - Source intake (local project inbox for CRI): [inbox_source/](inbox_source/)
 - Inbox note (local scratchpad / guidance note for this project): [inbox_note/](inbox_note/)
 
-## Current execution focus (as of 2026-04-08)
+## Current execution focus (as of 2026-04-22)
+
+- **Experimental Track: WorldPop-Driven Dasymetric Disaggregation**
+  - **Context**: Discovery of high-resolution (100m) WorldPop datasets triggered a rethink of the disaggregation pipeline.
+  - **Objective**: Brainstorm and test hypotheses for disaggregating 3 core pillars:
+    1.  **Casualties**: Deaths and affected people (Pillar 1).
+    2.  **GPP**: Provincial economic output (Pillar 3).
+    3.  **Financial Relief**: Emergency funds as a proxy for Loss & Damage (Pillar 4).
+  - **Status**: **Active Experimentation.** No changes to the production pipeline have been committed. 
+  - Active Hypotheses:
+    - **Model C Hybrid**: Testing if $W = Pop \times Empirical$ corrects urban risk bias.
+  - Evidence linkage: [E-CRI-024 to E-CRI-029](ψ/incubate/DCCE/CRI/CRI-Evidence-Registry.md).
+
 
 - **Capacity tagging v2 + CBI bridge (Track B)**
   - Working pack:
-    - v1.1 baseline dictionary: [output/CRI_Capacity_Tagging_Dictionary.md](output/CRI_Capacity_Tagging_Dictionary.md)
-    - v2 canonical dictionary: [output/CRI_Capacity_Tagging_Dictionary_v2.md](output/CRI_Capacity_Tagging_Dictionary_v2.md)
-    - CBI-integrated v2 variant: [output/CRI_Capacity_Tagging_Dictionary_v2_CBI.md](output/CRI_Capacity_Tagging_Dictionary_v2_CBI.md)
-    - CRI–CBI crosswalk: [output/CRI_CBI_indicator_crosswalk.md](output/CRI_CBI_indicator_crosswalk.md)
-    - CBI bridging notes: [output/CRI_CBI_Bridging_Method_Note.md](output/CRI_CBI_Bridging_Method_Note.md), [output/CRI_CBI_method_reconstruction.md](output/CRI_CBI_method_reconstruction.md)
-    - NotebookLM v2 pipeline (plan + packet + concept register):
-      - [output/notebooklm_capacity_dictionary_v2/00_query_plan.md](output/notebooklm_capacity_dictionary_v2/00_query_plan.md)
-      - [output/notebooklm_capacity_dictionary_v2/02_pilot_execution_packet.md](output/notebooklm_capacity_dictionary_v2/02_pilot_execution_packet.md)
-      - [output/notebooklm_capacity_dictionary_v2/synthesis/indicator_concept_register.md](output/notebooklm_capacity_dictionary_v2/synthesis/indicator_concept_register.md)
-    - v3 governance freeze and vetting surfaces:
-      - v3 canonical governance worksheet: [output/CRI_Capacity_Tagging_Dictionary_v3.md](output/CRI_Capacity_Tagging_Dictionary_v3.md)
-      - compact concept summary: [output/CRI_Capacity_Concept_Summary_v3.md](output/CRI_Capacity_Concept_Summary_v3.md)
-      - concept-definition evidence surface: [inbox_source/Urban_Resilience_Concept_Check.md](inbox_source/Urban_Resilience_Concept_Check.md)
-  - Handoff + reflection for this track:
-    - Handoff: [ψ/inbox/handoff/2026-04-08_16-22_cri-capacity-v2-cbi-trackB.md](ψ/inbox/handoff/2026-04-08_16-22_cri-capacity-v2-cbi-trackB.md)
-    - Handoff (v3 governance freeze): [ψ/inbox/handoff/2026-04-10_15-10_cri-v3-structure-locked.md](ψ/inbox/handoff/2026-04-10_15-10_cri-v3-structure-locked.md)
-    - Retro: [ψ/memory/retrospectives/2026-04/08/16.19_rrr_cri-capacity-v2-cbi-crosswalk.md](ψ/memory/retrospectives/2026-04/08/16.19_rrr_cri-capacity-v2-cbi-crosswalk.md)
-    - Learning: [ψ/memory/learnings/2026-04-08_cri-capacity-v2-cbi-crosswalk-subtasking.md](ψ/memory/learnings/2026-04-08_cri-capacity-v2-cbi-crosswalk-subtasking.md)
-  - Near-term Track B priorities (see also [output/2026-04-07_cri-phase2-next-steps.md](output/2026-04-07_cri-phase2-next-steps.md)):
-    - Implement Track B8 evidence wiring for the v2 dictionary + CBI bridge (update AI sources index, evidence registry, and coverage map).
-    - Extend the CRI–CBI crosswalk and CBI-integrated dictionary to cover more v2 concepts, including CBI-only constructs that remain narrative/adjacency-only.
-    - Sketch and then prototype at least one **profile-first provincial demonstrator** using the v2 dictionary + CBI bridge.
-    - Treat the v3 Institutional Readiness lens as the active governance contract for the next indicator-vetting pass, while retaining the v2 + CBI bridge as historical and methodological context.
-    - Begin the first evidence-backed mapping pass from v3 governance concepts to Thai administrative indicators (LPA, e-LAAS, Traffy Fondue, and related systems), with explicit evidence-registry links.
+    - v3 governance worksheet: [output/CRI_Capacity_Tagging_Dictionary_v3.md](output/CRI_Capacity_Tagging_Dictionary_v3.md)
+  - Priorities:
+    - Validate Pillar 1 experimental outputs vs empirical ground truth.
+    - Brainstorm disaggregation logic for Pillar 2 (Buildings) using WorldPop structural metrics.
 
 ## Immediate priorities (next 1–2 weeks)
 
-> Decisions and tasking under this section should be backed by entries in `output/CRI-Evidence-Registry.md` and reflected in `output/CRI-Evidence-Coverage-Map.md` as evidence is locked in. Where a decision changes scope, outputs, or commitments, also append a corresponding row in the CRI Change Log and/or Trigger Log.
-1) **Operationalize the gap-flag protocol**
-   - Define the rule precisely: hazard observed AND admin relief=0 ⇒ “Administrative Gap” (not low risk).
-   - Implement + document in a short “Data Quality Flag” note inside the Phase 1 pipeline.
-   - Reference materials now in: [inbox/active/](inbox/active/)
 
-2) **Finalize Phase 1 data lineage + denominators**
+1) **Finalize Phase 1 data lineage + denominators**
    - Confirm numerator definition(s) for fiscal relief using the **best proxy for all sectors** (central emergency funds may be preferred even if incomplete), and note exclusions.
    - Confirm denominator choice (total GPP vs sectoral) and document bias/mitigation.
    - Incorporate **new DDPM impact and fiscal relief Excel extracts**:

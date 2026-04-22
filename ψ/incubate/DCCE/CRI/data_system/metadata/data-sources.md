@@ -65,3 +65,7 @@ This layer contains immutable, raw source files used as the foundation for the C
 
 # 4. Thailand Administrative Map Shapefile
 https://www.youtube.com/watch?v=CL2tOueWZzM&t=7s
+
+## 4.1 Shapefile of Province, Amphoe, Tambon
+- Source: https://drive.google.com/drive/folders/1zi3Z0l7wvsGN1p5YIWVVL3LFs3WnS7VQ
+- 
