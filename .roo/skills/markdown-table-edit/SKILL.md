@@ -31,7 +31,7 @@ Before editing a table, determine:
 1. **Target file path**  
    Example: [`ψ/incubate/DCCE/CRDB/CRDB-Evidence-Registry.md`](ψ/incubate/DCCE/CRDB/CRDB-Evidence-Registry.md).
 2. **Header anchor text** immediately preceding the table  
-   Example: `## Registry table` or `## Trigger table`.
+   Example: `## Registry table` or `## Trigger table`, or `#Table_A`.
 3. **Desired final table** content  
    A complete logical table: header row, alignment row, and all data rows with final values.
 
