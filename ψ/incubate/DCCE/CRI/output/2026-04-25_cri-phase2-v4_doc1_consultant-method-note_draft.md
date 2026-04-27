@@ -1,20 +1,20 @@
 ---
 type: draft_document
-status: draft_v1
+status: draft_v1.1
 created: 2026-04-26
-last_updated: 2026-04-26
+last_updated: 2026-04-27
 project:
   - DCCE_CRI
-title: CRI Phase 2 v4 Consultant Method Note (Draft)
+title: CRI Phase 2 v4.1 Consultant Method Note (Draft)
 language: en
 audience: consultant_team
 ---
 
-# CRI Phase 2 v4 Consultant Method Note (Draft)
+# CRI Phase 2 v4.1 Consultant Method Note (Draft)
 
 ## 1) Purpose, audience, and strict use boundary
 
-This document is an internal method note for the consultant team that will maintain, interpret, and communicate the CRI Phase 2 v4 framing.
+This document is an internal method note for the consultant team that will maintain, interpret, and communicate the CRI Phase 2 v4.1 framing.
 
 It has four practical jobs:
 
@@ -25,7 +25,7 @@ It has four practical jobs:
 
 This document is **not** a public scoring manual and is **not** a public calculation method.
 
-The factual boundary for this draft is anchored to the approved package plan and the adopted dictionary. Internal interpretation guidance is anchored to the consolidation note.
+The factual boundary for this draft is anchored to the approved package plan and the adopted v4.1 dictionary. Internal interpretation guidance is anchored to the consolidation note.
 
 ## 2) One-page decision summary (working default and boundaries)
 
@@ -42,7 +42,8 @@ The adopted working position is:
 - **Experiment C** is retained as the stress-test boundary record.
 - `Community Self-Organization & Stewardship` is retained as a **cross-cutting scored concept** that affects which metrics are selected and scored across relevant governance pillars.
 
-This position keeps the six-pillar institutional-readiness kernel stable while preserving enough internal interpretive structure to continue technical work without drifting into unsupported claims. It also prevents community self-organization from disappearing between interpretation and score construction.
+### v4.1 Advancement: Process-Aware Governance
+This position keeps the six-pillar institutional-readiness kernel stable while evolving definitions into **process-aware governance anchors**. Robustness is no longer read as "having a strong pipe" (Stock), but as "managing the integrity and fail-safe protocols" of that pipe (Activation).
 
 ## 3) Canonical model statement and interpretation discipline
 
@@ -51,7 +52,7 @@ This position keeps the six-pillar institutional-readiness kernel stable while p
 In this working model:
 
 - Asset indicators represent condition signals about enabling stock.
-- Governance indicators represent condition signals about institutional readiness.
+- Governance indicators represent condition signals about institutional readiness to **activate** that stock.
 
 Reading them together helps the team estimate whether stock is more likely to become usable function under stress.
 
@@ -75,7 +76,7 @@ Asset stock is interpreted as structural potential. Potential can exist without 
 
 ### 4.2 Activation-aware
 
-Governance conditions explain whether that potential is likely to activate into service function when stress arrives.
+Governance conditions explain whether that potential is likely to activate into service function when stress arrives. **Activation is a process, not a state.**
 
 ### 4.3 Condition-signal outcome
 
@@ -125,7 +126,7 @@ Apply the established ladder in order:
 Use a compact internal chain structure:
 
 1. Asset stock.
-2. Selected governance block(s).
+2. Selected governance block(s) (**focus on Process/Action**).
 3. Intended service function.
 4. Primary bottleneck.
 
@@ -161,7 +162,7 @@ Every outward statement must include or inherit the validation caveat:
 
 ### 6.1 What was adopted
 
-Adopted: Experiment B as working default with six-pillar kernel continuity and cross-cutting scored integration for `Community Self-Organization & Stewardship`.
+Adopted: Experiment B as working default with six-pillar kernel continuity and cross-cutting scored integration for `Community Self-Organization & Stewardship`. Definitions updated to v4.1 (Hardened Integration).
 
 ### 6.2 What was retained as lineage, not canonical logic
 
@@ -174,7 +175,7 @@ Adopted: Experiment B as working default with six-pillar kernel continuity and c
 - Expansion into a generalized seventh pillar.
 - Public disclosure of detailed activation-chain mechanics as scoring rules.
 
-## 7) Internal interpretation notes by case family
+## 7) Internal interpretation notes by case family (v4.1 Hardened)
 
 This section is intentionally explicit because the team requested full internal logic continuity.
 
@@ -184,27 +185,27 @@ For HC-01 to HC-04, the stable conclusion is that reuse with interpretation was 
 
 #### HC-01 (urban green ecological cooling stock)
 
-Internal reading: presence of green stock is not enough; usable cooling function depends on continuity of maintenance and practical access.
+Internal reading: presence of green stock is not enough; usable cooling function depends on **upkeep discipline** and **access protocols**.
 
-Drafting implication: when screening proxies, prefer indicators that reflect maintenance continuity and access conditions, not only static stock presence.
+Drafting implication: prefer indicators of *maintenance spending* and *access fairness*, not just green area.
 
-#### HC-02 (stormwater and flood-routing stock)
+#### HC-02 (stormwater and flood-routing stock system)
 
-Internal reading: routing stock can fail function if inspection cadence, unclogging discipline, retrofit enforcement, and monitoring continuity are weak.
+Internal reading: routing stock fails if **inspection cadence** and **unclogging protocols** are weak.
 
-Drafting implication: use operational continuity signals, not just infrastructure existence signals.
+Drafting implication: use *SOP compliance* signals, not just infrastructure existence.
 
 #### HC-03 (coastal protection and accommodation built stock)
 
-Internal reading: hard protection is conditional, not permanent safety; lock-in and maladaptation risk require revision-cycle attention.
+Internal reading: hard protection requires **integrity monitoring** and **revision-cycle attention**.
 
-Drafting implication: where possible, screen for review-cycle and adaptation-updating proxies, not one-time construction proxies only.
+Drafting implication: screen for *safeguard enforcement* and *review-cycle* proxies.
 
 #### HC-04 (coastal socio-ecological buffer and EbA stock)
 
-Internal reading: designation alone does not equal buffering service; continuity, coordination, restoration management, and funding persistence matter.
+Internal reading: buffering service depends on **restoration management** and **finance continuity**.
 
-Drafting implication: interpret ecological stock with continuity and coordination signals, not status labels alone.
+Drafting implication: interpret ecological stock with *coordination effectiveness* signals.
 
 ### 7.2 Escalated combination/overlay cases (HC-05 to HC-11)
 
@@ -220,15 +221,15 @@ Method implication: keep combination logic in internal notes; express only bound
 
 Pattern: both cases carried a repeated community-mediated activation burden not cleanly captured by formal readiness categories alone.
 
-Method implication: treat `Community Self-Organization & Stewardship` as a scored cross-cutting concept when screening for metrics that formal pillar concepts alone would miss.
+Method implication: treat `Community Self-Organization & Stewardship` as a scored cross-cutting concept.
 
-Boundary implication: do not present this concept as a new general pillar, a separate public score, or a visible chain mechanic. But do allow it to influence metric selection and scoring across relevant pillars beyond the two cases where it first surfaced.
+Boundary implication: do not present this concept as a new general pillar.
 
 #### HC-10 (translation burden from buffer to usable support)
 
-Pattern: availability does not guarantee usable uptake; translation into real delivery still depends on internal activation conditions.
+Pattern: availability does not guarantee usable uptake; translation into real delivery depends on **targeting and delivery processes**.
 
-Method implication: external language should remain cautious and avoid certainty claims.
+Method implication: external language should remain cautious.
 
 ## 8) Activation chains: what to write internally, what to suppress publicly
 
@@ -238,119 +239,62 @@ Within consultant documents, activation chains are required for:
 
 - interpretation consistency,
 - proxy-screening discipline,
-- bottleneck diagnosis,
-- team continuity across drafting cycles.
+- bottleneck diagnosis.
 
 ### 8.2 Public usage (bounded)
 
-In outward-facing communication, activation logic may appear only as simple exemplary narrative, never as formula-like or engine-like mechanics.
+In outward-facing communication, activation logic may appear only as simple exemplary narrative.
 
 ### 8.3 Internal template for chain writing
 
 Use this structure in working notes:
 
-1. Asset stock under discussion.
-2. Relevant governance readiness blocks.
+1. Asset stock.
+2. Relevant governance **Process** blocks.
 3. Intended function under stress.
 4. Primary bottleneck explanation.
 5. Proxy implications.
 6. External-safe phrasing.
 
-### 8.4 Prohibited public leakage patterns
-
-Do not publish:
-
-- full causal ordering as score engine,
-- per-case chain notation as public algorithm,
-- provisional labels from experimental refinement,
-- pruning-path narrative as user-facing method.
-
 ## 9) Cross-cutting scored concept logic and restrictions
 
-`Community Self-Organization & Stewardship` is retained because the experiment program exposed a persistent community-mediated governance burden that would otherwise disappear from the score-producing metric set.
-
-It is restricted by five rules:
+`Community Self-Organization & Stewardship` is restricted by five rules:
 
 1. Structure rule: not a seventh pillar.
-2. Scoring rule: any metric admitted through this concept must be assigned back into one of the six pillar scores.
-3. Visibility rule: no separate public score for this concept.
-4. Communication rule: external phrasing remains non-mechanical and does not show activation chains.
-5. Discipline rule: do not use this concept as a vague participation bucket; only use it where it materially improves metric selection and scoring validity.
+2. Scoring rule: Metrics assigned back into existing pillars.
+3. Visibility rule: no separate public score.
+4. Communication rule: external phrasing remains non-mechanical.
+5. Discipline rule: only use where it materially improves metric selection.
 
 ## 10) Validation caveats and monitoring protocol
 
 ### 10.1 Core caveat (must be preserved)
 
-Stronger asset and governance scores may suggest stronger resilience conditions in general, but they do not by themselves prove realized resilience.
-
-Activation-chain validity is context dependent and requires empirical monitoring against observed outcomes.
+Stronger scores suggest stronger conditions, not proven outcomes. Activation-chain validity is context dependent.
 
 ### 10.2 Monitoring orientation for downstream teams
 
-Downstream monitoring should compare condition signals against observed stress performance over time.
-
-The purpose is calibration: detect where interpretation aligns with outcomes and where context-specific adjustment is needed.
+Compare condition signals against observed stress performance over time.
 
 ### 10.3 Claim-control rule
 
-If monitoring evidence is absent or mixed, communication must remain at condition-signal level and avoid declaring demonstrated resilience outcomes.
+Avoid declaring demonstrated resilience outcomes without monitoring evidence.
 
 ## 11) Practical screening guidance for candidate proxy indicators
-
-This section is the operational core for day-to-day analyst work.
 
 ### 11.1 Screening questions (mandatory)
 
 For each candidate proxy, ask:
 
-1. Does it signal enabling condition or only inventory presence?
-2. Does it signal continuity of function under stress?
-3. Does it reflect accessibility/usability, not just existence?
-4. Does it align with reuse-first concept definitions?
-5. Does it require internal interpretation note to avoid misreading?
-6. Could it be misread publicly as proof of outcome?
+1. Does it signal **Process/Action** or only inventory presence?
+2. Does it signal **Continuity** under stress?
+3. Does it reflect **Usability**, not just existence?
 
 ### 11.2 Classification outcomes
 
-Classify each proxy into one of four bins:
-
-- **Direct fit**: usable with minimal interpretation.
-- **Interpretation-dependent fit**: usable only with explicit note.
-- **Internal-only diagnostic**: useful for internal chain reading only.
-- **Reject/defer**: risk of over-claiming or concept drift.
-
-### 11.3 Minimum annotation fields for analyst log
-
-Each proxy decision should carry:
-
-1. Case ID (HC-xx).
-2. Pillar mapping.
-3. Interpretation note (if needed).
-4. Public-safe wording.
-5. Caveat flag.
-6. Monitoring dependency flag.
-
-### 11.4 Common screening mistakes to avoid
-
-Avoid these recurring errors:
-
-- treating stock existence as realized service outcome,
-- presenting internal chain steps as official scoring mechanics,
-- detecting a cross-cutting concept internally but then failing to let it influence the scored metric set,
-- implying outcome certainty without monitoring evidence,
-- using formula language as if it were adopted computation.
+Classify each proxy into: **Direct fit**, **Interpretation-dependent fit**, **Internal-only diagnostic**, **Reject/defer**.
 
 ## 12) Lineage discipline: how to use Experiments A and C correctly
-
-### 12.1 Experiment A (no-growth benchmark)
-
-Use A to test whether reuse-first interpretation can still carry the case without concept growth.
-
-### 12.2 Experiment C (stress-test boundary)
-
-Use C to understand outer exploratory pressure and why uncontrolled growth requires pruning.
-
-### 12.3 Shared lineage takeaway
 
 A and C together support bounded supplementation logic and do not justify taxonomy-wide redesign.
 
@@ -358,38 +302,18 @@ A and C together support bounded supplementation logic and do not justify taxono
 
 ### 13.1 What Doc 1 must include in full
 
-Doc 1 (this consultant note) should include full internal logic, chain cautions, overlay restrictions, lineage handling, and validation caveats.
+Doc 1 (this note) includes full internal logic, process-aware definitions, and validation caveats.
 
 ### 13.2 What Doc 2 and Doc 3 must not include
 
-Doc 2 and Doc 3 must not expose full chain mechanics as public scoring rules.
-
-They may acknowledge that internal interpretation logic exists, while preserving simple external explanation and making clear that community self-organization still matters through the metrics that feed pillar scores.
-
-### 13.3 Boundary language for external-safe communication
-
-External-safe language should emphasize:
-
-1. complementary condition signals,
-2. caution against over-claiming,
-3. need for local context and empirical follow-up.
+Doc 2 and Doc 3 must not expose full chain mechanics or technical "process-only" terminology that confuses stakeholders. They use plain language to explain that "management matters as much as the pipe."
 
 ## 14) Internal quality check before release
 
-Use this checklist before sign-off:
-
 1. Is Experiment B clearly identified as working default?
 2. Are asset and governance indicators framed as complementary signals?
-3. Is formula language bounded (conceptual only) if mentioned?
-4. Are activation chains explicitly internal?
-5. Does the draft treat `Community Self-Organization & Stewardship` as score-relevant without turning it into a seventh pillar or separate public score?
-6. Are A and C correctly framed as lineage/boundary evidence only?
-7. Is the validation caveat present and intact?
-8. Are any statements over-claiming realized resilience?
+3. Does the draft treat `Community Self-Organization & Stewardship` as score-relevant without turning it into a seventh pillar?
 
 ## 15) Closing note for method continuity
 
-The objective of this method note is practical continuity without drift.
-
-The team should continue to work with full internal logic for analysis quality, while maintaining strict public boundary discipline. This combination protects technical usefulness and communication integrity at the same time.
-
+The v4.1 advancement ensures we are scoring **Real Readiness**, not just "Hardware Inventories." The team should maintain strict public boundary discipline while using the full process-aware logic for analysis quality.
