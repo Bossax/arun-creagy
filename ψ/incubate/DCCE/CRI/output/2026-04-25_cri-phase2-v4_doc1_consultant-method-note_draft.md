@@ -1,20 +1,20 @@
 ---
 type: draft_document
-status: draft_v1.1
+status: draft_v1.2
 created: 2026-04-26
 last_updated: 2026-04-27
 project:
   - DCCE_CRI
-title: CRI Phase 2 v4.1 Consultant Method Note (Draft)
+title: CRI Phase 2 v5 Consultant Method Note (Draft)
 language: en
 audience: consultant_team
 ---
 
-# CRI Phase 2 v4.1 Consultant Method Note (Draft)
+# CRI Phase 2 v5 Consultant Method Note (Draft)
 
 ## 1) Purpose, audience, and strict use boundary
 
-This document is an internal method note for the consultant team that will maintain, interpret, and communicate the CRI Phase 2 v4.1 framing.
+This document is an internal method note for the consultant team that will maintain, interpret, and communicate the CRI Phase 2 v5 framing.
 
 It has four practical jobs:
 
@@ -25,7 +25,7 @@ It has four practical jobs:
 
 This document is **not** a public scoring manual and is **not** a public calculation method.
 
-The factual boundary for this draft is anchored to the approved package plan and the adopted v4.1 dictionary. Internal interpretation guidance is anchored to the consolidation note.
+The factual boundary for this draft is anchored to the approved package plan and the adopted **v5 dictionary worksheet**. Internal interpretation guidance is anchored to the consolidation note.
 
 ## 2) One-page decision summary (working default and boundaries)
 
@@ -42,8 +42,8 @@ The adopted working position is:
 - **Experiment C** is retained as the stress-test boundary record.
 - `Community Self-Organization & Stewardship` is retained as a **cross-cutting scored concept** that affects which metrics are selected and scored across relevant governance pillars.
 
-### v4.1 Advancement: Process-Aware Governance
-This position keeps the six-pillar institutional-readiness kernel stable while evolving definitions into **process-aware governance anchors**. Robustness is no longer read as "having a strong pipe" (Stock), but as "managing the integrity and fail-safe protocols" of that pipe (Activation).
+### v5 Advancement: The Process-Aware Worksheet
+The v5 dictionary transforms the taxonomy into an operational worksheet. It embeds the **"Activation/Process" logic** directly into the concept descriptions, ensuring that analysts look for management discipline rather than static asset counts.
 
 ## 3) Canonical model statement and interpretation discipline
 
@@ -86,7 +86,7 @@ The combined read is a condition signal of resilience potential, not a direct st
 
 This architecture preserves the six-pillar readiness kernel, stays interpretable for implementation teams, and supports controlled interpretation without turning internal logic into public mechanics.
 
-## 5) Analysis workflow for consultant operations
+## 5) Analysis workflow for consultant operations (using v5 Worksheet)
 
 This section defines the minimum internal workflow to keep interpretation disciplined and reproducible.
 
@@ -126,7 +126,7 @@ Apply the established ladder in order:
 Use a compact internal chain structure:
 
 1. Asset stock.
-2. Selected governance block(s) (**focus on Process/Action**).
+2. Selected governance block(s) (**focus on the v5 "Description" and "Process/Action"**).
 3. Intended service function.
 4. Primary bottleneck.
 
@@ -162,7 +162,7 @@ Every outward statement must include or inherit the validation caveat:
 
 ### 6.1 What was adopted
 
-Adopted: Experiment B as working default with six-pillar kernel continuity and cross-cutting scored integration for `Community Self-Organization & Stewardship`. Definitions updated to v4.1 (Hardened Integration).
+Adopted: Experiment B as working default with six-pillar kernel continuity and cross-cutting scored integration for `Community Self-Organization & Stewardship`. Definitions updated to v5 (Hardened Worksheet Edition).
 
 ### 6.2 What was retained as lineage, not canonical logic
 
@@ -175,7 +175,7 @@ Adopted: Experiment B as working default with six-pillar kernel continuity and c
 - Expansion into a generalized seventh pillar.
 - Public disclosure of detailed activation-chain mechanics as scoring rules.
 
-## 7) Internal interpretation notes by case family (v4.1 Hardened)
+## 7) Internal interpretation notes by case family (v5 Hardened)
 
 This section is intentionally explicit because the team requested full internal logic continuity.
 
@@ -286,7 +286,7 @@ Avoid declaring demonstrated resilience outcomes without monitoring evidence.
 
 For each candidate proxy, ask:
 
-1. Does it signal **Process/Action** or only inventory presence?
+1. Does it signal **Process/Action** (as defined in v5 worksheet) or only inventory presence?
 2. Does it signal **Continuity** under stress?
 3. Does it reflect **Usability**, not just existence?
 
@@ -316,4 +316,4 @@ Doc 2 and Doc 3 must not expose full chain mechanics or technical "process-only"
 
 ## 15) Closing note for method continuity
 
-The v4.1 advancement ensures we are scoring **Real Readiness**, not just "Hardware Inventories." The team should maintain strict public boundary discipline while using the full process-aware logic for analysis quality.
+The v5 advancement ensures we are scoring **Real Readiness**, not just "Hardware Inventories." The team should maintain strict public boundary discipline while using the full process-aware logic for analysis quality.
