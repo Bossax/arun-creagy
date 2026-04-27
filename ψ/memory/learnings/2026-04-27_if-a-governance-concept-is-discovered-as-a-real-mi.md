@@ -1,0 +1,13 @@
+---
+title: If a governance concept is discovered as a real missing piece during method desi
+tags: [cri, methodology, scoring, cross-cutting, governance]
+created: 2026-04-27
+source: rrr: Arun_Creagy
+---
+
+# If a governance concept is discovered as a real missing piece during method desi
+
+If a governance concept is discovered as a real missing piece during method design, it cannot stop at interpretation. In a scoring system, the concept must visibly affect what metrics are scanned, admitted, and assigned into scores. Otherwise the method can sound corrected while the actual score-producing machinery stays unchanged. For CRI Phase 2 v4, the right repair was to keep the six governance pillars, keep activation chains internal, and make `Community Self-Organization & Stewardship` a cross-cutting scored concept whose selected metrics are assigned back into relevant pillar scores rather than exposed as a separate public score.
+
+---
+*Added via Oracle Learn*

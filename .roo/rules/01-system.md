@@ -2,8 +2,10 @@
 
 These rules ensure technical consistency and path compliance across the Windows/PowerShell environment.
 
+Do not use a command syntax starts with '$' 
+
 ## 1. Environment & Commands
-- **Default Shell**: `powershell.exe -NoProfile`. 
+- **Default Shell**: cmd.exe 
 - **The Brain (ψ)**: Use PowerShell for all path operations involving the `ψ` character.
 - **Path Syntax**: 
   - **Tool Parameters**: Forward slashes (`/`) (e.g., `read_file(file_path="ψ/memory/...")`).
@@ -14,3 +16,4 @@ These rules ensure technical consistency and path compliance across the Windows/
 - **Absolute Paths**: Always resolve `ψ/` paths to their absolute host path when calling external CLIs.
 - **Atomic Execution**: Maximum of two independent operations per `run_shell_command`.
 - **Sorting**: Replace `ls -t` with `Get-ChildItem | Sort-Object LastWriteTime -Descending`.
+- 

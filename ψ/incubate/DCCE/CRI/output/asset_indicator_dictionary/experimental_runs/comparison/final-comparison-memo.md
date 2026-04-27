@@ -24,9 +24,9 @@ The preferred working default candidate is **Experiment B**.
 
 The main reason is not that Experiment B radically changes the taxonomy. It does not. The main reason is that it preserves the six-pillar v3 kernel, reaches full coverage across all 11 hardened asset concepts, and improves the treatment of the two hardest community-mediated assets with only **one** tightly bounded overlay concept: **Community Self-Organization & Stewardship**.
 
-Experiment A remains the strongest conservative baseline because it achieves full coverage with zero surviving concept growth. However, it does so by relying more heavily on combination chains for the softest cases, especially HC-09 and HC-11, which weakens bottleneck clarity and administrative readability relative to Experiment B.
+Experiment A remains the strongest conservative baseline because it achieves full coverage with zero surviving concept growth. However, it does so by ==relying more heavily on combination chains for the softest cases==, especially HC-09 and HC-11, which weakens bottleneck clarity and administrative readability relative to Experiment B.
 
-Experiment C is best interpreted as a successful stress test rather than as the working default. Its final stabilized shape converges with Experiment B, but it reaches that outcome through looser Round 2 admission and very high Round 3 pruning. That makes it highly valuable as boundary evidence, but less suitable than Experiment B as the operational default for downstream drafting.
+==Experiment C is best interpreted as a successful stress test rather than as the working default.== Its final stabilized shape converges with Experiment B, but it reaches that outcome through looser Round 2 admission and very high Round 3 pruning. That makes it highly valuable as boundary evidence, but less suitable than Experiment B as the operational default for downstream drafting.
 
 ## 1. Final concept inventory delta versus v3
 
@@ -36,7 +36,7 @@ Experiment C is best interpreted as a successful stress test rather than as the 
 
 ### Comparison finding
 
-Across all three experiments, the program did **not** produce evidence for a broad seventh governance family. The only durable pressure point was a narrow community-mediated linkage problem affecting the two softest asset cases. This means the comparison outcome supports **bounded supplementation**, not taxonomy redesign.
+Across all three experiments, the program did **not** produce evidence for a broad seventh governance family. ==The only durable pressure point was a narrow community-mediated linkage problem affecting the two softest asset cases==. This means the comparison outcome supports **bounded supplementation**, not taxonomy redesign.
 
 ## 2. Coverage summary across all 11 hardened asset concepts
 
@@ -50,7 +50,7 @@ The practical difference lies in **how** the hardest cases were stabilized:
 
 ### Comparison finding
 
-Coverage is no longer the discriminating criterion. The discriminating criteria are bottleneck clarity, category purity under pressure, evidence strength, and practitioner readability.
+**Coverage is no longer the discriminating criterion**. The discriminating criteria are bottleneck clarity, category purity under pressure, evidence strength, and practitioner readability. %% difficult to understand %%
 
 ## 3. Surviving new concepts and why they survived
 
@@ -61,7 +61,7 @@ Coverage is no longer the discriminating criterion. The discriminating criteria 
 ### Experiment B
 
 - One surviving concept: **Community Self-Organization & Stewardship**.
-- It survived because the evidence package supported a narrow claim: some asset stocks depend on informal stewardship, customary or local knowledge, trust-based self-organization, and autonomous collective action that are only partially legible through the six formal readiness categories alone.
+- It survived because the evidence package supported a narrow claim: ==some asset stocks depend on informal stewardship, customary or local knowledge, trust-based self-organization, and autonomous collective action that are only partially legible through the six formal readiness categories alone==.
 - Its use was tightly bounded to **HC-09** and **HC-11**.
 
 ### Experiment C
@@ -71,7 +71,7 @@ Coverage is no longer the discriminating criterion. The discriminating criteria 
 
 ### Comparison finding
 
-The shared signal from Experiments B and C is that only **one** narrow overlay survived, and it survived for only **two** asset families. This is strong evidence that the missing logic is limited and specific rather than systemic across the taxonomy.
+The shared signal from Experiments B and C is that only **one** narrow overlay survived, and it survived for only **two** asset families. ==This is strong evidence that the missing logic is limited and specific rather than systemic across the taxonomy==.
 
 ## 4. Bottleneck clarity comparison
 
@@ -92,7 +92,7 @@ Experiment B performs best on bottleneck clarity because it achieves the same fu
 ### Comparison finding
 
 Experiment A is best on purity in the strict sense. However, Experiment B keeps purity within an acceptable range because the overlay remains narrow, non-pillar, and asset-limited. Experiment C confirms that this boundary must stay tightly governed.
-
+%% if the new concept does not require a separate pillar, what is it then? %%
 ## 6. Evidence-strength comparison
 
 - **Experiment A:** Strong reuse-case evidence, but the two softest assets remained conservative judgments under a high bar for concept admission. Evidence was sufficient for rejection of growth, but less decisive for explaining the residual discomfort in HC-09 and HC-11.

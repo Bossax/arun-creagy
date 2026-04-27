@@ -23,7 +23,7 @@ Completed.
 - Surviving new concepts: None.
 - Category-purity issues remaining: No material unresolved issue. Asset stock and governance activation remain separated; cross-pillar linkages were not reified into hybrid concept rows.
 - Shared-rubric score: 32/35 provisional self-score (`concept_growth = 5`, `coverage = 5`, `bottleneck_clarity = 4`, `category_purity = 5`, `evidence_strength = 4`, `cross_asset_reusability = 5`, `administrative_readability = 4`).
-- Recommendation note: Experiment A is a strong conservative baseline. It shows that strict kernel preservation can carry full 11-concept coverage without concept growth, but seven assets require combination-heavy chains. The next orchestration step is to hold this result as the no-growth baseline and then run Experiment B for comparative pressure-testing only.
+- Recommendation note: Experiment A is a strong conservative baseline. It shows that strict kernel preservation can carry full 11-concept coverage without concept growth, but ==seven assets require combination-heavy chains==. The next orchestration step is to hold this result as the no-growth baseline and then run Experiment B for comparative pressure-testing only.
 
 ## Evidence note
 
