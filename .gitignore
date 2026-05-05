@@ -37,7 +37,13 @@ tools/
 *.wav
 *.pptx
 
-
+# 6. Python Virtual Environments
+venv/
+venv_clean/
+.venv/
+**/venv/
+**/venv_clean/
+**/.venv/
 
 # Large Data Files
 *.gpkg
