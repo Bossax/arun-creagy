@@ -1,0 +1,67 @@
+{
+	"mcpServers": {
+		"oracle-v2": {
+			"command": "docker",
+			"args": [
+				"exec",
+				"-i",
+				"oracle-arun-creagy",
+				"bun",
+				"src/index.ts"
+			],
+			"cwd": "C:/Users/sitth/OracleWorkspace/engine",
+			"description": "Local Oracle Registry (Registry of Form)",
+			"alwaysAllow": [
+				"arra_learn",
+				"arra_threads",
+				"arra_search",
+				"arra_trace"
+			]
+		},
+		"notebooklm": {
+			"command": "npx",
+			"args": [
+				"notebooklm-mcp@latest"
+			],
+			"env": {
+				"NOTEBOOK_PROFILE_STRATEGY": "single"
+			},
+			"description": "Research from pre-uploaded sources on notebooklm",
+			"alwaysAllow": [
+				"list_notebooks",
+				"get_notebook",
+				"select_notebook",
+				"get_health",
+				"setup_auth",
+				"ask_question"
+			]
+		},
+		"perplexity": {
+			"type": "stdio",
+			"command": "npx",
+			"args": [
+				"-y",
+				"@perplexity-ai/mcp-server"
+			],
+			"env": {
+				"PERPLEXITY_API_KEY": "${env:PERPLEXITY_API_KEY}"
+			},
+			"description": "AI web search",
+			"alwaysAllow": []
+		},
+		"brave-search": {
+			"command": "npx",
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-brave-search"
+			],
+			"env": {
+				"BRAVE_API_KEY": "${env:BRAVE_API_KEY}"
+			},
+			"description": "web search",
+			"alwaysAllow": [
+				"brave_web_search"
+			]
+		}
+	}
+}
