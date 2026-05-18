@@ -1,6 +1,7 @@
 import pandas as pd
 import os
 import re
+import sys
 
 def normalize_admin_name(value):
     if value is None: return ""
@@ -16,6 +17,11 @@ def normalize_admin_name(value):
     return s.replace("ฯ", "").strip()
 
 def main():
+    # Ensure Thai/ψ paths can be printed in Windows terminals
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")  # py3.7+
+    except Exception:
+        pass
     # Resolve project root: ψ/incubate/DCCE/CRI/data_system/
     script_dir = os.path.dirname(os.path.abspath(__file__))
     project_root = os.path.dirname(os.path.dirname(script_dir))
@@ -91,7 +97,12 @@ def main():
     print("Ensuring coverage for administrative subdistricts (no-village zones)...")
     for t_c, t_n in t_map.items():
         canonical_rows.append({
-            'location_id': t_c + '00',
+            # IMPORTANT: `location_id` must be unique across ALL rows.
+            # Using `t_c + '00'` collides with village rows when a `VILL_CODE` happens to end with '00'
+            # (example observed: location_id=30101200 is a *village* row for โนนสูง/ด่านคล้า).
+            # That collision causes this subdistrict row to be dropped by drop_duplicates below,
+            # which then makes the admin_level='subdistrict' slice incomplete and breaks boundary joins.
+            'location_id': f"{t_c}__subdistrict",
             'province_code': t_c[:2], 'province_name_th': p_map[t_c[:2]],
             'district_code': t_c[:4], 'district_name_th': a_map[t_c[:4]],
             'subdistrict_code': t_c, 'subdistrict_name_th': t_n,
@@ -100,6 +111,7 @@ def main():
         })
 
     master_df = pd.DataFrame(canonical_rows)
+    # Keep duplicates logic, but now subdistrict rows won't collide with village rows.
     master_df = master_df.drop_duplicates(subset=['location_id'], keep='first')
     master_df.to_csv(output_path, index=False, encoding='utf-8-sig')
     

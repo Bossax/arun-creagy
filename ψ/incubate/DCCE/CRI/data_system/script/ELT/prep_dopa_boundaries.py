@@ -308,8 +308,16 @@ def main():
         enriched_t['prov_code'] = enriched_t['prov_code'].str[-2:].str.zfill(2)
     
     cols_t = [c for c in enriched_t.columns if not c.endswith('_norm') and c not in ['province_name_th', 'district_name_th', 'subdistrict_name_th']]
-    enriched_t[cols_t].to_file(out_tambon, driver='ESRI Shapefile', encoding='utf-8')
-    print(f"Saved: {out_tambon}")
+    try:
+        enriched_t[cols_t].to_file(out_tambon, driver='ESRI Shapefile', encoding='utf-8')
+        print(f"Saved: {out_tambon}")
+    except PermissionError as e:
+        # Windows often locks shapefiles if they are open in QGIS/ArcGIS/Explorer preview.
+        # Fall back to a safe alternate filename so the run can complete.
+        alt_out_tambon = out_tambon.with_name(out_tambon.stem + "_new" + out_tambon.suffix)
+        enriched_t[cols_t].to_file(alt_out_tambon, driver='ESRI Shapefile', encoding='utf-8')
+        print(f"WARNING: Could not overwrite locked file: {out_tambon}")
+        print(f"Saved (fallback): {alt_out_tambon}")
 
     # --- Part 2: Province Enrichment ---
     print("Processing Province boundaries...")
