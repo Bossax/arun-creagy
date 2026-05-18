@@ -36,6 +36,8 @@ tools/
 *.mp3
 *.wav
 *.pptx
+*.jpg
+*.png
 
 # 6. Python Virtual Environments
 venv/
@@ -50,7 +52,8 @@ venv_clean/
 *.tif
 #shapefile artifacts
 *.dbf
-*.shp
+*.shp*
+*.sbx
 *.shx
 *.prj
 *.sbn
