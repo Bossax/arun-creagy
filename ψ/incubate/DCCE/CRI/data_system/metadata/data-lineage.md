@@ -23,7 +23,9 @@ This document provides a human-readable map of the transformation logic used to 
 ## 3. DOPA Spatial Spine
 - **URL**: https://drive.google.com/drive/folders/1zi3Z0l7wvsGN1p5YIWVVL3LFs3WnS7VQ
 *   **Raw Source**: `0_bronze/dopa/thailanda-administrative-boundary/*.shp`
-*   **Processing Script**: `prep_dopa_boundaries.py`
+*   **Processing Scripts**:
+    *   Tambon + Province enrichment (legacy combined): [`script/ELT/prep_dopa_boundaries.py`](ψ/incubate/DCCE/CRI/data_system/script/ELT/prep_dopa_boundaries.py:1)
+    *   Province-only enrichment (preferred for province-only workflows): [`script/ELT/prep_dopa_province_boundaries.py`](ψ/incubate/DCCE/CRI/data_system/script/ELT/prep_dopa_province_boundaries.py:1)
     *   **Logic**:
         *   **Geometry Normalization**: Ensures CRS is set to WGS84 (EPSG:4326).
         *   **Forensic Alignment**: Applies 11 targeted nomenclature patches to resolve legacy attribute errors in the Bronze GIS file (e.g., renames, district shifts).
@@ -31,6 +33,8 @@ This document provides a human-readable map of the transformation logic used to 
     *   **Outputs**: 
         *   `1_silver/dopa/tambon_boundaries_enriched.shp`
         *   `1_silver/dopa/province_boundaries_enriched.shp`
+
+> Province-only note: `prep_dopa_province_boundaries.py` performs the province enrichment join against the Gold spine and writes `province_boundaries_enriched.shp` without reading or depending on tambon geometries.
 
 ---
 
