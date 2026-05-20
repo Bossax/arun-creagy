@@ -1,7 +1,7 @@
 {
   "general": {
     "plan": {
-      "directory": "plans"
+      "directory": ""
     }
   },
   "mcpServers": {
@@ -50,5 +50,8 @@
       },
       "description": "web search"
     }
+  },
+  "security": {
+    "autoAddToPolicyByDefault": false
   }
 }

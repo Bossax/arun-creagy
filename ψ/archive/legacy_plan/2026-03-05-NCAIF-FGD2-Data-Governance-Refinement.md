@@ -23,8 +23,8 @@ type: "plan "
 - [ ] Proposed the changes to [[Feature-Driven Data Governance Strategy v2 (2026-02-26)]]
 - [ ] Rewrite [[National Climate Adaptation Information Framework]]: according to [[Feature-Driven Data Governance Strategy v2 (2026-02-26)]] decisions. Below is minimum expected content 
 	- [ ] Update the sitemap [[NCAIF_Sitemap_Options]]. The sitemap must be designed to satisfy the focused workflows and explicitly place MVPs in suitable locations. Give me 2-3 alternatives. 
-	- [ ] Section explaining use case inventory from stakeholder engagement in [[NCAIF_Use_Cases]]
-	- [ ] Section explaining prioritized workflow and use cases. Highlight MVPs. describe the logic of deriving these MVPs [[NCAIF — Workflow patterns + MVP draft (from stakeholder use cases)]]
+	- [ ] Section explaining use case inventory from stakeholder engagement in [[ψ/incubate/DCCE/CRDB/output/03_Logic_MVD_MVP/NCAIF_Use_Cases]]
+	- [ ] Section explaining prioritized workflow and use cases. Highlight MVPs. describe the logic of deriving these MVPs [[ψ/incubate/DCCE/CRDB/output/03_Logic_MVD_MVP/NCAIF — Workflow patterns + MVP draft (from stakeholder use cases)]]
 	- [ ] Demonstration of user journeys using NCAIF and MVPs: DCCE communication and engagement team, adaptation measure development team, international  cooperation team (handle reporting and standard compliance)  
 - [ ] Refine [[FGD2_Slide_Deck_Guide]] to include exact wording and visual guide. The slide number can increase
 	- [ ] Slide 5 includes the interview plan and status. and how we use the interview results for

@@ -33,16 +33,16 @@ We must align with **Director Nid** (Director of the Climate Change Adaptation D
 ## 3. The "Complete" Deliverable (The 8 Pillars of Success)
 Success is now defined as delivering an **Inception Package** that provides the domain-specific knowledge required to build the system without methodology discovery. This list has been re-calibrated against project reality (missing national reference data and vast dataset scale).
 
-| Pillar                             | Success Criteria (The "Complete" State)                                | Purpose (The Shield)                |
-| :--------------------------------- | :--------------------------------------------------------------------- | :---------------------------------- |
-| **1. Climate Data Model (CDM)**    | Hardened Physical Schema/ERD for Asset/Risk/Adaptation.                | Establishing the system of record.  |
-| **2. Business Glossary**           | Controlled list of 100+ terms with owner-approved definitions.         | Preventing semantic drift.          |
-| **3. LDM Logic Rules (MVD)**       | Deterministic formulas for Loss & Damage entity relationships.         | Eliminating "Black Box" logic in the disaster domain. |
-| **4. Subject-Area Interface Map**  | Mapping major source classes (e.g. ThaiWater) to CDM Subject Areas.    | Defining integration boundaries without field-level overhead. |
-| **5. Data Quality Framework**      | G1-G5 Audit Rules and Metadata compliance gates.                       | Ensuring "Good Data" from day one.  |
-| **6. Governance Operating Model**  | RACI matrix with Director Nid (Approver) and Sub-divisions (Stewards). | Defining accountability.            |
+| Pillar                                  | Success Criteria (The "Complete" State)                                 | Purpose (The Shield)                                           |
+| :-------------------------------------- | :---------------------------------------------------------------------- | :------------------------------------------------------------- |
+| **1. Climate Data Model (CDM)**         | Hardened Physical Schema/ERD for Asset/Risk/Adaptation.                 | Establishing the system of record.                             |
+| **2. Business Glossary**                | Controlled list of 100+ terms with owner-approved definitions.          | Preventing semantic drift.                                     |
+| **3. LDM Logic Rules (MVD)**            | Deterministic formulas for Loss & Damage entity relationships.          | Eliminating "Black Box" logic in the disaster domain.          |
+| **4. Subject-Area Interface Map**       | Mapping major source classes (e.g. ThaiWater) to CDM Subject Areas.     | Defining integration boundaries without field-level overhead.  |
+| **5. Data Quality Framework**           | G1-G5 Audit Rules and Metadata compliance gates.                        | Ensuring "Good Data" from day one.                             |
+| **6. Governance Operating Model**       | RACI matrix with Director Nid (Approver) and Sub-divisions (Stewards).  | Defining accountability.                                       |
 | **7. Reference Data Dependency Matrix** | Identification of entities requiring shared lookups (e.g. Admin Units). | Forcing architectural S-O-T without fixing national data gaps. |
-| **8. Building Block Catalog**      | Tiered feature list (Must-Have vs. Nice-to-Have).                      | Providing procurement flexibility.  |
+| **8. Building Block Catalog**           | Tiered feature list (Must-Have vs. Nice-to-Have).                       | Providing procurement flexibility.                             |
 
 ---
 

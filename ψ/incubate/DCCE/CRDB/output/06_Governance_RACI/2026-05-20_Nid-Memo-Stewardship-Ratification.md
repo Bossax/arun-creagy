@@ -1,0 +1,56 @@
+# Memorandum: Internal Data Stewardship Ratification for the CRDB Platform
+**To**: Director Nid (Director, Climate Change Adaptation Division, DCCE)
+**From**: CRDB Strategic Audit Team
+**Date**: 2026-05-20
+**Subject**: Proposal for Internal Data Stewardship Model to Secure Procurement Integrity (25M THB)
+
+---
+
+## 1. Executive Summary
+The Climate Risk Data Blueprint (CRDB) project is transitioning into its 25M THB implementation phase. To ensure the success of this procurement and prevent the "Discovery Trap" (where contractors spend 12-18 months attempting to understand the domain), DCCE must reclaim **Product Ownership**.
+
+This memorandum proposes the formal ratification of an **Internal Data Stewardship Model**. This model ensures that the logic, definitions, and content of the CRDB platform are authored and approved by DCCE experts, while the contractor is strictly limited to technical implementation.
+
+---
+
+## 2. The Strategic Risk: "Expert Drift"
+Recent audits of the DCCE-Contractor interface have identified a critical risk: the assumption that technical integrators can "figure out" climate risk logic, dashboard designs, and policy narratives. 
+
+*   **The Problem**: When contractors are left to "invent" logic (e.g., how to calculate Loss & Damage or which hazard datasets are "official"), the result is a **Mediocrity Spiral**—a platform that is technically functional but scientifically or politically inaccurate.
+*   **The Shield**: The **8-Pillar Inception Package** (CDM, Glossary, Logic Rules, etc.) serves as the technical baseline. However, this blueprint requires **Internal Stewards** to maintain its integrity during the multi-year build phase.
+
+---
+
+## 3. The Proposed Stewardship Model (RACI)
+We propose that the Climate Change Adaptation Division establish a **Data Stewardship RACI** (Responsible, Accountable, Consulted, Informed) for the platform's core data domains.
+
+| Data Domain | Data Steward (Responsible) | Strategic Authority (Accountable) | Technical Implementer (Contractor) |
+| :--- | :--- | :--- | :--- |
+| **Pillar 1: CDM (Architecture)** | Adaptation Division Lead | **Director Nid** | Build to Schema |
+| **Pillar 2: Business Glossary** | Sectoral Focal Points (Water, Agri, etc.) | **Director Nid** | Implement Tags/Semantics |
+| **Pillar 3: LDM Logic (L&D)** | Disaster/Risk Analyst | **Director Nid** | Code to Formulas |
+| **Pillar 5: DQ Standards** | Data Governance Lead | **Director Nid** | Implement Audit Gates |
+| **Pillar 8: Building Blocks** | Project Management Team | **Director Nid** | Deliver to Tiered Specs |
+
+### **Key Responsibilities of Internal Stewards:**
+1.  **Semantic Approval**: Verify that terms in the Business Glossary (Pillar 2) match DCCE policy.
+2.  **Logic Validation**: Ensure that mathematical formulas for Loss & Damage (Pillar 3) are deterministic and transparent.
+3.  **Data Quality Oversight**: Act as the final "gatekeeper" for dataset endorsements (Pillar 5).
+4.  **Requirement Guarding**: Ensure the contractor does not deviate from the "Must-Have" Building Blocks (Pillar 8).
+
+---
+
+## 4. Operational Mandate: The "Official Source of Truth"
+For this platform to succeed, it must be mandated as the **Division's Official Source of Truth**. This requires:
+1.  **Internal Integration**: Sub-divisions must prioritize the platform for their sectoral reporting (BTR, NAP, CRI).
+2.  **Stewardship Accountability**: Data Stewards must be allocated time to review and approve contractor outputs as part of their division-level duties.
+
+---
+
+## 5. Requested Action
+We request that Director Nid formally ratify this Stewardship structure. This ratification will be included in the **July 6th Inception Package** and tucked into **Deliverable 2 (FGD3 Report)** to make it a contractually binding requirement for the incoming contractor.
+
+**By establishing this "Nid Layer" of governance now, DCCE ensures that the 25M THB investment delivers a platform owned by the division, not the contractor.**
+
+---
+*Prepared by ARUN for CRDB Pillar 6 (Governance & RACI).*
