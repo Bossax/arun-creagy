@@ -15,7 +15,7 @@ This document provides the structural blueprint for the 10 mandated deliverables
 #### **Del 1: Design Report (NCAIF & Data Management Framework)**
 *   **The Pillars**: 1 (CDM), 2 (Glossary), 5 (DQ Framework).
 *   **Structure**: 
-    *   **Core Architecture**: Insert the **CDM Physical Schema (ERD)** as the non-negotiable system of record.
+    *   **Core Architecture**: Insert the **CDM Entity-Attribute-Relationship (EAR) Catalog** as the non-negotiable logical baseline.
     *   **Data Quality Section**: Insert the **G1-G5 Audit Rules** as mandatory system acceptance criteria.
     *   **Appendix**: Attach the **Business Glossary** (100+ terms) to prevent semantic drift during software development.
 
@@ -54,7 +54,7 @@ This document provides the structural blueprint for the 10 mandated deliverables
 #### **Del 6: Minimum Viable Dataset (MVD) & Reporting Forms**
 *   **The Pillar**: 3 (LDM Logic Rules).
 *   **Structure**:
-    *   **Logical Data Model (LDM)**: Define the **"Disaster Card"** fact table and its relational logic (Hazard-Asset-Impact).
+    *   **Logical Data Model (LDM)**: Define the **"Disaster Card"** entity structure and its relational logic (Hazard-Asset-Impact).
     *   **Deterministic Formulas**: Provide the logic for entity relationships within the Loss & Damage domain.
 
 ---
@@ -71,13 +71,51 @@ This document provides the structural blueprint for the 10 mandated deliverables
 
 ## 3. Summary of Pillar-to-Deliverable Mapping
 
-| Pillar | Delivering Package | Target Deliverable |
-| :--- | :--- | :--- |
-| **1. CDM (Physical ERD)** | Package A | **Del 1** (Design Report) |
-| **2. Business Glossary** | Package A / D | **Del 1** (Appendix) / **Del 9** (Tagging) |
-| **3. LDM Logic (MVD)** | Package C | **Del 6** (MVD Spec) |
-| **4. Interface Map** | Package C | **Del 4** (Inventory Mapping) |
-| **5. DQ Framework (G1-G5)** | Package A / D | **Del 1** (Rules) / **Del 8-10** (Audits) |
-| **6. Governance (RACI)** | Package B | **Del 2** (FGD3 Report) |
-| **7. Ref Data Matrix** | Package C | **Del 4** (Dependencies) |
-| **8. Building Block Catalog** | Package A | **Del 7** (Procurement Tiers) |
+| Pillar | Delivering Package | Target Deliverable | Format |
+| :--- | :--- | :--- | :--- |
+| **1. CDM (Logical Baseline)** | Package A | **Del 1** (Design Report) | **EAR Catalog** (Excel/CSV) |
+| **2. Business Glossary** | Package A / D | **Del 1** (Appendix) / **Del 9** (Tagging) | **Normalized CSV** |
+| **3. LDM Logic (MVD)** | Package C | **Del 6** (MVD Spec) | **Functional Excel Model** |
+| **4. Interface Map** | Package C | **Del 4** (Inventory Mapping) | **Mapping CSV** |
+| **5. DQ Framework (G1-G5)** | Package A / D | **Del 1** (Rules) / **Del 8-10** (Audits) | **Audit Ruleset (JSON/CSV)** |
+| **6. Governance (RACI)** | Package B | **Del 2** (FGD3 Report) | **RACI Matrix** |
+| **7. Ref Data Matrix** | Package C | **Del 4** (Dependencies) | **Master Data CSV** |
+| **8. Building Block Catalog** | Package A | **Del 7** (Procurement Tiers) | **Tiered Feature List** |
+
+---
+
+## 4. Technical Specification Requirements
+
+This section defines the mandatory technical standards, verification criteria, and implementation constraints for each of the 8 Pillars. These requirements constitute the "Definition of Done" for the CRDB hardening phase.
+
+### **Pillar 1: Climate Data Model (CDM) - Logical Baseline**
+*   **Detailed Requirements**: Refer to [[ψ/incubate/DCCE/CRDB/output/01_CDM_Architecture/Pillar_01_CDM_Technical_Specification.md|Pillar 1 Technical Specification]].
+*   **Summary**: Defines the logical Entity-Attribute-Relationship (EAR) structure for all climate risk and adaptation data subject areas. It serves as the mandatory logical baseline for the physical database implementation.
+
+### **Pillar 2: Business Glossary**
+*   **Detailed Requirements**: Refer to [[ψ/incubate/DCCE/CRDB/output/02_Glossary_Semantics/Pillar_02_Glossary_Technical_Specification.md|Pillar 2 Technical Specification]].
+*   **Summary**: A controlled list of 100+ terms providing the Universal Semantic Layer (USL) for the entire platform. It ensures consistent labeling and discoverability across all data products.
+
+### **Pillar 3: Logic Rules (MVD)**
+*   **Detailed Requirements**: Refer to [[ψ/incubate/DCCE/CRDB/output/03_Logic_MVD_MVP/Pillar_03_LDM_Logic_Technical_Specification.md|Pillar 3 Technical Specification]].
+*   **Summary**: Defines the TOR-required **Minimum Viable Dataset (MVD)** and **Loss & Damage reporting form** as a Logical Data Model (LDM) specification, including validation/revision requirements and a ≥3 historical-event pilot evidence pack. Computation/estimation logic is not assumed unless explicitly mandated.
+
+### **Pillar 4: Interface Map**
+*   **Detailed Requirements**: Refer to [[ψ/incubate/DCCE/CRDB/output/04_Inventory_Mapping/Pillar_04_Interface_Map_Technical_Specification.md|Pillar 4 Technical Specification]].
+*   **Summary**: A TOR-supporting **source-to-CDM crosswalk** that makes the inventories joinable and records integration posture + unknowns explicitly (not a validated ETL design in this project). It includes row-level `Feasibility_Posture` and `Provenance_Anchor` so Project B can implement harvesters later without vendor-led rediscovery.
+
+### **Pillar 5: DQ Framework (G1-G5)**
+*   **Detailed Requirements**: Refer to [[ψ/incubate/DCCE/CRDB/output/05_Quality_Standards/Pillar_05_DQ_Framework_Technical_Specification.md|Pillar 5 Technical Specification]].
+*   **Summary**: The **normative semantics** of the 5 governance gates (G1–G5) for Phase 1 execution (manual/procedural now; automatable later). It standardizes meanings of classification rails, container metadata minima, endorsement/authority labels, denominators/crosswalk governance, and revision/maturity labels.
+
+### **Pillar 6: Governance (RACI)**
+*   **Detailed Requirements**: Refer to [[ψ/incubate/DCCE/CRDB/output/06_Governance_RACI/Pillar_06_Governance_Technical_Specification.md|Pillar 6 Technical Specification]].
+*   **Summary**: A Stewardship RACI **plus a governance buy-in execution plan** (cadence, onboarding, escalation, decision log) to prevent stale shelfware. It defines who decides and how division-wide governance runs with limited resources, and acts as a procurement shield for Project B.
+
+### **Pillar 7: Ref Data Matrix**
+*   **Detailed Requirements**: Refer to [[ψ/incubate/DCCE/CRDB/output/04_Inventory_Mapping/Pillar_07_Ref_Data_Technical_Specification.md|Pillar 7 Technical Specification]].
+*   **Summary**: A TOR-supporting **reference data dependency matrix + authority/source map** (not a fully reconciled master data package in this project). It identifies required reference sets, who the authority is, what depends on what, and records `Reference_Status` (Agreed/Contested/Unknown) and crosswalk needs for downstream resolution.
+
+### **Pillar 8: Building Block Catalog**
+*   **Detailed Requirements**: Refer to [[ψ/incubate/DCCE/CRDB/output/07_Sitemap_BuildingBlocks/Pillar_08_Building_Block_Technical_Specification.md|Pillar 8 Technical Specification]].
+*   **Summary**: A TOR-5.2-first inventory of **NCAIF building blocks** with **budgeting/strategy-oriented presentation as primary** and catalog/link-out as secondary. Each Tier-1 (TOR-critical) block must map to NCAIF sections, deliverables, dependencies, and project evidence anchors (to avoid invented features and preserve consultation-derived grounding).

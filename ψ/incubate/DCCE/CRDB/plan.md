@@ -51,3 +51,5 @@ Later (June 2026)
 
 ---
 *Operational plan maintained by ARUN; synchronized with the Procurement Shield Strategy (2026-05-20).*
+\
+- [ ] Execute [2026-05-21_Technical-Specification-Hardening-Plan.md](plans/2026-05-21_Technical-Specification-Hardening-Plan.md) to expand the 8-Pillar Anchor with technical requirements.\

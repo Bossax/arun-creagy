@@ -35,7 +35,7 @@ Success is now defined as delivering an **Inception Package** that provides the 
 
 | Pillar                                  | Success Criteria (The Handoff Baseline)                                 | Role in the 25M THB Project                                    |
 | :-------------------------------------- | :---------------------------------------------------------------------- | :------------------------------------------------------------- |
-| **1. Climate Data Model (CDM)**         | Hardened Physical Schema/ERD for Asset/Risk/Adaptation.                 | **Mandatory Schema**: Contractor builds physical DB to this model. |
+| **1. Climate Data Model (CDM)**         | Hardened **EAR Catalog** (Excel/CSV) for Asset/Risk/Adaptation.         | **Logical Baseline**: Contractor builds physical DB to this model. |
 | **2. Business Glossary**                | Controlled list of 100+ terms with owner-approved definitions.          | **Semantic Layer**: Contractor implements as a Universal Semantic Layer. |
 | **3. LDM Logic Rules (MVD)**            | Deterministic formulas for Loss & Damage entity relationships.          | **Code Logic**: Contractor writes functions to these formulas. |
 | **4. Subject-Area Interface Map**       | Mapping major source classes (e.g. ThaiWater) to CDM Subject Areas.     | **ETL Spec**: Contractor builds Harvesters to this mapping.    |
@@ -50,7 +50,8 @@ Success is now defined as delivering an **Inception Package** that provides the 
 To ensure procurement integrity and avoid "reinventing the wheel," the upcoming project is prohibited from conducting its own domain discovery for the 8 Pillars.
 
 *   **Fixed Baseline**: The contractor accepts the 8 Pillars as "Frozen Requirements."
-*   **Audit Gate**: The Blueprint project (Strategic Auditor) must approve the Technical Design (Del 1) to ensure it honors the CDM and Logic Rules.
+*   **Consultation Interface**: Minor modifications to the physical structure are permitted for technical optimization, provided the underlying domain logic is preserved. The contractor must consult the Strategic Architect on any schema deviations.
+*   **Audit Gate**: The Blueprint project (Strategic Architect) must approve the Technical Design (Del 1) to ensure it honors the CDM and Logic Rules.
 *   **Technical Integrity**: Overlap is limited to **Implementation Mapping**—translating the logical blueprint into the physical platform.
 
 ---

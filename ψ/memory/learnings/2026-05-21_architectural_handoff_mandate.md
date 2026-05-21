@@ -20,4 +20,7 @@ To mitigate this, the "Strategic Audit" phase must produce a **Mandatory Incepti
 4.  **Governance Handoff**: Internal stewardship must be established (e.g., the Nid Memo) to ensure internal domain experts have the authority to audit the contractor's code against the provided logic rules.
 
 ### Success Criterion
-"Execution" in the strategic phase is measured by the **Physical Portability** of the output. If the output is a Word doc, it is a suggestion. If the output is a **SQL Schema (Pillar 1)** and a **Logic Test-Suite (Pillar 3)**, it is a **Mandate**.
+"Execution" in the strategic phase is measured by the **Physical Portability** of the output. If the output is a Word doc, it is a suggestion. If the output is an **EAR Catalog (Pillar 1)** and a **Functional Logic Model (Pillar 3)**, it is a **Technical Requirement**.
+
+### The Consultation Interface
+Effective handoffs allow the technical contractor to optimize the physical implementation (performance, storage types) while being bound to the provided domain logic. This is facilitated through a **Consultation Interface** where the Strategic Architect audits the proposed physical design against the logical baseline.

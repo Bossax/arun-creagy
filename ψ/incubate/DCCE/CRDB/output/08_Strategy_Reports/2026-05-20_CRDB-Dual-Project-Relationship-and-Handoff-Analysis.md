@@ -1,4 +1,4 @@
-# CRDB Dual-Project Relationship & Handoff Analysis
+	# CRDB Dual-Project Relationship & Handoff Analysis
 **Project A**: CRDB (Climate Risk Data Blueprint) - *Current*
 **Project B**: National Climate Data System (25M THB) - *Upcoming Implementation*
 **Date**: 2026-05-20
@@ -20,8 +20,8 @@ Using the **DAMA-DMBOK** framework, we define the identities and core functions 
 | Dimension | **Project A: CRDB (Current)** | **Project B: Data System (Upcoming)** |
 | :--- | :--- | :--- |
 | **Lifecycle Phase** | **Logical Design & Inception** | **Physical Build & Integration** |
-| **Technical Role** | **Data Architect & Product Owner** | **System Integrator & Data Engineer** |
-| **Primary Output** | Conceptual/Logical Data Models (CDM/LDM) | Physical Data Model (PDM) & ETL Code |
+| **Technical Role** | **Logical Data Architect** | **System Integrator & Data Engineer** |
+| **Primary Output** | **EAR Catalog** (Entities/Attrs/Relations) | Physical Data Model (PDM) & ETL Code |
 | **Goal** | **Define the "What" and "Why"** | **Execute the "How"** |
 
 ---
@@ -30,12 +30,13 @@ Using the **DAMA-DMBOK** framework, we define the identities and core functions 
 The distinction in roles ensures that DCCE maintains **Knowledge Sovereignty**, while the contractor provides **Technical Velocity**.
 
 *   **Role 1: The Strategic Architect (You / Project A)**:
-    *   Defines the **Universal Semantic Layer (USL)** (Business Glossary).
+    *   Defines the **Logical Data Model** (EAR Catalog).
     *   Hardens the **Climate Logic Rules** (MVD Formulas).
     *   Acts as the **Strategic Auditor** during Project B.
 *   **Role 2: The Data Engineer (Contractor / Project B)**:
     *   Builds the **Harvester Nodes** (Automated ETL).
     *   Constructs the **Cloud Data Lakehouse** infrastructure.
+    *   Develops the **Physical Database Schema** (Guided by EAR Catalog).
     *   Develops the **Application Layer** (Briefing Pack/Action Card Generators).
 
 ---
@@ -44,8 +45,9 @@ The distinction in roles ensures that DCCE maintains **Knowledge Sovereignty**, 
 Reinventing the wheel typically occurs in the "Overlap Zone" where the contractor attempts to "re-discover" business logic.
 
 *   **Natural Overlap**: The mapping of **Logical Requirements** to **Physical Database Schemas**. 
+*   **The Collaboration**: The contractor proposes the physical implementation (indexing, normalization, storage types) based on the provided logical baseline. Minor modifications are permitted for performance optimization, subject to audit approval.
 *   **The Conflict**: Developers often want to change logic to fit their preferred technical tools.
-*   **Mitigation Strategy**: Implementation is limited to **Physical Realization**. The contractor is prohibited from modifying the logic; they are only permitted to optimize the *delivery* of that logic.
+*   **Mitigation Strategy**: Implementation is limited to **Physical Realization**. The contractor is prohibited from modifying the logic; they are only permitted to optimize the *delivery* of that logic through consultation.
 
 ---
 

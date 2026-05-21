@@ -19,10 +19,15 @@
 
 ## 🚧 Next Session Priorities (The "Hardening" Phase)
 Move from "Writing Reports" to "Creating Specs":
-1.  **Pillar 2 (Glossary)**: Transition from a list to a **Physical CSV/Excel** (100+ terms with UUIDs).
-2.  **Pillar 3 (Logic Rules)**: Develop the **Deterministic Excel Model** for Loss & Damage (MVD).
-3.  **Pillar 1 (CDM)**: Hardened the Conceptual Model into a **SQL DDL or Physical ERD**.
-4.  **TOR Redlines**: Finalize surgical edits to Sections 5 and 11 to mandate this "Inception Package."
+1.  **Pillar 2 (Glossary)**: Transition from a list to a **Normalized CSV** (100+ terms with UUIDs).
+2.  **Pillar 3 (Logic Rules)**: Develop the **Functional Excel Model** for Loss & Damage (MVD).
+3.  **Pillar 1 (CDM)**: Harden the Conceptual Model into a **Physical EAR Catalog** (Excel/CSV) for collaborative vendor consultation.
+4.  **TOR Redlines**: Finalize surgical edits to Sections 5 and 11 to mandate this "Logical Baseline" and "Consultation Interface."
+
+## 📜 Technical Commitment Sealed
+*   **Format Pivot**: Shifted from SQL DDL to **Entity-Attribute-Relationship (EAR) Catalog** (Excel/CSV) to ensure stakeholder legibility and vendor collaboration.
+*   **Consultation Strategy**: Established the "Consultation Interface" where minor physical modifications are permitted if domain logic is preserved.
+*   **Grounded Language**: Mandated strictly technical terminology across all inception artifacts.
 
 ## 📎 Reference Material
 - `ψ/incubate/DCCE/CRDB/output/07_Sitemap_BuildingBlocks/National Climate Adaptation Information Framework.md` (The 7-section Spine).
