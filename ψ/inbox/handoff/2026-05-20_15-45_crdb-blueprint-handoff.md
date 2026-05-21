@@ -11,7 +11,7 @@
 - **Transcript Audit**: Corrected speaker attributions for the May 19 meeting with Ditto, identifying critical "Product Owner" confusion in DCCE.
 - **Strategic Anchoring**: Finalized the **CRDB Blueprint Handoff & Procurement Shield Strategy** (`ψ/incubate/DCCE/CRDB/output/2026-05-20_CRDB-Blueprint-Handoff-and-Procurement-Shield-Strategy.md`).
 - **Deliverable Definition**: Defined "Completeness" for CRDB as an **8-Pillar Inception Package** (CDM, Glossary, Logic Rules, etc.) to shield DCCE from contractor "logic invention."
-- **Nid Layer Strategy**: Established the need for **Director Nid** to mandate internal Stewardship by sub-divisions, reclaiming control from AI/Contractors.
+- **Division-Level Stewardship Mandate**: Established the need for **Director Nid** to mandate internal Stewardship by sub-divisions, reclaiming control from AI/Contractors.
 
 ## Pending
 - [ ] Tier the **Building Block Catalog** (Pillar 8) based on Must-Have / Nice-to-Have categories.

@@ -17,34 +17,28 @@ The Building Block Catalog provides a modular inventory of the CRDB platform's f
 *Identity: The non-negotiable plumbing and "Official Truth" anchors.*
 *   **Success Criterion**: Without Tier 1, the platform is merely a "website" and fails as a data integration blueprint.
 
-| Block ID | Building Block Name | Sitemap v4 Mapping | Purpose |
+| Block ID | Building Block Name | Sitemap vNext Mapping | Purpose (The Handoff Requirement) |
 | :--- | :--- | :--- | :--- |
-| **BB-01** | **Data Engineering & ETL Pipelines** | 4.1 (Backend) | The automated harvesting logic for official sources (TMD, GISTDA, DDPM). |
-| **BB-02** | **CDM & Governance Rails** | 4.2 (Standards) | System logic that enforces G1-G5 DQ gates and CDM schema compliance. |
-| **BB-03** | **National Situation Dashboard (MVP-2)** | 2.1 (A, B, C) | The "National Monitoring Loop" for L&D stats and Risk Outlook. |
-| **BB-04** | **Provincial Risk Profiles (MVP-1)** | 2.2 (Profiles) | Decision-ready "Briefing Pack" generator for governors and planners. |
-| **BB-05** | **Recommended Dataset Registry (MVP-3)** | 4.1 (Catalog) | The "Clearinghouse" that defines what data is official vs. experimental. |
-| **BB-06** | **Business Glossary Engine** | 2.3 / 4.2 | The semantic service that prevents "Expert Drift" via 100+ approved terms. |
+| **BB-01** | **Data Engineering & ETL Pipelines** | 6. Knowledge, Tools & Services | **Mandatory Handoff**: Contractor must build Harvester Nodes to implement the source-to-CDM mapping provided in Pillar 4. |
+| **BB-02** | **CDM & Governance Rails** | 6. Knowledge, Tools & Services | **Mandatory Handoff**: Contractor must implement G1-G5 validation gates as a hard-coded gatekeeper for the CDM physical schema. |
+| **BB-03** | **National Situation Dashboard (MVP-2)** | 2. Policy Maker Center | **Strategic Anchor**: The primary interface for L&D stats and Risk Outlook summary. |
+| **BB-04** | **Provincial Risk Profiles (MVP-1)** | 4. Risk & Area Profiles | **Product Anchor**: Automated PDF/Briefing pack generator based on provincial CDM views. |
+| **BB-05** | **Recommended Dataset Registry (MVP-3)** | 6. Knowledge, Tools & Services | **Governance Anchor**: The DCAT-AP compliant catalog for 'Official' vs. 'Experimental' data. |
+| **BB-06** | **Business Glossary Engine** | 6. Knowledge, Tools & Services | **Semantic Anchor**: The Universal Semantic Layer (USL) that maps technical tables to the 100+ approved terms. |
 
 ### **Tier 2: Policy Service Layer (Should-Have)**
-*Identity: Tools that translate data into implementation action.*
-*   **Success Criterion**: Enhances the "Usability" of the core data for specific policy workflows.
-
-| Block ID | Building Block Name | Sitemap v4 Mapping | Purpose |
+| Block ID | Building Block Name | Sitemap vNext Mapping | Purpose |
 | :--- | :--- | :--- | :--- |
-| **BB-07** | **"Make it Usable" Resource Hub** | 2.3 (Resources) | Centralized repository for Policy, Legal, Funding, and TOR templates. |
-| **BB-08** | **Uncertainty-Safe Analysis (MVP-4)** | 2.4 (Methodology) | Interpretive guidance and "Decision Readiness" labeling for future risk. |
-| **BB-09** | **Hazard & Vulnerability Overlay Tool** | 2.4 (Services) | Interactive spatial tool for overlaying ADPC hazards with DCCE vulnerability. |
+| **BB-07** | **"Make it Usable" Resource Hub** | 5. Adaptation Measures | Centralized repository for Policy, Legal, and Funding templates. |
+| **BB-08** | **Uncertainty-Safe Analysis (MVP-4)** | 6. Knowledge, Tools & Services | Decision-readiness labeling and interpretive guidance for future risk. |
+| **BB-09** | **Hazard & Vulnerability Overlay Tool** | 6. Knowledge, Tools & Services | Spatial service for overlaying hazard layers with DCCE assets. |
 
 ### **Tier 3: Thematic & Expansion Slices (Nice-to-Have)**
-*Identity: Deep knowledge hubs and public engagement features.*
-*   **Success Criterion**: Provides the "Long-Tail" of climate knowledge for researchers and the public.
-
-| Block ID | Building Block Name | Sitemap v4 Mapping | Purpose |
+| Block ID | Building Block Name | Sitemap vNext Mapping | Purpose |
 | :--- | :--- | :--- | :--- |
-| **BB-10** | **Adaptation Cycle Knowledge Hub** | 3 (All sections) | Detailed "Knowledge Hub" for researchers (3.1-3.5) by cycle stage. |
-| **BB-11** | **Public Engagement & News** | 1 (Home) / 5 | Identity branding, news updates, and "Partner Agency" directory. |
-| **BB-12** | **Adaptation Options Library** | 3.4 (Options) | Case studies and NbS vs. Infrastructure catalogs. |
+| **BB-10** | **Adaptation Cycle Knowledge Hub** | 3. Info by Cycle | Detailed thematic hubs (3.1-3.6) for researchers. |
+| **BB-11** | **Public Engagement & News** | 7. News & About | Identity branding and partner agency directory. |
+| **BB-12** | **Adaptation Options Library** | 5. Adaptation Measures | Curated case studies and NbS vs. Infra catalogs. |
 
 ---
 

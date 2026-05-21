@@ -25,7 +25,7 @@ To accommodate budget uncertainties, we are delivering the platform as a modular
 *   **Nice-to-Haves (Data Slices)**: 
     *   Secondary use-case dashboards and additional data services. These can be scaled back or added in later years if initial funding is tight.
 
-### 2.2 Reclaiming Product Ownership (The "Nid Layer")
+### 2.2 Reclaiming Product Ownership (Division-Level Stewardship Mandate)
 We must align with **Director Nid** (Director of the Climate Change Adaptation Division) to secure a high-level mandate for the platform.
 *   **Internal Stewardship**: Content domains (e.g., Adaptation Measures and Planning) must not be authored by AI or contractors. They must be owned, authored, and approved by internal DCCE **Data Stewards** within the respective sub-divisions.
 *   **The Mandate**: Director Nid must establish that this platform is the **Division's Official Source of Truth**. This push from the top ensures that sub-divisions take accountability for the content that sits on the platform, preventing the contractor from "guessing" policy narratives.
@@ -33,38 +33,29 @@ We must align with **Director Nid** (Director of the Climate Change Adaptation D
 ## 3. The "Complete" Deliverable (The 8 Pillars of Success)
 Success is now defined as delivering an **Inception Package** that provides the domain-specific knowledge required to build the system without methodology discovery. This list has been re-calibrated against project reality (missing national reference data and vast dataset scale).
 
-| Pillar                                  | Success Criteria (The "Complete" State)                                 | Purpose (The Shield)                                           |
+| Pillar                                  | Success Criteria (The Handoff Baseline)                                 | Role in the 25M THB Project                                    |
 | :-------------------------------------- | :---------------------------------------------------------------------- | :------------------------------------------------------------- |
-| **1. Climate Data Model (CDM)**         | Hardened Physical Schema/ERD for Asset/Risk/Adaptation.                 | Establishing the system of record.                             |
-| **2. Business Glossary**                | Controlled list of 100+ terms with owner-approved definitions.          | Preventing semantic drift.                                     |
-| **3. LDM Logic Rules (MVD)**            | Deterministic formulas for Loss & Damage entity relationships.          | Eliminating "Black Box" logic in the disaster domain.          |
-| **4. Subject-Area Interface Map**       | Mapping major source classes (e.g. ThaiWater) to CDM Subject Areas.     | Defining integration boundaries without field-level overhead.  |
-| **5. Data Quality Framework**           | G1-G5 Audit Rules and Metadata compliance gates.                        | Ensuring "Good Data" from day one.                             |
-| **6. Governance Operating Model**       | RACI matrix with Director Nid (Approver) and Sub-divisions (Stewards).  | Defining accountability.                                       |
-| **7. Reference Data Dependency Matrix** | Identification of entities requiring shared lookups (e.g. Admin Units). | Forcing architectural S-O-T without fixing national data gaps. |
-| **8. Building Block Catalog**           | Tiered feature list (Must-Have vs. Nice-to-Have).                       | Providing procurement flexibility.                             |
+| **1. Climate Data Model (CDM)**         | Hardened Physical Schema/ERD for Asset/Risk/Adaptation.                 | **Mandatory Schema**: Contractor builds physical DB to this model. |
+| **2. Business Glossary**                | Controlled list of 100+ terms with owner-approved definitions.          | **Semantic Layer**: Contractor implements as a Universal Semantic Layer. |
+| **3. LDM Logic Rules (MVD)**            | Deterministic formulas for Loss & Damage entity relationships.          | **Code Logic**: Contractor writes functions to these formulas. |
+| **4. Subject-Area Interface Map**       | Mapping major source classes (e.g. ThaiWater) to CDM Subject Areas.     | **ETL Spec**: Contractor builds Harvesters to this mapping.    |
+| **5. Data Quality Framework**           | G1-G5 Audit Rules and Metadata compliance gates.                        | **System Rail**: Contractor builds automated Gating logic.    |
+| **6. Governance Operating Model**       | RACI matrix with Director Nid (Approver) and Sub-divisions (Stewards).  | **User Roles**: Contractor implements as platform Permissions. |
+| **7. Reference Data Dependency Matrix** | Identification of entities requiring shared lookups (e.g. Admin Units). | **Lookup Base**: Contractor seeds DB with these Master Data sets. |
+| **8. Building Block Catalog**           | Tiered feature list (Must-Have vs. Nice-to-Have).                       | **Scope Filter**: Contractor builds only validated Tiers.      |
 
 ---
 
-## 4. Deliverable Mapping
-These pillars are not new deliverables; they are **tucked into** the 10 mandated deliverables expected by Director Toey to ensure they are contractually binding:
+## 4. The "Zero-Discovery" Mandate: Preventing Redundancy
+To ensure procurement integrity and avoid "reinventing the wheel," the upcoming project is prohibited from conducting its own domain discovery for the 8 Pillars.
 
-1.  **Package A (Framework)**: Pillars 1, 2, 5, and 8 tucked into **Del 1 (Design Report)** and **Del 7 (Recommendations)**.
-2.  **Package B (Validation)**: Pillar 6 tucked into **Del 2 (FGD3 Report)** as stewardship ratification.
-3.  **Package C (Technical)**: Pillars 3, 4, and 7 tucked into **Del 4 (Inventories)** and **Del 6 (MVD)**.
-4.  **Package D (Content)**: Content metadata aligned with Pillars 2 and 5 across **Dels 8, 9, and 10**.
+*   **Fixed Baseline**: The contractor accepts the 8 Pillars as "Frozen Requirements."
+*   **Audit Gate**: The Blueprint project (Strategic Auditor) must approve the Technical Design (Del 1) to ensure it honors the CDM and Logic Rules.
+*   **Technical Integrity**: Overlap is limited to **Implementation Mapping**—translating the logical blueprint into the physical platform.
 
 ---
 
-## 5. The Efficiency Argument: Avoiding "What takes so long?"
-The most common friction in public-sector digital projects is the 12-to-18 month "Discovery Trap" where contractors spend the first year "understanding the domain" before a single line of code is written.
-
-This Blueprint strategy is the antidote to this delay:
-*   **Zero Discovery Time**: By providing the **8 Pillars** upfront, we eliminate the contractor's need to "discover" the climate data model or define the glossary. They can move to **Build** on Day 1.
-*   **Reduced Logic Rework**: By providing the **Logic Rules (MVD)** and **DQ Framework**, we prevent the "Black Box" failure mode where contractors build the wrong logic and have to spend months refactoring it after DCCE review.
-*   **Predictable Procurement**: The **Building Block Catalog** allows for a "Menu-based" selection, ensuring that technical complexity is matched to budget and timeline from the start.
-
-## 6. Immediate Roadmap (Through July 6, 2026)
+## 5. Immediate Roadmap (Through July 6, 2026)
 1.  **Harden Pillar Anchor**: Draft the detailed technical requirements for each of the 8 Pillars.
 2.  **Tier the Building Block Catalog**: Map NCAIF Sitemap [D-009] to Must/Nice tiers.
 3.  **Draft the "Nid Memo"**: Formalize the Stewardship structure for Division ratification.
