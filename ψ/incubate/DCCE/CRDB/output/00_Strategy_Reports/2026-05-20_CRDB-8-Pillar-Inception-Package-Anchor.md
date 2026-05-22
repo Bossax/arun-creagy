@@ -68,7 +68,7 @@ This document provides the structural blueprint for the 10 mandated deliverables
 | **P3. Data Inventory** | Data & Product Inventory | **DQ Framework (G1-G5)** | Package C |
 | **P4. Glossary** | Terminology Authority | **Universal Semantic Layer** | Package A/D |
 | **P5. CDM** | Conceptual Data Model | **EAR Catalog** | Package A |
-| **P6. LDM (L&D)** | MVD & Reporting Forms | **Deterministic Math Engine** | Package C |
+| **P6. LDM (L&D)** | MVD & Reporting Forms | **LDM templates + validation rules (no math engine assumed)** | Package C |
 | **P7. Governance** | Governance Framework | **Stewardship RACI** | Package B |
 | **P8. Ref Data Matrix**| (Architecture Dependency) | **The Universal Translator** | Package C |
 | **P9. Building Blocks**| Recommendations (5.2) | **Procurement Tiers** | Package A |
@@ -82,11 +82,11 @@ This document provides the structural blueprint for the 10 mandated deliverables
 *   **Summary**: Defines the 7-level navigation and the specific **Data Contract** for every node. The SI is prohibited from inventing new data flows for the UI.
 
 ### **Pillar 2: Use Case Inventory & Functional Specs**
-*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/09_BuildingBlocks/Pillar_09_BuildingBlocks_Technical_Specification.md|Use Case Functional Spec]].
+*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/02_UseCases_FunctionalSpecs/Pillar_02_UseCases_FunctionalSpecs_Technical_Specification.md|Pillar 2 (Use Cases) Technical Specification]].
 *   **Summary**: Translates stakeholder journeys into step-by-step logic. Defines "What happens when I click X" to eliminate implemented logic "discovery."
 
 ### **Pillar 3: Data Inventory & DQ Framework**
-*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/03_DataInventory_DQ/Pillar_05_DQ_Framework_Technical_Specification.md|Pillar 3 (DQ) Technical Specification]].
+*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/03_DataInventory_DQ/Pillar_03_DataInventory_DQ_Technical_Specification.md|Pillar 3 (Data Inventory & DQ) Technical Specification]].
 *   **Summary**: Lists the raw supply and applies the normative G1-G5 trust labels. Standardizes the "Definition of Done" for data ingestion.
 
 ### **Pillar 4: Business Glossary**
@@ -94,15 +94,15 @@ This document provides the structural blueprint for the 10 mandated deliverables
 *   **Summary**: The 100+ term authority list. Ensures that the UI labels, metadata, and database columns all use the exact same terminology.
 
 ### **Pillar 5: Climate Data Model (CDM)**
-*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/05_CDM_EARCatalog/Pillar_01_CDM_Technical_Specification.md|Pillar 5 (CDM) Technical Specification]].
+*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/05_CDM_EARCatalog/Pillar_05_CDM_EARCatalog_Technical_Specification.md|Pillar 5 (CDM) Technical Specification]].
 *   **Summary**: The frozen relational structure of the domain. SI must implement the Physical Schema as a 100% faithful realization of this CDM.
 
 ### **Pillar 6: Loss & Damage LDM (Data Model)**
-*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/06_LDM_LossDamage_DataModel/Pillar_03_LDM_Logic_Technical_Specification.md|Pillar 6 (LDM) Technical Specification]].
+*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/06_LDM_LossDamage_DataModel/Pillar_06_LDM_LossDamage_DataModel_Technical_Specification.md|Pillar 6 (LDM) Technical Specification]].
 *   **Summary**: Defines the logical data model (entities + relationships) for Loss & Damage reporting. Computation formulas are treated as separate, explicit artifacts when needed (do not assume they are embedded in the LDM).
 
 ### **Pillar 7: Governance (RACI & Workflow)**
-*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/07_Governance_RACI/Pillar_07_Governance_Technical_Specification|Pillar 7 (Governance) Technical Specification]].
+*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/07_Governance_RACI/Pillar_07_Governance_RACI_Technical_Specification.md|Pillar 7 (Governance) Technical Specification]].
 *   **Summary**: Defines the humans in the loop. The SI must build the digital gates (G1-G5) that enforce these DCCE approval roles.
 
 ### **Pillar 8: Reference Data Matrix**

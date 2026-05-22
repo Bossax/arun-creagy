@@ -8,7 +8,7 @@ The TOR does not explicitly name a “Business Glossary”, but it implicitly re
 - Baseline Data Inventory categories (driver / hazard / exposure / sensitivity / adaptive capacity / impact / response / loss & damage) ([`ψ/incubate/DCCE/CRDB/inbox_source/CRDB - TOR.md`](ψ/incubate/DCCE/CRDB/inbox_source/CRDB%20-%20TOR.md:169))
 - MVD + reporting-form design (cross-agency comparability depends on stable definitions) ([`ψ/incubate/DCCE/CRDB/inbox_source/CRDB - TOR.md`](ψ/incubate/DCCE/CRDB/inbox_source/CRDB%20-%20TOR.md:190))
 
-Therefore Pillar 2 is treated as a **TOR-supporting execution rail**: a controlled semantic layer that prevents definitional drift across deliverables.
+Therefore Pillar 4 is treated as a **TOR-supporting execution rail**: a controlled semantic layer that prevents definitional drift across deliverables.
 
 Primary seed sources that already exist in this repo:
 
@@ -68,7 +68,7 @@ To reduce disputes and support phased approval, extend the schema with:
 
 ---
 
-## 4. Execution guidance: how to build Pillar 2 from existing assets
+## 4. Execution guidance: how to build Pillar 4 from existing assets
 
 1. **Seed the term backlog from the CDM** (entities + key distinctions like event vs driver, exposure vs vulnerability): [`ψ/incubate/DCCE/CRDB/output/05_CDM_EARCatalog/Conceptual Data Model for climate risk and adaptation data system.md`](ψ/incubate/DCCE/CRDB/output/05_CDM_EARCatalog/Conceptual%20Data%20Model%20for%20climate%20risk%20and%20adaptation%20data%20system.md:56)
 2. **Add TOR category vocabulary as mandatory `Usage_Tags`** to enforce alignment with inventories and MVD: [`ψ/incubate/DCCE/CRDB/inbox_source/CRDB - TOR.md`](ψ/incubate/DCCE/CRDB/inbox_source/CRDB%20-%20TOR.md:169)

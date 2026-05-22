@@ -1,4 +1,4 @@
-# Technical Specification: Pillar 3 - Logical Data Model (LDM) & MVD Logic Rules
+# Technical Specification: Pillar 6 — Loss & Damage LDM (Data Model) + MVD Templates
 
 ## 0. TOR-first grounding (contract reality)
 

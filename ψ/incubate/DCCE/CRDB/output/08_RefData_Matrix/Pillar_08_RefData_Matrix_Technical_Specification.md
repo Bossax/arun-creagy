@@ -4,14 +4,14 @@
 
 **Decision:** This project will not have time to fully **validate / verify / testify** the canonical reference datasets (admin units, hazard codes, agency codes, etc.) across the entire future data system before the July 6 submission.
 
-Therefore, Pillar 7 is specified as a **dependency matrix + authority/source map** that supports TOR inventories (by making them joinable and interpretable), rather than a delivered, fully reconciled master data package.
+Therefore, Pillar 8 is specified as a **dependency matrix + authority/source map** that supports TOR inventories (by making them joinable and interpretable), rather than a delivered, fully reconciled master data package.
 
 **Governance separation note (DAMA-aligned):**
-- Pillar 7 defines the *reference data dependency artifact* (what reference sets exist, who is the authority, what depends on what).
-- The **definitions** of shared governance attributes (classification, metadata minima, endorsement labels, revision/maturity labels) are standardized in **Pillar 5 (G1–G5)**.
-- The **decision rights and workflow** for resolving contested authorities, issuing new versions, and approving crosswalks are standardized in **Pillar 6 (RACI)**.
+- Pillar 8 defines the *reference data dependency artifact* (what reference sets exist, who is the authority, what depends on what).
+- The **definitions** of shared governance attributes (classification, metadata minima, endorsement labels, revision/maturity labels) are standardized in **Pillar 3 (Data Inventory & DQ Framework)**.
+- The **decision rights and workflow** for resolving contested authorities, issuing new versions, and approving crosswalks are standardized in **Pillar 7 (Governance: RACI & workflow)**.
 
-This keeps Pillar 7 auditable and joinable without duplicating governance semantics across pillars.
+This keeps Pillar 8 auditable and joinable without duplicating governance semantics across pillars.
 
 TOR context: baseline data inventory requires consistent categories + limitations and would otherwise silently diverge by coding systems ([`ψ/incubate/DCCE/CRDB/inbox_source/CRDB - TOR.md`](ψ/incubate/DCCE/CRDB/inbox_source/CRDB%20-%20TOR.md:169)).
 
@@ -25,7 +25,7 @@ TOR context: baseline data inventory requires consistent categories + limitation
     *   **`Authority_Source`**: The official agency providing the master list (e.g., DGA for agency codes, NSO for administrative units).
     *   **`Update_Frequency`**: Cadence for refreshing the master list.
     *   **`Reference_Status`**: One of `Agreed` / `Contested` / `Unknown`.
-        - Definitions and escalation workflow are specified in Pillar 6; Pillar 7 stores the selected value per entity.
+        - Definitions and escalation workflow are specified in Pillar 7; Pillar 8 stores the selected value per entity.
     *   **`Versioning_Expectation`**: Brief text describing whether stable codes/IDs are expected and whether effective dating exists (or `Unknown`).
     *   **`Crosswalk_Required`**: `Yes`/`No`/`Unknown` (e.g., Admin ↔ Hydrological; legacy codes ↔ current codes).
     *   **Logical Scope**: The matrix must include all entities that act as "Master Data" or "Lookups" for the TOR-facing inventories and the Pillar 1/3 conceptual/logical models, specifically:
@@ -50,5 +50,5 @@ TOR context: baseline data inventory requires consistent categories + limitation
 *   **Single-source intent**: The matrix states the intent that future systems should avoid duplicated/siloed lookups; enforcement is an implementation responsibility.
 
 *   **Governance dependency**:
-    * Pillar 7 does not redefine governance semantics.
-    * Any changes to allowed values/definitions of `Reference_Status` must be made in Pillar 6 and then applied here.
+    * Pillar 8 does not redefine governance semantics.
+    * Any changes to allowed values/definitions of `Reference_Status` must be made in Pillar 7 and then applied here.

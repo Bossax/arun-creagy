@@ -1,4 +1,4 @@
-# Technical Specification: Pillar 4 - Subject-Area Interface Map
+# Technical Specification: Pillar 1 — Sitemap & Interface Mapping
 
 ## 0. Scope decision (time-bound, TOR-supporting)
 
@@ -7,11 +7,11 @@
 Therefore, this artifact is specified as a **TOR-supporting inventory scaffold** (a crosswalk) rather than a delivered ETL design.
 
 **Governance separation note (DAMA-aligned):**
-- Pillar 4 defines the *interface inventory artifact* (what sources exist, what they relate to, what is known/unknown).
-- The **meaning** of governance flags/attributes (e.g., what counts as “Validated vs Assumed”, how metadata fields are defined) is standardized in **Pillar 5 (G1–G5)**.
-- The **decision-rights + workflow** for changing mappings/flags (who approves changes, how versions are issued) is defined in **Pillar 6 (RACI)**.
+- Pillar 1 defines the *interface inventory artifact* (what sources exist, what they relate to, what is known/unknown).
+- The **meaning** of governance flags/attributes (e.g., what counts as “Validated vs Assumed”, how metadata fields are defined) is standardized in **Pillar 3 (Data Inventory & DQ Framework)**.
+- The **decision-rights + workflow** for changing mappings/flags (who approves changes, how versions are issued) is defined in **Pillar 7 (Governance: RACI & workflow)**.
 
-This avoids duplicating governance semantics in every pillar while keeping Pillar 4 operationally auditable.
+This avoids duplicating governance semantics in every pillar while keeping Pillar 1 operationally auditable.
 
 - TOR requires an Information Product Inventory + Baseline Data Inventory (5.3.4–5.3.5): [`ψ/incubate/DCCE/CRDB/inbox_source/CRDB - TOR.md`](ψ/incubate/DCCE/CRDB/inbox_source/CRDB%20-%20TOR.md:167)
 - This map exists to make those inventories **joinable** to CDM subject areas and to record integration posture + unknowns explicitly.
@@ -49,5 +49,5 @@ This avoids duplicating governance semantics in every pillar while keeping Pilla
 *   **Mapping sovereignty**: Changes to the CDM subject-area mapping require a formal revision decision (to prevent silent drift).
 
 *   **Governance dependency**:
-    * Pillar 4 does not redefine governance semantics.
-    * Any changes to the allowed values or definitions of `Feasibility_Posture` must be made in Pillar 5 and then applied here.
+    * Pillar 1 does not redefine governance semantics.
+    * Any changes to the allowed values or definitions of `Feasibility_Posture` must be made in Pillar 3 and then applied here.

@@ -1,4 +1,4 @@
-# Technical Specification: Pillar 1 - Climate Data Model (CDM)
+# Technical Specification: Pillar 5 — Climate Data Model (CDM) & EAR Catalog
 
 ## 0. Grounding note (current CRDB reality)
 

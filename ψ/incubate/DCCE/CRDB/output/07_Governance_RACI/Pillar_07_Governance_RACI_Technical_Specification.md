@@ -2,7 +2,7 @@
 
 ## 0. Purpose (DAMA-aligned, time- and resource-bounded)
 
-Pillar 6 is not only a role chart. It is the **execution plan** to secure division-wide buy-in so governance does not become stale shelfware.
+Pillar 7 is not only a role chart. It is the **execution plan** to secure division-wide buy-in so governance does not become stale shelfware.
 
 Given limited time and resources, the objective is to **close the major pitfalls** of stale governance by locking:
 
@@ -14,7 +14,7 @@ Given limited time and resources, the objective is to **close the major pitfalls
 
 This aligns with the project’s “architectural baseline before implementation” stance: [`ψ/incubate/DCCE/CRDB/inbox_source/The Enterprise Data System Development Lifecycle.md`](ψ/incubate/DCCE/CRDB/inbox_source/The%20Enterprise%20Data%20System%20Development%20Lifecycle.md:64).
 
-## 1. Technical Requirements
+## 1. Data Structural Requirements
 
 ### 1.1 Artifact set (minimum viable governance package)
 
@@ -40,7 +40,7 @@ The execution plan must define:
 *   **Operating cadence**:
     * Weekly/biweekly **Steward Review** (working-level)
     * Monthly **Division Governance Review** (approval + escalations)
-*   **Decision categories** (minimum set), mapped to the 5 gates (Pillar 5):
+*   **Decision categories** (minimum set), mapped to the 5 gates (Pillar 3):
     * G1 classification / rail assignment
     * G2 metadata minima exceptions
     * G3 endorsement authority + “recommended baseline” decisions
@@ -61,15 +61,15 @@ The execution plan must define:
 *   **Domain coverage**: The RACI must cover all Pillars and at minimum the CDM’s logical domains.
 *   **Execution realism**: The execution plan must specify a cadence and named meeting owners. If cadence is missing, governance is considered non-operational.
 *   **Decision traceability**: Every governance decision category must have a Decision Log entry template (date, decision, rationale, approver, affected artifacts).
-*   **Integration with Pillar 4/7**:
-    * Pillar 4 uses `Feasibility_Posture` per row and must have an escalation rule when posture stays `Unknown` beyond a defined timebox: [`ψ/incubate/DCCE/CRDB/output/04_Inventory_Mapping/Pillar_04_Interface_Map_Technical_Specification.md`](ψ/incubate/DCCE/CRDB/output/04_Inventory_Mapping/Pillar_04_Interface_Map_Technical_Specification.md:28)
-    * Pillar 7 uses `Reference_Status` per entity and must have a resolution workflow for `Contested`: [`ψ/incubate/DCCE/CRDB/output/04_Inventory_Mapping/Pillar_07_Ref_Data_Technical_Specification.md`](ψ/incubate/DCCE/CRDB/output/04_Inventory_Mapping/Pillar_07_Ref_Data_Technical_Specification.md:26)
+*   **Integration with Pillar 1/8**:
+    * Pillar 1 uses `Feasibility_Posture` per row and must have an escalation rule when posture stays `Unknown` beyond a defined timebox: [`ψ/incubate/DCCE/CRDB/output/01_Sitemap_InterfaceMapping/Pillar_01_Sitemap_InterfaceMapping_Technical_Specification.md`](ψ/incubate/DCCE/CRDB/output/01_Sitemap_InterfaceMapping/Pillar_01_Sitemap_InterfaceMapping_Technical_Specification.md:33)
+    * Pillar 8 uses `Reference_Status` per entity and must have a resolution workflow for `Contested`: [`ψ/incubate/DCCE/CRDB/output/08_RefData_Matrix/Pillar_08_RefData_Matrix_Technical_Specification.md`](ψ/incubate/DCCE/CRDB/output/08_RefData_Matrix/Pillar_08_RefData_Matrix_Technical_Specification.md:1)
 
 ## 3. Implementation Constraints
 
 *   **No-shelfware rule**: If governance cannot be executed with current resourcing, the plan must reduce scope rather than invent roles/cadence that will not run.
 *   **Separation of concerns**:
-    * Pillar 5 defines governance semantics (G1–G5 meanings).
-    * Pillar 6 defines who decides + how decisions are made operationally.
-*   **Procurement shield**: The implementation contractor must adopt the Pillar 6 decision rights + workflow as contractual non-negotiables.
-*   **Avoid overclaim**: Pillar 6 defines *workflows and decision rights*; it does not assume the existence of fully implemented automation until Project B.
+    * Pillar 3 defines governance semantics (G1–G5 meanings).
+    * Pillar 7 defines who decides + how decisions are made operationally.
+*   **Procurement shield**: The implementation contractor must adopt the Pillar 7 decision rights + workflow as contractual non-negotiables.
+*   **Avoid overclaim**: Pillar 7 defines *workflows and decision rights*; it does not assume the existence of fully implemented automation until Project B.

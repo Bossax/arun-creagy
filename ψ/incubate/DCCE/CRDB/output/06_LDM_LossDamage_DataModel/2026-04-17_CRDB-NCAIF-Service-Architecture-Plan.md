@@ -6,8 +6,8 @@ Consolidate NCAIF service-facing structure for Phase 1 execution.
 
 ## Primary anchors
 
-- NCAIF framework: [`National Climate Adaptation Information Framework.md`](ψ/incubate/DCCE/CRDB/output/National%20Climate%20Adaptation%20Information%20Framework.md)
-- Workflow/MVP logic: [`NCAIF — Workflow patterns + MVP v3.md`](ψ/incubate/DCCE/CRDB/output/NCAIF%20%E2%80%94%20Workflow%20patterns%20%2B%20MVP%20v3.md)
+- NCAIF framework: [`National Climate Adaptation Information Framework.md`](ψ/incubate/DCCE/CRDB/output/01_Sitemap_InterfaceMapping/National%20Climate%20Adaptation%20Information%20Framework.md)
+- Workflow/MVP logic: [`NCAIF — Workflow patterns + MVP v3.md`](ψ/incubate/DCCE/CRDB/output/02_UseCases_FunctionalSpecs/NCAIF%20%E2%80%94%20Workflow%20patterns%20%2B%20MVP%20v3.md)
 - Demand synthesis: [`2026-03-23-Chapter2-stakeholder-needs-synthesis-v2.md`](ψ/incubate/DCCE/CRDB/output/2026-03-23-Chapter2-stakeholder-needs-synthesis-v2.md)
 
 ## Phase 1 architecture decisions to operationalize
@@ -31,4 +31,3 @@ Consolidate NCAIF service-facing structure for Phase 1 execution.
 1. Workshop: demand-side confirmation and service bundle realism.
 2. IT discussion: feasibility of service-supporting metadata/integration pathways.
 3. FGD3: ownership and sequencing confirmation.
-

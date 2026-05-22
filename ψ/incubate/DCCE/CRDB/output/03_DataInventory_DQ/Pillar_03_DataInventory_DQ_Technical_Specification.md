@@ -1,16 +1,16 @@
-# Technical Specification: Pillar 5 - Governance Gates (G1–G5) Semantics (DQ + Metadata + Endorsement)
+# Technical Specification: Pillar 3 — Data Inventory & DQ Framework (Governance Gates Semantics)
 
 ## 0. Purpose (DAMA-aligned, Phase-1 realistic)
 
-Pillar 5 defines the **standard semantics** of the 5 governance gates (G1–G5).
+Pillar 3 defines the **standard semantics** of the 5 governance gates (G1–G5) as they apply to **data inventory, metadata quality, and fitness-for-use signaling**.
 
 It is intentionally written as a **TOR-first / Phase-1 governance standard** that can be executed manually (checklists + templates) and later automated in Project B.
 
-- Pillar 4 and Pillar 7 store governance attributes (e.g., `Feasibility_Posture`, `Reference_Status`) at row/entity level.
-- Pillar 5 defines **what those fields mean** and what constitutes acceptable values.
-- Pillar 6 defines **who decides** (decision rights) and **how decisions are executed** (cadence + escalation + decision log).
+- Pillar 1 and Pillar 8 store governance attributes (e.g., `Feasibility_Posture`, `Reference_Status`) at row/entity level.
+- Pillar 3 defines **what those fields mean** and what constitutes acceptable values.
+- Pillar 7 defines **who decides** (decision rights) and **how decisions are executed** (cadence + escalation + decision log).
 
-## 1. Technical Requirements
+## 1. Data Structural Requirements
 
 ### 1.1 Artifact format
 
@@ -37,7 +37,7 @@ It is intentionally written as a **TOR-first / Phase-1 governance standard** tha
 
 ### 1.3 Shared flag definitions used by other pillars
 
-*   **`Feasibility_Posture`** (used in Pillar 4)
+*   **`Feasibility_Posture`** (used in Pillar 1)
     * `Validated`: confirmed by a named source owner or authoritative documentation.
     * `Assumed`: inferred from public materials; not confirmed by the source owner.
     * `Unknown`: not enough evidence; requires follow-up.

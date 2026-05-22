@@ -6,7 +6,7 @@ Translate CDM from conceptual anchor into operational Phase 1 implementation cho
 
 ## Primary anchors
 
-- CDM base: [`Conceptual Data Model for climate risk and adaptation data system.md`](ψ/incubate/DCCE/CRDB/output/Conceptual%20Data%20Model%20for%20climate%20risk%20and%20adaptation%20data%20system.md)
+- CDM base: [`Conceptual Data Model for climate risk and adaptation data system.md`](ψ/incubate/DCCE/CRDB/output/05_CDM_EARCatalog/Conceptual%20Data%20Model%20for%20climate%20risk%20and%20adaptation%20data%20system.md)
 - Evidence bridge: [`2026-03-12_crdb-section1-cdm-mvp-evidence-analysis.md`](ψ/incubate/DCCE/CRDB/output/2026-03-12_crdb-section1-cdm-mvp-evidence-analysis.md)
 - Execution gap lens: [`2026-03-23-general-execution-gaps-for-NCAIF-CDM-and-data-governance.md`](ψ/incubate/DCCE/CRDB/output/2026-03-23-general-execution-gaps-for-NCAIF-CDM-and-data-governance.md)
 
@@ -38,4 +38,3 @@ Translate CDM from conceptual anchor into operational Phase 1 implementation cho
 1. IT discussion: platform support for CDM-related metadata and linkage logic.
 2. Workshop: feasibility of cross-agency semantic alignment and boundary handling.
 3. FGD3: ownership and authority commitments.
-
