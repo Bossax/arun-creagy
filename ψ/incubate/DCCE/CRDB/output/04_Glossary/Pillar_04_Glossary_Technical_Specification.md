@@ -1,4 +1,4 @@
-# Technical Specification: Pillar 2 - Business Glossary
+# Technical Specification: Pillar 4 - Business Glossary
 
 ## 0. Purpose and grounding (TOR-supporting, not TOR-named)
 

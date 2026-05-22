@@ -1,4 +1,4 @@
-# Technical Specification: Pillar 8 - NCAIF Building Blocks (TOR 5.2) + Budgeting/Strategy-Oriented Presentation (Catalog Secondary)
+# Technical Specification: Pillar 9 - NCAIF Building Blocks (TOR 5.2) + Budgeting/Strategy-Oriented Presentation (Catalog Secondary)
 
 ## 0. Grounding note (contract reality + project history)
 

@@ -1,4 +1,4 @@
-# Technical Specification: Pillar 7 - Reference Data Dependency Matrix
+# Technical Specification: Pillar 8 - Reference Data Dependency Matrix
 
 ## 0. Scope decision (time-bound, TOR-supporting)
 

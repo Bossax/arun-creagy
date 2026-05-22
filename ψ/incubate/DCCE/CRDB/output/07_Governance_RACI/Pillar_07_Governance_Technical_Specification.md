@@ -1,4 +1,4 @@
-# Technical Specification: Pillar 6 - Governance Operating Model (RACI) + Division Buy-in Execution Plan
+# Technical Specification: Pillar 7 - Governance Operating Model (RACI) + Division Buy-in Execution Plan
 
 ## 0. Purpose (DAMA-aligned, time- and resource-bounded)
 

@@ -90,7 +90,7 @@ This document provides the structural blueprint for the 10 mandated deliverables
 *   **Summary**: Lists the raw supply and applies the normative G1-G5 trust labels. Standardizes the "Definition of Done" for data ingestion.
 
 ### **Pillar 4: Business Glossary**
-*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/04_Glossary/Pillar_02_Glossary_Technical_Specification.md|Pillar 4 (Glossary) Technical Specification]].
+*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/04_Glossary/Pillar_04_Glossary_Technical_Specification|Pillar 4 (Glossary) Technical Specification]].
 *   **Summary**: The 100+ term authority list. Ensures that the UI labels, metadata, and database columns all use the exact same terminology.
 
 ### **Pillar 5: Climate Data Model (CDM)**
@@ -102,7 +102,7 @@ This document provides the structural blueprint for the 10 mandated deliverables
 *   **Summary**: Defines the logical data model (entities + relationships) for Loss & Damage reporting. Computation formulas are treated as separate, explicit artifacts when needed (do not assume they are embedded in the LDM).
 
 ### **Pillar 7: Governance (RACI & Workflow)**
-*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/07_Governance_RACI/Pillar_06_Governance_Technical_Specification.md|Pillar 7 (Governance) Technical Specification]].
+*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/07_Governance_RACI/Pillar_07_Governance_Technical_Specification|Pillar 7 (Governance) Technical Specification]].
 *   **Summary**: Defines the humans in the loop. The SI must build the digital gates (G1-G5) that enforce these DCCE approval roles.
 
 ### **Pillar 8: Reference Data Matrix**
