@@ -78,39 +78,39 @@ This document provides the structural blueprint for the 10 mandated deliverables
 ## 4. Technical Specification Requirements (The "Zero-Discovery" Baseline)
 
 ### **Pillar 1: Sitemap & Interface Mapping**
-*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/07_Sitemap_BuildingBlocks/Pillar_08_Building_Block_Technical_Specification.md|Sitemap Spec]] & [[ψ/incubate/DCCE/CRDB/output/04_Inventory_Mapping/Pillar_04_Interface_Map_Technical_Specification.md|Interface Map Spec]].
+*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/09_BuildingBlocks/Pillar_09_BuildingBlocks_Technical_Specification.md|Sitemap Spec]] & [[ψ/incubate/DCCE/CRDB/output/01_Sitemap_InterfaceMapping/Pillar_01_Sitemap_InterfaceMapping_Technical_Specification.md|Interface Map Spec]].
 *   **Summary**: Defines the 7-level navigation and the specific **Data Contract** for every node. The SI is prohibited from inventing new data flows for the UI.
 
 ### **Pillar 2: Use Case Inventory & Functional Specs**
-*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/07_Sitemap_BuildingBlocks/Pillar_08_Building_Block_Technical_Specification.md|Use Case Functional Spec]].
+*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/09_BuildingBlocks/Pillar_09_BuildingBlocks_Technical_Specification.md|Use Case Functional Spec]].
 *   **Summary**: Translates stakeholder journeys into step-by-step logic. Defines "What happens when I click X" to eliminate implemented logic "discovery."
 
 ### **Pillar 3: Data Inventory & DQ Framework**
-*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/05_Quality_Standards/Pillar_05_DQ_Framework_Technical_Specification.md|Pillar 3 (DQ) Technical Specification]].
+*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/03_DataInventory_DQ/Pillar_05_DQ_Framework_Technical_Specification.md|Pillar 3 (DQ) Technical Specification]].
 *   **Summary**: Lists the raw supply and applies the normative G1-G5 trust labels. Standardizes the "Definition of Done" for data ingestion.
 
 ### **Pillar 4: Business Glossary**
-*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/02_Glossary_Semantics/Pillar_02_Glossary_Technical_Specification.md|Pillar 4 (Glossary) Technical Specification]].
+*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/04_Glossary/Pillar_02_Glossary_Technical_Specification.md|Pillar 4 (Glossary) Technical Specification]].
 *   **Summary**: The 100+ term authority list. Ensures that the UI labels, metadata, and database columns all use the exact same terminology.
 
 ### **Pillar 5: Climate Data Model (CDM)**
-*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/01_CDM_Architecture/Pillar_01_CDM_Technical_Specification.md|Pillar 5 (CDM) Technical Specification]].
+*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/05_CDM_EARCatalog/Pillar_01_CDM_Technical_Specification.md|Pillar 5 (CDM) Technical Specification]].
 *   **Summary**: The frozen relational structure of the domain. SI must implement the Physical Schema as a 100% faithful realization of this CDM.
 
-### **Pillar 6: Loss & Damage LDM (The Math)**
-*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/03_Logic_MVD_MVP/Pillar_03_LDM_Logic_Technical_Specification.md|Pillar 6 (LDM) Technical Specification]].
-*   **Summary**: Provides the actual computation formulas for L&D. Ensures the software "calculates" according to DCCE rules, not developer logic.
+### **Pillar 6: Loss & Damage LDM (Data Model)**
+*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/06_LDM_LossDamage_DataModel/Pillar_03_LDM_Logic_Technical_Specification.md|Pillar 6 (LDM) Technical Specification]].
+*   **Summary**: Defines the logical data model (entities + relationships) for Loss & Damage reporting. Computation formulas are treated as separate, explicit artifacts when needed (do not assume they are embedded in the LDM).
 
 ### **Pillar 7: Governance (RACI & Workflow)**
-*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/06_Governance_RACI/Pillar_06_Governance_Technical_Specification.md|Pillar 7 (Governance) Technical Specification]].
+*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/07_Governance_RACI/Pillar_06_Governance_Technical_Specification.md|Pillar 7 (Governance) Technical Specification]].
 *   **Summary**: Defines the humans in the loop. The SI must build the digital gates (G1-G5) that enforce these DCCE approval roles.
 
 ### **Pillar 8: Reference Data Matrix**
-*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/04_Inventory_Mapping/Pillar_07_Ref_Data_Technical_Specification.md|Pillar 8 (Ref Data) Technical Specification]].
+*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/08_RefData_Matrix/Pillar_08_RefData_Matrix_Technical_Specification.md|Pillar 8 (Ref Data) Technical Specification]].
 *   **Summary**: The interoperability key. Provides the crosswalks for Provinces, Sectors, and Hazards to enable multi-agency data joining.
 
 ### **Pillar 9: Building Block Catalog**
-*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/07_Sitemap_BuildingBlocks/Pillar_08_Building_Block_Technical_Specification.md|Pillar 9 (Building Blocks) Technical Specification]].
+*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/09_BuildingBlocks/Pillar_09_BuildingBlocks_Technical_Specification.md|Pillar 9 (Building Blocks) Technical Specification]].
 *   **Summary**: The modular procurement menu. Tiers the other 8 pillars into a 3-year rollout strategy (Tier 1: Core Engine, Tier 2: Services, Tier 3: Expansion).
 
 ---

@@ -12,7 +12,7 @@ Therefore Pillar 2 is treated as a **TOR-supporting execution rail**: a controll
 
 Primary seed sources that already exist in this repo:
 
-- CDM entity vocabulary and business-rule distinctions (seed term list + `CDM_Entity_Link` mapping): [`ψ/incubate/DCCE/CRDB/output/01_CDM_Architecture/Conceptual Data Model for climate risk and adaptation data system.md`](ψ/incubate/DCCE/CRDB/output/01_CDM_Architecture/Conceptual%20Data%20Model%20for%20climate%20risk%20and%20adaptation%20data%20system.md:56)
+- CDM entity vocabulary and business-rule distinctions (seed term list + `CDM_Entity_Link` mapping): [`ψ/incubate/DCCE/CRDB/output/05_CDM_EARCatalog/Conceptual Data Model for climate risk and adaptation data system.md`](ψ/incubate/DCCE/CRDB/output/05_CDM_EARCatalog/Conceptual%20Data%20Model%20for%20climate%20risk%20and%20adaptation%20data%20system.md:56)
 - Governance question framing for “glossary scope + definitions authority”: [`ψ/incubate/DCCE/CRDB/inbox_note/FGD2_plan_2026-02-26.md`](ψ/incubate/DCCE/CRDB/inbox_note/FGD2_plan_2026-02-26.md:127)
 
 ## 1. Data Structural Requirements
@@ -70,7 +70,7 @@ To reduce disputes and support phased approval, extend the schema with:
 
 ## 4. Execution guidance: how to build Pillar 2 from existing assets
 
-1. **Seed the term backlog from the CDM** (entities + key distinctions like event vs driver, exposure vs vulnerability): [`ψ/incubate/DCCE/CRDB/output/01_CDM_Architecture/Conceptual Data Model for climate risk and adaptation data system.md`](ψ/incubate/DCCE/CRDB/output/01_CDM_Architecture/Conceptual%20Data%20Model%20for%20climate%20risk%20and%20adaptation%20data%20system.md:56)
+1. **Seed the term backlog from the CDM** (entities + key distinctions like event vs driver, exposure vs vulnerability): [`ψ/incubate/DCCE/CRDB/output/05_CDM_EARCatalog/Conceptual Data Model for climate risk and adaptation data system.md`](ψ/incubate/DCCE/CRDB/output/05_CDM_EARCatalog/Conceptual%20Data%20Model%20for%20climate%20risk%20and%20adaptation%20data%20system.md:56)
 2. **Add TOR category vocabulary as mandatory `Usage_Tags`** to enforce alignment with inventories and MVD: [`ψ/incubate/DCCE/CRDB/inbox_source/CRDB - TOR.md`](ψ/incubate/DCCE/CRDB/inbox_source/CRDB%20-%20TOR.md:169)
 3. **Define the core approved set** (small):
    - minimum: the TOR category terms + CDM’s core entities + the most misused policy terms (risk/hazard/vulnerability/impact/loss & damage).

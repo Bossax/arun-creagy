@@ -5,7 +5,7 @@
 This pillar exists to satisfy **TOR 5.2** (develop the National Climate Adaptation Information Framework + the data-management structure), not to prescribe a full platform implementation.
 
 - TOR 5.2 requires a draft NCAIF structure covering major content classes and a draft data-management structure with sources, responsible agencies, and mechanisms: [`ψ/incubate/DCCE/CRDB/inbox_source/CRDB - TOR.md`](ψ/incubate/DCCE/CRDB/inbox_source/CRDB%20-%20TOR.md:124)
-- Project execution framing after the May 12–13 workshop emphasizes **production + ratification** and treats content outputs as governed assets (owned, versioned, linked): [`ψ/incubate/DCCE/CRDB/output/08_Strategy_Reports/2026-05-13_CRDB-Post-Workshop-Reorientation-Synthesis.md`](ψ/incubate/DCCE/CRDB/output/08_Strategy_Reports/2026-05-13_CRDB-Post-Workshop-Reorientation-Synthesis.md:32)
+- Project execution framing after the May 12–13 workshop emphasizes **production + ratification** and treats content outputs as governed assets (owned, versioned, linked): [`ψ/incubate/DCCE/CRDB/output/00_Strategy_Reports/2026-05-13_CRDB-Post-Workshop-Reorientation-Synthesis.md`](ψ/incubate/DCCE/CRDB/output/00_Strategy_Reports/2026-05-13_CRDB-Post-Workshop-Reorientation-Synthesis.md:32)
 
 **Interpretation:** Pillar 8 is a **structured inventory of NCAIF building blocks** to support (a) a budgeting/strategy-oriented presentation as the primary interface, with (b) catalog/link-out as a secondary support layer.
 
