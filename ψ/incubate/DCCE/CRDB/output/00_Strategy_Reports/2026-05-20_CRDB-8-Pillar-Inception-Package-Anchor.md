@@ -85,9 +85,9 @@ This document provides the structural blueprint for the 10 mandated deliverables
 *   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/02_UseCases_FunctionalSpecs/Pillar_02_UseCases_FunctionalSpecs_Technical_Specification.md|Pillar 2 (Use Cases) Technical Specification]].
 *   **Summary**: Translates stakeholder journeys into step-by-step logic. Defines "What happens when I click X" to eliminate implemented logic "discovery."
 
-### **Pillar 3: Data Inventory & DQ Framework**
-*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/03_DataInventory_DQ/Pillar_03_DataInventory_DQ_Technical_Specification.md|Pillar 3 (Data Inventory & DQ) Technical Specification]].
-*   **Summary**: Lists the raw supply and applies the normative G1-G5 trust labels. Standardizes the "Definition of Done" for data ingestion.
+### **Pillar 3: Baseline Data Inventory & Information Product Inventory**
+*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/03_DataInventory_DQ/Pillar_03_DataInventory_DQ_Technical_Specification.md|Pillar 3 (Inventories) Technical Specification]].
+*   **Summary**: Delivers TOR §5.3.4–5.3.5 inventories (products + raw datasets). Quality is expressed as secondary labels/caveats to prevent false certainty and to prioritize later verification.
 
 ### **Pillar 4: Business Glossary**
 *   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/04_Glossary/Pillar_04_Glossary_Technical_Specification|Pillar 4 (Glossary) Technical Specification]].
