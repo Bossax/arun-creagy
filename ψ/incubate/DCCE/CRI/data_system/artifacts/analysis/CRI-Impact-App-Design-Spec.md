@@ -1,7 +1,7 @@
 # Engineering Design Document: CRI Impact Visualization Dashboard
 
 **Project**: Climate Resilience Index (CRI) - DCCE  
-**Release Version**: 1.0.0 (Hardened Standalone)  
+**Release Version**: 1.2.0 (Robust Spatial Hardening)  
 **Implementation Date**: May 25, 2026  
 **Author**: Arun Creagy, Strategic Climate Knowledge Auditor
 
@@ -52,29 +52,51 @@ To prevent join failures between CSV data (often read as floats) and Shapefiles 
 *   `zfill(6)` to ensure leading zeros are preserved.
 *   Filter out `nan` or invalid codes to maintain spatial integrity.
 
-### 3.4 The Bootstrap Launcher
-`launcher.py` serves as the compiled entry point. It performs two concurrent tasks:
-1.  **Server Start**: Invokes `streamlit.web.cli` in the background.
-2.  **Browser Trigger**: Uses a `threading.Timer` to wait 3 seconds (allowing the server to warm up) before calling `webbrowser.open()`.
+## 4. The 7-Stage Data Processing Pipeline
+To maintain structural integrity from raw signal to final visualization, the app executes the following sequence:
 
-## 4. Build & Reproducibility
-### 4.1 Dependency Installation
+1.  **Environment Adaptation (Bootstrapping)**: Resolves physical paths using the `_MEIPASS` pattern to handle script-vs-bundled execution modes.
+2.  **Ingestion (Multimodal Loading)**: Parallel loading of Tabular Gold Fact CSVs and Spatial Enriched Boundary Shapefiles via `@st.cache_data`.
+3.  **Normalization (The 6-Digit DOPA Standard)**: Uses `_clean_code_6()` to enforce a strict 6-digit subdistrict code, stripping decimals and padding leading zeros to ensure join compatibility.
+4.  **Spatial Integrity (Precision Geometry)**: Standardizes CRS to EPSG:4326. Note: As of v1.1.0, spatial simplification is disabled to preserve boundary accuracy at high zoom levels.
+5.  **Semantic Mapping & Runtime Filtering**: Employs a `METRICS_CONFIG` layer to map user-facing labels to internal fact columns.
+6.  **Integrity-First Join**: Performs an `inner` join (for performance) or `left` join (for robustness) on normalized codes to bind impact data to spatial polygons.
+7.  **Localization & Visualization Rendering**: Dynamically switches between Matplotlib (Performance/National) and Plotly (Interaction/Province) using injected Thai fonts.
+
+## 5. Build & Reproducibility
+### 5.1 Dependency Installation
 ```bash
 pip install streamlit pandas geopandas plotly matplotlib pyarrow pyinstaller
 ```
 
-### 4.2 Packaging Workflow
+### 5.2 Packaging Workflow
 We use `bundle_windows.py` which executes PyInstaller with specific "Hardening" flags:
 *   `--collect-all streamlit`: Essential for bundling Streamlit's static web components.
 *   `--collect-all plotly`: Ensures Mapbox templates and JS assets are included.
 *   `--copy-metadata`: Preserves package identity required by some C-extensions at runtime.
 
-### 4.3 Build Command
+### 5.3 Build Command
 To reproduce the `.exe` (folder-based distribution), run:
 ```bash
 python bundle_windows.py
 ```
 The output will reside in `dist/CRI_Impact_Dashboard/`.
+
+## 6. Change Log
+### v1.2.0 (May 25, 2026)
+*   **Bangkok & Central Region Fix**: Switched to 2-digit province code prefixes for filtering Shapefile geometries. This bypasses corrupted or missing province names (e.g., Bangkok labeled as `<NA>` in SHP) and ensures the central region renders correctly.
+*   **Hole-Free Province Focus**: Refactored the join logic to use a `left` join from the filtered Shapefile to the Impact CSV. All subdistricts in a province are now rendered, with missing impact data appearing as 0/white instead of empty holes.
+*   **Robust DOPA Cleaning**: Hardened the `_clean_code_6` utility to better handle string edge cases.
+
+### v1.1.0 (May 25, 2026)
+*   **Precision Hardening**: Removed `simplify(0.005)` from the spatial processing stage. Province-level focus plots now display high-fidelity subdistrict boundaries.
+*   **Version Registration**: Added `APP_VERSION` global variable and integrated it into the Sidebar UI and Page Title for traceability.
+*   **Pipeline Documentation**: Integrated the 7-stage data processing lifecycle into the official Design Specification.
+
+### v1.0.0 (May 20, 2026)
+*   Initial release of the standalone CRI Impact Visualization Dashboard.
+*   Implemented "Zero-Discovery" path resolution for bundled deployment.
+*   Added Thai font support for both Streamlit and Matplotlib.
 
 ---
 *Status: FINALIZED. This document serves as the authoritative blueprint for the CRI Digital Interface.*

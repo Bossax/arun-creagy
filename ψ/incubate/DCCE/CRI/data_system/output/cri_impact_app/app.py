@@ -19,9 +19,12 @@ def get_resource_path(relative_path):
         base_path = os.path.abspath(".")
     return Path(base_path) / relative_path
 
+# --- VERSION CONFIG ---
+APP_VERSION = "1.2.0"
+
 # --- PAGE CONFIG ---
 st.set_page_config(
-    page_title="CRI Impact Dashboard",
+    page_title=f"CRI Impact Dashboard v{APP_VERSION}",
     page_icon="🌍",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -95,7 +98,7 @@ def load_data():
     gdf_tambon = gpd.read_file(data_dir / "tambon_boundaries_enriched.shp")
     gdf_prov = gpd.read_file(data_dir / "province_boundaries_enriched.shp")
     
-    gdf_tambon['geometry'] = gdf_tambon.geometry.simplify(0.005, preserve_topology=True)
+    # gdf_tambon['geometry'] = gdf_tambon.geometry.simplify(0.005, preserve_topology=True) # Lifted in v1.1 for precision
     gdf_tambon['subdist_cd'] = _clean_code_6(gdf_tambon['subdist_cd'])
     
     if gdf_tambon.crs != "EPSG:4326": gdf_tambon = gdf_tambon.to_crs("EPSG:4326")
@@ -136,7 +139,7 @@ def main():
     fact_df, yearly_df, gdf_tambon, gdf_prov = load_data()
 
     # --- SIDEBAR ---
-    st.sidebar.title("CRI Dashboard")
+    st.sidebar.title(f"CRI Dashboard v{APP_VERSION}")
     scope = st.sidebar.selectbox("Analysis Scope", ["Whole Country", "Province Focus"])
     
     dim_loc = fact_df[['subdistrict_code', 'subdistrict_name_th', 'district_name_th', 'province_name_th']].drop_duplicates()
@@ -160,10 +163,7 @@ def main():
         working_df = yearly_df[yearly_df['year_be'] == selected_year].copy()
         working_df = working_df.merge(dim_loc, on='subdistrict_code', how='left')
         config = METRICS_CONFIG[metric_key]
-        if metric_key == "YoY Change":
-            actual_abs_col = "yoy_delta_affected_households" if "yoy_delta_affected_households" in working_df.columns else config["abs"]
-        else:
-            actual_abs_col = config["abs"]
+        actual_abs_col = "yoy_delta_affected_households" if metric_key == "YoY Change" and "yoy_delta_affected_households" in working_df.columns else config["abs"]
             
         if val_type == "National Percentile":
             target_col = config["pct"]
@@ -176,9 +176,21 @@ def main():
         target_col = config["pct"] if val_type == "National Percentile" else config["abs"]
 
     if scope == "Province Focus":
-        working_df = working_df[working_df['province_name_th'] == selected_prov]
+        # Robust Filtering: Use 2-digit province code prefix to isolate geometry
+        prov_sample = working_df[working_df['province_name_th'] == selected_prov]
+        if not prov_sample.empty:
+            prov_prefix = prov_sample['subdistrict_code'].iloc[0][:2]
+            # Filter SHP by prefix to ensure full boundary visibility (fixes Bangkok <NA> name issue)
+            gdf_target = gdf_tambon[gdf_tambon['subdist_cd'].str.startswith(prov_prefix)].copy()
+            # Left join to keep all polygons, filling missing impact data with 0
+            map_data = gdf_target.merge(prov_sample, left_on='subdist_cd', right_on='subdistrict_code', how='left')
+        else:
+            map_data = gdf_tambon.merge(working_df[working_df['province_name_th'] == selected_prov], 
+                                       left_on='subdist_cd', right_on='subdistrict_code', how='inner')
+    else:
+        # National View: Left join from SHP to impact data
+        map_data = gdf_tambon.merge(working_df, left_on='subdist_cd', right_on='subdistrict_code', how='left')
 
-    map_data = gdf_tambon.merge(working_df, left_on='subdist_cd', right_on='subdistrict_code', how='inner' if scope == "Province Focus" else 'left')
     map_data[target_col] = pd.to_numeric(map_data[target_col], errors='coerce').fillna(0)
 
     # --- VISUALIZATION ---
