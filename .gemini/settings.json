@@ -23,6 +23,10 @@
         "notebooklm-mcp@latest"
       ],
       "env": {
+        "BROWSER_TIMEOUT": "360000",
+				"STEALTH_ENABLED": "true",
+				"TYPING_WPM_MIN": "200",
+				"TYPING_WPM_MAX": "400",
         "NOTEBOOK_PROFILE_STRATEGY": "single"
       },
       "description": "Research from pre-uploaded sources on notebooklm"

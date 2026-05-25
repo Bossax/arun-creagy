@@ -19,22 +19,14 @@
 			]
 		},
 		"notebooklm": {
+			"type": "stdio",
 			"command": "npx",
 			"args": [
+				"-y",
 				"notebooklm-mcp@latest"
 			],
-			"env": {
-				"NOTEBOOK_PROFILE_STRATEGY": "single"
-			},
-			"description": "Research from pre-uploaded sources on notebooklm",
-			"alwaysAllow": [
-				"list_notebooks",
-				"get_notebook",
-				"select_notebook",
-				"get_health",
-				"setup_auth",
-				"ask_question"
-			]
+			"description": "NotebookLM MCP server",
+			"alwaysAllow": []
 		},
 		"perplexity": {
 			"type": "stdio",

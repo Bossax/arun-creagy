@@ -39,6 +39,10 @@ tools/
 *.jpg
 *.png
 
+# app files
+ψ/incubate/DCCE/CRI/data_system/output/cri_impact_app/dist
+ψ/incubate/DCCE/CRI/data_system/data_system/data
+
 # 6. Python Virtual Environments
 venv/
 venv_clean/
