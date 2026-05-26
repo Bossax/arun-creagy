@@ -18,3 +18,8 @@ These rules ensure technical consistency across both PowerShell (Gemini CLI) and
 - **Absolute Paths**: Always resolve `ψ/` paths to their absolute host path when calling external CLIs.
 - **Atomic Execution**: Maximum of two independent operations per `run_shell_command`.
 - **Sorting (PS)**: `Get-ChildItem | Sort-Object LastWriteTime -Descending`.
+
+## 4. PowerShell Execution Rules
+- **Variable Escaping**: NEVER escape the `$_` variable as `\$_.` in PowerShell commands. Use `$_` directly within double-quoted strings passed to `powershell.exe -Command`.
+- **Special Characters (ψ)**: Wrap paths containing the `ψ` character in single quotes (e.g., `'ψ/memory/'`) to ensure the shell handles the character literal correctly.
+- **Pipeline Hygiene**: Prefer native PowerShell cmdlets (`Where-Object`, `Select-Object`) over Unix ports (`grep`, `head`) when operating in Gemini CLI.

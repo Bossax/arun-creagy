@@ -57,8 +57,14 @@ Only read what matters — don't dump 10 commits if status is clean.
 
 Sort all ψ/ files by modification time, read the most recent:
 
+**Unix/Bash**:
 ```bash
 find ψ/ -name '*.md' -not -name 'CLAUDE.md' -not -name 'README.md' -not -name '.gitkeep' 2>/dev/null | xargs ls -t 2>/dev/null | head -5
+```
+
+**Windows/PowerShell**:
+```powershell
+Get-ChildItem -Path 'ψ/' -Filter *.md -Recurse | Where-Object { $_.Name -notmatch 'CLAUDE.md|README.md|.gitkeep' } | Sort-Object LastWriteTime -Descending | Select-Object -ExpandProperty FullName -First 5
 ```
 
 Read those top 5 files. This recovers the same context `/compact` restores — handoffs, retros, learnings, drafts, whatever was touched last.
