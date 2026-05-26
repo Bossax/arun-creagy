@@ -146,6 +146,6 @@
 		- how the workshop adds value beyond the 10+ in-depth interviews.
 
 - These decisions should feed directly into:
-  - updates to the progress-meeting agenda: [`ψ/incubate/DCCE/CRDB/output/CRDB_Director_Toey_Progress_Meeting_Agenda.md`](ψ/incubate/DCCE/CRDB/CRDB_Director_Toey_Progress_Meeting_Agenda-2026-03-26.md);
+  - updates to the progress-meeting agenda: [`ψ/incubate/DCCE/CRDB/output/CRDB_Director_Toey_Progress_Meeting_Agenda.md`](ψ/incubate/DCCE/CRDB/archive/CRDB_Director_Toey_Progress_Meeting_Agenda-2026-03-26.md);
 	- the next revision of the interim report based on the 2026-03-12 writing plan and current chapter drafts; and
 	- refinement of the workshop plan and stakeholder list in [`ψ/incubate/DCCE/CRDB/output/2026-03-24_CRDB-Workshop-Preliminary-Plan.md`](ψ/incubate/DCCE/CRDB/output/consultation_workshop/2026-03-24_CRDB-Workshop-Preliminary-Plan.md).

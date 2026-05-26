@@ -78,7 +78,7 @@ You do not need to preserve raw spacing or pipe alignment; only the **column ord
 ### 3. Write the new table to a temporary file
 
 1. Choose a temporary path inside the repo, for example:  
-   `project_root/tmp/new-table.md`
+   `tmp/new-table.md`
 2. Use your native file-write tool to write **only the new table block** to that file:
 
    - The file should contain:

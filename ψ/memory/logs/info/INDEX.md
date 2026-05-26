@@ -1,5 +1,8 @@
 # Info Log Index
 
+- [2026-05-26 11:20] 🚩 **CRDB June engagement sequence (Important)**: Director Toey on 8 June / 12 June, likely Director Nid the following week, then FGD3 in the last week of June.
+  - File: ψ/memory/logs/info/2026-05-26_11-20_crdb-june-engagement-sequence-toey-nid-fgd3.md
+
 - [2026-05-20 16:00] 🚩 **DCCE Org Structure (Important)**: Mitigation Division (2.3) owns the "Central Database Group" (6th Floor IT), while Adaptation (2.2) owns the Climate Domain logic.
   - File: ψ/memory/logs/info/2026-05-20_16-00_dcce-org-structure.md
 
