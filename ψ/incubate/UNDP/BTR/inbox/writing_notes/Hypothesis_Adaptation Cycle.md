@@ -124,6 +124,7 @@ Use liner AI to evaluate the hypothesis
 >[!Adaptation Cycle]
 > A cyclical climate adaptation information framework where Climate Science Foundation creates demand for adaptation action, IVRA provides evidence base for decision-making, Planning translates evidence into actionable strategies, Implementation operationalizes strategies with technical guidance, and MEL creates institutional learning that informs the next adaptation cycle, resulting in iteratively improved adaptation outcomes over time.
 
+https://napcentral.org/nap-guidelines
 
 >[!important] 25 Sep action items
 >- Think about indicators and metrics for assessing the effectiveness of information services

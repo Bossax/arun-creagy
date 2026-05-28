@@ -2,7 +2,8 @@
 
 ## 0. Purpose and grounding (TOR-supporting, not TOR-named)
 
-The TOR does not explicitly name a “Business Glossary”, but it implicitly requires **semantic consistency** across:
+- **Seeded Deliverable (Canonical)**: [`ψ/incubate/DCCE/CRDB/output/04_Glossary/Pillar_04_Glossary_Deliverable.md`](ψ/incubate/DCCE/CRDB/output/04_Glossary/Pillar_04_Glossary_Deliverable.md)
+- Semantic Master: The TOR does not explicitly name a “Business Glossary”, but it implicitly requires **semantic consistency** across:
 
 - NCAIF domains + Draft Data Management Structure ([`ψ/incubate/DCCE/CRDB/inbox_source/CRDB - TOR.md`](ψ/incubate/DCCE/CRDB/inbox_source/CRDB%20-%20TOR.md:130))
 - Baseline Data Inventory categories (driver / hazard / exposure / sensitivity / adaptive capacity / impact / response / loss & damage) ([`ψ/incubate/DCCE/CRDB/inbox_source/CRDB - TOR.md`](ψ/incubate/DCCE/CRDB/inbox_source/CRDB%20-%20TOR.md:169))

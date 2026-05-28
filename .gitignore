@@ -22,7 +22,6 @@ Icon?
 .roo/rules
 .vscode/
 tmp/
-plans/
 tools/
 
 # 5. Data & Big files
@@ -38,6 +37,7 @@ tools/
 *.pptx
 *.jpg
 *.png
+!ψ/incubate/DCCE/CRDB/output/04_Glossary/*.csv
 
 # app files
 ψ/incubate/DCCE/CRI/data_system/output/cri_impact_app/dist

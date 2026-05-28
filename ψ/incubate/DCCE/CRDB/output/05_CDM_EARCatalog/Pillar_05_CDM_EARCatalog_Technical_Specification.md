@@ -4,6 +4,7 @@
 
 This spec is **not a hypothetical CDM**. It is constrained by the project’s existing CDM artifact and evidence chain:
 
+- **Sealed Deliverable (Canonical)**: [`ψ/incubate/DCCE/CRDB/output/05_CDM_EARCatalog/Pillar_05_CDM_EARCatalog_Deliverable.md`](ψ/incubate/DCCE/CRDB/output/05_CDM_EARCatalog/Pillar_05_CDM_EARCatalog_Deliverable.md)
 - CDM anchor (current): [`ψ/incubate/DCCE/CRDB/output/05_CDM_EARCatalog/Conceptual Data Model for climate risk and adaptation data system.md`](ψ/incubate/DCCE/CRDB/output/05_CDM_EARCatalog/Conceptual%20Data%20Model%20for%20climate%20risk%20and%20adaptation%20data%20system.md:10)
 - Evidence bridge (why CDM exists + how to position it): [`ψ/incubate/DCCE/CRDB/output/05_CDM_EARCatalog/2026-03-12_crdb-section1-cdm-mvp-evidence-analysis.md`](ψ/incubate/DCCE/CRDB/output/05_CDM_EARCatalog/2026-03-12_crdb-section1-cdm-mvp-evidence-analysis.md:47)
 - Evidence registry index: [`ψ/incubate/DCCE/CRDB/CRDB-Evidence-Registry.md`](ψ/incubate/DCCE/CRDB/CRDB-Evidence-Registry.md:35) (E-002)
