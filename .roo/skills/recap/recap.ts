@@ -1,22 +1,31 @@
 #!/usr/bin/env bun
+// @ts-nocheck
 // Fast recap - no AI, just git status
 // Usage: bun recap.ts
 
 import { $ } from "bun";
-import { existsSync, realpathSync } from "fs";
+import { existsSync, realpathSync, statSync } from "fs";
 import { join } from "path";
 
+const safe = async (cmd: any) => {
+  try {
+    return (await cmd.text()).trim();
+  } catch {
+    return "";
+  }
+};
+
 // Get repo root
-const root = (await $`git rev-parse --show-toplevel 2>/dev/null`.text()).trim() || process.cwd();
+const root = (await safe($`git rev-parse --show-toplevel`)) || process.cwd();
 process.chdir(root);
 
 // Gather git data
-const branch = (await $`git branch --show-current`.text()).trim();
+const branch = (await safe($`git branch --show-current`));
 let ahead = "0";
 try {
-  ahead = (await $`git rev-list --count @{u}..HEAD 2>/dev/null`.text()).trim() || "0";
+  ahead = (await safe($`git rev-list --count @{u}..HEAD`)) || "0";
 } catch {}
-const lastCommit = (await $`git log --oneline -1`.text()).trim().slice(8, 68);
+const lastCommit = (await safe($`git log --oneline -1`)).slice(8, 68);
 
 // Resolve ψ symlink (used for focus + schedule)
 const psi = existsSync("ψ") ? realpathSync("ψ") : "ψ";
@@ -48,13 +57,21 @@ let latestRetro = "none";
 let latestHandoff = "none";
 
 const listLatest = async (pattern: string) => {
+  // Windows-safe implementation (no bash/ls). Pattern is expected to be a glob.
   try {
-    const cmd = `ls -t ${pattern} 2>/dev/null`;
-    const output = (await $`bash -lc ${cmd}`.text()).trim();
-    if (!output) return "none";
-    const lines = output.split("\n");
-    const match = lines.find(f => !f.includes("CLAUDE"));
-    return match ? (match.split("/").pop() || "none") : "none";
+    const files = Array.from(new Bun.Glob(pattern).scanSync({ dot: false })) as string[];
+    const candidates = files
+      .filter((f: string) => !f.includes("CLAUDE"))
+      .sort((a: string, b: string) => {
+        try {
+          return statSync(b).mtimeMs - statSync(a).mtimeMs;
+        } catch {
+          return 0;
+        }
+      });
+    const top = candidates[0];
+    if (!top) return "none";
+    return top.split(/[\\/]/).pop() || "none";
   } catch {
     return "none";
   }

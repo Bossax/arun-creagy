@@ -1,53 +1,69 @@
 #!/usr/bin/env bun
-// recap-rich.ts - Full context recap
+// recap-rich.ts - Local win32-hardened full context recap
+// Usage: bun recap-rich.ts
+
 import { $ } from "bun";
-import { existsSync, readdirSync, realpathSync } from "fs";
-import { join } from "path";
+import { existsSync, readdirSync, realpathSync, statSync } from "fs";
+import { join, basename } from "path";
 
-const ROOT = process.env.ROOT || (await $`git rev-parse --show-toplevel`.text().catch(() => process.cwd())).trim();
-const isGit = (await $`git -C ${ROOT} rev-parse --is-inside-work-tree`.quiet().text().catch(() => "false")).trim() === "true";
-if (isGit) await $`git -C ${ROOT} config core.quotePath false`.quiet().catch(() => {});
+const safe = async (cmd: any) => {
+  try {
+    return (await cmd.text()).trim();
+  } catch {
+    return "";
+  }
+};
 
-const now = new Date();
-const date = now.toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
-const time = now.toTimeString().slice(0, 5);
-const month = now.toISOString().slice(0, 7);
+const ROOT = (await safe($`git rev-parse --show-toplevel`)) || process.cwd();
+const isGit = (await safe($`git -C ${ROOT} rev-parse --is-inside-work-tree`)) === "true";
+if (isGit) await $`git -C ${ROOT} config core.quotePath false`.quiet();
 
-// Session detection
+// Session detection (win32-native fallback)
 let sessionLine = "";
 try {
-  const encodedPwd = ROOT.replace(/^\//, '-').replace(/\//g, '-');
-  const projectDir = `${process.env.HOME}/.claude/projects/${encodedPwd}`;
-  if (existsSync(projectDir)) {
-    const jsonls = (await $`ls -t ${projectDir}/*.jsonl 2>/dev/null`.text()).trim().split('\n').filter(Boolean);
-    if (jsonls.length) {
-      const sessionId = jsonls[0].split('/').pop()!.replace('.jsonl', '');
-      const shortId = sessionId.slice(0, 8);
-      const firstLine = (await $`head -1 ${jsonls[0]}`.text()).trim();
-      let startStr = "";
-      try {
-        const ts = JSON.parse(firstLine).timestamp;
-        if (ts) {
-          const start = new Date(ts);
-          const elapsed = Math.round((Date.now() - start.getTime()) / 60000);
-          const h = Math.floor(elapsed / 60);
-          const m = elapsed % 60;
-          startStr = h > 0 ? `${h}h ${String(m).padStart(2, '0')}m` : `${m}m`;
-        }
-      } catch {}
-      const repoName = ROOT.split('/').pop() || '';
-      sessionLine = `${shortId} | ${repoName}${startStr ? ` | ${startStr}` : ''}`;
-    }
+  const encodedPwd = ROOT.replace(':', '').replace(/[\\/.]/g, '-');
+  const projectDir = join(process.env.USERPROFILE || "", ".claude", "projects");
+  const glob = new Bun.Glob(`*${encodedPwd}*/*.jsonl`);
+  const sessions = Array.from(glob.scanSync({ cwd: projectDir, absolute: true })) as string[];
+  const latest = sessions.sort((a, b) => statSync(b).mtimeMs - statSync(a).mtimeMs)[0];
+
+  if (latest) {
+    const sessionId = basename(latest, ".jsonl");
+    const firstLine = (await safe($`powershell.exe -NoProfile -Command "Get-Content -Path '${latest}' -TotalCount 1"`));
+    let startStr = "";
+    try {
+      const ts = JSON.parse(firstLine).timestamp;
+      if (ts) {
+        const elapsed = Math.round((Date.now() - ts) / 60000);
+        const h = Math.floor(elapsed / 60);
+        const m = elapsed % 60;
+        startStr = h > 0 ? `${h}h ${String(m).padStart(2, '0')}m` : `${m}m`;
+      }
+    } catch {}
+    sessionLine = `${sessionId.slice(0, 8)} | ${basename(ROOT)}${startStr ? ` | ${startStr}` : ""}`;
   }
 } catch {}
 
-console.log("# RECAP (Rich)");
+const now = new Date();
+const date = now.toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
+const time = now.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit", hour12: false });
+const month = now.toISOString().slice(0, 7);
+
+console.log("# RECAP (Project Rich)");
 if (sessionLine) console.log(`📡 Session: ${sessionLine}`);
 console.log(`\n${time} | ${date}\n\n---\n`);
 
-// Resolve ψ symlink (used for focus + schedule)
 const psiPath = join(ROOT, "ψ");
 const psi = existsSync(psiPath) ? realpathSync(psiPath) : psiPath;
+
+// INCUBATED_BY detection
+const incubatedByPath = join(ROOT, ".claude", "INCUBATED_BY");
+if (existsSync(incubatedByPath)) {
+  const breadcrumb = await Bun.file(incubatedByPath).text();
+  console.log("## ⚠️ INCUBATED REPO");
+  console.log(breadcrumb.trim());
+  console.log("");
+}
 
 // Focus
 console.log("## FOCUS");
@@ -75,11 +91,9 @@ if (existsSync(scheduleFile)) {
 // Git
 console.log("\n## GIT");
 if (isGit) {
-  console.log(await $`git -C ${ROOT} status -sb`.text());
+  console.log(await safe($`git -C ${ROOT} status -sb`));
   console.log("**Last 3 commits:**");
-  console.log(await $`git -C ${ROOT} log --oneline -3`.text());
-} else {
-  console.log("Not a git repository");
+  console.log(await safe($`git -C ${ROOT} log --oneline -3`));
 }
 
 // Tracks
@@ -87,7 +101,8 @@ console.log("## TRACKS");
 const tracksDir = join(ROOT, "ψ/inbox/tracks");
 if (existsSync(tracksDir)) {
   const tracks = readdirSync(tracksDir)
-    .filter((f) => f.endsWith(".md") && !f.includes("INDEX") && !f.includes("CLAUDE"))
+    .filter((f) => f.endsWith(".md") && !f.includes("INDEX") && !f.includes("CLAUDE") && !f.includes("GEMINI"))
+    .sort((a, b) => statSync(join(tracksDir, b)).mtimeMs - statSync(join(tracksDir, a)).mtimeMs)
     .slice(0, 6);
   for (const t of tracks) {
     const content = await Bun.file(join(tracksDir, t)).text();
@@ -99,28 +114,34 @@ if (existsSync(tracksDir)) {
 
 // Latest retro
 console.log("\n---\n\n## LAST SESSION");
-const retroDir = join(ROOT, `ψ/memory/retrospectives/${month}`);
+const retroDir = join(ROOT, "ψ/memory/retrospectives");
 if (existsSync(retroDir)) {
-  const days = readdirSync(retroDir).filter((d) => !d.startsWith(".")).sort().reverse();
-  for (const day of days) {
-    const files = readdirSync(join(retroDir, day)).filter((f) => f.endsWith(".md") && !f.includes("CLAUDE"));
-    if (files.length) {
-      const retro = await Bun.file(join(retroDir, day, files[0])).text();
-      console.log(`**From**: ${files[0]}\n`);
-      const summary = retro.match(/## Session Summary\n([\s\S]*?)(?=\n## |$)/)?.[1]?.trim();
-      if (summary) console.log(`**Summary**:\n${summary.split("\n").slice(0, 8).join("\n")}`);
-      break;
-    }
+  const glob = new Bun.Glob("**/*.md");
+  const retros = Array.from(glob.scanSync({ cwd: retroDir, absolute: true })) as string[];
+  const latest = retros
+    .filter(f => !f.includes("CLAUDE") && !f.includes("GEMINI"))
+    .sort((a, b) => statSync(b).mtimeMs - statSync(a).mtimeMs)[0];
+
+  if (latest) {
+    const content = await Bun.file(latest).text();
+    console.log(`**From**: ${basename(latest)}\n`);
+    const summary = content.match(/## Session Summary\n([\s\S]*?)(?=\n## |$)/)?.[1]?.trim();
+    if (summary) console.log(`**Summary**:\n${summary.split("\n").slice(0, 8).join("\n")}`);
   }
 }
 
 // Handoff
 const handoffDir = join(ROOT, "ψ/inbox/handoff");
 if (existsSync(handoffDir)) {
-  const handoffs = readdirSync(handoffDir).filter((f) => f.endsWith(".md") && !f.includes("CLAUDE")).sort().reverse();
-  if (handoffs.length) {
-    const content = await Bun.file(join(handoffDir, handoffs[0])).text();
-    console.log(`\n**Handoff**: ${handoffs[0]}`);
+  const glob = new Bun.Glob("*.md");
+  const handoffs = Array.from(glob.scanSync({ cwd: handoffDir, absolute: true })) as string[];
+  const latest = handoffs
+    .filter(f => !f.includes("CLAUDE") && !f.includes("GEMINI"))
+    .sort((a, b) => statSync(b).mtimeMs - statSync(a).mtimeMs)[0];
+
+  if (latest) {
+    const content = await Bun.file(latest).text();
+    console.log(`\n**Handoff**: ${basename(latest)}`);
     console.log(content.split("\n").slice(2, 20).join("\n"));
   }
 }
@@ -128,12 +149,9 @@ if (existsSync(handoffDir)) {
 // Context
 console.log("\n---\n\n## CONTEXT\n");
 if (isGit) {
-  const status = await $`git -C ${ROOT} status --porcelain`.text();
+  const status = await safe($`git -C ${ROOT} status --porcelain`);
   const modified = status.split("\n").filter((l) => l.startsWith(" M")).map((l) => l.slice(3));
   const untracked = status.split("\n").filter((l) => l.startsWith("??")).map((l) => l.slice(3));
-
   if (modified.length) console.log("**Modified**:\n" + modified.map((f) => `  ${f}`).join("\n"));
   if (untracked.length) console.log("\n**Untracked**:\n" + untracked.map((f) => `  ${f}`).join("\n"));
-} else {
-  console.log("Not a git repository — skipping file status");
 }

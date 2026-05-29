@@ -1,24 +1,32 @@
 #!/usr/bin/env bun
-// Fast recap - no AI, just git status
+// recap.ts - Local win32-hardened recap engine
 // Usage: bun recap.ts
 
 import { $ } from "bun";
-import { existsSync, realpathSync } from "fs";
-import { join } from "path";
+import { existsSync, realpathSync, statSync } from "fs";
+import { join, basename } from "path";
+
+const safe = async (cmd: any) => {
+  try {
+    return (await cmd.text()).trim();
+  } catch {
+    return "";
+  }
+};
 
 // Get repo root
-const root = (await $`git rev-parse --show-toplevel 2>/dev/null`.text()).trim() || process.cwd();
+const root = (await safe($`git rev-parse --show-toplevel`)) || process.cwd();
 process.chdir(root);
 
 // Gather git data
-const branch = (await $`git branch --show-current`.text()).trim();
+const branch = await safe($`git branch --show-current`);
 let ahead = "0";
 try {
-  ahead = (await $`git rev-list --count @{u}..HEAD 2>/dev/null`.text()).trim() || "0";
+  ahead = (await safe($`git rev-list --count @{u}..HEAD`)) || "0";
 } catch {}
-const lastCommit = (await $`git log --oneline -1`.text()).trim().slice(8, 68);
+const lastCommit = (await safe($`git log --oneline -1`)).slice(8, 68);
 
-// Resolve ψ symlink (used for focus + schedule)
+// Resolve ψ symlink
 const psi = existsSync("ψ") ? realpathSync("ψ") : "ψ";
 
 // Focus state
@@ -37,70 +45,68 @@ if (existsSync(focusFile)) {
 let schedule = "No schedule";
 const scheduleFile = join(psi, "inbox", "schedule.md");
 if (existsSync(scheduleFile)) {
-  const match = (await Bun.file(scheduleFile).text()).split('\n')
-    .find(l => l.startsWith('| ') && !l.includes('---') && !l.includes('Date'));
-  if (match) schedule = match.replace(/\|/g, '').trim().slice(0, 120);
+  const content = await Bun.file(scheduleFile).text();
+  const match = content.split("\n")
+    .find(l => l.startsWith("| ") && !l.includes("---") && !l.includes("Date"));
+  if (match) schedule = match.replace(/\|/g, "").trim().slice(0, 120);
 }
 
-// Latest retro and handoff
+// Native file sorter (win32-safe)
+const getLatest = (pattern: string) => {
+  try {
+    const glob = new Bun.Glob(pattern);
+    const files = Array.from(glob.scanSync({ dot: false })) as string[];
+    const top = files
+      .filter(f => !f.includes("CLAUDE") && !f.includes("GEMINI"))
+      .sort((a, b) => statSync(b).mtimeMs - statSync(a).mtimeMs)[0];
+    return top ? basename(top) : "none";
+  } catch {
+    return "none";
+  }
+};
+
 const monthDir = `ψ/memory/retrospectives/${new Date().toISOString().slice(0, 7)}`;
-let latestRetro = "none";
-let latestHandoff = "none";
-
-try {
-  const retros = (await $`ls -t ${monthDir}/*/*.md 2>/dev/null`.text()).trim().split('\n');
-  const retro = retros.find(f => !f.includes('CLAUDE'));
-  if (retro) latestRetro = retro.split('/').pop() || "none";
-} catch {}
-
-try {
-  const handoffs = (await $`ls -t ψ/inbox/handoff/*.md 2>/dev/null`.text()).trim().split('\n');
-  const handoff = handoffs.find(f => !f.includes('CLAUDE'));
-  if (handoff) latestHandoff = handoff.split('/').pop() || "none";
-} catch {}
+const latestRetro = getLatest(`${monthDir}/*/*.md`);
+const latestHandoff = getLatest("ψ/inbox/handoff/*.md");
 
 // Git status
 await $`git config core.quotePath false`.quiet();
-const status = (await $`git status --porcelain`.text()).trim();
-const lines = status ? status.split('\n') : [];
+const status = (await safe($`git status --porcelain`));
+const lines = status ? status.split("\n") : [];
+const modified = lines.filter(l => l.startsWith(" M"));
+const untracked = lines.filter(l => l.startsWith("??"));
 
-const modified = lines.filter(l => l.startsWith(' M'));
-const untracked = lines.filter(l => l.startsWith('??'));
-
-// Session detection
+// Session detection (win32-native fallback)
 let sessionLine = "";
 try {
-  const encodedPwd = root.replace(/^\//, '-').replace(/\//g, '-');
-  const projectDir = `${process.env.HOME}/.claude/projects/${encodedPwd}`;
-  if (existsSync(projectDir)) {
-    const jsonls = (await $`ls -t ${projectDir}/*.jsonl 2>/dev/null`.text()).trim().split('\n').filter(Boolean);
-    if (jsonls.length) {
-      const sessionId = jsonls[0].split('/').pop()!.replace('.jsonl', '');
-      const shortId = sessionId.slice(0, 8);
-      const firstLine = (await $`head -1 ${jsonls[0]}`.text()).trim();
-      let startStr = "";
-      try {
-        const ts = JSON.parse(firstLine).timestamp;
-        if (ts) {
-          const start = new Date(ts);
-          const elapsed = Math.round((Date.now() - start.getTime()) / 60000);
-          const h = Math.floor(elapsed / 60);
-          const m = elapsed % 60;
-          startStr = h > 0 ? `${h}h ${String(m).padStart(2, '0')}m` : `${m}m`;
-        }
-      } catch {}
-      const repoName = root.split('/').pop() || '';
-      sessionLine = `${shortId} | ${repoName}${startStr ? ` | ${startStr}` : ''}`;
-    }
+  const encodedPwd = root.replace(':', '').replace(/[\\/.]/g, '-');
+  const projectDir = join(process.env.USERPROFILE || "", ".claude", "projects");
+  const glob = new Bun.Glob(`*${encodedPwd}*/*.jsonl`);
+  const sessions = Array.from(glob.scanSync({ cwd: projectDir, absolute: true })) as string[];
+  const latest = sessions.sort((a, b) => statSync(b).mtimeMs - statSync(a).mtimeMs)[0];
+
+  if (latest) {
+    const sessionId = basename(latest, ".jsonl");
+    const firstLine = (await safe($`powershell.exe -NoProfile -Command "Get-Content -Path '${latest}' -TotalCount 1"`));
+    let startStr = "";
+    try {
+      const ts = JSON.parse(firstLine).timestamp;
+      if (ts) {
+        const elapsed = Math.round((Date.now() - ts) / 60000);
+        const h = Math.floor(elapsed / 60);
+        const m = elapsed % 60;
+        startStr = h > 0 ? `${h}h ${String(m).padStart(2, '0')}m` : `${m}m`;
+      }
+    } catch {}
+    sessionLine = `${sessionId.slice(0, 8)} | ${basename(root)}${startStr ? ` | ${startStr}` : ""}`;
   }
 } catch {}
 
-// Output
 const now = new Date();
-const time = now.toLocaleTimeString('en', { hour: '2-digit', minute: '2-digit', hour12: false });
-const date = now.toLocaleDateString('en', { day: '2-digit', month: 'short', year: 'numeric' });
+const time = now.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit", hour12: false });
+const date = now.toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
 
-console.log("# RECAP");
+console.log("# RECAP (Project)");
 console.log("");
 if (sessionLine) console.log(`📡 Session: ${sessionLine}`);
 console.log(`🕐 ${time} | ${date}`);

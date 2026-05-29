@@ -9,23 +9,23 @@ trigger: /recap
 
 **Goal**: Orient quickly using the project-local recap script.
 
-This local override uses the existing script at `.roo/skills/recap/recap.ts` and does not introduce new logic.
+This local override runs project-local scripts (Windows-safe) and avoids unix-only shell utilities.
 
 ## Usage
 
 ```
-/recap           # Local recap (project script)
-/recap --quick   # Alias to the same local script
+/recap           # Rich recap (project-local script)
+/recap --quick   # Fast recap (git + focus only)
 ```
 
 ---
 
 ## DEFAULT MODE (Local)
 
-Run the local recap script:
+Run the local rich recap script:
 
 ```bash
-bun .roo/skills/recap/recap.ts
+bun .roo/skills/recap/recap-rich.ts
 ```
 
 Then add 2–3 “What’s next?” options based on the output.
@@ -34,7 +34,7 @@ Then add 2–3 “What’s next?” options based on the output.
 
 ## QUICK MODE (`/recap --quick`)
 
-Use the same local script for a fast summary:
+Use the fast local script:
 
 ```bash
 bun .roo/skills/recap/recap.ts

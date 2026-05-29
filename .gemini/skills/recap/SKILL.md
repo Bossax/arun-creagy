@@ -1,8 +1,8 @@
 ---
-installer: arra-oracle-skills-cli v3.8.3
+installer: arra-oracle-skills-cli v26.5.16
 origin: Nat Weerawan's brain, digitized — how one human works with AI, captured as code — Soul Brews Studio
 name: recap
-description: '[core] v3.8.3 G-SKLL | Session orientation and awareness — retro summaries, handoffs, git state, focus. Use when starting a session, after /jump, lost your place, switching context, or when user asks "now", "where are we", "what are we doing", "status", "recap". Do NOT trigger for "standup" or "morning check" (use /standup), or session mining "dig", "past sessions" (use /dig).'
+description: '[project] v26.5.16 G-SKLL | Session orientation and awareness — retro summaries, handoffs, git state, focus. Use when starting a session, after /jump, lost your place, switching context, or when user asks "now", "where are we", "what are we doing", "status", "recap". Do NOT trigger for "standup" or "morning check" (use /standup), or session mining "dig", "past sessions" (use /dig).'
 argument-hint: "[--now | --deep]"
 trigger: /recap
 ---
@@ -29,63 +29,25 @@ trigger: /recap
 
 ## DEFAULT MODE (Rich)
 
-**Run the rich script, then add suggestions:**
+**Run the local project script, then add suggestions:**
 
 ```bash
-bun ~/.claude/skills/recap/recap-rich.ts
+bun ./.gemini/skills/recap/recap-rich.ts
 ```
 
 Script reads retro summaries, handoff content, tracks, git state. Then LLM adds:
 - **What's next?** (2-3 options based on context)
 
-### Step 2: Git context
-
-```bash
-git status --short
-git log --oneline -1
-```
-
-Check what's appropriate from git status:
-- **Uncommitted changes?** → show them, suggest commit or stash
-- **On a branch (not main)?** → `git log main..HEAD --oneline` to see branch work
-- **Branch ahead of remote?** → suggest push or PR
-- **Clean on main?** → just show last commit, move on
-
-Only read what matters — don't dump 10 commits if status is clean.
-
 ### Step 3: Read latest ψ/ brain files
 
 Sort all ψ/ files by modification time, read the most recent:
 
-**Unix/Bash**:
-```bash
-find ψ/ -name '*.md' -not -name 'CLAUDE.md' -not -name 'README.md' -not -name '.gitkeep' 2>/dev/null | xargs ls -t 2>/dev/null | head -5
-```
-
 **Windows/PowerShell**:
 ```powershell
-Get-ChildItem -Path 'ψ/' -Filter *.md -Recurse | Where-Object { $_.Name -notmatch 'CLAUDE.md|README.md|.gitkeep' } | Sort-Object LastWriteTime -Descending | Select-Object -ExpandProperty FullName -First 5
+Get-ChildItem -Path 'ψ/' -Filter *.md -Recurse | Where-Object { $_.Name -notmatch 'GEMINI.md|README.md|.gitkeep' } | Sort-Object LastWriteTime -Descending | Select-Object -ExpandProperty FullName -First 5
 ```
 
 Read those top 5 files. This recovers the same context `/compact` restores — handoffs, retros, learnings, drafts, whatever was touched last.
-
-### Step 4: Dig last session
-
-```bash
-ENCODED_PWD=$(pwd | sed 's|^/|-|; s|/|-|g')
-PROJECT_BASE=$(ls -d "$HOME/.claude/projects/${ENCODED_PWD}" 2>/dev/null | head -1)
-export PROJECT_DIRS="$PROJECT_BASE"
-python3 ~/.claude/skills/dig/scripts/dig.py 1
-```
-
-Include in recap:
-```
-📡 Last session: HH:MM–HH:MM (Xm, N msgs) — [topic]
-```
-
-Need more? `/dig 5` or `/dig --timeline`.
-
-**Total**: 1 bash call + LLM analysis
 
 ---
 
@@ -94,7 +56,7 @@ Need more? `/dig 5` or `/dig --timeline`.
 **Minimal, no content reads:**
 
 ```bash
-bun ~/.claude/skills/recap/recap.ts
+bun ./.gemini/skills/recap/recap.ts
 ```
 
 Script outputs git status + focus state (~0.1s). Then LLM adds:
@@ -102,147 +64,48 @@ Script outputs git status + focus state (~0.1s). Then LLM adds:
 
 ---
 
-## "What's next?" Rules
+## Hard Rules (v26.5.16 Mandate)
 
-| If you see... | Suggest... |
-|---------------|------------|
-| Handoff exists | Continue from handoff |
-| Untracked files | Commit them |
-| Focus = completed | Pick from tracks or start fresh |
-| Branch ahead | Push or create PR |
-| Streak active | Keep momentum going |
+1. **ONE bun call** — never multiple parallel calls (adds latency).
+2. **No subagents** — everything in main agent context.
+3. **Ask, don't suggest** — "What next?" not "You should...".
+4. **Verify pending before reporting** — See "Verify Before Reporting" below. **NON-NEGOTIABLE.**
+5. **Print absolute paths** — when referencing vault files, render the resolved `$ROOT/ψ/...` path (starts with `C:/` or `/`). Bare `ψ/...` is not clickable.
 
 ---
 
-## Hard Rules
+## Verify Before Reporting (MANDATORY)
 
-1. **ONE bash call** — never multiple parallel calls (adds latency)
-2. **No subagents** — everything in main agent
-3. **Ask, don't suggest** — "What next?" not "You should..."
+Handoffs, retros, and memory files are **point-in-time claims**, not live state. You MUST verify each claimed pending item against current reality:
 
----
+| Claim type | How to verify |
+|---|---|
+| "Copy file X to path Y" | `ls path/Y` or `Test-Path` — is it already there? |
+| "PR #N open/merged" | `gh pr view N --json state` |
+| "Apply pattern P to file F" | `grep` or `Select-String` for the pattern in F |
+
+### The correction pattern
+If handoff and reality diverge, show the correction explicitly:
+
+```
+| Item | Handoff said | Reality |
+|------|--------------|---------|
+| Copy cache/ to maw-ui | pending | DONE (Apr 20 04:16) |
+```
 
 ---
 
 ## NOW MODE (`/recap --now`)
 
-**Mid-session awareness from AI memory** — no file reading needed. Use when user asks "where are we", "now", "status", "what are we doing".
-
-AI reconstructs session timeline from conversation memory:
-
-```markdown
-## This Session
-
-| Time | Duration | Topic | Jump |
-|------|----------|-------|------|
-| HH:MM | ~Xm | First topic | - |
-| HH:MM | ~Xm | Second topic | spark |
-| HH:MM | ongoing | **Now**: Current | complete |
-
-**Noticed**:
-- [Pattern - energy/mode]
-- [Jump pattern: sparks vs escapes vs completions]
-
-**Status**:
-- Energy: [level]
-- Loose ends: [unfinished]
-- Parked: [topics we'll return to]
-
-**My Read**: [1-2 sentences]
-
----
-**Next?**
-```
-
-### Jump Types
-
-| Icon | Type | Meaning |
-|------|------|---------|
-| spark | New idea, exciting |
-| complete | Finished, moving on |
-| return | Coming back to parked |
-| park | Intentional pause |
-| escape | Avoiding difficulty |
-
-**Healthy session**: Mostly sparks and completes
-**Warning sign**: Too many escapes = avoidance pattern
-
----
-
-## NOW DEEP MODE (`/recap --now deep`)
-
-Same as `--now` but adds bigger picture context.
-
-### Step 1: Gather (parallel)
-
-```
-1. Current session from AI memory
-2. Read latest handoff: ls -t ψ/inbox/handoff/*.md | head -1
-3. Git status: git status --short
-4. Tracks: cat ψ/inbox/tracks/INDEX.md 2>/dev/null
-```
-
-### Step 2: Output
-
-Everything from `--now`, plus:
-
-```markdown
-### Bigger Picture
-
-**Came from**: [Last session/handoff summary - 1 line]
-**Working on**: [Current thread/goal]
-**Thread**: [Larger pattern this connects to]
-
-### Pending
-
-| Priority | Item | Source |
-|----------|------|--------|
-| Now | [Current task] | This session |
-| Soon | [Next up] | Tracks/discussion |
-| Later | [Backlog] | GitHub/tracks |
-
-### Connections
-
-**Pattern**: [What pattern emerged]
-**Learning**: [Key insight from session]
-**Oracle**: [Related past pattern, if any]
-
-**My Read**: [2-3 sentences - deeper reflection]
-
-**Next action?**
-```
-
----
-
-## Session Context
-
-The recap scripts (`recap.ts` and `recap-rich.ts`) auto-detect and display the current session:
-
-```
-📡 Session: 74c32f34 | arra-oracle-skills-cli | 2h 15m
-```
-
-Detection: scans `~/.claude/projects/[encoded-pwd]/*.jsonl` for the most recent session file, extracts short ID and elapsed time from first timestamp.
-
-If session detection fails, skip silently — it's informational only.
+AI reconstructs session timeline from conversation memory (no file reading needed). Use for "where are we", "status", "what are we doing".
 
 ---
 
 ## Demographics Context
 
-If CLAUDE.md contains demographics from `/awaken` wizard v2, include in recap output:
-
+If **GEMINI.md** contains demographics, include in one line after the timestamp:
 ```markdown
 **Oracle**: [name] ([pronouns]) | **Human**: [name] ([pronouns]) | **Language**: [pref]
 ```
 
-Add this as one line after the timestamp in any mode. If demographics not present, skip silently.
-
-Look for fields in CLAUDE.md: `Human Pronouns`, `Oracle Pronouns`, `Language`, `Team`, `Experience`.
-
----
-
 **Philosophy**: Detect reality. Surface blockers. Offer direction. *"Not just the clock. The map."*
-
-**Version**: 8.0 (Merged where-we-are into --now mode)
-**Updated**: 2026-02-10
