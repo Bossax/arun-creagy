@@ -37,7 +37,12 @@ tools/
 *.pptx
 *.jpg
 *.png
+
+# Project specific exceptions
 !ψ/incubate/DCCE/CRDB/output/04_Glossary/*.csv
+!ψ/incubate/DCCE/CRDB/output/05_CDM_EARCatalog/*. jpg
+!ψ/incubate/DCCE/CRDB/output/05_CDM_EARCatalog/*. csv
+
 
 # app files
 ψ/incubate/DCCE/CRI/data_system/output/cri_impact_app/dist
