@@ -1,0 +1,39 @@
+Domain_ID,Entity_Name,PK_Type,Term_ID,Definition,Remark
+DOM_010,CLIMATE_SCENARIO,UUID,TERM_052,Hypothetical future pathways (e.g. SSP5-8.5) used for projections.,
+DOM_010,CLIMATE_DRIVER,UUID,TERM_002,Continuous physical states (e.g. Sea Level Rise Temperature).,
+DOM_010,HAZARDOUS_EVENT,DDPM_ID,TERM_001,The realized outcome of a hazard in the real world. Does not include the impact.,Imported from DDPM tracking. DCCE might need to run the ID numbers.
+DOM_010,SATELLITE_OBSERVATION,UUID,TERM_028,Remote sensing data capturing hazard extent and supporting maps.,
+DOM_010,METEOROLOGICAL_OBSERVATION,UUID,TERM_029,Measured weather data from stations used as dynamic inputs.,
+DOM_021,HAZARD_MODELS,UUID,TERM_022,Computational engines that simulate hazards from drivers and static data.,
+DOM_021,HAZARD_MAP,UUID,TERM_043,Spatial representation of hazard intensity (Modeled or Observed).,
+DOM_022,SPATIAL_UNIT,UUID,TERM_013,The geometric foundation (Administrative area census tracts watersheds).,
+DOM_022,EXPOSED_ASSET,UUID,TERM_010,People buildings or crops located in hazard-prone areas.,
+DOM_022,VULNERABILITY_DEFINITION,UUID,TERM_024,The abstract strategy used to define vulnerability (Math vs. Index).,
+DOM_022,VULNERABILITY_FRAMEWORK,UUID,TERM_038,The methodological framework selection.,probabilistic vs index-based vs qualitative approach metadata
+DOM_022,VULNERABILITY_DIMENSION,UUID,TERM_041,Thematic pillars of vulnerability (e.g. Sensitivity and Adaptive Capacity).,definitions of each dimension per framework. One dimension could be named the same with different meaning and focus
+DOM_022,VULNERABILITY_STRUCTURE,UUID,TERM_042,The mapping of specific variables to vulnerability framework dimensions.,tables of maps between the variables in VULNERABILITY_DETERMINANT and the dimension definition
+DOM_022,IMPACT_FUNCTION,UUID,TERM_039,Mathematical curves relating hazard intensity to damage percentage.,damage functions are the subset of impact function
+DOM_022,VULNERABILITY_DETERMINANT,UUID,TERM_011,Neutral social/economic indicators used as model variables.,overeaching database of various datasets
+DOM_023,RISK_ANALYSIS,UUID,TERM_032,An instance of a risk calculation (Probabilistic or Index calculation).,Renamed from ASSESSMENT per CRDB standard
+DOM_023,RISK_METRIC,UUID,TERM_031,Quantitative outcomes from probabilistic risk analysis approach.,
+DOM_023,COMPOSITE_INDEX,UUID,TERM_036,Quantitative scores of risk resilience and other index-based modeling.,Recursive structure
+DOM_024,DISASTER_RECORD,UUID,TERM_045,A single observed occurrence of a hazardous event that becomes a disaster.,
+DOM_024,LOSS_DAMAGE_RECORD,UUID,TERM_046,Detailed impact data per a disaster record.,Dropped Sendai alignment
+DOM_024,ATTRIBUTION_LINK,UUID,TERM_007,The formal logical link asserting cause between Loss and drivers.,Expanded to Vuln/Exp drivers
+DOM_030,RESILIENCE_FRAMEWORK,UUID,TERM_033,The methodological framework for resilience assessment.,metadata of methodology
+DOM_030,RESILIENCE_DIMENSION,UUID,TERM_034,Thematic pillars (e.g. Social Economic Institutional).,definitions of each dimension per framework. One dimension could be named the same with different meaning and focus
+DOM_030,RESILIENCE_STRUCTURE,UUID,TERM_035,Defines the weighting and aggregation logic for specific resilience dimension.,tables of maps between variables and dimensions
+DOM_030,RESILIENCE_ASSESSMENT,UUID,TERM_037,Application of a framework to a spatial unit to generate an index.,
+DOM_040,DECISION_CONTEXT,UUID,TERM_054,Defines the scope problem and uncertainty level for adaptation planning.,New Planning Entity
+DOM_040,ADAPTATION_PORTFOLIO,UUID,TERM_055,Groups multiple adaptation options for collective evaluation.,New Planning Entity
+DOM_040,ADAPTATION_OPTION,UUID,TERM_050,Standardized solutions from the Adaptation Options Library.,linked to DCCE M&E platform
+DOM_040,APPRAISAL_EVENT,UUID,TERM_056,Records the process of evaluating adaptation options.,New Planning Entity
+DOM_040,APPRAISAL_METRIC,UUID,TERM_057,Detailed metrics representing the outcomes of an appraisal.,New Planning Entity
+DOM_040,ADAPTATION_PROJECT,UUID,TERM_049,Specific implementation instances of an adaptation action.,linked to DCCE M&E platform
+DOM_050,INTERVENTION_RESULT,UUID,TERM_058,SMART KPIs measuring project effectiveness.,New MEL Entity
+DOM_050,RISK_TOLERANCE_PROFILE,UUID,TERM_059,Captures stakeholder risk appetite to guide decision-making.,New MEL/Planning Entity
+DOM_050,FUNDING_SOURCE,UUID,TERM_060,Tracking the origin of capital for adaptation projects.,New MEL Entity
+DOM_010,CURATED_PAGE,UUID,TERM_061,Metadata for static content pages (e.g. Provincial Profiles).,Content Entity
+DOM_010,COMMUNICATION_ASSET,UUID,TERM_062,Media synthesis outputs (e.g. Infographics Policy Digests).,Content Entity
+DOM_010,EXTERNAL_REFERENCE,UUID,TERM_063,Catalog entry for ad-hoc data sourcing from the internet.,Content Entity
+DOM_010,EVIDENCE_PACKAGE,UUID,TERM_064,Container for raw data submitted by consultants.,Content Entity

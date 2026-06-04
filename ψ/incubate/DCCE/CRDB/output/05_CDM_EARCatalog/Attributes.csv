@@ -1,0 +1,11 @@
+Entity,Attribute,Data_Nature,Standard_Format
+CLIMATE_DRIVER,Variable_Name,Static,CF Conventions / IPCC
+CLIMATE_DRIVER,Spatiotemporal_Cube,Temporal,NetCDF4 / OPeNDAP
+HAZARDOUS_EVENT,DDPM_ID,Static,DDPM Registry
+SPATIAL_UNIT,Geometry,Spatial,GeoJSON / WKT / DGGS
+EXPOSED_ASSET,Asset_Type,Static,GED4ALL Taxonomy
+LOSS_DAMAGE_RECORD,Mortality_Count,Static,Integer
+LOSS_DAMAGE_RECORD,Economic_Loss_LCU,Static,Float (THB)
+ATTRIBUTION_LINK,Confidence_Level,Static,IPCC Uncertainty Scale
+ADAPTATION_PROJECT,Status,Static,ISO 14090 (Planned/Active)
+INTERVENTION_RESULT,KPI_Value,Static,Numeric/Text

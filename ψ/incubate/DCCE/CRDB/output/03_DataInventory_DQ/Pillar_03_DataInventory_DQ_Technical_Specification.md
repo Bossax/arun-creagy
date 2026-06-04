@@ -21,8 +21,9 @@ It is intentionally written as a **TOR-first / Phase-1 governance standard** tha
 
 1. **Information Product Inventory** (products/services)
 2. **Baseline Data Inventory** (raw datasets)
-
-Supporting artifacts (optional):
+    - **Current Canonical Artifact**: `data_catalog_v3.csv` (Hardened Baseline)
+    - **Alignment**: DGA Government Open Data Standard (Technical Headers) + Pillar 5 CDM Domains.
+    - **Governance Posture**: Phase-1 Discovery (Draft status, Unverified baseline).
 
 - Gap analysis tables/matrices that derive from these inventories
 - Evidence notes that justify row entries

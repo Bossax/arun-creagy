@@ -1,0 +1,35 @@
+﻿Parent_Entity,Child_Entity,Cardinality,Business_Rule,Remark
+CLIMATE_SCENARIO,CLIMATE_DRIVER,1:N,Scenarios simulate multiple physical drivers.,
+CLIMATE_DRIVER,HAZARDOUS_EVENT,1:N,Drivers (Stress) manifest as specific Events (Shocks).,"it is nore like climate drivers contribute to the changes in the hazard characteristics. Not sure if this entity should be moderated by an intermediate entity? However, this is like saying a flooding event is attributed by a,b,c climate drivers."
+HAZARD_MODELS,HAZARD_MAP,1:N,Models simulate intensity and extent; Maps store spatial results.,
+SATELLITE_OBSERVATION,HAZARD_MAP,1:N,Observations produce historical observed maps.,
+SPATIAL_UNIT,EXPOSED_ASSET,1:N,Assets are contained within spatial units.,
+EXPOSED_ASSET,VULNERABILITY_FRAMEWORK,N:1,Assets share a vulnerability framework taxonomy.,one asset can be analyzed its risk based on either probabilistic approach (with impact or damage functions) or index-based approach
+VULNERABILITY_FRAMEWORK,IMPACT_FUNCTION,1:N,Polymorphic: implements Math-path implementation.,"if the framework is probabilistic, links to a asset-specific impact function"
+VULNERABILITY_FRAMEWORK,VULNERABILITY_DIMENSION,1:N,Frameworks are composed of multiple dimensions.,
+VULNERABILITY_DIMENSION,VULNERABILITY_STRUCTURE,1:N,Dimensions define the logic of the structure.,the structure is a map of variables and dimensions per framework definitions
+VULNERABILITY_STRUCTURE,VULNERABILITY_DETERMINANT,N:1,Determinant Neutrality: Indicators are neutral.,pool datasets of variables
+RISK_ANALYSIS,HAZARD_MAP,N:1,Analysis uses physical intensity maps.,
+RISK_ANALYSIS,CLIMATE_DRIVER,N:1,Analysis uses climate indices (for index-based approach).,
+RISK_ANALYSIS,RISK_METRIC,1:N,Produces quantitative probabilistic metrics.,
+RISK_ANALYSIS,COMPOSITE_INDEX,1:N,Produces unitless/dimensionless indices and scores.,
+HAZARDOUS_EVENT,DISASTER_RECORD,1:1,Hazardous events are documented in disaster records.,
+DISASTER_RECORD,HAZARD_MAP,N:1,Disaster records document hazard extents.,If available. Or this should be ingerited through HAZARDOUS_EVENT?
+HAZARDOUS_EVENT,SATELLITE_OBSERVATION,1:N,Events extent observed by satellite.,not all hazardous events have difinitive footprints
+DISASTER_RECORD,LOSS_DAMAGE_RECORD,1:N,Records include multiple loss/damage entries.,which may or may not exist
+LOSS_DAMAGE_RECORD,ATTRIBUTION_LINK,1:1,Loss is explained by an attribution link.,
+ATTRIBUTION_LINK,CLIMATE_DRIVER,N:1,Link attributes loss to a slow-onset driver.,
+EXPOSED_ASSET,LOSS_DAMAGE_RECORD,1:N,Assets sustain realized losses.,
+RESILIENCE_FRAMEWORK,RESILIENCE_DIMENSION,1:N,Resilience frameworks define thematic pillars.,
+RESILIENCE_DIMENSION,RESILIENCE_STRUCTURE,1:N,Dimensions define the weighting/aggregation logic.,
+RESILIENCE_STRUCTURE,VULNERABILITY_DETERMINANT,N:1,Determinant Neutrality: Reuses neutral indicators.,
+RESILIENCE_ASSESSMENT,COMPOSITE_INDEX,1:N,Generates resilience scores (Recursive).,
+DECISION_CONTEXT,ADAPTATION_PORTFOLIO,1:N,Planning context informs collective portfolios.,
+ADAPTATION_PORTFOLIO,ADAPTATION_OPTION,1:N,Portfolios contain multiple options.,
+ADAPTATION_OPTION,APPRAISAL_EVENT,1:N,Options are evaluated via appraisal events.,
+APPRAISAL_EVENT,APPRAISAL_METRIC,1:N,Events generate detailed appraisal metrics.,
+ADAPTATION_OPTION,ADAPTATION_PROJECT,1:N,Options are implemented as specific projects.,
+ADAPTATION_PROJECT,RISK_ANALYSIS,N:1,Projects are justified by a risk baseline.,
+ADAPTATION_PROJECT,INTERVENTION_RESULT,1:N,Projects achieve specific measurable results.,
+RISK_TOLERANCE_PROFILE,DECISION_CONTEXT,1:N,Stakeholder appetite guides the decision context.,
+ADAPTATION_PROJECT,FUNDING_SOURCE,N:1,Projects are supported by various funding origins.,

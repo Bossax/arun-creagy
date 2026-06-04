@@ -1,0 +1,29 @@
+Domain_ID,Entity_Name,PK_Type,Term_ID,Definition
+DOM_01,CLIMATE_SCENARIO,UUID,TERM_015,Hypothetical future pathways (e.g. SSP5-8.5) used for projections.
+DOM_01,CLIMATE_DRIVER,UUID,TERM_002,Continuous physical states (e.g. Sea Level Rise Temperature).
+DOM_01,HAZARDOUS_EVENT,WMO-CHE UUID,TERM_001,Discrete occurrences of disasters (e.g. Typhoon Yagi).
+DOM_01,SATELLITE_OBSERVATION,UUID,TERM_028,Remote sensing data capturing hazard extent and supporting maps.
+DOM_01,METEOROLOGICAL_OBSERVATION,UUID,TERM_029,Measured weather data from stations used as dynamic inputs.
+DOM_02,HAZARD_MODELS,UUID,TERM_022,Computational engines that simulate hazards from drivers and static data.
+DOM_02,HAZARD_MAP,UUID,TERM_043,Spatial representation of hazard intensity (Modeled or Observed).
+DOM_02,SPATIAL_UNIT,UUID,TERM_013,The geometric foundation (Admin Level 3 DGGS Cell Watershed).
+DOM_02,EXPOSED_ASSET,UUID,TERM_010,People buildings or crops located in hazard-prone areas.
+DOM_02,VULNERABILITY_FRAMEWORK,UUID,TERM_038,The abstract strategy used to define vulnerability (Math vs. Index).
+DOM_02,VULNERABILITY_DIMENSION,UUID,TERM_041,Thematic pillars of vulnerability (e.g. Sensitivity Capacity).
+DOM_02,VULNERABILITY_STRUCTURE,UUID,TERM_042,The mapping of specific variables to vulnerability framework dimensions.
+DOM_02,IMPACT_FUNCTION,UUID,TERM_012,Mathematical curves relating hazard intensity to damage percentage.
+DOM_02,VULNERABILITY_DETERMINANT,UUID,TERM_011,Neutral social/economic indicators used as model variables.
+DOM_02,RISK_ASSESSMENT,UUID,TERM_030,An instance of a risk calculation (Probabilistic or Composite).
+DOM_02,RISK_METRIC,UUID,TERM_031,Quantitative outcomes (e.g. Expected Annual Loss).
+DOM_02,COMPOSITE_INDEX,UUID,TERM_036,Qualitative or normalized resilience/vulnerability scores (Recursive).
+DOM_02,DISASTER_EVENT,UUID,TERM_044,The realized outcome of a hazard interacting with exposure.
+DOM_02,DISASTER_RECORD,UUID,TERM_045,A single observed occurrence of a disaster with summary statistics.
+DOM_02,LOSS_DAMAGE_RECORD,UUID,TERM_046,Historical impact data categorized by Sendai Targets A-D.
+DOM_02,ATTRIBUTION_LINK,UUID,TERM_007,The formal logical link asserting cause between Loss and Hazard/Driver.
+DOM_03,RESILIENCE_FRAMEWORK,UUID,TERM_033,The governing methodology for resilience assessment.
+DOM_03,RESILIENCE_DIMENSION,UUID,TERM_034,Thematic pillars (e.g. Social Economic Institutional).
+DOM_03,RESILIENCE_STRUCTURE,UUID,TERM_035,Defines the weighting and aggregation logic for specific determinants.
+DOM_03,RESILIENCE_ASSESSMENT,UUID,TERM_037,Application of a framework to a spatial unit to generate an index.
+DOM_04,ADAPTATION_OPTION,UUID,TERM_020,Standardized solutions from the Adaptation Options Library.
+DOM_04,ADAPTATION_PROJECT,UUID,TERM_049,Specific implementation instances of an adaptation action.
+DOM_04,ADAPTATION_PROCESS,UUID,TERM_053,The National Adaptation Plan (NAP) iterative process (Modules A-D).

@@ -1,0 +1,5 @@
+Domain_ID,Domain_Name,Owner,Core_Logic
+DOM_010,Physical Climate,,From raw observations to Drivers and Hazardous Events (The Cause).
+DOM_020,Risk and Impact Assessment,,The core engine combining Hazard Exposure and Vulnerability (The Calculation).
+DOM_030,Resilience Assessment,,Hierarchical scoring of adaptive capacity (The Capacity).
+DOM_040,Adaptation Planning,,ISO 14090 Adaptation Cycle and iterative decision support (The Action).

@@ -1,0 +1,10 @@
+Domain_ID,Domain_Name,Owner,Core_Logic
+DOM_010,Physical Climate,Climate Science,From raw observations to Drivers and Hazardous Events (The Cause).
+DOM_020,Risk and Impact Assessment,Risk Analysis,The core engine combining Hazard Exposure and Vulnerability (The Calculation).
+DOM_021,Hazard,Risk Analysis,Derivation of hazard maps from various sources for risk analysis.
+DOM_022,Vulnerability and Exposure,Risk Analysis,Derivation of exposure data and vulnerability modeling for risk analysis.
+DOM_023,Risk Analysis,Risk Analysis,Qualitative and quantitative analysis of risks.
+DOM_024,Disaster and Impact,Risk Analysis,Historical tracking of disaster events and realized impacts.
+DOM_030,Resilience Assessment,Policy and Planning,Hierarchical scoring of adaptive capacity (The Capacity).
+DOM_040,Adaptation Planning,Implementation,ISO 14090 Adaptation Cycle and iterative decision support (The Action).
+DOM_050,Monitoring Evaluation Learning,Policy and Planning,Tracking the effectiveness and long-term impact of adaptation interventions.

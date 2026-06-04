@@ -1,0 +1,32 @@
+Parent_Entity,Child_Entity,Cardinality,Business_Rule
+CLIMATE_SCENARIO,CLIMATE_DRIVER,1:N,Scenarios simulate multiple physical drivers.
+CLIMATE_DRIVER,HAZARDOUS_EVENT,1:N,Drivers (Stress) manifest as specific Events (Shocks).
+HAZARDOUS_EVENT,DISASTER_RECORD,1:1,Disaster records document hazardous events.
+HAZARDOUS_EVENT,SATELLITE_OBSERVATION,1:N,Events are extent-observed by satellite passes.
+HAZARD_MODELS,HAZARD_MAP,1:N,Models simulate intensity; Maps store spatial results.
+SATELLITE_OBSERVATION,HAZARD_MAP,1:N,Observations produce historical observed maps.
+SPATIAL_UNIT,EXPOSED_ASSET,1:N,Assets are contained within spatial units.
+EXPOSED_ASSET,VULNERABILITY_FRAMEWORK,N:1,Assets share a vulnerability framework taxonomy.
+VULNERABILITY_FRAMEWORK,IMPACT_FUNCTION,1:N,Polymorphic: implements Math-path implementation.
+VULNERABILITY_FRAMEWORK,VULNERABILITY_DIMENSION,1:N,Frameworks are composed of multiple dimensions.
+VULNERABILITY_DIMENSION,VULNERABILITY_STRUCTURE,1:N,Dimensions define the logic of the structure.
+VULNERABILITY_STRUCTURE,VULNERABILITY_DETERMINANT,N:1,Determinant Neutrality: Indicators are neutral.
+RISK_ANALYSIS,HAZARD_MAP,N:1,Analysis uses physical intensity maps.
+RISK_ANALYSIS,CLIMATE_DRIVER,N:1,Analysis uses climate indices (index-based).
+RISK_ANALYSIS,RISK_METRIC,1:N,Produces quantitative probabilistic metrics.
+RISK_ANALYSIS,COMPOSITE_INDEX,1:N,Produces normalized policy scores.
+RESILIENCE_FRAMEWORK,RESILIENCE_DIMENSION,1:N,Resilience frameworks define thematic pillars.
+RESILIENCE_DIMENSION,RESILIENCE_STRUCTURE,1:N,Dimensions define the weighting/aggregation logic.
+RESILIENCE_STRUCTURE,VULNERABILITY_DETERMINANT,N:1,Determinant Neutrality: Reuses neutral indicators.
+RESILIENCE_ASSESSMENT,COMPOSITE_INDEX,1:N,Generates resilience scores (Recursive).
+COMPOSITE_INDEX,COMPOSITE_INDEX,1:N,Recursive: Indices can be composed of other indices.
+DISASTER_RECORD,LOSS_DAMAGE_RECORD,1:N,Disaster records include detailed loss/damage items.
+EXPOSED_ASSET,LOSS_DAMAGE_RECORD,1:N,Assets sustain multiple loss records.
+LOSS_DAMAGE_RECORD,ATTRIBUTION_LINK,1:N,Attribution must be anchored to realized loss evidence.
+RISK_TOLERANCE_PROFILE,DECISION_CONTEXT,1:N,Tolerance profiles guide decision contexts.
+DECISION_CONTEXT,ADAPTATION_PORTFOLIO,1:N,Contexts inform adaptation portfolios.
+ADAPTATION_PORTFOLIO,ADAPTATION_OPTION,1:N,Portfolios contain adaptation options.
+ADAPTATION_OPTION,ADAPTATION_PROJECT,1:N,Options are implemented as projects.
+ADAPTATION_PROJECT,RISK_ANALYSIS,N:1,Projects are justified by a risk analysis baseline.
+ADAPTATION_PROJECT,INTERVENTION_RESULT,1:N,Projects achieve measurable results.
+INTERVENTION_RESULT,COMPOSITE_INDEX,N:1,Feedback Loop: Results improve resilience indices.

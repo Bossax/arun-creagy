@@ -1,0 +1,39 @@
+Parent_Entity,Child_Entity,Cardinality,Business_Rule,Remark
+CLIMATE_SCENARIO,CLIMATE_DRIVER,1:N,Scenarios simulate multiple physical drivers.,
+CLIMATE_DRIVER,HAZARD_MODELS,1:N,Drivers act as forcing inputs to computational models.,Decision 1 (Forward Path)
+HAZARD_MODELS,HAZARD_MAP,1:N,Models simulate intensity and extent based on drivers.,Decision 1 (Forward Path)
+SATELLITE_OBSERVATION,HAZARD_MAP,1:N,Satellite imagery generates historical observed hazard maps.,Decision 1 (Historical Path)
+HAZARDOUS_EVENT,HAZARD_MAP,1:N,Hazardous events are represented by their spatial footprint/map.,Decision 1 (Evidence Link)
+RISK_ANALYSIS,HAZARD_MAP,N:1,Analysis uses intensity maps as the core computational payload.,Decision 1 (The Payload)
+DISASTER_RECORD,SPATIAL_UNIT,1:N,Disaster records are anchored to administrative boundaries (villages).,Decision 2 (The Anchor)
+HAZARD_MAP,DISASTER_RECORD,N:1,Hazard map inherits administrative context from the disaster report.,Decision 2 (Inheritance)
+SATELLITE_OBSERVATION,DISASTER_RECORD,N:1,Satellite observations directly verify reported impact extents.,User Direct Link
+INTERVENTION_RESULT,COMPOSITE_INDEX,N:1,Project successes physically update national resilience scores.,Decision 3 (MEL Loop)
+EXPOSED_ASSET,VULNERABILITY_FRAMEWORK,N:1,Assets share a vulnerability definition strategy.,
+VULNERABILITY_FRAMEWORK,IMPACT_FUNCTION,1:N,Framework implements math-based damage curves if probabilistic.,
+VULNERABILITY_FRAMEWORK,VULNERABILITY_DIMENSION,1:N,Frameworks are composed of thematic pillars (Sensitivity etc).,
+VULNERABILITY_DIMENSION,VULNERABILITY_STRUCTURE,1:N,Dimensions define the weighting and variable mapping logic.,
+VULNERABILITY_STRUCTURE,VULNERABILITY_DETERMINANT,N:1,Indicators are neutral facts stored in a shared library.,Determinant Neutrality
+RISK_ANALYSIS,CLIMATE_DRIVER,N:1,Analysis uses climate indices for index-based/semi-quant risk.,
+RISK_ANALYSIS,RISK_METRIC,1:N,Produces quantitative metrics (e.g. Expected Annual Loss).,
+RISK_ANALYSIS,COMPOSITE_INDEX,1:N,Produces unitless policy scores and composite indices.,
+HAZARDOUS_EVENT,DISASTER_RECORD,1:1,Institutional event record linked to disaster impact record.,DDPM/Met Agency Sync
+DISASTER_RECORD,LOSS_DAMAGE_RECORD,1:N,Disaster records include granular loss/damage entries.,
+LOSS_DAMAGE_RECORD,ATTRIBUTION_LINK,1:1,Loss is explained by an associative attribution link.,
+ATTRIBUTION_LINK,CLIMATE_DRIVER,N:1,Attributes loss to specific climatic drivers.,Risk Attribution
+ATTRIBUTION_LINK,VULNERABILITY_STRUCTURE,N:1,Attributes loss to changes in vulnerability profiles.,Risk Attribution
+ATTRIBUTION_LINK,EXPOSED_ASSET,N:1,Attributes loss to changes in exposure/asset density.,Risk Attribution
+EXPOSED_ASSET,LOSS_DAMAGE_RECORD,1:N,Exposed assets sustain the realized historical losses.,
+RESILIENCE_FRAMEWORK,RESILIENCE_DIMENSION,1:N,Methodology defines the thematic pillars of resilience.,Symmetrical to Vuln
+RESILIENCE_DIMENSION,RESILIENCE_STRUCTURE,1:N,Weighting and aggregation logic per resilience dimension.,Symmetrical to Vuln
+RESILIENCE_STRUCTURE,VULNERABILITY_DETERMINANT,N:1,Resilience logic reuses the same neutral indicators.,Determinant Neutrality
+RESILIENCE_ASSESSMENT,COMPOSITE_INDEX,1:N,Assessment generates the dynamic resilience scores.,
+DECISION_CONTEXT,ADAPTATION_PORTFOLIO,1:N,Adaptation planning context informs collective portfolios.,ISO 14090
+ADAPTATION_PORTFOLIO,ADAPTATION_OPTION,1:N,Portfolios group multiple solution options.,
+ADAPTATION_OPTION,APPRAISAL_EVENT,1:N,Options are evaluated via appraisal events (CBA etc).,
+APPRAISAL_EVENT,APPRAISAL_METRIC,1:N,Appraisals generate detailed outcome metrics.,
+ADAPTATION_OPTION,ADAPTATION_PROJECT,1:N,Options are implemented as specific resource-bound projects.,
+ADAPTATION_PROJECT,RISK_ANALYSIS,N:1,Projects are justified by a risk baseline/analysis.,
+ADAPTATION_PROJECT,INTERVENTION_RESULT,1:N,Projects achieve specific measurable SMART results.,
+RISK_TOLERANCE_PROFILE,DECISION_CONTEXT,1:N,Stakeholder risk appetite guides the planning context.,
+ADAPTATION_PROJECT,FUNDING_SOURCE,N:1,Projects are supported by various financial origins.,

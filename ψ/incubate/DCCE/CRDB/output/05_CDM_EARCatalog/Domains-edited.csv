@@ -1,0 +1,10 @@
+﻿Domain_ID,Domain_Name,Owner,Core_Logic
+DOM_010,Physical Climate,,From raw observations to Drivers and Hazardous Events (The Cause).
+DOM_020,Risk and Impact Assessment,กลุ่มพัฒนาข้อมูลความเสี่ยง,The core engine combining Hazard Exposure and Vulnerability (The Calculation).
+DOM_030,Resilience Assessment,,Hierarchical scoring of adaptive capacity (The Capacity).
+DOM_040,Adaptation Planning,,ISO 14090 Adaptation Cycle and iterative decision support (The Action).
+DOM_050,Monitoring Evaluation Learning ,,
+DOM_021,Hazard,กลุ่มพัฒนาข้อมูลความเสี่ยง,Derivation of hazard maps from various sources for risk analysis
+DOM_022,Vulnerability and Exposure,กลุ่มพัฒนาข้อมูลความเสี่ยง,Derivation of exposure datas and vulnerability modeling for risk analysis
+DOM_023,Risk Analysis,กลุ่มพัฒนาข้อมูลความเสี่ยง,Qualitative and quantitative analysis of risks
+DOM_024,"Disaster, Impact, L&D",กลุ่มพัฒนาข้อมูลความเสี่ยง,Backward looking of disaster events and their impacts
