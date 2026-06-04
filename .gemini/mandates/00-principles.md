@@ -6,7 +6,7 @@
 1. **NO UNPROMPTED EXECUTION**: You are prohibited from using replace, write_file, or modifying shell commands unless the user explicitly provides a **\"GREEN LIGHT\"** or says \"Execute.\"
 2. **INQUIRY PRECEDENCE**: Treat every user message as an **Inquiry** (Research/Analysis) rather than a **Directive** (Implementation). 
 3. **PLAN-ONLY OUTPUT**: When asked to \"update,\" \"fix,\" or \"change\" something, you MUST only propose the text/diff in the chat. STOP and wait for approval.
-4. **THINKING OVER DOING**: If you identify a bug or a logic gap (like the \"Portal Trap\"), you must explain it and ask \"How do we play this?\" before touching any files.
+4. **THINKING OVER DOING**: If you identify a bug or a logic gap, you must explain it and ask \"How do we play this?\" before touching any files.
 
 ---
 

@@ -1,75 +1,44 @@
-# Technical Specification: Pillar 7 - Governance Operating Model+ Division Buy-in Execution Plan
+# Technical Specification: Pillar 7 - Governance Operating Model (Phase 1)
 
-## 0. Purpose (DAMA-aligned, time- and resource-bounded)
+## 0. Purpose
+Pillar 7 defines the institutional operating model required to ensure the sustainability of the National Climate Change Adaptation Information Framework (NCAIF). The goal is to move from a static document repository to a managed data service by locking divisional accountability and technical standards before the 2027 implementation phase.
 
-Pillar 7 is not only a role chart. It is the **execution plan** to secure division-wide buy-in so governance does not become stale shelfware.
+This specification is anchored in three strategic milestones:
+1. **DCCE as Product Owner**: Establishing functional requirements derived from validated use cases.
+2. **Certified Data Ownership**: Assigning divisional accountability for sitemap content.
+3. **Enforced Standards**: Ensuring data interoperability and fidelity via the Conceptual Data Model.
 
-Given limited time and resources, the objective is to **close the major pitfalls** of stale governance by locking:
+## 1. Functional Requirements
 
-1. **Decision rights** (who can approve what)
-2. **Operational cadence** (when decisions happen)
-3. **Minimum viable artifacts** (what must exist so work is repeatable)
-4. **Escalation + conflict resolution** (how stalemates are resolved)
-5. **Traceability** (what was decided, when, by whom)
+### 1.1 Artifact A: Website Content & Stewardship Matrix
+The matrix serves as the primary record of institutional accountability. It must map every node of the NCAIF Sitemap (v6.1+) to a specific DCCE division.
+*   **Mandatory Fields**:
+    *   `Node_ID`: Unique identifier from the sitemap.
+    *   `Data_Owner`: Group Director (Accountable for accuracy and mandate).
+    *   `Data_Steward`: Operational Staff (Responsible for day-to-day verification).
+    *   `Technical_Custodian`: Section 7 / Central Database Group (Responsible for technical infrastructure).
+    *   `Update_Cadence`: Required frequency of content/data review.
 
-This aligns with the project’s “architectural baseline before implementation” stance: [`ψ/incubate/DCCE/CRDB/inbox_source/The Enterprise Data System Development Lifecycle.md`](ψ/incubate/DCCE/CRDB/inbox_source/The%20Enterprise%20Data%20System%20Development%20Lifecycle.md:64).
+### 1.2 Artifact B: Use Case-Led Functional Specifications (2027 Baseline)
+To protect the department from procurement-stage logic invention, the functional requirements for the next-generation system must be derived strictly from the **10 Canonical Use Cases (UC-01 to UC-10)**.
+*   **Requirements**:
+    *   **Module Alignment**: Every proposed system function must map to a specific operational step defined in the Pillar 2 Functional Specifications.
+    *   **Data-Service Integration**: The system must prioritize the delivery of the information services identified in the Use Case Inventory (e.g., Provincial Risk Profiles, Sector Resilience Summaries).
+    *   **Validation Logic**: Functional requirements must include the "Validation Rubrics" needed to ensure information fidelity across divisions.
 
-## 1. Data Structural Requirements
-
-### 1.1 Artifact set (minimum viable governance package)
-
-*   **Primary Artifact A**: Stewardship Matrix (who owns what)
-    * **File Type**: Structured Excel (.xlsx) or Comma-Separated Values (.csv)
-*   **Primary Artifact B**: Governance Buy-in Execution Plan (how governance runs)
-    * **File Type**: Markdown (.md) + optional spreadsheet annex
-*   **Primary Artifact C**: Decision Log (traceability spine)
-    * **File Type**: Markdown (.md) or spreadsheet
-
-### 1.2 Mandatory schema — RACI matrix
-
-*   **`Data_Domain_ID`**: Identifier for the domain (aligned to Pillar 1 subject areas).
-*   **`Steward_Role`**: The DCCE sub-division/position responsible for day-to-day authoring/verifying.
-*   **`Approval_Authority`**: The executive role required for formal ratification.
-*   **`Consulted_Agencies`**: External stakeholders involved (as-needed).
-*   **`Technical_Custodian`**: Entity responsible for system operations (future implementer / contractor).
-
-### 1.3 Mandatory schema — execution plan (buy-in mechanics)
-
-The execution plan must define:
-
-*   **Operating cadence**:
-    * Weekly/biweekly **Steward Review** (working-level)
-    * Monthly **Division Governance Review** (approval + escalations)
-*   **Decision categories** (minimum set), mapped to the 5 gates (Pillar 3):
-    * G1 classification / rail assignment
-    * G2 metadata minima exceptions
-    * G3 endorsement authority + “recommended baseline” decisions
-    * G4 canonical boundary + crosswalk ownership %% irrelevant %%
-    * G5 revision/maturity labels for event/impact records
-*   **Onboarding workflow** for each steward role:
-    * required reading (what to know)
-    * the first 3 decisions they must complete (to avoid “no-op stewardship”)
-*   **Escalation path**:
-    * what triggers escalation (e.g., Contested reference set in Pillar 7)
-    * timebox + who decides when timebox expires
-*   **Handoff contract** to Project B:
-    * which governance artifacts become contractual acceptance criteria for implementation.
+### 1.3 Artifact C: Standards Adherence (Glossary & Conceptual Data Model)
+The **Business Glossary** and **Conceptual Data Model (CDM)** are the mandatory technical rails for all divisional data exchange.
+*   **Fidelity Requirement**: Every data entity presented on the website must map to a unique definition in the Conceptual Data Model to prevent naming ambiguity and reduce manual processing.
 
 ## 2. Verification Criteria
-
-*   **Authority alignment**: 100% of “Accountable” roles must be assigned to DCCE division-level leadership to ensure institutional sovereignty.
-*   **Domain coverage**: The RACI must cover all Pillars and at minimum the CDM’s logical domains.
-*   **Execution realism**: The execution plan must specify a cadence and named meeting owners. If cadence is missing, governance is considered non-operational.
-*   **Decision traceability**: Every governance decision category must have a Decision Log entry template (date, decision, rationale, approver, affected artifacts).
-*   **Integration with Pillar 1/8**:
-    * Pillar 1 uses `Feasibility_Posture` per row and must have an escalation rule when posture stays `Unknown` beyond a defined timebox: [`ψ/incubate/DCCE/CRDB/output/01_Sitemap_InterfaceMapping/Pillar_01_Sitemap_InterfaceMapping_Technical_Specification.md`](ψ/incubate/DCCE/CRDB/output/01_Sitemap_InterfaceMapping/Pillar_01_Sitemap_InterfaceMapping_Technical_Specification.md:33)
-    * Pillar 8 uses `Reference_Status` per entity and must have a resolution workflow for `Contested`: [`ψ/incubate/DCCE/CRDB/output/08_RefData_Matrix/Pillar_08_RefData_Matrix_Technical_Specification.md`](ψ/incubate/DCCE/CRDB/output/08_RefData_Matrix/Pillar_08_RefData_Matrix_Technical_Specification.md:1)
+*   **Accountability Coverage**: 100% of sitemap nodes must have a named Group Director assigned as the Data Owner.
+*   **Use Case Traceability**: Artifact B must demonstrate 1:1 traceability between functional requirements and the 10 Canonical Use Cases.
+*   **Inter-Divisional Alignment**: The Stewardship Matrix must explicitly define the coordination between the **Adaptation Division (Content/Logic)** and the **Central Database Group (IT/Infrastructure)**.
 
 ## 3. Implementation Constraints
+*   **Domain Expertise Gap Mitigation**: Stewardship roles must be supported by standardized verification procedures. These procedures allow staff to validate content for citation accuracy, even when technical climate adaptation expertise is localized in specific groups.
+*   **Resource Alignment**: Governance workflows must be integrated into existing divisional duties. If a role or cadence cannot be sustained with current staff capacity, it must be simplified or automated in the 2027 system design.
+*   **Contractual Integrity**: These governance roles and standards form the baseline for the 2027 implementation contract. The future vendor is prohibited from modifying the DCCE-owned logical models or use-case flows.
 
-*   **No-shelfware rule**: If governance cannot be executed with current resourcing, the plan must reduce scope rather than invent roles/cadence that will not run.
-*   **Separation of concerns**:
-    * Pillar 3 defines governance semantics (G1–G5 meanings).
-    * Pillar 7 defines who decides + how decisions are made operationally.
-*   **Procurement shield**: The implementation contractor must adopt the Pillar 7 decision rights + workflow as contractual non-negotiables.
-*   **Avoid overclaim**: Pillar 7 defines *workflows and decision rights*; it does not assume the existence of fully implemented automation until Project B.
+---
+*Technical Specification — Pillar 7: Governance Operating Model*
