@@ -61,17 +61,17 @@ This document provides the structural blueprint for the 10 mandated deliverables
 
 ## 3. Summary of Pillar-to-Deliverable Mapping
 
-| Pillar | TOR Deliverable (The Shell) | Hardening Artifact (The Bridge) | Target Package |
-| :--- | :--- | :--- | :--- |
-| **P1. Sitemap** | Sitemap | **Interface Mapping** | Package A |
-| **P2. Use Cases** | Use Case Inventory | **Functional Specifications** | Package B |
-| **P3. Data Inventory** | Data & Product Inventory | **DQ Framework (G1-G5)** | Package C |
-| **P4. Glossary** | Terminology Authority | **Universal Semantic Layer** | Package A/D |
-| **P5. CDM** | Conceptual Data Model | **EAR Catalog** | Package A |
-| **P6. LDM (L&D)** | MVD & Reporting Forms | **LDM templates + validation rules (no math engine assumed)** | Package C |
-| **P7. Governance** | Governance Framework | **Stewardship RACI** | Package B |
-| **P8. Ref Data Matrix**| (Architecture Dependency) | **The Universal Translator** | Package C |
-| **P9. Building Blocks**| Recommendations (5.2) | **Procurement Tiers** | Package A |
+| Pillar                  | TOR Deliverable (The Shell) | Hardening Artifact (The Bridge)                               | Target Package |
+| :---------------------- | :-------------------------- | :------------------------------------------------------------ | :------------- |
+| **P1. Sitemap**         | Sitemap                     | **Interface Mapping**                                         | Package A      |
+| **P2. Use Cases**       | Use Case Inventory          | **Functional Specifications**                                 | Package B      |
+| **P3. Data Inventory**  | Data & Product Inventory    | **DQ Framework (G1-G5)**                                      | Package C      |
+| **P4. Glossary**        | Terminology Authority       | **Universal Semantic Layer**                                  | Package A/D    |
+| **P5. CDM**             | Conceptual Data Model       | **EAR Catalog**                                               | Package A      |
+| **P6. LDM (L&D)**       | MVD & Reporting Forms       | **LDM templates + validation rules (no math engine assumed)** | Package C      |
+| **P7. Governance**      | Governance Framework        | **Stewardship structure**                                     | Package B      |
+| **P8. Ref Data Matrix** | (Architecture Dependency)   | **The Universal Translator**                                  | Package C      |
+| **P9. Building Blocks** | Recommendations (5.2)       | **Procurement Tiers**                                         | Package A      |
 
 ---
 
@@ -101,8 +101,7 @@ This document provides the structural blueprint for the 10 mandated deliverables
 *   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/06_LDM_LossDamage_DataModel/Pillar_06_LDM_LossDamage_DataModel_Technical_Specification.md|Pillar 6 (LDM) Technical Specification]].
 *   **Summary**: Defines the logical data model (entities + relationships) for Loss & Damage reporting. Computation formulas are treated as separate, explicit artifacts when needed (do not assume they are embedded in the LDM).
 
-### **Pillar 7: Governance (RACI & Workflow)**
-*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/07_Governance_RACI/Pillar_07_Governance_RACI_Technical_Specification.md|Pillar 7 (Governance) Technical Specification]].
+*   **Technical Spec**: [[ψ/incubate/DCCE/CRDB/output/07_Governance_RACI/Pillar_07_Governance_Operating_Model_Technical_Specification|Pillar 7 (Governance) Technical Specification]].
 *   **Summary**: Defines the humans in the loop. The SI must build the digital gates (G1-G5) that enforce these DCCE approval roles.
 
 ### **Pillar 8: Reference Data Matrix**

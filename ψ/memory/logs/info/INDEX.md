@@ -1,5 +1,8 @@
 # Info Log Index
 
+- [2026-06-04 10:41] 🟡 **Director Toey feedback post-workshop**: Concerns about user retention (suggests hooking private sector/banks), undecided on raw data downloads, wants roadmap, suggests raising Data Standards in FGD3.
+  - File: ψ/memory/logs/info/2026-06-04_10-41_director-toey-feedback-post-workshop.md
+
 - [2026-05-26 11:20] 🚩 **CRDB June engagement sequence (Important)**: Director Toey on 8 June / 12 June, likely Director Nid the following week, then FGD3 in the last week of June.
   - File: ψ/memory/logs/info/2026-05-26_11-20_crdb-june-engagement-sequence-toey-nid-fgd3.md
 

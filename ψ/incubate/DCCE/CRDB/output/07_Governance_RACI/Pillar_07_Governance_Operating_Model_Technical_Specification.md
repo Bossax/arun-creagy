@@ -1,4 +1,4 @@
-# Technical Specification: Pillar 7 - Governance Operating Model (RACI) + Division Buy-in Execution Plan
+# Technical Specification: Pillar 7 - Governance Operating Model+ Division Buy-in Execution Plan
 
 ## 0. Purpose (DAMA-aligned, time- and resource-bounded)
 
@@ -18,7 +18,7 @@ This aligns with the project’s “architectural baseline before implementation
 
 ### 1.1 Artifact set (minimum viable governance package)
 
-*   **Primary Artifact A**: Stewardship RACI Matrix (who owns what)
+*   **Primary Artifact A**: Stewardship Matrix (who owns what)
     * **File Type**: Structured Excel (.xlsx) or Comma-Separated Values (.csv)
 *   **Primary Artifact B**: Governance Buy-in Execution Plan (how governance runs)
     * **File Type**: Markdown (.md) + optional spreadsheet annex
@@ -44,7 +44,7 @@ The execution plan must define:
     * G1 classification / rail assignment
     * G2 metadata minima exceptions
     * G3 endorsement authority + “recommended baseline” decisions
-    * G4 canonical boundary + crosswalk ownership
+    * G4 canonical boundary + crosswalk ownership %% irrelevant %%
     * G5 revision/maturity labels for event/impact records
 *   **Onboarding workflow** for each steward role:
     * required reading (what to know)

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCAIF Sitemap Specification v5.2 (Hardened)</title>
+    <style>
+        :root {
+            --dcce-blue: #1a5f7a;
+            --dcce-green: #159895;
+            --dcce-light: #f0f7f4;
+            --text-dark: #333;
+            --accent: #e67e22;
+        }
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background-color: var(--dcce-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background: var(--dcce-blue);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .sitemap-node {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .level-1 { border-left: 10px solid var(--dcce-blue); font-weight: bold; font-size: 1.25em; background: #eef5f8; }
+        .level-2 { border-left: 10px solid var(--dcce-green); margin-left: 30px; font-weight: 500; font-size: 1.1em; }
+        .level-3 { border-left: 10px solid #999; margin-left: 60px; font-size: 1em; color: #444; }
+        
+        .content-brief {
+            margin-top: 10px;
+            padding: 15px;
+            background: #fff;
+            border: 1px dashed #ccc;
+            border-radius: 4px;
+            font-size: 0.95em;
+            color: #444;
+            display: none;
+        }
+        .content-brief ul { margin: 10px 0 0 20px; padding: 0; }
+        .content-brief li { margin-bottom: 5px; }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            margin-left: 10px;
+            color: white;
+            vertical-align: middle;
+        }
+        .badge-mvp { background: var(--accent); }
+        .badge-core { background: #3498db; }
+        
+        .toggle-btn {
+            cursor: pointer;
+            color: var(--dcce-blue);
+            text-decoration: none;
+            font-size: 0.8em;
+            float: right;
+            border: 1px solid var(--dcce-blue);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        .toggle-btn:hover { background: var(--dcce-blue); color: white; }
+        .clear { clear: both; }
+        .slide-ref { color: #888; font-size: 0.8em; font-weight: normal; }
+        h3 { margin: 0; padding: 0; display: inline; }
+    </style>
+    <script>
+        function toggleBrief(id) {
+            const el = document.getElementById(id);
+            el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>NCAIF Sitemap Specification v5.2</h1>
+        <p>National Climate Adaptation Information Framework | Hardened Content Blueprint</p>
+    </header>
+
+    <!-- Node 1 -->
+    <div class="sitemap-node level-1">
+        1. หน้าหลัก (Home: The Hero Hub) <span class="slide-ref">[Slide 35]</span>
+        <span class="toggle-btn" onclick="toggleBrief('b1')">View Brief</span>
+        <div id="b1" class="content-brief">
+            <strong>Executive Dashboard:</strong> สรุปสภาวะภูมิอากาศและแนวโน้มความเสี่ยงระดับชาติ (High-level Trends)
+            <ul>
+                <li>National Trends & Summaries</li>
+                <li>สรุปสำหรับผู้บริหารและผู้กำหนดนโยบาย</li>
+                <li>Quick Entry for Scientists, Planners, and Tool Developers</li>
+            </ul>
+        </div>
+    </div>
+    <div class="sitemap-node level-2">
+        1.1 สรุปสำหรับผู้บริหาร (National Overview) <span class="slide-ref">[Slide 36]</span>
+        <span class="toggle-btn" onclick="toggleBrief('b1_1')">View Brief</span>
+        <div id="b1_1" class="content-brief">
+            <strong>สรุปภาพรวมความเสี่ยงและการปรับตัว:</strong>
+            <ul>
+                <li><strong>ภาพรวมความเสี่ยง:</strong> ประวัติศาสตร์ภัยธรรมชาติ, กรอบทฤษฎี IPCC, Physical vs Transition Risk</li>
+                <li><strong>ลำดับความสำคัญ:</strong> Hotspot ความเสี่ยงรายพื้นที่/ภาคส่วน, สรุปแผน NAP ระดับชาติ</li>
+                <li><strong>ตัวอย่างความสำเร็จ:</strong> โครงการเด่นและมาตรการหลักในการปรับตัว</li>
+            </ul>
+        </div>
+    </div>
+    <div class="sitemap-node level-2">
+        1.2 ข้อมูลความเสี่ยงรายพื้นที่ (My Area Profile)
+        <span class="toggle-btn" onclick="toggleBrief('b1_2')">View Brief</span>
+        <div id="b1_2" class="content-brief">
+            <strong>ช่องทางเข้าถึงข้อมูลระดับพื้นที่:</strong> ค้นหาข้อมูลสรุปความเสี่ยงรายภูมิภาค จังหวัด และ อปท. ผ่านแผนที่หรือชื่อพื้นที่
+        </div>
+    </div>
+    <div class="sitemap-node level-2">
+        1.3 แนวทางการปรับตัว (Help Me Plan)
+        <span class="toggle-btn" onclick="toggleBrief('b1_3')">View Brief</span>
+        <div id="b1_3" class="content-brief">
+            <strong>ช่องทางเข้าถึงการปฏิบัติ:</strong> ทางลัดสู่ห้องสมุดมาตรการ คู่มือเทคนิค และแหล่งทุนเพื่อการปรับตัว
+        </div>
+    </div>
+
+    <!-- Node 2 -->
+    <div class="sitemap-node level-1">
+        2. ศูนย์สนับสนุนการตัดสินใจระดับชาติ (National Decision Support Center) <span class="slide-ref">[Slide 37]</span>
+        <span class="toggle-btn" onclick="toggleBrief('b2')">View Brief</span>
+        <div id="b2" class="content-brief">
+            <strong>ข้อมูลเชิงนโยบาย:</strong> ข้อมูลสรุปสำหรับการตัดสินใจและวางแผนยุทธศาสตร์
+        </div>
+    </div>
+    <div class="sitemap-node level-2">
+        2.1 สรุปโปรไฟล์ความเสี่ยงรายพื้นที่และภาคส่วน <span class="badge badge-mvp">MVP-1</span>
+        <span class="toggle-btn" onclick="toggleBrief('b2_1')">View Brief</span>
+        <div id="b2_1" class="content-brief">
+            <strong>Summary Profile:</strong> สรุปความเสี่ยงและความเปราะบางรายพื้นที่ (ภูมิภาค, จังหวัด, อปท.) และรายภาคส่วน
+        </div>
+    </div>
+    <div class="sitemap-node level-2">
+        2.2 ตัวชี้วัดสภาวะภูมิอากาศและความเสี่ยง (Indicators)
+        <span class="toggle-btn" onclick="toggleBrief('b2_2')">View Brief</span>
+        <div id="b2_2" class="content-brief">
+            <strong>สถานการณ์ปัจจุบัน:</strong> สถิติอากาศสุดขั้ว, ผลกระทบและความเสียหาย (อดีต-ปัจจุบัน), สรุปความเปราะบาง
+        </div>
+    </div>
+    <div class="sitemap-node level-2">
+        2.3 เครื่องมือทางนโยบาย กฎหมาย และการเงิน
+        <span class="toggle-btn" onclick="toggleBrief('b2_3')">View Brief</span>
+        <div id="b2_3" class="content-brief">
+            <strong>กลไกสนับสนุน:</strong> สถานะแผน NAP, สรุปกฎหมายและนโยบาย, แหล่งทุนและกรณีศึกษาการเงินเพื่อการปรับตัว
+        </div>
+    </div>
+    <div class="sitemap-node level-2">
+        2.4 บริการข้อมูลสำหรับการวางแผน (Planning Support) <span class="badge badge-mvp">MVP-3</span>
+        <span class="toggle-btn" onclick="toggleBrief('b2_4')">View Brief</span>
+        <div id="b2_4" class="content-brief">
+            <strong>Data Services:</strong> แผนที่ความเสี่ยงเชิงพื้นที่, ดัชนีความยืดหยุ่น (CRI), คู่มือการตีความข้อมูล และหน้าเชื่อมโยงคลังข้อมูล
+        </div>
+    </div>
+
+    <!-- Node 3 -->
+    <div class="sitemap-node level-1">
+        3. ข้อมูลสนับสนุนการปรับตัวตามวงจรองค์ความรู้ (Adaptation Information by Cycle) <span class="slide-ref">[Slides 38-43]</span>
+    </div>
+    <div class="sitemap-node level-2">
+        3.1 วิทยาศาสตร์สภาวะภูมิอากาศ (Climate Science) <span class="slide-ref">[Slide 38]</span>
+        <span class="toggle-btn" onclick="toggleBrief('b3_1')">View Brief</span>
+        <div id="b3_1" class="content-brief">
+            <strong>รากฐานทางวิทยาศาสตร์:</strong>
+            <ul>
+                <li><strong>ข้อมูลสังเกตการณ์:</strong> อากาศระยะสั้น (กรมอุตุฯ), ดาวเทียม (ป่า, Land cover, น้ำ, ปะการัง), ENSO/AMOC, Climatology</li>
+                <li><strong>ฉากทัศน์อนาคต:</strong> Downscaled climate data, SSPs Scenarios, แนวทางการใช้งานและตัวอย่างในยุทธศาสตร์</li>
+            </ul>
+        </div>
+    </div>
+    <div class="sitemap-node level-2">
+        3.2 การวิเคราะห์ผลกระทบ ความเสี่ยง และความเปราะบาง (Risk Analysis) <span class="slide-ref">[Slide 39]</span>
+        <span class="toggle-btn" onclick="toggleBrief('b3_2')">View Brief</span>
+        <div id="b3_2" class="content-brief">
+            <strong>การประเมินความเสี่ยง:</strong>
+            <ul>
+                <li><strong>Vulnerability:</strong> Exposure, Sensitivity, Adaptive Capacity Frameworks</li>
+                <li><strong>Impacts:</strong> Impact Chain Analysis, Resilience Framework, Damage Function (Technical Notes)</li>
+            </ul>
+        </div>
+    </div>
+    <div class="sitemap-node level-2">
+        3.3 ความสูญเสียและความเสียหาย (Loss and Damage) <span class="badge badge-mvp">MVP-2</span> <span class="slide-ref">[Slide 40]</span>
+        <span class="toggle-btn" onclick="toggleBrief('b3_3')">View Brief</span>
+        <div id="b3_3" class="content-brief">
+            <strong>L&D Tracking:</strong> UNFCCC framework, สถิติภัยพิบัติ, Dashboard ความสูญเสีย, และระเบียบวิธีคำนวณ
+        </div>
+    </div>
+    <div class="sitemap-node level-2">
+        3.4 การวางแผนการปรับตัวและการปฏิบัติ (Planning & Implementation) <span class="slide-ref">[Slides 41-42]</span>
+        <span class="toggle-btn" onclick="toggleBrief('b3_4')">View Brief</span>
+        <div id="b3_4" class="content-brief">
+            <strong>จากวิเคราะห์สู่ปฏิบัติ:</strong>
+            <ul>
+                <li><strong>Guidelines:</strong> แนวทางรายภาคส่วน, การวิเคราะห์ทางการเงิน, National Adaptation Roadmap</li>
+                <li><strong>Inventory:</strong> ห้องสมุดมาตรการ, กรณีศึกษาการวางแผน, สถานะโครงการที่กำลังดำเนินการ</li>
+            </ul>
+        </div>
+    </div>
+    <div class="sitemap-node level-2">
+        3.5 การติดตาม ประเมินผล และถอดบทเรียน (Results & M&E) <span class="slide-ref">[Slide 43]</span>
+        <span class="toggle-btn" onclick="toggleBrief('b3_5')">View Brief</span>
+        <div id="b3_5" class="content-brief">
+            <strong>การเรียนรู้และติดตาม:</strong> กรอบ M&E รายโครงการ/ยุทธศาสตร์, GGA Indicators, Adaptation M&E Platform, คลังกรณีศึกษาความสำเร็จ
+        </div>
+    </div>
+
+    <!-- Node 4 -->
+    <div class="sitemap-node level-1">
+        4. โปรไฟล์รายพื้นที่และภาคส่วน (Contextual Profiles)
+    </div>
+    <div class="sitemap-node level-2">4.1 โปรไฟล์รายจังหวัด (77 Provincial Profiles)</div>
+    <div class="sitemap-node level-2">4.2 โปรไฟล์รายภาคส่วน (6 Core Sector Profiles)</div>
+
+    <!-- Node 5 -->
+    <div class="sitemap-node level-1">
+        5. แนวทางปฏิบัติและกรณีศึกษา (Action Hub)
+    </div>
+    <div class="sitemap-node level-2">5.1 ห้องสมุดมาตรการปรับตัว (Measures Library) <span class="slide-ref">[Slide 41]</span></div>
+    <div class="sitemap-node level-2">5.2 กรณีศึกษาและบทเรียน (Case Studies) <span class="slide-ref">[Slide 42, 43]</span></div>
+    <div class="sitemap-node level-2">5.3 คู่มือและเครื่องมือปฏิบัติ (Toolkits) <span class="slide-ref">[Slide 37, 41]</span></div>
+
+    <!-- Node 6 -->
+    <div class="sitemap-node level-1">
+        6. เครื่องมือและบริการสารสนเทศ (Technical Utility) <span class="slide-ref">[Slide 44]</span>
+        <span class="toggle-btn" onclick="toggleBrief('b6')">View Brief</span>
+        <div id="b6" class="content-brief">
+            <strong>ศูนย์รวมทางเทคนิค:</strong> คลังข้อมูลและเครื่องมือวิเคราะห์ระดับลึก
+            <ul>
+                <li><strong>Data Catalog:</strong> บัญชีข้อมูล (Search, Filter by Product/Sector/Spatial)</li>
+                <li><strong>Apps:</strong> Visualization and Analytics (Risk Maps, Hazard Monitoring)</li>
+                <li><strong>External Hub:</strong> ศูนย์รวมเครื่องมือและแหล่งข้อมูลภายนอก</li>
+            </ul>
+        </div>
+    </div>
+    <div class="sitemap-node level-2">
+        6.1 บัญชีข้อมูล (Data Catalog) <span class="badge badge-mvp">MVP-3</span>
+    </div>
+    <div class="sitemap-node level-2">
+        6.2 บริการข้อมูลและพอร์ทัลสำหรับนักพัฒนา (Developer Portal & APIs)
+    </div>
+    <div class="sitemap-node level-2">
+        6.3 ระเบียบวิธี มาตรฐาน และความไม่แน่นอน (Standards & Uncertainty) <span class="badge badge-mvp">MVP-4</span>
+    </div>
+
+    <!-- Node 7 -->
+    <div class="sitemap-node level-1">
+        7. ข่าวสารและเกี่ยวกับระบบ (Engagement) <span class="slide-ref">[Slide 35]</span>
+    </div>
+
+    <div class="clear"></div>
+    <footer style="margin-top: 50px; border-top: 1px solid #ccc; padding-top: 20px; text-align: center; color: #777;">
+        <p>Specification Status: <strong>v5.2 Hardened</strong> | Grounding: May 12 Workshop Presentation Narrative</p>
+    </footer>
+</div>
+
+</body>
+</html>

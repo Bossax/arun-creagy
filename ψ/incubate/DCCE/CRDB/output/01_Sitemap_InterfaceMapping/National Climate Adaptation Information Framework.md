@@ -14,11 +14,11 @@ due date:
 
 Primary inputs:
 
-- Use-case inventory: [`NCAIF_Use_Cases.md`](src/01_Projects/2025-11_DCCE-CRDB/output/NCAIF_Use_Cases.md:1)
-- Workflow patterns + MVPs (v2; literacy-grounded): [`NCAIF — Workflow patterns + MVP v2.md`](src/01_Projects/2025-11_DCCE-CRDB/output/NCAIF%20%E2%80%94%20Workflow%20patterns%20%2B%20MVP%20v2.md:1)
-- (v1 preserved for history): [`NCAIF — Workflow patterns + MVP draft (from stakeholder use cases).md`](src/01_Projects/2025-11_DCCE-CRDB/output/NCAIF%20%E2%80%94%20Workflow%20patterns%20%2B%20MVP%20draft%20%28from%20stakeholder%20use%20cases%29.md:1)
-- Sitemap alternatives (to select): [`NCAIF_Sitemap_Options.md`](src/01_Projects/2025-11_DCCE-CRDB/output/Artifact%20v1/NCAIF_Sitemap_Options.md:1)
-- Governance phasing (v3): [`Feature-Driven Data Governance Strategy v3 (2026-03-05).md`](01_Projects/2025-11_DCCE-CRDB/output/Feature-Driven%20Data%20Governance%20Strategy%20v3%20%282026-03-05%29.md)
+- **Workshop Presentation (May 12)**: [`2026-05-12-NCAIF-Sitemap-Presentation.md`](ψ/incubate/DCCE/CRDB/output/01_Sitemap_InterfaceMapping/2026-05-12-NCAIF-Sitemap-Presentation.md) — Approved UI/UX layouts and thematic groupings.
+- Use-case inventory: [`NCAIF_Use_Cases.md`](ψ/incubate/DCCE/CRDB/output/02_UseCases_FunctionalSpecs/NCAIF_Use_Cases.md)
+- Workflow patterns + MVPs (v3): [`NCAIF — Workflow patterns + MVP v3.md`](ψ/incubate/DCCE/CRDB/output/02_UseCases_FunctionalSpecs/NCAIF%20%E2%80%94%20Workflow%20patterns%20%2B%20MVP%20v3.md)
+- Sitemap alternatives (v4): [`NCAIF_Detailed_Sitemap_v4.md`](ψ/incubate/DCCE/CRDB/output/01_Sitemap_InterfaceMapping/NCAIF_Detailed_Sitemap_v4.md)
+- Governance phasing: [`Feature-Driven Data Governance Strategy v3 (2026-03-05).md`](ψ/incubate/DCCE/CRDB/archive/Feature-Driven%20Data%20Governance%20Strategy%20v3%20%282026-03-05%29.md)
 
 ---
 

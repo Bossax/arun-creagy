@@ -1,4 +1,4 @@
-# Hardening Notes: Data Catalog v2 (Pillar 3)
+ # Hardening Notes: Data Catalog v2 (Pillar 3)
 
 This document tracks the surgical edits and decisions made to transform `data_catalog_v2.csv` into a procurement-ready baseline.
 
