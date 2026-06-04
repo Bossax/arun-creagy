@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCAIF Sitemap Specification v6.1 (Linguistic Parity Baseline)</title>
+    <style>
+        :root {
+            --dcce-blue: #1a5f7a;
+            --dcce-green: #159895;
+            --dcce-light: #f0f7f4;
+            --text-dark: #333;
+            --accent: #e67e22;
+            --engine-accent: #8e44ad;
+        }
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background-color: var(--dcce-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        header { background: var(--dcce-blue); color: white; padding: 20px; border-radius: 8px; text-align: center; margin-bottom: 30px; }
+        .sitemap-node { background: white; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 12px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .level-1 { border-left: 10px solid var(--dcce-blue); font-weight: bold; font-size: 1.2em; background: #eef5f8; }
+        .level-2 { border-left: 10px solid var(--dcce-green); margin-left: 30px; font-weight: 500; font-size: 1.1em; }
+        .box-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 10px; }
+        .box { padding: 12px; border: 1px solid #eee; border-radius: 4px; background: #fafafa; font-size: 0.9em; }
+        .box-title { font-weight: bold; color: var(--dcce-blue); margin-bottom: 8px; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+        .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.7em; background: #eee; margin-right: 5px; vertical-align: middle; }
+        .tag-interactive { background: var(--engine-accent); color: white; }
+        .tag-data { background: var(--dcce-green); color: white; }
+        .content-brief { margin-top: 10px; padding: 10px; background: #fffdf0; border: 1px dashed #e67e22; border-radius: 4px; font-size: 0.85em; }
+        ul { margin: 5px 0 0 20px; padding: 0; }
+        li { margin-bottom: 3px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>NCAIF Sitemap Specification v6.1</h1>
+        <p>โครงสร้างเว็บไซต์ที่เป็นทางการ (100% Linguistic Parity with Markdown Baseline)</p>
+    </header>
+
+    <!-- SECTION 1 -->
+    <div class="sitemap-node level-1">
+        1. หน้าแรก (Home: National Climate Adaptation Portal)
+    </div>
+    <div class="sitemap-node level-2">
+        1.1 สรุปสำหรับผู้บริหาร (Executive Overview)
+        <div class="box-grid">
+            <div class="box">
+                <div class="box-title">1.1.1 ภาพรวมความเสี่ยงจากการเปลี่ยนแปลงสภาพภูมิอากาศ</div>
+                ประวัติศาสตร์ภัยธรรมชาติ, กรอบทฤษฎี IPCC, ความเสี่ยงกายภาพ/เปลี่ยนผ่าน, แผนภาพสรุปโปรไฟล์ความเสี่ยง
+            </div>
+            <div class="box">
+                <div class="box-title">1.1.2 ความเสี่ยงสำคัญ และลำดับความสำคัญในการปรับตัว</div>
+                Hotspot ของความเสี่ยงรายภัย/ภาคส่วน, สรุปแผน NAP, ตัวอย่างมาตรการหรือโครงการเด่น
+            </div>
+        </div>
+    </div>
+    <div class="sitemap-node level-2">
+        1.2 สืบค้นข้อมูลรายพื้นที่ (Area Quick-Search Widget) <span class="tag tag-interactive">WIDGET</span>
+        <div class="content-brief">
+            ระบบสืบค้นข้อมูลความเสี่ยงเชิงพื้นที่แบบโต้ตอบ รองรับระดับ จังหวัด -> อำเภอ -> ตำบล เชื่อมต่อแผนที่ความเสี่ยง (Spatial Risk Map) และแสดงบัตรข้อมูลสรุป (Summary Cards)
+        </div>
+    </div>
+    <div class="sitemap-node level-2">
+        1.3 ทางลัดตามกลุ่มผู้ใช้งาน (Role-based Shortcut Hub) <span class="tag tag-interactive">MENU</span>
+        <div class="content-brief">
+            เมนูทางลัดแบบคงที่สำหรับ 4 กลุ่มหลัก:
+            <ul>
+                <li><strong>ภาคประชาชน:</strong> สืบค้นพื้นที่, ข้อมูลสังเกตุการณ์, กรณีศึกษา</li>
+                <li><strong>หน่วยงานท้องถิ่น:</strong> โปรไฟล์ อปท., ระบบติดตาม M&E, คู่มือวางแผน</li>
+                <li><strong>ภาคธุรกิจ/เกษตรกร:</strong> ข้อมูล Climatology, ห้องสมุดมาตรการ, ฉากทัศน์อนาคต</li>
+                <li><strong>ผู้กำหนดนโยบาย:</strong> ศูนย์ข้อมูลนโยบาย, แผนที่ความเสี่ยง, เครื่องมือการเงิน</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="sitemap-node level-1">
+        2. ศูนย์ข้อมูลสำหรับผู้กำหนดนโยบายและแผน (Policy Maker Information Center)
+    </div>
+    <div class="sitemap-node level-2">
+        <div class="box-grid">
+            <div class="box">
+                <div class="box-title">2.1 สถานการณ์การเปลี่ยนแปลงสภาพภูมิอากาศของประเทศ</div>
+                สถิติอากาศสุดขั้ว, ผลกระทบและความเสียหาย, สรุปความเสี่ยงและความเปราะบาง
+            </div>
+            <div class="box">
+                <div class="box-title">2.2 สรุปโปรไฟล์ของความเสี่ยงรายพื้นที่และรายภาคส่วน</div>
+                สรุปความเสี่ยงรายภูมิภาค, จังหวัด, อปท. และรายภาคส่วน
+            </div>
+            <div class="box">
+                <div class="box-title">2.3 เครื่องมือทางนโยบาย กฎหมาย และการเงิน</div>
+                สถานะ NAP, เครื่องมือกฎหมาย, เครื่องมือการเงิน/แหล่งทุน, M&E Framework
+            </div>
+            <div class="box">
+                <div class="box-title">2.4 บริการข้อมูลสำหรับการวางแผน</div>
+                แผนที่ความเสี่ยงเชิงพื้นที่, แผนที่ภัยและความเปราะบาง, ดัชนีความยืดหยุ่น, คู่มือการตีความข้อมูล
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 3 -->
+    <div class="sitemap-node level-1">
+        3. วงจรขับเคลื่อนการปรับตัว (Adaptation Knowledge Cycle)
+    </div>
+    <div class="sitemap-node level-2">
+        3.1 วิทยาศาสตร์ของสภาพภูมิอากาศ
+        <div class="box-grid">
+            <div class="box">
+                <div class="box-title">3.1.1 ข้อมูลสังเกตุการณ์</div>
+                อากาศ TMD, ดาวเทียม (ป่า, Land cover, น้ำ, ปะการัง, นิเวศน์), ENSO, AMOC
+            </div>
+            <div class="box">
+                <div class="box-title">3.1.2 ปัจจัยขับเคลื่อนทางภูมิอากาศ</div>
+                Climatology ไทย, สถิติ Climate Variable, บทอธิบาย climate scenario, Downscaled Data
+            </div>
+            <div class="box">
+                <div class="box-title">3.1.3 ฉากทัศน์ภูมิอากาศในอนาคต</div>
+                บทอธิบายการใช้งาน scenario, แหล่งข้อมูล scenario, ตัวอย่างการใช้งานเชิงยุทธศาสตร์
+            </div>
+        </div>
+    </div>
+    <div class="sitemap-node level-2">
+        3.2 การวิเคราะห์ผลกระทบ ความเสี่ยง และความเปราะบาง
+        <div class="box-grid">
+            <div class="box">
+                <div class="box-title">3.2.1 การวิเคราะห์ความเปราะบางและการเปิดรับภัย</div>
+                Exposure, Sensitivity, Adaptive Capacity, <strong>Damage function</strong>, <strong>Resilience</strong>
+            </div>
+            <div class="box">
+                <div class="box-title">3.2.2 การวิเคราะห์ความเสี่ยง</div>
+                กรอบการประเมินความเสี่ยงต่างๆ, บทสรุปตามพื้นที่และภาคส่วน, แหล่งข้อมูลภายนอก
+            </div>
+            <div class="box">
+                <div class="box-title">3.2.3 ผลกระทบลูกโซ่</div>
+                แนวคิดผลกระทบลูกโซ่, การวิเคราะห์ผลกระทบ, Impact Chain Analysis
+            </div>
+        </div>
+        <div class="box-grid" style="margin-top:10px;">
+            <div class="box">
+                <div class="box-title">3.2.4 ความสูญเสียและความเสียหาย (Loss and Damage)</div>
+                นิยาม L&D, UNFCCC Framework, สถิติภัยพิบัติ, Dashboard ความเสียหาย
+            </div>
+            <div class="box">
+                <div class="box-title">3.2.5 กรอบทฤษฎีและเอกสารคู่มือ</div>
+                ระเบียบวิธีประเมินความเสี่ยง, การประเมินผลกระทบ, การคำนวณ Loss and Damage
+            </div>
+        </div>
+    </div>
+    <div class="sitemap-node level-2">
+        3.3 การวางแผนการปรับตัวและการปฏิบัติ
+        <div class="box-grid">
+            <div class="box">
+                <div class="box-title">3.3.1 แนวทางการวางแผนการปรับตัว</div>
+                รายภาคส่วน, การวิเคราะห์ทางการเงิน
+            </div>
+            <div class="box">
+                <div class="box-title">3.3.2 เส้นทางกลยุทธ์การปรับตัวของประเทศ</div>
+                Roadmap การดำเนินงานระดับชาติ
+            </div>
+            <div class="box">
+                <div class="box-title">3.3.3 ห้องสมุดมาตรการปรับตัวตามสาขา</div>
+                ฐานข้อมูลมาตรการ พร้อมคำอธิบายและกรณีศึกษา
+            </div>
+        </div>
+        <div class="box-grid" style="margin-top:10px;">
+            <div class="box">
+                <div class="box-title">3.3.4 กรณีศึกษาการวางแผนการปรับตัว</div>
+                คลังแผนจัดการความเสี่ยงองค์กรและภาคส่วน
+            </div>
+            <div class="box">
+                <div class="box-title">3.3.5 โครงการที่กำลังดำเนินการ</div>
+                Project Tracking Status
+            </div>
+        </div>
+    </div>
+    <div class="sitemap-node level-2">
+        3.4 การติดตาม ประเมินผล และถอดบทเรียน
+        <div class="box-grid">
+            <div class="box">
+                <div class="box-title">3.4.1 แนวทางการติดตามและประเมินผล</div>
+                ทฤษฎี M&E, GGA Indicators & ตัวชี้วัด
+            </div>
+            <div class="box">
+                <div class="box-title">3.4.2 ระบบฐานข้อมูลด้าน M&E ของประเทศ</div>
+                แนะนำ Adaptation M&E Platform
+            </div>
+            <div class="box">
+                <div class="box-title">3.4.3 กรณีศึกษาที่ประสบความสำเร็จ</div>
+                คลังบทเรียนการถอดบทเรียนโครงการ
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 4 -->
+    <div class="sitemap-node level-1">
+        4. ข้อมูลรายพื้นที่และรายสาขา (Area & Sectoral Profiles Hub)
+    </div>
+    <div class="sitemap-node level-2">
+        4.1 ข้อมูลรายจังหวัด (Provincial Profiles)
+        <div class="content-brief">
+            Landing Page รายละเอียดสำหรับ 77 จังหวัด: สถิติอากาศสุดขั้วในอดีต, สรุปโปรไฟล์ความเสี่ยงอนาคต และลำดับความสำคัญท้องถิ่น
+        </div>
+    </div>
+    <div class="sitemap-node level-2">
+        4.2 ข้อมูลรายสาขา (Sectoral Profiles)
+        <div class="content-brief">
+            เจาะลึก 6 สาขาหลัก: เกษตร, น้ำ, สาธารณสุข, ท่องเที่ยว, พลังงาน, ป่าไม้ แสดงผลกระทบลูกโซ่ และมาตรการเฉพาะทาง
+        </div>
+    </div>
+
+    <!-- SECTION 5 -->
+    <div class="sitemap-node level-1">
+        5. คลังมาตรการและกรณีศึกษา (Action & Success Hub)
+    </div>
+    <div class="sitemap-node level-2">
+        5.1 ห้องสมุดมาตรการปรับตัว (Measures Library UI)
+        <div class="content-brief">
+            ระบบสืบค้น (Searchable Database) คัดกรองตามประเภทภัย, ภาคส่วน และงบประมาณ เพื่อการใช้งานจริง
+        </div>
+    </div>
+    <div class="sitemap-node level-2">
+        5.2 กรณีศึกษาและโครงการที่ประสบความสำเร็จ (Success Stories)
+        <div class="content-brief">
+            การคัดสรรและถอดบทเรียนโครงการเด่น (Flagship Projects) เพื่อเป็นแนวทางปฏิบัติและหลักฐานเชิงประจักษ์
+        </div>
+    </div>
+
+    <!-- SECTION 6 -->
+    <div class="sitemap-node level-1">
+        6. เครื่องมือและบริการสารสนเทศด้านภูมิอากาศ (Tools & Services)
+        <div class="box-grid">
+            <div class="box">6.1 Data Catalog (Metadata Search)</div>
+            <div class="box">6.2 Visualization and Analytics Application (Sectoral Dashboards)</div>
+            <div class="box">6.3 ศูนย์รวมเครื่องมือและแหล่งข้อมูลภายนอก (External Gateway)</div>
+        </div>
+    </div>
+
+    <footer style="margin-top: 50px; text-align: center; color: #777; font-size: 0.8em;">
+        <p>Specification Status: <strong>v6.1 Final Baseline</strong> | 100% Linguistic Parity with Markdown Baseline</p>
+    </footer>
+</div>
+
+</body>
+</html>

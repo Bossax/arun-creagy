@@ -1,19 +1,24 @@
-# Learning: Forensic Content Mapping & Readiness Bottlenecks
+# Learning: The "Synthesis Bottleneck" in Institutional Portals
+**Date:** 2026-06-04
+**Category:** Content Strategy / IA
+**Status:** Validated
 
-**Date**: 2026-06-04
-**Project**: Climate Resilience Data Board (CRDB)
-**Concept**: #IA #Forensics #ContentStrategy
+## 1. The Pattern
+In large-scale institutional data portals (like NCAIF), technical teams often report "High Readiness" because raw data or PDF reports exist. However, the end-user (Policy Maker/Citizen) requires **Synthesis**—the translation of raw data into "Explainers" or "Summaries."
 
-## The Problem
-Existing government portals (DCCE) are often "Administration-First," meaning content is structured by department silos rather than the user's workflow (The Adaptation Cycle). Simply mapping a new Sitemap to the current site structure results in a fragmented experience.
+## 2. The Grounding Principle: Data != Content
+- **Raw Data:** TMD API, Risk DB CSVs, GIS Layers.
+- **Content:** "Phuket's Climate History," "Budget Impact of Sea Level Rise," "Farmer Action Alerts."
+- **The Gap:** The effort required to move from Raw Data to Content (Synthesis) is often underestimated by a factor of 5-10x.
 
-## The Discovery
-By performing a **Forensic Content Trace**, I identified two distinct asset types:
-1.  **Technical Supply**: High-fidelity data (CMIP6, Risk Indices) found in historical project reports (CRI, Risk DB) but NOT on the website.
-2.  **Institutional Gaps**: Sections like "Loss and Damage" or "Adaptation Library" that have no reusable digital assets and require **New Synthesis**.
+## 3. The Forensic Audit Rule
+When evaluating an asset map:
+1. Look at the **Content Brief** (What the user is promised).
+2. Look at the **Technical Asset** (What actually exists).
+3. If the asset is a "Raw Report" or "Internal Library" and the brief is an "Explainer," mark readiness as **LOW (Synthesis Required)**.
 
-## Implementation Standard
-A content-asset mapping must include a **Readiness Audit**. This prevents vendor guesswork by flagging "Low Readiness" nodes where implementation cannot proceed without a strategic content-generation phase (converting PDF reports into web-ready interactive modules).
+## 4. Application
+This forensic approach protects the project from procurement failure. By exposing the synthesis bottleneck early, DCCE can allocate resources to technical writers or subject matter experts before the implementation contractor arrives.
 
-## Recovery Action
-Always cross-reference the "As-Is" website against "As-Designed" groundwork reports *before* drafting the final Sitemap content briefs.
+---
+*Oracle Knowledge Base - ψ/memory/learnings/*

@@ -31,20 +31,20 @@
 ## 2. National Decision Support Center (The Policy Hub)
 *Purpose: Prescriptive, decision-ready briefings for senior leadership and planners.*
 
-### 2.1 Summary of Risks by Area and Sector (Node 2.2 in Presentation)
+### 2.1 Summary of Risks by Area and Sector  
 *   **Content Brief**: Consolidated "Executive Summaries" of risk and vulnerability.
     *   Summaries for 4 Tiers: Regional, Provincial, Local (LAO), and Sectoral.
 *   **Key Assets**: Executive Briefing Packs, High-level Profile Diagrams.
 *   **Source**: Presentation Page 37 (Category 2).
 
-### 2.2 National Climate Indicators (Node 2.1 in Presentation)
+### 2.2 National Climate Indicators
 *   **Content Brief**: Current and historical climate situation dashboard.
     *   Statistics of extreme weather events (Past to Present).
     *   Aggregated impact and damage data.
     *   Summary of national climate risk and vulnerability levels.
 *   **Source**: Presentation Page 37 (Category 1).
 
-### 2.3 Policy, Law, and Finance Hub (Node 2.3 in Presentation)
+### 2.3 Policy, Law, and Finance Hub  
 *   **Content Brief**: Strategic implementation tools.
     *   **Implementation Status**: Progress tracking of the National Adaptation Plan (NAP).
     *   **Legal & Policy**: Summaries of relevant laws and adaptation policy instruments.

@@ -128,19 +128,17 @@
             
         - AMOC
             
-    - ปัจจัยขับเคลื่อนทางภูมิอากาศ
-        
-    - ข้อมูล Climatology ของประเทศไทย
-        
-    - ข้อมูลสถิติ Climate Variable ที่สำคัญ
+    - **กล่องข้อความตรงกลาง** ปัจจัยขับเคลื่อนทางภูมิอากาศ
+	        
+	    - ข้อมูล Climatology ของประเทศไทย
+	        
+	    - ข้อมูลสถิติ Climate Variable ที่สำคัญ
+	    - ฉากทัศน์ภูมิอากาศในอนาคต
+		    - บทอธิบาย climate scenario
+		    - ข้อมูล downscaled climate data ของประเทศไทย
         
 - **กล่องข้อความฝั่งขวา**: ฉากทัศน์ภูมิอากาศในอนาคต
-    
-    - บทอธิบาย climate scenario
-        
-    - ข้อมูล downscaled climate data ของประเทศไทย
-        
-    - ฉากทัศน์อนาคต
+
         
     - บทอธิบายการใช้งาน climate scenario
         
@@ -160,13 +158,14 @@
 - **กล่องข้อความฝั่งซ้าย**: การเปิดรับภัยและการวิเคราะห์ความเสี่ยงความเปราะบาง
     
     - บทอธิบายการเปิดรับภัยและความเปราะบาง
-        
         - Exposure
-            
         - Sensitivity
-            
         - Adaptive Capacity
-            
+
+	- Damage function
+	- Resilience
+
+- **กล่องข้อความตรงกลาง**: การวิเคราะห์ ความเสี่ยง
     - บทอธิบายกรอบการประเมินความเสี่ยงต่างๆ
         
     - บทสรุปความเสี่ยงตามพื้นที่และภาคส่วน
@@ -180,10 +179,6 @@
     - อธิบายแนวคิดการวิเคราะห์ผลกระทบ
         
     - อธิบายแนวคิด Impact Chain Analysis
-        
-    - แนวทางการใช้กรอบวิเคราะห์ Resilience
-        
-- **ข้อความเพิ่มเติมด้านล่าง**: Damage function (มีเครื่องหมายตกใจระวังกำกับ)
     
 - **มุมล่าง**: เลข 3 ในวงกลมสีเขียว | CREAGY | 39
     
@@ -284,26 +279,8 @@
 
 - **หัวข้อหลัก**: เครื่องมือและบริการสารสนเทศด้านภูมิอากาศ
     
-- **ข้อความในส่วนจำลองหน้าจอระบบ (UI)**:
-    
-    - Datasets | Search | Filter
-        
-    - Data type | Product type | Provider | Sector | Spatial coverage
-        
-    - Data Catalog บัญชีข้อมูล
-        
-    - Visualization and Analytics Application
-        
-    - Climate Risk Maps Thailand | Hazard Monitoring Laos | HAZARD TYPE Flood Cambodia | List updated Risk Map
-        
-    - ERA5 post processed daily statistics on pressure levels from 1940 to present
-        
-    - ERA5 is the fifth generation ECMWF reanalysis for the global climate and weather for the past 8 decades Data is available from 1940s. ERA5 replaces the ERA-Interim reanalysis. Reanalysis combines model stata with observations from acros the world into a globally complete and consistent datas
-        
-    - ศูนย์รวมเครื่องมือและแหล่งข้อมูลภายนอก
-        
-    - กลุ่มภาพสาขา (Sectors): Health, Agriculture, Forestry, Energy, Tourism, Water and Coastal
-        
-    - ตัวเลขและข้อความสถิติอื่นๆ ในกรอบ: 3,109 | 14,699 | 3.6 | Avg | Andaman
+- **กล่องข้อความที่ 1**  : Data Catalog บัญชีข้อมูล
+- **กล่องข้อความที่ 2**: Visualization and Analytics Application
+- **กล่องข้อความที่ 3**: ศูนย์รวมเครื่องมือและแหล่งข้อมูลภายนอก
         
 - **มุมล่าง**: เลข 4 ในวงกลมสีเขียว | CREAGY | 44
