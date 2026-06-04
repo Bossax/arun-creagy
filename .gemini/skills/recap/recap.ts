@@ -57,7 +57,7 @@ const getLatest = (pattern: string) => {
     const glob = new Bun.Glob(pattern);
     const files = Array.from(glob.scanSync({ dot: false })) as string[];
     const top = files
-      .filter(f => !f.includes("CLAUDE") && !f.includes("GEMINI"))
+      .filter(f => !f.includes("GEMINI"))
       .sort((a, b) => statSync(b).mtimeMs - statSync(a).mtimeMs)[0];
     return top ? basename(top) : "none";
   } catch {
@@ -80,19 +80,19 @@ const untracked = lines.filter(l => l.startsWith("??"));
 let sessionLine = "";
 try {
   const encodedPwd = root.replace(':', '').replace(/[\\/.]/g, '-');
-  const projectDir = join(process.env.USERPROFILE || "", ".claude", "projects");
-  const glob = new Bun.Glob(`*${encodedPwd}*/*.jsonl`);
+  const projectDir = join(process.env.USERPROFILE || "", ".gemini", "tmp", "arun-creagy", "chats");
+  const glob = new Bun.Glob(`session-*.jsonl`);
   const sessions = Array.from(glob.scanSync({ cwd: projectDir, absolute: true })) as string[];
   const latest = sessions.sort((a, b) => statSync(b).mtimeMs - statSync(a).mtimeMs)[0];
 
   if (latest) {
-    const sessionId = basename(latest, ".jsonl");
+    const sessionId = basename(latest).replace('session-', '').replace('.jsonl', '');
     const firstLine = (await safe($`powershell.exe -NoProfile -Command "Get-Content -Path '${latest}' -TotalCount 1"`));
     let startStr = "";
     try {
       const ts = JSON.parse(firstLine).timestamp;
       if (ts) {
-        const elapsed = Math.round((Date.now() - ts) / 60000);
+        const elapsed = Math.round((Date.now() - new Date(ts).getTime()) / 60000);
         const h = Math.floor(elapsed / 60);
         const m = elapsed % 60;
         startStr = h > 0 ? `${h}h ${String(m).padStart(2, '0')}m` : `${m}m`;

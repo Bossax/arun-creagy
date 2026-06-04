@@ -9,7 +9,7 @@ These rules are non-negotiable and must be followed in every session to protect 
 
 ## 2. Credential Protection
 - **No Secrets**: Never commit or log secrets, API keys, OAuth tokens, private keys, or passwords.
-- **File Exclusions**: Rigorously protect `.env` files and credentials stored in `~/.claude/` or `~/.gemini/`.
+- **File Exclusions**: Rigorously protect `.env` files and credentials stored in `~/.gemini/`.
 - **Sanitization**: Ensure no sensitive data is leaked in retrospectives, announcements, or public outputs.
 
 ## 3. Human Authorization

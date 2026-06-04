@@ -22,19 +22,19 @@ if (isGit) await $`git -C ${ROOT} config core.quotePath false`.quiet();
 let sessionLine = "";
 try {
   const encodedPwd = ROOT.replace(':', '').replace(/[\\/.]/g, '-');
-  const projectDir = join(process.env.USERPROFILE || "", ".claude", "projects");
-  const glob = new Bun.Glob(`*${encodedPwd}*/*.jsonl`);
+  const projectDir = join(process.env.USERPROFILE || "", ".gemini", "tmp", "arun-creagy", "chats");
+  const glob = new Bun.Glob(`session-*.jsonl`);
   const sessions = Array.from(glob.scanSync({ cwd: projectDir, absolute: true })) as string[];
   const latest = sessions.sort((a, b) => statSync(b).mtimeMs - statSync(a).mtimeMs)[0];
 
   if (latest) {
-    const sessionId = basename(latest, ".jsonl");
+    const sessionId = basename(latest).replace('session-', '').replace('.jsonl', '');
     const firstLine = (await safe($`powershell.exe -NoProfile -Command "Get-Content -Path '${latest}' -TotalCount 1"`));
     let startStr = "";
     try {
       const ts = JSON.parse(firstLine).timestamp;
       if (ts) {
-        const elapsed = Math.round((Date.now() - ts) / 60000);
+        const elapsed = Math.round((Date.now() - new Date(ts).getTime()) / 60000);
         const h = Math.floor(elapsed / 60);
         const m = elapsed % 60;
         startStr = h > 0 ? `${h}h ${String(m).padStart(2, '0')}m` : `${m}m`;
@@ -57,7 +57,7 @@ const psiPath = join(ROOT, "ψ");
 const psi = existsSync(psiPath) ? realpathSync(psiPath) : psiPath;
 
 // INCUBATED_BY detection
-const incubatedByPath = join(ROOT, ".claude", "INCUBATED_BY");
+const incubatedByPath = join(ROOT, ".gemini", "INCUBATED_BY");
 if (existsSync(incubatedByPath)) {
   const breadcrumb = await Bun.file(incubatedByPath).text();
   console.log("## ⚠️ INCUBATED REPO");
@@ -101,7 +101,7 @@ console.log("## TRACKS");
 const tracksDir = join(ROOT, "ψ/inbox/tracks");
 if (existsSync(tracksDir)) {
   const tracks = readdirSync(tracksDir)
-    .filter((f) => f.endsWith(".md") && !f.includes("INDEX") && !f.includes("CLAUDE") && !f.includes("GEMINI"))
+    .filter((f) => f.endsWith(".md") && !f.includes("INDEX") && !f.includes("GEMINI"))
     .sort((a, b) => statSync(join(tracksDir, b)).mtimeMs - statSync(join(tracksDir, a)).mtimeMs)
     .slice(0, 6);
   for (const t of tracks) {
@@ -119,7 +119,7 @@ if (existsSync(retroDir)) {
   const glob = new Bun.Glob("**/*.md");
   const retros = Array.from(glob.scanSync({ cwd: retroDir, absolute: true })) as string[];
   const latest = retros
-    .filter(f => !f.includes("CLAUDE") && !f.includes("GEMINI"))
+    .filter(f => !f.includes("GEMINI"))
     .sort((a, b) => statSync(b).mtimeMs - statSync(a).mtimeMs)[0];
 
   if (latest) {
@@ -136,7 +136,7 @@ if (existsSync(handoffDir)) {
   const glob = new Bun.Glob("*.md");
   const handoffs = Array.from(glob.scanSync({ cwd: handoffDir, absolute: true })) as string[];
   const latest = handoffs
-    .filter(f => !f.includes("CLAUDE") && !f.includes("GEMINI"))
+    .filter(f => !f.includes("GEMINI"))
     .sort((a, b) => statSync(b).mtimeMs - statSync(a).mtimeMs)[0];
 
   if (latest) {

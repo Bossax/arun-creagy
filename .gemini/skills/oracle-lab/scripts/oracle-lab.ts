@@ -42,8 +42,8 @@ function ship(projectName: string, version: string) {
   const fleetMembers = readdirSync(WORKSPACE_ROOT, { withFileTypes: true })
     .filter(dirent => {
       if (!dirent.isDirectory() || dirent.name === 'temp' || dirent.name === 'engine' || dirent.name.startsWith('.')) return false;
-      // Heartbeat Check: Only ship to folders with a CLAUDE.md manifest
-      return existsSync(join(WORKSPACE_ROOT, dirent.name, 'CLAUDE.md'));
+      // Heartbeat Check: Only ship to folders with a GEMINI.md manifest
+      return existsSync(join(WORKSPACE_ROOT, dirent.name, 'GEMINI.md'));
     })
     .map(dirent => dirent.name);
 

@@ -47,7 +47,7 @@ Detect session ID (win32-native):
 
 ```powershell
 $ENCODED_PWD = (Get-Location).Path.Replace(':', '').Replace('\', '-')
-$PROJECT_BASE = Get-ChildItem -Path "$env:USERPROFILE\.claude\projects\*$ENCODED_PWD*" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+$PROJECT_BASE = Get-ChildItem -Path "$env:USERPROFILE\.gemini\tmp\arun-creagy\chats" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
 $LATEST_JSONL = Get-ChildItem -Path "$PROJECT_BASE\*.jsonl" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
 if ($LATEST_JSONL) { $SESSION_ID = $LATEST_JSONL.BaseName; Write-Host "SESSION: $($SESSION_ID.Substring(0, 8))" }
 ```
@@ -65,7 +65,7 @@ Agent({
 Read-only.
 
 Command:
-powershell.exe -NoProfile -Command "$ENCODED_PWD = '[ORACLE_ROOT]'.Replace(':', '').Replace('\\', '-'); $PROJECT_BASE = Get-ChildItem -Path \"$env:USERPROFILE\\.claude\\projects\\*$ENCODED_PWD*\" | Sort-Object LastWriteTime -Descending | Select-Object -First 1; $LATEST_JSONL = Get-ChildItem -Path \"$PROJECT_BASE\\*.jsonl\" | Sort-Object LastWriteTime -Descending | Select-Object -First 1; if ($LATEST_JSONL) { python3 -c \"import json, os; from datetime import datetime, timezone, timedelta; tz = timezone(timedelta(hours=7)); f_path = r'$($LATEST_JSONL.FullName)'; with open(f_path, encoding='utf-8') as f: [print(f'{datetime.fromisoformat(m['timestamp'].replace(\"Z\", \"+00:00\")).astimezone(tz).strftime(\"%Y-%m-%d %H:%M\")} | {m['message']['content'][:80]}') for m in (json.loads(l) for l in f) if m.get('type') == 'user' and 'message' in m]\" }"`
+powershell.exe -NoProfile -Command "$PROJECT_BASE = Get-ChildItem -Path \"$env:USERPROFILE\\.gemini\\tmp\\arun-creagy\\chats\" | Sort-Object LastWriteTime -Descending | Select-Object -First 1; $LATEST_JSONL = Get-ChildItem -Path \"$PROJECT_BASE\\*.jsonl\" | Sort-Object LastWriteTime -Descending | Select-Object -First 1; if ($LATEST_JSONL) { python3 -c \"import json, os; from datetime import datetime, timezone, timedelta; tz = timezone(timedelta(hours=7)); f_path = r'$($LATEST_JSONL.FullName)'; with open(f_path, encoding='utf-8') as f: [print(f'{datetime.fromisoformat(m['timestamp'].replace(\"Z\", \"+00:00\")).astimezone(tz).strftime(\"%Y-%m-%d %H:%M\")} | {m['content'][:80]}') for m in (json.loads(l) for l in f) if m.get('type') == 'user']\" }"
 })
 ```
 

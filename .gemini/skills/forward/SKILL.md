@@ -31,7 +31,7 @@ Create context for next session, then enter plan mode to define next steps.
 
 ```powershell
 $ENCODED_PWD = (Get-Location).Path.Replace(':', '').Replace('\', '-')
-$PROJECT_DIR = "$env:USERPROFILE\.claude\projects"
+$PROJECT_DIR = "$env:USERPROFILE\.gemini\tmp\arun-creagy\chats"
 $LATEST_JSONL = Get-ChildItem -Path "$PROJECT_DIR\*$ENCODED_PWD*\*.jsonl" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
 if ($LATEST_JSONL) {
   $SESSION_ID = $LATEST_JSONL.BaseName

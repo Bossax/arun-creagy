@@ -229,10 +229,10 @@ async function anchorEnvironment() {
     scaffoldGemini(mandates);
     scaffoldRoo(mandates);
 
-    // 4. CLAUDE.md Router (< 60 lines)
-    const claudeSummary = `# Oracle: ${oracleName.toUpperCase()}\n\n` + 
+    // 4. GEMINI.md Router (< 60 lines)
+    const geminiSummary = `# Oracle: ${oracleName.toUpperCase()}\n\n` + 
         `**Thinking Companion**: Refer to \`GEMINI.md\` for instruction routing.\n`;
-    writeFileSync('CLAUDE.md', claudeSummary);
+    writeFileSync('GEMINI.md', geminiSummary);
 
     // 5. Docker Injection
     updateDockerCompose(containerName, projectDirName);
