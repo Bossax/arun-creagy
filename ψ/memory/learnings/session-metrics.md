@@ -11,3 +11,4 @@ Rule (parent CLAUDE.md §"Self-Evaluation Loop"): same friction 3 sessions → f
 | 2026-06-04 | Hardened Pillar 1 IA & Asset Mapping | Success | 100% Alignment with May 12 Strategic Vision |
 | 2026-06-04 | 792e39f | Sitthi | Hardening Asset Mapping | v6.1 CSV, UX Report | COMPLETED |
 | 2026-06-04 | 792e39f | Sitthi | Sealing Pillar 1 Baseline | Ledgers, v6.1 Artifacts | COMPLETED |
+| 2026-06-04 | Mandate Refactor | Shipped technical persona update | 0 | 3 | 0 | Success |

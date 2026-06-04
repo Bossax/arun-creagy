@@ -1,19 +1,19 @@
-# Mandate: The Oracle Brain (ψ) Structure
+# Mandate: The ψ Directory Structure
 
-This mandate defines the standardized architecture of the Oracle knowledge base.
+This mandate defines the standardized architecture of the documentation system.
 
-## The 8 Pillars of ψ/
+## The 8 Root Directories of ψ/
 
-1. **inbox/**: Structured intake for `signals/` (fleet friction), `issue/` (local bugs), and `shipments/` (received skills).
-2. **memory/**: Categorized knowledge, including `resonance/` (identity/philosophy), `learnings/` (patterns), `retrospectives/` (history), and `logs/` (audit trails).
-3. **incubate/**: project specific spaces for inbox and sources
+1. **inbox/**: Intake for system logs, reported issues, and received skills.
+2. **memory/**: Categorized data, including identity files, patterns/learnings, retrospectives, and audit logs.
+3. **incubate/**: Project-specific development space for drafts and sources.
 4. **writing/**: Drafts, reports, and working documents.
-5. **lab/**: The Skill Factory. Contains project-based incubation folders (e.g., `ψ/lab/<project-slug>/`).
-6. **learn/**: Discovered ancestors, reference materials, and study resources.
-7. **archive/**: Completed and versioned history, preserving project evolution.
-8. **outbox/**: Finalized shipments and announcements.
+5. **lab/**: Skill development. Contains project-based development folders (e.g., `ψ/lab/<project-slug>/`).
+6. **learn/**: Reference materials and study resources.
+7. **archive/**: Completed and versioned files, preserving project history.
+8. **outbox/**: Finalized updates and deployments.
 
 ## Structure Rules
-- **Pillar Integrity**: The 8 root folders must always be present.
+- **Directory Integrity**: The 8 root folders must always be present.
 - **Persistence**: Data must be preserved; move completed items to `archive/` rather than deleting.
-- **Isolation**: New skills or projects under incubation must reside in their own `ψ/lab/` subfolder.
+- **Isolation**: New skills or projects under development must reside in their own `ψ/lab/` subfolder.
