@@ -1,0 +1,138 @@
+{
+  "version": "4.0",
+  "project": "NCAIF Pillar 2",
+  "last_updated": "2026-06-05",
+  "dependencies": [
+    {
+      "id": "G1-01",
+      "agency": ["TBA", "Commercial Banks"],
+      "decision_moment": "Climate Stress Testing (ICAAP/BoT)",
+      "institutional_pain_point": "Risk of financial instability and regulatory non-compliance with BoT physical risk analysis framework; reliance on outdated 2011 baseline.",
+      "intelligence_product": "Asset-level Probabilistic Flood Maps",
+      "technical_specs": {
+        "granularity": "Asset-level coordinates",
+        "hazards": ["Pluvial", "Riverine", "Coastal"],
+        "metrics": ["Depth", "Duration", "Probability"],
+        "scenarios": ["CMIP5", "BoT Guideline Scenarios"]
+      },
+      "originator_tag": "[TBA - Stress Test - Interview Summary TBA]"
+    },
+    {
+      "id": "G1-02",
+      "agency": ["NESDC"],
+      "decision_moment": "Quarterly GDP Forecast Adjustment",
+      "institutional_pain_point": "DDPM data only captures 'Government Compensation' payouts, missing true economic value loss, business interruption, and logistics friction.",
+      "intelligence_product": "Event-level Macro-Economic L&D Report",
+      "technical_specs": {
+        "scope": ["Direct asset damage", "Business interruption", "Opportunity cost"],
+        "granularity": "Event-level / District-level",
+        "framework": "Sendai-aligned L&D"
+      },
+      "originator_tag": "[NESDC - GDP Adjustment - Interview Summary NESDC]"
+    },
+    {
+      "id": "G1-03",
+      "agency": ["DLA", "Local Municipalities"],
+      "decision_moment": "Accumulated Funds (เงินสะสม) Deployment",
+      "institutional_pain_point": "Fear of State Audit Office (OAG) liability for spending local funds without officially recognized ROI/Cost-Benefit justification.",
+      "intelligence_product": "Standardized Climate Investment ROI",
+      "technical_specs": {
+        "metrics": ["ROI", "Cost-Benefit Ratio"],
+        "baseline": "Proactive vs. Post-disaster loss",
+        "targets": ["LAO-level projects"]
+      },
+      "originator_tag": "[DLA - Accumulated Funds - Interview Summary DLA]"
+    },
+    {
+      "id": "G1-04",
+      "agency": ["FTI", "Commercial Banks"],
+      "decision_moment": "Green Loan Interest Rate Setting",
+      "institutional_pain_point": "Lack of verifiable impact data for SMEs prevents banks from providing discounted green loan rates; need for third-party verification.",
+      "intelligence_product": "SME Emission Verification Certificate",
+      "technical_specs": {
+        "reporting": ["Scope 1", "Scope 2"],
+        "baseline": "Pre- vs. Post-investment monitoring",
+        "standards": "TGO-aligned methodologies"
+      },
+      "originator_tag": "[FTI - Green Loan - Interview Summary FTI]"
+    },
+    {
+      "id": "G2-01",
+      "agency": ["UDDC", "City Planners"],
+      "decision_moment": "Spatial Strategic Plan Formulation",
+      "institutional_pain_point": "Inter-agency data fragmentation and 'Zero-Base' inconsistencies prevent the legal formalization of neighborhood climate plans.",
+      "intelligence_product": "Neighborhood Data Lake / Future Inundation Maps",
+      "technical_specs": {
+        "resolution": "1m DEM",
+        "scenarios": ["SSP3", "SSP5 downscaled to city"],
+        "outputs": ["Future habitability zones", "Spatial strategic plans"]
+      },
+      "originator_tag": "[UDDC - City Scale - Interview Summary UDDC]"
+    },
+    {
+      "id": "G2-02",
+      "agency": ["MSDHS", "Provincial Social Development Offices"],
+      "decision_moment": "Physical Evacuation of Vulnerable Groups",
+      "institutional_pain_point": "Lack of real-time matching between rising water and specific bedridden/disabled individuals; evacuations are reactive rather than predictive.",
+      "intelligence_product": "Vulnerable Group Spatial Overlay",
+      "technical_specs": {
+        "data_link": "Civil Registry (13-digit ID) to welfare registries",
+        "granularity": "Household/Individual level",
+        "hazard_overlay": ["Flood", "Drought", "Heatwave"]
+      },
+      "originator_tag": "[MSDHS - Evacuation - Interview Summary MSDHS]"
+    },
+    {
+      "id": "G2-03",
+      "agency": ["DPT", "Public Works Engineers"],
+      "decision_moment": "Urban Drainage Infrastructure Design",
+      "institutional_pain_point": "Reliance on 30-year historical rainfall statistics leads to infrastructure failure under intensified 'Rain Bomb' conditions.",
+      "intelligence_product": "Climate-Adjusted IDF Curves",
+      "technical_specs": {
+        "return_period": ["50-year", "100-year"],
+        "coefficients": "Climate-change adjusted rainfall intensity",
+        "engineering_inputs": ["Road elevation", "Drainage geometry"]
+      },
+      "originator_tag": "[DPT - Drainage Design - Interview Summary DPT]"
+    },
+    {
+      "id": "G2-04",
+      "agency": ["OTP", "Highway/Railway Departments"],
+      "decision_moment": "National Infrastructure Retrofitting Investment",
+      "institutional_pain_point": "Rejection of budget for climate resilience by Bureau of Budget due to uncertainty; need for pinpoint justification down to the asset level.",
+      "intelligence_product": "High-Res Infrastructure Hazard Flow Map",
+      "technical_specs": {
+        "granularity": "Kilometer markers / Railway utility pole numbers",
+        "modeling": "High-res hydrological hazard flow",
+        "asset_overlay": ["National highways", "Rural roads", "Railways"]
+      },
+      "originator_tag": "[OTP - KM-Marker - Interview Summary OTP]"
+    },
+    {
+      "id": "G2-05",
+      "agency": ["NSO", "DCCE"],
+      "decision_moment": "Exposure Layer Generation (NCAIF Risk Map)",
+      "institutional_pain_point": "Current exposure maps are too coarse; lack of building-block resolution for accurate urban risk assessment.",
+      "intelligence_product": "Enumeration Area (EA) High-Res Exposure Baseline",
+      "technical_specs": {
+        "spatial_unit": "Enumeration Area (~250 buildings per block)",
+        "source": "Population and Housing Census actual residence data",
+        "attributes": ["Building count", "Business density", "Household vulnerability"]
+      },
+      "originator_tag": "[NSO - EA Unit - Interview Summary NSO]"
+    },
+    {
+      "id": "G3-01",
+      "agency": ["BMA", "Drainage & Sewerage Dept"],
+      "decision_moment": "Pumping Gate & Tunnel Operation",
+      "institutional_pain_point": "Lack of automated API exchange for upstream basin and tidal data; staff must manually monitor multiple websites during flood events.",
+      "intelligence_product": "Integrated Basin-City Operational View",
+      "technical_specs": {
+        "inputs": ["BMA rainfall/canals", "Upstream river release", "Tidal backflow"],
+        "latency": "Near real-time (API-based)",
+        "lead_time": "1-3 hour short-term forecasting"
+      },
+      "originator_tag": "[BMA - Flood Ops - Interview Summary BMA]"
+    }
+  ]
+}
