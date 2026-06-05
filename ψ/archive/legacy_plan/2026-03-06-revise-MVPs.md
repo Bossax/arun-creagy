@@ -23,12 +23,12 @@ type: "plan "
 - [ ] ground my critique and suggestion with the interview analysis result 
 - [ ] prompt me to revise MVP directions
 - [ ] create a second version of [[ψ/incubate/DCCE/CRDB/output/03_Logic_MVD_MVP/NCAIF — Workflow patterns + MVP draft (from stakeholder use cases)]]
-- [ ] update [[National Climate Adaptation Information Framework]]. Include the analysis of how the new MVP design align with or even enhance the use cases [[ψ/incubate/DCCE/CRDB/output/03_Logic_MVD_MVP/NCAIF_Use_Cases]]
+- [ ] update [[ψ/incubate/DCCE/CRDB/output/00_Drafts_Archive/National Climate Adaptation Information Framework]]. Include the analysis of how the new MVP design align with or even enhance the use cases [[ψ/incubate/DCCE/CRDB/output/03_Logic_MVD_MVP/NCAIF_Use_Cases]]
 - [ ] merge [[FGD2_plan_2026-02-26]] and [[FGD2_agenda_2026-03-02]], use the most recent file as an anchor
 - [ ] update[[FGD2_Slide_Deck_Guide]] and create a new FGD plan
 - [ ] The slide deck guide can refer to [[Communication strategy - Selling NCAIF and CDM (FGD2 internal)]]. Come up with 1 key message per one agenda that the participants must remember or take away from the meeting. Design the presentation slide around this key message
 ## Expected Outcome
 
 *  New MVP design doc
-*  Updated [[National Climate Adaptation Information Framework]]
+*  Updated [[ψ/incubate/DCCE/CRDB/output/00_Drafts_Archive/National Climate Adaptation Information Framework]]
 * updated FGD2 documents

@@ -21,7 +21,7 @@ type: "plan "
 - [ ]  [[01_Projects/2025-11_DCCE-CRDB/output/Artifact v1/CDM - All Domain-20260225.drawio - xml.xml]] update this xml file based on [[01_Projects/2025-11_DCCE-CRDB/output/Artifact v1/Detailed_CDM_Design ]]
 - [ ] Read interview summary of DGA. Append a section contains suggestions to leverage DGA capacity and service to accelerate the phasing of data governance.
 - [ ] Proposed the changes to [[Feature-Driven Data Governance Strategy v2 (2026-02-26)]]
-- [ ] Rewrite [[National Climate Adaptation Information Framework]]: according to [[Feature-Driven Data Governance Strategy v2 (2026-02-26)]] decisions. Below is minimum expected content 
+- [ ] Rewrite [[ψ/incubate/DCCE/CRDB/output/00_Drafts_Archive/National Climate Adaptation Information Framework]]: according to [[Feature-Driven Data Governance Strategy v2 (2026-02-26)]] decisions. Below is minimum expected content 
 	- [ ] Update the sitemap [[NCAIF_Sitemap_Options]]. The sitemap must be designed to satisfy the focused workflows and explicitly place MVPs in suitable locations. Give me 2-3 alternatives. 
 	- [ ] Section explaining use case inventory from stakeholder engagement in [[ψ/incubate/DCCE/CRDB/output/03_Logic_MVD_MVP/NCAIF_Use_Cases]]
 	- [ ] Section explaining prioritized workflow and use cases. Highlight MVPs. describe the logic of deriving these MVPs [[ψ/incubate/DCCE/CRDB/output/03_Logic_MVD_MVP/NCAIF — Workflow patterns + MVP draft (from stakeholder use cases)]]
@@ -36,5 +36,5 @@ type: "plan "
 1. Updated xml
 2. Updated documents
 	- Feature-Driven Data Governance Strategy v3 in the same folder 
-	- [[National Climate Adaptation Information Framework]]
+	- [[ψ/incubate/DCCE/CRDB/output/00_Drafts_Archive/National Climate Adaptation Information Framework]]
 	- [[FGD2_Slide_Deck_Guide]]

@@ -21,7 +21,7 @@ Use only the following as the authoritative evidence base for Pillar 2 compilati
 ### 2.1 Interview-derived use cases and patterns
 
 - [`canoncial_use_cases.md`](ψ/incubate/DCCE/CRDB/output/consultation_workshop/canoncial_use_cases.md)
-- [`NCAIF — Workflow patterns + MVP v3.md`](ψ/incubate/DCCE/CRDB/output/02_UseCases_FunctionalSpecs/NCAIF%20—%20Workflow%20patterns%20+%20MVP%20v3.md)
+- [`NCAIF — Workflow patterns + MVP v3.md`](ψ/archive/2026-06-05_stale_pillar2/NCAIF%20—%20Workflow%20patterns%20+%20MVP%20v3.md)
 
 ### 2.2 Workshop validation + expansion artifacts
 

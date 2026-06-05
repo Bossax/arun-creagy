@@ -8,7 +8,7 @@ Run a structured content gap analysis between the current DCCE website (https://
 
 Use the NCAIF vNext sitemap as the **target structure**:
 
-- [`ψ/incubate/DCCE/CRDB/National Climate Adaptation Information Framework.md`](National%20Climate%20Adaptation%20Information%20Framework.md)
+- [`ψ/incubate/DCCE/CRDB/National Climate Adaptation Information Framework.md`](ψ/incubate/DCCE/CRDB/output/00_Drafts_Archive/National%20Climate%20Adaptation%20Information%20Framework.md)
 - [`plans/2026-03-12_ncaif-sitemap-vnext-plan.md`](plans/2026-03-12_ncaif-sitemap-vnext-plan.md)
 
 ## Scope boundaries

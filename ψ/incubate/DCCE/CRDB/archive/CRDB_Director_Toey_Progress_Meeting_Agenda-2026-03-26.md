@@ -56,7 +56,7 @@ Use this as a **working agenda**, not a slide deck. For each segment the intent 
      - [`ψ/incubate/DCCE/CRDB/output/2026-03-12-DCCE_Website_Content_Gap_Inventory.md`](ψ/incubate/DCCE/CRDB/output/2026-03-12-DCCE_Website_Content_Gap_Inventory.md)
      - [`ψ/incubate/DCCE/CRDB/output/2026-03-12-DCCE_Website_Content_Gap_Matrix.md`](ψ/incubate/DCCE/CRDB/output/2026-03-12-DCCE_Website_Content_Gap_Matrix.md)
      - [`ψ/incubate/DCCE/CRDB/output/2026-03-12-DCCE_Website_Content_Gap_Summary.md`](ψ/incubate/DCCE/CRDB/output/2026-03-12-DCCE_Website_Content_Gap_Summary.md)
-   - Summarize the **strong** evidence that current content and navigation do not match user demand and that NCAIF needs a different front door, as framed in [`ψ/incubate/DCCE/CRDB/output/01_Sitemap_InterfaceMapping/National Climate Adaptation Information Framework.md`](ψ/incubate/DCCE/CRDB/output/01_Sitemap_InterfaceMapping/National%20Climate%20Adaptation%20Information%20Framework.md).
+   - Summarize the **strong** evidence that current content and navigation do not match user demand and that NCAIF needs a different front door, as framed in [`ψ/incubate/DCCE/CRDB/output/01_Sitemap_InterfaceMapping/National Climate Adaptation Information Framework.md`](ψ/incubate/DCCE/CRDB/output/00_Drafts_Archive/National%20Climate%20Adaptation%20Information%20Framework.md).
    - Connect to UX evidence in [`ψ/incubate/DCCE/CRDB/inbox_source/2026-03-12 - User Experience Design Principles for National Climate Change Adaptation Information Services.md`](ψ/incubate/DCCE/CRDB/inbox_source/2026-03-12%20-%20User%20Experience%20Design%20Principles%20for%20National%20Climate%20Change%20Adaptation%20Information%20Services.md).
 
 2. **CDM concept and data-method framing — Moderate but conceptually solid**

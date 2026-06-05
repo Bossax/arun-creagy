@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCAIF Service Discovery Tool - กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม</title>
+    <style>
+        :root {
+            --primary-color: #004a5d;
+            --secondary-color: #008ba3;
+            --accent-color: #f1f8fa;
+            --text-color: #333;
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Sarabun', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f4f7f8;
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        header p {
+            color: var(--secondary-color);
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: var(--border-radius);
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .service-header {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+
+        .service-header:hover {
+            background-color: var(--accent-color);
+        }
+
+        .service-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .icon {
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .service-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            padding: 0 20px;
+            background-color: #fff;
+        }
+
+        .service-card.active .service-content {
+            max-height: 2000px;
+            padding-bottom: 20px;
+        }
+
+        .service-card.active .icon {
+            transform: rotate(180deg);
+        }
+
+        .definition {
+            font-size: 1rem;
+            color: #555;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+
+        .agency-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .agency-item {
+            background-color: var(--accent-color);
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-left: 3px solid var(--secondary-color);
+        }
+
+        .agency-name {
+            font-weight: bold;
+            color: var(--secondary-color);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .use-case {
+            font-size: 0.95rem;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e0e0e0;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>NCAIF Service Discovery Tool</h1>
+    <p>ระบบโครงสร้างสารสนเทศการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศแห่งชาติ (NCAIF)</p>
+</header>
+
+<div class="container" id="services-container">
+    <!-- Service 01 -->
+    <div class="service-card">
+        <div class="service-header" onclick="toggleService(this)">
+            <span class="service-title">บริการที่ 1: การรับรองมาตรฐานเมทาดาตาและคุณภาพข้อมูลเชิงอำนาจ (Authoritative Metadata & Quality Certification)</span>
+            <span class="icon">▼</span>
+        </div>
+        <div class="service-content">
+            <div class="definition">
+                <strong>นิยาม:</strong> การจัดเตรียมสถาปัตยกรรมข้อมูลและมาตรฐานเมทาดาตา (Metadata Schemas) ที่ได้รับการตรวจสอบและรับรองความถูกต้องตามมาตรฐานสากล (ISO/STAC) เพื่อให้ข้อมูลภูมิอากาศมี "ตราประทับอย่างเป็นทางการ" สำหรับการใช้งานในระดับสถาบัน
+            </div>
+            <div class="tag">หน่วยงานหลัก: สมาคมธนาคารไทย (TBA), สผ. (ONEP), สศช. (NESDC), สอวช. (NXPO)</div>
+            <ul class="agency-list">
+                <li class="agency-item">
+                    <span class="agency-name">สมาคมธนาคารไทย (TBA)</span>
+                    <span class="use-case">จัดทำ <strong>Sectoral Damage Functions</strong> ที่เป็นมาตรฐาน เพื่อสร้างความสอดคล้องในการทำ Stress Test (ICAAP) ตามเกณฑ์การกำกับดูแลของธนาคารแห่งประเทศไทย</span>
+                </li>
+                <li class="agency-item">
+                    <span class="agency-name">สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม (สผ.)</span>
+                    <span class="use-case">การออก <strong>เกณฑ์มาตรฐานความเสี่ยงด้านความหลากหลายทางชีวภาพ</strong> เพื่อสนับสนุนการจัดการพื้นที่คุ้มครองและการบูรณาการยุทธศาสตร์การอนุรักษ์ระดับชาติ</span>
+                </li>
+                <li class="agency-item">
+                    <span class="agency-name">สำนักงานสภาพัฒนาการเศรษฐกิจและสังคมแห่งชาติ (สศช.)</span>
+                    <span class="use-case"><strong>การทวนสอบความเสี่ยงระดับมหภาค</strong> สำหรับการอนุมัติเงินกู้โครงสร้างพื้นฐานขนาดใหญ่และการจัดทำแบบจำลองส่วนลดความเสี่ยงระดับชาติ (Risk-discounting models)</span>
+                </li>
+                <li class="agency-item">
+                    <span class="agency-name">สำนักงานสภานโยบายการอุดมศึกษา วิทยาศาสตร์ วิจัยและนวัตกรรมแห่งชาติ (สอวช.)</span>
+                    <span class="use-case"><strong>แดชบอร์ดลำดับความสำคัญของความเสี่ยงระดับสถาบัน</strong> เพื่อกำหนดมาตรฐานการจัดสรรทุนวิจัยระหว่างหน่วยงานและการจัดลำดับความสำคัญของการลงทุนเพื่อการปรับตัว</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Service 02 -->
+    <div class="service-card">
+        <div class="service-header" onclick="toggleService(this)">
+            <span class="service-title">บริการที่ 2: การวิเคราะห์ความเปราะบางเชิงพื้นที่และสังคมเชิงบูรณาการ</span>
+            <span class="icon">▼</span>
+        </div>
+        <div class="service-content">
+            <div class="definition">
+                <strong>นิยาม:</strong> การวิเคราะห์เชิงลึกที่บูรณาการการคาดการณ์ภัยทางกายภาพ เข้ากับดัชนีชี้วัดความเปราะบางทางสังคมและเศรษฐกิจในระดับตำบลหรือหมู่บ้าน
+            </div>
+            <div class="tag">หน่วยงานหลัก: พม. (MSDHS), สสช. (NSO), ปภ. (DDPM), กรมอนามัย (DOH)</div>
+            <ul class="agency-list">
+                <li class="agency-item">
+                    <span class="agency-name">กระทรวงการพัฒนาสังคมและความมั่นคงของมนุษย์ (พม.)</span>
+                    <span class="use-case"><strong>ศูนย์กลางข้อมูลความเปราะบางระดับหมู่บ้าน</strong> เพื่อระบุกลุ่มประชากรที่จำเป็นต้องได้รับความช่วยเหลือในการย้ายถิ่นฐานเนื่องจากการเปลี่ยนแปลงสภาพภูมิอากาศที่ถาวร</span>
+                </li>
+                <li class="agency-item">
+                    <span class="agency-name">สำนักงานสถิติแห่งชาติ (สสช.)</span>
+                    <span class="use-case"><strong>ข้อมูลสถิติพื้นฐานที่ระบุตำแหน่งความเสี่ยงภูมิอากาศ</strong> (EA/Village level) เพื่อสนับสนุนการทำสำมะโนประชากรที่แม่นยำและการรายงานผล SDG/UN ระดับนานาชาติ</span>
+                </li>
+                <li class="agency-item">
+                    <span class="agency-name">กรมป้องกันและบรรเทาสาธารณภัย (ปภ.)</span>
+                    <span class="use-case"><strong>ดัชนีความเปราะบางระดับท้องถิ่น</strong> เพื่อกำหนดมาตรฐานการประเมินความเสี่ยงอย่างเป็นระบบในทั้ง 76 จังหวัด</span>
+                </li>
+                <li class="agency-item">
+                    <span class="agency-name">กรมอนามัย (DOH)</span>
+                    <span class="use-case"><strong>การวิเคราะห์เฝ้าระวังความเสี่ยงด้านสุขภาพ</strong> โดยเชื่อมโยงภัยคุกคามทางกายภาพระดับตำบลเข้ากับข้อมูลกลุ่มเสี่ยง (ผู้สูงอายุ/ผู้ป่วย) เพื่อวางแผนทรัพยากรทางการแพทย์</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Service 03 -->
+    <div class="service-card">
+        <div class="service-header" onclick="toggleService(this)">
+            <span class="service-title">บริการที่ 3: การสนับสนุนการลงทุนและเหตุผลความจำเป็นด้านงบประมาณ</span>
+            <span class="icon">▼</span>
+        </div>
+        <div class="service-content">
+            <div class="definition">
+                <strong>นิยาม:</strong> ข้อมูลเชิงประจักษ์ทางเทคนิคและบทวิเคราะห์ความคุ้มค่า (ROI) ที่ออกแบบมาเพื่อใช้ชี้แจงความจำเป็นในการใช้งบประมาณเพื่อสร้างความพร้อมรับมือต่อสำนักงบประมาณและหน่วยงานตรวจสอบ (สตง.)
+            </div>
+            <div class="tag">หน่วยงานหลัก: สถ. (DLA), สนข. (OTP), กทม. (BMA), UDDC</div>
+            <ul class="agency-list">
+                <li class="agency-item">
+                    <span class="agency-name">กรมส่งเสริมการปกครองท้องถิ่น (สถ.)</span>
+                    <span class="use-case"><strong>ตัวชี้วัดความคุ้มค่า (ROI) ของการสร้างความพร้อมรับมือ</strong> เพื่อให้องค์กรปกครองส่วนท้องถิ่นสามารถนำ "เงินสะสม" มาใช้ในโครงการป้องกันภัยเชิงรุกแทนการเยียวยาหลังเกิดเหตุ</span>
+                </li>
+                <li class="agency-item">
+                    <span class="agency-name">สำนักงานนโยบายและแผนการจราจรและขนส่ง (สนข.)</span>
+                    <span class="use-case"><strong>บทวิเคราะห์ผลกระทบรายสาขา</strong> เพื่อใช้เป็นหลักฐานทางเทคนิคในการขออนุมัติงบประมาณที่เพิ่มขึ้น (50 เท่า) สำหรับการออกแบบโครงสร้างพื้นฐานที่ทนทานต่อภูมิอากาศ</span>
+                </li>
+                <li class="agency-item">
+                    <span class="agency-name">กรุงเทพมหานคร (BMA)</span>
+                    <span class="use-case"><strong>การรับรองการลงทุนระหว่างหน่วยงาน</strong> เพื่อประสานงานการลงทุนโครงสร้างพื้นฐานระดับหมื่นล้าน (อุโมงค์ระบายน้ำ/แก้มลิง) ร่วมกับหน่วยงานน้ำระดับชาติ</span>
+                </li>
+                <li class="agency-item">
+                    <span class="agency-name">ศูนย์เชี่ยวชาญเฉพาะทางด้านยุทธศาสตร์เมือง (UDDC)</span>
+                    <span class="use-case"><strong>แบบจำลองผลประโยชน์จาก Nature-based Solutions (NbS)</strong> เพื่อเป็น "หลักฐานยืนยัน" ให้สำนักงบประมาณอนุมัติทุนสำหรับโครงสร้างพื้นฐานสีเขียวเชิงรุก</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Service 04 -->
+    <div class="service-card">
+        <div class="service-header" onclick="toggleService(this)">
+            <span class="service-title">บริการที่ 4: การติดตามตรวจสอบความสูญเสียและความเสียหายระดับชาติที่เป็นมาตรฐาน</span>
+            <span class="icon">▼</span>
+        </div>
+        <div class="service-content">
+            <div class="definition">
+                <strong>นิยาม:</strong> การรวมข้อมูลความสูญเสียจากหลายภาคส่วนให้เป็นโปรไฟล์ความเสียหายระดับชาติเพียงหนึ่งเดียว แทนการประมาณการที่แยกส่วนกันในแต่ละหน่วยงาน
+            </div>
+            <div class="tag">หน่วยงานหลัก: ปภ. (DDPM), สศช. (NESDC), ททท./กระทรวงท่องเที่ยว (MOTS), สทนช. (ONWR), พด. (LDD)</div>
+            <ul class="agency-list">
+                <li class="agency-item">
+                    <span class="agency-name">กรมป้องกันและบรรเทาสาธารณภัย (ปภ.)</span>
+                    <span class="use-case"><strong>อนุกรมวิธานความเปราะบางที่ผ่านการทวนสอบ</strong> (ตามมาตรฐาน UNDRR) เพื่อกำหนดมาตรฐานการนับความเสียหายทางกายภาพและการสูญเสียสินทรัพย์ในทุกจังหวัด</span>
+                </li>
+                <li class="agency-item">
+                    <span class="agency-name">สำนักงานสภาพัฒนาการเศรษฐกิจและสังคมแห่งชาติ (สศช.)</span>
+                    <span class="use-case"><strong>รายงานความสูญเสียเชิงมหภาคแบบบูรณาการ</strong> โดยรวมความเสียหายโดยตรงของสินทรัพย์เข้ากับต้นทุนการหยุดชะงักทางธุรกิจเพื่อการพยากรณ์ GDP</span>
+                </li>
+                <li class="agency-item">
+                    <span class="agency-name">กระทรวงการท่องเที่ยวและกีฬา (MOTS)</span>
+                    <span class="use-case"><strong>โปรไฟล์ความพร้อมรับมือด้านการท่องเที่ยว</strong> เพื่อวัดความอ่อนไหวทางเศรษฐกิจและความสูญเสียที่แท้จริงของแหล่งท่องเที่ยวสำคัญเพื่อวางแผนการฟื้นฟู</span>
+                </li>
+                <li class="agency-item">
+                    <span class="agency-name">กรมพัฒนาที่ดิน (พด.)</span>
+                    <span class="use-case"><strong>การวิเคราะห์การฟื้นฟูระดับแปลงที่ดิน</strong> (ฝน/อุณหภูมิ/ความเสียหาย) เพื่อสนับสนุนนโยบายการฟื้นฟูเกษตรกรรมและการทวนสอบตลาดคาร์บอนเครดิต</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Service 05 -->
+    <div class="service-card">
+        <div class="service-header" onclick="toggleService(this)">
+            <span class="service-title">บริการที่ 5: พารามิเตอร์ทางวิศวกรรมเพื่อการออกแบบโครงสร้างพื้นฐาน</span>
+            <span class="icon">▼</span>
+        </div>
+        <div class="service-content">
+            <div class="definition">
+                <strong>นิยาม:</strong> การบูรณาการตัวแปรทางภูมิอากาศที่มองไปข้างหน้า (Forward-looking) เข้าสู่ข้อกำหนดอาคาร (Building Codes), กฎหมายผังเมือง และมาตรฐานการออกแบบโครงสร้างพื้นฐาน
+            </div>
+            <div class="tag">หน่วยงานหลัก: ยผ. (DPT), สนข. (OTP), กทม. (BMA), กรมทรัพยากรธรณี (DMR)</div>
+            <ul class="agency-list">
+                <li class="agency-item">
+                    <span class="agency-name">กรมโยธาธิการและผังเมือง (ยผ.)</span>
+                    <span class="use-case"><strong>การคาดการณ์ความเข้มข้นของฝนที่ปรับตามภูมิอากาศ</strong> เพื่อนำไปใช้โดยตรงในมาตรฐานการออกแบบระบบระบายน้ำและการกำหนดโซนนิ่งผังเมือง</span>
+                </li>
+                <li class="agency-item">
+                    <span class="agency-name">กรุงเทพมหานคร (BMA)</span>
+                    <span class="use-case"><strong>ข้อมูลวิเคราะห์เกาะความร้อนเมือง (Heat-Island)</strong> เพื่อกำหนดข้อกำหนดทางวิศวกรรมสำหรับโครงสร้างพื้นฐาน "เมืองฟองน้ำ" (Sponge City) ในแต่ละเขต</span>
+                </li>
+                <li class="agency-item">
+                    <span class="agency-name">สำนักงานนโยบายและแผนการจราจรและขนส่ง (สนข.)</span>
+                    <span class="use-case"><strong>การคาดการณ์ทางอุทกวิทยาระยะยาวที่เชื่อถือได้</strong> (20-50 ปี) เพื่อใช้เป็นฐานข้อมูลบังคับสำหรับโครงการรถไฟและถนนระดับชาติ</span>
+                </li>
+                <li class="agency-item">
+                    <span class="agency-name">กรมทรัพยากรธรณี (DMR)</span>
+                    <span class="use-case"><strong>แผนที่คาดการณ์หลุมยุบและดินโคลนถล่ม</strong> เพื่อเป็นฐานทางกฎหมายในการกำหนดพื้นที่ห้ามก่อสร้างและการออกใบอนุญาตความปลอดภัย</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Service 06 -->
+    <div class="service-card">
+        <div class="service-header" onclick="toggleService(this)">
+            <span class="service-title">บริการที่ 6: การเฝ้าระวังความเสี่ยงรายสาขาและการแจ้งเตือนด้านสุขภาพ</span>
+            <span class="icon">▼</span>
+        </div>
+        <div class="service-content">
+            <div class="definition">
+                <strong>นิยาม:</strong> การเฝ้าระวังเกณฑ์การอยู่อาศัย (Habitablity thresholds) และจุดวิกฤตความเสี่ยงด้านสาธารณสุขแบบเรียลไทม์ เพื่อให้หน่วยงานในพื้นที่จัดการความเสี่ยงได้อย่างทันท่วงที
+            </div>
+            <div class="tag">หน่วยงานหลัก: กรมอนามัย (DOH), กทม. (BMA), กระทรวงท่องเที่ยว (MOTS), กรมพัฒนาที่ดิน (LDD)</div>
+            <ul class="agency-list">
+                <li class="agency-item">
+                    <span class="agency-name">กรมอนามัย (DOH)</span>
+                    <span class="use-case"><strong>การเฝ้าระวังความร้อนและสุขภาพระดับตำบล</strong> เพื่อแนะนำการส่งหน่วยแพทย์เคลื่อนที่ในช่วงคลื่นความร้อนรุนแรง</span>
+                </li>
+                <li class="agency-item">
+                    <span class="agency-name">กรุงเทพมหานคร (BMA)</span>
+                    <span class="use-case"><strong>การแจ้งเตือนเกณฑ์การอยู่อาศัยรายเขต</strong> โดยคำนวณจากความร้อน ความชื้น และความสามารถในการระบายน้ำ เพื่อความปลอดภัยสาธารณะ</span>
+                </li>
+                <li class="agency-item">
+                    <span class="agency-name">กระทรวงการท่องเที่ยวและกีฬา (MOTS)</span>
+                    <span class="use-case"><strong>การเฝ้าระวังความเสี่ยงในแหล่งท่องเที่ยวสำคัญ</strong> เพื่อออกคำแนะนำตามความเสี่ยง (เช่น การปิดอุทยานทางทะเล หรือคำเตือนเรื่องความร้อนแก่ทางผู้ประกอบการ)</span>
+                </li>
+                <li class="agency-item">
+                    <span class="agency-name">กรมพัฒนาที่ดิน (พด.)</span>
+                    <span class="use-case"><strong>การสนับสนุนความเสี่ยงคาร์บอนในภาคเกษตร</strong> โดยให้ข้อมูลความเสี่ยงแก่โครงการคาร์บอนเครดิตภาคเกษตร เพื่อรักษาความเสถียรของตลาดในช่วงวิกฤตภูมิอากาศ</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Service 07 -->
+    <div class="service-card">
+        <div class="service-header" onclick="toggleService(this)">
+            <span class="service-title">บริการที่ 7: บริการการเข้าถึงข้อมูลที่เชื่อถือได้และสิทธิ์ในการเข้าถึงระดับสถาบัน</span>
+            <span class="icon">▼</span>
+        </div>
+        <div class="service-content">
+            <div class="definition">
+                <strong>นิยาม:</strong> การจัดการการเข้าถึงข้อมูลระดับชาติที่เป็น "ความจริงชุดเดียว" (Single-Source-of-Truth) เพื่อลดความยุ่งยากในการประสานงานและเป็น "เกราะป้องกันทางกฎหมาย" ในการแบ่งปันข้อมูล
+            </div>
+            <div class="tag">หน่วยงานหลัก: สอวช. (NXPO), สสช. (NSO), สผ. (ONEP), สพร. (DGA)</div>
+            <ul class="agency-list">
+                <li class="agency-item">
+                    <span class="agency-name">สำนักงานสภานโยบายการอุดมศึกษา วิทยาศาสตร์ วิจัยและนวัตกรรมแห่งชาติ (สอวช.)</span>
+                    <span class="use-case"><strong>API ดัชนีความพร้อมรับมือระดับสถาบัน</strong> เพื่อให้นักวิจัยเข้าถึงข้อมูลการคาดการณ์ได้โดยเจ้าหน้าที่ไม่ต้องกังวลเรื่องความรับผิดทางกฎหมายส่วนบุคคลหากข้อมูลพยากรณ์คลาดเคลื่อน</span>
+                </li>
+                <li class="agency-item">
+                    <span class="agency-name">สำนักงานสถิติแห่งชาติ (สสช.)</span>
+                    <span class="use-case"><strong>หน่วยงานกลางในการแลกเปลี่ยนข้อมูลระดับชาติ</strong> ที่มีอำนาจตรวจสอบและรับรองเพื่อข้ามข้อจำกัดด้านความเป็นส่วนตัวของข้อมูลในการรายงานผลระดับชาติ</span>
+                </li>
+                <li class="agency-item">
+                    <span class="agency-name">สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม (สผ.)</span>
+                    <span class="use-case"><strong>คลังข้อมูลความเสี่ยงด้านความหลากหลายทางชีวภาพ</strong> (GeoTIFF/SHP) ที่บูรณาการเข้ากับระบบ TH-BIF สำหรับการประเมินผลกระทบสิ่งแวดล้อม</span>
+                </li>
+                <li class="agency-item">
+                    <span class="agency-name">สำนักงานพัฒนารัฐบาลดิจิทัล (DGA)</span>
+                    <span class="use-case"><strong>NCAIF Authoritative API</strong> เพื่อการบูรณาการระบบงานอัตโนมัติระหว่างหน่วยงานเข้ากับระบบ e-MENSCR และ G-Cloud</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<footer>
+    &copy; 2026 กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (DCCE) - NCAIF Blueprint Phase
+</footer>
+
+<script>
+    function toggleService(header) {
+        const card = header.parentElement;
+        const isActive = card.classList.contains('active');
+        
+        // Close all other cards (optional, comment out if you want multiple open)
+        // document.querySelectorAll('.service-card').forEach(c => c.classList.remove('active'));
+        
+        if (isActive) {
+            card.classList.remove('active');
+        } else {
+            card.classList.add('active');
+        }
+    }
+</script>
+
+</body>
+</html>

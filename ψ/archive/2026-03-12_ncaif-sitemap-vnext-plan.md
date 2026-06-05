@@ -6,7 +6,7 @@ Refine the NCAIF presented in FGD2 so it looks like the kind of website-platform
 
 This plan keeps the strengths of:
 
-- [`ψ/incubate/DCCE/CRDB/National Climate Adaptation Information Framework.md`](National%20Climate%20Adaptation%20Information%20Framework.md)
+- [`ψ/incubate/DCCE/CRDB/National Climate Adaptation Information Framework.md`](ψ/incubate/DCCE/CRDB/output/00_Drafts_Archive/National%20Climate%20Adaptation%20Information%20Framework.md)
 - [`ψ/incubate/DCCE/CRDB/Artifact v1/NCAIF_Sitemap_Options.md`](NCAIF_Sitemap_Options.md)
 - [`ψ/incubate/DCCE/CRDB/inbox/writing_notes/2026-03-11_FGD2_action_summary.md`](2026-03-11_FGD2_action_summary.md)
 
@@ -247,7 +247,7 @@ And it should explicitly state:
 
 ## Execution checklist for [💻 Code](.roomodes)
 
-- [x] Update [`ψ/incubate/DCCE/CRDB/National Climate Adaptation Information Framework.md`](National%20Climate%20Adaptation%20Information%20Framework.md) with the vNext sitemap narrative
+- [x] Update [`ψ/incubate/DCCE/CRDB/National Climate Adaptation Information Framework.md`](ψ/incubate/DCCE/CRDB/output/00_Drafts_Archive/National%20Climate%20Adaptation%20Information%20Framework.md) with the vNext sitemap narrative
 - [x] Add a new section containing the 2 to 3 level drill-down sitemap
 - [x] Add a stable vs flexible sitemap rule section
 - [x] Add the sitemap change process section

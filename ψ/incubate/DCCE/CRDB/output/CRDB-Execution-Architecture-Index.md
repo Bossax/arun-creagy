@@ -20,7 +20,7 @@ Supersedes: [`CRDB-Workstreams-Index.md`](ψ/incubate/DCCE/CRDB/archive/CRDB-Wor
 
 ## 3) Legacy architecture anchors (still active as source anchors)
 
-- NCAIF anchor: [`National Climate Adaptation Information Framework.md`](ψ/incubate/DCCE/CRDB/output/01_Sitemap_InterfaceMapping/National%20Climate%20Adaptation%20Information%20Framework.md)
+- NCAIF anchor: [`National Climate Adaptation Information Framework.md`](ψ/incubate/DCCE/CRDB/output/00_Drafts_Archive/National%20Climate%20Adaptation%20Information%20Framework.md)
 - CDM anchor: [`Conceptual Data Model for climate risk and adaptation data system.md`](ψ/incubate/DCCE/CRDB/output/05_CDM_EARCatalog/Conceptual%20Data%20Model%20for%20climate%20risk%20and%20adaptation%20data%20system.md)
 - Workflow/MVP anchor: [`NCAIF — Workflow patterns + MVP v3.md`](ψ/incubate/DCCE/CRDB/output/02_UseCases_FunctionalSpecs/NCAIF%20%E2%80%94%20Workflow%20patterns%20%2B%20MVP%20v3.md)
 - Governance strategy anchor: [`2026-03-05-Feature-Driven Data Governance Strategy v3.md`](ψ/incubate/DCCE/CRDB/output/2026-03-05-Feature-Driven%20Data%20Governance%20Strategy%20v3.md)

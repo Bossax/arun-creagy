@@ -1,6 +1,6 @@
 # DCCE Website × NCAIF vNext — Content Gap Matrix
 
-Reference model: [`National Climate Adaptation Information Framework.md`](National%20Climate%20Adaptation%20Information%20Framework.md)
+Reference model: [`National Climate Adaptation Information Framework.md`](ψ/incubate/DCCE/CRDB/output/00_Drafts_Archive/National%20Climate%20Adaptation%20Information%20Framework.md)
 
 Source inventory: [`DCCE_Website_Content_Gap_Inventory.md`](ψ/incubate/DCCE/CRDB/output/2026-03-12-DCCE_Website_Content_Gap_Inventory.md)
 
