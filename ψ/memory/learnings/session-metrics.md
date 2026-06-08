@@ -14,3 +14,5 @@ Rule (parent CLAUDE.md §"Self-Evaluation Loop"): same friction 3 sessions → f
 | 2026-06-04 23:40 | 5f4cca37 | Pillar 7 Hardened, Slide Deck v2.1 | "Common" vs "Conceptual" drift | 15-slide Narrative Bridge | Jargon Trap ("Dark Context") | Hallucinated Artifact B |
 | 2026-06-05 | 1786effc | Pillar 2 Service Hardening (7 Services) | 7-Service Consolidation | SEALED D-034 |
 | 2026-06-05 15:45 | 3dadc689 | TOR 5.5 Article Sealing | Sectoral Backfill & Cleansing | SEALED D-041 | Chrome/Tab fail | Perplexity Pivot |
+| 2026-06-06 00:05 | 4f0eb0c9 | Pillar 2 Definitive Synthesis (v4.2) | Lossy Compression Pivot | SEALED D-042 | Jargon Trap ("Zero-Trust") | Narrative Erasure Failure |
+| 2026-06-08 12:34 | 4f0eb0c9 | Pillar 2 Context Recovery & Traceability Analysis | n/a | Traceability validation | Subagent JSONL parsing | Script syntax error |
