@@ -71,7 +71,10 @@ Script outputs git status + focus state (~0.1s). Then LLM adds:
 3. **Ask, don't suggest** — "What next?" not "You should...".
 4. **Verify pending before reporting** — See "Verify Before Reporting" below. **NON-NEGOTIABLE.**
 5. **Print absolute paths** — when referencing vault files, render the resolved `$ROOT/ψ/...` path (starts with `C:/` or `/`). Bare `ψ/...` is not clickable.
-6. **Execution Lock** — Post-recap execution is strictly prohibited. After a `/recap`, you MUST stop and present a "Consultation Menu" (2-3 options). Do NOT use `replace`, `write_file`, or `run_shell_command` (excluding read-only/audit commands) until the Human provides a "Green Light" (Directive). Treat all "Pending" lists as hypotheses for audit, not directives for action.
+6. **Execution Lock (CRITICAL)** — Post-recap execution is strictly prohibited. After a `/recap`, you MUST stop and present a "Consultation Menu" (2-3 options).
+    - **FORBIDDEN**: Do NOT use `replace`, `write_file`, or any mutating `run_shell_command` in the same turn as a recap. 
+    - **SEMANTIC LOCK**: Treat all "Pending" lists as hypotheses for audit, not directives for action.
+    - **PROTOCOL FAILURE**: If you violate this lock, you must immediately stop, unstage changes, and provide a "Protocol Violation Report" before the human provides a "Green Light" (Directive).
 
 ---
 

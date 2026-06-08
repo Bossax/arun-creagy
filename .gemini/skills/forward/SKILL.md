@@ -74,9 +74,9 @@ Do NOT `git add` vault files — they are shared state, not committed to repos.
 - [ ] Item 1
 - [ ] Item 2
 
-## Next Session
-- [ ] Specific action 1
-- [ ] Specific action 2
+## Hypotheses for Next Session (Audit Required)
+- [ ] Hypothesis 1: [Specific action]
+- [ ] Hypothesis 2: [Specific action]
 
 ## Key Files
 - [Important file 1] (C:/path/to/file)
