@@ -5,17 +5,29 @@
     "use_case": "National Adaptation Compliance Dashboard",
     "service_id": "S07",
     "data_parameters": {
-      "variables": ["NAP Progress Indicators", "Sectoral Adaptation Targets", "GGA Alignment Metrics"],
+      "variables": [
+        "NAP Progress Indicators",
+        "Sectoral Adaptation Targets",
+        "GGA Alignment Metrics"
+      ],
       "resolution": "National/Provincial",
       "return_periods": "Annual Reporting Cycle"
     },
-    "triggers": ["Cabinet Reporting Mandate", "NAP Statutory Requirement", "UNFCCC Transparency Framework"],
+    "triggers": [
+      "Cabinet Reporting Mandate",
+      "NAP Statutory Requirement",
+      "UNFCCC Transparency Framework"
+    ],
     "technical_constraints": {
       "latency": "Quarterly Updates",
       "format": "Interactive Dashboard / GeoJSON",
       "integration": "Internal DCCE M&E System"
     },
-    "source_anchors": ["S1", "S3", "Matrix-R1"]
+    "source_anchors": [
+      "S1",
+      "S3",
+      "Matrix-R1"
+    ]
   },
   {
     "id": "UC-02",
@@ -23,17 +35,28 @@
     "use_case": "Provincial Risk Profiles",
     "service_id": "S01",
     "data_parameters": {
-      "variables": ["Hazard Baselines", "Provincial Vulnerability Index", "Exposure Layers"],
+      "variables": [
+        "Hazard Baselines",
+        "Provincial Vulnerability Index",
+        "Exposure Layers"
+      ],
       "resolution": "Provincial (with Sub-district drill-down)",
       "return_periods": "Baseline (Current) + Future Projections"
     },
-    "triggers": ["National Risk Communication Strategy", "Provincial Development Plan Alignment"],
+    "triggers": [
+      "National Risk Communication Strategy",
+      "Provincial Development Plan Alignment"
+    ],
     "technical_constraints": {
       "latency": "Static/Annual Update",
       "format": "PDF Report + Web-GIS Layer",
       "integration": "DCCE Public Portal"
     },
-    "source_anchors": ["S1", "S3", "Matrix-R1"]
+    "source_anchors": [
+      "S1",
+      "S3",
+      "Matrix-R1"
+    ]
   },
   {
     "id": "UC-03",
@@ -41,17 +64,30 @@
     "use_case": "Standardized Sectoral Damage Functions",
     "service_id": "S01",
     "data_parameters": {
-      "variables": ["Sectoral Damage Functions", "Depth-Damage Curves", "Asset Type Classification"],
+      "variables": [
+        "Sectoral Damage Functions",
+        "Depth-Damage Curves",
+        "Asset Type Classification"
+      ],
       "resolution": "Asset-level (Point/Building)",
       "return_periods": null
     },
-    "triggers": ["BoT Physical Risk Framework", "ICAAP Stress Testing", "TCFD Compliance"],
+    "triggers": [
+      "BoT Physical Risk Framework",
+      "ICAAP Stress Testing",
+      "TCFD Compliance"
+    ],
     "technical_constraints": {
       "latency": "On-demand",
       "format": "Tabular (CSV/JSON) / API",
       "integration": "Commercial Bank Risk Models"
     },
-    "source_anchors": ["TBA", "S1", "Matrix-R2", "Raw-G1-1"]
+    "source_anchors": [
+      "TBA",
+      "S1",
+      "Matrix-R2",
+      "Raw-G1-1"
+    ]
   },
   {
     "id": "UC-04",
@@ -59,17 +95,32 @@
     "use_case": "Asset-level Probabilistic Risk Maps",
     "service_id": "S01",
     "data_parameters": {
-      "variables": ["Flood Depth", "Flood Duration", "Flood Type (Pluvial/Riverine/Coastal)"],
+      "variables": [
+        "Flood Depth",
+        "Flood Duration",
+        "Flood Type (Pluvial/Riverine/Coastal)"
+      ],
       "resolution": "Asset-level (Point Location)",
-      "return_periods": ["Probabilistic (Return Periods 10, 50, 100y)"]
+      "return_periods": [
+        "Probabilistic (Return Periods 10, 50, 100y)"
+      ]
     },
-    "triggers": ["BoT Stress Testing", "Credit Risk Assessment", "Collateral Valuation"],
+    "triggers": [
+      "BoT Stress Testing",
+      "Credit Risk Assessment",
+      "Collateral Valuation"
+    ],
     "technical_constraints": {
       "latency": "Near Real-time (for monitoring) / Static (for stress test)",
       "format": "GeoTIFF / Vector API",
       "integration": "Banking Information Systems"
     },
-    "source_anchors": ["TBA", "S1", "Matrix-R2", "Raw-G1-2"]
+    "source_anchors": [
+      "TBA",
+      "S1",
+      "Matrix-R2",
+      "Raw-G1-2"
+    ]
   },
   {
     "id": "UC-05",
@@ -77,17 +128,33 @@
     "use_case": "Climate-Adjusted Engineering Parameters",
     "service_id": "S05",
     "data_parameters": {
-      "variables": ["Rainfall Intensity", "Peak Flow", "Temperature Extremes"],
+      "variables": [
+        "Rainfall Intensity",
+        "Peak Flow",
+        "Temperature Extremes"
+      ],
       "resolution": "Infrastructure Network Level",
-      "return_periods": ["50-year", "100-year Future Return Periods"]
+      "return_periods": [
+        "50-year",
+        "100-year Future Return Periods"
+      ]
     },
-    "triggers": ["Infrastructure Design Code Revision", "Bureau of Budget (BoB) Justification", "Technical Necessity Audit"],
+    "triggers": [
+      "Infrastructure Design Code Revision",
+      "Bureau of Budget (BoB) Justification",
+      "Technical Necessity Audit"
+    ],
     "technical_constraints": {
       "latency": "Cycle-based (5-year updates)",
       "format": "Technical Tables / Engineering Manuals",
       "integration": "Department of Highways (DoH) / Railways Design Software"
     },
-    "source_anchors": ["OTP", "S1", "Matrix-R3", "Raw-G2-26"]
+    "source_anchors": [
+      "OTP",
+      "S1",
+      "Matrix-R3",
+      "Raw-G2-26"
+    ]
   },
   {
     "id": "UC-06",
@@ -95,17 +162,28 @@
     "use_case": "Highway KM-marker Hazard Projections",
     "service_id": "S05",
     "data_parameters": {
-      "variables": ["Inundation Depth at KM", "Landslide Risk at KM"],
+      "variables": [
+        "Inundation Depth at KM",
+        "Landslide Risk at KM"
+      ],
       "resolution": "KM-marker (Point/Segment)",
       "return_periods": "Annual Max / 100-year Projection"
     },
-    "triggers": ["Maintenance Cycle Planning", "Critical Route Resilience Audit"],
+    "triggers": [
+      "Maintenance Cycle Planning",
+      "Critical Route Resilience Audit"
+    ],
     "technical_constraints": {
       "latency": "Annual",
       "format": "GIS Layer (SHP/GeoJSON)",
       "integration": "MOT Open Data Center / DoH Asset Management"
     },
-    "source_anchors": ["OTP", "S1", "Matrix-R3", "Raw-G2-37"]
+    "source_anchors": [
+      "OTP",
+      "S1",
+      "Matrix-R3",
+      "Raw-G2-37"
+    ]
   },
   {
     "id": "UC-07",
@@ -113,17 +191,30 @@
     "use_case": "Resilient Urban Planning Guidance",
     "service_id": "S05",
     "data_parameters": {
-      "variables": ["Hazard Zonation", "Land Use Suitability", "Ecosystem Service Value"],
+      "variables": [
+        "Hazard Zonation",
+        "Land Use Suitability",
+        "Ecosystem Service Value"
+      ],
       "resolution": "Urban/Neighborhood Scale",
       "return_periods": "20-year Planning Horizon"
     },
-    "triggers": ["Urban Planning Act", "Zoning Restrictions", "Green Building Standards"],
+    "triggers": [
+      "Urban Planning Act",
+      "Zoning Restrictions",
+      "Green Building Standards"
+    ],
     "technical_constraints": {
       "latency": "Planning Cycle (5-10 years)",
       "format": "Zoning Maps / Spatial Policy Document",
       "integration": "DPT GIS System"
     },
-    "source_anchors": ["DPT", "S1", "Matrix-R4", "Raw-G2-27"]
+    "source_anchors": [
+      "DPT",
+      "S1",
+      "Matrix-R4",
+      "Raw-G2-27"
+    ]
   },
   {
     "id": "UC-08",
@@ -131,17 +222,31 @@
     "use_case": "Climate-Adjusted Rainfall Intensity Tables",
     "service_id": "S05",
     "data_parameters": {
-      "variables": ["IDF Curves", "Hourly Rainfall Intensity", "Climate Change Factors"],
+      "variables": [
+        "IDF Curves",
+        "Hourly Rainfall Intensity",
+        "Climate Change Factors"
+      ],
       "resolution": "Station/City Grid",
-      "return_periods": ["10, 25, 50, 100-year"]
+      "return_periods": [
+        "10, 25, 50, 100-year"
+      ]
     },
-    "triggers": ["Drainage System Redesign", "Urban Hydrology Standards"],
+    "triggers": [
+      "Drainage System Redesign",
+      "Urban Hydrology Standards"
+    ],
     "technical_constraints": {
       "latency": "Periodic update",
       "format": "Look-up Tables / CSV",
       "integration": "Urban Drainage Simulation Models"
     },
-    "source_anchors": ["DPT", "S1", "Matrix-R4", "Raw-G2-26"]
+    "source_anchors": [
+      "DPT",
+      "S1",
+      "Matrix-R4",
+      "Raw-G2-26"
+    ]
   },
   {
     "id": "UC-09",
@@ -149,17 +254,30 @@
     "use_case": "Macro-Economic True Loss Reports",
     "service_id": "S04",
     "data_parameters": {
-      "variables": ["Direct Asset Damage", "Indirect Economic Loss", "Supply Chain Disruption Cost"],
+      "variables": [
+        "Direct Asset Damage",
+        "Indirect Economic Loss",
+        "Supply Chain Disruption Cost"
+      ],
       "resolution": "Sectoral / National",
       "return_periods": "Event-based"
     },
-    "triggers": ["GDP Forecast Adjustment", "National Disaster Reporting", "OAG Compliance"],
+    "triggers": [
+      "GDP Forecast Adjustment",
+      "National Disaster Reporting",
+      "OAG Compliance"
+    ],
     "technical_constraints": {
       "latency": "Quarterly (Post-event)",
       "format": "Economic Indicator Time-series",
       "integration": "Macroeconomic Forecasting Models"
     },
-    "source_anchors": ["NESDC", "S1", "Matrix-R5", "Raw-G1-5"]
+    "source_anchors": [
+      "NESDC",
+      "S1",
+      "Matrix-R5",
+      "Raw-G1-5"
+    ]
   },
   {
     "id": "UC-10",
@@ -167,17 +285,29 @@
     "use_case": "SDG Baseline Indicators",
     "service_id": "S07",
     "data_parameters": {
-      "variables": ["SDG 13.1.1 (Death/Affected)", "Indicator 11.b.2 (DRR Strategy)", "Unified Baseline Metrics"],
+      "variables": [
+        "SDG 13.1.1 (Death/Affected)",
+        "Indicator 11.b.2 (DRR Strategy)",
+        "Unified Baseline Metrics"
+      ],
       "resolution": "National / Provincial",
       "return_periods": "Annual"
     },
-    "triggers": ["SDG Voluntary National Review (VNR) 2025", "Milestone 11 Tracking (13th Plan)"],
+    "triggers": [
+      "SDG Voluntary National Review (VNR) 2025",
+      "Milestone 11 Tracking (13th Plan)"
+    ],
     "technical_constraints": {
       "latency": "Annual",
       "format": "Verified Statistical Series",
       "integration": "NSO SDG Portal / UN Reporting System"
     },
-    "source_anchors": ["NESDC", "S1", "Matrix-R5", "Raw-G5-58"]
+    "source_anchors": [
+      "NESDC",
+      "S1",
+      "Matrix-R5",
+      "Raw-G5-58"
+    ]
   },
   {
     "id": "UC-11",
@@ -185,17 +315,29 @@
     "use_case": "Adaptation Research Priority Dashboard",
     "service_id": "S07",
     "data_parameters": {
-      "variables": ["Research Funding Allocation", "Technology Maturity (TRL)", "Adaptation Gap Analysis"],
+      "variables": [
+        "Research Funding Allocation",
+        "Technology Maturity (TRL)",
+        "Adaptation Gap Analysis"
+      ],
       "resolution": "Thematic/Sectoral",
       "return_periods": null
     },
-    "triggers": ["Research Funding Prioritization", "National Science & Tech Strategy"],
+    "triggers": [
+      "Research Funding Prioritization",
+      "National Science & Tech Strategy"
+    ],
     "technical_constraints": {
       "latency": "Annual",
       "format": "Business Intelligence Dashboard",
       "integration": "NXPO Research Management System"
     },
-    "source_anchors": ["NXPO", "S1", "Matrix-R6", "Raw-G2-34"]
+    "source_anchors": [
+      "NXPO",
+      "S1",
+      "Matrix-R6",
+      "Raw-G2-34"
+    ]
   },
   {
     "id": "UC-12",
@@ -203,17 +345,29 @@
     "use_case": "Climate Innovation Opportunity Maps",
     "service_id": "S07",
     "data_parameters": {
-      "variables": ["Climate Vulnerability hotspots", "Innovation Sandbox Locations", "Market Demand for Adapt-Tech"],
+      "variables": [
+        "Climate Vulnerability hotspots",
+        "Innovation Sandbox Locations",
+        "Market Demand for Adapt-Tech"
+      ],
       "resolution": "Regional/Spatial",
       "return_periods": "10-20 year Horizon"
     },
-    "triggers": ["Innovation Sandbox Selection", "GGA (Global Goal on Adaptation) Alignment"],
+    "triggers": [
+      "Innovation Sandbox Selection",
+      "GGA (Global Goal on Adaptation) Alignment"
+    ],
     "technical_constraints": {
       "latency": "Strategic Cycle",
       "format": "Thematic GIS Layers",
       "integration": "Regional Innovation Hubs"
     },
-    "source_anchors": ["NXPO", "S1", "Matrix-R6", "Raw-G2-35"]
+    "source_anchors": [
+      "NXPO",
+      "S1",
+      "Matrix-R6",
+      "Raw-G2-35"
+    ]
   },
   {
     "id": "UC-13",
@@ -221,17 +375,28 @@
     "use_case": "Industrial Water Scarcity Economic Loss Models",
     "service_id": "S06",
     "data_parameters": {
-      "variables": ["Water Supply-Demand Gap", "Production Loss per m3 Water Scarcity"],
+      "variables": [
+        "Water Supply-Demand Gap",
+        "Production Loss per m3 Water Scarcity"
+      ],
       "resolution": "Industrial Estate / 10 sqkm",
       "return_periods": "20-year Planning Horizon"
     },
-    "triggers": ["EEC Water Security War Room", "Industrial Investment Decisions"],
+    "triggers": [
+      "EEC Water Security War Room",
+      "Industrial Investment Decisions"
+    ],
     "technical_constraints": {
       "latency": "Near Real-time for operations / Annual for planning",
       "format": "Economic Scenarios / Vector GIS",
       "integration": "FTI Water Security System / EEC Dashboard"
     },
-    "source_anchors": ["FTI", "HII", "Matrix-R7", "Raw-G2-30"]
+    "source_anchors": [
+      "FTI",
+      "HII",
+      "Matrix-R7",
+      "Raw-G2-30"
+    ]
   },
   {
     "id": "UC-14",
@@ -239,17 +404,29 @@
     "use_case": "Water Supply-Demand Forecasts",
     "service_id": "S06",
     "data_parameters": {
-      "variables": ["Reservoir Inflow Projections", "Industrial Water Demand History (10y+)", "Supply Projections"],
+      "variables": [
+        "Reservoir Inflow Projections",
+        "Industrial Water Demand History (10y+)",
+        "Supply Projections"
+      ],
       "resolution": "Basin / EEC Scale",
       "return_periods": "Monthly / Seasonal / 20-year"
     },
-    "triggers": ["Drought Response Activation", "Supply-Demand Conflict Mitigation (EEC)"],
+    "triggers": [
+      "Drought Response Activation",
+      "Supply-Demand Conflict Mitigation (EEC)"
+    ],
     "technical_constraints": {
       "latency": "Monthly",
       "format": "Time-series API",
       "integration": "ONWR / RID Data Sharing"
     },
-    "source_anchors": ["FTI", "S1", "Matrix-R7", "Raw-G2-31"]
+    "source_anchors": [
+      "FTI",
+      "S1",
+      "Matrix-R7",
+      "Raw-G2-31"
+    ]
   },
   {
     "id": "UC-15",
@@ -257,17 +434,29 @@
     "use_case": "Human Settlement Habitability Projections",
     "service_id": "S02",
     "data_parameters": {
-      "variables": ["Permanent Inundation Risk", "Habitability Score", "Relocation Urgency"],
+      "variables": [
+        "Permanent Inundation Risk",
+        "Habitability Score",
+        "Relocation Urgency"
+      ],
       "resolution": "Neighborhood / Sub-district",
       "return_periods": "2-5 year Forecast"
     },
-    "triggers": ["5-year Community Relocation Planning", "Occupational Retraining Programs"],
+    "triggers": [
+      "5-year Community Relocation Planning",
+      "Occupational Retraining Programs"
+    ],
     "technical_constraints": {
       "latency": "Annual",
       "format": "Risk Classification Maps",
       "integration": "MSDHS Welfare System"
     },
-    "source_anchors": ["MSDHS", "S1", "Matrix-R8", "Raw-G2-20"]
+    "source_anchors": [
+      "MSDHS",
+      "S1",
+      "Matrix-R8",
+      "Raw-G2-20"
+    ]
   },
   {
     "id": "UC-16",
@@ -275,17 +464,30 @@
     "use_case": "Priority Evacuation Registry",
     "service_id": "S02",
     "data_parameters": {
-      "variables": ["Bedridden Patient Locations", "Elderly Locations", "Flood Hazard Zone Overlay"],
+      "variables": [
+        "Bedridden Patient Locations",
+        "Elderly Locations",
+        "Flood Hazard Zone Overlay"
+      ],
       "resolution": "Individual / Household level",
       "return_periods": "Event-based (Near Real-time)"
     },
-    "triggers": ["Emergency Evacuation Activation", "Local Health Response"],
+    "triggers": [
+      "Emergency Evacuation Activation",
+      "Local Health Response"
+    ],
     "technical_constraints": {
       "latency": "Near Real-time",
       "format": "Secure Spatial Database / Mobile App",
       "integration": "DDPM Emergency Response / Local Health Dept"
     },
-    "source_anchors": ["MSDHS", "S1", "Matrix-R8", "Raw-G2-19", "Raw-G3-39"]
+    "source_anchors": [
+      "MSDHS",
+      "S1",
+      "Matrix-R8",
+      "Raw-G2-19",
+      "Raw-G3-39"
+    ]
   },
   {
     "id": "UC-17",
@@ -293,17 +495,29 @@
     "use_case": "Neighborhood Heat-Risk Intensity Index",
     "service_id": "S06",
     "data_parameters": {
-      "variables": ["Surface Temperature", "Humidex", "Cooling Center Locations"],
+      "variables": [
+        "Surface Temperature",
+        "Humidex",
+        "Cooling Center Locations"
+      ],
       "resolution": "Neighborhood / 100m Grid",
       "return_periods": "Daily / Hourly"
     },
-    "triggers": ["Governor Heat Warning Activation", "Cooling Center Deployment"],
+    "triggers": [
+      "Governor Heat Warning Activation",
+      "Cooling Center Deployment"
+    ],
     "technical_constraints": {
       "latency": "Hourly (Live-feed)",
       "format": "Real-time Heat Intensity Map",
       "integration": "BMA Health Warning App / City Command Center"
     },
-    "source_anchors": ["BMA", "S1", "Matrix-R9", "Raw-G3-44"]
+    "source_anchors": [
+      "BMA",
+      "S1",
+      "Matrix-R9",
+      "Raw-G3-44"
+    ]
   },
   {
     "id": "UC-18",
@@ -311,17 +525,29 @@
     "use_case": "Infrastructure Resilience Audit",
     "service_id": "S03",
     "data_parameters": {
-      "variables": ["Pump Performance", "Drainage Tunnel Capacity", "Climate-adjusted Runoff"],
+      "variables": [
+        "Pump Performance",
+        "Drainage Tunnel Capacity",
+        "Climate-adjusted Runoff"
+      ],
       "resolution": "Asset/Network level",
       "return_periods": "100-year Storm Event"
     },
-    "triggers": ["Tunnel Procurement Justification", "BMA Engineering Code Update"],
+    "triggers": [
+      "Tunnel Procurement Justification",
+      "BMA Engineering Code Update"
+    ],
     "technical_constraints": {
       "latency": "Annual/Audit cycle",
       "format": "Technical Audit Report / GIS",
       "integration": "BMA Department of Drainage"
     },
-    "source_anchors": ["BMA", "S1", "Matrix-R9", "S5-4"]
+    "source_anchors": [
+      "BMA",
+      "S1",
+      "Matrix-R9",
+      "S5-4"
+    ]
   },
   {
     "id": "UC-19",
@@ -329,17 +555,29 @@
     "use_case": "Local Resilience Justification Pack",
     "service_id": "S03",
     "data_parameters": {
-      "variables": ["Localized Hazard Intensity", "Economic Value at Risk", "Mitigation ROI"],
+      "variables": [
+        "Localized Hazard Intensity",
+        "Economic Value at Risk",
+        "Mitigation ROI"
+      ],
       "resolution": "Municipality (Tesaban)",
       "return_periods": "Current + Future Scenarios"
     },
-    "triggers": ["Annual Budget Ordinance", "Accumulated Funds (เงินสะสม) Request"],
+    "triggers": [
+      "Annual Budget Ordinance",
+      "Accumulated Funds (เงินสะสม) Request"
+    ],
     "technical_constraints": {
       "latency": "Annual (Budget Window)",
       "format": "Simplified Evidence Summary (Template)",
       "integration": "e-MENSCR / DLA Budget System"
     },
-    "source_anchors": ["DLA", "S1", "Matrix-R10", "Raw-G1-10"]
+    "source_anchors": [
+      "DLA",
+      "S1",
+      "Matrix-R10",
+      "Raw-G1-10"
+    ]
   },
   {
     "id": "UC-20",
@@ -347,17 +585,29 @@
     "use_case": "Performance Index (LPA) Alignment",
     "service_id": "S07",
     "data_parameters": {
-      "variables": ["LPA Climate Indicators", "Local Adaptation Progress", "National Target Mapping"],
+      "variables": [
+        "LPA Climate Indicators",
+        "Local Adaptation Progress",
+        "National Target Mapping"
+      ],
       "resolution": "LAO (Local Administrative Organization)",
       "return_periods": "Annual"
     },
-    "triggers": ["Local Performance Assessment (LPA)", "National NAP Tracking"],
+    "triggers": [
+      "Local Performance Assessment (LPA)",
+      "National NAP Tracking"
+    ],
     "technical_constraints": {
       "latency": "Annual",
       "format": "Key Performance Indicators (KPI)",
       "integration": "DLA Performance Database"
     },
-    "source_anchors": ["DLA", "S1", "Matrix-R10", "Raw-G1-11"]
+    "source_anchors": [
+      "DLA",
+      "S1",
+      "Matrix-R10",
+      "Raw-G1-11"
+    ]
   },
   {
     "id": "UC-21",
@@ -365,17 +615,29 @@
     "use_case": "Disaster Declaration Justification Certificate",
     "service_id": "S04",
     "data_parameters": {
-      "variables": ["Hazard Magnitude", "Area Affected", "Impact Magnitude (Death/Injured/Damage)"],
+      "variables": [
+        "Hazard Magnitude",
+        "Area Affected",
+        "Impact Magnitude (Death/Injured/Damage)"
+      ],
       "resolution": "District / Sub-district",
       "return_periods": "Event-based"
     },
-    "triggers": ["Ministry of Finance Relief Fund Activation", "Disaster Zone Declaration"],
+    "triggers": [
+      "Ministry of Finance Relief Fund Activation",
+      "Disaster Zone Declaration"
+    ],
     "technical_constraints": {
       "latency": "Real-time / Instant",
       "format": "Certified JSON Certificate / Official PDF",
       "integration": "Ministry of Finance Payment System"
     },
-    "source_anchors": ["DDPM", "S1", "Matrix-R11", "S4-2"]
+    "source_anchors": [
+      "DDPM",
+      "S1",
+      "Matrix-R11",
+      "S4-2"
+    ]
   },
   {
     "id": "UC-22",
@@ -383,17 +645,30 @@
     "use_case": "Sectoral Impact Valuation",
     "service_id": "S04",
     "data_parameters": {
-      "variables": ["Damage Proxy Values", "Physical Loss Statistics", "Sendai Sectoral Categories"],
+      "variables": [
+        "Damage Proxy Values",
+        "Physical Loss Statistics",
+        "Sendai Sectoral Categories"
+      ],
       "resolution": "Sectoral / National",
       "return_periods": "Post-disaster"
     },
-    "triggers": ["Sendai Framework Reporting", "Macro-economic Loss Synthesis"],
+    "triggers": [
+      "Sendai Framework Reporting",
+      "Macro-economic Loss Synthesis"
+    ],
     "technical_constraints": {
       "latency": "Monthly (Post-event)",
       "format": "Taxonomy-aligned Data Structure",
       "integration": "NESDC Economic Models"
     },
-    "source_anchors": ["DDPM", "S1", "Matrix-R11", "Raw-G1-8", "Raw-G5-61"]
+    "source_anchors": [
+      "DDPM",
+      "S1",
+      "Matrix-R11",
+      "Raw-G1-8",
+      "Raw-G5-61"
+    ]
   },
   {
     "id": "UC-23",
@@ -401,17 +676,29 @@
     "use_case": "EA-level Population Exposure Analytics",
     "service_id": "S02",
     "data_parameters": {
-      "variables": ["Population Count", "Household Type", "Housing Material"],
+      "variables": [
+        "Population Count",
+        "Household Type",
+        "Housing Material"
+      ],
       "resolution": "Enumeration Area (EA) ~250 buildings",
       "return_periods": "10-year Census cycle"
     },
-    "triggers": ["Risk Map Exposure Layer Generation", "Social Vulnerability Mapping"],
+    "triggers": [
+      "Risk Map Exposure Layer Generation",
+      "Social Vulnerability Mapping"
+    ],
     "technical_constraints": {
       "latency": "Decadal (Updated with Census)",
       "format": "GIS Vector / Shapefile",
       "integration": "National Risk Platform (CRDB)"
     },
-    "source_anchors": ["NSO", "S1", "Matrix-R12", "Raw-G2-32"]
+    "source_anchors": [
+      "NSO",
+      "S1",
+      "Matrix-R12",
+      "Raw-G2-32"
+    ]
   },
   {
     "id": "UC-24",
@@ -419,17 +706,30 @@
     "use_case": "Consolidated Official Dataset",
     "service_id": "S01",
     "data_parameters": {
-      "variables": ["Environment Statistics (FDES)", "Official Sectoral Baselines", "Metatdata standards"],
+      "variables": [
+        "Environment Statistics (FDES)",
+        "Official Sectoral Baselines",
+        "Metatdata standards"
+      ],
       "resolution": "Varies",
       "return_periods": "Varies"
     },
-    "triggers": ["International Data Requests", "Official Statistics Mandate"],
+    "triggers": [
+      "International Data Requests",
+      "Official Statistics Mandate"
+    ],
     "technical_constraints": {
       "latency": "Ongoing",
       "format": "Machine-readable (CSV/API)",
       "integration": "GD Catalog / NSO Statistical Hub"
     },
-    "source_anchors": ["NSO", "S1", "Matrix-R12", "Raw-G5-77", "Raw-G5-81"]
+    "source_anchors": [
+      "NSO",
+      "S1",
+      "Matrix-R12",
+      "Raw-G5-77",
+      "Raw-G5-81"
+    ]
   },
   {
     "id": "UC-25",
@@ -437,17 +737,29 @@
     "use_case": "Health Risk Surveillance System",
     "service_id": "S06",
     "data_parameters": {
-      "variables": ["Heat Index", "Disease Vector Density", "Respiratory Risk Index"],
+      "variables": [
+        "Heat Index",
+        "Disease Vector Density",
+        "Respiratory Risk Index"
+      ],
       "resolution": "Sub-district / Health District",
       "return_periods": "Weekly / Seasonal"
     },
-    "triggers": ["Epidemiological Alert Cycle", "National Health Risk Advisories"],
+    "triggers": [
+      "Epidemiological Alert Cycle",
+      "National Health Risk Advisories"
+    ],
     "technical_constraints": {
       "latency": "Weekly",
       "format": "Epidemiological Data Format (R506 etc.)",
       "integration": "DOH Data Center / MOPH Surveillance"
     },
-    "source_anchors": ["DOH", "S1", "Matrix-R13", "S6-3"]
+    "source_anchors": [
+      "DOH",
+      "S1",
+      "Matrix-R13",
+      "S6-3"
+    ]
   },
   {
     "id": "UC-26",
@@ -455,17 +767,29 @@
     "use_case": "Heat-Stress Mortality Projections",
     "service_id": "S06",
     "data_parameters": {
-      "variables": ["Wet Bulb Globe Temperature (WBGT)", "Mortality Coefficients", "Vulnerable Demographic Count"],
+      "variables": [
+        "Wet Bulb Globe Temperature (WBGT)",
+        "Mortality Coefficients",
+        "Vulnerable Demographic Count"
+      ],
       "resolution": "Regional / Provincial",
       "return_periods": "10, 20, 50-year Projections"
     },
-    "triggers": ["Health Resource Allocation", "Climate-Health Master Plan Update"],
+    "triggers": [
+      "Health Resource Allocation",
+      "Climate-Health Master Plan Update"
+    ],
     "technical_constraints": {
       "latency": "Annual (Strategic)",
       "format": "Predictive Health Models",
       "integration": "MOPH Resource Planning"
     },
-    "source_anchors": ["DOH", "S1", "Matrix-R13", "S6-3"]
+    "source_anchors": [
+      "DOH",
+      "S1",
+      "Matrix-R13",
+      "S6-3"
+    ]
   },
   {
     "id": "UC-27",
@@ -473,17 +797,29 @@
     "use_case": "Ecosystem Risk Repository",
     "service_id": "S01",
     "data_parameters": {
-      "variables": ["Vegetation Indices", "Habitat Suitability", "Ecosystem Service Maps"],
+      "variables": [
+        "Vegetation Indices",
+        "Habitat Suitability",
+        "Ecosystem Service Maps"
+      ],
       "resolution": "Park/Protected Area Scale",
       "return_periods": "10-year Horizon"
     },
-    "triggers": ["Protected Area Management Plans", "National Biodiversity Strategy"],
+    "triggers": [
+      "Protected Area Management Plans",
+      "National Biodiversity Strategy"
+    ],
     "technical_constraints": {
       "latency": "Periodic (5-year)",
       "format": "GeoTIFF / Raster GIS",
       "integration": "TH-BIF (Thailand Biodiversity Information Facility)"
     },
-    "source_anchors": ["ONEP", "S1", "Matrix-R14", "S1-2"]
+    "source_anchors": [
+      "ONEP",
+      "S1",
+      "Matrix-R14",
+      "S1-2"
+    ]
   },
   {
     "id": "UC-28",
@@ -491,17 +827,29 @@
     "use_case": "Climate-Adjusted Biodiversity Baselines",
     "service_id": "S01",
     "data_parameters": {
-      "variables": ["Species Range Shifts", "Bioclimatic Envelopes", "Thermal Thresholds"],
+      "variables": [
+        "Species Range Shifts",
+        "Bioclimatic Envelopes",
+        "Thermal Thresholds"
+      ],
       "resolution": "Ecosystem/Ecoregion",
       "return_periods": "Climate Model Timeframes (2050, 2070)"
     },
-    "triggers": ["EIA/EHIA Guidelines", "Climate-Biodiversity Policy Integration"],
+    "triggers": [
+      "EIA/EHIA Guidelines",
+      "Climate-Biodiversity Policy Integration"
+    ],
     "technical_constraints": {
       "latency": "Strategic Cycle",
       "format": "Scientific Baseline Reports / GIS",
       "integration": "DCCE Climate Science Hub"
     },
-    "source_anchors": ["ONEP", "S1", "Matrix-R14", "S1-2"]
+    "source_anchors": [
+      "ONEP",
+      "S1",
+      "Matrix-R14",
+      "S1-2"
+    ]
   },
   {
     "id": "UC-29",
@@ -509,17 +857,28 @@
     "use_case": "Predictive Geologic Hazard Mapping",
     "service_id": "S05",
     "data_parameters": {
-      "variables": ["Landslide Susceptibility", "Sinkhole Risk Zones", "Soil Stability"],
+      "variables": [
+        "Landslide Susceptibility",
+        "Sinkhole Risk Zones",
+        "Soil Stability"
+      ],
       "resolution": "Site-specific / 1:50,000 Scale",
       "return_periods": "Annual / Event-based"
     },
-    "triggers": ["Building Permit Restrictions", "Geological Safety Zoning"],
+    "triggers": [
+      "Building Permit Restrictions",
+      "Geological Safety Zoning"
+    ],
     "technical_constraints": {
       "latency": "Periodic update",
       "format": "Geological GIS (Shapefile)",
       "integration": "DPT Urban Planning / Local Building Authority"
     },
-    "source_anchors": ["DMR", "S1", "Matrix-R15"]
+    "source_anchors": [
+      "DMR",
+      "S1",
+      "Matrix-R15"
+    ]
   },
   {
     "id": "UC-30",
@@ -527,17 +886,29 @@
     "use_case": "Neighborhood-scale Double Vulnerability Maps",
     "service_id": "S02",
     "data_parameters": {
-      "variables": ["Physical Risk overlay", "Poverty Indicators", "Asset Vulnerability"],
+      "variables": [
+        "Physical Risk overlay",
+        "Poverty Indicators",
+        "Asset Vulnerability"
+      ],
       "resolution": "Urban Block / Neighborhood",
       "return_periods": "Current + 10-year Horizon"
     },
-    "triggers": ["Urban Intervention Targeting", "Social Support Program Design"],
+    "triggers": [
+      "Urban Intervention Targeting",
+      "Social Support Program Design"
+    ],
     "technical_constraints": {
       "latency": "Planning Cycle",
       "format": "High-res Spatial Analytic Layers",
       "integration": "City Planning Web-GIS"
     },
-    "source_anchors": ["UDDC", "S1", "Matrix-R16", "Raw-G4-46"]
+    "source_anchors": [
+      "UDDC",
+      "S1",
+      "Matrix-R16",
+      "Raw-G4-46"
+    ]
   },
   {
     "id": "UC-31",
@@ -545,17 +916,29 @@
     "use_case": "NbS ROI Justification",
     "service_id": "S03",
     "data_parameters": {
-      "variables": ["Water Retention Capacity", "Heat Mitigation Benefit", "Cost of Grey Infrastructure Avoidance"],
+      "variables": [
+        "Water Retention Capacity",
+        "Heat Mitigation Benefit",
+        "Cost of Grey Infrastructure Avoidance"
+      ],
       "resolution": "Project / Site Level (20cm drone res)",
       "return_periods": "25-year Lifecycle"
     },
-    "triggers": ["Municipal Budget Approval", "NbS Funding Competitions"],
+    "triggers": [
+      "Municipal Budget Approval",
+      "NbS Funding Competitions"
+    ],
     "technical_constraints": {
       "latency": "Project-based",
       "format": "Economic Benefit Analytics / DSM",
       "integration": "InVEST Modeling Tool / Urban Planning Dept"
     },
-    "source_anchors": ["UDDC", "S1", "Matrix-R16", "Raw-G1-17"]
+    "source_anchors": [
+      "UDDC",
+      "S1",
+      "Matrix-R16",
+      "Raw-G1-17"
+    ]
   },
   {
     "id": "UC-32",
@@ -563,16 +946,239 @@
     "use_case": "GDX Authoritative Exchange Entitlement",
     "service_id": "S01",
     "data_parameters": {
-      "variables": ["Data Sharing Permissions", "Encryption Keys", "User Access Level"],
+      "variables": [
+        "Data Sharing Permissions",
+        "Encryption Keys",
+        "User Access Level"
+      ],
       "resolution": "System-to-system",
       "return_periods": "Transactional (Real-time)"
     },
-    "triggers": ["Digital Government Act (Article 15)", "G2G Data Sharing Request"],
+    "triggers": [
+      "Digital Government Act (Article 15)",
+      "G2G Data Sharing Request"
+    ],
     "technical_constraints": {
       "latency": "Milliseconds",
       "format": "API Authentication Token / XML-JSON",
       "integration": "National GDX Highway / DGA Data Hub"
     },
-    "source_anchors": ["DGA", "S1", "Matrix-R17", "Raw-G5-63", "Raw-G5-67"]
+    "source_anchors": [
+      "DGA",
+      "S1",
+      "Matrix-R17",
+      "Raw-G5-63",
+      "Raw-G5-67"
+    ]
+  },
+  {
+    "id": "UC-33",
+    "agency": "MOTS",
+    "use_case": "Tourism Resilience Info System",
+    "service_id": "S04",
+    "data_parameters": {
+      "variables": [
+        "Tourism Economic Vulnerability",
+        "Loss & Damage Data",
+        "Sensitivity Analysis"
+      ],
+      "resolution": "Provincial/Destination",
+      "return_periods": "Annual"
+    },
+    "triggers": [
+      "Tourism Recovery Planning"
+    ],
+    "technical_constraints": {
+      "latency": "Annual",
+      "format": "Economic Dashboard",
+      "integration": "MOTS Data Center"
+    },
+    "source_anchors": [
+      "G1-C3",
+      "G1-C4"
+    ]
+  },
+  {
+    "id": "UC-34",
+    "agency": "DMCR",
+    "use_case": "Real-time Marine Ecosystem Monitoring",
+    "service_id": "S06",
+    "data_parameters": {
+      "variables": [
+        "Sea Surface Temperature",
+        "Coral Bleaching Alerts",
+        "Water Quality Parameters"
+      ],
+      "resolution": "Coastal Grids / Stations",
+      "return_periods": "1yr historical / 30-day forecast"
+    },
+    "triggers": [
+      "Marine Conservation Action",
+      "Pollution Alerts"
+    ],
+    "technical_constraints": {
+      "latency": "Real-time",
+      "format": "API/Dashboard",
+      "integration": "DMCR Portal"
+    },
+    "source_anchors": [
+      "G1-C10",
+      "G3-C3"
+    ]
+  },
+  {
+    "id": "UC-35",
+    "agency": "PMUA",
+    "use_case": "Learning Data Repository",
+    "service_id": "S07",
+    "data_parameters": {
+      "variables": [
+        "Area-based Planning Data",
+        "Future Hazard Alerts"
+      ],
+      "resolution": "Regional",
+      "return_periods": "Strategic"
+    },
+    "triggers": [
+      "Research Funding Allocation"
+    ],
+    "technical_constraints": {
+      "latency": "Annual",
+      "format": "API",
+      "integration": "PMUA Research Database"
+    },
+    "source_anchors": [
+      "G2-C1"
+    ]
+  },
+  {
+    "id": "UC-36",
+    "agency": "ONWR",
+    "use_case": "Integrated Water Management Projections",
+    "service_id": "S06",
+    "data_parameters": {
+      "variables": [
+        "Flood/Drought Forecasts",
+        "Water Quality",
+        "Economic Loss Assessment"
+      ],
+      "resolution": "Basin Level",
+      "return_periods": "Seasonal"
+    },
+    "triggers": [
+      "National Water Command Center Directives"
+    ],
+    "technical_constraints": {
+      "latency": "Real-time/Seasonal",
+      "format": "API / Source Code",
+      "integration": "National Water Data Center"
+    },
+    "source_anchors": [
+      "G3-C9"
+    ]
+  },
+  {
+    "id": "UC-37",
+    "agency": "TMD",
+    "use_case": "Localized Flood Risk Maps",
+    "service_id": "S06",
+    "data_parameters": {
+      "variables": [
+        "Water Absorption Thresholds",
+        "Localized Rainfall Peaks"
+      ],
+      "resolution": "Sub-district",
+      "return_periods": "Event-based"
+    },
+    "triggers": [
+      "Early Warning Activation"
+    ],
+    "technical_constraints": {
+      "latency": "Real-time",
+      "format": "SHP/GeoJSON",
+      "integration": "TMD Warning System"
+    },
+    "source_anchors": [
+      "G3-C10"
+    ]
+  },
+  {
+    "id": "UC-38",
+    "agency": "MD",
+    "use_case": "Marine Infrastructure Risk Assessment",
+    "service_id": "S05",
+    "data_parameters": {
+      "variables": [
+        "Sea Level Rise (SLR) Projections",
+        "Coastal Erosion Rates"
+      ],
+      "resolution": "Port/Coastal Segment",
+      "return_periods": "20-50 year Projections"
+    },
+    "triggers": [
+      "Port Maintenance Regulations",
+      "Infrastructure Budget Approval"
+    ],
+    "technical_constraints": {
+      "latency": "Decadal/5-Year Cycle",
+      "format": "Risk Maps / Adaptation Manuals",
+      "integration": "Marine Dept Asset Mgt"
+    },
+    "source_anchors": [
+      "G4-C7"
+    ]
+  },
+  {
+    "id": "UC-39",
+    "agency": "HII",
+    "use_case": "EEC Water Scarcity Planning Service",
+    "service_id": "S06",
+    "data_parameters": {
+      "variables": [
+        "Raw Water Sources",
+        "Future Scarcity Projections"
+      ],
+      "resolution": "EEC Industrial Zones",
+      "return_periods": "Seasonal / 10-year"
+    },
+    "triggers": [
+      "EEC Water Allocation Planning"
+    ],
+    "technical_constraints": {
+      "latency": "Monthly",
+      "format": "Web Services / API",
+      "integration": "HII Data Hub"
+    },
+    "source_anchors": [
+      "G78-C1"
+    ]
+  },
+  {
+    "id": "UC-40",
+    "agency": "LDD",
+    "use_case": "Ag-Sector Carbon & Recovery Support",
+    "service_id": "S02",
+    "data_parameters": {
+      "variables": [
+        "Plot-level Rainfall/Temp/Damage",
+        "Soil Moisture",
+        "Crop Impact"
+      ],
+      "resolution": "Plot-level (Agricultural)",
+      "return_periods": "Seasonal"
+    },
+    "triggers": [
+      "Agricultural Recovery Policy",
+      "Carbon Credit Verification"
+    ],
+    "technical_constraints": {
+      "latency": "Monthly",
+      "format": "Dashboard / API",
+      "integration": "LDD Agricultural Database"
+    },
+    "source_anchors": [
+      "G78-C9",
+      "G78-C10"
+    ]
   }
 ]

@@ -1,6 +1,6 @@
 # Technical Specification: Forensic Service Synthesis & Intelligence Design (v4.0)
 
-**Status**: Definitive Design Basis
+**Status**: SUPERSEDED by v5.0 (Moved to Archive)
 **Version**: 4.0 (Forensic Restoration & Technical Enrichment)
 **Project Component**: Pillar 2 — Use Cases & Functional Specifications
 **Date**: 2026-06-05
