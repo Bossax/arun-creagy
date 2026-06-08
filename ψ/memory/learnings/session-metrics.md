@@ -17,3 +17,4 @@ Rule (parent CLAUDE.md §"Self-Evaluation Loop"): same friction 3 sessions → f
 | 2026-06-06 00:05 | 4f0eb0c9 | Pillar 2 Definitive Synthesis (v4.2) | Lossy Compression Pivot | SEALED D-042 | Jargon Trap ("Zero-Trust") | Narrative Erasure Failure |
 | 2026-06-08 12:34 | 4f0eb0c9 | Pillar 2 Context Recovery & Traceability Analysis | n/a | Traceability validation | Subagent JSONL parsing | Script syntax error |
 | 2026-06-08 17:26 | n/a | Phase 2/3 Process Correction | 3-Phase Process Execution | Formal Logic Memo Generation | Procedural Shortcut Bypass | Scripted artifact failure |
+| 2026-06-09 02:15 | d635439f | Semantic Lock Hardening | Unprompted Execution | Hardened semantic guardrails | Proactivity Bias vs Lock | Protocol Violation |
