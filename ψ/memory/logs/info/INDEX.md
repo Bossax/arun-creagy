@@ -1,5 +1,11 @@
 # Info Log Index
 
+- [2026-06-09 15:29] 🚩 **Suggest modifications for DCCE's TOR (Important)**: Modifications needed for the climate adaptation digital platform TOR next week.
+  - File: ψ/memory/logs/info/2026-06-09_15-29_dcce-tor-modification-suggestion.md
+
+- [2026-06-09 15:21] 🚩 **UNDP brief on Thailand's climate adaptation landscape (Important)**: Need to create a slide and scope key messages for the briefing.
+  - File: ψ/memory/logs/info/2026-06-09_15-21_undp-brief-climate-adaptation-thailand.md
+
 - [2026-06-04 10:41] 🟡 **Director Toey feedback post-workshop**: Concerns about user retention (suggests hooking private sector/banks), undecided on raw data downloads, wants roadmap, suggests raising Data Standards in FGD3.
   - File: ψ/memory/logs/info/2026-06-04_10-41_director-toey-feedback-post-workshop.md
 
