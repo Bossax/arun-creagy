@@ -1,27 +1,31 @@
 # Style-Pack: NCAIF-Institutional
-**Samples Learnt**: 2 (Incremental Refinement) | **Last Updated**: 2026-06-09
+**Samples Learnt**: 5 (In-line Justification & Purpose-First) | **Last Updated**: 2026-06-09
 
 ## 1. Ranked Style Rules
-1. **Precision in Institutional Authority** - Instead of using metaphors like "Seal" or "Stamp" alone, use "แนวทางและเครื่องมือช่วยเหลือ" (Guidelines and Tools) to emphasize functional utility.
-2. **Explicit Reference Anchoring** - Always cite official sources for technical units, e.g., "หน่วยย่อยของการทำสำมะโนประชากร (Enumeration Area, อ้างอิง สำนักงานสถิติแห่งชาติ)".
-3. **Inter-Service Dependency** - Explicitly state that services must be developed "ควบคู่ไปกับการพัฒนาบริการอื่นๆ" (in parallel with other services) rather than in isolation.
-4. **Outcome-Oriented Language** - Focus on "การตัดสินใจที่ตั้งอยู่บนฐานของความรอบคอบ" (Decisions based on prudence) rather than just "Legal Shields."
+1. **Purpose-First Phrasing** - Start Institutional Necessity sections with proactive intent: **"เพื่อแก้ไขอุปสรรคเชิงโครงสร้าง..."** (To fix structural obstacles), **"เพื่อขจัดข้อจำกัด..."** (To eliminate limitations), or **"เพื่อคุ้มครองผู้บริหารและหน่วยงาน..."** (To protect executives and agencies).
+2. **In-line Justification** - Integrate "Regulatory Justification" (ความชอบธรรมตามกฎข้อบังคับ) directly into the narrative and necessity. Do NOT use a separate column for it if it causes repetition.
+3. **Functional Utility over Metaphor** - NEVER use "Shield" or "Wall." Use specific administrative terms like **"ความเสี่ยงทางกฎหมายจากการใช้ข้อมูลที่ขาดการรับรองมาตรฐาน"** (Legal risk from using uncertified data).
+4. **Explicit Reference Anchoring** - Cite official sources/units: **"หน่วยย่อยสำมะโนประชากร (Enumeration Area)"**, **"มาตรฐานสากล (Sendai Framework)"**, **"แผน NAP"**.
+5. **Inter-Service Dependency** - Highlight the **Single Source of Truth** and the integration of science with engineering/policy.
 
 ## 2. Lexicon & Diction (Dos/Don'ts)
 | Banned/Common | Preferred | Reason |
 | :--- | :--- | :--- |
-| "Data Hunt" | (Remove) | Informal/Consultant jargon; replaced with descriptive flow. |
-| "ระบบแคตาลอค" | "คลังข้อมูลภูมิอากาศ" | Prefers "Registry/Repository" over "Catalog." |
-| "Seal/Certification" | "สถานะความพร้อมและการใช้งาน" | Focuses on "Readiness and Suitability" over "Approval." |
+| "Institutional Shield" / "เกราะป้องกัน" | "ความชอบธรรมตามกฎข้อบังคับ / การคุ้มครองผู้บริหาร" | Focus on "Executive Protection" and "Rule-based Justification." |
+| "Budgeting Wall" / "กำแพงงบประมาณ" | "ความเสี่ยงในการถูกตรวจสอบความคุ้มค่า" | Focus on "Audit Risk" and "CBA Transparency." |
+| "Check Readiness" / "สถานะความพร้อม" | "ความเหมาะสมของการนำข้อมูลไปใช้งาน" | Focus on "Suitability for Use." |
+| "Data Hunt" | "ความกระจัดกระจายของข้อมูล" | Standard professional Thai. |
 
 ## 3. Structural DNA
-- **Flow**: Transitions should emphasize the *necessity* of the service based on stakeholder pain points before describing the features.
-- **Service 8 Placement**: Positioned as a cross-cutting support layer that enables all other services to function under uncertainty.
+- **Necessity (Why)**: Must lead with the *bureaucratic friction* (risk of audit, legal liability, structural gaps).
+- **Methodology (How)**: Must be descriptive and functional (e.g., "การจัดตั้งแพลตฟอร์ม Single Source of Truth").
+- **Summary**: Must be a "Clean Handoff"—concise, no filler, focused on the outcome for the agency.
 
 ## 4. Anti-AI Shield (Counter-examples)
-- **DON'T**: Use "Data Hunt" or "Budgeting Wall" as the primary heading; keep them as explanatory concepts for the *Why*.
-- **DON'T**: Use overly robotic terms like "ระบบย่อย" (Sub-system) when "องค์ประกอบหลัก" (Core components) is more appropriate.
+- **CRITICAL DON'T**: Use separate columns that force repetitive "Legitimacy" boilerplate.
+- **CRITICAL DO**: Bake the justification into the **Institutional Necessity**.
+- **DON'T**: Use "โดยตรวจสอบสถานะความพร้อม" as a filler. Use **"ประเมินความเหมาะสม"** or **"ทวนสอบความถูกต้อง"**.
 
 ## 5. Master Implementation Prompt
-> **Writing Mode**: NCAIF-Institutional
-> **Instructions**: Write in a formal Thai institutional voice. Avoid consultant jargon. Lead with the "Institutional Necessity" (Why). Use specific references (e.g., Enumeration Area references). Frame uncertainty handling as "Readiness and Suitability Guidelines."
+> **Writing Mode**: NCAIF-Institutional (v2.2 - In-line & Purpose-First)
+> **Instructions**: Write in a formal Thai institutional voice. Lead with proactive purpose: "เพื่อแก้ไข..." or "เพื่อคุ้มครอง...". Integrate regulatory justification (ความชอบธรรมตามกฎข้อบังคับ) into the flow. Avoid repetitive columns or filler phrases like "สถานะความพร้อม." Focus on audit risk, legal liability, and empirical evidence.

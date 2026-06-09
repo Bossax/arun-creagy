@@ -88,3 +88,4 @@ It is intended to answer four practical questions:
 | E-054       | Claim **C-010** in [`CRDB-Claim-Register.md`](ψ/incubate/DCCE/CRDB/CRDB-Claim-Register.md) | Strategic Deferral Record | 2026-04-01 | Project Management | Strategic decoupling of TOR 5.5 to protect Phase 1 MVP | Governance and operating-model gaps | Trigger T-030; Change CH-023 | Documents why the task was "left off" since inception. |
 
 
+| E-056       | [`ψ/archive/2026-06-05_stale_pillar2/NCAIF_Use_Cases.md`](ψ/archive/2026-06-05_stale_pillar2/NCAIF_Use_Cases.md) | Legacy Use Case Draft | 2026-06-09 | Failure of arbitrary use cases | Exposes fragmented, non-comprehensive wishlists | Institutional Gaps | Trigger T-032; Change CH-025 | Foundational evidence that triggered the Pillar 2 refactor to Service Use Cases. |
