@@ -21,3 +21,4 @@ Rule (parent CLAUDE.md §"Self-Evaluation Loop"): same friction 3 sessions → f
 | 2026-06-09 08:40 | 08.40_ncaif-report-v6 | NCAIF Report v6.0 (Grounded Narrative) | Structural Audit (Why -> What) | Integrated Stakeholder Voice | Jargon Trap (Consultant Bias) | Artificial Terminology |
 | 2026-06-09 | 06:30 | 14 | 5 | 8 | style-capture, ncaif-v6, csv-overhaul |
 | 2026-06-09 22:58 | 0e7aab14 | Pillar 2 Deep Causality Seal | Service-First Pivot | SEALED D-043 | Causal Erasure | Shallow Audit-to-Asset Chain |
+| 2026-06-10 00:39 | ncaif-report | Service-Level Gap Policy Report | Unified Report Pivot | Exec-Level Translation | Separated UseCase/Service Reports | Policy Structural Disconnect |
