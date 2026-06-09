@@ -44,7 +44,7 @@ Sort all ψ/ files by modification time, read the most recent:
 
 **Windows/PowerShell**:
 ```powershell
-Get-ChildItem -Path 'ψ/' -Filter *.md -Recurse | Where-Object { $_.Name -notmatch 'GEMINI.md|README.md|.gitkeep' } | Sort-Object LastWriteTime -Descending | Select-Object -ExpandProperty FullName -First 5
+Get-ChildItem -Path 'ψ/' -Filter *.md -Recurse | Where-Object Name -notmatch 'GEMINI.md|README.md|.gitkeep' | Sort-Object LastWriteTime -Descending | Select-Object -ExpandProperty FullName -First 5
 ```
 
 Read those top 5 files. This recovers the same context `/compact` restores — handoffs, retros, learnings, drafts, whatever was touched last.
