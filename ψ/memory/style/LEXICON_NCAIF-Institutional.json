@@ -1,0 +1,59 @@
+{
+  "context": "NCAIF-Institutional",
+  "version": "3.1",
+  "lexicon": [
+    {
+      "banned": "พื้นที่การดำเนินงาน",
+      "preferred": "ประเด็นการดำเนินงาน",
+      "reason": "Avoids literal 'Area' translation; more natural for action points."
+    },
+    {
+      "banned": "ฐานราก",
+      "preferred": "รากฐาน",
+      "reason": "Institutional 'foundation' vs civil engineering 'foundation'."
+    },
+    {
+      "banned": "อันตรายภูมิอากาศ",
+      "preferred": "ภัยจากภูมิอากาศ",
+      "reason": "Standardized Thai for Hazard."
+    },
+    {
+      "banned": "การเปิดรับความเสี่ยง",
+      "preferred": "การเปิดรับภัย",
+      "reason": "Exposure links to the hazard source."
+    },
+    {
+      "banned": "ข้อจำกัดเชิงวิศวกรรม",
+      "preferred": "ข้อจำกัดเชิงเทคนิค",
+      "reason": "More inclusive and less jargon-heavy for policy summaries."
+    },
+    {
+      "banned": "ความเปราะบางของระบบ",
+      "preferred": "ความเปราะบาง",
+      "reason": "Simplified for institutional narrative flow."
+    },
+    {
+      "banned": "ข้อมูลระดับตำบล/พิกัด",
+      "preferred": "ข้อมูลระดับปฏิบัติการ",
+      "reason": "Elevates technical scale to institutional workflow terms."
+    }
+  ],
+  "technical_terms": [
+    {
+      "term": "แบบจำลองทำนายสภาพอากาศเชิงตัวเลข",
+      "definition": "Numerical Weather Prediction Model"
+    },
+    {
+      "term": "ตัวแปรขับเคลื่อนภูมิอากาศ",
+      "definition": "Climate Driver"
+    },
+    {
+      "term": "การสังเกตุผ่านดาวเทียม",
+      "definition": "Satellite Observation"
+    },
+    {
+      "term": "แผนจัดการความเสี่ยงแบบพุ่งเป้า",
+      "definition": "Targeted Risk Management Plan"
+    }
+  ]
+}
