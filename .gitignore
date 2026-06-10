@@ -43,6 +43,8 @@ tools/
 !ψ/incubate/DCCE/CRDB/output/05_CDM_EARCatalog/*.jpg
 !ψ/incubate/DCCE/CRDB/output/05_CDM_EARCatalog/*.csv
 !ψ/incubate/DCCE/CRDB/output/02_UseCases_FunctionalSpecs/*.csv
+!ψ/incubate/DCCE/CRDB/output/02_UseCases_FunctionalSpecs/*.xlsx
+
 !ψ/incubate/DCCE/CRDB/output/03_DataInventory_DQ/*.csv
 !ψ/incubate/DCCE/CRDB/output/03_DataInventory_DQ/*.xlsx
 !ψ/incubate/DCCE/CRDB/output/01_Sitemap_InterfaceMapping/*.csv
