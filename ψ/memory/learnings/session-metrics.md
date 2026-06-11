@@ -24,3 +24,4 @@ Rule (parent CLAUDE.md §"Self-Evaluation Loop"): same friction 3 sessions → f
 | 2026-06-10 00:39 | ncaif-report | Service-Level Gap Policy Report | Unified Report Pivot | Exec-Level Translation | Separated UseCase/Service Reports | Policy Structural Disconnect |
 | 2026-06-10 | writing-th v2.2 | Bottom-Up Policy Overhaul (v3.3) | Analysis Hallmark | 1 [→ AGENT DECISION] |
 | 2026-06-11 | Bottom-Up Gap Analysis Rewrite | 01.00_section-3-4-bottom-up-rewrite.md |
+| 2026-06-11 04:43 | rrr follow-through | `/rrr` execution correction | explanation-first response | retro + lesson written; timestamps unavailable | execution vs explanation; ψ path ambiguity |

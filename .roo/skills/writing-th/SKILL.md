@@ -1,14 +1,14 @@
 ---
 name: writing-th
-description: Thai-first writing skill (report/article). MCP-first memory retrieval + example-report style mimicry + session style-pack summary (Option C) + outline-stop + learn-back via writing-th-learn.
+description: Thai-first writing skill (report/article). MCP-first retrieval, style-pack lifecycle, outline-stop, and learn-back via writing-th-learn.
 ---
 
 # /writing-th [--report | --article]
 
-> Thai-first drafting skill for formal reports and readable articles. This skill is designed to be **Oracle-aligned**:
+> Thai-first drafting skill for formal reports and readable articles. This skill is designed to be **Oracle-aligned** and traceable:
 > - **MCP-first** retrieval (no Oracle HTTP APIs)
 > - **Outline-first stop** (human control boundary)
-> - **Session-specific style pack summary** (Option C lifecycle)
+> - **Session-specific style pack summary** lifecycle
 > - **Learn-back** delegated to [`writing-th-learn`](.roo/skills/writing-th-learn/SKILL.md)
 
 ## When to use
@@ -36,13 +36,13 @@ Exactly one mode flag:
 
 Ask only for what is missing:
 
-1) **Writing plan path** (markdown) — anchor file where we append outline + session style pack summary.
-2) **Example report path** (markdown; optional but recommended) — the style reference for this session.
-3) **หัวข้อ + วัตถุประสงค์** — what are we writing and what decision/action should the reader take.
-4) **ผู้อ่าน** — target audience.
-5) **ความยาวเป้าหมาย** — pages/words.
-6) **Constraints** — must-include / must-avoid / deadline.
-7) **Ground-truth sources** — only these files/notes are allowed as factual basis.
+1. **Writing plan path** (markdown) — anchor file where we append outline + session style pack summary.
+2. **Example report path** (markdown; optional but recommended) — the style reference for this session.
+3. **หัวข้อ + วัตถุประสงค์** — what are we writing and what decision/action should the reader take.
+4. **ผู้อ่าน** — target audience.
+5. **ความยาวเป้าหมาย** — pages/words.
+6. **Constraints** — must-include / must-avoid / deadline.
+7. **Ground-truth sources** — only these files/notes are allowed as factual basis.
 
 ---
 
@@ -50,7 +50,7 @@ Ask only for what is missing:
 
 Use this structure in the writing plan file so `/writing-th` and `/writing-th-learn` can stay traceable and automation-friendly.
 
-```
+```markdown
 # Writing Plan — <topic>
 
 ## 0) Session metadata
@@ -96,23 +96,22 @@ This skill uses **layered style**, with two phases:
 
 ### Phase A — Before any project session style pack exists
 
-1) **Example report (session reference)** — primary for terminology + section flow, within bounds of the layers below.
-2) **Project style brief (if present)** — binding voice/tone/concept framing for this deliverable.
-3) **Persistent resonance (safety rails)** — baseline constraints that must not be violated:
+1. **Example report (session reference)** — primary for terminology + section flow, within bounds of the layers below.
+2. **Project style brief (if present)** — binding voice/tone/concept framing for this deliverable.
+3. **Persistent resonance (safety rails)** — baseline constraints that must not be violated:
    - [`ψ/memory/resonance/writing-style-th.md`](ψ/memory/resonance/writing-style-th.md)
    - [`ψ/memory/resonance/citation-style-th.md`](ψ/memory/resonance/citation-style-th.md)
-4) **Learnings tagged writing-th** — evolving patterns from previous projects/sessions.
+4. **Learnings tagged writing-th** — evolving patterns from previous projects/sessions.
 
 ### Phase B — After a project session style pack exists
 
-1) **Example report (session reference)** — primary for terminology + section flow, **within the bounds of the layers below**.
-2) **Project Session Style Pack file** — project-specific rules that crystallized from human-edited drafts and `/writing-th-learn` patterns (e.g., `plans/<project>-writing-style-pack.md`).
-3) **Project style brief (if present)** — binding voice/tone/concept framing for the deliverable.
-4) **Persistent resonance (safety rails)** — global constraints for writing and citations.
-5) **Learnings tagged writing-th** — additional global patterns.
+1. **Example report (session reference)** — primary for terminology + section flow, **within the bounds of the layers below**.
+2. **Project Session Style Pack file** — project-specific rules that crystallized from human-edited drafts and `/writing-th-learn` patterns (e.g., `plans/<project>-writing-style-pack.md`).
+3. **Project style brief (if present)** — binding voice/tone/concept framing for the deliverable.
+4. **Persistent resonance (safety rails)** — global constraints for writing and citations.
+5. **Learnings tagged writing-th** — additional global patterns.
 
 If example style conflicts with a project Session Style Pack, project style brief, or resonance, **the pack + brief + resonance win**.
-
 
 ---
 
@@ -127,7 +126,7 @@ If example style conflicts with a project Session Style Pack, project style brie
 ### Grounding + citations
 
 - **No invented sources**.
-- Citations only from user-provided sources (or explicitly retrieved via MCP from `ψ/`).
+- Citations only from user-provided sources or explicitly retrieved via MCP from `ψ/`.
 
 ### External vs internal artifacts
 
@@ -140,7 +139,7 @@ If example style conflicts with a project Session Style Pack, project style brie
 
 ### Step 0 — Decide mode
 
-- If user does not specify: default to `--report`.
+- If the user does not specify a mode, default to `--report`.
 
 ### Step 1 — Retrieve memory (MCP-first)
 
@@ -159,26 +158,26 @@ Then read the user-provided example report file (path from the writing plan) to 
 - preferred terminology (key nouns/verbs)
 - section flow (ordering + headings style)
 - paragraph rhythm (length, transitions)
-- typical “summary blocks” vs narrative
+- typical summary blocks vs narrative
 
 ### Step 2 — Session Style Pack handling
 
 There are two cases:
 
-1) **No project Session Style Pack yet (first drafting phase)**
+1. **No project Session Style Pack yet (first drafting phase)**
 
 - Do **not** create a Session Style Pack file yet.
 - Use only:
   - resonance (writing-style-th + citation-style-th),
   - existing learnings tagged `writing-th`,
   - example report(s),
-  - project style brief (ถ้ามี).
+  - project style brief (if any).
 - Proceed to Step 3 (Outline) and Step 4 (Draft) using these layers.
 
-2) **Project Session Style Pack exists**
+2. **Project Session Style Pack exists**
 
-- Load the Session Style Pack file referenced in the writing plan (เช่น `plans/<project>-writing-style-pack.md`).
-- Append a new "Session Style Pack Summary" block into that file (append-only):
+- Load the Session Style Pack file referenced in the writing plan (for example `plans/<project>-writing-style-pack.md`).
+- Append a new `Session Style Pack Summary` block into that file (append-only):
 
   ```markdown
   ## Session Style Pack Summary (YYYY-MM-DD HH:MM)
@@ -201,18 +200,19 @@ There are two cases:
 
   ### Placeholders
   - [ต้องเติมตัวเลข] / [ต้องเติมแหล่งอ้างอิง] ...
+  ```
 
 Notes:
 
 - The summary is **session-scoped** and must not overwrite past summaries.
-
+- This block is a traceable snapshot, not a replacement for the underlying style files.
 
 ### Step 3 — Outline first, then STOP
 
-Produce (at least) one numbered Thai outline (optionally 2 variants if structure choices exist):
+Produce at least one numbered Thai outline, and optionally two variants if the structure is still ambiguous:
 
-- Variant A: closest to example flow
-- Variant B: closest to plan/TOR flow (if different)
+- Variant A: closest to the example flow
+- Variant B: closest to the plan/TOR flow (if different)
 
 Append the chosen outline into the writing plan and **STOP** for explicit confirmation.
 
@@ -223,31 +223,33 @@ After confirmation:
 - Write the draft as a new file (no overwrite).
 - Recommended naming:
   - `<topic-slug>-v1-draft.md`
-  - If re-drafting: increment version (`v2`, `v3`, ...).
-
+  - If re-drafting: increment version (`v2`, `v3`, ...)
 
 ### Step 4b — Post-section sanity check (mechanical style validation)
 
-After completing a substantial section (เช่น หัวข้อย่อยที่มีหมายเลข หรือหนึ่งบทเต็ม) ให้รัน **sanity check แบบเชิงกล** เปรียบเทียบร่างกับ writing style pack ที่ใช้งานอยู่ (resonance + project style brief ถ้ามี + Session Style Pack Summary):
+After completing a substantial section, run a mechanical sanity check against the active writing style pack (resonance + project style brief if any + Session Style Pack Summary):
 
-หากข้อใดข้อหนึ่งไม่ผ่าน ให้แก้ไขส่วนดังกล่าวภายใต้ style pack เดียวกันก่อนจะนับว่าเป็นร่างที่พร้อมสำหรับให้มนุษย์ทบทวน
+- Thai-first wording intact
+- No invented sources
+- Section performs one clear job
+- Style does not drift away from the approved reference
+
+If any check fails, revise that section under the same style pack before treating it as draft-ready.
 
 ### Step 5 — Human edit handshake
 
 Ask the user to:
 
 - Copy the draft and create an edited version.
-- Preferred naming pair for automation:
+- Prefer the naming pair for automation:
   - `...-draft.md`
   - `...-edited.md`
 
-If the user wants different filenames, preserve originals and create a conforming copy pair (Nothing is Deleted).
+If the user wants different filenames, preserve the originals and create a conforming copy pair (Nothing is Deleted).
 
 ### Step 6 — Learn-back (delegated)
 
 If an edited version exists, invoke the learning-only companion:
-
-- [`writing-th-learn`](.roo/skills/writing-th-learn/SKILL.md:1)
 
 - [`writing-th-learn`](.roo/skills/writing-th-learn/SKILL.md)
 
