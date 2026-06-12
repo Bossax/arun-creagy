@@ -25,3 +25,6 @@ Rule (parent CLAUDE.md §"Self-Evaluation Loop"): same friction 3 sessions → f
 | 2026-06-10 | writing-th v2.2 | Bottom-Up Policy Overhaul (v3.3) | Analysis Hallmark | 1 [→ AGENT DECISION] |
 | 2026-06-11 | Bottom-Up Gap Analysis Rewrite | 01.00_section-3-4-bottom-up-rewrite.md |
 | 2026-06-11 04:43 | rrr follow-through | `/rrr` execution correction | explanation-first response | retro + lesson written; timestamps unavailable | execution vs explanation; ψ path ambiguity |
+| Date | Session | Friction | Error | Lesson |
+|---|---|---|---|---|
+| 2026-06-12 | crdb-pillar2-service-detailing | retro path root mismatch + workflow overlap | Used wrong repo-root guard for retro and mixed sealing with retro framing | Service-detailing needs explicit dossier scope and clean separation between conceptual model, example, and seal |

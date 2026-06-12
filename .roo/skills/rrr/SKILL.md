@@ -40,13 +40,13 @@ When the subagent returns, main agent merges real timestamps into the Timeline s
 # Step 1: Find git root
 $ORACLE_ROOT = (git rev-parse --show-toplevel 2>$null)
 
-# Step 2: Cross-check — oracle repo has CLAUDE.md + ψ/
-if ($ORACLE_ROOT -and (Test-Path (Join-Path $ORACLE_ROOT 'CLAUDE.md')) -and (Test-Path (Join-Path $ORACLE_ROOT 'ψ'))) {
+# Step 2: Cross-check — oracle repo has CLAUDE.md or GEMINI.md + ψ/
+if ($ORACLE_ROOT -and ((Test-Path (Join-Path $ORACLE_ROOT 'CLAUDE.md')) -or (Test-Path (Join-Path $ORACLE_ROOT 'GEMINI.md'))) -and (Test-Path (Join-Path $ORACLE_ROOT 'ψ'))) {
   $ROOT = $ORACLE_ROOT
-} elseif ((Test-Path (Join-Path (Get-Location) 'CLAUDE.md')) -and (Test-Path (Join-Path (Get-Location) 'ψ'))) {
+} elseif (((Test-Path (Join-Path (Get-Location) 'CLAUDE.md')) -or (Test-Path (Join-Path (Get-Location) 'GEMINI.md'))) -and (Test-Path (Join-Path (Get-Location) 'ψ'))) {
   $ROOT = (Get-Location).Path
 } else {
-  Write-Host "⚠️ Not in oracle repo (no CLAUDE.md + ψ at git root). Writing to current directory." -ForegroundColor Yellow
+  Write-Host "⚠️ Not in oracle repo (no CLAUDE.md or GEMINI.md + ψ at git root). Writing to current directory." -ForegroundColor Yellow
   $ROOT = (Get-Location).Path
 }
 
@@ -59,6 +59,8 @@ $PSI = (Get-Item -LiteralPath (Join-Path $ROOT 'ψ')).FullName
 ---
 
 ## /rrr (Default — background dig + parallel write)
+
+**Scope guardrail**: `/rrr` is for retrospectives and lesson capture only. It must not perform sealing, ledger mutation, or archive cleanup unless the user explicitly asks for that separate action.
 
 ### 1. Gather git context (main agent)
 

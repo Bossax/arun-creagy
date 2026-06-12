@@ -12,7 +12,6 @@
 			"cwd": "C:/Users/sitth/OracleWorkspace/engine",
 			"description": "Local Oracle Registry (Registry of Form)",
 			"alwaysAllow": [
-				"arra_learn",
 				"arra_threads",
 				"arra_search",
 				"arra_trace"
