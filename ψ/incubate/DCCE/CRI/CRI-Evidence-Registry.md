@@ -9,15 +9,10 @@ description: Central register of evidence artifacts backing CRI Phase 1 and Phas
 
 # CRI Evidence Registry
 
-This registry records the **evidence backbone for the Climate Risk Index (CRI)** project. It follows the evidence registry pattern established in the CRDB project, but is scoped specifically to **DCCE / CRI** under `ψ/incubate/DCCE/CRI/`.
+This registry records the **physical artifacts** backing the Climate Risk Index (CRI) project. Following Oracle T-E-D-A ontology, this ledger tracks **Evidence (E)**—the tangible data, documents, and transcripts that ground the project.
 
-Each row links a concrete artifact (source, note, synthesis, or output) to its role in CRI Phase 1 and Phase 2 design and implementation. Over time, this table should become the **single authoritative map** of which evidence backs which methodology sections, design decisions, and implementation choices.
-
-> [!note]
-> - **id** should be a stable identifier (`E-CRI-###`) used in methodology notes, the coverage map, and decision logs.
-> - **path** is always recorded relative to the repo root (`c:/Users/sitth/OracleWorkspace/Arun_Creagy`).
-> - **type** distinguishes raw sources, internal notes, curated outputs, and AI-assisted syntheses.
-> - **dimensions** should reference CRI-relevant concepts such as `impact`, `capacity`, `data_richness`, `SES`, `governance`, etc.
+> [!important]
+> **Artifacts Only**: This ledger records the *Nouns* of the project (the files). It does not record motives, triggers, or decisions. Every entry must point to a verifiable physical path or ID.
 
 ## Table
 

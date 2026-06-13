@@ -1,29 +1,14 @@
-# CRI Deliverable Map
+# CRI Asset & Deliverable Map
 
 ## Purpose
 
-This ledger tracks **key deliverable units** for the CRI project and connects them to triggers, decisions, and evidence. 
+This ledger tracks **Assets**—the hardened physical reality that instantiates project decisions. Following Oracle T-E-D-A, an Asset is the final result of a causal chain.
 
 ## Usage and maintenance
-- Focus on **high-leverage deliverables** (methodology packs, hearing summaries, indicator designs, governance notes) rather than every micro-note.
-- Add one row when a deliverable becomes operationally important (drafting, review, or submission).
-- When a deliverable supersedes a previous one, add a new row and reference the earlier ID in **Notes**; do not delete older rows.
-- Keep links consistent with:
-  - triggers in [`CRI-Trigger-Log.md`](ψ/incubate/DCCE/CRI/CRI-Trigger-Log.md)
-  - evidence in [`output/CRI-Evidence-Registry.md`](ψ/incubate/DCCE/CRI/CRI-Evidence-Registry.md) and the coverage map [`output/CRI-Evidence-Coverage-Map.md`](ψ/incubate/DCCE/CRI/CRI-Evidence-Coverage-Map.md)
-  - submissions in [`CRI-Submission-Log.md`](ψ/incubate/DCCE/CRI/CRI-Submission-Log.md)
-  - any CRI decision / change logs introduced in later steps
+- **Physical Realization**: Only log high-leverage files (Methodologies, Apps, Datasets, Scripts) that represent a "Sealed" state.
+- Link to the **Decision (D)** that birthed the asset and the **Evidence (E)** that grounds it.
 
-## Practical reading order
-1. Start here to identify **which CRI deliverables exist** and which are planned.
-2. For a given deliverable row, follow:
-   - **Related triggers** → [`CRI-Trigger-Log.md`](ψ/incubate/DCCE/CRI/CRI-Trigger-Log.md)
-   - **Decision dependencies** → CRI decision / change logs (once established)
-   - **Evidence basis** → [`output/CRI-Evidence-Registry.md`](ψ/incubate/DCCE/CRI/CRI-Evidence-Registry.md) and the coverage map
-3. Use [`CRI-Submission-Log.md`](ψ/incubate/DCCE/CRI/CRI-Submission-Log.md) to see when a deliverable was actually sent or frozen.
-
-
-# Deliverable map
+# Asset map
 
 
 

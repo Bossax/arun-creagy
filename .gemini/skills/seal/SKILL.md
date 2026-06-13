@@ -1,15 +1,15 @@
 ---
-installer: arra-oracle-skills-cli v26.5.16
+installer: arra-oracle-skills-cli v26.6.0
 origin: ARUN (Strategic Knowledge Auditor)
 name: seal
-description: '[project] v26.5.16 G-SKLL |Capture project progress by auditing the recent progress on the current issue and proposing the reconstructed progression timeline.'
+description: '[project] v26.6.0 G-SKLL | The Funnel: Commit unstructured discovery into structured T-E-D-A ledgers. Bonds the audit to the asset.'
 argument-hint: "[--init | --dry-run]"
 trigger: /seal
 ---
 
-# /seal (The Audit-to-Asset Chain)
+# /seal (The T-E-D-A Funnel)
 
-> "A project's truth is defined by its causality, not its claims."
+> "Trace to understand; Seal to commit. A project's truth is its causality."
 
 ## Oracle Root Detection (REQUIRED — win32/PowerShell)
 
@@ -33,64 +33,49 @@ if ($ORACLE_ROOT -and (Test-Path "$ORACLE_ROOT\GEMINI.md") -and (Test-Path "$ORA
 
 ---
 
-## 🛡️ The Workflow (Senior Auditor Protocol)
+## 🛡️ The Workflow (The Audit Funnel)
 
-### Phase 1:  Discovery
-Do NOT ask the user for the history. Find it yourself in the Oracle Brain.
+### Phase 1: Intake & Discovery
+Do NOT ask the user for history. Consume it from the brain.
 
-1.  **Semantic Search**: Call `arra_search(query: "recent retrospectives and handoffs for <PROJECT_NAME>")`.
-2.  **Intent Parsing**: Read the content of the last 3-5 discovered files.
-    - Extract **Evidence (E)** from `AI Diary` or `Lessons Learned`.
-    - Extract **Trigger (T)** from `Next Steps` or `Pending` handoff items.
-3.  **Physical Cross-Check**: Run `git log --stat` and `ls -R` to identify the current **Asset (D)** being sealed.
+1.  **Trace Intake**: Scan `ψ/memory/traces/` for any file created in the last 24 hours. Read the `### Potential Ledger Yields` section.
+2.  **Retro Intake**: Call `arra_search(query: "recent retrospectives for <PROJECT>")`.
+3.  **Motive vs. Artifact Split**: 
+    - Identify the **Evidence (E)**: The physical files/paths discovered.
+    - Identify the **Trigger (T)**: The conceptual motive or mandate derived from that evidence.
+4.  **Target Asset (A)**: Identify the file or directory being hardened.
 
-### Phase 2: The Traceability Verdict
+### Phase 2: The T-E-D-A Verdict
 Present the reconstructed chain to the user. **Wait for Approval.**
 
-> **Audit-to-Asset Chain Proposal**
-> *   **Evidence (E)**: [Text from Retro/Search] ([File Path])
-> *   **Trigger (T)**: [Text from Handoff/Search] ([File Path])
-> *   **Change (CH)**: [Current Strategic Pivot]
-> *   **Asset (D)**: [Target File Path]
+> **Audit-to-Asset Chain Proposal (T-E-D-A)**
+> *   **Trigger (T)**: [Conceptual Motive] (Linked to E-XXX)
+> *   **Evidence (E)**: [File Path] ([Evidence ID])
+> *   **Decision (D)**: [Agreed Posture/Semantic Lock]
+> *   **Asset (A)**: [Hardened File Path] ([Deliverable ID])
 > 
 > **Auditor Verdict**: [Significant/Minor] progress.
-> 
-> **Options**:
-> 1. **Seal**: Seals the chain as proposed.
-> 2. **Trace Escalation**: If this proposal misses the "essence," use the **Trace Skill** (`arra_trace`) to perform a deep forensic dig. This will discover technical ancestry (files, commits, history) from the filesystem directly.
-> 3. **Manual Correction**: Correct the E-T-CH-D links manually.
 
-### Phase 2.5: Trace Escalation
-If triggered:
-- Run the **Trace Skill** (`arra_trace`) on the active asset.
-- Analyze the discovered **Dig Points** (files and commits) to find the "hidden" causality.
-- Re-propose the chain based on this technical discovery.
+### Phase 3: Sealing (Structural Commitment)
+Upon explicit approval:
 
-### Phase 3: Sealing
-Upon approval, perform the following in order:
-
-1.  **Initialize (if --init)**: Copy `.gemini/skills/seal/TEMPLATE.md` to `ψ/incubate/<PROJECT>/` as the 4 canonical ledgers.
+1.  **Initialize (if --init)**: Ensure `ψ/incubate/<PROJECT>/` has the 4 canonical ledgers.
 2.  **Sequential Write**:
-    - Update `Evidence-Registry.md`
-    - Update `Trigger-Log.md`
-    - Update `Change-Log.md`
-    - Update `Deliverable-Map.md` (Mark as "Sealed")
-3.  **Oracle Hardening**: Call `arra_trace` to log the Sealing Event as a permanent record.
-4.  **Trace Linking**: Call `arra_trace_link` to bond the discovered ancestors to this "Sealing Trace."
+    - Update `Evidence-Registry.md` (Artifacts only).
+    - Update `Trigger-Log.md` (Motives only; link to E-ID).
+    - Update `Change-Log.md` (Decisions; link to T-ID).
+    - Update `Deliverable-Map.md` (Mark Asset as "Sealed").
+3.  **Database Bonding**: Call `arra_trace_link(prevId, nextId)` to bond the unstructured discovery trace to the formal sealing event.
 
 ---
 
-## 📜 Ledger Structure (T-E-CH-D)
+## 📜 Hard Rules (v26.6.0 Mandate)
 
-Every project MUST maintain these 4 files in `ψ/incubate/<PROJECT>/`:
-
-| File | Role | Key Columns |
-| :--- | :--- | :--- |
-| **Evidence-Registry.md** | The Grounding | ID, Artifact, Type, Date, Main Topic, Gap Lens |
-| **Trigger-Log.md** | The Motive | ID, Evidence ID, Gap Description, Impact Zone, Deliverable ID |
-| **Change-Log.md** | The Design | ID, Trigger ID, Strategic Pivot, Design Commitment, Status |
-| **Deliverable-Map.md** | The Result | ID, Name, Pillar, Acceptance Gate, Status (Draft/Sealed) |
-
+1.  **Motive/Artifact Separation**: Never log a file path in the Trigger ledger. A Trigger is the "Why"; Evidence is the "What".
+2.  **Approval Gate**: You MUST present the T-E-D-A chain and wait for confirmation before writing to the project ledgers.
+3.  **Historical IDs**: Always preserve the existing ID prefixing (E-CRI-XXX, T-CRI-XXX, CH-CRI-XXX, D-CRI-XXX).
+4.  **Nothing is Deleted**: Do not overwrite ledger entries. Always append.
 
 ---
-**Philosophy**: Detect reality. Link causality. Harden the spine. *"A project's truth is defined by its causality, not its claims."*
+
+**Philosophy**: Detect reality. Link causality. Harden the spine. *"Trace to understand; Seal to commit."*

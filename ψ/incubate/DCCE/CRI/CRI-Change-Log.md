@@ -1,34 +1,19 @@
-# CRI Change Log
+# CRI Decision & Change Log
 
 ## Purpose
 
-This ledger records **human-readable summaries of major direction shifts** in the CRI project: what changed, why, and what it affected. It complements the more granular trigger, claim, deliverable, and submission ledgers.
-
-It is designed to answer what we have committed in plain language. 
+This ledger records the **Semantic Lock**—the agreed-upon technical or strategic postures that define the project's direction. It answers: *"What is the verified plan?"*
 
 ## Usage and maintenance
 
-- Add an entry when the **CRI project direction, methodological stance, governance posture, or key deliverable trajectory** changes.
-- Each entry should reference:
-  - trigger(s) from [`CRI-Trigger-Log.md`](ψ/incubate/DCCE/CRI/CRI-Trigger-Log.md)
-  - decisions from CRI decision / design notes 
-  - a place holder in [`CRI-Deliverable-Map.md`](ψ/incubate/DCCE/CRI/CRI-Deliverable-Map.md) if this change will lead to a new deliverable
-- Use **append-only** updates; do not delete historical change notes.
+- **Decisions over Actions**: Do not log micro-tasks. Log the *postures* and *pivots* agreed upon by the Human and Oracle.
+- Reference the **Trigger (T)** that forced the decision and the **Asset (A)** that instantiates it.
 
-## Practical reading order
-
-1. Review this file to understand **major phases and turning points** in CRI.
-2. For each row, once populated:
-   - inspect underlying triggers → [`CRI-Trigger-Log.md`](ψ/incubate/DCCE/CRI/CRI-Trigger-Log.md)
-   - confirm decision details → CRI decision / design notes
-   - assess deliverable impact → [`CRI-Deliverable-Map.md`](ψ/incubate/DCCE/CRI/CRI-Deliverable-Map.md)
-
-
-# Change log
+# Decision log
 
 
 
-| Change ID   | Date       | Change summary                                                                                                                                                                                                                                                                         | Trigger(s)                      | Affected decisions                                                                                       | Affected deliverables                                                            | Impact description                                                                                                                                                                                                            | Notes                                                                                                                                                                                                       |
+| Decision ID | Date       | Strategic Decision / Pivot                                                                                                                                                                                                                                                             | Trigger(s)                      | Affected decisions                                                                                       | Affected deliverables                                                            | Impact description                                                                                                                                                                                                            | Notes                                                                                                                                                                                                       |
 | ----------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | CH-CRI-000  | 2025-10-17 | Reframed the Phase 1 Impact Index as a complementary benchmark to spatial risk maps and confirmed that Phase 2 would not build heavy new impact models, instead privileging dasymetric mapping and a municipal-level Climate Resilience Index.                                         | T-CRI-000                       | (to be linked once Phase 1/2 interface and impact vs resilience notes are anchored)                      | (to be mapped; likely Phase 1/2 methodology revisions and spatial-risk products) | Establishes the Phase 1/2 interface as "impact benchmark + spatial risk maps" plus a distinct CRI, reducing pressure to over-extend Phase 2 into new impact modelling.                                                        | Backfilled narrative from T-CRI-000; wording kept close to the trigger description and may be refined once methodology notes and evidence registry entries are fully linked.                                |
 | CH-CRI-000A | 2025-10-29 | Shifted CRI Phase 2 implementation posture toward using LAO-reported indicators (e.g., LPA, Sustainable City) and existing administrative systems as the backbone for capacity profiling, rather than designing standalone CRI data-entry tools.                                       | T-CRI-000A                      | (to be linked once data-governance and incentive-framing notes exist)                                    | (to be mapped; candidate CRI data-architecture and governance deliverables)      | Anchors a dual-track framing where CRI builds on LAO data incentives and co-creation, signalling a preference for integration with existing systems over bespoke CRI platforms.                                               | Backfilled narrative from T-CRI-000A; downstream deliverable mapping is intentionally left open until the CRI deliverable map is updated for data-architecture components.                                  |

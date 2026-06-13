@@ -73,9 +73,15 @@ powershell.exe -NoProfile -Command "$PROJECT_BASE = Get-ChildItem -Path \"$env:U
 
 **Path**: `$PSI/memory/retrospectives/YYYY-MM/DD/HH.MM_slug.md`
 
-### 3. Write Lesson Learned
+### 3. Write Lesson Learned (Knowledge Ingestion)
 
-**Path**: `$PSI/memory/learnings/YYYY-MM-DD_slug.md`
+**Mechanism**: You MUST use the `mcp_oracle-v2_arra_learn` tool to ingest the lesson.
+- **Pattern**: The core technical or philosophical learning.
+- **Concepts**: Relevant tags (e.g., [ontology, win32, causality]).
+- **Project**: The current project ghq path.
+
+> [!important]
+> Do NOT use `write_file` for learnings. Use `arra_learn` to ensure the pattern is indexed in the Oracle brain and available for hybrid search.
 
 ### 3.5. Append Session-Metrics Row (REQUIRED)
 
