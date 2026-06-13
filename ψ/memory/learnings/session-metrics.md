@@ -28,3 +28,4 @@ Rule (parent CLAUDE.md §"Self-Evaluation Loop"): same friction 3 sessions → f
 | Date | Session | Friction | Error | Lesson |
 |---|---|---|---|---|
 | 2026-06-12 | crdb-pillar2-service-detailing | retro path root mismatch + workflow overlap | Used wrong repo-root guard for retro and mixed sealing with retro framing | Service-detailing needs explicit dossier scope and clean separation between conceptual model, example, and seal |
+| 2026-06-13 | 15:25 | session-2026-06-13T06-27-6a2e629b | 1 |

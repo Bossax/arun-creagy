@@ -51,18 +51,34 @@ This document serves as the canonical reference for the metadata structures used
 | `province_name_th` | string | No | - | Standard Thai province name. |
 | `tambon_name_th` | string | No | - | Standard Thai sub-district name. |
 
+## 3. Gold Fact Tables (Empirical Impact)
+
+### 3.1 DDPM Tambon Impact (`fact_ddpm_tambon_impact_climate`)
+**Role**: Canonical sub-district level empirical impact signals derived from DDPM village-level records.
+
+| Column Name | Data Type | Role | Definition | Notes |
+| :--- | :--- | :--- | :--- | :--- |
+| `subdistrict_code` | string | PK | 6-digit DOPA Tambon code. | Join key for Gold Spine. |
+| `affected_households_sum` | float | Metric | Total households affected (B.E. 2560–2567). | Primary impact proxy. |
+| `affected_people_sum` | float | Metric | Total people affected (B.E. 2560–2567). | - |
+| `deaths_sum` | float | Metric | Total casualties (B.E. 2560–2567). | - |
+| `avg_yoy_change` | float | Metric | Mean year-over-year change in affected households. | - |
+| `pct_national_*` | float | Score | National Percentile Rank (0-100) for each metric. | Calculated across all Tambons. |
+
+### 3.2 DDPM Provincial Impact Score (`fact_ddpm_province_impact_climate`)
+**Role**: Aggregated provincial-level impact scores used for national benchmarking.
+
+| Column Name | Data Type | Role | Definition | Notes |
+| :--- | :--- | :--- | :--- | :--- |
+| `province_code` | string | PK | 2-digit DOPA Province code. | - |
+| `province_name_th` | string | - | Standard Thai province name. | - |
+| `impact_score_minmax` | float | Score | Min-max normalized score (0.0-1.0). | Derived from aggregated tambon impacts. |
+| `admin_gap_flag` | boolean | QA | Triggered when Damage > 0 but Relief = 0. | Marked as "Insufficient Data". |
+
 ---
 
-## 3. Analysis Artifacts (Experimental)
+## 4. Administrative Protocols
 
-### 3.1 Comparative Casualties (`human_impact_casualties_by_tambon_comparative`)
-**Role**: Output table for the experimental Pillar 1 disaggregation.
-
-| Column Name | Data Type | Role | Description |
-| :--- | :--- | :--- | :--- |
-| `subdistrict_code` | string | FK | Joins to `dim_location_master`. |
-| `model_a_pop` | float | - | Disaggregated casualties based purely on Population (Exposure). |
-| `model_b_empirical` | float | - | Disaggregated casualties based on Historical DDPM records. |
-| `model_c_hybrid` | float | - | Disaggregated casualties using the Hybrid ($W = Pop \times Empirical$) logic. |
-| `shift_worldpop` | float | - | Delta between Population-only risk and Empirical history. |
-| `shift_hybrid` | float | - | Delta between Hybrid model and Empirical history. |
+- **DOPA Spine**: All spatial joins MUST use the 6-digit `subdistrict_code` from `dim_location_master`.
+- **Temporal Window**: Phase 1 Gold tables are locked to B.E. 2560–2567.
+- **Null Handling**: Metric nulls are treated as `0.0` for ranking; missing DOPA codes are purged to the `qa` directory.

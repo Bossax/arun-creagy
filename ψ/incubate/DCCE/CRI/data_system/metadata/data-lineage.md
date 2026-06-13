@@ -53,74 +53,22 @@ This document provides a human-readable map of the transformation logic used to 
 
 ---
 
-## 5. WorldPop Zonal Statistics
-*   **Raw Source**: `0_bronze/worldpop/tha_pop_2020_CN_100m_R2025A_v1.tif`
-*   **Processing Script**: `prep_worldpop_exposure.py`
-    *   **Logic**:
-        *   **Zonal Aggregation**: Overlays enriched Tambon geometries on the 100m population raster.
-        *   **Calculation**: Sums pixel values to derive total registration-independent population count per Tambon.
-    *   **Outputs**: 
-        *   `1_silver/worldpop/tambon_population_count_worldpop.csv`
-        *   `1_silver/worldpop/tambon_population_count_worldpop.tif` (rasterized version)
+## 11. DDPM Provincial Impact (Gold Fact Tables | 2560–2567)
 
-## 5. TEI Pilot Baseline
-*   **Raw Source**: `0_bronze/tei_pilot/casualties_by_hazard_2559_2566.csv`
-*   **Processing Script**: `prep_tei_casualties.py`
-    *   **Logic**:
-        *   **Code Mapping**: Resolves legacy provincial names to canonical DOPA 2-digit codes.
-        *   **Cleaning**: Handles encoding issues and whitespace normalization in casualty figures.
-    *   **Output**: `1_silver/tei_pilot/provincial_casualties_clean.csv`
-
-## 6. DDPM Intermediate Aggregation
-*   **Raw Source**: `1_silver/ddpm/master_village_disaster_stat_2557_2567.csv`
-*   **Processing Script**: `prep_ddpm_climate_history.py`
-    *   **Logic**:
-        *   **Hazard Filtering**: Uses `dim_hazard_canonical.csv` to filter strictly for climate-related events.
-        *   **Spatial Roll-up**: Aggregates village-level `Affected Households` to the 6-digit Tambon level.
-    *   **Output**: `1_silver/ddpm/tambon_climate_affected_household_aggregate_ddpm_village_stat.csv`
----
-
-## 7. DDPM Tambon Impact (Gold Fact Tables; Climate Hazards | 2560–2567)
-
-This is the national Gold layer output for DDPM climate impacts at tambon (subdistrict) level.
-
-*   **Purpose**: Produce national fact tables and QA artifacts for downstream notebooks + deterministic per-province export bundles.
-*   **Processing Script**: [`ψ/incubate/DCCE/CRI/data_system/script/ELT/build_gold_ddpm_tambon_impact_climate_2560_2567.py`](ψ/incubate/DCCE/CRI/data_system/script/ELT/build_gold_ddpm_tambon_impact_climate_2560_2567.py:1)
-*   **Plan Anchor**: [`plans/2026-05-18_national-ddpm-tambon-impact-notebook-plan.md`](plans/2026-05-18_national-ddpm-tambon-impact-notebook-plan.md:1)
-
-### 7.1 Inputs
-
-*   **DDPM master stats (Silver)**: `1_silver/ddpm/master_village_disaster_stat_2557_2567.csv`
-*   **Canonical hazard mapping (Gold dim)**: `2_gold/dim_hazard_canonical.csv`
-    *   Filter rule: keep `hazard_group == 'climate'`
-    *   Variant normalization before join: `ดินโคลนถล่ม` and `ดินโคลนถล่ม/ดินถล่ม` → `ดินถล่ม`
-*   **Gold location spine**: `2_gold/dopa/dim_location_master.csv`
-*   **Tambon geometry (Silver enriched)**: `1_silver/dopa/tambon_boundaries_enriched.shp`
-    *   Join key: `subdist_cd` (6-digit DOPA subdistrict code)
-
-### 7.2 Transformations
-
-*   Filter year window to B.E. 2560–2567
-*   Normalize DDPM `Subdistrict Code` to strict 6-digit `subdistrict_code` (digits only). Invalid codes are dropped and counted.
-*   Filter to climate hazards only via the canonical hazard mapping table.
-*   Compute two outputs:
-    *   **Period table** (one row per `subdistrict_code`): totals across 2560–2567 + derived national percentile ranks
-    *   **Yearly table** (one row per `subdistrict_code`, `year_be`): yearly totals + derived national percentile ranks
-*   QA gate:
-    *   **Stats → geometry coverage** must hold (`subdistrict_code` in fact ⊆ `subdist_cd` in geometry). If not, write a missing-geometry CSV and fail.
-
-### 7.3 Outputs
-
-*   `2_gold/ddpm/fact_ddpm_tambon_impact_climate_2560_2567.csv`
-*   `2_gold/ddpm/fact_ddpm_tambon_impact_climate_yearly_2560_2567.csv`
-*   QA artifacts:
-    *   `2_gold/ddpm/qa/qa_missing_geometry_2560_2567.csv`
-    *   `2_gold/ddpm/qa/qa_invalid_code_totals_2560_2567.csv`
-    *   `2_gold/ddpm/qa/qa_valid_rows_by_province_2560_2567.csv`
+*   **Purpose**: Aggregated provincial-level impact scores and fiscal gap analysis.
+*   **Inputs**: 
+    *   **Tambon Gold Fact Table**: `2_gold/ddpm/fact_ddpm_tambon_impact_climate_2560_2567.csv`
+    *   **Financial Relief (Silver)**: `1_silver/ddpm/master_financial_relief_by_hazard.csv`
+*   **Logic**:
+    *   **Aggregation**: Sums tambon-level metrics (`affected_households_sum`, `deaths_sum`) to provincial level.
+    *   **Normalization**: Applies **min-max scoring** (0.0 to 1.0) across all provinces for presentation-ready mapping.
+    *   **Gap Analysis**: Joins impact sums with `วงเงินอนุมัติ` (Approved Relief). 
+    *   **Gap Flag**: Sets `admin_gap_flag` to TRUE if `affected_households_sum > 0` AND `approved_relief == 0`, signaling potential under-reporting or fiscal-access barriers.
+*   **Outputs**: `2_gold/ddpm/fact_ddpm_province_impact_climate_2560_2567.csv`
 
 ---
 
-## 8. Integrity Standards (Metadata Layer)
+## 12. Integrity Standards (Metadata Layer)
 
 *   **Location Spine Integrity**: All enriched Silver and Gold spatial tables are joined against the **Gold** `dim_location_master.csv`. This spine achieved 100% referential integrity with the CCAATT master hierarchy. Systematic nomenclature errors in the `code_village_dopa_2019.xls` source (e.g., Korat's capital being shortened to "Mueang") were resolved via hierarchical inheritance.
 *   **Hazard Canonicalization**: Mappings between raw disaster strings and canonical IDs are documented in `data/2_gold/dim_hazard_canonical.csv`.
