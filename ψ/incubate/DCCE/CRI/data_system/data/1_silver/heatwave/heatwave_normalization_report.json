@@ -1,0 +1,76 @@
+{
+  "generated_at_utc": "2026-06-14T05:12:46.384230+00:00",
+  "script_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\script\\normalize_heatwave_to_silver.py",
+  "input_bronze_csv_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\heatwave_extracts\\heatwave.raw.csv",
+  "output_csv_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\1_silver\\heatwave\\silver_heatwave_impact_long.csv",
+  "output_report_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\1_silver\\heatwave\\heatwave_normalization_report.json",
+  "supporting_dimensions": {
+    "location": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\2_gold\\dopa\\dim_location_master.csv",
+    "hazard_canonical": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\2_gold\\dim_hazard_canonical.csv",
+    "hazard_type": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\2_gold\\dim_hazard_type.csv",
+    "sector": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\2_gold\\dim_sector.csv"
+  },
+  "issues": [],
+  "status": "warning",
+  "input_row_count": 78,
+  "output_row_count": 308,
+  "skipped_total_rows": 1,
+  "expected_grain": "one row per province_code + metric_name + time_scope",
+  "output_schema": [
+    "record_id",
+    "province_code",
+    "province_name_th",
+    "location_id",
+    "admin_level",
+    "hazard_code",
+    "hazard_name_en",
+    "hazard_name_th",
+    "canonical_hazard_code",
+    "canonical_hazard_name_en",
+    "canonical_hazard_name_th",
+    "metric_code",
+    "metric_name",
+    "time_scope",
+    "time_scope_type",
+    "time_scope_label",
+    "period_start_be",
+    "period_end_be",
+    "value",
+    "value_type",
+    "unit",
+    "sector_code",
+    "source_system",
+    "source_dataset",
+    "source_file",
+    "source_sheet",
+    "source_row_number",
+    "raw_header_value"
+  ],
+  "bronze_headers": [
+    "Province Code | รหัสจังหวัด",
+    "Province | จังหวัด",
+    "จำนวนผู้เสียชีวิตและได้รับผลกระทบ (คน) | 2567 | Deaths",
+    "Injured",
+    "2561 - 2567 | Deaths",
+    "Injured_2"
+  ],
+  "validation": {
+    "header_contract_matches_expected": true,
+    "unique_key_count": 308,
+    "duplicate_keys": [],
+    "time_scope_counts": {
+      "year_2567": 154,
+      "range_2561_2567": 154
+    },
+    "metric_counts": {
+      "Deaths": 154,
+      "Injured": 154
+    },
+    "province_codes_missing_from_dim": [],
+    "province_name_mismatches": [],
+    "invalid_numeric_rows": [],
+    "canonical_hazard_found": true,
+    "hazard_type_found": false,
+    "sector_found": true
+  }
+}

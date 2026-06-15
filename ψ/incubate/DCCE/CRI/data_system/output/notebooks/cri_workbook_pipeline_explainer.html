@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CRI Workbook Pipeline Explainer</title>
+  <style>
+    body { font-family: Segoe UI, Tahoma, Arial, sans-serif; margin: 0; background: #f7f8fa; color: #1f2937; }
+    header { background: #0f172a; color: white; padding: 24px 32px; }
+    header h1 { margin: 0 0 8px 0; font-size: 30px; }
+    header p { margin: 0; max-width: 1000px; line-height: 1.5; color: #dbeafe; }
+    main { padding: 24px 32px 48px; max-width: 1400px; margin: 0 auto; }
+    h2 { margin-top: 36px; border-bottom: 2px solid #dbe2ea; padding-bottom: 8px; }
+    h3 { margin-top: 28px; }
+    .note { background: #eef6ff; border-left: 4px solid #3b82f6; padding: 12px 16px; margin: 16px 0; }
+    .warn { background: #fff7ed; border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 16px 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
+    .card { background: white; border: 1px solid #dbe2ea; border-radius: 10px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+    .card h4 { margin-top: 0; margin-bottom: 10px; font-size: 18px; }
+    .mini { font-size: 13px; color: #475569; line-height: 1.5; }
+    .pipeline { display: flex; flex-wrap: wrap; gap: 12px; align-items: stretch; margin: 20px 0; }
+    .box { background: white; border: 1px solid #cbd5e1; border-radius: 10px; padding: 14px 16px; min-width: 210px; flex: 1 1 220px; }
+    .box strong { display: block; margin-bottom: 6px; }
+    .arrow { align-self: center; font-size: 28px; color: #64748b; padding: 0 4px; }
+    table { width: 100%; border-collapse: collapse; background: white; margin: 12px 0 20px; }
+    th, td { border: 1px solid #dbe2ea; padding: 8px 10px; vertical-align: top; text-align: left; font-size: 14px; }
+    th { background: #eff6ff; }
+    code { background: #eef2f7; padding: 1px 5px; border-radius: 4px; }
+    pre { background: #0b1020; color: #e5eefc; padding: 12px; border-radius: 8px; overflow-x: auto; font-size: 13px; }
+    ul { line-height: 1.55; }
+    .caption { font-size: 13px; color: #64748b; margin-top: 6px; }
+    .img-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+    .img-card { background: white; border: 1px solid #dbe2ea; border-radius: 10px; padding: 12px; }
+    .img-card img { width: 100%; height: auto; border-radius: 6px; border: 1px solid #e5e7eb; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CRI Workbook Pipeline Explainer</h1>
+    <p>
+      This page explains how the workbook-derived CRI datasets move from Bronze extraction to Silver normalization to the province-level notebook demo.
+      It is designed to make the processing decisions visible: what each file contains, who owns the source data, what transformations were applied, what issues appeared,
+      and why the current pipeline was built this way.
+    </p>
+  </header>
+  <main>
+
+    <div class="note">
+      Scope of this explainer: only the workbook-derived streams and the notebook inputs. It does not attempt to document the full historical CRI repository.
+    </div>
+
+    <h2>1. High-level flow</h2>
+    <div class="pipeline">
+      <div class="box">
+        <strong>Raw workbooks</strong>
+        Heatwave, GPP, Eco loss, Population<br />
+        under <code>0_bronze/2026-06-12_cri_proj_data/</code>
+      </div>
+      <div class="arrow">→</div>
+      <div class="box">
+        <strong>Bronze extraction</strong>
+        Source-near CSVs + manifests + definition extracts
+      </div>
+      <div class="arrow">→</div>
+      <div class="box">
+        <strong>Silver normalization</strong>
+        Long-form analytical tables with canonical fields
+      </div>
+      <div class="arrow">→</div>
+      <div class="box">
+        <strong>Notebook demo</strong>
+        Province-level CRI-style score + maps + summary views
+      </div>
+    </div>
+
+    <h2>2. Workbook streams and why they were processed differently</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h4>Heatwave</h4>
+        <div class="mini">
+          <strong>Owner:</strong> กองระบาดวิทยา กรมควบคุมโรค / Epidemiology Division, Department of Disease Control.<br />
+          <strong>Bronze shape:</strong> province rows with wide metric/time columns.<br />
+          <strong>Silver shape:</strong> one row per province + metric + time scope.<br />
+          <strong>Why:</strong> the workbook already behaves like a compact province summary; reshaping was mostly about converting the wide layout into analytical rows.
+        </div>
+      </div>
+      <div class="card">
+        <h4>GPP</h4>
+        <div class="mini">
+          <strong>Owner:</strong> NESDC / สศช.<br />
+          <strong>Bronze shape:</strong> block-structured province sections with metric rows beneath them.<br />
+          <strong>Silver shape:</strong> one row per area + metric + year.<br />
+          <strong>Why:</strong> this workbook is not a clean flat table; it had to be unfolded vertically first, then melted across years.
+        </div>
+      </div>
+      <div class="card">
+        <h4>Eco loss</h4>
+        <div class="mini">
+          <strong>Owner:</strong> DDPM / ปภ.-style reserve / disaster spending source.<br />
+          <strong>Bronze shape:</strong> three hazard-specific province tables with years in columns.<br />
+          <strong>Silver shape:</strong> one annual long fact table plus one period-total table.<br />
+          <strong>Why:</strong> it is naturally province-grained but hazard-split and year-wide, so the correct move is to melt hazards and years while preserving period totals separately.
+        </div>
+      </div>
+      <div class="card">
+        <h4>Population</h4>
+        <div class="mini">
+          <strong>Owner:</strong> DOPA / กรมการปกครอง.<br />
+          <strong>Bronze shape:</strong> one monthly table and one wide annual table, both mixing detail and aggregate rows.<br />
+          <strong>Silver shape:</strong> monthly, annual, and period-total tables with geography classes separated.<br />
+          <strong>Why:</strong> this source contains embedded aggregates, code formulas, and duplicate-grain collisions, so it needed the heaviest normalization logic.
+        </div>
+      </div>
+    </div>
+
+    <h2>3. File-by-file pipeline detail</h2>
+
+    <h3>3.1 Heatwave stream</h3>
+    <div class="pipeline">
+      <div class="box"><strong>Raw workbook</strong><code>CRI Data - Heatwave.xlsx</code></div>
+      <div class="arrow">→</div>
+      <div class="box"><strong>Bronze extractor</strong><code>extract_heatwave_table.py</code></div>
+      <div class="arrow">→</div>
+      <div class="box"><strong>Bronze outputs</strong><code>heatwave.raw.csv</code><br /><code>heatwave.manifest.json</code><br /><code>cri-data-heatwave.definition.md</code></div>
+      <div class="arrow">→</div>
+      <div class="box"><strong>Silver normalizer</strong><code>normalize_heatwave_to_silver.py</code></div>
+      <div class="arrow">→</div>
+      <div class="box"><strong>Silver output</strong><code>silver_heatwave_impact_long.csv</code></div>
+    </div>
+
+    <table>
+      <tr><th>Aspect</th><th>Detail</th></tr>
+      <tr><td>Definition preview</td><td><code>Deaths</code> = ผู้เสียชีวิตจากภัยความร้อน, <code>Injured</code> = ผู้ป่วย/ผู้ได้รับบาดเจ็บ from [`cri-data-heatwave.definition.md`](ψ/incubate/DCCE/CRI/data_system/data/0_bronze/2026-06-12_cri_proj_data/definition_sheet_extracts/cri-data-heatwave.definition.md:10).</td></tr>
+      <tr><td>Processing logic</td><td>Unfold wide workbook columns into long province × metric × time-scope facts.</td></tr>
+      <tr><td>Known issues</td><td>Coverage begins from 2561, not a full 2560–2567 annual panel. Canonical hazard is now resolved; source-side hazard type is intentionally left as non-blocking metadata debt.</td></tr>
+      <tr><td>Main caution</td><td>Province-level only. Good as a companion human-impact metric, but not a full annual panel for the whole CRI window.</td></tr>
+    </table>
+
+    <h3>3.2 GPP stream</h3>
+    <div class="pipeline">
+      <div class="box"><strong>Raw workbook</strong><code>CRI Data - GPP.xlsx</code></div>
+      <div class="arrow">→</div>
+      <div class="box"><strong>Bronze extractor</strong><code>extract_gpp_tables.py</code></div>
+      <div class="arrow">→</div>
+      <div class="box"><strong>Bronze outputs</strong><code>gpp-67.raw.csv</code><br /><code>gpp-60-67.raw.csv</code><br /><code>cri-data-gpp.definition.md</code></div>
+      <div class="arrow">→</div>
+      <div class="box"><strong>Silver normalizer</strong><code>normalize_gpp_to_silver.py</code></div>
+      <div class="arrow">→</div>
+      <div class="box"><strong>Silver output</strong><code>silver_gpp_annual_long.csv</code></div>
+    </div>
+
+    <table>
+      <tr><th>Aspect</th><th>Detail</th></tr>
+      <tr><td>Definition preview</td><td>The chosen metric is current-market-price GPP because monetary loss should be compared against current-price economic output in [`cri-data-gpp.definition.md`](ψ/incubate/DCCE/CRI/data_system/data/0_bronze/2026-06-12_cri_proj_data/definition_sheet_extracts/cri-data-gpp.definition.md:14).</td></tr>
+      <tr><td>Processing logic</td><td>Unfold province/code blocks, capture metric rows, expand years into long annual facts, prefer standalone 2567 values over the multi-year sheet for that year.</td></tr>
+      <tr><td>Known issues</td><td>`p` and `r` semantics mean recent values may be provisional or revised. Small yearly-sum vs `Total` mismatches were observed and classified as floating-point noise under the accepted tolerance policy.</td></tr>
+      <tr><td>Main caution</td><td>Good denominator/context table, not a direct impact fact. Province-only.</td></tr>
+    </table>
+
+    <h3>3.3 Eco loss stream</h3>
+    <div class="pipeline">
+      <div class="box"><strong>Raw workbook</strong><code>CRI Data - Eco loss.xlsx</code></div>
+      <div class="arrow">→</div>
+      <div class="box"><strong>Bronze extractor</strong><code>extract_eco_loss_hazard_sheets.py</code></div>
+      <div class="arrow">→</div>
+      <div class="box"><strong>Bronze outputs</strong><code>eco-loss-อุทกภัย.raw.csv</code><br /><code>eco-loss-ภัยแล้ง.raw.csv</code><br /><code>eco-loss-วาตภัย.raw.csv</code><br /><code>cri-data-eco-loss.definition.md</code></div>
+      <div class="arrow">→</div>
+      <div class="box"><strong>Province bridge</strong><code>build_province_code_lookup.py</code><br /><code>province_code_lookup.csv</code></div>
+      <div class="arrow">→</div>
+      <div class="box"><strong>Silver normalizer</strong><code>normalize_eco_loss_to_silver.py</code></div>
+      <div class="arrow">→</div>
+      <div class="box"><strong>Silver outputs</strong><code>silver_eco_loss_annual_long.csv</code><br /><code>silver_eco_loss_period_total.csv</code></div>
+    </div>
+
+    <table>
+      <tr><th>Aspect</th><th>Detail</th></tr>
+      <tr><td>Definition preview</td><td>The definition explicitly says this dataset excludes landslide, heat, local own-budget spending, agriculture compensation from another ministry, and donations in [`cri-data-eco-loss.definition.md`](ψ/incubate/DCCE/CRI/data_system/data/0_bronze/2026-06-12_cri_proj_data/definition_sheet_extracts/cri-data-eco-loss.definition.md:16).</td></tr>
+      <tr><td>Processing logic</td><td>Melt three hazard-specific year-wide province tables into one annual long fact table plus one period-total table. Use province-name lookup to recover `province_code`. Canonical hazard labels come from [`dim_hazard_canonical.csv`](ψ/incubate/DCCE/CRI/data_system/data/2_gold/dim_hazard_canonical.csv:1).</td></tr>
+      <tr><td>Known issues</td><td>Initial normalization failed because direct province lookup against the active geography spine snapshot was not province-ready. This was fixed by creating [`province_code_lookup.csv`](ψ/incubate/DCCE/CRI/data_system/data/1_silver/dopa/province_code_lookup.csv:1). Tail rows such as `วงเงินอำนาจอธิบดี`, blank lines, `กทม.`, and `Total` had to be explicitly excluded.</td></tr>
+      <tr><td>Main caution</td><td>This is not a full observed economic-loss census. It is a partial province-level proxy rooted in public disaster-finance categories.</td></tr>
+    </table>
+
+    <h3>3.4 Population stream</h3>
+    <div class="pipeline">
+      <div class="box"><strong>Raw workbook</strong><code>CRI Data - Population.xlsx</code></div>
+      <div class="arrow">→</div>
+      <div class="box"><strong>Bronze extractor</strong><code>extract_population_tables.py</code></div>
+      <div class="arrow">→</div>
+      <div class="box"><strong>Bronze outputs</strong><code>pop67.raw.csv</code><br /><code>pop60-67.raw.csv</code><br /><code>cri-data-population.definition.md</code></div>
+      <div class="arrow">→</div>
+      <div class="box"><strong>Silver normalizer</strong><code>normalize_population_to_silver.py</code></div>
+      <div class="arrow">→</div>
+      <div class="box"><strong>Silver outputs</strong><code>silver_population_monthly.csv</code><br /><code>silver_population_annual.csv</code><br /><code>silver_population_period_total.csv</code></div>
+    </div>
+
+    <table>
+      <tr><th>Aspect</th><th>Detail</th></tr>
+      <tr><td>Definition preview</td><td>The definition says province code `0`, office code `0`, and `-` labels can indicate aggregate levels rather than missing data in [`cri-data-population.definition.md`](ψ/incubate/DCCE/CRI/data_system/data/0_bronze/2026-06-12_cri_proj_data/definition_sheet_extracts/cri-data-population.definition.md:18).</td></tr>
+      <tr><td>Processing logic</td><td>Split monthly and annual wide forms into separate Silver tables, preserve formula-derived code logic, and classify geography levels explicitly.</td></tr>
+      <tr><td>Known issues</td><td>This was the noisiest stream. Duplicate-grain collisions appeared because the same derived subdistrict code was reused across different registration-office contexts. The fix was to separate colliding record classes in Silver instead of pretending the grain was unique.</td></tr>
+      <tr><td>Main caution</td><td>Some zeros are coding conventions, not literal zero population. Province rows are the cleanest denominator layer; subprovince use requires more care.</td></tr>
+    </table>
+
+    <h2>4. Why the notebook processes data this way</h2>
+    <div class="warn">
+      The notebook is not using one single perfectly harmonized master dataset. It uses a set of sources that each play a different role:
+      DDPM Gold facts for human impact, Population Silver for denominators, GPP Silver for economic denominator, Eco loss Silver for economic impact, and Heatwave Silver as a companion metric.
+    </div>
+
+    <ul>
+      <li>Human impact is aggregated to province because the CRI demo is province-level.</li>
+      <li>Population is averaged across years to get a stable denominator for rates.</li>
+      <li>GPP is averaged across years and filtered to current-market-price GPP because the pilot logic compares monetary loss against current-price economic output.</li>
+      <li>Eco loss is kept annual for scoring and period totals are kept separate so cumulative reporting does not pollute annual score logic.</li>
+      <li>Heat mortality is visualized because it matters analytically, but it is intentionally excluded from the CRI score because its time coverage and methodology role do not match the six pilot components.</li>
+    </ul>
+
+    <h2>5. Sneak peek into the files used by the notebook</h2>
+    <table>
+      <tr><th>Notebook input</th><th>Grain</th><th>Key fields</th><th>Main issue to remember</th></tr>
+      <tr><td><code>fact_ddpm_tambon_impact_climate_2560_2567.csv</code></td><td>tambon</td><td><code>subdistrict_code</code>, <code>affected_people_sum</code>, <code>deaths_sum</code></td><td>reported impact, not perfect ground truth</td></tr>
+      <tr><td><code>silver_population_annual.csv</code></td><td>mixed geography, filtered to province here</td><td><code>province_code</code>, <code>population_total</code>, <code>geography_level</code></td><td>embedded aggregate semantics and coded zero meanings</td></tr>
+      <tr><td><code>silver_eco_loss_annual_long.csv</code></td><td>province + hazard + year</td><td><code>province_code</code>, <code>canonical_hazard_code</code>, <code>value</code></td><td>partial proxy of economic loss, not full damage census</td></tr>
+      <tr><td><code>silver_gpp_annual_long.csv</code></td><td>province + metric + year</td><td><code>province_code</code>, <code>metric_code</code>, <code>value</code></td><td>recent values may be provisional/revised</td></tr>
+      <tr><td><code>silver_heatwave_impact_long.csv</code></td><td>province + metric + time_scope</td><td><code>province_code</code>, <code>metric_code</code>, <code>time_scope</code>, <code>value</code></td><td>not a full 2560–2567 annual panel</td></tr>
+    </table>
+
+    <h2>6. Schema previews of transformed files</h2>
+    <p class="caption">These are compact previews of the exact file structures that drive the notebook logic.</p>
+
+    <h3>6.1 Heatwave Silver</h3>
+    <pre>silver_heatwave_impact_long.csv
+record_id, province_code, province_name_th, location_id, admin_level,
+hazard_code, hazard_name_en, hazard_name_th,
+canonical_hazard_code, canonical_hazard_name_en, canonical_hazard_name_th,
+metric_code, metric_name,
+time_scope, time_scope_type, time_scope_label,
+period_start_be, period_end_be,
+value, value_type, unit,
+sector_code, source_system, source_dataset, source_file, source_sheet,
+source_row_number, raw_header_value</pre>
+
+    <h3>6.2 GPP Silver</h3>
+    <pre>silver_gpp_annual_long.csv
+record_id, area_code, area_code_label, area_label_en, area_name_th,
+province_code, province_name_th, location_id, admin_level,
+metric_code, metric_name,
+year_be, year_ce,
+value, value_type, unit,
+source_system, source_dataset, source_file, source_sheet,
+source_row_number, source_column, source_priority, raw_metric_label</pre>
+
+    <h3>6.3 Eco loss Silver</h3>
+    <pre>silver_eco_loss_annual_long.csv
+record_id, province_code, province_name_th, location_id, admin_level,
+hazard_code, hazard_name_en, hazard_name_th,
+canonical_hazard_code, canonical_hazard_name_en, canonical_hazard_name_th,
+year_be, year_ce,
+value, value_type, unit,
+source_system, source_dataset, source_file, source_sheet,
+source_row_number, source_column, raw_value
+
+silver_eco_loss_period_total.csv
+record_id, province_code, province_name_th, location_id, admin_level,
+hazard_code, hazard_name_en, hazard_name_th,
+canonical_hazard_code, canonical_hazard_name_en, canonical_hazard_name_th,
+time_scope, time_scope_type, time_scope_label,
+period_start_be, period_end_be,
+value, value_type, unit,
+raw_period_value, raw_period_is_formula, derived_from_annual_values,
+source_system, source_dataset, source_file, source_sheet,
+source_row_number, source_column</pre>
+
+    <h3>6.4 Population Silver</h3>
+    <pre>silver_population_annual.csv
+record_id, record_class, geography_key, geography_level, geography_join_ready,
+province_code, province_name_th, location_id,
+registration_office_code, registration_office_name_th,
+subdistrict_code_raw, subdistrict_code_derived, subdistrict_derivation_method,
+year_be, year_ce, population_total,
+source_system, source_dataset, source_file, source_sheet, source_row_number
+
+silver_population_monthly.csv
+record_id, record_class, geography_key, geography_level, geography_join_ready,
+province_code, province_name_th, location_id,
+registration_office_code, registration_office_name_th,
+subdistrict_code_raw, subdistrict_code_derived, subdistrict_derivation_method,
+year_month_be, year_be, month_be,
+population_male, population_female, population_total,
+source_system, source_dataset, source_file, source_sheet, source_row_number
+
+silver_population_period_total.csv
+record_id, record_class, geography_key, geography_level, geography_join_ready,
+province_code, province_name_th, location_id,
+registration_office_code, registration_office_name_th,
+subdistrict_code_raw, subdistrict_code_derived, subdistrict_derivation_method,
+period_start_be, period_end_be,
+population_total, annual_sum_population_total, annual_sum_matches_period_total,
+source_system, source_dataset, source_file, source_sheet, source_row_number</pre>
+
+    <h3>6.5 Notebook input mart</h3>
+    <pre>province_year_cri_impact_demo.csv
+province_code, province_name_th,
+deaths_sum, affected_people_sum,
+loss_total_baht_2560_2567, gpp_avg_million_baht_2560_2567, population_avg_2560_2567,
+heat_deaths_2561_2567, heat_deaths_per_100k,
+deaths_per_100k, affected_per_100k, loss_per_gpp,
+score_deaths, score_deaths_rate, score_affected, score_affected_rate,
+score_loss, score_loss_gpp,
+cri_demo_score, cri_demo_rank</pre>
+
+    <h2>7. Bottom-line interpretation</h2>
+    <p>
+      The pipeline was designed this way because the data are not born in one clean analytical model. Each stream had a different shape, owner, level of completeness, and semantic risk.
+      The Bronze layer kept the source structure close to the original workbook. The Silver layer turned those structures into analysis-ready facts. The notebook then uses those Silver and Gold assets by role: human impact, denominator, economic loss, economic denominator, and companion heat metrics.
+    </p>
+    <p>
+      That is why the notebook can already demonstrate a meaningful province-level CRI-style implementation, while still carrying cautions about missing-vs-zero ambiguity, proxy economic-loss logic, provisional GPP, and the non-equivalence of heat mortality to the six official CRI score components.
+    </p>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "workbook_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\CRI Data - Heatwave.xlsx",
+  "sheet_name": "Heatwave",
+  "output_csv_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\heatwave_extracts\\heatwave.raw.csv",
+  "output_manifest_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\heatwave_extracts\\heatwave.manifest.json",
+  "exists": true,
+  "worksheet_dimensions": {
+    "max_row": 81,
+    "max_column": 6
+  },
+  "header_row_number": 1,
+  "header_row_span": 3,
+  "headers": [
+    "Province Code | รหัสจังหวัด",
+    "Province | จังหวัด",
+    "จำนวนผู้เสียชีวิตและได้รับผลกระทบ (คน) | 2567 | Deaths",
+    "Injured",
+    "2561 - 2567 | Deaths",
+    "Injured_2"
+  ],
+  "column_count": 6,
+  "row_count": 78,
+  "preview_first_data_row": [
+    "50",
+    "เชียงใหม่",
+    "1",
+    "0",
+    "9",
+    "0"
+  ],
+  "trailing_empty_rows_removed": true
+}

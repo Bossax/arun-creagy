@@ -182,7 +182,7 @@ If the file doesn't exist, create with the standard header, then append ONE row.
 
 ### 4. Oracle Sync
 
-Write lesson learned markdown into `$PSI/memory/learnings/` (auto-memory picks it up).
+call arra_learn on the latest learning
 
 ### 4.5. Pattern Check (last 7 rows)
 

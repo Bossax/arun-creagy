@@ -1,0 +1,105 @@
+{
+  "workbook_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\CRI Data - GPP.xlsx",
+  "output_manifest_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\gpp_extracts\\gpp.manifest.json",
+  "output_dir": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\gpp_extracts",
+  "exists": true,
+  "sheets": [
+    {
+      "sheet_name": "GPP 67",
+      "output_csv_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\gpp_extracts\\gpp-67.raw.csv",
+      "worksheet_dimensions": {
+        "max_row": 310,
+        "max_column": 3
+      },
+      "header_row_number": 1,
+      "header_row_span": 2,
+      "header_rows": [
+        [
+          "Gross Provincial Product at Current Market Prices",
+          "",
+          "2567"
+        ],
+        [
+          "จังหวัด",
+          "รายละเอียด",
+          "2024p"
+        ]
+      ],
+      "headers": [
+        "Gross Provincial Product at Current Market Prices | จังหวัด",
+        "รายละเอียด",
+        "2567 | 2024p"
+      ],
+      "column_count": 3,
+      "row_count": 308,
+      "preview_first_data_row": [
+        "ขอนแก่น",
+        "0101 - KHON KAEN",
+        ""
+      ],
+      "footer_rows_skipped": [],
+      "first_metric_row_detected": 4
+    },
+    {
+      "sheet_name": "GPP 60-67",
+      "output_csv_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\gpp_extracts\\gpp-60-67.raw.csv",
+      "worksheet_dimensions": {
+        "max_row": 310,
+        "max_column": 11
+      },
+      "header_row_number": 1,
+      "header_row_span": 1,
+      "header_rows": [
+        [
+          "Gross Provincial Product at Current Market Prices",
+          "",
+          "2560",
+          "2561",
+          "2562",
+          "2563",
+          "2564",
+          "2565",
+          "2566",
+          "2567",
+          "Total"
+        ]
+      ],
+      "headers": [
+        "Gross Provincial Product at Current Market Prices",
+        "column_2",
+        "2560",
+        "2561",
+        "2562",
+        "2563",
+        "2564",
+        "2565",
+        "2566",
+        "2567",
+        "Total"
+      ],
+      "column_count": 11,
+      "row_count": 308,
+      "preview_first_data_row": [
+        "ขอนแก่น",
+        "0101 - KHON KAEN",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "footer_rows_skipped": [],
+      "first_code_row_detected": 3,
+      "first_metric_row_detected": 4
+    }
+  ],
+  "sheet_names": [
+    "Definition",
+    "GPP 67",
+    "GPP 60-67"
+  ]
+}

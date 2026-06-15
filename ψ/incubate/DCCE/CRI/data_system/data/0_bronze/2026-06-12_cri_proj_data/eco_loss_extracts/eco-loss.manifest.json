@@ -1,0 +1,209 @@
+{
+  "workbook_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\CRI Data - Eco loss.xlsx",
+  "output_manifest_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\eco_loss_extracts\\eco-loss.manifest.json",
+  "output_dir": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\eco_loss_extracts",
+  "exists": true,
+  "sheets": [
+    {
+      "sheet_name": "Eco loss อุทกภัย",
+      "output_csv_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\eco_loss_extracts\\eco-loss-อุทกภัย.raw.csv",
+      "worksheet_dimensions": {
+        "max_row": 85,
+        "max_column": 10
+      },
+      "header_row_number": 2,
+      "header_row_span": 1,
+      "header_rows": [
+        [
+          "จังหวัด",
+          "2567",
+          "2566",
+          "2565",
+          "2564",
+          "2563",
+          "2562",
+          "2561",
+          "2560",
+          "2560 - 2567"
+        ]
+      ],
+      "headers": [
+        "จังหวัด",
+        "2567",
+        "2566",
+        "2565",
+        "2564",
+        "2563",
+        "2562",
+        "2561",
+        "2560",
+        "2560 - 2567"
+      ],
+      "column_count": 10,
+      "row_count": 81,
+      "preview_first_data_row": [
+        "กระบี่",
+        "22000",
+        "0",
+        "7912922.54",
+        "14948018",
+        "0",
+        "13372360.5",
+        "0",
+        "45329815.190000005",
+        "=SUM(B4:I4)"
+      ],
+      "footer_rows_skipped": [
+        [
+          "หน่วยงานในสังกัด",
+          "28545753.010000005",
+          "60755914.93000001",
+          "47090315.43000001",
+          "41698349.019999996",
+          "14074290.41",
+          "43781135.339999996",
+          "192986064.38",
+          "191158440.04000005",
+          "=SUM(B83:I83)"
+        ]
+      ],
+      "first_data_row_number": 4
+    },
+    {
+      "sheet_name": "Eco loss ภัยแล้ง",
+      "output_csv_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\eco_loss_extracts\\eco-loss-ภัยแล้ง.raw.csv",
+      "worksheet_dimensions": {
+        "max_row": 85,
+        "max_column": 10
+      },
+      "header_row_number": 2,
+      "header_row_span": 1,
+      "header_rows": [
+        [
+          "จังหวัด",
+          "2567",
+          "2566",
+          "2565",
+          "2564",
+          "2563",
+          "2562",
+          "2561",
+          "2560",
+          "2560 - 2567"
+        ]
+      ],
+      "headers": [
+        "จังหวัด",
+        "2567",
+        "2566",
+        "2565",
+        "2564",
+        "2563",
+        "2562",
+        "2561",
+        "2560",
+        "2560 - 2567"
+      ],
+      "column_count": 10,
+      "row_count": 81,
+      "preview_first_data_row": [
+        "กระบี่",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "footer_rows_skipped": [
+        [
+          "หน่วยงานในสังกัด",
+          "0",
+          "5248024.52",
+          "0",
+          "302695",
+          "18457722.700000003",
+          "0",
+          "0",
+          "0",
+          "24008442.220000003"
+        ]
+      ],
+      "first_data_row_number": 4
+    },
+    {
+      "sheet_name": "Eco loss วาตภัย",
+      "output_csv_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\eco_loss_extracts\\eco-loss-วาตภัย.raw.csv",
+      "worksheet_dimensions": {
+        "max_row": 85,
+        "max_column": 10
+      },
+      "header_row_number": 2,
+      "header_row_span": 1,
+      "header_rows": [
+        [
+          "จังหวัด",
+          "2567",
+          "2566",
+          "2565",
+          "2564",
+          "2563",
+          "2562",
+          "2561",
+          "2560",
+          "2560 - 2567"
+        ]
+      ],
+      "headers": [
+        "จังหวัด",
+        "2567",
+        "2566",
+        "2565",
+        "2564",
+        "2563",
+        "2562",
+        "2561",
+        "2560",
+        "2560 - 2567"
+      ],
+      "column_count": 10,
+      "row_count": 81,
+      "preview_first_data_row": [
+        "กระบี่",
+        "0",
+        "298902.24",
+        "197432",
+        "362825",
+        "110250",
+        "178185",
+        "383705",
+        "455779",
+        "1987078.24"
+      ],
+      "footer_rows_skipped": [
+        [
+          "หน่วยงานในสังกัด",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "96380",
+          "129083.11",
+          "0",
+          "225463.11"
+        ]
+      ],
+      "first_data_row_number": 4
+    }
+  ],
+  "sheet_names": [
+    "Definition",
+    "Eco loss อุทกภัย",
+    "Eco loss ภัยแล้ง",
+    "Eco loss วาตภัย"
+  ]
+}

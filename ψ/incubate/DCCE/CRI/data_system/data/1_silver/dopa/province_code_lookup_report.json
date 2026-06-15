@@ -1,0 +1,10 @@
+{
+  "generated_at_utc": "2026-06-14T05:05:41.882281+00:00",
+  "script_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\script\\build_province_code_lookup.py",
+  "source_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\archive_stage3_legacy\\data\\1_silver\\stage3_dopa_province_boundary_code_crosswalk.csv",
+  "output_csv": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\1_silver\\dopa\\province_code_lookup.csv",
+  "row_count": 77,
+  "duplicate_province_name_norm_count": 0,
+  "duplicate_province_name_norm_values": [],
+  "status": "ok"
+}

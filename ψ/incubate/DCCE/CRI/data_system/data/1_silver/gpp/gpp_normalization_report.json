@@ -1,0 +1,273 @@
+{
+  "generated_at_utc": "2026-06-14T04:00:18.205606+00:00",
+  "script_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\script\\normalize_gpp_to_silver.py",
+  "inputs": {
+    "gpp_67": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\gpp_extracts\\gpp-67.raw.csv",
+    "gpp_60_67": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\gpp_extracts\\gpp-60-67.raw.csv",
+    "manifest": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\gpp_extracts\\gpp.manifest.json",
+    "location_dim": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\2_gold\\dopa\\dim_location_master.csv"
+  },
+  "outputs": {
+    "silver_csv": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\1_silver\\gpp\\silver_gpp_annual_long.csv",
+    "report_json": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\1_silver\\gpp\\gpp_normalization_report.json"
+  },
+  "issues": [],
+  "status": "ok",
+  "normalized_grain": "one row per area_code_or_area_label + metric_name + year",
+  "output_schema": [
+    "record_id",
+    "area_code",
+    "area_code_label",
+    "area_label_en",
+    "area_name_th",
+    "province_code",
+    "province_name_th",
+    "location_id",
+    "admin_level",
+    "metric_code",
+    "metric_name",
+    "year_be",
+    "year_ce",
+    "value",
+    "value_type",
+    "unit",
+    "source_system",
+    "source_dataset",
+    "source_file",
+    "source_sheet",
+    "source_row_number",
+    "source_column",
+    "source_priority",
+    "raw_metric_label"
+  ],
+  "input_row_counts": {
+    "gpp_67_raw_rows_including_header": 309,
+    "gpp_60_67_raw_rows_including_header": 309
+  },
+  "output_row_count": 1848,
+  "validation": {
+    "expected_area_blocks": 77,
+    "expected_metric_rows_per_sheet": 231,
+    "expected_output_rows": 1848,
+    "gpp_67": {
+      "parsed_area_blocks": 77,
+      "parsed_metric_rows": 231,
+      "extracted_row_count": 231,
+      "unexpected_rows": [],
+      "unexpected_row_count": 0,
+      "unmatched_locations": [],
+      "unmatched_location_count": 0,
+      "orphan_metric_rows": [],
+      "orphan_metric_row_count": 0
+    },
+    "gpp_60_67": {
+      "parsed_area_blocks": 77,
+      "parsed_metric_rows": 231,
+      "extracted_row_count": 1848,
+      "unexpected_rows": [],
+      "unexpected_row_count": 0,
+      "unmatched_locations": [],
+      "unmatched_location_count": 0,
+      "yearly_sum_mismatches": [
+        {
+          "row_number": 3,
+          "area_code": "0101",
+          "metric_name": "Gross provincial product (GPP)",
+          "annual_sum": "1733257.845842",
+          "reported_total": "1733257.8458419999"
+        },
+        {
+          "row_number": 4,
+          "area_code": "0101",
+          "metric_name": "GPP Per capita (Baht)",
+          "annual_sum": "1012616.998",
+          "reported_total": "1012616.9979999999"
+        },
+        {
+          "row_number": 5,
+          "area_code": "0101",
+          "metric_name": "Population (1,000 persons)",
+          "annual_sum": "13695.39746",
+          "reported_total": "13695.397460000002"
+        },
+        {
+          "row_number": 7,
+          "area_code": "0102",
+          "metric_name": "Gross provincial product (GPP)",
+          "annual_sum": "935805.49898",
+          "reported_total": "935805.4989799999"
+        },
+        {
+          "row_number": 11,
+          "area_code": "0103",
+          "metric_name": "Gross provincial product (GPP)",
+          "annual_sum": "464863.705487",
+          "reported_total": "464863.70548700006"
+        },
+        {
+          "row_number": 12,
+          "area_code": "0103",
+          "metric_name": "GPP Per capita (Baht)",
+          "annual_sum": "863903.691",
+          "reported_total": "863903.6909999999"
+        },
+        {
+          "row_number": 13,
+          "area_code": "0103",
+          "metric_name": "Population (1,000 persons)",
+          "annual_sum": "4307.748892",
+          "reported_total": "4307.7488920000005"
+        },
+        {
+          "row_number": 15,
+          "area_code": "0104",
+          "metric_name": "Gross provincial product (GPP)",
+          "annual_sum": "358742.595604",
+          "reported_total": "358742.59560400003"
+        },
+        {
+          "row_number": 16,
+          "area_code": "0104",
+          "metric_name": "GPP Per capita (Baht)",
+          "annual_sum": "788149.014",
+          "reported_total": "788149.0140000001"
+        },
+        {
+          "row_number": 17,
+          "area_code": "0104",
+          "metric_name": "Population (1,000 persons)",
+          "annual_sum": "3642.02997",
+          "reported_total": "3642.0299699999996"
+        },
+        {
+          "row_number": 21,
+          "area_code": "0105",
+          "metric_name": "Population (1,000 persons)",
+          "annual_sum": "3344.261041",
+          "reported_total": "3344.2610409999998"
+        },
+        {
+          "row_number": 25,
+          "area_code": "0106",
+          "metric_name": "Population (1,000 persons)",
+          "annual_sum": "4400.791175",
+          "reported_total": "4400.791174999999"
+        },
+        {
+          "row_number": 27,
+          "area_code": "0107",
+          "metric_name": "Gross provincial product (GPP)",
+          "annual_sum": "525568.898685",
+          "reported_total": "525568.8986849999"
+        },
+        {
+          "row_number": 28,
+          "area_code": "0107",
+          "metric_name": "GPP Per capita (Baht)",
+          "annual_sum": "574457.043",
+          "reported_total": "574457.0430000001"
+        },
+        {
+          "row_number": 37,
+          "area_code": "0109",
+          "metric_name": "Population (1,000 persons)",
+          "annual_sum": "20024.926647",
+          "reported_total": "20024.926646999997"
+        },
+        {
+          "row_number": 45,
+          "area_code": "0111",
+          "metric_name": "Population (1,000 persons)",
+          "annual_sum": "3626.644906",
+          "reported_total": "3626.6449060000004"
+        },
+        {
+          "row_number": 49,
+          "area_code": "0112",
+          "metric_name": "Population (1,000 persons)",
+          "annual_sum": "13861.684518",
+          "reported_total": "13861.684517999998"
+        },
+        {
+          "row_number": 55,
+          "area_code": "0114",
+          "metric_name": "Gross provincial product (GPP)",
+          "annual_sum": "777098.402863",
+          "reported_total": "777098.4028629999"
+        },
+        {
+          "row_number": 56,
+          "area_code": "0114",
+          "metric_name": "GPP Per capita (Baht)",
+          "annual_sum": "645916.161",
+          "reported_total": "645916.1610000001"
+        },
+        {
+          "row_number": 57,
+          "area_code": "0114",
+          "metric_name": "Population (1,000 persons)",
+          "annual_sum": "9642.647936",
+          "reported_total": "9642.647936000001"
+        }
+      ],
+      "yearly_sum_mismatch_count": 101
+    },
+    "merge": {
+      "replaced_2567_rows": 231,
+      "inserted_2567_rows": 0,
+      "cross_sheet_2567_mismatches": [],
+      "cross_sheet_2567_mismatch_count": 0
+    },
+    "unique_key_count": 1848,
+    "duplicate_keys": [],
+    "row_count_by_year": {
+      "2560": 231,
+      "2561": 231,
+      "2562": 231,
+      "2563": 231,
+      "2564": 231,
+      "2565": 231,
+      "2566": 231,
+      "2567": 231
+    },
+    "row_count_by_metric": {
+      "GPP Per capita (Baht)": 616,
+      "Gross provincial product (GPP)": 616,
+      "Population (1,000 persons)": 616
+    },
+    "row_count_by_area_sample": {
+      "0101": 24,
+      "0102": 24,
+      "0103": 24,
+      "0104": 24,
+      "0105": 24,
+      "0106": 24,
+      "0107": 24,
+      "0108": 24,
+      "0109": 24,
+      "0110": 24
+    },
+    "malformed_rows": [],
+    "manifest_header_checks": {
+      "gpp_67_expected": [
+        "Gross Provincial Product at Current Market Prices | จังหวัด",
+        "รายละเอียด",
+        "2567 | 2024p"
+      ],
+      "gpp_60_67_expected": [
+        "Gross Provincial Product at Current Market Prices",
+        "column_2",
+        "2560",
+        "2561",
+        "2562",
+        "2563",
+        "2564",
+        "2565",
+        "2566",
+        "2567",
+        "Total"
+      ]
+    },
+    "location_lookup_count": 77
+  }
+}

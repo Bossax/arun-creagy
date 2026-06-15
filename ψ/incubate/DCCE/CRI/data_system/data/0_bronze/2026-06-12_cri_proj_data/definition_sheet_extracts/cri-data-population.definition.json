@@ -1,0 +1,108 @@
+{
+  "workbook_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\CRI Data - Population.xlsx",
+  "workbook_name": "CRI Data - Population.xlsx",
+  "definition_sheet_name": "Definition",
+  "exists": true,
+  "rows": [
+    {
+      "row_number": 1,
+      "term": "Definition",
+      "meaning": "Meaning",
+      "extra_cells": [],
+      "is_header": true
+    },
+    {
+      "row_number": 2,
+      "term": "ปีเดือน",
+      "meaning": "แสดงปีและเดือนที่อัปเดตข้อมูล โดยเป็นเลขระบุ ปีพ.ศ. และ เดือน",
+      "extra_cells": [],
+      "is_header": false
+    },
+    {
+      "row_number": 3,
+      "term": "จำนวนประชากร",
+      "meaning": "นับรวมทั้งคนไทยและไม่ใช่คนไทย และนับรวมทั้งเพศชายและเพศหญิง",
+      "extra_cells": [],
+      "is_header": false
+    },
+    {
+      "row_number": 4,
+      "term": "รหัสจังหวัด",
+      "meaning": "บอกรหัสประจำจังหวัด",
+      "extra_cells": [],
+      "is_header": false
+    },
+    {
+      "row_number": 5,
+      "term": "รหัสสำนัก",
+      "meaning": "บอกรหัสประจำสำนักทะเบียน ที่หมายถึงอำดภแ และ เทศบาล",
+      "extra_cells": [],
+      "is_header": false
+    },
+    {
+      "row_number": 6,
+      "term": "ชื่อสำนักทะเบียน",
+      "meaning": "ชื่ออำเภอ และ เทศบาล",
+      "extra_cells": [],
+      "is_header": false
+    },
+    {
+      "row_number": 7,
+      "term": "รหัสตำบล",
+      "meaning": "บอกรหัสประจำตำบล",
+      "extra_cells": [],
+      "is_header": false
+    },
+    {
+      "row_number": 8,
+      "term": "หมายเหตุ",
+      "meaning": "",
+      "extra_cells": [],
+      "is_header": false
+    },
+    {
+      "row_number": 9,
+      "term": "จำนวน 0 ที่แสดงในช่องจำนวนประชากร",
+      "meaning": "พื้นที่นั้นเปลี่ยนสถานะจากระบบตำบล/องค์การบริหารส่วนตำบลขึ้นเป็นเทศบาลเมืองหรือเทศบาลนคร เช่น ตำบลเสาธงหิน เป็น เทศบาลตำบลเสาธงหิน แทน",
+      "extra_cells": [],
+      "is_header": false
+    },
+    {
+      "row_number": 10,
+      "term": "รหัสจังหวัดที่เป็น 0",
+      "meaning": "ไม่ได้หมายถึงไม่มีข้อมูล แต่เอาไว้ขั้นว่าเป็นการแสดงผลรวมระดับประเทศ",
+      "extra_cells": [],
+      "is_header": false
+    },
+    {
+      "row_number": 11,
+      "term": "รหัสสำนักที่เป็น 0",
+      "meaning": "ไม่ได้หมายถึงไม่มีข้อมูล แต่เอาไว้ขั้นว่าเป็นการแสดงผลรวมระดับจังหวัด",
+      "extra_cells": [],
+      "is_header": false
+    },
+    {
+      "row_number": 12,
+      "term": "ชื่อสำนักทะเบียนที่เป็น (-)",
+      "meaning": "ไม่ได้หมายถึงไม่มีข้อมูล แต่เอาไว้ขั้นว่าเป็นการแสดงผลรวมระดับประเทศและระดับจังหวัด",
+      "extra_cells": [],
+      "is_header": false
+    },
+    {
+      "row_number": 13,
+      "term": "รหัสตำบลที่เป็น 0",
+      "meaning": "ไม่ได้หมายถึงไม่มีข้อมูล แต่เอาไว้ขั้นว่าเป็นการแสดงผลรวมระดับจังหวัดและระดับสำนักทะเบียน (อำเภอและเทศบาล)",
+      "extra_cells": [],
+      "is_header": false
+    },
+    {
+      "row_number": 14,
+      "term": "ชื่อตำบลที่เป็น (-)",
+      "meaning": "ไม่ได้หมายถึงไม่มีข้อมูล แต่เอาไว้ขั้นว่าเป็นการแสดงผลรวมระดับประเทศ ระดับจังหวัด และระดับสำนักทะเบียน (อำเภอและเทศบาล)",
+      "extra_cells": [],
+      "is_header": false
+    }
+  ],
+  "max_row": 14,
+  "max_column": 2
+}

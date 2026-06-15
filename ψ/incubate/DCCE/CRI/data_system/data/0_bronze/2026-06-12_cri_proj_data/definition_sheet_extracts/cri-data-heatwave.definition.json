@@ -1,0 +1,45 @@
+{
+  "workbook_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\CRI Data - Heatwave.xlsx",
+  "workbook_name": "CRI Data - Heatwave.xlsx",
+  "definition_sheet_name": "Definition",
+  "exists": true,
+  "rows": [
+    {
+      "row_number": 1,
+      "term": "Definition",
+      "meaning": "Meaning",
+      "extra_cells": [],
+      "is_header": true
+    },
+    {
+      "row_number": 2,
+      "term": "Deaths",
+      "meaning": "ผู้เสียชีวิตจากภัยความร้อน",
+      "extra_cells": [],
+      "is_header": false
+    },
+    {
+      "row_number": 3,
+      "term": "Injured",
+      "meaning": "ผู้ป่วย / ผู้ได้รับบาดเจ็บจากภัยความร้อน",
+      "extra_cells": [],
+      "is_header": false
+    },
+    {
+      "row_number": 4,
+      "term": "หมายเหตุ",
+      "meaning": "",
+      "extra_cells": [],
+      "is_header": false
+    },
+    {
+      "row_number": 5,
+      "term": "ปีที่บันทึกภัยความร้อน",
+      "meaning": "บันทึกข้อมูลตั้งแต่ปี 2561 - 2569",
+      "extra_cells": [],
+      "is_header": false
+    }
+  ],
+  "max_row": 5,
+  "max_column": 2
+}

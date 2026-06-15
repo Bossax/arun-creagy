@@ -31,3 +31,5 @@ Rule (parent CLAUDE.md §"Self-Evaluation Loop"): same friction 3 sessions → f
 | 2026-06-13 | 15:25 | session-2026-06-13T06-27-6a2e629b | 1 |
 | 2026-06-13 | 16:55 | session-2026-06-13T06-27-6a2e629b | 1 |
 | 2026-06-13 10:16 | trace-seal-skill-behavior-capture | sandbox isolation, guide writing, timestamp absence | no session JSONL found; wrote behavior-capture guide | Missing session log / timestamps unavailable |
+| 2026-06-15 12:25 | timestamps-unavailable | CRI workbook normalization, lineage, notebook, html explainer | state-reporting drift, command fragility, metadata-vs-operational distinction | Built end-to-end analytical baseline and explainer artifacts | Declared edits complete before full verification; long PS command pattern | Separate planned/patched/executed/verified states and prefer short execution units |
+| 2026-06-15 | designmd-standardization | 04:09 | designmd skill v1.0.0, REGISTRY.json | SUCCESS |

@@ -53,6 +53,135 @@ This document provides a human-readable map of the transformation logic used to 
 
 ---
 
+## 5. Workbook-Derived Bronze CSV Extraction Layer (2026-06-12 Bundle)
+
+*   **Purpose**: Convert four manually curated Excel workbooks into source-near Bronze CSVs and extraction manifests before analytical normalization.
+*   **Raw Source Folder**: `0_bronze/2026-06-12_cri_proj_data/`
+*   **Source Workbooks**:
+    *   `CRI Data - Heatwave.xlsx`
+    *   `CRI Data - GPP.xlsx`
+    *   `CRI Data - Eco loss.xlsx`
+    *   `CRI Data - Population.xlsx`
+*   **Exploration Script**: [`script/inspect_cri_workbooks.py`](ψ/incubate/DCCE/CRI/data_system/script/inspect_cri_workbooks.py:1)
+    *   **Logic**:
+        *   Inspects workbook sheet structures, candidate headers, and workbook-specific layout patterns.
+        *   Confirms that extraction strategy must be sheet-family specific rather than generic workbook flattening.
+*   **Bronze Extraction Scripts**:
+    *   Shared definitions: [`script/extract_cri_definition_sheets.py`](ψ/incubate/DCCE/CRI/data_system/script/extract_cri_definition_sheets.py:1)
+    *   Heatwave table: [`script/extract_heatwave_table.py`](ψ/incubate/DCCE/CRI/data_system/script/extract_heatwave_table.py:1)
+    *   GPP tables: [`script/extract_gpp_tables.py`](ψ/incubate/DCCE/CRI/data_system/script/extract_gpp_tables.py:1)
+    *   Eco loss hazard sheets: [`script/extract_eco_loss_hazard_sheets.py`](ψ/incubate/DCCE/CRI/data_system/script/extract_eco_loss_hazard_sheets.py:1)
+    *   Population tables: [`script/extract_population_tables.py`](ψ/incubate/DCCE/CRI/data_system/script/extract_population_tables.py:1)
+*   **Bronze Policy**:
+    *   Bronze preserves source-near layout and raw formulas where present.
+    *   Derived values are not resolved in Bronze; they are deferred to Silver.
+    *   Workbook-specific manifests document sheet structure, header interpretation, and extraction anomalies.
+*   **Outputs**:
+    *   `0_bronze/2026-06-12_cri_proj_data/definition_sheet_extracts/*`
+    *   `0_bronze/2026-06-12_cri_proj_data/heatwave_extracts/*`
+    *   `0_bronze/2026-06-12_cri_proj_data/gpp_extracts/*`
+    *   `0_bronze/2026-06-12_cri_proj_data/eco_loss_extracts/*`
+    *   `0_bronze/2026-06-12_cri_proj_data/population_extracts/*`
+
+---
+
+## 6. Heatwave Workbook Stream (Bronze → Silver)
+
+*   **Bronze Inputs**:
+    *   `0_bronze/2026-06-12_cri_proj_data/heatwave_extracts/heatwave.raw.csv`
+    *   `0_bronze/2026-06-12_cri_proj_data/heatwave_extracts/heatwave.manifest.json`
+*   **Normalization Script**: [`script/normalize_heatwave_to_silver.py`](ψ/incubate/DCCE/CRI/data_system/script/normalize_heatwave_to_silver.py:1)
+*   **Logic**:
+    *   Splits workbook-derived wide columns into a long fact structure.
+    *   Produces one row per `province_code + metric_name + time_scope`.
+    *   Preserves source header text in lineage columns for traceability.
+    *   Joins province identities against the Gold geography spine.
+    *   Resolves canonical hazard against `dim_hazard_canonical.csv`. 
+	    * I added a new row 'HEATWAVE' by hand
+*   **Assumptions / Changes**:
+    *   `2567` is treated as a single-year scope.
+    *   `2561 - 2567` is treated as a multi-year aggregate scope.
+    *   Heatwave metrics are modeled as `Deaths` and `Injured` under the health sector.
+    *   Canonical hazard is required for analysis; source-specific hazard-type alignment may lag behind without blocking the Silver fact table.
+*   **Outputs**:
+    *   [`1_silver/heatwave/silver_heatwave_impact_long.csv`](ψ/incubate/DCCE/CRI/data_system/data/1_silver/heatwave/silver_heatwave_impact_long.csv)
+    *   [`1_silver/heatwave/heatwave_normalization_report.json`](ψ/incubate/DCCE/CRI/data_system/data/1_silver/heatwave/heatwave_normalization_report.json)
+
+---
+
+## 7. GPP Workbook Stream (Bronze → Silver)
+
+*   **Bronze Inputs**:
+    *   `0_bronze/2026-06-12_cri_proj_data/gpp_extracts/gpp-67.raw.csv`
+    *   `0_bronze/2026-06-12_cri_proj_data/gpp_extracts/gpp-60-67.raw.csv`
+    *   `0_bronze/2026-06-12_cri_proj_data/gpp_extracts/gpp.manifest.json`
+*   **Normalization Script**: [`script/normalize_gpp_to_silver.py`](ψ/incubate/DCCE/CRI/data_system/script/normalize_gpp_to_silver.py:1)
+*   **Logic**:
+    *   Unfolds province/code blocks into row-level analytical facts.
+    *   Extracts metric rows under each province block.
+    *   Expands yearly wide columns into long annual rows.
+    *   Prefers the standalone `2567` extract over the multi-year extract for year `2567`.
+    *   Joins province labels to the Gold geography spine where possible.
+*   **Assumptions / Changes**:
+    *   Grain is one row per `area_code_or_area_label + metric_name + year`.
+    *   `2024p` is treated as a provisional-status indicator rather than a distinct year.
+    *   Minor yearly-sum vs `Total` mismatches are treated as floating-point validation noise until a tolerance policy is finalized.
+*   **Outputs**:
+    *   [`1_silver/gpp/silver_gpp_annual_long.csv`](ψ/incubate/DCCE/CRI/data_system/data/1_silver/gpp/silver_gpp_annual_long.csv)
+    *   [`1_silver/gpp/gpp_normalization_report.json`](ψ/incubate/DCCE/CRI/data_system/data/1_silver/gpp/gpp_normalization_report.json)
+
+---
+
+## 8. Eco Loss Workbook Stream (Bronze → Silver)
+
+*   **Bronze Inputs**:
+    *   `0_bronze/2026-06-12_cri_proj_data/eco_loss_extracts/eco-loss-อุทกภัย.raw.csv`
+    *   `0_bronze/2026-06-12_cri_proj_data/eco_loss_extracts/eco-loss-ภัยแล้ง.raw.csv`
+    *   `0_bronze/2026-06-12_cri_proj_data/eco_loss_extracts/eco-loss-วาตภัย.raw.csv`
+    *   `0_bronze/2026-06-12_cri_proj_data/eco_loss_extracts/eco-loss.manifest.json`
+*   **Province Lookup Bridge**:
+    *   [`script/build_province_code_lookup.py`](ψ/incubate/DCCE/CRI/data_system/script/build_province_code_lookup.py:1)
+    *   Output: [`1_silver/dopa/province_code_lookup.csv`](ψ/incubate/DCCE/CRI/data_system/data/1_silver/dopa/province_code_lookup.csv)
+    *   Source: `archive_stage3_legacy/data/1_silver/stage3_dopa_province_boundary_code_crosswalk.csv`
+*   **Normalization Script**: [`script/normalize_eco_loss_to_silver.py`](ψ/incubate/DCCE/CRI/data_system/script/normalize_eco_loss_to_silver.py:1)
+*   **Logic**:
+    *   Merges three hazard-specific workbook extracts into one hazard-aware analytical stream.
+    *   Melts year columns `2560–2567` into annual long rows.
+    *   Separates `2560 - 2567` into a period-total fact table.
+    *   Maps Thai hazard names to canonical hazard identities using `dim_hazard_canonical.csv`.
+    *   Joins `จังหวัด` strings via `province_code_lookup.csv` to obtain `province_code` and canonical province naming.
+    *   Excludes non-province rows such as blank spacer rows, `วงเงินอำนาจอธิบดี`, `กทม.`, and `Total`.
+*   **Assumptions / Changes**:
+    *   Bronze formulas in total columns are preserved as raw source evidence.
+    *   Silver period totals are derived from annual values and compared to Bronze period values when numeric.
+    *   Province-level join uses the dedicated province lookup table because the active `dim_location_master.csv` snapshot is not directly province-oriented for this workflow.
+*   **Outputs**:
+    *   [`1_silver/eco_loss/silver_eco_loss_annual_long.csv`](ψ/incubate/DCCE/CRI/data_system/data/1_silver/eco_loss/silver_eco_loss_annual_long.csv)
+    *   [`1_silver/eco_loss/silver_eco_loss_period_total.csv`](ψ/incubate/DCCE/CRI/data_system/data/1_silver/eco_loss/silver_eco_loss_period_total.csv)
+    *   [`1_silver/eco_loss/eco_loss_normalization_report.json`](ψ/incubate/DCCE/CRI/data_system/data/1_silver/eco_loss/eco_loss_normalization_report.json)
+
+---
+
+## 9. Population Workbook Stream (Bronze → Silver, in progress)
+
+*   **Bronze Inputs**:
+    *   `0_bronze/2026-06-12_cri_proj_data/population_extracts/pop67.raw.csv`
+    *   `0_bronze/2026-06-12_cri_proj_data/population_extracts/pop60-67.raw.csv`
+    *   `0_bronze/2026-06-12_cri_proj_data/population_extracts/population.manifest.json`
+*   **Bronze Extraction Script**: [`script/extract_population_tables.py`](ψ/incubate/DCCE/CRI/data_system/script/extract_population_tables.py:1)
+*   **Current State**:
+    *   Bronze extraction is complete.
+    *   Header flattening for `pop60-67` was corrected so `2567` remains its own year column.
+    *   Bronze keeps duplicated/raw code fields source-near and preserves formulas for later Silver derivation.
+*   **Planned Silver Logic**:
+    *   `pop67` → monthly geography-level population fact table.
+    *   `pop60-67` → annual long population fact table plus separate period-total handling.
+    *   Formula-derived and resolved subdistrict code fields will be separated semantically in Silver.
+*   **Planned Outputs**:
+    *   `1_silver/population/...` (to be materialized after normalization implementation)
+
+---
+
 ## 11. DDPM Provincial Impact (Gold Fact Tables | 2560–2567)
 
 *   **Purpose**: Aggregated provincial-level impact scores and fiscal gap analysis.

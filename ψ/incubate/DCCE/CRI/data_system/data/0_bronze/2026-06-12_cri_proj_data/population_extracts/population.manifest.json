@@ -1,0 +1,298 @@
+{
+  "script_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\script\\extract_population_tables.py",
+  "workbook_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\CRI Data - Population.xlsx",
+  "output_manifest_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\population_extracts\\population.manifest.json",
+  "output_dir": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\population_extracts",
+  "extracted_at_utc": "2026-06-13T16:20:55.712009+00:00",
+  "exists": true,
+  "bronze_policy": "Preserve raw formulas in Bronze and derive resolved values later in Silver.",
+  "sheets": [
+    {
+      "sheet_name": "pop67",
+      "output_csv_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\population_extracts\\pop67.raw.csv",
+      "worksheet_dimensions": {
+        "max_row": 11380,
+        "max_column": 11
+      },
+      "header_row_number": 1,
+      "header_row_span": 1,
+      "header_rows": [
+        [
+          "ปีเดือน",
+          "รหัสจังหวัด",
+          "ชื่อจังหวัด",
+          "รหัสสำนักทะเบียน",
+          "ชื่อสำนักทะเบียน",
+          "รหัสตำบล",
+          "รหัสตำบล",
+          "ชื่อตำบล",
+          "จำนวนประชากรชาย",
+          "จำนวนประชากรหญิง",
+          "จำนวนประชากรทั้งหมด"
+        ]
+      ],
+      "headers": [
+        "ปีเดือน",
+        "รหัสจังหวัด",
+        "ชื่อจังหวัด",
+        "รหัสสำนักทะเบียน",
+        "ชื่อสำนักทะเบียน",
+        "รหัสตำบล",
+        "รหัสตำบล_2",
+        "ชื่อตำบล",
+        "จำนวนประชากรชาย",
+        "จำนวนประชากรหญิง",
+        "จำนวนประชากรทั้งหมด"
+      ],
+      "column_count": 11,
+      "row_count": 11372,
+      "preview_first_data_row": [
+        "6712",
+        "10",
+        "กรุงเทพมหานคร",
+        "1001",
+        "ท้องถิ่นเขตพระนคร",
+        "=LEFT(G9,6)",
+        "10010500",
+        "ศาลเจ้าพ่อเสือ",
+        "1100",
+        "1474",
+        "2574"
+      ],
+      "preview_second_data_row": [
+        "6712",
+        "10",
+        "กรุงเทพมหานคร",
+        "1001",
+        "ท้องถิ่นเขตพระนคร",
+        "=LEFT(G10,6)",
+        "10010600",
+        "เสาชิงช้า",
+        "865",
+        "973",
+        "1838"
+      ],
+      "footer_rows_skipped": [],
+      "formula_cells_detected": 11362,
+      "formula_samples": [
+        {
+          "data_row_index_1_based": 1,
+          "column_index_1_based": 6,
+          "formula": "=LEFT(G9,6)"
+        },
+        {
+          "data_row_index_1_based": 2,
+          "column_index_1_based": 6,
+          "formula": "=LEFT(G10,6)"
+        },
+        {
+          "data_row_index_1_based": 3,
+          "column_index_1_based": 6,
+          "formula": "=LEFT(G11,6)"
+        },
+        {
+          "data_row_index_1_based": 4,
+          "column_index_1_based": 6,
+          "formula": "=LEFT(G12,6)"
+        },
+        {
+          "data_row_index_1_based": 5,
+          "column_index_1_based": 6,
+          "formula": "=LEFT(G13,6)"
+        },
+        {
+          "data_row_index_1_based": 6,
+          "column_index_1_based": 6,
+          "formula": "=LEFT(G14,6)"
+        },
+        {
+          "data_row_index_1_based": 7,
+          "column_index_1_based": 6,
+          "formula": "=LEFT(G15,6)"
+        },
+        {
+          "data_row_index_1_based": 8,
+          "column_index_1_based": 6,
+          "formula": "=LEFT(G16,6)"
+        },
+        {
+          "data_row_index_1_based": 10,
+          "column_index_1_based": 6,
+          "formula": "=LEFT(G18,6)"
+        },
+        {
+          "data_row_index_1_based": 11,
+          "column_index_1_based": 6,
+          "formula": "=LEFT(G19,6)"
+        }
+      ],
+      "raw_formula_preservation_policy": "Bronze preserves raw formulas exactly as workbook cell text; resolved values belong in Silver.",
+      "structural_issues": []
+    },
+    {
+      "sheet_name": "pop60-67",
+      "output_csv_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\population_extracts\\pop60-67.raw.csv",
+      "worksheet_dimensions": {
+        "max_row": 11390,
+        "max_column": 16
+      },
+      "header_row_number": 1,
+      "header_row_span": 2,
+      "header_rows": [
+        [
+          "รหัสจังหวัด",
+          "ชื่อจังหวัด",
+          "รหัสสำนักทะเบียน",
+          "ชื่อสำนักทะเบียน",
+          "รหัสตำบล",
+          "รหัสตำบล",
+          "ชื่อตำบล",
+          "จำนวนประชากร (คน)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "2567",
+          "2566",
+          "2565",
+          "2564",
+          "2563",
+          "2562",
+          "2561",
+          "2560",
+          "2560 - 2567"
+        ]
+      ],
+      "headers": [
+        "รหัสจังหวัด",
+        "ชื่อจังหวัด",
+        "รหัสสำนักทะเบียน",
+        "ชื่อสำนักทะเบียน",
+        "รหัสตำบล",
+        "รหัสตำบล_2",
+        "ชื่อตำบล",
+        "2567",
+        "2566",
+        "2565",
+        "2564",
+        "2563",
+        "2562",
+        "2561",
+        "2560",
+        "2560 - 2567"
+      ],
+      "column_count": 16,
+      "row_count": 11388,
+      "preview_first_data_row": [
+        "0",
+        "ทั่วประเทศ",
+        "0",
+        "-",
+        "",
+        "0",
+        "-",
+        "65951210",
+        "66052615",
+        "66090475",
+        "66171439",
+        "66186727",
+        "66558935",
+        "66413979",
+        "66188503",
+        "529613883"
+      ],
+      "preview_second_data_row": [
+        "10",
+        "กรุงเทพมหานคร",
+        "0",
+        "-",
+        "",
+        "0",
+        "-",
+        "5455020",
+        "5471588",
+        "5494932",
+        "5527994",
+        "5588222",
+        "5666264",
+        "5676648",
+        "5682415",
+        "44563083"
+      ],
+      "footer_rows_skipped": [],
+      "formula_cells_detected": 11304,
+      "formula_samples": [
+        {
+          "data_row_index_1_based": 4,
+          "column_index_1_based": 5,
+          "formula": "=LEFT(F6,6)"
+        },
+        {
+          "data_row_index_1_based": 5,
+          "column_index_1_based": 5,
+          "formula": "=LEFT(F7,6)"
+        },
+        {
+          "data_row_index_1_based": 6,
+          "column_index_1_based": 5,
+          "formula": "=LEFT(F8,6)"
+        },
+        {
+          "data_row_index_1_based": 7,
+          "column_index_1_based": 5,
+          "formula": "=LEFT(F9,6)"
+        },
+        {
+          "data_row_index_1_based": 8,
+          "column_index_1_based": 5,
+          "formula": "=LEFT(F10,6)"
+        },
+        {
+          "data_row_index_1_based": 9,
+          "column_index_1_based": 5,
+          "formula": "=LEFT(F11,6)"
+        },
+        {
+          "data_row_index_1_based": 10,
+          "column_index_1_based": 5,
+          "formula": "=LEFT(F12,6)"
+        },
+        {
+          "data_row_index_1_based": 11,
+          "column_index_1_based": 5,
+          "formula": "=LEFT(F13,6)"
+        },
+        {
+          "data_row_index_1_based": 12,
+          "column_index_1_based": 5,
+          "formula": "=LEFT(F14,6)"
+        },
+        {
+          "data_row_index_1_based": 13,
+          "column_index_1_based": 5,
+          "formula": "=LEFT(F15,6)"
+        }
+      ],
+      "raw_formula_preservation_policy": "Bronze preserves raw formulas exactly as workbook cell text; resolved values belong in Silver.",
+      "structural_issues": []
+    }
+  ],
+  "sheet_names": [
+    "Definition",
+    "pop67",
+    "pop60-67"
+  ]
+}

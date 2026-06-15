@@ -20,6 +20,7 @@ These rules ensure technical consistency across both PowerShell (Gemini CLI) and
 - **Sorting (PS)**: `Get-ChildItem | Sort-Object LastWriteTime -Descending`.
 
 ## 4. PowerShell Execution Rules
+- Do not execute code blocks in command line. Create a temporary script and execute the script. 
 - **Variable Escaping**: In Gemini CLI, the host shell expands `$_` in double-quoted strings. Use **single quotes** for the `-Command` block (e.g., `powershell.exe -Command '... { $_.Name ... }'`) or use **Simplified Filtering** (e.g., `Where-Object Name -match '...'`) to avoid expansion.
 - **Special Characters (ψ)**: Wrap paths containing the `ψ` character in single quotes (e.g., `'ψ/memory/'`) to ensure the shell handles the character literal correctly.
 - **Pipeline Hygiene**: Prefer native PowerShell cmdlets (`Where-Object`, `Select-Object`) over Unix ports (`grep`, `head`) when operating in Gemini CLI.

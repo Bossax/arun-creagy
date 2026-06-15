@@ -1,0 +1,34 @@
+{
+  "source_root": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data",
+  "output_root": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\definition_sheet_extracts",
+  "extracts": [
+    {
+      "workbook_name": "CRI Data - Eco loss.xlsx",
+      "json_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\definition_sheet_extracts\\cri-data-eco-loss.definition.json",
+      "markdown_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\definition_sheet_extracts\\cri-data-eco-loss.definition.md",
+      "row_count": 11,
+      "error": null
+    },
+    {
+      "workbook_name": "CRI Data - GPP.xlsx",
+      "json_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\definition_sheet_extracts\\cri-data-gpp.definition.json",
+      "markdown_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\definition_sheet_extracts\\cri-data-gpp.definition.md",
+      "row_count": 8,
+      "error": null
+    },
+    {
+      "workbook_name": "CRI Data - Heatwave.xlsx",
+      "json_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\definition_sheet_extracts\\cri-data-heatwave.definition.json",
+      "markdown_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\definition_sheet_extracts\\cri-data-heatwave.definition.md",
+      "row_count": 5,
+      "error": null
+    },
+    {
+      "workbook_name": "CRI Data - Population.xlsx",
+      "json_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\definition_sheet_extracts\\cri-data-population.definition.json",
+      "markdown_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\definition_sheet_extracts\\cri-data-population.definition.md",
+      "row_count": 14,
+      "error": null
+    }
+  ]
+}

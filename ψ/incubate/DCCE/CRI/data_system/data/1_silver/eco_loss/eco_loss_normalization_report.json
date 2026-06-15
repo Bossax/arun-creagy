@@ -1,0 +1,516 @@
+{
+  "generated_at_utc": "2026-06-14T05:06:52.689361+00:00",
+  "script_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\script\\normalize_eco_loss_to_silver.py",
+  "inputs": {
+    "manifest": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\eco_loss_extracts\\eco-loss.manifest.json",
+    "bronze_dir": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\eco_loss_extracts",
+    "location_dim": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\2_gold\\dopa\\dim_location_master.csv",
+    "province_lookup": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\1_silver\\dopa\\province_code_lookup.csv",
+    "hazard_canonical_dim": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\2_gold\\dim_hazard_canonical.csv",
+    "hazard_type_dim": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\2_gold\\dim_hazard_type.csv"
+  },
+  "outputs": {
+    "annual_csv": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\1_silver\\eco_loss\\silver_eco_loss_annual_long.csv",
+    "period_csv": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\1_silver\\eco_loss\\silver_eco_loss_period_total.csv",
+    "report_json": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\1_silver\\eco_loss\\eco_loss_normalization_report.json"
+  },
+  "issues": [
+    "3 province rows could not join to dim_location_master",
+    "9 period total rows were malformed",
+    "15 numeric period totals differed from derived annual sums",
+    "Annual output row count 1848 differs from expected 1944",
+    "Period output row count 231 differs from expected 243",
+    "Annual row expansion counts are uneven across years 2560-2567"
+  ],
+  "status": "warning",
+  "normalized_schema": {
+    "annual": [
+      "record_id",
+      "province_code",
+      "province_name_th",
+      "location_id",
+      "admin_level",
+      "hazard_code",
+      "hazard_name_en",
+      "hazard_name_th",
+      "canonical_hazard_code",
+      "canonical_hazard_name_en",
+      "canonical_hazard_name_th",
+      "year_be",
+      "year_ce",
+      "value",
+      "value_type",
+      "unit",
+      "source_system",
+      "source_dataset",
+      "source_file",
+      "source_sheet",
+      "source_row_number",
+      "source_column",
+      "raw_value"
+    ],
+    "period_total": [
+      "record_id",
+      "province_code",
+      "province_name_th",
+      "location_id",
+      "admin_level",
+      "hazard_code",
+      "hazard_name_en",
+      "hazard_name_th",
+      "canonical_hazard_code",
+      "canonical_hazard_name_en",
+      "canonical_hazard_name_th",
+      "time_scope",
+      "time_scope_type",
+      "time_scope_label",
+      "period_start_be",
+      "period_end_be",
+      "value",
+      "value_type",
+      "unit",
+      "raw_period_value",
+      "raw_period_is_formula",
+      "derived_from_annual_values",
+      "source_system",
+      "source_dataset",
+      "source_file",
+      "source_sheet",
+      "source_row_number",
+      "source_column"
+    ]
+  },
+  "normalized_grain": {
+    "annual": "one row per province + hazard + year",
+    "period_total": "one row per province + hazard + period"
+  },
+  "input_row_counts": {
+    "Eco loss อุทกภัย": 81,
+    "Eco loss ภัยแล้ง": 81,
+    "Eco loss วาตภัย": 81
+  },
+  "output_row_counts": {
+    "annual": 1848,
+    "period_total": 231
+  },
+  "validation": {
+    "manifest_headers_expected": [
+      "จังหวัด",
+      "2567",
+      "2566",
+      "2565",
+      "2564",
+      "2563",
+      "2562",
+      "2561",
+      "2560",
+      "2560 - 2567"
+    ],
+    "hazard_header_contract_matches": {
+      "Eco loss อุทกภัย": true,
+      "Eco loss ภัยแล้ง": true,
+      "Eco loss วาตภัย": true
+    },
+    "hazard_type_join_ready": {
+      "Eco loss อุทกภัย": true,
+      "Eco loss ภัยแล้ง": true,
+      "Eco loss วาตภัย": true
+    },
+    "province_lookup_count": 77,
+    "accepted_rows_by_hazard": {
+      "Eco loss อุทกภัย": 77,
+      "Eco loss ภัยแล้ง": 77,
+      "Eco loss วาตภัย": 77
+    },
+    "skipped_rows_by_hazard": {
+      "Eco loss อุทกภัย": 4,
+      "Eco loss ภัยแล้ง": 4,
+      "Eco loss วาตภัย": 4
+    },
+    "annual_counts_by_hazard": {
+      "FLOOD": 616,
+      "DROUGHT": 616,
+      "WINDSTORM": 616
+    },
+    "annual_counts_by_year": {
+      "2560": 231,
+      "2561": 231,
+      "2562": 231,
+      "2563": 231,
+      "2564": 231,
+      "2565": 231,
+      "2566": 231,
+      "2567": 231
+    },
+    "annual_counts_by_hazard_year": {
+      "DROUGHT": {
+        "2567": 77,
+        "2566": 77,
+        "2565": 77,
+        "2564": 77,
+        "2563": 77,
+        "2562": 77,
+        "2561": 77,
+        "2560": 77
+      },
+      "FLOOD": {
+        "2567": 77,
+        "2566": 77,
+        "2565": 77,
+        "2564": 77,
+        "2563": 77,
+        "2562": 77,
+        "2561": 77,
+        "2560": 77
+      },
+      "WINDSTORM": {
+        "2567": 77,
+        "2566": 77,
+        "2565": 77,
+        "2564": 77,
+        "2563": 77,
+        "2562": 77,
+        "2561": 77,
+        "2560": 77
+      }
+    },
+    "period_counts_by_hazard": {
+      "FLOOD": 77,
+      "DROUGHT": 77,
+      "WINDSTORM": 77
+    },
+    "expected_rows": {
+      "per_hazard_input": 81,
+      "accepted_total_rows": 243,
+      "annual_output": 1944,
+      "period_total_output": 243
+    },
+    "formula_handling": {
+      "period_formula_row_count": 77,
+      "period_formula_rows_sample": [
+        {
+          "sheet_name": "Eco loss อุทกภัย",
+          "province_name_th": "กระบี่",
+          "source_row_number": "4",
+          "raw_period_value": "=SUM(B4:I4)"
+        },
+        {
+          "sheet_name": "Eco loss อุทกภัย",
+          "province_name_th": "กาญจนบุรี",
+          "source_row_number": "5",
+          "raw_period_value": "=SUM(B5:I5)"
+        },
+        {
+          "sheet_name": "Eco loss อุทกภัย",
+          "province_name_th": "กาฬสินธุ์",
+          "source_row_number": "6",
+          "raw_period_value": "=SUM(B6:I6)"
+        },
+        {
+          "sheet_name": "Eco loss อุทกภัย",
+          "province_name_th": "กำแพงเพชร",
+          "source_row_number": "7",
+          "raw_period_value": "=SUM(B7:I7)"
+        },
+        {
+          "sheet_name": "Eco loss อุทกภัย",
+          "province_name_th": "ขอนแก่น",
+          "source_row_number": "8",
+          "raw_period_value": "=SUM(B8:I8)"
+        },
+        {
+          "sheet_name": "Eco loss อุทกภัย",
+          "province_name_th": "จันทบุรี",
+          "source_row_number": "9",
+          "raw_period_value": "=SUM(B9:I9)"
+        },
+        {
+          "sheet_name": "Eco loss อุทกภัย",
+          "province_name_th": "ฉะเชิงเทรา",
+          "source_row_number": "10",
+          "raw_period_value": "=SUM(B10:I10)"
+        },
+        {
+          "sheet_name": "Eco loss อุทกภัย",
+          "province_name_th": "ชลบุรี",
+          "source_row_number": "11",
+          "raw_period_value": "=SUM(B11:I11)"
+        },
+        {
+          "sheet_name": "Eco loss อุทกภัย",
+          "province_name_th": "ชัยนาท",
+          "source_row_number": "12",
+          "raw_period_value": "=SUM(B12:I12)"
+        },
+        {
+          "sheet_name": "Eco loss อุทกภัย",
+          "province_name_th": "ชัยภูมิ",
+          "source_row_number": "13",
+          "raw_period_value": "=SUM(B13:I13)"
+        },
+        {
+          "sheet_name": "Eco loss อุทกภัย",
+          "province_name_th": "ชุมพร",
+          "source_row_number": "14",
+          "raw_period_value": "=SUM(B14:I14)"
+        },
+        {
+          "sheet_name": "Eco loss อุทกภัย",
+          "province_name_th": "เชียงราย",
+          "source_row_number": "15",
+          "raw_period_value": "=SUM(B15:I15)"
+        },
+        {
+          "sheet_name": "Eco loss อุทกภัย",
+          "province_name_th": "เชียงใหม่",
+          "source_row_number": "16",
+          "raw_period_value": "=SUM(B16:I16)"
+        },
+        {
+          "sheet_name": "Eco loss อุทกภัย",
+          "province_name_th": "ตรัง",
+          "source_row_number": "17",
+          "raw_period_value": "=SUM(B17:I17)"
+        },
+        {
+          "sheet_name": "Eco loss อุทกภัย",
+          "province_name_th": "ตราด",
+          "source_row_number": "18",
+          "raw_period_value": "=SUM(B18:I18)"
+        },
+        {
+          "sheet_name": "Eco loss อุทกภัย",
+          "province_name_th": "ตาก",
+          "source_row_number": "19",
+          "raw_period_value": "=SUM(B19:I19)"
+        },
+        {
+          "sheet_name": "Eco loss อุทกภัย",
+          "province_name_th": "นครนายก",
+          "source_row_number": "20",
+          "raw_period_value": "=SUM(B20:I20)"
+        },
+        {
+          "sheet_name": "Eco loss อุทกภัย",
+          "province_name_th": "นครปฐม",
+          "source_row_number": "21",
+          "raw_period_value": "=SUM(B21:I21)"
+        },
+        {
+          "sheet_name": "Eco loss อุทกภัย",
+          "province_name_th": "นครพนม",
+          "source_row_number": "22",
+          "raw_period_value": "=SUM(B22:I22)"
+        },
+        {
+          "sheet_name": "Eco loss อุทกภัย",
+          "province_name_th": "นครราชสีมา",
+          "source_row_number": "23",
+          "raw_period_value": "=SUM(B23:I23)"
+        }
+      ],
+      "numeric_period_mismatch_count": 15,
+      "numeric_period_mismatches_sample": [
+        {
+          "sheet_name": "Eco loss ภัยแล้ง",
+          "province_name_th": "จันทบุรี",
+          "source_row_number": "9",
+          "raw_period_value": "25153785.26",
+          "derived_period_value": "25153785.260000001"
+        },
+        {
+          "sheet_name": "Eco loss ภัยแล้ง",
+          "province_name_th": "ชัยภูมิ",
+          "source_row_number": "13",
+          "raw_period_value": "7117422.4399999995",
+          "derived_period_value": "7117422.44"
+        },
+        {
+          "sheet_name": "Eco loss ภัยแล้ง",
+          "province_name_th": "ชุมพร",
+          "source_row_number": "14",
+          "raw_period_value": "6219100.78",
+          "derived_period_value": "6219100.7800000005"
+        },
+        {
+          "sheet_name": "Eco loss ภัยแล้ง",
+          "province_name_th": "ตราด",
+          "source_row_number": "18",
+          "raw_period_value": "26191176.150000002",
+          "derived_period_value": "26191176.1500000008"
+        },
+        {
+          "sheet_name": "Eco loss ภัยแล้ง",
+          "province_name_th": "นครราชสีมา",
+          "source_row_number": "23",
+          "raw_period_value": "1479726.79",
+          "derived_period_value": "1479726.79000000004"
+        },
+        {
+          "sheet_name": "Eco loss ภัยแล้ง",
+          "province_name_th": "นครสวรรค์",
+          "source_row_number": "25",
+          "raw_period_value": "10064290.440000001",
+          "derived_period_value": "10064290.4400000001"
+        },
+        {
+          "sheet_name": "Eco loss ภัยแล้ง",
+          "province_name_th": "น่าน",
+          "source_row_number": "28",
+          "raw_period_value": "8569536.690000001",
+          "derived_period_value": "8569536.69"
+        },
+        {
+          "sheet_name": "Eco loss ภัยแล้ง",
+          "province_name_th": "บุรีรัมย์",
+          "source_row_number": "30",
+          "raw_period_value": "32024864.359999996",
+          "derived_period_value": "32024864.3599999965"
+        },
+        {
+          "sheet_name": "Eco loss ภัยแล้ง",
+          "province_name_th": "พิษณุโลก",
+          "source_row_number": "40",
+          "raw_period_value": "42638783.230000004",
+          "derived_period_value": "42638783.23"
+        },
+        {
+          "sheet_name": "Eco loss ภัยแล้ง",
+          "province_name_th": "ลพบุรี",
+          "source_row_number": "54",
+          "raw_period_value": "1902900.9900000002",
+          "derived_period_value": "1902900.99"
+        },
+        {
+          "sheet_name": "Eco loss ภัยแล้ง",
+          "province_name_th": "อำนาจเจริญ",
+          "source_row_number": "75",
+          "raw_period_value": "1822356.66",
+          "derived_period_value": "1822356.6599999999"
+        },
+        {
+          "sheet_name": "Eco loss ภัยแล้ง",
+          "province_name_th": "อุตรดิตถ์",
+          "source_row_number": "77",
+          "raw_period_value": "47283947.269999996",
+          "derived_period_value": "47283947.27"
+        },
+        {
+          "sheet_name": "Eco loss วาตภัย",
+          "province_name_th": "จันทบุรี",
+          "source_row_number": "9",
+          "raw_period_value": "11365913.860000001",
+          "derived_period_value": "11365913.86"
+        },
+        {
+          "sheet_name": "Eco loss วาตภัย",
+          "province_name_th": "สงขลา",
+          "source_row_number": "60",
+          "raw_period_value": "8245768.66",
+          "derived_period_value": "8245768.6599999997"
+        },
+        {
+          "sheet_name": "Eco loss วาตภัย",
+          "province_name_th": "สุราษฎร์ธานี",
+          "source_row_number": "70",
+          "raw_period_value": "3795154.9699999997",
+          "derived_period_value": "3795154.97000000002"
+        }
+      ],
+      "policy": "Bronze preserves raw formulas; Silver derives period totals from annual values and compares against any numeric period totals"
+    },
+    "province_join_readiness": {
+      "unmatched_province_count": 3,
+      "unmatched_provinces_sample": [
+        {
+          "sheet_name": "Eco loss อุทกภัย",
+          "province_name_th": "กทม.",
+          "source_row_number": "82"
+        },
+        {
+          "sheet_name": "Eco loss ภัยแล้ง",
+          "province_name_th": "กทม.",
+          "source_row_number": "82"
+        },
+        {
+          "sheet_name": "Eco loss วาตภัย",
+          "province_name_th": "กทม.",
+          "source_row_number": "82"
+        }
+      ],
+      "province_name_mismatch_count": 0,
+      "province_name_mismatches_sample": []
+    },
+    "malformed_rows": {
+      "annual_cell_count": 0,
+      "annual_cells_sample": [],
+      "period_row_count": 9,
+      "period_rows_sample": [
+        {
+          "sheet_name": "Eco loss อุทกภัย",
+          "source_row_number": "80",
+          "issue": "non_province_or_missing_row",
+          "province_name_th": ""
+        },
+        {
+          "sheet_name": "Eco loss อุทกภัย",
+          "source_row_number": "81",
+          "issue": "non_province_or_missing_row",
+          "province_name_th": "วงเงินอำนาจอธิบดี"
+        },
+        {
+          "sheet_name": "Eco loss อุทกภัย",
+          "source_row_number": "84",
+          "issue": "non_province_or_missing_row",
+          "province_name_th": "Total"
+        },
+        {
+          "sheet_name": "Eco loss ภัยแล้ง",
+          "source_row_number": "80",
+          "issue": "non_province_or_missing_row",
+          "province_name_th": ""
+        },
+        {
+          "sheet_name": "Eco loss ภัยแล้ง",
+          "source_row_number": "81",
+          "issue": "non_province_or_missing_row",
+          "province_name_th": "วงเงินอำนาจอธิบดี"
+        },
+        {
+          "sheet_name": "Eco loss ภัยแล้ง",
+          "source_row_number": "84",
+          "issue": "non_province_or_missing_row",
+          "province_name_th": "Total"
+        },
+        {
+          "sheet_name": "Eco loss วาตภัย",
+          "source_row_number": "80",
+          "issue": "non_province_or_missing_row",
+          "province_name_th": ""
+        },
+        {
+          "sheet_name": "Eco loss วาตภัย",
+          "source_row_number": "81",
+          "issue": "non_province_or_missing_row",
+          "province_name_th": "วงเงินอำนาจอธิบดี"
+        },
+        {
+          "sheet_name": "Eco loss วาตภัย",
+          "source_row_number": "84",
+          "issue": "non_province_or_missing_row",
+          "province_name_th": "Total"
+        }
+      ]
+    },
+    "duplicate_keys": {
+      "annual_count": 0,
+      "annual_sample": [],
+      "period_count": 0,
+      "period_sample": []
+    },
+    "unique_key_counts": {
+      "annual": 1848,
+      "period_total": 231
+    }
+  }
+}
