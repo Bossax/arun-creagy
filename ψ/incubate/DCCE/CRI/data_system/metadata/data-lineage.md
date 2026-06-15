@@ -60,7 +60,7 @@ This document provides a human-readable map of the transformation logic used to 
 *   **Source Workbooks**:
     *   `CRI Data - Heatwave.xlsx`
     *   `CRI Data - GPP.xlsx`
-    *   `CRI Data - Eco loss.xlsx`
+    *   `CRI Data - Government_Advanced_Payment.xlsx`
     *   `CRI Data - Population.xlsx`
 *   **Exploration Script**: [`script/inspect_cri_workbooks.py`](ψ/incubate/DCCE/CRI/data_system/script/inspect_cri_workbooks.py:1)
     *   **Logic**:
@@ -70,7 +70,7 @@ This document provides a human-readable map of the transformation logic used to 
     *   Shared definitions: [`script/extract_cri_definition_sheets.py`](ψ/incubate/DCCE/CRI/data_system/script/extract_cri_definition_sheets.py:1)
     *   Heatwave table: [`script/extract_heatwave_table.py`](ψ/incubate/DCCE/CRI/data_system/script/extract_heatwave_table.py:1)
     *   GPP tables: [`script/extract_gpp_tables.py`](ψ/incubate/DCCE/CRI/data_system/script/extract_gpp_tables.py:1)
-    *   Eco loss hazard sheets: [`script/extract_eco_loss_hazard_sheets.py`](ψ/incubate/DCCE/CRI/data_system/script/extract_eco_loss_hazard_sheets.py:1)
+    *   Government Advance Payment hazard sheets: [`script/extract_govt_adv_payment_hazard_sheets.py`](ψ/incubate/DCCE/CRI/data_system/script/extract_govt_adv_payment_hazard_sheets.py:1)
     *   Population tables: [`script/extract_population_tables.py`](ψ/incubate/DCCE/CRI/data_system/script/extract_population_tables.py:1)
 *   **Bronze Policy**:
     *   Bronze preserves source-near layout and raw formulas where present.
@@ -80,7 +80,7 @@ This document provides a human-readable map of the transformation logic used to 
     *   `0_bronze/2026-06-12_cri_proj_data/definition_sheet_extracts/*`
     *   `0_bronze/2026-06-12_cri_proj_data/heatwave_extracts/*`
     *   `0_bronze/2026-06-12_cri_proj_data/gpp_extracts/*`
-    *   `0_bronze/2026-06-12_cri_proj_data/eco_loss_extracts/*`
+    *   `0_bronze/2026-06-12_cri_proj_data/govt_adv_payment_extracts/*`
     *   `0_bronze/2026-06-12_cri_proj_data/population_extracts/*`
 
 ---
@@ -132,18 +132,18 @@ This document provides a human-readable map of the transformation logic used to 
 
 ---
 
-## 8. Eco Loss Workbook Stream (Bronze → Silver)
+## 8. Government Advance Payment Workbook Stream (Bronze → Silver)
 
 *   **Bronze Inputs**:
-    *   `0_bronze/2026-06-12_cri_proj_data/eco_loss_extracts/eco-loss-อุทกภัย.raw.csv`
-    *   `0_bronze/2026-06-12_cri_proj_data/eco_loss_extracts/eco-loss-ภัยแล้ง.raw.csv`
-    *   `0_bronze/2026-06-12_cri_proj_data/eco_loss_extracts/eco-loss-วาตภัย.raw.csv`
-    *   `0_bronze/2026-06-12_cri_proj_data/eco_loss_extracts/eco-loss.manifest.json`
+    *   `0_bronze/2026-06-12_cri_proj_data/govt_adv_payment_extracts/govt_adv_payment-อุทกภัย.raw.csv`
+    *   `0_bronze/2026-06-12_cri_proj_data/govt_adv_payment_extracts/govt_adv_payment-ภัยแล้ง.raw.csv`
+    *   `0_bronze/2026-06-12_cri_proj_data/govt_adv_payment_extracts/govt_adv_payment-วาตภัย.raw.csv`
+    *   `0_bronze/2026-06-12_cri_proj_data/govt_adv_payment_extracts/govt_adv_payment.manifest.json`
 *   **Province Lookup Bridge**:
     *   [`script/build_province_code_lookup.py`](ψ/incubate/DCCE/CRI/data_system/script/build_province_code_lookup.py:1)
     *   Output: [`1_silver/dopa/province_code_lookup.csv`](ψ/incubate/DCCE/CRI/data_system/data/1_silver/dopa/province_code_lookup.csv)
     *   Source: `archive_stage3_legacy/data/1_silver/stage3_dopa_province_boundary_code_crosswalk.csv`
-*   **Normalization Script**: [`script/normalize_eco_loss_to_silver.py`](ψ/incubate/DCCE/CRI/data_system/script/normalize_eco_loss_to_silver.py:1)
+*   **Normalization Script**: [`script/normalize_govt_adv_payment_to_silver.py`](ψ/incubate/DCCE/CRI/data_system/script/normalize_govt_adv_payment_to_silver.py:1)
 *   **Logic**:
     *   Merges three hazard-specific workbook extracts into one hazard-aware analytical stream.
     *   Melts year columns `2560–2567` into annual long rows.
@@ -156,9 +156,9 @@ This document provides a human-readable map of the transformation logic used to 
     *   Silver period totals are derived from annual values and compared to Bronze period values when numeric.
     *   Province-level join uses the dedicated province lookup table because the active `dim_location_master.csv` snapshot is not directly province-oriented for this workflow.
 *   **Outputs**:
-    *   [`1_silver/eco_loss/silver_eco_loss_annual_long.csv`](ψ/incubate/DCCE/CRI/data_system/data/1_silver/eco_loss/silver_eco_loss_annual_long.csv)
-    *   [`1_silver/eco_loss/silver_eco_loss_period_total.csv`](ψ/incubate/DCCE/CRI/data_system/data/1_silver/eco_loss/silver_eco_loss_period_total.csv)
-    *   [`1_silver/eco_loss/eco_loss_normalization_report.json`](ψ/incubate/DCCE/CRI/data_system/data/1_silver/eco_loss/eco_loss_normalization_report.json)
+    *   [`1_silver/govt_adv_payment/silver_govt_adv_payment_annual_long.csv`](ψ/incubate/DCCE/CRI/data_system/data/1_silver/govt_adv_payment/silver_govt_adv_payment_annual_long.csv)
+    *   [`1_silver/govt_adv_payment/silver_govt_adv_payment_period_total.csv`](ψ/incubate/DCCE/CRI/data_system/data/1_silver/govt_adv_payment/silver_govt_adv_payment_period_total.csv)
+    *   [`1_silver/govt_adv_payment/govt_adv_payment_normalization_report.json`](ψ/incubate/DCCE/CRI/data_system/data/1_silver/govt_adv_payment/govt_adv_payment_normalization_report.json)
 
 ---
 

@@ -53,7 +53,7 @@
     <div class="pipeline">
       <div class="box">
         <strong>Raw workbooks</strong>
-        Heatwave, GPP, Eco loss, Population<br />
+        Heatwave, GPP, Government Advance Payment, Population<br />
         under <code>0_bronze/2026-06-12_cri_proj_data/</code>
       </div>
       <div class="arrow">→</div>
@@ -95,7 +95,7 @@
         </div>
       </div>
       <div class="card">
-        <h4>Eco loss</h4>
+        <h4>Government Advance Payment</h4>
         <div class="mini">
           <strong>Owner:</strong> DDPM / ปภ.-style reserve / disaster spending source.<br />
           <strong>Bronze shape:</strong> three hazard-specific province tables with years in columns.<br />
@@ -158,27 +158,27 @@
       <tr><td>Main caution</td><td>Good denominator/context table, not a direct impact fact. Province-only.</td></tr>
     </table>
 
-    <h3>3.3 Eco loss stream</h3>
+    <h3>3.3 Government Advance Payment stream</h3>
     <div class="pipeline">
-      <div class="box"><strong>Raw workbook</strong><code>CRI Data - Eco loss.xlsx</code></div>
+      <div class="box"><strong>Raw workbook</strong><code>CRI Data - Government_Advanced_Payment.xlsx</code></div>
       <div class="arrow">→</div>
-      <div class="box"><strong>Bronze extractor</strong><code>extract_eco_loss_hazard_sheets.py</code></div>
+      <div class="box"><strong>Bronze extractor</strong><code>extract_govt_adv_payment_hazard_sheets.py</code></div>
       <div class="arrow">→</div>
-      <div class="box"><strong>Bronze outputs</strong><code>eco-loss-อุทกภัย.raw.csv</code><br /><code>eco-loss-ภัยแล้ง.raw.csv</code><br /><code>eco-loss-วาตภัย.raw.csv</code><br /><code>cri-data-eco-loss.definition.md</code></div>
+      <div class="box"><strong>Bronze outputs</strong><code>govt_adv_payment-อุทกภัย.raw.csv</code><br /><code>govt_adv_payment-ภัยแล้ง.raw.csv</code><br /><code>govt_adv_payment-วาตภัย.raw.csv</code><br /><code>cri-data-govt-adv-payment.definition.md</code></div>
       <div class="arrow">→</div>
       <div class="box"><strong>Province bridge</strong><code>build_province_code_lookup.py</code><br /><code>province_code_lookup.csv</code></div>
       <div class="arrow">→</div>
-      <div class="box"><strong>Silver normalizer</strong><code>normalize_eco_loss_to_silver.py</code></div>
+      <div class="box"><strong>Silver normalizer</strong><code>normalize_govt_adv_payment_to_silver.py</code></div>
       <div class="arrow">→</div>
-      <div class="box"><strong>Silver outputs</strong><code>silver_eco_loss_annual_long.csv</code><br /><code>silver_eco_loss_period_total.csv</code></div>
+      <div class="box"><strong>Silver outputs</strong><code>silver_govt_adv_payment_annual_long.csv</code><br /><code>silver_govt_adv_payment_period_total.csv</code></div>
     </div>
 
     <table>
       <tr><th>Aspect</th><th>Detail</th></tr>
-      <tr><td>Definition preview</td><td>The definition explicitly says this dataset excludes landslide, heat, local own-budget spending, agriculture compensation from another ministry, and donations in [`cri-data-eco-loss.definition.md`](ψ/incubate/DCCE/CRI/data_system/data/0_bronze/2026-06-12_cri_proj_data/definition_sheet_extracts/cri-data-eco-loss.definition.md:16).</td></tr>
+      <tr><td>Definition preview</td><td>The definition explicitly says this dataset excludes landslide, heat, local own-budget spending, agriculture compensation from another ministry, and donations in [`cri-data-govt-adv-payment.definition.md`](ψ/incubate/DCCE/CRI/data_system/data/0_bronze/2026-06-12_cri_proj_data/definition_sheet_extracts/cri-data-govt-adv-payment.definition.md:16).</td></tr>
       <tr><td>Processing logic</td><td>Melt three hazard-specific year-wide province tables into one annual long fact table plus one period-total table. Use province-name lookup to recover `province_code`. Canonical hazard labels come from [`dim_hazard_canonical.csv`](ψ/incubate/DCCE/CRI/data_system/data/2_gold/dim_hazard_canonical.csv:1).</td></tr>
       <tr><td>Known issues</td><td>Initial normalization failed because direct province lookup against the active geography spine snapshot was not province-ready. This was fixed by creating [`province_code_lookup.csv`](ψ/incubate/DCCE/CRI/data_system/data/1_silver/dopa/province_code_lookup.csv:1). Tail rows such as `วงเงินอำนาจอธิบดี`, blank lines, `กทม.`, and `Total` had to be explicitly excluded.</td></tr>
-      <tr><td>Main caution</td><td>This is not a full observed economic-loss census. It is a partial province-level proxy rooted in public disaster-finance categories.</td></tr>
+      <tr><td>Main caution</td><td>This is not a full observed government advance payment census. It is a partial province-level proxy rooted in public disaster-finance categories.</td></tr>
     </table>
 
     <h3>3.4 Population stream</h3>
@@ -205,14 +205,14 @@
     <h2>4. Why the notebook processes data this way</h2>
     <div class="warn">
       The notebook is not using one single perfectly harmonized master dataset. It uses a set of sources that each play a different role:
-      DDPM Gold facts for human impact, Population Silver for denominators, GPP Silver for economic denominator, Eco loss Silver for economic impact, and Heatwave Silver as a companion metric.
+      DDPM Gold facts for human impact, Population Silver for denominators, GPP Silver for economic denominator, Government Advance Payment Silver for economic impact, and Heatwave Silver as a companion metric.
     </div>
 
     <ul>
       <li>Human impact is aggregated to province because the CRI demo is province-level.</li>
       <li>Population is averaged across years to get a stable denominator for rates.</li>
       <li>GPP is averaged across years and filtered to current-market-price GPP because the pilot logic compares monetary loss against current-price economic output.</li>
-      <li>Eco loss is kept annual for scoring and period totals are kept separate so cumulative reporting does not pollute annual score logic.</li>
+      <li>Government Advance Payment is kept annual for scoring and period totals are kept separate so cumulative reporting does not pollute annual score logic.</li>
       <li>Heat mortality is visualized because it matters analytically, but it is intentionally excluded from the CRI score because its time coverage and methodology role do not match the six pilot components.</li>
     </ul>
 
@@ -221,7 +221,7 @@
       <tr><th>Notebook input</th><th>Grain</th><th>Key fields</th><th>Main issue to remember</th></tr>
       <tr><td><code>fact_ddpm_tambon_impact_climate_2560_2567.csv</code></td><td>tambon</td><td><code>subdistrict_code</code>, <code>affected_people_sum</code>, <code>deaths_sum</code></td><td>reported impact, not perfect ground truth</td></tr>
       <tr><td><code>silver_population_annual.csv</code></td><td>mixed geography, filtered to province here</td><td><code>province_code</code>, <code>population_total</code>, <code>geography_level</code></td><td>embedded aggregate semantics and coded zero meanings</td></tr>
-      <tr><td><code>silver_eco_loss_annual_long.csv</code></td><td>province + hazard + year</td><td><code>province_code</code>, <code>canonical_hazard_code</code>, <code>value</code></td><td>partial proxy of economic loss, not full damage census</td></tr>
+      <tr><td><code>silver_govt_adv_payment_annual_long.csv</code></td><td>province + hazard + year</td><td><code>province_code</code>, <code>canonical_hazard_code</code>, <code>value</code></td><td>partial proxy of government advance payment, not full damage census</td></tr>
       <tr><td><code>silver_gpp_annual_long.csv</code></td><td>province + metric + year</td><td><code>province_code</code>, <code>metric_code</code>, <code>value</code></td><td>recent values may be provisional/revised</td></tr>
       <tr><td><code>silver_heatwave_impact_long.csv</code></td><td>province + metric + time_scope</td><td><code>province_code</code>, <code>metric_code</code>, <code>time_scope</code>, <code>value</code></td><td>not a full 2560–2567 annual panel</td></tr>
     </table>
@@ -251,8 +251,8 @@ value, value_type, unit,
 source_system, source_dataset, source_file, source_sheet,
 source_row_number, source_column, source_priority, raw_metric_label</pre>
 
-    <h3>6.3 Eco loss Silver</h3>
-    <pre>silver_eco_loss_annual_long.csv
+    <h3>6.3 Government Advance Payment Silver</h3>
+    <pre>silver_govt_adv_payment_annual_long.csv
 record_id, province_code, province_name_th, location_id, admin_level,
 hazard_code, hazard_name_en, hazard_name_th,
 canonical_hazard_code, canonical_hazard_name_en, canonical_hazard_name_th,
@@ -261,7 +261,7 @@ value, value_type, unit,
 source_system, source_dataset, source_file, source_sheet,
 source_row_number, source_column, raw_value
 
-silver_eco_loss_period_total.csv
+silver_govt_adv_payment_period_total.csv
 record_id, province_code, province_name_th, location_id, admin_level,
 hazard_code, hazard_name_en, hazard_name_th,
 canonical_hazard_code, canonical_hazard_name_en, canonical_hazard_name_th,
@@ -313,10 +313,10 @@ cri_demo_score, cri_demo_rank</pre>
     <h2>7. Bottom-line interpretation</h2>
     <p>
       The pipeline was designed this way because the data are not born in one clean analytical model. Each stream had a different shape, owner, level of completeness, and semantic risk.
-      The Bronze layer kept the source structure close to the original workbook. The Silver layer turned those structures into analysis-ready facts. The notebook then uses those Silver and Gold assets by role: human impact, denominator, economic loss, economic denominator, and companion heat metrics.
+      The Bronze layer kept the source structure close to the original workbook. The Silver layer turned those structures into analysis-ready facts. The notebook then uses those Silver and Gold assets by role: human impact, denominator, government advance payment, economic denominator, and companion heat metrics.
     </p>
     <p>
-      That is why the notebook can already demonstrate a meaningful province-level CRI-style implementation, while still carrying cautions about missing-vs-zero ambiguity, proxy economic-loss logic, provisional GPP, and the non-equivalence of heat mortality to the six official CRI score components.
+      That is why the notebook can already demonstrate a meaningful province-level CRI-style implementation, while still carrying cautions about missing-vs-zero ambiguity, proxy government advance payment logic, provisional GPP, and the non-equivalence of heat mortality to the six official CRI score components.
     </p>
 
   </main>

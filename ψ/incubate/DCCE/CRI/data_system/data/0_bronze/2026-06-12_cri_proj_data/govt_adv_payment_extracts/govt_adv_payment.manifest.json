@@ -1,12 +1,12 @@
 {
-  "workbook_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\CRI Data - Eco loss.xlsx",
-  "output_manifest_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\eco_loss_extracts\\eco-loss.manifest.json",
-  "output_dir": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\eco_loss_extracts",
+  "workbook_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\CRI Data - Government_Advanced_Payment.xlsx",
+  "output_manifest_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\govt_adv_payment_extracts\\govt_adv_payment.manifest.json",
+  "output_dir": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\govt_adv_payment_extracts",
   "exists": true,
   "sheets": [
     {
       "sheet_name": "Eco loss อุทกภัย",
-      "output_csv_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\eco_loss_extracts\\eco-loss-อุทกภัย.raw.csv",
+      "output_csv_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\govt_adv_payment_extracts\\govt_adv_payment-อุทกภัย.raw.csv",
       "worksheet_dimensions": {
         "max_row": 85,
         "max_column": 10
@@ -71,7 +71,7 @@
     },
     {
       "sheet_name": "Eco loss ภัยแล้ง",
-      "output_csv_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\eco_loss_extracts\\eco-loss-ภัยแล้ง.raw.csv",
+      "output_csv_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\govt_adv_payment_extracts\\govt_adv_payment-ภัยแล้ง.raw.csv",
       "worksheet_dimensions": {
         "max_row": 85,
         "max_column": 10
@@ -136,7 +136,7 @@
     },
     {
       "sheet_name": "Eco loss วาตภัย",
-      "output_csv_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\eco_loss_extracts\\eco-loss-วาตภัย.raw.csv",
+      "output_csv_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\govt_adv_payment_extracts\\govt_adv_payment-วาตภัย.raw.csv",
       "worksheet_dimensions": {
         "max_row": 85,
         "max_column": 10

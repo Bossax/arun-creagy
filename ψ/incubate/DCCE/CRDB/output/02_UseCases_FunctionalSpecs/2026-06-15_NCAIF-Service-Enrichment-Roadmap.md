@@ -103,9 +103,41 @@ This roadmap maintains the **Human-Centric Blueprint (v6)** while enriching it w
 
 ### Phase 1: The Alpha Wedge (Months 1-4)
 **Goal**: Prove the "Edge" through one high-value service.
-*   **Action**: Detail the **Loss & Damage Economic Impact Briefing (Service 4)** as the first pilot.
-*   **Focus**: Build the **Service Dossier** (Urgent Case, Outcome, Package, Test) to the same quality as the L&D example.
+*   **Action**: Detail the **Historical Loss & Damage Dossier (Service 4)** as the first pilot.
+*   **Focus**: Bridge the gap between **Government Advance Payments (เงินทดรองราชการ)** and **True Economic Damage** using empirical functions.
 *   **Partner**: Engage **NESDC** and **DDPM** as the first-line "Alpha Customers."
+
+---
+
+## 🧩 Part 3: Alpha Wedge Detail (Service 4: Historical Impact Dossier)
+
+The Alpha Wedge serves as the "Bridge" between Phase 1 (Normalization of Line Agency Data) and Phase 2 (Analytical Enrichment). It transforms raw fiscal records into decision-ready economic evidence.
+
+### 1. The Terminology Bridge
+*   **Input (Raw Source)**: **Government Advance Payments** (เงินทดรองราชการ). 
+    *   *Semantic*: Represents public fiscal outlays for emergency relief.
+    *   *Status*: 2560–2567 Province-level series normalized to Silver.
+*   **Output (Service Goal)**: **Estimated Economic Damage**.
+    *   *Semantic*: Represents the total value of assets destroyed/impaired (OpEx + CapEx).
+    *   *Requirement*: Essential for NESDC macroeconomic sectoral reporting.
+
+### 2. Functional Requirements (The "Hard Atoms")
+*   **Weighting Logic**: Adopt the **Pilot Methodology (2024)** weights:
+    *   Deaths per 100k (22.5%)
+    *   Affected per 100k (15.0%)
+    *   Government Advance Payment per GPP (37.5%)
+*   **Normalization Standard**: Use **Min-Max scaling** for indicator components, followed by a **Final Re-normalization** (0.0 to 1.0) of the aggregate score to ensure cross-provincial comparability.
+*   **Spatial Granularity**: Initial pilot at **Province level** (using Gold DDPM tambon facts aggregated up), with a roadmap to **Tambon-level damage estimation** for Services 2 and 3.
+
+### 3. Methodology Roadmap (Service 4 Pipeline)
+1.  **Normalization**: Complete the terminology refactor from "Eco-Loss" to "Government Advance Payment" (DONE).
+2.  **Harmonization**: Cross-walk Government Advance Payment categories (Flood, Drought, Wind) against sectoral GPP.
+3.  **Estimation**: Apply localized **Damage-to-Relief Ratios** (derived from the Komolafe/Sendai benchmarks) to estimate the total "Alpha" economic wedge.
+4.  **Validation**: Compare estimated totals against historical World Bank/NESDC flood damage reports (e.g., 2011 benchmarks).
+
+---
+*Status: Alpha Wedge Detailed | Service 4 Anchored.*
+
 
 ### Phase 2: Foundation Hardening (Months 5-8)
 **Goal**: Build the "Governance Backbone."

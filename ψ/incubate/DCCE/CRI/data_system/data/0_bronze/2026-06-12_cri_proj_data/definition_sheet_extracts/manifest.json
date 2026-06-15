@@ -3,9 +3,9 @@
   "output_root": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\definition_sheet_extracts",
   "extracts": [
     {
-      "workbook_name": "CRI Data - Eco loss.xlsx",
-      "json_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\definition_sheet_extracts\\cri-data-eco-loss.definition.json",
-      "markdown_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\definition_sheet_extracts\\cri-data-eco-loss.definition.md",
+      "workbook_name": "CRI Data - Government_Advanced_Payment.xlsx",
+      "json_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\definition_sheet_extracts\\cri-data-govt-adv-payment.definition.json",
+      "markdown_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\definition_sheet_extracts\\cri-data-govt-adv-payment.definition.md",
       "row_count": 11,
       "error": null
     },

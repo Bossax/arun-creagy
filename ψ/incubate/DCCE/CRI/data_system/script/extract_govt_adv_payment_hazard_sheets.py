@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 r"""
-Extract Eco loss hazard-sheet tables from the CRI bronze intake workbook.
+Extract Government Advance Payment hazard-sheet tables from the CRI bronze intake workbook.
 
 Run from project root with the CRI data_system venv Python, for example:
-    .\ψ\incubate\DCCE\CRI\data_system\.venv\Scripts\python.exe .\ψ\incubate\DCCE\CRI\data_system\script\extract_eco_loss_hazard_sheets.py
+    .\ψ\incubate\DCCE\CRI\data_system\.venv\Scripts\python.exe .\ψ\incubate\DCCE\CRI\data_system\script\extract_govt_adv_payment_hazard_sheets.py
 
 Outputs:
-- `eco_loss_extracts/eco-loss-อุทกภัย.raw.csv`
-- `eco_loss_extracts/eco-loss-ภัยแล้ง.raw.csv`
-- `eco_loss_extracts/eco-loss-วาตภัย.raw.csv`
-- `eco_loss_extracts/eco-loss.manifest.json`
+- `govt_adv_payment_extracts/govt_adv_payment-อุทกภัย.raw.csv`
+- `govt_adv_payment_extracts/govt_adv_payment-ภัยแล้ง.raw.csv`
+- `govt_adv_payment_extracts/govt_adv_payment-วาตภัย.raw.csv`
+- `govt_adv_payment_extracts/govt_adv_payment.manifest.json`
 """
 
 from __future__ import annotations
@@ -26,14 +26,14 @@ from openpyxl import load_workbook
 SCRIPT_PATH = Path(__file__).resolve()
 PROJECT_ROOT = SCRIPT_PATH.parents[6]
 BRONZE_DIR = PROJECT_ROOT / "ψ" / "incubate" / "DCCE" / "CRI" / "data_system" / "data" / "0_bronze" / "2026-06-12_cri_proj_data"
-WORKBOOK_PATH = BRONZE_DIR / "CRI Data - Eco loss.xlsx"
-OUTPUT_DIR = BRONZE_DIR / "eco_loss_extracts"
-MANIFEST_PATH = OUTPUT_DIR / "eco-loss.manifest.json"
+WORKBOOK_PATH = BRONZE_DIR / "CRI Data - Government_Advanced_Payment.xlsx"
+OUTPUT_DIR = BRONZE_DIR / "govt_adv_payment_extracts"
+MANIFEST_PATH = OUTPUT_DIR / "govt_adv_payment.manifest.json"
 
 SHEET_OUTPUTS = {
-    "Eco loss อุทกภัย": "eco-loss-อุทกภัย.raw.csv",
-    "Eco loss ภัยแล้ง": "eco-loss-ภัยแล้ง.raw.csv",
-    "Eco loss วาตภัย": "eco-loss-วาตภัย.raw.csv",
+    "Eco loss อุทกภัย": "govt_adv_payment-อุทกภัย.raw.csv",
+    "Eco loss ภัยแล้ง": "govt_adv_payment-ภัยแล้ง.raw.csv",
+    "Eco loss วาตภัย": "govt_adv_payment-วาตภัย.raw.csv",
 }
 
 
@@ -112,7 +112,7 @@ def is_numeric_like(value: str) -> bool:
 
 def is_hazard_sheet_title(value: str) -> bool:
     normalized = normalize_text(value).casefold()
-    return normalized.startswith("eco loss")
+    return normalized.startswith("eco loss") or normalized.startswith("govt_adv_payment")
 
 
 def is_data_row_leader(value: str) -> bool:

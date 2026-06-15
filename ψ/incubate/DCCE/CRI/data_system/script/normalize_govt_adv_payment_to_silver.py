@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 r"""
-Normalize the Eco loss bronze hazard-sheet extracts into Silver-ready annual and period-total fact tables.
+Normalize the Government Advance Payment bronze hazard-sheet extracts into Silver-ready annual and period-total fact tables.
 
 Run from project root with the CRI data_system venv Python, for example:
-    .\ψ\incubate\DCCE\CRI\data_system\.venv\Scripts\python.exe .\ψ\incubate\DCCE\CRI\data_system\script\normalize_eco_loss_to_silver.py
+    .\ψ\incubate\DCCE\CRI\data_system\.venv\Scripts\python.exe .\ψ\incubate\DCCE\CRI\data_system\script\normalize_govt_adv_payment_to_silver.py
 
 Outputs:
-- `data/1_silver/eco_loss/silver_eco_loss_annual_long.csv`
-- `data/1_silver/eco_loss/silver_eco_loss_period_total.csv`
-- `data/1_silver/eco_loss/eco_loss_normalization_report.json`
+- `data/1_silver/govt_adv_payment/silver_govt_adv_payment_annual_long.csv`
+- `data/1_silver/govt_adv_payment/silver_govt_adv_payment_period_total.csv`
+- `data/1_silver/govt_adv_payment/govt_adv_payment_normalization_report.json`
 """
 
 from __future__ import annotations
@@ -36,9 +36,9 @@ BRONZE_DIR = (
     / "data"
     / "0_bronze"
     / "2026-06-12_cri_proj_data"
-    / "eco_loss_extracts"
+    / "govt_adv_payment_extracts"
 )
-MANIFEST_PATH = BRONZE_DIR / "eco-loss.manifest.json"
+MANIFEST_PATH = BRONZE_DIR / "govt_adv_payment.manifest.json"
 LOCATION_DIM_PATH = (
     PROJECT_ROOT
     / "ψ"
@@ -95,14 +95,14 @@ OUTPUT_DIR = (
     / "data_system"
     / "data"
     / "1_silver"
-    / "eco_loss"
+    / "govt_adv_payment"
 )
-ANNUAL_OUTPUT_PATH = OUTPUT_DIR / "silver_eco_loss_annual_long.csv"
-PERIOD_OUTPUT_PATH = OUTPUT_DIR / "silver_eco_loss_period_total.csv"
-REPORT_OUTPUT_PATH = OUTPUT_DIR / "eco_loss_normalization_report.json"
+ANNUAL_OUTPUT_PATH = OUTPUT_DIR / "silver_govt_adv_payment_annual_long.csv"
+PERIOD_OUTPUT_PATH = OUTPUT_DIR / "silver_govt_adv_payment_period_total.csv"
+REPORT_OUTPUT_PATH = OUTPUT_DIR / "govt_adv_payment_normalization_report.json"
 
 SOURCE_SYSTEM = "CRI_WORKBOOK_BUNDLE"
-SOURCE_DATASET = "eco_loss"
+SOURCE_DATASET = "govt_adv_payment"
 VALUE_TYPE = "amount"
 UNIT = "baht"
 PERIOD_COLUMN = "2560 - 2567"
@@ -113,7 +113,7 @@ EXPECTED_ROWS_PER_HAZARD = 81
 
 HAZARD_SPECS = {
     "Eco loss อุทกภัย": {
-        "source_file": "eco-loss-อุทกภัย.raw.csv",
+        "source_file": "govt_adv_payment-อุทกภัย.raw.csv",
         "hazard_code": "FLOOD",
         "hazard_name_en": "Flood",
         "hazard_name_th": "อุทกภัย",
@@ -121,7 +121,7 @@ HAZARD_SPECS = {
         "hazard_type_name_th": "อุทกภัย",
     },
     "Eco loss ภัยแล้ง": {
-        "source_file": "eco-loss-ภัยแล้ง.raw.csv",
+        "source_file": "govt_adv_payment-ภัยแล้ง.raw.csv",
         "hazard_code": "DROUGHT",
         "hazard_name_en": "Drought",
         "hazard_name_th": "ภัยแล้ง",
@@ -129,7 +129,7 @@ HAZARD_SPECS = {
         "hazard_type_name_th": "ภัยแล้ง",
     },
     "Eco loss วาตภัย": {
-        "source_file": "eco-loss-วาตภัย.raw.csv",
+        "source_file": "govt_adv_payment-วาตภัย.raw.csv",
         "hazard_code": "WINDSTORM",
         "hazard_name_en": "Windstorm",
         "hazard_name_th": "วาตภัย",

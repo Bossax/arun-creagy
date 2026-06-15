@@ -3,7 +3,7 @@ r"""
 Build a reusable province-level lookup table for Silver joins.
 
 This table is derived from the legacy province boundary crosswalk and is intended
-to support workbook-derived province-only datasets such as Eco loss.
+to support workbook-derived province-only datasets such as Government Advance Payment.
 
 Run from project root with the CRI data_system venv Python, for example:
     .\ψ\incubate\DCCE\CRI\data_system\.venv\Scripts\python.exe .\ψ\incubate\DCCE\CRI\data_system\script\build_province_code_lookup.py

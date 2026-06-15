@@ -21,7 +21,7 @@ PROJECT_ROOT = SCRIPT_PATH.parents[6]
 BRONZE_DIR = PROJECT_ROOT / "ψ" / "incubate" / "DCCE" / "CRI" / "data_system" / "data" / "0_bronze" / "2026-06-12_cri_proj_data"
 
 TARGET_WORKBOOKS = [
-    BRONZE_DIR / "CRI Data - Eco loss.xlsx",
+    BRONZE_DIR / "CRI Data - Government_Advanced_Payment.xlsx",
     BRONZE_DIR / "CRI Data - GPP.xlsx",
     BRONZE_DIR / "CRI Data - Heatwave.xlsx",
     BRONZE_DIR / "CRI Data - Population.xlsx",
@@ -58,6 +58,7 @@ HEADER_HINT_KEYWORDS = {
     "gpp",
     "loss",
     "heatwave",
+    "advance_payment",
 }
 
 

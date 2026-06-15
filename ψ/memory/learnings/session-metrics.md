@@ -34,3 +34,4 @@ Rule (parent CLAUDE.md §"Self-Evaluation Loop"): same friction 3 sessions → f
 | 2026-06-15 12:25 | timestamps-unavailable | CRI workbook normalization, lineage, notebook, html explainer | state-reporting drift, command fragility, metadata-vs-operational distinction | Built end-to-end analytical baseline and explainer artifacts | Declared edits complete before full verification; long PS command pattern | Separate planned/patched/executed/verified states and prefer short execution units |
 | 2026-06-15 15:22 | pillar2-realignment | Strategic Realignment, Enrichment Roadmap, Deviation Purge | Enriched v6 Roadmap | Service 4 Alpha focus | Proactivity Bias (External vs. Groundwork) | Strategic Hallucination (Layer 0 Drift) |
 | 2026-06-15 | designmd-standardization | 04:09 | designmd skill v1.0.0, REGISTRY.json | SUCCESS |
+| 2026-06-15 | terminology-refactor | SUCCESS | Refactored Eco-Loss to Govt Adv Payment and updated weights |

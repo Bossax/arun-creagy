@@ -1,18 +1,18 @@
 {
   "generated_at_utc": "2026-06-14T05:06:52.689361+00:00",
-  "script_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\script\\normalize_eco_loss_to_silver.py",
+  "script_path": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\script\\normalize_govt_adv_payment_to_silver.py",
   "inputs": {
-    "manifest": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\eco_loss_extracts\\eco-loss.manifest.json",
-    "bronze_dir": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\eco_loss_extracts",
+    "manifest": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\govt_adv_payment_extracts\\govt_adv_payment.manifest.json",
+    "bronze_dir": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\0_bronze\\2026-06-12_cri_proj_data\\govt_adv_payment_extracts",
     "location_dim": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\2_gold\\dopa\\dim_location_master.csv",
     "province_lookup": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\1_silver\\dopa\\province_code_lookup.csv",
     "hazard_canonical_dim": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\2_gold\\dim_hazard_canonical.csv",
     "hazard_type_dim": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\2_gold\\dim_hazard_type.csv"
   },
   "outputs": {
-    "annual_csv": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\1_silver\\eco_loss\\silver_eco_loss_annual_long.csv",
-    "period_csv": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\1_silver\\eco_loss\\silver_eco_loss_period_total.csv",
-    "report_json": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\1_silver\\eco_loss\\eco_loss_normalization_report.json"
+    "annual_csv": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\1_silver\\govt_adv_payment\\silver_govt_adv_payment_annual_long.csv",
+    "period_csv": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\1_silver\\govt_adv_payment\\silver_govt_adv_payment_period_total.csv",
+    "report_json": "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\ψ\\incubate\\DCCE\\CRI\\data_system\\data\\1_silver\\govt_adv_payment\\govt_adv_payment_normalization_report.json"
   },
   "issues": [
     "3 province rows could not join to dim_location_master",

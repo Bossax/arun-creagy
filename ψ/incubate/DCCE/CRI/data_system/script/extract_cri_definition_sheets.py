@@ -27,7 +27,7 @@ BRONZE_DIR = PROJECT_ROOT / "ψ" / "incubate" / "DCCE" / "CRI" / "data_system" /
 OUTPUT_DIR = BRONZE_DIR / "definition_sheet_extracts"
 
 TARGET_WORKBOOKS = [
-    BRONZE_DIR / "CRI Data - Eco loss.xlsx",
+    BRONZE_DIR / "CRI Data - Government_Advanced_Payment.xlsx",
     BRONZE_DIR / "CRI Data - GPP.xlsx",
     BRONZE_DIR / "CRI Data - Heatwave.xlsx",
     BRONZE_DIR / "CRI Data - Population.xlsx",
@@ -36,6 +36,7 @@ TARGET_WORKBOOKS = [
 
 def slugify(text: str) -> str:
     text = text.strip().casefold()
+    text = text.replace("government_advanced_payment", "govt-adv-payment")
     text = re.sub(r"[^\w\s-]", "", text)
     text = re.sub(r"[-\s]+", "-", text)
     return text.strip("-") or "workbook"
