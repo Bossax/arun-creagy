@@ -45,7 +45,7 @@ The use-case unit is therefore close to:
 
 Services are a higher-level abstraction created by clustering many use cases.
 
-The process is described in [`บทสรุปความต้องการใช้งานบริการข้อมูลสารสนเทศด้านภูมิอากาศ_v6.md`](บทสรุปความต้องการใช้งานบริการข้อมูลสารสนเทศด้านภูมิอากาศ_v6.md:13):
+The process is described in [`บทสรุปความต้องการใช้งานบริการข้อมูลสารสนเทศด้านภูมิอากาศ_v6.md`](บทสรุปความต้องการใช้งานบริการข้อมูลสารสนเทศด้านภูมิอากาศ_v6.md):
 
 1. process interviews and workshop comments,
 2. identify purposes for using information,
