@@ -35,3 +35,4 @@ Rule (parent CLAUDE.md §"Self-Evaluation Loop"): same friction 3 sessions → f
 | 2026-06-15 15:22 | pillar2-realignment | Strategic Realignment, Enrichment Roadmap, Deviation Purge | Enriched v6 Roadmap | Service 4 Alpha focus | Proactivity Bias (External vs. Groundwork) | Strategic Hallucination (Layer 0 Drift) |
 | 2026-06-15 | designmd-standardization | 04:09 | designmd skill v1.0.0, REGISTRY.json | SUCCESS |
 | 2026-06-15 | terminology-refactor | SUCCESS | Refactored Eco-Loss to Govt Adv Payment and updated weights |
+| 2026-06-16 01:42 | 807c1a97 | CRI Proxy Audit & Methodology Resolution | 1 |
