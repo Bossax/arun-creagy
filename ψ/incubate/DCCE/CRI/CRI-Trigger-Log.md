@@ -31,3 +31,5 @@ This ledger records **conceptual triggers**—the kinetic realizations or extern
 | T-CRI-011 | 2026-06-13 | Stakeholder Requirement for Regional Benchmarking | Strategic requirement | National policy reporting; provincial comparison | High | E-CRI-045, E-CRI-046 | Standardization of Provincial Scoring Protocol | D-CRI-015 | Logged | The need for presentation-ready regional comparisons triggered the move from sub-district percentiles to a standardized provincial Min-Max scoring system. |
 
 
+$T_ENTRY
+| T-CRI-012 | 2026-06-16 | Resolution of the Bangkok Paradox and Methodology Reconciliation | High | Technical Discrepancy | E-CRI-033, E-CRI-034 | Resolved the 90-rank drop in Bangkok by identifying the GPP denominator shift (Agricultural vs Total). |

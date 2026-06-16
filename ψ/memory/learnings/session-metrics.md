@@ -37,3 +37,5 @@ Rule (parent CLAUDE.md §"Self-Evaluation Loop"): same friction 3 sessions → f
 | 2026-06-15 | terminology-refactor | SUCCESS | Refactored Eco-Loss to Govt Adv Payment and updated weights |
 | 2026-06-16 01:42 | 807c1a97 | CRI Proxy Audit & Methodology Resolution | 1 |
 | 2026-06-16 11:28 | 0e78b886 | Hardened CRI sanity checks; identified border population and GPP shifts. |
+| 2026-06-16 | 516e9913 | 4 | 2458 | 0 | Reconciliation of Pilot vs Phase 1 CRI methodologies; Rank Correlation implementation. |
+| 2026-06-16 21:25 | 21:21 | Hardened Phase 1 Demo Notebook (4 Stages) | JSON Syntax Recovery | Standardized high-fidelity CRI Visualization | Surgical notebook editing | JSON parsing failure (missing comma) |
