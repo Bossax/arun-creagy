@@ -33,3 +33,4 @@ This ledger records **conceptual triggers**—the kinetic realizations or extern
 
 $T_ENTRY
 | T-CRI-012 | 2026-06-16 | Resolution of the Bangkok Paradox and Methodology Reconciliation | High | Technical Discrepancy | E-CRI-033, E-CRI-034 | Resolved the 90-rank drop in Bangkok by identifying the GPP denominator shift (Agricultural vs Total). |
+| T-CRI-013 | 2026-06-16 | UI/UX Requirement for Clean Spatial Orientation | Strategic requirement | Visualization standards; spatial orientation | High | E-CRI-047 | Removal of subdistrict clutter in favor of clean provincial boundary overlays. | D-CRI-017 | Logged | The need for presentation-ready granular maps triggered the decommissioning of subdistrict edge lines in the visualizer to improve heatmap readability. |

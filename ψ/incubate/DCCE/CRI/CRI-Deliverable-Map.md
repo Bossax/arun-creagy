@@ -36,3 +36,4 @@ This ledger tracks **Assets**—the hardened physical reality that instantiates 
 
 $D_ENTRY
 | D-CRI-016 | cri_methodology_comparison.ipynb | Project Team, DCCE | Sealed reproducibility and comparison notebook providing the final forensic verdict on Phase 1 vs Pilot rank shifts. | T-CRI-012 | CH-CRI-012 | E-CRI-034, E-CRI-035 | Sealed | Revisit if DDPM Gold historical casualties are significantly revised. | The definitive diagnostic for the 2026 methodology transition. |
+| D-CRI-017 | cri_phase_1_demo.ipynb | Project Team, Web App Devs | Sealed demonstration notebook implementing the 4x2 metric grid and clean boundary overlays. Serves as the visual contract for the interactive web app. | T-CRI-013 | CH-CRI-013 | E-CRI-047 | Sealed | Reference for React/Streamlit mapping implementations. | The definitive visual prototype for Phase 1 distribution. |
