@@ -40,3 +40,4 @@ Rule (parent CLAUDE.md §"Self-Evaluation Loop"): same friction 3 sessions → f
 | 2026-06-16 | 516e9913 | 4 | 2458 | 0 | Reconciliation of Pilot vs Phase 1 CRI methodologies; Rank Correlation implementation. |
 | 2026-06-16 21:25 | 21:21 | Hardened Phase 1 Demo Notebook (4 Stages) | JSON Syntax Recovery | Standardized high-fidelity CRI Visualization | Surgical notebook editing | JSON parsing failure (missing comma) |
 | 2026-06-16 | 23:29 | Hardened CRI Phase 1 Visuals and Demo Seal | 1 | 1 | 0 | Jupyter Notebooks, T-E-D-A |
+| 2026-06-17 | 6b41b511 | methodology-hardening | SHIPPED: silver_household_annual.csv, refactored demo notebook |
