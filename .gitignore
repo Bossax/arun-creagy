@@ -77,4 +77,10 @@ venv_clean/
 *.CPG
 *.qpj
 
- 
+# Heavy JSON/GeoJSON Exports (Do not commit 30MB+ raw boundaries)
+*.geojson
+!*_simple.geojson
+!*manifest.json
+
+# CRI Deployment Bundle
+ψ/outbox/cri_deploy/
