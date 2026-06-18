@@ -80,7 +80,9 @@ def build_province_geojson(dataset: dict[str, Any]) -> dict[str, Any]:
     base_geojson = load_stage1_json(province_asset)
     record_map = {str(item.get("province_code") or ""): item for item in dataset.get("records", []) if item.get("province_code")}
 
+    # Color Scaling
     max_val = max([float(r.get("value") or 0) for r in record_map.values()], default=0.0)
+    color_scheme = (dataset.get("legend") or {}).get("color_scheme", "OrRd")
 
     new_features = []
     for feature in base_geojson.get("features", []):
@@ -89,7 +91,7 @@ def build_province_geojson(dataset: dict[str, Any]) -> dict[str, Any]:
         record = record_map.get(code, {})
         value = float(record.get("value") or 0)
         
-        # Linear scaling (High contrast: White to Dark Red)
+        # Linear scaling
         intensity = (value / max_val) if max_val > 0 else 0.0
         
         new_props = old_props.copy()
@@ -99,11 +101,17 @@ def build_province_geojson(dataset: dict[str, Any]) -> dict[str, Any]:
         new_props["display_value"] = record.get("display_value") if record.get("display_value") is not None else str(record.get("value") or 0)
         new_props["has_data"] = code in record_map
         
-        r = 255 if intensity < 0.5 else int(255 - (intensity - 0.5) * 2 * 55)
-        g = int(255 * (1 - intensity))
-        b = int(255 * (1 - intensity))
+        if color_scheme == "GnBu":
+            # Blue scaling: White [255,255,255] to Dark Blue [0,0,200]
+            r = int(255 * (1 - intensity))
+            g = int(255 * (1 - intensity))
+            b = 255 if intensity < 0.5 else int(255 - (intensity - 0.5) * 2 * 55)
+        else:
+            # Red scaling: White [255,255,255] to Dark Red [200,0,0]
+            r = 255 if intensity < 0.5 else int(255 - (intensity - 0.5) * 2 * 55)
+            g = int(255 * (1 - intensity))
+            b = int(255 * (1 - intensity))
         
-        # Solid RGB (no alpha)
         new_props["fill_color"] = [r, g, b]
         new_props["line_color"] = [80, 80, 80]
         
@@ -183,6 +191,7 @@ def tambon_geojson_for_province(dataset: dict[str, Any], province_code: str) -> 
     # Linear scaling
     raw_values = [float(r.get("value") or 0) for r in record_map.values()]
     max_val = max(raw_values, default=0.0)
+    color_scheme = (dataset.get("legend") or {}).get("color_scheme", "OrRd")
 
     new_features = []
     for feature in base_geojson.get("features", []):
@@ -202,12 +211,17 @@ def tambon_geojson_for_province(dataset: dict[str, Any], province_code: str) -> 
         new_props["display_value"] = record.get("display_value") if record.get("display_value") is not None else str(record.get("value") or 0)
         new_props["has_data"] = code in record_map
         
-        # High contrast: White [255, 255, 255] to Dark Red [200, 0, 0]
-        r = 255 if intensity < 0.5 else int(255 - (intensity - 0.5) * 2 * 55)
-        g = int(255 * (1 - intensity))
-        b = int(255 * (1 - intensity))
+        if color_scheme == "GnBu":
+            # Blue scaling
+            r = int(255 * (1 - intensity))
+            g = int(255 * (1 - intensity))
+            b = 255 if intensity < 0.5 else int(255 - (intensity - 0.5) * 2 * 55)
+        else:
+            # Red scaling
+            r = 255 if intensity < 0.5 else int(255 - (intensity - 0.5) * 2 * 55)
+            g = int(255 * (1 - intensity))
+            b = int(255 * (1 - intensity))
         
-        # Strip alpha channel to force solid rendering in Pydeck
         new_props["fill_color"] = [r, g, b]
         new_props["line_color"] = [80, 80, 80]
         

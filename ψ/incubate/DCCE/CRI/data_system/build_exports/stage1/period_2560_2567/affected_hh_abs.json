@@ -1,6 +1,6 @@
 {
   "metric_key": "affected_hh_abs",
-  "metric_label": "Total Affected Households (Absolute)",
+  "metric_label": " Affected Households (Household)",
   "period_key": "period_2560_2567",
   "period_label": "2560–2567 average",
   "unit_label": "Annual households",

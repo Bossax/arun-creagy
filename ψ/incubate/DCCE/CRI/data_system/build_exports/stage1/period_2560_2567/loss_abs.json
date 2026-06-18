@@ -1,6 +1,6 @@
 {
   "metric_key": "loss_abs",
-  "metric_label": "Government Advance Payment",
+  "metric_label": "Economic Loss",
   "period_key": "period_2560_2567",
   "period_label": "2560–2567 average",
   "unit_label": "THB",
@@ -71,10 +71,10 @@
       "province_code": "22",
       "province_name_th": "จันทบุรี",
       "province_name_en": "CHANTHABURI",
-      "value": 8722324.65125,
+      "value": 8722324.651250001,
       "display_value": "8722324.65125",
       "rank_desc": 46,
-      "normalized_value": 0.043955421639766276
+      "normalized_value": 0.04395542163976628
     },
     {
       "province_code": "24",
@@ -242,10 +242,10 @@
       "province_code": "55",
       "province_name_th": "น่าน",
       "province_name_en": "NAN",
-      "value": 12699775.94375,
+      "value": 12699775.943750001,
       "display_value": "12699775.94375",
       "rank_desc": 33,
-      "normalized_value": 0.06405258104668587
+      "normalized_value": 0.06405258104668589
     },
     {
       "province_code": "38",
@@ -350,28 +350,28 @@
       "province_code": "65",
       "province_name_th": "พิษณุโลก",
       "province_name_en": "PHITSANULOK",
-      "value": 18484558.432499997,
+      "value": 18484558.4325,
       "display_value": "18484558.4325",
       "rank_desc": 21,
-      "normalized_value": 0.09328177513637459
+      "normalized_value": 0.09328177513637462
     },
     {
       "province_code": "76",
       "province_name_th": "เพชรบุรี",
       "province_name_en": "PHETCHABURI",
-      "value": 7959122.742500001,
+      "value": 7959122.7425,
       "display_value": "7959122.7425",
       "rank_desc": 48,
-      "normalized_value": 0.04009913546757954
+      "normalized_value": 0.04009913546757953
     },
     {
       "province_code": "67",
       "province_name_th": "เพชรบูรณ์",
       "province_name_en": "PHETCHABUN",
-      "value": 15092108.043750001,
+      "value": 15092108.04375,
       "display_value": "15092108.04375",
       "rank_desc": 26,
-      "normalized_value": 0.0761404926343526
+      "normalized_value": 0.07614049263435259
     },
     {
       "province_code": "54",
@@ -404,19 +404,19 @@
       "province_code": "49",
       "province_name_th": "มุกดาหาร",
       "province_name_en": "MUKDAHAN",
-      "value": 12918202.12,
+      "value": 12918202.120000001,
       "display_value": "12918202.12",
       "rank_desc": 31,
-      "normalized_value": 0.06515623898236382
+      "normalized_value": 0.06515623898236383
     },
     {
       "province_code": "58",
       "province_name_th": "แม่ฮ่องสอน",
       "province_name_en": "MAE HONG SON",
-      "value": 57549767.035,
+      "value": 57549767.035000004,
       "display_value": "57549767.035",
       "rank_desc": 5,
-      "normalized_value": 0.2906694153142484
+      "normalized_value": 0.29066941531424845
     },
     {
       "province_code": "35",
@@ -485,10 +485,10 @@
       "province_code": "52",
       "province_name_th": "ลำปาง",
       "province_name_en": "LAMPANG",
-      "value": 13401944.116249999,
+      "value": 13401944.11625,
       "display_value": "13401944.11625",
       "rank_desc": 29,
-      "normalized_value": 0.0676004775903361
+      "normalized_value": 0.06760047759033612
     },
     {
       "province_code": "51",
@@ -647,10 +647,10 @@
       "province_code": "39",
       "province_name_th": "หนองบัวลำภู",
       "province_name_en": "NONG BUA LAMPHU",
-      "value": 10635093.450000001,
+      "value": 10635093.45,
       "display_value": "10635093.45",
       "rank_desc": 39,
-      "normalized_value": 0.053620208617685225
+      "normalized_value": 0.05362020861768522
     },
     {
       "province_code": "15",
@@ -744,7 +744,7 @@
       {
         "province_code": "58",
         "province_name_th": "แม่ฮ่องสอน",
-        "value": 57549767.035,
+        "value": 57549767.035000004,
         "display_value": "57549767.035",
         "rank_desc": 5,
         "province_name_en": "MAE HONG SON"

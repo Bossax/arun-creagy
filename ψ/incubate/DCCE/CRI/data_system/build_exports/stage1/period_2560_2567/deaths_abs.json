@@ -1,6 +1,6 @@
 {
   "metric_key": "deaths_abs",
-  "metric_label": "Total Deaths (Absolute)",
+  "metric_label": "Deaths (Count)",
   "period_key": "period_2560_2567",
   "period_label": "2560–2567 average",
   "unit_label": "Annual deaths",

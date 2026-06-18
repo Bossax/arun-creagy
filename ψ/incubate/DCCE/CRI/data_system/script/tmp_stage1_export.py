@@ -359,8 +359,9 @@ def main():
     hh_annual = hh[hh["year_be"].isin(period_years)].groupby(["province_code", "year_be"], dropna=False)["household_total"].sum().reset_index()
     hh_avg = hh_annual.groupby("province_code", dropna=False)["household_total"].mean().reset_index()
     gpp_avg = gpp[gpp["metric_code"] == "GPP_CURRENT_MARKET_PRICE"].groupby("province_code", dropna=False)["value"].mean().reset_index().rename(columns={"value": "gpp_avg"})
-    loss_avg = loss.groupby("province_code", dropna=False)["value"].sum().reset_index()
-    loss_avg["loss_abs"] = (loss_avg["value"] / 8.0)  # Keep in THB (Government Advance Payment)
+    
+    loss_annual = loss[loss["year_be"].isin(period_years)].groupby(["province_code", "year_be"], dropna=False)["value"].sum().reset_index()
+    loss_avg = loss_annual.groupby("province_code", dropna=False)["value"].mean().reset_index().rename(columns={"value": "loss_abs"})
 
     prov_avg = prov_lookup.merge(human[["province_code", "deaths_abs", "affected_hh_abs"]], on="province_code", how="left")
     prov_avg = prov_avg.merge(pop_avg, on="province_code", how="left")
@@ -388,12 +389,12 @@ def main():
     prov_avg["province_name_en"] = prov_avg["province_name_en"].where(pd.notna(prov_avg["province_name_en"]), None)
 
     avg_specs = [
-        ("deaths_abs", "Total Deaths (Absolute)", "Annual deaths"),
+        ("deaths_abs", "Deaths (Count)", "Annual deaths"),
         ("deaths_rate", "Death Rate", "Per 100,000 population"),
-        ("affected_hh_abs", "Total Affected Households (Absolute)", "Annual households"),
+        ("affected_hh_abs", " Affected Households (Household)", "Annual households"),
         ("affected_rate", "Affected Rate", "Per 100 households"),
-        ("loss_abs", "Government Advance Payment", "THB"),
-        ("loss_per_gpp", "Relief per Unit GPP", "Percentage points (%)"),
+        ("loss_abs", "Economic Loss", "THB"),
+        ("loss_per_gpp", "Economic Loss per GPP", "Percentage points (%)"),
         ("cri_score", "CRI Phase 1 Score", "Score [0-1]"),
     ]
     for metric_key, metric_label, unit_label in avg_specs:

@@ -1,13 +1,13 @@
 {
   "metric_key": "loss_per_gpp",
-  "metric_label": "Relief per Unit GPP",
+  "metric_label": "Economic Loss per GPP",
   "period_key": "period_2560_2567",
   "period_label": "2560–2567 average",
   "unit_label": "Percentage points (%)",
   "source_mode": "average_window",
   "legend": {
     "min": 5.554606559787785e-06,
-    "max": 0.3669172089537404,
+    "max": 0.36691720895374047,
     "display_min": "0.000006",
     "display_max": "0.366917",
     "color_scheme": "OrRd"
@@ -20,7 +20,7 @@
       "value": 0.012723701707395018,
       "display_value": "0.012724",
       "rank_desc": 41,
-      "normalized_value": 0.034662695910991734
+      "normalized_value": 0.03466269591099173
     },
     {
       "province_code": "10",
@@ -29,7 +29,7 @@
       "value": 0.0014761750027886685,
       "display_value": "0.001476",
       "rank_desc": 65,
-      "normalized_value": 0.0040081048906594405
+      "normalized_value": 0.00400810489065944
     },
     {
       "province_code": "71",
@@ -38,7 +38,7 @@
       "value": 0.006744995973111527,
       "display_value": "0.006745",
       "rank_desc": 56,
-      "normalized_value": 0.018368022074803647
+      "normalized_value": 0.018368022074803644
     },
     {
       "province_code": "46",
@@ -47,7 +47,7 @@
       "value": 0.009570554199516048,
       "display_value": "0.009571",
       "rank_desc": 52,
-      "normalized_value": 0.026068944607318543
+      "normalized_value": 0.02606894460731854
     },
     {
       "province_code": "62",
@@ -56,7 +56,7 @@
       "value": 0.012582006315845287,
       "display_value": "0.012582",
       "rank_desc": 42,
-      "normalized_value": 0.03427651196215577
+      "normalized_value": 0.03427651196215576
     },
     {
       "province_code": "40",
@@ -65,13 +65,13 @@
       "value": 0.010476604118978444,
       "display_value": "0.010477",
       "rank_desc": 50,
-      "normalized_value": 0.02853833992013428
+      "normalized_value": 0.028538339920134274
     },
     {
       "province_code": "22",
       "province_name_th": "จันทบุรี",
       "province_name_en": "CHANTHABURI",
-      "value": 0.006234615967667041,
+      "value": 0.006234615967667042,
       "display_value": "0.006235",
       "rank_desc": 57,
       "normalized_value": 0.01697700601031649
@@ -83,7 +83,7 @@
       "value": 0.0006713373012301364,
       "display_value": "0.000671",
       "rank_desc": 69,
-      "normalized_value": 0.0018145585913724315
+      "normalized_value": 0.001814558591372431
     },
     {
       "province_code": "20",
@@ -92,7 +92,7 @@
       "value": 0.0005423672247273867,
       "display_value": "0.000542",
       "rank_desc": 70,
-      "normalized_value": 0.0014630568743386218
+      "normalized_value": 0.0014630568743386216
     },
     {
       "province_code": "18",
@@ -101,7 +101,7 @@
       "value": 0.030381701310933568,
       "display_value": "0.030382",
       "rank_desc": 17,
-      "normalized_value": 0.0827887213297159
+      "normalized_value": 0.08278872132971589
     },
     {
       "province_code": "36",
@@ -110,7 +110,7 @@
       "value": 0.009489654844322102,
       "display_value": "0.00949",
       "rank_desc": 53,
-      "normalized_value": 0.025848457320432318
+      "normalized_value": 0.025848457320432314
     },
     {
       "province_code": "86",
@@ -119,7 +119,7 @@
       "value": 0.02361597366883408,
       "display_value": "0.023616",
       "rank_desc": 22,
-      "normalized_value": 0.06434905727996731
+      "normalized_value": 0.0643490572799673
     },
     {
       "province_code": "57",
@@ -128,7 +128,7 @@
       "value": 0.01791909738112002,
       "display_value": "0.017919",
       "rank_desc": 32,
-      "normalized_value": 0.04882249599411745
+      "normalized_value": 0.04882249599411744
     },
     {
       "province_code": "50",
@@ -137,7 +137,7 @@
       "value": 0.006792104319947268,
       "display_value": "0.006792",
       "rank_desc": 55,
-      "normalized_value": 0.018496413599786838
+      "normalized_value": 0.018496413599786835
     },
     {
       "province_code": "92",
@@ -146,7 +146,7 @@
       "value": 0.013422036279904225,
       "display_value": "0.013422",
       "rank_desc": 40,
-      "normalized_value": 0.03656597307386
+      "normalized_value": 0.036565973073859996
     },
     {
       "province_code": "23",
@@ -155,7 +155,7 @@
       "value": 0.013811998446202779,
       "display_value": "0.013812",
       "rank_desc": 39,
-      "normalized_value": 0.03762879613134065
+      "normalized_value": 0.037628796131340646
     },
     {
       "province_code": "63",
@@ -164,7 +164,7 @@
       "value": 0.134060600881913,
       "display_value": "0.134061",
       "rank_desc": 2,
-      "normalized_value": 0.3653605566546193
+      "normalized_value": 0.36536055665461925
     },
     {
       "province_code": "26",
@@ -173,7 +173,7 @@
       "value": 0.01825798539775996,
       "display_value": "0.018258",
       "rank_desc": 31,
-      "normalized_value": 0.049746118922483956
+      "normalized_value": 0.04974611892248394
     },
     {
       "province_code": "73",
@@ -182,7 +182,7 @@
       "value": 0.00017055169653954906,
       "display_value": "0.000171",
       "rank_desc": 74,
-      "normalized_value": 0.0004496916029373029
+      "normalized_value": 0.0004496916029373028
     },
     {
       "province_code": "48",
@@ -191,7 +191,7 @@
       "value": 0.02047344341941586,
       "display_value": "0.020473",
       "rank_desc": 28,
-      "normalized_value": 0.05578424280164419
+      "normalized_value": 0.055784242801644186
     },
     {
       "province_code": "30",
@@ -200,7 +200,7 @@
       "value": 0.0022335671000836502,
       "display_value": "0.002234",
       "rank_desc": 63,
-      "normalized_value": 0.006072340486126024
+      "normalized_value": 0.006072340486126023
     },
     {
       "province_code": "80",
@@ -209,7 +209,7 @@
       "value": 0.10959194889856845,
       "display_value": "0.109592",
       "rank_desc": 3,
-      "normalized_value": 0.29867242698242386
+      "normalized_value": 0.2986724269824238
     },
     {
       "province_code": "60",
@@ -218,7 +218,7 @@
       "value": 0.0037878019465311373,
       "display_value": "0.003788",
       "rank_desc": 59,
-      "normalized_value": 0.010308332524080841
+      "normalized_value": 0.01030833252408084
     },
     {
       "province_code": "12",
@@ -227,7 +227,7 @@
       "value": 0.00018239020228536052,
       "display_value": "0.000182",
       "rank_desc": 73,
-      "normalized_value": 0.00048195687880289197
+      "normalized_value": 0.0004819568788028919
     },
     {
       "province_code": "96",
@@ -236,13 +236,13 @@
       "value": 0.08110605952677642,
       "display_value": "0.081106",
       "rank_desc": 5,
-      "normalized_value": 0.22103551075397943
+      "normalized_value": 0.2210355107539794
     },
     {
       "province_code": "55",
       "province_name_th": "น่าน",
       "province_name_en": "NAN",
-      "value": 0.035413542527252345,
+      "value": 0.03541354252725235,
       "display_value": "0.035414",
       "rank_desc": 15,
       "normalized_value": 0.09650276163533543
@@ -254,7 +254,7 @@
       "value": 0.009972016017750883,
       "display_value": "0.009972",
       "rank_desc": 51,
-      "normalized_value": 0.027163109410966238
+      "normalized_value": 0.027163109410966235
     },
     {
       "province_code": "31",
@@ -263,7 +263,7 @@
       "value": 0.021416852561636404,
       "display_value": "0.021417",
       "rank_desc": 26,
-      "normalized_value": 0.05835545887244217
+      "normalized_value": 0.05835545887244216
     },
     {
       "province_code": "13",
@@ -272,7 +272,7 @@
       "value": 0.0003696247898608622,
       "display_value": "0.00037",
       "rank_desc": 71,
-      "normalized_value": 0.0009922557078456342
+      "normalized_value": 0.000992255707845634
     },
     {
       "province_code": "77",
@@ -281,7 +281,7 @@
       "value": 0.01136037845899172,
       "display_value": "0.01136",
       "rank_desc": 44,
-      "normalized_value": 0.030947024216591727
+      "normalized_value": 0.03094702421659172
     },
     {
       "province_code": "25",
@@ -290,7 +290,7 @@
       "value": 0.0007862910249499724,
       "display_value": "0.000786",
       "rank_desc": 67,
-      "normalized_value": 0.002127859415584093
+      "normalized_value": 0.0021278594155840925
     },
     {
       "province_code": "94",
@@ -299,7 +299,7 @@
       "value": 0.07857758835185603,
       "display_value": "0.078578",
       "rank_desc": 6,
-      "normalized_value": 0.21414428463738436
+      "normalized_value": 0.21414428463738433
     },
     {
       "province_code": "14",
@@ -308,7 +308,7 @@
       "value": 0.003602178638700046,
       "display_value": "0.003602",
       "rank_desc": 60,
-      "normalized_value": 0.009802425160191412
+      "normalized_value": 0.00980242516019141
     },
     {
       "province_code": "56",
@@ -317,7 +317,7 @@
       "value": 0.056836986581977875,
       "display_value": "0.056837",
       "rank_desc": 8,
-      "normalized_value": 0.15489132411597595
+      "normalized_value": 0.15489132411597592
     },
     {
       "province_code": "82",
@@ -335,7 +335,7 @@
       "value": 0.08830987756178185,
       "display_value": "0.08831",
       "rank_desc": 4,
-      "normalized_value": 0.24066916901927127
+      "normalized_value": 0.24066916901927124
     },
     {
       "province_code": "66",
@@ -344,13 +344,13 @@
       "value": 0.04440005539675462,
       "display_value": "0.0444",
       "rank_desc": 12,
-      "normalized_value": 0.12099506860631822
+      "normalized_value": 0.12099506860631819
     },
     {
       "province_code": "65",
       "province_name_th": "พิษณุโลก",
       "province_name_en": "PHITSANULOK",
-      "value": 0.017734507998467274,
+      "value": 0.017734507998467278,
       "display_value": "0.017735",
       "rank_desc": 34,
       "normalized_value": 0.048319406543385304
@@ -359,10 +359,10 @@
       "province_code": "76",
       "province_name_th": "เพชรบุรี",
       "province_name_en": "PHETCHABURI",
-      "value": 0.010654456080083037,
+      "value": 0.010654456080083035,
       "display_value": "0.010654",
       "rank_desc": 49,
-      "normalized_value": 0.029023066853709156
+      "normalized_value": 0.029023066853709145
     },
     {
       "province_code": "67",
@@ -371,7 +371,7 @@
       "value": 0.01779416266088294,
       "display_value": "0.017794",
       "rank_desc": 33,
-      "normalized_value": 0.04848199244576501
+      "normalized_value": 0.048481992445765
     },
     {
       "province_code": "54",
@@ -380,7 +380,7 @@
       "value": 0.021652211162136174,
       "display_value": "0.021652",
       "rank_desc": 25,
-      "normalized_value": 0.05899691737535761
+      "normalized_value": 0.0589969173753576
     },
     {
       "province_code": "83",
@@ -398,7 +398,7 @@
       "value": 0.029696544142189415,
       "display_value": "0.029697",
       "rank_desc": 20,
-      "normalized_value": 0.08092135854462475
+      "normalized_value": 0.08092135854462473
     },
     {
       "province_code": "49",
@@ -407,13 +407,13 @@
       "value": 0.0455926312499694,
       "display_value": "0.045593",
       "rank_desc": 10,
-      "normalized_value": 0.12424537651855022
+      "normalized_value": 0.12424537651855021
     },
     {
       "province_code": "58",
       "province_name_th": "แม่ฮ่องสอน",
       "province_name_en": "MAE HONG SON",
-      "value": 0.3669172089537404,
+      "value": 0.36691720895374047,
       "display_value": "0.366917",
       "rank_desc": 1,
       "normalized_value": 1.0
@@ -425,7 +425,7 @@
       "value": 0.021735139042070813,
       "display_value": "0.021735",
       "rank_desc": 24,
-      "normalized_value": 0.05922293330849058
+      "normalized_value": 0.059222933308490565
     },
     {
       "province_code": "95",
@@ -434,7 +434,7 @@
       "value": 0.017522108385622147,
       "display_value": "0.017522",
       "rank_desc": 35,
-      "normalized_value": 0.047740521652898424
+      "normalized_value": 0.04774052165289842
     },
     {
       "province_code": "45",
@@ -443,7 +443,7 @@
       "value": 0.021738447740661918,
       "display_value": "0.021738",
       "rank_desc": 23,
-      "normalized_value": 0.05923195100676182
+      "normalized_value": 0.05923195100676181
     },
     {
       "province_code": "85",
@@ -461,7 +461,7 @@
       "value": 0.0003047962674760405,
       "display_value": "0.000305",
       "rank_desc": 72,
-      "normalized_value": 0.0008155686999058989
+      "normalized_value": 0.0008155686999058988
     },
     {
       "province_code": "70",
@@ -470,7 +470,7 @@
       "value": 0.0011999941651763934,
       "display_value": "0.0012",
       "rank_desc": 66,
-      "normalized_value": 0.003255387351327898
+      "normalized_value": 0.0032553873513278975
     },
     {
       "province_code": "16",
@@ -479,13 +479,13 @@
       "value": 0.011266939090213318,
       "display_value": "0.011267",
       "rank_desc": 45,
-      "normalized_value": 0.03069235972809339
+      "normalized_value": 0.030692359728093387
     },
     {
       "province_code": "52",
       "province_name_th": "ลำปาง",
       "province_name_en": "LAMPANG",
-      "value": 0.018403857308865693,
+      "value": 0.018403857308865696,
       "display_value": "0.018404",
       "rank_desc": 30,
       "normalized_value": 0.05014368577373394
@@ -497,7 +497,7 @@
       "value": 0.019637052012561922,
       "display_value": "0.019637",
       "rank_desc": 29,
-      "normalized_value": 0.053504698401938305
+      "normalized_value": 0.0535046984019383
     },
     {
       "province_code": "42",
@@ -515,7 +515,7 @@
       "value": 0.0366878736938914,
       "display_value": "0.036688",
       "rank_desc": 13,
-      "normalized_value": 0.0999758897072861
+      "normalized_value": 0.09997588970728609
     },
     {
       "province_code": "47",
@@ -524,7 +524,7 @@
       "value": 0.010994532571196298,
       "display_value": "0.010995",
       "rank_desc": 46,
-      "normalized_value": 0.029949928911874993
+      "normalized_value": 0.02994992891187499
     },
     {
       "province_code": "90",
@@ -533,7 +533,7 @@
       "value": 0.0109167576929992,
       "display_value": "0.010917",
       "rank_desc": 47,
-      "normalized_value": 0.029737957236198796
+      "normalized_value": 0.029737957236198792
     },
     {
       "province_code": "91",
@@ -542,7 +542,7 @@
       "value": 0.004888024702472965,
       "display_value": "0.004888",
       "rank_desc": 58,
-      "normalized_value": 0.013306936528359129
+      "normalized_value": 0.013306936528359126
     },
     {
       "province_code": "11",
@@ -560,7 +560,7 @@
       "value": 0.00012223452151660465,
       "display_value": "0.000122",
       "rank_desc": 75,
-      "normalized_value": 0.00031800547509022844
+      "normalized_value": 0.0003180054750902284
     },
     {
       "province_code": "74",
@@ -578,7 +578,7 @@
       "value": 0.00819258641843125,
       "display_value": "0.008193",
       "rank_desc": 54,
-      "normalized_value": 0.022313359946110337
+      "normalized_value": 0.022313359946110334
     },
     {
       "province_code": "19",
@@ -587,7 +587,7 @@
       "value": 0.0025747298711139297,
       "display_value": "0.002575",
       "rank_desc": 62,
-      "normalized_value": 0.007002163147761795
+      "normalized_value": 0.007002163147761794
     },
     {
       "province_code": "17",
@@ -605,7 +605,7 @@
       "value": 0.044735454788092405,
       "display_value": "0.044735",
       "rank_desc": 11,
-      "normalized_value": 0.12190918345484908
+      "normalized_value": 0.12190918345484905
     },
     {
       "province_code": "72",
@@ -623,7 +623,7 @@
       "value": 0.029988044292782234,
       "display_value": "0.029988",
       "rank_desc": 19,
-      "normalized_value": 0.0817158281318922
+      "normalized_value": 0.08171582813189218
     },
     {
       "province_code": "32",
@@ -632,7 +632,7 @@
       "value": 0.010830684416512068,
       "display_value": "0.010831",
       "rank_desc": 48,
-      "normalized_value": 0.029503368676616855
+      "normalized_value": 0.02950336867661685
     },
     {
       "province_code": "43",
@@ -641,16 +641,16 @@
       "value": 0.02068843016677233,
       "display_value": "0.020688",
       "rank_desc": 27,
-      "normalized_value": 0.05637017880233891
+      "normalized_value": 0.0563701788023389
     },
     {
       "province_code": "39",
       "province_name_th": "หนองบัวลำภู",
       "province_name_en": "NONG BUA LAMPHU",
-      "value": 0.03494405474603063,
+      "value": 0.03494405474603062,
       "display_value": "0.034944",
       "rank_desc": 16,
-      "normalized_value": 0.09522319535375454
+      "normalized_value": 0.0952231953537545
     },
     {
       "province_code": "15",
@@ -659,7 +659,7 @@
       "value": 0.035888414270565994,
       "display_value": "0.035888",
       "rank_desc": 14,
-      "normalized_value": 0.09779700164566858
+      "normalized_value": 0.09779700164566857
     },
     {
       "province_code": "37",
@@ -668,7 +668,7 @@
       "value": 0.05040139201828638,
       "display_value": "0.050401",
       "rank_desc": 9,
-      "normalized_value": 0.13735142183311747
+      "normalized_value": 0.13735142183311744
     },
     {
       "province_code": "41",
@@ -677,7 +677,7 @@
       "value": 0.014469834717533969,
       "display_value": "0.01447",
       "rank_desc": 38,
-      "normalized_value": 0.03942169712954315
+      "normalized_value": 0.039421697129543146
     },
     {
       "province_code": "53",
@@ -686,7 +686,7 @@
       "value": 0.0301076783635888,
       "display_value": "0.030108",
       "rank_desc": 18,
-      "normalized_value": 0.08204188501612887
+      "normalized_value": 0.08204188501612886
     },
     {
       "province_code": "61",
@@ -695,7 +695,7 @@
       "value": 0.06436384191551721,
       "display_value": "0.064364",
       "rank_desc": 7,
-      "normalized_value": 0.17540540494268425
+      "normalized_value": 0.17540540494268422
     },
     {
       "province_code": "34",
@@ -704,7 +704,7 @@
       "value": 0.014978897851064972,
       "display_value": "0.014979",
       "rank_desc": 37,
-      "normalized_value": 0.040809124123206635
+      "normalized_value": 0.04080912412320663
     }
   ],
   "rankings": {
@@ -712,7 +712,7 @@
       {
         "province_code": "58",
         "province_name_th": "แม่ฮ่องสอน",
-        "value": 0.3669172089537404,
+        "value": 0.36691720895374047,
         "display_value": "0.366917",
         "rank_desc": 1,
         "province_name_en": "MAE HONG SON"

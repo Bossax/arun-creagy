@@ -36,7 +36,7 @@ def render() -> None:
 
             ### 6. Known limitations
             - **Affected Rate Interpretation**: The "Affected Rate" represents *incidents per 100 households*. Because a single household can be hit by multiple independent disasters in one year, this rate can mathematically exceed 100%.
-            - **Economic Metrics**: The primary economic proxy is **Government Advance Payment** (เงินทดรองราชการ) for relief, measured in **THB**. This represents the direct fiscal cost of recovery. **Loss per GPP** is calculated as a **Percentage Point (%)** of the Gross Provincial Product (GPP), where GPP is denominated in **Million THB**.
+            - **Economic Metrics**: The primary economic proxy is **Government Advance Payment** (เงินทดรองราชการ) for relief, measured in **THB**. This represents the direct fiscal cost of recovery. **Loss per GPP** is calculated as a **Percentage Point (%)** of the Gross Provincial Product (GPP), where GPP is denominated in **Million THB**. It is important to note that these figures represent government advance payments accounted for by DDPM from various sources of advance payment made by line agencies to recover and relief disaster in provinces.
             - **Government Relief Caps**: These emergency funds may hit administrative ceilings (e.g., 20M THB/event), potentially understating absolute total damage but providing a reliable indicator of provincial fiscal stress.
 
             ### 7. Data Lineage & Metadata
