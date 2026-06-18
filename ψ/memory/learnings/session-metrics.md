@@ -42,3 +42,5 @@ Rule (parent CLAUDE.md §"Self-Evaluation Loop"): same friction 3 sessions → f
 | 2026-06-16 | 23:29 | Hardened CRI Phase 1 Visuals and Demo Seal | 1 | 1 | 0 | Jupyter Notebooks, T-E-D-A |
 | 2026-06-17 | 6b41b511 | methodology-hardening | SHIPPED: silver_household_annual.csv, refactored demo notebook |
 | 2026-06-18 | Economic Metrics & Unit Fix | 4 | ae7f1 | Success |
+| 2026-06-18 | 1777386833888 | CRI | Dashboard v3.1 Hardening | 1.0 | 4 | SEALED |
+| 2026-06-18 19:25 | fa71319f | CRI Cloud Deployment Bundle | Dependency Mismatch (GDAL) | SUCCESS | Runtime dependency bloat | Build failure (fiona) |
