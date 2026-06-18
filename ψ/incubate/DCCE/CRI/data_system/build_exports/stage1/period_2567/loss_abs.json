@@ -1,9 +1,9 @@
 {
   "metric_key": "loss_abs",
-  "metric_label": "Total Economic Loss",
+  "metric_label": "Government Advance Payment",
   "period_key": "period_2567",
   "period_label": "2567 only",
-  "unit_label": "Million THB",
+  "unit_label": "THB",
   "source_mode": "single_year",
   "legend": {
     "min": 0.0,

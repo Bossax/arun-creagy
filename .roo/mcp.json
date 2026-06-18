@@ -14,7 +14,8 @@
 			"alwaysAllow": [
 				"arra_threads",
 				"arra_search",
-				"arra_trace"
+				"arra_trace",
+				"arra_handoff"
 			]
 		},
 		"notebooklm": {

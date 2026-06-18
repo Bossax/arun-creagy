@@ -340,18 +340,27 @@ def main():
     tambon_lookup = tambon_lookup_from_shp(tambon_gdf)
 
     # Province metrics for 2560-2567 average
-    human = ddpm.groupby(["province_code", "province_name_th"], dropna=False).agg(
+    human = ddpm.groupby(["province_code"], dropna=False).agg(
         deaths_sum=("deaths_sum", "sum"),
         affected_households_sum=("affected_households_sum", "sum"),
     ).reset_index()
     human["deaths_abs"] = human["deaths_sum"] / 8.0
     human["affected_hh_abs"] = human["affected_households_sum"] / 8.0
 
-    pop_avg = pop[pop["geography_level"] == "province"].groupby("province_code", dropna=False)["population_total"].mean().reset_index()
-    hh_avg = hh.groupby("province_code", dropna=False)["household_total"].mean().reset_index()
+    # Ensure we only average the specific 8-year period for population and households
+    period_years = [str(y) for y in range(2560, 2568)]
+    
+    # Correct multi-step aggregation:
+    # 1. Sum tambons to get Province Total per Year
+    # 2. Average the Annual Province Totals
+    pop_annual = pop[pop["year_be"].isin(period_years)].groupby(["province_code", "year_be"], dropna=False)["population_total"].sum().reset_index()
+    pop_avg = pop_annual.groupby("province_code", dropna=False)["population_total"].mean().reset_index()
+    
+    hh_annual = hh[hh["year_be"].isin(period_years)].groupby(["province_code", "year_be"], dropna=False)["household_total"].sum().reset_index()
+    hh_avg = hh_annual.groupby("province_code", dropna=False)["household_total"].mean().reset_index()
     gpp_avg = gpp[gpp["metric_code"] == "GPP_CURRENT_MARKET_PRICE"].groupby("province_code", dropna=False)["value"].mean().reset_index().rename(columns={"value": "gpp_avg"})
     loss_avg = loss.groupby("province_code", dropna=False)["value"].sum().reset_index()
-    loss_avg["loss_abs"] = loss_avg["value"] / 8.0
+    loss_avg["loss_abs"] = (loss_avg["value"] / 8.0)  # Keep in THB (Government Advance Payment)
 
     prov_avg = prov_lookup.merge(human[["province_code", "deaths_abs", "affected_hh_abs"]], on="province_code", how="left")
     prov_avg = prov_avg.merge(pop_avg, on="province_code", how="left")
@@ -360,7 +369,12 @@ def main():
     prov_avg = prov_avg.merge(loss_avg[["province_code", "loss_abs"]], on="province_code", how="left")
     prov_avg["deaths_rate"] = prov_avg["deaths_abs"] / prov_avg["population_total"] * 100000
     prov_avg["affected_rate"] = prov_avg["affected_hh_abs"] / prov_avg["household_total"] * 100
-    prov_avg["loss_per_gpp"] = prov_avg["loss_abs"] / prov_avg["gpp_avg"]
+    
+    # GPP is in Million THB, Relief (loss_abs) is in THB.
+    # Ratio (%) = (Relief_THB / (GPP_Million_THB * 1,000,000)) * 100
+    gpp_thb = prov_avg["gpp_avg"] * 1_000_000
+    prov_avg["loss_per_gpp"] = (prov_avg["loss_abs"] / gpp_thb) * 100.0 
+    
     for c in ["deaths_abs", "deaths_rate", "affected_hh_abs", "affected_rate", "loss_abs", "loss_per_gpp"]:
         prov_avg[f"s_{c}"] = minmax(prov_avg[c])
     prov_avg["cri_score"] = (
@@ -378,8 +392,8 @@ def main():
         ("deaths_rate", "Death Rate", "Per 100,000 population"),
         ("affected_hh_abs", "Total Affected Households (Absolute)", "Annual households"),
         ("affected_rate", "Affected Rate", "Per 100 households"),
-        ("loss_abs", "Total Economic Loss", "Million THB"),
-        ("loss_per_gpp", "Loss per Unit GPP", "Ratio"),
+        ("loss_abs", "Government Advance Payment", "THB"),
+        ("loss_per_gpp", "Relief per Unit GPP", "Percentage points (%)"),
         ("cri_score", "CRI Phase 1 Score", "Score [0-1]"),
     ]
     for metric_key, metric_label, unit_label in avg_specs:
@@ -400,6 +414,7 @@ def main():
     hh_2567 = hh[hh["year_be"] == "2567"].groupby("province_code", dropna=False)["household_total"].mean().reset_index()
     gpp_2567 = gpp[(gpp["metric_code"] == "GPP_CURRENT_MARKET_PRICE") & (gpp["year_be"] == "2567")].groupby("province_code", dropna=False)["value"].mean().reset_index().rename(columns={"value": "gpp_avg"})
     loss_2567 = loss[loss["year_be"] == "2567"].groupby("province_code", dropna=False)["value"].sum().reset_index().rename(columns={"value": "loss_abs"})
+    # loss_2567["loss_abs"] is already in THB from sum
 
     prov_2567 = prov_lookup.merge(human_2567[["province_code", "deaths_abs", "affected_hh_abs"]], on="province_code", how="left")
     prov_2567 = prov_2567.merge(pop_2567, on="province_code", how="left")
@@ -408,7 +423,11 @@ def main():
     prov_2567 = prov_2567.merge(loss_2567, on="province_code", how="left")
     prov_2567["deaths_rate"] = prov_2567["deaths_abs"] / prov_2567["population_total"] * 100000
     prov_2567["affected_rate"] = prov_2567["affected_hh_abs"] / prov_2567["household_total"] * 100
-    prov_2567["loss_per_gpp"] = prov_2567["loss_abs"] / prov_2567["gpp_avg"]
+    
+    # Ratio calculation for 2567
+    gpp_thb_2567 = prov_2567["gpp_avg"] * 1_000_000
+    prov_2567["loss_per_gpp"] = (prov_2567["loss_abs"] / gpp_thb_2567) * 100.0 
+
     for c in ["deaths_abs", "deaths_rate", "affected_hh_abs", "affected_rate", "loss_abs", "loss_per_gpp"]:
         prov_2567[f"s_{c}"] = minmax(prov_2567[c])
     prov_2567["cri_score"] = (
@@ -420,6 +439,17 @@ def main():
         + prov_2567["s_loss_per_gpp"] * 0.375
     )
     prov_2567["province_name_en"] = prov_2567["province_name_en"].where(pd.notna(prov_2567["province_name_en"]), None)
+    
+    # Define specs after both blocks to ensure consistency
+    avg_specs = [
+        ("deaths_abs", "Total Deaths (Absolute)", "Annual deaths"),
+        ("deaths_rate", "Death Rate", "Per 100,000 population"),
+        ("affected_hh_abs", "Total Affected Households (Absolute)", "Annual households"),
+        ("affected_rate", "Affected Rate", "Per 100 households"),
+        ("loss_abs", "Government Advance Payment", "THB"),
+        ("loss_per_gpp", "Relief per Unit GPP", "Percentage points (%)"),
+        ("cri_score", "CRI Phase 1 Score", "Score [0-1]"),
+    ]
     for metric_key, metric_label, unit_label in avg_specs:
         payload = province_metric_payload(metric_key, metric_label, "period_2567", "2567 only", unit_label, "single_year", prov_2567[["province_code", "province_name_th", "province_name_en", metric_key]].rename(columns={metric_key: "value"}))
         write_json(OUT / "period_2567" / f"{metric_key}.json", payload)
@@ -467,9 +497,14 @@ def main():
     write_json(OUT / "period_2567" / "tambon_affected_households.json", tambon_metric_payload("tambon_affected_households", "Tambon Affected Households", "period_2567", "2567 only", "Annual households", "single_year", tambon_2567_aff))
 
     # Heat metrics - period 2560-2567 average and 2567 only
+    # Note: Heat data is only available from 2561-2567 (7 years)
     heat_def = heat.copy()
     heat_def["metric_code"] = heat_def["metric_code"].astype(str)
-    heat_avg = heat_def[heat_def["time_scope"] == "range_2561_2567"].groupby(["province_code", "province_name_th", "metric_code"], dropna=False)["value"].sum().reset_index()
+    
+    heat_avg_sum = heat_def[heat_def["time_scope"] == "range_2561_2567"].groupby(["province_code", "province_name_th", "metric_code"], dropna=False)["value"].sum().reset_index()
+    heat_avg = heat_avg_sum.copy()
+    heat_avg["value"] = heat_avg["value"] / 7.0
+    
     heat_257 = heat_def[heat_def["time_scope"] == "year_2567"].groupby(["province_code", "province_name_th", "metric_code"], dropna=False)["value"].sum().reset_index()
 
     def heat_metric(metric_code: str, frame: pd.DataFrame, period_key: str, period_label: str):

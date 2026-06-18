@@ -7,9 +7,9 @@
   "source_mode": "average_window",
   "legend": {
     "min": 0.0,
-    "max": 3.0,
+    "max": 0.42857142857142855,
     "display_min": "0",
-    "display_max": "3",
+    "display_max": "0.428571",
     "color_scheme": "OrRd"
   },
   "records": [
@@ -89,8 +89,8 @@
       "province_code": "20",
       "province_name_th": "ชลบุรี",
       "province_name_en": null,
-      "value": 1.0,
-      "display_value": "1",
+      "value": 0.14285714285714285,
+      "display_value": "0.142857",
       "rank_desc": 4,
       "normalized_value": null
     },
@@ -98,8 +98,8 @@
       "province_code": "18",
       "province_name_th": "ชัยนาท",
       "province_name_en": null,
-      "value": 1.0,
-      "display_value": "1",
+      "value": 0.14285714285714285,
+      "display_value": "0.142857",
       "rank_desc": 4,
       "normalized_value": null
     },
@@ -161,8 +161,8 @@
       "province_code": "63",
       "province_name_th": "ตาก",
       "province_name_en": null,
-      "value": 1.0,
-      "display_value": "1",
+      "value": 0.14285714285714285,
+      "display_value": "0.142857",
       "rank_desc": 4,
       "normalized_value": null
     },
@@ -188,8 +188,8 @@
       "province_code": "48",
       "province_name_th": "นครพนม",
       "province_name_en": null,
-      "value": 1.0,
-      "display_value": "1",
+      "value": 0.14285714285714285,
+      "display_value": "0.142857",
       "rank_desc": 4,
       "normalized_value": null
     },
@@ -215,8 +215,8 @@
       "province_code": "60",
       "province_name_th": "นครสวรรค์",
       "province_name_en": null,
-      "value": 3.0,
-      "display_value": "3",
+      "value": 0.42857142857142855,
+      "display_value": "0.428571",
       "rank_desc": 1,
       "normalized_value": null
     },
@@ -224,8 +224,8 @@
       "province_code": "12",
       "province_name_th": "นนทบุรี",
       "province_name_en": null,
-      "value": 1.0,
-      "display_value": "1",
+      "value": 0.14285714285714285,
+      "display_value": "0.142857",
       "rank_desc": 4,
       "normalized_value": null
     },
@@ -260,8 +260,8 @@
       "province_code": "31",
       "province_name_th": "บุรีรัมย์",
       "province_name_en": null,
-      "value": 1.0,
-      "display_value": "1",
+      "value": 0.14285714285714285,
+      "display_value": "0.142857",
       "rank_desc": 4,
       "normalized_value": null
     },
@@ -287,8 +287,8 @@
       "province_code": "25",
       "province_name_th": "ปราจีนบุรี",
       "province_name_en": null,
-      "value": 3.0,
-      "display_value": "3",
+      "value": 0.42857142857142855,
+      "display_value": "0.428571",
       "rank_desc": 1,
       "normalized_value": null
     },
@@ -386,8 +386,8 @@
       "province_code": "83",
       "province_name_th": "ภูเก็ต",
       "province_name_en": null,
-      "value": 1.0,
-      "display_value": "1",
+      "value": 0.14285714285714285,
+      "display_value": "0.142857",
       "rank_desc": 4,
       "normalized_value": null
     },
@@ -440,8 +440,8 @@
       "province_code": "45",
       "province_name_th": "ร้อยเอ็ด",
       "province_name_en": null,
-      "value": 2.0,
-      "display_value": "2",
+      "value": 0.2857142857142857,
+      "display_value": "0.285714",
       "rank_desc": 3,
       "normalized_value": null
     },
@@ -701,8 +701,8 @@
       "province_code": "34",
       "province_name_th": "อุบลราชธานี",
       "province_name_en": null,
-      "value": 1.0,
-      "display_value": "1",
+      "value": 0.14285714285714285,
+      "display_value": "0.142857",
       "rank_desc": 4,
       "normalized_value": null
     }
@@ -712,80 +712,80 @@
       {
         "province_code": "25",
         "province_name_th": "ปราจีนบุรี",
-        "value": 3.0,
-        "display_value": "3",
+        "value": 0.42857142857142855,
+        "display_value": "0.428571",
         "rank_desc": 1,
         "province_name_en": null
       },
       {
         "province_code": "60",
         "province_name_th": "นครสวรรค์",
-        "value": 3.0,
-        "display_value": "3",
+        "value": 0.42857142857142855,
+        "display_value": "0.428571",
         "rank_desc": 1,
         "province_name_en": null
       },
       {
         "province_code": "45",
         "province_name_th": "ร้อยเอ็ด",
-        "value": 2.0,
-        "display_value": "2",
+        "value": 0.2857142857142857,
+        "display_value": "0.285714",
         "rank_desc": 3,
         "province_name_en": null
       },
       {
         "province_code": "12",
         "province_name_th": "นนทบุรี",
-        "value": 1.0,
-        "display_value": "1",
+        "value": 0.14285714285714285,
+        "display_value": "0.142857",
         "rank_desc": 4,
         "province_name_en": null
       },
       {
         "province_code": "18",
         "province_name_th": "ชัยนาท",
-        "value": 1.0,
-        "display_value": "1",
+        "value": 0.14285714285714285,
+        "display_value": "0.142857",
         "rank_desc": 4,
         "province_name_en": null
       },
       {
         "province_code": "20",
         "province_name_th": "ชลบุรี",
-        "value": 1.0,
-        "display_value": "1",
+        "value": 0.14285714285714285,
+        "display_value": "0.142857",
         "rank_desc": 4,
         "province_name_en": null
       },
       {
         "province_code": "31",
         "province_name_th": "บุรีรัมย์",
-        "value": 1.0,
-        "display_value": "1",
+        "value": 0.14285714285714285,
+        "display_value": "0.142857",
         "rank_desc": 4,
         "province_name_en": null
       },
       {
         "province_code": "34",
         "province_name_th": "อุบลราชธานี",
-        "value": 1.0,
-        "display_value": "1",
+        "value": 0.14285714285714285,
+        "display_value": "0.142857",
         "rank_desc": 4,
         "province_name_en": null
       },
       {
         "province_code": "48",
         "province_name_th": "นครพนม",
-        "value": 1.0,
-        "display_value": "1",
+        "value": 0.14285714285714285,
+        "display_value": "0.142857",
         "rank_desc": 4,
         "province_name_en": null
       },
       {
         "province_code": "63",
         "province_name_th": "ตาก",
-        "value": 1.0,
-        "display_value": "1",
+        "value": 0.14285714285714285,
+        "display_value": "0.142857",
         "rank_desc": 4,
         "province_name_en": null
       }

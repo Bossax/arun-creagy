@@ -197,10 +197,30 @@ This document provides a human-readable map of the transformation logic used to 
 
 ---
 
-## 12. Integrity Standards (Metadata Layer)
+## 13. Stage 1 Export (Analytical Layer)
 
-*   **Location Spine Integrity**: All enriched Silver and Gold spatial tables are joined against the **Gold** `dim_location_master.csv`. This spine achieved 100% referential integrity with the CCAATT master hierarchy. Systematic nomenclature errors in the `code_village_dopa_2019.xls` source (e.g., Korat's capital being shortened to "Mueang") were resolved via hierarchical inheritance.
-*   **Hazard Canonicalization**: Mappings between raw disaster strings and canonical IDs are documented in `data/2_gold/dim_hazard_canonical.csv`.
+*   **Purpose**: Final transformation and packaging of all metrics into the JSON data contract used by the CRI Web App v3.
+*   **Processing Script**: [`script/tmp_stage1_export.py`](ψ/incubate/DCCE/CRI/data_system/script/tmp_stage1_export.py:1)
+*   **Inputs**:
+    *   **Gold Tambon Impacts**: `2_gold/ddpm/fact_ddpm_tambon_impact_climate_2560_2567.csv` (Cumulative sums).
+    *   **Silver Population/Households**: `1_silver/population/silver_population_annual.csv` & `silver_household_annual.csv`.
+    *   **Silver GPP/Loss**: `1_silver/gpp/...` & `1_silver/govt_adv_payment/...`.
+    *   **Silver Heatwave**: `1_silver/heatwave/silver_heatwave_impact_long.csv`.
+*   **Logic**:
+    *   **Averaging (2560–2567)**: 
+        *   It reads the cumulative sums from the Gold/Silver layers, aggregates them by `province_code`, and divides by **8.0** to calculate the annual average.
+        *   **Heat Exception**: Heat metrics are divided by **7.0** to reflect the 2561–2567 data availability window.
+    *   **Rate Calculation**:
+        *   **Affected Rate**: Calculated as `(Annual Avg Affected Households / Annual Avg Total Households) * 100`.
+        *   **Incidence Multiplier**: Because the numerator counts *events* and a single household can be affected by multiple disasters in a year, this rate is an **incidence frequency multiplier** (where >100% indicates multiple impacts per household per year).
+    *   **Normalization**: Applies min-max normalization to generate the composite **CRI Score**.
+*   **Outputs**: 
+    *   `build_exports/stage1/period_2560_2567/*.json`
+    *   `build_exports/stage1/period_2567/*.json`
+    *   `build_exports/stage1/spatial/*.geojson`
+
+---
+
 
 ---
 
