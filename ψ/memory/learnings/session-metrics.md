@@ -44,3 +44,4 @@ Rule (parent CLAUDE.md §"Self-Evaluation Loop"): same friction 3 sessions → f
 | 2026-06-18 | Economic Metrics & Unit Fix | 4 | ae7f1 | Success |
 | 2026-06-18 | 1777386833888 | CRI | Dashboard v3.1 Hardening | 1.0 | 4 | SEALED |
 | 2026-06-18 19:25 | fa71319f | CRI Cloud Deployment Bundle | Dependency Mismatch (GDAL) | SUCCESS | Runtime dependency bloat | Build failure (fiona) |
+| 2026-06-18 23:59 | b5bedec0 | CRI Dashboard V3.1 Optimization | st.cache_data & GeoJSON downsampling | SUCCESS | 20s data loading latency | Missing dev synchronization |
