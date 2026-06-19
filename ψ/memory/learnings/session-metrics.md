@@ -46,3 +46,5 @@ Rule (parent CLAUDE.md §"Self-Evaluation Loop"): same friction 3 sessions → f
 | 2026-06-18 19:25 | fa71319f | CRI Cloud Deployment Bundle | Dependency Mismatch (GDAL) | SUCCESS | Runtime dependency bloat | Build failure (fiona) |
 | 2026-06-18 23:59 | b5bedec0 | CRI Dashboard V3.1 Optimization | st.cache_data & GeoJSON downsampling | SUCCESS | 20s data loading latency | Missing dev synchronization |
 | 2026-06-19 14:50 | 24381ff4 | CRI Hazard Disaggregation & Download Buttons | Streamlit Cloud build failure due to heavy dev requirements | SUCCESS | requirements.txt development bloat overwrite | fiona==1.10.1 build error on Streamlit Cloud (missing GDAL) |
+| 2026-06-19 18:24 | 25fc8a53 | CRI App V4.1 (Cold Spell Exclusion & MOF Cleanups) | Streamlit Cloud cache persistence & build propagation latency | Verified full directory parity & successfully deployed Standalone V4.1 | Streamlit Cloud in-memory cache retaining old manifest.json | Forgot to warn human about Streamlit cache clear requirement |
+
