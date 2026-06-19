@@ -14,6 +14,15 @@ SRC = BASE / "data"
 OUT = BASE / "build_exports" / "stage1"
 
 
+HAZARDS = {
+    "all": "ALL",
+    "flood": "FLOOD",
+    "drought": "DROUGHT",
+    "windstorm": "WINDSTORM",
+    "landslide": "LANDSLIDE"
+}
+
+
 def minmax(series: pd.Series) -> pd.Series:
     denom = series.max() - series.min()
     if pd.isna(denom) or denom == 0:
@@ -115,6 +124,7 @@ def rebuild_yearly_ddpm_fact(ddpm_dir: Path) -> tuple[Path, list[str], list[str]
     source_files = sorted(
         p for p in ddpm_dir.glob("fact_ddpm_tambon_impact_climate_yearly_*_2560_2567.csv")
         if p.name != "fact_ddpm_tambon_impact_climate_yearly_2560_2567.csv"
+        and "cold_spell" not in p.name
     )
     if not source_files:
         raise RuntimeError(f"No hazard-specific yearly DDPM files found in {ddpm_dir}")
@@ -265,8 +275,19 @@ def main():
     if yearly_missing:
         print("[REPAIR] Skipped due to missing schema: " + "; ".join(yearly_missing))
 
-    ddpm = load_csv(SRC / "2_gold/ddpm/fact_ddpm_tambon_impact_climate_2560_2567.csv")
+    ddpm_raw = load_csv(SRC / "2_gold/ddpm/fact_ddpm_tambon_impact_climate_2560_2567.csv")
     ddpm_yearly = load_csv(yearly_path)
+    
+    # Reconstruct ddpm by summing ddpm_yearly to exclude cold_spell from overall averages
+    ddpm = ddpm_yearly.groupby(["subdistrict_code", "province_code"], dropna=False).agg(
+        deaths_sum=("deaths_sum", "sum"),
+        affected_households_sum=("affected_households_sum", "sum"),
+        affected_people_sum=("affected_people_sum", "sum"),
+    ).reset_index()
+    
+    # Merge names from raw ddpm file for downstream lookup
+    tambon_lookup_ddpm = ddpm_raw[["subdistrict_code", "subdistrict_name_th", "district_name_th", "province_code"]].drop_duplicates()
+    ddpm = ddpm.merge(tambon_lookup_ddpm, on=["subdistrict_code", "province_code"], how="left")
     pop = load_csv(SRC / "1_silver/population/silver_population_annual.csv")
     hh = load_csv(SRC / "1_silver/population/silver_household_annual.csv")
     loss = load_csv(SRC / "1_silver/govt_adv_payment/silver_govt_adv_payment_annual_long.csv")
@@ -333,7 +354,7 @@ def main():
     ensure_dir(OUT)
     ensure_dir(OUT / "spatial" / "tambon")
     for period_key in ["period_2560_2567", "period_2567"]:
-        for h_key in ["all", "flood", "drought", "windstorm", "cold_spell", "landslide"]:
+        for h_key in HAZARDS.keys():
             ensure_dir(OUT / period_key / h_key)
 
     prov_lookup = province_lookup_from_csv(prov_code_lookup).merge(
@@ -594,14 +615,7 @@ def main():
         ("loss_per_gpp", "Relief per Unit GPP", "Percentage points (%)"),
         ("cri_score", "CRI Phase 1 Score", "Score [0-1]"),
     ]
-    HAZARDS = {
-        "all": "ALL",
-        "flood": "FLOOD",
-        "drought": "DROUGHT",
-        "windstorm": "WINDSTORM",
-        "cold_spell": "COLD_SPELL",
-        "landslide": "LANDSLIDE"
-    }
+    # Local HAZARDS overridden by module-level configuration
 
     # Ensure nested folders exist (already initialized at start of main)
 
@@ -824,7 +838,6 @@ def main():
             {"hazard_key": "all", "hazard_label": "All Climate Hazards (รวมทุกภัย)"},
             {"hazard_key": "flood", "hazard_label": "Flood (อุทกภัย)"},
             {"hazard_key": "windstorm", "hazard_label": "Windstorm (วาตภัย)"},
-            {"hazard_key": "cold_spell", "hazard_label": "Cold Spell (ภัยหนาว)"},
             {"hazard_key": "landslide", "hazard_label": "Landslide (ดินโคลนถล่ม)"},
             {"hazard_key": "drought", "hazard_label": "Drought (ภัยแล้ง)"}
         ],
