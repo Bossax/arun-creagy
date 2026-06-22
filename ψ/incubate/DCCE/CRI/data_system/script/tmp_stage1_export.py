@@ -420,7 +420,7 @@ def main():
         ("affected_rate", "Affected Rate", "Per 100 households"),
         ("loss_abs", "Economic Loss", "THB"),
         ("loss_per_gpp", "Economic Loss per GPP", "Percentage points (%)"),
-        ("cri_score", "CRI Phase 1 Score", "Score [0-1]"),
+        ("cri_score", "CRI Score", "Score [0-1]"),
     ]
     # Legacy flat average metrics files are not written; disaggregated subfolders are used instead.
 
@@ -472,7 +472,7 @@ def main():
         ("affected_rate", "Affected Rate", "Per 100 households"),
         ("loss_abs", "Government Advance Payment", "THB"),
         ("loss_per_gpp", "Relief per Unit GPP", "Percentage points (%)"),
-        ("cri_score", "CRI Phase 1 Score", "Score [0-1]"),
+        ("cri_score", "CRI Score", "Score [0-1]"),
     ]
     # Legacy flat 2567 metrics files are not written; disaggregated subfolders are used instead.
 
@@ -604,7 +604,7 @@ def main():
         ("affected_rate", "Affected Rate", "Per 100 households"),
         ("loss_abs", "Economic Loss", "THB"),
         ("loss_per_gpp", "Economic Loss per GPP", "Percentage points (%)"),
-        ("cri_score", "CRI Phase 1 Score", "Score [0-1]"),
+        ("cri_score", "CRI Score", "Score [0-1]"),
     ]
     avg_specs_2567 = [
         ("deaths_abs", "Total Deaths (Absolute)", "Annual deaths"),
@@ -613,7 +613,7 @@ def main():
         ("affected_rate", "Affected Rate", "Per 100 households"),
         ("loss_abs", "Government Advance Payment", "THB"),
         ("loss_per_gpp", "Relief per Unit GPP", "Percentage points (%)"),
-        ("cri_score", "CRI Phase 1 Score", "Score [0-1]"),
+        ("cri_score", "CRI Score", "Score [0-1]"),
     ]
     # Local HAZARDS overridden by module-level configuration
 
