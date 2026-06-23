@@ -187,3 +187,16 @@ Yes, the exact title `2-Exploring the impacts of climate change and identifying 
 **Figure 4**: "Bar chart showing the comparison of measured and simulated rice yield during (a) model calibration and (b) model evaluation".
 
 - **Analytical focus**: Provides visual validation of the crop model's predictive accuracy by comparing observed field data against simulated yield outputs.
+
+
+
+---
+# Limitations
+
+Based on the source document "2-Exploring the impacts of climate change and identifying potential adaptation strategies for sustainable rice production in Thailand.pdf," here are the explicit limitations, uncertainties, assumptions, and caveats stated by the authors:
+
+- **Assumption regarding independent simulations:** "A seasonal project resets the initial soil conditions on the date of simulation each year and was chosen for this study to ensure that each year was independently simulated and there was no residual effect from the previous year" (Section: _Model calibration and evaluation_, Page 8).
+- **Uncertainty/Caveat regarding early-century projections:** "In the case of the early century, the rice yield may exhibit some misleading outcomes, as the period is too short to reflect a significant change" (Section: _Impacts of future climate change on rice yield_, Page 13).
+- **Assumption regarding future management practices:** "This simulation assumed that the field management practices would remain consistent in the future, but some genetic coefficients of RD57 would be adjusted" (Section: _Impact of simulated virtual cultivar on future rice yield and irrigation water use_, Page 17).
+- **Constraint regarding practical implementation:** The authors note that "practical implementation by local farmers may face several barriers. Social and cultural factors, such as resistance to changing traditional farming practices, and the lack of crop policies may further hinder the adaptation of these strategies" (Section: _Impact of simulated virtual cultivar on future rice yield and irrigation water use_, Page 20).
+- **Scope limitation requiring future research:** The authors state that "further studies are needed to better understand the combined effects of different adaptation strategies" because the current study primarily evaluated strategies with their single or isolated impacts rather than as a holistic combination (Section: _Impact of simulated virtual cultivar on future rice yield and irrigation water use_, Page 20).

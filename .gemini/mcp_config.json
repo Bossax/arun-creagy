@@ -17,6 +17,7 @@
       "args": [
         "notebooklm-mcp@latest"
       ],
+      "timeout": 180,
       "env": {
         "BROWSER_TIMEOUT": "360000",
         "STEALTH_ENABLED": "false",

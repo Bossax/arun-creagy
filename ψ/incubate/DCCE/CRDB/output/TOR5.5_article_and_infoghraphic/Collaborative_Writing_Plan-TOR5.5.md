@@ -77,16 +77,58 @@ For each article, we will move sequentially through these phases:
 
 ### 🔍 Phase 1 Execution Protocol: Adaptive Topic-First Exploration
 
-To prevent confirmation bias and ensure high-recall extraction, the AI must not use static, pre-canned queries. Instead, Phase 1 must be executed using a three-step progressive feedback loop:
+To prevent confirmation bias and ensure high-recall extraction, the AI must not use static, pre-canned queries. Instead, Phase 1 must be executed using a three-step progressive feedback loop.
+
+#### 🔄 Execution Modes: Automated MCP vs. Hybrid Manual-Paste Loop
+To prevent context congestion, save AI token budget, and handle browser-session locks or timeouts, Phase 1 can be executed in two modes:
+1. **Automated MCP Mode**: The AI agent manages the browser session and executes Step 1–3 queries sequentially, appending outputs to `raw-copy.md`.
+2. **Hybrid Manual-Paste Mode (Recommended)**: 
+   - **Step A**: The AI automatically creates or updates the `raw-copy.md` file in the target article directory, prepopulated with the exact, custom queries for that paper (Step 1A - 1E) to facilitate the human's copy-paste workflow.
+   - **Step B**: The human runs these pre-filled queries in the NotebookLM Web UI and pastes the raw responses directly below each query block in `raw-copy.md`.
+   - **Step C**: The AI reads `raw-copy.md` to synthesize the canonical `01_Raw_Extraction.md` JSON.
+
+This hybrid pattern acts as the primary recovery and token optimization path for all agents working on this project.
 
 1. **Step 1: Structural Mapping & Topic Discovery**
-   - *Action*: Query NotebookLM with a low-assumption probe to extract the outline, the list of all tables/figures, and the core research hypothesis.
-   - *Sample Query*: `"Give me a detailed outline of the sections in [Source Title]. For each section, list the primary scientific variables discussed, the title and focus of every table and figure, and state the core research hypothesis in one sentence."`
+   - *Action*: Query NotebookLM with a packet of 5 atomic queries to map the paper's outline, variables, tables, figures, and hypothesis.
+   - *Standard Query Pack*:
+     - **Step 1A (Outline)**:
+       `"For the source document \"[Exact Source Title]\": Extract and list the full section outline of the paper. If the document is not found or the title is ambiguous, report that explicitly."`
+     - **Step 1B (Variables)**:
+       `"For the source document \"[Exact Source Title]\": Identify and list the primary variables, metrics, or qualitative concepts discussed in each section (e.g., climate parameters, agricultural indicators, socioeconomic variables, health/environmental indices)."`
+     - **Step 1C (Tables)**:
+       `"For the source document \"[Exact Source Title]\": Extract and list only the tables mentioned, along with their exact titles/captions and their analytical focus. Do not summarize or harmonize."`
+     - **Step 1D (Figures)**:
+       `"For the source document \"[Exact Source Title]\": Extract and list only the figures mentioned, along with their exact titles/captions and their analytical focus. Do not summarize or harmonize."`
+     - **Step 1E (Hypothesis & Labels)**:
+       `"For the source document \"[Exact Source Title]\": Extract only the core research hypothesis plus named study areas, climate hazards, target variables, and geographical labels. Do not summarize or harmonize."`
 2. **Step 2: Adaptive Deepening (Dynamic Branching)**
-   - *Action*: Formulate subsequent queries dynamically based on the structure, tables, and variables discovered in Step 1. Investigate yield sensitivities, threshold parameters, and water footprints for specific crops in specific districts as revealed by the paper.
+   - *Action*: Formulate subsequent queries dynamically based on the structure, tables, and variables discovered in Step 1.
+   - *Query Guidelines*:
+     - **For Agricultural & Biophysical Papers (e.g., ART01, ART02, ART04, ART05, ART06)**:
+       - **Step 2A (Sensitivities & Thresholds)**: `"For the source document \"[Exact Source Title]\": Extract specific crop yield sensitivities, crop-water footprints, or climate parameter thresholds (e.g., temperature ranges, rainfall deficits) across different regions, seasons, or scenarios."`
+       - **Step 2B (Geographical & District Variations)**: `"For the source document \"[Exact Source Title]\": Extract specific district-level or regional differences in climate vulnerability and adaptation responses mentioned in the paper (e.g., Central Plains vs. Northeast)."`
+     - **For Public Health & Social Impact Papers (e.g., ART03, ART07, ART08, ART09, ART10)**:
+       - **Step 2A (Statistical Relationships & Odds Ratios)**: `"For the source document \"[Exact Source Title]\": Extract the specific statistical findings, correlation coefficients, or Odds Ratios (ORs) showing the associations between climate exposures (e.g., heat stress, flooding) and specific daily activity or health domains (e.g., sleeping, commuting, working)."`
+       - **Step 2B (Socioeconomic Vulnerability & Cascading Impacts)**: `"For the source document \"[Exact Source Title]\": Detail the cascading effects of climate hazards on public health outcomes (e.g., life satisfaction, mental health, disease risk) and identify which specific demographic or socioeconomic groups are most vulnerable."`
+     - **Step 2C (Infrastructure & Adaptive Capacity)**: `"For the source document \"[Exact Source Title]\": Extract specific findings related to how infrastructure (e.g., air-conditioning, public transport, green open spaces) or behavioral patterns moderate the impacts of the hazard."`
 3. **Step 3: Synthesis & Gap Sweep**
    - *Action*: Target limitations, source data gaps, model parameters, and uncertainties to ensure the public narrative is scientifically grounded.
-   - *Sample Query*: `"What are the explicit limitations, source data uncertainties, or model parameters that the authors warn about in their discussion or conclusion?"`
+   - *Standard Query Pack*:
+     - **Step 3A (Limitations & Data Gaps)**: `"For the source document \"[Exact Source Title]\": What are the explicit limitations, sample limitations, source data uncertainties, or model parameters (e.g., self-reported bias, lack of baseline data, simulation constraints) that the authors warn about in their discussion or conclusion?"`
+     - **Step 3B (Author Recommendations & Adaptation Policies)**: `"For the source document \"[Exact Source Title]\": What concrete adaptation strategies, policy recommendations, or future research directions do the authors propose to address the identified risks?"`
+
+### 📝 Phase 2 Execution Protocol: Rich Contextual Topic Selection
+
+To ensure the human expert has complete narrative visibility and scientific context before selecting topics (KEEP/DISCARD), the AI must **never** generate a blank decision table. 
+
+Instead, the `02_Decision_Log.md` file must be prepopulated with:
+1. **Executive Summary**: A robust summary of the study's scope, analytical methods, and data coverage.
+2. **Key Scientific Insights**: Detailed explanations of how the climate hazards (e.g., ENSO anomalies, crop sensitivities) directly impact Thailand's sectors, geography, and local communities (the "so what?" of the scientific data).
+3. **Traceable Selection Table**: A table linking extracted Issue IDs (`E01`, `E02`, etc.) to clear descriptions of their core concepts.
+4. **Narrative Blueprint Placeholders**: Designated placeholders for the human to outline the opening hook, body flow, and adaptation takeaways.
+
+This ensures the decision log acts as a high-signal brief rather than a generic checklist.
 
 ---
 
@@ -145,7 +187,7 @@ To prevent robotic writing and align the articles with your strategic voice, the
 | **ART07** | Urban Heat Stress Bangkok | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | **ART08** | Griffith Univ / GIZ, 2018 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | **ART09** | J Flood Risk Manag, 2024 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| **ART10** | WIM ExCom Sea Level Rise | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| **ART10** | WIM ExCom Sea Level Rise | [x] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ---
 
