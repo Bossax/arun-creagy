@@ -1,0 +1,69 @@
+{
+  "context": "TOR5.5-Articles",
+  "version": "1.0",
+  "lexicon": [
+    {
+      "banned": "นอกจากนี้",
+      "preferred": "",
+      "reason": "Avoid robotic, mechanical transitions in public articles."
+    },
+    {
+      "banned": "ยิ่งไปกว่านั้น",
+      "preferred": "",
+      "reason": "Artificial and stiff text flow connector."
+    },
+    {
+      "banned": "มุ่งเน้น",
+      "preferred": "เน้น / ให้ความสำคัญ",
+      "reason": "Overused AI transition word."
+    },
+    {
+      "banned": "นับได้ว่า",
+      "preferred": "ถือว่า / จัดเป็น",
+      "reason": "Overly formal AI filler."
+    },
+    {
+      "banned": "เอฟเฟกต์",
+      "preferred": "ผลกระทบ",
+      "reason": "Standard Thai term for impact/effect."
+    }
+  ],
+  "technical_terms": [
+    {
+      "term": "การเปลี่ยนแปลงสภาพภูมิอากาศ",
+      "definition": "Climate Change"
+    },
+    {
+      "term": "ความสูญเสียและความเสียหายที่ไม่ใช่เชิงเศรษฐกิจ",
+      "definition": "Non-Economic Loss and Damage: NELD"
+    },
+    {
+      "term": "อุณหภูมิผิวน้ำทะเล",
+      "definition": "Sea Surface Temperature"
+    },
+    {
+      "term": "พื้นที่คุ้มครองทางทะเล",
+      "definition": "Marine Protected Areas: MPAs"
+    },
+    {
+      "term": "เกาะความร้อนเมือง",
+      "definition": "urban heat island"
+    },
+    {
+      "term": "ผลิตภาพแรงงาน",
+      "definition": "labor productivity"
+    },
+    {
+      "term": "พืชผลการเกษตรเสียหาย",
+      "definition": "crop failure"
+    },
+    {
+      "term": "ความเครียดจากความร้อน",
+      "definition": "heat stress"
+    },
+    {
+      "term": "เรื่องเล่าความเปลี่ยนแปลงที่สำคัญที่สุด",
+      "definition": "Most Significant Change: MSC"
+    }
+  ]
+}

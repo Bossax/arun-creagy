@@ -30,13 +30,13 @@ To keep the work organized and prevent context drift, each of the 10 selected pa
 1. `ART01_CMIP6_Water_Crop/` - CMIP6 crop yield & water footprint (Arunrat et al., 2021)
 2. `ART02_ChaoPhraya_Rice_Adaptation/` - Lower Chao Phraya rice adaptation (Vilavan et al., 2024)
 3. `ART03_PLOS_Infectious_Diseases/` - Projections of 9 infectious disease risks (PLOS NTD, 2024)
-4. `ART04_Dengue_Early_Warning/` - Severe dengue spatial patterns & drivers (PMC, 2019)
+4. `ART04_ENSO_Precipitation_Northeast/` - ENSO & precipitation variability in Northeast Thailand
 5. `ART05_Coastal_Erosion_Southern/` - Hard vs. soft defense structures (PMC, 2022)
 6. `ART06_Species_Protected_Areas/` - Wildlife & plant climate migration (PMC, 2018)
-7. `ART07_Coral_Reef_Closures/` - Coral bleaching & tourism closures (Reef Resilience, 2020)
+7. `ART07_Urban_Heat_Stress_Bangkok/` - Urban heat stress and human health in Bangkok
 8. `ART08_Tourism_Risk_GIZ/` - Tourism sector risk assessment (Griffith Univ / GIZ, 2018)
 9. `ART09_BMR_UrbanSprawl_Floods/` - Sprawl vs. rainfall flood risk in BMR (J Flood Risk Manag, 2024)
-10. `ART10_Industrial_Damage_Curves/` - Depth-damage industrial flood vulnerability (Int J Disaster Risk Reduct, 2025)
+10. `ART10_WIM_ExCom_Sea_Level_Rise/` - WIM ExCom sea level rise
 
 ### Core Files per Directory:
 *   `01_Raw_Extraction.md` — All risks, trends, and qualitative concepts pulled from the source.
@@ -74,6 +74,19 @@ For each article, we will move sequentially through these phases:
 │ Phase 4: Draft        │ ──> Generates: `04_Final_Draft.md` (Article + Graphic Copy)
 └───────────────────────┘
 ```
+
+### 🔍 Phase 1 Execution Protocol: Adaptive Topic-First Exploration
+
+To prevent confirmation bias and ensure high-recall extraction, the AI must not use static, pre-canned queries. Instead, Phase 1 must be executed using a three-step progressive feedback loop:
+
+1. **Step 1: Structural Mapping & Topic Discovery**
+   - *Action*: Query NotebookLM with a low-assumption probe to extract the outline, the list of all tables/figures, and the core research hypothesis.
+   - *Sample Query*: `"Give me a detailed outline of the sections in [Source Title]. For each section, list the primary scientific variables discussed, the title and focus of every table and figure, and state the core research hypothesis in one sentence."`
+2. **Step 2: Adaptive Deepening (Dynamic Branching)**
+   - *Action*: Formulate subsequent queries dynamically based on the structure, tables, and variables discovered in Step 1. Investigate yield sensitivities, threshold parameters, and water footprints for specific crops in specific districts as revealed by the paper.
+3. **Step 3: Synthesis & Gap Sweep**
+   - *Action*: Target limitations, source data gaps, model parameters, and uncertainties to ensure the public narrative is scientifically grounded.
+   - *Sample Query*: `"What are the explicit limitations, source data uncertainties, or model parameters that the authors warn about in their discussion or conclusion?"`
 
 ---
 
@@ -126,13 +139,13 @@ To prevent robotic writing and align the articles with your strategic voice, the
 | **ART01** | Arunrat et al., 2021 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | **ART02** | Vilavan et al., 2024 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | **ART03** | PLOS NTD, 2024 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| **ART04** | PMC, 2019 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| **ART04** | ENSO Precipitation | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | **ART05** | PMC, 2022 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | **ART06** | PMC, 2018 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| **ART07** | Reef Resilience, 2020 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| **ART07** | Urban Heat Stress Bangkok | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | **ART08** | Griffith Univ / GIZ, 2018 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | **ART09** | J Flood Risk Manag, 2024 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| **ART10** | Int J Disaster Risk Reduct, 2025 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| **ART10** | WIM ExCom Sea Level Rise | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ---
 *Created based on: [AI_Agent_Workflow_Guide-Climate Change in Thailand Project.md](file:///C:/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/incubate/DCCE/CRDB/output/TOR5.5_article_and_infoghraphic/AI_Agent_Workflow_Guide-Climate%20Change%20in%20Thailand%20Project.md)*

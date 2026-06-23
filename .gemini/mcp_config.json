@@ -19,10 +19,11 @@
       ],
       "env": {
         "BROWSER_TIMEOUT": "360000",
-        "STEALTH_ENABLED": "true",
-        "TYPING_WPM_MIN": "200",
-        "TYPING_WPM_MAX": "400",
-        "NOTEBOOK_PROFILE_STRATEGY": "single"
+        "STEALTH_ENABLED": "false",
+        "TYPING_WPM_MIN": "400",
+        "TYPING_WPM_MAX": "700",
+        "NOTEBOOK_PROFILE_STRATEGY": "single",
+        "MCP_SERVER_REQUEST_TIMEOUT": "360000"
       },
       "description": "Research from pre-uploaded sources on notebooklm"
     },
