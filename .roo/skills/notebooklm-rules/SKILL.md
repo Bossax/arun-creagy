@@ -51,6 +51,11 @@ You must resolve local filenames to exact NotebookLM titles before calling the t
 
 The Gate: The prompt must instruct NotebookLM to stop and report if any named title is missing or ambiguous. NotebookLM must not substitute nearby literature.
 
+## D. Ruleset reference
+
+- The canonical repo-local rules live in [`notebooklm-mcp-ruleset.md`](.roo/skills/notebooklm-rules/references/notebooklm-mcp-ruleset.md:1).
+- When updating NotebookLM MCP behavior, align this skill with that ruleset rather than introducing new policy elsewhere.
+
 # 2. Execution Workflow
 
 Follow these 5 steps for every NotebookLM extraction task:

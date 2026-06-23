@@ -39,11 +39,11 @@ Every NotebookLM MCP call must make these parameters explicit in the orchestrati
    - Either reuse a known open session or create a new one and record it in project context.
 
 3. `browser_options`
-   - do not add variables to this parameters unless explicitly demanded by the human.
+   - Do not add or modify variables here unless explicitly commanded by the user.
 
 4. `stealth`
-   - do not set any variables to this parameters. 
-  
+   - Do not set any variables here.
+
 5. Source-binding assumptions
    - For each batch, specify whether it is corpus-wide or tied to a specific packet of named sources.
    - Encode this assumption in the prompt itself.
@@ -87,7 +87,7 @@ Design prompts so that NotebookLM stays in its strongest mode: structured extrac
 1. Single objective per prompt
    - Each prompt should target one theme (e.g., methodological capacities, framework indicators, governance clauses).
 2. Extraction-only and targeted query language
-   - Allowed: "extract", "list", "identify", "quote", "cite", "classify within X". and general question sentences. 
+   - Allowed: "extract", "list", "identify", "quote", "cite", "classify within X".
    - Forbidden: "harmonise", "deduplicate", "merge outputs", "QC the register", "rewrite".
 
 3. Length and latency
@@ -124,5 +124,3 @@ NotebookLM MCP is sensitive to environment and auth state.
 4. Environment quirks
    - Cross-platform CLI and shell differences (Windows vs Git Bash vs container) can affect MCP startup.
    - Capture such issues in [`NotebookLM-MCP-troubleshooting.md`](ψ/inbox/NotebookLM-MCP-troubleshooting.md) and treat them as additional constraints.
-
-

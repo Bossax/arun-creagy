@@ -15,7 +15,8 @@
 				"arra_threads",
 				"arra_search",
 				"arra_trace",
-				"arra_handoff"
+				"arra_handoff",
+				"arra_learn"
 			]
 		},
 		"notebooklm": {
@@ -25,9 +26,17 @@
 				"-y",
 				"notebooklm-mcp@latest"
 			],
+			"env": {
+				"BROWSER_TIMEOUT": "180000",
+				"TYPING_WPM_MIN": "400"
+			},
 			"description": "NotebookLM MCP server",
 			"alwaysAllow": [
-				"get_health"
+				"get_health",
+				"list_notebooks",
+				"ask_question",
+				"list_sessions",
+				"close_session"
 			]
 		},
 		"perplexity": {
