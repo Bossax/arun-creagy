@@ -148,4 +148,50 @@ To prevent robotic writing and align the articles with your strategic voice, the
 | **ART10** | WIM ExCom Sea Level Rise | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ---
+
+## 🗃️ Appendix: 01_Raw_Extraction.md Structure (Option A)
+
+Each `01_Raw_Extraction.md` file must follow this exact Markdown structure containing a single, parsable JSON code block:
+
+# Raw Extraction: [Article Folder Name]
+- **Source**: [Exact Source Filename.pdf]
+- **Date Extracted**: [Timestamp]
+
+```json
+{
+  "metadata": {
+    "source_filename": "[Exact Source Filename.pdf]",
+    "extracted_at": "[Timestamp]",
+    "notebook_id": "crdb-tor-5-5-climate-risk-arti"
+  },
+  "core_hypothesis": "[Core scientific hypothesis in one sentence]",
+  "sections_outline": [
+    "[Section Outline List]"
+  ],
+  "tables_and_figures": [
+    {
+      "id": "[Table/Figure ID, e.g., Table 1]",
+      "title": "[Title of table/figure]",
+      "focus": "[Brief summary of variables/data shown]"
+    }
+  ],
+  "extracted_evidence": [
+    {
+      "evidence_id": "E01",
+      "topic": "[e.g., Rice Yield Sensitivity under SSP5-8.5]",
+      "description": "[Qualitative concept or trend extracted]",
+      "metrics_mentioned": "[Explicit numbers or ranges, if any]",
+      "citations": "[Exact section name, page number, or table/figure reference]"
+    }
+  ],
+  "limitations_and_uncertainties": [
+    {
+      "issue": "[Warning, model limitation, or source data uncertainty]",
+      "citation": "[Location in paper]"
+    }
+  ]
+}
+```
+
+---
 *Created based on: [AI_Agent_Workflow_Guide-Climate Change in Thailand Project.md](file:///C:/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/incubate/DCCE/CRDB/output/TOR5.5_article_and_infoghraphic/AI_Agent_Workflow_Guide-Climate%20Change%20in%20Thailand%20Project.md)*
