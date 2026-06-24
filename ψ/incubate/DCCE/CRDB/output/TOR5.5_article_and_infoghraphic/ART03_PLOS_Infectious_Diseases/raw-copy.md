@@ -296,3 +296,153 @@ Here is the extracted information regarding limitations, uncertainties, model pa
 - Without adjusting for potential changes in reporting rates, authors warn there is a risk that fluctuations in reported cases could be influenced by reporting practices.
 - Future research should focus on the development of GCM outputs that provide continuous monthly data for future periods to allow for a more accurate representation of interannual climate variability and extreme events.
 - Further work is needed to assess the projected impact of extreme weather on infectious diseases in other climatic and socioeconomic contexts, requiring the refining of predictions when immunity and intervention data become available.
+
+# Phase 3 Delta Packet — 2026-06-24
+
+## Phase 3 Query 01 — Exact anchors for core KEEP claims
+
+For the exact source title "3-Projecting long-term excess risks of major infectious diseases associated with future extreme weather events in Thailand", extract only the exact source anchors and values needed for these already-selected claims. For each item, return the exact number, confidence interval if shown, the comparison basis, and the exact figure/table/page/section anchor where it appears. Do not summarize beyond the source wording.
+
+Items to extract
+- Historical baseline finding that extreme heat increased most infectious diseases except malaria and leptospirosis.
+- Nationwide dengue excess-risk decrease of 24.9% in 2061–2080.
+- Influenza excess-risk increase of 36.8% in Nakhon Ratchasima in 2021–2040 under SSP245.
+- Any exact province examples already highlighted in the paper for dengue or influenza under SSP245.
+
+### Raw response
+
+Here are the exact source anchors and values extracted for your selected claims based on the paper _"Projecting long-term excess risks of major infectious diseases associated with future extreme weather events in Thailand"_:
+
+**1. Historical baseline finding that extreme heat increased most infectious diseases except malaria and leptospirosis**
+
+- **Exact Wording/Values:** "Historically, extreme heat was associated with an increase in all infectious disease incidences except malaria and leptospirosis." / "In dengue, JEV, influenza, pneumonia and melioidosis, the number of extreme heat days in a month was positively associated with disease risk... On the other hand, increasing days of extreme heat days in a month was negatively associated with malaria and leptospirosis risk".
+- **Comparison Basis:** Number of extreme heat days in a month vs. no days of extreme heat.
+- **Exact Anchor:** Abstract; Results Section ("Association of diseases with extreme weather"), Fig 2.
+
+**2. Nationwide dengue excess-risk decrease of 24.9% in 2061–2080**
+
+- **Exact Number:** Decrease of 24.9%.
+- **Confidence Interval:** (95%CI:9.68%,40.0%).
+- **Comparison Basis:** "during future periods of extreme weather from 2061–2080 compared to historical baselines".
+- **Exact Anchor:** Abstract.
+
+**3. Influenza excess-risk increase of 36.8% in Nakhon Ratchasima in 2021–2040 under SSP245**
+
+- **Exact Number:** Increase of 36.8%.
+- **Confidence Interval:** (95%CI:9.83%,63.8%) / (95% CI: 9.83%, 63.8%).
+- **Comparison Basis:** "in 2021–2040 under SSP245" / "during periods of extreme weather" compared to historical burden.
+- **Exact Anchor:** Abstract; Results Section ("Trends of influenza excess risk during extreme weather in SSP245"), Fig 7A.
+
+**4. Exact province examples highlighted in the paper for dengue or influenza under SSP245**
+
+- **Dengue in Bangkok:** Increased risk of 42.2% | **CI:** (95% CI: 13.6%, 70.7%) | **Comparison Basis:** From 2021–2040 during periods of extreme weather | **Anchor:** Results Section ("Trends of dengue excess risk during extreme weather in SSP245"), Fig 6A.
+- **Dengue in Chiang Mai:** Decrease in dengue risk / ER: -24.6% | **CI:** (95% CI: -40.1%, -9.00%) | **Comparison Basis:** From 2021–2040 during periods of extreme weather | **Anchor:** Results Section ("Trends of dengue excess risk during extreme weather in SSP245"), Fig 6A.
+- **Dengue in Chiang Rai:** Decrease in risk / ER: -34.2% | **CI:** (95% CI: -47.2%, -21.1%) | **Comparison Basis:** From 2061–2080 during periods of extreme weather | **Anchor:** Results Section ("Trends of dengue excess risk during extreme weather in SSP245"), Fig 6A.
+
+---
+
+
+
+## Phase 3 Query 02 — Exact numbers for the diseases still missing in the draft logic
+
+For the exact source title "3-Projecting long-term excess risks of major infectious diseases associated with future extreme weather events in Thailand", extract only the exact projected excess-risk values and anchors needed to support the kept narrative for pneumonia, melioidosis, malaria, Japanese encephalitis virus, and leptospirosis. Return only values that clarify direction, magnitude, time period, scenario, and whether the value is statistically significant. Include the exact figure/table/page/section anchor for each value. Do not summarize beyond the source wording.
+
+### Raw response
+
+Here are the exact projected excess-risk values, trends, and anchors extracted for your specified diseases from _"Projecting long-term excess risks of major infectious diseases associated with future extreme weather events in Thailand"_:
+
+**Melioidosis**
+
+- **Direction & Magnitude:** Increases by 27.8% | **CI:** (95% CI: -39.4%, 94.9%)
+    - **Time Period & Scenario:** By 2100 during periods of extreme heat under SSP585.
+    - **Significance:** "confidence intervals remain wide" (not statistically significant as CI crosses zero).
+    - **Exact Anchor:** Results Section ("Change in disease risk by individual extreme weather events"), Fig 5J.
+- **Direction & Magnitude:** Increase / ER: 25.4% | **CI:** (95% CI: -32.1%, 82.8%)
+    - **Time Period & Scenario:** From 2041–2060 during periods of extreme wet weather under SSP585.
+    - **Significance:** "confidence intervals are wide" (not statistically significant as CI crosses zero).
+    - **Exact Anchor:** Results Section ("Change in disease risk by individual extreme weather events"), Fig 5L.
+
+**Japanese encephalitis virus (JEV)**
+
+- **Direction & Magnitude:** Decline / ER: -18.2% | **CI:** (95% CI: -43.4%, 6.96%)
+    - **Time Period & Scenario:** 2081–2100 during periods of extreme dry weather under SSP245.
+    - **Significance:** CI crosses zero (not statistically significant).
+    - **Exact Anchor:** Results Section ("Change in disease risk by individual extreme weather events"), Fig 4E.
+- **General Trend (no exact values provided in text):** "A decrease in JEV risk from 2061–2080 is observed across all four climate change scenarios, except for SSP585, where there is an expected increased risk".
+    - **Exact Anchor:** Results Section ("Overall change in disease risk during periods of extreme weather"), Fig 3E-3H.
+
+_(Note: The source text does not provide exact numerical projected excess-risk percentages or confidence intervals for pneumonia, malaria, or leptospirosis. Only the exact directional trends are stated, as extracted below)._
+
+**Pneumonia**
+
+- **Direction / Trend:** "Pneumonia and melioidosis risks are expected to increase".
+- **Time Period & Scenario:** "in the future during periods of extreme weather, particularly in the highest carbon emission scenario, SSP585 respectively".
+- **Exact Anchor:** Results Section ("Overall change in disease risk during periods of extreme weather"), Fig 3D.
+
+**Malaria**
+
+- **Direction / Trend:** "An increase in malaria risk is expected".
+- **Time Period & Scenario:** "during periods of extreme weather across all climate change scenarios and time periods... The exception is in SSP245, which sees a decrease in 2021–2040 and 2081–2100".
+- **Exact Anchor:** Results Section ("Overall change in disease risk during periods of extreme weather"), Fig 3I-3L.
+- **Secondary Trend:** "malaria risk is expected to increase during periods of extreme dry weather and wet weather, but more so during extreme dry weather".
+- **Exact Anchor:** Results Section ("Change in disease risk by individual extreme weather events"), Fig 4H, 4I.
+
+**Leptospirosis**
+
+- **Direction / Trend:** "leptospirosis risk is expected to decrease".
+- **Time Period & Scenario:** "during periods of extreme weather, across all climate change scenarios and time periods".
+- **Exact Anchor:** Results Section ("Overall change in disease risk during periods of extreme weather").
+
+## Phase 3 Query 03 — Baseline comparison needed by the active draft
+
+For the exact source title "3-Projecting long-term excess risks of major infectious diseases associated with future extreme weather events in Thailand", extract only the historical baseline information that helps interpret how large the projected shifts are. Return any exact historical-period disease burden statements, ranking statements, mean case-count references, or baseline comparison language used by the authors for dengue, influenza, pneumonia, malaria, leptospirosis, melioidosis, and Japanese encephalitis virus. Include the exact table/figure/page/section anchor. If the paper does not provide a direct baseline ranking or current burden comparison for a requested disease, state that explicitly.
+
+### Raw response
+
+Based on the source _"Projecting long-term excess risks of major infectious diseases associated with future extreme weather events in Thailand"_, here is the exact historical baseline information, burden statements, and baseline comparison language used by the authors:
+
+**Dengue**
+
+- **Burden/Ranking Statement:** The authors specifically focused their finer analysis on the "five provinces which had the highest dengue burden from 2003 to 2019".
+- **Baseline Comparison Language:** "Provinces with historically high dengue incidence, such as Bangkok".
+- **Anchor:** Results Section ("Trends of dengue excess risk during extreme weather in SSP245"); Fig 6A caption ("five provinces with the historically highest incidence of dengue").
+
+**Influenza**
+
+- **Burden/Ranking Statement:** The authors focused their analysis on the "five provinces with the historically highest incidence of influenza".
+- **Baseline Comparison Language:** "Nakhon Ratchasima, a province with historically high influenza burden".
+- **Anchor:** Results Section ("Trends of influenza excess risk during extreme weather in SSP245"); Fig 7A caption.
+
+**Melioidosis**
+
+- **Case-Count Reference:** The authors note that "Broad confidence intervals could be explained by low monthly case counts across provinces".
+- **Anchor:** Results Section ("Change in disease risk by individual extreme weather events").
+
+**Pneumonia, Malaria, Leptospirosis, and Japanese Encephalitis Virus (JEV)**
+
+- **General Comparison Language:** The authors group these diseases together with the others as "seven major infectious diseases circulating in Thailand" and note they were "chosen among the common infectious diseases in Thailand as the risk of transmission from these diseases are plausibly influenced by weather conditions".
+- **Anchor:** Methods Section ("Disease case data").
+- **Explicit Statement on Missing Information:** The paper **does not provide** a direct baseline ranking, specific mean case-count numbers, or direct current burden comparison language for pneumonia, malaria, leptospirosis, or Japanese encephalitis virus (JEV). The methodology mentions that excess risk was calculated using the "mean disease case counts across the historical period" (2003-2019), but the exact baseline numbers for these specific diseases are not published in the text.
+
+## Phase 3 Query 04 — Short method and uncertainty anchors for public-facing caveats
+
+For the exact source title "3-Projecting long-term excess risks of major infectious diseases associated with future extreme weather events in Thailand", extract only the exact method and limitation details needed for a short public-facing caveat box. Return concise source-bound statements with anchors for these items only
+- study period and geographic coverage
+- model family used
+- climate scenarios used
+- why future population growth was excluded
+- the daily-temperature disaggregation limitation
+- the lack of bias correction for GCM inputs
+- the warning that these are risk trajectories from extreme weather pressure rather than guaranteed future case counts
+
+### Raw response
+
+Here are the exact method and limitation details extracted for the caveat box, based on the source _"Projecting long-term excess risks of major infectious diseases associated with future extreme weather events in Thailand"_:
+
+- **Study period and geographic coverage:** The models used "historical data from 2003 to 2019" across "77 provinces in Thailand" to project future excess risk "from 2021–2100". **(Anchors: Author summary; Introduction)**
+- **Model family used:** "Generalised additive models (GAMs) with a negative binomial distribution were used to model the associations". **(Anchor: Methods Section, "Statistical model")**
+- **Climate scenarios used:** The study considered "4 of the CMIP6 climate change scenarios - SSP126, SSP245, SSP370, SSP585". **(Anchor: Results Section, "Future climate change scenarios")**
+- **Why future population growth was excluded:** The authors noted they "could not account for future population growth as future population exceeded historical maxima, hence incorporating future population in projections led to implausibly large and uncertain estimates". Additionally, they aimed to "observe the change in risk solely from extreme weather and not population levels". **(Anchors: Results Section, "Model evaluation"; Discussion)**
+- **The daily-temperature disaggregation limitation:** "Future monthly temperature was disaggregated to daily temperature to determine the number of extreme heat days. However, this approach may not accurately capture the true variability and daily extremes within each month". **(Anchor: Discussion)**
+- **The lack of bias correction for GCM inputs:** "We did not apply additional bias correction to the GCM inputs, so weather extremes may have been under-estimated or over-estimated, which could influence the estimated impact of extreme weather on disease outcomes". **(Anchor: Discussion)**
+- **The warning that these are risk trajectories from extreme weather pressure rather than guaranteed future case counts:** The methodology specifies that the analysis "ensures that excess risk reflects the impact of future extreme weather while holding all other covariates constant". The authors explicitly warn that they "did not account for variables such as changes in land use, use of intervention and proximity to amplifying hosts" and "were unable to incorporate population immunity dynamics and future interventions in our model. This would require refining of our predictions in the future when such data is available". **(Anchors: Methods Section, "Future projection and estimation of excess risk due to extreme weather scenarios"; Discussion)**

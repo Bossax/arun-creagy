@@ -200,3 +200,178 @@ Based on the source document "2-Exploring the impacts of climate change and iden
 - **Assumption regarding future management practices:** "This simulation assumed that the field management practices would remain consistent in the future, but some genetic coefficients of RD57 would be adjusted" (Section: _Impact of simulated virtual cultivar on future rice yield and irrigation water use_, Page 17).
 - **Constraint regarding practical implementation:** The authors note that "practical implementation by local farmers may face several barriers. Social and cultural factors, such as resistance to changing traditional farming practices, and the lack of crop policies may further hinder the adaptation of these strategies" (Section: _Impact of simulated virtual cultivar on future rice yield and irrigation water use_, Page 20).
 - **Scope limitation requiring future research:** The authors state that "further studies are needed to better understand the combined effects of different adaptation strategies" because the current study primarily evaluated strategies with their single or isolated impacts rather than as a holistic combination (Section: _Impact of simulated virtual cultivar on future rice yield and irrigation water use_, Page 20).
+
+---
+
+# Phase 3A refresh — targeted retrieval after draft-gap review
+
+## Gap trigger summary
+- Draft gap on methodology detail in [`03_Draft_Article.md`](ψ/incubate/DCCE/CRDB/output/TOR5.5_article_and_infoghraphic/ART02_ChaoPhraya_Rice_Adaptation/03_Draft_Article.md:5)
+- Draft gap on rice-risk mechanism in [`03_Draft_Article.md`](ψ/incubate/DCCE/CRDB/output/TOR5.5_article_and_infoghraphic/ART02_ChaoPhraya_Rice_Adaptation/03_Draft_Article.md:7)
+- Draft gap on adaptation comparison and model-testing logic in [`03_Draft_Article.md`](ψ/incubate/DCCE/CRDB/output/TOR5.5_article_and_infoghraphic/ART02_ChaoPhraya_Rice_Adaptation/03_Draft_Article.md:9)
+
+## Query P3-1 — Methodology chain for public-facing explanation
+For the source document `2-Exploring the impacts of climate change and identifying potential adaptation strategies for sustainable rice production in Thailand`: Extract the exact methodological chain used in the study. Identify the study scope, baseline period, future periods, SSP scenarios, selected climate models, the role of the DSSAT-CSM-CERES-Rice model, and the field data used for calibration and evaluation. Cite exact section, table, or figure anchors. If the document is missing or the title is ambiguous, stop and report that explicitly.
+
+### Raw Response
+Here is the methodological chain and study design extracted from the document:
+
+- **Study Scope:** The research focuses on the **Lower Chao Phraya River Basin (CPRB)** in Thailand, utilizing an experimental location in the Pathum Thani province as a representative site for the basin (referenced in the "Abstract", "Field experiments and crop management for model evaluation" section, and Fig. 1).
+- **Baseline Period:** The historical baseline period used for analyzing current conditions and comparing future simulations is **2010–2022** (referenced in the "Abstract", "Data collection: Weather data" section, Table 5, and Table 9).
+- **Future Periods:** Future climate impacts and adaptation strategies were assessed across three distinct periods: **early-century (2023–2040)**, **mid-century (2041–2070)**, and **late-century (2071–2100)** (referenced in the "Abstract", "Global climate model for future climate change projection" section, and Table 5).
+- **SSP Scenarios:** The study utilized three Shared Socioeconomic Pathways (SSPs) to represent different future greenhouse gas emission scenarios: **SSP126, SSP245, and SSP585** (referenced in the "Abstract", "Global climate model for future climate change projection" section, and Table 4).
+- **Selected Climate Models:** The researchers downloaded bias-corrected climate data from the NEX-GDDP-CMIP6 datasets, selecting five Global Climate Models (GCMs): **ACCESS-ESM1-5, CNRM-CM6-1, EC-Earth3-Veg, MPI-ESM1-2-LR, and MRI-ESM2-0** (referenced in the "Abstract", "Global climate model for future climate change projection" section, and Table 3).
+- **Role of the DSSAT-CSM-CERES-Rice model:** The model was the central simulation tool used to assess how the rice crop responds to varying weather, soil, crop cultivar, and crop management conditions (referenced in the "Abstract", and "Crop growth model" section). Once calibrated, the model was used to project the impacts of future climate scenarios on rice yield and irrigation water use, and to simulate the effectiveness of different genotype- and management-based adaptation strategies (e.g., altering planting dates, optimizing irrigation thresholds, and evaluating virtual "heat-tolerant" or "early-flowering" cultivars) (referenced in the "Introduction" and "DSSAT model calibration and evaluation" section).
+- **Field Data Used for Calibration and Evaluation:**
+    - **Calibration Data:** Measured data from field experiments using the photoperiod-insensitive **RD57 rice cultivar**, conducted during the dry season from **December 2017 to April 2018** at the Asian Institute of Technology (AIT) research farms (referenced in "Field experiments and crop management for model evaluation" and "Model calibration and evaluation" sections). Treatments included dry direct seeding and transplanting across three irrigation levels: continuous flooding (CF), mild stress (AWD15), and severe stress (AWD30) (referenced in Table 1).
+    - **Evaluation Data:** Measured field data collected during the subsequent dry season from **October 2021 to February 2022** at the same site, testing wet direct seeding and transplanting against the same three irrigation levels (referenced in "Model calibration and evaluation" section and Table 1).
+    - **Supporting Environmental Data:** The study relied on historical daily weather data (2010–2022) obtained from an onsite AIT weather station and a nearby Thai Meteorological Department station, alongside detailed physical and chemical soil properties collected from six successive layers (0–120 cm depth) of the experimental field (referenced in "Data collection" section and Table 2).
+
+---
+
+## Query P3-2 — Climate-risk mechanism affecting RD57 yield
+For the source document `2-Exploring the impacts of climate change and identifying potential adaptation strategies for sustainable rice production in Thailand`: Extract the authors’ explicit explanation of which climate factors reduce or alter dry-season rice yield for RD57 and through what process. Identify the roles of rising maximum and minimum temperatures, rainfall or water availability, solar radiation if relevant, and irrigation demand. Quote or list only mechanisms directly stated by the authors. Cite exact section, table, or figure anchors. If the document is missing or the title is ambiguous, stop and report that explicitly.
+
+### Raw Response
+Based on the source document, the authors explicitly attribute the reduction and alteration of future rice yields to rising temperatures and the subsequent impact on crop water needs.
+
+Here are the specific climate factors and mechanisms directly stated by the authors:
+
+**1. Rising Maximum and Minimum Temperatures (Heat Stress)** The authors identify increased projected temperatures as the primary driver of yield decline, which causes "heat stress, particularly during critical growth stages like panicle initiation, flowering, and grain filling". In the **"Impacts of future climate change on rice yield"** and **"Historical climate trends and future climate scenarios"** sections, they list the following exact mechanisms through which elevated temperatures alter or reduce yield:
+
+- **Accelerated growth but reduced biomass:** "An increase in temperature might accelerate rice growth but reduce biomass and productivity".
+- **Impaired internal processes:** High temperatures "impair physiological and biochemical processes".
+- **Reduced photosynthesis:** Heat stress can "reduce photosynthetic capacity".
+- **Reproductive failure:** Prolonged exposure to high temperatures can "cause pollen sterility" or "induce pollen sterility".
+- **Grain defects:** Heat stress leads to "poor grain setting, and decreased grain quality".
+- **High baseline variability:** "Higher variability with the baseline temperature leads to increased heat stress for rice under future global warming and thereby affecting the yield".
+
+**2. Irrigation Demand and Evapotranspiration** While rising temperatures directly damage the plant's biology, they also alter the crop's water requirements. In the **"Impacts of future climate change on rice yield"** section, the authors explain:
+
+- **Increased Transpiration and Evaporation:** "The rise in temperature would affect future crop water needs by increasing transpiration and evaporation rates".
+- **Surging Water Use:** This leads to a substantial "increase in irrigation water inputs... regardless of the timeline," with up to a 53.34% increase under the SSP585 scenario by the late century (referenced in **Table 10**).
+- **Combined Impact:** "Rising temperatures would itself impair rice productivity and also cause an increase in water use for rice cropping and therefore, significantly impacting future rice production".
+
+**3. Rainfall / Water Availability** The authors note that future rainfall levels are not the primary cause of yield reduction. In the **"Impacts of future climate change on rice yield"** section, they explicitly state that "future annual rainfall will remain similar" (with only minor variations of <5% predicted in the early and mid-century, and slight increases in the late century). The yield reductions occur _despite_ stable rainfall because of the temperature-driven mechanisms described above.
+
+**4. Solar Radiation** In the **"Historical climate trends and future climate scenarios"** section, the authors project that "solar radiation is projected to increase slightly under future climate change scenarios" (with variations within 10%, showing a notable increase from April to October) (referenced in **Table 5** and **Figure 2b**). However, the authors do not explicitly outline a standalone biological mechanism through which this increased solar radiation directly reduces or alters the rice yield, focusing instead entirely on the physiological damage caused by temperature.
+
+---
+
+## Query P3-3 — Baseline rice yield and irrigation water results
+For the source document `2-Exploring the impacts of climate change and identifying potential adaptation strategies for sustainable rice production in Thailand`: Extract the exact baseline simulation findings from `Table 9` and `Table 10`. Report the projected rice yield and irrigation water use results under `SSP126`, `SSP245`, and `SSP585` across early-century, mid-century, and late-century periods. Include exact percentages or values and exact table citations. If the document is missing or the title is ambiguous, stop and report that explicitly.
+
+### Raw Response
+
+**Baseline Values** The historical baseline period (2010–2022) established a standard rice yield of **4,749.77 kg ha⁻¹** (Table 9) and a baseline irrigation water use of **121.08 mm** (Table 10).
+
+**Projected Rice Yield (Table 9)** Compared to the baseline, the projected rice yields across the three future climatic periods are:
+
+- **SSP126**
+    - **Early-century (2023–2040):** 4,378 kg ha⁻¹ (z-score: -1.25)
+    - **Mid-century (2041–2070):** 4,423 kg ha⁻¹ (z-score: -1.1)
+    - **Late-century (2071–2100):** 4,335 kg ha⁻¹ (z-score: -1.40)
+- **SSP245**
+    - **Early-century:** 4,595 kg ha⁻¹ (z-score: -0.52)
+    - **Mid-century:** 4,375 kg ha⁻¹ (z-score: -1.26)
+    - **Late-century:** 4,238 kg ha⁻¹ (z-score: -1.72*), representing a projected decrease of **10.78%**
+- **SSP585**
+    - **Early-century:** 4,477 kg ha⁻¹ (z-score: -0.92)
+    - **Mid-century:** 4,191 kg ha⁻¹ (z-score: -1.88*), representing a projected decrease of **11.77%**
+    - **Late-century:** 3,194 kg ha⁻¹ (z-score: -5.24**), representing a projected decrease of **32.76%**
+
+**Projected Irrigation Water Use (Table 10)** Compared to the baseline, the projected irrigation water use inputs across the three future climatic periods are:
+
+- **SSP126**
+    - **Early-century:** 143.56 mm (z-score: 0.68)
+    - **Mid-century:** 139.38 mm (z-score: 0.56)
+    - **Late-century:** 143.91 mm (z-score: 0.69)
+- **SSP245**
+    - **Early-century:** 159.98 mm (z-score: 1.18)
+    - **Mid-century:** 158.00 mm (z-score: 1.12)
+    - **Late-century:** 157.63 mm (z-score: 1.11)
+- **SSP585**
+    - **Early-century:** 145.73 mm (z-score: 0.75)
+    - **Mid-century:** 174.69 mm (z-score: 1.63)
+    - **Late-century:** 185.66 mm (z-score: 1.96**), representing a significant water input increase of **53.34%**
+---
+
+## Query P3-4 — Management adaptation effects and water-saving claim
+For the source document `2-Exploring the impacts of climate change and identifying potential adaptation strategies for sustainable rice production in Thailand`: Extract the exact findings from `Table 11` and `Table 12` for management-based adaptation strategies. Identify which changes in planting date, fertilizer timing or dose, and irrigation thresholds most improved rice yield and which most reduced irrigation water use. Include the exact basis for the claim that irrigation water use can be reduced by up to 90 percent while keeping yield stable, with exact citations. If the document is missing or the title is ambiguous, stop and report that explicitly.
+
+### Raw Response
+
+**Findings for Management-Based Adaptation Strategies (Tables 11 and 12)**
+
+Based on the simulations under SSP126, SSP245, and SSP585 climate scenarios, adjustments to management practices yielded the following exact results:
+
+- **Planting Date:** Shifting the planting date **1 or 2 weeks forward** (earlier than the baseline of July 20) resulted in positive improvements by **increasing rice yield** and **reducing irrigation water use** across all SSPs and timelines. Conversely, late planting (shifting 1 or 2 weeks backward) had a negative impact on yield and increased water use.
+- **Fertilizer Application Date (Panicle Initiation):** Shifting the fertilizer application date **1 or 2 weeks forward** indicated better rice yields across all cases. Shifting the date backward by 2 weeks reduced yields, and shifting dates generally had no substantial influence on irrigation water use.
+- **Fertilizer Application Dose:** Increasing the fertilizer application by **1.5 times the base dose** substantially increased rice yield with little effect on irrigation water use. Increasing the dose further to 2, 3, and 4 times the base dose did not increase the yield any further, as yields stabilized, nor did it noticeably increase water use. Reducing the dose by half drastically decreased the rice yield.
+- **Irrigation Water Threshold:** Changing the percentage threshold of remaining soil water at which to irrigate resulted in **stable rice yields** across all timelines and scenarios. However, increasing the threshold above the baseline required substantially more water, while decreasing the threshold significantly saved water.
+
+**Which Changes Most Improved Rice Yield?**
+
+- **Planting Date:** Shifting the planting date **1 or 2 weeks forward**.
+- **Fertilizer Timing:** Shifting the application date **forward by 2 weeks**. The authors note this "dramatically improved the rice yield," noting at least a 5.6%, 6.6%, and 5.6% increase in the early, mid, and late centuries under the SSP585 scenario.
+- **Fertilizer Dose:** Increasing the base dose by **1.5 times** achieved the maximum yield improvement; applying more than 1.5 times provided no additional benefit.
+
+**Which Changes Most Reduced Irrigation Water Use?**
+
+- **Planting Date:** Shifting the planting date **1 or 2 weeks forward**.
+- **Irrigation Threshold:** Decreasing the irrigation water threshold to **30%** (a 20% decrease from the baseline).
+
+**Exact Basis for the 90% Water Reduction Claim** The authors base this claim directly on the simulation data comparing yield stability against reduced water inputs. They state: **"Although this approach resulted in stable rice yields across all SSPs and timelines (Table 11), irrigation water use could be saved up to 90%, 55%, and 30% at thresholds of 30%, 40%, and 45%, respectively, as shown in Table 12"**.
+
+The 90% saving is specifically achieved by shifting the baseline irrigation threshold of 50% down by 20% (resulting in a 30% threshold), which forces the model to wait until the soil is much drier before applying water. Because the simulations were run during periods where natural rainfall was still adequate for crop growth, this severe reduction in supplementary irrigation water could be implemented while maintaining a completely stable yield.
+
+---
+
+## Query P3-5 — Virtual cultivar effects and the 37.9 percent claim
+For the source document `2-Exploring the impacts of climate change and identifying potential adaptation strategies for sustainable rice production in Thailand`: Extract the exact findings from `Table 13` and `Table 14` for virtual cultivar adaptation strategies. Identify which traits produced the largest rice-yield gains and which reduced irrigation water use. Include the exact basis for the claim that heat tolerance can increase yield by up to 37.9 percent under the most severe late-century scenario, with exact citations. If the document is missing or the title is ambiguous, stop and report that explicitly.
+
+### Raw Response
+Based on the simulations of virtual cultivars under varying climate scenarios, here are the exact findings extracted from **Table 13** and **Table 14** and the authors' corresponding analysis:
+
+**Which traits produced the largest rice-yield gains?**
+
+- **Heat Tolerance (THOT):** Increasing the high-temperature tolerance coefficient produced the most substantial and desirable yield gains of any trait. Increasing heat tolerance by 5% to 15% consistently increased rice yields across all Shared Socioeconomic Pathways (SSPs) and timelines.
+- **High Yield Potential (G1):** Increasing the potential spikelet number coefficient by up to 15% resulted in the second-best yield improvements, which proved more effective than extending the grain-filling period. For example, this trait achieved an 8.3% yield increase under the SSP585 late-century scenario.
+- **Longer Grain Filling Period (P5):** Extending the grain-filling duration by 15% enhanced rice yields, though less dramatically than G1 or THOT, showing a 1.1% increase under the SSP585 late-century scenario.
+
+**Which traits reduced irrigation water use?** According to the findings associated with **Table 14**, reducing irrigation water use was entirely tied to shortening the plant's growth phases, which required a trade-off because these shortened phases also reduced overall crop yield:
+
+- **Early Flowering (P1):** Decreasing the basic vegetative phase (shortening the flowering duration) successfully reduced irrigation water use, but it simultaneously decreased future rice yields.
+- **Shorter Grain Filling Period (P5):** Decreasing the duration of grain-filling also led to reduced irrigation water use, alongside a reduction in yield.
+- _Note on other traits:_ Adjusting the virtual traits for high yield potential (G1), drought tolerance (RWUMX), and heat tolerance (THOT) (whether increased or decreased) had a **minimal impact on irrigation water use** across all SSPs and timelines.
+
+**Exact Basis for the 37.9% Yield Increase Claim** The claim that heat tolerance can increase yield by up to 37.9% is based directly on the simulation of the virtual cultivar with an enhanced **high-temperature tolerant coefficient (THOT)**.
+
+The authors explicitly base this claim on the following observations:
+
+- In the **"Impact of simulated virtual cultivar on future rice yield"** section, they report that "increasing heat tolerance by 5% to 15% increased rice yields (Table 13)" and that "The most notable yield increases for THOT were observed in SSP245 and SSP585 during the mid and late centuries (up to 37.9%)".
+- In the **Conclusions** section, the authors explicitly pinpoint the most severe scenario responsible for this maximum gain, stating that "adjustments to genetic coefficients of the RD57 cultivar, particularly enhancing heat tolerance (THOT), showed promising results in increasing yields across all scenarios, with the most notable increase of 37.9% under SSP585 in the late century".
+
+---
+
+## Query P3-6 — Why both management and genotype are needed
+For the source document `2-Exploring the impacts of climate change and identifying potential adaptation strategies for sustainable rice production in Thailand`: Extract the authors’ explicit explanation for why management-based adaptation and genotype-based adaptation should be combined rather than treated as alternatives. Quote or list only the reasons directly stated by the authors, with exact section anchors. If the document is missing or the title is ambiguous, stop and report that explicitly.
+
+### Raw Response
+Based on the source document, the authors do not explicitly use the phrase "rather than treated as alternatives" when discussing genotype and management strategies. However, they explicitly explain that relying solely on management-based adaptation is insufficient and highlight the direct interdependence between a plant's genetics and its response to management practices.
+
+Here are the specific reasons directly stated by the authors for why these strategies are interconnected and must support one another:
+
+**1. Genetic Limitations Cap Management Benefits** In the **"Impacts of changed management practices on predicted rice yield and irrigation water use"** section, the authors explain that while increasing fertilizer can improve yields, there is a hard ceiling to how much management alone can achieve without better genetics:
+
+- "Moreover, high-yielding rice varieties respond better to elevated fertilizer application... However, due to genetic limitations, rice yield stabilizes after potential is reached, and fertilization and management cannot increase the yield any further".
+
+**2. Genetic Potential Restricts Future Water and Yield Efficiency** In the **"Impact of simulated virtual cultivar on future rice yield and irrigation water use"** section, the authors explicitly state that existing genetics will act as a bottleneck under future climate stress, necessitating new genotypes:
+
+- "The genetic potential of a cultivar could limit yield increase and water use efficiency under future climate change scenarios. Thus, a virtual cultivar with improved attributes could be a potential solution for mitigating the effects of future climate change".
+
+**3. New Genotypes are Required to Maximize Management Practices** In the **"Virtual cultivars adaptations"** section, the authors note that improving the plant's genotype is a mechanism used to get the most out of management resources:
+
+- "High-yield potential cultivars can be simulated to optimize management practices (fertilizer, irrigation) for maximum productivity".
+
+_(Note: In the **"Impact of simulated virtual cultivar on future rice yield and irrigation water use"** section, the authors also discuss the "synergies and trade-offs" of combining various adaptation strategies to formulate "effective adaptation measures that maximize rice yield while minimizing water use", though their specific examples in that paragraph focus primarily on combining multiple management strategies—such as planting dates, irrigation, and fertilizer—to achieve cumulative benefits.)_

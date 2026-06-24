@@ -196,3 +196,102 @@ Based on the source document "4-Influence of El Niño southern oscillation on pr
 - **Warnings**: The authors warn that El Niño phases severely reduce rainfall, which **exacerbates drought conditions, reduces water availability, and increases the risk of forest fires**. Conversely, strong La Niña phases cause significant increases in precipitation that, while beneficial for crops, pose **high risks of flooding and related hazards**.
 - **Recommendations for Planning**: The authors recommend using ENSO forecasts to predict agricultural outputs so that Thai farmers and planners can **develop better tactics to deal with extreme weather**. Understanding ENSO variability is crucial for mitigating adverse impacts and **enhancing the resilience of local communities and economies**.
 - **Future Research Needs**: Future studies should seek to expand on these findings by **incorporating more extensive datasets and utilizing advanced analytical methods**. This will help refine climate predictions and better inform policy decisions necessary for sustainable development in Northeast Thailand and similar regions globally.
+
+# Phase 3 Delta Query Packet — 2026-06-24
+
+## Gap assessment note
+- This packet is limited to unresolved needs that survive the Phase 3 filters from [`Collaborative_Writing_Plan-TOR5.5.md`](ψ/incubate/DCCE/CRDB/output/TOR5.5_article_and_infoghraphic/Collaborative_Writing_Plan-TOR5.5.md).
+- Already-captured material such as the basic ENSO-rainfall relationship, 4-to-5 month lag, strong La Niña asymmetry, 2-to-7 year periodicity, and 1993/2017 extremes was **not** re-queried.
+- The packet targets only citation anchors, mechanism clarification, and method explanation gaps exposed by [`02_Decision_Log.md`](ψ/incubate/DCCE/CRDB/output/TOR5.5_article_and_infoghraphic/ART04_ENSO_Precipitation_Northeast/02_Decision_Log.md) and placeholders inside [`03_Draft_Article.md`](ψ/incubate/DCCE/CRDB/output/TOR5.5_article_and_infoghraphic/ART04_ENSO_Precipitation_Northeast/03_Draft_Article.md).
+
+## Phase 3A — Classification and detection mechanism
+**Query**
+"For the source document \"4-Influence of El Niño southern oscillation on precipitation variability in Northeast Thailand.pdf\": extract only the paper's source-bound explanation of how El Niño, La Niña, and neutral conditions are identified or represented in this study. Include the exact Niño indices used, any thresholds, category labels, figure/table anchors, and the section/page locations where this classification or detection logic appears. Do not add outside climatology background."
+
+**Paste NotebookLM response below this line**
+
+
+## Phase 3B — Why Pearson correlation and wavelet coherence matter here
+**Query**
+"For the source document \"4-Influence of El Niño southern oscillation on precipitation variability in Northeast Thailand.pdf\": extract only the paper's explanation of what the Pearson correlation analysis and wavelet transform coherence each contribute to understanding ENSO impacts on precipitation in Northeast Thailand. Include exact methodological wording, what each method can and cannot show, and the exact section/page anchors. Do not paraphrase into general textbook language."
+
+**Paste NotebookLM response below this line**
+Based on the provided study, here is the exact explanation of how El Niño, La Niña, and neutral conditions are identified and represented:
+
+**Niño Indices Used** The study utilizes Sea Surface Temperature Anomalies (SSTA) from four specific regions to monitor the phases of the El Niño Southern Oscillation (ENSO), using the ERSST.v5 dataset from NOAA:
+
+- **Niño 1+2** (0–10S, 90W–80W)
+- **Niño 3** (5N–5S, 150W–90W)
+- **Niño 3.4** (5N–5S, 170W–120W)
+- **Niño 4** (5N–5S, 160E–150W)
+
+**Categories and Thresholds** The paper evaluates El Niño (warmer-than-average SSTs) and La Niña (cooler-than-average SSTs) by sorting them into severity categories based specifically on the **Niño 3.4 index**. The specific thresholds and labels are:
+
+- **Neutral conditions ("ENSO-neutral"):** Described as periods when Sea Surface Temperatures (SST) in the central and eastern equatorial Pacific are close to their long-term average, and conditions are neither El Niño nor La Niña.
+- **Weak (El Niño or La Niña):** ± 0.5 to ± 1.0
+- **Moderate (El Niño or La Niña):** ± 1.0 to ± 1.5
+- **Strong (El Niño or La Niña):** ± 1.5 and above/below
+
+**Figure and Table Anchors**
+
+- **Figure 3 (a, b, c, d):** These line graphs visually map the monthly indices for Niño 1+2, 3, 3.4, and 4 from 1993 to 2022. Each graph includes explicit horizontal lines labeling the thresholds for "Neutral" (0), "Weak" (±0.5), "Moderate" (±1.0), and "Strong" (±1.5) for both El Niño (positive, red) and La Niña (negative, blue).
+- **Figure 6 (a, b, c, d):** Bar charts that illustrate the Pearson's correlation results between precipitation anomalies and the explicit intensity labels: "Strong La Niña," "Moderate La Niña," "Weak La Niña," "Weak El Niño," "Moderate El Niño," and "Strong El Niño".
+
+**Section Locations**
+
+- **"Background" section:** Introduces the definitions of El Niño, La Niña, and Neutral phases, noting that phases vary in intensity (weak, medium, strong).
+- **"Data acquisition" section:** Defines the specific Niño regions (1+2, 3, 3.4, and 4) and their geographic coordinates.
+- **"Pearson’s correlation analysis" section:** Specifically details the numerical measurement thresholds (± 0.5, ± 1.0, ± 1.5 based on Niño 3.4) used to classify the severity levels.
+- 
+
+## Phase 3C — Exact citation anchors for the article's kept claims
+**Query**
+"For the source document \"4-Influence of El Niño southern oscillation on precipitation variability in Northeast Thailand.pdf\": provide an extraction-only verification table for these specific claims, with exact value, exact comparison basis, and exact page/section/table/figure anchors for each item: (1) 4-to-5 month lag by Niño region, (2) strong La Niña correlation coefficients across Niño 1+2, 3, 3.4, and 4, (3) mean annual rainfall of 1470.80 mm, (4) 2017 rainfall of 1972.8 mm and +34.13% anomaly, (5) 1993 rainfall of 1112.3 mm and -24.38% anomaly, and (6) the 27-station 1993–2022 study coverage and the study's geographic limitation to Northeast Thailand. Return only what is explicitly supported by the source."
+
+**Paste NotebookLM response below this line**
+Based on the provided study, here is the explanation of how the Pearson correlation analysis and wavelet transform coherence (WTC) contribute to the research, using the paper's exact descriptions:
+
+**Pearson Correlation Analysis**
+
+- **Contribution:** The method "elucidates the relationship between ENSO indices and PPTA". It is used to "quantify relationships between ENSO indices and PPTA for 1993–2022," functioning as a "statistical approach [that] lays the groundwork for identifying initial connections and potential areas of influence".
+- **Exact Methodological Wording:** "The Pearson correlation coefficient (r) is a descriptive statistic, meaning that it summarizes the characteristics of a dataset by finding a relationship between two variables. Specifically, it describes the strength and direction of the linear relationship between two quantitative variables... If the value approaches one, two variables have a direct relationship, and the opposite for − 1. If the value approaches 0, the two variables do not have a relationship".
+- **What it can show:** It acts as a tool that "measures the linear relationship between two variables" and "helps identify whether there is a consistent relationship between ENSO signals and precipitation (PPT) over time".
+- **What it cannot show:** Because it is a traditional measure, Pearson's correlation "may obscure" the "significant co-varying patterns and time-dependent relationships" that fluctuate across varying frequency bands over time.
+- **Section/Page Anchors:**
+    - "Abstract" (Page 1)
+    - "Background" (Page 2-3)
+    - "Data preprocessing" -> "The Pearson correlation" subsection (Page 5)
+
+**Wavelet Transform Coherence (WTC)**
+
+- **Contribution:** WTC "dissects the temporal and frequency-specific nature of the relationship between ENSO and PPTA". It is applied to "explore how the periodicity of ENSO impacts varies over time across different frequency bands" and enables "the examination of the temporal recurrence of ENSO-related signals in PPTA, enhancing understanding of their transient nature".
+- **Exact Methodological Wording:** "Wavelet coherence measures the local correlation between two-time series in both time and frequency domains. It is defined as the ratio of the cross-spectrum to the product of the spectrum of each series... Smoothing is necessary to avoid identically 1 coherency values, and it is achieved through convolution with a Gaussian in time and a rectangular window in scale".
+- **What it can show:** It provides "information about the strength and consistency of the relationship between two variables across different frequencies and time intervals". Unlike traditional tools, wavelet analysis can "identify oscillations with phase and amplitude modulation," showing "how the relationship... has changed and evolved, with variations observed across different frequencies".
+- **What it cannot show:** The text implies a mathematical limitation regarding standard significance testing, stating that "Theoretical distributions for wavelet coherency have not been derived yet, so statistical significance is typically assessed using Monte Carlo simulation methods".
+- **Section/Page Anchors:**
+    - "Abstract" (Page 2)
+    - "Background" (Page 2-3)
+    - "Method details" -> "Wavelet transformation" subsection (Page 6-7)
+
+
+## Phase 3D — Mechanism wording for lag and seasonality
+**Query**
+"For the source document \"4-Influence of El Niño southern oscillation on precipitation variability in Northeast Thailand.pdf\": extract only the paper's source-grounded explanation for why ENSO effects on precipitation in Northeast Thailand appear with a lag and why coherence appears in both 2-to-7 year and 0.5-to-1 year bands. Include exact wording or close extraction, plus page/section/figure anchors. Do not add interpretation beyond the paper."
+
+**Paste NotebookLM response below this line**
+Based on the provided study, here are the exact explanations extracted from the text regarding the lag in ENSO effects and the observed coherence bands:
+
+**Why ENSO Effects on Precipitation Appear with a Lag**
+
+- **Exact Wording:** "The time lag in correlations suggests that the impact of SSTA [Sea Surface Temperature Anomalies] in the Niño regions on PPTA [precipitation anomalies] may be delayed due to the propagation of oceanic and atmospheric waves, which can take several months to influence distant regions".
+- **Section Anchor:** "Pearson’s correlation analysis" section.
+
+**Why Coherence Appears in the 2-to-7 Year Band**
+
+- **Exact Wording:** "This is because ENSO events typically occur every 2 to 7 years, and the associated shifts in atmospheric circulation directly affect the monsoon and precipitation patterns in Northeast Thailand".
+- **Section/Figure Anchor:** "Wavelet analysis" section, corresponding to visual data in Figure 7.
+
+**Why Coherence Appears in the 0.5-to-1 Year Band**
+
+- **Exact Wording:** The study observes notable coherence "at periods around 0.5 to 1 year (semi-annual to annual cycles)". It explicitly explains that "Coherence at these short periods might be related to annual cycles, reflecting the influence of ENSO on specific seasons within the year".
+- **Section/Figure Anchor:** "Wavelet analysis" section, corresponding to visual data in Figure 7.

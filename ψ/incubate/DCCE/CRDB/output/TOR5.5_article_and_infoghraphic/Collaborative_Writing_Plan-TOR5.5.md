@@ -75,6 +75,25 @@ For each article, we will move sequentially through these phases:
 └───────────────────────┘
 ```
 
+### ✍️ Phase 4 Execution Rule: Produce the Final Draft from Phases 1–3
+
+Phase 4 is the stage that produces the actual final public-facing draft in `04_Final_Draft.md`.
+
+Before drafting, the AI must treat the outputs of the earlier phases as the complete working input set:
+- `01_Raw_Extraction.md` provides the structured evidence inventory and topic map.
+- `02_Decision_Log.md` provides the human-selected narrative direction, priorities, and framing intent.
+- `03_Verified_Facts.md` provides the exact numbers, page anchors, table references, and verified claims that are allowed into the final prose.
+- `STYLE_PACK_TOR5.5-Articles.md` provides the active voice, lexicon, anti-AI constraints, and any style-capture updates already learned from prior edits.
+
+The AI must then generate `04_Final_Draft.md` by doing all of the following inside Phase 4:
+1. **Load the current style pack first** and preserve any human-edited framing already propagated there.
+2. **Use only verified facts** from `03_Verified_Facts.md` for numerical claims, scenario comparisons, citations, and technical assertions.
+3. **Use `01_Raw_Extraction.md` only as contextual support** for qualitative structure, issue grouping, and concept framing when those points have already been verified or do not require exact numeric citation.
+4. **Use `02_Decision_Log.md` as the narrative contract** for the opening hook, body flow, article emphasis, and adaptation takeaway.
+5. **Write the full final article and infographic copy directly into `04_Final_Draft.md`** without reverting to a generic baseline voice or bypassing the human-selected framing.
+
+If evidence gaps are still discovered during drafting, the AI must stop and return to Phase 3 rather than inventing connective facts inside Phase 4.
+
 ### 🔍 Phase 1 Execution Protocol: Adaptive Topic-First Exploration
 
 To prevent confirmation bias and ensure high-recall extraction, the AI must not use static, pre-canned queries. Instead, Phase 1 must be executed using a three-step progressive feedback loop.
@@ -86,6 +105,40 @@ To prevent context congestion, save AI token budget, and handle browser-session 
    - **Step A**: The AI automatically creates or updates the `raw-copy.md` file in the target article directory, prepopulated with the exact, custom queries for that paper (Step 1A - 1E) to facilitate the human's copy-paste workflow.
    - **Step B**: The human runs these pre-filled queries in the NotebookLM Web UI and pastes the raw responses directly below each query block in `raw-copy.md`.
    - **Step C**: The AI reads `raw-copy.md` to synthesize the canonical `01_Raw_Extraction.md` JSON.
+
+#### 📥 Raw Extraction Persistence Rule
+All new NotebookLM extraction output must be persisted first in `raw-copy.md` inside the target article directory.
+
+- `raw-copy.md` is the canonical landing zone for **verbatim NotebookLM output** before any local synthesis, flattening, or promotion into other artifacts.
+- If additional retrieval is needed after Phase 2 because the decision log, edited draft, or narrative blueprint reveals evidence gaps, the AI must **update `raw-copy.md` with a new query block packet** rather than bypassing the file.
+- The human then pastes the new NotebookLM responses directly under those newly added query blocks in the same `raw-copy.md` file.
+- The AI may then use the expanded `raw-copy.md` to enrich `01_Raw_Extraction.md` if the material remains extraction-grade, or to construct `03_Verified_Facts.md` when the retrieval is targeted, citation-bound, and being used as formal verification.
+
+#### 🔁 Phase 3 Query Refresh Rule
+When entering Phase 3 or any Phase-2.5 / language-first gap-retrieval pass, the AI must inspect the current `02_Decision_Log.md`, edited draft, and `01_Raw_Extraction.md` to identify missing details.
+
+- The AI must then **update `raw-copy.md` to append a dedicated Phase 3 query packet** only for those missing details before any new NotebookLM run occurs.
+- Phase 3 retrieval is a **delta-only pass**, not a restart of Phase 1. The AI must avoid re-querying material that is already adequately captured in `01_Raw_Extraction.md` unless the missing need is an exact citation anchor, exact number, exact comparison, or a more precise formulation explicitly required by the decision log or the edited draft.
+- These Phase 3 packets should be narrow, source-bound, and extraction-only, focused only on unresolved items such as exact definitions, table-level metrics, figure interpretation, methodological detail, limitations, citation anchors, or mechanism explanations that are still missing.
+- The AI must not place fresh NotebookLM output only in chat or only in a temporary note; the new retrieval must be captured under the new Phase 3 query blocks in `raw-copy.md` first.
+- This rule applies even when the retrieval is triggered by a richer drafting need rather than by the formal verification file itself.
+
+#### 🎯 Phase 3 Relevance Filter
+Before appending any new Phase 3 query block, the AI must explicitly test each candidate query against three filters:
+
+1. **Already Captured Filter**
+   - Is the needed content already present in `01_Raw_Extraction.md` with sufficient clarity for the current article?
+   - If yes, do not query it again.
+
+2. **Decision-Log Relevance Filter**
+   - Is the missing detail required to support a `KEEP` issue, the chosen narrative direction, or a stated narrative blueprint in `02_Decision_Log.md`?
+   - If no, do not query it.
+
+3. **Draft-Gap Filter**
+   - Is the missing detail explicitly needed to resolve a placeholder, sharpen a causal explanation, support a numeric claim, or complete an argument in the current draft or edited draft?
+   - If no, do not query it.
+
+Only queries that survive all three filters should be appended to `raw-copy.md`.
 
 This hybrid pattern acts as the primary recovery and token optimization path for all agents working on this project.
 
@@ -115,8 +168,41 @@ This hybrid pattern acts as the primary recovery and token optimization path for
 3. **Step 3: Synthesis & Gap Sweep**
    - *Action*: Target limitations, source data gaps, model parameters, and uncertainties to ensure the public narrative is scientifically grounded.
    - *Standard Query Pack*:
-     - **Step 3A (Limitations & Data Gaps)**: `"For the source document \"[Exact Source Title]\": What are the explicit limitations, sample limitations, source data uncertainties, or model parameters (e.g., self-reported bias, lack of baseline data, simulation constraints) that the authors warn about in their discussion or conclusion?"`
-     - **Step 3B (Author Recommendations & Adaptation Policies)**: `"For the source document \"[Exact Source Title]\": What concrete adaptation strategies, policy recommendations, or future research directions do the authors propose to address the identified risks?"`
+      - **Step 3A (Limitations & Data Gaps)**: `"For the source document \"[Exact Source Title]\": What are the explicit limitations, sample limitations, source data uncertainties, or model parameters (e.g., self-reported bias, lack of baseline data, simulation constraints) that the authors warn about in their discussion or conclusion?"`
+      - **Step 3B (Author Recommendations & Adaptation Policies)**: `"For the source document \"[Exact Source Title]\": What concrete adaptation strategies, policy recommendations, or future research directions do the authors propose to address the identified risks?"`
+
+### ✅ Phase 3 Required Outputs
+
+Phase 3 must result in a **complete verification package** for the target article. It is not just a query stage. It must produce all of the following outcomes before the article can move cleanly into Phase 4:
+
+1. **Delta-gap assessment completed**
+   - The AI must inspect `01_Raw_Extraction.md`, `02_Decision_Log.md`, the current draft or edited draft, and the active style state.
+   - The AI must identify only the still-missing factual, methodological, comparison, citation, or mechanism gaps required for the chosen article direction.
+
+2. **`raw-copy.md` updated when gaps exist**
+   - If gaps remain, the AI must append a narrow, source-bound, extraction-only Phase 3 query packet to `raw-copy.md`.
+   - These queries must target only what is missing from the earlier extraction and what is required by the decision log and the active draft.
+
+3. **Raw NotebookLM responses captured verbatim**
+   - All new retrieval responses must be pasted into `raw-copy.md` under the corresponding Phase 3 query blocks.
+   - No fresh NotebookLM output should live only in chat.
+
+4. **`03_Verified_Facts.md` produced or refreshed**
+   - Phase 3 must materialize `03_Verified_Facts.md` as the canonical verification layer for the article.
+   - This file must contain the exact numbers, exact comparison basis, exact table/figure anchors, page or section citations, and any clarified mechanism explanations needed by the article.
+
+5. **Style capture completed when the edited draft changes reusable voice**
+   - If the active edited draft introduces meaningful framing, lexicon, or structural preferences that should shape the final article, the AI must run style capture during Phase 3 and update `STYLE_PACK_TOR5.5-Articles.md` before Phase 4.
+   - This is part of Phase 3 execution when such a style delta exists.
+
+6. **Phase 3 completion test passed**
+   - The article is Phase-3 complete only when:
+     - all required gaps for the chosen narrative are closed,
+     - `raw-copy.md` contains any needed new raw retrieval,
+     - `03_Verified_Facts.md` contains the verified facts actually needed for writing,
+     - and the style pack has been refreshed if the edited draft introduced reusable voice changes.
+
+If any of these outputs is missing, the article has not truly completed Phase 3 and must not be treated as ready for final drafting.
 
 ### 📝 Phase 2 Execution Protocol: Rich Contextual Topic Selection
 
@@ -154,11 +240,12 @@ To prevent robotic writing and align the articles with your strategic voice, the
 ### Steps of the Loop:
 1.  **Calibration & Initiation (Stage 0)**: I load the cumulative Style-Pack from [STYLE_PACK_TOR5.5-Articles.md](file:///C:/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/memory/style/STYLE_PACK_TOR5.5-Articles.md). If it's the first session, we start with standard [writing-th](file:///C:/Users/sitth/OracleWorkspace/Arun_Creagy/.agents/skills/writing-th/SKILL.md) rules (e.g., stripping fillers like *"นอกจากนี้"*, *"ยิ่งไปกว่านั้น"*).
 2.  **Human Review & Edit (Stage 5)**: Once the AI outputs the draft, you review and edit it. You can correct sentence structure, tone, vocabulary, or storytelling flow.
-3.  **Linguistic Extraction**: The AI compares the draft and edited files. The **`style-capture`** engine performs a semantic diff to extract:
+3.  **Pre-Final-Draft Trigger**: If the edited version is being used as the voice anchor for a later final draft of the same article, the AI must run style capture **before** generating `04_Final_Draft.md`, not only after publication of an earlier draft.
+4.  **Linguistic Extraction**: The AI compares the draft and edited files. The **`style-capture`** engine performs a semantic diff to extract:
     *   **Preferred Lexicon**: Words you replaced (e.g., mapping generic verbs to precise strategic terms).
     *   **Linguistic DNA**: Your preferred sentence lengths, hedging habits, and transitions.
     *   **Anti-AI Shield**: Explicit expressions or layouts to avoid.
-4.  **Propagation**: The updated rules are written to the master Style-Pack, which I load at the start of drafting the next article.
+5.  **Propagation**: The updated rules are written to the master Style-Pack, which I load at the start of drafting the next article **and** at the start of any final-draft regeneration pass for the current article.
 
 ---
 

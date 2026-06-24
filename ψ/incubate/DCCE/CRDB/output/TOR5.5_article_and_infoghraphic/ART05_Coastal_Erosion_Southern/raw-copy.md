@@ -253,3 +253,34 @@ Based on the source document "5-Coastal Erosion and Flood Coping Mechanisms in S
 
 - **Ecological Warning:** The authors explicitly warn that the Royal Forestry Department should "desist from planting a certain type of mangrove forest (_Rhizophora mucronate_, or red mangrove) because it produces huge amounts of wastewater".
 - **Long-term Planning (5–20 Year Roadmaps):** The authors recommend that each government agency create a **roadmap covering 5–20 years**. This roadmap should detail specific initiatives and projects for particular areas to "better forecast resources and identify opportunities for integrating projects to achieve efficiency". Furthermore, they note that the Public Works and Town & Country Planning Office in Krabi province already utilizes a 5- to 10-year roadmap detailing their disaster preparedness and response plans.
+
+## Phase 3 Query 01 — Exact anchors for core KEEP claims
+
+For the exact source title "5-Coastal Erosion and Flood Coping Mechanisms in Southern Thailand - A Qualitative Study", extract only the exact source anchors for these specific facts. For each item, return the exact figure/table/page/section anchor where it appears. Do not summarize beyond the source wording.
+
+Items to extract:
+- Shoreline change rates: Krabi mangroves (-34.5 to +21.7 m/yr) and sandy beaches (-4.1 to +4 m/yr); Nakhon Si Thammarat mangroves (-66 to +16.4 m/yr) and sandy beaches (-22.2 to +10.6 m/yr).
+- The 200,000 THB budget for bamboo fences.
+- The mention of substandard 45-degree concrete blocks.
+- The mention of mercury contamination from coal ash reefs.
+- The ecological warning that red mangroves (Rhizophora mucronata) produce large amounts of wastewater.
+- The legal barrier stating residents lack title deeds and face taxation penalties from the Marine Office for self-protection structures.
+- The exact post-disaster compensation figures of 6,000 THB and 11,000 THB.
+- The 20 million THB annual central disaster budget.
+- The specific recommendation to invest 100 million THB in erosion studies rather than 10 million THB in temporary houses.
+- The recommendation for government agencies to create 5-20 year roadmaps.
+
+### Raw response
+
+Here are the exact source anchors for the specified facts from "5-Coastal Erosion and Flood Coping Mechanisms in Southern Thailand - A Qualitative Study":
+
+- **Shoreline change rates: Krabi mangroves (-34.5 to +21.7 m/yr) and sandy beaches (-4.1 to +4 m/yr); Nakhon Si Thammarat mangroves (-66 to +16.4 m/yr) and sandy beaches (-22.2 to +10.6 m/yr).** Section 2.1. Study Area, Page 3 of 14.
+- **The 200,000 THB budget for bamboo fences.** Section 3.2. Control Measures, Page 6 of 14, and Section 3.4.3. Emergency Financial, Page 8 of 14.
+- **The mention of substandard 45-degree concrete blocks.** Concrete blocks at 45 degrees are located in Section 3.2. Control Measures, Page 6 of 14, while the mention of "substandard" hard construction that will not last many years is in Section 4. Discussion, Page 11 of 14.
+- **The mention of mercury contamination from coal ash reefs.** Section 3.2. Control Measures, Page 5 of 14.
+- **The ecological warning that red mangroves (Rhizophora mucronata) produce large amounts of wastewater.** Section 4. Discussion, Page 12 of 14.
+- **The legal barrier stating residents lack title deeds and face taxation penalties from the Marine Office for self-protection structures.** Section 4. Discussion, Page 12 of 14.
+- **The exact post-disaster compensation figures of 6,000 THB and 11,000 THB.** Section 3.3. Mitigation Measures, Page 7 of 14.
+- **The 20 million THB annual central disaster budget.** Section 3.4.3. Emergency Financial, Page 8 of 14.
+- **The specific recommendation to invest 100 million THB in erosion studies rather than 10 million THB in temporary houses.** Section 4. Discussion, Page 12 of 14.
+- **The recommendation for government agencies to create 5-20 year roadmaps.** Section 4. Discussion, Page 12 of 14.

@@ -63,3 +63,26 @@ Follow these constraints strictly:
 - Terms: Translate scientific terms into plain Thai, but append the English term in parentheses without colons.
 - Highlighting: Use ==double equals== to highlight key policy numbers or critical thresholds.
 ```
+
+---
+
+## 5. Incremental Capture Log
+
+### 2026-06-24 — ART01 human edit delta
+
+**Source of delta**: human edits in [`03_Draft_Article.md`](ψ/incubate/DCCE/CRDB/output/TOR5.5_article_and_infoghraphic/ART01_CMIP6_Water_Crop/03_Draft_Article.md) compared against the prior AI draft via local git diff.
+
+#### Preferred direction detected
+- **Broader civilizational framing before technical narrowing**: the human shifted the opening away from an immediate sensory-weather hook toward a larger food-security and rice-civilization frame grounded in Thai identity and regional importance.
+- **Explicit rhetorical questioning is acceptable when opening a strategic article**: the edit strengthens the use of large framing questions about food security, resilience, and adaptation rather than only scene-setting.
+- **Demand for denser substantive scaffolding**: the human inserted placeholders asking for more detail on `BAU irrigated rice yields`, `BAU rain-fed rice yields`, model inputs, and mixed-cropping logic, signaling that thin elegance is less preferred than well-supported explanatory density.
+- **Thai-first strategic framing can precede model explanation**: the edit privileges context, stakes, and national meaning before method.
+
+#### New style rule candidates
+7. **Strategic Stakes Openings Are Allowed**: A draft may open with a broad Thai food-security, livelihood, or civilizational frame when the article topic is foundational to national resilience, provided it still flows into concrete evidence.
+8. **Human Edits May Prefer Detail-Rich Exposition Over Lean Minimalism**: When the human adds placeholders asking for more mechanism, comparisons, or model detail, future drafts should not over-compress explanation.
+9. **Preserve the Human’s Chosen Framing Layer**: If a human edit expands the frame from a local climate vignette to a wider historical, agricultural, or societal lens, the final draft should preserve that lens instead of reverting to the earlier AI opening pattern.
+
+#### Anti-regression note
+- Do **not** automatically force every article back to the narrow “felt weather moment” opening if the human has deliberately expanded the article into a larger strategic Thai framing.
+- Do **not** treat concise prose as the only goal when the human is signaling a need for more explanatory structure and evidence-bearing detail.
