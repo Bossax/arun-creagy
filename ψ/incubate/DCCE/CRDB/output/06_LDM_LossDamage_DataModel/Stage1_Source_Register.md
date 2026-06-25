@@ -1,0 +1,34 @@
+# Stage 1 Source Register — CRDB Loss & Damage Data Model
+
+| filename | source type | purpose | relevance to 5.3.6 / 5.3.7 | evidence class |
+|---|---|---|---|---|
+| `2026-04-17_CRDB-MVD-and-Loss-Damage-Operational-Plan.md` | operational plan | Sets the MVD / loss-damage workstream sequence and delivery framing. | both; mainly 5.3.6 | core |
+| `2026-04-17_CRDB-NCAIF-Service-Architecture-Plan.md` | architecture plan | Captures service/architecture context around the data model workstream. | both; mainly 5.3.6 | core |
+| `2026-04-29_CRDB-climate-service-lifecycle-evidence-audit.md` | evidence audit | Records lifecycle/evidence trace for the CRDB service/data model workstream. | both | core |
+| `Pillar_06_LDM_LossDamage_DataModel_Technical_Specification.md` | technical specification | Current draft artifact for the LDM / loss-damage technical structure. | both | core |
+| `Post Disaster Needs Assessment report by DDPM.md` | report | Primary DDPM / PDNA workflow reference. | both; mainly 5.3.6 | core |
+| `Contingency fund for prevent or mitigate disaster vents.md` | note / policy workflow | Supports financing and administrative workflow context for reporting logic. | 5.3.6 | core |
+| `Technical Interoperability and Data Modeling in Disaster Risk Reduction - A Comparative Analysis of IPCC, Sendai, and Global Standards.md` | comparative standards analysis | Supports interoperability framing and standards comparison. | 5.3.6 | core |
+| `Disaster_Loss_Standards_Analysis.md` | standards analysis | Priority anchor for database/data-model design and schema logic. | 5.3.6 | core |
+| `NESDC-Loss-and-damage-database-presentation-slide.md` | presentation slide | Thailand adaptation signal for loss-and-damage database design. | 5.3.6 | core |
+| `2025-05-10-additional-note-about-loss-and-damage-from-ddpm.md` | DDPM note | Clarifies DDPM practice, current status, and reporting questions. | 5.3.6 | core |
+| `Disaster Risk Reduction in Thailand - Status Report 2020.md` | country status report | Thailand DRR institutional / operational context. | 5.3.6 | supporting |
+| `Required data for DaLA.md` | methodology note | Identifies data needs for damage and loss assessment applications. | 5.3.7 | supporting |
+| `Damage and Loss Estimation - techniques.md` | methodology note | Summarizes collection / estimation techniques relevant to event application. | 5.3.7 | supporting |
+| `Data Model for Decision-Support Frameworks.md` | methodology note | Supports method selection and decision framing for applying the MVD. | 5.3.7 | supporting |
+| `Processes of decision making - IPCC WGII Chapter 17.md` | methodology reference | Decision-method framing for applying the draft MVD to real events. | 5.3.7 | supporting |
+| `Conceptual vs Logical vs Physical Data Models.md` | modeling reference | Clarifies model-layer boundaries for data-model extraction. | 5.3.6 | supporting |
+| `What is Conceptual Data Modeling Purpose & Examples.md` | modeling reference | Reinforces conceptual vs logical model boundary for the draft data model. | 5.3.6 | supporting |
+| `Learnings from T-PLAT - Benchmarking CDM.md` | benchmarking note | Thailand CDM lessons and interoperability enablers. | 5.3.6 | supporting |
+| `Climate Risk Analytics - Global Platforms, Thailand Landscape, and Strategic Market Gap Analysis.md` | benchmark analysis | Provides comparative platform context for data-model design expectations. | 5.3.6 | supporting |
+| `The Digital Architecture of National Climate Governance - A Technical and Strategic Evaluation of Thailand's Department of Climate Change and Environment Web-Based Ecosystem.md` | architecture analysis | DCCE governance / portal architecture context. | 5.3.6 | supporting |
+| `Thaiwater Governance Framework.md` | governance standard | Metadata / reporting schema pattern for structured ingestion. | 5.3.6 | supporting |
+| `Glossary-DCCE-Monitoring-and-Evaluation-Platform-Project.md` | glossary | Terminology alignment for the wider DCCE data ecosystem. | both | supporting |
+| `Assessment of Sectoral Climate Risk Studies and Data Architectures in Thailand (2016–2026) Gemini Deep Research.md` | evidence map | Thailand adaptation / sectoral study landscape. | 5.3.6 | supporting |
+| `Assessment of Sectoral Climate Risk Studies and Data Architectures in Thailand (2016–2026) Consensus AI.md` | evidence map | Secondary landscape view for Thai sectoral risk architecture context. | 5.3.6 | supporting |
+| `2026-02-10-Architectural Blueprint for the Thailand Climate Change Adaptation Data Ecosystem - A Comparative Analysis of Global Platforms and Standards.md` | architecture blueprint | Broad standards / platform comparison for Thailand adaptation data ecosystem. | 5.3.6 | supporting |
+| `2026-03-12 - Comprehensive Digital Infrastructure Inventory and Content Gap Analysis of the Department of Climate Change and Environment (DCCE) Portal -.md` | portal inventory | DCCE portal inventory and content-gap context. | 5.3.6 | supporting |
+| `The Enterprise Data System Development Lifecycle.md` | lifecycle reference | Data lifecycle / governance support for source inventory and model control. | 5.3.6 | supporting |
+| `Climate change information neededfor Thailand’s NAP implementation.md` | NAP reference | Thailand adaptation context and information needs alignment. | 5.3.6 | supporting |
+| `How to create an inventory of your data sources.md` | methodology note | Direct support for inventory discipline and source traceability. | 5.3.6 | supporting |
+

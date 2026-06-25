@@ -28,6 +28,8 @@
 | **มุ่งเน้น** | **เน้น**, **ให้ความสำคัญ** | Overused AI filler word. |
 | **นับได้ว่า** | **ถือว่า**, **จัดเป็น** | Formal AI filler. |
 | **ในยุคปัจจุบัน** | *Begin directly with the hook* | Generic introductory phrase. |
+| **ในทางกลับกัน** | *Omit or use natural contrast* | AI transition filler. |
+| **ถึงกระนั้น** | *Omit or use natural transition* | AI transition filler. |
 
 ### Technical Terminology Mapping (No Colons)
 * **Climate Change** -> การเปลี่ยนแปลงสภาพภูมิอากาศ (Climate Change)
@@ -39,6 +41,10 @@
 * **Crop Failure** -> พืชผลการเกษตรเสียหาย (crop failure)
 * **Heat Stress** -> ความเครียดจากความร้อน (heat stress)
 * **Most Significant Change (MSC)** -> เรื่องเล่าความเปลี่ยนแปลงที่สำคัญที่สุด (Most Significant Change)
+* **Adaptation Paradox** -> ความย้อนแย้งของการปรับตัว (Adaptation Paradox) *(Do NOT use "ปฏิทรรศนะของการปรับตัว" - it is too academic)*
+* **Eco-Economic Cascade** -> ผลกระทบลูกโซ่จากระบบนิเวศสู่เศรษฐกิจ (Eco-Economic Cascade)
+* **Economic Trap** -> ข้อจำกัดจากการพัฒนาที่เน้นแต่ผลกำไร *(Do NOT use "กับดักทางเศรษฐกิจ" or "กับดักทางเศรษฐกิ")*
+* **Mass Tourism** -> การท่องเที่ยวแบบมวลชน (Mass Tourism)
 
 ---
 
@@ -86,3 +92,26 @@ Follow these constraints strictly:
 #### Anti-regression note
 - Do **not** automatically force every article back to the narrow “felt weather moment” opening if the human has deliberately expanded the article into a larger strategic Thai framing.
 - Do **not** treat concise prose as the only goal when the human is signaling a need for more explanatory structure and evidence-bearing detail.
+
+### 2026-06-25 — ART08 human edit delta
+
+**Source of delta**: Human inline comments and review in [`03_Draft_Article.md`](ψ/incubate/DCCE/CRDB/output/TOR5.5_article_and_infoghraphic/ART08_Tourism_Risk_GIZ/03_Draft_Article.md).
+
+#### Preferred direction detected
+- **Clean Separation of Impacts**: The human explicitly criticized mixing different types of impacts. Natural capital degradation (e.g., coral bleaching) should not be lumped into paragraphs discussing direct threats to human safety and comfort (e.g., heat, floods, landslides).
+- **Demand for Granular Detail**: The human rejected vague, hand-wavy impact descriptions ("can be much more detailed"). Evidence must be specific and grounded in the source data.
+- **Rejection of Weird Phrasing/Jargon**: The human reacted negatively to incomplete or awkward direct translations like "กับดักทางเศรษฐกิ" (economic trap). The language must be natural, complete, and idiomatic Thai.
+- **Urgent Tone for Recommendations**: When presenting policy or adaptation recommendations, the human wants a tone that conveys high urgency rather than passive suggestion.
+- **Rejection of Forced Melodrama**: The human completely rewrote the opening to remove a forced, fluffy string of "If" conditions, preferring a direct, authoritative macroeconomic hook (e.g., "Can Thai tourism survive...?").
+- **Grammatical Cohesion**: The original draft referred to "this question" without ever asking one. Transitions must logically connect to the preceding sentence.
+
+#### New style rule candidates
+10. **Do Not Mix Impact Categories**: Keep a strict narrative boundary between direct human safety threats (floods, extreme heat, landslides) and ecological/natural capital degradation (coral bleaching, water scarcity). Do not blend them in the same paragraph.
+11. **Avoid Awkward Translated Jargon**: Do not invent unnatural Thai phrases or portmanteaus (like "กับดักทางเศรษฐกิจ"). Use plain, descriptive Thai language that feels natural to native speakers.
+12. **Recommendations Must Convey Urgency**: Frame concluding recommendations and adaptation policies with strong, urgent language that highlights the immediate necessity of action.
+13. **Authoritative Openings Override Sensory Hooks**: When an article deals with massive systemic risk (like 15% of GDP), open with the strategic stakes immediately rather than forcing a melodramatic "felt weather moment."
+14. **Logical Transition Integrity**: Never use phrases like "คำถามนี้" (This question) or "ปัญหาเหล่านี้" (These problems) unless the preceding text actually asked a question or explicitly listed problems.
+
+#### Anti-regression note
+- **DON'T** use vague umbrella statements to cover complex environmental cascades. Be specific about what is happening (e.g., where exactly coral bleaching fits into the eco-economic cascade).
+- **DON'T** try to shoehorn a poetic or sensory opening into an article that demands a serious, macroeconomic framing.

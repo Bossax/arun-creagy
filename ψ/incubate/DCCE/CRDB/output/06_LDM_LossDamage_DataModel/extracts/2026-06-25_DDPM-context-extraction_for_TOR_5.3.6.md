@@ -1,0 +1,86 @@
+---
+title: DDPM context extraction for TOR 5.3.6
+date: 2026-06-25
+last_updated: 2026-06-25
+scope: DDPM current practice, NESDC structural signals, and institutional constraints only
+sources:
+  - ψ/incubate/DCCE/CRDB/inbox_source/2025-05-10-additional-note-about-loss-and-damage-from-ddpm.md
+  - ψ/incubate/DCCE/CRDB/inbox_source/NESDC-Loss-and-damage-database-presentation-slide.md
+  - ψ/incubate/DCCE/CRDB/output/Interview summary notes/Interview Summary DDPM.md
+  - plans/2026-06-25_crdb-ldm-5.3.6-5.3.7-execution-plan.md
+focus: extraction only; no prose rewrite
+---
+
+# DDPM context package extraction for [`5.3.6`](ψ/incubate/DCCE/CRDB/inbox_source/CRDB%20-%20TOR.md:190)
+
+This artifact extracts only the claims needed to sharpen the rewrite of [`5.3.6`](ψ/incubate/DCCE/CRDB/inbox_source/CRDB%20-%20TOR.md:190). It does not draft report prose.
+
+## 1. What DDPM currently does well in rapid reporting
+
+- DDPM already operates a **single urgent disaster reporting chain** using the urgent disaster report form, routed from local government to district to province and then consolidated centrally. This is strong evidence of an existing operational intake pathway rather than a hypothetical future workflow. Evidence: [`2025-05-10-additional-note-about-loss-and-damage-from-ddpm.md`](ψ/incubate/DCCE/CRDB/inbox_source/2025-05-10-additional-note-about-loss-and-damage-from-ddpm.md:6).
+
+- The operational system is built to support **fast situation reporting and actual emergency-assistance processing** under Ministry of Finance rules. That means the existing workflow is institutionally real, routinized, and incentive-backed. Evidence: [`2025-05-10-additional-note-about-loss-and-damage-from-ddpm.md`](ψ/incubate/DCCE/CRDB/inbox_source/2025-05-10-additional-note-about-loss-and-damage-from-ddpm.md:6), [`2025-05-10-additional-note-about-loss-and-damage-from-ddpm.md`](ψ/incubate/DCCE/CRDB/inbox_source/2025-05-10-additional-note-about-loss-and-damage-from-ddpm.md:7), [`Interview Summary DDPM.md`](ψ/incubate/DCCE/CRDB/output/Interview%20summary%20notes/Interview%20Summary%20DDPM.md:15), [`Interview Summary DDPM.md`](ψ/incubate/DCCE/CRDB/output/Interview%20summary%20notes/Interview%20Summary%20DDPM.md:19).
+
+- DDPM’s field collection logic is tied to local administrative reality: LAOs collect first, district forwards, province performs first QC, and only then is data entered into the central system. This is operationally important because it shows where the first realistic quality gate already exists. Evidence: [`Interview Summary DDPM.md`](ψ/incubate/DCCE/CRDB/output/Interview%20summary%20notes/Interview%20Summary%20DDPM.md:39), [`Interview Summary DDPM.md`](ψ/incubate/DCCE/CRDB/output/Interview%20summary%20notes/Interview%20Summary%20DDPM.md:42).
+
+- DDPM currently tracks impacts to a fine **administrative reporting scale down to village level** over roughly a 10-year historical baseline, even though exact coordinates are often missing. That means the system is already useful for event identification and area-based operational summaries. Evidence: [`Interview Summary DDPM.md`](ψ/incubate/DCCE/CRDB/output/Interview%20summary%20notes/Interview%20Summary%20DDPM.md:44).
+
+- DDPM also already maintains a broader **operational data-sharing posture** through the DDPM Alert Platform / Data Portal and a data catalog of about 40 datasets shared via API. This matters because the rewrite should not imply DDPM is starting from zero in digital infrastructure. Evidence: [`Interview Summary DDPM.md`](ψ/incubate/DCCE/CRDB/output/Interview%20summary%20notes/Interview%20Summary%20DDPM.md:33), [`Interview Summary DDPM.md`](ψ/incubate/DCCE/CRDB/output/Interview%20summary%20notes/Interview%20Summary%20DDPM.md:34).
+
+## 2. What DDPM does not yet do for standardized loss-and-damage accounting
+
+- DDPM’s current post-disaster reporting **does not use PDNA principles**. The additional note is explicit on this point. Evidence: [`2025-05-10-additional-note-about-loss-and-damage-from-ddpm.md`](ψ/incubate/DCCE/CRDB/inbox_source/2025-05-10-additional-note-about-loss-and-damage-from-ddpm.md:7).
+
+- The monetary figures in current DDPM reporting are **administrative reimbursement figures**, not full economic loss-and-damage estimates. They are used for disbursement under emergency-finance rules and may diverge from actual total damages. Evidence: [`2025-05-10-additional-note-about-loss-and-damage-from-ddpm.md`](ψ/incubate/DCCE/CRDB/inbox_source/2025-05-10-additional-note-about-loss-and-damage-from-ddpm.md:7), [`2025-05-10-additional-note-about-loss-and-damage-from-ddpm.md`](ψ/incubate/DCCE/CRDB/inbox_source/2025-05-10-additional-note-about-loss-and-damage-from-ddpm.md:8).
+
+- DDPM has **not established PDNA-based damage valuation rules** in its normal operational reporting. The additional note states that DDPM has not yet developed damage-value determination according to PDNA principles. Evidence: [`2025-05-10-additional-note-about-loss-and-damage-from-ddpm.md`](ψ/incubate/DCCE/CRDB/inbox_source/2025-05-10-additional-note-about-loss-and-damage-from-ddpm.md:7).
+
+- DDPM does **not currently assess macroeconomic impacts** such as GDP effects from disasters. Evidence: [`2025-05-10-additional-note-about-loss-and-damage-from-ddpm.md`](ψ/incubate/DCCE/CRDB/inbox_source/2025-05-10-additional-note-about-loss-and-damage-from-ddpm.md:9).
+
+- DDPM collects **raw damaged-item counts** but lacks a rigid taxonomy for converting them into standardized exposure, vulnerability, or internationally comparable sector groupings. This is a key reason the rewrite must not over-claim current readiness for standardized national loss accounting. Evidence: [`Interview Summary DDPM.md`](ψ/incubate/DCCE/CRDB/output/Interview%20summary%20notes/Interview%20Summary%20DDPM.md:52), [`Interview Summary DDPM.md`](ψ/incubate/DCCE/CRDB/output/Interview%20summary%20notes/Interview%20Summary%20DDPM.md:53).
+
+- Even where DDPM or related pilots tried to estimate economic impacts using **proxy values** such as cost per kilometer of road, those attempts did not capture indirect loss well and stalled because multi-agency data were difficult to obtain. Evidence: [`Interview Summary DDPM.md`](ψ/incubate/DCCE/CRDB/output/Interview%20summary%20notes/Interview%20Summary%20DDPM.md:55), [`Interview Summary DDPM.md`](ψ/incubate/DCCE/CRDB/output/Interview%20summary%20notes/Interview%20Summary%20DDPM.md:56).
+
+## 3. What the evidence says about non-operational PDNA status
+
+- The strongest reading is not merely that PDNA is incomplete, but that **PDNA is institutionally positioned as a later-phase method rather than DDPM’s current front-line operating routine**. The controlling plan explicitly asks the workstream to use DDPM/PDNA sources to clarify “operational status.” Evidence anchor for use: [`2026-06-25_crdb-ldm-5.3.6-5.3.7-execution-plan.md`](plans/2026-06-25_crdb-ldm-5.3.6-5.3.7-execution-plan.md:41), [`2026-06-25_crdb-ldm-5.3.6-5.3.7-execution-plan.md`](plans/2026-06-25_crdb-ldm-5.3.6-5.3.7-execution-plan.md:45).
+
+- The additional DDPM note says current post-event reporting **is not PDNA-based**, which is direct evidence that PDNA is not operationalized in the standing urgent-report workflow. Evidence: [`2025-05-10-additional-note-about-loss-and-damage-from-ddpm.md`](ψ/incubate/DCCE/CRDB/inbox_source/2025-05-10-additional-note-about-loss-and-damage-from-ddpm.md:7).
+
+- The DDPM interview sharpens this further: past PDNA-style efforts were **pilot-like attempts** using proxy values, but they did not become a stable cross-agency operating system for standardized loss accounting. Evidence: [`Interview Summary DDPM.md`](ψ/incubate/DCCE/CRDB/output/Interview%20summary%20notes/Interview%20Summary%20DDPM.md:55), [`Interview Summary DDPM.md`](ψ/incubate/DCCE/CRDB/output/Interview%20summary%20notes/Interview%20Summary%20DDPM.md:56).
+
+- Therefore the rewrite should state sharply that **PDNA provides design direction for staged enrichment, not a description of DDPM’s already-operational collection practice**. This is a grounded interpretive claim synthesized from the two DDPM sources above.
+
+## 4. What NESDC contributes for Thailand-specific sector structure and valuation-layer separation
+
+- NESDC explicitly states that **Thailand still lacks a standardized Loss & Damage database**. This gives the rewrite a Thailand-specific policy justification for proposing a draft MVD rather than assuming an existing national standard. Evidence: [`NESDC-Loss-and-damage-database-presentation-slide.md`](ψ/incubate/DCCE/CRDB/inbox_source/NESDC-Loss-and-damage-database-presentation-slide.md:26), [`NESDC-Loss-and-damage-database-presentation-slide.md`](ψ/incubate/DCCE/CRDB/inbox_source/NESDC-Loss-and-damage-database-presentation-slide.md:32).
+
+- NESDC contributes a usable **five-sector structure** for Thai loss-and-damage analysis: agriculture, production, housing, public utilities, and cultural heritage. This is a strong local signal for downstream observation categories, even if it should not be forced into the first rapid intake screen. Evidence: [`NESDC-Loss-and-damage-database-presentation-slide.md`](ψ/incubate/DCCE/CRDB/inbox_source/NESDC-Loss-and-damage-database-presentation-slide.md:182), [`NESDC-Loss-and-damage-database-presentation-slide.md`](ψ/incubate/DCCE/CRDB/inbox_source/NESDC-Loss-and-damage-database-presentation-slide.md:184), [`NESDC-Loss-and-damage-database-presentation-slide.md`](ψ/incubate/DCCE/CRDB/inbox_source/NESDC-Loss-and-damage-database-presentation-slide.md:186).
+
+- NESDC also contributes the critical structural separation between **physical event-impact counts** and **valuation inputs**. The study combines DDPM counts as one source layer and separate unit-cost / unit-value references as another. This is one of the strongest design implications in the source package. Evidence: [`NESDC-Loss-and-damage-database-presentation-slide.md`](ψ/incubate/DCCE/CRDB/inbox_source/NESDC-Loss-and-damage-database-presentation-slide.md:200), [`NESDC-Loss-and-damage-database-presentation-slide.md`](ψ/incubate/DCCE/CRDB/inbox_source/NESDC-Loss-and-damage-database-presentation-slide.md:202), [`NESDC-Loss-and-damage-database-presentation-slide.md`](ψ/incubate/DCCE/CRDB/inbox_source/NESDC-Loss-and-damage-database-presentation-slide.md:204), [`NESDC-Loss-and-damage-database-presentation-slide.md`](ψ/incubate/DCCE/CRDB/inbox_source/NESDC-Loss-and-damage-database-presentation-slide.md:220), [`NESDC-Loss-and-damage-database-presentation-slide.md`](ψ/incubate/DCCE/CRDB/inbox_source/NESDC-Loss-and-damage-database-presentation-slide.md:222).
+
+- This means NESDC should be used in the rewrite not as proof that DDPM already collects full loss values, but as evidence that a Thai-standard database will need **at least two distinct layers**: observed impact data and valuation-reference data.
+
+- NESDC also marks important analytical boundaries: the estimates are preliminary, secondary-data-based, and exclude flood duration, indirect impacts, supply-chain impacts, opportunity cost, and macroeconomic long-run effects. So NESDC is a strong structural reference, but not proof of a complete operational national accounting solution. Evidence: [`NESDC-Loss-and-damage-database-presentation-slide.md`](ψ/incubate/DCCE/CRDB/inbox_source/NESDC-Loss-and-damage-database-presentation-slide.md:352), [`NESDC-Loss-and-damage-database-presentation-slide.md`](ψ/incubate/DCCE/CRDB/inbox_source/NESDC-Loss-and-damage-database-presentation-slide.md:356), [`NESDC-Loss-and-damage-database-presentation-slide.md`](ψ/incubate/DCCE/CRDB/inbox_source/NESDC-Loss-and-damage-database-presentation-slide.md:358), [`NESDC-Loss-and-damage-database-presentation-slide.md`](ψ/incubate/DCCE/CRDB/inbox_source/NESDC-Loss-and-damage-database-presentation-slide.md:360), [`NESDC-Loss-and-damage-database-presentation-slide.md`](ψ/incubate/DCCE/CRDB/inbox_source/NESDC-Loss-and-damage-database-presentation-slide.md:362), [`NESDC-Loss-and-damage-database-presentation-slide.md`](ψ/incubate/DCCE/CRDB/inbox_source/NESDC-Loss-and-damage-database-presentation-slide.md:366).
+
+## 5. Institutional and workflow constraints that should be stated sharply in [`5.3.6`](ψ/incubate/DCCE/CRDB/inbox_source/CRDB%20-%20TOR.md:190)
+
+- **Constraint 1: the core workflow is hierarchical and one-way.** Local data move upward through district and province, with province as the main QC gate; central DDPM cannot practically ground-truth field entries. Therefore the MVD must carry provenance, reporting-stage, and review-status fields instead of assuming centrally verified truth. Evidence: [`Interview Summary DDPM.md`](ψ/incubate/DCCE/CRDB/output/Interview%20summary%20notes/Interview%20Summary%20DDPM.md:40), [`Interview Summary DDPM.md`](ψ/incubate/DCCE/CRDB/output/Interview%20summary%20notes/Interview%20Summary%20DDPM.md:42).
+
+- **Constraint 2: local reporting is incentive-shaped by relief finance.** Because data entry is strongly motivated by eligibility for compensation and relief funds, the system is optimized for administrative response, not neutral analytical completeness. The rewrite should say this directly, because it explains why compensation numbers cannot be treated as full loss accounting. Evidence: [`Interview Summary DDPM.md`](ψ/incubate/DCCE/CRDB/output/Interview%20summary%20notes/Interview%20Summary%20DDPM.md:46), [`Interview Summary DDPM.md`](ψ/incubate/DCCE/CRDB/output/Interview%20summary%20notes/Interview%20Summary%20DDPM.md:47), [`2025-05-10-additional-note-about-loss-and-damage-from-ddpm.md`](ψ/incubate/DCCE/CRDB/inbox_source/2025-05-10-additional-note-about-loss-and-damage-from-ddpm.md:7).
+
+- **Constraint 3: DDPM’s present dataset is event-and-count strong but taxonomy weak.** The current system is good at capturing affected people, damaged assets, and administrative event facts, but weak at standardized sector coding and weak at translating counts into comparable economic-loss classes. Evidence: [`Interview Summary DDPM.md`](ψ/incubate/DCCE/CRDB/output/Interview%20summary%20notes/Interview%20Summary%20DDPM.md:52), [`Interview Summary DDPM.md`](ψ/incubate/DCCE/CRDB/output/Interview%20summary%20notes/Interview%20Summary%20DDPM.md:53).
+
+- **Constraint 4: exact geospatial precision is still incomplete.** Village-level administrative granularity exists, but exact in-village coordinates are often absent, and a GIS reporting tool is only being rolled out. This matters for how strongly the rewrite should promise spatially precise downstream analytics. Evidence: [`Interview Summary DDPM.md`](ψ/incubate/DCCE/CRDB/output/Interview%20summary%20notes/Interview%20Summary%20DDPM.md:44).
+
+- **Constraint 5: data quality problems are known and recurrent.** DDPM itself reports late entry, mis-entry, and wrong-category input from LAOs, and specifically requests automated screening or AI cleaning. The rewrite should therefore justify quality flags and validation workflows as necessary operating controls, not optional enhancements. Evidence: [`Interview Summary DDPM.md`](ψ/incubate/DCCE/CRDB/output/Interview%20summary%20notes/Interview%20Summary%20DDPM.md:58), [`Interview Summary DDPM.md`](ψ/incubate/DCCE/CRDB/output/Interview%20summary%20notes/Interview%20Summary%20DDPM.md:59).
+
+- **Constraint 6: multi-agency valuation is required for true economic loss.** DDPM alone does not hold the cross-sector baseline, valuation, and indirect-loss information needed for standardized national loss accounting. This is why the proposed form must be staged and extensible rather than pretending one rapid form can complete the whole problem. Evidence: [`Interview Summary DDPM.md`](ψ/incubate/DCCE/CRDB/output/Interview%20summary%20notes/Interview%20Summary%20DDPM.md:55), [`Interview Summary DDPM.md`](ψ/incubate/DCCE/CRDB/output/Interview%20summary%20notes/Interview%20Summary%20DDPM.md:56), [`NESDC-Loss-and-damage-database-presentation-slide.md`](ψ/incubate/DCCE/CRDB/inbox_source/NESDC-Loss-and-damage-database-presentation-slide.md:220), [`NESDC-Loss-and-damage-database-presentation-slide.md`](ψ/incubate/DCCE/CRDB/inbox_source/NESDC-Loss-and-damage-database-presentation-slide.md:225).
+
+## 6. Strongest extraction-ready claims for later rewrite
+
+1. DDPM’s current reporting system is operationally strong for **rapid hierarchical event reporting and emergency-assistance administration**, but not for standardized national loss-and-damage accounting.
+2. Current DDPM monetary figures should be treated as **administrative compensation or reimbursement values**, not as full estimates of actual damage and loss.
+3. PDNA is best represented as a **non-operational, later-phase enrichment logic** rather than as DDPM’s current front-line data collection mode.
+4. NESDC’s main contribution is not proof of an existing national standard, but a Thailand-specific **sector structure plus a crucial separation between physical counts and valuation layers**.
+5. The rewrite of [`5.3.6`](ψ/incubate/DCCE/CRDB/inbox_source/CRDB%20-%20TOR.md:190) should state bluntly that any workable MVD must be designed around **one-way reporting, provincial QC, known local data-quality noise, incomplete geospatial precision, and the need for later cross-agency valuation enrichment**.
