@@ -358,3 +358,92 @@ Robust MEL designs are emphasized as critical for tracking progress, adjusting s
 - **Identifying Tipping Points and Biophysical Limits:** Monitoring systems should be designed to help manage long-term coastal adaptation by actively identifying "tipping points" where current approaches become ineffective. The guide recommends using tools like cost-benefit analyses to define the financial, biophysical, and technical limits of interventions.
 - **Iterative Learning to Prevent Maladaptation:** MEL processes must be iterative to enable continuous, deliberate learning among project implementers. Because sea level rise triggers cascading risks across different systems (e.g., infrastructure failures leading to economic instability), an active MEL framework is essential to ensure that an intervention in one system does not cause negative, maladaptive impacts in another.
 
+---
+
+## 🚀 Phase 3: Targeted Gap Extraction (Drafting Queries)
+
+**Query 3C (Report Background):**
+```text
+For the source document "10-WIM ExCom sea level rise": What is the official background and purpose of this report as mentioned in the Procedural introduction? (Who prepared it, for what purpose, and what is the target audience?)
+```
+The official background and purpose of the technical guide on sea level rise, as outlined in its Procedural introduction, are as follows:
+
+**Who prepared it:** The guide was prepared under the plan of action of the **Expert Group on Slow Onset Events of the Executive Committee of the Warsaw International Mechanism for Loss and Damage (WIM ExCom)**. The technical development of the guide was co-led by four expert members—Jaroslav Mysiak, Mariya Aleksandrova, Albert Salamanca, and Akhilesh Surjan—with contributions from WIM ExCom member Elisa Calliari. The WIM ExCom also received valuable review feedback from various thematic expert groups, a task force, and international organizations such as the International Labour Organization, the International Organization for Migration, and the Office of the United Nations High Commissioner for Refugees.
+
+**For what purpose:** The primary aim of the guide is to **help establish a common understanding of how to systemically manage the impacts and anticipate the risks of slow onset events**. This guide fulfills a specific mandate given to the Executive Committee to develop technical guides that cover long-term risk assessments, approaches to averting, minimizing, and addressing loss and damage, available financial resources, and monitoring systems for assessing the effectiveness of these approaches. Ultimately, the Committee hopes this document will **assist developing countries in integrating relevant responses to sea-level-rise-related loss and damage into their national planning and policymaking processes**.
+
+**Target audience:** The information, policy options, and user-friendly tools presented in the guide are intended to be tailored to the needs of **policymakers, governments, implementing agencies, and other stakeholders** operating at various levels.
+
+**Query 3D (NbS Failures & Tipping Points):**
+```text
+For the source document "10-WIM ExCom sea level rise": Provide concrete examples of Nature-Based Solutions (NbS) and explicit scenarios, physical limits, or "tipping points" where these solutions fail or become ineffective due to severe sea level rise or environmental changes.
+```
+**Concrete Examples of Nature-Based Solutions (NbS)**
+
+The technical guide highlights several concrete examples of ecosystem-based adaptation, or Nature-Based Solutions, used to protect coastal areas:
+
+- **Coastal wetlands (salt marshes and mangroves):** These ecosystems stabilize coastlines using complex root systems, trap sediment to build elevation, and buffer against storm surges.
+- **Coral and oyster reefs:** Acting as natural, physical barriers, these reefs dissipate wave energy and mitigate the impact of storm surges. A specific example is the coral reef restoration project in Puerto Rico, which uses coral nurseries and artificial reef structures to accelerate coral growth and reduce shoreline erosion.
+- **Sand dunes:** Dunes act as natural barriers that absorb and dissipate wave energy, and they can be artificially enhanced by installing sand fences or planting deep-rooted dune-stabilizing vegetation.
+
+**Scenarios, Physical Limits, and "Tipping Points" of Ineffectiveness**
+
+While NbS can be cost-effective and highly beneficial, the source outlines several scenarios and physical limitations where they may fail or lose their protective capabilities:
+
+- **Physical and spatial constraints:** The performance and effectiveness of ecosystem restoration projects are physically bound by site-specific factors, specifically **habitat width, water depth, and vegetation height relative to the water level**. If sea levels rise beyond what these parameters can accommodate, the natural barriers lose their mitigating effect.
+- **Vulnerability to severe environmental changes:** Nature-based solutions can fail because the ecosystems themselves are threatened by climate-induced hazards. For instance, **higher salinity and ocean acidification** lead to habitat loss and the erosion of the coastal features that provide protection.
+- **Specific ecological failures:** In equatorial regions, **saltwater intrusion** directly threatens the survival of mangrove forests, while in temperate areas, severe **beach erosion** destroys marine breeding grounds, effectively degrading the natural defense systems.
+- **Reaching biophysical limits:** The guide explicitly emphasizes the need for comprehensive monitoring systems to track long-term coastal adaptation and specifically to **"identify tipping points where approaches become ineffective"**. These systems are necessary to define the exact biophysical and technical limits of NbS as sea levels continue to rise.
+**Query 3E (Concrete NELD Examples):**
+```text
+For the source document "10-WIM ExCom sea level rise": Provide concrete, real-world examples (or specific scenarios mentioned) of Non-Economic Loss and Damage (NELD) related to:
+1. Forced migration causing loss of cultural heritage and community ties.
+2. Gender inequality and specific risks to women during coastal disasters.
+3. Mental trauma, PTSD, or psychosocial anxiety resulting from coastal disasters and relocation.
+```
+Here are concrete, real-world examples and specific scenarios of Non-Economic Loss and Damage (NELD) highlighted in the technical guide:
+
+**1. Forced migration causing loss of cultural heritage and community ties**
+
+- **Pacific Island communities:** Planned relocation and climate-induced migration due to the reduced habitability of low-lying areas result in a severe "loss of sense of place and social cohesion," as well as the loss of traditional adaptive mechanisms that usually help these populations survive.
+- **Small Island Developing States:** Coastal inundation is submerging traditional burial sites and forcing communities to alter their traditional burial practices, directly diminishing their cultural identity and social cohesion.
+- **Indigenous communities:** Relocating Indigenous populations away from their traditional and sacred grounds severs their deep connection to the land and its resources, potentially leading to the irreversible loss of their cultural identity, traditional ecological knowledge, and ways of life.
+
+**2. Gender inequality and specific risks to women during coastal disasters**
+
+- **Bangladesh:** Social and gender norms create life-threatening disadvantages for women during cyclones; for instance, some women are unable to swim during floods because of their traditional clothing, while others refuse to relocate to safety shelters due to fears of actual or alleged sexual assault.
+- **Fiji:** Following coastal natural disasters, women have faced heightened exposure to violence, including domestic abuse, human trafficking, and exploitation.
+- **Vanuatu:** Coastal disasters have disproportionately affected women's livelihoods, specifically by destroying their ability to subsist on small sales at local markets.
+- **Systemic disparities:** Sea level rise and coastal hazards consistently worsen gender inequalities by disproportionately threatening women's land rights, increasing their dependency on male family members, and posing severe, specific health risks to pregnant women.
+
+**3. Mental trauma, PTSD, or psychosocial anxiety resulting from coastal disasters and relocation**
+
+- **Gender-specific trauma:** Women who survive coastal natural disasters often experience higher rates of post-traumatic stress disorder (PTSD) and anxiety, and these long-term psychological impacts are heavily compounded by their gendered caregiving responsibilities.
+- **Relocation-induced anxiety:** While managed retreat moves people away from physical hazards, research on resettled communities demonstrates significant adverse psychosocial consequences, including heightened anxiety, reduced perceived safety, and overall deterioration of mental well-being.
+- **Psychological impacts of losing territory:** The loss of land, the disruption of marine-dependent livelihoods, and the forced shift away from traditional roles and diets have profound, long-term implications for the mental, psychological, and spiritual health of affected coastal communities.
+
+
+**Query 3F (Policy Evolution for Managed Retreat):**
+```text
+For the source document "10-WIM ExCom sea level rise": How should policies evolve to support Managed Retreat and relocation? What specific funding mechanisms, social protections, or national frameworks (e.g., Fiji's policies) does the report suggest for executing fair and safe community relocation?
+```
+Policies supporting Managed Retreat (often referred to as "planned relocation") must evolve from viewing retreat merely as a last resort to implementing well-governed, comprehensive strategies that prioritize human rights and community well-being. To execute fair and safe relocations, the technical guide suggests evolving approaches across several dimensions:
+
+**Evolution of Policies and Governance** Policies need to adopt a multifaceted approach that goes beyond hard engineering solutions, utilizing specific legal and planning tools to manage the transition safely. The report highlights tools such as **planning frameworks** (e.g., relocation-specific plans and post-disaster recovery plans), **acquisition tools** (e.g., voluntary buyouts, land swaps, leasebacks, and open space acquisitions), and **regulatory mechanisms** (e.g., zoning, development permit conditions, and coastal setbacks). Crucially, the governance of these policies must be **inclusive and participatory**; active involvement of local populations in decision-making is essential to prevent maladaptation, impoverishment, and the adverse psychosocial consequences that often accompany resettlement.
+
+**Specific Social Protections** To mitigate the severe social costs of displacement—such as joblessness, homelessness, and social disintegration—the report recommends integrating formal social protection mechanisms directly into relocation strategies. Suggested protections include:
+
+- **Targeted assistance:** Providing explicit **social transfers, housing support, and social services** for climate migrants and those undergoing planned relocation.
+- **Livelihood support:** Implementing **livelihood promotion and diversification** programs to help relocated communities shift to new economic activities that are less exposed to climate hazards.
+- **Health and well-being initiatives:** Incorporating social health protection programs that address the unique risks emerging from sea level rise, including psychosocial support to manage the anxiety and trauma associated with losing one's home and territory.
+
+**Funding Mechanisms** Relocation is highly expensive, with estimates ranging from USD 10,000 per person in Fiji to USD 100,000 per person in the United States. The guide outlines several financial structures necessary to support these massive undertakings:
+
+- **Multilateral Climate Funds:** Leveraging international finance from sources like the **Green Climate Fund (GCF)**, the **Adaptation Fund**, and the newly established **Fund for responding to Loss and Damage**, which is specifically designed to assist vulnerable developing countries.
+- **Domestic Taxation and Trust Funds:** Creating dedicated, sustainable funding streams at the national level through policy-based taxation, which can then be combined with international aid to cover costs ranging from technical assessments to new infrastructure.
+
+**National Frameworks (The Fiji Model)** Fiji is highlighted as a pioneering model for executing equitable community relocation, being the first country in the world to develop a comprehensive national policy package to address climate-induced movement. Fiji's legal and policy framework relies on:
+
+- **The 2018 Planned Relocation Guidelines** and the **2023 Standard Operating Procedures**, which provide a clear, operational roadmap for moving vulnerable communities.
+- **The 2021 Climate Change Act**, which formally establishes the legal principles and procedures for relocating at-risk populations.
+- **The Climate Relocation of Communities Trust Fund**, the world's first national trust fund dedicated entirely to community-driven planned relocation. This fund is sustained by the **Environment and Climate Adaptation Levy**—a policy-based tax that automatically funnels 3% of its revenue into the Trust Fund, ensuring a steady, predictable flow of resources for long-term community resilience.

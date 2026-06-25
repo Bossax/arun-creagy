@@ -1,5 +1,8 @@
 # Info Log Index
 
+- [2026-06-25 10:43] Workflow design for evidence-to-draft pipeline and anti-shallow gates
+  - File: ψ/memory/logs/info/2026-06-25_10-43_writing-workflow-evidence-to-draft-pipeline.md
+
 - [2026-06-09 15:29] 🚩 **Suggest modifications for DCCE's TOR (Important)**: Modifications needed for the climate adaptation digital platform TOR next week.
   - File: ψ/memory/logs/info/2026-06-09_15-29_dcce-tor-modification-suggestion.md
 

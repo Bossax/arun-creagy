@@ -273,8 +273,8 @@ To prevent robotic writing and align the articles with your strategic voice, the
 | **ART06** | PMC, 2018 | [x] | [x] | [x] | [x] | [ ] | [ ] |
 | **ART07** | Urban Heat Stress Bangkok | [x] | [x] | [x] | [x] | [ ] | [ ] |
 | **ART08** | Griffith Univ / GIZ, 2018 | [x] | [x] | [x] | [x] | [ ] | [ ] |
-| **ART09** | J Flood Risk Manag, 2024 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| **ART10** | WIM ExCom Sea Level Rise | [x] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| **ART09** | J Flood Risk Manag, 2024 | [x] | [x] | [x] | [x] | [ ] | [ ] |
+| **ART10** | WIM ExCom Sea Level Rise | [x] | [x] | [x] | [x] | [ ] | [ ] |
 
 ---
 
