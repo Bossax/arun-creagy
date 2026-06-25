@@ -557,3 +557,69 @@ Based on the source document "6-Vulnerability to climate change of species in pr
 - Our understanding of how tropical climates specifically filter species distributions is still weak, and the mechanistic basis of correlations between environmental variables and current distributions is rarely known.
 - **Assumption:** For future projections, the authors assumed temperature and precipitation would change, but that topography, soil, and vegetation would remain stable, meaning the analysis represents the impacts of climate alone.
 - Extinction risk assessments for individual species based only on climate change projections omit other non-climatic factors and unpredictable interactions, and thus should not be used in isolation for conservation planning.
+
+---
+
+## Phase 3 — Gap Sweep & Verification
+
+**Query**
+
+```text
+For the source document "6-Vulnerability to climate change of species in protected areas in Thailand": Extract the specific names of the 1 primate species, 6 bird species, and 4 plant species that are projected to become extinct by 2070 under the RCP8.5 scenario. Also, confirm the exact percentage increase of threatened species under RCP8.5 (e.g., from 11% to 54%). Do not summarize or harmonize.
+```
+
+**Raw Response**
+
+
+**Primate (1 species)**
+
+- **Phayre's leaf monkey / Indochinese grey langur** (_Trachypithecus crepusculus_, formerly considered a subspecies of _T. phayrei_)
+
+**Birds (6 species)**
+
+- **Chinese crested tern** (_Thalasseus bernsteini_)
+- **Ferruginous partridge** (_Caloperdix oculeus_)
+- **Chestnut-tailed minla** (_Actinodura strigula_)
+- **Nepal house-martin** (_Delichon nipalense_)
+- **Black-throated laughingthrush** (_Ianthocincla chinensis_)
+- **Ratchet-tailed treepie** (_Temnurus temnurus_)
+
+**Plants (4 species)**
+
+- _**Acacia leucophloea**_ (a tree of dry forests and savanna)
+- _**Agapetes loranthiflora**_ (a montane epiphytic shrub in the Ericaceae family)
+- _**Diplycosia cf. heterophylla**_ (a montane epiphytic shrub in the Ericaceae family)
+- _**Scaphochlamys obcordata**_ (a member of the Zingiberaceae family found in southernmost Thailand)
+
+> Search for common Thai name on the web
+
+**Extinction rate**
+The overall percentage of modeled species assessed as threatened is projected to increase from 11% currently to 54% by 2070 under the RCP8.5 scenario.
+
+Under the RCP2.6 scenario, the models do not project any of the assessed species to become completely extinct in Thailand by 2070.
+
+However, while no outright extinctions are predicted under this lower greenhouse gas concentration scenario, the broader extinction risk and threat to biodiversity remain significant. The overall proportion of modeled species assessed as threatened is projected to increase from 11% currently to 35% by 2070.
+
+Under RCP2.6, the numbers of modeled species across all threat categories are projected to increase, while the number of species currently rated as "Least Concern" is expected to more than halve.
+
+The projected percentage of threatened species by 2070 under the RCP2.6 scenario varies by taxonomic group:
+
+- **Mammals:** 61%
+- **Birds:** 35%
+- **Plants:** 35%
+- **Reptiles:** 23%
+- **Amphibians:** 16%
+
+
+## Extra info
+
+Climate change accelerates biodiversity loss primarily by driving rapid shifts in environmental conditions that drastically reduce the availability of suitable habitats for species. As regional climates warm and precipitation patterns change, many species are projected to face profound habitat contraction, pu inshing them into higher threat categories and, in some cases, toward extinction.
+
+Based on the modeling of species in Thailand, climate change accelerates biodiversity loss through several key mechanisms:
+
+- **Severe Loss of Suitable Habitat:** Changing bioclimatic conditions will make many current habitats uninhabitable. For example, under a high-emission scenario (RCP8.5), models project that **60–65% of mammal species and 57–62% of bird species could lose more than half of their currently suitable habitat by 2070**. In worst-case instances, up to 11% of mammals and 8% of birds could lose their suitable habitats entirely if they are unable to disperse to new areas.
+- **Dispersal Limitations and Fixed Boundaries:** While species might theoretically survive by expanding into newly suitable areas, their ability to migrate is often highly constrained. **Many species will likely not be able to track the rapid pace of climate change projected over the next 50 years**. Furthermore, protected areas have fixed geographical boundaries, making the species isolated within them highly vulnerable as their optimal climate zones shift to unprotected areas.
+- **Escalation of Extinction Risk:** The cumulative effect of habitat contraction is a massive escalation in extinction risk. Under the RCP8.5 scenario, **the overall percentage of modeled species assessed as threatened is projected to skyrocket from 11% to 54% by 2070**. Even under the lower-emission RCP2.6 scenario, the number of species classified as "Least Concern" is expected to more than halve, demonstrating a pervasive decline in stable populations.
+- **Secondary and Compounding Ecological Effects:** Beyond direct temperature and rainfall changes, climate change accelerates biodiversity loss through complex secondary impacts. It can **increase the frequency and intensity of severe climatic extremes, such as floods, droughts, and temperature maxima**. It can also alter local fire regimes—leading to the degradation of fire-sensitive forests—and disrupt vital biotic networks, such as the relationships between predators, prey, and essential mutualists. Additionally, the direct physiological effects of rising carbon dioxide levels can alter ecosystem structures, such as favoring woody encroachment that transforms savannas into forests.
+
+Because species exist in complex biological communities, these physical and ecological changes act as cascading pressures that consistently push vulnerable taxa toward local and global extinction.

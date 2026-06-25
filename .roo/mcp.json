@@ -18,7 +18,8 @@
 				"arra_handoff",
 				"arra_learn",
 				"oracle_search",
-				"oracle_trace"
+				"oracle_trace",
+				"oracle_learn"
 			]
 		},
 		"notebooklm": {
