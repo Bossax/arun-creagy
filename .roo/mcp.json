@@ -22,25 +22,12 @@
 				"oracle_learn"
 			]
 		},
-		"notebooklm": {
+		"notebooklm-mcp": {
 			"type": "stdio",
-			"command": "npx",
-			"args": [
-				"-y",
-				"notebooklm-mcp@latest"
-			],
-			"env": {
-				"BROWSER_TIMEOUT": "180000",
-				"TYPING_WPM_MIN": "400"
-			},
-			"description": "NotebookLM MCP server",
-			"alwaysAllow": [
-				"get_health",
-				"list_notebooks",
-				"ask_question",
-				"list_sessions",
-				"close_session"
-			]
+			"command": "notebooklm-mcp",
+			"description": "NotebookLM MCP server (API-based, low-latency)",
+			"disabled": true,
+			"alwaysAllow": []
 		},
 		"perplexity": {
 			"type": "stdio",
