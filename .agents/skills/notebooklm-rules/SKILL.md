@@ -1,11 +1,11 @@
 ---
 name: notebooklm-rules
-description: Enforces NotebookLM MCP guardrails—parameter discipline, extraction-only prompts, and source-fidelity gates—before any mcp--notebooklm--ask_question call.
+description: Enforces NotebookLM MCP guardrails—parameter discipline, extraction-only prompts, and source-fidelity gates—before any mcp--notebooklm--notebook_query call.
 ---
 
 # NotebookLM MCP Rules Guardrail
 
-This skill defines the **guardrails and preflight checks** that must be applied before any NotebookLM MCP usage, especially calls to `mcp--notebooklm--ask_question`.
+This skill defines the **guardrails and preflight checks** that must be applied before any NotebookLM MCP usage, especially calls to `mcp--notebooklm--notebook_query`.
 
 It does **not** implement the low-level MCP client itself; instead, it tells the agent how to:
 - make parameters explicit (notebook, session, browser options),
@@ -21,7 +21,7 @@ For detailed rules, see [`notebooklm-mcp-ruleset.md`](../references/notebooklm-m
 
 Use this skill **before** any NotebookLM MCP work when:
 
-1. A plan or session wants to call `mcp--notebooklm--ask_question` directly, or via another NotebookLM skill.
+1. A plan or session wants to call `mcp--notebooklm--notebook_query` directly, or via another NotebookLM skill.
 2. You are running structured extraction from a NotebookLM notebook (for example, CRI capacity dictionary, WMO/NFCS quote bank, foresight evidence passes).
 3. You need reliable, evidence-grade outputs where **source fidelity** and **parameter discipline** are critical.
 
@@ -142,15 +142,22 @@ Using the patterns in the ruleset and relevant project plans (for example, CRI v
    - Explicitly instruct NotebookLM to **fail fast** if any are missing.
 3. Keep the expected response length within the environment’s latency budget (to reduce timeouts).
 
-### 8) Construct the ask_question parameters
+### 8) Construct the notebook_query parameters
 
-Before calling `mcp--notebooklm--ask_question` (or any wrapper skill):
+Before calling `mcp--notebooklm--notebook_query` (or any wrapper skill):
 
 1. Ensure the payload has:
    - `notebook_id`: explicit, taken from the project config or human input.
    - `session_id`: explicit, either reused from an open session or newly created and recorded.
+   - `source_format`: explicit (e.g. `none`, `footnotes`, or `json`).
 
 2. Record `notebook_id`, `session_id`, and the batch label in a local session log when implemented.
+
+### 9) Enforce Tool Focus (Query-Only Policy)
+
+To prevent context window bloat and random exploration:
+- Restrict yourself **strictly** to the core RAG loop: `notebook_list`, `notebook_get`, and `notebook_query` (plus `source_add` when uploading new files).
+- The use of NotebookLM for podcasts, mindmaps, slide decks, video generation, and quizzes is **strictly prohibited**. Never call any tools related to these features (such as `studio_*`, `download_*`, `export_*`, `batch`, `tag_*`, `pipeline`, etc.). They are completely banned in this workspace.
 
 
 ---
@@ -162,7 +169,7 @@ This skill assumes a two-layer configuration model:
 1. **Global defaults** (infrastructure-level)
    - Path (conceptual example): `/.roo/skills/notebooklm-rules.config.json`
    - Contents (minimum):
-     - Default `browser_options` for NotebookLM MCP (timeout, stealth flags).
+     - Default `source_format` for NotebookLM MCP (e.g. `none`).
      - Optional global fallbacks for `notebook_id` when a project has not yet attached one.
 
 2. **Project-level config** (per-incubate project)
@@ -185,7 +192,7 @@ This skill defines the **behavioural contract** for a future command surface suc
 
 - `notebooklm_rules:session_init` — attach notebook, create/record `session_id`, and prepare a session log.
 - `notebooklm_rules:preflight` — run MCP health checks and source-fidelity gates for a batch.
-- `notebooklm_rules:run_batch` — build a compliant `ask_question` payload and delegate to the NotebookLM MCP tool/skill.
+- `notebooklm_rules:run_batch` — build a compliant `notebook_query` payload and delegate to the NotebookLM MCP tool/skill.
 - `notebooklm_rules:status` — summarise current notebook, session, and recent batches.
 
 These commands are not implemented here; they are **targets for Code mode**. This SKILL.md tells any agent that implements them **what behaviour they must enforce**.
@@ -197,14 +204,14 @@ flowchart TD
   Start[Start NotebookLM MCP work] --> Init[notebooklm_rules:session_init]
   Init --> Preflight[notebooklm_rules:preflight]
   Preflight -->|ok| Run[notebooklm_rules:run_batch]
-  Preflight -->|fails source fidelity or health| Abort[Log issue, fix config/sources, do not call ask_question]
+  Preflight -->|fails source fidelity or health| Abort[Log issue, fix config/sources, do not call notebook_query]
   Run --> Save[Save raw NotebookLM response verbatim]
   Save --> Local[Local harmonisation and QC in repo]
   Local --> Status[notebooklm_rules:status]
 ```
 
 Implementations in Code mode must preserve this structure:
-- **Guardrails and checks** (session_init + preflight) always run **before** any `ask_question` call.
+- **Guardrails and checks** (session_init + preflight) always run **before** any `notebook_query` call.
 - **Raw outputs** are always saved verbatim **before** any local transformation.
 - **Harmonisation** always happens in repo files, never inside NotebookLM.
 

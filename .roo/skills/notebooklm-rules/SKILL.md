@@ -1,101 +1,240 @@
 ---
 name: notebooklm-rules
-description: Strict guardrails for using NotebookLM MCP. Enforces parameter discipline, extraction-only prompts, and source-fidelity gates.
+description: Enforces NotebookLM MCP guardrails—parameter discipline, extraction-only prompts, and source-fidelity gates—before any mcp--notebooklm--notebook_query call.
 ---
 
 # NotebookLM MCP Rules Guardrail
 
-This skill defines the mandatory constraints and workflow for any NotebookLM MCP usage, specifically calls to mcp--notebooklm--ask_question.
+This skill defines the **guardrails and preflight checks** that must be applied before any NotebookLM MCP usage, especially calls to `mcp--notebooklm--notebook_query`.
+
+It does **not** implement the low-level MCP client itself; instead, it tells the agent how to:
+- make parameters explicit (notebook, session, browser options),
+- keep NotebookLM extraction-only,
+- enforce strict source-fidelity gates, and
+- log each batch in a traceable way.
+
+For detailed rules, see [`notebooklm-mcp-ruleset.md`](../references/notebooklm-mcp-ruleset.md).
+
+---
 
 ## When to use this skill
 
-Use this skill before any NotebookLM MCP work when:
+Use this skill **before** any NotebookLM MCP work when:
 
-Extracting data, quotes, or evidence from a NotebookLM notebook.
+1. A plan or session wants to call `mcp--notebooklm--notebook_query` directly, or via another NotebookLM skill.
+2. You are running structured extraction from a NotebookLM notebook (for example, CRI capacity dictionary, WMO/NFCS quote bank, foresight evidence passes).
+3. You need reliable, evidence-grade outputs where **source fidelity** and **parameter discipline** are critical.
 
-A plan requires reliable, evidence-grade outputs where source fidelity is critical.
+In these cases, you must:
+- apply the rules in this skill first,
+- confirm parameters and source packets explicitly,
+- then delegate the actual NotebookLM call.
 
-## 1. The Iron Rules (System Constraints)
+---
 
-You must follow these rules without exception. Do not attempt to bypass them to save steps.
+## When NOT to use this skill
 
-### A. Parameter Discipline
+Do **not** use this skill when:
 
-Never assume a state. Every NotebookLM call requires explicit parameters:
+1. You are editing or analysing local markdown notes only, with no NotebookLM involvement.
+2. You are using the NotebookLM web UI in a purely exploratory, non-repo-bound way.
+3. Another, more specific NotebookLM skill already guarantees parameter discipline and source fidelity for the exact workflow (and explicitly states that it supersedes this guardrail).
 
-notebook_id: Must be explicitly resolved from project config or user input. No "active notebook" defaults.
+In those cases, keep the rules in mind, but do not add unnecessary ceremony.
 
-session_id: Must be explicitly declared. Reuse a known ID or generate a new one and log it immediately.
+---
 
-browser_options: Do not add or modify variables here unless explicitly commanded by the user.
+## Inputs required
 
-stealth: Keep this empty. Do not add or modify variables here unless explicitly commanded by the user.
+Before applying this skill, gather:
 
-## B. Extraction-Only (No Harmonizing)
+1. **Project context**
+   - Client / project name (e.g., CRI, CRDB, WMO-NFCS, foresight report).
+   - The local repo path where outputs and logs should live.
 
-NotebookLM is an extraction engine only.
+2. **NotebookLM context**
+   - The intended NotebookLM `notebook_id` for this project.
+   - A short description of what the notebook contains (domains, document types).
 
-Allowed in prompt: "Extract", "list", "identify", "quote", "cite".
+3. **Batch objective**
+   - The specific extraction goal for this batch (e.g., “methodological capacity indicator concepts”, “framework evidence rows”, “governance quotes”).
+   - Whether the batch is **source-bound** (tied to named titles) or general corpus extraction.
 
-Forbidden in prompt: "Harmonize", "deduplicate", "merge", "QC", "rewrite".
 
-All merging, flattening, and deduplication must happen locally in the repo, not inside NotebookLM.
 
-## C. Source-Fidelity Gate (Fail-Fast)
+---
 
-If a batch targets specific sources (Source-bound):
+## Workflow
 
-You must group runs into packets of 1–3 exact NotebookLM titles.
+Follow these steps whenever using NotebookLM MCP in a structured workflow.
 
-You must resolve local filenames to exact NotebookLM titles before calling the tool.
+### 1) Load and internalise the ruleset
 
-The Gate: The prompt must instruct NotebookLM to stop and report if any named title is missing or ambiguous. NotebookLM must not substitute nearby literature.
+1. Read the condensed rules in [`notebooklm-mcp-ruleset.md`](references/notebooklm-mcp-ruleset.md).
+2. Optionally skim the originating learnings and retros referenced there under `"Origins"` for deeper context.
 
-## D. Ruleset reference
+Do not proceed until you can restate, in your own words, the three core pillars:
+- **extraction vs local harmonisation**, 
+- **parameter discipline**, and
+- **source fidelity as a hard gate**.
 
-- The canonical repo-local rules live in [`notebooklm-mcp-ruleset.md`](.roo/skills/notebooklm-rules/references/notebooklm-mcp-ruleset.md:1).
-- When updating NotebookLM MCP behavior, align this skill with that ruleset rather than introducing new policy elsewhere.
+### 2) Attach or confirm the project notebook
 
-# 2. Execution Workflow
+1. Determine the project-level config location (conceptual):
+   - Prefer a project file such as `ψ/incubate/<Client>/<Project>/output/notebooklm-rules.config.json`.
+2. If the config exists:
+   - Read the attached `notebook_id` and notebook description.
+   - Confirm it matches the current task.
+3. If it does not exist:
+   - Ask the human which NotebookLM notebook to use.
+   - Record the chosen `notebook_id` and a short description in the project config when implemented.
 
-Follow these 5 steps for every NotebookLM extraction task:
+### 3) Cross-check with the troubleshooting log
 
-### Step 1: Pre-Flight Check
+1. Open [`NotebookLM-MCP-troubleshooting.md`](ψ/inbox/NotebookLM-MCP-troubleshooting.md).
+2. Look for any **recent failures, environment issues, or workarounds** (auth drift, timeouts, shell limitations, skill-loading conflicts).
+3. If you find relevant patterns not already covered in the ruleset:
+   - Treat them as **additional constraints** (for example, required timeouts, shell quirks, or MCP server settings).
+   - Update the mental model of how to run NotebookLM in this environment.
 
-Check that authenticated = true using MCP health tools.
+The troubleshooting note is the first place new failure patterns should be captured. The ruleset is updated only after these patterns stabilise.
 
-If auth has drifted, trigger a controlled re-auth workflow (clean session, then re-auth). Do not blindly retry.
+### 4) Run MCP health and auth preflight
 
-### Step 2: Parameter & Title Resolution
+1. Use MCP health tools (for example, a `get_health`-style check) to confirm:
+   - `authenticated = true` for NotebookLM MCP.
+   - No obvious error state or repeated recent failures.
+2. If health is poor or auth has drifted:
+   - Apply the re-auth workflow described in the ruleset (cleanup while preserving library, then re-auth), not ad hoc retries.
+3. Only proceed when NotebookLM MCP is healthy.
 
-call `list_notebook` to find the notebook_id.
+### 5) Define the batch and source packet
 
-If this is a source-bound batch, verify you have the exact NotebookLM titles, not just local filenames.
+1. Clarify the **single extraction objective** for this batch.
+2. Decide whether the batch is:
+   - **Corpus-wide extraction** (not tied to named titles), or
+   - **Source-bound extraction** (requires exact NotebookLM titles).
+3. For source-bound batches:
+   - Define a **small packet** of 1–3 exact titles.
+   - Ensure these titles are copied directly from the NotebookLM source list, not inferred from repo filenames.
 
-### Step 3: Prompt Construction
+### 6) Apply the source-fidelity gate
 
-Write a concise, extraction-only prompt.
+For **source-bound** batches:
 
-If source-bound, include the exact titles and the "Fail-Fast" instruction.
+1. If necessary, run a **title-resolution step** in NotebookLM to list actual source titles.
+2. Confirm that each named packet title is present and unambiguous.
+3. Encode explicit instructions for **fail-fast behaviour**:
+   - If any named title is missing or ambiguous, NotebookLM must report this and stop.
+   - Substituting “nearby” literature is not allowed.
+4. If the gate fails, mark the batch as **invalid** and do not proceed until sources or prompts are corrected.
 
-Keep the expected response short to avoid timeouts.
+### 7) Build a compliant extraction prompt
 
-### Step 4: Execute & Save Verbatim
+Using the patterns in the ruleset and relevant project plans (for example, CRI v2 query packs):
 
-Call mcp--notebooklm--ask_question with your explicit parameters.
+1. Write a **short, extraction-only prompt** that:
+   - States a single objective.
+   - Forbids harmonisation, de-duplication, QC, or register rewriting.
+   - Describes the expected output shape (flat row schema or atomic-note template).
+2. For source-bound batches:
+   - Include a section listing the **exact NotebookLM source titles** in the packet.
+   - Explicitly instruct NotebookLM to **fail fast** if any are missing.
+3. Keep the expected response length within the environment’s latency budget (to reduce timeouts).
 
-Mandatory: Save the raw NotebookLM response verbatim to a local file immediately upon success. Do not clean or format it in memory before saving.
+### 8) Construct the notebook_query parameters
 
-### Step 5: Local Processing
+Before calling `mcp--notebooklm--notebook_query` (or any wrapper skill):
 
-Once the raw output is saved, you may use standard code tools or local editing to flatten and harmonize the data into the project's canonical registers.
+1. Ensure the payload has:
+   - `notebook_id`: explicit, taken from the project config or human input.
+   - `session_id`: explicit, either reused from an open session or newly created and recorded.
+   - `source_format`: explicit (e.g. `none`, `footnotes`, or `json`).
 
-## 3. Failure Protocol
+2. Record `notebook_id`, `session_id`, and the batch label in a local session log when implemented.
 
-If a call fails, log the issue in ψ/inbox/NotebookLM-MCP-troubleshooting.md and apply these fixes:
+### 9) Enforce Tool Focus (Query-Only Policy)
 
-Timeout (Request timed out): The prompt is too complex or the output is too long. Simplify the prompt or adjust MCP environment timeouts.
+To prevent context window bloat and random exploration:
+- Restrict yourself **strictly** to the core RAG loop: `notebook_list`, `notebook_get`, and `notebook_query` (plus `source_add` when uploading new files).
+- The use of NotebookLM for podcasts, mindmaps, slide decks, video generation, and quizzes is **strictly prohibited**. Never call any tools related to these features (such as `studio_*`, `download_*`, `export_*`, `batch`, `tag_*`, `pipeline`, etc.). They are completely banned in this workspace.
 
-Missing Source / Gate Failure: NotebookLM reported a title is missing. Stop the extraction. Do not proceed until the sources or prompts are corrected.
 
-Auth Error: Run the re-auth workflow. Do not attempt ad hoc retries.
+---
+
+## Configuration model (conceptual)
+
+This skill assumes a two-layer configuration model:
+
+1. **Global defaults** (infrastructure-level)
+   - Path (conceptual example): `/.roo/skills/notebooklm-rules.config.json`
+   - Contents (minimum):
+     - Default `source_format` for NotebookLM MCP (e.g. `none`).
+     - Optional global fallbacks for `notebook_id` when a project has not yet attached one.
+
+2. **Project-level config** (per-incubate project)
+   - Recommended path pattern: `ψ/incubate/<Client>/<Project>/output/notebooklm-rules.config.json`
+   - Contents (minimum):
+     - `notebook_id`: primary NotebookLM notebook for this project.
+     - `notebook_description`: short human description of notebook scope.
+     - `default_output_root`: where to save NotebookLM raw outputs and logs (for example, `notebooklm_runs/`).
+     - Optional `default_row_schema` or `note_template` hints for this project.
+
+When implementing this skill in Code mode:
+- Read global defaults first, then overlay project-level config.
+- Never rely on implicit runtime state; always resolve notebook and session ids from config + explicit parameters.
+
+---
+
+## Interaction flow and commands (conceptual)
+
+This skill defines the **behavioural contract** for a future command surface such as:
+
+- `notebooklm_rules:session_init` — attach notebook, create/record `session_id`, and prepare a session log.
+- `notebooklm_rules:preflight` — run MCP health checks and source-fidelity gates for a batch.
+- `notebooklm_rules:run_batch` — build a compliant `notebook_query` payload and delegate to the NotebookLM MCP tool/skill.
+- `notebooklm_rules:status` — summarise current notebook, session, and recent batches.
+
+These commands are not implemented here; they are **targets for Code mode**. This SKILL.md tells any agent that implements them **what behaviour they must enforce**.
+
+### Workflow diagram (for implementers)
+
+```mermaid
+flowchart TD
+  Start[Start NotebookLM MCP work] --> Init[notebooklm_rules:session_init]
+  Init --> Preflight[notebooklm_rules:preflight]
+  Preflight -->|ok| Run[notebooklm_rules:run_batch]
+  Preflight -->|fails source fidelity or health| Abort[Log issue, fix config/sources, do not call notebook_query]
+  Run --> Save[Save raw NotebookLM response verbatim]
+  Save --> Local[Local harmonisation and QC in repo]
+  Local --> Status[notebooklm_rules:status]
+```
+
+Implementations in Code mode must preserve this structure:
+- **Guardrails and checks** (session_init + preflight) always run **before** any `notebook_query` call.
+- **Raw outputs** are always saved verbatim **before** any local transformation.
+- **Harmonisation** always happens in repo files, never inside NotebookLM.
+
+---
+
+## Troubleshooting and evolution
+
+When NotebookLM MCP work fails or behaves unexpectedly:
+
+1. **Log first, then fix**
+   - Append a short, concrete description of the failure to [`NotebookLM-MCP-troubleshooting.md`](ψ/inbox/NotebookLM-MCP-troubleshooting.md):
+     - What you tried (prompt + batch type).
+     - What failed (auth, timeout, wrong sources, environment mismatch).
+     - Any immediate workaround.
+
+2. **Map failure → rule**
+   - Re-open [`notebooklm-mcp-ruleset.md`](references/notebooklm-mcp-ruleset.md).
+   - Decide whether the failure reveals a missing or unclear rule.
+   - If so, update the ruleset (in a future Skill Writer edit) so the behaviour becomes part of the standard discipline.
+
+3. **Keep skills narrow**
+   - This guardrail skill defines **how** NotebookLM may be used.
+   - Individual project skills or workflows define **what** to ask (domain-specific prompts and schemas).
+
+Over time, this skill should remain the **single source of truth** for NotebookLM MCP guardrails in this repo.
+

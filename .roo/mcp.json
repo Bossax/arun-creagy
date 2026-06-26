@@ -26,7 +26,7 @@
 			"type": "stdio",
 			"command": "notebooklm-mcp",
 			"description": "NotebookLM MCP server (API-based, low-latency)",
-			"disabled": true,
+			"disabled": false,
 			"alwaysAllow": []
 		},
 		"perplexity": {
