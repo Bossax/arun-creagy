@@ -1,4 +1,0 @@
-csv_file,source_file,extracted_content,why_it_is_useful
-"extracts/Disaster_Loss_Standards_Analysis_extracted_tables.csv","Disaster_Loss_Standards_Analysis.md","Core schema / field tables and comparative framework rows.","Improves retrieval of schema constraints, impact metrics, and standards comparisons for 5.3.6."
-"extracts/NESDC_Loss_and_Damage_comparison.csv","NESDC-Loss-and-damage-database-presentation-slide.md","Current-vs-future comparison table for disaster response vs risk management.","Preserves the Thailand adaptation signal in a compact retrieval-friendly format."
-
