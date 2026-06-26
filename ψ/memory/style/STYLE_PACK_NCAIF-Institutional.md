@@ -1,5 +1,5 @@
 # Style-Pack: NCAIF-Institutional
-**Samples Learnt**: 11 (Technical Precision, Readability, and Analytical Density) | **Last Updated**: 2026-06-25
+**Samples Learnt**: 12 (Technical Precision, Readability, and Analytical Density) | **Last Updated**: 2026-06-26
 
 ## 1. Ranked Style Rules
 1. **Evidence-First Institutional Opening** - Begin with the audit scale, the named service, or the concrete finding. Do not force a literary hook or a generic thesis opening.
@@ -26,11 +26,15 @@
 | "ขั้นสูง" (Advanced) | [Omit] | Institutional prose avoids hyperbole. |
 | "นอกจากนี้" | *Minimize or replace with direct continuation* | Reads like filler and weakens momentum. |
 | "ยิ่งไปกว่านั้น" | *Omit* | Artificial transition word. |
-| "มุ่งเน้น" | "เน้น", "ให้ความสำคัญ" | Overused AI filler word. |
+| "มุ่งเน้น" | "เน้น" | Redundant prefix word in formal Thai (ตัดคำว่า "มุ่ง" ออก). |
 | "นับได้ว่า" | "ถือว่า", "จัดเป็น" | Formal AI filler. |
 | "ในยุคปัจจุบัน" | *Begin directly with the finding* | Generic introductory phrase. |
 | "ในทางกลับกัน" | *Omit or use natural contrast* | AI transition filler. |
 | "ถึงกระนั้น" | *Omit or use natural transition* | AI transition filler. |
+| "สถาปัตยกรรมด้านการจัดการความเสี่ยง..." | "การจัดการความเสี่ยง..." | Avoids overly verbose AI framing for institutional risks. |
+| "แก่นแท้ของยุทธศาสตร์..." | "ใจความหลักของยุทธศาสตร์..." | Avoids literal or literary AI phrasing. |
+| "ก่อให้เกิดความท้าทายเชิงโครงสร้างอย่างมีนัยสำคัญ" | "ก่อให้เกิดช่องว่างของข้อมูล" | Replaces abstract AI filler with precise fact. |
+| "ไร้รอยต่อ" / "สมบูรณ์แบบ" | *Omit or describe operational reality* | Avoids hyperbolic marketing terms. |
 
 ### Technical Terminology Mapping
 * **Climate Change** -> การเปลี่ยนแปลงสภาพภูมิอากาศ (Climate Change)
@@ -55,14 +59,16 @@
 ## 4. Anti-AI Shield (Counter-examples)
 - **CRITICAL DON'T**: Start with "อย่างไรก็ตาม..." or "แม้ว่า..." unless the contrast is doing real analytical work.
 - **CRITICAL DON'T**: Use "ระบบ" without identifying *which* system.
+- **CRITICAL DON'T**: Use hyperbolic marketing/commercial words like "ไร้รอยต่อ" or "สมบูรณ์แบบ". Describe actual operational workflows or technical constraints instead.
 - **DON'T**: Use high-precision decimals in summaries; round to nearest 10 or 5 unless the precision itself is essential.
 - **DON'T**: Write abstract gap statements without a concrete blocked task, service, or example.
 - **DON'T**: Write recommendation paragraphs that name only a direction. Name the artifact, owner, or mechanism.
 - **DON'T**: Compress multiple service gaps into one dense paragraph when the distinctions matter to the reader.
+- **DON'T**: Issue blanket criticisms of institutional practices (e.g., claiming "ปภ. ยังไม่มีการดำเนินการ...") without distinguishing operational scopes (e.g., initial 0-72h emergency response reporting vs. post-disaster recovery/needs assessment).
 
 ## 5. Master Implementation Prompt
 > **Writing Mode**: NCAIF-Institutional (v4.0 - Precise, Readable, and Evidence-Dense)
-> **Instructions**: Write in a punchy, authoritative Thai institutional voice. Start from the evidence or audit finding, not a literary hook. Specify all data resolutions (e.g., "25-100 กม.", "หลักสิบเมตร"). Avoid vague terms like "ระบบ" alone; use "สถาปัตยกรรมบริการสารสนเทศ". Strip all causal padding and "advanced/important" descriptors. Keep paragraphs readable, but use bullets or tables when comparing multiple services. Every substantive paragraph must include a claim, a concrete example, a consequence, and a mechanism or artifact. Round statistics unless exact precision matters. Link every technical gap to budget legitimacy, service usability, and operational risk.
+> **Instructions**: Write in a punchy, authoritative Thai institutional voice. Start from the evidence or audit finding, not a literary hook. Specify all data resolutions (e.g., "25-100 กม.", "หลักสิบเมตร"). Avoid vague terms like "ระบบ" alone; use "สถาปัตยกรรมบริการสารสนเทศ". Strip all causal padding and "advanced/important" descriptors. Keep paragraphs readable, but use bullets or tables when comparing multiple services. Every substantive paragraph must include a claim, a concrete example, a consequence, and a mechanism or artifact. Round statistics unless exact precision matters. Link every technical gap to budget legitimacy, service usability, and operational risk. Avoid marketing words like "ไร้รอยต่อ" or "สมบูรณ์แบบ" and balance institutional gap critiques by contextualizing operational constraints.
 
 ## 6. Incremental Capture Log
 
@@ -86,3 +92,12 @@
 - Do **not** borrow TOR 5.5-style opening moves into institutional sections.
 - Do **not** let paragraph flow override analytical completeness.
 - Do **not** allow style smoothing to erase concrete examples, blocked workflows, or institutional causes.
+
+### 2026-06-26 — Style-pack upgrade from Disaster Management analysis
+
+**Source of delta**: [edit_notes_5.3.6.md](file:///C:/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/incubate/DCCE/CRDB/output/final_report/5.3/edit_notes_5.3.6.md)
+
+#### Preferred direction detected
+- **Eliminate AI puffery and abstract filler**: Replaced complex-sounding phrases with concrete facts (e.g., using "ช่องว่างของข้อมูล" instead of "ความท้าทายเชิงโครงสร้างอย่างมีนัยสำคัญ", and "การจัดการความเสี่ยง..." instead of "สถาปัตยกรรมด้านการจัดการความเสี่ยง...").
+- **Avoid commercial/marketing hype**: Banned words like "ไร้รอยต่อ" or "สมบูรณ์แบบ" to preserve institutional gravity and accuracy.
+- **Contextual and precise institutional critiques**: Refrain from broad criticisms about organizational gaps; ground observations in distinct timeframes (e.g., initial response window vs. post-disaster assessment process).

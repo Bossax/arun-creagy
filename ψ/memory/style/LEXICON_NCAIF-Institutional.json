@@ -36,6 +36,36 @@
       "banned": "ข้อมูลระดับตำบล/พิกัด",
       "preferred": "ข้อมูลระดับปฏิบัติการ",
       "reason": "Elevates technical scale to institutional workflow terms."
+    },
+    {
+      "banned": "สถาปัตยกรรมด้านการจัดการความเสี่ยง...",
+      "preferred": "การจัดการความเสี่ยง...",
+      "reason": "Avoids overly verbose AI framing for institutional risks."
+    },
+    {
+      "banned": "แก่นแท้ของยุทธศาสตร์...",
+      "preferred": "ใจความหลักของยุทธศาสตร์...",
+      "reason": "Avoids literal or literary AI phrasing."
+    },
+    {
+      "banned": "มุ่งเน้น",
+      "preferred": "เน้น",
+      "reason": "Redundant prefix word in formal Thai."
+    },
+    {
+      "banned": "ก่อให้เกิดความท้าทายเชิงโครงสร้างอย่างมีนัยสำคัญ",
+      "preferred": "ก่อให้เกิดช่องว่างของข้อมูล",
+      "reason": "Replaces abstract AI filler with precise fact."
+    },
+    {
+      "banned": "ไร้รอยต่อ",
+      "preferred": "หลีกเลี่ยงหรือเขียนตามจริงเชิงปฏิบัติงาน",
+      "reason": "Avoids hyperbolic marketing terms."
+    },
+    {
+      "banned": "สมบูรณ์แบบ",
+      "preferred": "หลีกเลี่ยงหรืออธิบายตามเงื่อนไขทางเทคนิค",
+      "reason": "Avoids hyperbolic marketing terms."
     }
   ],
   "technical_terms": [
@@ -54,6 +84,14 @@
     {
       "term": "แผนจัดการความเสี่ยงแบบพุ่งเป้า",
       "definition": "Targeted Risk Management Plan"
+    },
+    {
+      "term": "สำนักงานลดความเสี่ยงจากภัยพิบัติแห่งสหประชาชาติ",
+      "definition": "United Nations Office for Disaster Risk Reduction (UNDRR)"
+    },
+    {
+      "term": "คณะกรรมาธิการเศรษฐกิจสำหรับลาตินอเมริกาและแคริบเบียน",
+      "definition": "Economic Commission for Latin America and the Caribbean (ECLAC)"
     }
   ]
 }
