@@ -7,9 +7,9 @@
     
 - **Content:** Introduce the report as an evaluation of climate risks framed specifically around Thailand’s **National Adaptation Plan (NAP)**. Define "adaptation" not as a static defense, but as a dynamic strategy based on shifting future probabilities. Lay out the 6 mandated NAP sectors that define the country's vulnerability:
     
-    1. ความมั่นคงทางน้ำ
+    1. การจัดการทรัพยากรน้ำ
         
-    2. ความมั่นคงทางอาหารและเกษตร
+    2. เกษตรและความมั่นคงทางอาหาร
         
     3. การท่องเที่ยว
         
@@ -17,7 +17,7 @@
         
     5. สาธารณสุข (Public Health)
         
-    6. ทรัพยากรธรรมชาติและสิ่งแวดล้อม
+    6. การจัดการทรัพยากรธรรมชาติ
         
 - **Section Outro:** Conclude by stating that while these 6 sectors look clean on paper, their actual survival depends entirely on the unpredictable climate physics heading their way.
     
