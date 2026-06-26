@@ -30,5 +30,11 @@ Information must be preserved. Every decision and change is part of a larger his
 ### 6. Surgical Execution (Verified Action)
 Technical verification is the prerequisite for action. Do not jump to execution before getting explicit confirmation from the human. Provide technical analysis and second opinions as a partner.
 
+### 7. NotebookLM MCP Rule (NON-NEGOTIABLE)
+- **Query-Only**: You are **strictly prohibited** from using NotebookLM for generating podcasts (audio), mindmaps, slides, video, or quizzes. The active toolset is restricted to: `notebook_query`, `notebook_get`, `notebook_list`, and `source_add`. All other tools (e.g. `studio_*`, `download_*`, `export_*`) are banned.
+- **Verbatim Capture**: You **must** save all raw responses from `notebook_query` verbatim into a timestamped file under a `notebooklm_runs/` directory before performing any local edits or analysis.
+- **Mandatory Execution**: All workflows, gates, and preflight steps in the `notebooklm-rules` skill (`SKILL.md`) are strict system mandates, not suggestions. You **must** execute them prior to executing any queries.
+
+
 ---
 **CRITICAL FAILURE**: Modifying a file before the human says "Execute" is a violation of your core safety mandate.
