@@ -17,6 +17,23 @@
 9. **Paragraph-Based Flow with Controlled Compression** - Keep the prose paragraph-led for readability, but use bullets or tables when comparing multiple services, gaps, or artifacts would otherwise blur distinctions.
 10. **Parenthetical Technical Anchors** - Introduce English scientific concepts and abbreviations in parentheses immediately after the Thai term when they improve traceability. Do not force them where they reduce clarity.
 
+## 1A. Hierarchical Vetting Stack (apply in order)
+1. **Level 1 — Section Job First**
+   - Before writing any paragraph, identify the section's job in one sentence.
+   - Reject any paragraph that repeats the previous section's job or drifts into the next section's job.
+2. **Level 2 — Paragraph Function**
+   - Each paragraph must do only one main job: define, compare, diagnose, or conclude.
+   - Do not mix background, evaluation, and recommendation in the same paragraph unless the section explicitly requires it.
+3. **Level 3 — Evidence Payload**
+   - Each paragraph must contain: one finding, one concrete example or variable, one implication, and one named institutional or technical basis.
+   - If any of these four pieces is missing, the paragraph is incomplete.
+4. **Level 4 — Thai Institutional Voice**
+   - Rewrite any sentence that sounds like a translated design memo, software spec, or English argumentative skeleton.
+   - Prefer Thai institutional explanation over imported system-design phrasing.
+5. **Level 5 — Diction Cleanup**
+   - Remove filler transitions, prestige words, and literal translations before accepting the paragraph.
+   - Final prose must sound like a report written for Thai policy and technical readers, not like a polished translation.
+
 ## 2. Lexicon & Diction (Dos/Don'ts)
 | Banned/Common | Preferred | Reason |
 | :--- | :--- | :--- |
@@ -35,6 +52,11 @@
 | "แก่นแท้ของยุทธศาสตร์..." | "ใจความหลักของยุทธศาสตร์..." | Avoids literal or literary AI phrasing. |
 | "ก่อให้เกิดความท้าทายเชิงโครงสร้างอย่างมีนัยสำคัญ" | "ก่อให้เกิดช่องว่างของข้อมูล" | Replaces abstract AI filler with precise fact. |
 | "ไร้รอยต่อ" / "สมบูรณ์แบบ" | *Omit or describe operational reality* | Avoids hyperbolic marketing terms. |
+| "workflow" / "เวิร์กโฟลว์" เมื่อไม่จำเป็น | "ขั้นตอนการทำงาน", "ลำดับการประเมิน", "กระบวนงาน" | Prefer Thai institutional wording unless English is materially necessary. |
+| "layer", "ชั้น", "ชั้นข้อมูล" เมื่อใช้เป็นคำแปลตรง | "ส่วนข้อมูล", "ส่วนที่ทำหน้าที่...", "ข้อมูลชุด...", "องค์ประกอบ..." | Avoid literal architecture translation in audience-facing prose. |
+| "input" / "output" | "ข้อมูลที่ใช้", "ผลลัพธ์", "ข้อมูลที่ได้จากการประเมิน" | Reduce software-spec tone in report prose. |
+| "อย่างเป็นทางการในระดับโครงสร้างข้อมูล" | "แยกออกจากกันให้ชัดในตัวฐานข้อมูล" | Composite noun is unnatural and over-translated. |
+| ประโยคแบบ "ไม่ได้...แต่..." เพื่อเปิดย่อหน้า | เริ่มจากข้อเท็จจริงหรือหน้าที่โดยตรง | Thai report prose should state the actual basis first, not a negated pseudo-contrast. |
 
 ### Technical Terminology Mapping
 * **Climate Change** -> การเปลี่ยนแปลงสภาพภูมิอากาศ (Climate Change)
@@ -56,6 +78,18 @@
 - **Audit Risk**: Frame technical hurdles as a threat to **"ความชอบธรรมในการใช้งบประมาณ"** and to decision usefulness.
 - **Product Naming**: Recommendations should resolve into named artifacts, owners, or standards, not only verbs.
 
+### Thai Sentence Shape Guardrails
+- Start with the real subject, institution, dataset, or finding whenever possible.
+- Avoid opening a sentence by denying what something is **not** before stating what it **is**.
+- Ban pseudo-balanced translated structures such as:
+  - "...ไม่ได้...แต่..."
+  - "ไม่ใช่เพียง...แต่ยัง..."
+  when they are used as rhetorical scaffolding rather than real contrast.
+- Preferred pattern: state the actual function first, then state the limitation or contrast in the next clause or next sentence.
+- Example preferred transformation:
+  - Avoid: "การออกแบบชุดข้อมูล...ไม่ได้เริ่มจาก...แต่เริ่มจาก..."
+  - Prefer: "การออกแบบชุดข้อมูล...เริ่มจากข้อมูลที่ ปภ. มีอยู่จริงในระบบงานปัจจุบัน แล้วจึงพิจารณาว่าข้อมูลส่วนใดยังไม่เพียงพอสำหรับการประเมินความเสียหายและความสูญเสีย"
+
 ## 4. Anti-AI Shield (Counter-examples)
 - **CRITICAL DON'T**: Start with "อย่างไรก็ตาม..." or "แม้ว่า..." unless the contrast is doing real analytical work.
 - **CRITICAL DON'T**: Use "ระบบ" without identifying *which* system.
@@ -65,6 +99,8 @@
 - **DON'T**: Write recommendation paragraphs that name only a direction. Name the artifact, owner, or mechanism.
 - **DON'T**: Compress multiple service gaps into one dense paragraph when the distinctions matter to the reader.
 - **DON'T**: Issue blanket criticisms of institutional practices (e.g., claiming "ปภ. ยังไม่มีการดำเนินการ...") without distinguishing operational scopes (e.g., initial 0-72h emergency response reporting vs. post-disaster recovery/needs assessment).
+- **DON'T**: Let a paragraph sound like a translated architecture note by piling up composite nouns such as "ระดับโครงสร้างข้อมูล", "ชั้นข้อมูลส่วนขยาย", or "บูรณภาพเชิงวิเคราะห์" when simpler Thai can name the same function.
+- **DON'T**: Explain by negation first if the same point can be stated directly from the actual evidence or institutional role.
 
 ## 5. Master Implementation Prompt
 > **Writing Mode**: NCAIF-Institutional (v4.0 - Precise, Readable, and Evidence-Dense)
@@ -101,3 +137,23 @@
 - **Eliminate AI puffery and abstract filler**: Replaced complex-sounding phrases with concrete facts (e.g., using "ช่องว่างของข้อมูล" instead of "ความท้าทายเชิงโครงสร้างอย่างมีนัยสำคัญ", and "การจัดการความเสี่ยง..." instead of "สถาปัตยกรรมด้านการจัดการความเสี่ยง...").
 - **Avoid commercial/marketing hype**: Banned words like "ไร้รอยต่อ" or "สมบูรณ์แบบ" to preserve institutional gravity and accuracy.
 - **Contextual and precise institutional critiques**: Refrain from broad criticisms about organizational gaps; ground observations in distinct timeframes (e.g., initial response window vs. post-disaster assessment process).
+
+### 2026-06-27 — Style-pack upgrade from CRDB Topic 3–5 language correction
+
+**Source of delta**: review of [`5.3.6_edited_v1.md`](ψ/incubate/DCCE/CRDB/output/final_report/5.3/5.3.6_edited_v1.md:39) against human-edited Thai sections in [`5.3.6_edited_v1.md`](ψ/incubate/DCCE/CRDB/output/final_report/5.3/5.3.6_edited_v1.md:19).
+
+#### Preferred direction detected
+- **Thai report prose should not sound like translated architecture writing**.
+- **Design sections must still read like institutional analysis, not technical product notes**.
+- **Sentence openings should name the real subject and function first, instead of using negated contrast scaffolding**.
+
+#### New style rule candidates
+15. **Hierarchical Vetting Before Acceptance**: Check section job, paragraph job, evidence payload, Thai voice, and diction cleanup in that order.
+16. **No Composite-Noun Inflation**: Replace overbuilt translated clusters with simple Thai phrasing that names the function directly.
+17. **Direct Assertion Before Contrast**: State what the subject does first; only then explain what it cannot do or does not yet support.
+18. **Architecture Terms Must Be Naturalized**: Replace literal imports like `layer`, `input`, `output`, and stray `workflow` wording with Thai institutional equivalents unless the English term is itself the object of explanation.
+
+#### Anti-regression note
+- Do **not** open key explanatory paragraphs with "ไม่ได้...แต่..." unless the negative contrast is essential and cannot be rewritten more directly.
+- Do **not** let MVD or database sections drift into software-spec Thai.
+- Do **not** preserve English design vocabulary when a normal Thai report term can carry the meaning more naturally.

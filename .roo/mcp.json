@@ -31,7 +31,8 @@
 				"notebook_list",
 				"notebook_get",
 				"notebook_query",
-				"server_info"
+				"server_info",
+				"refresh_auth"
 			]
 		},
 		"perplexity": {
