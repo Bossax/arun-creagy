@@ -212,8 +212,8 @@ This table stores Layer B direct physical damage records. It is explicitly downs
 | `damage_record_id` | VARCHAR(50) | **Primary Key**. |
 | `assessment_context_id` | VARCHAR(50) | **Foreign Key** to [`ASSESSMENT_CONTEXT`](Pillar_06_LDM_LossDamage_DataModel_Technical_Specification.md:136). |
 | `disaster_event_id` | VARCHAR(50) | Redundant foreign key for easier querying and integrity checks. |
-| `sector_id` | ENUM | High-level sector classification aligned to CRDB / NESDC. |
-| `subsector_id` | VARCHAR(100) | Subsector or thematic category where known. |
+| `sector_id` | ENUM | High-level sector taxonomy: 'Agriculture', 'Production_Manufacturing', 'Housing', 'Public_Utilities', 'Cultural_Heritage'. |
+| `subsector_id` | VARCHAR(100) | Subsector category (e.g., 'Crops', 'Livestock', 'Aquaculture', 'Manufacturing', 'Hotels'). |
 | `asset_type` | VARCHAR(255) | Asset class or asset description. |
 | `owner_or_responsible_entity` | VARCHAR(255) | Ownership or responsible entity where relevant. |
 | `severity_state` | ENUM | `Destroyed`, `Damaged`, `Mixed`, `Unknown`. |
@@ -237,9 +237,9 @@ This table stores Layer B economic loss records. It should not be populated as i
 | `loss_record_id` | VARCHAR(50) | **Primary Key**. |
 | `assessment_context_id` | VARCHAR(50) | **Foreign Key** to [`ASSESSMENT_CONTEXT`](Pillar_06_LDM_LossDamage_DataModel_Technical_Specification.md:136). |
 | `disaster_event_id` | VARCHAR(50) | Redundant foreign key for easier querying and integrity checks. |
-| `sector_id` | ENUM | High-level sector classification aligned to CRDB / NESDC. |
-| `subsector_id` | VARCHAR(100) | Subsector or thematic category where known. |
-| `loss_category` | ENUM | `Foregone_Revenue`, `Yield_Reduction`, `Service_Disruption`, `Increased_Op_Cost`, `Emergency_Expense`, `Other`. |
+| `sector_id` | ENUM | High-level sector taxonomy: 'Agriculture', 'Production_Manufacturing', 'Housing', 'Public_Utilities', 'Cultural_Heritage'. |
+| `subsector_id` | VARCHAR(100) | Subsector category (e.g., 'Crops', 'Livestock', 'Aquaculture', 'Manufacturing', 'Hotels'). |
+| `loss_category` | ENUM | `Yield_Reduction`, `Foregone_Revenue`, `Service_Disruption`, `Increased_Op_Cost`, `Emergency_Expense`, `Rent_Housing`, `Other`. |
 | `analysis_horizon_start` | DATE | Start date of the loss-estimation period. |
 | `analysis_horizon_end` | DATE | End date of the loss-estimation period. |
 | `baseline_quantity_or_value` | DECIMAL(18,2) | Expected baseline quantity or value in the no-disaster case. |
@@ -261,7 +261,7 @@ This table stores needs-related outputs only after damage and/or loss records ha
 | `needs_record_id` | VARCHAR(50) | **Primary Key**. |
 | `assessment_context_id` | VARCHAR(50) | **Foreign Key** to [`ASSESSMENT_CONTEXT`](Pillar_06_LDM_LossDamage_DataModel_Technical_Specification.md:136). |
 | `disaster_event_id` | VARCHAR(50) | **Foreign Key** to [`DISASTER_EVENT`](Pillar_06_LDM_LossDamage_DataModel_Technical_Specification.md:113). |
-| `sector_id` | ENUM | High-level sector classification. |
+| `sector_id` | ENUM | High-level sector taxonomy: 'Agriculture', 'Production_Manufacturing', 'Housing', 'Public_Utilities', 'Cultural_Heritage'. |
 | `needs_type` | ENUM | `Recovery`, `Reconstruction`, `Rehabilitation`, `Risk_Reduction_Upgrade`, `Other`. |
 | `time_horizon` | ENUM | `Short_Term`, `Medium_Term`, `Long_Term`. |
 | `derived_from_damage` | BOOLEAN | Indicates whether calculation references damage records. |
