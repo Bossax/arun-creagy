@@ -158,3 +158,35 @@ sources:
 sources:
 - [[ψ/incubate/DCCE/CRDB/inbox_source/NESDC-Loss-and-damage-database-presentation-slide|NESDC-Loss-and-damage-database-presentation-slide]]
 - (อ้างอิงร่วมกับแหล่งข้อมูลใน Topic 4 ทั้งหมด)
+
+
+## Consolidated source inventory for 5.3.6 / 5.3.7 repair
+
+### A. Core DDPM / PDNA / loss-and-damage evidence
+- [`raw-extraction-from-notebooklm_Disaster-Risk Reduction-Thailand's-Department-of-Disaster Prevention-and-Mitigation.md`](../../inbox_source/raw-extraction-from-notebooklm_Disaster-Risk%20Reduction-Thailand's-Department-of-Disaster%20Prevention-and-Mitigation.md:1)
+- [`Post Disaster Needs Assessment report by DDPM.md`](../../inbox_source/Post%20Disaster%20Needs%20Assessment%20report%20by%20DDPM.md:1)
+- [`2025-05-10-additional-note-about-loss-and-damage-from-ddpm.md`](../../inbox_source/2025-05-10-additional-note-about-loss-and-damage-from-ddpm.md:1)
+- [`Disaster_Loss_Standards_Analysis.md`](../../inbox_source/Disaster_Loss_Standards_Analysis.md:1)
+- [`DesInventar as a Disaster Information Management System.md`](../../inbox_source/DesInventar%20as%20a%20Disaster%20Information%20Management%20System.md:1)
+- [`NESDC-Loss-and-damage-database-presentation-slide.md`](../../inbox_source/NESDC-Loss-and-damage-database-presentation-slide.md:1)
+
+### B. CRDB LDM design and gap-analysis artifacts
+- [`comparative_analysis_DaLA_DesInventar_PDNA.md`](../../06_LDM_LossDamage_DataModel/comparative_analysis_DaLA_DesInventar_PDNA.md:1)
+- [`DaLA_methodology_report.md`](../../06_LDM_LossDamage_DataModel/DaLA_methodology_report.md:1)
+- [`DDPM_CRI_to_CRDB_MVD_gap_analysis.md`](../../06_LDM_LossDamage_DataModel/DDPM_CRI_to_CRDB_MVD_gap_analysis.md:1)
+- [`DDPM_data_review_from_CRI_project.md`](../../06_LDM_LossDamage_DataModel/DDPM_data_review_from_CRI_project.md:1)
+- [`DDPM_PDNA_methodology_report.md`](../../06_LDM_LossDamage_DataModel/DDPM_PDNA_methodology_report.md:1)
+- [`Pillar_06_LDM_LossDamage_DataModel_Technical_Specification.md`](../../06_LDM_LossDamage_DataModel/Pillar_06_LDM_LossDamage_DataModel_Technical_Specification.md:1)
+
+### C. NotebookLM raw runs and traceability files
+- [`notebooklm_runs/2026-06-26_0721_raw_world-bank-dala.json`](../../../../notebooklm_runs/2026-06-26_0721_raw_world-bank-dala.json:1)
+- [`notebooklm_runs/2026-06-26_0901_raw_dala.json`](../../../../notebooklm_runs/2026-06-26_0901_raw_dala.json:1)
+- [`notebooklm_runs/2026-06-26_0903_raw_ddpm.txt`](../../../../notebooklm_runs/2026-06-26_0903_raw_ddpm.txt:1)
+- [`notebooklm_runs/2026-06-26_0852_raw_dala_error.json`](../../../../notebooklm_runs/2026-06-26_0852_raw_dala_error.json:1)
+- [`notebooklm_runs/2026-06-26_0852_raw_ddpm_error.json`](../../../../notebooklm_runs/2026-06-26_0852_raw_ddpm_error.json:1)
+
+### D. Why these were added
+- The DDPM / PDNA / DesInventar files provide the factual basis for Topics 1–4.
+- The LDM design artifacts provide the target schema and the gap analysis for Topics 5–6.
+- The NotebookLM raw runs preserve the verbatim evidence trail for the DDPM / DaLA conclusions.
+- The NotebookLM error files are retained for traceability of retrieval failures and authentication issues.
