@@ -39,6 +39,14 @@ The **Business Glossary** and **Conceptual Data Model (CDM)** are the mandatory 
 *   **Domain Expertise Gap Mitigation**: Stewardship roles must be supported by standardized verification procedures. These procedures allow staff to validate content for citation accuracy, even when technical climate adaptation expertise is localized in specific groups.
 *   **Resource Alignment**: Governance workflows must be integrated into existing divisional duties. If a role or cadence cannot be sustained with current staff capacity, it must be simplified or automated in the 2027 system design.
 *   **Contractual Integrity**: These governance roles and standards form the baseline for the 2027 implementation contract. The future vendor is prohibited from modifying the DCCE-owned logical models or use-case flows.
+*   **System-Agnostic Data Intake & Validation Flow**: The future platform must support a structured, high-level data intake and validation flow. Because the exact mechanics are system-dependent, the implementation must logically enforce:
+    1. *Syntactic & Format Validation*: Automated or manual verification that datasets are in open formats (CSV, GeoJSON) and contain the mandatory metadata fields defined in the Section 5.3.5 / Pillar 3 Data Catalog.
+    2. *Semantic & Reference Integrity*: Verification that administrative boundaries and terminologies align with the Business Glossary (Pillar 4) and Reference Data Matrix (Pillar 8).
+    3. *Staged Approval Gates*: An intake gate where the Data Steward reviews validation reports prior to the Data Owner (Group Director) signing off on public release.
+*   **Sitemap Expansion & Versioning Framework**: To ensure the platform can grow continuously without breaking existing interfaces, the future implementation must support:
+    1. *Information Architecture Change Control*: Any modification or addition to sitemap nodes (e.g. adding new provinces or sectors) must be formally approved by the Data Governance Committee, mapping directly to a designated Data Steward/Owner, and aligning with the Business Glossary (Pillar 4).
+    2. *Interface & API Versioning*: Database updates or schema alterations affecting front-end widgets must support API versioning (e.g., maintaining `/v1/` and `/v2/` endpoints) to ensure backward compatibility for external consumers.
+    3. *Content Deprecation & Archiving*: Superseded or deprecated datasets must not be deleted; they must be moved to an archive zone with clear historical metadata labels.
 
 ---
 *Technical Specification — Pillar 7: Governance Operating Model*

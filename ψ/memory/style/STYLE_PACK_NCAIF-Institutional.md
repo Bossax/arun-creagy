@@ -1,5 +1,5 @@
 # Style-Pack: NCAIF-Institutional
-**Samples Learnt**: 13 (Technical Precision, Readability, and Analytical Density) | **Last Updated**: 2026-07-01
+**Samples Learnt**: 14 (Technical Precision, Readability, and Analytical Density) | **Last Updated**: 2026-07-01
 
 ## 1. Ranked Style Rules
 1. **Evidence-First Institutional Opening** - Begin with the audit scale, the named service, or the concrete finding. Do not force a literary hook or a generic thesis opening.
@@ -19,6 +19,9 @@
 11. **Banish Direct English Jargon** - NEVER use English terms (like `use case`, `workflow`, `interoperability`, `usability`, `lag time`) in main report summaries. Substitute them with functional Thai descriptors (e.g. `กรณีการใช้งาน`, `ขั้นตอนการทำงาน`, `ระบบงานจริง`).
 12. **Refer to Department as กรมฯ** - Refer to the Department of Climate Change and Environment as `กรมฯ` rather than `DCCE` when writing public-facing Thai report prose.
 13. **Ground Gaps with Precise Baseline Parameters** - Always specify specific resolutions (25 km, 5 km), variables (Precipitation, Temperatures), and scenarios (SSP2-4.5, SSP5-8.5) when discussing climate projections to avoid vague gap statements.
+14. **Direct Mandates Over Philosophical Preaching** - Do not write recommendations as moral advice or general "perspective shifts" (e.g. `ควรปรับมุมมอง...`). Write them as concrete operational mandates (e.g. `ต้องจัดตั้งแนวทาง...`, `จะต้องบริหารแพลตฟอร์ม...`).
+15. **Eliminate English Contrast Scaffolding** - Never open sentences or build key arguments using the translated contrast pattern `ไม่ควรถูกมองเป็น... แต่ควรถูกมองเป็น...` or `ไม่ได้... แต่...`. Make direct, positive assertions about what the institution does or requires.
+16. **Structured Breakdowns for Complex Lists** - When listing core pillars, layers, or recommendations (e.g., the 6 elements of governance), do not compress them into a single inline paragraph. Always separate them into a numbered list (1 to N) with line breaks to ensure readability and scannability.
 
 ## 1A. Hierarchical Vetting Stack (apply in order)
 1. **Level 1 — Section Job First**
@@ -66,6 +69,11 @@
 | "usability" | "ความพร้อมใช้งาน", "ความง่ายในการนำข้อมูลไปใช้งาน" | Translates to plain operational language. |
 | "lag time" | "จังหวะเวลา", "ช่วงเวลาดีเลย์ของข้อมูล" | Explains latency in a functional, reader-friendly format. |
 | "DCCE" | "กรมฯ" | Standard official shorthand for the Department of Climate Change and Environment. |
+| "อัปเดต" / "รอบการอัปเดต" | "ปรับปรุง" / "รอบการปรับปรุง" | Proper Thai policy terminology. |
+| "dashboard" / "แดชบอร์ด" | "แดชบอร์ดแสดงผลข้อมูล" | Proper descriptive Thai localization. |
+| "โครงสร้างไอที" | "โครงสร้างทางเทคโนโลยีสารสนเทศ" | Formal registrar terminology. |
+| "หน่วยการจัดการจริง" | "ขอบเขตพื้นที่ที่หน่วยงานรับทุนจำเป็นต้องจัดการจริง" | Grounded spatial boundaries. |
+| "ข้อเสนอเชิงยุทธศาสตร์ที่สุด" | "ข้อเสนอเชิงยุทธศาสตร์ที่สำคัญ" | Remove subjective superlatives. |
 
 ### Technical Terminology Mapping
 * **Climate Change** -> การเปลี่ยนแปลงสภาพภูมิอากาศ (Climate Change)
@@ -110,10 +118,13 @@
 - **DON'T**: Issue blanket criticisms of institutional practices (e.g., claiming "ปภ. ยังไม่มีการดำเนินการ...") without distinguishing operational scopes (e.g., initial 0-72h emergency response reporting vs. post-disaster recovery/needs assessment).
 - **DON'T**: Let a paragraph sound like a translated architecture note by piling up composite nouns such as "ระดับโครงสร้างข้อมูล", "ชั้นข้อมูลส่วนขยาย", or "บูรณภาพเชิงวิเคราะห์" when simpler Thai can name the same function.
 - **DON'T**: Explain by negation first if the same point can be stated directly from the actual evidence or institutional role.
+- **DON'T**: Open sentences or build key arguments using the translated contrast template `ไม่ควรถูกมองเป็น... แต่ควรถูกมองเป็น...` or `ไม่ได้... แต่...`.
+- **DON'T**: Use conceptual/philosophical prefixes like `ตรรกะหลักของ...` in report summaries.
+- **DON'T**: Use subjective superlatives like `ข้อเสนอเชิงยุทธศาสตร์ที่สุด` (use `ข้อเสนอเชิงยุทธศาสตร์ที่สำคัญ` instead).
 
 ## 5. Master Implementation Prompt
-> **Writing Mode**: NCAIF-Institutional (v4.0 - Precise, Readable, and Evidence-Dense)
-> **Instructions**: Write in a punchy, authoritative Thai institutional voice. Start from the evidence or audit finding, not a literary hook. Specify all data resolutions (e.g., "25-100 กม.", "หลักสิบเมตร"). Avoid vague terms like "ระบบ" alone; use "สถาปัตยกรรมบริการสารสนเทศ". Strip all causal padding and "advanced/important" descriptors. Keep paragraphs readable, but use bullets or tables when comparing multiple services. Every substantive paragraph must include a claim, a concrete example, a consequence, and a mechanism or artifact. Round statistics unless exact precision matters. Link every technical gap to budget legitimacy, service usability, and operational risk. Avoid marketing words like "ไร้รอยต่อ" or "สมบูรณ์แบบ" and balance institutional gap critiques by contextualizing operational constraints.
+> **Writing Mode**: NCAIF-Institutional (v4.1 - Precise, Readable, and Evidence-Dense)
+> **Instructions**: Write in a punchy, authoritative Thai institutional voice. Start from the evidence or audit finding, not a literary hook. Specify all data resolutions (e.g., "25-100 กม.", "หลักสิบเมตร"). Avoid vague terms like "ระบบ" alone; use "สถาปัตยกรรมบริการสารสนเทศ". Strip all causal padding and "advanced/important" descriptors. Keep paragraphs readable, but use bullets or tables when comparing multiple services or when listing core recommendations. Frame recommendations as concrete operational mandates (e.g. `ต้องจัดตั้งแนวทาง...`, `จะต้องบริหารแพลตฟอร์ม...`) rather than advising the department to "adjust perspectives" or "act as role models." Avoid opening sentences or building arguments using translated contrast patterns like `ไม่ควรถูกมองเป็น... แต่ควรถูกมองเป็น...` or `ไม่ได้... แต่...`.
 
 ## 6. Incremental Capture Log
 
@@ -184,3 +195,22 @@
 #### Anti-regression note
 - Do **not** allow stray English architecture vocabulary like `use case` or `workflow` in final audience-facing summaries.
 - Do **not** generalize downscaling gaps without specifying what variables or scenarios are blocked or enabled at that scale.
+
+### 2026-07-01 (Session 2) — Style-pack upgrade from Section 5.3.9 in-place edits
+
+**Source of delta**: Section 5.3.9 in-place edits.
+
+#### Preferred direction detected
+- **Direct Mandates Over Philosophical Preaching**: Shifted general advice and perspective shifts to action-oriented institutional mandates.
+- **Eliminated English Contrast Scaffolding**: Avoided structured negations like `ไม่ได้... แต่...` or `ไม่ควรถูกมองเป็น...`.
+- **Structured Breakdowns**: List core items/pillars as numbered lists with line breaks instead of single inline sentences.
+
+#### New style rule candidates
+22. **Direct Mandates Over Philosophical Preaching**: Frame recommendations as concrete operational mandates (e.g. `ต้องจัดตั้งแนวทาง...`, `จะต้องบริหาร...`).
+23. **Eliminate English Contrast Scaffolding**: Never build key arguments using the translated contrast pattern `ไม่ควรถูกมองเป็น... แต่ควรถูกมองเป็น...` or `ไม่ได้... แต่...`.
+24. **Structured Breakdowns for Complex Lists**: Format multi-item recommendations or pillars as numbered lists with line breaks.
+
+#### Anti-regression note
+- Do **not** use academic preaching or moral advice structures.
+- Do **not** use translated English contrasting templates.
+- Do **not** compress multi-item recommendations into single inline text blocks.

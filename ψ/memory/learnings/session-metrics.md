@@ -75,3 +75,4 @@ Rule (parent CLAUDE.md §"Self-Evaluation Loop"): same friction 3 sessions → f
 | 2026-07-01 16:07 | 833c4e75 | LLM forgetfulness of custom rules when merging/composing text (Rule 11/12 drift) | Forgetting to translate "DCCE", "CRDB", and "use cases" in edited report section 5.3.9 | Establish a dual-pass workflow (bulk regex search-and-replace followed by manual contextual cleanup) to guarantee 100% compliance with style packs. |
 
 
+| 2026-07-02 | 01:00 | 2c3bb56a | Finalized 5.2.9 & 5.3.9, Lexicon Check |
