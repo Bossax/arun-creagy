@@ -38,16 +38,11 @@ bun ./.agents/skills/recap/recap-rich.ts
 Script reads retro summaries, handoff content, tracks, git state. Then LLM adds:
 - **What's next?** (2-3 options based on context)
 
-### Step 3: Read latest ψ/ brain files
+### Step 3: Read handoffs, retros, and index only (Banned modified project/large file auto-reads)
 
-Sort all ψ/ files by modification time, read the most recent:
+Do NOT auto-read the contents of recently modified or untracked project files, draft chapters, or large files (such as 5.3.8 chapter drafts or cumulative metrics). Simply identify and list these file paths, and suggest diving into or reading them as options in the Consultation Menu.
 
-**Windows/PowerShell**:
-```powershell
-Get-ChildItem -Path 'ψ/' -Filter *.md -Recurse | Where-Object Name -notmatch 'GEMINI.md|README.md|.gitkeep' | Sort-Object LastWriteTime -Descending | Select-Object -ExpandProperty FullName -First 5
-```
-
-Read those top 5 files. This recovers the same context `/compact` restores — handoffs, retros, learnings, drafts, whatever was touched last.
+You MUST, however, still read the most recent handoff, retrospective, and logs info index files to recover the session context and verify point-in-time claims.
 
 ---
 

@@ -66,6 +66,41 @@
       "banned": "สมบูรณ์แบบ",
       "preferred": "หลีกเลี่ยงหรืออธิบายตามเงื่อนไขทางเทคนิค",
       "reason": "Avoids hyperbolic marketing terms."
+    },
+    {
+      "banned": "DCCE",
+      "preferred": "กรมฯ",
+      "reason": "Standard official shorthand for the Department of Climate Change and Environment."
+    },
+    {
+      "banned": "use case",
+      "preferred": "กรณีการใช้งาน",
+      "reason": "Avoid direct English jargon in formal reports."
+    },
+    {
+      "banned": "workflow",
+      "preferred": "ขั้นตอนการทำงาน หรือ ระบบงานจริง หรือ กระบวนงาน",
+      "reason": "Naturalizes technical flow concepts into standard Thai institutional terms."
+    },
+    {
+      "banned": "raster",
+      "preferred": "ขนาดกริด หรือ ข้อมูลกริด",
+      "reason": "Removes redundant technical phrasing."
+    },
+    {
+      "banned": "interoperability",
+      "preferred": "ความสามารถในการทำงานร่วมกัน หรือ การเชื่อมต่อข้อมูลระหว่างระบบ",
+      "reason": "Translates technical system terms to operational functions."
+    },
+    {
+      "banned": "usability",
+      "preferred": "ความพร้อมใช้งาน หรือ ความง่ายในการนำข้อมูลไปใช้งาน",
+      "reason": "Translates to plain operational language."
+    },
+    {
+      "banned": "lag time",
+      "preferred": "จังหวะเวลา หรือ ช่วงเวลาดีเลย์ของข้อมูล",
+      "reason": "Explains latency in a functional, reader-friendly format."
     }
   ],
   "technical_terms": [

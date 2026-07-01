@@ -1,5 +1,11 @@
 # Info Log Index
 
+- [2026-07-01 16:05] 🚩 **Style Pack Compliance Workflow (Important)**: Systematic process for auditing, batch-replacing, and manually polishing draft report prose against custom style packs to banish English jargon and enforce institutional names.
+  - File: ψ/memory/logs/info/2026-07-01_16-05_style-pack-compliance-workflow.md
+
+- [2026-06-29 22:01] ภารกิจหลักของกรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (สส.): จัดทำนโยบาย ปรับตัวต่อสภาพภูมิอากาศ พันธกรณีระหว่างประเทศ บัญชีก๊าซเรือนกระจก และส่งเสริมการมีส่วนร่วม
+  - File: ψ/memory/logs/info/2026-06-29_22-01_dcce-core-missions.md
+
 - [2026-06-25 10:43] Workflow design for evidence-to-draft pipeline and anti-shallow gates
   - File: ψ/memory/logs/info/2026-06-25_10-43_writing-workflow-evidence-to-draft-pipeline.md
 
