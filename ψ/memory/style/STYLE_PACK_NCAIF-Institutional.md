@@ -214,3 +214,23 @@
 - Do **not** use academic preaching or moral advice structures.
 - Do **not** use translated English contrasting templates.
 - Do **not** compress multi-item recommendations into single inline text blocks.
+
+### 2026-07-02 — Style-pack upgrade from Full_Report_Final.md in-place edits
+
+**Source of delta**: [2026-07-02_16-02_NCAIF-Institutional_diff-evidence.md](file:///C:/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/memory/style/evidence/2026-07-02_16-02_NCAIF-Institutional_diff-evidence.md)
+
+#### Preferred direction detected
+- **Systems Thinking**: Shifted from treating the 6 NAP sectors as isolated theoretical buckets to describing cascading impacts ("ห่วงโซ่ผลกระทบที่ข้ามสาขา ข้ามระบบ") using biophysical and economic lenses.
+- **Analytical Critique**: Added critical reflection on disaster frameworks, pointing out that human-centric definitions overlook natural resource impacts.
+- **Humanizing Impact**: Anchored macro-economic threats to human well-being and quality of life.
+- **Paragraph Cohesion**: Respected sectoral boundaries by not cramming different sectors into one paragraph.
+
+#### New style rule candidates
+25. **Systems Thinking Over Silos**: Emphasize cascading impacts across systems rather than treating NAP sectors as isolated buckets.
+26. **Analytical Critique Over Fact-Stating**: Critically evaluate frameworks instead of just describing them (e.g., noting the limitations of human-centric disaster definitions).
+27. **Humanize the Macro-Impact**: Anchor macro-economic risks to actual human well-being and quality of life.
+28. **Paragraph Cohesion (Sectoral Boundaries)**: Do not compress multiple distinct sectors into a single paragraph; respect sectoral boundaries.
+
+#### Anti-regression note
+- Do **not** use AI "fluff" or poetic drama (e.g., `ตีกรอบความไม่แน่นอน`, `เปลี่ยนจุดศูนย์กลาง...`).
+- Do **not** use English translations in parentheses unless absolutely necessary for technical precision.

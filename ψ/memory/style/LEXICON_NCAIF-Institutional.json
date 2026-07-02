@@ -101,6 +101,21 @@
       "banned": "lag time",
       "preferred": "จังหวะเวลา หรือ ช่วงเวลาดีเลย์ของข้อมูล",
       "reason": "Explains latency in a functional, reader-friendly format."
+    },
+    {
+      "banned": "ตีกรอบความไม่แน่นอน",
+      "preferred": "เปรียบเทียบกับฉากทัศน์ทางเลือก",
+      "reason": "Replaces AI-like abstract metaphor with standard assessment terminology."
+    },
+    {
+      "banned": "ไม่ใช่เพียงการสร้างโครงสร้างพื้นฐานเพื่อตั้งรับแบบตายตัว แต่เป็นยุทธศาสตร์เชิงพลวัต",
+      "preferred": "ยุทธศาสตร์ของการปรับตัวต้องอาศัยการประเมินความน่าจะเป็นและขนาดของความเสี่ยง",
+      "reason": "Replaces dramatic AI contrast with a grounded, formal policy tone."
+    },
+    {
+      "banned": "สมมติฐานแบบเหมารวมนั้นไม่เพียงพอ",
+      "preferred": "สมมติฐานแบบเหมารวมนั้นไม่เพียงพอและเป็นสมมุติฐานที่อันตราย",
+      "reason": "Adds critical, human-centric evaluation instead of just stating a fact."
     }
   ],
   "technical_terms": [

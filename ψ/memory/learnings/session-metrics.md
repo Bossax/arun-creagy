@@ -76,3 +76,5 @@ Rule (parent CLAUDE.md §"Self-Evaluation Loop"): same friction 3 sessions → f
 
 
 | 2026-07-02 | 01:00 | 2c3bb56a | Finalized 5.2.9 & 5.3.9, Lexicon Check |
+| 2026-07-02 16:25 | e81b8c60 | Full Report Style Alignment & Content Restoration | n/a | Restored full human facts while conforming to Style-Pack | Paragraph shortening over-editing | Over-aggressive compression of human drafts |
+
