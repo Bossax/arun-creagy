@@ -116,6 +116,36 @@
       "banned": "สมมติฐานแบบเหมารวมนั้นไม่เพียงพอ",
       "preferred": "สมมติฐานแบบเหมารวมนั้นไม่เพียงพอและเป็นสมมุติฐานที่อันตราย",
       "reason": "Adds critical, human-centric evaluation instead of just stating a fact."
+    },
+    {
+      "banned": "สถาปัตยกรรม...",
+      "preferred": "ระบบรายงาน, ฐานข้อมูล, ระบบสารสนเทศ, ระบบบันทึกข้อมูล (เว้นแต่จะหมายถึง Enterprise Architecture ในภาพรวม)",
+      "reason": "Too abstract and academic; use grounded operational terms."
+    },
+    {
+      "banned": "ผลกระทบเชิงสถาปัตยกรรม",
+      "preferred": "ผลกระทบเชิงระบบ หรือ ช่องว่างเชิงระบบ",
+      "reason": "More direct and practical for systemic findings."
+    },
+    {
+      "banned": "ละเลย",
+      "preferred": "ขาดกระบวนงาน, ขาดกลไกการบังคับ",
+      "reason": "Institutional writing must state systemic facts, not judge or moralize operators."
+    },
+    {
+      "banned": "เพิกเฉย",
+      "preferred": "ขาดกระบวนงาน, ขาดกลไกการบังคับ",
+      "reason": "Avoid moralizing or blaming language."
+    },
+    {
+      "banned": "มุ่งหวังที่จะ",
+      "preferred": "ตัดทิ้ง หรือใช้กริยาหลัก (เช่น กำหนดให้, จัดทำ)",
+      "reason": "Redundant AI filler word that reduces institutional authority."
+    },
+    {
+      "banned": "มีความพยายามในการ",
+      "preferred": "ดำเนินการ, หรือตัดทิ้ง",
+      "reason": "Subjective AI filler word."
     }
   ],
   "technical_terms": [

@@ -234,3 +234,9 @@
 #### Anti-regression note
 - Do **not** use AI "fluff" or poetic drama (e.g., `ตีกรอบความไม่แน่นอน`, `เปลี่ยนจุดศูนย์กลาง...`).
 - Do **not** use English translations in parentheses unless absolutely necessary for technical precision.
+
+
+## 5. Strict Parenthetical Anchor (Anti-regression Update)
+- **Rule**: Do **not** use English translations in parentheses unless absolutely necessary for technical precision.
+- **Allowed**: Exact database schema names (`DISASTER_EVENT`), system keys, or official acronyms (`MVD`).
+- **Banned**: Translating conceptual terms or phrases (e.g., `(Data Availability)`, `(Temporal completeness)`, `(Bounded Application Test)`). If it's a concept, write it in strong Thai and leave it alone.
