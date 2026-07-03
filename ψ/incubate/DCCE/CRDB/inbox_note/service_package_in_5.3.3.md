@@ -1,0 +1,4 @@
+the service packages should be grounded in [[ψ/incubate/DCCE/CRDB/output/02_UseCases_FunctionalSpecs/บทสรุปความต้องการใช้งานบริการข้อมูลสารสนเทศด้านภูมิอากาศ_v6|บทสรุปความต้องการใช้งานบริการข้อมูลสารสนเทศด้านภูมิอากาศ_v6]]. The text should focus on explaining why this service is created, what use cases of the stakeholders can it serve. The text should be able to convince the reader that this service is truly grounded in the real needs
+Then the later part of each service section, we bring in [[ψ/incubate/DCCE/CRDB/output/02_UseCases_FunctionalSpecs/2026-06-15_NCAIF-Service-Enrichment-Roadmap|2026-06-15_NCAIF-Service-Enrichment-Roadmap]] to open up possibility of service requirements. We write in a way that this is suggestion, not absolute requirements ready for implementation
+
+Each service should be 3-4 paragraph long. 
