@@ -10,6 +10,7 @@ description: Thai-first writing skill (report/article). MCP-first retrieval, sty
 > - **Outline-first stop** (human control boundary)
 > - **Session-specific style pack summary** lifecycle
 > - **Learn-back** delegated to [`writing-th-learn`](.roo/skills/writing-th-learn/SKILL.md)
+> - **Stage-aware control** — drafting and editing are iterative; do not apply all rules equally at every pass
 
 ## When to use
 
@@ -137,9 +138,63 @@ If example style conflicts with a project Session Style Pack, project style brie
 
 ## Workflow
 
+### Step 0 — Identify loop stage before doing anything else
+
+This skill must **not** treat all writing work as one drafting event. Before drafting, revising, or editing, determine the current stage of the writing loop and activate only the relevant rule layer.
+
+Use these stages:
+
+1. **Stage A — Framing / Outline**
+   - Goal: define section job, audience action, evidence boundaries, and section sequence.
+   - Primary rules: section architecture, outline logic, evidence scope.
+   - Defer: sentence polish, lexicon cleanup, micro-diction.
+
+2. **Stage B — First Draft / Content Build**
+   - Goal: get the content spine onto the page while preserving source meaning.
+   - Primary rules: section job, paragraph payload, actor/product clarity, preservation-first fidelity.
+   - Defer: heavy sentence beautification, aggressive compression, lexicon perfection.
+
+3. **Stage C — Structural Revision**
+   - Goal: repair drift, split overloaded paragraphs, re-sequence evidence, and clarify section logic.
+   - Primary rules: one paragraph one job, evidence-to-action chain, service-package sequence, adoption-test clarity.
+   - Defer: low-level word substitution unless it blocks structural clarity.
+
+4. **Stage D — Voice / Sentence Revision**
+   - Goal: make the prose sound like authored Thai institutional writing.
+   - Primary rules: subject-first sentence shape, active institutional agency when actor is known, anti-translation cleanup, anti-AI phrasing.
+   - Defer: broad restructuring unless sentence problems reveal deeper structural defects.
+
+5. **Stage E — Lexicon / Consistency Pass**
+   - Goal: normalize terminology and remove banned phrases.
+   - Primary rules: project lexicon, approved shorthand, technical anchor discipline, repeated term consistency.
+   - Defer: major content changes unless a lexical issue reveals a factual or institutional mismatch.
+
+6. **Stage F — Release Gate**
+   - Goal: confirm the section is audience-facing and publishable.
+   - Primary rules: no invented sources, no repo-internal leakage, no unresolved placeholders unless explicitly marked, style drift check.
+
+Rule of thumb:
+
+- A smooth sentence that arrives before a complete argument is a drafting failure.
+- A lexically compliant paragraph that still lacks a clear job is not draft-ready.
+- Early stages optimize **content logic**; late stages optimize **surface control**.
+
 ### Step 0 — Decide mode
 
 - If the user does not specify a mode, default to `--report`.
+
+### Step 0b — Ask or infer the stage if needed
+
+If the user says things like:
+
+- “outline”, “plan”, “scaffold” → Stage A
+- “draft”, “write section”, “first pass” → Stage B
+- “restructure”, “fix flow”, “too hollow”, “section job unclear” → Stage C
+- “unnatural Thai”, “sounds AI”, “active voice”, “polish prose” → Stage D
+- “check lexicon”, “normalize terms”, “replace wording” → Stage E
+- “finalize”, “ready to send”, “release” → Stage F
+
+If the stage is ambiguous, infer the narrowest plausible stage from the user’s request and current artifact state.
 
 ### Step 1 — Retrieve memory (MCP-first)
 
@@ -207,7 +262,7 @@ Notes:
 - The summary is **session-scoped** and must not overwrite past summaries.
 - This block is a traceable snapshot, not a replacement for the underlying style files.
 
-### Step 3 — Outline first, then STOP
+### Step 3 — Outline first, then STOP (Stage A only)
 
 Produce at least one numbered Thai outline, and optionally two variants if the structure is still ambiguous:
 
@@ -216,7 +271,7 @@ Produce at least one numbered Thai outline, and optionally two variants if the s
 
 Append the chosen outline into the writing plan and **STOP** for explicit confirmation.
 
-### Step 4 — Draft
+### Step 4 — Draft (Stage B)
 
 After confirmation:
 
@@ -225,14 +280,36 @@ After confirmation:
   - `<topic-slug>-v1-draft.md`
   - If re-drafting: increment version (`v2`, `v3`, ...)
 
-### Step 4b — Post-section sanity check (mechanical style validation)
+### Step 4b — Stage-aware sanity check before accepting a section
 
-After completing a substantial section, run a mechanical sanity check against the active writing style pack (resonance + project style brief if any + Session Style Pack Summary):
+After completing a substantial section, run a sanity check against the active writing style pack (resonance + project style brief if any + Session Style Pack Summary), but apply only the checks relevant to the current stage:
 
-- Thai-first wording intact
-- No invented sources
-- Section performs one clear job
-- Style does not drift away from the approved reference
+- **Stage B check**
+  - section performs one clear job
+  - paragraphs carry enough evidence payload
+  - no invented sources
+  - source meaning preserved
+
+- **Stage C check**
+  - each paragraph does one main job
+  - section sequence is coherent
+  - package / mechanism / adoption-test logic is visible
+
+- **Stage D check**
+  - Thai-first wording intact
+  - active institutional agency where actor is known
+  - no translated English scaffolding
+  - anti-AI cleanup without payload loss
+
+- **Stage E check**
+  - terminology follows project lexicon
+  - department shorthand and technical anchors are consistent
+  - banned phrases removed
+
+- **Stage F check**
+  - audience-facing prose contains no internal scaffolding
+  - placeholders, unresolved claims, and citations are handled appropriately
+  - style does not drift away from the approved reference
 
 If any check fails, revise that section under the same style pack before treating it as draft-ready.
 
@@ -257,6 +334,17 @@ Goal of learn-back:
 
 - extract patterns in word choice + semantic arrangement
 - store as `ψ/memory/learnings/YYYY-MM-DD_writing-th-<mode>-learn.md`
+
+### Step 6b — Feed stage-specific corrections to [`style-capture`](.roo/skills/style-capture/SKILL.md)
+
+When a human correction reveals a repeated pattern, treat it as a stage-tagged learning event:
+
+- Section architecture lesson → Stage A memory
+- Paragraph payload lesson → Stage B/C memory
+- Sentence agency or anti-AI lesson → Stage D memory
+- Lexicon substitution lesson → Stage E memory
+
+Do **not** flatten all corrections into one undifferentiated style rule list.
 
 ---
 

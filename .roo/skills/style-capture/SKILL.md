@@ -6,6 +6,8 @@ description: Incrementally learns and refines writing styles from individual sam
 # /style-capture
 
 > A cumulative learning engine for writing style mimicry. It extracts linguistic patterns, structural DNA, and lexicon preferences from single samples or "Draft vs. Edited" comparisons, merging them into a persistent context-specific **Style-Pack**.
+>
+> In the redesigned writing architecture, this skill is **not** the drafting engine. It is the reflective learning layer that updates the rule system used by [`writing-th`](.roo/skills/writing-th/SKILL.md).
 
 ## When to use this skill
 
@@ -64,25 +66,38 @@ description: Incrementally learns and refines writing styles from individual sam
         - **Linguistic Markers**: Sentence length, active/passive preference, use of connectors.
         - **The Anti-AI Shield**: Identify phrases or structures that were removed/replaced (Counter-examples).
         - **Lexicon**: Map specific terms to their preferred alternatives.
+        - **Stage / Scale**: Classify each learned pattern by where it operates in the writing loop.
+
+          Required classification:
+          - **Stage A / Scale 1** — section architecture
+          - **Stage B-C / Scale 2** — paragraph payload and structural revision
+          - **Stage D / Scale 3** — sentence agency, tone, anti-translation, anti-AI cleanup
+          - **Stage E / Scale 4** — lexicon and consistency cleanup
 
 5) **Cumulative Merging (Update Phase)**
     - **Merge Strategy**:
         - Append new **Examples** and **Counter-examples** to the `STYLE_PACK`.
         - If a new pattern contradicts an existing rule, prioritize the new evidence as "Style Evolution" but keep a note of the change.
         - **Rank Order**: Re-evaluate the hierarchy. Rules appearing in multiple samples move to "Highest Priority."
+        - **Scale Discipline**: Do not promote a lexicon or micro-diction lesson into a top-level structural rule. Keep rules at the smallest scale that explains the correction.
     - Update the `LEXICON_<CONTEXT>.json` with new term pairings.
 
 6) **Artifact Materialization**
     - Write/Update the `STYLE_PACK_<CONTEXT>.md`.
     - Format:
-        - `## 1. Ranked Style Rules`
-        - `## 2. Structural DNA`
-        - `## 3. Lexicon & Diction (Dos/Don'ts Table)`
-        - `## 4. Anti-AI Shield (Counter-examples)`
-        - `## 5. Master Implementation Prompt`
+        - `## 1. Core Kernel Rules (80/20)`
+        - `## 2. Stage / Scale Map`
+        - `## 3. Structural DNA`
+        - `## 4. Lexicon & Diction (Dos/Don'ts Table)`
+        - `## 5. Anti-AI Shield (Counter-examples)`
+        - `## 6. Master Implementation Prompt`
 
 7) **Master Prompt Synthesis**
-    - Generate a concise, high-signal prompt that can be pasted into a new session to "activate" this style. It should include the Top 5 rules and a few critical Dos/Don'ts.
+    - Generate a concise, high-signal prompt that can be pasted into a new session to "activate" this style.
+    - The prompt must distinguish:
+      - which rules are first-pass drafting rules,
+      - which rules are structural revision rules,
+      - which rules are late-pass lexicon rules.
 
 8) **oracle_learn Integration**
     - Call `oracle_learn` to index the new patterns.
@@ -97,18 +112,24 @@ description: Incrementally learns and refines writing styles from individual sam
 # Style-Pack: [Context]
 **Samples Learnt**: [N] | **Last Updated**: [Date]
 
-## 1. Ranked Style Rules
+## 1. Core Kernel Rules (80/20)
 1. [Rule] - [Example]
 2. ...
 
-## 2. Lexicon & Diction
+## 2. Stage / Scale Map
+- Stage A / Scale 1 — Section architecture:
+- Stage B-C / Scale 2 — Paragraph payload and structure:
+- Stage D / Scale 3 — Sentence agency and voice:
+- Stage E / Scale 4 — Lexicon and cleanup:
+
+## 3. Lexicon & Diction
 | Banned/Common | Preferred | Reason |
 | :--- | :--- | :--- |
 
-## 3. Anti-AI Shield
+## 4. Anti-AI Shield
 - **DON'T**: [AI-sounding phrase]
 - **DO**: [Human-sounding alternative]
 
-## 4. Master Implementation Prompt
+## 5. Master Implementation Prompt
 [Concise instructions for future sessions]
 ```

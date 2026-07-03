@@ -1,29 +1,87 @@
 # Style-Pack: NCAIF-Institutional
-**Samples Learnt**: 14 (Technical Precision, Readability, and Analytical Density) | **Last Updated**: 2026-07-01
+**Samples Learnt**: 14 (Technical Precision, Readability, and Analytical Density) | **Last Updated**: 2026-07-03
 
-## 1. Ranked Style Rules
-1. **Evidence-First Institutional Opening** - Begin with the audit scale, the named service, or the concrete finding. Do not force a literary hook or a generic thesis opening.
-2. **Analytical Payload Rule** - Every substantive paragraph must carry at least one claim, one concrete example, one consequence, and one institutional or technical mechanism.
-3. **Precision in Resolution Scales** - ALWAYS specify the exact scale or range when discussing data resolution.
-    - Use **"ระดับ 25-100 กิโลเมตร"** instead of "ระดับกิโลเมตร".
-    - Use **"ระดับหลักสิบเมตร"** instead of "ระดับเมตร".
-4. **Simplified Technical Prose** - Strip "Expert-AI" descriptors like "ขั้นสูง" (advanced) or "ที่สำคัญที่สุด" (most important). Let the fact stand alone.
-5. **The Anti-Vagueness Rule (The System Identity)** - NEVER use "ระบบ" (system) without a modifier.
-    - **Banned**: "ความมั่นคงของระบบ"
-    - **Preferred**: "ความมั่นคงของสถาปัตยกรรมบริการสารสนเทศ" or "เสถียรภาพของระบบสนับสนุนการตัดสินใจ".
-6. **Direct Evidence Lead (No Padding)** - Never spend a paragraph on scene-setting or hedge-heavy framing when the point is a diagnosed gap. State the evidence first, then the implication.
-7. **Product over Process** - Describe the *deliverable* (e.g., "ระเบียบวิธีและเครื่องมือคำนวณมาตรฐาน"), not the activity.
-8. **Fact-Impact Snapping** - Break long sentences. Every claim should be a standalone evidence-impact pair.
-9. **Paragraph-Based Flow with Controlled Compression** - Keep the prose paragraph-led for readability, but use bullets or tables when comparing multiple services, gaps, or artifacts would otherwise blur distinctions.
-10. **Parenthetical Technical Anchors** - Introduce English scientific concepts and abbreviations in parentheses immediately after the Thai term when they improve traceability. Do not force them where they reduce clarity.
-11. **Banish Direct English Jargon** - NEVER use English terms (like `use case`, `workflow`, `interoperability`, `usability`, `lag time`) in main report summaries. Substitute them with functional Thai descriptors (e.g. `กรณีการใช้งาน`, `ขั้นตอนการทำงาน`, `ระบบงานจริง`).
-12. **Refer to Department as กรมฯ** - Refer to the Department of Climate Change and Environment as `กรมฯ` rather than `DCCE` when writing public-facing Thai report prose.
-13. **Ground Gaps with Precise Baseline Parameters** - Always specify specific resolutions (25 km, 5 km), variables (Precipitation, Temperatures), and scenarios (SSP2-4.5, SSP5-8.5) when discussing climate projections to avoid vague gap statements.
-14. **Direct Mandates Over Philosophical Preaching** - Do not write recommendations as moral advice or general "perspective shifts" (e.g. `ควรปรับมุมมอง...`). Write them as concrete operational mandates (e.g. `ต้องจัดตั้งแนวทาง...`, `จะต้องบริหารแพลตฟอร์ม...`).
-15. **Eliminate English Contrast Scaffolding** - Never open sentences or build key arguments using the translated contrast pattern `ไม่ควรถูกมองเป็น... แต่ควรถูกมองเป็น...` or `ไม่ได้... แต่...`. Make direct, positive assertions about what the institution does or requires.
-16. **Structured Breakdowns for Complex Lists** - When listing core pillars, layers, or recommendations (e.g., the 6 elements of governance), do not compress them into a single inline paragraph. Always separate them into a numbered list (1 to N) with line breaks to ensure readability and scannability.
+## 1. Core Kernel (80/20)
 
-## 1A. Hierarchical Vetting Stack (apply in order)
+These are the small set of rules that generate most of the desired NCAIF prose quality. Apply these before any secondary cleanup.
+
+1. **Section Job First** — Before writing any section or paragraph, identify the section job in one sentence. Reject text that repeats the previous section's job or drifts into the next section's job.
+2. **Evidence-First Institutional Opening** — Begin with the audit scale, named service, blocked task, or concrete finding. Do not open with a literary hook, scene-setting filler, or abstract thesis line.
+3. **Analytical Payload Rule** — Every substantive paragraph must carry at least one claim, one concrete example or variable, one consequence, and one institutional or technical mechanism.
+4. **Evidence-to-Action Chain** — Default paragraph logic should move from observed evidence → operational consequence → institutional cause → proposed mechanism.
+5. **Product Naming** — Describe the deliverable, owner, or service artifact, not only the activity.
+6. **One Paragraph, One Main Job** — Each paragraph should mainly define, diagnose, compare, or conclude. Do not mix multiple jobs unless the section explicitly requires it.
+7. **Thai Institutional Voice Over Design-Memo Tone** — Rewrite any sentence that sounds like a translated design memo, software spec, or English argumentative skeleton.
+8. **Active Institutional Agency When Actor Is Known** — When the actor is already known, state the duty directly. Prefer `กรมฯ จัดทำ...`, `บริการนี้ทำหน้าที่...`, `หน่วยงานใช้...` over passive or pseudo-passive framing such as `ถูกออกแบบให้...`.
+9. **Banish Direct English Jargon** — Never use direct English operational jargon in audience-facing Thai prose when a functional Thai equivalent exists.
+10. **Simplified Technical Prose** — Remove prestige descriptors like `ขั้นสูง`, `ที่สำคัญที่สุด`, or similar verbal inflation unless the distinction is materially necessary.
+
+## 2. Stage / Scale Activation Map
+
+This pack is no longer a flat checklist. Apply rules by stage and scale.
+
+### Stage A / Scale 1 — Section architecture
+- Section job first
+- Evidence-first institutional opening
+- Service-by-service discrimination
+- Product naming
+
+Use at outline time and first structural framing.
+
+### Stage B / Scale 2 — First-draft content build
+- Analytical payload rule
+- Evidence-to-action chain
+- One paragraph, one main job
+- Preservation of source meaning and institutional distinctions
+
+Use when building the first complete section. Do not over-optimize diction yet.
+
+### Stage C / Scale 2 — Structural revision
+- Split overloaded paragraphs
+- Restore blocked actor / consequence clarity
+- Separate package, mechanism, and adoption-test logic
+- Use bullets or numbered lists when multiple service elements blur together
+
+Use after the first draft exists but before sentence polish.
+
+### Stage D / Scale 3 — Sentence agency and voice
+- Thai institutional voice over design-memo tone
+- Active institutional agency when actor is known
+- Eliminate translated contrast scaffolding
+- Direct assertion before contrast
+- Remove composite-noun inflation
+
+Use only after structure and payload already work.
+
+### Stage E / Scale 4 — Lexicon and cleanup
+- Department shorthand normalization
+- English-jargon bans and Thai substitutions
+- Parenthetical anchor discipline
+- Banned/common phrase cleanup
+
+Use as a late-pass consistency sweep, not as a first-pass drafting engine.
+
+### Stage F — Release gate
+- No invented sources
+- No repo-internal leakage in audience-facing prose
+- No unresolved placeholders unless explicitly marked
+- Final style drift check against the context pack
+
+## 3. Secondary Pass Rules
+
+These rules matter, but they should not compete with the Core Kernel during early drafting.
+
+1. **Precision in Resolution Scales** — Specify exact scale or range when discussing data resolution.
+   - Use **"ระดับ 25-100 กิโลเมตร"** instead of "ระดับกิโลเมตร".
+   - Use **"ระดับหลักสิบเมตร"** instead of "ระดับเมตร".
+2. **Ground Gaps with Precise Baseline Parameters** — Specify resolutions, variables, or scenarios when discussing climate-model gaps.
+3. **Parenthetical Technical Anchors** — Introduce English scientific concepts or abbreviations in parentheses only when they improve traceability.
+4. **Paragraph-Based Flow with Controlled Compression** — Keep prose paragraph-led, but switch to bullets or tables when dense comparison would otherwise blur distinctions.
+5. **Structured Breakdowns for Complex Lists** — When listing pillars, layers, or recommendations, prefer numbered lists over compressed inline prose.
+6. **Direct Mandates Over Philosophical Preaching** — In recommendation mode, write operational mandates rather than moral advice or perspective shifts.
+7. **The Anti-Vagueness Rule (The System Identity)** — Do not use `ระบบ` without specifying which system when the exact identity matters.
+
+## 4. Hierarchical Vetting Stack (apply in order)
 1. **Level 1 — Section Job First**
    - Before writing any paragraph, identify the section's job in one sentence.
    - Reject any paragraph that repeats the previous section's job or drifts into the next section's job.
@@ -40,7 +98,7 @@
    - Remove filler transitions, prestige words, and literal translations before accepting the paragraph.
    - Final prose must sound like a report written for Thai policy and technical readers, not like a polished translation.
 
-## 2. Lexicon & Diction (Dos/Don'ts)
+## 5. Lexicon & Diction (Dos/Don'ts)
 | Banned/Common | Preferred | Reason |
 | :--- | :--- | :--- |
 | "ความลักลั่น" | "ความซ้ำซ้อนและความไร้มาตรฐาน" | More descriptive of technical failure. |
@@ -87,7 +145,7 @@
 * **Uncertainty Communication** -> การสื่อสารความไม่แน่นอน (Uncertainty Communication)
 * **Most Significant Change (MSC)** -> เรื่องเล่าความเปลี่ยนแปลงที่สำคัญที่สุด (Most Significant Change)
 
-## 3. Structural DNA
+## 6. Structural DNA
 - **Traceable Intro**: Start with the audit scale, named service, or concrete finding.
 - **Evidence-to-Action Chain**: Default paragraph logic should move from observed evidence → operational consequence → institutional cause → proposed mechanism.
 - **Scale-Specific Impact**: Link technical gaps to concrete resolutions (25km vs 10m), and specify what task fails at each scale.
@@ -97,17 +155,21 @@
 
 ### Thai Sentence Shape Guardrails
 - Start with the real subject, institution, dataset, or finding whenever possible.
+- When the institutional actor is already known, prefer active-duty phrasing over passive intention language.
 - Avoid opening a sentence by denying what something is **not** before stating what it **is**.
 - Ban pseudo-balanced translated structures such as:
   - "...ไม่ได้...แต่..."
   - "ไม่ใช่เพียง...แต่ยัง..."
   when they are used as rhetorical scaffolding rather than real contrast.
 - Preferred pattern: state the actual function first, then state the limitation or contrast in the next clause or next sentence.
+- Preferred active transformation:
+  - Avoid: `บริการนี้ถูกออกแบบให้ทำหน้าที่...`
+  - Prefer: `บริการนี้ทำหน้าที่...` or `กรมฯ จัดทำ...`
 - Example preferred transformation:
   - Avoid: "การออกแบบชุดข้อมูล...ไม่ได้เริ่มจาก...แต่เริ่มจาก..."
   - Prefer: "การออกแบบชุดข้อมูล...เริ่มจากข้อมูลที่ ปภ. มีอยู่จริงในระบบงานปัจจุบัน แล้วจึงพิจารณาว่าข้อมูลส่วนใดยังไม่เพียงพอสำหรับการประเมินความเสียหายและความสูญเสีย"
 
-## 4. Anti-AI Shield (Counter-examples)
+## 7. Anti-AI Shield (Counter-examples)
 - **CRITICAL DON'T**: Start with "อย่างไรก็ตาม..." or "แม้ว่า..." unless the contrast is doing real analytical work.
 - **CRITICAL DON'T**: Use "ระบบ" without identifying *which* system.
 - **CRITICAL DON'T**: Use hyperbolic marketing/commercial words like "ไร้รอยต่อ" or "สมบูรณ์แบบ". Describe actual operational workflows or technical constraints instead.
@@ -121,12 +183,21 @@
 - **DON'T**: Open sentences or build key arguments using the translated contrast template `ไม่ควรถูกมองเป็น... แต่ควรถูกมองเป็น...` or `ไม่ได้... แต่...`.
 - **DON'T**: Use conceptual/philosophical prefixes like `ตรรกะหลักของ...` in report summaries.
 - **DON'T**: Use subjective superlatives like `ข้อเสนอเชิงยุทธศาสตร์ที่สุด` (use `ข้อเสนอเชิงยุทธศาสตร์ที่สำคัญ` instead).
+- **DON'T**: Use passive or pseudo-passive agency like `ถูกออกแบบให้...` when the institutional actor is already known and can be named directly.
+- **DON'T**: Compress by deleting governance content. Cut scaffolding first, not institutional duties, evidence, or conditions of use.
 
-## 5. Master Implementation Prompt
-> **Writing Mode**: NCAIF-Institutional (v4.1 - Precise, Readable, and Evidence-Dense)
-> **Instructions**: Write in a punchy, authoritative Thai institutional voice. Start from the evidence or audit finding, not a literary hook. Specify all data resolutions (e.g., "25-100 กม.", "หลักสิบเมตร"). Avoid vague terms like "ระบบ" alone; use "สถาปัตยกรรมบริการสารสนเทศ". Strip all causal padding and "advanced/important" descriptors. Keep paragraphs readable, but use bullets or tables when comparing multiple services or when listing core recommendations. Frame recommendations as concrete operational mandates (e.g. `ต้องจัดตั้งแนวทาง...`, `จะต้องบริหารแพลตฟอร์ม...`) rather than advising the department to "adjust perspectives" or "act as role models." Avoid opening sentences or building arguments using translated contrast patterns like `ไม่ควรถูกมองเป็น... แต่ควรถูกมองเป็น...` or `ไม่ได้... แต่...`.
+## 8. Master Implementation Prompt
+> **Writing Mode**: NCAIF-Institutional (v5.0 - Stage-Aware, Evidence-Dense, Institution-Led)
+> 
+> **How to use this pack**:
+> 1. First secure the section job and paragraph payload.
+> 2. Then repair structure and service-package sequencing.
+> 3. Only after that polish sentence agency and diction.
+> 4. Use the lexicon as a late-pass cleanup layer, not a first-pass drafting engine.
+>
+> **Core behavior**: Write in a punchy, authoritative Thai institutional voice. Start from the evidence, blocked task, or service function, not a literary hook. Make each paragraph do one clear job. Ensure each substantive paragraph contains a finding, example, consequence, and mechanism. Name the deliverable, owner, or service artifact directly. Prefer active institutional agency when the actor is known. Remove translated contrast scaffolding, prestige filler, and design-memo tone. Keep technical specificity where it matters, but never let micro-style optimization outrank content logic.
 
-## 6. Incremental Capture Log
+## 9. Incremental Capture Log
 
 ### 2026-06-25 — Style-pack upgrade from institutional analysis failure
 
