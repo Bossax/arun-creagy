@@ -80,3 +80,5 @@ Rule (parent CLAUDE.md §"Self-Evaluation Loop"): same friction 3 sessions → f
 | 2026-07-03 00:43 | dddb43dd | MVD Real Event Testing & Strict Style Pack Alignment | n/a | Updated 5.3.7 with strict NCAIF style and lexicon compliance | Paragraph-level overcompensation with abstract jargon and unnecessary parentheses | Over-aggressive abstract word choice replacements |
 | 2026-07-03 10:05 | a33f6ca1 | 5.3.3 Workshop Results Rewrite | n/a | Deeply detailed raw results extraction | Overwriting format context with internal logic | Applying internal project logic to audience-facing reports |
 | 2026-07-03 12:10 | 19c00277 | 5.3.3 Rewrite Compliance | file restoration loops | Flawless structural rewrite with strict Thai-report-rules | Ad-hoc Node scripts | Trust native replacement tools first |
+| 2026-07-04 13:26 | f32d2f30 | Cleaned references in 5.2.3, 5.2.5, 5.2.7 and aligned DGA roles | Hallucinated internal deliverable codes as report references | Standardized to round parentheses with actual external publications | PowerShell quote escaping on mining command | NoneType attribute replace error in python parser |
+
