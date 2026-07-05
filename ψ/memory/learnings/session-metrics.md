@@ -166,3 +166,4 @@ Rule (parent CLAUDE.md §"Self-Evaluation Loop"): same friction 3 sessions → f
 | 2026-07-04 | 21:27 | ART Compression & 5.3.3 Rewrite | 3 | Gentle constraint harness |
 | 2026-07-05 | 14:34 | 1 | 3f83123 | [14.34_final-report-logic-arc.md](../retrospectives/2026-07/05/14.34_final-report-logic-arc.md) | Logic Arc Correction |
 | 2026-07-05 | 17:27 | 5122e2f6 | Chapter 5 Summaries Alignment | Compression vs Diff Mapping | 1 [→ AGENT DECISION] | Aggressively compressing instead of mapping vocabulary |
+| 2026-07-05 | 18:17 | 78012a89 | Overhauled writing-th skill & removed system prompt bloat | n/a | 1 [→ AGENT DECISION] | Attempting to fix prompt safety with more prompts |

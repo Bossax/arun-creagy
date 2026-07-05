@@ -1,14 +1,25 @@
 ---
-installer: arra-oracle-skills-cli v1.0.0
-origin: Project-local hardened version for Windows/ψ stability.
+installer: arra-oracle-skills-cli v26.5.16
+origin: Project-local hardened version for Windows/ψ stability (aligned with global v26.5.16)
 name: trace
-description: '[local] Hardened v1.1.0 | The Lens: Unstructured forensic discovery across the Oracle brain. Maps technical ancestry and generates T-E-D-A hypotheses.'
+description: '[local] Hardened v26.5.16 | The Lens: Unified forensic discovery across git history, repos, docs, and Oracle. Maps technical ancestry and generates T-E-D-A hypotheses.'
 argument-hint: "<query> [--oracle | --smart | --deep]"
 ---
 
-# /trace (The Lens)
+# /trace — Unified Discovery System (The Forensic Lens)
 
 > "Discover reality. Map the ancestry. Hypothesize the why."
+
+## Usage
+
+```
+/trace [query]                    # Current repo (default --smart)
+/trace [query] --oracle           # Oracle only (fastest)
+/trace [query] --smart            # Oracle first, fallback to deep
+/trace [query] --deep             # Forensic wave execution (thorough)
+```
+
+---
 
 ## Oracle Root Detection (REQUIRED — win32/PowerShell)
 
@@ -34,34 +45,140 @@ if ($ORACLE_ROOT -and (Test-Path "$ORACLE_ROOT\GEMINI.md") -and (Test-Path "$ORA
 
 ## 🛡️ The Workflow (The Forensic Lens)
 
-### Step 1: Search Waves (The Engine)
-Run discovery using the existing forensic tools. Do NOT skip waves; the value of a trace is in its exhaustive depth.
-- **Wave 1 (Oracle)**: `arra_search` (hybrid mode) to find principles and patterns.
-- **Wave 2 (Files)**: `grep_search` across `ψ/incubate/`, `ψ/memory/`, and project directories to find orphaned notes.
-- **Wave 3 (Sessions)**: Call `python .agents/skills/trace/scripts/dig.py` to extract raw strings from `session.jsonl` logs.
+### Mode 1: --oracle (Oracle Only)
+**Fastest. Just Oracle MCP, no subagents.**
+Query Oracle knowledge base:
+```
+oracle_search("[query]", limit=15)
+```
+Display results and done.
 
-### Step 2: Logging (The Archive & Database)
-1. **Physical Log**: Write the raw findings to `ψ/memory/traces/YYYY-MM-DD/HHMM_[query].md`.
-   - Include clickable Windows paths (e.g., `C:/...`).
-   - Calculate a **Friction Score** based on the distance between the query and the evidence found.
-2. **Database Registration**: You MUST call the `arra_trace` tool with the query and the list of discovered files/sessions.
-   - Capture the returned `traceId`.
-   - Record this `traceId` in the markdown file header for future bonding.
+### Mode 2: --smart (Default)
+**Oracle first → auto-escalate if results < 3**
+- Query Oracle first: `oracle_search("[query]", limit=10)`
+- If Oracle results >= 3 → Display and done.
+- If Oracle results < 3 → Auto-escalate to `--deep` mode.
 
-### Step 3: Synthesis (The T-E-D-A Hypothesis)
-Every trace MUST conclude with a **Hypothesis** block. This translates unstructured "mess" into potential project ledgers.
+### Mode 3: --deep (Wave Execution + Session Mining)
+**Multiple waves of parallel search + session mining. Each wave has fresh context.**
 
-> [!important]
-> **Artifact vs. Motive Separation**: Files (PDFs, scripts, notebooks) are **Evidence (E)**. The insight or mandate derived from them is the **Trigger (T)**. Never log a file path as a Trigger.
+#### Wave 1 — Fast surface search + session mining
+- **Agent A (Current Repo Files)**: Search for file names, paths, code, or configs matching the query.
+- **Agent B (Oracle Memory)**: Search ψ/memory/ for learnings, retrospectives, and previous trace logs matching the query.
+- **Agent F (Session History - dig)**: Call the local session miner to extract session history:
+  ```bash
+  python .agents/skills/trace/scripts/dig.py 50
+  ```
+  And search the output session data for mentions of the query.
 
-**Markdown Section Template**:
+Check if Wave 1 results are sufficient (answer clear and >= 3 results). If insufficient, proceed to Wave 2.
+
+#### Wave 2 — Deep search
+- **Agent C (Git History)**: Search git commits: `git log --all --oneline --grep="[query]"`
+- **Agent D (Cross-Repo)**: Search other repos under the ghq root.
+- **Agent E (GitHub Issues/PRs)**: Run `gh issue list --search "[query]"` and `gh pr list --search "[query]"` if remote exists.
+
+---
+
+## Step 3: Calculate Friction Score
+Calculate `friction_score = S + C_offset` (clamped to `[0.0, 1.0]`).
+
+**S — Source Score** (highest-tier source with relevant result):
+- **1.0**: Oracle (Frictionless)
+- **0.7**: Repo files (Present but not indexed)
+- **0.5**: Git history (Buried)
+- **0.3**: Cross-repo (Hidden)
+- **0.0**: Not found (Invisible)
+
+**C_offset — Completeness** (from goal-backward check in Step 4):
+- **high**: +0.00
+- **medium**: −0.10
+- **low**: −0.20
+
+Calculate `coverage` (dimensions searched): `oracle`, `files`, `git`, `cross-repo`, `github`.
+
+---
+
+## Step 4: Goal-Backward Check
+Ask: *"Did this trace actually answer the original question?"*
+- **Yes** → confidence: high
+- **Partial** (found related but not exact) → confidence: medium (note what's missing)
+- **No** → confidence: low (note what next step is needed)
+
+---
+
+## Step 5: Write Trace Log
+Write findings to `ψ/memory/traces/YYYY-MM-DD/HHMM_[query-slug].md`.
+
+**Markdown Log Template**:
 ```markdown
+---
+type: trace
+traceId: [trace_id]
+date: YYYY-MM-DD
+query: "[query]"
+target: "[TARGET_NAME]"
+mode: [oracle|smart|deep]
+timestamp: YYYY-MM-DD HH:MM
+friction_score: [0.0–1.0]
+coverage: [oracle, files, git, cross-repo, github]
+confidence: [high|medium|low]
+---
+
+# Trace: [query]
+
+**Target**: [TARGET_NAME]
+**Mode**: [mode] | **Friction**: [friction_score] | **Confidence**: [confidence]
+**Time**: [timestamp]
+
+## Oracle Results
+[list results or "None"]
+
+## Files Found
+[list files or "None"]
+
+## Git History
+[list commits or "None"]
+
+## GitHub Issues/PRs
+[list or "None"]
+
+## Cross-Repo Matches
+[list or "None"]
+
+## Oracle Memory
+[list or "None"]
+
+## Session History (from /dig)
+[list from local dig.py or "None"]
+
+## Friction Analysis
+**Score**: [0.0–1.0] — [interpretation]
+**Coverage**: [dimensions searched]
+**Goal check**: [Did this answer the question? What's missing?]
+
 ### Potential Ledger Yields (T-E-D-A Hypothesis)
 
 - **[T] Potential Trigger**: [The conceptual "Why" discovered in the trace]
 - **[E] Supporting Evidence**: [File Path A], [File Path B]
 - **[D] Potential Decision**: [The strategy/posture this trace seems to validate]
 - **[A] Target Asset**: [The file this trace was investigating]
+```
+
+> [!important]
+> **Artifact vs. Motive Separation**: Files (PDFs, scripts, notebooks) are **Evidence (E)**. The insight or mandate derived from them is the **Trigger (T)**. Never log a file path as a Trigger.
+
+---
+
+## Step 6: Log to Oracle Database
+Call `oracle_trace` (MCP) with the query, foundFiles, foundCommits, foundIssues, friction_score, and confidence. Record the returned `traceId` in the markdown file header.
+
+---
+
+## Step 7: Confirm Trace Log Path
+Output the absolute path to the trace file:
+```bash
+echo "🔍 Trace logged: $TRACE_FILE"
 ```
 
 ---

@@ -70,8 +70,7 @@ description: Incrementally learns and refines writing styles from individual sam
         - Append new **Examples** and **Counter-examples** to the `STYLE_PACK`.
         - If a new pattern contradicts an existing rule, prioritize the new evidence as "Style Evolution" but keep a note of the change.
         - **Rank Order**: Re-evaluate the hierarchy. Rules appearing in multiple samples move to "Highest Priority."
-    - Update the `LEXICON_<CONTEXT>.json` with new term pairings.
-
+    - Update the `LEXICON_<CONTEXT>.json` with new term pairings. **CRITICAL**: The JSON must strictly adhere to the schema expected by `lint_thai_writing.py`: Each entry must have `"banned"`, `"preferred"`, and `"reason"` keys. Do not deviate from this schema or the deterministic linter will crash.
 6) **Artifact Materialization**
     - Write/Update the `STYLE_PACK_<CONTEXT>.md`.
     - Format:
