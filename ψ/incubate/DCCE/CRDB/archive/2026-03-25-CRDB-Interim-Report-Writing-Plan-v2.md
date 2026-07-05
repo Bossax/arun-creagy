@@ -58,7 +58,7 @@
 - Task 5.5 lists not present in interim report format.
 
 **Dependency on available sources:**
-- Use TOR file as authoritative clause wording: [`ψ/incubate/DCCE/CRDB/inbox_source/CRDB - TOR.md`](ψ/incubate/DCCE/CRDB/inbox_source/CRDB%20-%20TOR.md)
+- Use TOR file as authoritative clause wording: [`ψ/incubate/DCCE/CRDB/inbox_source/CRDB - TOR.md`](ψ/incubate/DCCE/CRDB/inbox_source/CRDB-TOR.md)
 - Use submitted interim report PDFs as the **canonical v1 section structure and base text** for all rewrites: [`ψ/incubate/DCCE/CRDB/inbox_source/2026-03-23_interim-report-1st-submission.pdf`](ψ/incubate/DCCE/CRDB/archive/2026-03-23_interim-report-1st-submission.pdf); [`ψ/incubate/DCCE/CRDB/inbox_source/2026-03-23_interim-report-1st-appendix.pdf`](ψ/incubate/DCCE/CRDB/archive/2026-03-23_interim-report-1st-appendix.pdf)
 - Use interim report working outline and chapter drafts as structure anchors: [`ψ/incubate/DCCE/CRDB/inbox_note/CRDB interim report.md`](ψ/incubate/DCCE/CRDB/inbox_note/CRDB%20interim%20report.md)
 - Use Task 5.5 scope note for progress framing but add explicit list outputs: [`ψ/incubate/DCCE/CRDB/output/2026-03-12-Task 5.5 Scope.md`](ψ/incubate/DCCE/CRDB/output/2026-03-12-Task%205.5%20Scope.md)

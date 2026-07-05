@@ -1,6 +1,6 @@
 # CRDB Interim Report — Working Outline (TOR 7.2)
 
-The interim report must include these topics per [[CRDB - TOR]]:
+The interim report must include these topics per [[ψ/incubate/DCCE/CRDB/inbox_source/CRDB-TOR]]:
 - **Results of Clauses 5.2.1 to 5.2.5**
 - **Results of Clauses 5.3.1 to 5.3.2**
 - **Progress on Clauses 5.5.1 to 5.5.2**
@@ -34,7 +34,7 @@ The interim report must include these topics per [[CRDB - TOR]]:
 
 #### 1.1 TOR intent and sponsor expectations
 
-The TOR requested a **National Climate Adaptation Information Framework** plus a **data management structure**, not only a web redesign. This chapter therefore reports progress on a coherent framework, the underlying management logic, and the mechanisms for safe publishing and revision. (TOR reference: [`ψ/incubate/DCCE/CRDB/inbox_source/CRDB - TOR.md`](ψ/incubate/DCCE/CRDB/inbox_source/CRDB%20-%20TOR.md))
+The TOR requested a **National Climate Adaptation Information Framework** plus a **data management structure**, not only a web redesign. This chapter therefore reports progress on a coherent framework, the underlying management logic, and the mechanisms for safe publishing and revision. (TOR reference: [`ψ/incubate/DCCE/CRDB/inbox_source/CRDB - TOR.md`](ψ/incubate/DCCE/CRDB/inbox_source/CRDB-TOR.md))
 
 #### 1.2 Methodology: deriving user demand and design criteria
 

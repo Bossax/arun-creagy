@@ -77,7 +77,7 @@
 - [`ψ/incubate/DCCE/CRDB/inbox_note/CRDB interim report.md`](ψ/incubate/DCCE/CRDB/inbox_note/CRDB%20interim%20report.md)
 - [`ψ/incubate/DCCE/CRDB/output/2026-03-13-Three-Platform Review and T-PLAT Lessons.md`](ψ/incubate/DCCE/CRDB/output/2026-03-13-Three-Platform%20Review%20and%20T-PLAT%20Lessons.md)
 - [`ψ/incubate/DCCE/CRDB/output/2026-03-12_crdb-section1-cdm-mvp-evidence-analysis.md`](ψ/incubate/DCCE/CRDB/output/2026-03-12_crdb-section1-cdm-mvp-evidence-analysis.md)
-- [`ψ/incubate/DCCE/CRDB/inbox_source/CRDB - TOR.md`](ψ/incubate/DCCE/CRDB/inbox_source/CRDB%20-%20TOR.md)
+- [`ψ/incubate/DCCE/CRDB/inbox_source/CRDB - TOR.md`](ψ/incubate/DCCE/CRDB/inbox_source/CRDB-TOR.md)
 - [`ψ/incubate/DCCE/CRDB/output/NCAIF_Use_Cases.md`](ψ/incubate/DCCE/CRDB/output/NCAIF_Use_Cases.md)
 - [`ψ/incubate/DCCE/CRDB/output/Conceptual Data Model for climate risk and adaptation data system.md`](ψ/incubate/DCCE/CRDB/output/Conceptual%20Data%20Model%20for%20climate%20risk%20and%20adaptation%20data%20system.md)
 - [`ψ/incubate/DCCE/CRDB/inbox_note/Technical Interoperability and Data Modeling in Disaster Risk Reduction - A Comparative Analysis of IPCC, Sendai, and Global Standards.md`](ψ/incubate/DCCE/CRDB/inbox_note/Technical%20Interoperability%20and%20Data%20Modeling%20in%20Disaster%20Risk%20Reduction%20-%20A%20Comparative%20Analysis%20of%20IPCC,%20Sendai,%20and%20Global%20Standards.md)

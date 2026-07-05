@@ -57,7 +57,7 @@ This document outlines the chosen implementation strategy for the DCCE-CRDB proj
 *   **Desired Outcome:** A tangible, useful product that demonstrates the value of well-managed data, securing stakeholder support and funding for the next phase.
 
 >[!comment]
->This plan sounds very practical and well within the [[CRDB - TOR]]. WP 4 of [[CRDB - Implementation Plan]] already requires the development of the data catalog for risk assessment domain.
+>This plan sounds very practical and well within the [[ψ/incubate/DCCE/CRDB/inbox_source/CRDB-TOR]]. WP 4 of [[CRDB - Implementation Plan]] already requires the development of the data catalog for risk assessment domain.
 
 
 ### Phase 2: Expand Value Chains & Build Capacity (Months 7-18)

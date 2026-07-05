@@ -6,7 +6,7 @@ Make MVD and Loss & Damage execution explicit as a first-class implementation tr
 
 ## Primary anchors
 
-- TOR baseline: [`CRDB - TOR.md`](ψ/incubate/DCCE/CRDB/inbox_source/CRDB%20-%20TOR.md)
+- TOR baseline: [`CRDB - TOR.md`](ψ/incubate/DCCE/CRDB/inbox_source/CRDB-TOR.md)
 - MVP framing and MVD groundwork context: [`NCAIF — Workflow patterns + MVP v3.md`](ψ/incubate/DCCE/CRDB/output/02_UseCases_FunctionalSpecs/NCAIF%20%E2%80%94%20Workflow%20patterns%20%2B%20MVP%20v3.md)
 - Thaiwater enhancement note: [`2026-04-09-enhancement-plan-based-on-Thaiwater-data-architecture.md`](ψ/incubate/DCCE/CRDB/inbox_note/2026-04-09-enhancement-plan-based-on-Thaiwater-data-architecture.md)
 - Trigger linkage: [`CRDB-Trigger-Log.md`](ψ/incubate/DCCE/CRDB/CRDB-Trigger-Log.md)

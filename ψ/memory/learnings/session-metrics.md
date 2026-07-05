@@ -83,3 +83,5 @@ Rule (parent CLAUDE.md §"Self-Evaluation Loop"): same friction 3 sessions → f
 | 2026-07-04 13:26 | f32d2f30 | Cleaned references in 5.2.3, 5.2.5, 5.2.7 and aligned DGA roles | Hallucinated internal deliverable codes as report references | Standardized to round parentheses with actual external publications | PowerShell quote escaping on mining command | NoneType attribute replace error in python parser |
 | 2026-07-04 17:11 | 907b9856 | Level 3 Deep Polish of 10 Articles & 5.2.9 | Colloquialisms and AI transitions remaining in drafts | Synthesized NCAIF + Articles style packs for full rewrite | Superficial regex replacement pass chosen initially | Subagent instruction superficiality |
 
+| 2026-07-04 | 21:27 | ART Compression & 5.3.3 Rewrite | 3 | Gentle constraint harness |
+| 2026-07-05 | 14:34 | 1 | 3f83123 | [14.34_final-report-logic-arc.md](../retrospectives/2026-07/05/14.34_final-report-logic-arc.md) | Logic Arc Correction |

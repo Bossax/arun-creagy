@@ -27,7 +27,7 @@
 - [ ] Backfill [`ψ/incubate/DCCE/CRDB/CRDB-Change-Log.md`](ψ/incubate/DCCE/CRDB/CRDB-Change-Log.md) from the trigger spine (major direction shifts).
 - [ ] Backfill [`ψ/incubate/DCCE/CRDB/CRDB-Claim-Register.md`](ψ/incubate/DCCE/CRDB/CRDB-Claim-Register.md) from triggers + decisions + evidence.
 - [ ] Reconcile triggers/deliverables with evidence IDs in [`ψ/incubate/DCCE/CRDB/output/CRDB-Evidence-Registry.md`](ψ/incubate/DCCE/CRDB/CRDB-Evidence-Registry.md) and navigation in [`ψ/incubate/DCCE/CRDB/output/CRDB-Workstreams-Index.md`](ψ/incubate/DCCE/CRDB/output/CRDB-Workstreams-Index.md)
-- [ ] Create a reconstruction completeness checklist vs TOR milestones using [`ψ/incubate/DCCE/CRDB/inbox_source/CRDB - TOR.md`](ψ/incubate/DCCE/CRDB/inbox_source/CRDB%20-%20TOR.md)
+- [ ] Create a reconstruction completeness checklist vs TOR milestones using [`ψ/incubate/DCCE/CRDB/inbox_source/CRDB - TOR.md`](ψ/incubate/DCCE/CRDB/inbox_source/CRDB-TOR.md)
 
 ## Next Session
 

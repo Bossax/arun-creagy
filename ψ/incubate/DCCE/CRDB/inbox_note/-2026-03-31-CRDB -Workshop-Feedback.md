@@ -1,7 +1,7 @@
 
 มีคอมเมนต์บนแผนที่ทำมาให้นะครับ สำหรับการจัด Workshop ของ CRBD โครงการของ DCCE ซึ่งเราพยายามจะเอากรอบของ NFCS เข้ามาผูกด้วย เพื่อให้ Workshop ครั้งนี้มี Output บางอย่างที่เอาไปใช้กับ NFCS ได้ แล้วเราก็พูดถึงด้วยว่าตัว NFCS ใน Workshop นี้เราจะไม่ได้พูดออกมาอย่างชัดเจน แต่เราจะพูดว่ามีกรอบนี้เป็นภาพใหญ่ โดยเราจะมาโฟกัสกันที่การสร้างระบบข้อมูลสำหรับ DCCE ซึ่งเป็นระบบข้อมูลที่รองรับบริการชุดข้อมูล (Data Product) เรื่องความเสี่ยงจาก Climate Change การปรับตัว และผลกระทบต่างๆ
 
-check CRDB TOR to evaluate if the output from this project satisfies every literal of TOR 5.3.3 [[ψ/incubate/DCCE/CRDB/inbox_source/CRDB - TOR|CRDB - TOR]]
+check CRDB TOR to evaluate if the output from this project satisfies every literal of TOR 5.3.3 [[ψ/incubate/DCCE/CRDB/inbox_source/CRDB-TOR|CRDB-TOR]]
 
 ทีนี้ดูจากแผนขั้นต้น Session 1-3 ถือว่าโอเคครับ มีการเฟรมว่าจะใช้ Journey Confirmation เป็น Workflow ซึ่งจริงๆ ลองไป Cross-check กับ Workflow Pattern หรือ Use Case ที่ได้จากการสัมภาษณ์มาด้วยนะว่ามันตรงไหม อาจจะมีคำถามนิดนึงว่า 1-2 Use Case เนี่ย มันอาจจะครอบคลุมได้แค่ 1-2 ภัยหรือเปล่า อย่างเช่น ภัยเรื่องความร้อนกับภัยเรื่องน้ำท่วม แล้วมันจะ Fit กับประสบการณ์หรือ Priority ของคนที่เราเชิญเข้ามาด้วยไหม
 

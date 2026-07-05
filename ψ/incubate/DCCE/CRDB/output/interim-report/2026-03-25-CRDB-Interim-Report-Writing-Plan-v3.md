@@ -76,7 +76,7 @@ For each TOR clause (5.2.1–5.2.5, 5.3.1–5.3.2, 5.5.1–5.5.2), apply this 4�
 - [`2026-03-23_interim-report-1st-appendix.md`](ψ/incubate/DCCE/CRDB/inbox_source/2026-03-23_interim-report-1st-appendix.md) contains detailed tables, lists, and documentation for focus groups, interviews, and evidence.
 
 **Canonical sources for v3:**
-- Use TOR file as authoritative clause wording: [`CRDB - TOR.md`](ψ/incubate/DCCE/CRDB/inbox_source/CRDB%20-%20TOR.md).
+- Use TOR file as authoritative clause wording: [`CRDB - TOR.md`](ψ/incubate/DCCE/CRDB/inbox_source/CRDB-TOR.md).
 - Source hierarchy for v3 drafting:
   - Submitted interim-report PDFs (main body + appendix) are the **legal canonical record**.
   - The v1 MD files in `inbox_source` are the **primary base MD text** for v3 rewriting:
@@ -110,7 +110,7 @@ For each TOR clause (5.2.1–5.2.5, 5.3.1–5.3.2, 5.5.1–5.5.2), apply this 4�
 
 **Evidence artifacts to pull forward:**
 - TOR mapping and scope information from:
-  - [`CRDB - TOR.md`](ψ/incubate/DCCE/CRDB/inbox_source/CRDB%20-%20TOR.md)
+  - [`CRDB - TOR.md`](ψ/incubate/DCCE/CRDB/inbox_source/CRDB-TOR.md)
   - [`CRDB interim report.md`](ψ/incubate/DCCE/CRDB/inbox_note/CRDB%20interim%20report.md)
   - [`2026-03-25-CRDB-Interim-Report-Evidence-Gathering-Plan.md`](ψ/incubate/DCCE/CRDB/output/2026-03-25-CRDB-Interim-Report-Evidence-Gathering-Plan.md)
 

@@ -11,7 +11,7 @@ type:
   - Artifact
 ---
 **Context**
-1. Aligning with [[CRDB - TOR]] that states that National Climate Adaptation Information Framework, which the consultant must develop, needs to contain at least
+1. Aligning with [[ψ/incubate/DCCE/CRDB/inbox_source/CRDB-TOR]] that states that National Climate Adaptation Information Framework, which the consultant must develop, needs to contain at least
 	- Climate Data
 	- Risk and Impact Assessment Data
 	- Adaptation Guidelines and Examples
