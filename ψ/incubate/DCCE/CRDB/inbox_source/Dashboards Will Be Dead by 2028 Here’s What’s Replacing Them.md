@@ -1,8 +1,9 @@
 ---
-type: "web clipped"
+type: web clipped
 tags:
+  - "#Data"
 capture_date:
-url: "https://medium.com/@businesspulse.ai/dashboards-will-be-dead-by-2028-heres-what-s-replacing-them-cc9f786dbf4e"
+url: https://medium.com/@businesspulse.ai/dashboards-will-be-dead-by-2028-heres-what-s-replacing-them-cc9f786dbf4e
 ---
 ![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*oai0fMbQncoU3WM_5r7pCA.png)
 
