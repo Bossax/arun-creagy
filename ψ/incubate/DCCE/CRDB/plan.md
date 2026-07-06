@@ -1,55 +1,46 @@
 # plan — DCCE / CRDB
 
-Operational plan for the **CRDB Inception Package (July 6th Handoff)**.
+Operational plan for the **CRDB Phase 2: Final Report & Dissemination Sprint (July–August 2026)**.
 
-Status (as of **2026-05-20**, ICT)
+Status (as of **2026-07-06**, ICT)
 
 | Item | Summary | Key artifacts |
 | :--- | :--- | :--- |
-| **Procurement Shield Strategy** | Transitioned to a "Blueprint-as-a-Shield" model to protect the 25M THB procurement from "Expert Drift." Focus is on delivering a high-quality Inception Package (9 Pillars). | Strategy: [`ψ/incubate/DCCE/CRDB/output/00_Strategy_Reports/2026-05-20_CRDB-Blueprint-Handoff-and-Procurement-Shield-Strategy.md`](ψ/incubate/DCCE/CRDB/output/00_Strategy_Reports/2026-05-20_CRDB-Blueprint-Handoff-and-Procurement-Shield-Strategy.md); Anchor: [`ψ/incubate/DCCE/CRDB/output/00_Strategy_Reports/2026-05-20_CRDB-9-Pillar-Inception-Package-Anchor.md`](ψ/incubate/DCCE/CRDB/output/00_Strategy_Reports/2026-05-20_CRDB-9-Pillar-Inception-Package-Anchor.md) |
-| **The 9 Pillars** | The project is now structured into 9 TOR-direct pillars (Sitemap+Interface Map, Use Cases, Data Inventory+DQs, Glossary, CDM, LDM, Governance, Ref Data Matrix, Building Blocks) tucked into the 10 mandated deliverables for July 6. | Catalog: [`ψ/incubate/DCCE/CRDB/output/09_BuildingBlocks/2026-05-20_CRDB-Pillar-8-Building-Block-Catalog.md`](ψ/incubate/DCCE/CRDB/output/09_BuildingBlocks/2026-05-20_CRDB-Pillar-8-Building-Block-Catalog.md) |
-| **Governance & Stewardship** | Establishing the "Division-Level Stewardship Oversight" framework to reclaim product ownership from contractors. | Nid Memo: [`ψ/incubate/DCCE/CRDB/output/07_Governance_RACI/2026-05-20_Nid-Memo-Stewardship-Ratification.md`](ψ/incubate/DCCE/CRDB/output/07_Governance_RACI/2026-05-20_Nid-Memo-Stewardship-Ratification.md) |
-| **Output Reorganization** | Folder structure has been refactored to align with the 8 Pillars (01-08) for better auditability. | Index: [`ψ/incubate/DCCE/CRDB/output/CRDB-Execution-Architecture-Index.md`](ψ/incubate/DCCE/CRDB/output/CRDB-Execution-Architecture-Index.md) |
+| **Phase 2 Execution Plan** | Overhauled to guide the 8-week sprint leading to the August 26 final report submission and August 18 dissemination event. | Plan: [`ψ/incubate/DCCE/CRDB/output/00_Strategy_Reports/2026-07-06_CRDB-July-August-Phase2-Execution-Plan.md`](ψ/incubate/DCCE/CRDB/output/00_Strategy_Reports/2026-07-06_CRDB-July-August-Phase2-Execution-Plan.md) |
+| **Sitemap Policy Alignment** | Reviewing the NCAIF sitemap to incorporate national policy mandates (NbS, gender safeguards). | Sitemap Spec (Pillar 1) |
+| **CDM A-BTR Refinement** | Refinement of the Conceptual Data Model to support Paris Agreement Biennial Transparency Report obligations. | CDM Spec (Pillar 5) |
+| **L&D Table NEDSC Alignment** | Upgrading Loss and Damage tables to align with NEDSC's national standards. | LDM Spec (Pillar 6) |
+| **System Requirements Annex** | Compiling functional/non-functional requirements for the upcoming procurement shield. | Requirements Spec |
 
 ---
 **Core Strategic Anchors:**
-- **Blueprint Strategy**: [`ψ/incubate/DCCE/CRDB/output/00_Strategy_Reports/2026-05-20_CRDB-Blueprint-Handoff-and-Procurement-Shield-Strategy.md`](ψ/incubate/DCCE/CRDB/output/00_Strategy_Reports/2026-05-20_CRDB-Blueprint-Handoff-and-Procurement-Shield-Strategy.md)
+- **July-August Enriched Plan**: [`ψ/incubate/DCCE/CRDB/output/00_Strategy_Reports/2026-07-06_CRDB-July-August-Phase2-Execution-Plan.md`](ψ/incubate/DCCE/CRDB/output/00_Strategy_Reports/2026-07-06_CRDB-July-August-Phase2-Execution-Plan.md)
 - **Pillar-to-Deliverable Mapping**: [`ψ/incubate/DCCE/CRDB/output/00_Strategy_Reports/2026-05-20_CRDB-9-Pillar-Inception-Package-Anchor.md`](ψ/incubate/DCCE/CRDB/output/00_Strategy_Reports/2026-05-20_CRDB-9-Pillar-Inception-Package-Anchor.md)
-- **Building Block Catalog (Pillar 9)**: [`ψ/incubate/DCCE/CRDB/output/09_BuildingBlocks/2026-05-20_CRDB-Pillar-8-Building-Block-Catalog.md`](ψ/incubate/DCCE/CRDB/output/09_BuildingBlocks/2026-05-20_CRDB-Pillar-8-Building-Block-Catalog.md)
 
 ## Now / next / later (actionable)
 
-Now (this week)
+Now (Week 1)
+- [ ] **Sitemap Policy Review**: Update sitemap structure to accommodate NbS and Gender mandates.
+- [ ] **Knowledge Asset Audit**: Reassess DCCE's publications and files to target content gaps.
+- [ ] **Dissemination Logistics**: Draft infographics/rollups layouts and confirm DCCE venue availability for August 18.
 
-- [x] **Tier the Building Block Catalog**: Categorize Pillar 8 into Must-Have vs. Nice-to-Have tiers.
-- [x] **Draft the Nid Memo**: Formalize the stewardship model for Director Nid's ratification.
-- [ ] **Surgical TOR Redlines**: Update TOR Sections 5 and 11 to mandate the "Inception Package" as the contractor's baseline.
-- [ ] **Harden Pillar 2 (Glossary)**: Expand the business glossary with 100+ owner-approved terms.
+Next (Weeks 2–3)
+- [ ] **A-BTR Mapping**: Connect BTR transparency reporting segments into the CDM.
+- [ ] **NEDSC Alignment**: Align L&D database tables with NEDSC schemas.
+- [ ] **Requirements Draft**: Create functional & non-functional specifications.
+- [ ] **Service Refinement**: Harden Service Packages 1–4 with product management rigor.
 
-Next (1–2 weeks)
-
-- [ ] **Harden Pillar 3 (Logic Rules)**: Finalize deterministic formulas for the MVD/Loss & Damage domain.
-- [ ] **Map NCAIF Sitemap [D-009]**: Align all sitemap features to Building Block tiers and functional requirements.
-- [ ] **FGD3 Preparation**: Plan the stakeholder session for internal stewardship ratification.
-
-Later (June 2026)
-
-- [ ] **Final Assembly**: Consolidate all 8 Pillars into the 10 mandated deliverables for the July 6 submission.
-- [ ] **Quality Audit**: Perform a final G1-G5 compliance check across all package assets.
+Later (Weeks 4–8)
+- [ ] **Draft Final Report**: Restructure and author the report text (draft by Week 5).
+- [ ] **Peer Review**: P Tik content review and correction (Weeks 6–7).
+- [ ] **Public Event**: Conduct dissemination event (Week 7).
+- [ ] **Submission**: Deliver report package to DCCE on August 26 (Week 8).
 
 ## Objectives
-1) **Prevent "Expert Drift"**: Ensure the contractor builds to DCCE's specifications, not their own.
-2) **Zero Discovery Time**: Provide all necessary domain knowledge (the 8 Pillars) on Day 1 of the contract.
-3) **Reclaim Ownership**: Establish Director Nid and DCCE sub-divisions as the platform's "Data Stewards."
-4) **Procurement Flexibility**: Use the tiered Building Block Catalog to match technical scope to budget constraints.
-
-## Deliverables (The July 6th "Ship List")
-- **Package A (Framework)**: Del 1 (Design Report), Del 7 (Recommendations) - [Pillars 1, 2, 5, 8]
-- **Package B (Validation)**: Del 2 (FGD3 Report) - [Pillar 6]
-- **Package C (Technical)**: Del 4 (Inventories), Del 6 (MVD) - [Pillars 3, 4, 7]
-- **Package D (Content)**: Del 8, 9, 10 (Media/Articles) - [Glossary/DQ Alignment]
+1) **A-BTR Ready**: Ensure DCCE can map international reporting inputs into NCAIF.
+2) **NEDSC Standardized**: Align Loss & Damage databases with national data controllers.
+3) **Zero Discovery Handover**: Build a system requirements shield to prevent developer drift.
+4) **Policy Endorsement**: Anchor sitemaps directly to policy mandates (NbS, gender) to secure institutional support.
 
 ---
-*Operational plan maintained by ARUN; synchronized with the Procurement Shield Strategy (2026-05-20).*
-\
-- [ ] Execute [2026-05-21_Technical-Specification-Hardening-Plan.md](plans/2026-05-21_Technical-Specification-Hardening-Plan.md) to expand the 8-Pillar Anchor with technical requirements.\
+*Operational plan maintained by ARUN; synchronized with Phase 2 Execution Plan (2026-07-06).*
