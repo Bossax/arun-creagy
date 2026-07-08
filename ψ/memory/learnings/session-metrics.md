@@ -170,3 +170,4 @@ Rule (parent CLAUDE.md §"Self-Evaluation Loop"): same friction 3 sessions → f
 | 2026-07-06 12:20 | e1b42615 | DCCE website gap trace & comprehensive mapping | n/a | Unified trace logs | Path scoping omissions | 1 [→ AGENT DECISION] Missing structured data subfolders and report drafts |
 
 | 2026-07-06 21:14 | 7a51be65 | BTR M&E Reporting Pipeline Trace & Design | n/a | Trace, Use Case | Brain directory restriction | 1 [→ AGENT DECISION] Writing artifacts to project workspace without disabling metadata |
+| 2026-07-08 11:45 | 99002359 | Refactored Infographics Theme A, resolved cross-contamination | n/a | Accurate split-thematic boxes matching source drafts | Initial percentage carry-over (53.34%) | 1 [→ AGENT DECISION] Mixed up Article 2 dry-season rice data with Article 1 crop systems |

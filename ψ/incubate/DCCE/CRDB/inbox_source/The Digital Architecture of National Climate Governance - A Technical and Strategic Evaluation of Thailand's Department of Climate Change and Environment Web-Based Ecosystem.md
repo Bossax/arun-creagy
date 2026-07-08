@@ -1,5 +1,8 @@
 Timestamp: 2026-03-25-2000
 
+>[!comment] 
+>The content contains errors. For example, `clim-webbased.dcce.go.th` is owned by ศูนย์วิจัยการเปลี่ยนแปลงสภาพภูมิอากาสและสิ่งแวดล้อม and it is a website that hosts climate projection data, not the TGEIS. [[ψ/memory/logs/info/2026-05-20_16-00_dcce-org-structure|2026-05-20_16-00_dcce-org-structure]]
+
 The evolution of Thailand’s climate policy from a peripheral environmental concern to a central tenet of national economic and security planning is most visibly manifested in the digital infrastructure managed by the Department of Climate Change and Environment (DCCE). Following the high-level commitments made during the 26th Conference of the Parties (COP26), Thailand established an ambitious roadmap toward carbon neutrality by 2050 and net-zero greenhouse gas (GHG) emissions by 2065. Central to this transition is the development of a robust, web-based Monitoring, Reporting, and Verification (MRV) system, anchored by the `clim-webbased.dcce.go.th` domain and its associated portals. This architecture represents the institutionalization of climate transparency, moving from fragmented data collection to a unified, technical workflow designed to meet the requirements of the Enhanced Transparency Framework (ETF) under the Paris Agreement.
 
 The DCCE, established under the Ministry of Natural Resources and Environment (MNRE), was tasked with a specific mandate: to track GHG emissions at both national and provincial levels while coordinating the country's adaptation strategies. In 2021, Thailand’s emission profile revealed approximately 270 $MtCO_{2}eq$ of total emissions, with an abatement of approximately 60 $MtCO_{2}eq$ against a national budget of 380 $MtCO_{2}eq$. This significant data load requires an information architecture that is not only scalable but also capable of integrating diverse sectoral inputs into a single, streamlined workflow. The `clim-webbased.dcce.go.th` system serves as the operational engine for this mission, providing the technical platform for the Thailand Greenhouse Gas Emissions Inventory System (TGEIS).
@@ -39,14 +42,14 @@ The core navigation of the DCCE website is organized into several key categories
 4. **Specialized Technical Portals**: Independent systems for spatial risk mapping, green area tracking, and hospital emissions management.
     
 
-|**Functional Domain**|**System / Portal Name**|**Primary Target Audience**|
-|---|---|---|
-|National MRV|TGEIS (Thailand GHG Inventory System)|Line Ministries, UNFCCC Auditors|
-|Public Knowledge|CCIC (Climate Change Info Center)|Researchers, General Public|
-|Adaptation|Risk MAP (Spatial Risk Database)|City Planners, Disaster Response|
-|Sectoral Reporting|THEMS (Thai Hospital Emissions)|Healthcare Administrators|
-|Data Governance|DGF (Data Catalog System)|Data Analysts, Policy Makers|
-|Capacity Building|e-Learning / Seminar Systems|Local Officials, Environment Officers|
+| **Functional Domain** | **System / Portal Name**              | **Primary Target Audience**           |
+| --------------------- | ------------------------------------- | ------------------------------------- |
+| National MRV          | TGEIS (Thailand GHG Inventory System) | Line Ministries, UNFCCC Auditors      |
+| Public Knowledge      | CCIC (Climate Change Info Center)     | Researchers, General Public           |
+| Adaptation            | Risk MAP (Spatial Risk Database)      | City Planners, Disaster Response      |
+| Sectoral Reporting    | THEMS (Thai Hospital Emissions)       | Healthcare Administrators             |
+| Data Governance       | DGF (Data Catalog System)             | Data Analysts, Policy Makers          |
+| Capacity Building     | e-Learning / Seminar Systems          | Local Officials, Environment Officers |
 
 Sources:
 

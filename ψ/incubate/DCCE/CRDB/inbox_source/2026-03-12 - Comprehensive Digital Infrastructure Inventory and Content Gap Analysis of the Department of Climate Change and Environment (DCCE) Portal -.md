@@ -84,23 +84,23 @@ The CCIC functions as the primary data hub for climate-related statistics and fo
 
 The DCCE manages a diverse array of portals that support its "Environmentally Friendly Production, Service, and Consumption" (SCP) initiatives. The following table provides a structured inventory of these systems.
 
-|**Information System Name**|**Functional Domain**|**URL**|
-|---|---|---|
-|Climate Change Info Center (CCIC)|Central data and forecasting hub|[http://ccic.dcce.go.th/](http://ccic.dcce.go.th/)|
-|Data Catalog System|Departmental data inventory|[http://dgf.dcce.go.th/](http://dgf.dcce.go.th/)|
-|Spatial Risk Database (Risk MAP)|Geographic risk assessment|[http://ccic.dcce.go.th/riskarea](http://ccic.dcce.go.th/riskarea)|
-|Sustainable Env. City (SAR)|Urban environmental monitoring|[http://sar.dcce.go.th/](http://sar.dcce.go.th/)|
-|Green Area System|Urban green space management|[http://greenarea.dcce.go.th/](http://greenarea.dcce.go.th/)|
-|Data Trash|Waste management recording|[http://datatrash.dcce.go.th/](http://datatrash.dcce.go.th/)|
-|Energy and Waste Storage|Energy/waste data integration|[http://energyandwaste.dcce.go.th/](http://energyandwaste.dcce.go.th/)|
-|Environmental Quality Monitor|Monitoring point reporting|[http://monitor.dcce.go.th/](http://monitor.dcce.go.th/)|
-|Eco School System|Educational sustainability|[http://ecoschool.dcce.go.th/](http://ecoschool.dcce.go.th/)|
-|Green Hotel System|Hospitality industry sustainability|[http://greenhotelthai.com/th/](http://greenhotelthai.com/th/)|
-|Green Office System|Workplace environmental standards|[https://scpallgreen.dcce.go.th/](https://scpallgreen.dcce.go.th/)|
-|SCP Service System|Production and consumption info|[http://scpallgreen.dcce.go.th](http://scpallgreen.dcce.go.th/)|
-|Green National Park System|Protected area sustainability|scpallgreen.dcce.go.th/project_detail.php?id=4|
-|VNE Network System|Environmental volunteer network|datacenter.dcce.go.th/nevt/home|
-|e-Learning System|Online capacity building|e-learning.dcce.go.th/lrs_deqp/home2|
+| **Information System Name**       | **Functional Domain**               | **URL**                                                                |
+| --------------------------------- | ----------------------------------- | ---------------------------------------------------------------------- |
+| Climate Change Info Center (CCIC) | Central data and forecasting hub    | [http://ccic.dcce.go.th/](http://ccic.dcce.go.th/)                     |
+| Data Catalog System               | Departmental data inventory         | [http://dgf.dcce.go.th/](http://dgf.dcce.go.th/)                       |
+| Spatial Risk Database (Risk MAP)  | Geographic risk assessment          | [http://ccic.dcce.go.th/riskarea](http://ccic.dcce.go.th/riskarea)     |
+| Sustainable Env. City (SAR)       | Urban environmental monitoring      | [http://sar.dcce.go.th/](http://sar.dcce.go.th/)                       |
+| Green Area System                 | Urban green space management        | [http://greenarea.dcce.go.th/](http://greenarea.dcce.go.th/)           |
+| Data Trash                        | Waste management recording          | [http://datatrash.dcce.go.th/](http://datatrash.dcce.go.th/)           |
+| Energy and Waste Storage          | Energy/waste data integration       | [http://energyandwaste.dcce.go.th/](http://energyandwaste.dcce.go.th/) |
+| Environmental Quality Monitor     | Monitoring point reporting          | [http://monitor.dcce.go.th/](http://monitor.dcce.go.th/)               |
+| Eco School System                 | Educational sustainability          | [http://ecoschool.dcce.go.th/](http://ecoschool.dcce.go.th/)           |
+| Green Hotel System                | Hospitality industry sustainability | [http://greenhotelthai.com/th/](http://greenhotelthai.com/th/)         |
+| Green Office System               | Workplace environmental standards   | [https://scpallgreen.dcce.go.th/](https://scpallgreen.dcce.go.th/)     |
+| SCP Service System                | Production and consumption info     | [http://scpallgreen.dcce.go.th](http://scpallgreen.dcce.go.th/)        |
+| Green National Park System        | Protected area sustainability       | scpallgreen.dcce.go.th/project_detail.php?id=4                         |
+| VNE Network System                | Environmental volunteer network     | datacenter.dcce.go.th/nevt/home                                        |
+| e-Learning System                 | Online capacity building            | e-learning.dcce.go.th/lrs_deqp/home2                                   |
 
 The fragmentation of these systems across different subdomains (e.g., scpallgreen.dcce.go.th, monitor.dcce.go.th) presents a challenge for integrated data analysis. While each system serves a specific stakeholder group—such as hotel operators or school administrators—the absence of a unified data lake makes it difficult to generate cross-sectoral insights. This is a primary area where the NCAIF vNext sitemap can provide significant improvements by centralizing these datasets for AI-driven analysis.
 
