@@ -1,0 +1,156 @@
+{
+  "question": "Based strictly on the document 18June2025_BTR WS_mandated event.pdf, what is the context, objective, background, participants, agenda, or key outcomes of the June 18, 2025 BTR Workshop (SB62)?",
+  "answer": "Based strictly on the provided target document, here is the context, objective, background, participants, agenda, and key highlights of the June 18, 2025, BTR Workshop:\n\n**Context, Objective, and Background**\n*   **Date and Setting:** The event took place on June 18, 2025, during the SB62 sessions [1, 2]. \n*   **Mandate:** It was a mandated event as part of the Enhanced Transparency Framework (ETF) activities under decisions 18/CMA.5 and 21/CMA.6 [2].\n*   **Objective:** The primary goal was to \"facilitate the sharing of experiences of developing country Parties in preparing their first biennial transparency reports (BTRs)\" [3].\n\n**Participants**\n*   **UNFCCC Leadership:** Julia Gardiner (SBI Chair), Daniele Violetti (UNFCCC Senior Director), and Jigme (Manager, UNFCCC secretariat) [1, 3].\n*   **Agencies:** Representatives from the Global Environment Facility (GEF) and its implementing agencies, including Conservation International (CI), FAO, UNDP, UNEP, and WWF-US [3]. \n*   **Developing Country Parties:** Presenters included Mominata Elola/Compaore from Burkina Faso, Ms. Beiyang Zhang from China, and representatives from Trinidad and Tobago [3-5].\n\n**Agenda**\nThe workshop followed a structured timeline:\n*   **10 min:** Opening remarks from the SBI Chair and UNFCCC Senior Director [3].\n*   **10 min:** Scene setting and an icebreaking activity using Menti [1].\n*   **40 min:** Presentations from the GEF and its implementing agencies, followed by a 10-minute Q&A [3].\n*   **40 min:** Presentations from developing country Parties, followed by a 10-minute Q&A [3].\n*   **45 min:** Breakout group discussions focusing on key takeaways, solutions to challenges, and successful approaches to replicate [1, 6].\n*   **30 min:** Plenary session for report backs and reflections from the breakout groups [1, 6].\n*   **5 min:** Key takeaways and closing [1].\n\n**Key Outcomes and Experiences Shared**\n**1. Support from GEF and Implementing Agencies:**\n*   **GEF:** Reported funding 163 BTRs in 111 countries (totaling $109 million) and 100 Capacity-building Initiative for Transparency (CBIT) projects (totaling $168 million). GEF emphasized a 33% increase in ETF funding during GEF-8 and efforts to reduce processing times [7, 8].\n*   **Conservation International:** Shared strategies to overcome high staff turnover, such as using retiring government experts as mentors, issuing formal certificates, and establishing academic partnerships, like the Evidence-based Climate Reporting Initiative (ECRI) in Rwanda [9-11].\n*   **FAO:** Highlighted the benefits of parallel design and joint implementation of Enabling Activities (EA) and CBIT projects to streamline coordination [12].\n*   **UNDP:** Shared technical assistance success stories, such as helping Niger correct its National Inventory Report (NIR) and CTF tables right before the submission deadline, and assisting Guinea-Bissau in harmonizing its GHG inventory [13-15].\n*   **WWF-US:** Discussed progress in Nepal, including developing a draft national MRV framework and identifying bottlenecks to jumpstart CBIT Phase II [16].\n\n**2. Developing Country Experiences:**\n*   **Burkina Faso:** Shared their process for creating a combined BTR1 and 4th National Communication (NC4). They utilized a \"Facilitative Tool\" that color-coded the Modalities, Procedures, and Guidelines (MPGs) to distinguish mandatory (green) from non-mandatory (yellow) information [17]. Challenges included dealing with repetitive information requested by the MPGs, a lack of operational budget for their transparency framework, and missing domestic data [5, 18]. \n*   **China:** Showcased enhanced institutional arrangements, notably forming a steering committee across over 30 ministries and departments, and improving technical capacities by prioritizing domestic emission factors from national carbon markets [19, 20]. China highlighted significant challenges, noting that the cost per BTR is at least $2 million and that financial support applications are overly lengthy [21, 22]. They also expressed the need for methodologies to disaggregate overlapping mitigation effects and conduct cost-benefit analyses to accurately quantify financial support needs [23, 24].",
+  "conversation_id": "6176676b-f1aa-49a9-95ba-92b7feccaffa",
+  "sources_used": [
+    "b9def82f-bb96-4d88-891b-ccccf9e41324"
+  ],
+  "citations": {
+    "1": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+    "2": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+    "3": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+    "4": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+    "5": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+    "6": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+    "7": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+    "8": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+    "9": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+    "10": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+    "11": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+    "12": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+    "13": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+    "14": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+    "15": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+    "16": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+    "17": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+    "18": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+    "19": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+    "20": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+    "21": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+    "22": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+    "23": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+    "24": "b9def82f-bb96-4d88-891b-ccccf9e41324"
+  },
+  "references": [
+    {
+      "source_id": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+      "citation_number": 1,
+      "cited_text": "10 min Scene setting and icebreaking activity 45 min Breakout group discussion 30 min Plenary: Report back and reflections 5 min Key takeaways and closing Julia Gardiner, chair of the SBI Welcome Remarks Workshop to facilitate the sharing of experiences of developing country Parties in preparing their first biennial transparency reports Daniele Violetti UNFCCC Senior Director Jigme, Manager, UNFCCC secretariat Scene setting and icebreaking activity 18 June 2025 Apr 2024 Prior to SBI 60 Regional online workshops on support available to developing country Parties for BTR and IAs Guidance on the application process of transparency related projects"
+    },
+    {
+      "source_id": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+      "citation_number": 2,
+      "cited_text": "May 2025 3 weeks to SBI 62 Synthesis report on progress, best practices and remaining challenges contained in the submissions and BTRs Jun 2025 SBI 62 BTR workshop to facilitate experiences sharing Facilitative dialogue to discuss the findings in the synthesis report Consider outcomes of the facilitative dialogue Nov 2025 CMA 7 Consider BTR workshop summary report Draft decision, including future activities, as appropriate ETF mandated activities as per decisions 18/CMA.5 & 21/CMA.6"
+    },
+    {
+      "source_id": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+      "citation_number": 3,
+      "cited_text": "18 June 2025 MANDATED EVENT: Workshop to facilitate the sharing of experiences of developing country Parties in preparing their first biennial transparency reports Programme 10 min 40 min Opening remarks from SBI Chair and UNFCCC, Senior Director Presentations from GEF and its implementing agencies GEF, Conservation International, FAO, UNDP, UNEP, WWF-US (30 min) Q&A session (10 min) 40 min Presentations from developing country Parties Burkina Faso, China, Trinidad and Tobago (10 min each) Q&A session (10 min)"
+    },
+    {
+      "source_id": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+      "citation_number": 4,
+      "cited_text": "Fostering complementarity between BTRs and CBIT, while leveraging the continuity of support. Continuous revision of our policies and guidelines, including the simplification of the EA template, bundling of reports, and increase of the MSP cap ($5M) Raising awareness and outreach via online and face-to-face meetings and informational resources, to assist countries in their pursuit for BTR and CBIT funding. GEF-7 GEF-8 Thank you Mominata ELOLA/COMPAORE Burkina Faso experience in preparing it first"
+    },
+    {
+      "source_id": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+      "citation_number": 5,
+      "cited_text": "Fund allocated ❑ Funds allocated were only directed towards the development but could not be used for the functioning of the climate transparency framework. ❑ Framework set up within the implementation of the CBIT and partially used, in particular for the collection of certain data, but the lack of budget has not allowed all its aspects to be used. ❑ MRV decree adopted in 2024 needs to be operationalized for the first 2 years at least for its sustainability. Thank you. Ms. Beiyang Zhang, NCSC Experiences, Good Practices, Challenges"
+    },
+    {
+      "source_id": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+      "citation_number": 6,
+      "cited_text": "Report backs and reflections - 30 min in total Rapporteurs from break-out groups will share a summary of the group discussions Breakout group discussion Guiding questions: 1. Drawing from the presentations and your own experience, identify three to five key takeaways from the preparation of the first BTR, including challenges and successful strategies? 2. What solutions have been effective in addressing these challenges, and how can they be further strengthened? 3. Which successful approaches from the BTR preparation and submission process could be replicated or scaled up to support future efforts?"
+    },
+    {
+      "source_id": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+      "citation_number": 7,
+      "cited_text": "Submission of first biennial transparency report Icebreaking activity- background of participants Join at menti.com Code: 8571 1009 www.unfccc.int Thank you. Workshop to facilitate the sharing of experiences of developing country Parties in preparing their first biennial transparency reports (BTRs) Experiences and Lessons Learned in supporting the first BTRs SB62, 18 June 2025 Overall support to transparency Report BTR and NC preparation Capacity Capacity-building Initiative for Transparency (CBIT)"
+    },
+    {
+      "source_id": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+      "citation_number": 8,
+      "cited_text": "Experiences in considering and approving proposals 0 5 10 15 20 25 Jul 21 Dec 21 Jul 22 Jan 23 Jul 23 Jan 24 Jul 24 Jan 25 Jul 25 Pr oc es si ng  ti m e (in  m on th s) Non-Expedited EA Expedited EA Evolution of BTR review time (from submission to approval) Key aspects in supporting BTRs Resource management resulting in increased ETF funding during GEF-8 (+33%) while reducing processing time (~2 months) Coordination with agencies and partners with the aim to support as many countries as possible in accessing BTR and CBIT funding while avoiding duplication"
+    },
+    {
+      "source_id": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+      "citation_number": 9,
+      "cited_text": "Transparency Barrier: ❑ High turnover of government staff ❑Limited participation of young professionals in the transparency Interventions by the CBIT Regional Project: ❑Leverage seasoned transparency experts exiting the government to continue engaging as mentors and Trainers of Trainers (ToTs). ❑Incentivizing government officials to participate in capacity- building activities ❑Incentivizing upcoming and younger experts from state and non-state institutions to participate in the capacity-building activities including the trainings offered through CBIT Projects"
+    },
+    {
+      "source_id": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+      "citation_number": 10,
+      "cited_text": "Examples of incentives to retain and attract experts: 1. Training programs linked to practical, real-world applications. 2. Formal certificates issued upon training completion. 3. Recognition of outstanding trainees as national Trainers of Trainers (ToTs. 4. Leverage experienced former government experts as mentors and ToTs. Talent for Lasting Impact: Partnerships between Government and Academia Powering Climate Reporting Capacity Transparency Barrier: ❑Limited national and regional capacity in transparent"
+    },
+    {
+      "source_id": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+      "citation_number": 11,
+      "cited_text": "climate reporting, leading to an overreliance on international experts to prepare countries’ reports. Interventions by the CBIT Rwanda Project: ❑ Strengthening partnerships between governments and academic institutions through MoUs. ❑ 2023: Rwanda Environment Management Authority (REMA) and African Institute of Mathematical Sciences (AIMS) signed a 5-year MoU, launching the Evidence-based Climate Reporting Initiative (ECRI) with CBIT support. Goal of ECRI: To strengthen national research and climate reporting capacity by building local technical expertise."
+    },
+    {
+      "source_id": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+      "citation_number": 12,
+      "cited_text": "Parallel design and integrated implementation to ensure alignment and coherence FAO is implementing 8 Enabling Activities (EA) and 28 CBIT projects, with several more in the pipeline. In 5 countries, FAO is implementing both EA and CBIT projects, which offers unique strategic advantages. Parallel Design Enhances Synergy CBIT projects are tailored to support EA objectives through aligned and complementary planning. Streamlined Coordination Joint implementation enables more efficient use of resources and ensures project coherence. Strengthened Institutional Frameworks Clear identification of stakeholders allows for targeted capacity building aligned with real-world tasks. Challenges with Split Implementation When led by different agencies, coordination becomes a major challenge—affecting coherence,"
+    },
+    {
+      "source_id": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+      "citation_number": 13,
+      "cited_text": "Timely access to technical assistance for the ETF is critical in addressing bottlenecks during the implementation and preparation of national reports Case 2: Technical Support to Niger Country Case: UNDP technical expert identified an important error in the BTR (NIR and CTF tables), right before the submission of BTR. How the challenge was addressed: UNDP provided technical support to align the NIR with the requirements under the MPGs. The expert helped country in correcting the CTF tables for"
+    },
+    {
+      "source_id": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+      "citation_number": 14,
+      "cited_text": "NDC tracking. The expert helped strengthen national capacity in understanding the IPCC and MPG guidelines. Results: Niger, a member of LDCs, submitted its first BTR by the December 2024 deadline. Country enhanced its understanding of the MPGs and international reporting requirements. Case 1: Technical Support to Guinea-Bissau Country Case: Country was working on two different inventories and willing to submit the first BTR by the December 2024 deadline. How the challenge was addressed:"
+    },
+    {
+      "source_id": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+      "citation_number": 15,
+      "cited_text": "UNDP and CBIT-GSP provided technical support to address gaps in the GHG inventory. Experts assisted in aligning the country’s BTR and NC processes. Experts supported the country to link the NDC and the first BTR. Results: Guinea-Bissau, a member of  the LDCs and SIDS, submitted its first BTR by the December 2024 deadline. The country harmonized its inventory, which will facilitate the preparation of subsequent reporting. Country has strengthened its understanding of the MPGs, and  the link between BTR preparation and NDC revision."
+    },
+    {
+      "source_id": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+      "citation_number": 16,
+      "cited_text": "implementation and progress of NDCs - Enhancing technical capacity to assess, monitor and report the emissions and removals of GHGs - M&E and Knowledge management Support and coordinative role from the GEF - Easily reachable and consistently available to support coordination efforts. - Played a key role in organizing meetings with country delegates and managing side events at COP. Building Momentum: CBIT Progress Despite initial delays, WWF Nepal worked diligently to ensure the timely completion of project activities. Played a key coordinating role and collaborated closely with other GEF agencies (FAO, UNDP, UNEP) to broaden CBIT engagement in Nepal. Successfully engaged government in capacity building activities and provided technical supports in preparation of Nepal’s NDC 3.0 and Biennial Transparency Report (BTR). Developed a draft national MRV framework, which is currently under the approval process. Identified key bottlenecks in implementing transparency actions and initiated early discussions on the design of CBIT Phase II."
+    },
+    {
+      "source_id": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+      "citation_number": 17,
+      "cited_text": "Methodological approach and steps ➢ Development of the document using: Methodological approach and steps Steering committee and process monitoring sessions to review deliverables and provide guidance; compilation and consolidation of deliverables by an ad hoc committee set up for this purpose; Quality control (by the experts in charge of the BTR/NC and national stakeholders); Quality Assurance (UNFCCC and UNEP PSG); validation in the national workshop (6 December); finalization and submission of the BTR1/4NC (9-20 December)."
+    },
+    {
+      "source_id": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+      "citation_number": 18,
+      "cited_text": "Application of the  MPGs Excellent support for the preparation of the report. Difficulties in providing information on certain points. In view of Burkina Faso national circumstances, some information either did not exist or was difficult to collect. The word \"shall\" meant that the information was mandatory, it was often difficult to provide the information or to specify it. We tried as best we could and as far as possible to provide information or a proxy. Application of the  MPGs Repetitive information. Under the MPGs, the points present the national situation and the institutional arrangements (e.g. inventory, NDC tracking progress, climate change impacts and adaptation, etc.). In our context, several actions are often taken by the same structure, leading to a repetition of certain elements. On this point, we have tried to circumscribe the information as best as possible."
+    },
+    {
+      "source_id": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+      "citation_number": 19,
+      "cited_text": "and Needs in Preparing 1BTR, China 18 June 2025 Compilation Process ⚫ Enhanced Institutional Arrangements ⚫ Improved Technical Capacities in Inventory Compilation ⚫ Enhance QA/QC in Inventory Compilation ⚫ Support from CBIT project Experiences and Good Practices ⚫ Enhanced Institutional Arrangements Issued Work Plan for IBTR Compilation – Established steering committee across over 30 ministries and departments for more comprehensive data/information collection and efficient report drafting; – Significantly enhanced the authority of information on NDC progress"
+    },
+    {
+      "source_id": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+      "citation_number": 20,
+      "cited_text": "tracking, mitigation and adaptation policies, as well as support needed and received. Experiences and Good Practices ⚫ Improved Technical Capacities in Inventory Compilation Prioritized the use of domestic emission factors – Enterprise-level measured data from national carbon market emission reports, measured and statistical/research data developed by relevant departments, and measured/research data published by relevant institutions; – Able to apply higher Tier methods and improved the transparency and"
+    },
+    {
+      "source_id": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+      "citation_number": 21,
+      "cited_text": "including that for inventory, mitigation and adaptation policies, support needed and received, as well as for accepting TER and FMCP. – Enhance the efficiency of data aggregation and analysis, and strengthen data quality control and assurance functions in databases while building on existing manual processes. Challenges and Needs ⚫ Barriers in accessing financial support To fulfill reporting obligations under Article 13 of the Paris Agreement with high quality and sustainability, the cost per BTR is at least USD 2 million."
+    },
+    {
+      "source_id": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+      "citation_number": 22,
+      "cited_text": "The processes for applying and receiving financial support are overly lengthy and complex, resulting in delayed support that lag behind the compliance cycles. Implementing agencies should continuously improve the transparency and efficiency during the decision-making processes of project application to avoid stagnation of relevant procedures due to information asymmetry among stakeholders. Challenges and Needs ⚫ Adequate, predictable and sustainable multilateral/bilateral Financial, Technology development and transfer, and Capacity-building support is"
+    },
+    {
+      "source_id": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+      "citation_number": 23,
+      "cited_text": "Challenges and Needs ⚫ NDC and Mitigation Policies Need to refine GHG emission accounting mechanisms. Need to strengthen the capacities to assess the effectiveness of mitigation policies implementation, and to tracking and managing relevant data. Need to develop methodologies to disaggregate emission reductions from overlapping mitigation actions and improve capabilities to quantify overlapping effects, outcomes, and emission reductions. Need to enhance the ability to assess the co-benefits of NDCs."
+    },
+    {
+      "source_id": "b9def82f-bb96-4d88-891b-ccccf9e41324",
+      "citation_number": 24,
+      "cited_text": "Challenges and Needs ⚫ Support needed and received Need to explore the establishment of a bottom-up statistic mechanisms, accounting methodologies, reporting and working mechanisms on the information of received FTC support. Need to develop cost-benefit analysis methodologies to estimate sector- specific and/or mitigation/adaptation action-specific needs, improving the ability to identify, quantify, and report on financial support needed and received. Challenges and Needs ⚫ Accepting TER and FMCP"
+    }
+  ]
+}

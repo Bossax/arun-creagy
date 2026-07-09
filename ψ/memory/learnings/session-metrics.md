@@ -171,3 +171,7 @@ Rule (parent CLAUDE.md §"Self-Evaluation Loop"): same friction 3 sessions → f
 
 | 2026-07-06 21:14 | 7a51be65 | BTR M&E Reporting Pipeline Trace & Design | n/a | Trace, Use Case | Brain directory restriction | 1 [→ AGENT DECISION] Writing artifacts to project workspace without disabling metadata |
 | 2026-07-08 11:45 | 99002359 | Refactored Infographics Theme A, resolved cross-contamination | n/a | Accurate split-thematic boxes matching source drafts | Initial percentage carry-over (53.34%) | 1 [→ AGENT DECISION] Mixed up Article 2 dry-season rice data with Article 1 crop systems |
+| 2026-07-08 21:25 | fa71319f | Unified database compilation, reclassification | n/a | Parsed 391 sitemap & CKAN assets cleanly with dynamic classification rules | Initial sitemap systems parsed count bloat due to early trim() | 1 [→ AGENT DECISION] Discarded indentation levels by trimming lines too early |
+| 2026-07-09 13:23 | fffe79de | API-based BTR Dissection & M&E Platform Review | n/a | Migrated to CLI-only rules, extracted 4 case studies, and mapped design vs structural issues | Initial ask_question browser timeouts | 1 [→ AGENT DECISION] Attempted browser-based ask_question in bot-blocked headful mode |
+
+

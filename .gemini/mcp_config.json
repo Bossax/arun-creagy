@@ -12,22 +12,6 @@
       "cwd": "C:/Users/sitth/OracleWorkspace/engine",
       "description": "Local Oracle Registry (Registry of Form)"
     },
-    "notebooklm": {
-      "command": "npx",
-      "args": [
-        "notebooklm-mcp@latest"
-      ],
-      "timeout": 180,
-      "env": {
-        "BROWSER_TIMEOUT": "360000",
-        "STEALTH_ENABLED": "false",
-        "TYPING_WPM_MIN": "400",
-        "TYPING_WPM_MAX": "700",
-        "NOTEBOOK_PROFILE_STRATEGY": "single",
-        "MCP_SERVER_REQUEST_TIMEOUT": "360000"
-      },
-      "description": "Research from pre-uploaded sources on notebooklm"
-    },
     "perplexity": {
       "type": "stdio",
       "command": "npx",
