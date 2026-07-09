@@ -1,0 +1,443 @@
+[
+  {
+    "sitemap_node_id": "SIT-1",
+    "node_code": "1",
+    "title_th": "หน้าแรก",
+    "title_en": "Home: National Climate Adaptation Portal",
+    "parent_node_id": "",
+    "hierarchy_level": 1,
+    "content_requirements": [],
+    "content_requirements_summary": ""
+  },
+  {
+    "sitemap_node_id": "SIT-1.1",
+    "node_code": "1.1",
+    "title_th": "สรุปสำหรับผู้บริหาร",
+    "title_en": "Executive Overview",
+    "parent_node_id": "SIT-1",
+    "hierarchy_level": 2,
+    "content_requirements": [],
+    "content_requirements_summary": ""
+  },
+  {
+    "sitemap_node_id": "SIT-1.1.1",
+    "node_code": "1.1.1",
+    "title_th": "ภาพรวมความเสี่ยงจากการเปลี่ยนแปลงสภาพภูมิอากาศในประเทศไทย",
+    "title_en": "",
+    "parent_node_id": "SIT-1.1",
+    "hierarchy_level": 3,
+    "content_requirements": [
+      "ประวัติศาสตร์ของภัยธรรมชาติในประเทศไทย",
+      "กรอบทฤษฎีและนิยามของความเสี่ยง IPCC",
+      "ความเสี่ยงทางกายภาพและความเสี่ยงของการเปลี่ยนผ่าน",
+      "แผนภาพสรุปโปรไฟล์ความเสี่ยงของประเทศไทย"
+    ],
+    "content_requirements_summary": "ประวัติศาสตร์ของภัยธรรมชาติในประเทศไทย; กรอบทฤษฎีและนิยามของความเสี่ยง IPCC; ความเสี่ยงทางกายภาพและความเสี่ยงของการเปลี่ยนผ่าน; แผนภาพสรุปโปรไฟล์ความเสี่ยงของประเทศไทย"
+  },
+  {
+    "sitemap_node_id": "SIT-1.1.2",
+    "node_code": "1.1.2",
+    "title_th": "ความเสี่ยงสำคัญ และลำดับความสำคัญในการปรับตัวของประเทศไทย",
+    "title_en": "",
+    "parent_node_id": "SIT-1.1",
+    "hierarchy_level": 3,
+    "content_requirements": [
+      "Hotspot ของความเสี่ยงในแต่ละภัย และภาคส่วน",
+      "สรุปแผนการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศระดับชาติ",
+      "ตัวอย่างมาตรการหลักหรือโครงการเด่นในการปรับตัว"
+    ],
+    "content_requirements_summary": "Hotspot ของความเสี่ยงในแต่ละภัย และภาคส่วน; สรุปแผนการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศระดับชาติ; ตัวอย่างมาตรการหลักหรือโครงการเด่นในการปรับตัว"
+  },
+  {
+    "sitemap_node_id": "SIT-1.2",
+    "node_code": "1.2",
+    "title_th": "สืบค้นข้อมูลรายพื้นที่",
+    "title_en": "",
+    "parent_node_id": "SIT-1",
+    "hierarchy_level": 2,
+    "content_requirements": [
+      "**Search Hierarchy**: รองรับการค้นหาตามระดับการปกครอง (จังหวัด -> อำเภอ -> ตำบล)",
+      "**Map Integration**: แสดงผลตำแหน่งบนแผนที่ความเสี่ยง (Spatial Risk Map integration)",
+      "**Quick-view Dashboard**: แสดงบัตรข้อมูลสรุป (Summary Cards) เกี่ยวกับภัยคุกคามหลัก ดัชนีความเปราะบาง และมาตรการที่แนะนำในเบื้องต้น ก่อนส่งผู้ใช้ไปยังหน้ารายละเอียดใน Section 4"
+    ],
+    "content_requirements_summary": "**Search Hierarchy**: รองรับการค้นหาตามระดับการปกครอง (จังหวัด -> อำเภอ -> ตำบล); **Map Integration**: แสดงผลตำแหน่งบนแผนที่ความเสี่ยง (Spatial Risk Map integration); **Quick-view Dashboard**: แสดงบัตรข้อมูลสรุป (Summary Cards) เกี่ยวกับภัยคุกคามหลัก ดัชนีความเปราะบาง และมาตรการที่แนะนำในเบื้องต้น ก่อนส่งผู้ใช้ไปยังหน้ารายละเอียดใน Section 4"
+  },
+  {
+    "sitemap_node_id": "SIT-2",
+    "node_code": "2",
+    "title_th": "ศูนย์ข้อมูลสำหรับผู้กำหนดนโยบายและแผน",
+    "title_en": "Policy Maker Information Center",
+    "parent_node_id": "",
+    "hierarchy_level": 1,
+    "content_requirements": [],
+    "content_requirements_summary": ""
+  },
+  {
+    "sitemap_node_id": "SIT-2.1",
+    "node_code": "2.1",
+    "title_th": "สถานการณ์การเปลี่ยนแปลงสภาพภูมิอากาศของประเทศ",
+    "title_en": "",
+    "parent_node_id": "SIT-2",
+    "hierarchy_level": 2,
+    "content_requirements": [],
+    "content_requirements_summary": ""
+  },
+  {
+    "sitemap_node_id": "SIT-2.2",
+    "node_code": "2.2",
+    "title_th": "สรุปโปรไฟล์ของความเสี่ยงรายพื้นที่และรายภาคส่วน",
+    "title_en": "",
+    "parent_node_id": "SIT-2",
+    "hierarchy_level": 2,
+    "content_requirements": [],
+    "content_requirements_summary": ""
+  },
+  {
+    "sitemap_node_id": "SIT-2.3",
+    "node_code": "2.3",
+    "title_th": "เครื่องมือทางนโยบาย กฎหมาย และการเงิน",
+    "title_en": "",
+    "parent_node_id": "SIT-2",
+    "hierarchy_level": 2,
+    "content_requirements": [],
+    "content_requirements_summary": ""
+  },
+  {
+    "sitemap_node_id": "SIT-2.4",
+    "node_code": "2.4",
+    "title_th": "บริการข้อมูลสำหรับการวางแผน",
+    "title_en": "",
+    "parent_node_id": "SIT-2",
+    "hierarchy_level": 2,
+    "content_requirements": [],
+    "content_requirements_summary": ""
+  },
+  {
+    "sitemap_node_id": "SIT-3",
+    "node_code": "3",
+    "title_th": "วงจรขับเคลื่อนการปรับตัว",
+    "title_en": "Adaptation Knowledge Cycle",
+    "parent_node_id": "",
+    "hierarchy_level": 1,
+    "content_requirements": [],
+    "content_requirements_summary": ""
+  },
+  {
+    "sitemap_node_id": "SIT-3.1",
+    "node_code": "3.1",
+    "title_th": "วิทยาศาสตร์ของสภาพภูมิอากาศ",
+    "title_en": "Climate Science",
+    "parent_node_id": "SIT-3",
+    "hierarchy_level": 2,
+    "content_requirements": [],
+    "content_requirements_summary": ""
+  },
+  {
+    "sitemap_node_id": "SIT-3.1.1",
+    "node_code": "3.1.1",
+    "title_th": "ข้อมูลสังเกตุการณ์",
+    "title_en": "",
+    "parent_node_id": "SIT-3.1",
+    "hierarchy_level": 3,
+    "content_requirements": [
+      "ข้อมูลสภาพอากาศระยะสั้นและระยะกลาง (TMD Website)",
+      "ข้อมูลการสังเกตุจากดาวเทียม:",
+      "พื้นที่ป่า",
+      "Land cover",
+      "พื้นที่แหล่งน้ำ",
+      "แนวปะการัง",
+      "ระบบนิเวศน์",
+      "ปรากฏการณ์ทางภูมิอากาศที่สำคัญ:",
+      "ENSO (El Niño–Southern Oscillation)",
+      "AMOC (Atlantic Meridional Overturning Circulation)"
+    ],
+    "content_requirements_summary": "ข้อมูลสภาพอากาศระยะสั้นและระยะกลาง (TMD Website); ข้อมูลการสังเกตุจากดาวเทียม:; พื้นที่ป่า; Land cover; พื้นที่แหล่งน้ำ; แนวปะการัง; ระบบนิเวศน์; ปรากฏการณ์ทางภูมิอากาศที่สำคัญ:; ENSO (El Niño–Southern Oscillation); AMOC (Atlantic Meridional Overturning Circulation)"
+  },
+  {
+    "sitemap_node_id": "SIT-3.1.2",
+    "node_code": "3.1.2",
+    "title_th": "ปัจจัยขับเคลื่อนทางภูมิอากาศ",
+    "title_en": "",
+    "parent_node_id": "SIT-3.1",
+    "hierarchy_level": 3,
+    "content_requirements": [
+      "ข้อมูล Climatology ของประเทศไทย",
+      "ข้อมูลสถิติ Climate Variable ที่สำคัญ",
+      "บทอธิบาย climate scenario",
+      "ข้อมูล downscaled climate data ของประเทศไทย"
+    ],
+    "content_requirements_summary": "ข้อมูล Climatology ของประเทศไทย; ข้อมูลสถิติ Climate Variable ที่สำคัญ; บทอธิบาย climate scenario; ข้อมูล downscaled climate data ของประเทศไทย"
+  },
+  {
+    "sitemap_node_id": "SIT-3.1.3",
+    "node_code": "3.1.3",
+    "title_th": "ฉากทัศน์ภูมิอากาศในอนาคต",
+    "title_en": "",
+    "parent_node_id": "SIT-3.1",
+    "hierarchy_level": 3,
+    "content_requirements": [
+      "บทอธิบายการใช้งาน climate scenario",
+      "แหล่งข้อมูล climate scenario",
+      "ตัวอย่างการใช้งาน climate scenario ในการทำแผนยุทธศาสตร์และประเมินความเสี่ยง"
+    ],
+    "content_requirements_summary": "บทอธิบายการใช้งาน climate scenario; แหล่งข้อมูล climate scenario; ตัวอย่างการใช้งาน climate scenario ในการทำแผนยุทธศาสตร์และประเมินความเสี่ยง"
+  },
+  {
+    "sitemap_node_id": "SIT-3.2",
+    "node_code": "3.2",
+    "title_th": "การวิเคราะห์ผลกระทบ ความเสี่ยง และความเปราะบาง",
+    "title_en": "Risk Analysis",
+    "parent_node_id": "SIT-3",
+    "hierarchy_level": 2,
+    "content_requirements": [],
+    "content_requirements_summary": ""
+  },
+  {
+    "sitemap_node_id": "SIT-3.2.1",
+    "node_code": "3.2.1",
+    "title_th": "การวิเคราะห์ความเปราะบางและการเปิดรับภัย",
+    "title_en": "",
+    "parent_node_id": "SIT-3.2",
+    "hierarchy_level": 3,
+    "content_requirements": [
+      "บทอธิบายการเปิดรับภัยและความเปราะบาง (Exposure, Sensitivity, Adaptive Capacity)",
+      "Damage function",
+      "Resilience"
+    ],
+    "content_requirements_summary": "บทอธิบายการเปิดรับภัยและความเปราะบาง (Exposure, Sensitivity, Adaptive Capacity); Damage function; Resilience"
+  },
+  {
+    "sitemap_node_id": "SIT-3.2.2",
+    "node_code": "3.2.2",
+    "title_th": "การวิเคราะห์ความเสี่ยง",
+    "title_en": "",
+    "parent_node_id": "SIT-3.2",
+    "hierarchy_level": 3,
+    "content_requirements": [
+      "บทอธิบายกรอบการประเมินความเสี่ยงต่างๆ",
+      "บทสรุปความเสี่ยงตามพื้นที่และภาคส่วน",
+      "แหล่งข้อมูลผลการประเมินความเสี่ยงอื่นๆ"
+    ],
+    "content_requirements_summary": "บทอธิบายกรอบการประเมินความเสี่ยงต่างๆ; บทสรุปความเสี่ยงตามพื้นที่และภาคส่วน; แหล่งข้อมูลผลการประเมินความเสี่ยงอื่นๆ"
+  },
+  {
+    "sitemap_node_id": "SIT-3.2.3",
+    "node_code": "3.2.3",
+    "title_th": "ผลกระทบลูกโซ่",
+    "title_en": "",
+    "parent_node_id": "SIT-3.2",
+    "hierarchy_level": 3,
+    "content_requirements": [
+      "อธิบายแนวคิดผลกระทบลูกโซ่",
+      "อธิบายแนวคิดการวิเคราะห์ผลกระทบ",
+      "อธิบายแนวคิด Impact Chain Analysis"
+    ],
+    "content_requirements_summary": "อธิบายแนวคิดผลกระทบลูกโซ่; อธิบายแนวคิดการวิเคราะห์ผลกระทบ; อธิบายแนวคิด Impact Chain Analysis"
+  },
+  {
+    "sitemap_node_id": "SIT-3.2.4",
+    "node_code": "3.2.4",
+    "title_th": "ความสูญเสียและความเสียหาย",
+    "title_en": "Loss and Damage",
+    "parent_node_id": "SIT-3.2",
+    "hierarchy_level": 3,
+    "content_requirements": [
+      "บทอธิบาย Loss and Damage",
+      "UNFCC Loss and Damage framework",
+      "ภาพรวมสถิติภัยพิบัติจากภูมิอากาศ",
+      "ภาพรวมความสูญเสียและความเสียหาย",
+      "Loss and Damage Dashboard"
+    ],
+    "content_requirements_summary": "บทอธิบาย Loss and Damage; UNFCC Loss and Damage framework; ภาพรวมสถิติภัยพิบัติจากภูมิอากาศ; ภาพรวมความสูญเสียและความเสียหาย; Loss and Damage Dashboard"
+  },
+  {
+    "sitemap_node_id": "SIT-3.2.5",
+    "node_code": "3.2.5",
+    "title_th": "กรอบทฤษฎีและเอกสารคู่มือ",
+    "title_en": "",
+    "parent_node_id": "SIT-3.2",
+    "hierarchy_level": 3,
+    "content_requirements": [
+      "เอกสารระเบียบวิธีการในการประเมินความเสี่ยง",
+      "เอกสารระเบียบวิธีการในการประเมินผลกระทบ",
+      "เอกสารระเบียบวิธีการในการคำนวณ Loss and Damage"
+    ],
+    "content_requirements_summary": "เอกสารระเบียบวิธีการในการประเมินความเสี่ยง; เอกสารระเบียบวิธีการในการประเมินผลกระทบ; เอกสารระเบียบวิธีการในการคำนวณ Loss and Damage"
+  },
+  {
+    "sitemap_node_id": "SIT-3.3",
+    "node_code": "3.3",
+    "title_th": "การวางแผนการปรับตัวและการปฏิบัติ",
+    "title_en": "Planning & Implementation",
+    "parent_node_id": "SIT-3",
+    "hierarchy_level": 2,
+    "content_requirements": [],
+    "content_requirements_summary": ""
+  },
+  {
+    "sitemap_node_id": "SIT-3.3.1",
+    "node_code": "3.3.1",
+    "title_th": "แนวทางการวางแผนการปรับตัว",
+    "title_en": "",
+    "parent_node_id": "SIT-3.3",
+    "hierarchy_level": 3,
+    "content_requirements": [
+      "รายภาคส่วน, การวิเคราะห์ทางการเงิน"
+    ],
+    "content_requirements_summary": "รายภาคส่วน, การวิเคราะห์ทางการเงิน"
+  },
+  {
+    "sitemap_node_id": "SIT-3.3.2",
+    "node_code": "3.3.2",
+    "title_th": "เส้นทางกลยุทธ์การปรับตัวของประเทศ",
+    "title_en": "Roadmap",
+    "parent_node_id": "SIT-3.3",
+    "hierarchy_level": 3,
+    "content_requirements": [],
+    "content_requirements_summary": ""
+  },
+  {
+    "sitemap_node_id": "SIT-3.3.3",
+    "node_code": "3.3.3",
+    "title_th": "ห้องสมุดมาตรการปรับตัวตามสาขา",
+    "title_en": "",
+    "parent_node_id": "SIT-3.3",
+    "hierarchy_level": 3,
+    "content_requirements": [],
+    "content_requirements_summary": ""
+  },
+  {
+    "sitemap_node_id": "SIT-3.3.4",
+    "node_code": "3.3.4",
+    "title_th": "กรณีศึกษาการวางแผนการปรับตัว",
+    "title_en": "",
+    "parent_node_id": "SIT-3.3",
+    "hierarchy_level": 3,
+    "content_requirements": [
+      "คลังแผนความเสี่ยงขององค์กรต่างๆ"
+    ],
+    "content_requirements_summary": "คลังแผนความเสี่ยงขององค์กรต่างๆ"
+  },
+  {
+    "sitemap_node_id": "SIT-3.3.5",
+    "node_code": "3.3.5",
+    "title_th": "โครงการที่กำลังดำเนินการ",
+    "title_en": "Project Tracking Status",
+    "parent_node_id": "SIT-3.3",
+    "hierarchy_level": 3,
+    "content_requirements": [],
+    "content_requirements_summary": ""
+  },
+  {
+    "sitemap_node_id": "SIT-3.4",
+    "node_code": "3.4",
+    "title_th": "การติดตาม ประเมินผล และถอดบทเรียน",
+    "title_en": "M&E and Learning",
+    "parent_node_id": "SIT-3",
+    "hierarchy_level": 2,
+    "content_requirements": [],
+    "content_requirements_summary": ""
+  },
+  {
+    "sitemap_node_id": "SIT-3.4.1",
+    "node_code": "3.4.1",
+    "title_th": "แนวทางการติดตามและประเมินผลการปรับตัว",
+    "title_en": "",
+    "parent_node_id": "SIT-3.4",
+    "hierarchy_level": 3,
+    "content_requirements": [
+      "ทฤษฎี M&E, GGA Indicators"
+    ],
+    "content_requirements_summary": "ทฤษฎี M&E, GGA Indicators"
+  },
+  {
+    "sitemap_node_id": "SIT-3.4.2",
+    "node_code": "3.4.2",
+    "title_th": "ระบบฐานข้อมูลด้านการติดตามและประเมินผลของประเทศไทย",
+    "title_en": "Adaptation M&E Platform",
+    "parent_node_id": "SIT-3.4",
+    "hierarchy_level": 3,
+    "content_requirements": [],
+    "content_requirements_summary": ""
+  },
+  {
+    "sitemap_node_id": "SIT-3.4.3",
+    "node_code": "3.4.3",
+    "title_th": "กรณีศึกษาโครงการปรับตัวที่ประสบความสำเร็จ การคัดสรรและถอดบทเรียนโครงการเด่น",
+    "title_en": "Flagship Projects",
+    "parent_node_id": "SIT-3.4",
+    "hierarchy_level": 3,
+    "content_requirements": [],
+    "content_requirements_summary": ""
+  },
+  {
+    "sitemap_node_id": "SIT-4",
+    "node_code": "4",
+    "title_th": "เครื่องมือและบริการสารสนเทศด้านภูมิอากาศ",
+    "title_en": "Tools & Services",
+    "parent_node_id": "",
+    "hierarchy_level": 1,
+    "content_requirements": [],
+    "content_requirements_summary": ""
+  },
+  {
+    "sitemap_node_id": "SIT-4.1",
+    "node_code": "4.1",
+    "title_th": "บัญชีข้อมูล",
+    "title_en": "Data Catalog",
+    "parent_node_id": "SIT-4",
+    "hierarchy_level": 3,
+    "content_requirements": [],
+    "content_requirements_summary": ""
+  },
+  {
+    "sitemap_node_id": "SIT-4.2",
+    "node_code": "4.2",
+    "title_th": "Visualization and Analytics Application",
+    "title_en": "",
+    "parent_node_id": "SIT-4",
+    "hierarchy_level": 3,
+    "content_requirements": [],
+    "content_requirements_summary": ""
+  },
+  {
+    "sitemap_node_id": "SIT-4.3",
+    "node_code": "4.3",
+    "title_th": "ศูนย์รวมเครื่องมือและแหล่งข้อมูลภายนอก",
+    "title_en": "",
+    "parent_node_id": "SIT-4",
+    "hierarchy_level": 3,
+    "content_requirements": [],
+    "content_requirements_summary": ""
+  },
+  {
+    "sitemap_node_id": "SIT-5",
+    "node_code": "5",
+    "title_th": "ข่าว ประกาศ และช่องทางการติดต่อ",
+    "title_en": "News and Contact",
+    "parent_node_id": "",
+    "hierarchy_level": 1,
+    "content_requirements": [],
+    "content_requirements_summary": ""
+  },
+  {
+    "sitemap_node_id": "SIT-5.1",
+    "node_code": "5.1",
+    "title_th": "ประกาศกิจกรรมของศูนย์ การอัพเดทชุดข้อมูล การเผยแพร่ชุดข้อมูล ความร่วมมือกับหน่วยงาน กิจกรรม workshop งานอบรมที่เกี่ยวกับข้อมูลสภาพภูมิอากาศ",
+    "title_en": "",
+    "parent_node_id": "SIT-5",
+    "hierarchy_level": 3,
+    "content_requirements": [],
+    "content_requirements_summary": ""
+  },
+  {
+    "sitemap_node_id": "SIT-5.2",
+    "node_code": "5.2",
+    "title_th": "ช่องทางการรับ feedback ที่เป็นระบบเพื่อการปรับปรุงผลิตภัณฑ์ข้อมูล ชุดข้อมูล บริการสารสนเทศ การสื่อสาร",
+    "title_en": "",
+    "parent_node_id": "SIT-5",
+    "hierarchy_level": 3,
+    "content_requirements": [],
+    "content_requirements_summary": ""
+  }
+]
