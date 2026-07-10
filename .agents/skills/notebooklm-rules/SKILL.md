@@ -100,3 +100,48 @@ nlm login --check
 8. Run the CLI command:
    `nlm login --manual --file <path_to_cookie.txt>`
 9. Delete the temporary `cookie.txt` file immediately for safety.
+
+---
+
+## 5. Query-Focused Command Reference
+
+Use the following reference to construct exact `nlm` CLI calls for research and extraction tasks:
+
+### 5.1. Chatting with Notebook Sources
+* **Command**: `nlm query notebook <notebook_id_or_alias> "<question>"`
+* **Description**: Queries all or specific sources within the designated notebook.
+* **Syntax Examples**:
+  ```bash
+  # Standard JSON query with timeout parameters
+  nlm query notebook 8bcbf9bb-fc5c-448a-839f-74a2d11b1a0e "What is the data ingestion model?" --json --timeout 120
+
+  # Contextual follow-up query using conversation ID
+  nlm query notebook 8bcbf9bb-fc5c-448a-839f-74a2d11b1a0e "Can you elaborate on the second point?" -c "session-12345" --json
+
+  # Targeted query restricted to specific source UUIDs
+  nlm query notebook 8bcbf9bb-fc5c-448a-839f-74a2d11b1a0e "Extract rainfall projections" -s "11a228e1-7073-4e93-b306-db150f0e3a15,0bc4f075-947a-48bb-bfae-b370b8b34a24" --json
+  ```
+
+### 5.2. Generating Notebook AI Summaries
+* **Command**: `nlm notebook describe <notebook_id>`
+* **Description**: Retrieves high-level notebook summaries and suggested topics.
+* **Syntax Example**:
+  ```bash
+  nlm notebook describe 8bcbf9bb-fc5c-448a-839f-74a2d11b1a0e --json
+  ```
+
+### 5.3. Generating Source AI Summaries
+* **Command**: `nlm source describe <source_id>`
+* **Description**: Returns an AI-generated summary of a single source document, including extracted keywords.
+* **Syntax Example**:
+  ```bash
+  nlm source describe 11a228e1-7073-4e93-b306-db150f0e3a15 --json
+  ```
+
+### 5.4. Fetching Source Details
+* **Command**: `nlm source get <source_id>`
+* **Description**: Gets source metadata and details.
+* **Syntax Example**:
+  ```bash
+  nlm source get 11a228e1-7073-4e93-b306-db150f0e3a15 --json
+  ```

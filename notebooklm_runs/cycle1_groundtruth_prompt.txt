@@ -1,0 +1,10 @@
+Using only these sources: Semantic Layer Architecture: Components, Design Patterns, and AI Integration - Databricks; Semantic Layers in Data Mesh Architecture; Universal Semantic Layer: Capabilities, Integrations, and Enterprise Benefits - Cube Blog.
+
+Extract only source-grounded findings relevant to evaluating the design proposal:
+1. loose coupling between source systems and canonical model
+2. metadata or semantic control plane behavior
+3. separation between governed data layer and presentation/consumption layer
+4. any contradictions or missing components
+
+If any named source is missing or ambiguous, stop and report that first.
+Return concise bullet points with citations only. No broad synthesis.

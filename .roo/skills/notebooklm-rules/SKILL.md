@@ -1,14 +1,14 @@
 ---
 name: notebooklm-rules
-description: MANDATORY DIRECTIVE - Enforces low-latency API-based NotebookLM MCP query-only guardrails, source-fidelity gates, and verbatim raw response captures. MUST BE ADHERED TO WITHOUT EXCEPTION.
+description: MANDATORY DIRECTIVE - Enforces low-latency API-based nlm CLI query-only guardrails, source-fidelity gates, and verbatim raw response captures. MUST BE ADHERED TO WITHOUT EXCEPTION.
 ---
 
-# NotebookLM MCP Rules & Workflow
+# NotebookLM CLI Rules & Workflow
 
 > [!IMPORTANT]
 > **MANDATORY SYSTEM DIRECTIVE - NOT A SUGGESTION**
-> All instructions, guardrails, and workflows defined in this skill are **strict system constraints**. 
-> Any agent invoking or interacting with NotebookLM in this workspace **MUST** adhere to this protocol without exception. 
+> All instructions, guardrails, and workflows defined in this skill are **strict system constraints**.
+> Any agent invoking or interacting with NotebookLM in this workspace **MUST** execute queries exclusively via the `nlm` CLI tool.
 > Failure to follow these rules constitutes a direct violation of the core agent safety mandate.
 
 ---
@@ -16,23 +16,27 @@ description: MANDATORY DIRECTIVE - Enforces low-latency API-based NotebookLM MCP
 ## 1. Core Principles (Strictly Mandatory)
 
 1. **"Nothing is Deleted" (Verbatim Capture)**
-   * **REQUIRED:** All raw responses from NotebookLM must be saved **verbatim as-is** in the repository under a timestamped run directory (e.g., `ψ/inbox/notebooklm_runs/YYYY-MM-DD_HHMM_raw.md`) before any formatting, translation, or cleanup occurs. This ensures a transparent, uncorrupted audit trail of source data.
+   * **REQUIRED:** All raw responses from the `nlm` CLI must be saved **verbatim as-is** in the repository under a timestamped run directory (e.g., `ψ/inbox/notebooklm_runs/YYYY-MM-DD_HHMM_raw.md` or as JSON) before any formatting, translation, or cleanup occurs. This ensures a transparent, uncorrupted audit trail of source data.
 2. **Query-Only Policy (Absolute Restriction)**
-   * **BANNED:** The use of NotebookLM for generating podcasts (`audio`), mindmaps, slide decks, video overviews, quizzes, or flashcards is **strictly prohibited**.
-   * **RESTRICTION:** The allowed toolset is restricted exclusively to text query and source management: `notebook_query`, `notebook_get`, `notebook_list`, and `source_add`. Any other call is blocked.
+   * **BANNED:** Generating podcasts (`audio`), mindmaps, slide decks, or video overviews is strictly prohibited.
+   * **RESTRICTION:** Use only CLI query and source management commands (`nlm query`, `nlm list`, `nlm source`).
 3. **Local Harmonisation**
-   * **REQUIRED:** Deduplication, text merging, data cleaning, or register updates must be performed **locally in the repository files**, never inside NotebookLM.
+   * **REQUIRED:** Deduplication, data cleaning, or register updates must be performed **locally in the repository files**, never inside NotebookLM.
+4. **No Substitution on Tool Failure (Strict Source-Fidelity)**
+   * **REQUIRED:** If a CLI query fails or times out, the agent **MUST** immediately report the error and stop.
+   * **BANNED:** Under no circumstances is the agent allowed to bypass a failed query by pulling from local files, general search, or other workspace files to simulate a successful query. Doing so violates the source-fidelity gate and introduces the risk of out-of-date or hallucinated information.
+5. **No Browser Automation**
+   * **BANNED:** Browser automation tools (e.g., Playwright MCP `ask_question`) are strictly banned from execution due to bot-detection and timeout instability.
+   * **REQUIRED:** Execute queries using the command: `nlm query notebook <notebook_id> "<question>"` (use `--json` when structured citation metadata is needed).
 
 ---
 
 ## 2. Parameter Discipline (Strictly Mandatory)
 
-Every NotebookLM MCP call must make these parameters explicit:
-*   `notebook_id`: Explicitly specified for `notebook_query`. Never rely on an implicit active notebook.
-*   `session_id`: Use a concrete session ID for sequential Q&A to maintain thread context. For independent lookups, omit `session_id` to start a fresh session and reduce token consumption.
-*   `source_format`: Explicitly set to `none` (fast text-only RAG), `footnotes`/`inline` (citation-backed answers for human verification), or `json` (for programmatic citation processing).
-
-*Note: Playwright browser options (headless, show, stealth, typing speed) are obsolete and must not be used.*
+Every `nlm` command must specify the notebook and parameters explicitly to ensure non-interrupted, error-free execution:
+*   **Notebook ID**: Always pass the exact UUID (e.g., `8bcbf9bb-fc5c-448a-839f-74a2d11b1a0e`) or its registered alias.
+*   **JSON Flag**: Pass the `--json` option if downstream parsing of references or citations is required.
+*   **Timeout**: Pass `--timeout 120` to guarantee a 2-minute API threshold.
 
 ---
 
@@ -47,37 +51,43 @@ flowchart TD
   ResolveNotebook --> SourceGate{5. Source-Fidelity Gate}
   SourceGate -->|Fails / Missing Source| Abort[6. Fail-Fast & Abort Session]
   SourceGate -->|Passes| BuildPrompt[7. Build Query Prompt]
-  BuildPrompt --> Query[8. Execute notebook_query]
+  BuildPrompt --> Query[8. Execute nlm query]
   Query --> SaveVerbatim[9. Save Raw Response Verbatim]
   SaveVerbatim --> LocalHarmonize[10. Local QC & Harmonization in Repo]
   LocalHarmonize --> End[Session Closure /rrr]
 ```
 
 ### Step 1: Preflight Auth Check (MANDATORY GATE)
-You **MUST** verify authentication status before executing any query. If the session has expired (`Authentication expired` error), you **MUST** apply the **Manual Cookie Login** process immediately. Proceeding with queries during auth errors is prohibited.
+You **MUST** verify authentication status before executing any query by running `nlm login --check`. If the session is invalid, you **MUST** apply the **Manual Cookie Login** process immediately.
 
 ### Step 2: Resolve Notebook ID (MANDATORY GATE)
-You **MUST** retrieve the `notebook_id` from the project-level config (e.g., `notebooklm-rules.config.json`). You are **STRICTLY BANNED** from proceeding with implicit active notebook assumptions or guessing the notebook ID.
+You **MUST** retrieve the notebook UUID (e.g., `8bcbf9bb-fc5c-448a-839f-74a2d11b1a0e`). Do not make active notebook assumptions.
 
-### Step 3: Source-Fidelity Gate (MANDATORY GATE for Source-Bound Batches)
-1. You **MUST** run `notebook_get` to retrieve and verify the actual titles of the documents in the target notebook.
+### Step 3: Source-Fidelity Gate (MANDATORY GATE)
+1. You **MUST** run `nlm list sources <notebook_id>` to retrieve and verify the actual titles of the documents in the target notebook.
 2. You **MUST** group query targets into small packets of 1–3 exact titles.
-3. You **MUST** instruct NotebookLM in the prompt to **stop and report** (Fail-Fast) if any of the target documents are missing or ambiguous. Under no circumstances may you substitute adjacent or similar files.
+3. You **MUST** instruct NotebookLM in the prompt to **stop and report** (Fail-Fast) if any of the target documents are missing or ambiguous.
 
-### Step 4: Build Query Prompt (MANDATORY Query-Only Directive)
-Formulate a focused extraction query. You **MUST** explicitly command NotebookLM to extract raw data without summarizing or generalizing across unrelated concepts. You are **STRICTLY BANNED** from calling or using any studio, audio, mindmap, slide, or media generation options.
+### Step 4: Build Query Prompt
+Formulate a focused extraction query. You **MUST** explicitly command NotebookLM to extract raw data without summarizing or generalizing across unrelated concepts.
 
 ### Step 5: Save Raw Response Verbatim (MANDATORY AUDIT GATE)
-You **MUST** save the raw markdown/JSON output from `notebook_query` into a timestamped file under `notebooklm_runs/` BEFORE applying any local changes, edits, or analysis. Saving raw response verbatim is a non-negotiable compliance requirement.
+You **MUST** save the raw output from the CLI query into a timestamped file under `notebooklm_runs/` BEFORE applying any local changes, edits, or analysis.
 
 ### Step 6: Local Harmonisation (MANDATORY GATE)
-You **MUST** clean, translate, deduplicate, or format the text locally in the repository files after and only after the raw output has been written to the audit log. Do not perform these edits inside the NotebookLM query loop.
+You **MUST** clean, translate, or format the text locally in the repository files after the raw output has been written to the audit log.
 
 ---
 
 ## 4. Troubleshooting & Manual Cookie Login
 
-When Google invalidates cookies (usually every 2-4 weeks), commands will fail with `Authentication expired`. 
+When Google invalidates cookies (usually every 2-4 weeks), commands will fail with `Authentication expired` or `Failed to authenticate session`.
+
+### Verification of Authentication:
+Run the diagnostic command in the terminal to verify active profiles and credentials:
+```bash
+nlm login --check
+```
 
 ### Manual Cookie Extraction Steps:
 1. Log in to [https://notebooklm.google.com](https://notebooklm.google.com) in your web browser.
@@ -90,3 +100,48 @@ When Google invalidates cookies (usually every 2-4 weeks), commands will fail wi
 8. Run the CLI command:
    `nlm login --manual --file <path_to_cookie.txt>`
 9. Delete the temporary `cookie.txt` file immediately for safety.
+
+---
+
+## 5. Query-Focused Command Reference
+
+Use the following reference to construct exact `nlm` CLI calls for research and extraction tasks:
+
+### 5.1. Chatting with Notebook Sources
+* **Command**: `nlm query notebook <notebook_id_or_alias> "<question>"`
+* **Description**: Queries all or specific sources within the designated notebook.
+* **Syntax Examples**:
+  ```bash
+  # Standard JSON query with timeout parameters
+  nlm query notebook 8bcbf9bb-fc5c-448a-839f-74a2d11b1a0e "What is the data ingestion model?" --json --timeout 120
+
+  # Contextual follow-up query using conversation ID
+  nlm query notebook 8bcbf9bb-fc5c-448a-839f-74a2d11b1a0e "Can you elaborate on the second point?" -c "session-12345" --json
+
+  # Targeted query restricted to specific source UUIDs
+  nlm query notebook 8bcbf9bb-fc5c-448a-839f-74a2d11b1a0e "Extract rainfall projections" -s "11a228e1-7073-4e93-b306-db150f0e3a15,0bc4f075-947a-48bb-bfae-b370b8b34a24" --json
+  ```
+
+### 5.2. Generating Notebook AI Summaries
+* **Command**: `nlm notebook describe <notebook_id>`
+* **Description**: Retrieves high-level notebook summaries and suggested topics.
+* **Syntax Example**:
+  ```bash
+  nlm notebook describe 8bcbf9bb-fc5c-448a-839f-74a2d11b1a0e --json
+  ```
+
+### 5.3. Generating Source AI Summaries
+* **Command**: `nlm source describe <source_id>`
+* **Description**: Returns an AI-generated summary of a single source document, including extracted keywords.
+* **Syntax Example**:
+  ```bash
+  nlm source describe 11a228e1-7073-4e93-b306-db150f0e3a15 --json
+  ```
+
+### 5.4. Fetching Source Details
+* **Command**: `nlm source get <source_id>`
+* **Description**: Gets source metadata and details.
+* **Syntax Example**:
+  ```bash
+  nlm source get 11a228e1-7073-4e93-b306-db150f0e3a15 --json
+  ```

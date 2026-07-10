@@ -1,0 +1,11 @@
+Using only these sources: An approach for semantic integration of heterogenous data source.pdf; Enriching Earth observation datasets through semantics for climate change applications - The EIFFEL ontology.pdf; Heterogeneous data integration Challenges and Opportunity.pdf.
+
+Extract only source-grounded findings relevant to phase-2 design hardening for the DCCE proposal:
+1. how heterogeneous source systems should map into a canonical or shared semantic model
+2. what metadata, ontology, vocabulary, or dictionary mechanisms are required
+3. whether governance of definitions should be centralized, delegated by domain, or layered
+4. what this implies for assigning content change management by topic versus keeping semantic governance separate
+5. any explicit risks or limitations for climate-data integration
+
+If any named source is missing or ambiguous, stop and report that first.
+Return concise bullet points with citations only. No broad synthesis.

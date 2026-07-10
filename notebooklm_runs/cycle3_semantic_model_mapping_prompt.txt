@@ -1,0 +1,6 @@
+Using only these sources: An approach for semantic integration of heterogenous data source.pdf; Enriching Earth observation datasets through semantics for climate change applications - The EIFFEL ontology.pdf; Heterogeneous data integration Challenges and Opportunity.pdf.
+
+Question: How should heterogeneous source systems map into a canonical or shared semantic model?
+
+If any named source is missing or ambiguous, stop and report that first.
+Return concise bullet points with citations only. No broad synthesis.

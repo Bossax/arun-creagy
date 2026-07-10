@@ -22,19 +22,6 @@
 				"oracle_learn"
 			]
 		},
-		"notebooklm-mcp": {
-			"type": "stdio",
-			"command": "notebooklm-mcp",
-			"description": "NotebookLM MCP server (API-based, low-latency)",
-			"disabled": false,
-			"alwaysAllow": [
-				"notebook_list",
-				"notebook_get",
-				"notebook_query",
-				"server_info",
-				"refresh_auth"
-			]
-		},
 		"perplexity": {
 			"type": "stdio",
 			"command": "npx",
