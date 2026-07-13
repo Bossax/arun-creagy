@@ -44,7 +44,7 @@ To fully support the A-BTR compliance queries, the following entities must be ad
 ### C. Finance & Support Tracking
 *A-BTR Mandates: C-036 to C-042 (mandating explicit tracking of embedded domestic budgets and international support).*
 
-7.  **`BUDGET_TAG_RECORD`**: Tracks domestic government budget line items explicitly tagged for climate adaptation, linked to projects and ministries. %% this code is non-existent in the Bureau of Budget's system %%
+7.  **`BUDGET_TAG_RECORD`**: Tracks domestic government budget line items explicitly tagged for climate adaptation, linked to projects and ministries. %% this code is non-existent in the Bureau of Budget's system yet %%
 8.  **`SUPPORT_TRACKING_RECORD`**: Tracks international support (Financial, Technology Transfer, and Capacity-Building) categorizing what is *needed* versus what is *received*.
 
 ### D. Institutional Governance & Data Stewardship

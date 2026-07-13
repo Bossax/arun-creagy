@@ -1,0 +1,1578 @@
+{
+  "A-REQ-004": [
+    {
+      "metric_name": "population",
+      "value_numeric": 65.95,
+      "unit": "million",
+      "comparison_operator": "=",
+      "time_period": "2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": "Demographic baseline"
+    },
+    {
+      "metric_name": "urbanization_rate",
+      "value_numeric": 34.3,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": "Residing in urban areas"
+    }
+  ],
+  "B-REQ-007": [
+    {
+      "metric_name": "observed_annual_mean_temperature",
+      "value_numeric": 28.5,
+      "unit": "°C",
+      "comparison_operator": "=",
+      "time_period": "2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": "Highest in 74 years"
+    },
+    {
+      "metric_name": "temperature_anomaly_above_normal",
+      "value_numeric": 1.1,
+      "unit": "°C",
+      "comparison_operator": "+",
+      "time_period": "2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": "Relative to 1991-2020 normal of 27.4°C"
+    }
+  ],
+  "B-REQ-010": [
+    {
+      "metric_name": "projected_mean_temperature_increase_min",
+      "value_numeric": 0.98,
+      "unit": "°C",
+      "comparison_operator": "+",
+      "time_period": "2021-2040",
+      "geography": "Thailand",
+      "scenario_label": "SSP2-4.5/SSP5-8.5",
+      "notes": ""
+    },
+    {
+      "metric_name": "projected_mean_temperature_increase_max",
+      "value_numeric": 1.34,
+      "unit": "°C",
+      "comparison_operator": "+",
+      "time_period": "2021-2040",
+      "geography": "Thailand",
+      "scenario_label": "SSP2-4.5/SSP5-8.5",
+      "notes": ""
+    },
+    {
+      "metric_name": "projected_mean_temperature_increase_min",
+      "value_numeric": 1.42,
+      "unit": "°C",
+      "comparison_operator": "+",
+      "time_period": "2041-2060",
+      "geography": "Thailand",
+      "scenario_label": "SSP2-4.5/SSP5-8.5",
+      "notes": ""
+    },
+    {
+      "metric_name": "projected_mean_temperature_increase_max",
+      "value_numeric": 1.98,
+      "unit": "°C",
+      "comparison_operator": "+",
+      "time_period": "2041-2060",
+      "geography": "Thailand",
+      "scenario_label": "SSP2-4.5/SSP5-8.5",
+      "notes": ""
+    },
+    {
+      "metric_name": "projected_mean_temperature_increase_min",
+      "value_numeric": 2.01,
+      "unit": "°C",
+      "comparison_operator": "+",
+      "time_period": "2081-2100",
+      "geography": "Thailand",
+      "scenario_label": "SSP2-4.5/SSP5-8.5",
+      "notes": ""
+    },
+    {
+      "metric_name": "projected_mean_temperature_increase_max",
+      "value_numeric": 3.39,
+      "unit": "°C",
+      "comparison_operator": "+",
+      "time_period": "2081-2100",
+      "geography": "Thailand",
+      "scenario_label": "SSP2-4.5/SSP5-8.5",
+      "notes": ""
+    }
+  ],
+  "B-REQ-012": [
+    {
+      "metric_name": "projected_tmax_increase_min",
+      "value_numeric": 0.9,
+      "unit": "°C",
+      "comparison_operator": "+",
+      "time_period": "2021-2040",
+      "geography": "Thailand",
+      "scenario_label": "SSP2-4.5/SSP5-8.5",
+      "notes": ""
+    },
+    {
+      "metric_name": "projected_tmax_increase_max",
+      "value_numeric": 1.16,
+      "unit": "°C",
+      "comparison_operator": "+",
+      "time_period": "2021-2040",
+      "geography": "Thailand",
+      "scenario_label": "SSP2-4.5/SSP5-8.5",
+      "notes": ""
+    },
+    {
+      "metric_name": "projected_tmax_increase_min",
+      "value_numeric": 1.33,
+      "unit": "°C",
+      "comparison_operator": "+",
+      "time_period": "2041-2060",
+      "geography": "Thailand",
+      "scenario_label": "SSP2-4.5/SSP5-8.5",
+      "notes": ""
+    },
+    {
+      "metric_name": "projected_tmax_increase_max",
+      "value_numeric": 1.84,
+      "unit": "°C",
+      "comparison_operator": "+",
+      "time_period": "2041-2060",
+      "geography": "Thailand",
+      "scenario_label": "SSP2-4.5/SSP5-8.5",
+      "notes": ""
+    },
+    {
+      "metric_name": "projected_tmax_increase_min",
+      "value_numeric": 1.92,
+      "unit": "°C",
+      "comparison_operator": "+",
+      "time_period": "2081-2100",
+      "geography": "Thailand",
+      "scenario_label": "SSP2-4.5/SSP5-8.5",
+      "notes": ""
+    },
+    {
+      "metric_name": "projected_tmax_increase_max",
+      "value_numeric": 3.42,
+      "unit": "°C",
+      "comparison_operator": "+",
+      "time_period": "2081-2100",
+      "geography": "Thailand",
+      "scenario_label": "SSP2-4.5/SSP5-8.5",
+      "notes": ""
+    }
+  ],
+  "B-REQ-013": [
+    {
+      "metric_name": "projected_tmin_increase_min",
+      "value_numeric": 1.08,
+      "unit": "°C",
+      "comparison_operator": "+",
+      "time_period": "2021-2040",
+      "geography": "Thailand",
+      "scenario_label": "SSP2-4.5/SSP5-8.5",
+      "notes": ""
+    },
+    {
+      "metric_name": "projected_tmin_increase_max",
+      "value_numeric": 1.43,
+      "unit": "°C",
+      "comparison_operator": "+",
+      "time_period": "2021-2040",
+      "geography": "Thailand",
+      "scenario_label": "SSP2-4.5/SSP5-8.5",
+      "notes": ""
+    },
+    {
+      "metric_name": "projected_tmin_increase_min",
+      "value_numeric": 1.47,
+      "unit": "°C",
+      "comparison_operator": "+",
+      "time_period": "2041-2060",
+      "geography": "Thailand",
+      "scenario_label": "SSP2-4.5/SSP5-8.5",
+      "notes": ""
+    },
+    {
+      "metric_name": "projected_tmin_increase_max",
+      "value_numeric": 2.08,
+      "unit": "°C",
+      "comparison_operator": "+",
+      "time_period": "2041-2060",
+      "geography": "Thailand",
+      "scenario_label": "SSP2-4.5/SSP5-8.5",
+      "notes": ""
+    },
+    {
+      "metric_name": "projected_tmin_increase_min",
+      "value_numeric": 2.03,
+      "unit": "°C",
+      "comparison_operator": "+",
+      "time_period": "2081-2100",
+      "geography": "Thailand",
+      "scenario_label": "SSP2-4.5/SSP5-8.5",
+      "notes": ""
+    },
+    {
+      "metric_name": "projected_tmin_increase_max",
+      "value_numeric": 3.49,
+      "unit": "°C",
+      "comparison_operator": "+",
+      "time_period": "2081-2100",
+      "geography": "Thailand",
+      "scenario_label": "SSP2-4.5/SSP5-8.5",
+      "notes": ""
+    }
+  ],
+  "B-REQ-018": [
+    {
+      "metric_name": "observed_annual_rainfall",
+      "value_numeric": 1704.4,
+      "unit": "mm",
+      "comparison_operator": "=",
+      "time_period": "2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "rainfall_anomaly_above_normal",
+      "value_numeric": 81.5,
+      "unit": "mm",
+      "comparison_operator": "+",
+      "time_period": "2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": "Relative to 1991-2020 average of 1,622.9 mm"
+    },
+    {
+      "metric_name": "rainfall_anomaly_percentage",
+      "value_numeric": 5.0,
+      "unit": "%",
+      "comparison_operator": "+",
+      "time_period": "2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "rainfall_increase_relative_to_previous_year",
+      "value_numeric": 183.8,
+      "unit": "mm",
+      "comparison_operator": "+",
+      "time_period": "2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": "Higher than 2023"
+    }
+  ],
+  "B-REQ-028": [
+    {
+      "metric_name": "observed_sea_surface_temperature",
+      "value_numeric": 32.7,
+      "unit": "°C",
+      "comparison_operator": "=",
+      "time_period": "May 2024",
+      "geography": "Eastern Gulf of Thailand",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-034": [
+    {
+      "metric_name": "flooded_provinces_count",
+      "value_numeric": 69,
+      "unit": "provinces",
+      "comparison_operator": "=",
+      "time_period": "2022",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-037": [
+    {
+      "metric_name": "historical_flood_return_period",
+      "value_numeric": 120,
+      "unit": "years",
+      "comparison_operator": "=",
+      "time_period": "Historical",
+      "geography": "Chao Phraya Basin",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "projected_flood_return_period",
+      "value_numeric": 19,
+      "unit": "years",
+      "comparison_operator": "=",
+      "time_period": "2040-2059",
+      "geography": "Chao Phraya Basin",
+      "scenario_label": "SSP2-4.5",
+      "notes": ""
+    },
+    {
+      "metric_name": "projected_flood_return_period",
+      "value_numeric": 6,
+      "unit": "years",
+      "comparison_operator": "=",
+      "time_period": "2040-2059",
+      "geography": "Chao Phraya Basin",
+      "scenario_label": "SSP5-8.5",
+      "notes": ""
+    }
+  ],
+  "B-REQ-038": [
+    {
+      "metric_name": "flood_recurrence_probability_2011_equivalent",
+      "value_numeric": 50,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "By 2050",
+      "geography": "Chao Phraya Basin",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-040": [
+    {
+      "metric_name": "elevation_msl_min",
+      "value_numeric": 0.5,
+      "unit": "meters",
+      "comparison_operator": "=",
+      "time_period": "Current",
+      "geography": "Bangkok",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "elevation_msl_max",
+      "value_numeric": 1.5,
+      "unit": "meters",
+      "comparison_operator": "=",
+      "time_period": "Current",
+      "geography": "Bangkok",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-042": [
+    {
+      "metric_name": "worst_drought_recurrence_period",
+      "value_numeric": 15,
+      "unit": "years",
+      "comparison_operator": "=",
+      "time_period": "2015",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-048": [
+    {
+      "metric_name": "landslide_incidents_count",
+      "value_numeric": 310,
+      "unit": "incidents",
+      "comparison_operator": ">",
+      "time_period": "2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-050": [
+    {
+      "metric_name": "landslide_probability_increase",
+      "value_numeric": 90,
+      "unit": "%",
+      "comparison_operator": "+",
+      "time_period": "Future",
+      "geography": "Thailand",
+      "scenario_label": "RCP 4.5",
+      "notes": "For 100-year extreme events"
+    },
+    {
+      "metric_name": "landslide_affected_area_share",
+      "value_numeric": 40,
+      "unit": "%",
+      "comparison_operator": ">",
+      "time_period": "Future",
+      "geography": "Thailand",
+      "scenario_label": "RCP 4.5",
+      "notes": ""
+    },
+    {
+      "metric_name": "landslide_high_risk_area_share",
+      "value_numeric": 80,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "Future",
+      "geography": "Thailand",
+      "scenario_label": "RCP 8.5",
+      "notes": ""
+    }
+  ],
+  "B-REQ-052": [
+    {
+      "metric_name": "landslide_probability_threshold",
+      "value_numeric": 0.9,
+      "unit": "probability",
+      "comparison_operator": ">",
+      "time_period": "2040-2059",
+      "geography": "Thailand",
+      "scenario_label": "RCP 8.5",
+      "notes": ""
+    }
+  ],
+  "B-REQ-057": [
+    {
+      "metric_name": "historical_cyclones_total",
+      "value_numeric": 206,
+      "unit": "cyclones",
+      "comparison_operator": "=",
+      "time_period": "1951-2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "average_cyclone_frequency",
+      "value_numeric": 2.78,
+      "unit": "events/year",
+      "comparison_operator": "=",
+      "time_period": "1951-2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-058": [
+    {
+      "metric_name": "cyclone_seasonality_share",
+      "value_numeric": 80.6,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "August-November",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "cyclone_seasonality_share_october",
+      "value_numeric": 27.2,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "October",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "cyclone_seasonality_share_september",
+      "value_numeric": 26.7,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "September",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-061": [
+    {
+      "metric_name": "synthetic_cyclones_count",
+      "value_numeric": 64000,
+      "unit": "cyclones",
+      "comparison_operator": ">",
+      "time_period": "Future",
+      "geography": "Thailand",
+      "scenario_label": "SSP2-4.5/SSP5-8.5",
+      "notes": ""
+    },
+    {
+      "metric_name": "gcm_count",
+      "value_numeric": 9,
+      "unit": "models",
+      "comparison_operator": "=",
+      "time_period": "Future",
+      "geography": "Thailand",
+      "scenario_label": "SSP2-4.5/SSP5-8.5",
+      "notes": ""
+    }
+  ],
+  "B-REQ-062": [
+    {
+      "metric_name": "extreme_wind_speed_increase",
+      "value_numeric": 100,
+      "unit": "%",
+      "comparison_operator": ">",
+      "time_period": "Future",
+      "geography": "Bangkok",
+      "scenario_label": "",
+      "notes": "99th percentile maximum wind speed"
+    }
+  ],
+  "B-REQ-063": [
+    {
+      "metric_name": "extreme_cyclone_duration_increase",
+      "value_numeric": 72,
+      "unit": "%",
+      "comparison_operator": "+",
+      "time_period": "Future",
+      "geography": "Thailand",
+      "scenario_label": "SSP2-4.5",
+      "notes": ""
+    }
+  ],
+  "B-REQ-064": [
+    {
+      "metric_name": "wildfire_incidents_total",
+      "value_numeric": 60000,
+      "unit": "incidents",
+      "comparison_operator": ">",
+      "time_period": "Past Decade",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "wildfire_burned_area_total",
+      "value_numeric": 1.4,
+      "unit": "million rai",
+      "comparison_operator": ">",
+      "time_period": "Past Decade",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-065": [
+    {
+      "metric_name": "wildfire_incidents_northern_region",
+      "value_numeric": 42305,
+      "unit": "incidents",
+      "comparison_operator": "=",
+      "time_period": "2015-2024",
+      "geography": "Northern Region",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "wildfire_burned_area_northern_region",
+      "value_numeric": 984143,
+      "unit": "rai",
+      "comparison_operator": "=",
+      "time_period": "2015-2024",
+      "geography": "Northern Region",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-066": [
+    {
+      "metric_name": "human_caused_wildfires_share",
+      "value_numeric": 90,
+      "unit": "%",
+      "comparison_operator": ">",
+      "time_period": "Annual",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-067": [
+    {
+      "metric_name": "repeated_burning_share_2_or_more",
+      "value_numeric": 67,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "2014-2023",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "repeated_burning_share_5_or_more",
+      "value_numeric": 22,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "2014-2023",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-070": [
+    {
+      "metric_name": "wildfire_prone_area_share",
+      "value_numeric": 50,
+      "unit": "%",
+      "comparison_operator": ">",
+      "time_period": "Annual",
+      "geography": "22 administrative regions",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "wildfire_prone_regions_count",
+      "value_numeric": 22,
+      "unit": "regions",
+      "comparison_operator": "=",
+      "time_period": "Annual",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-072": [
+    {
+      "metric_name": "historical_sea_level_rise_rate",
+      "value_numeric": 16.4,
+      "unit": "mm/year",
+      "comparison_operator": "=",
+      "time_period": "1951-1991",
+      "geography": "Fort Phrachul",
+      "scenario_label": "",
+      "notes": "Error margin: ±0.85 mm/year"
+    },
+    {
+      "metric_name": "historical_sea_level_rise_rate",
+      "value_numeric": 2.3,
+      "unit": "mm/year",
+      "comparison_operator": "=",
+      "time_period": "1951-1991",
+      "geography": "Ko Taphao Noi",
+      "scenario_label": "",
+      "notes": "Error margin: ±1.1 mm/year"
+    },
+    {
+      "metric_name": "historical_sea_level_rise_rate_average",
+      "value_numeric": 6.0,
+      "unit": "mm/year",
+      "comparison_operator": "=",
+      "time_period": "1940-2014",
+      "geography": "Thai coastline",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-073": [
+    {
+      "metric_name": "relative_sea_level_rise_rate",
+      "value_numeric": 0.021,
+      "unit": "m/year",
+      "comparison_operator": "=",
+      "time_period": "Before 2004",
+      "geography": "Bangkok",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "relative_sea_level_rise_rate",
+      "value_numeric": 0.013,
+      "unit": "m/year",
+      "comparison_operator": "=",
+      "time_period": "After groundwater regulation",
+      "geography": "Bangkok",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-074": [
+    {
+      "metric_name": "recent_sea_level_rise_rate_min",
+      "value_numeric": 3.0,
+      "unit": "mm/year",
+      "comparison_operator": "=",
+      "time_period": "Recent",
+      "geography": "Gulf of Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "recent_sea_level_rise_rate_max",
+      "value_numeric": 5.5,
+      "unit": "mm/year",
+      "comparison_operator": "=",
+      "time_period": "Recent",
+      "geography": "Gulf of Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "monsoon_sea_level_increase",
+      "value_numeric": 0.2,
+      "unit": "m",
+      "comparison_operator": "=",
+      "time_period": "Northeast Monsoon",
+      "geography": "Gulf of Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "monsoon_sea_level_increase",
+      "value_numeric": 0.1,
+      "unit": "m",
+      "comparison_operator": "=",
+      "time_period": "Southwest Monsoon",
+      "geography": "Andaman Coast",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-076": [
+    {
+      "metric_name": "projected_sea_level_rise_rate",
+      "value_numeric": 2.0,
+      "unit": "mm/year",
+      "comparison_operator": "=",
+      "time_period": "End-century",
+      "geography": "Thai coastline",
+      "scenario_label": "SSP2-4.5",
+      "notes": ""
+    },
+    {
+      "metric_name": "projected_sea_level_rise_rate",
+      "value_numeric": 5.0,
+      "unit": "mm/year",
+      "comparison_operator": ">",
+      "time_period": "End-century",
+      "geography": "Thai coastline",
+      "scenario_label": "SSP5-8.5",
+      "notes": ""
+    }
+  ],
+  "B-REQ-077": [
+    {
+      "metric_name": "inundated_area_expansion_min",
+      "value_numeric": 3.2,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "2030",
+      "geography": "Bangkok Metropolitan Region",
+      "scenario_label": "",
+      "notes": "Relative to 2011 flood"
+    },
+    {
+      "metric_name": "inundated_area_expansion_max",
+      "value_numeric": 3.6,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "2030",
+      "geography": "Bangkok Metropolitan Region",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "inundated_area_expansion_min",
+      "value_numeric": 8.2,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "2050",
+      "geography": "Bangkok Metropolitan Region",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "inundated_area_expansion_max",
+      "value_numeric": 8.4,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "2050",
+      "geography": "Bangkok Metropolitan Region",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "inundated_area_expansion_min",
+      "value_numeric": 14.0,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "2070",
+      "geography": "Bangkok Metropolitan Region",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "inundated_area_expansion_max",
+      "value_numeric": 15.1,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "2070",
+      "geography": "Bangkok Metropolitan Region",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "inundated_area_expansion_min",
+      "value_numeric": 21.4,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "2090",
+      "geography": "Bangkok Metropolitan Region",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "inundated_area_expansion_max",
+      "value_numeric": 26.2,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "2090",
+      "geography": "Bangkok Metropolitan Region",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-078": [
+    {
+      "metric_name": "projected_rainfall_increase_min",
+      "value_numeric": 12.72,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "2100",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "projected_rainfall_increase_max",
+      "value_numeric": 21.47,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "2100",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "projected_chao_phraya_discharge_increase_min",
+      "value_numeric": 39.0,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "2090",
+      "geography": "Chao Phraya Basin",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "projected_chao_phraya_discharge_increase_max",
+      "value_numeric": 51.0,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "2090",
+      "geography": "Chao Phraya Basin",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-079": [
+    {
+      "metric_name": "hot_threshold_min",
+      "value_numeric": 35.0,
+      "unit": "°C",
+      "comparison_operator": "=",
+      "time_period": "Current",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "hot_threshold_max",
+      "value_numeric": 39.9,
+      "unit": "°C",
+      "comparison_operator": "=",
+      "time_period": "Current",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "very_hot_threshold_min",
+      "value_numeric": 40.0,
+      "unit": "°C",
+      "comparison_operator": ">=",
+      "time_period": "Current",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-080": [
+    {
+      "metric_name": "observed_annual_mean_temperature",
+      "value_numeric": 28.5,
+      "unit": "°C",
+      "comparison_operator": "=",
+      "time_period": "2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "observed_monthly_maximum_temperature",
+      "value_numeric": 44.2,
+      "unit": "°C",
+      "comparison_operator": "=",
+      "time_period": "April 2024",
+      "geography": "Thoen District, Lampang",
+      "scenario_label": "",
+      "notes": "National record is 44.6°C"
+    }
+  ],
+  "B-REQ-083": [
+    {
+      "metric_name": "global_climate_risk_index_ranking",
+      "value_numeric": 17,
+      "unit": "rank",
+      "comparison_operator": "=",
+      "time_period": "2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": "Global Climate Risk Index 2026"
+    }
+  ],
+  "B-REQ-084": [
+    {
+      "metric_name": "long_term_climate_risk_rank_absolute_losses",
+      "value_numeric": 4,
+      "unit": "rank",
+      "comparison_operator": "=",
+      "time_period": "1995-2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "long_term_climate_risk_rank_people_affected",
+      "value_numeric": 6,
+      "unit": "rank",
+      "comparison_operator": "=",
+      "time_period": "1995-2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "long_term_climate_risk_rank_losses_relative_to_gdp",
+      "value_numeric": 24,
+      "unit": "rank",
+      "comparison_operator": "=",
+      "time_period": "1995-2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-085": [
+    {
+      "metric_name": "climate_risk_rank_absolute_losses",
+      "value_numeric": 11,
+      "unit": "rank",
+      "comparison_operator": "=",
+      "time_period": "2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "climate_risk_rank_fatalities",
+      "value_numeric": 24,
+      "unit": "rank",
+      "comparison_operator": "=",
+      "time_period": "2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "long_term_fatality_rank",
+      "value_numeric": 35,
+      "unit": "rank",
+      "comparison_operator": "=",
+      "time_period": "Long-term",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-086": [
+    {
+      "metric_name": "projected_gdp_decline_min",
+      "value_numeric": 7.0,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "By 2050",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "projected_gdp_decline_max",
+      "value_numeric": 14.0,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "By 2050",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-088": [
+    {
+      "metric_name": "agriculture_gdp_contraction_yoy",
+      "value_numeric": 3.5,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "Q1 2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "agricultural_employment_decline_yoy",
+      "value_numeric": 3.6,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "Q4 2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-089": [
+    {
+      "metric_name": "disaster_loss_share_gdp",
+      "value_numeric": 0.27,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "Highly affected years",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-091": [
+    {
+      "metric_name": "flood_affected_villages",
+      "value_numeric": 225745,
+      "unit": "villages/communities",
+      "comparison_operator": "=",
+      "time_period": "2015-2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "flood_fatalities",
+      "value_numeric": 623,
+      "unit": "deaths",
+      "comparison_operator": "=",
+      "time_period": "2015-2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "flood_damage_cost",
+      "value_numeric": 307.59,
+      "unit": "million USD",
+      "comparison_operator": "=",
+      "time_period": "2015-2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "drought_affected_villages",
+      "value_numeric": 158255,
+      "unit": "villages/communities",
+      "comparison_operator": "=",
+      "time_period": "2015-2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "drought_damage_cost",
+      "value_numeric": 66.29,
+      "unit": "million USD",
+      "comparison_operator": "=",
+      "time_period": "2015-2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "landslide_affected_villages",
+      "value_numeric": 743,
+      "unit": "villages/communities",
+      "comparison_operator": "=",
+      "time_period": "2015-2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "landslide_fatalities",
+      "value_numeric": 34,
+      "unit": "deaths",
+      "comparison_operator": "=",
+      "time_period": "2015-2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "windstorm_affected_villages",
+      "value_numeric": 142725,
+      "unit": "villages/communities",
+      "comparison_operator": "=",
+      "time_period": "2015-2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "windstorm_fatalities",
+      "value_numeric": 302,
+      "unit": "deaths",
+      "comparison_operator": "=",
+      "time_period": "2015-2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "windstorm_damage_cost",
+      "value_numeric": 16.07,
+      "unit": "million USD",
+      "comparison_operator": "=",
+      "time_period": "2015-2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-092": [
+    {
+      "metric_name": "communicable_disease_increase_yoy",
+      "value_numeric": 31.8,
+      "unit": "%",
+      "comparison_operator": "+",
+      "time_period": "2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "air_pollution_illness_cases",
+      "value_numeric": 12.0,
+      "unit": "million",
+      "comparison_operator": "=",
+      "time_period": "2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "air_pollution_illness_increase_yoy",
+      "value_numeric": 10.0,
+      "unit": "%",
+      "comparison_operator": "+",
+      "time_period": "2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": "Relative to 2023"
+    }
+  ],
+  "B-REQ-093": [
+    {
+      "metric_name": "heat_related_fatalities",
+      "value_numeric": 63,
+      "unit": "deaths",
+      "comparison_operator": "=",
+      "time_period": "2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "average_age_of_fatalities",
+      "value_numeric": 62,
+      "unit": "years",
+      "comparison_operator": "=",
+      "time_period": "2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "regional_concentration_share",
+      "value_numeric": 54.0,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "2024",
+      "geography": "Northeastern Region",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-094": [
+    {
+      "metric_name": "stunting_rate_before",
+      "value_numeric": 10.5,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "0-5 years",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "stunting_rate_after",
+      "value_numeric": 12.9,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "0-5 years",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "stunting_rate_before",
+      "value_numeric": 8.7,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "6-14 years",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "stunting_rate_after",
+      "value_numeric": 9.4,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "6-14 years",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "wasting_rate_before",
+      "value_numeric": 5.6,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "0-5 years",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "wasting_rate_after",
+      "value_numeric": 6.7,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "0-5 years",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "wasting_rate_before",
+      "value_numeric": 4.4,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "6-14 years",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "wasting_rate_after",
+      "value_numeric": 5.8,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "6-14 years",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-095": [
+    {
+      "metric_name": "coastal_erosion_affected_subdistricts",
+      "value_numeric": 77,
+      "unit": "sub-districts",
+      "comparison_operator": ">",
+      "time_period": "2019-2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-096": [
+    {
+      "metric_name": "coral_bleaching_share_nationwide",
+      "value_numeric": 86.6,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "May 2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "coral_bleaching_share_andaman",
+      "value_numeric": 76.7,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "May 2024",
+      "geography": "Andaman Sea",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "coral_bleaching_share_gulf",
+      "value_numeric": 92.3,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "May 2024",
+      "geography": "Gulf of Thailand",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "B-REQ-097": [
+    {
+      "metric_name": "forest_cover_share",
+      "value_numeric": 31.46,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "forest_cover_area",
+      "value_numeric": 101.79,
+      "unit": "million rai",
+      "comparison_operator": "=",
+      "time_period": "2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "forest_cover_change_yoy",
+      "value_numeric": 0.03,
+      "unit": "%",
+      "comparison_operator": "-",
+      "time_period": "2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "forest_cover_gain",
+      "value_numeric": 331952.0,
+      "unit": "rai",
+      "comparison_operator": "+",
+      "time_period": "Decade",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "forest_cover_loss",
+      "value_numeric": 832081.0,
+      "unit": "rai",
+      "comparison_operator": "-",
+      "time_period": "Decade",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "D-REQ-042": [
+    {
+      "metric_name": "agri_map_adjusted_area",
+      "value_numeric": 64559.0,
+      "unit": "rai",
+      "comparison_operator": "=",
+      "time_period": "Cumulative",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "crop_insurance_farmers_covered",
+      "value_numeric": 646479.0,
+      "unit": "farmers",
+      "comparison_operator": "=",
+      "time_period": "Cumulative",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "crop_insurance_area_covered",
+      "value_numeric": 8.49,
+      "unit": "million rai",
+      "comparison_operator": "=",
+      "time_period": "Cumulative",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "tourism_certifications_2023",
+      "value_numeric": 3419.0,
+      "unit": "certifications",
+      "comparison_operator": "=",
+      "time_period": "2023",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "tourism_certifications_2024",
+      "value_numeric": 3694.0,
+      "unit": "certifications",
+      "comparison_operator": "=",
+      "time_period": "2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "trained_community_members",
+      "value_numeric": 371.0,
+      "unit": "members",
+      "comparison_operator": "=",
+      "time_period": "Cumulative",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "strengthened_health_communities",
+      "value_numeric": 26.0,
+      "unit": "communities",
+      "comparison_operator": "=",
+      "time_period": "Cumulative",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "hnap_progress_initial",
+      "value_numeric": 65.0,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "hnap_progress_substantial",
+      "value_numeric": 35.0,
+      "unit": "%",
+      "comparison_operator": "=",
+      "time_period": "2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "E-REQ-008": [
+    {
+      "metric_name": "cbs_hazard_types_covered",
+      "value_numeric": 8.0,
+      "unit": "hazard types",
+      "comparison_operator": "=",
+      "time_period": "As of end-2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    },
+    {
+      "metric_name": "full_operational_implementation_target",
+      "value_numeric": 2026.0,
+      "unit": "year",
+      "comparison_operator": "=",
+      "time_period": "By 2026",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "E-REQ-019": [
+    {
+      "metric_name": "cbdrm_implemented_communities",
+      "value_numeric": 15851.0,
+      "unit": "communities/villages",
+      "comparison_operator": "=",
+      "time_period": "As of 2024",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "E-REQ-024": [
+    {
+      "metric_name": "esf_functional_areas_count",
+      "value_numeric": 18.0,
+      "unit": "functional areas",
+      "comparison_operator": "=",
+      "time_period": "Current",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": ""
+    }
+  ],
+  "E-REQ-030": [
+    {
+      "metric_name": "usar_certification_target_year",
+      "value_numeric": 2025.0,
+      "unit": "year",
+      "comparison_operator": "=",
+      "time_period": "Target 2025",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": "INSARAG External Classification certification expected year"
+    }
+  ],
+  "E-REQ-036": [
+    {
+      "metric_name": "initial_post_disaster_assessment_timeframe",
+      "value_numeric": 72.0,
+      "unit": "hours",
+      "comparison_operator": "<=",
+      "time_period": "Immediate",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": "Initial Assessment window post-disaster"
+    }
+  ],
+  "F-REQ-010": [
+    {
+      "metric_name": "nap_priority_sectors_count",
+      "value_numeric": 6.0,
+      "unit": "sectors",
+      "comparison_operator": "=",
+      "time_period": "Current",
+      "geography": "Thailand",
+      "scenario_label": "",
+      "notes": "Water, agriculture, tourism, public health, natural resources, human settlements"
+    }
+  ]
+}
