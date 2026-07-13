@@ -45,7 +45,7 @@ To fully support the A-BTR compliance queries, the following entities must be ad
 *A-BTR Mandates: C-036 to C-042 (mandating explicit tracking of embedded domestic budgets and international support).*
 
 7.  **`BUDGET_TAG_RECORD`**: Tracks domestic government budget line items explicitly tagged for climate adaptation, linked to projects and ministries. %% this code is non-existent in the Bureau of Budget's system yet %%
-8.  **`SUPPORT_TRACKING_RECORD`**: Tracks international support (Financial, Technology Transfer, and Capacity-Building) categorizing what is *needed* versus what is *received*.
+8.  **`SUPPORT_TRACKING_RECORD`**: Tracks international support (Financial, Technology Transfer, and Capacity-Building) categorizing what is *needed* versus what is *received*. 
 
 ### D. Institutional Governance & Data Stewardship
 *A-BTR Mandates: A-011 to A-022, C-027, C-047 (mandating the identification of specific focal points, committees, and data owners).*
@@ -58,7 +58,7 @@ To fully support the A-BTR compliance queries, the following entities must be ad
 *A-BTR Mandates: A-004 to A-007 (socio-economic context), plus NCAIF Services 2 & 5.*
 
 11. **`MACRO_ECONOMIC_STATISTIC`**: Stores baseline socio-economic metrics per spatial unit (GPP, GDP, poverty incidence, demographic counts) required to normalize absolute loss data into comparative risk indices.
-12. **`ENGINEERING_DESIGN_PARAMETER`**: Stores derived, actionable scientific outputs like Intensity-Duration-Frequency (IDF) curves, design runoff, and peak flow coefficients for infrastructure planning. %% which domains does this entity belong to? %%
+12. **`ENGINEERING_DESIGN_PARAMETER`**: Stores derived, actionable scientific outputs like Intensity-Duration-Frequency (IDF) curves, design runoff, and peak flow coefficients for infrastructure planning. %% which domains does this entity belong to? This is a product of service 5. Ok it should live inside this data system but we donnt have the domain for it yet. Probably it is more like the take-action stage of the adaptation cycle  %%
 
 ---
 
@@ -88,3 +88,7 @@ To bind these new entities into the CDM, the following primary/foreign key relat
 
 ## 4. Next Steps
 Once this comprehensive entity list is approved, the Python automation script (`run_cdm_refinement.py`) will be executed to inject these 12 entities and 12 relationships into the CSV files and synchronize the SQLite `a_btr_dissection.db` database.
+
+
+>[!comment] Overall comments
+>Does this addition cover the quantitative values that are reported in the A-BTR? this is a straightforward requirement because a database for structured data must answer to business requirements, of which is a a-btr reporting

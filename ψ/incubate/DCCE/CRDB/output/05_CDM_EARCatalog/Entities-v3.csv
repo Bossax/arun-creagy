@@ -1,0 +1,46 @@
+Domain_ID,Entity_Name,PK_Type,Term_ID,Definition,Remark
+DOM_EV,METEOROLOGICAL_OBSERVATION,UUID,TERM_029,Measured weather data from stations used as dynamic inputs.,Consolidated under DOM_EV
+DOM_EV,CLIMATE_DRIVER,UUID,TERM_002,Continuous physical slow-onset states (e.g. Sea Level Rise Temperature).,Consolidated under DOM_EV
+DOM_EV,ENVIRONMENTAL_DATA,UUID,TERM_061,A unified registry of physical environmental and spatial datasets (e.g. elevation soil roughness tides).,Replaces detailed physical tables (terrain soil hydrology etc.) and old dataset_catalog
+DOM_HAZ,CLIMATE_SCENARIO,UUID,TERM_052,Hypothetical future pathways (e.g. SSP5-8.5) used for projections.,
+DOM_HAZ,CLIMATE_PROJECTION,UUID,TERM_062,Projected climatic changes and indices associated with scenarios.,New entity tracking future projection outputs
+DOM_HAZ,HAZARDOUS_EVENT,DDPM_ID,TERM_001,The realized outcome of a hazard in the real world (e.g. cyclones droughts).,
+DOM_HAZ,HAZARD_MODELS,UUID,TERM_022,Computational engines that simulate hazards from drivers and static data.,
+DOM_HAZ,HAZARD_MAP,UUID,TERM_043,Spatial representation of hazard intensity (Modeled or Observed).,
+DOM_022,SPATIAL_UNIT,UUID,TERM_013,The geometric foundation (Administrative area census tracts watersheds).,
+DOM_022,EXPOSED_ASSET,UUID,TERM_010,People buildings or crops located in hazard-prone areas.,
+DOM_022,VULNERABILITY_FRAMEWORK,UUID,TERM_038,The methodological framework for vulnerability modeling.,
+DOM_022,VULNERABILITY_DIMENSION,UUID,TERM_041,Thematic pillars of vulnerability (e.g. Sensitivity Adaptive Capacity).,
+DOM_022,VULNERABILITY_STRUCTURE,UUID,TERM_042,The mapping of specific variables to vulnerability dimensions.,
+DOM_022,IMPACT_FUNCTION,UUID,TERM_039,Mathematical curves relating hazard intensity to damage percentage.,
+DOM_022,VULNERABILITY_DETERMINANT,UUID,TERM_011,Neutral social/economic indicators used as model variables.,
+DOM_023,RISK_ANALYSIS,UUID,TERM_032,An instance of a risk calculation (Probabilistic or Index calculation).,
+DOM_023,RISK_METRIC,UUID,TERM_031,Quantitative outcomes from probabilistic risk analysis (e.g. Expected Annual Loss).,
+DOM_023,COMPOSITE_INDEX,UUID,TERM_036,Quantitative scores of risk resilience and other index-based modeling.,
+DOM_024,DISASTER_EVENT,VARCHAR,TERM_045,A single observed occurrence of a hazardous event that becomes a disaster.,Renamed from DISASTER_RECORD; Layer A LDM MVD Event Anchor
+DOM_024,EVENT_LOCATION,VARCHAR,TERM_063,Location details mapping an event to multiple administrative spatial units.,New Layer A LDM MVD entity for administrative split mapping
+DOM_024,ASSESSMENT_CONTEXT,VARCHAR,TERM_064,Metadata bridge tracking assessment phase lead agency review status and date.,New Layer B/C LDM MVD entity preventing category collapse
+DOM_024,LD_PHYSICAL_DAMAGE,VARCHAR,TERM_065,Sectoral physical damage valuation records of destroyed/damaged assets.,New Layer B LDM MVD entity replacing physical loss_damage
+DOM_024,LD_ECONOMIC_LOSS,VARCHAR,TERM_066,Sectoral economic flow disruption records capturing foregone revenue.,New Layer B LDM MVD entity replacing economic loss_damage
+DOM_024,LD_RECOVERY_RECONSTRUCTION_NEEDS,VARCHAR,TERM_067,Derived post-assessment funding needs for recovery and rehabilitation.,New Layer B LDM MVD planning entity
+DOM_024,ENVIRONMENTAL_LOSS_RECORD,UUID,TERM_068,Ecological loss tracking (e.g. coral bleaching or burned forest acreage).,Value-add DCCE entity
+DOM_024,RELIEF_PAYMENT_RECORD,UUID,TERM_069,Tracking emergency relief funds and compensation payments.,Value-add DCCE entity
+DOM_024,ATTRIBUTION_LINK,UUID,TERM_007,The formal logical link asserting cause between loss and drivers/vulnerability.,
+DOM_030,RESILIENCE_FRAMEWORK,UUID,TERM_033,The methodological framework for resilience assessment.,
+DOM_030,RESILIENCE_DIMENSION,UUID,TERM_034,Thematic pillars (e.g. Social Economic Institutional) containing definitions of resilience.,
+DOM_030,RESILIENCE_STRUCTURE,UUID,TERM_035,Defines the weighting and aggregation logic for specific resilience dimensions.,
+DOM_030,RESILIENCE_ASSESSMENT,UUID,TERM_037,Application of a framework to a spatial unit to generate an index.,
+DOM_040,DECISION_CONTEXT,UUID,TERM_054,Defines the scope problem and uncertainty level for adaptation planning.,
+DOM_040,INSTITUTIONAL_BODY,UUID,TERM_070,Government agencies and focal points serving as data custodians and project managers.,New governance entity
+DOM_040,ADAPTATION_PORTFOLIO,UUID,TERM_055,Groups multiple adaptation options for collective evaluation.,
+DOM_040,ADAPTATION_OPTION,UUID,TERM_050,Standardized solutions from the Adaptation Options Library.,
+DOM_040,APPRAISAL_EVENT,UUID,TERM_056,Records the process of evaluating adaptation options.,
+DOM_040,APPRAISAL_METRIC,UUID,TERM_057,Detailed metrics representing the outcomes of an appraisal.,
+DOM_040,ADAPTATION_PROJECT,UUID,TERM_049,Specific implementation instances of an adaptation action.,
+DOM_050,ADAPTATION_OUTPUT,UUID,TERM_071,SMART project-level outputs (e.g. seawall length community training).,Replaces INTERVENTION_RESULT output aspects
+DOM_050,ADAPTATION_OUTCOME,UUID,TERM_072,Systemic resilience changes and progress indicators linked to global goals.,Replaces INTERVENTION_RESULT outcome aspects
+DOM_050,ADAPTATION_PROJECT_OUTCOME_CONTRIBUTION,UUID,TERM_075,Associative entity mapping projects to the systemic adaptation outcomes they contribute to.,Resolves MEL output-outcome level mismatch
+DOM_050,BUDGET_TAG_RECORD,UUID,TERM_073,Domestic climate budget tag records linked to specific projects.,New tag entity
+DOM_050,SUPPORT_TRACKING_RECORD,UUID,TERM_074,Tracking international financial tech or capacity-building support.,New support entity
+DOM_050,FUNDING_SOURCE,UUID,TERM_060,Tracking the origin of capital for adaptation projects.,
+DOM_050,RISK_TOLERANCE_PROFILE,UUID,TERM_059,Captures stakeholder risk appetite to guide decision-making.,

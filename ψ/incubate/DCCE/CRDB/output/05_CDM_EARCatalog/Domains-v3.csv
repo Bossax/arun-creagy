@@ -1,0 +1,9 @@
+Domain_ID,Domain_Name,Owner,Core_Logic
+DOM_EV,Essential Variables,Climate Science,Registry of climate observations drivers and spatial environmental datasets.
+DOM_HAZ,Hazard and Modeling,Risk Analysis,Simulation of climate projections and hazardous events.
+DOM_022,Vulnerability and Exposure,Risk Analysis,Derivation of exposure data and vulnerability modeling.
+DOM_023,Risk Analysis,Risk Analysis,Qualitative and quantitative calculations of risks.
+DOM_024,Disaster and Impact,Risk Analysis,Three-layer LDM MVD tracking of disaster events and losses.
+DOM_030,Resilience Assessment,Policy and Planning,Hierarchical assessment of adaptive capacity.
+DOM_040,Adaptation Planning,Implementation,Adaptation cycle decision contexts and projects.
+DOM_050,Monitoring Evaluation Learning,Policy and Planning,Tracking project outputs outcomes budgets and support.

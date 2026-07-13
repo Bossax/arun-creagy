@@ -1,0 +1,148 @@
+quantitative_value_id,evidence_unit_id,metric_name,value_numeric,unit,comparison_operator,time_period,geography,scenario_label,notes,target_cdm_entity,mapping_type,mapping_rationale
+QTY-001,EVU-004,population,65.95,million,=,2024,Thailand,,Demographic baseline,VULNERABILITY_DETERMINANT,Existing Entity,Baseline demographic/socio-economic normalizer
+QTY-002,EVU-004,urbanization_rate,34.3,%,=,2024,Thailand,,Residing in urban areas,VULNERABILITY_DETERMINANT,Existing Entity,Baseline demographic/socio-economic normalizer
+QTY-003,EVU-044,observed_annual_mean_temperature,28.5,°C,=,2024,Thailand,,Highest in 74 years,METEOROLOGICAL_OBSERVATION,Existing Entity,Direct station climate observation
+QTY-004,EVU-044,temperature_anomaly_above_normal,1.1,°C,+,2024,Thailand,,Relative to 1991-2020 normal of 27.4°C,METEOROLOGICAL_OBSERVATION,Existing Entity,Direct station climate observation
+QTY-005,EVU-047,projected_mean_temperature_increase_min,0.98,°C,+,2021-2040,Thailand,SSP2-4.5/SSP5-8.5,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-006,EVU-047,projected_mean_temperature_increase_max,1.34,°C,+,2021-2040,Thailand,SSP2-4.5/SSP5-8.5,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-007,EVU-047,projected_mean_temperature_increase_min,1.42,°C,+,2041-2060,Thailand,SSP2-4.5/SSP5-8.5,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-008,EVU-047,projected_mean_temperature_increase_max,1.98,°C,+,2041-2060,Thailand,SSP2-4.5/SSP5-8.5,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-009,EVU-047,projected_mean_temperature_increase_min,2.01,°C,+,2081-2100,Thailand,SSP2-4.5/SSP5-8.5,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-010,EVU-047,projected_mean_temperature_increase_max,3.39,°C,+,2081-2100,Thailand,SSP2-4.5/SSP5-8.5,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-011,EVU-049,projected_tmax_increase_min,0.9,°C,+,2021-2040,Thailand,SSP2-4.5/SSP5-8.5,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-012,EVU-049,projected_tmax_increase_max,1.16,°C,+,2021-2040,Thailand,SSP2-4.5/SSP5-8.5,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-013,EVU-049,projected_tmax_increase_min,1.33,°C,+,2041-2060,Thailand,SSP2-4.5/SSP5-8.5,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-014,EVU-049,projected_tmax_increase_max,1.84,°C,+,2041-2060,Thailand,SSP2-4.5/SSP5-8.5,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-015,EVU-049,projected_tmax_increase_min,1.92,°C,+,2081-2100,Thailand,SSP2-4.5/SSP5-8.5,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-016,EVU-049,projected_tmax_increase_max,3.42,°C,+,2081-2100,Thailand,SSP2-4.5/SSP5-8.5,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-017,EVU-050,projected_tmin_increase_min,1.08,°C,+,2021-2040,Thailand,SSP2-4.5/SSP5-8.5,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-018,EVU-050,projected_tmin_increase_max,1.43,°C,+,2021-2040,Thailand,SSP2-4.5/SSP5-8.5,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-019,EVU-050,projected_tmin_increase_min,1.47,°C,+,2041-2060,Thailand,SSP2-4.5/SSP5-8.5,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-020,EVU-050,projected_tmin_increase_max,2.08,°C,+,2041-2060,Thailand,SSP2-4.5/SSP5-8.5,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-021,EVU-050,projected_tmin_increase_min,2.03,°C,+,2081-2100,Thailand,SSP2-4.5/SSP5-8.5,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-022,EVU-050,projected_tmin_increase_max,3.49,°C,+,2081-2100,Thailand,SSP2-4.5/SSP5-8.5,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-023,EVU-055,observed_annual_rainfall,1704.4,mm,=,2024,Thailand,,,METEOROLOGICAL_OBSERVATION,Existing Entity,Direct station climate observation
+QTY-024,EVU-055,rainfall_anomaly_above_normal,81.5,mm,+,2024,Thailand,,"Relative to 1991-2020 average of 1,622.9 mm",METEOROLOGICAL_OBSERVATION,Existing Entity,Direct station climate observation
+QTY-025,EVU-055,rainfall_anomaly_percentage,5.0,%,+,2024,Thailand,,,METEOROLOGICAL_OBSERVATION,Existing Entity,Direct station climate observation
+QTY-026,EVU-055,rainfall_increase_relative_to_previous_year,183.8,mm,+,2024,Thailand,,Higher than 2023,METEOROLOGICAL_OBSERVATION,Existing Entity,Direct station climate observation
+QTY-027,EVU-065,observed_sea_surface_temperature,32.7,°C,=,May 2024,Eastern Gulf of Thailand,,,METEOROLOGICAL_OBSERVATION,Existing Entity,Direct station climate observation
+QTY-028,EVU-071,flooded_provinces_count,69.0,provinces,=,2022,Thailand,,,DISASTER_EVENT,MVD Synced Entity,Historical disaster event
+QTY-029,EVU-074,historical_flood_return_period,120.0,years,=,Historical,Chao Phraya Basin,,,DISASTER_EVENT,MVD Synced Entity,Historical disaster event
+QTY-030,EVU-074,projected_flood_return_period,19.0,years,=,2040-2059,Chao Phraya Basin,SSP2-4.5,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-031,EVU-074,projected_flood_return_period,6.0,years,=,2040-2059,Chao Phraya Basin,SSP5-8.5,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-032,EVU-075,flood_recurrence_probability_2011_equivalent,50.0,%,=,By 2050,Chao Phraya Basin,,,CLIMATE_PROJECTION,Proposed Entity,Projected risk probability
+QTY-033,EVU-077,elevation_msl_min,0.5,meters,=,Current,Bangkok,,,ENVIRONMENTAL_DATA,Existing Entity,Topographical/geographical baseline dataset registered under Environmental Data
+QTY-034,EVU-077,elevation_msl_max,1.5,meters,=,Current,Bangkok,,,ENVIRONMENTAL_DATA,Existing Entity,Topographical/geographical baseline dataset registered under Environmental Data
+QTY-035,EVU-079,worst_drought_recurrence_period,15.0,years,=,2015,Thailand,,,CLIMATE_PROJECTION,Proposed Entity,Projected risk probability
+QTY-036,EVU-085,landslide_incidents_count,310.0,incidents,>,2024,Thailand,,,DISASTER_EVENT,MVD Synced Entity,Historical disaster event
+QTY-037,EVU-087,landslide_probability_increase,90.0,%,+,Future,Thailand,RCP 4.5,For 100-year extreme events,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-038,EVU-087,landslide_affected_area_share,40.0,%,>,Future,Thailand,RCP 4.5,,DISASTER_EVENT,MVD Synced Entity,Historical disaster event
+QTY-039,EVU-087,landslide_high_risk_area_share,80.0,%,=,Future,Thailand,RCP 8.5,,DISASTER_EVENT,MVD Synced Entity,Historical disaster event
+QTY-040,EVU-089,landslide_probability_threshold,0.9,probability,>,2040-2059,Thailand,RCP 8.5,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-041,EVU-094,historical_cyclones_total,206.0,cyclones,=,1951-2024,Thailand,,,HAZARDOUS_EVENT,Existing Entity,Historical hazard profile
+QTY-042,EVU-094,average_cyclone_frequency,2.78,events/year,=,1951-2024,Thailand,,,HAZARDOUS_EVENT,Existing Entity,Historical hazard profile
+QTY-043,EVU-095,cyclone_seasonality_share,80.6,%,=,August-November,Thailand,,,HAZARDOUS_EVENT,Existing Entity,Historical hazard profile
+QTY-044,EVU-095,cyclone_seasonality_share_october,27.2,%,=,October,Thailand,,,HAZARDOUS_EVENT,Existing Entity,Historical hazard profile
+QTY-045,EVU-095,cyclone_seasonality_share_september,26.7,%,=,September,Thailand,,,HAZARDOUS_EVENT,Existing Entity,Historical hazard profile
+QTY-046,EVU-098,synthetic_cyclones_count,64000.0,cyclones,>,Future,Thailand,SSP2-4.5/SSP5-8.5,,CLIMATE_PROJECTION,Proposed Entity,Projected synthetic cyclones
+QTY-047,EVU-098,gcm_count,9.0,models,=,Future,Thailand,SSP2-4.5/SSP5-8.5,,CLIMATE_PROJECTION,Proposed Entity,Number of global climate models used for projections
+QTY-048,EVU-099,extreme_wind_speed_increase,100.0,%,>,Future,Bangkok,,99th percentile maximum wind speed,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-049,EVU-100,extreme_cyclone_duration_increase,72.0,%,+,Future,Thailand,SSP2-4.5,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-050,EVU-101,wildfire_incidents_total,60000.0,incidents,>,Past Decade,Thailand,,,DISASTER_EVENT,MVD Synced Entity,Historical wildfire disaster events
+QTY-051,EVU-101,wildfire_burned_area_total,1.4,million rai,>,Past Decade,Thailand,,,ENVIRONMENTAL_LOSS_RECORD,Value-Add Entity,Non-economic ecosystem and forest impacts
+QTY-052,EVU-102,wildfire_incidents_northern_region,42305.0,incidents,=,2015-2024,Northern Region,,,DISASTER_EVENT,MVD Synced Entity,Historical wildfire disaster events
+QTY-053,EVU-102,wildfire_burned_area_northern_region,984143.0,rai,=,2015-2024,Northern Region,,,ENVIRONMENTAL_LOSS_RECORD,Value-Add Entity,Non-economic ecosystem and forest impacts
+QTY-054,EVU-103,human_caused_wildfires_share,90.0,%,>,Annual,Thailand,,,HAZARDOUS_EVENT,Existing Entity,Wildfire hazard behavior or recurrence metric
+QTY-055,EVU-104,repeated_burning_share_2_or_more,67.0,%,=,2014-2023,Thailand,,,HAZARDOUS_EVENT,Existing Entity,Wildfire hazard behavior or recurrence metric
+QTY-056,EVU-104,repeated_burning_share_5_or_more,22.0,%,=,2014-2023,Thailand,,,HAZARDOUS_EVENT,Existing Entity,Wildfire hazard behavior or recurrence metric
+QTY-057,EVU-107,wildfire_prone_area_share,50.0,%,>,Annual,22 administrative regions,,,HAZARDOUS_EVENT,Existing Entity,Wildfire hazard behavior or recurrence metric
+QTY-058,EVU-107,wildfire_prone_regions_count,22.0,regions,=,Annual,Thailand,,,HAZARDOUS_EVENT,Existing Entity,Wildfire hazard behavior or recurrence metric
+QTY-059,EVU-109,historical_sea_level_rise_rate,16.4,mm/year,=,1951-1991,Fort Phrachul,,Error margin: ±0.85 mm/year,CLIMATE_DRIVER,Existing Entity,Long-term slow-onset driver state
+QTY-060,EVU-109,historical_sea_level_rise_rate,2.3,mm/year,=,1951-1991,Ko Taphao Noi,,Error margin: ±1.1 mm/year,CLIMATE_DRIVER,Existing Entity,Long-term slow-onset driver state
+QTY-061,EVU-109,historical_sea_level_rise_rate_average,6.0,mm/year,=,1940-2014,Thai coastline,,,CLIMATE_DRIVER,Existing Entity,Long-term slow-onset driver state
+QTY-062,EVU-110,relative_sea_level_rise_rate,0.021,m/year,=,Before 2004,Bangkok,,,CLIMATE_DRIVER,Existing Entity,Long-term slow-onset driver state
+QTY-063,EVU-110,relative_sea_level_rise_rate,0.013,m/year,=,After groundwater regulation,Bangkok,,,CLIMATE_DRIVER,Existing Entity,Long-term slow-onset driver state
+QTY-064,EVU-111,recent_sea_level_rise_rate_min,3.0,mm/year,=,Recent,Gulf of Thailand,,,CLIMATE_DRIVER,Existing Entity,Long-term slow-onset driver state
+QTY-065,EVU-111,recent_sea_level_rise_rate_max,5.5,mm/year,=,Recent,Gulf of Thailand,,,CLIMATE_DRIVER,Existing Entity,Long-term slow-onset driver state
+QTY-066,EVU-111,monsoon_sea_level_increase,0.2,m,=,Northeast Monsoon,Gulf of Thailand,,,CLIMATE_DRIVER,Existing Entity,Long-term slow-onset driver state
+QTY-067,EVU-111,monsoon_sea_level_increase,0.1,m,=,Southwest Monsoon,Andaman Coast,,,CLIMATE_DRIVER,Existing Entity,Long-term slow-onset driver state
+QTY-068,EVU-113,projected_sea_level_rise_rate,2.0,mm/year,=,End-century,Thai coastline,SSP2-4.5,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-069,EVU-113,projected_sea_level_rise_rate,5.0,mm/year,>,End-century,Thai coastline,SSP5-8.5,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-070,EVU-114,inundated_area_expansion_min,3.2,%,=,2030,Bangkok Metropolitan Region,,Relative to 2011 flood,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-071,EVU-114,inundated_area_expansion_max,3.6,%,=,2030,Bangkok Metropolitan Region,,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-072,EVU-114,inundated_area_expansion_min,8.2,%,=,2050,Bangkok Metropolitan Region,,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-073,EVU-114,inundated_area_expansion_max,8.4,%,=,2050,Bangkok Metropolitan Region,,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-074,EVU-114,inundated_area_expansion_min,14.0,%,=,2070,Bangkok Metropolitan Region,,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-075,EVU-114,inundated_area_expansion_max,15.1,%,=,2070,Bangkok Metropolitan Region,,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-076,EVU-114,inundated_area_expansion_min,21.4,%,=,2090,Bangkok Metropolitan Region,,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-077,EVU-114,inundated_area_expansion_max,26.2,%,=,2090,Bangkok Metropolitan Region,,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-078,EVU-115,projected_rainfall_increase_min,12.72,%,=,2100,Thailand,,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-079,EVU-115,projected_rainfall_increase_max,21.47,%,=,2100,Thailand,,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-080,EVU-115,projected_chao_phraya_discharge_increase_min,39.0,%,=,2090,Chao Phraya Basin,,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-081,EVU-115,projected_chao_phraya_discharge_increase_max,51.0,%,=,2090,Chao Phraya Basin,,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-082,EVU-116,hot_threshold_min,35.0,°C,=,Current,Thailand,,,RISK_TOLERANCE_PROFILE,Existing Entity,Planning limits or risk tolerance thresholds
+QTY-083,EVU-116,hot_threshold_max,39.9,°C,=,Current,Thailand,,,RISK_TOLERANCE_PROFILE,Existing Entity,Planning limits or risk tolerance thresholds
+QTY-084,EVU-116,very_hot_threshold_min,40.0,°C,>=,Current,Thailand,,,RISK_TOLERANCE_PROFILE,Existing Entity,Planning limits or risk tolerance thresholds
+QTY-085,EVU-117,observed_annual_mean_temperature,28.5,°C,=,2024,Thailand,,,METEOROLOGICAL_OBSERVATION,Existing Entity,Direct station climate observation
+QTY-086,EVU-117,observed_monthly_maximum_temperature,44.2,°C,=,April 2024,"Thoen District, Lampang",,National record is 44.6°C,METEOROLOGICAL_OBSERVATION,Existing Entity,Direct station climate observation
+QTY-087,EVU-120,global_climate_risk_index_ranking,17.0,rank,=,2024,Thailand,,Global Climate Risk Index 2026,COMPOSITE_INDEX,Existing Entity,Recursive risk/resilience composite score
+QTY-088,EVU-121,long_term_climate_risk_rank_absolute_losses,4.0,rank,=,1995-2024,Thailand,,,COMPOSITE_INDEX,Existing Entity,Recursive risk/resilience composite score
+QTY-089,EVU-121,long_term_climate_risk_rank_people_affected,6.0,rank,=,1995-2024,Thailand,,,COMPOSITE_INDEX,Existing Entity,Recursive risk/resilience composite score
+QTY-090,EVU-121,long_term_climate_risk_rank_losses_relative_to_gdp,24.0,rank,=,1995-2024,Thailand,,,COMPOSITE_INDEX,Existing Entity,Recursive risk/resilience composite score
+QTY-091,EVU-122,climate_risk_rank_absolute_losses,11.0,rank,=,2024,Thailand,,,COMPOSITE_INDEX,Existing Entity,Recursive risk/resilience composite score
+QTY-092,EVU-122,climate_risk_rank_fatalities,24.0,rank,=,2024,Thailand,,,DISASTER_EVENT,MVD Synced Entity,"Immediate human, health, and spatial impact statistics"
+QTY-093,EVU-122,long_term_fatality_rank,35.0,rank,=,Long-term,Thailand,,,COMPOSITE_INDEX,Existing Entity,Recursive risk/resilience composite score
+QTY-094,EVU-123,projected_gdp_decline_min,7.0,%,=,By 2050,Thailand,,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-095,EVU-123,projected_gdp_decline_max,14.0,%,=,By 2050,Thailand,,,CLIMATE_PROJECTION,Proposed Entity,Future projected hazard and climate parameter
+QTY-096,EVU-125,agriculture_gdp_contraction_yoy,3.5,%,=,Q1 2024,Thailand,,,LD_ECONOMIC_LOSS,MVD Synced Entity,Sectoral economic flow disruption (baseline-vs-actual counterfactual)
+QTY-097,EVU-125,agricultural_employment_decline_yoy,3.6,%,=,Q4 2024,Thailand,,,DISASTER_EVENT,MVD Synced Entity,"Immediate human, health, and spatial impact statistics"
+QTY-098,EVU-126,disaster_loss_share_gdp,0.27,%,=,Highly affected years,Thailand,,,LD_ECONOMIC_LOSS,MVD Synced Entity,Sectoral economic flow disruption (baseline-vs-actual counterfactual)
+QTY-099,EVU-128,flood_affected_villages,225745.0,villages/communities,=,2015-2024,Thailand,,,DISASTER_EVENT,MVD Synced Entity,"Immediate human, health, and spatial impact statistics"
+QTY-100,EVU-128,flood_fatalities,623.0,deaths,=,2015-2024,Thailand,,,DISASTER_EVENT,MVD Synced Entity,"Immediate human, health, and spatial impact statistics"
+QTY-101,EVU-128,flood_damage_cost,307.59,million USD,=,2015-2024,Thailand,,,LD_PHYSICAL_DAMAGE,MVD Synced Entity,Sectoral physical damage valuation (destroyed/damaged units & assets)
+QTY-102,EVU-128,drought_affected_villages,158255.0,villages/communities,=,2015-2024,Thailand,,,DISASTER_EVENT,MVD Synced Entity,"Immediate human, health, and spatial impact statistics"
+QTY-103,EVU-128,drought_damage_cost,66.29,million USD,=,2015-2024,Thailand,,,LD_PHYSICAL_DAMAGE,MVD Synced Entity,Sectoral physical damage valuation (destroyed/damaged units & assets)
+QTY-104,EVU-128,landslide_affected_villages,743.0,villages/communities,=,2015-2024,Thailand,,,DISASTER_EVENT,MVD Synced Entity,"Immediate human, health, and spatial impact statistics"
+QTY-105,EVU-128,landslide_fatalities,34.0,deaths,=,2015-2024,Thailand,,,DISASTER_EVENT,MVD Synced Entity,"Immediate human, health, and spatial impact statistics"
+QTY-106,EVU-128,windstorm_affected_villages,142725.0,villages/communities,=,2015-2024,Thailand,,,DISASTER_EVENT,MVD Synced Entity,"Immediate human, health, and spatial impact statistics"
+QTY-107,EVU-128,windstorm_fatalities,302.0,deaths,=,2015-2024,Thailand,,,DISASTER_EVENT,MVD Synced Entity,"Immediate human, health, and spatial impact statistics"
+QTY-108,EVU-128,windstorm_damage_cost,16.07,million USD,=,2015-2024,Thailand,,,LD_PHYSICAL_DAMAGE,MVD Synced Entity,Sectoral physical damage valuation (destroyed/damaged units & assets)
+QTY-109,EVU-129,communicable_disease_increase_yoy,31.8,%,+,2024,Thailand,,,DISASTER_EVENT,MVD Synced Entity,"Immediate human, health, and spatial impact statistics"
+QTY-110,EVU-129,air_pollution_illness_cases,12.0,million,=,2024,Thailand,,,DISASTER_EVENT,MVD Synced Entity,"Immediate human, health, and spatial impact statistics"
+QTY-111,EVU-129,air_pollution_illness_increase_yoy,10.0,%,+,2024,Thailand,,Relative to 2023,DISASTER_EVENT,MVD Synced Entity,"Immediate human, health, and spatial impact statistics"
+QTY-112,EVU-130,heat_related_fatalities,63.0,deaths,=,2024,Thailand,,,DISASTER_EVENT,MVD Synced Entity,"Immediate human, health, and spatial impact statistics"
+QTY-113,EVU-130,average_age_of_fatalities,62.0,years,=,2024,Thailand,,,DISASTER_EVENT,MVD Synced Entity,"Immediate human, health, and spatial impact statistics"
+QTY-114,EVU-130,regional_concentration_share,54.0,%,=,2024,Northeastern Region,,,DISASTER_EVENT,MVD Synced Entity,"Immediate human, health, and spatial impact statistics"
+QTY-115,EVU-131,stunting_rate_before,10.5,%,=,0-5 years,Thailand,,,DISASTER_EVENT,MVD Synced Entity,"Immediate human, health, and spatial impact statistics"
+QTY-116,EVU-131,stunting_rate_after,12.9,%,=,0-5 years,Thailand,,,DISASTER_EVENT,MVD Synced Entity,"Immediate human, health, and spatial impact statistics"
+QTY-117,EVU-131,stunting_rate_before,8.7,%,=,6-14 years,Thailand,,,DISASTER_EVENT,MVD Synced Entity,"Immediate human, health, and spatial impact statistics"
+QTY-118,EVU-131,stunting_rate_after,9.4,%,=,6-14 years,Thailand,,,DISASTER_EVENT,MVD Synced Entity,"Immediate human, health, and spatial impact statistics"
+QTY-119,EVU-131,wasting_rate_before,5.6,%,=,0-5 years,Thailand,,,DISASTER_EVENT,MVD Synced Entity,"Immediate human, health, and spatial impact statistics"
+QTY-120,EVU-131,wasting_rate_after,6.7,%,=,0-5 years,Thailand,,,DISASTER_EVENT,MVD Synced Entity,"Immediate human, health, and spatial impact statistics"
+QTY-121,EVU-131,wasting_rate_before,4.4,%,=,6-14 years,Thailand,,,DISASTER_EVENT,MVD Synced Entity,"Immediate human, health, and spatial impact statistics"
+QTY-122,EVU-131,wasting_rate_after,5.8,%,=,6-14 years,Thailand,,,DISASTER_EVENT,MVD Synced Entity,"Immediate human, health, and spatial impact statistics"
+QTY-123,EVU-132,coastal_erosion_affected_subdistricts,77.0,sub-districts,>,2019-2024,Thailand,,,ENVIRONMENTAL_LOSS_RECORD,Value-Add Entity,Non-economic ecosystem and forest impacts
+QTY-124,EVU-133,coral_bleaching_share_nationwide,86.6,%,=,May 2024,Thailand,,,ENVIRONMENTAL_LOSS_RECORD,Value-Add Entity,Non-economic ecosystem and forest impacts
+QTY-125,EVU-133,coral_bleaching_share_andaman,76.7,%,=,May 2024,Andaman Sea,,,ENVIRONMENTAL_LOSS_RECORD,Value-Add Entity,Non-economic ecosystem and forest impacts
+QTY-126,EVU-133,coral_bleaching_share_gulf,92.3,%,=,May 2024,Gulf of Thailand,,,ENVIRONMENTAL_LOSS_RECORD,Value-Add Entity,Non-economic ecosystem and forest impacts
+QTY-127,EVU-134,forest_cover_share,31.46,%,=,2024,Thailand,,,ENVIRONMENTAL_LOSS_RECORD,Value-Add Entity,Non-economic ecosystem and forest impacts
+QTY-128,EVU-134,forest_cover_area,101.79,million rai,=,2024,Thailand,,,ENVIRONMENTAL_LOSS_RECORD,Value-Add Entity,Non-economic ecosystem and forest impacts
+QTY-129,EVU-134,forest_cover_change_yoy,0.03,%,-,2024,Thailand,,,ENVIRONMENTAL_LOSS_RECORD,Value-Add Entity,Non-economic ecosystem and forest impacts
+QTY-130,EVU-134,forest_cover_gain,331952.0,rai,+,Decade,Thailand,,,ENVIRONMENTAL_LOSS_RECORD,Value-Add Entity,Non-economic ecosystem and forest impacts
+QTY-131,EVU-134,forest_cover_loss,832081.0,rai,-,Decade,Thailand,,,ENVIRONMENTAL_LOSS_RECORD,Value-Add Entity,Non-economic ecosystem and forest impacts
+QTY-132,EVU-271,agri_map_adjusted_area,64559.0,rai,=,Cumulative,Thailand,,,ADAPTATION_OUTPUT,Existing Entity,Immediate project output counts
+QTY-133,EVU-271,crop_insurance_farmers_covered,646479.0,farmers,=,Cumulative,Thailand,,,ADAPTATION_OUTPUT,Existing Entity,Immediate project output counts
+QTY-134,EVU-271,crop_insurance_area_covered,8.49,million rai,=,Cumulative,Thailand,,,ADAPTATION_OUTPUT,Existing Entity,Immediate project output counts
+QTY-135,EVU-271,tourism_certifications_2023,3419.0,certifications,=,2023,Thailand,,,ADAPTATION_OUTPUT,Existing Entity,Immediate project output counts
+QTY-136,EVU-271,tourism_certifications_2024,3694.0,certifications,=,2024,Thailand,,,ADAPTATION_OUTPUT,Existing Entity,Immediate project output counts
+QTY-137,EVU-271,trained_community_members,371.0,members,=,Cumulative,Thailand,,,ADAPTATION_OUTPUT,Existing Entity,Immediate project output counts
+QTY-138,EVU-271,strengthened_health_communities,26.0,communities,=,Cumulative,Thailand,,,ADAPTATION_OUTPUT,Existing Entity,Immediate project output counts
+QTY-139,EVU-271,hnap_progress_initial,65.0,%,=,2024,Thailand,,,ADAPTATION_OUTCOME,Existing Entity,Capacity-building progress and certification target outcomes
+QTY-140,EVU-271,hnap_progress_substantial,35.0,%,=,2024,Thailand,,,ADAPTATION_OUTCOME,Existing Entity,Capacity-building progress and certification target outcomes
+QTY-141,EVU-299,cbs_hazard_types_covered,8.0,hazard types,=,As of end-2024,Thailand,,,ADAPTATION_OUTPUT,Existing Entity,Immediate project output counts
+QTY-142,EVU-299,full_operational_implementation_target,2026.0,year,=,By 2026,Thailand,,,ADAPTATION_OUTCOME,Existing Entity,Capacity-building progress and certification target outcomes
+QTY-143,EVU-310,cbdrm_implemented_communities,15851.0,communities/villages,=,As of 2024,Thailand,,,ADAPTATION_OUTCOME,Existing Entity,Capacity-building progress and certification target outcomes
+QTY-144,EVU-315,esf_functional_areas_count,18.0,functional areas,=,Current,Thailand,,,DECISION_CONTEXT,Existing Entity,Administrative target/framework constraint
+QTY-145,EVU-321,usar_certification_target_year,2025.0,year,=,Target 2025,Thailand,,INSARAG External Classification certification expected year,ADAPTATION_OUTCOME,Existing Entity,Capacity-building progress and certification target outcomes
+QTY-146,EVU-327,initial_post_disaster_assessment_timeframe,72.0,hours,<=,Immediate,Thailand,,Initial Assessment window post-disaster,DECISION_CONTEXT,Existing Entity,Administrative target/framework constraint
+QTY-147,EVU-349,nap_priority_sectors_count,6.0,sectors,=,Current,Thailand,,"Water, agriculture, tourism, public health, natural resources, human settlements",DECISION_CONTEXT,Existing Entity,Administrative target/framework constraint
