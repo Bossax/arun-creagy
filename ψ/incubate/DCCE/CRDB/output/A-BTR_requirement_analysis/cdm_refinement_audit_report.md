@@ -34,8 +34,11 @@ To fully support the A-BTR compliance queries, the following entities must be ad
 5.  **`ADAPTATION_OUTPUT`**: Replaces the generic `INTERVENTION_RESULT`. Tracks immediate, countable deliverables of an adaptation project (e.g., number of training workshops held, length of seawall built).
 6.  **`ADAPTATION_OUTCOME`**: Tracks measurable changes in resilience, vulnerability reduction, and adaptive capacity (e.g., % reduction in expected annual loss, improvement in food security indices) linked to GGA/Belém targets.
 
-%% is there 'Adaptation_project' table yet? what are adjacent entities to fully describe an adaptation project?
-Do we need a mapping table for GGA dimensional and thematic indicators?
+%%
+- is there 'Adaptation_project' table yet? what are adjacent entities to fully describe an adaptation project?
+- Does the ADAPTATION_OUTPUT track at project level or aggregate? since A-BTR reports aggregate statistics, should the unit of analysis be project or country level? 
+- Do we need a mapping table for GGA dimensional and thematic indicators? so that we can seal the logical framework of linking existing indicators produced by line agencies to GGA indicators. This allows for dynamic mapping rather than hard coding this logic somewhere else (check if I am correct, compare the the lesson from the M&E platform) 
+- There is still unclear issues about what M&E platform can answer. Are those indicators reported by the focal point line agencies map-able to GGA indicators? or are those indicators focused on tracking NAP which is not fully aligned with GGD yet
 %%
 
 ### C. Finance & Support Tracking
