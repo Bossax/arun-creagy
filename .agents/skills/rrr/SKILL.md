@@ -52,21 +52,16 @@ $LATEST_JSONL = Get-ChildItem -Path "$PROJECT_BASE\*.jsonl" | Sort-Object LastWr
 if ($LATEST_JSONL) { $SESSION_ID = $LATEST_JSONL.BaseName; Write-Host "SESSION: $($SESSION_ID.Substring(0, 8))" }
 ```
 
-### 1.5. Spawn timestamp miner (background subagent — win32 adapted)
+### 1.5. Extract timestamps
 
-Spawn ONE background Agent to extract real timestamps:
+> [!important]
+> **Token Optimization:** We use a static Python script for timestamp extraction to avoid context inheritance and parsing errors.
 
-```
-Agent({
-  name: "timestamp-miner",
-  description: "Extract session timestamps for /rrr (win32)",
-  run_in_background: true,
-  prompt: `Extract ISO timestamps from a session .jsonl file on Windows.
-Read-only.
+Run the predefined miner script to extract session timestamps:
 
-Command:
-powershell.exe -NoProfile -Command "$PROJECT_BASE = Get-ChildItem -Path \"$env:USERPROFILE\\.gemini\\tmp\\arun-creagy\\chats\" | Sort-Object LastWriteTime -Descending | Select-Object -First 1; $LATEST_JSONL = Get-ChildItem -Path \"$PROJECT_BASE\\*.jsonl\" | Sort-Object LastWriteTime -Descending | Select-Object -First 1; if ($LATEST_JSONL) { python3 -c \"import json, os; from datetime import datetime, timezone, timedelta; tz = timezone(timedelta(hours=7)); f_path = r'$($LATEST_JSONL.FullName)'; with open(f_path, encoding='utf-8') as f: [print(f'{datetime.fromisoformat(m['timestamp'].replace(\"Z\", \"+00:00\")).astimezone(tz).strftime(\"%Y-%m-%d %H:%M\")} | {m['content'][:80]}') for m in (json.loads(l) for l in f) if m.get('type') == 'user']\" }"
-})
+```powershell
+# Assuming $ORACLE_ROOT is resolved from step 1
+python "$ORACLE_ROOT\.agents\skills\rrr\scripts\miner.py"
 ```
 
 ### 2. Write Retrospective (main agent)
@@ -83,9 +78,7 @@ powershell.exe -NoProfile -Command "$PROJECT_BASE = Get-ChildItem -Path \"$env:U
 > [!important]
 > Do NOT use `write_file` for learnings. Use `arra_learn` to ensure the pattern is indexed in the Oracle brain and available for hybrid search.
 
-### 3.5. Append Session-Metrics Row (REQUIRED)
 
-**Path**: `$PSI/memory/learnings/session-metrics.md`
 
 ---
 
