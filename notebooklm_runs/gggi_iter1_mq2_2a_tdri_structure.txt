@@ -1,0 +1,1 @@
+Extract the raw text passages outlining 'โครงสร้างของแผน' (structure of the plan). Do not summarize or explain. CRITICAL: Stop and report immediately: 'FAIL: Source (Up) แผนปฎิบัติการ NAP ฉบับสมบูรณ์.pdf missing or ambiguous' if the document is not present or content is unclear.

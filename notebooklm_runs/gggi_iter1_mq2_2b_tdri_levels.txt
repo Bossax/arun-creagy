@@ -1,0 +1,1 @@
+Extract the raw text passages and definitions describing 'ยุทธศาสตร์' (strategies), 'แนวทาง' (pathways/measures), 'มาตรการ' (measures), or 'กิจกรรม' (activities). Do not summarize or explain. CRITICAL: Stop and report immediately: 'FAIL: Source (Up) แผนปฎิบัติการ NAP ฉบับสมบูรณ์.pdf missing or ambiguous' if the document is not present or content is unclear.

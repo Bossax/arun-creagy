@@ -1,0 +1,1 @@
+Extract the raw text passages detailing the definitions, calculation formulas, and data variables used to measure or calculate the adaptation outcome indicators (copied from GGA). Do not summarize. CRITICAL: Stop and report immediately: 'FAIL: Source (Up) แผนปฎิบัติการ NAP ฉบับสมบูรณ์.pdf missing or ambiguous' if the document is not present or content is unclear.

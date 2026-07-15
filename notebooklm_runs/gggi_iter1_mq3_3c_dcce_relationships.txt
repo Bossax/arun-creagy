@@ -1,0 +1,1 @@
+Extract the raw text passages describing the relationships or mappings between the database tables or entities. Do not summarize or explain. CRITICAL: Stop and report immediately: 'FAIL: Source DCCE_ระบบติดตามประเมินผล_เล่มงวดที่ 2_ V.07_25032026.pdf missing or ambiguous' if the document is not present or content is unclear.

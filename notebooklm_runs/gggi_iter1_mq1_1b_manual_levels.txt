@@ -1,0 +1,1 @@
+Extract the raw text passages and lists describing 'ระดับ' (levels) of monitoring and evaluation. Do not summarize or explain. CRITICAL: Stop and report immediately: 'FAIL: Source คู่มือการติดตามและประเมินผล.pdf missing or ambiguous' if the document is not present or content is unclear.
