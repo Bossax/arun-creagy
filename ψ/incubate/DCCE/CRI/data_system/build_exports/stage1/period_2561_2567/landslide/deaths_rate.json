@@ -134,10 +134,10 @@
       "province_code": "50",
       "province_name_th": "เชียงใหม่",
       "province_name_en": "CHIANG MAI",
-      "value": 0.016004042834607258,
-      "display_value": "0.016004",
-      "rank_desc": 4,
-      "normalized_value": 0.10825338932644545
+      "value": 0.032008085669214516,
+      "display_value": "0.032008",
+      "rank_desc": 3,
+      "normalized_value": 0.2165067786528909
     },
     {
       "province_code": "92",
@@ -622,7 +622,7 @@
       "province_name_en": "SURAT THANI",
       "value": 0.017782951431114136,
       "display_value": "0.017783",
-      "rank_desc": 2,
+      "rank_desc": 4,
       "normalized_value": 0.12028615422616183
     },
     {
@@ -656,10 +656,10 @@
       "province_code": "15",
       "province_name_th": "อ่างทอง",
       "province_name_en": "ANG THONG",
-      "value": 0.01732475619303728,
-      "display_value": "0.017325",
-      "rank_desc": 3,
-      "normalized_value": 0.11718686312780266
+      "value": 0.03464951238607456,
+      "display_value": "0.03465",
+      "rank_desc": 2,
+      "normalized_value": 0.23437372625560532
     },
     {
       "province_code": "37",
@@ -718,28 +718,28 @@
         "province_name_en": "PHUKET"
       },
       {
-        "province_code": "84",
-        "province_name_th": "สุราษฎร์ธานี",
-        "value": 0.017782951431114136,
-        "display_value": "0.017783",
-        "rank_desc": 2,
-        "province_name_en": "SURAT THANI"
-      },
-      {
         "province_code": "15",
         "province_name_th": "อ่างทอง",
-        "value": 0.01732475619303728,
-        "display_value": "0.017325",
-        "rank_desc": 3,
+        "value": 0.03464951238607456,
+        "display_value": "0.03465",
+        "rank_desc": 2,
         "province_name_en": "ANG THONG"
       },
       {
         "province_code": "50",
         "province_name_th": "เชียงใหม่",
-        "value": 0.016004042834607258,
-        "display_value": "0.016004",
-        "rank_desc": 4,
+        "value": 0.032008085669214516,
+        "display_value": "0.032008",
+        "rank_desc": 3,
         "province_name_en": "CHIANG MAI"
+      },
+      {
+        "province_code": "84",
+        "province_name_th": "สุราษฎร์ธานี",
+        "value": 0.017782951431114136,
+        "display_value": "0.017783",
+        "rank_desc": 4,
+        "province_name_en": "SURAT THANI"
       },
       {
         "province_code": "57",

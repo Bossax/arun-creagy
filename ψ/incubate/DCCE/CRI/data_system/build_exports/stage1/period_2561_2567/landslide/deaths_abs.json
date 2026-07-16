@@ -134,10 +134,10 @@
       "province_code": "50",
       "province_name_th": "เชียงใหม่",
       "province_name_en": "CHIANG MAI",
-      "value": 0.8571428571428571,
-      "display_value": "0.857143",
+      "value": 1.7142857142857142,
+      "display_value": "1.714286",
       "rank_desc": 2,
-      "normalized_value": 0.4615384615384615
+      "normalized_value": 0.923076923076923
     },
     {
       "province_code": "92",
@@ -199,7 +199,7 @@
       "province_name_en": "NAKHON RATCHASIMA",
       "value": 0.14285714285714285,
       "display_value": "0.142857",
-      "rank_desc": 5,
+      "rank_desc": 6,
       "normalized_value": 0.07692307692307691
     },
     {
@@ -235,7 +235,7 @@
       "province_name_en": "NARATHIWAT",
       "value": 0.14285714285714285,
       "display_value": "0.142857",
-      "rank_desc": 5,
+      "rank_desc": 6,
       "normalized_value": 0.07692307692307691
     },
     {
@@ -334,7 +334,7 @@
       "province_name_en": "PHATTHALUNG",
       "value": 0.14285714285714285,
       "display_value": "0.142857",
-      "rank_desc": 5,
+      "rank_desc": 6,
       "normalized_value": 0.07692307692307691
     },
     {
@@ -352,7 +352,7 @@
       "province_name_en": "PHITSANULOK",
       "value": 0.14285714285714285,
       "display_value": "0.142857",
-      "rank_desc": 5,
+      "rank_desc": 6,
       "normalized_value": 0.07692307692307691
     },
     {
@@ -656,10 +656,10 @@
       "province_code": "15",
       "province_name_th": "อ่างทอง",
       "province_name_en": "ANG THONG",
-      "value": 0.14285714285714285,
-      "display_value": "0.142857",
+      "value": 0.2857142857142857,
+      "display_value": "0.285714",
       "rank_desc": 5,
-      "normalized_value": 0.07692307692307691
+      "normalized_value": 0.15384615384615383
     },
     {
       "province_code": "37",
@@ -720,8 +720,8 @@
       {
         "province_code": "50",
         "province_name_th": "เชียงใหม่",
-        "value": 0.8571428571428571,
-        "display_value": "0.857143",
+        "value": 1.7142857142857142,
+        "display_value": "1.714286",
         "rank_desc": 2,
         "province_name_en": "CHIANG MAI"
       },
@@ -744,8 +744,8 @@
       {
         "province_code": "15",
         "province_name_th": "อ่างทอง",
-        "value": 0.14285714285714285,
-        "display_value": "0.142857",
+        "value": 0.2857142857142857,
+        "display_value": "0.285714",
         "rank_desc": 5,
         "province_name_en": "ANG THONG"
       },
@@ -754,7 +754,7 @@
         "province_name_th": "นครราชสีมา",
         "value": 0.14285714285714285,
         "display_value": "0.142857",
-        "rank_desc": 5,
+        "rank_desc": 6,
         "province_name_en": "NAKHON RATCHASIMA"
       },
       {
@@ -762,7 +762,7 @@
         "province_name_th": "พิษณุโลก",
         "value": 0.14285714285714285,
         "display_value": "0.142857",
-        "rank_desc": 5,
+        "rank_desc": 6,
         "province_name_en": "PHITSANULOK"
       },
       {
@@ -770,7 +770,7 @@
         "province_name_th": "พัทลุง",
         "value": 0.14285714285714285,
         "display_value": "0.142857",
-        "rank_desc": 5,
+        "rank_desc": 6,
         "province_name_en": "PHATTHALUNG"
       },
       {
@@ -778,7 +778,7 @@
         "province_name_th": "นราธิวาส",
         "value": 0.14285714285714285,
         "display_value": "0.142857",
-        "rank_desc": 5,
+        "rank_desc": 6,
         "province_name_en": "NARATHIWAT"
       },
       {
