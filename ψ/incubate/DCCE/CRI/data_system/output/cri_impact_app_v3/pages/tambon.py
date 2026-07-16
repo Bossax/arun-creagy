@@ -25,7 +25,7 @@ def render() -> None:
         # Metric Selector
         metric_options = {
             "Tambon Deaths": "tambon_deaths",
-            "Tambon Affected Households": "tambon_affected_households",
+            "Tambon Affected People": "tambon_affected_people",
         }
         selected_metric_label = st.selectbox("Metric Selector", options=list(metric_options.keys()), key="tambon_metric_selector")
         selected_metric = metric_options[selected_metric_label]
@@ -71,36 +71,53 @@ def render() -> None:
                 summary = data.metric_summary(dataset)
                 rank_rows = data.tambon_rank_rows(dataset, province_code)
 
-                st.markdown(f"**Ranking: {summary['metric_label']}**")
-                st.caption(f"{selected_province['province_name_th']} | {summary['unit_label']}")
-                st.table(rank_rows)
+                # Check if all subdistricts in this province recorded zero impacts
+                all_zeros = True
+                if rank_rows:
+                    for row in rank_rows:
+                        try:
+                            val_str = str(row.get("value", "0")).replace(",", "").strip()
+                            if float(val_str) > 0:
+                                all_zeros = False
+                                break
+                        except (ValueError, TypeError):
+                            pass
+                else:
+                    all_zeros = True
 
-                # Download button for all subdistricts in the selected province
-                all_tambons = data.tambon_records(dataset, province_code)
-                import pandas as pd
-                df_all = pd.DataFrame(all_tambons)
-                if not df_all.empty:
-                    df_all["value"] = pd.to_numeric(df_all["value"], errors="coerce").fillna(0.0)
-                    df_all = df_all.sort_values(by="value", ascending=False).reset_index(drop=True)
-                    df_all["Rank"] = df_all.index + 1
-                    
-                    cols_to_keep = ["Rank", "subdistrict_code", "subdistrict_name_th", "district_name_th", "province_name_th", "display_value"]
-                    rename_map = {
-                        "subdistrict_code": "Tambon Code",
-                        "subdistrict_name_th": "Tambon Name",
-                        "district_name_th": "District Name",
-                        "province_name_th": "Province Name",
-                        "display_value": "Value"
-                    }
-                    df_export = df_all[cols_to_keep].rename(columns=rename_map)
-                    csv_data = df_export.to_csv(index=False, encoding="utf-8-sig")
-                    st.download_button(
-                        label="Download All Province Tambons CSV",
-                        data=csv_data,
-                        file_name=f"tambons_{selected_metric}_{period_key}_{hazard_key}_{province_code}.csv",
-                        mime="text/csv",
-                        key="tambon_download_button",
-                    )
+                if all_zeros:
+                    st.info(f"All subdistricts in {selected_province['province_name_th']} recorded zero impacts (0 deaths / 0 affected people) for the selected hazard.")
+                else:
+                    st.markdown(f"**Ranking: {summary['metric_label']}**")
+                    st.caption(f"{selected_province['province_name_th']} | {summary['unit_label']}")
+                    st.table(rank_rows)
+
+                    # Download button for all subdistricts in the selected province
+                    all_tambons = data.tambon_records(dataset, province_code)
+                    import pandas as pd
+                    df_all = pd.DataFrame(all_tambons)
+                    if not df_all.empty:
+                        df_all["value"] = pd.to_numeric(df_all["value"], errors="coerce").fillna(0.0)
+                        df_all = df_all.sort_values(by="value", ascending=False).reset_index(drop=True)
+                        df_all["Rank"] = df_all.index + 1
+                        
+                        cols_to_keep = ["Rank", "subdistrict_code", "subdistrict_name_th", "district_name_th", "province_name_th", "display_value"]
+                        rename_map = {
+                            "subdistrict_code": "Tambon Code",
+                            "subdistrict_name_th": "Tambon Name",
+                            "district_name_th": "District Name",
+                            "province_name_th": "Province Name",
+                            "display_value": "Value"
+                        }
+                        df_export = df_all[cols_to_keep].rename(columns=rename_map)
+                        csv_data = df_export.to_csv(index=False, encoding="utf-8-sig")
+                        st.download_button(
+                            label="Download All Province Tambons CSV",
+                            data=csv_data,
+                            file_name=f"tambons_{selected_metric}_{period_key}_{hazard_key}_{province_code}.csv",
+                            mime="text/csv",
+                            key="tambon_download_button",
+                        )
         else:
             st.warning(warning_msg)
 

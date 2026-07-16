@@ -173,6 +173,87 @@ def rebuild_yearly_ddpm_fact(ddpm_dir: Path) -> tuple[Path, list[str], list[str]
     return out_path, [p.name for p in source_files], missing_report
 
 
+def rebuild_yearly_ddpm_fact_for_cri_score(ddpm_dir: Path) -> pd.DataFrame:
+    """Rebuild the aggregate yearly DDPM fact containing only the complete hazards (drought, flood, windstorm) for CRI score."""
+    allowed_hazards = {"drought", "flood", "windstorm"}
+    source_files = sorted(
+        p for p in ddpm_dir.glob("fact_ddpm_tambon_impact_climate_yearly_*_2560_2567.csv")
+        if p.name != "fact_ddpm_tambon_impact_climate_yearly_2560_2567.csv"
+        and any(hz in p.name.lower() for hz in allowed_hazards)
+    )
+    required_cols = [
+        "canonical_hazard_id",
+        "canonical_hazard_code",
+        "canonical_hazard_name_th",
+        "subdistrict_code",
+        "year_be",
+        "affected_households_sum",
+        "affected_people_sum",
+        "deaths_sum",
+        "province_code",
+        "yoy_delta_affected_households",
+    ]
+    frames = []
+    for path in source_files:
+        frame = load_csv(path)
+        missing = [c for c in required_cols if c not in frame.columns]
+        if missing:
+            continue
+        frames.append(frame[required_cols].copy())
+    
+    if not frames:
+        return pd.DataFrame(columns=required_cols)
+        
+    rebuilt = pd.concat(frames, ignore_index=True)
+    rebuilt["subdistrict_code"] = rebuilt["subdistrict_code"].astype(str).str.zfill(6)
+    rebuilt["province_code"] = rebuilt["province_code"].astype(str).str.zfill(2)
+    rebuilt["year_be"] = rebuilt["year_be"].astype(str)
+    return rebuilt
+
+
+def apply_conversion_and_clean_keys(df, hh, prov_hh):
+    """Joins population & household totals to calculate ratio and estimate affected people."""
+    df["subdistrict_code"] = df["subdistrict_code"].astype(str).str.zfill(6)
+    if "province_code" not in df.columns:
+        df["province_code"] = df["subdistrict_code"].str[:2]
+    df["province_code"] = df["province_code"].astype(str).str.zfill(2)
+    df["year_be"] = df["year_be"].astype(str)
+
+    hh_copy = hh.copy()
+    hh_copy["subdistrict_code"] = hh_copy["subdistrict_code"].astype(str).str.replace(r"\.0$", "", regex=True).str.strip().str.zfill(6)
+    hh_copy["province_code"] = hh_copy["province_code"].astype(str).str.replace(r"\.0$", "", regex=True).str.strip().str.zfill(2)
+    hh_copy["year_be"] = hh_copy["year_be"].astype(str).str.replace(r"\.0$", "", regex=True).str.strip()
+    hh_copy["household_total"] = pd.to_numeric(hh_copy["household_total"], errors="coerce").fillna(0.0)
+    hh_copy["population_total"] = pd.to_numeric(hh_copy["population_total"], errors="coerce").fillna(0.0)
+    hh_copy["ratio"] = np.where(hh_copy["household_total"] > 0, hh_copy["population_total"] / hh_copy["household_total"], np.nan)
+
+    # Cast prov_hh keys to string
+    prov_hh_copy = prov_hh.copy()
+    prov_hh_copy["province_code"] = prov_hh_copy["province_code"].astype(str).str.replace(r"\.0$", "", regex=True).str.strip().str.zfill(2)
+    prov_hh_copy["year_be"] = prov_hh_copy["year_be"].astype(str).str.replace(r"\.0$", "", regex=True).str.strip()
+
+    # Merge subdistrict ratio
+    merged = df.merge(hh_copy[["subdistrict_code", "year_be", "ratio"]], on=["subdistrict_code", "year_be"], how="left")
+    
+    # Merge province fallback ratio
+    merged = merged.merge(prov_hh_copy[["province_code", "year_be", "prov_ratio"]], on=["province_code", "year_be"], how="left")
+    
+    merged["final_ratio"] = merged["ratio"].fillna(merged["prov_ratio"]).fillna(3.0)
+    merged["fallback_applied"] = merged["ratio"].isna()
+    
+    # Calculate affected_people_estimated
+    merged["affected_people_estimated"] = merged["affected_households_sum"] * merged["final_ratio"]
+    merged["affected_households_sum"] = merged["affected_people_estimated"]
+    
+    audit_cols = ["canonical_hazard_code", "subdistrict_code", "province_code", "year_be", 
+                  "ratio", "prov_ratio", "final_ratio", "affected_people_estimated", "fallback_applied"]
+    # Filter only columns that exist
+    actual_audit_cols = [c for c in audit_cols if c in merged.columns]
+    audit_data = merged[actual_audit_cols].copy()
+    
+    return merged, audit_data
+
+
 def metric_top_bottom(df: pd.DataFrame, value_col: str, code_col: str, name_th_col: str, name_en_col: str | None = None, national: bool = False):
     ordered = df.sort_values([value_col, code_col], ascending=[False, True]).copy()
     ordered["rank_desc"] = descending_rank(ordered[value_col])
@@ -278,23 +359,52 @@ def main():
 
     ddpm_raw = load_csv(SRC / "2_gold/ddpm/fact_ddpm_tambon_impact_climate_2560_2567.csv")
     ddpm_yearly = load_csv(yearly_path)
-    
-    # Reconstruct ddpm by summing ddpm_yearly to exclude cold_spell from overall averages
-    ddpm = ddpm_yearly.groupby(["subdistrict_code", "province_code"], dropna=False).agg(
-        deaths_sum=("deaths_sum", "sum"),
-        affected_households_sum=("affected_households_sum", "sum"),
-        affected_people_sum=("affected_people_sum", "sum"),
-    ).reset_index()
-    
-    # Merge names from raw ddpm file for downstream lookup
-    tambon_lookup_ddpm = ddpm_raw[["subdistrict_code", "subdistrict_name_th", "district_name_th", "province_code"]].drop_duplicates()
-    ddpm = ddpm.merge(tambon_lookup_ddpm, on=["subdistrict_code", "province_code"], how="left")
     pop = load_csv(SRC / "1_silver/population/silver_population_annual.csv")
     hh = load_csv(SRC / "1_silver/population/silver_household_annual.csv")
     loss = load_csv(SRC / "1_silver/govt_adv_payment/silver_govt_adv_payment_annual_long.csv")
     gpp = load_csv(SRC / "1_silver/gpp/silver_gpp_annual_long.csv")
     heat = load_csv(SRC / "1_silver/heatwave/silver_heatwave_impact_long.csv")
     prov_code_lookup = load_csv(SRC / "1_silver/dopa/province_code_lookup.csv")
+
+    # Load DOPA lookup master to guarantee names are never missing (e.g. wildfire)
+    location_spine = load_csv(SRC / "2_gold/dopa/dim_location_master.csv")
+    location_spine["subdistrict_code"] = location_spine["subdistrict_code"].astype(str).str.replace(r"\.0$", "", regex=True).str.strip().str.zfill(6)
+    location_spine["province_code"] = location_spine["province_code"].astype(str).str.replace(r"\.0$", "", regex=True).str.strip().str.zfill(2)
+    tambon_lookup_master = location_spine.loc[
+        location_spine["admin_level"].astype(str).eq("subdistrict"),
+        ["subdistrict_code", "subdistrict_name_th", "district_name_th", "province_code"]
+    ].drop_duplicates(subset=["subdistrict_code"])
+    
+    tambon_lookup_ddpm = tambon_lookup_master
+
+    # Precompute population/household ratios
+    hh["household_total"] = pd.to_numeric(hh["household_total"], errors="coerce").fillna(0.0)
+    hh["population_total"] = pd.to_numeric(hh["population_total"], errors="coerce").fillna(0.0)
+    
+    # Province level averages
+    prov_hh = hh.groupby(["province_code", "year_be"]).agg(
+        prov_pop=("population_total", "sum"),
+        prov_hh=("household_total", "sum")
+    ).reset_index()
+    prov_hh["prov_ratio"] = np.where(prov_hh["prov_hh"] > 0, prov_hh["prov_pop"] / prov_hh["prov_hh"], np.nan)
+
+    # Convert overall ddpm_yearly households to people
+    ddpm_yearly, conversion_audit = apply_conversion_and_clean_keys(ddpm_yearly, hh, prov_hh)
+    
+    # Save the audit log
+    audit_dir = BASE / "artifacts/analysis"
+    audit_dir.mkdir(parents=True, exist_ok=True)
+    conversion_audit.to_csv(audit_dir / "household_to_people_conversion_audit.csv", index=False, encoding="utf-8-sig")
+    print(f"[REPAIR] Saved household to people conversion audit log to: {audit_dir / 'household_to_people_conversion_audit.csv'}")
+
+    # Reconstruct ddpm by summing converted ddpm_yearly
+    ddpm = ddpm_yearly.groupby(["subdistrict_code", "province_code"], dropna=False).agg(
+        deaths_sum=("deaths_sum", "sum"),
+        affected_households_sum=("affected_households_sum", "sum"),
+        affected_people_sum=("affected_people_sum", "sum"),
+    ).reset_index()
+    
+    ddpm = ddpm.merge(tambon_lookup_ddpm, on=["subdistrict_code", "province_code"], how="left")
     prov_gdf = gpd.read_file(SRC / "1_silver/dopa/province_boundaries_enriched.shp")
     tambon_gdf = gpd.read_file(SRC / "1_silver/dopa/tambon_boundaries_enriched.shp")
 
@@ -601,8 +711,8 @@ def main():
     avg_specs_2560_2567 = [
         ("deaths_abs", "Deaths (Count)", "Annual deaths"),
         ("deaths_rate", "Death Rate", "Per 100,000 population"),
-        ("affected_hh_abs", " Affected Households (Household)", "Annual households"),
-        ("affected_rate", "Affected Rate", "Per 100 households"),
+        ("affected_ppl_abs", "Affected People (Count)", "Annual people"),
+        ("affected_ppl_rate", "Affected People Rate", "Per 100,000 population"),
         ("loss_abs", "Economic Loss", "THB"),
         ("loss_per_gpp", "Economic Loss per GPP", "Percentage points (%)"),
         ("cri_score", "CRI Score", "Score [0-1]"),
@@ -610,8 +720,8 @@ def main():
     avg_specs_2567 = [
         ("deaths_abs", "Total Deaths (Absolute)", "Annual deaths"),
         ("deaths_rate", "Death Rate", "Per 100,000 population"),
-        ("affected_hh_abs", "Total Affected Households (Absolute)", "Annual households"),
-        ("affected_rate", "Affected Rate", "Per 100 households"),
+        ("affected_ppl_abs", "Total Affected People (Absolute)", "Annual people"),
+        ("affected_ppl_rate", "Affected People Rate", "Per 100,000 population"),
         ("loss_abs", "Government Advance Payment", "THB"),
         ("loss_per_gpp", "Relief per Unit GPP", "Percentage points (%)"),
         ("cri_score", "CRI Score", "Score [0-1]"),
@@ -635,6 +745,8 @@ def main():
             for col in ["province_code", "subdistrict_code", "year_be"]:
                 if col in yearly_df.columns:
                     yearly_df[col] = yearly_df[col].astype(str)
+            # Apply conversion
+            yearly_df, _ = apply_conversion_and_clean_keys(yearly_df, hh, prov_hh)
         
         # Clean/fill province_code
         if "province_code" not in yearly_df.columns:
@@ -658,7 +770,7 @@ def main():
         
         prov_avg_human = prov_annual.groupby("province_code", dropna=False).agg(
             deaths_abs=("deaths_sum", lambda x: x.sum() / 7.0),
-            affected_hh_abs=("affected_households_sum", lambda x: x.sum() / 7.0)
+            affected_ppl_abs=("affected_households_sum", lambda x: x.sum() / 7.0)
         ).reset_index()
 
         # Relief sums
@@ -680,34 +792,87 @@ def main():
         prov_avg_metrics = prov_avg_metrics.merge(gpp_avg, on="province_code", how="left")
         prov_avg_metrics = prov_avg_metrics.merge(prov_avg_loss, on="province_code", how="left")
 
-        for c in ["deaths_abs", "affected_hh_abs", "loss_abs"]:
+        for c in ["deaths_abs", "affected_ppl_abs", "loss_abs"]:
             prov_avg_metrics[c] = prov_avg_metrics[c].fillna(0.0)
 
         prov_avg_metrics["deaths_rate"] = prov_avg_metrics["deaths_abs"] / prov_avg_metrics["population_total"] * 100000.0
-        prov_avg_metrics["affected_rate"] = prov_avg_metrics["affected_hh_abs"] / prov_avg_metrics["household_total"] * 100.0
+        prov_avg_metrics["affected_ppl_rate"] = prov_avg_metrics["affected_ppl_abs"] / prov_avg_metrics["population_total"] * 100000.0
         
         gpp_thb = prov_avg_metrics["gpp_avg"] * 1_000_000.0
         prov_avg_metrics["loss_per_gpp"] = (prov_avg_metrics["loss_abs"] / gpp_thb) * 100.0
 
-        for c in ["deaths_rate", "affected_rate", "loss_per_gpp"]:
+        for c in ["deaths_rate", "affected_ppl_rate", "loss_per_gpp"]:
             prov_avg_metrics[c] = prov_avg_metrics[c].fillna(0.0)
             prov_avg_metrics[c] = prov_avg_metrics[c].replace([np.inf, -np.inf], 0.0)
 
-        for c in ["deaths_abs", "deaths_rate", "affected_hh_abs", "affected_rate", "loss_abs", "loss_per_gpp"]:
+        for c in ["deaths_abs", "deaths_rate", "affected_ppl_abs", "affected_ppl_rate", "loss_abs", "loss_per_gpp"]:
             prov_avg_metrics[f"s_{c}"] = minmax(prov_avg_metrics[c])
 
-        prov_avg_metrics["cri_score"] = (
-            prov_avg_metrics["s_deaths_abs"] * 0.075
-            + prov_avg_metrics["s_deaths_rate"] * 0.225
-            + prov_avg_metrics["s_affected_hh_abs"] * 0.05
-            + prov_avg_metrics["s_affected_rate"] * 0.15
-            + prov_avg_metrics["s_loss_abs"] * 0.125
-            + prov_avg_metrics["s_loss_per_gpp"] * 0.375
-        )
+        # CRI Score Logic
+        has_cri_score = h_key not in ["landslide", "wildfire", "cold_spell"]
+        
+        if h_key == "all":
+            # Compute 3-hazard subset for composite CRI score
+            yearly_df_cri = rebuild_yearly_ddpm_fact_for_cri_score(SRC / "2_gold/ddpm")
+            yearly_df_cri = apply_conversion_and_clean_keys(yearly_df_cri, hh, prov_hh)[0]
+            
+            prov_annual_cri = yearly_df_cri[yearly_df_cri["year_be"].isin(period_years)].groupby(
+                ["province_code", "year_be"], dropna=False
+            ).agg(
+                deaths_sum=("deaths_sum", "sum"),
+                affected_households_sum=("affected_households_sum", "sum"),
+            ).reset_index()
+            prov_avg_human_cri = prov_annual_cri.groupby("province_code", dropna=False).agg(
+                deaths_abs=("deaths_sum", lambda x: x.sum() / 7.0),
+                affected_ppl_abs=("affected_households_sum", lambda x: x.sum() / 7.0)
+            ).reset_index()
+            
+            prov_avg_cri = prov_lookup.merge(prov_avg_human_cri, on="province_code", how="left")
+            prov_avg_cri = prov_avg_cri.merge(pop_avg, on="province_code", how="left")
+            prov_avg_cri = prov_avg_cri.merge(gpp_avg, on="province_code", how="left")
+            prov_avg_cri = prov_avg_cri.merge(prov_avg_loss, on="province_code", how="left")
+            
+            for c in ["deaths_abs", "affected_ppl_abs", "loss_abs"]:
+                prov_avg_cri[c] = prov_avg_cri[c].fillna(0.0)
+            
+            prov_avg_cri["deaths_rate"] = prov_avg_cri["deaths_abs"] / prov_avg_cri["population_total"] * 100000.0
+            prov_avg_cri["affected_ppl_rate"] = prov_avg_cri["affected_ppl_abs"] / prov_avg_cri["population_total"] * 100000.0
+            prov_avg_cri["loss_per_gpp"] = (prov_avg_cri["loss_abs"] / (prov_avg_cri["gpp_avg"] * 1_000_000.0)) * 100.0
+            
+            for c in ["deaths_rate", "affected_ppl_rate", "loss_per_gpp"]:
+                prov_avg_cri[c] = prov_avg_cri[c].fillna(0.0).replace([np.inf, -np.inf], 0.0)
+                
+            for c in ["deaths_abs", "deaths_rate", "affected_ppl_abs", "affected_ppl_rate", "loss_abs", "loss_per_gpp"]:
+                prov_avg_cri[f"s_{c}"] = minmax(prov_avg_cri[c])
+                
+            prov_avg_metrics["cri_score"] = (
+                prov_avg_cri["s_deaths_abs"] * 0.075
+                + prov_avg_cri["s_deaths_rate"] * 0.225
+                + prov_avg_cri["s_affected_ppl_abs"] * 0.05
+                + prov_avg_cri["s_affected_ppl_rate"] * 0.15
+                + prov_avg_cri["s_loss_abs"] * 0.125
+                + prov_avg_cri["s_loss_per_gpp"] * 0.375
+            )
+        elif has_cri_score:
+            prov_avg_metrics["cri_score"] = (
+                prov_avg_metrics["s_deaths_abs"] * 0.075
+                + prov_avg_metrics["s_deaths_rate"] * 0.225
+                + prov_avg_metrics["s_affected_ppl_abs"] * 0.05
+                + prov_avg_metrics["s_affected_ppl_rate"] * 0.15
+                + prov_avg_metrics["s_loss_abs"] * 0.125
+                + prov_avg_metrics["s_loss_per_gpp"] * 0.375
+            )
+        else:
+            prov_avg_metrics["cri_score"] = np.nan
+
         prov_avg_metrics["province_name_en"] = prov_avg_metrics["province_name_en"].where(pd.notna(prov_avg_metrics["province_name_en"]), None)
 
+        # Filter Specs for current hazard
+        h_avg_specs = [spec for spec in avg_specs_2560_2567 if spec[0] != "cri_score" or has_cri_score]
+        h_2567_specs = [spec for spec in avg_specs_2567 if spec[0] != "cri_score" or has_cri_score]
+
         # Write province average metrics
-        for metric_key, metric_label, unit_label in avg_specs_2560_2567:
+        for metric_key, metric_label, unit_label in h_avg_specs:
             payload = province_metric_payload(
                 metric_key, metric_label, "period_2561_2567", "2561–2567 average", unit_label, "average_window",
                 prov_avg_metrics[["province_code", "province_name_th", "province_name_en", metric_key]].rename(columns={metric_key: "value"})
@@ -742,9 +907,7 @@ def main():
         tambon_avg_aff = tambon_avg[["subdistrict_code", "subdistrict_name_th", "district_name_th", "province_code", "province_name_th", "affected_hh_abs"]].rename(columns={"affected_hh_abs": "value"}).fillna(0.0)
         
         write_json(OUT / "period_2561_2567" / h_key / "tambon_deaths.json", tambon_metric_payload("tambon_deaths", "Tambon Deaths", "period_2561_2567", "2561–2567 average", "Annual deaths", "average_window", tambon_avg_deaths))
-        write_json(OUT / "period_2561_2567" / h_key / "tambon_affected_households.json", tambon_metric_payload("tambon_affected_households", "Tambon Affected Households", "period_2561_2567", "2561–2567 average", "Annual households", "average_window", tambon_avg_aff))
-
-        # Heatwave files are written directly to the 'all' directory above.
+        write_json(OUT / "period_2561_2567" / h_key / "tambon_affected_people.json", tambon_metric_payload("tambon_affected_people", "Tambon Affected People", "period_2561_2567", "2561–2567 average", "Annual people", "average_window", tambon_avg_aff))
 
         # -------------------------------------------------------------------------
         # PROCESS: 2567 ONLY
@@ -753,7 +916,7 @@ def main():
         
         prov_2567_human = yearly_df_2567.groupby("province_code", dropna=False).agg(
             deaths_abs=("deaths_sum", "sum"),
-            affected_hh_abs=("affected_households_sum", "sum"),
+            affected_ppl_abs=("affected_households_sum", "sum"),
         ).reset_index()
 
         if h_key == "all":
@@ -769,33 +932,71 @@ def main():
         prov_2567_metrics = prov_2567_metrics.merge(gpp_2567, on="province_code", how="left")
         prov_2567_metrics = prov_2567_metrics.merge(prov_2567_loss, on="province_code", how="left")
 
-        for c in ["deaths_abs", "affected_hh_abs", "loss_abs"]:
+        for c in ["deaths_abs", "affected_ppl_abs", "loss_abs"]:
             prov_2567_metrics[c] = prov_2567_metrics[c].fillna(0.0)
 
         prov_2567_metrics["deaths_rate"] = prov_2567_metrics["deaths_abs"] / prov_2567_metrics["population_total"] * 100000.0
-        prov_2567_metrics["affected_rate"] = prov_2567_metrics["affected_hh_abs"] / prov_2567_metrics["household_total"] * 100.0
+        prov_2567_metrics["affected_ppl_rate"] = prov_2567_metrics["affected_ppl_abs"] / prov_2567_metrics["population_total"] * 100000.0
         
         gpp_thb_2567 = prov_2567_metrics["gpp_avg"] * 1_000_000.0
         prov_2567_metrics["loss_per_gpp"] = (prov_2567_metrics["loss_abs"] / gpp_thb_2567) * 100.0
 
-        for c in ["deaths_rate", "affected_rate", "loss_per_gpp"]:
+        for c in ["deaths_rate", "affected_ppl_rate", "loss_per_gpp"]:
             prov_2567_metrics[c] = prov_2567_metrics[c].fillna(0.0)
             prov_2567_metrics[c] = prov_2567_metrics[c].replace([np.inf, -np.inf], 0.0)
 
-        for c in ["deaths_abs", "deaths_rate", "affected_hh_abs", "affected_rate", "loss_abs", "loss_per_gpp"]:
+        for c in ["deaths_abs", "deaths_rate", "affected_ppl_abs", "affected_ppl_rate", "loss_abs", "loss_per_gpp"]:
             prov_2567_metrics[f"s_{c}"] = minmax(prov_2567_metrics[c])
 
-        prov_2567_metrics["cri_score"] = (
-            prov_2567_metrics["s_deaths_abs"] * 0.075
-            + prov_2567_metrics["s_deaths_rate"] * 0.225
-            + prov_2567_metrics["s_affected_hh_abs"] * 0.05
-            + prov_2567_metrics["s_affected_rate"] * 0.15
-            + prov_2567_metrics["s_loss_abs"] * 0.125
-            + prov_2567_metrics["s_loss_per_gpp"] * 0.375
-        )
+        if h_key == "all":
+            # 2567 CRI score composite subset
+            yearly_df_cri_2567 = yearly_df_cri[yearly_df_cri["year_be"] == "2567"].copy()
+            prov_2567_human_cri = yearly_df_cri_2567.groupby("province_code", dropna=False).agg(
+                deaths_abs=("deaths_sum", "sum"),
+                affected_ppl_abs=("affected_households_sum", "sum"),
+            ).reset_index()
+            
+            prov_2567_cri = prov_lookup.merge(prov_2567_human_cri, on="province_code", how="left")
+            prov_2567_cri = prov_2567_cri.merge(pop_2567, on="province_code", how="left")
+            prov_2567_cri = prov_2567_cri.merge(gpp_2567, on="province_code", how="left")
+            prov_2567_cri = prov_2567_cri.merge(prov_2567_loss, on="province_code", how="left")
+            
+            for c in ["deaths_abs", "affected_ppl_abs", "loss_abs"]:
+                prov_2567_cri[c] = prov_2567_cri[c].fillna(0.0)
+                
+            prov_2567_cri["deaths_rate"] = prov_2567_cri["deaths_abs"] / prov_2567_cri["population_total"] * 100000.0
+            prov_2567_cri["affected_ppl_rate"] = prov_2567_cri["affected_ppl_abs"] / prov_2567_cri["population_total"] * 100000.0
+            prov_2567_cri["loss_per_gpp"] = (prov_2567_cri["loss_abs"] / (prov_2567_cri["gpp_avg"] * 1_000_000.0)) * 100.0
+            
+            for c in ["deaths_rate", "affected_ppl_rate", "loss_per_gpp"]:
+                prov_2567_cri[c] = prov_2567_cri[c].fillna(0.0).replace([np.inf, -np.inf], 0.0)
+                
+            for c in ["deaths_abs", "deaths_rate", "affected_ppl_abs", "affected_ppl_rate", "loss_abs", "loss_per_gpp"]:
+                prov_2567_cri[f"s_{c}"] = minmax(prov_2567_cri[c])
+                
+            prov_2567_metrics["cri_score"] = (
+                prov_2567_cri["s_deaths_abs"] * 0.075
+                + prov_2567_cri["s_deaths_rate"] * 0.225
+                + prov_2567_cri["s_affected_ppl_abs"] * 0.05
+                + prov_2567_cri["s_affected_ppl_rate"] * 0.15
+                + prov_2567_cri["s_loss_abs"] * 0.125
+                + prov_2567_cri["s_loss_per_gpp"] * 0.375
+            )
+        elif has_cri_score:
+            prov_2567_metrics["cri_score"] = (
+                prov_2567_metrics["s_deaths_abs"] * 0.075
+                + prov_2567_metrics["s_deaths_rate"] * 0.225
+                + prov_2567_metrics["s_affected_ppl_abs"] * 0.05
+                + prov_2567_metrics["s_affected_ppl_rate"] * 0.15
+                + prov_2567_metrics["s_loss_abs"] * 0.125
+                + prov_2567_metrics["s_loss_per_gpp"] * 0.375
+            )
+        else:
+            prov_2567_metrics["cri_score"] = np.nan
+
         prov_2567_metrics["province_name_en"] = prov_2567_metrics["province_name_en"].where(pd.notna(prov_2567_metrics["province_name_en"]), None)
 
-        for metric_key, metric_label, unit_label in avg_specs_2567:
+        for metric_key, metric_label, unit_label in h_2567_specs:
             payload = province_metric_payload(
                 metric_key, metric_label, "period_2567", "2567 only", unit_label, "single_year",
                 prov_2567_metrics[["province_code", "province_name_th", "province_name_en", metric_key]].rename(columns={metric_key: "value"})
@@ -823,9 +1024,7 @@ def main():
         tambon_2567_aff = tambon_2567[["subdistrict_code", "subdistrict_name_th", "district_name_th", "province_code", "province_name_th", "affected_households_sum"]].rename(columns={"affected_households_sum": "value"}).fillna(0.0)
         
         write_json(OUT / "period_2567" / h_key / "tambon_deaths.json", tambon_metric_payload("tambon_deaths", "Tambon Deaths", "period_2567", "2567 only", "Annual deaths", "single_year", tambon_2567_deaths))
-        write_json(OUT / "period_2567" / h_key / "tambon_affected_households.json", tambon_metric_payload("tambon_affected_households", "Tambon Affected Households", "period_2567", "2567 only", "Annual households", "single_year", tambon_2567_aff))
-
-        # Heatwave files are written directly to the 'all' directory above.
+        write_json(OUT / "period_2567" / h_key / "tambon_affected_people.json", tambon_metric_payload("tambon_affected_people", "Tambon Affected People", "period_2567", "2567 only", "Annual people", "single_year", tambon_2567_aff))
 
     # Update manifest to support disaggregation
     manifest = {
@@ -845,8 +1044,8 @@ def main():
             {"hazard_key": "wildfire", "hazard_label": "Wildfire (ไฟป่า)"}
         ],
         "metric_groups": {
-            "cri": ["deaths_abs", "deaths_rate", "affected_hh_abs", "affected_rate", "loss_abs", "loss_per_gpp", "cri_score"],
-            "tambon": ["tambon_deaths", "tambon_affected_households"],
+            "cri": ["deaths_abs", "deaths_rate", "affected_ppl_abs", "affected_ppl_rate", "loss_abs", "loss_per_gpp", "cri_score"],
+            "tambon": ["tambon_deaths", "tambon_affected_people"],
             "heat": ["heat_deaths", "heat_injured"]
         },
         "assets": {
@@ -858,7 +1057,7 @@ def main():
     print("[SUCCESS] Disaggregated Stage 1 export completed successfully.")
     
     validation = {
-        "province_metric_files": sorted([p.name for p in (OUT / "period_2561_2567").glob("*.json") if p.name not in {"tambon_deaths.json", "tambon_affected_households.json"}] + [p.name for p in (OUT / "period_2567").glob("*.json") if p.name not in {"tambon_deaths.json", "tambon_affected_households.json"}]),
+        "province_metric_files": sorted([p.name for p in (OUT / "period_2561_2567").glob("*.json") if p.name not in {"tambon_deaths.json", "tambon_affected_people.json"}] + [p.name for p in (OUT / "period_2567").glob("*.json") if p.name not in {"tambon_deaths.json", "tambon_affected_people.json"}]),
         "tambon_files": sorted([p.name for p in (OUT / "period_2561_2567").glob("tambon_*.json")]) + sorted([p.name for p in (OUT / "period_2567").glob("tambon_*.json")]),
         "heat_files": sorted([p.name for p in (OUT / "period_2561_2567").glob("heat_*.json")]) + sorted([p.name for p in (OUT / "period_2567").glob("heat_*.json")]),
         "spatial_province_exists": (OUT / "spatial" / "province_boundaries.geojson").exists(),

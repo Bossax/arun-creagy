@@ -22,19 +22,6 @@ def render() -> None:
         ]
         period_key = render_period_choice(control_key="cri", options=period_options, default_key="period_2561_2567")
 
-        # Metric Selector
-        metric_options = {
-            "CRI Score": "cri_score",
-            "Deaths (Count)": "deaths_abs",
-            "Death Rate (per 100k Population)": "deaths_rate",
-            "Affected Households (Household)": "affected_hh_abs",
-            "Affected Household Rate (per 100 Households)": "affected_rate",
-            "Economic Loss (THB)": "loss_abs",
-            "Economic Loss per GPP (%)": "loss_per_gpp",
-        }
-        selected_label = st.selectbox("Metric Selector", options=list(metric_options.keys()), key="cri_metric_selector")
-        selected_metric = metric_options[selected_label]
-
         # Hazard Selector
         hazard_options = data.available_hazard_options()
         selected_hazard = st.selectbox(
@@ -45,6 +32,24 @@ def render() -> None:
         )
         hazard_key = selected_hazard["hazard_key"]
 
+        # Metric Selector (Filtered dynamically by hazard capability)
+        metric_options = {}
+        # Only complete hazards have CRI score
+        if hazard_key not in ["landslide", "wildfire", "cold_spell"]:
+            metric_options["CRI Score"] = "cri_score"
+            
+        metric_options.update({
+            "Deaths (Count)": "deaths_abs",
+            "Death Rate (per 100k Population)": "deaths_rate",
+            "Affected People (Count)": "affected_ppl_abs",
+            "Affected People Rate (per 100k Population)": "affected_ppl_rate",
+            "Economic Loss (THB)": "loss_abs",
+            "Economic Loss per GPP (%)": "loss_per_gpp",
+        })
+        
+        selected_label = st.selectbox("Metric Selector", options=list(metric_options.keys()), key="cri_metric_selector")
+        selected_metric = metric_options[selected_label]
+
         # Check constraints
         data_available = True
         warning_msg = ""
@@ -54,7 +59,7 @@ def render() -> None:
             data_available = False
             warning_msg = "Long-term historical wildfire average is not available. Please select '2567 Only'."
             warning_type = "warning"
-        elif (hazard_key in ["landslide", "wildfire"]) and (selected_metric in ["loss_abs", "loss_per_gpp"]):
+        elif (hazard_key in ["landslide", "wildfire", "cold_spell"]) and (selected_metric in ["loss_abs", "loss_per_gpp"]):
             data_available = False
             warning_msg = f"Economic damage data is not recorded/available for {selected_hazard['hazard_label']}."
             warning_type = "info"

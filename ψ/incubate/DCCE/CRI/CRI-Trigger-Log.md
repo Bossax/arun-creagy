@@ -32,3 +32,4 @@ This ledger records **conceptual triggers**—the kinetic realizations or extern
 
 
 | T-CRI-014 | 2026-06-18 | Dashboard Compactness & Economic Hardening | Strategic requirement | UI efficiency; economic scaling; terminology | High | E-CRI-048 | CH-CRI-014 | D-CRI-018 | Logged | The need for spatial efficiency triggered the 1/3 sidebar layout; terminology audit refined "Total Economic Loss" to "Government Advance Payment (Relief)". |
+| T-CRI-015 | 2026-07-16 | Integrating incomplete hazards, converting households to people, and UI adjustments | Strategic / Methodological requirement | Data disaggregation; index validity; user clarity | High | E-CRI-049 | CH-CRI-015 | D-CRI-019 | Logged | The need to avoid statistical skew in composite indices, convert household units to people, and remove UI ambiguity triggered the v4.1 pipeline and frontend upgrades. |

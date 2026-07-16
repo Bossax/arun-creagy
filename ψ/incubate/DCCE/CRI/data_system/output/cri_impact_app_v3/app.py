@@ -26,8 +26,9 @@ def _apply_global_style() -> None:
             color: rgba(49, 51, 63, 0.76);
           }
           /* Hide Sidebar completely */
-          [data-testid="collapsedControl"] { display: none; }
-          section[data-testid="stSidebar"] { display: none; }
+          [data-testid="collapsedControl"] { display: none !important; }
+          section[data-testid="stSidebar"] { display: none !important; width: 0px !important; }
+          div[data-testid="stSidebarUserContent"] { display: none !important; }
         </style>
         """,
         unsafe_allow_html=True,
@@ -39,7 +40,7 @@ def main() -> None:
     _apply_global_style()
 
     st.title("CRI Impact Index")
-    st.caption("v4.0 | Explore climate-impact patterns across provinces and tambons.")
+    st.caption("v4.1 | Explore climate-impact patterns across provinces and tambons.")
 
     tabs = st.tabs([
         "Methodology",

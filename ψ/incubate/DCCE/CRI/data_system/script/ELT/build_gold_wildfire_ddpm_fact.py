@@ -4,7 +4,7 @@ from pathlib import Path
 
 # Setup paths
 base_path = Path(__file__).resolve().parents[2]
-bronze_csv = base_path / "data/0_bronze/2026-07-16-cri-proj-data/Wildfire_ppl_data.csv"
+bronze_csv = base_path / "data/0_bronze/2026-07-16-cri-proj-data/Wildfire_hh_data.csv"
 spine_csv = base_path / "data/2_gold/dopa/dim_location_master.csv"
 out_dir = base_path / "data/2_gold/ddpm"
 
@@ -55,7 +55,7 @@ for _, row in df.iterrows():
         deaths = float(row[death_col]) if death_col in row and not pd.isna(row[death_col]) else 0.0
         
         # Affected households
-        affected_col = f"wildfire_affected_{y_short}"
+        affected_col = f"wildfire_affected_hh_{y_short}"
         affected = float(row[affected_col]) if affected_col in row and not pd.isna(row[affected_col]) else 0.0
         
         rows.append({
