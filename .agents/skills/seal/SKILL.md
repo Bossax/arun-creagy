@@ -1,10 +1,10 @@
 ---
-installer: arra-oracle-skills-cli v26.6.0
-origin: ARUN (Strategic Knowledge Auditor)
-name: seal
-description: '[project] v26.6.0 G-SKLL | The Funnel: Commit unstructured discovery into structured T-E-D-A ledgers. Bonds the audit to the asset.'
+installer: "arra-oracle-skills-cli v26.6.0"
+origin: "ARUN (Strategic Knowledge Auditor)"
+name: "seal"
+description: "[project] v26.6.0 G-SKLL | The Funnel: Commit unstructured discovery into structured T-E-D-A ledgers. Bonds the audit to the asset."
 argument-hint: "[--init | --dry-run]"
-trigger: /seal
+trigger: "/seal"
 ---
 
 # /seal (The T-E-D-A Funnel)

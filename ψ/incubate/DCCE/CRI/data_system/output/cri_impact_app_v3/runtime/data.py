@@ -31,7 +31,7 @@ def load_spatial_manifest() -> dict[str, Any]:
 
 
 @st.cache_data
-def load_metric(metric_key: str, period_key: str = "period_2560_2567", hazard_key: str = "all") -> dict[str, Any]:
+def load_metric(metric_key: str, period_key: str = "period_2561_2567", hazard_key: str = "all") -> dict[str, Any]:
     if metric_key.startswith("heat_"):
         hazard_key = "all"
     path = STAGE1_DIR / period_key / hazard_key / f"{metric_key}.json"
@@ -191,8 +191,8 @@ def build_province_geojson(dataset: dict[str, Any]) -> dict[str, Any]:
 
 
 def tambon_period_key(period_choice: str) -> str:
-    valid = {"period_2560_2567", "period_2567"}
-    return period_choice if period_choice in valid else "period_2560_2567"
+    valid = {"period_2561_2567", "period_2567"}
+    return period_choice if period_choice in valid else "period_2561_2567"
 
 
 def tambon_records(dataset: dict[str, Any], province_code: str | None = None) -> list[dict[str, Any]]:

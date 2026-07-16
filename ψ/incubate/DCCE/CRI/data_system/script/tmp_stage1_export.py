@@ -19,7 +19,9 @@ HAZARDS = {
     "flood": "FLOOD",
     "drought": "DROUGHT",
     "windstorm": "WINDSTORM",
-    "landslide": "LANDSLIDE"
+    "landslide": "LANDSLIDE",
+    "cold_spell": "COLD_SPELL",
+    "wildfire": "WILDFIRE"
 }
 
 
@@ -124,7 +126,6 @@ def rebuild_yearly_ddpm_fact(ddpm_dir: Path) -> tuple[Path, list[str], list[str]
     source_files = sorted(
         p for p in ddpm_dir.glob("fact_ddpm_tambon_impact_climate_yearly_*_2560_2567.csv")
         if p.name != "fact_ddpm_tambon_impact_climate_yearly_2560_2567.csv"
-        and "cold_spell" not in p.name
     )
     if not source_files:
         raise RuntimeError(f"No hazard-specific yearly DDPM files found in {ddpm_dir}")
@@ -353,7 +354,7 @@ def main():
 
     ensure_dir(OUT)
     ensure_dir(OUT / "spatial" / "tambon")
-    for period_key in ["period_2560_2567", "period_2567"]:
+    for period_key in ["period_2561_2567", "period_2567"]:
         for h_key in HAZARDS.keys():
             ensure_dir(OUT / period_key / h_key)
 
@@ -364,16 +365,16 @@ def main():
     )
     tambon_lookup = tambon_lookup_from_shp(tambon_gdf)
 
-    # Province metrics for 2560-2567 average
+    # Province metrics for 2561-2567 average
     human = ddpm.groupby(["province_code"], dropna=False).agg(
         deaths_sum=("deaths_sum", "sum"),
         affected_households_sum=("affected_households_sum", "sum"),
     ).reset_index()
-    human["deaths_abs"] = human["deaths_sum"] / 8.0
-    human["affected_hh_abs"] = human["affected_households_sum"] / 8.0
+    human["deaths_abs"] = human["deaths_sum"] / 7.0
+    human["affected_hh_abs"] = human["affected_households_sum"] / 7.0
 
     # Ensure we only average the specific 8-year period for population and households
-    period_years = [str(y) for y in range(2560, 2568)]
+    period_years = [str(y) for y in range(2561, 2568)]
     
     # Correct multi-step aggregation:
     # 1. Sum tambons to get Province Total per Year
@@ -476,14 +477,14 @@ def main():
     ]
     # Legacy flat 2567 metrics files are not written; disaggregated subfolders are used instead.
 
-    # Tambon metrics follow the same lineage as province metrics: 2560–2567 uses the full
+    # Tambon metrics follow the same lineage as province metrics: 2561–2567 uses the full
     # range fact averaged to an annual value, while 2567 only stays as the single-year slice.
     tambon_avg = ddpm.groupby(["subdistrict_code", "province_code"], dropna=False).agg(
         deaths_sum=("deaths_sum", "sum"),
         affected_households_sum=("affected_households_sum", "sum"),
     ).reset_index()
-    tambon_avg["deaths_abs"] = tambon_avg["deaths_sum"] / 8.0
-    tambon_avg["affected_hh_abs"] = tambon_avg["affected_households_sum"] / 8.0
+    tambon_avg["deaths_abs"] = tambon_avg["deaths_sum"] / 7.0
+    tambon_avg["affected_hh_abs"] = tambon_avg["affected_households_sum"] / 7.0
     tambon_avg = tambon_avg.merge(tambon_lookup_ddpm, on=["subdistrict_code", "province_code"], how="left")
     tambon_avg = tambon_avg.merge(prov_lookup[["province_code", "province_name_th"]], on="province_code", how="left")
     if "province_name_th_y" in tambon_avg.columns:
@@ -515,7 +516,7 @@ def main():
     tambon_2567_aff = tambon_2567[["subdistrict_code", "subdistrict_name_th", "district_name_th", "province_code", "province_name_th", "affected_households_sum"]].rename(columns={"affected_households_sum": "value"})
     # Legacy flat tambon metrics files are not written; disaggregated subfolders are used instead.
 
-    # Heat metrics - period 2560-2567 average and 2567 only
+    # Heat metrics - period 2561-2567 average and 2567 only
     # Note: Heat data is only available from 2561-2567 (7 years)
     heat_def = heat.copy()
     heat_def["metric_code"] = heat_def["metric_code"].astype(str)
@@ -545,13 +546,13 @@ def main():
             period_key,
             period_label,
             "Annual deaths" if metric_code == "DEATHS" else "Annual injuries",
-            "average_window" if period_key == "period_2560_2567" else "single_year",
+            "average_window" if period_key == "period_2561_2567" else "single_year",
             sub,
         )
 
     # Write heatwave metrics directly to 'all' hazard subfolder (heat has no other hazard disaggregation)
-    write_json(OUT / "period_2560_2567" / "all" / "heat_deaths.json", heat_metric("DEATHS", heat_avg, "period_2560_2567", "2560–2567 average"))
-    write_json(OUT / "period_2560_2567" / "all" / "heat_injured.json", heat_metric("INJURED", heat_avg, "period_2560_2567", "2560–2567 average"))
+    write_json(OUT / "period_2561_2567" / "all" / "heat_deaths.json", heat_metric("DEATHS", heat_avg, "period_2561_2567", "2561–2567 average"))
+    write_json(OUT / "period_2561_2567" / "all" / "heat_injured.json", heat_metric("INJURED", heat_avg, "period_2561_2567", "2561–2567 average"))
     write_json(OUT / "period_2567" / "all" / "heat_deaths.json", heat_metric("DEATHS", heat_257, "period_2567", "2567 only"))
     write_json(OUT / "period_2567" / "all" / "heat_injured.json", heat_metric("INJURED", heat_257, "period_2567", "2567 only"))
 
@@ -573,7 +574,7 @@ def main():
         "version": "2026-06-17-stage1",
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "periods": [
-            {"period_key": "period_2560_2567", "period_label": "2560–2567 average"},
+            {"period_key": "period_2561_2567", "period_label": "2561–2567 average"},
             {"period_key": "period_2567", "period_label": "2567 only"},
         ],
         "metric_groups": {
@@ -645,7 +646,7 @@ def main():
         yearly_df["subdistrict_code"] = yearly_df["subdistrict_code"].astype(str).str.zfill(6)
 
         # -------------------------------------------------------------------------
-        # PROCESS: 2560-2567 AVERAGE
+        # PROCESS: 2561-2567 AVERAGE
         # -------------------------------------------------------------------------
         # Province-level sums
         prov_annual = yearly_df[yearly_df["year_be"].isin(period_years)].groupby(
@@ -656,8 +657,8 @@ def main():
         ).reset_index()
         
         prov_avg_human = prov_annual.groupby("province_code", dropna=False).agg(
-            deaths_abs=("deaths_sum", lambda x: x.sum() / 8.0),
-            affected_hh_abs=("affected_households_sum", lambda x: x.sum() / 8.0)
+            deaths_abs=("deaths_sum", lambda x: x.sum() / 7.0),
+            affected_hh_abs=("affected_households_sum", lambda x: x.sum() / 7.0)
         ).reset_index()
 
         # Relief sums
@@ -708,10 +709,10 @@ def main():
         # Write province average metrics
         for metric_key, metric_label, unit_label in avg_specs_2560_2567:
             payload = province_metric_payload(
-                metric_key, metric_label, "period_2560_2567", "2560–2567 average", unit_label, "average_window",
+                metric_key, metric_label, "period_2561_2567", "2561–2567 average", unit_label, "average_window",
                 prov_avg_metrics[["province_code", "province_name_th", "province_name_en", metric_key]].rename(columns={metric_key: "value"})
             )
-            write_json(OUT / "period_2560_2567" / h_key / f"{metric_key}.json", payload)
+            write_json(OUT / "period_2561_2567" / h_key / f"{metric_key}.json", payload)
 
         # Tambon-level human impact averages
         tambon_annual = yearly_df[yearly_df["year_be"].isin(period_years)].groupby(
@@ -722,8 +723,8 @@ def main():
         ).reset_index()
         
         tambon_avg = tambon_annual.groupby("subdistrict_code", dropna=False).agg(
-            deaths_abs=("deaths_sum", lambda x: x.sum() / 8.0),
-            affected_hh_abs=("affected_households_sum", lambda x: x.sum() / 8.0),
+            deaths_abs=("deaths_sum", lambda x: x.sum() / 7.0),
+            affected_hh_abs=("affected_households_sum", lambda x: x.sum() / 7.0),
         ).reset_index()
         
         tambon_avg = tambon_avg.merge(tambon_lookup_ddpm, on="subdistrict_code", how="left")
@@ -740,8 +741,8 @@ def main():
         tambon_avg_deaths = tambon_avg[["subdistrict_code", "subdistrict_name_th", "district_name_th", "province_code", "province_name_th", "deaths_abs"]].rename(columns={"deaths_abs": "value"}).fillna(0.0)
         tambon_avg_aff = tambon_avg[["subdistrict_code", "subdistrict_name_th", "district_name_th", "province_code", "province_name_th", "affected_hh_abs"]].rename(columns={"affected_hh_abs": "value"}).fillna(0.0)
         
-        write_json(OUT / "period_2560_2567" / h_key / "tambon_deaths.json", tambon_metric_payload("tambon_deaths", "Tambon Deaths", "period_2560_2567", "2560–2567 average", "Annual deaths", "average_window", tambon_avg_deaths))
-        write_json(OUT / "period_2560_2567" / h_key / "tambon_affected_households.json", tambon_metric_payload("tambon_affected_households", "Tambon Affected Households", "period_2560_2567", "2560–2567 average", "Annual households", "average_window", tambon_avg_aff))
+        write_json(OUT / "period_2561_2567" / h_key / "tambon_deaths.json", tambon_metric_payload("tambon_deaths", "Tambon Deaths", "period_2561_2567", "2561–2567 average", "Annual deaths", "average_window", tambon_avg_deaths))
+        write_json(OUT / "period_2561_2567" / h_key / "tambon_affected_households.json", tambon_metric_payload("tambon_affected_households", "Tambon Affected Households", "period_2561_2567", "2561–2567 average", "Annual households", "average_window", tambon_avg_aff))
 
         # Heatwave files are written directly to the 'all' directory above.
 
@@ -831,7 +832,7 @@ def main():
         "version": "2026-06-19-disaggregated-stage1",
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "periods": [
-            {"period_key": "period_2560_2567", "period_label": "2560–2567 average"},
+            {"period_key": "period_2561_2567", "period_label": "2561–2567 average"},
             {"period_key": "period_2567", "period_label": "2567 only"}
         ],
         "hazards": [
@@ -839,7 +840,9 @@ def main():
             {"hazard_key": "flood", "hazard_label": "Flood (อุทกภัย)"},
             {"hazard_key": "windstorm", "hazard_label": "Windstorm (วาตภัย)"},
             {"hazard_key": "landslide", "hazard_label": "Landslide (ดินโคลนถล่ม)"},
-            {"hazard_key": "drought", "hazard_label": "Drought (ภัยแล้ง)"}
+            {"hazard_key": "drought", "hazard_label": "Drought (ภัยแล้ง)"},
+            {"hazard_key": "cold_spell", "hazard_label": "Cold Spell (ภัยหนาว)"},
+            {"hazard_key": "wildfire", "hazard_label": "Wildfire (ไฟป่า)"}
         ],
         "metric_groups": {
             "cri": ["deaths_abs", "deaths_rate", "affected_hh_abs", "affected_rate", "loss_abs", "loss_per_gpp", "cri_score"],
@@ -855,12 +858,12 @@ def main():
     print("[SUCCESS] Disaggregated Stage 1 export completed successfully.")
     
     validation = {
-        "province_metric_files": sorted([p.name for p in (OUT / "period_2560_2567").glob("*.json") if p.name not in {"tambon_deaths.json", "tambon_affected_households.json"}] + [p.name for p in (OUT / "period_2567").glob("*.json") if p.name not in {"tambon_deaths.json", "tambon_affected_households.json"}]),
-        "tambon_files": sorted([p.name for p in (OUT / "period_2560_2567").glob("tambon_*.json")]) + sorted([p.name for p in (OUT / "period_2567").glob("tambon_*.json")]),
-        "heat_files": sorted([p.name for p in (OUT / "period_2560_2567").glob("heat_*.json")]) + sorted([p.name for p in (OUT / "period_2567").glob("heat_*.json")]),
+        "province_metric_files": sorted([p.name for p in (OUT / "period_2561_2567").glob("*.json") if p.name not in {"tambon_deaths.json", "tambon_affected_households.json"}] + [p.name for p in (OUT / "period_2567").glob("*.json") if p.name not in {"tambon_deaths.json", "tambon_affected_households.json"}]),
+        "tambon_files": sorted([p.name for p in (OUT / "period_2561_2567").glob("tambon_*.json")]) + sorted([p.name for p in (OUT / "period_2567").glob("tambon_*.json")]),
+        "heat_files": sorted([p.name for p in (OUT / "period_2561_2567").glob("heat_*.json")]) + sorted([p.name for p in (OUT / "period_2567").glob("heat_*.json")]),
         "spatial_province_exists": (OUT / "spatial" / "province_boundaries.geojson").exists(),
         "spatial_manifest_exists": (OUT / "spatial" / "manifest.json").exists(),
-        "province_metric_count": len(list((OUT / "period_2560_2567").glob("*.json"))) + len(list((OUT / "period_2567").glob("*.json"))),
+        "province_metric_count": len(list((OUT / "period_2561_2567").glob("*.json"))) + len(list((OUT / "period_2567").glob("*.json"))),
     }
     write_json(OUT / "validation_summary.json", validation)
 
