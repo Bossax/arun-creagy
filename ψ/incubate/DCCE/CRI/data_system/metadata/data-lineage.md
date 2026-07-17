@@ -182,6 +182,23 @@ This document provides a human-readable map of the transformation logic used to 
 
 ---
 
+## 10. Wildfire Ingestion Stream (Bronze → Gold)
+
+*   **Raw Source**: `0_bronze/2026-07-16-cri-proj-data/Wildfire_hh_data.csv`
+*   **Processing Script**: [`script/ELT/build_gold_wildfire_ddpm_fact.py`](ψ/incubate/DCCE/CRI/data_system/script/ELT/build_gold_wildfire_ddpm_fact.py:1)
+    *   **Logic**:
+        *   **Standardization**: Village/subdistrict codes are zero-padded to 6 digits (`tambon_code`).
+        *   **Pivoting (Melt)**: Converts wide yearly columns representing years 2560 to 2567 (`wildfire_death_XX` and `wildfire_affected_hh_XX` where `XX` is `60` to `67`) into a long format mapping to `deaths_sum` and `affected_households_sum`.
+        *   **YoY Delta**: Calculates Year-on-Year (YoY) delta `yoy_delta_affected_households` for yearly facts.
+        *   **Aggregation**: Sums `affected_households_sum`, `affected_people_sum` (set to `0.0`), and `deaths_sum` for the period aggregate.
+        *   **Enrichment**: Joins with Gold Location Spine (`dim_location_master.csv`) to resolve administrative names (Province, District, Subdistrict).
+        *   **Percentile Ranking**: Calculates percentile ranks for metric sums and average YoY changes on a national level.
+    *   **Outputs**:
+        *   `2_gold/ddpm/fact_ddpm_tambon_impact_climate_wildfire_2560_2567.csv`
+        *   `2_gold/ddpm/fact_ddpm_tambon_impact_climate_yearly_wildfire_2560_2567.csv`
+
+---
+
 ## 11. DDPM Provincial Impact (Gold Fact Tables | 2560–2567)
 
 *   **Purpose**: Aggregated provincial-level impact scores and fiscal gap analysis.
@@ -197,34 +214,36 @@ This document provides a human-readable map of the transformation logic used to 
 
 ---
 
-## 13. Stage 1 Export (Analytical Layer)
+## 12. Stage 1 Export (Analytical Layer / v4.1.0 Upgrade)
 
-*   **Purpose**: Final transformation and packaging of all metrics into the JSON data contract used by the CRI Web App v3.
+*   **Purpose**: Final transformation, packaging, and demographic disaggregation of all metrics into the JSON data contract used by the CRI Web App v4.
 *   **Processing Script**: [`script/tmp_stage1_export.py`](ψ/incubate/DCCE/CRI/data_system/script/tmp_stage1_export.py:1)
 *   **Inputs**:
-    *   **Gold Tambon Impacts**: `2_gold/ddpm/fact_ddpm_tambon_impact_climate_2560_2567.csv` (Cumulative sums).
+    *   **Gold Tambon Impacts**: `2_gold/ddpm/fact_ddpm_tambon_impact_climate_*.csv` (Hazard-specific cumulative sums, including `wildfire` and `cold_spell`).
     *   **Silver Population/Households**: `1_silver/population/silver_population_annual.csv` & `silver_household_annual.csv`.
     *   **Silver GPP/Loss**: `1_silver/gpp/...` & `1_silver/govt_adv_payment/...`.
     *   **Silver Heatwave**: `1_silver/heatwave/silver_heatwave_impact_long.csv`.
+    *   **Location Spine (Gold)**: `2_gold/dopa/dim_location_master.csv` (used as the definitive location spine dictionary).
 *   **Logic**:
-    *   **Averaging (2560–2567)**: 
-        *   It reads the cumulative sums from the Gold/Silver layers, aggregates them by `province_code`, and divides by **8.0** to calculate the annual average.
-        *   **Heat Exception**: Heat metrics are divided by **7.0** to reflect the 2561–2567 data availability window.
-    *   **Rate Calculation**:
-        *   **Affected Rate**: Calculated as `(Annual Avg Affected Households / Annual Avg Total Households) * 100`.
-        *   **Incidence Multiplier**: Because the numerator counts *events* and a single household can be affected by multiple disasters in a year, this rate is an **incidence frequency multiplier** (where >100% indicates multiple impacts per household per year).
-    *   **Normalization**: Applies min-max normalization to generate the composite **CRI Score**.
+    *   **Temporal Baseline Shift (2561–2567)**:
+        *   The baseline period is set to a 7-year window (`2561–2567`) for all hazards. Annual averages are computed by dividing by **7.0**.
+    *   **Dynamic Demographic Multiplier (Household to People)**:
+        *   Instead of raw household metrics, all affected household numbers are dynamically converted to estimated affected people using DOPA population-to-household ratios (computed at the subdistrict level from `silver_household_annual.csv`, with provincial-level fallback).
+        *   A conversion audit report is exported to [`artifacts/analysis/household_to_people_conversion_audit.csv`](ψ/incubate/DCCE/CRI/data_system/artifacts/analysis/household_to_people_conversion_audit.csv) to trace DOPA multiplier fallbacks.
+    *   **Metric Key Renaming**:
+        *   `affected_hh_abs` (Affected Households) $\rightarrow$ `affected_ppl_abs` (Affected People).
+        *   The affected rate is recalculated per 100,000 population: `affected_ppl_rate = (affected_ppl_abs / population_annual_avg) * 100000.0` (replacing the legacy per-100-households rate).
+    *   **CRI Score Completeness Constraints**:
+        *   The composite `ALL` hazard `cri_score` is strictly calculated from the complete hazards (Flood, Drought, and Windstorm).
+        *   Incomplete hazards lacking relief data (Landslide, Wildfire, Cold Spell) have their hazard-specific CRI Scores omitted/disabled, and their indicators are excluded from the composite index calculation.
 *   **Outputs**: 
-    *   `build_exports/stage1/period_2560_2567/*.json`
+    *   `build_exports/stage1/period_2561_2567/*.json`
     *   `build_exports/stage1/period_2567/*.json`
     *   `build_exports/stage1/spatial/*.geojson`
 
 ---
 
-
----
-
-## 9. Forensic Patch Registry (GIS Alignment)
+## 13. Forensic Patch Registry (GIS Alignment)
 
 The following 11 targeted patches were applied in `prep_dopa_boundaries.py` to bridge the gap between legacy GIS attributes (Bronze) and the modern Gold Spine:
 
@@ -244,7 +263,7 @@ The following 11 targeted patches were applied in `prep_dopa_boundaries.py` to b
 
 ---
 
-## 10. Standardization & Exclusion Rules
+## 14. Standardization & Exclusion Rules
 
 To ensure spatial consistency across the CRI, the following rules are applied during the transformation from Silver to Gold:
 
@@ -256,8 +275,5 @@ The following variants are normalized to "กรุงเทพมหานค�
 
 ### 8.2 Administrative Exclusions
 *   **Non-Spatial Agencies**: Records associated with `หน่วยงานในสังกัด` (Affiliated Agencies) are **excluded** from the CRI pipeline.
-*   **Reason**: These represent line-agency expenditures that cannot be spatially attributed to a specific province or village, and would introduce noise into the spatial risk index.
-*   **Reference**: These rules are maintained in `metadata/standardization_mapping.csv`.
- from the CRI pipeline.
 *   **Reason**: These represent line-agency expenditures that cannot be spatially attributed to a specific province or village, and would introduce noise into the spatial risk index.
 *   **Reference**: These rules are maintained in `metadata/standardization_mapping.csv`.

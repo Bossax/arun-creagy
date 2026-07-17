@@ -1,6 +1,5 @@
 import json
 import os
-import glob
 from datetime import datetime, timezone, timedelta
 
 def main():
@@ -9,18 +8,21 @@ def main():
         os.path.expandvars(r"%USERPROFILE%\.gemini\antigravity-cli\brain")
     ]
 
-    latest_jsonl = None
+    all_jsonls = []
     for base_path in base_paths:
         if os.path.exists(base_path):
-            # Sort all jsonl files recursively by modified time
-            jsonls = sorted(glob.glob(os.path.join(base_path, "**", "*.jsonl"), recursive=True), key=os.path.getmtime, reverse=True)
-            if jsonls:
-                latest_jsonl = jsonls[0]
-                break
+            # Use os.walk to guarantee traversing dot-directories like .system_generated
+            for root, dirs, files in os.walk(base_path):
+                for f in files:
+                    if f.endswith('.jsonl'):
+                        all_jsonls.append(os.path.join(root, f))
 
-    if not latest_jsonl:
+    if not all_jsonls:
         print("No session directories found.")
         return
+
+    # Find the newest file across all search directories
+    latest_jsonl = max(all_jsonls, key=os.path.getmtime)
 
     tz = timezone(timedelta(hours=7))
     with open(latest_jsonl, encoding='utf-8') as f:
@@ -29,7 +31,7 @@ def main():
                 m = json.loads(line)
                 # Match both antigravity-cli and older formats
                 if m.get("type") in ("user", "USER_INPUT") or m.get("source") == "USER_EXPLICIT":
-                    ts = m.get("timestamp", "")
+                    ts = m.get("timestamp") or m.get("created_at") or ""
                     content = str(m.get("content", ""))[:80].replace('\n', ' ')
                     if ts:
                         dt = datetime.fromisoformat(ts.replace("Z", "+00:00")).astimezone(tz)
