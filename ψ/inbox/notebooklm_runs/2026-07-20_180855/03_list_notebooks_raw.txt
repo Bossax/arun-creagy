@@ -1,0 +1,956 @@
+[
+  {
+    "id": "b5c732ca-12f1-42f0-a79f-da9a0a336218",
+    "title": "IPCC AR6 WGI: The Physical Science Basis Summary for Policymakers",
+    "source_count": 3,
+    "updated_at": "2026-07-20T10:04:58Z"
+  },
+  {
+    "id": "3d4b06cb-b4a4-4b57-b6dc-1cbc2f6f0e78",
+    "title": "",
+    "source_count": 0,
+    "updated_at": "2026-07-20T10:02:42Z"
+  },
+  {
+    "id": "2e622290-6730-489d-91b9-af47f7aa729c",
+    "title": "SurfPerch: Cross-Domain Transfer Learning for Marine Bioacoustics",
+    "source_count": 1,
+    "updated_at": "2026-07-19T08:26:30Z"
+  },
+  {
+    "id": "29be142f-b042-4669-89f2-9f4013b4f63e",
+    "title": "Mapping coral reef with optical methods on aerial platforms",
+    "source_count": 6,
+    "updated_at": "2026-07-19T04:39:36Z"
+  },
+  {
+    "id": "897d9ae3-4448-41a1-a507-edbe7eb30990",
+    "title": "Hyperspectral Remote Sensing of Coral Reef Benthic Habitats",
+    "source_count": 4,
+    "updated_at": "2026-07-19T04:07:48Z"
+  },
+  {
+    "id": "d06504fb-2059-40a3-8930-e328e2a2f59d",
+    "title": "Vol. II : Soundscapes Characterization and Interpretation",
+    "source_count": 5,
+    "updated_at": "2026-07-17T04:37:23Z"
+  },
+  {
+    "id": "e268754e-b55f-4f70-aba3-57093c1f65a0",
+    "title": "Vol. I : Soundscapes Characterization and Interpretation",
+    "source_count": 6,
+    "updated_at": "2026-07-16T01:41:05Z"
+  },
+  {
+    "id": "c79455d7-3470-492f-9eea-cc4832a06897",
+    "title": "DCCE Climate Adaptation Monitoring and Evaluation Development TOR",
+    "source_count": 5,
+    "updated_at": "2026-07-14T05:36:51Z"
+  },
+  {
+    "id": "caf2f1d8-c5b9-4c48-9e4c-7dc5459bda2c",
+    "title": " Semantic Layer Architecture  ",
+    "source_count": 8,
+    "updated_at": "2026-07-13T08:10:02Z"
+  },
+  {
+    "id": "8bcbf9bb-fc5c-448a-839f-74a2d11b1a0e",
+    "title": "A-BTR data pipelines",
+    "source_count": 5,
+    "updated_at": "2026-07-09T05:51:05Z"
+  },
+  {
+    "id": "03439c21-6a77-40d0-a3d2-d8c0d8850c03",
+    "title": "แนวทางการเปิดเผยข้อมูลเปิดภาครัฐในรูปแบบดิจิทัลต่อสาธารณะ",
+    "source_count": 5,
+    "updated_at": "2026-07-08T05:19:24Z"
+  },
+  {
+    "id": "3727e24b-0947-4717-ba48-33b28601c7ae",
+    "title": "Monitoring and Evaluation for Climate Adaptation",
+    "source_count": 5,
+    "updated_at": "2026-07-06T08:38:31Z"
+  },
+  {
+    "id": "a2943d6e-7b69-4361-82c5-33e69a6a4a9d",
+    "title": "Underwater Noise: Measurement, Modeling, and Mitigation",
+    "source_count": 8,
+    "updated_at": "2026-07-04T14:54:17Z"
+  },
+  {
+    "id": "af545f03-9237-4687-a527-b2d07be6509a",
+    "title": "Deployment design for Marine Soundscape",
+    "source_count": 8,
+    "updated_at": "2026-07-04T14:47:30Z"
+  },
+  {
+    "id": "bb0355f2-1119-4385-b3bc-6b7cfa189296",
+    "title": "Climate Change Risk and Impact Paper",
+    "source_count": 10,
+    "updated_at": "2026-07-04T02:56:23Z"
+  },
+  {
+    "id": "a0cbd9d8-f796-478c-98b6-55e1a3ed5be0",
+    "title": "Measuring Municipal Climate Adaptation Progress: An Index Validation",
+    "source_count": 9,
+    "updated_at": "2026-06-29T16:20:18Z"
+  },
+  {
+    "id": "8d02885d-0115-4b7a-ba16-1acafbb8f82e",
+    "title": "Hardware hydrophone rig design",
+    "source_count": 4,
+    "updated_at": "2026-06-29T03:16:06Z"
+  },
+  {
+    "id": "c5916710-0855-45c6-a833-bcd6b4df3ab1",
+    "title": "Disaster Risk Reduction: Thailand's Department of Disaster Prevention",
+    "source_count": 14,
+    "updated_at": "2026-06-27T09:46:13Z"
+  },
+  {
+    "id": "9130db9c-6282-42c6-b18f-1a53230dff48",
+    "title": "Thailand’s National Adaptation Plan (NAP) 2023",
+    "source_count": 1,
+    "updated_at": "2026-06-26T11:09:21Z"
+  },
+  {
+    "id": "adead7bd-8ccd-4106-b670-960c99485b1d",
+    "title": "World Bank - Damage, Loss, and Need Assessment",
+    "source_count": 3,
+    "updated_at": "2026-06-26T08:58:45Z"
+  },
+  {
+    "id": "a7274ced-ccb1-4734-86cf-ac2f53a273c5",
+    "title": "NAP Technical Guidelines 2025",
+    "source_count": 1,
+    "updated_at": "2026-06-26T08:27:22Z"
+  },
+  {
+    "id": "f4181c6a-7db0-44a2-804a-29f60572febb",
+    "title": "Thailand Annual Budget Act B.E. 2570",
+    "source_count": 2,
+    "updated_at": "2026-06-23T15:09:26Z"
+  },
+  {
+    "id": "b2123f9b-1b34-43eb-ac01-442208dd6b83",
+    "title": "วิกฤตการณ์และการรับมือภัยชายฝั่งในประเทศไทยในยุคโลกร้อน",
+    "source_count": 10,
+    "updated_at": "2026-06-23T09:07:59Z"
+  },
+  {
+    "id": "6d65e6db-eeee-421f-a755-44173d55f474",
+    "title": "How to capture writing style ",
+    "source_count": 10,
+    "updated_at": "2026-06-22T10:08:54Z"
+  },
+  {
+    "id": "b1dfec7d-f435-45cb-8aa0-2387f4d1d291",
+    "title": "GHG Accounting for Land Sector",
+    "source_count": 3,
+    "updated_at": "2026-06-09T10:06:42Z"
+  },
+  {
+    "id": "d82016bb-02c1-4d9f-b06c-a3c03415db1f",
+    "title": "TH_writing_style_extractor",
+    "source_count": 4,
+    "updated_at": "2026-06-09T09:58:25Z"
+  },
+  {
+    "id": "3a0a8ba9-8b24-4341-9024-729bbce69161",
+    "title": "Thailand Climate-Resilient Infrastructure Planning Terms of Reference",
+    "source_count": 1,
+    "updated_at": "2026-05-28T11:23:22Z"
+  },
+  {
+    "id": "f3896e36-cd51-439c-8c27-4efe845549bb",
+    "title": "แผนแม่บทรถไฟฟ้าเชียงใหม่สายสีแดง: สรุปผลการศึกษาและออกแบบโครงการ",
+    "source_count": 2,
+    "updated_at": "2026-05-23T17:06:55Z"
+  },
+  {
+    "id": "297cfba6-fbbb-4ff8-ae4b-2482f08d2ca7",
+    "title": "โครงการถนนวงแหวนเชียงใหม่รอบ 4 ตอนล่าง",
+    "source_count": 2,
+    "updated_at": "2026-05-23T16:03:22Z"
+  },
+  {
+    "id": "80e8e3db-30af-460d-80d5-6a5152921513",
+    "title": "Highway 121 Elevated Road Development in Chiang Mai",
+    "source_count": 3,
+    "updated_at": "2026-05-23T15:43:19Z"
+  },
+  {
+    "id": "4b14725a-3ae7-4c22-a14f-c85df2dfe807",
+    "title": "การจัดการสาธารณภัยในประเทศไทย",
+    "source_count": 10,
+    "updated_at": "2026-05-14T12:31:55Z"
+  },
+  {
+    "id": "aed80487-5061-413c-8363-67ae998fbb6d",
+    "title": "Co-design of climate services",
+    "source_count": 10,
+    "updated_at": "2026-05-04T14:49:13Z"
+  },
+  {
+    "id": "8dbc7b1b-e2f0-4564-b05a-4c1363123d2b",
+    "title": "Climate Services 1",
+    "source_count": 6,
+    "updated_at": "2026-05-04T06:38:15Z"
+  },
+  {
+    "id": "452404a1-f654-42af-bef2-c81c8fefa15e",
+    "title": "CRI Asset-Process Framework",
+    "source_count": 5,
+    "updated_at": "2026-05-01T05:46:32Z"
+  },
+  {
+    "id": "dc7618ad-a99d-4fa1-aa9f-515354c2c63c",
+    "title": "Urban Resilience - Infrastructure and Assets",
+    "source_count": 10,
+    "updated_at": "2026-05-01T05:20:21Z"
+  },
+  {
+    "id": "d82bb8d6-e5a0-421d-9d67-602fcc879bfd",
+    "title": "Urban Resilience - Governance",
+    "source_count": 23,
+    "updated_at": "2026-05-01T03:41:22Z"
+  },
+  {
+    "id": "c828d4e8-ed0f-4aec-aab7-1188d646af93",
+    "title": "National Climate Risk Index and Assessment Platform for Thailand",
+    "source_count": 1,
+    "updated_at": "2026-04-29T14:12:27Z"
+  },
+  {
+    "id": "a6446a8d-d0af-4d93-8d2e-f9ef81e77933",
+    "title": "case-crossover for health impact",
+    "source_count": 7,
+    "updated_at": "2026-04-26T15:46:30Z"
+  },
+  {
+    "id": "3c6606bb-0364-4aca-bfba-4385214fa445",
+    "title": "Vol II : Acoustic Indexes for Marine Biodiversity and Ecosystem Health",
+    "source_count": 3,
+    "updated_at": "2026-04-16T17:43:32Z"
+  },
+  {
+    "id": "598fde78-262e-4760-83e2-3462b21fecce",
+    "title": "Vol I : Acoustic Indexes for Marine Biodiversity and Ecosystem Health",
+    "source_count": 6,
+    "updated_at": "2026-04-16T17:40:50Z"
+  },
+  {
+    "id": "78b44911-99f2-4fa9-b487-df219008ee26",
+    "title": "Acoustic Characteristics and Marine Habitats",
+    "source_count": 8,
+    "updated_at": "2026-04-16T17:36:37Z"
+  },
+  {
+    "id": "79b814ad-65fd-417e-9f6e-65b7fb9177d7",
+    "title": "Fish chorus and Source Identification",
+    "source_count": 5,
+    "updated_at": "2026-04-16T17:10:32Z"
+  },
+  {
+    "id": "2aaf7d8b-9528-436b-9f37-eaf0afad9d3f",
+    "title": "Small People: Existential Uncertainty in Southern Thailand",
+    "source_count": 1,
+    "updated_at": "2026-04-10T14:33:41Z"
+  },
+  {
+    "id": "63bf26a1-721e-4f16-8564-ee0b7478caf8",
+    "title": "แผนยุทธศาสตร์สื่อสารและชุดส่งมอบผลลัพธ์เวิร์กชอป CRDB เพื่อตอบรับ NFCS",
+    "source_count": 8,
+    "updated_at": "2026-04-10T04:17:59Z"
+  },
+  {
+    "id": "83a6f270-e3d6-4574-9b5d-6ab5ff0eb20b",
+    "title": "ฐานข้อมูลความเสี่ยงเชิงพื้นที่จากการเปลี่ยนแปลงสภาพภูมิอากาศไทยฉบับสมบูรณ์",
+    "source_count": 2,
+    "updated_at": "2026-04-10T04:17:30Z"
+  },
+  {
+    "id": "1bfead9e-24d2-430a-96b6-f1029a2dbecf",
+    "title": "WMO NFCS – Thailand & Examples",
+    "source_count": 7,
+    "updated_at": "2026-03-30T10:37:51Z"
+  },
+  {
+    "id": "3532ecdb-60f5-46fb-a39d-f34655917977",
+    "title": "DCCE_CRDB Strategy and National Climate Information Framework Roadmap",
+    "source_count": 0,
+    "updated_at": "2026-03-11T06:38:28Z"
+  },
+  {
+    "id": "c68b5988-4d4a-4511-9c9f-8d619b32b0b3",
+    "title": "Thailand Forestry Acts",
+    "source_count": 7,
+    "updated_at": "2026-03-04T05:27:12Z"
+  },
+  {
+    "id": "29cc28c9-2db3-48d0-852b-4ebd76040e78",
+    "title": "IPCC 2019 Vol4 AFOLU",
+    "source_count": 7,
+    "updated_at": "2026-03-04T02:49:40Z"
+  },
+  {
+    "id": "14ad44e1-2abe-4a3b-a1cc-bbebf6b8716d",
+    "title": "IPCC 2006 Vol4 AFOLU",
+    "source_count": 7,
+    "updated_at": "2026-03-04T02:47:22Z"
+  },
+  {
+    "id": "1888d5db-d377-42cf-9ab7-f5ca30caca55",
+    "title": "IPCC AR6 WGII: Climate Risk Management and Adaptation Governance Strategies",
+    "source_count": 1,
+    "updated_at": "2026-02-16T06:05:14Z"
+  },
+  {
+    "id": "53736491-d58b-406c-9bce-68a3ba47ddb3",
+    "title": "Technical Guidance on Comprehensive Risk Assessment and Planning",
+    "source_count": 1,
+    "updated_at": "2026-02-16T06:04:46Z"
+  },
+  {
+    "id": "0cbd097b-5d41-438d-8352-02a5b4064207",
+    "title": "Technical lever of DRR and CCA alignment",
+    "source_count": 21,
+    "updated_at": "2026-02-16T05:11:03Z"
+  },
+  {
+    "id": "f45993cf-7d8a-4838-bd16-3b6b4ce4f62f",
+    "title": "Data Architecture",
+    "source_count": 9,
+    "updated_at": "2026-02-11T10:04:47Z"
+  },
+  {
+    "id": "62eefca5-438b-44c2-86ad-451ab019b8e3",
+    "title": "Informal Parking: Problem or Opportunity?",
+    "source_count": 3,
+    "updated_at": "2026-02-04T15:45:52Z"
+  },
+  {
+    "id": "3152d841-f2f3-406d-ac90-4d59c845e6b5",
+    "title": "Climate Resilience Research",
+    "source_count": 19,
+    "updated_at": "2026-02-03T03:13:38Z"
+  },
+  {
+    "id": "0c822b25-9e28-450e-be96-29671d4fa7cf",
+    "title": "Parking reform research",
+    "source_count": 1,
+    "updated_at": "2026-01-31T16:54:37Z"
+  },
+  {
+    "id": "00b545d7-506b-4d10-b15d-b7c9a3fb8e82",
+    "title": " Urban-Act",
+    "source_count": 1,
+    "updated_at": "2026-01-30T04:23:19Z"
+  },
+  {
+    "id": "b2e2d41b-ad52-435b-a48f-a1aa04783c5a",
+    "title": "Global system risk research",
+    "source_count": 5,
+    "updated_at": "2026-01-21T15:37:40Z"
+  },
+  {
+    "id": "8ea417b8-70d7-4f31-a98e-ad0280c02025",
+    "title": "ปภ: DRM",
+    "source_count": 9,
+    "updated_at": "2026-01-20T03:34:45Z"
+  },
+  {
+    "id": "8c87a366-9d4b-4904-b099-bc4cf709f6fd",
+    "title": "MDB Common Approach to Measuring Climate Results: Indicator Update",
+    "source_count": 2,
+    "updated_at": "2026-01-16T15:31:12Z"
+  },
+  {
+    "id": "ac670a50-7603-4a37-bcf1-ad4763a75631",
+    "title": "National A M&E Research ",
+    "source_count": 5,
+    "updated_at": "2026-01-16T02:06:31Z"
+  },
+  {
+    "id": "6fef5127-ecfc-4c6a-8551-01dfa742eaec",
+    "title": "Baseline framework research for climate change adaptation",
+    "source_count": 25,
+    "updated_at": "2026-01-15T14:30:54Z"
+  },
+  {
+    "id": "1478906f-948a-4f78-a99d-a2c82db0b32b",
+    "title": "A-BTR and MEL System",
+    "source_count": 3,
+    "updated_at": "2026-01-15T14:30:18Z"
+  },
+  {
+    "id": "7b697578-4208-445c-bce8-c20072805f53",
+    "title": "Mainstreaming CCA ",
+    "source_count": 3,
+    "updated_at": "2026-01-15T14:29:49Z"
+  },
+  {
+    "id": "9fd00d65-09af-4f20-b709-1a7cd3d59a94",
+    "title": "Climate Change Department: Duties and Responsibilities",
+    "source_count": 2,
+    "updated_at": "2026-01-15T14:29:15Z"
+  },
+  {
+    "id": "75d1ba7b-db85-4d7a-8016-b9663c867aa0",
+    "title": "Overview - A M&E status",
+    "source_count": 1,
+    "updated_at": "2026-01-15T14:28:46Z"
+  },
+  {
+    "id": "447d718e-6d06-49de-aa4c-3234ee8d4458",
+    "title": "Climate Adaptation Information Initiative",
+    "source_count": 16,
+    "updated_at": "2026-01-15T14:28:26Z"
+  },
+  {
+    "id": "b7027d8e-29d5-41a7-bb83-9fedc4e8686a",
+    "title": "Adapting to Transparency: Biennial Reporting Guide",
+    "source_count": 3,
+    "updated_at": "2026-01-15T14:27:59Z"
+  },
+  {
+    "id": "5f46c548-2902-4e3d-a814-f7afc181c2a6",
+    "title": "Adaptation M&E case study - coral reef community",
+    "source_count": 2,
+    "updated_at": "2026-01-15T14:26:11Z"
+  },
+  {
+    "id": "9f82e5be-a674-4966-b9bc-0bbc580cb5e4",
+    "title": "Adaptation Policy Frameworks for Climate Change",
+    "source_count": 1,
+    "updated_at": "2026-01-15T14:06:26Z"
+  },
+  {
+    "id": "faffbbeb-aaa0-4d45-864c-26001b497184",
+    "title": "Systemic Pivot: Building the Adaptation M&E Architecture",
+    "source_count": 1,
+    "updated_at": "2026-01-15T14:03:11Z"
+  },
+  {
+    "id": "0dd49058-08dc-4a76-a365-083ce1bf77e2",
+    "title": "แนวทางการประเมินความเสียหาย การสูญเสีย และความต้องการ (DaLA)",
+    "source_count": 3,
+    "updated_at": "2026-01-15T14:03:02Z"
+  },
+  {
+    "id": "63def526-5212-4225-8b0c-73d509971d16",
+    "title": "ยุทธศาสตร์บูรณาการข้อมูลและการปรับตัวต่อสภาพภูมิอากาศ DCCE",
+    "source_count": 2,
+    "updated_at": "2026-01-15T14:02:55Z"
+  },
+  {
+    "id": "cac330be-571a-4497-80e7-42b125b44d15",
+    "title": "Risk Assessment for Climate Change Adaptation in Thai Cities",
+    "source_count": 3,
+    "updated_at": "2026-01-15T14:02:43Z"
+  },
+  {
+    "id": "3721e400-8afa-4976-9329-29921e9bf8b6",
+    "title": "Architectural Blueprint for the National Climate Adaptation Information Framework",
+    "source_count": 1,
+    "updated_at": "2026-01-15T10:41:34Z"
+  },
+  {
+    "id": "44fd57d0-0fe6-476c-988d-53d21b8a3ec0",
+    "title": "Climate and Hazard relationship",
+    "source_count": 3,
+    "updated_at": "2026-01-15T04:10:50Z"
+  },
+  {
+    "id": "bd90dccf-924d-481e-a04a-48319dd68afd",
+    "title": "Stakeholder Interview Results",
+    "source_count": 10,
+    "updated_at": "2026-01-14T05:49:16Z"
+  },
+  {
+    "id": "2b411d10-882c-4623-be52-3df83d01c851",
+    "title": "OpenQuake Engine Technical Documentation and User Guides",
+    "source_count": 10,
+    "updated_at": "2026-01-14T05:25:39Z"
+  },
+  {
+    "id": "a26cc3cb-f3f0-4701-90bf-5fbf61316de2",
+    "title": "CLIMADA",
+    "source_count": 8,
+    "updated_at": "2026-01-14T05:25:32Z"
+  },
+  {
+    "id": "32ebc215-c2d7-400f-9d2d-09fa20491f2a",
+    "title": "ISO 19115-1 Metadata Workbook and XML Implementation Guide",
+    "source_count": 2,
+    "updated_at": "2026-01-13T07:26:43Z"
+  },
+  {
+    "id": "7bdf4668-f0bc-4fb5-af34-a6abda2617c7",
+    "title": "การประเมินความเสี่ยงเพื่อการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศในเมือง",
+    "source_count": 1,
+    "updated_at": "2026-01-08T03:52:49Z"
+  },
+  {
+    "id": "6c9ccf5e-f87a-4883-a368-4df08549622c",
+    "title": "แนวทางการฟื้นฟูธรรมชาติและระบบนิเวศอย่างยั่งยืน",
+    "source_count": 5,
+    "updated_at": "2025-12-30T15:54:27Z"
+  },
+  {
+    "id": "4d6d9cc5-2a1b-484f-9666-bafba4af8507",
+    "title": "Deep South Futures: Signals and Trends",
+    "source_count": 7,
+    "updated_at": "2025-12-14T02:54:05Z"
+  },
+  {
+    "id": "0c6c4ee1-92fb-493a-93a6-27d740473e0f",
+    "title": "Thai Department of Highways Strategic Plan 2023–2027",
+    "source_count": 4,
+    "updated_at": "2025-11-17T18:46:39Z"
+  },
+  {
+    "id": "a20d584d-e94f-4d54-8117-07f77775e2c8",
+    "title": "Rebel Cities: Urbanization and Capitalist Crises",
+    "source_count": 7,
+    "updated_at": "2025-11-15T09:50:03Z"
+  },
+  {
+    "id": "a148ca39-eb37-41e9-8ca6-d550c85e6317",
+    "title": "Sustainable City Assessment Manual: Thailand",
+    "source_count": 1,
+    "updated_at": "2025-10-14T03:37:05Z"
+  },
+  {
+    "id": "570955f9-61be-4689-b5e8-9e6f2c0f18e8",
+    "title": "LPA 2025: Local Performance Management Assessment",
+    "source_count": 6,
+    "updated_at": "2025-10-09T08:05:29Z"
+  },
+  {
+    "id": "58f9b494-42c0-4399-9a59-9d1fc002f224",
+    "title": "Thailand's Climate Adaptation and Risk Index Development",
+    "source_count": 1,
+    "updated_at": "2025-10-09T04:01:48Z"
+  },
+  {
+    "id": "33198e3f-2321-4cf8-90aa-cf9523f56a02",
+    "title": "Vulnerability study",
+    "source_count": 4,
+    "updated_at": "2025-10-07T03:24:42Z"
+  },
+  {
+    "id": "78058693-2e13-4784-afa9-cccf93015c18",
+    "title": "Flood Vulnerability Assessment Methods Overview",
+    "source_count": 2,
+    "updated_at": "2025-10-06T05:10:52Z"
+  },
+  {
+    "id": "14f09297-0294-48b8-920a-e1014e4f811e",
+    "title": "Thailand's Health Adaptation Plan for Climate Change (2021-2030)",
+    "source_count": 1,
+    "updated_at": "2025-10-03T06:57:49Z"
+  },
+  {
+    "id": "d1f3ce23-db17-4220-8e13-162ebe678b07",
+    "title": "Political Economy of Car Dependence and Carbon Lock-in",
+    "source_count": 1,
+    "updated_at": "2025-09-23T16:43:34Z"
+  },
+  {
+    "id": "1d2f1a20-b2c5-4d69-b897-a653f3e8fc8b",
+    "title": "FEMA National Risk Index Technical Documentation",
+    "source_count": 1,
+    "updated_at": "2025-09-23T09:08:18Z"
+  },
+  {
+    "id": "50253c80-4f88-44f9-9d22-8df7a4dea71a",
+    "title": "Case cross over in environmental epidemiology",
+    "source_count": 4,
+    "updated_at": "2025-09-12T04:58:03Z"
+  },
+  {
+    "id": "eba97235-5b71-4bc3-8bc5-63f2a59c9fb2",
+    "title": "Modeling Climate Change's Health Impacts: A Practical Guide",
+    "source_count": 1,
+    "updated_at": "2025-09-04T06:42:15Z"
+  },
+  {
+    "id": "7cdfda70-b26b-4694-ad85-530ac3ede6d3",
+    "title": "Optimized Passive Acoustic Monitoring for Coral Reef Health",
+    "source_count": 1,
+    "updated_at": "2025-09-03T17:23:53Z"
+  },
+  {
+    "id": "27a28b66-dd8a-456e-bfbb-0d1366b66e8c",
+    "title": "Underwater soundscape characterization",
+    "source_count": 9,
+    "updated_at": "2025-09-03T15:30:22Z"
+  },
+  {
+    "id": "c7aaffee-c9ca-4b93-a657-523ee500b19a",
+    "title": " Budgeting Handbooks for Fiscal Year 2567",
+    "source_count": 3,
+    "updated_at": "2025-08-13T05:06:35Z"
+  },
+  {
+    "id": "572b7c0c-4001-4ab1-8618-18f1c3ec29ca",
+    "title": "Goldilocks Parking: Right Prices, Better Cities",
+    "source_count": 6,
+    "updated_at": "2025-08-10T00:40:17Z"
+  },
+  {
+    "id": "f1e0047d-9bf3-4f3d-832e-dc9cb1c1da5c",
+    "title": "Thai Natural Resources Ministry: 6-Month Performance Assessment 2024",
+    "source_count": 6,
+    "updated_at": "2025-08-07T13:52:25Z"
+  },
+  {
+    "id": "958dcd36-d235-437f-b2e6-eed435068a0e",
+    "title": "Dasymetric Mapping for Megacity Health Outcomes Analysis",
+    "source_count": 8,
+    "updated_at": "2025-08-01T11:00:37Z"
+  },
+  {
+    "id": "3d6c6341-05ac-4d07-b3ed-79c1bdd68c29",
+    "title": "Real-Time Climate Change Attribution",
+    "source_count": 1,
+    "updated_at": "2025-07-30T09:51:05Z"
+  },
+  {
+    "id": "f9361763-fdeb-4983-9d9a-a3f6bdfb06d1",
+    "title": "LLM-Assisted Deductive Coding: A Content Analysis Approach",
+    "source_count": 7,
+    "updated_at": "2025-07-30T07:52:21Z"
+  },
+  {
+    "id": "ae49061d-0690-4bb7-ae8b-3ef6fa254c8f",
+    "title": "Overcoming Barriers to Climate Change Adaptation Implementation",
+    "source_count": 3,
+    "updated_at": "2025-07-24T08:07:37Z"
+  },
+  {
+    "id": "d3897122-0917-4c80-9cf8-5db83e453dc9",
+    "title": "Adaptation finance funds criteria",
+    "source_count": 13,
+    "updated_at": "2025-07-23T05:28:07Z"
+  },
+  {
+    "id": "dd611c06-bf40-40ff-ab4c-89fc842b3efd",
+    "title": "Adaptation project case studies  benchmarking",
+    "source_count": 8,
+    "updated_at": "2025-07-21T16:03:35Z"
+  },
+  {
+    "id": "0551d262-637d-4bb0-a8d6-dfac7b6faa62",
+    "title": "Advancing Climate Adaptation: Planning, Implementation, and Governance",
+    "source_count": 1,
+    "updated_at": "2025-07-18T08:20:24Z"
+  },
+  {
+    "id": "a789bceb-911c-44e9-93ad-ba2850dd4836",
+    "title": "Three Modes of Climate Adaptation Planning and Implementation",
+    "source_count": 1,
+    "updated_at": "2025-07-18T07:41:30Z"
+  },
+  {
+    "id": "315db891-50ad-4118-b3ce-5331837f4590",
+    "title": "Deadly Heat's Rising Tide: Shortening Return Periods of Mortality",
+    "source_count": 2,
+    "updated_at": "2025-07-15T22:30:33Z"
+  },
+  {
+    "id": "c3973524-14cd-46a4-82a0-e745acbd253e",
+    "title": "Machine Learning for Underwater Soundscape Analysis",
+    "source_count": 4,
+    "updated_at": "2025-07-01T04:03:12Z"
+  },
+  {
+    "id": "57750d41-1e07-42f7-ab09-89265823cb16",
+    "title": "Soundscapes: Marine Policy and Conservation",
+    "source_count": 4,
+    "updated_at": "2025-06-24T07:34:56Z"
+  },
+  {
+    "id": "ac024aa4-3216-4773-ba51-8d93568ceb96",
+    "title": "Horizon Scan Manual: Five Steps to Future Preparedness",
+    "source_count": 1,
+    "updated_at": "2025-06-11T14:41:47Z"
+  },
+  {
+    "id": "c0f1a586-543f-4e6e-a928-f1d8b62db951",
+    "title": "How to assign probability to scenarios",
+    "source_count": 4,
+    "updated_at": "2025-06-11T05:13:12Z"
+  },
+  {
+    "id": "6911299d-fb48-47fd-9da2-f93c9bfcb697",
+    "title": "Tiered Tariffs for Electricity-Enabled Businesses",
+    "source_count": 1,
+    "updated_at": "2025-06-11T04:44:29Z"
+  },
+  {
+    "id": "74e37c18-b964-493d-9514-fd14b5defec1",
+    "title": "World Energy Outlook: Scenarios for Global Energy Futures",
+    "source_count": 3,
+    "updated_at": "2025-06-04T08:58:35Z"
+  },
+  {
+    "id": "dbb35a21-5ff1-40bd-97f6-9bfe863c24ec",
+    "title": "ความย้อนแย้งของการจราจรในเมือง",
+    "source_count": 4,
+    "updated_at": "2025-06-03T16:28:04Z"
+  },
+  {
+    "id": "08172fb2-b46b-45f5-a31b-6c15fc47c19d",
+    "title": "Urban Highways: Barriers to Social Ties",
+    "source_count": 1,
+    "updated_at": "2025-06-03T01:55:35Z"
+  },
+  {
+    "id": "f7e465d4-9f6d-4897-a2e7-c11a547de222",
+    "title": "การเล่นกลางแจ้งกับการเปลี่ยนแปลงสภาพภูมิอากาศ",
+    "source_count": 10,
+    "updated_at": "2025-05-31T02:46:29Z"
+  },
+  {
+    "id": "7b05972d-de17-4ad9-9ef7-ded2cba649aa",
+    "title": "Local Finance Problems in Nakhon Pathom",
+    "source_count": 3,
+    "updated_at": "2025-05-30T10:23:11Z"
+  },
+  {
+    "id": "36a652d4-d7ec-4a43-9a58-d31a38fbd7cf",
+    "title": "คู่มือติดตามประเมินผลการปรับตัวสภาพภูมิอากาศ",
+    "source_count": 1,
+    "updated_at": "2025-05-28T08:58:34Z"
+  },
+  {
+    "id": "1205bb8b-fb0b-4882-8037-d46011422ec2",
+    "title": "Chiang Mai Statistical Report ",
+    "source_count": 6,
+    "updated_at": "2025-05-26T07:53:28Z"
+  },
+  {
+    "id": "bdddb756-dde3-48ae-a4f2-13e21c845380",
+    "title": "Operationalize National Adaptation Plan",
+    "source_count": 8,
+    "updated_at": "2025-05-22T14:08:15Z"
+  },
+  {
+    "id": "e86f6252-09c0-4b8e-82a1-457403dadc00",
+    "title": "Climate Risk: DRR and CCA Integration",
+    "source_count": 7,
+    "updated_at": "2025-05-22T14:01:17Z"
+  },
+  {
+    "id": "85add9f1-34b1-4396-9c59-8d09447ea8d6",
+    "title": "แผนปฏิบัติการเทศบาลนครเชียงใหม่ 2568",
+    "source_count": 1,
+    "updated_at": "2025-05-22T13:36:29Z"
+  },
+  {
+    "id": "fe644e02-cce2-4142-acf1-5a782817baa7",
+    "title": "Climate Adaptation Pathway",
+    "source_count": 9,
+    "updated_at": "2025-05-22T04:40:56Z"
+  },
+  {
+    "id": "ccac1ee4-fdc9-4136-8943-46d2c5be079f",
+    "title": "Chiang Mai Urban Expansion and Climate Change Adaptation",
+    "source_count": 3,
+    "updated_at": "2025-05-18T14:04:47Z"
+  },
+  {
+    "id": "e74968fa-347a-40d6-afac-8ddbd49a1c54",
+    "title": "Climate Change Integration in Local Development Plans",
+    "source_count": 8,
+    "updated_at": "2025-05-16T07:18:29Z"
+  },
+  {
+    "id": "cd493b49-5845-421c-be96-4b7c713d5a8b",
+    "title": "เสริมสร้างศักยภาพรับมือภูมิอากาศตามความตกลงปารีส",
+    "source_count": 2,
+    "updated_at": "2025-05-12T03:58:44Z"
+  },
+  {
+    "id": "f414b7d0-80c7-41ea-b045-5d96472e8c47",
+    "title": "Gov Project",
+    "source_count": 12,
+    "updated_at": "2025-05-09T03:36:00Z"
+  },
+  {
+    "id": "b526437e-f46e-4cec-b063-ae5248ae208f",
+    "title": "Rayong Coastal Climate Adaptation Project Alignment",
+    "source_count": 5,
+    "updated_at": "2025-05-05T23:22:01Z"
+  },
+  {
+    "id": "a2577a9a-89f8-498a-a6fa-82a5fc87254d",
+    "title": "Phetchaburi Coastal Adaptation Project Linkage",
+    "source_count": 4,
+    "updated_at": "2025-05-05T22:25:32Z"
+  },
+  {
+    "id": "1915c9df-e0f4-4b23-a14a-2cd2ffaad19e",
+    "title": "Phetchabun Disaster Prevention and Mitigation Plan",
+    "source_count": 6,
+    "updated_at": "2025-05-05T05:03:46Z"
+  },
+  {
+    "id": "1b9c1c73-ab39-403f-a9bd-9ecdaf8b3e82",
+    "title": "Urban Planning, Land Economics, and Policy Evaluation",
+    "source_count": 10,
+    "updated_at": "2025-05-03T04:47:31Z"
+  },
+  {
+    "id": "8330ad0e-1b9d-4bf1-a06a-d43aa4179fb2",
+    "title": "Financing and Operating Urban Bus Systems",
+    "source_count": 7,
+    "updated_at": "2025-04-26T00:29:42Z"
+  },
+  {
+    "id": "6cf12983-1c52-419a-848c-389bb7091e38",
+    "title": "ภาคเหนือ แผนพัฒนาจังหวัดและกลุ่มจังหวัด",
+    "source_count": 1,
+    "updated_at": "2025-04-23T06:16:56Z"
+  },
+  {
+    "id": "0281cf57-ad2c-4e93-9fb9-b27a5d2bf586",
+    "title": "Risk assessment frameworks",
+    "source_count": 3,
+    "updated_at": "2025-04-09T06:46:58Z"
+  },
+  {
+    "id": "9bcdeec8-9fd2-44e1-a134-c6ac3e3a7126",
+    "title": "Aqueduct 4.0 Water Risk Framework",
+    "source_count": 1,
+    "updated_at": "2025-04-09T06:44:36Z"
+  },
+  {
+    "id": "2f0e8135-ac7e-4f7e-a1d8-88b2f6722a27",
+    "title": "Thailand's Climate Change Master Plan 2015-2050",
+    "source_count": 1,
+    "updated_at": "2025-04-07T16:17:24Z"
+  },
+  {
+    "id": "e798aeff-3eb4-49ea-89a6-19e037a80e53",
+    "title": "Thailand's Environmental Observation and Modeling Capacity",
+    "source_count": 8,
+    "updated_at": "2025-04-07T08:04:12Z"
+  },
+  {
+    "id": "d73fc085-76af-4b1e-885a-2ce65c454451",
+    "title": "Gov agency data sharing",
+    "source_count": 2,
+    "updated_at": "2025-04-04T09:11:47Z"
+  },
+  {
+    "id": "c94b22ca-e4c8-4040-89e0-9a57d5c9c90a",
+    "title": "Interview summaries",
+    "source_count": 7,
+    "updated_at": "2025-04-04T08:04:30Z"
+  },
+  {
+    "id": "1598763a-cef9-4555-b639-0efc8e0f7aed",
+    "title": "Water Resource Projects and Expenses",
+    "source_count": 6,
+    "updated_at": "2025-04-04T04:02:48Z"
+  },
+  {
+    "id": "9c750c3e-2531-487f-9b36-878e4d9526d7",
+    "title": "Global Synthetic Tropical Cyclone Hazard Dataset Generation",
+    "source_count": 3,
+    "updated_at": "2025-03-30T16:07:49Z"
+  },
+  {
+    "id": "52a40693-47b7-423f-b045-a04e4f45e292",
+    "title": "DDPM Project",
+    "source_count": 11,
+    "updated_at": "2025-03-27T04:15:06Z"
+  },
+  {
+    "id": "da148bb1-9825-4199-a27a-a05c20991065",
+    "title": "GISTDA Project",
+    "source_count": 6,
+    "updated_at": "2025-03-26T04:26:47Z"
+  },
+  {
+    "id": "efdccee1-8849-4f70-acae-1c6528656178",
+    "title": "Thailand Meteorology Department Operational Plan FY 2023",
+    "source_count": 6,
+    "updated_at": "2025-03-25T08:31:40Z"
+  },
+  {
+    "id": "650cd12e-e17e-470d-9b43-2333825ddfa8",
+    "title": "Thailand's Climate Change Research Framework and Plan 2027-2032",
+    "source_count": 1,
+    "updated_at": "2025-03-18T10:35:15Z"
+  },
+  {
+    "id": "ba1922d2-50ce-44f2-888f-31c1f082b829",
+    "title": "Japan's Climate Change Adaptation Policy and Platforms",
+    "source_count": 3,
+    "updated_at": "2025-03-12T09:27:40Z"
+  },
+  {
+    "id": "8062dc2b-d1f9-46c0-bf43-fdbe5f09bdf6",
+    "title": "South Africa Adaptation and Climate Services",
+    "source_count": 1,
+    "updated_at": "2025-03-11T02:49:31Z"
+  },
+  {
+    "id": "925f8bf6-b386-442d-a874-9933d593da34",
+    "title": "Chiang Mai Urban Development: An Assessment of Sustainability",
+    "source_count": 6,
+    "updated_at": "2025-03-02T05:55:03Z"
+  },
+  {
+    "id": "671caf39-4cbf-402c-92c3-397b1a023cda",
+    "title": "Sustainable Urban Mobility Solutions",
+    "source_count": 9,
+    "updated_at": "2025-02-18T08:09:02Z"
+  },
+  {
+    "id": "d25142bd-9e92-4da3-9d4e-bde6f6ca17e1",
+    "title": "Bridging Gaps in Climate Risk Management",
+    "source_count": 4,
+    "updated_at": "2025-02-17T09:27:39Z"
+  },
+  {
+    "id": "51a2edbd-f2e2-4cca-bc16-d2d2c51078e6",
+    "title": "Nudging SUM",
+    "source_count": 6,
+    "updated_at": "2025-02-17T04:46:09Z"
+  },
+  {
+    "id": "1a39ce50-e2aa-42dd-b29a-9459e59f69ed",
+    "title": "Climate Outcomes of Urban Interventions",
+    "source_count": 7,
+    "updated_at": "2025-02-17T02:49:05Z"
+  },
+  {
+    "id": "2921d1b5-6e5e-46c2-abc3-4f234d3686dc",
+    "title": "Maladaptation in National Adaptation Policy: Concept and Metrics",
+    "source_count": 5,
+    "updated_at": "2025-02-10T02:43:20Z"
+  },
+  {
+    "id": "287f1e4f-51c6-4c18-b92c-92d8908dd1c3",
+    "title": "Impacts of Farmers' Adaptation to Extreme Weather on Rice Productivity in Thailand",
+    "source_count": 2,
+    "updated_at": "2025-02-03T03:35:22Z"
+  },
+  {
+    "id": "ff4ec878-3c2d-4c20-bd0c-395506075e5f",
+    "title": "Soft Skills and Technical Expertise in Project Management",
+    "source_count": 2,
+    "updated_at": "2025-01-31T03:03:12Z"
+  },
+  {
+    "id": "48ce297a-0e16-4d37-92b3-0deefcad0816",
+    "title": "Quantifying Health Benefits and Broader Socioeconomic Benefits of Urban Climate Mitigation",
+    "source_count": 10,
+    "updated_at": "2025-01-30T12:14:32Z"
+  }
+]
