@@ -69,7 +69,7 @@ Primary message:
 Climate impacts do not stay inside one sector. Hazards can trigger linked effects across water, food, health, ecosystems, cities, tourism, and public finance.
 
 Main visual:
-Network or flow diagram showing cascading pathways from hazards to sector impacts and social consequences.
+Network or flow diagram showing cascading pathways from hazards to sector impacts and social consequences. Use impact chain analysis as the core visual
 
 Role in series:
 Shows why climate risk assessment must be cross-sectoral rather than hazard-by-hazard only.
@@ -109,6 +109,13 @@ Path:
 Use:
 National circumstances, institutional arrangements, legal frameworks, adaptation governance, sectoral priorities, risk assessment systems, NAP/BTR framing.
 
+### S03 - IPCC AR6 WGI and WGII extraction
+[[ψ/inbox/notebooklm_runs/2026-07-20_202000/IPCC-AR6-WGI-WGII-extract|IPCC-AR6-WGI-WGII-extract]]
+Use: Definitions of risk framework, risk determinants, key risks, Climate Impact Driver
+
+### S04 Impact chain analysis
+[[ψ/inbox/notebooklm_runs/2026-07-20_202000/คู่มือการจัดทำาห่วงโซ่ผลกระทบ จากการเปลี่ยนแปลงสภาพภูมิอากาศ-A Guidebook for Climate Impact Chains|คู่มือการจัดทำาห่วงโซ่ผลกระทบ จากการเปลี่ยนแปลงสภาพภูมิอากาศ-A Guidebook for Climate Impact Chains]]
+Use: Cascading risk and impacts. Impact chain analysis an example
 
 ## Visual references
 - Scientific editorial infographic.

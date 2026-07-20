@@ -61,7 +61,7 @@ Frame Roll-up 3 and Roll-up 5 with Thailand-specific vulnerability, governance, 
 ## S03 — IPCC AR6 WGI/WGII risk extract
 
 Path:
-`ψ/incubate/DCCE/CRDB/inbox_source/IPCC-AR6-WGI-WGII-extract.md`
+`ψ/inbox/notebooklm_runs/2026-07-20_202000/IPCC-AR6-WGI-WGII-extract.md`
 
 Status:
 Found.
@@ -78,7 +78,24 @@ Observed relevance:
 Likely Stage 1 use:
 Anchor Roll-up 1 and provide conceptual definitions across all panels.
 
-## S04 — NotebookLM IPCC AR6 WGI notebook
+## S04 — Guidebook for Climate Impact Chains
+
+Path:
+`ψ/inbox/notebooklm_runs/2026-07-20_202000/คู่มือการจัดทำาห่วงโซ่ผลกระทบ จากการเปลี่ยนแปลงสภาพภูมิอากาศ-A Guidebook for Climate Impact Chains.md`
+
+Status:
+Found.
+
+Observed relevance:
+
+- Impact chain analysis as a tool for visualizing cause-and-effect relationships between climate hazards, impacts, exposure, vulnerability, and risk.
+- Distinction between direct and cascading impacts.
+- Practical steps for identifying hazards, impacts, exposure, sensitivity, lack of adaptive capacity, risks, interlinkages, and adaptive-capacity indicators.
+
+Likely Stage 1 use:
+Support Roll-up 4 as the core visual logic for cascading risks and impact-chain analysis. For Roll-up 1, use only as a light preview that risks can cascade.
+
+## S05 — NotebookLM IPCC AR6 WGI notebook
 
 Notebook title:
 `IPCC AR6 WGI: The Physical Science Basis Summary for Policymakers`
@@ -103,7 +120,8 @@ Any NotebookLM access must follow `notebooklm-rules`: authenticate first, query 
 The provided source set is sufficient to start the five-panel roll-up project:
 
 - S03 gives the conceptual risk framework.
-- S04 can support physical climate science checks if needed.
+- S04 gives the impact-chain framework for cascading risk visualization.
+- S05 can support physical climate science checks if needed.
 - S02 gives Thailand national adaptation, vulnerability, and governance framing.
 - S01 gives concrete Thailand risk examples by sector and geography.
 
