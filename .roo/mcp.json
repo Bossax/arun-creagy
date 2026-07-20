@@ -20,7 +20,8 @@
 				"oracle_search",
 				"oracle_trace",
 				"oracle_learn"
-			]
+			],
+			"disabled": false
 		},
 		"perplexity": {
 			"type": "stdio",
