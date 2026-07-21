@@ -152,7 +152,7 @@ Approximate height: 24–30 cm.
 
 Content:
 
-- Compact key-risk example module:
+- Compact key-risk example module with a one-sentence explanation for each domain:
   - ecosystems;
   - coastal socio-ecological systems;
   - critical infrastructure, networks, and services;
@@ -378,13 +378,18 @@ IPCC AR6 frames risk as an interaction among hazard, exposure, vulnerability, an
 ## 9.4 Bottom takeaway
 Risk is dynamic: it changes with climate, exposure, vulnerability, and the choices society makes — and appears concretely as risks to ecosystems, infrastructure, health, food, water, and coastal systems.
 
-## 9.5 Key-risk example labels
+## 9.5 Key-risk example cards
 
-- Coastal systems
-- Ecosystems
-- Infrastructure and services
-- Health and cultural heritage
-- Food and water security
+Header:
+`Key risks are potentially severe climate risks that demand attention.`
+
+- Coastal systems — sea-level rise, waves and storms can affect ecosystems, livelihoods and settlements together.
+- Ecosystems — climate conditions beyond tolerance can erode habitats, species and ecosystem services.
+- Infrastructure and services — extreme conditions can disrupt water, energy, transport and essential services.
+- Health and cultural heritage — climate risks can affect health, living standards and what communities value.
+- Food and water security — heat, drought and rainfall variability can undermine reliable food production and water access.
+
+Use these as illustrative IPCC domains, not as a Thailand risk assessment.
 
 ## 9.6 Maladaptation emphasis copy
 

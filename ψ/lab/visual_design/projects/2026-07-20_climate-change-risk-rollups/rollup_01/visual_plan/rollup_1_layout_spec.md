@@ -155,19 +155,22 @@ Content:
 Header:
 `Key risks make risk concrete`
 
-Icon chips:
+Supporting:
+`Potentially severe risks warrant attention because of their magnitude, likelihood and timing, and the ability to respond.`
 
-- Coastal systems
-- Ecosystems
-- Infrastructure and services
-- Health and cultural heritage
-- Food and water security
+Icon cards:
+
+- Coastal systems — sea-level rise, waves and storms can affect ecosystems, livelihoods and settlements together.
+- Ecosystems — climate conditions beyond tolerance can erode habitats, species and ecosystem services.
+- Infrastructure and services — extreme conditions can disrupt water, energy, transport and essential services.
+- Health and cultural heritage — climate risks can affect health, living standards and what communities value.
+- Food and water security — heat, drought and rainfall variability can undermine reliable food production and water access.
 
 Layout:
 
-- Use 5 compact icon chips in a row or 2-row cluster.
+- Use five compact two-line icon cards in a 2-row cluster.
 - Use subdued icon style based on low-poly reference.
-- Keep labels short.
+- Keep each explanation to one short sentence; no Thailand place names, statistics or ranking.
 
 Visual caution:
 These are illustrative IPCC key-risk domains, not a Thailand risk assessment.

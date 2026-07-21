@@ -51,6 +51,8 @@ tools/
 !ψ/incubate/DCCE/CRDB/output/03_DataInventory_DQ/*.csv
 !ψ/incubate/DCCE/CRI/data_system/data_system/data/*.xlsx
 !ψ/incubate/DCCE/CRI/data_system/data_system/data/*.csv
+!ψ/lab/visual_design/*.jpg
+!ψ/lab/visual_design/*.png
 
 # app files
 ψ/incubate/DCCE/CRI/data_system/output/cri_impact_app/dist
