@@ -225,15 +225,29 @@ def apply_conversion_and_clean_keys(df, hh, prov_hh):
     hh_copy["year_be"] = hh_copy["year_be"].astype(str).str.replace(r"\.0$", "", regex=True).str.strip()
     hh_copy["household_total"] = pd.to_numeric(hh_copy["household_total"], errors="coerce").fillna(0.0)
     hh_copy["population_total"] = pd.to_numeric(hh_copy["population_total"], errors="coerce").fillna(0.0)
-    hh_copy["ratio"] = np.where(hh_copy["household_total"] > 0, hh_copy["population_total"] / hh_copy["household_total"], np.nan)
+
+    # DEDUPLICATION GUARDRAIL: Aggregate subdistrict population & household totals before computing ratio
+    hh_grouped = (
+        hh_copy.groupby(["subdistrict_code", "year_be"], dropna=False)
+        .agg(
+            household_total=("household_total", "sum"),
+            population_total=("population_total", "sum"),
+        )
+        .reset_index()
+    )
+    hh_grouped["ratio"] = np.where(
+        hh_grouped["household_total"] > 0,
+        hh_grouped["population_total"] / hh_grouped["household_total"],
+        np.nan,
+    )
 
     # Cast prov_hh keys to string
     prov_hh_copy = prov_hh.copy()
     prov_hh_copy["province_code"] = prov_hh_copy["province_code"].astype(str).str.replace(r"\.0$", "", regex=True).str.strip().str.zfill(2)
     prov_hh_copy["year_be"] = prov_hh_copy["year_be"].astype(str).str.replace(r"\.0$", "", regex=True).str.strip()
 
-    # Merge subdistrict ratio
-    merged = df.merge(hh_copy[["subdistrict_code", "year_be", "ratio"]], on=["subdistrict_code", "year_be"], how="left")
+    # Merge deduplicated subdistrict ratio (1-to-1 or 1-to-0 match, preserving df row count)
+    merged = df.merge(hh_grouped[["subdistrict_code", "year_be", "ratio"]], on=["subdistrict_code", "year_be"], how="left")
     
     # Merge province fallback ratio
     merged = merged.merge(prov_hh_copy[["province_code", "year_be", "prov_ratio"]], on=["province_code", "year_be"], how="left")
@@ -365,6 +379,17 @@ def main():
     gpp = load_csv(SRC / "1_silver/gpp/silver_gpp_annual_long.csv")
     heat = load_csv(SRC / "1_silver/heatwave/silver_heatwave_impact_long.csv")
     prov_code_lookup = load_csv(SRC / "1_silver/dopa/province_code_lookup.csv")
+
+    # Aggregate subdistrict population totals for Tambon rate calculations
+    pop_sub = pop[pop["geography_level"] == "subdistrict"].copy()
+    pop_sub["subdistrict_code"] = pop_sub["subdistrict_code"].astype(str).str.replace(r"\.0$", "", regex=True).str.strip().str.zfill(6)
+    pop_sub["year_be"] = pop_sub["year_be"].astype(str).str.replace(r"\.0$", "", regex=True).str.strip()
+    pop_sub["population_total"] = pd.to_numeric(pop_sub["population_total"], errors="coerce").fillna(0.0)
+    pop_sub_grouped = (
+        pop_sub.groupby(["subdistrict_code", "year_be"], dropna=False)["population_total"]
+        .sum()
+        .reset_index()
+    )
 
     # Load DOPA lookup master to guarantee names are never missing (e.g. wildfire)
     location_spine = load_csv(SRC / "2_gold/dopa/dim_location_master.csv")
@@ -709,21 +734,21 @@ def main():
     # -------------------------------------------------------------------------
     print("[PROCESS] Running hazard disaggregation pipeline...")
     avg_specs_2560_2567 = [
-        ("deaths_abs", "Deaths (Count)", "Annual deaths"),
-        ("deaths_rate", "Death Rate", "Per 100,000 population"),
-        ("affected_ppl_abs", "Affected People (Count)", "Annual people"),
-        ("affected_ppl_rate", "Affected People Rate", "Per 100,000 population"),
-        ("loss_abs", "Economic Loss", "THB"),
-        ("loss_per_gpp", "Economic Loss per GPP", "Percentage points (%)"),
+        ("deaths_abs", "Deaths (Score)", "Score [0-1]"),
+        ("deaths_rate", "Death Rate (Score)", "Score [0-1]"),
+        ("affected_ppl_abs", "Affected People (Score)", "Score [0-1]"),
+        ("affected_ppl_rate", "Affected People Rate (Score)", "Score [0-1]"),
+        ("loss_abs", "Economic Loss (Score)", "Score [0-1]"),
+        ("loss_per_gpp", "Economic Loss per GPP (Score)", "Score [0-1]"),
         ("cri_score", "CRI Score", "Score [0-1]"),
     ]
     avg_specs_2567 = [
-        ("deaths_abs", "Total Deaths (Absolute)", "Annual deaths"),
-        ("deaths_rate", "Death Rate", "Per 100,000 population"),
-        ("affected_ppl_abs", "Total Affected People (Absolute)", "Annual people"),
-        ("affected_ppl_rate", "Affected People Rate", "Per 100,000 population"),
-        ("loss_abs", "Government Advance Payment", "THB"),
-        ("loss_per_gpp", "Relief per Unit GPP", "Percentage points (%)"),
+        ("deaths_abs", "Total Deaths (Score)", "Score [0-1]"),
+        ("deaths_rate", "Death Rate (Score)", "Score [0-1]"),
+        ("affected_ppl_abs", "Total Affected People (Score)", "Score [0-1]"),
+        ("affected_ppl_rate", "Affected People Rate (Score)", "Score [0-1]"),
+        ("loss_abs", "Government Advance Payment (Score)", "Score [0-1]"),
+        ("loss_per_gpp", "Relief per Unit GPP (Score)", "Score [0-1]"),
         ("cri_score", "CRI Score", "Score [0-1]"),
     ]
     # Local HAZARDS overridden by module-level configuration
@@ -872,10 +897,12 @@ def main():
         h_2567_specs = [spec for spec in avg_specs_2567 if spec[0] != "cri_score" or has_cri_score]
 
         # Write province average metrics
+        # Write province average metrics (Exporting min-max normalized scores instead of absolute values)
         for metric_key, metric_label, unit_label in h_avg_specs:
+            val_col = metric_key if metric_key == "cri_score" else f"s_{metric_key}"
             payload = province_metric_payload(
                 metric_key, metric_label, "period_2561_2567", "2561–2567 average", unit_label, "average_window",
-                prov_avg_metrics[["province_code", "province_name_th", "province_name_en", metric_key]].rename(columns={metric_key: "value"})
+                prov_avg_metrics[["province_code", "province_name_th", "province_name_en", val_col]].rename(columns={val_col: "value"})
             )
             write_json(OUT / "period_2561_2567" / h_key / f"{metric_key}.json", payload)
 
@@ -902,12 +929,39 @@ def main():
                 tambon_avg["province_name_th_y"],
             )
             tambon_avg = tambon_avg.drop(columns=["province_name_th_y"])
+
+        # Calculate average population for subdistrict in period years (2561-2567)
+        pop_sub_avg = (
+            pop_sub_grouped[pop_sub_grouped["year_be"].isin(period_years)]
+            .groupby("subdistrict_code", dropna=False)["population_total"]
+            .mean()
+            .reset_index()
+        )
+        
+        tambon_avg = tambon_avg.merge(pop_sub_avg, on="subdistrict_code", how="left")
+        tambon_avg["population_total"] = tambon_avg["population_total"].fillna(0.0)
+        
+        # Calculate rates per 100k population
+        tambon_avg["deaths_rate"] = np.where(
+            tambon_avg["population_total"] > 0,
+            (tambon_avg["deaths_abs"] / tambon_avg["population_total"]) * 100000.0,
+            0.0
+        )
+        tambon_avg["affected_people_rate"] = np.where(
+            tambon_avg["population_total"] > 0,
+            (tambon_avg["affected_hh_abs"] / tambon_avg["population_total"]) * 100000.0,
+            0.0
+        )
             
         tambon_avg_deaths = tambon_avg[["subdistrict_code", "subdistrict_name_th", "district_name_th", "province_code", "province_name_th", "deaths_abs"]].rename(columns={"deaths_abs": "value"}).fillna(0.0)
         tambon_avg_aff = tambon_avg[["subdistrict_code", "subdistrict_name_th", "district_name_th", "province_code", "province_name_th", "affected_hh_abs"]].rename(columns={"affected_hh_abs": "value"}).fillna(0.0)
+        tambon_avg_deaths_rate = tambon_avg[["subdistrict_code", "subdistrict_name_th", "district_name_th", "province_code", "province_name_th", "deaths_rate"]].rename(columns={"deaths_rate": "value"}).fillna(0.0)
+        tambon_avg_aff_rate = tambon_avg[["subdistrict_code", "subdistrict_name_th", "district_name_th", "province_code", "province_name_th", "affected_people_rate"]].rename(columns={"affected_people_rate": "value"}).fillna(0.0)
         
         write_json(OUT / "period_2561_2567" / h_key / "tambon_deaths.json", tambon_metric_payload("tambon_deaths", "Tambon Deaths", "period_2561_2567", "2561–2567 average", "Annual deaths", "average_window", tambon_avg_deaths))
         write_json(OUT / "period_2561_2567" / h_key / "tambon_affected_people.json", tambon_metric_payload("tambon_affected_people", "Tambon Affected People", "period_2561_2567", "2561–2567 average", "Annual people", "average_window", tambon_avg_aff))
+        write_json(OUT / "period_2561_2567" / h_key / "tambon_deaths_rate.json", tambon_metric_payload("tambon_deaths_rate", "Tambon Death Rate", "period_2561_2567", "2561–2567 average", "Per 100,000 population", "average_window", tambon_avg_deaths_rate))
+        write_json(OUT / "period_2561_2567" / h_key / "tambon_affected_people_rate.json", tambon_metric_payload("tambon_affected_people_rate", "Tambon Affected People Rate", "period_2561_2567", "2561–2567 average", "Per 100,000 population", "average_window", tambon_avg_aff_rate))
 
         # -------------------------------------------------------------------------
         # PROCESS: 2567 ONLY
@@ -997,9 +1051,10 @@ def main():
         prov_2567_metrics["province_name_en"] = prov_2567_metrics["province_name_en"].where(pd.notna(prov_2567_metrics["province_name_en"]), None)
 
         for metric_key, metric_label, unit_label in h_2567_specs:
+            val_col = metric_key if metric_key == "cri_score" else f"s_{metric_key}"
             payload = province_metric_payload(
                 metric_key, metric_label, "period_2567", "2567 only", unit_label, "single_year",
-                prov_2567_metrics[["province_code", "province_name_th", "province_name_en", metric_key]].rename(columns={metric_key: "value"})
+                prov_2567_metrics[["province_code", "province_name_th", "province_name_en", val_col]].rename(columns={val_col: "value"})
             )
             write_json(OUT / "period_2567" / h_key / f"{metric_key}.json", payload)
 
@@ -1019,12 +1074,39 @@ def main():
                 tambon_2567["province_name_th_y"],
             )
             tambon_2567 = tambon_2567.drop(columns=["province_name_th_y"])
+
+        # Calculate 2567 population for subdistricts
+        pop_sub_2567 = (
+            pop_sub_grouped[pop_sub_grouped["year_be"] == "2567"]
+            .groupby("subdistrict_code", dropna=False)["population_total"]
+            .sum()
+            .reset_index()
+        )
+        
+        tambon_2567 = tambon_2567.merge(pop_sub_2567, on="subdistrict_code", how="left")
+        tambon_2567["population_total"] = tambon_2567["population_total"].fillna(0.0)
+        
+        # Calculate rates per 100k population
+        tambon_2567["deaths_rate"] = np.where(
+            tambon_2567["population_total"] > 0,
+            (tambon_2567["deaths_sum"] / tambon_2567["population_total"]) * 100000.0,
+            0.0
+        )
+        tambon_2567["affected_people_rate"] = np.where(
+            tambon_2567["population_total"] > 0,
+            (tambon_2567["affected_households_sum"] / tambon_2567["population_total"]) * 100000.0,
+            0.0
+        )
             
         tambon_2567_deaths = tambon_2567[["subdistrict_code", "subdistrict_name_th", "district_name_th", "province_code", "province_name_th", "deaths_sum"]].rename(columns={"deaths_sum": "value"}).fillna(0.0)
         tambon_2567_aff = tambon_2567[["subdistrict_code", "subdistrict_name_th", "district_name_th", "province_code", "province_name_th", "affected_households_sum"]].rename(columns={"affected_households_sum": "value"}).fillna(0.0)
+        tambon_2567_deaths_rate = tambon_2567[["subdistrict_code", "subdistrict_name_th", "district_name_th", "province_code", "province_name_th", "deaths_rate"]].rename(columns={"deaths_rate": "value"}).fillna(0.0)
+        tambon_2567_aff_rate = tambon_2567[["subdistrict_code", "subdistrict_name_th", "district_name_th", "province_code", "province_name_th", "affected_people_rate"]].rename(columns={"affected_people_rate": "value"}).fillna(0.0)
         
         write_json(OUT / "period_2567" / h_key / "tambon_deaths.json", tambon_metric_payload("tambon_deaths", "Tambon Deaths", "period_2567", "2567 only", "Annual deaths", "single_year", tambon_2567_deaths))
         write_json(OUT / "period_2567" / h_key / "tambon_affected_people.json", tambon_metric_payload("tambon_affected_people", "Tambon Affected People", "period_2567", "2567 only", "Annual people", "single_year", tambon_2567_aff))
+        write_json(OUT / "period_2567" / h_key / "tambon_deaths_rate.json", tambon_metric_payload("tambon_deaths_rate", "Tambon Death Rate", "period_2567", "2567 only", "Per 100,000 population", "single_year", tambon_2567_deaths_rate))
+        write_json(OUT / "period_2567" / h_key / "tambon_affected_people_rate.json", tambon_metric_payload("tambon_affected_people_rate", "Tambon Affected People Rate", "period_2567", "2567 only", "Per 100,000 population", "single_year", tambon_2567_aff_rate))
 
     # Update manifest to support disaggregation
     manifest = {
@@ -1045,7 +1127,7 @@ def main():
         ],
         "metric_groups": {
             "cri": ["deaths_abs", "deaths_rate", "affected_ppl_abs", "affected_ppl_rate", "loss_abs", "loss_per_gpp", "cri_score"],
-            "tambon": ["tambon_deaths", "tambon_affected_people"],
+            "tambon": ["tambon_deaths", "tambon_deaths_rate", "tambon_affected_people", "tambon_affected_people_rate"],
             "heat": ["heat_deaths", "heat_injured"]
         },
         "assets": {

@@ -83,6 +83,7 @@ MONTHLY_OUTPUT_PATH = OUTPUT_DIR / "silver_population_monthly.csv"
 ANNUAL_OUTPUT_PATH = OUTPUT_DIR / "silver_population_annual.csv"
 PERIOD_OUTPUT_PATH = OUTPUT_DIR / "silver_population_period_total.csv"
 REPORT_OUTPUT_PATH = OUTPUT_DIR / "population_normalization_report.json"
+HOUSEHOLD_ANNUAL_OUTPUT_PATH = OUTPUT_DIR / "silver_household_annual.csv"
 
 SOURCE_SYSTEM = "CRI_WORKBOOK_BUNDLE"
 SOURCE_DATASET = "population"
@@ -792,6 +793,60 @@ def summarize_collision_samples(colliding_subdistricts: dict[str, dict[str, obje
     return samples
 
 
+def normalize_dopa_household_population() -> None:
+    import pandas as pd
+    
+    bronze_dir = PROJECT_ROOT / "ψ" / "incubate" / "DCCE" / "CRI" / "data_system" / "data" / "0_bronze" / "dopa"
+    records = []
+
+    for year_num in range(60, 68):
+        year_str = str(year_num)
+        path = bronze_dir / f"bronze_dopa_population_pop{year_str}.csv"
+        if not path.exists():
+            print(f"[WARNING] Missing DOPA population bronze file: {path}")
+            continue
+        
+        df = pd.read_csv(path)
+        
+        # Standardize columns
+        df["province_code"] = df["รหัสจังหวัด"].astype(str).str.replace(r"\.0$", "", regex=True).str.strip().str.zfill(2)
+        df["province_name_th"] = df["ชื่อจังหวัด"].astype(str).str.strip()
+        df["subdistrict_code_raw"] = df["รหัสตำบล"].astype(str).str.replace(r"\.0$", "", regex=True).str.strip()
+        df["subdistrict_name_th"] = df["ชื่อตำบล"].astype(str).str.strip()
+        df["subdistrict_code"] = df["subdistrict_code_raw"].str.zfill(8).str[:6]
+        
+        df["population_total"] = pd.to_numeric(df["จำนวนประชากรทั้งหมด"], errors="coerce").fillna(0.0)
+        df["household_total"] = pd.to_numeric(df["จำนวนบ้าน (หลังคาเรือน)"], errors="coerce").fillna(0.0)
+        
+        # Filter subdistrict level
+        df_sub = df[df["subdistrict_code"].str.fullmatch(r"\d{6}") & (df["subdistrict_code"] != "000000")].copy()
+        
+        df_sub["year_be"] = "25" + year_str
+        
+        # Group/sum to resolve split records
+        df_clean = df_sub.groupby(
+            ["year_be", "province_code", "province_name_th", "subdistrict_code", "subdistrict_name_th"],
+            dropna=False
+        ).agg(
+            population_total=("population_total", "sum"),
+            household_total=("household_total", "sum")
+        ).reset_index()
+        
+        records.append(df_clean)
+
+    if not records:
+        print("[ERROR] No DOPA bronze population files found to build silver_household_annual.csv")
+        return
+        
+    final_df = pd.concat(records, ignore_index=True)
+    
+    # Sort for deterministic output
+    final_df = final_df.sort_values(["year_be", "province_code", "subdistrict_code"]).reset_index(drop=True)
+    
+    final_df.to_csv(HOUSEHOLD_ANNUAL_OUTPUT_PATH, index=False, encoding="utf-8-sig")
+    print(f"Wrote {HOUSEHOLD_ANNUAL_OUTPUT_PATH}")
+
+
 def main() -> None:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
@@ -852,6 +907,9 @@ def main() -> None:
     write_csv(MONTHLY_OUTPUT_PATH, MONTHLY_HEADERS, monthly_rows)
     write_csv(ANNUAL_OUTPUT_PATH, ANNUAL_HEADERS, annual_rows)
     write_csv(PERIOD_OUTPUT_PATH, PERIOD_HEADERS, period_rows)
+    
+    # Consolidate and normalize DOPA household and population (silver_household_annual.csv)
+    normalize_dopa_household_population()
 
     report["normalized_schema"] = {
         "monthly_grain": "one row per record_class-qualified geography + year_month",
