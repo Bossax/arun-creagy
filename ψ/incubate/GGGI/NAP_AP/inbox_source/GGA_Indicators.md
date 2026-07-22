@@ -4,6 +4,20 @@ Draft decision -/CMA.7
 Belém, 10–21 November 2025
 Agenda item 8(a): Matters relating to adaptation Global goal on adaptation
 
+# Global Goal on Adaptation: Background
+The **Global Goal on Adaptation (GGA)** was established under Article 7.1 of the Paris Agreement. Its core objective is to enhance the world's adaptive capacity, strengthen resilience, and reduce vulnerability to the impacts of climate change.
+
+Essentially, the GGA was created to serve as a "guiding star" within the United Nations climate process, elevating the importance of adaptation action and the support needed to achieve it.
+
+While the Paris Agreement established the goal, it initially lacked a concrete methodology to measure collective global progress or specific targets. To figure out how to put the GGA into practice (to "operationalize" it) and further understand its application, Parties launched the two-year Glasgow–Sharm el-Sheikh work programme.
+
+This work ultimately culminated in the adoption of the **UAE Framework for Global Climate Resilience** at COP28. In short, the GGA is the overarching Paris Agreement goal itself, while the UAE Framework is the structured tool—complete with the thematic and dimensional targets discussed previously—designed to actually guide its achievement and review its overall progress. Progress made toward achieving the GGA is meant to be reviewed periodically during the Paris Agreement's Global Stocktake (GST). For more detail here -> [[ψ/inbox/UAE Framework for Global Climate Resilience|UAE Framework for Global Climate Resilience]]
+
+The decisions on the indicators were officially reached at the 7th Conference of the Parties serving as the meeting of the Parties to the Paris Agreement (CMA7 / COP30), which was held in Belém from **November 10–21, 2025**.
+
+Leading up to this point, the process to collect, refine, and map these indicators was carried out under the two-year **UAE–Belém work programme**, which was initially launched at COP28 (CMA5) in December 2023. The work programme concluded at CMA7, culminating in the formal adoption of the final framework metrics, officially named the **Belém Adaptation Indicators**.
+
+
 # Thematic targets
 ## Target 9(a)-Water supply and sanitation
 1. **Level of water stress**, which accounts for the intensity and/or frequency of relevant climate hazards and can include the outcomes of adaptation actions.
