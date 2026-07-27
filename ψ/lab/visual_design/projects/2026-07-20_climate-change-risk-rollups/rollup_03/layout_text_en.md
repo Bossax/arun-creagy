@@ -9,20 +9,49 @@
 - `Where do climate pressures differ across Thailand?`
 - `One changing climate. Different pressures in different places.`
 
-## Spatial framing card
+## Why impacts differ across Thailand
 
-`Terrain, water systems, urban form and coastlines shape how climate pressures are experienced.`
+`Climate conditions vary by place. Their impacts also depend on what is exposed—and on the resources, infrastructure and services people can use to prepare, cope and recover.`
 
-## Regional comparison callouts
+`Climate conditions` · `Exposure` · `Vulnerability and adaptive capacity`
 
-| Region | Climate-pressure label | Short consequence | Status |
-|---|---|---|---|
-| North | `Heavy rain + steep terrain` | `Landslide pressure` | `Observed + projected` |
-| Northeast | `Uneven rain + drought` | `Water stress` | `Observed + projected` |
-| Central / Chao Phraya Basin | `Intense rain + river overflow` | `Flood pressure` | `Observed + projected` |
-| Bangkok Metropolitan Area | `Heat is widespread. Density concentrates exposure.` | `Urban heat + flooding` | `Observed + projected` |
-| Eastern Gulf coast | `Warmer sea` | `Marine ecosystem stress` | `Observed + projected` |
-| South | `Intense monsoon rain + coastal change` | `Flood and coastal pressure` | `Observed + projected` |
+## Regional comparison narratives
+
+### Northern mountains
+
+`Northern Thailand’s steep mountains, narrow valleys and headwater systems make the movement of water central to daily life. When tropical storms brought sustained rain to slopes in Chiang Rai and Chiang Mai in 2024, saturated ground gave way as landslides. The concern is not rainfall alone, but disruption to hillside communities, road access and mountain ecosystems.`
+
+`BTR/5NC · observed local example`
+
+### Northeast
+
+`The Korat Plateau has relatively poor soils and recurrent drought, while many livelihoods depend on rain-fed farming. Across 27 northeastern stations, annual rainfall ranged from 1,112.3 mm to 1,972.8 mm between 1993 and 2022. When rain arrives unevenly, limited water storage becomes pressure on crops, household income and food security.`
+
+`ART04 + BTR/5NC · observed regional evidence`
+
+### Chao Phraya Basin
+
+`The Chao Phraya is a low-lying, highly connected river basin and one of Thailand’s most productive agricultural areas. Sustained monsoon rain flooded the basin in 2022; when rivers overflow, water moves through farms, settlements, transport routes and water systems together. The key concern is system-wide disruption, not a single flooded site.`
+
+`BTR/5NC · observed basin evidence`
+
+### Bangkok Metropolitan Area
+
+`Bangkok concentrates people, buildings, roads and services on low-lying land only about 0.5–1.5 metres above mean sea level. Dense heat-retaining surfaces, continuing subsidence and constrained drainage intensify heat and heavy-rain impacts. The result is disruption to travel, work, health and city services—not simply a hotter or wetter day.`
+
+`BTR/5NC + ART07 · city evidence`
+
+### Eastern Gulf
+
+`The eastern Gulf is part of a shallow, semi-enclosed sea that retains heat more readily than open water. In May 2024, sea-surface temperature there reached about 32.7°C, one of the highest levels recorded in the area. This marine warming puts coral ecosystems—and coastal livelihoods and tourism that depend on them—under pressure.`
+
+`BTR/5NC · observed local evidence`
+
+### Southern peninsula
+
+`Southern Thailand is a narrow peninsula between two seas, where settlements, productive land and tourism are closely tied to coasts and monsoon systems. After consecutive days of very heavy rain, severe floods occurred in late November and again in mid-December 2024. Here, heavy rain and shoreline change can disrupt local livelihoods, services and tourism together.`
+
+`BTR/5NC + ART05 · observed regional evidence`
 
 ## Comparison cue
 

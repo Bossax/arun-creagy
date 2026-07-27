@@ -80,6 +80,7 @@ venv_clean/
 *.sbn
 *.CPG
 *.qpj
+!250113_TMD_NFCS_Law-Baseline Review_V4.csv
 
 # Heavy JSON/GeoJSON Exports (Do not commit 30MB+ raw boundaries)
 *.geojson

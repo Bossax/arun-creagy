@@ -26,18 +26,18 @@ Roll-up 3 should feel like the next page of the same publication, not a new visu
 
 ## 3. Content-to-visual rule
 
-Every regional callout must carry four readable tiers: one dominant climate condition, the affected systems and visible consequence, one named/time-bound/numerical evidence cue, and a status marker. The separate “same hazard, different ability to cope” module explains the concrete options that make burdens unequal.
+Every regional callout must be a compact, place-specific narrative: a local climate condition meets an exposed system and produces a visible consequence. Weave one named, time-bound or numerical evidence cue naturally into that narrative; retain only a small source/status tag below it. The separate “same hazard, different ability to cope” module explains the concrete options that make burdens unequal.
 
 Do not use a hazard icon alone as a regional conclusion. Do not colour all regions as high/medium/low risk unless a comparable national method and dataset is verified.
 
 ## 4. Planned composition change from Roll-up 2
 
-Roll-up 2 leads with a CID framework card. Roll-up 3 leads with a short spatial-risk framing card, then moves into the Thailand map.
+Roll-up 2 leads with a CID framework card. Roll-up 3 leads with a short explanation of why climate impacts differ across Thailand, then moves into the Thailand map.
 
 Suggested vertical sequence:
 
 1. Title and short message: risk differs across places.
-2. Compact spatial-framing card: terrain, water systems, urban form and coastlines shape regional pressures.
+2. Compact “why impacts differ” card: climate conditions, exposure, and vulnerability/adaptive capacity together shape impacts.
 3. Six concise regional callouts arranged around a pale Thailand-map watermark.
 4. Two small cross-cutting layers: same hazard, different ability to cope; ecosystems and the limits of natural protection.
 5. Footer bridge: `Next: how do risks cascade across systems?`
