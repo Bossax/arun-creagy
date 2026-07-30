@@ -1,71 +1,66 @@
-
-# Data Medallion: Bronze Layer (Raw Data)
+# Data Medallion: Bronze Layer (Raw Data Sources)
 Location: `ψ/incubate/DCCE/CRI/data_system/data/0_bronze/`
 
 This layer contains immutable, raw source files used as the foundation for the CRI Phase 1 Impact Index.
 
-##  1 BMA (Bangkok Metropolitan Administration)
+---
+
+## 1. BMA (Bangkok Metropolitan Administration)
 - **Source:** BMA direct file transfer
 - **File**: `สถิติข้อมูลอุทกภัย ภัยแล้ง ดินถล่ม และวาตภัย ในพื้นที่กรุงเทพมหานคร_BMA.xlsx`
 - **Description**: Multi-hazard disaster statistics for Bangkok districts.
-- **Role**: Primary source for capital-specific impact metrics.
-- **Comments:** Data is sparse and seems incomplete. The definitions of the hazards are unclear. For example, Bangkok has never experienced riverine floods for almost a decade at the scale which DDPM will declare a disaster event or zone
+- **Role**: Capital-specific impact metrics.
+- **Comments:** Data is sparse; definitions differ from national DDPM disaster declarations.
 
-## 2 DDPM (Dept of Disaster Prevention & Mitigation)
+---
+
+## 2. DDPM (Dept of Disaster Prevention & Mitigation / กรมป้องกันและบรรเทาสาธารณภัย)
 - **Source:** DDPM direct file transfer
-- **Village Statistics (2557 - 2567)**:
+- **Village Disaster Statistics (2557 - 2567)**:
   - Individual yearly CSVs: `2557 - สถิติการเกิดสาธารณภัยรายหมู่บ้าน.csv` to `2567 - สถิติการเกิดสาธารณภัยรายหมู่บ้าน.csv`.
-  - **Contents**: Granular village-level (`Moo`) impact data (house damage, livestock, human impact).
+  - **Contents**: Granular village-level (`Moo`) impact data (house damage, casualties, affected households).
 - **Financial Relief**:
   - **File**: `สถิติข้อมูลการใช้จ่ายเงินทดรองราชการ ปี 2546 - ปัจจุบัน.xlsx`
   - **Description**: Provincial-level emergency fund spending records.
+- **Wildfire Data (2026-07-16 Bundle)**:
+  - **File**: `0_bronze/2026-07-16-cri-proj-data/Wildfire_hh_data.csv`
+  - **Contents**: Sub-district level wildfire affected households and casualty statistics across 2560–2567.
+  - **Processing Script**: [`script/ELT/build_gold_wildfire_ddpm_fact.py`](file:///C:/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/incubate/DCCE/CRI/data_system/script/ELT/build_gold_wildfire_ddpm_fact.py)
 
-## 3 DOPA (Dept of Provincial Administration)  
-- `commu.xlsx` (Communities)
-- `rcode.xlsx` (Regional codes)
-- `soi.xlsx` (Alleys/Small streets)
-- `thanon.xlsx` (Main Roads)
-- `trok.xlsx` (Lanes)
+---
+
+## 3. DOPA (Dept of Provincial Administration / กรมการปกครอง)
 - **`ccaatt.xlsx`**: Master administrative code sequential file (Province-District-Subdistrict).
-	- **Source:**  https://stat.bora.dopa.go.th/stat/statnew/statMenu/newStat/ccaa.php
-		**โครงสร้างข้อมูลทำเนียบท้องที่**
-		FILE NAME: `ccaatt.xlsx`
-		FILE TYPE: SEQUENTIAL (fixed length)
-		
-		หมายเหตุ:
-		1. ข้อมูลขณะนี้เป็นข้อมูลในระดับจังหวัด อำเภอ ตำบล  
-		2. รายการรหัสข้อมูลใดที่มีเครื่องหมาย * หมายถึง รหัสนี้ถูกยกเลิก
+  - **Source:** https://stat.bora.dopa.go.th/stat/statnew/statMenu/newStat/ccaa.php
+  - **Description**: Official sovereign hierarchy mapping 2-digit Province, 2-digit District, 2-digit Subdistrict codes.
+- **`code_village_dopa_2019.xls`**: High-resolution village code master list (2019 vintage).
+- **Administrative Shapefiles**:
+  - **Source:** https://drive.google.com/drive/folders/1zi3Z0l7wvsGN1p5YIWVVL3LFs3WnS7VQ
+  - **Files**: `thailanda-administrative-boundary/*.shp`
 
-|FIELD NAME|CHARS|STORE|TYPE|KEY|DESCRIPTION|
-|---|---|---|---|---|---|
-|TBCCAA-KEY|   |   |   |PK||
-|-TBC-CC|2|2|N||CHANGWAT (จังหวัด)|
-|-TBC-AA|2|2|N||AMPUR (อำเภอ)|
-|-TBC-TT|2|2|N||TAMBOON (ตำบล)|
-|-TBC-MM|2|2|N||MOO BARN (หมู่บ้าน)|
-|TBC-DESC|40|40|AN||DESCRIPTION (คำอธิบาย)|
+---
 
-- **`code_village_dopa_2019.xls`**: High-resolution village code master (2019 vintage).
-	- สถาบันพัฒนาองค์กรค์ชุมชน (CODI)
-		**Source:** https://ref.codi.or.th/2015-08-17-16-14-30/2015-08-19-16-00-10
-		FILE NAME: [code_villagedopa53.xls](https://ref.codi.or.th/2015-08-17-16-14-30/2015-08-19-16-00-10?download=12:2011-07-25-04-23-09)
-		รหัสพื้นที่ หมู่บ้าน อ้างอิง จากกรมการปกครองกระทรวงมหาดไทย ปี 2553
-		File Size: 3.64 MB
-		Date: 25 กรกฎาคม 2554
+## 4. CRI Project Data Bundle (2026-06-12 Multi-Agency Bundle)
+Location: `0_bronze/2026-06-12_cri_proj_data/`
 
-## 3.4 TEI Pilot (Baseline Data)
-- **Source:** TEI direct file transfer
-- **Files**:
-  - `casualties_by_hazard_2559_2566.csv`
-  - `relief_by_hazard_2559_2566.csv`
-  - `population_avg_2559_2566.csv`
-  - `gpp_agri_avg_2559_2566.csv`
-- **Role**: Pre-processed average statistics from the 2023 Pilot Phase used for benchmarking and calibration.
+* **Population & Households**:
+  - **Workbook**: `CRI Data - Population.xlsx`
+  - **Extracted Intake CSVs**: `population_extracts/pop67.raw.csv`, `pop60-67.raw.csv`
+  - **Agency Owner**: **DOPA (กรมการปกครอง)**
+* **Economic GPP**:
+  - **Workbook**: `CRI Data - GPP.xlsx`
+  - **Extracted Intake CSVs**: `gpp_extracts/gpp-67.raw.csv`, `gpp-60-67.raw.csv`
+  - **Agency Owner**: **NESDC (สภาพัฒน์ / Office of the National Economic & Social Development Council)**
+* **Government Advance Financial Relief**:
+  - **Workbook**: `CRI Data - Government_Advanced_Payment.xlsx`
+  - **Extracted Intake CSVs**: `govt_adv_payment_extracts/govt_adv_payment-*.raw.csv`
+  - **Agency Owner**: **Ministry of Finance (กค. / CGD) & DDPM (ปภ.)**
+* **Extreme Heat Casualties**:
+  - **Workbook**: `CRI Data - Heatwave.xlsx`
+  - **Extracted Intake CSVs**: `heatwave_extracts/heatwave.raw.csv`
+  - **Agency Owner**: **Department of Health (DOH / กรมอนามัย, Ministry of Public Health)**
 
+---
 
-# 4. Thailand Administrative Map Shapefile
-https://www.youtube.com/watch?v=CL2tOueWZzM&t=7s
-
-## 4.1 Shapefile of Province, Amphoe, Tambon
-- Source: https://drive.google.com/drive/folders/1zi3Z0l7wvsGN1p5YIWVVL3LFs3WnS7VQ
-- 
+## 5. Excluded Data Sources
+- **WorldPop Dasymetric Population Grid**: Evaluated in exploratory research notebooks (`pillar1_comparative_dasymetric_analysis.ipynb`) but **excluded from production CRI pipelines**. All demographic multipliers strictly use official DOPA subdistrict population & household counts.
