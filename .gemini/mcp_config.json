@@ -13,26 +13,19 @@
       "description": "Local Oracle Registry (Registry of Form)"
     },
     "perplexity": {
-      "type": "stdio",
-      "command": "npx",
+      "command": "cmd",
       "args": [
-        "-y",
-        "@perplexity-ai/mcp-server"
+        "/c",
+        "set \"PERPLEXITY_API_KEY=%PERPLEXITY_API_KEY%\" && npx -y @perplexity-ai/mcp-server"
       ],
-      "env": {
-        "PERPLEXITY_API_KEY": "${PERPLEXITY_API_KEY}"
-      },
       "description": "AI web search"
     },
     "brave-search": {
-      "command": "npx",
+      "command": "cmd",
       "args": [
-        "-y",
-        "@modelcontextprotocol/server-brave-search"
+        "/c",
+        "set \"BRAVE_API_KEY=%BRAVE_API_KEY%\" && npx -y @modelcontextprotocol/server-brave-search"
       ],
-      "env": {
-        "BRAVE_API_KEY": "${BRAVE_API_KEY2}"
-      },
       "description": "web search"
     }
   }
