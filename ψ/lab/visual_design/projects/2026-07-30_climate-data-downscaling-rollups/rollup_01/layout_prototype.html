@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roll-up 01 Layout Prototype — DCCE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&family=Outfit:wght@500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary-dark: #0A369D;
+      --color-primary-mid: #4472CA;
+      --color-accent-blue: #5E7CE2;
+      --color-blue-light: #92B4F4;
+      --color-blue-soft: #CFDEE7;
+      --color-surface-white: #FFFFFF;
+      --font-th: 'Sarabun', 'Kanit', sans-serif;
+      --font-en: 'Outfit', sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: #0F172A; font-family: var(--font-th); padding: 2rem; display: flex; justify-content: center; }
+    .banner { width: 520px; height: 1300px; background-color: #F8FAFC; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; border: 4px solid var(--color-primary-dark); }
+    .safe-zone-top { background: linear-gradient(135deg, var(--color-primary-dark) 0%, #062266 100%); color: #FFFFFF; padding: 1.25rem 1.5rem 1rem 1.5rem; }
+    .dcce-brand-bar { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--color-blue-light); border-bottom: 1px solid rgba(255, 255, 255, 0.15); padding-bottom: 0.5rem; margin-bottom: 0.75rem; }
+    .badge-strip { display: flex; gap: 0.35rem; margin-bottom: 0.75rem; }
+    .badge { font-family: var(--font-en); font-size: 0.65rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 4px; background-color: rgba(255, 255, 255, 0.15); color: #FFFFFF; border: 1px solid rgba(255, 255, 255, 0.3); }
+    .banner-title { font-family: 'Kanit', sans-serif; font-size: 1.35rem; font-weight: 700; color: #FFFFFF; line-height: 1.25; }
+    .banner-subtitle { font-size: 0.8rem; color: var(--color-blue-soft); margin-top: 0.35rem; line-height: 1.35; }
+    .banner-body { flex: 1; padding: 1.25rem; display: flex; flex-direction: column; gap: 1rem; background-color: #F1F5F9; overflow-y: auto; }
+    .card { background-color: var(--color-surface-white); border-radius: 10px; padding: 1rem; border: 1px solid var(--color-blue-soft); }
+    .card-header { font-family: 'Kanit', sans-serif; font-size: 0.95rem; font-weight: 600; color: var(--color-primary-dark); display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; padding-bottom: 0.35rem; border-bottom: 2px solid var(--color-blue-soft); }
+    .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    .mini-card { background-color: #F8FAFC; border-radius: 8px; padding: 0.75rem; border: 1px solid var(--color-blue-soft); }
+    .mini-card-title { font-weight: 700; font-size: 0.8rem; color: var(--color-primary-dark); margin-bottom: 0.35rem; }
+    .mini-card ul { list-style: none; font-size: 0.72rem; color: #475569; display: flex; flex-direction: column; gap: 0.25rem; }
+    .mini-card ul li::before { content: "• "; color: var(--color-primary-mid); font-weight: bold; }
+    .sector-grid { display: grid; grid-template-columns: 1fr; gap: 0.5rem; }
+    .sector-item { display: flex; align-items: flex-start; gap: 0.6rem; background-color: #FFFFFF; padding: 0.6rem; border-radius: 6px; border-left: 3px solid var(--color-primary-mid); }
+    .sector-icon { font-size: 1.1rem; }
+    .sector-text { font-size: 0.74rem; line-height: 1.35; color: #0F172A; }
+    .sector-text strong { color: var(--color-primary-dark); display: block; font-size: 0.78rem; }
+    .insight-card { background: linear-gradient(180deg, #FFFFFF 0%, #F0F4FF 100%); border: 2px solid var(--color-primary-mid); border-radius: 12px; padding: 1rem; }
+    .insight-card-header { font-family: 'Kanit', sans-serif; font-size: 0.88rem; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.4rem; }
+    .insight-card-body { font-size: 0.74rem; line-height: 1.45; color: #334155; }
+    .checklist-stack { display: flex; flex-direction: column; gap: 0.35rem; }
+    .checklist-item { display: flex; align-items: center; justify-content: space-between; background-color: var(--color-surface-white); padding: 0.45rem 0.75rem; border-radius: 6px; border: 1px solid var(--color-blue-soft); font-size: 0.72rem; }
+    .checklist-tag { font-family: var(--font-en); font-weight: 700; color: var(--color-primary-dark); background-color: var(--color-blue-light); padding: 0.1rem 0.4rem; border-radius: 4px; }
+    .banner-footer { background-color: #0F172A; color: #94A3B8; padding: 0.75rem 1.25rem; font-size: 0.65rem; display: flex; justify-content: space-between; border-top: 1px solid #1E293B; }
+  </style>
+</head>
+<body>
+  <article class="banner">
+    <div class="safe-zone-top">
+      <div class="dcce-brand-bar">
+        <span>DCCE Climate Info Series</span>
+        <span>Roll-up 01 / 02</span>
+      </div>
+      <div class="badge-strip">
+        <span class="badge">CMIP6</span>
+        <span class="badge">GCM</span>
+        <span class="badge">SSP Scenarios</span>
+        <span class="badge">Decision Support</span>
+      </div>
+      <h2 class="banner-title">ข้อมูลฉายภาพภูมิอากาศเพื่อการวางแผนและรับมืออนาคต</h2>
+      <p class="banner-subtitle">แปลงฉากทัศน์การเปลี่ยนแปลงสภาพภูมิอากาศระดับโลก สู่ข้อมูลเพื่อการตัดสินใจระดับพื้นที่ของประเทศไทย</p>
+    </div>
+    <div class="banner-body">
+      <section class="card">
+        <div class="card-header"><span>📊</span> ข้อมูลฉายภาพภูมิอากาศไม่ใช่การพยากรณ์อากาศ</div>
+        <div class="comparison-grid">
+          <div class="mini-card">
+            <div class="mini-card-title">การพยากรณ์อากาศ</div>
+            <ul>
+              <li>ล่วงหน้า 1–14 วัน</li>
+              <li>ผลลัพธ์แน่นอน (Deterministic)</li>
+              <li>ใช้สภาวะบรรยากาศปัจจุบัน</li>
+              <li>ใช้ในชีวิตประจำวัน</li>
+            </ul>
+          </div>
+          <div class="mini-card" style="border-color: var(--color-primary-mid); background-color: #F0F4FF;">
+            <div class="mini-card-title">ข้อมูลฉายภาพภูมิอากาศ</div>
+            <ul>
+              <li>ล่วงหน้า 10–80 ปี</li>
+              <li>ตามฉากทัศน์ (SSP Scenarios)</li>
+              <li>ใช้นโยบาย/การปล่อยก๊าซ</li>
+              <li>ใช้ในวางแผนยุทธศาสตร์</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="card">
+        <div class="card-header"><span>🎯</span> การนำข้อมูลไปประยุกต์ใช้เพื่อการตัดสินใจ 5 ด้านหลัก</div>
+        <div class="sector-grid">
+          <div class="sector-item"><span class="sector-icon">💧</span><div class="sector-text"><strong>การจัดการทรัพยากรน้ำ</strong>ประเมินแนวโน้มน้ำท่วม น้ำแล้ง และปริมาณน้ำต้นทุนในเขื่อน</div></div>
+          <div class="sector-item"><span class="sector-icon">🌾</span><div class="sector-text"><strong>การเกษตรและความมั่นคงทางอาหาร</strong>วางแผนปฏิทินการเพาะปลูกและรับมือคลื่นความร้อน</div></div>
+          <div class="sector-item"><span class="sector-icon">🏗️</span><div class="sector-text"><strong>โครงสร้างพื้นฐานและผังเมือง</strong>ออกแบบมาตรฐานการก่อสร้างทนทานต่อภัยพิบัติ</div></div>
+          <div class="sector-item"><span class="sector-icon">🛡️</span><div class="sector-text"><strong>การบริหารจัดการภัยพิบัติ</strong>เตือนภัยล่วงหน้าและเตรียมแผนเผชิญเหตุระดับพื้นที่</div></div>
+          <div class="sector-item"><span class="sector-icon">📈</span><div class="sector-text"><strong>นโยบายและการลงทุน</strong>กำหนดทิศทางการลงทุนสีเขียวและการปรับตัวอย่างยั่งยืน</div></div>
+        </div>
+      </section>
+      <section class="insight-card">
+        <div class="insight-card-header"><span>💡</span> ทำไมไม่ควรใช้แบบจำลองเดียวในการตัดสินใจ?</div>
+        <p class="insight-card-body">ผลจำลองภูมิอากาศจาก CMIP6 แสดงให้เห็นว่าแต่ละแบบจำลองและฉากทัศน์ให้ค่าประมาณการความเสี่ยงที่แตกต่างกัน การใช้ข้อมูลแบบจำลองเดียวอาจนำไปสู่การปรับตัวที่ผิดพลาด (Maladaptation) การวิเคราะห์แบบกลุ่มแบบจำลอง (Multi-Model Ensemble) ช่วยให้เห็นช่วงความเป็นไปได้ทั้งหมดและออกแบบมาตรการปรับตัวที่ยืดหยุ่น</p>
+      </section>
+      <section class="card">
+        <div class="card-header"><span>✅</span> 5 องค์ประกอบสำคัญในการตีความข้อมูล</div>
+        <div class="checklist-stack">
+          <div class="checklist-item"><span>แบบจำลองภูมิอากาศที่ใช้</span><span class="checklist-tag">1. Model</span></div>
+          <div class="checklist-item"><span>ฉากทัศน์การปล่อยก๊าซ (SSP1-5)</span><span class="checklist-tag">2. Scenario</span></div>
+          <div class="checklist-item"><span>ช่วงเวลาอนาคต (2030, 2050, 2100)</span><span class="checklist-tag">3. Time Horizon</span></div>
+          <div class="checklist-item"><span>ตัวแปรภูมิอากาศ (ฝน/อุณหภูมิ)</span><span class="checklist-tag">4. Variable</span></div>
+          <div class="checklist-item"><span>ความละเอียดเชิงพื้นที่ (ระดับพื้นที่)</span><span class="checklist-tag">5. Scale</span></div>
+        </div>
+      </section>
+    </div>
+    <footer class="banner-footer">
+      <span>กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม</span>
+      <span>clim-webbased.dcce.go.th</span>
+    </footer>
+  </article>
+</body>
+</html>

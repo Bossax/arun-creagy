@@ -1,4 +1,4 @@
-sa# Project brief — Climate data downscaling roll-ups
+# Project brief — Climate data downscaling roll-ups
 
 ## Purpose
 
