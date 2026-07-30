@@ -294,13 +294,11 @@ def metric_top_bottom(df: pd.DataFrame, value_col: str, code_col: str, name_th_c
 
 def province_metric_payload(metric_key, metric_label, period_key, period_label, unit_label, source_mode, df):
     df = df.copy()
-    df["display_value"] = df["value"].map(lambda x: f"{x:.6f}".rstrip("0").rstrip(".") if isinstance(x, (int, float, np.floating)) else str(x))
+    df["display_value"] = df["value"].map(lambda x: f"{x:,.2f}" if isinstance(x, (int, float, np.floating)) and x >= 100 else (f"{x:.4f}" if isinstance(x, (int, float, np.floating)) else str(x)))
     df["rank_desc"] = descending_rank(df["value"])
     if metric_key == "cri_score" or metric_key.startswith("heat_"):
         df["normalized_value"] = minmax(df["value"]) if metric_key == "cri_score" else None
     else:
-        df["normalized_value"] = minmax(df["value"])
-    if metric_key == "cri_score":
         df["normalized_value"] = minmax(df["value"])
     legend = {
         "min": float(df["value"].min()),
@@ -311,14 +309,17 @@ def province_metric_payload(metric_key, metric_label, period_key, period_label, 
     }
     records = []
     for _, r in df.iterrows():
+        norm_val = None if pd.isna(r.get("normalized_value", None)) else float(r["normalized_value"])
         records.append({
             "province_code": str(r["province_code"]).zfill(2),
             "province_name_th": r["province_name_th"],
             "province_name_en": r.get("province_name_en", None),
+            "raw_value": float(r["value"]),
+            "normalized_score": norm_val,
             "value": float(r["value"]),
             "display_value": r["display_value"],
             "rank_desc": int(r["rank_desc"]),
-            "normalized_value": None if pd.isna(r.get("normalized_value", None)) else float(r["normalized_value"]),
+            "normalized_value": norm_val,
         })
     top, bottom, _ = metric_top_bottom(df, "value", "province_code", "province_name_th", "province_name_en")
     return {
@@ -328,10 +329,16 @@ def province_metric_payload(metric_key, metric_label, period_key, period_label, 
         "period_label": period_label,
         "unit_label": unit_label,
         "source_mode": source_mode,
+        "unit_metadata": {
+            "primary_unit": unit_label,
+            "is_rate": "rate" in metric_key or "per_gpp" in metric_key,
+            "is_normalized_score": metric_key == "cri_score"
+        },
         "legend": legend,
         "records": records,
         "rankings": {"top_10": top, "bottom_10": bottom},
     }
+
 
 
 def tambon_metric_payload(metric_key, metric_label, period_key, period_label, unit_label, source_mode, df):
@@ -685,25 +692,61 @@ def main():
             sub,
         )
 
+    def heat_score_metric(heat_df, period_key, period_label):
+        df_p = heat_df.pivot(index="province_code", columns="metric_code", values="value").fillna(0.0).reset_index()
+        if "DEATHS" not in df_p.columns:
+            df_p["DEATHS"] = 0.0
+        if "INJURED" not in df_p.columns:
+            df_p["INJURED"] = 0.0
+        df_p["s_deaths"] = minmax(df_p["DEATHS"])
+        df_p["s_injured"] = minmax(df_p["INJURED"])
+        df_p["value"] = 0.5 * df_p["s_deaths"] + 0.5 * df_p["s_injured"]
+        sub = prov_lookup.merge(df_p[["province_code", "value"]], on="province_code", how="left").fillna({"value": 0.0})
+        sub["province_name_en"] = None
+        return province_metric_payload(
+            "heat_score",
+            "Heatwave Casualty Score",
+            period_key,
+            period_label,
+            "Score [0-1]",
+            "average_window" if period_key == "period_2561_2567" else "single_year",
+            sub,
+        )
+
     # Write heatwave metrics directly to 'all' hazard subfolder (heat has no other hazard disaggregation)
     write_json(OUT / "period_2561_2567" / "all" / "heat_deaths.json", heat_metric("DEATHS", heat_avg, "period_2561_2567", "2561–2567 average"))
     write_json(OUT / "period_2561_2567" / "all" / "heat_injured.json", heat_metric("INJURED", heat_avg, "period_2561_2567", "2561–2567 average"))
+    write_json(OUT / "period_2561_2567" / "all" / "heat_score.json", heat_score_metric(heat_avg, "period_2561_2567", "2561–2567 average"))
+
     write_json(OUT / "period_2567" / "all" / "heat_deaths.json", heat_metric("DEATHS", heat_257, "period_2567", "2567 only"))
     write_json(OUT / "period_2567" / "all" / "heat_injured.json", heat_metric("INJURED", heat_257, "period_2567", "2567 only"))
+    write_json(OUT / "period_2567" / "all" / "heat_score.json", heat_score_metric(heat_257, "period_2567", "2567 only"))
+
 
     # Spatial assets
-    prov_out = prov_gdf.copy()
-    prov_out.to_file(OUT / "spatial" / "province_boundaries.geojson", driver="GeoJSON")
-    tambon_by_prov = []
-    for pcode, group in tambon_lookup.groupby("province_code"):
-        file = OUT / "spatial" / "tambon" / f"{pcode}.geojson"
-        group_gdf = gpd.GeoDataFrame(group.drop(columns=["geometry"]), geometry=group["geometry"], crs=tambon_gdf.crs)
-        group_gdf.to_file(file, driver="GeoJSON")
-        tambon_by_prov.append({
-            "province_code": pcode,
-            "province_name_th": str(group["province_name_th"].dropna().iloc[0]) if group["province_name_th"].notna().any() else None,
-            "file": f"spatial/tambon/{pcode}.geojson",
-        })
+    try:
+        prov_out = prov_gdf.copy()
+        prov_out.to_file(OUT / "spatial" / "province_boundaries.geojson", driver="GeoJSON")
+        tambon_by_prov = []
+        for pcode, group in tambon_lookup.groupby("province_code"):
+            file = OUT / "spatial" / "tambon" / f"{pcode}.geojson"
+            group_gdf = gpd.GeoDataFrame(group.drop(columns=["geometry"]), geometry=group["geometry"], crs=tambon_gdf.crs)
+            group_gdf.to_file(file, driver="GeoJSON")
+            tambon_by_prov.append({
+                "province_code": pcode,
+                "province_name_th": str(group["province_name_th"].dropna().iloc[0]) if group["province_name_th"].notna().any() else None,
+                "file": f"spatial/tambon/{pcode}.geojson",
+            })
+    except Exception as e:
+        print(f"⚠️ Spatial asset rewrite skipped due to lock: {e}")
+        tambon_by_prov = [
+            {
+                "province_code": pcode,
+                "province_name_th": str(group["province_name_th"].dropna().iloc[0]) if group["province_name_th"].notna().any() else None,
+                "file": f"spatial/tambon/{pcode}.geojson",
+            }
+            for pcode, group in tambon_lookup.groupby("province_code")
+        ]
 
     manifest = {
         "version": "2026-06-17-stage1",
@@ -899,10 +942,10 @@ def main():
         # Write province average metrics
         # Write province average metrics (Exporting min-max normalized scores instead of absolute values)
         for metric_key, metric_label, unit_label in h_avg_specs:
-            val_col = metric_key if metric_key == "cri_score" else f"s_{metric_key}"
+            val_col = metric_key
             payload = province_metric_payload(
                 metric_key, metric_label, "period_2561_2567", "2561–2567 average", unit_label, "average_window",
-                prov_avg_metrics[["province_code", "province_name_th", "province_name_en", val_col]].rename(columns={val_col: "value"})
+                prov_avg_metrics[["province_code", "province_name_th", "province_name_en", metric_key, f"s_{metric_key}"]].rename(columns={metric_key: "value"}) if f"s_{metric_key}" in prov_avg_metrics.columns else prov_avg_metrics[["province_code", "province_name_th", "province_name_en", metric_key]].rename(columns={metric_key: "value"})
             )
             write_json(OUT / "period_2561_2567" / h_key / f"{metric_key}.json", payload)
 
@@ -1051,10 +1094,10 @@ def main():
         prov_2567_metrics["province_name_en"] = prov_2567_metrics["province_name_en"].where(pd.notna(prov_2567_metrics["province_name_en"]), None)
 
         for metric_key, metric_label, unit_label in h_2567_specs:
-            val_col = metric_key if metric_key == "cri_score" else f"s_{metric_key}"
+            val_col = metric_key
             payload = province_metric_payload(
                 metric_key, metric_label, "period_2567", "2567 only", unit_label, "single_year",
-                prov_2567_metrics[["province_code", "province_name_th", "province_name_en", val_col]].rename(columns={val_col: "value"})
+                prov_2567_metrics[["province_code", "province_name_th", "province_name_en", metric_key, f"s_{metric_key}"]].rename(columns={metric_key: "value"}) if f"s_{metric_key}" in prov_2567_metrics.columns else prov_2567_metrics[["province_code", "province_name_th", "province_name_en", metric_key]].rename(columns={metric_key: "value"})
             )
             write_json(OUT / "period_2567" / h_key / f"{metric_key}.json", payload)
 
