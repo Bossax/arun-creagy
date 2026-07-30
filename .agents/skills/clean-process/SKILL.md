@@ -20,28 +20,36 @@ Use this skill when:
 
 ## Execution Workflow (Windows / PowerShell)
 
-### Step 1: Detect Active Daemons & MCP Processes
+### Step 1: Detect Active MCP Worker Processes
 
-Run the following command to identify active daemon (`agy`, `codex`) and MCP worker processes:
+Run the following command to identify active MCP worker processes (excluding host daemons `agy` and `codex`):
 
 ```powershell
-pwsh -NoProfile -Command "Get-CimInstance Win32_Process | Where-Object { `$_.Name -match 'agy|codex' -or (`$_.CommandLine -and (`$_.CommandLine -like '*mcp*' -or `$_.CommandLine -like '*brave-search*' -or `$_.CommandLine -like '*perplexity*' -or `$_.CommandLine -like '*codex*' -or `$_.CommandLine -like '*agy*')) } | Select-Object ProcessId, Name, CommandLine | Format-Table -AutoSize"
+pwsh -NoProfile -Command "Get-CimInstance Win32_Process | Where-Object { (`$_.CommandLine -and (`$_.CommandLine -like '*mcp*' -or `$_.CommandLine -like '*brave-search*' -or `$_.CommandLine -like '*perplexity*')) -and `$_.Name -notmatch 'agy|codex' } | Select-Object ProcessId, Name, CommandLine | Format-Table -AutoSize"
 ```
 
-### Step 2: Terminate Target Processes
+### Step 2: Terminate Stale MCP Worker Processes
 
-Terminate any identified stale background daemons and MCP worker processes:
+Safely terminate target MCP server worker processes without killing the host runner (`agy.exe` / `codex.exe`):
 
 ```powershell
-pwsh -NoProfile -Command "Get-CimInstance Win32_Process | Where-Object { `$_.Name -match 'agy|codex' -or (`$_.CommandLine -and (`$_.CommandLine -like '*mcp*' -or `$_.CommandLine -like '*brave-search*' -or `$_.CommandLine -like '*perplexity*' -or `$_.CommandLine -like '*codex*' -or `$_.CommandLine -like '*agy*')) } | ForEach-Object { Stop-Process -Id `$_.ProcessId -Force; Write-Host ('Terminated PID: ' + `$_.ProcessId) }"
+pwsh -NoProfile -Command "Get-CimInstance Win32_Process | Where-Object { (`$_.CommandLine -and (`$_.CommandLine -like '*mcp*' -or `$_.CommandLine -like '*brave-search*' -or `$_.CommandLine -like '*perplexity*')) -and `$_.Name -notmatch 'agy|codex' } | ForEach-Object { if (`$_.ProcessId -ne `$PID) { Stop-Process -Id `$_.ProcessId -Force -ErrorAction SilentlyContinue; Write-Host ('Terminated PID: ' + `$_.ProcessId) } }"
 ```
 
 ### Step 3: Verify Process Termination
 
-Confirm that no stale processes remain:
+Confirm that no stale MCP server processes remain:
 
 ```powershell
-pwsh -NoProfile -Command "Get-CimInstance Win32_Process | Where-Object { `$_.Name -match 'agy|codex' -or (`$_.CommandLine -and (`$_.CommandLine -like '*mcp*' -or `$_.CommandLine -like '*brave-search*' -or `$_.CommandLine -like '*perplexity*' -or `$_.CommandLine -like '*codex*' -or `$_.CommandLine -like '*agy*')) }"
+pwsh -NoProfile -Command "Get-CimInstance Win32_Process | Where-Object { (`$_.CommandLine -and (`$_.CommandLine -like '*mcp*' -or `$_.CommandLine -like '*brave-search*' -or `$_.CommandLine -like '*perplexity*')) -and `$_.Name -notmatch 'agy|codex' }"
+```
+
+### Step 4: (Optional) Detached Host Daemon Restart
+
+If host daemons (`agy`, `codex`) explicitly need to be restarted, **always launch a detached background job with a delay** so the active agent turn finishes cleanly before termination:
+
+```powershell
+pwsh -NoProfile -Command "Start-Job -ScriptBlock { Start-Sleep -Seconds 3; Get-CimInstance Win32_Process | Where-Object { `$_.Name -match 'agy|codex' } | ForEach-Object { Stop-Process -Id `$_.ProcessId -Force } }"
 ```
 
 ---
@@ -49,6 +57,6 @@ pwsh -NoProfile -Command "Get-CimInstance Win32_Process | Where-Object { `$_.Nam
 ## Output Report
 
 Upon completion, report:
-- List of PIDs terminated (including `agy` and `codex` daemons if active).
-- Status confirmation that stale processes and daemons were cleaned up.
-- Recommendation to re-trigger the agent prompt so daemons re-spawn with freshly inherited environment variables.
+- List of MCP worker PIDs terminated.
+- Status confirmation that stale MCP processes were cleaned up.
+- Note whether a background job was scheduled for daemon restart if requested.

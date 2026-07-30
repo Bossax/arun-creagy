@@ -10,7 +10,7 @@
 
 ## Pending
 - [x] Restart VS Code / Antigravity host to ensure new environment variables (`BRAVE_API_KEY=BSAeK2DGsRzeGFO1f7d1yrK7IGS2yRE`) are inherited by the parent process.
-- [ ] Re-test Brave Search MCP tools (`brave_web_search`) after VS Code restart to confirm clean authentication.
+- [x] Re-test Brave Search MCP tools (`brave_web_search`) after VS Code restart to confirm clean authentication.
 
 ## Hypotheses for Next Session
 - [ ] Hypothesis 1: Upon VS Code restart, the new parent process environment will pass `BSAeK2DGsRzeGFO1f7d1yrK7IGS2yRE` to spawned MCP servers, resolving the 422 authentication error.
