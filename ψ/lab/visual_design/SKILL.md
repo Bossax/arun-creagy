@@ -76,15 +76,29 @@ The visual plan should make clear:
 
 Do not use a familiar visual grammar—a cycle, map, chain, matrix, timeline, or icon set—unless it makes the source-specific finding easier to understand. A generic process diagram without a source-specific tension is not an acceptable concept.
 
+### HTML layout prototype — use when alignment or copy fit is at risk
+
+For dense, bilingual, physical-format, or semantically complex work, create an editable HTML/CSS prototype before requesting generated artwork or final production layout. It is the layout authority for the approved reading order, copy capacity, safe zones, and evidence-bearing scaffold; it is not a substitute for the final design application.
+
+The prototype must show, at the intended aspect ratio or dimensions:
+
+- content zones, hierarchy, reading direction, and reserved production or hardware safe zones
+- final or representative editable copy, so line length, density, and bilingual fit can be checked
+- each evidence-bearing module's visible form: its slot count, comparison, sequence, map area, icon, or flow
+- the meaning of major symbols and connections, not just decorative placeholders
+
+Review the prototype against the Insight Card. If the intended finding cannot be understood without its future copy, revise the scaffold before moving on.
+
 Suggested artifacts:
 
 - `visual_plan.md`
 - `wireframe.png` or `wireframe.md`
+- `layout_prototype.html` and supporting CSS/assets when an HTML prototype is warranted
 - `visual_element_register.md` when a design has many elements
 
 ## Stage 3 — Generation or layout handoff
 
-Prepare one handoff that a designer, layout artist, or image-generation tool can use without reopening the research. Separate visual-generation instructions from final typesetting and data labels when accuracy matters.
+Prepare one handoff that a designer, layout artist, or image-generation tool can use without reopening the research. Separate visual-generation instructions from final typesetting and data labels when accuracy matters. When an HTML prototype exists, treat it as the approved layout authority and attach or reference it in the handoff.
 
 Include:
 
@@ -93,6 +107,8 @@ Include:
 - prompt and avoid list, if generating imagery
 - dimensions, output requirements, and reserved text areas
 - final display text, source notes, and editable-data requirements
+
+Any provisional imagery used at this stage must be text-free unless text generation is explicitly approved for a non-final placeholder. Do not ask a model to invent labels, numbers, citations, icons with semantic meaning, or the underlying information architecture. The approved overall composition remains the authority; extract final reusable visual assets only after it passes Stage 4.
 
 When final display language is known, create the editable layout copy at this stage as a separate companion file for each language, for example `layout_text_th.md` for Thai. Create it alongside `generation_handoff.md`, not as a later iteration artifact. Keep it text-only and include every title, label, badge, caption, caveat, and source note needed by the layout.
 
@@ -105,7 +121,7 @@ Suggested artifact:
 
 ## Stage 4 — Review and revision
 
-Treat early outputs as composition prototypes. Review them against the evidence, hierarchy, format, and design system before polishing style. Write targeted revision requests that state what to preserve, change, and not change.
+Treat early outputs as composition prototypes. Review them against the evidence, hierarchy, format, and design system before polishing style. When an HTML prototype is used, review it at the intended physical dimensions before approving final production or detailed styling. Write targeted revision requests that state what to preserve, change, and not change.
 
 Resolve these first:
 
@@ -114,6 +130,13 @@ Resolve these first:
 - hierarchy and reading order
 - scale, legibility, and space for text
 - required format and accessibility constraints
+
+For scaffolded or generated outputs, also verify:
+
+- every required module, slot, comparison, and step is visibly present in the approved count and order
+- symbols, flows, and visual groupings express the approved mechanism rather than a generic process
+- empty areas are intentionally structured for the approved copy; they are not vague space to be resolved later
+- each revision names observable changes to zones, shapes, icons, connections, count, or hierarchy—not only changes to future copy
 
 Run an anti-generic content review before accepting a revision:
 
@@ -136,11 +159,25 @@ Suggested artifacts:
 
 Validate the final output at its intended size and medium. Deliver the agreed master, export formats, and concise source notes. Preserve editable assets when possible.
 
+### Asset extraction for Canva — after the overall design passes review
+
+After the overall design, layout, and visual language are approved, identify the key visual elements that give the design its distinctive form, style, or texture. Generate these elements individually for Canva assembly; do not ask an image model to regenerate the entire finished panel.
+
+Create one shared **style-lock block** from the approved design and copy it verbatim into every element prompt. It must define the palette, shape language, line weight, texture or grain, lighting, perspective, abstraction level, detail density, and avoid list. Only the element role may vary between prompts.
+
+For each generated element, record:
+
+- element name, intended Canva placement, dimensions or aspect ratio, and whether it needs a clean or transparent background
+- the source zone in the approved composition and the element's visual role
+- the shared style-lock block and the element-specific prompt
+- constraints that preserve coherence with the approved design and prohibit text, data, labels, or new semantic claims
+
+Use the resulting assets to reconstruct the approved composition in Canva. If an element cannot preserve the locked visual language, regenerate that element; do not change the overall design to accommodate an inconsistent asset.
+
 Suggested artifacts:
 
-- final master and exports
-- `source_notes.md`
-- final `content_manifest.csv`, if used
+
+- `asset_extraction_plan.md` and one prompt record per generated element, when Canva assembly uses generated assets
 
 ## Principles
 
