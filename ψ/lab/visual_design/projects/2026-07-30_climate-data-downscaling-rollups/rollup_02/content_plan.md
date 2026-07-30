@@ -1,40 +1,36 @@
-# Content Plan — Roll-up 02: การลดสเกลและชุดผลิตภัณฑ์ข้อมูล
-**Roll-up 02: Downscaling & DCCE Data Product Family**
+# Roll-up 02 Draft 3 — Content Plan
 
----
+**Theme:** Downscaling and DCCE climate-data products
+**Relationship to Roll-up 01:** Roll-up 01 explains why projections matter for planning. Roll-up 02 explains how global model information is translated into locally usable data and how users can choose among methods and products.
 
-## 1. Primary Reader Question & Thesis
-**คำถามหลักประจำแผ่น**: การลดสเกลข้อมูลภูมิอากาศช่วยเพิ่มความละเอียดระดับพื้นที่ได้อย่างไร และชุดผลิตภัณฑ์ของ DCCE มีอะไรบ้าง?
-**แก่นความคิดหลัก**: การลดสเกลเชิงพลศาสตร์และการลดสเกลเชิงสถิติช่วยแปลงข้อมูลแบบจำลองระดับโลกสู่ความละเอียดสูงระดับพื้นที่ เพื่อให้ผู้ใช้นำไปใช้วางแผนผ่านชุดผลิตภัณฑ์ 4 ประเภท (GridData, WRF-Chem, RegCM5, Statistical Downscaling)
+## Primary reader question and thesis
 
----
+**Reader question:** แบบจำลองระดับโลกถูกแปลงให้เป็นข้อมูลที่ใช้วิเคราะห์ระดับพื้นที่ได้อย่างไร และควรเลือกผลิตภัณฑ์แบบใดให้เหมาะกับงาน?
 
-## 2. Message Hierarchy & Thai Draft Copy
+**Thesis:** การลดสเกลช่วยแปลข้อมูลจากแบบจำลองระดับโลกให้เหมาะกับคำถามและพื้นที่มากขึ้น แต่แต่ละวิธีและผลิตภัณฑ์มีจุดเด่นต่างกัน จึงต้องเลือกใช้โดยดูจากกลไก ความละเอียด ตัวแปร และการตัดสินใจที่ต้องการสนับสนุน
 
-### Header Zone
-- **Headline (TH)**: การลดสเกลข้อมูลและชุดผลิตภัณฑ์ฉายภาพภูมิอากาศความละเอียดสูง
-- **Sub-headline (TH)**: เชื่อมโยงแบบจำลองระดับโลกสู่ข้อมูลความละเอียดสูงระดับพื้นที่ของประเทศไทย
-- **Badges**: `Dynamical Downscaling` | `Statistical Downscaling` | `RCM` | `NetCDF / CSV`
-
-### Section 1: ปัญหาเชิงพื้นที่และการลดสเกลข้อมูล (Downscaling Mechanisms)
-- **การลดสเกลเชิงพลศาสตร์ (Dynamical Downscaling)**: ใช้แบบจำลองภูมิอากาศภูมิภาค (RCM) คำนวณสมการฟิสิกส์บรรยากาศ รักษากฎฟิสิกส์ สะท้อนสภาพอากาศสุดขั้วและภูมิประเทศซับซ้อนได้ดี (เช่น RegCM5, WRF-Chem)
-- **การลดสเกลเชิงสถิติ (Statistical Downscaling)**: ใช้แบบจำลองสถิติ/ML (Random Forest) จับคู่ความสัมพันธ์ข้อมูลกับสถานีจริง ประมวลผลรวดเร็วมาก ปรับแก้ความคลาดเคลื่อน (Bias Correction) ได้ดี
-
-### Section 2: ชุดผลิตภัณฑ์ข้อมูลฉายภาพภูมิอากาศ DCCE (4 Data Products)
-1. **GridData**: ข้อมูลตัวแปรภูมิอากาศรูปแบบ Raster พร้อมใช้งานเชิงพื้นที่ GIS (ไฟล์ NetCDF และ CSV)
-2. **WRF-Chem**: ข้อมูลจำลองเชิงพลศาสตร์ขั้นสูง บูรณาการเคมีบรรยากาศ ละอองลอย (Aerosols) และคุณภาพอากาศ
-3. **RegCM5**: แบบจำลองภูมิภาคยุคใหม่ เน้นฟิสิกส์บรรยากาศระดับภูมิภาคและสภาพอากาศสุดขั้ว
-4. **Statistical Downscaling**: ชุดข้อมูลประมวลผลเร็วเชิงสถิติเพื่อประเมินฉากทัศน์ระดับสถานีได้อย่างรวดเร็ว
-
----
-
-## 3. Insight Card 02
+## Reader-value gate — Insight Card 02
 
 | Field | Content |
 |---|---|
-| **Reader Question** | เหตุใดจึงต้องมีทั้งแบบจำลองเชิงพลศาสตร์ (RegCM5 / WRF-Chem) และการลดสเกลเชิงสถิติ? |
-| **Source-specific Finding** | การลดสเกลเชิงพลศาสตร์ให้ความแม่นยำด้านฟิสิกส์บรรยากาศและผลกระทบเชิงพื้นที่ซับซ้อน แต่ใช้พลังงานประมวลผลสูง ขณะที่การลดสเกลเชิงสถิติประมวลผลได้รวดเร็วและตรงกับสถานีจริง |
-| **Mechanism** | RCM คำนวณสมการฟิสิกส์บรรยากาศโดยตรง (Dynamical) ส่วน Statistical Downscaling ใช้แบบจำลองการเรียนรู้ของเครื่อง (Machine Learning) จับคู่รูปแบบสถิติ (Empirical Relationships) |
-| **Consequence** | ผู้ใช้สามารถเลือกใช้ WRF-Chem/RegCM5 สำหรับงานวิจัยเชิงลึกด้านฟิสิกส์/ฝุ่นละออง และใช้ Statistical Downscaling/GridData สำหรับงานวางแผนยุทธศาสตร์อย่างรวดเร็ว |
-| **Visual Proof** | ตารางเปรียบเทียบจุดเด่น วิธีการ และรูปแบบการใช้งานของทั้ง 4 ผลิตภัณฑ์ (Product Comparison Matrix) |
-| **Evidence Anchor** | DCCE Platform (WEB-01), CORDEX-SEA RCM Specs (SCI-01, IMG-02, IMG-03) |
+| **Reader question** | เหตุใดจึงต้องมีทั้งการลดสเกลเชิงพลศาสตร์และเชิงสถิติ แทนที่จะใช้วิธีเดียวกับทุกงาน? |
+| **Source-specific finding** | การลดสเกลเชิงพลศาสตร์จำลองกระบวนการทางฟิสิกส์และภูมิประเทศ ขณะที่การลดสเกลเชิงสถิติใช้ความสัมพันธ์เชิงประจักษ์กับข้อมูลท้องถิ่น ทั้งสองวิธีจึงตอบโจทย์คนละแบบ |
+| **Mechanism** | RCM คำนวณบรรยากาศในพื้นที่ย่อยของแบบจำลองระดับโลก ส่วนวิธีเชิงสถิติเรียนรู้ความสัมพันธ์ระหว่างตัวแปรแบบจำลองกับข้อมูลสถานีหรือข้อมูลอ้างอิง |
+| **Consequence** | ผู้ใช้เลือกวิธีและผลิตภัณฑ์ให้เหมาะกับงานวิจัยเชิงฟิสิกส์ งานวิเคราะห์เชิงพื้นที่ งานคุณภาพอากาศ หรืองานประเมินทางเลือกอย่างรวดเร็วได้ดีขึ้น |
+| **Visual proof** | ภาพเปรียบเทียบ “กล่องแบบจำลองระดับโลก → กลไกการลดสเกล 2 แบบ → ผลิตภัณฑ์ 4 กลุ่ม” |
+| **Evidence anchor** | `SCI-01`, `SCI-02`, `WEB-01`, `IMG-02`, `IMG-03`, `IMG-04` ใน `00_project/evidence_map.md` |
+
+## Message hierarchy
+
+1. **Why:** ข้อมูลระดับโลกมีขนาดช่องตารางหยาบ จึงอาจไม่สะท้อนภูเขา ชายฝั่ง เมือง และความแตกต่างระดับพื้นที่ได้เพียงพอ
+2. **How:** การลดสเกลมีสองแนวทางหลัก—เชิงพลศาสตร์และเชิงสถิติ—ซึ่งใช้กลไกและเหมาะกับงานต่างกัน
+3. **What:** DCCE มีผลิตภัณฑ์ 4 กลุ่ม—GridData, WRF-Chem, RegCM5 และ Statistical Downscaling
+4. **Choose:** เลือกผลิตภัณฑ์จากคำถาม วิธีการ ตัวแปร พื้นที่ และรูปแบบการใช้งาน ไม่ใช่เลือกจากชื่อผลิตภัณฑ์เพียงอย่างเดียว
+
+## Content boundaries
+
+- Do not claim that downscaling removes uncertainty or creates a single certain future.
+- Do not present one resolution value as universal across all products.
+- Keep product-specific resolution, coverage, and file metadata subject to the verified product record.
+- Keep product names exactly as `GridData`, `WRF-Chem`, `RegCM5`, and `Statistical Downscaling`.
+- Keep final text editable and separate from generated artwork.

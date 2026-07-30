@@ -1,90 +1,76 @@
-# Stage 3 Generation & Layout Handoff — Roll-up 01
-**Roll-up 01: ข้อมูลฉายภาพการเปลี่ยนแปลงสภาพภูมิอากาศ (Climate Projection Data & Scenarios)**
+# Draft 3 Generation Handoff — Roll-up 01
 
----
+**Project:** Climate Projection Data & Decision Support
+**Final format:** 60 × 160 cm vertical roll-up
+**Aspect ratio:** 3:8
+**Language:** Thai-first, with editable English technical labels
 
-## 1. Handoff Purpose & Layout Authority
+## Attach these references
 
-This document provides the complete layout, typesetting, and image-generation specification for **Roll-up 01**.
-- **Layout Authority**: `rollup_01/layout_prototype.html`
-- **Typesetting Copy Authority**: `rollup_01/layout_text_th.md`
-- **Design System Authority**: `00_project/DESIGN.md`
-- **Aspect Ratio**: `1:2.5` (80 cm x 200 cm physical vertical banner).
+- `img/draft2.png` — visual reference and illustration language
+- `visual_plan.md` — approved composition and reading sequence
+- `layout_text_th.md` — exact editable Thai copy
+- `00_project/DESIGN.md` — palette, typography, and design system
 
----
+## Production rule
 
-## 2. Shared Style-Lock Block (Copy Verbatim into Prompts)
+Use Draft 2 as the visual reference, but use `layout_text_th.md` as the only text authority. Do not copy, paraphrase, or invent text from the reference image.
+
+Generate the visual scaffold and text-free illustration assets first. Add all Thai text, SSP labels, technical terms, DCCE branding, QR code, citations, and source notes separately as editable layout elements.
+
+## Core message
+
+Climate projection data does not predict a specific day. It shows possible long-term futures under different development and emissions scenarios so people can plan, decide, and adapt with flexibility.
+
+## Required reading sequence
+
+1. Header: climate projection data for planning and future response.
+2. Definition: what climate projection data is.
+3. Comparison: weather forecast versus climate projection.
+4. Central message: “เห็นอนาคตที่เป็นไปได้”.
+5. SSP scenario branching: present → SSP1-2.6, SSP2-4.5, SSP5-8.5.
+6. Five decision applications: water, agriculture, infrastructure, disaster preparedness, policy/investment.
+7. Insight: why multiple models and scenarios are needed.
+8. Five questions before using the data.
+9. Closing message, source note, QR code, and DCCE footer.
+
+## Visual direction
+
+Match the attached Draft 2 illustration:
+
+- Blue-led public-information infographic
+- Egyptian-blue rounded outlines
+- Pale-blue and white surfaces
+- Simplified flat-vector forms
+- Soft restrained shading
+- Rounded panels, capsules, and icon containers
+- Clear, friendly, authoritative DCCE communication
+- Limited green accent for sustainability and plant motifs
+
+Do not introduce photorealism, glossy 3D, neon effects, unrelated stock-vector styles, complex perspective, invented maps, data values, or decorative clutter.
+
+## Layout requirements
+
+- Use an exact 3:8 canvas for 60 × 160 cm.
+- Reserve the top hardware zone for branding.
+- Reserve the bottom hardware zone for source notes, QR code, and partner marks.
+- Keep the SSP branching diagram as the dominant explanatory visual.
+- Give the richer Thai copy enough space to remain readable at roll-up viewing distance.
+- Do not include Roll-up 02 downscaling or product-family content.
+
+## Image-generation instruction
+
+When generating artwork with ChatGPT or another image model:
 
 ```text
-[STYLE-LOCK BLOCK]
-Style: Modern educational editorial infographic, flat vector construction, bold simplified silhouettes, clean geometric forms, thick dark outlines (#0A369D), solid fills with subtle tonal shading.
-Palette: Primary Egyptian Blue (#0A369D), Sapphire Sky (#4472CA), Glaucous (#5E7CE2), Baby Blue Ice (#92B4F4), Pale Sky (#CFDEE7), White (#FFFFFF).
-Tone: Authoritative public information, clean, professional, scientific.
-Avoid: Text, letters, numbers, photo-realism, 3D rendering, dark sci-fi glows, complex gradients, cluttered backgrounds, unverified maps.
-Background: Isolated clean vector element on white or transparent background.
+Use the Roll-up 01 image in this chat as the visual reference. Recreate the approved composition and illustration language for a 60 × 160 cm vertical public-information roll-up. Follow the attached visual plan for hierarchy and use the attached Thai layout text as editable copy guidance, but do not render any text, labels, numbers, logos, QR codes, citations, or source notes inside the generated image. Generate a clean text-free visual scaffold and reusable text-free illustrations matching the reference's blue palette, rounded heavy outlines, simplified flat-vector forms, pale-blue surfaces, and restrained shading. Keep the SSP scenario branching diagram dominant and preserve space for the full editable Thai copy.
 ```
 
----
+## Acceptance check
 
-## 3. Vector Element Extraction Plan (Canva Reusable Assets)
-
-### **Element 01 (`V01-01`): Scenario Branching Spectrum Diagram**
-- **Canva Placement**: Zone A / Zone C (Projection uncertainty visual proof).
-- **Element Role**: Show 3 diverging pathway arrows from a shared present-day origin branching into 3 socio-economic futures (SSP1-2.6 green route, SSP2-4.5 blue route, SSP5-8.5 dark blue route).
-- **Prompt**:
-  ```text
-  [STYLE-LOCK BLOCK]
-  Subject: Minimalist infographic vector diagram showing a single timeline arrow branching into three distinct socio-economic scenario pathways. The top branch is light blue with a leaf icon, the middle branch is sapphire blue with a steady line, and the bottom branch is dark egyptian blue with an upward curve. Flat vector, thick dark outlines (#0A369D), clean geometry, isolated on white background, no text, no numbers.
-  ```
-
-### **Element 02 (`V01-02`): 5 Sector Decision Badges**
-- **Canva Placement**: Zone B (Decision application grid).
-- **Element Role**: 5 distinct flat vector icons representing Thai public sector planning domains.
-- **Prompts**:
-  1. *Water Resources*:
-     ```text
-     [STYLE-LOCK BLOCK]
-     Subject: Flat vector icon of a water drop and reservoir dam wall. Primary Egyptian Blue (#0A369D) outlines, Sapphire Sky (#4472CA) fill. Clean geometry, isolated on white background, no text.
-     ```
-  2. *Agriculture*:
-     ```text
-     [STYLE-LOCK BLOCK]
-     Subject: Flat vector icon of a rice stalk and sun. Egyptian Blue (#0A369D) outlines, Glaucous (#5E7CE2) and Baby Blue Ice (#92B4F4) fills. Clean geometry, isolated on white background, no text.
-     ```
-  3. *Infrastructure*:
-     ```text
-     [STYLE-LOCK BLOCK]
-     Subject: Flat vector icon of a city building silhouette and flood protection barrier. Egyptian Blue (#0A369D) outlines, Sapphire Sky (#4472CA) fill. Clean geometry, isolated on white background, no text.
-     ```
-  4. *Disaster Preparedness*:
-     ```text
-     [STYLE-LOCK BLOCK]
-     Subject: Flat vector icon of a protection shield with a weather radar pulse. Egyptian Blue (#0A369D) outlines, Glaucous (#5E7CE2) fill. Clean geometry, isolated on white background, no text.
-     ```
-  5. *Policy & Investment*:
-     ```text
-     [STYLE-LOCK BLOCK]
-     Subject: Flat vector icon of a bar chart ascending into a green adaptation leaf badge. Egyptian Blue (#0A369D) outlines, Sapphire Sky (#4472CA) fill. Clean geometry, isolated on white background, no text.
-     ```
-
-### **Element 03 (`V01-03`): Spatial Scale Grid Contrast Graphic**
-- **Canva Placement**: Zone B (Scale gap illustration).
-- **Element Role**: Illustrate a 100km coarse GCM grid box zoom-in transitioning into a high-resolution 5km fine grid box over a simplified Thailand map silhouette.
-- **Prompt**:
-  ```text
-  [STYLE-LOCK BLOCK]
-  Subject: Infographic vector diagram illustrating scale translation. A large coarse grid square (100km) zooming in through a magnifying lens into a dense high-resolution 5km grid mesh over a subtle Thailand map silhouette. Egyptian Blue (#0A369D) outlines, Sapphire Sky (#4472CA) and Pale Sky (#CFDEE7) fills, isolated on white background, no text, no coordinates.
-  ```
-
----
-
-## 4. Typesetting & Assembly Guide (Canva Instructions)
-
-1. **Canvas Setup**: Set Canva custom canvas dimensions to `800px x 2000px` (or `80cm x 200cm` print dimensions at 300 DPI).
-2. **Background & Safe Zones**:
-   - Top Header Block (`0px` to `400px` height): Apply gradient fill from Egyptian Blue (`#0A369D`) to Deep Navy (`#062266`).
-   - Body Section (`400px` to `1850px` height): Slate light surface (`#F1F5F9`).
-   - Footer Bar (`1850px` to `2000px` height): Dark Slate (`#0F172A`).
-3. **Text Copy**: Paste text line-by-line directly from `rollup_01/layout_text_th.md`.
-4. **Font Styling**: Use `Sarabun` or `Kanit` for Thai text; `Outfit` for English badge chips (`CMIP6`, `GCM`, `SSP Scenarios`).
-5. **Asset Placement**: Position extracted vector assets (`V01-01`, `V01-02`, `V01-03`) in their respective designated container slots.
+- The composition follows the nine-step reading sequence.
+- The richer Thai copy from `layout_text_th.md` fits without being reduced to generic labels.
+- The image style visibly matches Draft 2.
+- No final wording is generated inside the artwork.
+- No Roll-up 02 content remains.
+- The output is designed for 60 × 160 cm, not 80 × 200 cm.
