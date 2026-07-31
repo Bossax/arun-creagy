@@ -1,190 +1,236 @@
+---
+name: visual-design
+description: Create evidence-led visual-design packages for infographics, rollups, posters, and presentation graphics. Use for research-backed visual communication that needs a reference style, a controlled layout, a full first-draft image, review, and later Canva asset extraction.
+---
+
 # Visual design workflow
 
-Use this workflow to turn supplied evidence, requirements, and visual references into a defensible visual-design package. Image generation and final layout happen in the user's chosen design application; prepare the materials needed for those steps here.
+Turn evidence and requirements into a visual design that can be reviewed, generated, and assembled in Canva. Use the fewest artifacts that make a decision or handoff reliable.
 
-Keep the workflow proportional. Create only the artifacts that help the current project; combine them when the work is simple. Keep project-specific decisions in the project folder, never in this skill.
+Never create an artifact merely because it may be useful. Every artifact below has one authority, one job, and one consumer.
 
-## Stage 0 — Intake and setup
+## Non-negotiable rules
 
-Create a dated project folder named `YYYY-MM-DD_visual-project-name`. Record the brief, source inventory, constraints, and references. If there is a visual system to follow, create or select a project-level `DESIGN.md` from the available design references.
+- Keep project decisions in the project folder, never in this skill.
+- Start with evidence and the reader's question, not decoration.
+- Treat a visual reference as three separate inputs: **illustration style**, **composition**, and **information hierarchy**. Record which inputs are approved; never assume all three.
+- Keep final text, data, citations, and complex diagrams editable in Canva.
+- Do not let image generation invent claims, labels, numbers, citations, geography, or logos.
+- Do not send a workflow history to ChatGPT. Send one current-stage production packet.
+- Do not start Stage 5 before the Stage 3 full-rollup draft passes Stage 4 review.
 
-Clarify:
+## Project structure
 
-- audience and intended use
-- format, dimensions, language, and production constraints
-- central idea and required content
-- source boundary and claim sensitivity
-- visual references, brand rules, and prohibited elements
+Create one dated project folder:
 
-Suggested artifacts:
+```text
+YYYY-MM-DD_visual-project-name/
+└── 00_project/
+    ├── project_brief.md
+    ├── DESIGN.md
+    ├── content_plan.md
+    ├── visual_plan.md
+    ├── layout_prototype.html       # when layout/copy fit is at risk
+    ├── layout_prototype.png        # rendered HTML preview for ChatGPT
+    ├── render_layout_prototype.js  # copied renderer utility
+    ├── generation_handoff.md
+    ├── layout_text_<language>.md
+    ├── review_vNN.md               # only after a draft exists
+    └── asset_generation_prompts.md # Stage 5 only
+```
 
-- `project_brief.md`
-- `source_inventory.md`
-- `DESIGN.md`
-- `reference_images/`
+For a multi-panel project, retain shared artifacts in `00_project/` and add `rollup_01/`, `rollup_02/`, and so on. Each rollup owns its own content plan, visual plan, prototype, handoff, display copy, review, and asset prompts.
 
-## Stage 1 — Content and evidence plan
+## Artifact contract
 
-Review supplied sources before deciding what to show. Extract defensible claims, mechanisms, comparisons, spatial or temporal relationships, key quantities, uncertainty, and useful source figures. Identify claims that should not be visualized.
+| Artifact                      | Authority                 | Must contain                                                              | Must not contain                                | Consumer          |
+| ----------------------------- | ------------------------- | ------------------------------------------------------------------------- | ----------------------------------------------- | ----------------- |
+| `project_brief.md`            | scope                     | audience, output, questions, constraints, reference roles                 | research synthesis, prompts, layout             | Stages 1–2        |
+| `DESIGN.md`                   | visual language           | reference extraction, palette, typography, illustration rules, exclusions | claims, workflow stages, prompt prose           | Stages 2–5        |
+| `content_plan.md`             | message and evidence      | Insight Card, claim IDs, evidence anchors, reader jobs, prohibited claims | layout or image prompt decisions                | Stage 2           |
+| `visual_plan.md`              | composition               | reading path, zones, visual roles, editable text zones, risks             | research notes, production prompt               | Stage 3           |
+| `layout_prototype.html`       | editable layout           | dimensions, copy capacity, reading order, safe zones                      | final illustration                              | Stage 3 review    |
+| `layout_prototype.png`        | visual layout attachment  | browser-rendered preview of the approved HTML                             | generated artwork or design decisions           | ChatGPT Stage 3–4 |
+| `layout_text_<language>.md`   | display copy              | final editable titles, labels, captions, source note                      | style or generation instructions                | Canva and Stage 3 |
+| `generation_handoff.md`       | current production packet | one tool-facing prompt, attachment list, output boundary, exclusions      | Stage 1–5 workflow or future-stage instructions | ChatGPT Stage 3   |
+| `review_vNN.md`               | revision decision         | preserve/change/do-not-change and observable corrections                  | vague taste-only feedback                       | Stage 4           |
+| `asset_generation_prompts.md` | ChatGPT asset delegation  | one prompt asking ChatGPT to plan and sequence asset generation            | agent-selected asset list or image prompts      | ChatGPT Stage 5   |
 
-Turn the evidence into a concise content plan that states:
+### Authority order
 
-- primary message and audience takeaway
-- message hierarchy and reading sequence
-- selected claims, sources, and confidence
-- draft display text or text limits
-- required context, caveats, and prohibited inferences
+Resolve conflicts in this order:
 
-### Reader-value gate — mandatory before Stage 2
+1. User instruction and approved project brief
+2. Content plan for meaning and evidence
+3. Visual plan and rendered prototype for composition
+4. DESIGN.md for visual language
+5. Layout text for displayed wording
+6. Generation handoff, which must only restate the approved decisions above
 
-Do not choose a visual concept, draft a headline, or write layout copy until the content plan contains an **Insight Card** with all six fields below:
+The generation handoff must never introduce a new visual, factual, or workflow decision.
 
-1. **Reader question:** the question this single panel answers.
-2. **Source-specific finding:** a relationship, contrast, exception, distribution, status condition, or quantified pattern that requires the supplied sources.
-3. **Mechanism:** why the finding happens or why it matters.
-4. **Consequence:** what it changes for a place, group, system, risk, or decision.
-5. **Visual proof:** the one comparison, sequence, map, chain, or diagram that makes the finding visible.
-6. **Evidence anchor:** source ID plus table, section, page, figure, or extract location.
+## Stage 0 — Scope and design system
 
-Apply this rejection test: if the central finding could be written accurately without opening the supplied sources, it is too generic. Return to the evidence and find a more discriminating claim, or state that the source does not support an informative panel yet.
+Create only `project_brief.md` and `DESIGN.md`.
 
-Use one primary thesis per panel. Supporting facts must explain, qualify, contrast, or prove that thesis; they cannot become a catalogue of sectors, hazards, agencies, definitions, or activities.
+1. Clarify audience, output dimensions, language, required questions, source boundary, and constraints.
+2. Classify every reference image as style, composition, information hierarchy, or a combination explicitly approved by the user.
+3. If a design system is needed, copy or adapt `ψ/lab/visual_design/design-md-template.md` into the project as `DESIGN.md`.
+4. Extract only reusable visual rules: palette, typography character, shapes, line weight, depth, texture, icon language, composition tendencies, and exclusions.
 
-For every proposed content module, record:
+**Gate:** Do not research or concept until the reader, physical output, reference role, and style exclusions are clear.
 
-`evidence → mechanism → reader consequence → visual role`
+## Stage 1 — Evidence and message
 
-Remove a module if it only restates a familiar definition, repeats the title, decorates empty space, or lists facts without changing the reader's understanding.
+Create only `content_plan.md`. Keep an evidence table inside it; create a separate evidence file only when the evidence cannot remain readable there.
 
-Suggested artifacts:
+The content plan must contain one **Insight Card**:
 
-- `content_plan.md`
-- `evidence_map.md` or `evidence_to_visual_matrix.csv` when traceability matters
+1. Reader question
+2. Source-specific finding
+3. Mechanism
+4. Consequence
+5. Visual proof
+6. Evidence anchors
 
-## Stage 2 — Visual plan
+For each module, record:
 
-Choose a visual concept that best supports the approved Insight Card, message, and evidence. Define composition, hierarchy, visual elements, reference-image use, style, palette, and the space required for final text. Use a simple wireframe when hierarchy or layout needs validation.
+`claim ID → evidence anchor → mechanism → reader job → visual role`
 
-The visual plan should make clear:
+Reject a concept if the central finding could be written without opening the sources. State claims that must not be visualized or must be qualified.
 
-- dominant visual and reading direction
-- what each visual element communicates
-- which supplied figures or images are reproduced, adapted, or used only for style
-- scientific, geographic, data, or accessibility risks
-- what must remain editable or be added outside image generation
-- the reader job of every major zone: establish the finding, explain the mechanism, show the contrast, locate the consequence, or test the response
+**Gate:** Do not choose a visual concept, headline, or production prompt until the Insight Card and all major claim anchors are approved.
 
-Do not use a familiar visual grammar—a cycle, map, chain, matrix, timeline, or icon set—unless it makes the source-specific finding easier to understand. A generic process diagram without a source-specific tension is not an acceptable concept.
+## Stage 2 — Composition and layout
 
-### HTML layout prototype — use when alignment or copy fit is at risk
+Create `visual_plan.md`. Create `layout_prototype.html` when the design is dense, bilingual, physically large, narrow, or otherwise at risk of copy-fit failure. Render the approved HTML as `layout_prototype.png` before any ChatGPT generation.
 
-For dense, bilingual, physical-format, or semantically complex work, create an editable HTML/CSS prototype before requesting generated artwork or final production layout. It is the layout authority for the approved reading order, copy capacity, safe zones, and evidence-bearing scaffold; it is not a substitute for the final design application.
+Use the bundled renderer `scripts/render_layout_prototype.js`. Copy it into `00_project/` and run:
 
-The prototype must show, at the intended aspect ratio or dimensions:
+```text
+node render_layout_prototype.js
+```
 
-- content zones, hierarchy, reading direction, and reserved production or hardware safe zones
-- final or representative editable copy, so line length, density, and bilingual fit can be checked
-- each evidence-bearing module's visible form: its slot count, comparison, sequence, map area, icon, or flow
-- the meaning of major symbols and connections, not just decorative placeholders
+The prototype HTML must expose its export element as `.rollup`. If Playwright reports a missing browser, install Chromium with `npx playwright install chromium`, then rerun the renderer. Verify that the PNG exists and preserves the intended aspect ratio before treating it as an attachment.
 
-Review the prototype against the Insight Card. If the intended finding cannot be understood without its future copy, revise the scaffold before moving on.
+The visual plan must define:
 
-Suggested artifacts:
+- final dimensions and reading direction;
+- one dominant visual anchor;
+- zone order and the reader job of each zone;
+- visible evidence-bearing forms: comparison, route, map, chain, slots, or diagram;
+- exact editable text zones and safe areas;
+- palette roles and reference-style rules;
+- accessibility, scientific, geographic, and layout risks.
 
-- `visual_plan.md`
-- `wireframe.png` or `wireframe.md`
-- `layout_prototype.html` and supporting CSS/assets when an HTML prototype is warranted
-- `visual_element_register.md` when a design has many elements
+The HTML prototype is the editable source of truth. It must show the intended aspect ratio, real or representative copy, reading order, evidence-bearing scaffold, and reserved text areas. Its browser-rendered PNG is the layout attachment for ChatGPT; it must be an exact render, never a generated reinterpretation.
 
-## Stage 3 — Generation or layout handoff
+**Gate:** Do not generate a full draft until the prototype makes the central finding understandable and proves that copy fits the physical format.
 
-Prepare one handoff that a designer, layout artist, or image-generation tool can use without reopening the research. Separate visual-generation instructions from final typesetting and data labels when accuracy matters. When an HTML prototype exists, treat it as the approved layout authority and attach or reference it in the handoff.
+## Stage 3 — Full first-draft generation
 
-Include:
+Create `layout_text_<language>.md` and `generation_handoff.md`.
 
-- required attachments and their role
-- composition and style instruction
-- prompt and avoid list, if generating imagery
-- dimensions, output requirements, and reserved text areas
-- final display text, source notes, and editable-data requirements
+Stage 3 produces one complete first-draft image of the whole rollup. It is a composition-and-style review draft, not a final Canva asset set.
 
-Any provisional imagery used at this stage must be text-free unless text generation is explicitly approved for a non-final placeholder. Do not ask a model to invent labels, numbers, citations, icons with semantic meaning, or the underlying information architecture. The approved overall composition remains the authority; extract final reusable visual assets only after it passes Stage 4.
+### ChatGPT production packet
 
-When final display language is known, create the editable layout copy at this stage as a separate companion file for each language, for example `layout_text_th.md` for Thai. Create it alongside `generation_handoff.md`, not as a later iteration artifact. Keep it text-only and include every title, label, badge, caption, caveat, and source note needed by the layout.
+Attach only:
 
-Make the source-specific finding visible in the title, subhead, or first visual read; never hide it in a footer or source note. Write labels that answer a concrete question—where, for whom, compared with what, through which mechanism, or proven by which evidence. Preserve the source's status language such as complete, ongoing, uneven, local, projected, or not systematically measured.
+1. `layout_prototype.png` as the **sole visual composition authority**;
+2. the copy-paste prompt from `generation_handoff.md`.
 
-Suggested artifact:
+Do not attach a style-reference image, project brief, content plan, visual plan, design system, HTML source, or workflow stages. State the approved style rules as text in the handoff. A reference image can dominate a generation even when it is labelled style-only.
 
-- `generation_handoff.md`
-- `layout_text_<language>.md` when final display copy is required
+### Generation handoff requirements
+
+`generation_handoff.md` must contain exactly:
+
+- output format and physical dimensions;
+- rendered-prototype attachment role;
+- the current output boundary: **generate one full first draft**;
+- a concise composition instruction derived from the prototype;
+- one style-lock paragraph derived from `DESIGN.md`;
+- visible draft-copy instruction derived from `layout_text_<language>.md`;
+- palette and exclusions;
+- a direct statement of what not to generate.
+
+It must not mention Stage 1, Stage 2, Stage 4, Stage 5, asset extraction, or future workflows.
+
+### Stage 3 prompt skeleton
+
+```text
+Create one complete first-draft [format] at [physical dimensions].
+
+Attachments:
+- [rendered prototype PNG]: strict layout, hierarchy, and zone authority.
+
+Reproduce the prototype's reading path, zone proportions, visual anchor, and editable text space. Use this text-only style lock: [one paragraph from DESIGN.md].
+
+Use this visible draft copy: [short title and essential labels from layout_text]. Keep longer copy minimal and leave it editable for Canva.
+
+Use only: [palette].
+Do not use: [exclusions].
+Output one complete review draft, not isolated assets and not a dashboard of unrelated panels.
+```
+
+**Gate:** Review the generated full rollup against the prototype, source-specific finding, style reference, and physical dimensions before extracting assets.
 
 ## Stage 4 — Review and revision
 
-Treat early outputs as composition prototypes. Review them against the evidence, hierarchy, format, and design system before polishing style. When an HTML prototype is used, review it at the intended physical dimensions before approving final production or detailed styling. Write targeted revision requests that state what to preserve, change, and not change.
+Create `review_vNN.md` only when a draft needs revision. This file is the self-contained revision instruction note that ChatGPT uses after the user approves it.
 
-Resolve these first:
+Review in this order:
 
-- factual and geographic accuracy
-- causal or data interpretation
-- hierarchy and reading order
-- scale, legibility, and space for text
-- required format and accessibility constraints
+1. evidence and causal accuracy;
+2. visible mechanism and required modules;
+3. reading order, scale, copy fit, and physical format;
+4. reference-style fidelity;
+5. palette, typography, and polish.
 
-For scaffolded or generated outputs, also verify:
+Write only observable instructions:
 
-- every required module, slot, comparison, and step is visibly present in the approved count and order
-- symbols, flows, and visual groupings express the approved mechanism rather than a generic process
-- empty areas are intentionally structured for the approved copy; they are not vague space to be resolved later
-- each revision names observable changes to zones, shapes, icons, connections, count, or hierarchy—not only changes to future copy
+```markdown
+# Review — V01
 
-Run an anti-generic content review before accepting a revision:
+## Preserve
+- [specific working zone, shape, or relationship]
 
-- Could the same panel be produced from general background knowledge rather than these sources?
-- Does the title announce only a topic, rather than state a finding or question with a consequential answer?
-- Does each major zone have an evidence anchor and a reader job?
-- Do the facts show a mechanism, contrast, affected group, or decision consequence—not merely that something exists?
-- Is a list of sectors, projects, or institutions standing in for insight?
-- Would removing the exact evidence anchors leave the panel's meaning essentially unchanged?
+## Change
+- [observable zone, shape, icon, route, count, palette, or hierarchy correction]
 
-If any answer is yes, revise the content architecture before refining graphics, illustration, or typography.
+## Do not change
+- [locked decision]
+```
 
-Suggested artifacts:
+State the baseline draft filename and end the note with one direct instruction to revise that draft. Do not edit `generation_handoff.md` during Stage 4. After approval, attach only the baseline draft, `layout_prototype.png`, and `review_vNN.md`; use the note itself as the ChatGPT revision prompt.
 
-- `review_v01.md`
-- `revision_v01_to_v02.md`
-- `content_manifest.csv` when final text is extensive or controlled
+Reject a draft when it uses generic visual grammar, depends on future copy to explain the mechanism, breaks the prototype's hierarchy, or drifts from the reference style.
 
-## Stage 5 — Final production package
+**Gate:** Approve the full composition before Canva asset extraction.
 
-Validate the final output at its intended size and medium. Deliver the agreed master, export formats, and concise source notes. Preserve editable assets when possible.
+## Stage 5 — Canva asset extraction
 
-### Asset extraction for Canva — after the overall design passes review
+Create `asset_generation_prompts.md` only after Stage 4 approves the full draft.
 
-After the overall design, layout, and visual language are approved, identify the key visual elements that give the design its distinctive form, style, or texture. Generate these elements individually for Canva assembly; do not ask an image model to regenerate the entire finished panel.
+Stage 5 does not identify assets, choose their order, or write image prompts. It creates one copy-paste **delegation prompt** that tells ChatGPT to inspect the approved full rollup and do those tasks itself.
 
-Create one shared **style-lock block** from the approved design and copy it verbatim into every element prompt. It must define the palette, shape language, line weight, texture or grain, lighting, perspective, abstraction level, detail density, and avoid list. Only the element role may vary between prompts.
+Attach the approved full-rollup draft and the Stage 5 prompt to ChatGPT. The prompt must instruct ChatGPT to:
 
-For each generated element, record:
+1. identify the minimum reusable illustration assets needed for Canva;
+2. return an asset manifest with each asset's role, placement, aspect ratio, background requirement, and the approved visual rules it must retain;
+3. write the image-generation prompt for the first asset only;
+4. wait for the user to request the next asset, then generate one asset at a time;
+5. keep generated assets text-free and prevent new claims, data, labels, citations, or redesign decisions.
 
-- element name, intended Canva placement, dimensions or aspect ratio, and whether it needs a clean or transparent background
-- the source zone in the approved composition and the element's visual role
-- the shared style-lock block and the element-specific prompt
-- constraints that preserve coherence with the approved design and prohibit text, data, labels, or new semantic claims
+`asset_generation_prompts.md` must not contain an asset list invented by this workflow. ChatGPT owns the asset analysis and prompt sequence. Canva receives the generated assets plus `layout_text_<language>.md` for final typography, data, citations, and assembly.
 
-Use the resulting assets to reconstruct the approved composition in Canva. If an element cannot preserve the locked visual language, regenerate that element; do not change the overall design to accommodate an inconsistent asset.
+## Final checklist
 
-Suggested artifacts:
-
-
-- `asset_extraction_plan.md` and one prompt record per generated element, when Canva assembly uses generated assets
-
-## Principles
-
-- Start with evidence and audience, not decoration.
-- Earn the reader's attention with a source-specific insight, mechanism, and consequence; broad generic information is not a substitute for a thesis.
-- Make the visual hierarchy match the message hierarchy.
-- Do not let generated imagery introduce claims, text, data, or geography that cannot be verified.
-- Use reference images deliberately: distinguish content reference, compositional reference, and style reference.
-- Keep final typography, numbers, citations, and complex diagrams editable whenever possible.
-- Use the smallest useful set of files. Add detail only when it reduces risk or improves handoff quality.
+- Every artifact has an explicit authority and consumer.
+- ChatGPT receives only the current-stage packet.
+- The full draft is generated in Stage 3.
+- ChatGPT receives the browser-rendered prototype PNG, not the HTML source or a style-reference image.
+- Stage 4 produces the approved revision instruction note used directly by ChatGPT.
+- Full-draft approval happens before asset extraction.
+- Canva receives editable copy and approved assets, not a redesigned composition.

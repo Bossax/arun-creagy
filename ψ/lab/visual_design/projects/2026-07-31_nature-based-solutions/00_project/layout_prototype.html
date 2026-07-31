@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nature-based Solutions — 60 × 160 cm layout prototype</title>
+  <style>
+    :root {
+      --evergreen: #002626;
+      --dark-teal: #0e4749;
+      --yellow-green: #95c623;
+      --cayenne-red: #e55812;
+      --soft-linen: #efe7da;
+    }
+
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--soft-linen); color: var(--evergreen); font-family: Arial, Helvetica, sans-serif; }
+    .rollup {
+      width: min(100vw, 900px);
+      aspect-ratio: 3 / 8;
+      margin: 0 auto;
+      overflow: hidden;
+      display: grid;
+      grid-template-rows: 18% 20% 37% 19% 6%;
+      background: var(--soft-linen);
+    }
+    h1, h2, h3, p { margin: 0; }
+    h1 { font-size: clamp(2rem, 7vw, 5.8rem); line-height: .88; letter-spacing: -.06em; }
+    h2 { font-size: clamp(1rem, 2.6vw, 2rem); line-height: 1.02; letter-spacing: -.03em; }
+    h3 { font-size: clamp(.72rem, 1.4vw, 1.05rem); line-height: 1.05; }
+    p, small { font-size: clamp(.63rem, 1.15vw, .95rem); line-height: 1.25; }
+
+    .header { position: relative; overflow: hidden; padding: 8% 8% 6%; background: var(--dark-teal); color: var(--soft-linen); }
+    .header p { width: 78%; margin-top: 9%; padding-top: 4%; border-top: 2px solid var(--soft-linen); }
+    .header .seed { position: absolute; right: 8%; top: 13%; width: 19%; aspect-ratio: 1; border: 3px solid var(--yellow-green); border-radius: 50% 50% 45% 45%; transform: rotate(-28deg); }
+    .header .seed::after { content: ""; position: absolute; left: 44%; top: 16%; height: 74%; border-left: 3px solid var(--yellow-green); transform: rotate(28deg); }
+
+    .relationship { position: relative; padding: 6% 8% 3%; overflow: hidden; }
+    .relationship::before { content: ""; position: absolute; left: 50%; top: 0; height: 100%; border-left: 3px solid var(--yellow-green); }
+    .relationship h2 { width: 82%; }
+    .concept-row { position: relative; z-index: 1; display: grid; grid-template-columns: 26% 1fr; gap: 6%; align-items: center; margin-top: 7%; }
+    .concept-row + .concept-row { margin-top: 5%; }
+    .orb { display: grid; place-items: center; width: 72%; aspect-ratio: 1; border: 3px solid var(--evergreen); border-radius: 50%; background: var(--soft-linen); font-weight: 800; font-size: clamp(.8rem, 2vw, 1.5rem); }
+    .concept-row.eBA .orb { border-color: var(--dark-teal); color: var(--dark-teal); }
+    .concept-row small { display: block; margin-top: 3%; max-width: 94%; }
+
+    .mechanism { position: relative; overflow: hidden; padding: 6% 8%; }
+    .mechanism > h2 { position: relative; z-index: 4; width: 87%; }
+    .mechanism-intro { position: relative; z-index: 4; width: 78%; margin-top: 3%; }
+    .sky-disc { position: absolute; z-index: 1; top: 9%; right: 9%; width: 12%; aspect-ratio: 1; border-radius: 50%; background: var(--cayenne-red); }
+    .land-back, .land-front { position: absolute; z-index: 1; left: -28%; right: -28%; border-radius: 50% 50% 0 0; }
+    .land-back { bottom: 41%; height: 25%; background: var(--yellow-green); }
+    .land-front { bottom: -4%; height: 51%; background: var(--dark-teal); }
+    .river { position: absolute; z-index: 2; left: 42%; bottom: -10%; width: 22%; height: 71%; border-radius: 50% 45% 0 0; background: var(--soft-linen); transform: rotate(9deg); }
+    .forest { position: absolute; z-index: 3; left: 8%; bottom: 26%; display: flex; align-items: end; gap: 1%; }
+    .tree { position: relative; width: clamp(24px, 6vw, 54px); height: clamp(65px, 15vw, 130px); }
+    .tree::before { content: ""; position: absolute; bottom: 0; left: 46%; height: 50%; border-left: 5px solid var(--evergreen); }
+    .tree::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; aspect-ratio: 1; border-radius: 50%; background: var(--evergreen); }
+    .tree:nth-child(2)::after { background: var(--yellow-green); }
+    .tree:nth-child(3)::after { background: var(--dark-teal); }
+    .city { position: absolute; z-index: 3; right: 8%; bottom: 27%; display: flex; align-items: end; gap: 3px; }
+    .building { width: clamp(14px, 3.4vw, 34px); height: clamp(40px, 10vw, 82px); border: 3px solid var(--evergreen); background: var(--soft-linen); }
+    .building:nth-child(2) { height: clamp(53px, 13vw, 108px); background: var(--yellow-green); }
+    .building:nth-child(3) { height: clamp(31px, 7vw, 60px); }
+    .callout { position: absolute; z-index: 4; width: 35%; }
+    .callout::after { content: ""; display: block; width: 30%; margin-top: 5px; border-top: 2px solid currentColor; }
+    .callout p { margin-top: 3px; }
+    .forest-callout { left: 8%; top: 30%; }
+    .farm-callout { right: 8%; top: 36%; }
+    .water-callout { left: 8%; bottom: 17%; color: var(--soft-linen); }
+    .city-callout { right: 8%; bottom: 8%; color: var(--soft-linen); }
+
+    .route-zone { position: relative; padding: 6% 8% 3%; overflow: hidden; background: var(--soft-linen); }
+    .route-zone h2 { position: relative; z-index: 2; width: 87%; }
+    .route-intro { position: relative; z-index: 2; width: 78%; margin-top: 3%; }
+    .friction { position: absolute; top: 43%; right: 8%; width: 18%; color: var(--cayenne-red); font-size: clamp(.55rem, 1vw, .8rem); line-height: 1.05; text-align: right; }
+    .route { position: absolute; left: 18%; top: 48%; bottom: 8%; border-left: 5px solid var(--yellow-green); }
+    .route::after { content: ""; position: absolute; left: -9px; bottom: -2px; border-left: 9px solid transparent; border-right: 9px solid transparent; border-top: 14px solid var(--yellow-green); }
+    .steps { position: absolute; left: 23%; right: 8%; top: 48%; bottom: 6%; display: flex; flex-direction: column; justify-content: space-between; }
+    .step { display: grid; grid-template-columns: 18px 1fr; align-items: center; gap: 3%; font-size: clamp(.58rem, 1.1vw, .85rem); line-height: 1; }
+    .step::before { content: ""; width: 14px; aspect-ratio: 1; border: 2px solid var(--evergreen); border-radius: 50%; background: var(--yellow-green); }
+
+    footer { padding: 4% 8%; border-top: 2px solid var(--evergreen); color: var(--evergreen); font-size: clamp(.5rem, .8vw, .7rem); line-height: 1.2; }
+    @media (max-width: 500px) { .rollup { width: 100vw; } }
+  </style>
+</head>
+<body>
+  <main class="rollup" aria-label="60 by 160 centimetre Nature-based Solutions rollup layout prototype">
+    <header class="header">
+      <h1>What are<br>Nature-based<br>Solutions?</h1>
+      <p><strong>NbS</strong> protect, restore and sustainably manage ecosystems to address societal challenges—benefiting people, biodiversity and resilience.</p>
+      <div class="seed" aria-hidden="true"></div>
+    </header>
+
+    <section class="relationship" aria-label="Relationship between NbS and Ecosystem-based Adaptation">
+      <h2>One broad approach.<br>One adaptation branch.</h2>
+      <div class="concept-row"><div class="orb">NbS</div><div><h3>Nature-based Solutions</h3><small>The broad approach: protecting, restoring, and sustainably managing ecosystems to address societal challenges.</small></div></div>
+      <div class="concept-row eBA"><div class="orb">EbA</div><div><h3>Ecosystem-based Adaptation</h3><small>The climate-adaptation application within NbS: biodiversity and ecosystem services help people adapt.</small></div></div>
+    </section>
+
+    <section class="mechanism" aria-label="How healthy ecosystems reduce climate risk">
+      <h2>Healthy ecosystems can change the path from climate hazard to human risk.</h2>
+      <p class="mechanism-intro">They regulate water, soil, heat, food, and livelihoods—reducing exposure and strengthening adaptive capacity.</p>
+      <div class="sky-disc" aria-hidden="true"></div><div class="land-back" aria-hidden="true"></div><div class="land-front" aria-hidden="true"></div><div class="river" aria-hidden="true"></div>
+      <div class="forest" aria-hidden="true"><div class="tree"></div><div class="tree"></div><div class="tree"></div></div>
+      <div class="city" aria-hidden="true"><div class="building"></div><div class="building"></div><div class="building"></div></div>
+      <div class="callout forest-callout"><h3>Forest and soil</h3><p>Roots stabilise land, reduce erosion, and help regulate water.</p></div>
+      <div class="callout farm-callout"><h3>Farms and healthy soils</h3><p>Support food, water, livelihoods, and ecological resilience.</p></div>
+      <div class="callout water-callout"><h3>Wetlands and rivers</h3><p>Slow and store water to reduce flood risk and support water security.</p></div>
+      <div class="callout city-callout"><h3>Urban green-blue space</h3><p>Helps regulate heat and supports health and everyday resilience.</p></div>
+    </section>
+
+    <section class="route-zone" aria-label="Route that enables Nature-based Solutions">
+      <h2>What makes adoption concrete?</h2>
+      <p class="route-intro">Policy announcements and pilots are not enough. NbS needs connected knowledge, public administration, finance, local action, maintenance, and learning.</p>
+      <p class="friction">fragmented authority<br>weak appraisal<br>scattered finance<br>unclear maintenance</p>
+      <div class="route" aria-hidden="true"></div>
+      <div class="steps"><div class="step">knowledge</div><div class="step">policy</div><div class="step">capacity</div><div class="step">appraisal</div><div class="step">budget and finance</div><div class="step">local pilot</div><div class="step">monitor and learn</div><div class="step">scale</div></div>
+    </section>
+
+    <footer>NbS are context-specific and complementary. Sources: UNEP / UNEA 5/5 · IPCC AR6 WGII · IUCN Global Standard · IUCN ADAPT Western Balkans.</footer>
+  </main>
+</body>
+</html>
