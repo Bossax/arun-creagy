@@ -296,8 +296,10 @@ def province_metric_payload(metric_key, metric_label, period_key, period_label, 
     df = df.copy()
     df["display_value"] = df["value"].map(lambda x: f"{x:,.2f}" if isinstance(x, (int, float, np.floating)) and x >= 100 else (f"{x:.4f}" if isinstance(x, (int, float, np.floating)) else str(x)))
     df["rank_desc"] = descending_rank(df["value"])
-    if metric_key == "cri_score" or metric_key.startswith("heat_"):
-        df["normalized_value"] = minmax(df["value"]) if metric_key == "cri_score" else None
+    if metric_key in ["cri_score", "heat_score"]:
+        df["normalized_value"] = minmax(df["value"])
+    elif metric_key.startswith("heat_"):
+        df["normalized_value"] = None
     else:
         df["normalized_value"] = minmax(df["value"])
     legend = {
@@ -700,7 +702,7 @@ def main():
             df_p["INJURED"] = 0.0
         df_p["s_deaths"] = minmax(df_p["DEATHS"])
         df_p["s_injured"] = minmax(df_p["INJURED"])
-        df_p["value"] = 0.5 * df_p["s_deaths"] + 0.5 * df_p["s_injured"]
+        df_p["value"] = minmax(0.5 * df_p["s_deaths"] + 0.5 * df_p["s_injured"])
         sub = prov_lookup.merge(df_p[["province_code", "value"]], on="province_code", how="left").fillna({"value": 0.0})
         sub["province_name_en"] = None
         return province_metric_payload(

@@ -4,9 +4,23 @@ All notable technical changes, schema updates, pipeline bugfixes, and version re
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v4.4.0] - 2026-07-31 (Thai Localization, Score Rendering Engine & MinMax Heatwave Scoring)
+
+### 🌐 Added (Localization & UX)
+* **Complete Thai Methodology Translation**: Fully translated all 8 methodology sections, agency data lineage matrix (ปภ./DDPM, ดพ./DOPA, สศช./NESDC, สธ./MOPH), and Min-Max calculation framework from `Web_App_TH_ver.md` into `pages/methodology.py`.
+* **Full UI Localization**: Localized page titles, version captions (`v4.4 | 31 July 2026`), navigation tabs (`ระเบียบวิธีวิจัย`, `ดัชนี CRI ระดับจังหวัด`, `ผลกระทบต่อมนุษย์ระดับตำบล`, `ผลกระทบจากความร้อน`), hazard selectors, metric options, zoom controls, and warning alerts across all views (`app.py`, `cri.py`, `tambon.py`, `heat.py`).
+* **Preserved Data Pipeline Export Schema**: Retained English column header names (`Rank`, `Province Code`, `Province Name (Thai)`, `Province Name (English)`, `Value`) in exported CSV files for downstream pipeline and script compatibility.
+
+### 🐛 Fixed (Sub-Score Rendering & Exporter Normalization)
+* **Normalized Sub-Score Binding**: Fixed `ranking_rows()`, `metric_summary()`, and `build_province_geojson_cached()` in `runtime/data.py` to map province codes back to the main `records` array, correctly binding CRI sub-indicators ($S_1 \dots S_6$) to 4-decimal `normalized_score` ($0.0 \dots 1.0$) instead of raw values when score view is selected.
+* **Heatwave Score MinMax Scaling**: Updated `export_cri_app_assets.py` to apply the second MinMax scaling pass (`minmax(0.5 * s_deaths + 0.5 * s_injured)`) to `heat_score`, ensuring the top heatwave casualty province is scaled to **1.0000** (consistent with `cri_score`).
+
+### 🛡️ Governance & Protection
+* **Data System Agent Context (`AGENTS.md`)**: Created `data_system/AGENTS.md` enforcing strict active development scope isolation (`output/cri_impact_app_v3/`) and permanent protection for outbox deployment targets (`ψ/outbox/`).
+
 ---
 
-## [v4.3.0] - Planned Release (Complete DDPM Medallion Rebuild Specification)
+## [v4.3.0] - 2026-07-31 (Complete DDPM Medallion Rebuild & Standalone Heat Score)
 
 ### 🚨 Fixed (Critical Bug Fixes)
 * **Complete Rebuild of All DDPM-Derived Datasets**: Rebuild `1_silver/ddpm/master_village_disaster_stat_2557_2567.csv` and `2_gold/ddpm/fact_ddpm_tambon_impact_climate_yearly_2560_2567.csv` from raw Bronze CSV files with strict `parse_clean_numeric()` comma sanitization to recover **1.1 Million Households** silently lost due to uncleaned comma coercion.

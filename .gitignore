@@ -21,6 +21,7 @@ Icon?
 .gemini/mandates
 .roo/rules
 .vscode/
+.tmp/
 tmp/
 tools/
 
