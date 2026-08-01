@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>DCCE National Climate Adaptation Platform - Budget Defense Deck Layout</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --space-indigo: #171738;
+      --deep-twilight: #2e1760;
+      --vivid-royal: #3423a6;
+      --glaucous: #7180b9;
+      --honeydew: #dff3e4;
+      --white: #ffffff;
+      --dark-bg: #0b071e;
+      --panel-glow: rgba(52, 35, 166, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--dark-bg);
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 0;
+      gap: 40px;
+    }
+
+    /* Container holding all stacked slides */
+    .rollup {
+      width: 1280px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px; /* Visual separator between slides during review */
+    }
+
+    /* Individual Slide Styles (16:9 widescreen layout with premium dark gradient) */
+    .slide {
+      width: 1280px;
+      height: 720px;
+      background: linear-gradient(135deg, var(--space-indigo) 0%, #110928 40%, var(--deep-twilight) 100%);
+      color: var(--white);
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid rgba(113, 128, 185, 0.25);
+      border-radius: 12px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Background decorative glowing circles for visual richness */
+    .slide::before {
+      content: "";
+      position: absolute;
+      top: -150px;
+      right: -150px;
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(52, 35, 166, 0.2) 0%, rgba(0,0,0,0) 70%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .slide::after {
+      content: "";
+      position: absolute;
+      bottom: -100px;
+      left: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(113, 128, 185, 0.1) 0%, rgba(0,0,0,0) 70%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Slide Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(113, 128, 185, 0.3);
+      padding-bottom: 16px;
+      height: 80px;
+      z-index: 2;
+    }
+
+    .title-group h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+    }
+
+    .title-group h2 {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--glaucous);
+      text-transform: uppercase;
+      margin-top: 6px;
+      letter-spacing: 1.5px;
+    }
+
+    /* Sleek Slide Badge replacing the top-right decision box */
+    .slide-badge {
+      background: rgba(52, 35, 166, 0.4);
+      border: 1px solid var(--vivid-royal);
+      color: var(--honeydew);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      box-shadow: 0 0 15px rgba(52, 35, 166, 0.4);
+      text-transform: uppercase;
+    }
+
+    /* Grid Layouts */
+    .grid-3col {
+      display: grid;
+      grid-template-columns: 1.15fr 1.3fr 1.15fr;
+      gap: 28px;
+      height: calc(100% - 110px);
+      margin-top: 24px;
+      z-index: 2;
+    }
+
+    .grid-2col {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 32px;
+      height: calc(100% - 110px);
+      margin-top: 24px;
+      z-index: 2;
+    }
+
+    .grid-4col {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      height: calc(100% - 110px);
+      margin-top: 24px;
+      z-index: 2;
+    }
+
+    /* Glassmorphic Panels & Cards */
+    .panel {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(113, 128, 185, 0.25);
+      border-radius: 10px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      backdrop-filter: blur(8px);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .panel:hover {
+      border-color: rgba(113, 128, 185, 0.45);
+      box-shadow: 0 8px 32px 0 var(--panel-glow);
+      transform: translateY(-2px);
+    }
+
+    .panel-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--honeydew);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 10px;
+      margin-bottom: 16px;
+      letter-spacing: 0.5px;
+    }
+
+    .panel-content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 12px;
+    }
+
+    .bullet-point {
+      font-size: 12px;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.85);
+      position: relative;
+      padding-left: 18px;
+    }
+
+    .bullet-point::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--honeydew);
+      box-shadow: 0 0 8px var(--honeydew);
+    }
+
+    .bullet-point strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    /* Callouts & Metric Highlights */
+    .metric-callout {
+      background: rgba(255, 255, 255, 0.04);
+      border-left: 4px solid var(--vivid-royal);
+      padding: 14px;
+      border-radius: 0 6px 6px 0;
+      font-size: 11.5px;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-left-width: 4px;
+      border-left-color: var(--vivid-royal);
+    }
+
+    .metric-callout .val {
+      font-family: 'Outfit', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--honeydew);
+      display: block;
+      margin-bottom: 4px;
+      text-shadow: 0 0 10px rgba(223, 243, 228, 0.2);
+    }
+
+    /* Illustration Elements (Dot Grid representing fragmentation) */
+    .dot-grid {
+      display: grid;
+      grid-template-columns: repeat(15, 1fr);
+      gap: 4px;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 6px;
+      border: 1px solid rgba(113, 128, 185, 0.15);
+      margin-top: 6px;
+    }
+
+    .dot {
+      height: 6px;
+      width: 6px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .dot.active {
+      background-color: var(--glaucous);
+    }
+
+    .dot.warning {
+      background-color: #ffb84d;
+      box-shadow: 0 0 8px #ffb84d;
+    }
+
+    .dot.danger {
+      background-color: #ff5e5e;
+      box-shadow: 0 0 8px #ff5e5e;
+    }
+
+    /* Visual Pipeline & Transits */
+    .db-box {
+      width: 100px;
+      padding: 12px 6px;
+      border-radius: 8px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .db-box.legacy {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(113, 128, 185, 0.3);
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .db-box.dynamic {
+      background: rgba(52, 35, 166, 0.3);
+      border: 1px solid var(--vivid-royal);
+      color: var(--honeydew);
+      box-shadow: 0 0 15px rgba(52, 35, 166, 0.4);
+    }
+
+    .db-title {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .db-percent {
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .flow-arrow {
+      font-size: 18px;
+      color: var(--glaucous);
+      animation: flash 2s infinite ease-in-out;
+    }
+
+    @keyframes flash {
+      0%, 100% { opacity: 0.4; transform: scale(0.95); }
+      50% { opacity: 1; transform: scale(1.05); }
+    }
+
+    /* Visual Gauges / Progress Bars */
+    .gauge-container {
+      margin-top: 8px;
+    }
+
+    .gauge-info {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 4px;
+    }
+
+    .gauge-track {
+      background: rgba(255, 255, 255, 0.08);
+      height: 6px;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .gauge-bar {
+      height: 100%;
+      border-radius: 3px;
+    }
+
+    /* Sitemap and Dashboard Mockups */
+    .mockup-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      width: 100%;
+    }
+
+    .mockup-card {
+      background-color: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(113, 128, 185, 0.2);
+      border-radius: 6px;
+      padding: 10px;
+      font-size: 10px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .mockup-card:hover {
+      border-color: rgba(113, 128, 185, 0.4);
+      background-color: rgba(255, 255, 255, 0.06);
+    }
+
+    .mockup-header {
+      background-color: var(--space-indigo);
+      color: var(--honeydew);
+      height: 6px;
+      width: 100%;
+      border-radius: 2px;
+      margin-bottom: 8px;
+    }
+
+    /* Footer */
+    .footer {
+      font-size: 9px;
+      color: rgba(113, 128, 185, 0.8);
+      font-family: monospace;
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 10px;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="rollup">
+
+    <!-- SLIDE 1: Gaps, Issues & National Urgency -->
+    <div class="slide" id="slide_1">
+      <div class="header">
+        <div class="title-group">
+          <h1>ข้อมูลสารสนเทศการปรับตัวเพื่อการบริหารจัดการความเสี่ยงภายใต้ความไม่แน่นอน</h1>
+          <h2>Slide 1: National Adaptation Platform — Crucial to Country's Economy & People Wellbeing</h2>
+        </div>
+        <div class="slide-badge">SLIDE 1</div>
+      </div>
+
+      <div class="grid-3col">
+        <!-- Panel 1: Threat to Economy -->
+        <div class="panel">
+          <div class="panel-title">1. ภัยคุกคามทางเศรษฐกิจจากสภาพภูมิอากาศ (Climate Threat)</div>
+          <div class="panel-content">
+            <div class="metric-callout">
+              <span class="val">7% - 14% GDP Loss</span>
+              ความเสี่ยงสูญเสียทางเศรษฐกิจของไทยภายในปี 2050 หากขาดระบบข้อมูลประเมินความเสี่ยงล่วงหน้าและการปรับตัวที่มีประสิทธิภาพ (World Bank CCDR)
+            </div>
+            
+            <!-- Styled visual gauge for GDP Loss -->
+            <div class="gauge-container">
+              <div class="gauge-info">
+                <span>คาดการณ์ความสูญเสียทางเศรษฐกิจ</span>
+                <span style="color: var(--honeydew); font-weight: 700;">ระดับวิกฤต</span>
+              </div>
+              <div class="gauge-track">
+                <div class="gauge-bar" style="background: linear-gradient(90deg, var(--vivid-royal) 0%, var(--honeydew) 100%); width: 75%; box-shadow: 0 0 10px rgba(52, 35, 166, 0.4);"></div>
+              </div>
+            </div>
+
+            <div class="bullet-point" style="margin-top: 6px;"><strong>ปกป้องเศรษฐกิจและชีวิตประชาชน:</strong> การขจัดช่องว่างด้านระบบข้อมูลถือเป็นขีดความสามารถระดับชาติที่จำเป็นยิ่ง (Critical National Capability) เพื่อปกป้องชีวิตประชาชนและรักษาเสถียรภาพทางเศรษฐกิจของประเทศอย่างยั่งยืน</div>
+          </div>
+        </div>
+
+        <!-- Panel 2: Existing Gaps -->
+        <div class="panel">
+          <div class="panel-title">2. ช่องว่างข้อมูลการปรับตัวที่มีอยู่ (Existing Data Gaps)</div>
+          <div class="panel-content">
+            <div class="bullet-point"><strong>รูปแบบเอกสารนิ่งสะสม:</strong> มีข้อมูลภูมิอากาศ 391 สินทรัพย์ แต่ 80.6% อยู่ในรูปเอกสารนิ่ง (PDF/Doc) ขาดระบบจัดเก็บเชิงตัวเลขประมวลผลได้</div>
+            <div class="bullet-point"><strong>ความพร้อมใช้ข้อมูล:</strong> ข้อมูลกว่า 80% ติดเงื่อนไขขั้นตอนราชการแบบแมนนวล ประสานขอรายครั้ง เกิดความล่าช้า</div>
+            <div class="bullet-point"><strong>ความละเอียดเชิงพื้นที่ต่ำ:</strong> ข้อมูล 70% หยาบเกินกว่าจะนำมาวางแผนความเสี่ยงระดับตำบล</div>
+            
+            <!-- Styled Dot Grid for 391 fragmented database files -->
+            <div class="dot-grid">
+              <div class="dot active"></div><div class="dot active"></div><div class="dot danger"></div><div class="dot active"></div><div class="dot active"></div>
+              <div class="dot active"></div><div class="dot warning"></div><div class="dot active"></div><div class="dot active"></div><div class="dot danger"></div>
+              <div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot warning"></div><div class="dot active"></div>
+              <div class="dot warning"></div><div class="dot active"></div><div class="dot danger"></div><div class="dot active"></div><div class="dot active"></div>
+              <div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot warning"></div>
+              <div class="dot danger"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div>
+            </div>
+            <div style="font-size: 8.5px; color: var(--glaucous); text-align: center; margin-top: 2px;">
+              จุดแดง/เหลืองแสดงความกระจัดกระจายและแยกส่วนของข้อมูล (Data Silos 391 แฟ้ม)
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 3: Digital Infrastructure -->
+        <div class="panel">
+          <div class="panel-title">3. ขีดความสามารถเชิงโครงสร้างพื้นฐานระดับชาติ (National Capability)</div>
+          <div class="panel-content" style="justify-content: space-between;">
+            <div class="svg-wrapper" style="width: 100%; height: 110px; display: flex; align-items: center; justify-content: center; margin: 5px 0;">
+              <svg width="120" height="110" viewBox="0 0 120 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Background Grid -->
+                <circle cx="60" cy="55" r="45" stroke="rgba(113, 128, 185, 0.1)" stroke-width="1" stroke-dasharray="2 2"/>
+                <circle cx="60" cy="55" r="30" stroke="rgba(113, 128, 185, 0.15)" stroke-width="1" stroke-dasharray="2 2"/>
+                
+                <!-- Protected Nodes (Mesh) -->
+                <line x1="45" y1="40" x2="75" y2="40" stroke="rgba(113, 128, 185, 0.3)" stroke-width="1"/>
+                <line x1="45" y1="40" x2="35" y2="55" stroke="rgba(113, 128, 185, 0.3)" stroke-width="1"/>
+                <line x1="75" y1="40" x2="85" y2="55" stroke="rgba(113, 128, 185, 0.3)" stroke-width="1"/>
+                <line x1="35" y1="55" x2="50" y2="70" stroke="rgba(113, 128, 185, 0.3)" stroke-width="1"/>
+                <line x1="85" y1="55" x2="70" y2="70" stroke="rgba(113, 128, 185, 0.3)" stroke-width="1"/>
+                <line x1="50" y1="70" x2="70" y2="70" stroke="rgba(113, 128, 185, 0.3)" stroke-width="1"/>
+                
+                <circle cx="45" cy="40" r="3.5" fill="var(--glaucous)"/>
+                <circle cx="75" cy="40" r="3.5" fill="var(--glaucous)"/>
+                <circle cx="35" cy="55" r="3.5" fill="var(--glaucous)"/>
+                <circle cx="85" cy="55" r="3.5" fill="var(--glaucous)"/>
+                <circle cx="50" cy="70" r="3.5" fill="var(--vivid-royal)"/>
+                <circle cx="70" cy="70" r="3.5" fill="var(--vivid-royal)"/>
+                <circle cx="60" cy="50" r="4.5" fill="var(--honeydew)" style="filter: drop-shadow(0 0 4px var(--honeydew));"/>
+                
+                <!-- Protective Arc Boundary (Honeydew) -->
+                <path d="M20 30 A50 50 0 0 1 100 30" fill="none" stroke="var(--honeydew)" stroke-width="3" stroke-linecap="round" style="filter: drop-shadow(0 0 6px rgba(223,243,228,0.6));"/>
+                
+                <!-- Incoming Threat Vectors (Red) deflecting at boundary -->
+                <path d="M15 -5 L20 15 L10 18" fill="none" stroke="#ff5e5e" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M55 -10 L58 10 L50 12" fill="none" stroke="#ff5e5e" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M95 -5 L92 15 L102 18" fill="none" stroke="#ff5e5e" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="schema-flow" style="font-size: 8.5px; color: var(--honeydew); margin-top: 2px;">
+              [NCAIF National Safeguard Node Mesh]
+            </div>
+            <div class="bullet-point" style="margin-top: 6px;">
+              <strong>การขับเคลื่อนภาครัฐดิจิทัล:</strong> การปกป้องระบบเศรษฐกิจของประเทศและสวัสดิภาพประชาชนจำเป็นต้องอาศัยโครงสร้างพื้นฐานระดับชาติที่สอดคล้องกับกรอบมาตรฐานธรรมาภิบาล สพร. (DGA)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span>DCCE National Climate Adaptation Database (CRDB)</span>
+        <span>Sources: World Bank CCDR (2022) | DCCE Asset Audit (2026) | DGA Guidelines (มรด. 6) | D-044 v5.0</span>
+      </div>
+    </div>
+
+
+    <!-- SLIDE 2: Demand-Driven Interface & Data Architecture -->
+    <div class="slide" id="slide_2">
+      <div class="header">
+        <div class="title-group">
+          <h1>สถาปัตยกรรมข้อมูลและการออกแบบส่วนต่อประสานตามความต้องการของผู้ใช้งาน</h1>
+          <h2>Slide 2: Demand-Driven Architecture — Stakeholder Demands, Web Dissemination & Data Foundation</h2>
+        </div>
+        <div class="slide-badge">SLIDE 2</div>
+      </div>
+
+      <div class="grid-2col">
+        <!-- Surveyed Demands -->
+        <div class="panel">
+          <div class="panel-title">1. ความต้องการใช้งานจริงจากการสำรวจผู้มีส่วนได้ส่วนเสีย (Surveyed Demands)</div>
+          <div class="panel-content" style="gap: 12px;">
+            <div class="bullet-point"><strong>ความต้องการแผนที่ภัยพิบัติรายตำบล:</strong> ผู้ใช้งาน 92% ต้องการข้อมูลความเสี่ยงแผนที่ความละเอียดสูงระดับชุมชนเพื่อเกษตรกรรมและผังเมืองเชิงรุก</div>
+            <!-- Progress gauge -->
+            <div class="gauge-container" style="margin-left: 18px; margin-top: -4px; margin-bottom: 8px;">
+              <div class="gauge-track"><div class="gauge-bar" style="background: var(--honeydew); width: 92%; box-shadow: 0 0 6px var(--honeydew);"></div></div>
+            </div>
+
+            <div class="bullet-point"><strong>เครื่องมือประเมินความคุ้มค่า (Avoided Losses):</strong> นโยบายและการเงินต้องการแบบจำลองช่วยประเมินมูลค่าความสูญเสียทางเศรษฐกิจที่หลีกเลี่ยงได้</div>
+            <!-- Progress gauge -->
+            <div class="gauge-container" style="margin-left: 18px; margin-top: -4px; margin-bottom: 8px;">
+              <div class="gauge-track"><div class="gauge-bar" style="background: var(--glaucous); width: 88%;"></div></div>
+            </div>
+
+            <div class="bullet-point"><strong>มาตรฐานวิศวกรรมการก่อสร้าง (Design Curves):</strong> วิศวกรต้องการเกณฑ์สถิติฝนเฉพาะจุดเพื่อการออกแบบโครงสร้างพื้นฐานภัยพิบัติ</div>
+            <!-- Progress gauge -->
+            <div class="gauge-container" style="margin-left: 18px; margin-top: -4px; margin-bottom: 8px;">
+              <div class="gauge-track"><div class="gauge-bar" style="background: var(--vivid-royal); width: 85%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unified Architecture -->
+        <div class="panel">
+          <div class="panel-title">2. โครงสร้างผังเว็บไซต์หน้าบ้าน (Sitemap v8.0) และระบบหลังบ้าน</div>
+          <div class="panel-content" style="gap: 8px;">
+            <div class="bullet-point"><strong>ส่วนต่อประสานระบบหน้าบ้าน (Frontend Sitemap v8.0):</strong> ผังเว็บไซต์ 5 ส่วนหลักเพื่อเผยแพร่ตามมาตรฐานการให้บริการสารสนเทศ:</div>
+            
+            <div style="font-size: 8.5px; color: var(--honeydew); background: rgba(0,0,0,0.25); padding: 8px; border-radius: 6px; display: flex; flex-direction: column; gap: 4px; border: 1px solid rgba(113, 128, 185, 0.2);">
+              <div><strong>1. หน้าแรก (Home & Area Search):</strong> บริการสืบค้นข้อมูลเชิงลึกและแผนที่ความเสี่ยงรายพิกัดตำบล</div>
+              <div><strong>2. ศูนย์ข้อมูลสำหรับผู้กำหนดนโยบาย (Policy Maker Info Center):</strong> สถิติมหภาคและแบบจำลองทวนสอบงบลงทุน</div>
+              <div><strong>3. วงจรขับเคลื่อนการปรับตัว (Adaptation Knowledge Cycle):</strong> คลังความรู้และระบบวิเคราะห์ติดตามโครงการ</div>
+              <div><strong>4. เครื่องมือและบริการสารสนเทศ (Tools & Services):</strong> ระบบข้อมูลเปิดภูมิอากาศและสถิติน้ำฝนเชิงวิศวกรรม</div>
+              <div><strong>5. ข่าว ประกาศ และการติดต่อ (News & Contact):</strong> ข้อมูลการให้บริการความช่วยเหลือและการรับข้อคิดเห็น</div>
+            </div>
+
+            <!-- Decoupled Isometric Grid Stack Illustration -->
+            <div class="visual-stack-container" style="margin: 8px 0; display: flex; flex-direction: column; align-items: center; gap: 4px; width: 100%;">
+              <svg width="320" height="95" viewBox="0 0 320 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Isometric Layer 2 (Bottom Grid: Backend Engine) -->
+                <polygon points="80,68 160,48 240,68 160,88" fill="rgba(52, 35, 166, 0.15)" stroke="var(--vivid-royal)" stroke-width="1.5"/>
+                <line x1="120" y1="58" x2="200" y2="78" stroke="rgba(113, 128, 185, 0.2)" stroke-width="1"/>
+                <line x1="120" y1="78" x2="200" y2="58" stroke="rgba(113, 128, 185, 0.2)" stroke-width="1"/>
+                <circle cx="160" cy="68" r="3.5" fill="var(--vivid-royal)"/>
+                <text x="160" y="83" fill="rgba(255,255,255,0.6)" font-size="7" text-anchor="middle" font-family="monospace">BACKEND DB ENGINE</text>
+
+                <!-- Vertical Data Transmission Beams -->
+                <line x1="120" y1="58" x2="120" y2="28" stroke="var(--glaucous)" stroke-width="1.2" stroke-dasharray="2 2" opacity="0.6"/>
+                <line x1="200" y1="58" x2="200" y2="28" stroke="var(--glaucous)" stroke-width="1.2" stroke-dasharray="2 2" opacity="0.6"/>
+                <line x1="160" y1="68" x2="160" y2="38" stroke="var(--honeydew)" stroke-width="1.5" style="filter: drop-shadow(0 0 2px var(--honeydew));"/>
+
+                <!-- Isometric Layer 1 (Top Grid: Frontend Sitemap) -->
+                <polygon points="80,38 160,18 240,38 160,58" fill="rgba(113, 128, 185, 0.15)" stroke="var(--honeydew)" stroke-width="1.5" style="filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));"/>
+                <circle cx="120" cy="28" r="3" fill="var(--honeydew)"/>
+                <circle cx="200" cy="28" r="3" fill="var(--honeydew)"/>
+                <circle cx="160" cy="38" r="4" fill="var(--honeydew)"/>
+                <text x="160" y="33" fill="var(--honeydew)" font-size="8" font-weight="bold" text-anchor="middle" font-family="Outfit, sans-serif">FRONTEND SITEMAP V8.0</text>
+              </svg>
+              <div style="font-size: 8px; color: var(--glaucous); text-align: center; margin-top: -2px;">
+                แบบจำลองสถาปัตยกรรมไอโซเมตริกสามมิติ (Decoupled Isometric Grid Stack)
+              </div>
+            </div>
+
+            <div class="bullet-point"><strong>ฐานข้อมูลการบริหารจัดการหลังบ้าน (Backend Foundation):</strong> อีกหนึ่งองค์ประกอบที่สำคัญคือระบบข้อมูลที่สามารถทำให้การนำเข้าข้อมูล ประมวลและจัดระเบียบข้อมูลให้อยู่ในรูปแบบที่หน่วยงานต่างๆ ทั้งกรม สส และหน่วยงานอื่นๆ นำไปใช้งานต่อได้โดยง่าย เพื่อการสร้างและพัฒนาผลิตภัณฑ์และบริการสารสนเทศทางภูมิอากาศในระยะยาว</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span>NCAIF Architecture & Stakeholder Demand Mapping</span>
+        <span>Sources: บทสรุปความต้องการใช้งานบริการข้อมูลสารสนเทศด้านภูมิอากาศ_v6 | D-043 Spec</span>
+      </div>
+    </div>
+
+
+    <!-- SLIDE 3: National Climate Adaptation Data System -->
+    <div class="slide" id="slide_3">
+      <div class="header">
+        <div class="title-group">
+          <h1>แบบจำลองระบบข้อมูลและการแบ่งปันข้อมูลอ้างอิงเพื่อการยกระดับบริการสารสนเทศและรายงานระดับสากล (A-BTR)</h1>
+          <h2>Slide 3: National Climate Adaptation Data System — Conceptual Design, Data Sharing & A-BTR Strategic Use Case</h2>
+        </div>
+        <div class="slide-badge">SLIDE 3</div>
+      </div>
+
+      <div class="grid-2col">
+        <!-- Climate Data System Design -->
+        <div class="panel">
+          <div class="panel-title">1. สถาปัตยกรรมข้อมูลภูมิอากาศอ้างอิงร่วมของประเทศ (Climate Data System Design)</div>
+          <div class="panel-content" style="justify-content: space-between; gap: 8px;">
+            <div class="bullet-point"><strong>ต่อยอดโครงสร้างพื้นฐานข้อมูลดิจิทัลภาครัฐ:</strong> วางแนวคิดสถาปัตยกรรมข้อมูลร่วมกันตามมาตรฐานการกำกับดูแลและการเชื่อมโยงข้อมูลของ สพร. (DGA Interoperability Framework) เพื่อความมั่นคงปลอดภัยและความยั่งยืนในระยะยาว</div>
+            
+            <!-- G2G Constellation Orbital Sharing Illustration -->
+            <div style="position: relative; width: 100%; height: 110px; display: flex; align-items: center; justify-content: center; margin: 4px 0; background: rgba(0,0,0,0.25); border-radius: 6px; border: 1px solid rgba(113, 128, 185, 0.15); overflow: hidden;">
+              <svg width="320" height="110" viewBox="0 0 320 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Concentric Orbital Lines -->
+                <circle cx="160" cy="55" r="45" stroke="rgba(113, 128, 185, 0.2)" stroke-width="1" stroke-dasharray="3 3"/>
+                <circle cx="160" cy="55" r="28" stroke="rgba(113, 128, 185, 0.25)" stroke-width="1" stroke-dasharray="2 2"/>
+                
+                <!-- Orbiting Nodes Connections -->
+                <line x1="160" y1="55" x2="120" y2="30" stroke="rgba(113, 128, 185, 0.4)" stroke-width="1"/>
+                <line x1="160" y1="55" x2="200" y2="80" stroke="var(--honeydew)" stroke-width="1.5" style="filter: drop-shadow(0 0 3px var(--honeydew));"/>
+                <line x1="160" y1="55" x2="115" y2="75" stroke="rgba(113, 128, 185, 0.4)" stroke-width="1"/>
+                <line x1="160" y1="55" x2="205" y2="30" stroke="rgba(113, 128, 185, 0.4)" stroke-width="1"/>
+                
+                <!-- Central NCAIF Core Node -->
+                <circle cx="160" cy="55" r="16" fill="var(--vivid-royal)" stroke="var(--honeydew)" stroke-width="1.5" style="filter: drop-shadow(0 0 8px rgba(52, 35, 166, 0.6));"/>
+                <text x="160" y="58" fill="var(--white)" font-size="7" font-weight="bold" text-anchor="middle" font-family="Outfit, sans-serif">NCAIF</text>
+
+                <!-- Floating Orbiting Nodes -->
+                <!-- Node 1: DGA -->
+                <circle cx="120" cy="30" r="5" fill="var(--glaucous)"/>
+                <text x="120" y="21" fill="var(--glaucous)" font-size="6.5" font-weight="bold" text-anchor="middle">สพร. (DGA)</text>
+                
+                <!-- Node 2: TMD -->
+                <circle cx="115" cy="75" r="5" fill="var(--glaucous)"/>
+                <text x="115" y="87" fill="var(--glaucous)" font-size="6.5" font-weight="bold" text-anchor="middle">กรมอุตุฯ (TMD)</text>
+
+                <!-- Node 3: GISTDA -->
+                <circle cx="205" cy="30" r="5" fill="var(--glaucous)"/>
+                <text x="205" y="21" fill="var(--glaucous)" font-size="6.5" font-weight="bold" text-anchor="middle">GISTDA</text>
+
+                <!-- Node 4: DCCE / BTR -->
+                <circle cx="200" cy="80" r="6" fill="var(--honeydew)" style="filter: drop-shadow(0 0 4px var(--honeydew));"/>
+                <text x="200" y="93" fill="var(--honeydew)" font-size="6.5" font-weight="bold" text-anchor="middle">กรม สส. (BTR)</text>
+              </svg>
+            </div>
+
+            <div class="bullet-point"><strong>การขจัดปัญหาข้อมูลแยกส่วนแบบไซโล (Silo Elimination):</strong> รวมข้อมูลความเสี่ยงสภาพภูมิอากาศและแผนการปรับตัวเชิงพื้นที่จากหลายส่วนงาน เข้ามาสืบค้นและค้นพบในจุดเดียว (Data Discovery) โดยมีพจนานุกรมคำศัพท์และนิยามควบคุมความถูกต้อง</div>
+          </div>
+        </div>
+
+        <!-- A-BTR Strategic Showcase -->
+        <div class="panel">
+          <div class="panel-title">2. ระบบรายงานความโปร่งใสความก้าวหน้าระดับโลก (A-BTR Strategic Showcase)</div>
+          <div class="panel-content" style="justify-content: space-between; gap: 8px;">
+            <div class="bullet-point"><strong>ท่อส่งข้อมูลรายงานนำร่องระดับสากล:</strong> นำความต้องการจัดทำรายงานความโปร่งใสภาคการปรับตัว (Adaptation Biennial Transparency Report - A-BTR) เสนอต่อ UNFCCC มาเป็นยุทธศาสตร์ตั้งต้นของการขับเคลื่อนท่อข้อมูลหลัก</div>
+            
+            <div style="display: flex; align-items: center; justify-content: center; gap: 8px; background: rgba(255,255,255,0.03); padding: 8px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.05); margin: 4px 0;">
+              <div style="font-size: 9px; padding: 6px; background: rgba(113,128,185,0.2); border-radius: 4px; color: var(--glaucous);">ส่งข้อมูล e-Form</div>
+              <div style="color: var(--glaucous); font-size: 10px;">➔</div>
+              <div style="font-size: 9px; padding: 6px; background: rgba(52, 35, 166, 0.4); border-radius: 4px; color: var(--white); border: 1px solid var(--vivid-royal);">ฐานข้อมูลความเสี่ยง</div>
+              <div style="color: var(--glaucous); font-size: 10px;">➔</div>
+              <div style="font-size: 9px; padding: 6px; background: rgba(223, 243, 228, 0.2); border-radius: 4px; color: var(--honeydew); border: 1px solid var(--honeydew);">ส่งออก A-BTR</div>
+            </div>
+
+            <div class="bullet-point"><strong>ประวัติทวนสอบข้อมูลย้อนกลับได้โปร่งใส:</strong> บันทึกประวัติและตรวจสอบย้อนกลับที่โปร่งใส ทำให้ผู้ตรวจระดับสากลและผู้บริหารสามารถทวนสอบค่าดัชนีชี้วัดผลลัพธ์กลับไปยังแหล่งข้อมูลนำเข้าจากหน่วยงานอื่นได้อย่างโปร่งใสและน่าเชื่อถือ</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span>NCAIF Conceptual Data System & Strategic A-BTR Ingestion Pipeline</span>
+        <span>Sources: DGA Interoperability Framework | BTR M&E Reporting Pipeline Use Case</span>
+      </div>
+    </div>
+
+
+    <!-- SLIDE 4: FY2027 Key Platform Deliverables -->
+    <div class="slide" id="slide_4">
+      <div class="header">
+        <div class="title-group">
+          <h1>แผนการส่งมอบระบบสถาปัตยกรรมปราศจากค่าลิขสิทธิ์ซอฟต์แวร์ปีงบประมาณ 2570</h1>
+          <h2>Slide 4: FY2027 Key Platform Deliverables & System Architecture — Zero-licensing Stack</h2>
+        </div>
+        <div class="slide-badge">SLIDE 4</div>
+      </div>
+
+      <!-- Horizontal Module Connected Flow Illustration (Geometric SVG) -->
+      <div style="width: 100%; display: flex; justify-content: center; margin-top: 15px; margin-bottom: -5px; z-index: 2;">
+        <svg width="600" height="40" viewBox="0 0 600 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Flow Line -->
+          <line x1="60" y1="20" x2="540" y2="20" stroke="var(--glaucous)" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.6"/>
+          <line x1="60" y1="20" x2="420" y2="20" stroke="var(--honeydew)" stroke-width="1.5" style="filter: drop-shadow(0 0 2px var(--honeydew));"/>
+
+          <!-- Module 1 Node -->
+          <rect x="15" y="5" width="100" height="30" rx="4" fill="rgba(52,35,166,0.2)" stroke="var(--vivid-royal)" stroke-width="1.2"/>
+          <circle cx="27" cy="20" r="3.5" fill="var(--honeydew)" style="filter: drop-shadow(0 0 4px var(--honeydew));"/>
+          <text x="70" y="19" fill="var(--white)" font-size="7.5" font-weight="bold" text-anchor="middle" font-family="Outfit, sans-serif">1. Data Ingest</text>
+
+          <!-- Module 2 Node -->
+          <rect x="155" y="5" width="100" height="30" rx="4" fill="rgba(52,35,166,0.2)" stroke="var(--vivid-royal)" stroke-width="1.2"/>
+          <circle cx="167" cy="20" r="3.5" fill="var(--honeydew)" style="filter: drop-shadow(0 0 4px var(--honeydew));"/>
+          <text x="210" y="19" fill="var(--white)" font-size="7.5" font-weight="bold" text-anchor="middle" font-family="Outfit, sans-serif">2. Governance</text>
+
+          <!-- Module 3 Node -->
+          <rect x="295" y="5" width="100" height="30" rx="4" fill="rgba(52,35,166,0.2)" stroke="var(--vivid-royal)" stroke-width="1.2"/>
+          <circle cx="307" cy="20" r="3.5" fill="var(--honeydew)" style="filter: drop-shadow(0 0 4px var(--honeydew));"/>
+          <text x="350" y="19" fill="var(--white)" font-size="7.5" font-weight="bold" text-anchor="middle" font-family="Outfit, sans-serif">3. GIS Search</text>
+
+          <!-- Module 4 Node -->
+          <rect x="435" y="5" width="120" height="30" rx="4" fill="rgba(52,35,166,0.4)" stroke="var(--honeydew)" stroke-width="1.5" style="filter: drop-shadow(0 0 8px rgba(223, 243, 228, 0.25));"/>
+          <circle cx="447" cy="20" r="4" fill="var(--honeydew)" style="filter: drop-shadow(0 0 5px var(--honeydew));"/>
+          <text x="500" y="19" fill="var(--honeydew)" font-size="8" font-weight="bold" text-anchor="middle" font-family="Outfit, sans-serif">4. BTR Reporting</text>
+        </svg>
+      </div>
+
+      <div class="grid-4col">
+        <!-- Module 1 -->
+        <div class="panel">
+          <div>
+            <div class="panel-title" style="font-size: 13px; color: var(--honeydew);">โมดูล 1: ระบบเชื่อมต่อข้อมูล (Data Pipeline)</div>
+            <div class="panel-content" style="gap: 8px;">
+              <div class="bullet-point"><strong>ท่อประสานข้อมูลอัตโนมัติ:</strong> เชื่อมต่อข้อมูล 3 รูปแบบอัปโหลด/ดึงอัตโนมัติ/เชื่อมความปลอดภัยสูง</div>
+              <div class="bullet-point"><strong>การจัดเก็บแบ่งส่วนปลอดภัย:</strong> พักและประมวลผลข้อมูล 3 ชั้นเพื่อความปลอดภัยของข้อมูลต้นทาง</div>
+            </div>
+          </div>
+          <div class="schema-flow" style="font-size: 9px; color: var(--glaucous); background: rgba(0,0,0,0.15); padding: 4px; border-radius: 4px; margin-top: 10px;">[Ingestion & Standardized Layers]</div>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="panel">
+          <div>
+            <div class="panel-title" style="font-size: 13px; color: var(--honeydew);">โมดูล 2: ควบคุมข้อมูลกลาง (Metadata & Governance)</div>
+            <div class="panel-content" style="gap: 8px;">
+              <div class="bullet-point"><strong>พจนานุกรมคำศัพท์ควบคุม:</strong> นิยามดัชนีชี้วัดระดับกองงาน ป้องกันการคลาดเคลื่อนทางสถิติ</div>
+              <div class="bullet-point"><strong>บันทึกเส้นทางทวนสอบ:</strong> บันทึกประวัติทิศทางเดินทางข้อมูลย้อนกลับเพื่อความโปร่งใส</div>
+            </div>
+          </div>
+          <div class="schema-flow" style="font-size: 9px; color: var(--glaucous); background: rgba(0,0,0,0.15); padding: 4px; border-radius: 4px; margin-top: 10px;">[Metadata & Registry Logs]</div>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="panel">
+          <div>
+            <div class="panel-title" style="font-size: 13px; color: var(--honeydew);">โมดูล 3: สืบค้นแผนที่ความเสี่ยง (Risk Search & GIS)</div>
+            <div class="panel-content" style="gap: 8px;">
+              <div class="bullet-point"><strong>สืบค้นความเสี่ยงระบุเงื่อนไข:</strong> แยกค้นหาได้ตามประเภทภัยพิบัติ พื้นที่ และสาขาผลกระทบ</div>
+              <div class="bullet-point"><strong>วิเคราะห์แผนที่เชิงโต้ตอบ:</strong> แสดงผลภูมิสารสนเทศเชิงโต้ตอบด้วยซอฟต์แวร์เปิดประสิทธิภาพสูง</div>
+            </div>
+          </div>
+          <div class="schema-flow" style="font-size: 9px; color: var(--glaucous); background: rgba(0,0,0,0.15); padding: 4px; border-radius: 4px; margin-top: 10px;">[Spatial Risk Map Viewer]</div>
+        </div>
+
+        <!-- Module 4 -->
+        <div class="panel">
+          <div>
+            <div class="panel-title" style="font-size: 13px; color: var(--honeydew);">โมดูล 4: แดชบอร์ดวิเคราะห์และรายงาน BTR</div>
+            <div class="panel-content" style="gap: 8px;">
+              <div class="bullet-point"><strong>ประเมินมาตรการเชิงนโยบาย:</strong> วิเคราะห์ผลลัพธ์และทวนสอบความน่าเชื่อถือเสนอต่อ UNFCCC</div>
+              <div class="bullet-point"><strong>ปราศจากลิขสิทธิ์ซอฟต์แวร์:</strong> ใช้ระบบแยกส่วนอิสระเพื่อประหยัดงบค่าลิขสิทธิ์รายปีระยะยาว</div>
+            </div>
+          </div>
+          <div class="schema-flow" style="font-size: 9px; color: var(--glaucous); background: rgba(0,0,0,0.15); padding: 4px; border-radius: 4px; margin-top: 10px;">[Zero-licensing Dashboard]</div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span>DCCE System Build & Procurement Logical Blueprint (TOR70)</span>
+        <span>Sources: TOR70_original-พัฒนาระบบฐานข้อมูล_9-July-2026.md | dcce_proposed_architecture_design.md</span>
+      </div>
+    </div>
+
+
+  </div>
+
+</body>
+</html>
