@@ -32,7 +32,7 @@ ACTIVITY_LOG="$ROOT/ψ/memory/logs/activity.log"
 [ -f "$ACTIVITY_LOG" ] && LAST_ACTIVITY=$(tail -1 "$ACTIVITY_LOG" | cut -d'|' -f3 | xargs)
 
 # Latest retro
-LATEST_RETRO=$(find "$ROOT/ψ/memory/retrospectives" -name "*.md" -type f 2>/dev/null | grep -v GEMINI | sort -r | head -1)
+LATEST_RETRO=$(find "$ROOT/ψ/memory/retrospectives" -name "*.md" -type f 2>/dev/null | sort -r | head -1)
 ```
 
 ## Detection Precedence (In Order)

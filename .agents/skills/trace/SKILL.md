@@ -18,24 +18,22 @@ description: The Lens — unified forensic discovery across git history, repos, 
 
 ---
 
-## Oracle Root Detection (REQUIRED — bash)
+## Oracle Root Detection
 
 **Every skill that writes to ψ/ MUST detect the oracle root first.**
 
-```bash
-ORACLE_ROOT=$(git rev-parse --show-toplevel 2>/dev/null)
-if [ -z "$ORACLE_ROOT" ]; then
-  ORACLE_ROOT="$(pwd)"
-fi
-PSI="$ORACLE_ROOT/ψ"
-```
+Resolve the repository root with the host's normal Git capability, falling back to
+the working directory, then set `PSI` to `<root>/ψ`. Do not assume a shell or a
+provider-owned workspace layout. Before a mode that writes a trace artifact,
+discover `oracle_search` and `oracle_trace`; Oracle is required and the skill must
+stop before writing if either capability is unavailable.
 
 ---
 
 ## 🛡️ The Workflow (The Forensic Lens)
 
 ### Mode 1: --oracle (Oracle Only)
-**Fastest. Just Oracle MCP, no subagents.**
+**Fastest. Just Oracle MCP.**
 Query Oracle knowledge base:
 ```
 oracle_search("[query]", limit=15)
@@ -54,11 +52,12 @@ Display results and done.
 #### Wave 1 — Fast surface search + session mining
 - **Agent A (Current Repo Files)**: Search for file names, paths, code, or configs matching the query.
 - **Agent B (Oracle Memory)**: Search ψ/memory/ for learnings, retrospectives, and previous trace logs matching the query.
-- **Agent F (Session History - dig)**: Call the local session miner to extract session history:
-  ```bash
-  python "$ORACLE_ROOT/.agents/skills/trace/scripts/dig.py" 50
+- **Session History**: Query the shared adapter for the explicitly selected host:
+  ```text
+  python .agents/skills/_shared/scripts/session_history.py --host auto --limit 50
   ```
-  And search the output session data for mentions of the query.
+  Search normalized session data for mentions of the query. If unavailable, record
+  the returned reason and continue without provider-log fallback.
 
 Check if Wave 1 results are sufficient (answer clear and >= 3 results). If insufficient, proceed to Wave 2.
 
@@ -84,7 +83,7 @@ Calculate `friction_score = S + C_offset` (clamped to `[0.0, 1.0]`).
 - **medium**: −0.10
 - **low**: −0.20
 
-Calculate `coverage` (dimensions searched): `oracle`, `files`, `git`, `cross-repo`, `github`.
+Calculate `coverage` (dimensions searched): `oracle`, `files`, `git`, `cross-repo`, `github`, `session-history`.
 
 ---
 
@@ -110,7 +109,7 @@ target: "[TARGET_NAME]"
 mode: [oracle|smart|deep]
 timestamp: YYYY-MM-DD HH:MM
 friction_score: [0.0–1.0]
-coverage: [oracle, files, git, cross-repo, github]
+coverage: [oracle, files, git, cross-repo, github, session-history]
 confidence: [high|medium|low]
 ---
 
@@ -138,8 +137,8 @@ confidence: [high|medium|low]
 ## Oracle Memory
 [list or "None"]
 
-## Session History (from /dig)
-[list from local dig.py or "None"]
+## Session History
+[normalized results or "Unavailable: reason"]
 
 ## Friction Analysis
 **Score**: [0.0–1.0] — [interpretation]
@@ -165,10 +164,7 @@ Call `oracle_trace` (MCP) with the query, foundFiles, foundCommits, foundIssues,
 ---
 
 ## Step 7: Confirm Trace Log Path
-Output the absolute path to the trace file:
-```bash
-echo "🔍 Trace logged: $TRACE_FILE"
-```
+Output the resolved absolute path to the trace file.
 
 ---
 

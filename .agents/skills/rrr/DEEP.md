@@ -56,7 +56,9 @@ Return: Files modified summary, architectural changes, risk areas
 ### Agent 3: Session Timeline Reconstruction
 ```
 Reconstruct the session timeline:
-- Read ψ/memory/logs/ for today
+- Read ψ/memory/logs/ for today and query the shared session-history adapter for
+  the explicitly selected host. If unavailable, state the fallback rather than
+  searching a different provider's logs.
 - Check git commit timestamps
 - Identify session phases (start, middle, end)
 - Map activities to times

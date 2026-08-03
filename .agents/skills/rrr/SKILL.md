@@ -7,21 +7,13 @@ description: Create session retrospective with AI diary and lessons learned. Use
 
 > "Reflect to grow, document to remember."
 
-## Oracle Root Detection (REQUIRED — bash)
+## Oracle Root Detection
 
 **Every skill that writes to ψ/ MUST detect the oracle root first.**
 
-```bash
-ORACLE_ROOT=$(git rev-parse --show-toplevel 2>/dev/null)
-if [ -z "$ORACLE_ROOT" ]; then
-  ORACLE_ROOT="$(pwd)"
-fi
-PSI="$ORACLE_ROOT/ψ"
-if [ ! -d "$PSI" ]; then
-  echo "⚠️ No ψ/ found at $ORACLE_ROOT — writing there anyway."
-  mkdir -p "$PSI"
-fi
-```
+Resolve the repository root with the host's normal Git capability, falling back to
+the working directory, then set `PSI` to `<root>/ψ`. Do not assume a shell or a
+provider-owned workspace layout.
 
 ---
 
@@ -35,28 +27,15 @@ git log --oneline -10
 git diff --stat HEAD~5
 ```
 
-Detect session ID:
+Obtain optional session identity and timestamps from the shared adapter:
 
-```bash
-ENCODED_PWD="$(pwd | sed 's/[:/\\]/-/g')"
-PROJECT_BASE=$(ls -td "$HOME/.claude/projects"/*"$ENCODED_PWD"* 2>/dev/null | head -1)
-LATEST_JSONL=$(ls -t "$PROJECT_BASE"/*.jsonl 2>/dev/null | head -1)
-if [ -n "$LATEST_JSONL" ]; then
-  SESSION_ID=$(basename "$LATEST_JSONL" .jsonl)
-  echo "SESSION: ${SESSION_ID:0:8}"
-fi
+```text
+python .agents/skills/_shared/scripts/session_history.py --host auto --limit 10
 ```
 
-### 1.5. Extract timestamps
-
-> [!important]
-> **Token Optimization:** We use a static Python script for timestamp extraction to avoid context inheritance and parsing errors.
-
-Run the predefined miner script to extract session timestamps:
-
-```bash
-python "$ORACLE_ROOT/.agents/skills/rrr/scripts/miner.py"
-```
+The adapter returns normalized JSON for Antigravity or Codex only when the host is
+explicitly selected (`ORACLE_SKILL_HOST`). If unavailable, use active conversation
+and Git timestamps, state that fallback, and do not inspect another host's logs.
 
 ### 2. Write Retrospective (main agent)
 
@@ -64,13 +43,15 @@ python "$ORACLE_ROOT/.agents/skills/rrr/scripts/miner.py"
 
 ### 3. Write Lesson Learned (Knowledge Ingestion)
 
-**Mechanism**: You MUST use the `oracle_learn` MCP tool to ingest the lesson (if available in this session — verify with a tool search before assuming it's connected; if it isn't, write the lesson file directly and note the sync as skipped).
+**Mechanism**: `oracle_learn` is required. Discover it before writing artifacts; if
+it is unavailable, stop and report the missing Oracle capability.
 - **Pattern**: The core technical or philosophical learning.
 - **Concepts**: Relevant tags (e.g., [ontology, causality]).
 - **Project**: The current project ghq path.
 
 > [!important]
-> Prefer `oracle_learn` over a plain file write when the MCP tool is connected, so the pattern is indexed in the Oracle brain and available for hybrid search. If the tool isn't connected this session, write `$PSI/memory/learnings/` directly — don't block the retro on it.
+> Oracle ingestion keeps the learning indexed in the Oracle brain and available for
+> hybrid search. Do not create an unsynchronized local fallback.
 
 ---
 

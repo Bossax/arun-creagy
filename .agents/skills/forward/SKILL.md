@@ -1,18 +1,17 @@
 ---
 name: forward
-description: Create handoff + enter plan mode for next session. Use when user says "forward", "handoff", "wrap up", or before ending session.
+description: Create a verified, host-neutral handoff for the next session. Use when user says "forward" or "handoff".
 ---
 
 # /forward - Handoff to Next Session
 
-Create context for next session, then enter plan mode to define next steps.
+Create the handoff, verify it, and stop. This skill does not require a provider
+plan-mode API, create GitHub issues, or stage/commit vault files.
 
 ## Usage
 
 ```
-/forward              # Create handoff, show plan, wait for approval
-/forward asap         # Create handoff + commit immediately (no approval needed)
-/forward --only       # Create handoff only, skip plan mode
+/forward              # Create and verify a handoff
 ```
 
 ## Steps
@@ -23,17 +22,17 @@ Create context for next session, then enter plan mode to define next steps.
 4. **Pending items**: What's left
 5. **Next steps**: Specific actions
 
-### Session Detection (bash)
+### Session Detection
 
-```bash
-ENCODED_PWD="$(pwd | sed 's/[:/\\]/-/g')"
-PROJECT_DIR="$HOME/.claude/projects"
-LATEST_JSONL=$(ls -t "$PROJECT_DIR"/*"$ENCODED_PWD"*/*.jsonl 2>/dev/null | head -1)
-if [ -n "$LATEST_JSONL" ]; then
-  SESSION_ID=$(basename "$LATEST_JSONL" .jsonl)
-  echo "SESSION: ${SESSION_ID:0:8}"
-fi
+Use the shared adapter when session metadata is useful:
+
+```text
+python .agents/skills/_shared/scripts/session_history.py --host auto --limit 1
 ```
+
+It only reads the explicitly selected Antigravity or Codex host. If unavailable,
+omit the session identifier and state the fallback; never inspect another host's
+log directory.
 
 Include in handoff header if detected:
 ```markdown
@@ -43,11 +42,8 @@ Skip silently if detection fails.
 
 ## Output
 
-Resolve vault path first:
-
-```bash
-PSI="$(pwd)/ψ"
-```
+Resolve the repository root with the host's normal Git capability and set `PSI` to
+the resolved `<root>/ψ` path.
 
 Write to: `$PSI/inbox/handoff/YYYY-MM-DD_HH-MM_slug.md`
 
@@ -79,48 +75,8 @@ Do NOT `git add` vault files — they are shared state, not committed to repos.
 
 ### Confirm handoff write (Absolute Paths Required)
 
-Always print the absolute Windows path so it is clickable in the terminal:
-`echo "📤 Handoff: C:/Users/.../ψ/inbox/handoff/..."`
-
----
-
-## Then: Create Issues from Pending Items
-
-After writing the handoff file, extract actionable items and offer to create GitHub issues.
-
-### Check for Duplicates
-
-```bash
-gh issue list --state open --search "ITEM_TITLE" --json title --jq '.[].title'
-```
-
-### Create Issues
-
-```bash
-REMOTE=$(git remote get-url origin)
-REPO=$(echo "$REMOTE" | sed -E 's#.*[:/]([^/]+/[^/]+?)(\.git)?$#\1#')
-gh issue create --repo "$REPO" --title "ITEM_TITLE" --body "From /forward handoff on $(date +%Y-%m-%d)"
-```
-
----
-
-## Then: MUST Show Plan Approval Box
-
-1. **Call `EnterPlanMode`** tool
-2. Write plan file with summary, pending, cleanup, and next steps.
-3. **Always end plan with a choice table**:
-
-```markdown
-## Next Session: Pick Your Path
-
-| Option | Command | What It Does |
-|--------|---------|--------------|
-| **Continue** | `/recap` | Pick up where we left off |
-| **Clean up first** | See cleanup list below, then `/recap` | Merge PRs, delete branches, close issues, then continue |
-| **Fresh start** | `/recap --quick` | Minimal context, start something new |
-```
-
-4. **Call `ExitPlanMode`** — user sees the built-in plan approval UI.
+Always print the resolved absolute handoff path, confirm it exists, and end the
+turn. The next host/session decides how to plan or continue.
 
 ---
 
@@ -134,12 +90,5 @@ If **AGENTS.md** contains demographics, include in handoff:
 ```
 
 ---
-
-## ASAP Mode
-
-If user says `/forward asap`:
-- Write handoff file.
-- **Immediately commit and push** (if requested/appropriate) — no approval needed.
-- Skip plan mode.
 
 **Philosophy**: Close the loop. Anchor the intent. *"The bridge is built before the light fades."*
