@@ -1,0 +1,341 @@
+<title>ระบบฐานข้อมูลด้านการปรับตัวฯ ถูกสร้างขึ้นอย่างไร — TOR70</title>
+
+<style>
+:root{
+  --bg: #eef1ec;
+  --panel: #ffffff;
+  --ink: #17231f;
+  --ink-soft: #47554e;
+  --rule: #d3dad2;
+  --ochre: #a3701f;
+  --ochre-soft: #f1e3c9;
+  --teal: #285c58;
+  --teal-soft: #dfeae8;
+  --shadow: 0 1px 2px rgba(23,35,31,0.06), 0 6px 16px rgba(23,35,31,0.05);
+}
+:root[data-theme="dark"]{
+  --bg: #101613;
+  --panel: #182420;
+  --ink: #e9ede7;
+  --ink-soft: #a9b6ae;
+  --rule: #2b3630;
+  --ochre: #dba748;
+  --ochre-soft: #2c2415;
+  --teal: #6bb0aa;
+  --teal-soft: #16302c;
+  --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 6px 16px rgba(0,0,0,0.35);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg: #101613;
+    --panel: #182420;
+    --ink: #e9ede7;
+    --ink-soft: #a9b6ae;
+    --rule: #2b3630;
+    --ochre: #dba748;
+    --ochre-soft: #2c2415;
+    --teal: #6bb0aa;
+    --teal-soft: #16302c;
+    --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 6px 16px rgba(0,0,0,0.35);
+  }
+}
+
+*{ box-sizing: border-box; }
+html{ background: var(--bg); }
+body{
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Noto Sans Thai", Seravek, "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+::selection{ background: var(--ochre-soft); }
+
+.mono{
+  font-family: ui-monospace, "SF Mono", "Cascadia Mono", Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Header ---------- */
+header.hero{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2.4rem 1.5rem 1.6rem;
+}
+.eyebrow{
+  font-family: ui-monospace, "SF Mono", Consolas, monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: var(--teal);
+  margin: 0 0 0.7rem;
+}
+h1{
+  font-family: "Noto Serif Thai", "Iowan Old Style", Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 3vw, 2.05rem);
+  line-height: 1.2;
+  margin: 0 0 0.6rem;
+  text-wrap: balance;
+  letter-spacing: -0.005em;
+}
+.dek{
+  font-size: 0.94rem;
+  color: var(--ink-soft);
+  max-width: 78ch;
+  margin: 0;
+}
+.meta-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.1rem;
+  margin-top: 0.9rem;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+.meta-row span b{ color: var(--ink); font-weight: 600; }
+
+/* ---------- Phase overview strip ---------- */
+.phases{
+  max-width: 980px;
+  margin: 0 auto 1.5rem;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+}
+.phase-pill{
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 0.55rem 0.6rem;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+.phase-pill .p-num{
+  font-family: ui-monospace, "SF Mono", Consolas, monospace;
+  font-size: 0.62rem;
+  color: var(--ochre);
+  letter-spacing: 0.04em;
+}
+.phase-pill .p-name{
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-top: 0.1rem;
+}
+.phase-pill .p-secs{
+  font-size: 0.68rem;
+  color: var(--ink-soft);
+  margin-top: 0.05rem;
+}
+
+/* ---------- Stage grid ---------- */
+.grid{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 1.5rem 1.8rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.7rem;
+}
+.card{
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--teal);
+  border-radius: 8px;
+  padding: 0.85rem 1rem 0.9rem;
+  box-shadow: var(--shadow);
+}
+.card[data-phase="gather"],
+.card[data-phase="verify"]{ border-left-color: var(--ochre); }
+
+.card .head{
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+.card .num{
+  font-family: ui-monospace, "SF Mono", Consolas, monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--teal);
+  flex-shrink: 0;
+}
+.card[data-phase="gather"] .num,
+.card[data-phase="verify"] .num{ color: var(--ochre); }
+
+.card .thai{
+  font-size: 0.68rem;
+  color: var(--ink-soft);
+  margin: 0;
+}
+.card h2{
+  font-family: "Noto Serif Thai", "Iowan Old Style", Georgia, serif;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0.15rem 0 0.4rem;
+  text-wrap: balance;
+}
+.card p.body{
+  margin: 0 0 0.55rem;
+  color: var(--ink);
+  font-size: 0.87rem;
+}
+.tags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+.tag{
+  font-size: 0.66rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 100px;
+  background: var(--teal-soft);
+  color: var(--teal);
+  font-weight: 600;
+}
+.card[data-phase="gather"] .tag,
+.card[data-phase="verify"] .tag{
+  background: var(--ochre-soft);
+  color: var(--ochre);
+}
+
+/* full-width card for the last (odd) item */
+.card.wide{ grid-column: 1 / -1; }
+
+/* ---------- Footer ---------- */
+footer{
+  max-width: 980px;
+  margin: 0.5rem auto 0;
+  padding: 1rem 1.5rem 2.2rem;
+  border-top: 1px solid var(--rule);
+}
+.sign{
+  font-size: 0.76rem;
+  color: var(--ink-soft);
+}
+.sign b{ color: var(--ink); }
+
+@media (max-width: 640px){
+  .phases{ grid-template-columns: repeat(2, 1fr); }
+  .grid{ grid-template-columns: 1fr; }
+  .card.wide{ grid-column: auto; }
+}
+</style>
+
+<header class="hero">
+  <p class="eyebrow">TOR70 · การพัฒนาระบบฐานข้อมูลด้านการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศ</p>
+  <h1>ระบบฐานข้อมูลด้านการปรับตัวฯ ถูกสร้างขึ้นอย่างไร</h1>
+  <p class="dek">กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (DCCE) กำลังจ้างที่ปรึกษาเพื่อรวบรวมองค์ความรู้ด้านการปรับตัวต่อสภาพภูมิอากาศที่กระจัดกระจาย — รายงาน นโยบาย แผนที่ ตัวชี้วัด — ให้เป็นศูนย์ข้อมูลเดียวที่ทันสมัย นี่คือขอบเขตงาน 10 ขั้นตอน (ข้อ 5.1–5.10) อธิบายด้วยภาษาที่เข้าใจง่าย แบ่งเป็น 5 ระยะ</p>
+  <div class="meta-row">
+    <span>งบประมาณ: <b>25,000,000 บาท</b></span>
+    <span>หน่วยงาน: <b>กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (DCCE)</b></span>
+    <span>ที่มา: <b>TOR70, 9 กรกฎาคม 2569</b></span>
+  </div>
+</header>
+
+<div class="phases">
+  <div class="phase-pill">
+    <div class="p-num">ระยะที่ 1</div>
+    <div class="p-name">วางแผน</div>
+    <div class="p-secs">ข้อ 5.1–5.2</div>
+  </div>
+  <div class="phase-pill">
+    <div class="p-num">ระยะที่ 2</div>
+    <div class="p-name">รวบรวมข้อมูล</div>
+    <div class="p-secs">ข้อ 5.3</div>
+  </div>
+  <div class="phase-pill">
+    <div class="p-num">ระยะที่ 3</div>
+    <div class="p-name">พัฒนาระบบ</div>
+    <div class="p-secs">ข้อ 5.4–5.6</div>
+  </div>
+  <div class="phase-pill">
+    <div class="p-num">ระยะที่ 4</div>
+    <div class="p-name">ทดสอบ/ติดตั้ง</div>
+    <div class="p-secs">ข้อ 5.7–5.8</div>
+  </div>
+  <div class="phase-pill">
+    <div class="p-num">ระยะที่ 5</div>
+    <div class="p-name">ฝึกอบรม/เผยแพร่</div>
+    <div class="p-secs">ข้อ 5.9–5.10</div>
+  </div>
+</div>
+
+<div class="grid">
+
+  <div class="card" data-phase="align">
+    <div class="head"><span class="num">5.1</span><span class="thai">แผนการดำเนินงาน (Project Plan)</span></div>
+    <h2>วางแผนการดำเนินงานทั้งโครงการ</h2>
+    <p class="body">ก่อนเริ่มเก็บข้อมูลหรือออกแบบใดๆ ที่ปรึกษาต้องจัดทำแผนแม่บทของโครงการ: อะไรเกิดขึ้นก่อน-หลัง ใครรับผิดชอบ ส่งมอบอะไรเมื่อไหร่ และกรมฯ จะติดตามความคืบหน้าอย่างไร แผนนี้ต้องครอบคลุมทุกขั้นตอนด้านล่าง ตั้งแต่การประชุมระดมความคิดเห็นไปจนถึงงานเปิดตัวระบบ</p>
+    <div class="tags"><span class="tag">การวางแผน</span><span class="tag">ผลผลิตเริ่มโครงการ</span></div>
+  </div>
+
+  <div class="card" data-phase="align">
+    <div class="head"><span class="num">5.2</span><span class="thai">การประชุมเพื่อระดมความคิดเห็น</span></div>
+    <h2>ประชุมระดมความคิดเห็นกับเจ้าหน้าที่กรมฯ</h2>
+    <p class="body">ที่ปรึกษาจัดประชุมร่วมกับเจ้าหน้าที่กรมฯ อย่างน้อย 20 คน ก่อนแตะข้อมูลใดๆ เพื่อตกลงกันว่าระบบต้องครอบคลุมอะไรบ้าง ใครจะเป็นผู้ใช้งาน ข้อมูลควรจัดหมวดหมู่อย่างไร และหน้าตาระบบควรเป็นแบบไหนคร่าวๆ — คือขั้นตอน "นิยามโจทย์ก่อนลงมือสร้าง"</p>
+    <div class="tags"><span class="tag">ประชุม · 20+ คน</span><span class="tag">กำหนดความต้องการ</span></div>
+  </div>
+
+  <div class="card wide" data-phase="gather">
+    <div class="head"><span class="num">5.3</span><span class="thai">การศึกษา สำรวจ รวบรวม วิเคราะห์ คัดเลือก และจัดเตรียมข้อมูล</span></div>
+    <h2>ค้นหา ตรวจสอบ และจัดทำบัญชีข้อมูล</h2>
+    <p class="body">ขั้นตอนที่ใช้เวลาและทรัพยากรมากที่สุดของโครงการ ที่ปรึกษาต้องค้นหาข้อมูลด้านการปรับตัวต่อสภาพภูมิอากาศ — รายงาน ตัวชี้วัด แผนที่ เอกสารนโยบาย — จากหน่วยงานไทยและแหล่งข้อมูลต่างประเทศ (IPCC, NAP Global Network, Germanwatch และอื่นๆ) ข้อมูลแต่ละชุดต้องผ่านการตรวจสอบคุณภาพ จัดหมวดหมู่ และบันทึกลงบัญชีรายการข้อมูล โดยต้องได้ข้อมูลอย่างน้อย 100 ชุดพร้อมนำเข้าระบบ พร้อมทั้งแปลงรายงานวิชาการที่ยาวให้เป็นบทความและอินโฟกราฟิกที่เข้าใจง่าย</p>
+    <div class="tags"><span class="tag">ข้อมูล 100+ ชุด</span><span class="tag">บัญชีรายการข้อมูล</span><span class="tag">ประชุมทบทวน 2 ครั้ง</span></div>
+  </div>
+
+  <div class="card" data-phase="build">
+    <div class="head"><span class="num">5.4</span><span class="thai">การวิเคราะห์และออกแบบระบบ</span></div>
+    <h2>ออกแบบพิมพ์เขียวของระบบ</h2>
+    <p class="body">ก่อนเขียนโค้ดใดๆ ทีมเทคนิคต้องออกแบบทุกอย่างบนกระดาษก่อน: ข้อมูลไหลผ่านระบบอย่างไร จัดเก็บที่ไหน โครงสร้างฐานข้อมูลเป็นแบบใด ใครเข้าถึงอะไรได้บ้าง และระบบทั้งหมดจะวางบนเซิร์ฟเวอร์ของกรมฯ อย่างปลอดภัยอย่างไร กรมฯ ต้องอนุมัติพิมพ์เขียวนี้ก่อนเริ่มพัฒนาจริง</p>
+    <div class="tags"><span class="tag">สถาปัตยกรรมระบบ</span><span class="tag">ออกแบบความปลอดภัย</span><span class="tag">กรมฯ อนุมัติ</span></div>
+  </div>
+
+  <div class="card" data-phase="build">
+    <div class="head"><span class="num">5.5</span><span class="thai">การพัฒนาระบบบริหารจัดการข้อมูลและเนื้อหา (CMS)</span></div>
+    <h2>พัฒนาระบบหลังบ้าน (CMS)</h2>
+    <p class="body">เครื่องมือภายในที่เจ้าหน้าที่กรมฯ จะใช้งานจริงในชีวิตประจำวัน: เพิ่ม-แก้ไขชุดข้อมูล อัปโหลดเอกสารและสื่อ อนุมัติเนื้อหาก่อนเผยแพร่ กำหนดสิทธิ์การเข้าถึง และบันทึกประวัติว่าใครแก้ไขอะไรเมื่อไหร่</p>
+    <div class="tags"><span class="tag">เครื่องมือสำหรับเจ้าหน้าที่</span><span class="tag">ขั้นตอนอนุมัติ</span><span class="tag">จัดการสิทธิ์</span></div>
+  </div>
+
+  <div class="card" data-phase="build">
+    <div class="head"><span class="num">5.6</span><span class="thai">การออกแบบ จัดทำ และพัฒนาส่วนแสดงผลบนเว็บไซต์</span></div>
+    <h2>พัฒนาเว็บไซต์สำหรับสาธารณะ</h2>
+    <p class="body">ส่วนที่คนภายนอกกรมฯ จะได้เห็น: หน้าแรก บัญชีข้อมูลที่ค้นหาได้ แดชบอร์ด แผนที่เชิงโต้ตอบ บทความข่าวสารและองค์ความรู้ และปุ่มดาวน์โหลด — ใช้งานได้ทั้งบนคอมพิวเตอร์ แท็บเล็ต และมือถือ หน้าจอจะถูกร่างและขอความเห็นชอบก่อนพัฒนาเต็มรูปแบบ</p>
+    <div class="tags"><span class="tag">หน้าเว็บสาธารณะ</span><span class="tag">แดชบอร์ดและแผนที่</span><span class="tag">รองรับทุกอุปกรณ์</span></div>
+  </div>
+
+  <div class="card" data-phase="verify">
+    <div class="head"><span class="num">5.7</span><span class="thai">การติดตั้งระบบ</span></div>
+    <h2>ติดตั้งระบบบนเซิร์ฟเวอร์ของกรมฯ</h2>
+    <p class="body">ระบบที่พัฒนาเสร็จแล้วจะถูกติดตั้งบนเซิร์ฟเวอร์จริงของกรมฯ (หรือที่กรมฯ เห็นชอบ) พร้อมตั้งค่าการเชื่อมต่อ สิทธิ์การเข้าถึง และความปลอดภัยทั้งหมด รวมถึงระบบสำรองและกู้คืนข้อมูลที่ใช้งานได้จริง พร้อมส่งมอบคู่มือการติดตั้งแบบทีละขั้นตอน</p>
+    <div class="tags"><span class="tag">การติดตั้งระบบ</span><span class="tag">สำรอง/กู้คืนข้อมูล</span></div>
+  </div>
+
+  <div class="card" data-phase="verify">
+    <div class="head"><span class="num">5.8</span><span class="thai">การทดสอบระบบ</span></div>
+    <h2>ทดสอบระบบให้มั่นใจ</h2>
+    <p class="body">ทุกส่วนของระบบต้องผ่านการทดสอบ: ฟังก์ชันทำงานถูกต้องหรือไม่ รองรับปริมาณการใช้งานจริงได้หรือไม่ ปลอดภัยจากการโจมตีทั่วไปหรือไม่ (ตามแนวทาง OWASP) และที่สำคัญที่สุด เจ้าหน้าที่กรมฯ ทดลองใช้จริงแล้วยอมรับหรือไม่ หากพบข้อบกพร่องต้องแก้ไขและทดสอบซ้ำก่อนตรวจรับ</p>
+    <div class="tags"><span class="tag">ทดสอบความปลอดภัย</span><span class="tag">ทดสอบประสิทธิภาพ</span><span class="tag">ทดสอบการยอมรับผู้ใช้</span></div>
+  </div>
+
+  <div class="card" data-phase="adopt">
+    <div class="head"><span class="num">5.9</span><span class="thai">การฝึกอบรมและถ่ายทอดความรู้</span></div>
+    <h2>ฝึกอบรมให้กรมฯ ดูแลระบบได้เอง</h2>
+    <p class="body">จัดฝึกอบรมเชิงปฏิบัติการให้ 3 กลุ่มผู้ใช้งาน: เจ้าหน้าที่ด้านเทคนิค (ติดตั้ง ดูแล แก้ปัญหา) เจ้าหน้าที่ดูแลเนื้อหา (ใช้งานเครื่องมือหลังบ้านในชีวิตประจำวัน) และผู้ใช้งานทั่วไป (ใช้งานเว็บไซต์สาธารณะ) พร้อมทิ้งคู่มือและเอกสารคำถามที่พบบ่อยไว้ให้อ้างอิงในอนาคต</p>
+    <div class="tags"><span class="tag">ฝึกอบรม 3 หลักสูตร</span><span class="tag">คู่มือการใช้งาน</span></div>
+  </div>
+
+  <div class="card wide" data-phase="adopt">
+    <div class="head"><span class="num">5.10</span><span class="thai">การสร้างการรับรู้และจัดกิจกรรมเผยแพร่ประชาสัมพันธ์</span></div>
+    <h2>เปิดตัวสู่สาธารณะ</h2>
+    <p class="body">จัดงานเปิดตัวสำหรับผู้เข้าร่วมไม่น้อยกว่า 100 คน (ทั้งแบบมาร่วมงานและถ่ายทอดสด) พร้อมวิทยากร นิทรรศการ และสื่อมวลชน รวมถึงบทความอย่างน้อย 10 ชิ้น อินโฟกราฟิกอย่างน้อย 10 ชิ้น และสื่อประชาสัมพันธ์อื่นๆ เพื่อให้หน่วยงานภาครัฐ นักวิชาการ และประชาชนรู้จักและใช้งานระบบจริง</p>
+    <div class="tags"><span class="tag">งานเปิดตัว · 100+ คน</span><span class="tag">บทความ 10 ชิ้น</span><span class="tag">อินโฟกราฟิก 10 ชิ้น</span></div>
+  </div>
+
+</div>
+
+<footer>
+  <p class="sign">จัดทำโดย <b>Claude (Sonnet 5)</b> ทำงานร่วมกับ Boss (Arun Creagy workspace) — สรุปจากต้นฉบับ TOR70 วันที่ 9 กรกฎาคม 2569 · จัดทำเอกสารนี้เมื่อ 3 สิงหาคม 2569</p>
+</footer>
