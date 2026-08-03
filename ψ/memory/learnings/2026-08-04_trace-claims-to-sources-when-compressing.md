@@ -1,0 +1,11 @@
+# Lesson: Trace every claim back to its source when compressing validated work into a fixed-size deliverable
+
+**Context**: Building a 14-slide briefing deck that compressed a 7-failure-mode literature validation into a 4-slide "gaps" section. Picked 3 failure modes for narrative flow and slide-budget reasons. The user asked "how did you pick these, any other things you might spot?" — turned out Part 4 of the deck contained a recommendation (content-synthesis quality) with no supporting evidence slide in Part 3, because the failure mode that justified it (FM4) had been cut for space. A second omission (the "specify system behavior, not implementation" NFR framing) had the same root cause: content already validated earlier in the session didn't survive the compression into the deck outline.
+
+**Pattern**: When compressing a large body of already-validated findings (a literature review, a set of citations, a research report) into a fixed-size downstream artifact (a slide deck, a summary memo, an executive brief), it is easy to select a subset that reads well narratively while silently dropping the evidentiary basis for a later claim/recommendation. The selection criteria that optimize for flow (narrative arc, slide count, pacing) are not the same as the criteria that guarantee completeness (every downstream conclusion has a supporting antecedent).
+
+**Fix**: Before presenting a compressed deliverable built from prior validated work, explicitly trace forward and backward once: for every claim/recommendation in the compressed output, confirm it has a supporting finding also present in the compressed output (not just in the original uncompressed source). Do this as a self-check pass, not something the user has to catch by asking "why did you pick these."
+
+**How to apply**: Any time a task involves distilling N validated findings into a smaller fixed-budget format (deck slides, one-pagers, executive summaries), add a completeness pass as an explicit step: list every claim in the final draft, and confirm each traces to an included (not just originally-available) piece of evidence. If a claim's evidence got cut for space, either cut the claim too or find room for a condensed version of its evidence — don't let them separate silently.
+
+**Tags**: #compression #completeness-check #self-review #slide-decks #evidence-tracing
