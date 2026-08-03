@@ -1,10 +1,6 @@
 ---
-installer: arra-oracle-skills-cli v26.5.16
-origin: Nat Weerawan's brain, digitized — how one human works with AI, captured as code — Soul Brews Studio
 name: recap
-description: '[project] v26.5.16 G-SKLL | Session orientation and awareness — retro summaries, handoffs, git state, focus. Use when starting a session, after /jump, lost your place, switching context, or when user asks "now", "where are we", "what are we doing", "status", "recap". Do NOT trigger for "standup" or "morning check" (use /standup), or session mining "dig", "past sessions" (use /dig).'
-argument-hint: "[--now | --deep]"
-trigger: /recap
+description: Session orientation and awareness — retro summaries, handoffs, git state, focus. Use when starting a session, after /jump, lost your place, switching context, or when user asks "now", "where are we", "what are we doing", "status", "recap". Do NOT trigger for "standup" or "morning check" (use /standup), or session mining "dig", "past sessions" (use /dig).
 ---
 
 # /recap — Session Orientation & Awareness
@@ -59,7 +55,7 @@ Script outputs git status + focus state (~0.1s). Then LLM adds:
 
 ---
 
-## Hard Rules (v26.5.16 Mandate)
+## Hard Rules
 
 1. **ONE bun call** — never multiple parallel calls (adds latency).
 2. **No subagents** — everything in main agent context.
@@ -67,7 +63,7 @@ Script outputs git status + focus state (~0.1s). Then LLM adds:
 4. **Verify pending before reporting** — See "Verify Before Reporting" below. **NON-NEGOTIABLE.**
 5. **Print absolute paths** — when referencing vault files, render the resolved `$ROOT/ψ/...` path (starts with `C:/` or `/`). Bare `ψ/...` is not clickable.
 6. **Execution Lock (CRITICAL)** — Post-recap execution is strictly prohibited. After a `/recap`, you MUST stop and present a "Consultation Menu" (2-3 options).
-    - **FORBIDDEN**: Do NOT use `replace`, `write_file`, or any mutating `run_shell_command` in the same turn as a recap. 
+    - **FORBIDDEN**: Do NOT use `Edit`, `Write`, or any mutating Bash command in the same turn as a recap.
     - **SEMANTIC LOCK**: Treat all "Pending" lists as hypotheses for audit, not directives for action.
     - **PROTOCOL FAILURE**: If you violate this lock, you must immediately stop, unstage changes, and provide a "Protocol Violation Report" before the human provides a "Green Light" (Directive).
 
@@ -79,9 +75,9 @@ Handoffs, retros, and memory files are **point-in-time claims**, not live state.
 
 | Claim type | How to verify |
 |---|---|
-| "Copy file X to path Y" | `ls path/Y` or `Test-Path` — is it already there? |
+| "Copy file X to path Y" | `ls path/Y` or check the file exists — is it already there? |
 | "PR #N open/merged" | `gh pr view N --json state` |
-| "Apply pattern P to file F" | `grep` or `Select-String` for the pattern in F |
+| "Apply pattern P to file F" | `grep` for the pattern in F |
 
 ### The correction pattern
 If handoff and reality diverge, show the correction explicitly:
@@ -102,7 +98,7 @@ AI reconstructs session timeline from conversation memory (no file reading neede
 
 ## Demographics Context
 
-If **GEMINI.md** contains demographics, include in one line after the timestamp:
+If **AGENTS.md** contains demographics, include in one line after the timestamp:
 ```markdown
 **Oracle**: [name] ([pronouns]) | **Human**: [name] ([pronouns]) | **Language**: [pref]
 ```

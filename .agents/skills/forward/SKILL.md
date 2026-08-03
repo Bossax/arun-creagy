@@ -1,10 +1,6 @@
 ---
-installer: arra-oracle-skills-cli v26.5.16
-origin: Nat Weerawan's brain, digitized — how one human works with AI, captured as code — Soul Brews Studio
 name: forward
-description: '[core] v26.5.16 G-SKLL | Create handoff + enter plan mode for next session. Use when user says "forward", "handoff", "wrap up", or before ending session.'
-argument-hint: "[asap | --only]"
-trigger: /forward
+description: Create handoff + enter plan mode for next session. Use when user says "forward", "handoff", "wrap up", or before ending session.
 ---
 
 # /forward - Handoff to Next Session
@@ -27,16 +23,16 @@ Create context for next session, then enter plan mode to define next steps.
 4. **Pending items**: What's left
 5. **Next steps**: Specific actions
 
-### Session Detection (Windows/PowerShell)
+### Session Detection (bash)
 
-```powershell
-$ENCODED_PWD = (Get-Location).Path.Replace(':', '').Replace('\', '-')
-$PROJECT_DIR = "$env:USERPROFILE\.gemini\tmp\arun-creagy\chats"
-$LATEST_JSONL = Get-ChildItem -Path "$PROJECT_DIR\*$ENCODED_PWD*\*.jsonl" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
-if ($LATEST_JSONL) {
-  $SESSION_ID = $LATEST_JSONL.BaseName
-  Write-Host "SESSION: $($SESSION_ID.Substring(0, 8))"
-}
+```bash
+ENCODED_PWD="$(pwd | sed 's/[:/\\]/-/g')"
+PROJECT_DIR="$HOME/.claude/projects"
+LATEST_JSONL=$(ls -t "$PROJECT_DIR"/*"$ENCODED_PWD"*/*.jsonl 2>/dev/null | head -1)
+if [ -n "$LATEST_JSONL" ]; then
+  SESSION_ID=$(basename "$LATEST_JSONL" .jsonl)
+  echo "SESSION: ${SESSION_ID:0:8}"
+fi
 ```
 
 Include in handoff header if detected:
@@ -49,10 +45,8 @@ Skip silently if detection fails.
 
 Resolve vault path first:
 
-**Windows/PowerShell**:
-```powershell
-$PSI = Resolve-Path 'ψ' -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Path
-if (-not $PSI) { $PSI = Join-Path (Get-Location).Path 'ψ' }
+```bash
+PSI="$(pwd)/ψ"
 ```
 
 Write to: `$PSI/inbox/handoff/YYYY-MM-DD_HH-MM_slug.md`
@@ -92,21 +86,20 @@ Always print the absolute Windows path so it is clickable in the terminal:
 
 ## Then: Create Issues from Pending Items
 
-After writing the handoff file, extract actionable items and offer to create GitHub issues.      
+After writing the handoff file, extract actionable items and offer to create GitHub issues.
 
-### Step 3: Check for Duplicates (win32)
+### Check for Duplicates
 
-```powershell
-# Check if issue exists
+```bash
 gh issue list --state open --search "ITEM_TITLE" --json title --jq '.[].title'
 ```
 
-### Step 5: Create Issues (win32)
+### Create Issues
 
-```powershell
-$REMOTE = git remote get-url origin
-$REPO = ($REMOTE -split '[:/]')[-2..-1] -join '/' -replace '\.git$', ''
-gh issue create --repo "$REPO" --title "ITEM_TITLE" --body "From /forward handoff on $(Get-Date -Format 'yyyy-MM-dd')" 
+```bash
+REMOTE=$(git remote get-url origin)
+REPO=$(echo "$REMOTE" | sed -E 's#.*[:/]([^/]+/[^/]+?)(\.git)?$#\1#')
+gh issue create --repo "$REPO" --title "ITEM_TITLE" --body "From /forward handoff on $(date +%Y-%m-%d)"
 ```
 
 ---
@@ -133,7 +126,7 @@ gh issue create --repo "$REPO" --title "ITEM_TITLE" --body "From /forward handof
 
 ## Identity Context
 
-If **GEMINI.md** contains demographics, include in handoff:
+If **AGENTS.md** contains demographics, include in handoff:
 
 ```markdown
 ## Context

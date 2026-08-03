@@ -1,6 +1,7 @@
 {
   "mcpServers": {
     "oracle-v2": {
+      "type": "stdio",
       "command": "docker",
       "args": [
         "exec",
@@ -9,8 +10,7 @@
         "bun",
         "src/index.ts"
       ],
-      "cwd": "C:/Users/sitth/OracleWorkspace/engine",
-      "description": "Local Oracle Registry (Registry of Form)"
+      "env": {}
     }
   }
 }

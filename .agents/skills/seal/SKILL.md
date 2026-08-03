@@ -19,10 +19,10 @@ trigger: "/seal"
 # Step 1: Find git root
 $ORACLE_ROOT = git rev-parse --show-toplevel 2>$null
 
-# Step 2: Cross-check — oracle repo has GEMINI.md + ψ/
-if ($ORACLE_ROOT -and (Test-Path "$ORACLE_ROOT\GEMINI.md") -and (Test-Path "$ORACLE_ROOT\ψ")) {
+# Step 2: Cross-check — oracle repo has AGENTS.md + ψ/
+if ($ORACLE_ROOT -and (Test-Path "$ORACLE_ROOT\AGENTS.md") -and (Test-Path "$ORACLE_ROOT\ψ")) {
     $PSI = Resolve-Path "$ORACLE_ROOT\ψ" | Select-Object -ExpandProperty Path
-} elseif ((Test-Path "GEMINI.md") -and (Test-Path "ψ")) {
+} elseif ((Test-Path "AGENTS.md") -and (Test-Path "ψ")) {
     $PSI = Resolve-Path "ψ" | Select-Object -ExpandProperty Path
     $ORACLE_ROOT = (Get-Location).Path
 } else {

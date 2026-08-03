@@ -1,55 +1,50 @@
 ---
-installer: arra-oracle-skills-cli v26.5.16
-origin: Nat Weerawan's brain, digitized — how one human works with AI, captured as code — Soul Brews Studio
 name: rrr
-description: '[project] v26.5.16 G-SKLL | Create session retrospective with AI diary and lessons learned. Use when user says "rrr", "retrospective", "wrap up session", "session summary", or at end of work session.'
-argument-hint: "[--quick | --detail | --deep]"
-trigger: /rrr
+description: Create session retrospective with AI diary and lessons learned. Use when user says "rrr", "retrospective", "wrap up session", "session summary", or at end of work session.
 ---
 
 # /rrr
 
 > "Reflect to grow, document to remember."
 
-## Oracle Root Detection (REQUIRED — win32/PowerShell)
+## Oracle Root Detection (REQUIRED — bash)
 
 **Every skill that writes to ψ/ MUST detect the oracle root first.**
 
-```powershell
-# Step 1: Find git root
-$ORACLE_ROOT = git rev-parse --show-toplevel 2>$null
-
-# Step 2: Cross-check — oracle repo has GEMINI.md + ψ/
-if ($ORACLE_ROOT -and (Test-Path "$ORACLE_ROOT\GEMINI.md") -and (Test-Path "$ORACLE_ROOT\ψ")) {
-    $PSI = Resolve-Path "$ORACLE_ROOT\ψ" | Select-Object -ExpandProperty Path
-} elseif ((Test-Path "GEMINI.md") -and (Test-Path "ψ")) {
-    $PSI = Resolve-Path "ψ" | Select-Object -ExpandProperty Path
-    $ORACLE_ROOT = (Get-Location).Path
-} else {
-    Write-Warning "Not in oracle repo (no GEMINI.md + ψ/). Writing to current directory."
-    $PSI = (Get-Location).Path
-}
+```bash
+ORACLE_ROOT=$(git rev-parse --show-toplevel 2>/dev/null)
+if [ -z "$ORACLE_ROOT" ]; then
+  ORACLE_ROOT="$(pwd)"
+fi
+PSI="$ORACLE_ROOT/ψ"
+if [ ! -d "$PSI" ]; then
+  echo "⚠️ No ψ/ found at $ORACLE_ROOT — writing there anyway."
+  mkdir -p "$PSI"
+fi
 ```
 
 ---
 
 ## /rrr (Default — background dig + parallel write)
 
-### 1. Gather git context (win32)
+### 1. Gather git context
 
-```powershell
-Get-Date -Format "HH:mm K (dddd dd MMMM yyyy)"
+```bash
+date "+%H:%M %Z (%A %d %B %Y)"
 git log --oneline -10
 git diff --stat HEAD~5
 ```
 
-Detect session ID (win32-native):
+Detect session ID:
 
-```powershell
-$ENCODED_PWD = (Get-Location).Path.Replace(':', '').Replace('\', '-')
-$PROJECT_BASE = Get-ChildItem -Path "$env:USERPROFILE\.gemini\tmp\arun-creagy\chats" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
-$LATEST_JSONL = Get-ChildItem -Path "$PROJECT_BASE\*.jsonl" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
-if ($LATEST_JSONL) { $SESSION_ID = $LATEST_JSONL.BaseName; Write-Host "SESSION: $($SESSION_ID.Substring(0, 8))" }
+```bash
+ENCODED_PWD="$(pwd | sed 's/[:/\\]/-/g')"
+PROJECT_BASE=$(ls -td "$HOME/.claude/projects"/*"$ENCODED_PWD"* 2>/dev/null | head -1)
+LATEST_JSONL=$(ls -t "$PROJECT_BASE"/*.jsonl 2>/dev/null | head -1)
+if [ -n "$LATEST_JSONL" ]; then
+  SESSION_ID=$(basename "$LATEST_JSONL" .jsonl)
+  echo "SESSION: ${SESSION_ID:0:8}"
+fi
 ```
 
 ### 1.5. Extract timestamps
@@ -59,9 +54,8 @@ if ($LATEST_JSONL) { $SESSION_ID = $LATEST_JSONL.BaseName; Write-Host "SESSION: 
 
 Run the predefined miner script to extract session timestamps:
 
-```powershell
-# Assuming $ORACLE_ROOT is resolved from step 1
-python "$ORACLE_ROOT\.agents\skills\rrr\scripts\miner.py"
+```bash
+python "$ORACLE_ROOT/.agents/skills/rrr/scripts/miner.py"
 ```
 
 ### 2. Write Retrospective (main agent)
@@ -70,30 +64,28 @@ python "$ORACLE_ROOT\.agents\skills\rrr\scripts\miner.py"
 
 ### 3. Write Lesson Learned (Knowledge Ingestion)
 
-**Mechanism**: You MUST use the `mcp_oracle-v2_arra_learn` tool to ingest the lesson.
+**Mechanism**: You MUST use the `oracle_learn` MCP tool to ingest the lesson (if available in this session — verify with a tool search before assuming it's connected; if it isn't, write the lesson file directly and note the sync as skipped).
 - **Pattern**: The core technical or philosophical learning.
-- **Concepts**: Relevant tags (e.g., [ontology, win32, causality]).
+- **Concepts**: Relevant tags (e.g., [ontology, causality]).
 - **Project**: The current project ghq path.
 
 > [!important]
-> Do NOT use `write_file` for learnings. Use `arra_learn` to ensure the pattern is indexed in the Oracle brain and available for hybrid search.
-
-
+> Prefer `oracle_learn` over a plain file write when the MCP tool is connected, so the pattern is indexed in the Oracle brain and available for hybrid search. If the tool isn't connected this session, write `$PSI/memory/learnings/` directly — don't block the retro on it.
 
 ---
 
-## Hard Rules (v26.5.16 Mandate)
+## Hard Rules
 
 1. **Verify Before Reporting**: Retros are the final truth. Verify all "shipped" items against git/filesystem.
 2. **Absolute Paths**: Render clickable Windows paths (e.g., `C:/...`) in the final announcement.
-3. **No Rationalization**: Follow the Anti-Rationalization Guard rules.
+3. **No Rationalization**: Follow the Anti-Rationalization Guard rules (see `DEEP.md` for the multi-agent version; apply the same spirit solo).
 4. **Agent Decision**: You MUST include exactly one `[→ AGENT DECISION]` naming a specific wrong choice you made.
 
 ---
 
 ## Demographics Context
 
-Check **GEMINI.md** for demographics. Include in header:
+Check **AGENTS.md** for demographics. Include in header:
 ```markdown
 **Oracle**: [name] ([pronouns]) | **Human**: [name] ([pronouns])
 ```

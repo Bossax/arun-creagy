@@ -1,9 +1,6 @@
 ---
-installer: arra-oracle-skills-cli v26.5.16
-origin: Project-local hardened version for Windows/ψ stability (aligned with global v26.5.16)
 name: trace
-description: '[local] Hardened v26.5.16 | The Lens: Unified forensic discovery across git history, repos, docs, and Oracle. Maps technical ancestry and generates T-E-D-A hypotheses.'
-argument-hint: "<query> [--oracle | --smart | --deep]"
+description: The Lens — unified forensic discovery across git history, repos, docs, and Oracle. Maps technical ancestry and generates T-E-D-A hypotheses. Use when user asks "trace", "find project", "where is [project]", "search history". Supports --oracle (fast), --smart (default), --deep (wave execution).
 ---
 
 # /trace — Unified Discovery System (The Forensic Lens)
@@ -21,24 +18,16 @@ argument-hint: "<query> [--oracle | --smart | --deep]"
 
 ---
 
-## Oracle Root Detection (REQUIRED — win32/PowerShell)
+## Oracle Root Detection (REQUIRED — bash)
 
 **Every skill that writes to ψ/ MUST detect the oracle root first.**
 
-```powershell
-# Step 1: Find git root
-$ORACLE_ROOT = git rev-parse --show-toplevel 2>$null
-
-# Step 2: Cross-check — oracle repo has GEMINI.md + ψ/
-if ($ORACLE_ROOT -and (Test-Path "$ORACLE_ROOT\GEMINI.md") -and (Test-Path "$ORACLE_ROOT\ψ")) {
-    $PSI = Resolve-Path "$ORACLE_ROOT\ψ" | Select-Object -ExpandProperty Path
-} elseif ((Test-Path "GEMINI.md") -and (Test-Path "ψ")) {
-    $PSI = Resolve-Path "ψ" | Select-Object -ExpandProperty Path
-    $ORACLE_ROOT = (Get-Location).Path
-} else {
-    Write-Warning "Not in oracle repo (no GEMINI.md + ψ/). Writing to current directory."
-    $PSI = (Get-Location).Path
-}
+```bash
+ORACLE_ROOT=$(git rev-parse --show-toplevel 2>/dev/null)
+if [ -z "$ORACLE_ROOT" ]; then
+  ORACLE_ROOT="$(pwd)"
+fi
+PSI="$ORACLE_ROOT/ψ"
 ```
 
 ---
@@ -67,7 +56,7 @@ Display results and done.
 - **Agent B (Oracle Memory)**: Search ψ/memory/ for learnings, retrospectives, and previous trace logs matching the query.
 - **Agent F (Session History - dig)**: Call the local session miner to extract session history:
   ```bash
-  python .agents/skills/trace/scripts/dig.py 50
+  python "$ORACLE_ROOT/.agents/skills/trace/scripts/dig.py" 50
   ```
   And search the output session data for mentions of the query.
 

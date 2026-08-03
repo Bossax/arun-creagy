@@ -9,13 +9,10 @@ date "+%H:%M %Z (%A %d %B %Y)"
 
 # Detect oracle root — don't assume pwd
 ORACLE_ROOT=$(git rev-parse --show-toplevel 2>/dev/null)
-if [ -n "$ORACLE_ROOT" ] && [ -f "$ORACLE_ROOT/GEMINI.md" ] && { [ -d "$ORACLE_ROOT/ψ" ] || [ -L "$ORACLE_ROOT/ψ" ]; }; then
-  PSI="$ORACLE_ROOT/ψ"
-else
-  echo "⚠️ Not in oracle repo. Using pwd."
+if [ -z "$ORACLE_ROOT" ]; then
   ORACLE_ROOT="$(pwd)"
-  PSI="$ORACLE_ROOT/ψ"
 fi
+PSI="$ORACLE_ROOT/ψ"
 
 ROOT="$ORACLE_ROOT"
 TODAY=$(date +%Y-%m-%d)
