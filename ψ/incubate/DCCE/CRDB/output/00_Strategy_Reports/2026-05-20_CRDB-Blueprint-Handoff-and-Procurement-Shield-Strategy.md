@@ -33,16 +33,16 @@ We must align with **Director Nid** (Director of the Climate Change Adaptation D
 ## 3. The "Complete" Deliverable (The 8 Pillars of Success)
 Success is now defined as delivering an **Inception Package** that provides the domain-specific knowledge required to build the system without methodology discovery. This list has been re-calibrated against project reality (missing national reference data and vast dataset scale).
 
-| Pillar                                  | Success Criteria (The Handoff Baseline)                                 | Role in the 25M THB Project                                    |
-| :-------------------------------------- | :---------------------------------------------------------------------- | :------------------------------------------------------------- |
-| **1. Climate Data Model (CDM)**         | Hardened **EAR Catalog** (Excel/CSV) for Asset/Risk/Adaptation.         | **Logical Baseline**: Contractor builds physical DB to this model. |
-| **2. Business Glossary**                | Controlled list of 100+ terms with owner-approved definitions.          | **Semantic Layer**: Contractor implements as a Universal Semantic Layer. |
-| **3. LDM Logic Rules (MVD)**            | Deterministic formulas for Loss & Damage entity relationships.          | **Code Logic**: Contractor writes functions to these formulas. |
-| **4. Subject-Area Interface Map**       | Mapping major source classes (e.g. ThaiWater) to CDM Subject Areas.     | **ETL Spec**: Contractor builds Harvesters to this mapping.    |
-| **5. Data Quality Framework**           | G1-G5 Audit Rules and Metadata compliance gates.                        | **System Rail**: Contractor builds automated Gating logic.    |
-| **6. Governance Operating Model**       | RACI matrix with Director Nid (Approver) and Sub-divisions (Stewards).  | **User Roles**: Contractor implements as platform Permissions. |
-| **7. Reference Data Dependency Matrix** | Identification of entities requiring shared lookups (e.g. Admin Units). | **Lookup Base**: Contractor seeds DB with these Master Data sets. |
-| **8. Building Block Catalog**           | Tiered feature list (Must-Have vs. Nice-to-Have).                       | **Scope Filter**: Contractor builds only validated Tiers.      |
+| Pillar                                  | Success Criteria (The Handoff Baseline)                                 | Role in the 25M THB Project                                                            |
+| :-------------------------------------- | :---------------------------------------------------------------------- | :------------------------------------------------------------------------------------- |
+| **1. Climate Data Model (CDM)**         | Hardened **EAR Catalog** (Excel/CSV) for Asset/Risk/Adaptation.         | **Logical Baseline**: Contractor builds physical DB to this model.                     |
+| **2. Business Glossary**                | Controlled list of 100+ terms with owner-approved definitions.          | **Semantic Layer**: Contractor implements as a Universal Semantic Layer. %%not quite%% |
+| **3. LDM Logic Rules (MVD)**            | Deterministic formulas for Loss & Damage entity relationships.          | **Code Logic**: Contractor writes functions to these formulas.                         |
+| **4. Subject-Area Interface Map**       | Mapping major source classes (e.g. ThaiWater) to CDM Subject Areas.     | **ETL Spec**: Contractor builds Harvesters to this mapping.                            |
+| **5. Data Quality Framework**           | G1-G5 Audit Rules and Metadata compliance gates.                        | **System Rail**: Contractor builds automated Gating logic.                             |
+| **6. Governance Operating Model**       | RACI matrix with Director Nid (Approver) and Sub-divisions (Stewards).  | **User Roles**: Contractor implements as platform Permissions.                         |
+| **7. Reference Data Dependency Matrix** | Identification of entities requiring shared lookups (e.g. Admin Units). | **Lookup Base**: Contractor seeds DB with these Master Data sets.                      |
+| **8. Building Block Catalog**           | Tiered feature list (Must-Have vs. Nice-to-Have).                       | **Scope Filter**: Contractor builds only validated Tiers.                              |
 
 ---
 
