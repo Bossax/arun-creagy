@@ -1,0 +1,1791 @@
+{
+  "project": "CRDB",
+  "projectPath": "ψ/incubate/DCCE/CRDB",
+  "prefix": "CRDB",
+  "generatedAt": "2026-08-05T06:05:31.343Z",
+  "entries": [
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-03/10/11.55_rrr_knowledge-ops-migration.md",
+      "date": "2026-03-10",
+      "time": "11:55",
+      "focus": "Refactor knowledge workspace for researcher workflow (Inbox triage + Incubate deliverables + shared assets)",
+      "type": "Refactoring | Knowledge Ops",
+      "sessionSummary": "Migrated legacy research/project materials into a structure that matches your workflow philosophy: raw capture → Inbox queue, deliverables → Incubate, assets centralized without breaking embeds, and everything logged for traceability.\n\nPulse context (from `project.json`/`heartbeat.json`): Session #1 of 1 in this project (1-day streak).",
+      "nextSteps": [
+        "Triage the two new inbox queues:",
+        "`ψ/inbox/_triage_from_active/`",
+        "`ψ/inbox/_triage_from_writing_notes/`",
+        "In each incubate Hub, add:",
+        "project goal (1–2 sentences)",
+        "key deliverables links",
+        "“next decision” list",
+        "Start Harvest step: extract 3–5 atomic notes from today’s migration + workflow alignment into `ψ/memory/learnings/`."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-03/10/16.10_rrr_knowledge-ops-triage-crdb-cri-btr.md",
+      "date": "2026-03-10",
+      "time": "16:10",
+      "focus": "Route triage inputs into project-scoped inboxes; harden Hub/plan navigation; normalize Obsidian-friendly links",
+      "type": "Refactoring | Knowledge Ops",
+      "sessionSummary": "Session #1 of 1 in this project (1-day streak)\n\n- Consolidated CRDB triage inputs into a project-scoped inbox, then locked Phase 1 decisions into hub/plan + decision log.\n- Consolidated CRI triage inputs into a project-scoped inbox, updated hub/plan, then applied clarifications (multi-score by capacity; cross-sector economic proxy guidance) and normalized links.\n- Consolidated UNDP-BTR triage inputs into a project-scoped inbox and updated hub/plan to become navigation + execution artifacts.\n- Adopted a consistent rule: clarification notes, once applied, get moved from global inbox into project inbox `active/` as an audit trail.",
+      "nextSteps": [
+        "Decide whether the next processing step is:",
+        "(A) promote/synthesize inbox items into canonical outputs, or",
+        "(B) create structured indexes/reading lists per project inbox.",
+        "Repeat the “apply → archive clarification into project inbox active” rule for future clarification notes."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-03/10/21.26_fgd2-design-choice-polls-and-deck-alignment.md",
+      "date": "2026-03-10",
+      "time": "21:26",
+      "focus": "21.26_fgd2-design-choice-polls-and-deck-alignment.md",
+      "type": "Unspecified",
+      "sessionSummary": "Session #1 of 1 in this project (1-day streak)\n\nAligned CRDB Phase 1 artifacts to the FGD2 deck framing and rewrote the workshop polling so answers directly support concrete design decisions across NCAIF sitemap, CDM scope, MVP prioritization, and governance gates.",
+      "nextSteps": [
+        "Use the sitemap-only and governance-only poll sets as the default Mentimeter block; add only 1–2 additional decision-bank questions if time allows.",
+        "After FGD2, convert poll outcomes into a decision log update and tighten wording across MVP v3 and governance v3 where necessary."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-03/11/17.18_rrr_fgd2-transcript-cleaning-and-crdb-packaging.md",
+      "date": "2026-03-11",
+      "time": "17:18",
+      "focus": "Clean FGD2 transcript, synthesize action-oriented summary grounded in minutes, log key insights, and bake actions into CRDB plan.",
+      "type": "Research / Knowledge Ops",
+      "sessionSummary": "Converted the onsite FGD2 `.vtt` transcript into a readable cleaned markdown transcript, then produced and iteratively refined an action-oriented synthesis for the CRDB project. The synthesis was re-grounded using in-room meeting minutes (as source-of-truth when transcription quality is imperfect) and augmented with key “decision-maker mental model” insights (sitemap-first, “website = platform”) and follow-up participant feedback (need more sitemap detail and confirmation that topics can evolve). Actions were baked into the CRDB project plan.\n\nSession #1 of 1 in this project (1-day streak).",
+      "nextSteps": [
+        "Deliver the drill-down sitemap + explicit sitemap change process (as planned in [`ψ/incubate/DCCE/CRDB/plan.md`](ψ/incubate/DCCE/CRDB/plan.md:57)).",
+        "Draft the one-page “Backend enables sitemap” narrative for decision-makers.",
+        "Draft MVP-3 baseline registry schema and MVP-2 intake/quarantine templates."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-03/12/12.32_rrr_dcce-ncaif-gap-analysis.md",
+      "date": "2026-03-12",
+      "time": "12:32",
+      "focus": "DCCE CRDB — NCAIF sitemap refinement + DCCE website content gap analysis",
+      "type": "Research / Documentation",
+      "sessionSummary": "Session #1 of 1 in this project (1-day streak). Delivered the NCAIF sitemap vNext refinement and completed the full DCCE website content gap analysis artifact set, including inventory, mapping matrix, summary, and report-ready insert.",
+      "nextSteps": [
+        "If needed, convert the gap analysis insert into a slide-ready visual for the interim report.",
+        "Draft the adaptation-cycle overview page and Policy Maker Center landing copy as Phase‑1 quick IA fixes."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-03/12/17.44_rrr_crdb-interim-report-section1-and-baseline.md",
+      "date": "2026-03-12",
+      "time": "17:44",
+      "focus": "Consolidating the CRDB interim-report baseline, evidence logic, and Chapter 1 Section 1 draft",
+      "type": "Research",
+      "sessionSummary": "Session #1 of 1 in this project (1-day streak)",
+      "nextSteps": [
+        "Review the Chapter 1 draft for tone consistency and remove any remaining repetition across subsections 1.1-1.12.",
+        "Continue drafting Chapter 2 using the same evidence-to-claim discipline established in Section 1.",
+        "Prepare the interim-report insert that explains what FGD2 validated, what changed, and why the revised sitemap remains flexible within governance rails."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-03/13/10.37_crdb-interim-report-drafting-sections1.6-1.12-and-style-learning.md",
+      "date": "2026-03-13",
+      "time": "10:37",
+      "focus": "Drafting CRDB interim-report Chapter 1, refining section framing, and learning Thai report-writing patterns from the user's edits",
+      "type": "Research / Writing / Planning",
+      "sessionSummary": "Session #1 of 1 in this project (1-day streak)\n\nThis session completed the main architecture-and-writing groundwork for Chapter 1 of the CRDB interim report. I extracted and organized the platform-review evidence from the inception report, stored it as a reusable output note, then updated the chapter anchors so Sections 1.5, 1.6, and 1.7 matched the user's intended framing. I prepared the Thai outline for Sections 1.1–1.5, drafted those sections, compared the first draft against the user-edited version, and distilled stable style lessons into long-term writing guidance. I then drafted Sections 1.6–1.12 so the full Chapter 1 draft arc now exists as two linked working drafts in the CRDB output folder.",
+      "nextSteps": [
+        "Review the full Chapter 1 draft across [`2026-03-13-CRDB-Interim-Report-Section-1.1-1.5-Draft-th edited.md`](ψ/incubate/DCCE/CRDB/output/2026-03-13-CRDB-Interim-Report-Section-1.1-1.5-Draft-th%20edited.md) and [`2026-03-13-CRDB-Interim-Report-Section-1.6-1.12-Draft-th.md`](ψ/incubate/DCCE/CRDB/output/2026-03-13-CRDB-Interim-Report-Section-1.6-1.12-Draft-th.md) to unify tone, transitions, and citation handling.",
+        "Decide whether to merge the two Chapter 1 draft files into a single integrated working draft or keep them separate until one more revision pass is complete.",
+        "Prepare the next session handoff so the remaining work can begin from a clean state rather than reconstructing progress from scattered outputs."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-03/17/13.08_rrr_crdb-interim-report-ch1-ch2-restructuring.md",
+      "date": "2026-03-17",
+      "time": "13:08",
+      "focus": "Restructuring the CRDB interim report logic across Chapter 1 and Chapter 2, refining the NCAIF design narrative, and stabilizing the anchor planning file.",
+      "type": "Research",
+      "sessionSummary": "Session #1 of 1 in this project (1-day streak)\n\nThis session focused on turning a loose drafting effort into a governed writing architecture for the CRDB interim report. I first compared AI-generated and edited Chapter 1 drafts, distilled the editing patterns, and updated long-term Thai writing guidance in [`ψ/memory/resonance/writing-style-th.md`](ψ/memory/resonance/writing-style-th.md). I then expanded the Chapter 1 material to better explain CDM, sitemap logic, governance gates, and the role of FGD1 signals in shaping the NCAIF structure.\n\nThe work then shifted from writing to report architecture. I narrowed the purpose of Chapter 2 for the interim report, separating it from the broader final-report ambition and recasting it as a disciplined review of the current data product landscape plus interview synthesis. After that, I restructured the relationship between Chapter 1 and Chapter 2: descriptive current-state material was reassigned toward Chapter 2, while Chapter 1 retained only the analytical implications needed to justify the architecture. This led to the creation of a v2 working draft for Chapter 1 restructuring, a merged Chapter 1 v3 draft, and multiple planning notes anchored to [`ψ/incubate/DCCE/CRDB/output/2026-03-12-Interim Report Writing Plan.md`](ψ/incubate/DCCE/CRDB/output/2026-03-12-Interim%20Report%20Writing%20Plan.md).",
+      "nextSteps": [
+        "Build the pre-drafting analysis artifacts identified in [`ψ/incubate/DCCE/CRDB/output/2026-03-17-Chapter1-Chapter2-restructuring-decision-note.md`](ψ/incubate/DCCE/CRDB/output/2026-03-17-Chapter1-Chapter2-restructuring-decision-note.md): interview comparison matrix, product landscape table, stakeholder-needs synthesis note, use-case clustering note, and Chapter 1 to Chapter 2 handoff note.",
+        "Review [`ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-Interim-Report-Chapter-1-Draft-v3.md`](ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-Interim-Report-Chapter-1-Draft-v3.md) once more for prose consistency and terminology smoothing before any deeper drafting.",
+        "Begin drafting Chapter 2 only after the analysis artifacts are complete and traceable back to [`ψ/incubate/DCCE/CRDB/output/2026-03-12-Interim Report Writing Plan.md`](ψ/incubate/DCCE/CRDB/output/2026-03-12-Interim%20Report%20Writing%20Plan.md)."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-03/18/00.31_rrr_crdb-interim-report-ch1-ch2-appendices-and-style-learning.md",
+      "date": "2026-03-18",
+      "time": "00:31",
+      "focus": "CRDB interim report — recap, Chapter 2 evidence building, Thai drafting, revision from user comments, and appendix drafting",
+      "type": "Research | Planning | Writing | Revision",
+      "sessionSummary": "Session #1 of 1 in this project (1-day streak)\n\nThis session moved the CRDB interim report from planning ambiguity into a much more structured drafting state. The work started with session orientation and a review of the handoff plus the interim writing plan, then shifted into a deliberate pre-drafting phase for Chapter 2. I built an evidence package around the Chapter 2 landscape review: interview comparison matrix, current data product landscape table, stakeholder-needs synthesis, use-case clustering, and a Chapter 1 → Chapter 2 handoff note. The anchor writing plan was updated so the evidence map now points to concrete supporting artifacts instead of only raw sources.\n\nThe session then moved into Thai drafting work. I loaded the Thai writing skill, retrieved relevant Thai-writing learnings, produced an outline in the anchor plan, drafted a full Thai Chapter 2, revised the file structure after feedback, then learned from user comments on both Chapter 1 and Chapter 2. Those comments materially improved the output: they pushed the prose toward more natural Thai administrative language, stronger decision-facing examples, summary tables for dense synthesis, and clearer separation between report logic and appendix-level detail. Based on that, I produced revised review versions of both chapters and then drafted a new appendices file covering CDM, use cases, and the sitemap in much fuller detail.",
+      "nextSteps": [
+        "Review the appendix draft for completeness and tone consistency",
+        "Integrate accepted review versions of Chapter 1, Chapter 2, and appendices into a cleaner report set",
+        "Compare any further user-edited review files and continue learning Thai sponsor-facing report patterns",
+        "Prepare the remaining sections and inserts needed for full interim-report consolidation"
+      ],
+      "changeLogRows": [
+        {
+          "change_id": "CH-005",
+          "date": "2026-03-18",
+          "change_summary": "Introduced a deadline-driven freeze boundary for the interim report submission cycle (“ship as-is” cutoff), establishing a clear internal milestone before external snapshots.",
+          "trigger_s": "T-013",
+          "affected_decisions": "Interim report drafting baseline constraints referenced in [`phase1_decision_log.md`](ψ/incubate/DCCE/CRDB/archive/phase1_decision_log.md)",
+          "affected_deliverables": "D-014 (drafting baseline package), D-002 (interim report snapshots)",
+          "impact_description": "Made the submission cycle auditable: later content gaps can be explained as deliberately deferred beyond the cutoff, not forgotten.",
+          "notes": "See S-003 in [`CRDB-Submission-Log.md`](ψ/incubate/DCCE/CRDB/CRDB-Submission-Log.md).",
+          "": ""
+        }
+      ],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-03/18/01.52_rrr_crdb-thai-drafting-and-appendix-cleanup.md",
+      "date": "2026-03-18",
+      "time": "01:52",
+      "focus": "CRDB interim-report drafting, Thai translation outputs, and appendix language cleanup",
+      "type": "Research / Writing / Refactoring",
+      "sessionSummary": "Session #1 of 1 in this project (1-day streak)\n\nThis session focused on converting a large body of CRDB working materials into cleaner Thai sponsor-facing outputs. The work began with session orientation and a check on the current drafting state of the CRDB interim report. From there, attention shifted to improving project navigation by updating the CRDB Hub with the latest chapter drafts and report-related artifacts. A substantial portion of the session was then spent in Thai writing mode: refining the Chapter 3 plan, adapting it to the still half-formed Task 5.5 scope, drafting the Chapter 3 body in Thai, and translating interview summaries into a single Thai synthesis file. The session also produced a Thai synthesis of FGD1 and FGD2. In parallel, I worked on cleaning the appendices draft to reduce unnecessary English phrasing and remove confusing mixed Thai-letter numbering, though that part progressed more slowly because repeated patch applications failed and required smaller, more careful edits.",
+      "nextSteps": [
+        "Continue cleaning [`ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-Interim-Report-Appendices-draft.md`](ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-Interim-Report-Appendices-draft.md) until all English-heavy labels and mixed numbering are normalized.",
+        "Review and refine [`ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-Interview-Summaries-th-draft.md`](ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-Interview-Summaries-th-draft.md) for consistency of terminology across agencies.",
+        "Decide how much of [`ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-FGD1-FGD2-summary-th-draft.md`](ψ/incubate/DCCE/CRDB/output/2026-03-17-CRDB-FGD1-FGD2-summary-th-draft.md) should be pulled into the interim report body versus kept as a supporting note."
+      ],
+      "changeLogRows": [
+        {
+          "change_id": "CH-005",
+          "date": "2026-03-18",
+          "change_summary": "Introduced a deadline-driven freeze boundary for the interim report submission cycle (“ship as-is” cutoff), establishing a clear internal milestone before external snapshots.",
+          "trigger_s": "T-013",
+          "affected_decisions": "Interim report drafting baseline constraints referenced in [`phase1_decision_log.md`](ψ/incubate/DCCE/CRDB/archive/phase1_decision_log.md)",
+          "affected_deliverables": "D-014 (drafting baseline package), D-002 (interim report snapshots)",
+          "impact_description": "Made the submission cycle auditable: later content gaps can be explained as deliberately deferred beyond the cutoff, not forgotten.",
+          "notes": "See S-003 in [`CRDB-Submission-Log.md`](ψ/incubate/DCCE/CRDB/CRDB-Submission-Log.md).",
+          "": ""
+        }
+      ],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-03/23/16.58_crdb-interview-ingestion-and-mvp-alignment.md",
+      "date": "2026-03-23",
+      "time": "16:58",
+      "focus": "CRDB interview synthesis, downstream ingestion, workflow traceability, and MVP alignment",
+      "type": "Research",
+      "sessionSummary": "Session #1 of 1 in this project (1-day streak)\n\nThis session moved from orientation into evidence consolidation. I started by re-establishing context around the CRDB interim-report workspace, then reviewed the global inbox to surface current work signals. From there, the session focused on CRDB stakeholder interview materials: identifying the missing summaries, generating new summary notes for BMA and DPT from transcripts, tracing how interview evidence already flows into later outputs, and then explicitly ingesting the newly completed interview notes into downstream project artifacts. The final phase shifted upward from evidence handling to product strategy: assessing whether the newer interview evidence should alter NCAIF workflow patterns and MVP requirements, then preserving the CRDB data-processing pipeline as an FYI memory entry for future recall.",
+      "nextSteps": [
+        "Run Oracle sync for the core lesson about interview-ingestion traceability and MVP discipline.",
+        "If needed in a later session, perform a lightweight clarification pass on [ψ/incubate/DCCE/CRDB/output/NCAIF — Workflow patterns + MVP v3.md](ψ/incubate/DCCE/CRDB/output/NCAIF%20%E2%80%94%20Workflow%20patterns%20%2B%20MVP%20v3.md) rather than a full successor version.",
+        "Maintain explicit mappings from agency interview summaries into future comparison matrices, needs syntheses, and report-facing artifacts."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-03/23/22.05_rrr_cce-interview-prep-th-note.md",
+      "date": "2026-03-23",
+      "time": "22:05",
+      "focus": "Design and draft Thai interview-prep note and opening questions for Head of CCE",
+      "type": "Research | Writing | Governance design",
+      "sessionSummary": "Worked on translating and operationalizing the Head-of-CCE interview prep into a Thai, report-style note plus a concise set of opening questions. Clarified CCE’s most plausible governance role as a **partial custodian only for data products or web services that CCE operates directly**, and separated that project-wide role framing from the interview-specific context. Produced a structured Thai draft at [`ψ/incubate/DCCE/CRDB/output/2026-03-23-TH-prep-for-HEAD-CCE-interview-draft.md`](ψ/incubate/DCCE/CRDB/archive/2026-03-23-TH-prep-for-HEAD-CCE-interview-draft.md) and added a focused opening-question block for use at the start of the meeting.",
+      "nextSteps": [
+        "ให้ผู้ใช้ตรวจทานและปรับสำนวนในร่างภาษาไทยที่ [`ψ/incubate/DCCE/CRDB/output/2026-03-23-TH-prep-for-HEAD-CCE-interview-draft.md`](ψ/incubate/DCCE/CRDB/archive/2026-03-23-TH-prep-for-HEAD-CCE-interview-draft.md) ให้สอดคล้องกับน้ำเสียงส่วนตัวและระดับความเป็นทางการที่ต้องการ",
+        "หลังการสัมภาษณ์จริง ให้สร้างโน้ตบันทึกผลการสัมภาษณ์ที่ mapping คำตอบของ CCE เข้ากับ role map (owner–steward–custodian–reviewer) เพื่อใช้ล็อกบทบาทใน CRDB และ BTR อย่างเป็นระบบ",
+        "เมื่อได้เวอร์ชัน edited ของโน้ตภาษาไทยแล้ว ให้ใช้เป็นคู่เทียบกับ draft เพื่อเรียนรู้รูปแบบคำถามและสำนวนที่มนุษย์ปรับแก้ แล้วบันทึกลง `ψ/memory/learnings/` สำหรับการเขียนโน้ตสัมภาษณ์ภาษาไทยครั้งถัดไป"
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-03/24/18.11_crdb-progress-meeting-governance-reframe.md",
+      "date": "2026-03-24",
+      "time": "18:11",
+      "focus": "18.11_crdb-progress-meeting-governance-reframe.md",
+      "type": "Unspecified",
+      "sessionSummary": "Session #1 of 1 in this project (1-day streak).\n\nThis session consolidated the CRDB progress-meeting preparation into a more coherent and realistic package. The work started from transcript interpretation and interim-report alignment, then moved into artifact production and correction. The most important shift was conceptual: moving from a partly technical-integration reading of CRDB toward a governance-and-negotiation reading. By the end of the session, the IT integration hypothesis, workshop design, progress-meeting decisions, and agenda were all being framed with clearer attention to uncertainty, trust, and access constraints.",
+      "nextSteps": [
+        "Draft a one-page DCCE IT system hypothesis diagram grounded in the current IT integration note and agenda.",
+        "If needed, tighten the progress-meeting decisions note and agenda language further so the trust/access caveat is impossible to miss.",
+        "Use the revised agenda and workshop plan as the baseline package for the upcoming discussion with Director Toey."
+      ],
+      "changeLogRows": [
+        {
+          "change_id": "CH-001",
+          "date": "2026-03-24",
+          "change_summary": "Locked Phase 1 stance around catalog-first architecture, workflow-pattern-first sitemap, and MVP-3 + MVP-2 as the core deliverables; clarified governance gates and endorsement approach.",
+          "trigger_s": "T-001",
+          "affected_decisions": "Phase 1 decisions as recorded in [`phase1_decision_log.md`](ψ/incubate/DCCE/CRDB/archive/phase1_decision_log.md)",
+          "affected_deliverables": "D-001 (management evidence pack), D-002 (interim report narrative), future governance notes (D-004)",
+          "impact_description": "Consolidated previous assumptions into a confirmed decision set, tightening scope and expectations for interim report drafting and governance design.",
+          "notes": "Acts as the main reference for \"what changed at the March 24 progress meeting\"; later changes should reference this entry when revisiting decisions.",
+          "": ""
+        }
+      ],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-03/25/11.01_local-skills-standup-recap-reset.md",
+      "date": "2026-03-25",
+      "time": "11:01",
+      "focus": "11.01_local-skills-standup-recap-reset.md",
+      "type": "Unspecified",
+      "sessionSummary": "Restored the repo’s local Roo skills after an accidental workspace-scoped installer dump, re‑implemented `/standup` as a SKILL‑only fix using `bash -lc` for deterministic retro ordering (no `focus-agent-main.md` dependency), and restored the missing local `/recap` SKILL.md to point at the existing project script. Session #1 of 1 in this project (1‑day streak).",
+      "nextSteps": [
+        "Keep the local skill set minimal and avoid running workspace‑scoped installers in this repo.",
+        "If installer noise appears again, restore tracked local skills using `git restore` and verify with `git ls-tree -r HEAD .roo/skills`."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-03/25/13.34_crdb-interim-evidence-section1-wrap.md",
+      "date": "2026-03-25",
+      "time": "13:34",
+      "focus": "Executing evidence-gathering plan for Section 1 (TOR 5.2.1–5.2.5) and wiring artefacts into the Evidence Gathering Plan",
+      "type": "Research / Refactoring",
+      "sessionSummary": "This session focused on turning the CRDB Interim Report Evidence Gathering Plan from an abstract table into concrete, report-ready artefacts for Section 1. We executed the plan for TOR 5.2.1–5.2.5: benchmark platforms, DCCE current structure, draft NCAIF structure, FGD and consultations, and revisions plus data management structure. For each TOR clause, we created named notes and tables under `ψ/incubate/DCCE/CRDB/output/`, aligned with v1 interim report chapters and appendices. We also attempted to upgrade the Evidence Gathering Plan so that its \"Report-ready outputs\" column references full vault-relative paths, ready for Obsidian navigation, although the final filename strings are still using bare filenames at the time of wrap.",
+      "nextSteps": [
+        "Finish upgrading the Evidence Gathering Plan so that all report-ready outputs use full vault-relative paths (and, if you decide, Obsidian `[[...]]` links)",
+        "Update the reminders / TODO list to mark 5.2.1–5.2.5 core artefact creation as complete and focus on QA criteria",
+        "Run quick QA passes for each 5.2.x artefact, checking against their ready-for-writing criteria and adjusting content where needed",
+        "Once Section 1 passes the evidence gate, extend the same pattern to Section 2 (TOR 5.3.1–5.3.2) and Section 3 (TOR 5.5.x)"
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-03/25/18.26_crdb-interim-report-planning-and-evidence-anchor.md",
+      "date": "2026-03-25",
+      "time": "18:26",
+      "focus": "CRDB interim report v2 writing plan and evidence-gathering anchor",
+      "type": "Research & Planning",
+      "sessionSummary": "This session focused on preparing the ground for revising the CRDB interim report (first submission) into a TOR- and feedback-aligned v2, without rewriting the entire report from scratch. I designed and iteratively refined two anchor artifacts: a v2 writing plan that clarifies structure and narrative, and an evidence-gathering plan that lists only the remaining evidence tasks necessary for the revision. I also encoded discipline around Deep Research usage, ensuring it is used sparingly and primarily for Thailand-focused Task 5.5 work.",
+      "nextSteps": [
+        "Use the Evidence Gathering Plan to execute only the remaining high-value evidence tasks: interview coverage table, FGD/public hearing synthesis, revision log, data management structure, and Task 5.5 Lists A/B for Thailand.",
+        "Once those evidence tasks are complete, begin a section-by-section rewrite of the v1 interim report using the v2 writing plan as the structural guide and the Evidence Plan as the checklist.",
+        "Optionally, manually annotate the Evidence Plan mapping table with concrete v1 section headings and page ranges (from the PDFs) so that each TOR/evidence row points to a specific part of the v1 report."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-03/25/21.36_crdb-evidence-gathering-section1-2-retro.md",
+      "date": "2026-03-25",
+      "time": "21:36",
+      "focus": "CRDB interim-report evidence artefacts for TOR 5.2.1–5.2.5 and 5.3.1–5.3.2, plus fixing canonical-source discipline",
+      "type": "Unspecified",
+      "sessionSummary": "Worked on the CRDB interim-report evidence layer for Section 1 and Section 2. This included tightening the Evidence Gathering Plan, correcting the canonical-source model to treat interim-report PDFs as the only v1 text, and (re)building the 5.2.1–5.3.2 artefacts as ready-for-writing tables and notes. Pulse data indicates: Session #1 of 1 in this project (1-day streak), with neutral week-on-week velocity.",
+      "nextSteps": [
+        "Do a focused QA pass on the 5.2.4 artefacts to ensure every event and signal is explicitly anchored to the correct appendices and PDF sections.",
+        "Reconfirm that the 5.3.2 synthesis note and tables are fully grounded in the v1 PDFs and interview appendices, with no residual reliance on markdown summaries.",
+        "Use the updated Evidence Gathering Plan as a checklist to tick off ready-for-writing criteria for each artefact before returning to drafting.",
+        "After this retrospective, record a dedicated learning about PDF-first evidence discipline and sync it into the Oracle memory layer for reuse in future projects."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-03/25/23.18_writing-plan-v3-cleanup-and-criteria.md",
+      "date": "2026-03-25",
+      "time": "23:18",
+      "focus": "CRDB Interim Report writing plan — evidence-first workflow + committee-criteria alignment",
+      "type": "Refactoring (document structure) + Planning",
+      "sessionSummary": "Session #1 of 1 in this project (1-day streak)\n\nRebuilt the CRDB interim-report writing plan to be usable as a drafting-session anchor: canonical sources were corrected (MD sources under `inbox_source`), committee feedback was formatted and linked as evaluation criteria, and the writing plan v3 was refactored to reduce duplicated workflow instructions while keeping clause-level output checks.",
+      "nextSteps": [
+        "Use [`ψ/incubate/DCCE/CRDB/output/2026-03-25-CRDB-Interim-Report-Writing-Plan-v3.md`](ψ/incubate/DCCE/CRDB/output/2026-03-25-CRDB-Interim-Report-Writing-Plan-v3.md) as the anchor for the next drafting session.",
+        "During drafting, decide whether to pull the 5.5 mapping artifacts into the writing workflow (deferred intentionally).",
+        "After a draft pass, run the v3 implementation checklist as QA against committee feedback and TOR order."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-03/26/08.35_crdb-interim-v3-drafts-style-mismatch.md",
+      "date": "2026-03-26",
+      "time": "08:35",
+      "focus": "Draft TOR-ordered subsection files for CRDB Interim Report v3; then triage a style/format mismatch for DCCE audience",
+      "type": "Writing / Packaging / Process correction",
+      "sessionSummary": "Session #1 of 1 in this project (1-day streak)",
+      "nextSteps": [
+        "Rewrite into a DCCE-facing main-body draft (single file) with coherent paragraph prose and no repo links.",
+        "Build an internal traceability map (claim/paragraph → internal artifact file) for review.",
+        "Extract all “missing/uncertain” items into an internal QA log.",
+        "Normalize the style pack to make these rules explicit."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-03/26/11.32_crdb-interim-v3-prose-rewrite-and-structure.md",
+      "date": "2026-03-26",
+      "time": "11:32",
+      "focus": "CRDB Interim Report v3 prose rewrite: TOR-only headings, paragraph-first Thai voice, sitemap hierarchy bullets, summary tables, and literature inventory discipline",
+      "type": "Refactoring",
+      "sessionSummary": "Re-aligned the Interim Report v3 drafting workflow to match v1-style paragraph prose while keeping evidence traceability internal, then iteratively restructured clauses to include only the required hierarchy bullets/tables (not template subsections), and expanded the 5.5.1 literature inventory table to fully reflect a Consensus AI evidence scan.",
+      "nextSteps": [
+        "Human editing pass: tune tone and committee-facing emphasis without changing the structural discipline.",
+        "If edits materially change patterns (e.g., preferred phrasing, table conventions), feed a diff back into learning capture for reuse."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-03/27/10.53_crdb-pm-artifacts-evidence-system-update.md",
+      "date": "2026-03-27",
+      "time": "10:53",
+      "focus": "CRDB project-management artifacts up-to-date check; evidence system updates; plan readability improvements",
+      "type": "Documentation / PM surface maintenance",
+      "sessionSummary": "Updated CRDB PM artifacts so the latest progress-meeting decisions, interim-report submission snapshot, and sponsor watchpoints are discoverable from the evidence system and plan. Also improved `plan.md` to be more actionable by adding a top “Status” block and a “Now / next” checklist.\n\nPulse context indicates this repo’s pulse tracking is stale (still shows 1 session total from 2026-03-09), so streak/velocity signals were not reliable for this session.",
+      "nextSteps": [
+        "Leave `plan.md` further refinement for later (user decision).",
+        "If/when desired: perform link-hygiene normalization and link verification in a staged, consent-driven way.",
+        "Commit the retrospective + learning files (rrr standard) after confirming which repo changes are in-scope to commit."
+      ],
+      "changeLogRows": [
+        {
+          "change_id": "CH-002",
+          "date": "2026-03-27",
+          "change_summary": "Created the first CRDB project-management anchors: trigger log, deliverable map, claim register, submission log, change log, project-management module specs, and a controlled facade contract.",
+          "trigger_s": "T-001, T-002, T-003",
+          "affected_decisions": "None new; these artifacts operationalize existing decisions without changing them.",
+          "affected_deliverables": "D-003 (this deliverable map), D-005 (submission log), project-management module and facade specs",
+          "impact_description": "Shifted project-management practice from ad-hoc reasoning to explicit, artifact-centered ledgers, while preserving a low-agency, advisory posture for any automation.",
+          "notes": "This change introduces the scaffolding for Option B (controlled facade) without enabling autonomous orchestration.",
+          "": ""
+        },
+        {
+          "change_id": "CH-006",
+          "date": "2026-03-27",
+          "change_summary": "Sponsor progress meeting confirmed multiple practical pivots: strict TOR alignment for interim-report revision; “CDM mental model” required to avoid a static website; Phase 1 MVP focus narrowed to L&D structure + data catalog; workshop logistics became urgent (invite letters early next month); and coordination with Digital Tech consultant initiative became a dependency.",
+          "trigger_s": "T-004, T-002",
+          "affected_decisions": "Reinforces (not replaces) Phase 1 stance in [`phase1_decision_log.md`](ψ/incubate/DCCE/CRDB/archive/phase1_decision_log.md); introduces coordination requirements for governance ownership mapping",
+          "affected_deliverables": "D-002 (interim report snapshots), D-006 (workshop package), D-004 (governance role-mapping notes), D-009 (NCAIF), D-010 (CDM)",
+          "impact_description": "Converted several “good practice” ideas into sponsor-backed requirements and critical-path tasks; increased urgency for logistics and cross-team alignment to avoid duplicated platform work.",
+          "notes": "Evidence anchor: E-021 (meeting summary), plus E-024/E-023 for coordination context.",
+          "": ""
+        },
+        {
+          "change_id": "CH-007",
+          "date": "2026-03-27",
+          "change_summary": "Workshop stream reframed as a bridge/baton-pass from earlier baseline meetings to NFCS validation: shift from dataset identification toward synthesis via facilitated breakouts, aligned to sponsor constraints.",
+          "trigger_s": "T-005, T-004",
+          "affected_decisions": "Workshop positioning consistent with Phase 1 stance in [`phase1_decision_log.md`](ψ/incubate/DCCE/CRDB/archive/phase1_decision_log.md)",
+          "affected_deliverables": "D-017 (workshop stream continuation plan), D-006 (workshop invite + logistics package)",
+          "impact_description": "Protects participant time and reduces repetition by making the April workshop produce missing synthesis outputs rather than redoing baseline inventorying.",
+          "notes": "This change should be treated as a facilitation design constraint and a narrative device for stakeholder communications.",
+          "": ""
+        }
+      ],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-03/27/13.09_project-management-ecosystem-facade.md",
+      "date": "2026-03-27",
+      "time": "13:09",
+      "focus": "Implement CRDB project-management ecosystem with controlled facade, then capture behavior via rrr on an isolated branch",
+      "type": "Architecture + Workflow Implementation",
+      "sessionSummary": "Implemented the CRDB project-management ecosystem described in the anchor and architecture plans, choosing Option B (controlled facade). Created five canonical project-management ledgers (Trigger Log, Deliverable Map, Claim Register, Submission Log, Change Log), a modules spec for state sensing / trigger capture / deliverable trace, and a controlled facade contract. Wired these into the CRDB project plan and then switched to a test branch (`test/project-management-ecosystem`) to run rrr and validate the behavior without touching main. Pulse context shows this is still an early session in the Arun_Creagy project (Session #2 of 2 in this project, on a 1-day streak), but the work materially upgrades how the project’s state can be read, traced, and explained.",
+      "nextSteps": [
+        "Use the new ledgers to drive the next CRDB planning or progress session, entering new triggers and deliverables in real time.",
+        "Draft one governance-focused deliverable (e.g. role-mapping note) and trace it end-to-end through Trigger Log, Claim Register, Deliverable Map, Submission Log, and Change Log.",
+        "Experiment with a manual, human-driven “project-manager” interaction that follows the facade contract (state sensing + explicit options) before any skill implementation."
+      ],
+      "changeLogRows": [
+        {
+          "change_id": "CH-002",
+          "date": "2026-03-27",
+          "change_summary": "Created the first CRDB project-management anchors: trigger log, deliverable map, claim register, submission log, change log, project-management module specs, and a controlled facade contract.",
+          "trigger_s": "T-001, T-002, T-003",
+          "affected_decisions": "None new; these artifacts operationalize existing decisions without changing them.",
+          "affected_deliverables": "D-003 (this deliverable map), D-005 (submission log), project-management module and facade specs",
+          "impact_description": "Shifted project-management practice from ad-hoc reasoning to explicit, artifact-centered ledgers, while preserving a low-agency, advisory posture for any automation.",
+          "notes": "This change introduces the scaffolding for Option B (controlled facade) without enabling autonomous orchestration.",
+          "": ""
+        },
+        {
+          "change_id": "CH-006",
+          "date": "2026-03-27",
+          "change_summary": "Sponsor progress meeting confirmed multiple practical pivots: strict TOR alignment for interim-report revision; “CDM mental model” required to avoid a static website; Phase 1 MVP focus narrowed to L&D structure + data catalog; workshop logistics became urgent (invite letters early next month); and coordination with Digital Tech consultant initiative became a dependency.",
+          "trigger_s": "T-004, T-002",
+          "affected_decisions": "Reinforces (not replaces) Phase 1 stance in [`phase1_decision_log.md`](ψ/incubate/DCCE/CRDB/archive/phase1_decision_log.md); introduces coordination requirements for governance ownership mapping",
+          "affected_deliverables": "D-002 (interim report snapshots), D-006 (workshop package), D-004 (governance role-mapping notes), D-009 (NCAIF), D-010 (CDM)",
+          "impact_description": "Converted several “good practice” ideas into sponsor-backed requirements and critical-path tasks; increased urgency for logistics and cross-team alignment to avoid duplicated platform work.",
+          "notes": "Evidence anchor: E-021 (meeting summary), plus E-024/E-023 for coordination context.",
+          "": ""
+        },
+        {
+          "change_id": "CH-007",
+          "date": "2026-03-27",
+          "change_summary": "Workshop stream reframed as a bridge/baton-pass from earlier baseline meetings to NFCS validation: shift from dataset identification toward synthesis via facilitated breakouts, aligned to sponsor constraints.",
+          "trigger_s": "T-005, T-004",
+          "affected_decisions": "Workshop positioning consistent with Phase 1 stance in [`phase1_decision_log.md`](ψ/incubate/DCCE/CRDB/archive/phase1_decision_log.md)",
+          "affected_deliverables": "D-017 (workshop stream continuation plan), D-006 (workshop invite + logistics package)",
+          "impact_description": "Protects participant time and reduces repetition by making the April workshop produce missing synthesis outputs rather than redoing baseline inventorying.",
+          "notes": "This change should be treated as a facilitation design constraint and a narrative device for stakeholder communications.",
+          "": ""
+        }
+      ],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-03/27/14.09_crdb-pm-ecosystem-test-workshop-stream-savepoints.md",
+      "date": "2026-03-27",
+      "time": "14:09",
+      "focus": "CRDB project-management ecosystem test run + workshop stream save-points + orientation surfaces",
+      "type": "Research / Refactoring / Workflow",
+      "sessionSummary": "This session converted a “feeling lost” moment into explicit navigation and traceability for CRDB work. I validated the new project-management ledgers against a real progress-meeting outcome (Dir Toey notes), integrated a new workshop strategy note from the CRDB project inbox, and created two save-points so the workshop stream can be resumed quickly.\n\nPulse context was present but stale (still showing 1 session on `main` as of 2026-03-09), so I treated pulse metrics as non-authoritative and relied on git status + the CRDB evidence system instead.",
+      "nextSteps": [
+        "Decide the next PM-ecosystem increment: (a) backfill more history, (b) a reusable section-trace template, or (c) a read-only state-sensing helper.",
+        "Materialize **D-006 workshop invite + logistics package (v0)** as an actual artifact under `ψ/incubate/DCCE/CRDB/output/` and treat it as the workshop stream’s main executable surface."
+      ],
+      "changeLogRows": [
+        {
+          "change_id": "CH-002",
+          "date": "2026-03-27",
+          "change_summary": "Created the first CRDB project-management anchors: trigger log, deliverable map, claim register, submission log, change log, project-management module specs, and a controlled facade contract.",
+          "trigger_s": "T-001, T-002, T-003",
+          "affected_decisions": "None new; these artifacts operationalize existing decisions without changing them.",
+          "affected_deliverables": "D-003 (this deliverable map), D-005 (submission log), project-management module and facade specs",
+          "impact_description": "Shifted project-management practice from ad-hoc reasoning to explicit, artifact-centered ledgers, while preserving a low-agency, advisory posture for any automation.",
+          "notes": "This change introduces the scaffolding for Option B (controlled facade) without enabling autonomous orchestration.",
+          "": ""
+        },
+        {
+          "change_id": "CH-006",
+          "date": "2026-03-27",
+          "change_summary": "Sponsor progress meeting confirmed multiple practical pivots: strict TOR alignment for interim-report revision; “CDM mental model” required to avoid a static website; Phase 1 MVP focus narrowed to L&D structure + data catalog; workshop logistics became urgent (invite letters early next month); and coordination with Digital Tech consultant initiative became a dependency.",
+          "trigger_s": "T-004, T-002",
+          "affected_decisions": "Reinforces (not replaces) Phase 1 stance in [`phase1_decision_log.md`](ψ/incubate/DCCE/CRDB/archive/phase1_decision_log.md); introduces coordination requirements for governance ownership mapping",
+          "affected_deliverables": "D-002 (interim report snapshots), D-006 (workshop package), D-004 (governance role-mapping notes), D-009 (NCAIF), D-010 (CDM)",
+          "impact_description": "Converted several “good practice” ideas into sponsor-backed requirements and critical-path tasks; increased urgency for logistics and cross-team alignment to avoid duplicated platform work.",
+          "notes": "Evidence anchor: E-021 (meeting summary), plus E-024/E-023 for coordination context.",
+          "": ""
+        },
+        {
+          "change_id": "CH-007",
+          "date": "2026-03-27",
+          "change_summary": "Workshop stream reframed as a bridge/baton-pass from earlier baseline meetings to NFCS validation: shift from dataset identification toward synthesis via facilitated breakouts, aligned to sponsor constraints.",
+          "trigger_s": "T-005, T-004",
+          "affected_decisions": "Workshop positioning consistent with Phase 1 stance in [`phase1_decision_log.md`](ψ/incubate/DCCE/CRDB/archive/phase1_decision_log.md)",
+          "affected_deliverables": "D-017 (workshop stream continuation plan), D-006 (workshop invite + logistics package)",
+          "impact_description": "Protects participant time and reduces repetition by making the April workshop produce missing synthesis outputs rather than redoing baseline inventorying.",
+          "notes": "This change should be treated as a facilitation design constraint and a narrative device for stakeholder communications.",
+          "": ""
+        }
+      ],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-03/27/15.57_rrr_crdb-pm-history-spine-ledgers-and-compliance-gap.md",
+      "date": "2026-03-27",
+      "time": "15:57",
+      "focus": "15.57_rrr_crdb-pm-history-spine-ledgers-and-compliance-gap.md",
+      "type": "Unspecified",
+      "sessionSummary": "Reconstructed CRDB project history using a **timeline-first staging surface** wired to canonical PM ledgers (Trigger Log → Deliverable Map → Submission Log), fixed the Trigger Log table formatting + chronological ordering, and produced a next-session handoff. Pulse context indicates **Session #1 of 1 in this project (1-day streak)**.",
+      "nextSteps": [
+        "QA Trigger Log: dedupe, normalize impact zones/urgency, verify evidence links.",
+        "Backfill remaining ledgers: [`ψ/incubate/DCCE/CRDB/CRDB-Change-Log.md`](ψ/incubate/DCCE/CRDB/CRDB-Change-Log.md) and [`ψ/incubate/DCCE/CRDB/CRDB-Claim-Register.md`](ψ/incubate/DCCE/CRDB/CRDB-Claim-Register.md).",
+        "Reconcile Trigger/Deliverable/Submission entries against Evidence Registry + Workstreams Index.",
+        "Create TOR-based completeness checklist vs milestones."
+      ],
+      "changeLogRows": [
+        {
+          "change_id": "CH-002",
+          "date": "2026-03-27",
+          "change_summary": "Created the first CRDB project-management anchors: trigger log, deliverable map, claim register, submission log, change log, project-management module specs, and a controlled facade contract.",
+          "trigger_s": "T-001, T-002, T-003",
+          "affected_decisions": "None new; these artifacts operationalize existing decisions without changing them.",
+          "affected_deliverables": "D-003 (this deliverable map), D-005 (submission log), project-management module and facade specs",
+          "impact_description": "Shifted project-management practice from ad-hoc reasoning to explicit, artifact-centered ledgers, while preserving a low-agency, advisory posture for any automation.",
+          "notes": "This change introduces the scaffolding for Option B (controlled facade) without enabling autonomous orchestration.",
+          "": ""
+        },
+        {
+          "change_id": "CH-006",
+          "date": "2026-03-27",
+          "change_summary": "Sponsor progress meeting confirmed multiple practical pivots: strict TOR alignment for interim-report revision; “CDM mental model” required to avoid a static website; Phase 1 MVP focus narrowed to L&D structure + data catalog; workshop logistics became urgent (invite letters early next month); and coordination with Digital Tech consultant initiative became a dependency.",
+          "trigger_s": "T-004, T-002",
+          "affected_decisions": "Reinforces (not replaces) Phase 1 stance in [`phase1_decision_log.md`](ψ/incubate/DCCE/CRDB/archive/phase1_decision_log.md); introduces coordination requirements for governance ownership mapping",
+          "affected_deliverables": "D-002 (interim report snapshots), D-006 (workshop package), D-004 (governance role-mapping notes), D-009 (NCAIF), D-010 (CDM)",
+          "impact_description": "Converted several “good practice” ideas into sponsor-backed requirements and critical-path tasks; increased urgency for logistics and cross-team alignment to avoid duplicated platform work.",
+          "notes": "Evidence anchor: E-021 (meeting summary), plus E-024/E-023 for coordination context.",
+          "": ""
+        },
+        {
+          "change_id": "CH-007",
+          "date": "2026-03-27",
+          "change_summary": "Workshop stream reframed as a bridge/baton-pass from earlier baseline meetings to NFCS validation: shift from dataset identification toward synthesis via facilitated breakouts, aligned to sponsor constraints.",
+          "trigger_s": "T-005, T-004",
+          "affected_decisions": "Workshop positioning consistent with Phase 1 stance in [`phase1_decision_log.md`](ψ/incubate/DCCE/CRDB/archive/phase1_decision_log.md)",
+          "affected_deliverables": "D-017 (workshop stream continuation plan), D-006 (workshop invite + logistics package)",
+          "impact_description": "Protects participant time and reduces repetition by making the April workshop produce missing synthesis outputs rather than redoing baseline inventorying.",
+          "notes": "This change should be treated as a facilitation design constraint and a narrative device for stakeholder communications.",
+          "": ""
+        }
+      ],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-03/30/11.59_rrr_crdb-pm-ledger-backfill-and-d006-workshop-package.md",
+      "date": "2026-03-30",
+      "time": "11:59",
+      "focus": "CRDB project-management ecosystem — execute maintenance plan, materialize D-006 workshop logistics package, and backfill remaining PM ledgers (claims/changes/submissions)",
+      "type": "Workflow / PM Ops / Knowledge Ops",
+      "sessionSummary": "Session #1 of 1 in this project (1-day streak) *(pulse context is present but stale; treated as non-authoritative)*.\n\nThis session moved the CRDB project-management ecosystem from “structures exist” to “structures are used.” We executed the event-scoped ledger update plan against the Director Toey progress meeting outcome, materialized the previously planned workshop logistics deliverable (D-006) into a real operational artifact, and completed the remaining historical backfill work for the PM ledger set (Claim Register + Change Log + one submission/freeze entry). The work was constrained to Option B’s low‑agency posture: artifacts and transparent ledgers first, no new automation skill.",
+      "nextSteps": [
+        "Pick the next single event to process (workshop invite issuance / venue confirmation / headcount allocation) and log it as an incremental update against D-006.",
+        "Materialize D-001 (management evidence pack) as a real artifact (separate from the trace) using the already traced spine.",
+        "Create a plan to apply this PM ecosystem to another project by copying the ledger set and adopting the same event-scoped maintenance loop."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-03/30/22.39_rrr_crdb-workshop-v2-plan-and-stakeholder-fit.md",
+      "date": "2026-03-30",
+      "time": "22:39",
+      "focus": "Convert CRDB workshop v2 handoff into executable plan + templates; add stakeholder-fit constraints; devil’s-advocate test",
+      "type": "Research",
+      "sessionSummary": "Session #1 of 1 in this project (1-day streak).\n\nThis session turned the “CRDB workshop v2” handoff into an executable package: a next-session plan, a stakeholder-fit + invite logic note grounded in CRDB interview synthesis, and two concrete deliverables (workshop plan v2 + outputs-pack skeleton). It also captured a workflow guardrail: keep project-specific content out of global folders.",
+      "nextSteps": [
+        "Convert the stakeholder-fit invite logic into a concrete invitee roster (names/roles per organization) and a minimum-per-session attendance matrix.",
+        "Pre-fill the outputs-pack skeleton with the “empty structure” for the selected 1–2 journeys (so breakouts can fill directly without reformatting).",
+        "Confirm steering-safe governance wording snippets and re-use them verbatim in session facilitation scripts."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-03/31/23.06_rrr_crdb-workshop-package-and-thai-invite-iteration.md",
+      "date": "2026-03-31",
+      "time": "23:06",
+      "focus": "CRDB workshop package revision (TOR 5.3.3 alignment) + Thai invitation package drafting and iterative human-edit calibration",
+      "type": "Refactoring | Writing | Facilitation design",
+      "sessionSummary": "Session #1 of 1 in this project (1-day streak)\n\nThis session turned the CRDB workshop package into a more TOR-literal, facilitation-usable package and then executed multiple review loops on the Thai invitation materials (letter, agenda, participant preparation questions). The dominant work pattern was “draft → human edits → learn the preference → revise again,” including targeted removal of inappropriate jargon and improvement of reader relevance (what participants will get, not just what DCCE needs).",
+      "nextSteps": [
+        "Review the current Thai package end-to-end as a single unit (letter + agenda + prep) and run one final human pass to confirm tone.",
+        "Revise the outputs pack skeleton so the internal templates map cleanly to the now-more-formal Thai agenda labels.",
+        "Split future commits so CRDB workshop changes do not co-mingle with unrelated lab artifacts."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-04/08/22.57_rrr_crdb-three-stream-execution-spine.md",
+      "date": "2026-04-08",
+      "time": "22:57",
+      "focus": "Align CRDB work-streams plan with interim report history and wire it into PM ledgers",
+      "type": "Project management / governance alignment",
+      "sessionSummary": "Aligned the three-stream CRDB work-steps plan (IT discussion → consultation workshop → FGD3) with the interim report Chapter 1 narrative (TOR interpretation → NCAIF/CDM/governance), then treated that as a formal execution decision in the project-management ledgers. The session ended with a full /rrr run, including new retrospective and learning artifacts.",
+      "nextSteps": [
+        "Run oracle_learn on the distilled lesson about staged execution spines and PM ledgers so it is available as a reusable pattern across projects.",
+        "Commit the new retrospective and learning files alongside the updated ledgers so the decision is fully traceable in git history.",
+        "In the next CRDB working block, use the new claim C-011 and deliverable D-020 as anchors when updating [`ψ/incubate/DCCE/CRDB/plan.md`](ψ/incubate/DCCE/CRDB/plan.md) and [`ψ/incubate/DCCE/CRDB/Hub.md`](ψ/incubate/DCCE/CRDB/archive/Hub.md) to surface the three-stream execution spine to humans."
+      ],
+      "changeLogRows": [
+        {
+          "change_id": "CH-008",
+          "date": "2026-04-08",
+          "change_summary": "Locked a three-stream execution spine for CRDB: use the 2026-04-29 DCCE IT discussion to test platform reality and requirements fit, the mid-May TOR 5.3.3 workshop to generate structured ecosystem evidence, and late-May FGD3 to ratify ownership, governance, and roadmap.",
+          "trigger_s": "T-015, T-004, T-002, T-011",
+          "affected_decisions": "Extends Phase 1 stance in [`phase1_decision_log.md`](ψ/incubate/DCCE/CRDB/archive/phase1_decision_log.md) from architecture/governance commitments into an explicit execution pathway",
+          "affected_deliverables": "D-020 (work-streams implementation plan), D-004 (governance role-mapping notes), D-006 (workshop package), D-017 (workshop continuation plan)",
+          "impact_description": "Converts the interim-report Chapter 1 logic into a staged delivery mechanism: platform constraints first, supply/demand evidence second, internal commitment third. This reduces the risk that NCAIF/CDM/governance remain conceptual only or drift away from DCCE’s real IT and institutional context.",
+          "notes": "Treat this as the answer to “why these three conversations?” — they are not separate meetings but the operational sequence required by the project’s own TOR interpretation and design history.",
+          "": ""
+        }
+      ],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-04/09/11.35_crdb-thaiwater-integration.md",
+      "date": "2026-04-09",
+      "time": "11:35",
+      "focus": "Reviewing CRDB Work Streams Implementation Plan and embedding Thaiwater-inspired enhancements.",
+      "type": "Research | Refactoring | Strategic Alignment",
+      "sessionSummary": "Focused on bridging the gap between high-level data governance concepts (Thaiwater) and the concrete execution plan for CRDB Phase 1.",
+      "nextSteps": [
+        "Prepare the \"CRDB → IT requirements brief\" for the April 29th meeting.",
+        "Draft the \"Pre-seeded inventory sheets\" with the new QC and reference slots for the May 12th workshop."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-04/09/16.50_crdb-thaiwater-pm-ledger-update.md",
+      "date": "2026-04-09",
+      "time": "16:50",
+      "focus": "Thaiwater data governance analysis → PM ledger alignment (Evidence, Trigger) + table-editing skill",
+      "type": "Unspecified",
+      "sessionSummary": "This session consolidated the Thaiwater data governance work into the CRDB project-management spine. We treated the new analysis note as core evidence, then updated the PM ledgers so that Evidence, Trigger, and (future) Change layers all acknowledge Thaiwater as the external benchmark for data standards and governance. We also designed and implemented a dedicated `markdown-table-edit` skill plus a deterministic Bun script to handle Markdown tables without fragile line-based patches. The result is that the Evidence Registry, Trigger Log, and PM skill stack now reflect Thaiwater correctly, while the historical Phase 1 decision log is demoted to a frozen snapshot.",
+      "nextSteps": [
+        "Draft CH-009 in [`ψ/incubate/DCCE/CRDB/CRDB-Change-Log.md`](ψ/incubate/DCCE/CRDB/CRDB-Change-Log.md) once the Reference Parameter Standard, L&D MVD, Data Quality Framework, and governance spine have concrete D-* IDs.",
+        "Add corresponding D-* entries to [`ψ/incubate/DCCE/CRDB/CRDB-Deliverable-Map.md`](ψ/incubate/DCCE/CRDB/CRDB-Deliverable-Map.md) for the Thaiwater-aligned design artifacts when drafts exist.",
+        "Consider adding a small helper skill or script to generate `new-evidence-table.md` / `new-trigger-table.md` from structured data, so table regeneration is one step instead of manual row assembly."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-04/17/13.04_rrr_crdb-canonical-artifact-consolidation.md",
+      "date": "2026-04-17",
+      "time": "13:04",
+      "focus": "Consolidate CRDB planning control surfaces into canonical integrated execution artifacts",
+      "type": "Refactoring / Project governance architecture",
+      "sessionSummary": "This session converted CRDB planning from fragmented and partly misleading control artifacts into a canonical structure centered on integrated execution. The main shift was replacing the stakeholder-only framing and legacy workstream index with a new execution spine and a canonical execution architecture index. I also implemented direct supersession moves into archive, then updated ledger surfaces so the new artifacts are traceable across Trigger, Change, Deliverable, Evidence, Claim, and project plan surfaces.\n\nThe resulting structure is now explicit about CDM, NCAIF, governance/data standards, and MVD/Loss & Damage as first-class tracks, with validation streams treated as gating mechanisms rather than the umbrella frame.",
+      "nextSteps": [],
+      "changeLogRows": [
+        {
+          "change_id": "CH-009",
+          "date": "2026-04-17",
+          "change_summary": "Reframed CRDB planning control from fragmented workstream and stakeholder-engagement artifacts into a canonical integrated execution family, with direct supersession and archive moves for misnamed/overlapping control surfaces.",
+          "trigger_s": "T-017, T-016, T-015",
+          "affected_decisions": "Extends CH-008 three-stream sequence into a cross-track artifact architecture and absorbs T-016 governance/standards direction into the canonical execution package",
+          "affected_deliverables": "D-021, D-022, D-023, D-024, D-025, D-026; supersedes D-019 and D-020",
+          "impact_description": "Reduces navigation ambiguity and prevents MVD/CDM/governance work from being buried under engagement-only framing; establishes one canonical execution spine plus domain operational plans with explicit ledger traceability.",
+          "notes": "Treat this as the canonical artifact-governance pivot; future planning artifacts should map into this family or be explicitly marked temporary.",
+          "": ""
+        },
+        {
+          "change_id": "CH-010",
+          "date": "2026-04-17",
+          "change_summary": "Formalized the pivot to a \"Governed Content Hub\" architecture (\"Thin Integration\") and established the \"Source Registration Protocol\" to govern content creation and media synthesis.",
+          "trigger_s": "T-018",
+          "affected_decisions": "Integrates the EDM expansion for \"Content-as-Data\" and decoupled publishing protocols into Phase 1 commitments.",
+          "affected_deliverables": "D-024 (NCAIF Service Architecture Plan), D-025 (Governance and Data Standards Plan)",
+          "impact_description": "Solves the \"orphan knowledge\" problem and bridges the gap between static page expectations and enterprise data architecture. Static pages are modeled as `CURATED_PAGE` assets linked to datasets, and external research is governed via `EVIDENCE_PACKAGE` or `EXTERNAL_REFERENCE`.",
+          "notes": "Treats static content as governed metadata assets without requiring a full Headless CMS implementation in Phase 1.",
+          "": ""
+        }
+      ],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-04/27/21.40_crdb-workshop-product-led-redesign.md",
+      "date": "2026-04-27",
+      "time": "21:40",
+      "focus": "CRDB Workshop Design (TOR 5.3.3) and Product-Led Co-creation Pivot",
+      "type": "Research | Refactoring | Design",
+      "sessionSummary": "This session involved a complete redesign of the CRDB (Climate Risk Data Base) brainstorming workshop. We successfully transitioned from a static, inventory-focused consultation plan (v3) to a dynamic, product-led co-creation strategy (v4). The new design anchors 80-100 participants across four \"Product Concept Suites\" (Strategic Briefing, Real-Time Exchange, Community Resilience, and Financial Risk Lab) using WMO National Framework for Climate Services (NFCS) terminology. The morning session (150 minutes) is now structured as a \"Common Operating Picture\" exercise to achieve knowledge equalization between data providers and users.",
+      "nextSteps": [
+        "Draft the Thai Invitation Package (v2) based on the finalized design.",
+        "Create the physical templates for the Mirror Posters and Mission Canvases.",
+        "Update the Stakeholder Prep Questions to be role-scoped and NFCS-aligned."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-04/28/22.25_crdb-workshop-afternoon-design-and-feasibility-audit.md",
+      "date": "2026-04-28",
+      "time": "22:25",
+      "focus": "Finalizing the Afternoon Session for the May 12th CRDB Consultation Workshop (TOR 5.2.6).",
+      "type": "Research | Design | Strategic Alignment",
+      "sessionSummary": "This session was a intensive strategic realignment of the May 12th CRDB Workshop's afternoon session. We pivoted from a generic \"Service Design\" approach to a formal **Public Hearing (TOR 5.2.6)** framework. The session moved through three major technical pivots: (1) Correcting \"Expert Drift\" and hallucinations about meeting details, (2) Re-anchoring the design in the **v4 Mission-Led Plan**, and (3) Reframing the stakeholder interaction from \"seeking commitment\" (which they lack authority to give) to a **Technical Feasibility Audit**.",
+      "nextSteps": [],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-04/29/09.27_rrr_crdb-climate-service-lifecycle-evidence-audit-report.md",
+      "date": "2026-04-29",
+      "time": "09:27",
+      "focus": "Map CRDB consultation workshop + project artifacts onto the climate-service Design Study Methodology lifecycle; produce a strict direct-evidence audit report.",
+      "type": "Research / Planning",
+      "sessionSummary": "Built a strict evidence-trace plan to assess what CRDB has produced against the climate-service development lifecycle described in [`ψ/incubate/DCCE/CRI/inbox_source/Introducing design in the development of effective climate services.md`](../../../../incubate/DCCE/CRI/inbox_source/Introducing%20design%20in%20the%20development%20of%20effective%20climate%20services.md:4). Executed the assessment under a tightened rule set (direct artifacts + downstream proof via ledgers), explicitly removing the use of [`ψ/incubate/DCCE/CRDB/output/CRDB-Evidence-Coverage-Map.md`](../../../../incubate/DCCE/CRDB/output/CRDB-Evidence-Coverage-Map.md:1) from the analysis. Produced a markdown deliverable capturing the lifecycle audit.",
+      "nextSteps": [
+        "If desired, add an explicit “Design Brief” artifact that unifies target users, key tasks, success criteria, and what qualifies as a prototype for Core-phase evidence.",
+        "If moving toward Core phase, define and capture pilot/evaluation artifacts (test plan, tasks, results, iteration log) as first-class evidence objects.",
+        "If moving toward Analysis phase, create an explicit multi-channel communication plan artifact rather than relying on discrete deliverables alone."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-04/30/17.23_crdb-workshop-pivot-ledgers-landscape-and-master-design-v2.md",
+      "date": "2026-04-30",
+      "time": "17:23",
+      "focus": "Re-anchor the CRDB consultation workshop after DCCE feedback, register the workshop pivot in PM ledgers, compare old vs new landscape inventories, choose a landscape-map direction, and draft a new master design v2.",
+      "type": "Research | Planning | PM ledger maintenance | Facilitation design",
+      "sessionSummary": "This session started with a repo recap and quickly moved into CRDB workshop recovery. The main thread was not “produce a final workshop kit,” but stabilize the design logic after new human feedback from DCCE. I first re-read the current plan state and reconstructed the workshop execution spine. Then I traced how the newer morning and afternoon master designs related to the existing trigger, change, and deliverable system. From there, I registered the missing workshop master-design artifacts in the deliverable ledger, then treated the 2026-04-30 meeting note as what it actually was: not a deliverable, but a new piece of evidence and a new trigger documenting the shift from co-creation toward guided feedback.\n\nThe second major stream was workshop content design. I reviewed the three CSV inventories in [`ψ/incubate/DCCE/CRDB/inbox_source/data_product_and_service_2025.csv`](ψ/incubate/DCCE/CRDB/inbox_source/data_product_and_service_2025.csv), [`ψ/incubate/DCCE/CRDB/inbox_source/data_product_and_service_2026.csv`](ψ/incubate/DCCE/CRDB/inbox_source/data_product_and_service_2026.csv), and [`ψ/incubate/DCCE/CRDB/inbox_source/data_product_and_service_2026-2.csv`](ψ/incubate/DCCE/CRDB/inbox_source/data_product_and_service_2026-2.csv). That comparison made it clear that the 2026 work is structurally better for workshop use because it separates data assets from services/products, even though the 2026 dataset file still has encoding problems. From that, we selected the two-layer landscape-map direction and clarified how services/products should be grouped.\n\nThe final major step was drafting a new workshop master design v2 in [`plans/2026-04-30_crdb-workshop-master-design-v2.md`](ψ/incubate/DCCE/CRDB/output/consultation_workshop/2026-04-30_crdb-workshop-master-design-v2.md). The important conceptual correction was that Activity 2 should not merely collect comments on the 4 prepared MVPs. Instead, the session should use those MVPs as anchors for guided expansion: participants react, add missing functions, propose adjacent services/products, and then cross-review peer ideas. That feels much closer to the actual intent of the human and the practical maturity of the room.",
+      "nextSteps": [
+        "MVP reaction worksheet",
+        "new service/product proposal sheet",
+        "peer review prompt sheet",
+        "short reporting template"
+      ],
+      "changeLogRows": [
+        {
+          "change_id": "CH-015",
+          "date": "2026-04-30",
+          "change_summary": "Formalized the post-review workshop redesign: shifted the consultation workshop from heavy co-creation / system-engineering assumptions to guided validation + guided expansion using prepared landscape materials, service concepts, participant correction, and peer review.",
+          "trigger_s": "T-019",
+          "affected_decisions": "Revises the workshop facilitation stance from D-027/D-028 after DCCE internal review; preserves TOR 5.3.3 evidence-capture purpose while reducing participant technical burden.",
+          "affected_deliverables": "D-029; supersedes active use of D-027 and D-028 as separate master designs.",
+          "impact_description": "Converts the meeting-note pivot into a hardened workshop design asset, making facilitation materials traceable to the internal review instead of appearing as ad-hoc redesign.",
+          "notes": "Evidence cause: E-033. Resulting asset: D-029.",
+          "": ""
+        }
+      ],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-05/04/23.16_mvp-scoping-nudge.md",
+      "date": "2026-05-04",
+      "time": "23:16",
+      "focus": "Technical scoping for CRDB MVP \"Dummies\" (Exporter, Intake, Catalog, Interpreter) and designing \"Slide-Ready\" narratives for the DCCE workshop.",
+      "type": "Research & Strategic Synthesis",
+      "sessionSummary": "This session focused on hardening the technical foundations of the 4 CRDB MVPs. We executed a multi-pass research strategy to find \"Real-World Relatives\" (UKCP, NOAA, IPCC) to ground the service levels (Level 1 vs. Level 2). A major pivot occurred for MVP-2 (The Intake), moving from \"Attribution Science\" to \"Strategic Data Reuse\"—reframing existing DDPM disaster relief statistics onto climate timescales to serve as a \"Quiet Nudge\" for institutional data improvement. The session concluded with the delivery of \"Slide-Ready\" narratives that provide deep story arcs and empirical proof for each MVP.",
+      "nextSteps": [
+        "Integrate the v3 Master Narratives into the **Workshop Master Design**.",
+        "Finalize the \"Morning Activity 2\" guided feedback structure.",
+        "Draft the \"Dummy\" visual mockups based on the Slide-Ready stories."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-05/05/11.51_workshop-audit-prep.md",
+      "date": "2026-05-05",
+      "time": "11:51",
+      "focus": "Workshop Facilitation Guide for NCAIF IA Audit",
+      "type": "Research | Documentation",
+      "sessionSummary": "This session focused on preparing the facilitation materials for the DCCE \"Public Hearing\" workshop (TOR 5.2.6). I synthesized a 6-slide presentation deck and a structured feedback plan using Mentimeter and physical posters. A critical pivot occurred mid-session when I realized my terminology (\"Monitoring Loop\") was too academic/abstract. I revised the entire facilitation guide to use \"Simple English\" (e.g., \"3-Step Status Report\") to ensure it resonates with government officials and non-technical stakeholders.",
+      "nextSteps": [
+        "Draft \"Dummy\" Artifact Content for the 4 MVPs (Box 1-4 framework).",
+        "Finalize the physical poster audit checklist for table facilitators.",
+        "Translate the \"Asks\" into formal but simple Thai."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-05/05/13.53_ncaif-afternoon-facilitation-rewrite.md",
+      "date": "2026-05-05",
+      "time": "13:53",
+      "focus": "Revise the afternoon workshop facilitation guide to capture user expectations/needs for the NCAIF website (not governance).",
+      "type": "Planning | Facilitation design | Information architecture validation",
+      "sessionSummary": "Converted the afternoon facilitation approach from “general sitemap feedback” into a structured **website expectations + needs capture** instrument. The revised guide now produces concrete outputs that can be used to build slides and detailed activities: top user tasks, missing pages/content, trust signals required on pages, and a needs-log format that can later be translated by DCCE internally into implementation/governance actions.\n\nThe critical alignment move was acknowledging that MVP/service concepts are already handled in the **morning** (Activity 2 in the master design), so the afternoon should treat MVPs as a brief recap only and focus on what users expect from the **website structure and content**.",
+      "nextSteps": [
+        "Use the revised guide to draft the actual slide deck (visuals + talking points).",
+        "Implement the Mentimeter questions and print the needs-log capture sheet.",
+        "After the workshop, translate needs-log items into DCCE internal backlog/governance actions."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-05/05/22.15_ncaif-prototype-polish.md",
+      "date": "2026-05-05",
+      "time": "22:15",
+      "focus": "Streamlit Prototype (NCAIF/CRDB) UI Refinement & Logic Hardening",
+      "type": "Feature | UI/UX | Technical Design",
+      "sessionSummary": "This session focused on polishing the interactive Streamlit prototype for the DCCE/NCAIF Consultation Workshop (May 12). Key work included updating technical climate parameters for MVP-1, refactoring the layout for better ergonomics (70% width), and implementing a dynamic \"Uncertainty Matrix\" in MVP-4 that shifts based on dataset selection.",
+      "nextSteps": [
+        "Extract prototype screenshots for the workshop presentation deck.",
+        "Finalize the \"Methodology Infographic\" placeholder with actual CRDB logic.",
+        "Prepare Mentimeter questions based on the \"Decision Utility\" differences demonstrated today."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-05/05/23.48_rrr_mvp-traceability-docs.md",
+      "date": "2026-05-05",
+      "time": "23:48",
+      "focus": "CRDB MVP evidence-grounding — stakeholder fit + traceability docs for MVP-1/2/3/4",
+      "type": "Research",
+      "sessionSummary": "Converted scattered interview evidence into a set of consistent, workshop-usable **evidence-grounded stakeholder–MVP traceability analysis** documents. Started from MVP-2 (the Intake / climate disaster statistics) and used it as the template for replicating the workflow across MVP-1 (Exporter), MVP-3 (Catalog/Endorsed baselines), and MVP-4 (Interpreter/uncertainty guardrails). Then performed a medium-strictness cross-check so the new MVP docs share the same main sections, evidence-link discipline, and scope guardrails without forcing identical wording.\n\nKey outputs are four Markdown artifacts in the CRDB workshop MVP folder:\n- [`mvp1_stakeholder_fit_traceability_analysis.md`](ψ/incubate/DCCE/CRDB/output/consultation_workshop/mvp/mvp1_stakeholder_fit_traceability_analysis.md:1)\n- [`mvp2_stakeholder_fit_traceability_analysis.md`](ψ/incubate/DCCE/CRDB/output/consultation_workshop/mvp/mvp2_stakeholder_fit_traceability_analysis.md:1)\n- [`mvp3_stakeholder_fit_traceability_analysis.md`](ψ/incubate/DCCE/CRDB/output/consultation_workshop/mvp/mvp3_stakeholder_fit_traceability_analysis.md:1)\n- [`mvp4_stakeholder_fit_traceability_analysis.md`](ψ/incubate/DCCE/CRDB/output/consultation_workshop/mvp/mvp4_stakeholder_fit_traceability_analysis.md:1)",
+      "nextSteps": [
+        "Use the four MVP traceability docs as the reference layer behind the **Decision Utility Matrix** and workshop facilitation prompts.",
+        "Optionally add a one-page index README in [`ψ/incubate/DCCE/CRDB/output/consultation_workshop/mvp/`](ψ/incubate/DCCE/CRDB/output/consultation_workshop/mvp:1) linking the four analysis docs + the prototype cards."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-05/06/16.05_rrr_crdb-workshop-activity2-mentimeter-and-mvp-ui.md",
+      "date": "2026-05-06",
+      "time": "16:05",
+      "focus": "CRDB consultation workshop — Activity 2 (morning) polling + guiding questions, anchored to workshop master design; run MVP mockup UI.",
+      "type": "Workshop facilitation design + prototype run",
+      "sessionSummary": "Converted Activity 2 into a **workshop-usable question bank** (Mentimeter + breakout prompts) that stays aligned to the “guided feedback / decision utility” intent. Iterated on the poll design to avoid predictable “Depends” answers by replacing service-level voting with concrete *minimum output / trigger / boundary* questions, and then tightened MVP-1 to focus on **front-page essentials** (what makes a briefing usable).\n\nAlso launched the Streamlit-based MVP mockup UI locally so it can be demoed during prep.",
+      "nextSteps": [
+        "Decide the exact Activity 2 run-of-show: which MVP screens are shown (and in what order) from [`crdb_mvp_prototype.py`](ψ/incubate/DCCE/CRDB/output/consultation_workshop/mvp/code/crdb_mvp_prototype.py:1) and which poll(s) are asked immediately after each.",
+        "Convert Q3 (MVP-1 front-page essentials) into a draft **briefing one-pager template** for printing.",
+        "Confirm whether Activity 2 is strictly “morning session” vs reused/adapted for afternoon website expectations capture (avoid mixing objectives)."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-05/06/23.22_rrr_usecase-typologies-and-mvp-mappings.md",
+      "date": "2026-05-06",
+      "time": "23:22",
+      "focus": "CRDB — use-case pain points, typology lenses (Jagannathan info types + service format typology + decision-process depth), and writing workshop-ready mapping artifacts in the MVP folder.",
+      "type": "Research + synthesis + documentation",
+      "sessionSummary": "Converted interview-derived CRDB use cases into three complementary categorization lenses that are usable for workshop facilitation and internal design decisions:\n\n1) **Service format typology (Option 4)** mapping (Maps & Apps / Expert Analysis / Climate-inclusive Consulting / Sharing Practices).\n2) **Decision-process depth** mapping, clarified to describe **information bundles per use case** rather than labeling the use case itself.\n3) **Jagannathan et al. actionable climate information** mapping, then refined to **sub-type level** (A1/A2/A3 and C1/C2) to support more granular reasoning about what information is actually demanded.\n\nWe also stress-tested whether the stakeholder demand signal has moved beyond “awareness” by counting the “Use:” tags inside the use-case document; the distribution shows strong emphasis on **Plan** and **Fund**, with some **Take action** but not uniformly.",
+      "nextSteps": [
+        "Use the three mapping reports as facilitation aids for workshop questions (e.g., which UCs are “Expert Analysis heavy” vs “Maps & Apps ready”).",
+        "If desired, tighten the Jagannathan sub-type mapping by adding short per-UC justification bullets (1–2 lines) so the inference chain is explicit.",
+        "Decide whether to keep the decision-process-depth report’s “Cross-cutting enablers” as a permanent category (it handles baseline endorsement UCs cleanly)."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-05/07/12.31_rrr_ncaif-sitemap-v4-ledger-updates-and-rule-slips.md",
+      "date": "2026-05-07",
+      "time": "12:31",
+      "focus": "NCAIF sitemap v4 revision + partial CRDB ledger registrations + reflection on rule violations",
+      "type": "Feature + Process correction",
+      "sessionSummary": "Produced a v4 revision of the NCAIF detailed sitemap to correct the policy-maker progressive disclosure ordering and to surface a first-class “Resources (policy/legal/funding/templates)” hub. Logged the supporting rationale as an evidence artifact, registered it into the Evidence Registry (`E-034`), and logged the change driver as a Trigger (`T-020`). Also created and posted a reflection message to Archon on repeated principle/rule violations during execution.\n\nWork intentionally stopped before updating Change Log (`CH-011`) and Deliverable Map (`D-029`) because execution discipline and auditability became the primary constraint.",
+      "nextSteps": [
+        "Add `CH-011` to [`CRDB-Change-Log.md`](ψ/incubate/DCCE/CRDB/CRDB-Change-Log.md:30) (one-ledger operation).",
+        "Add `D-029` to [`CRDB-Deliverable-Map.md`](ψ/incubate/DCCE/CRDB/CRDB-Deliverable-Map.md:17) (one-ledger operation).",
+        "(Optional) Add a concise “policy maker journey spec” page anchored to sitemap v4."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-05/13/16.20_crdb-delivery-strategy-and-mvd-pivot.md",
+      "date": "2026-05-13",
+      "time": "16:20",
+      "focus": "Project reorientation for CRDB July 6th deadline, formalizing MVD as Logical Data Model (LDM), and DCCE IT meeting retrieval.",
+      "type": "Research | Planning | Architecture",
+      "sessionSummary": "This session focused on synthesizing the project reorientation for CRDB following the May 12-13 consultation workshop. The core task was updating the high-level delivery strategy to reflect the July 6th deadline and the formal interpretation of the Minimum Viable Dataset (MVD) as a Logical Data Model (LDM). This architectural pivot ensures that the technical deliverables provide a structured relational schema aligned with Sendai Targets A-D rather than just a flat table. The session also involved searching for and retrieving specific meeting notes from the DCCE IT team interaction on April 29th to ground the forward strategy in institutional reality.",
+      "nextSteps": [],
+      "changeLogRows": [
+        {
+          "change_id": "CH-011",
+          "date": "2026-05-13",
+          "change_summary": "Reoriented project for the July 6th deadline following the Consultation Workshop; grouped 10 deliverables into interdependent clusters and formalized the \"MVD as Logical Data Model\" interpretation.",
+          "trigger_s": "T-019, T-020",
+          "affected_decisions": "Confirms the transition from conceptual design to content production and ratification; addresses workshop feedback on simplicity and data liability.",
+          "affected_deliverables": "D-001 (Design Report), D-004 (FGD3 Report), D-027 (Workshop Report), D-028 (MVD/LDM Specification)",
+          "impact_description": "Establishes the execution path for the final Phase 1 submission; ensures technical deliverables (MVD) provide a scalable data architecture (LDM) rather than a flat table, protecting against technical debt.",
+          "notes": "Evidence anchors: E-033 (Workshop note), E-034 (Sitemap v4), and 2026-05-13_CRDB-Post-Workshop-Reorientation-Synthesis.md.",
+          "": ""
+        },
+        {
+          "change_id": "CH-012",
+          "date": "2026-05-13",
+          "change_summary": "Refactored the post-workshop reorientation note into a concise execution framing: clarified Stage 3 as L&D LDM + ELT intake contract, Stage 4 as governed content assets, and Stage 5 as CDM domain ownership ratification; added a context-retrieval anchor list for future sessions.",
+          "trigger_s": "T-020",
+          "affected_decisions": "No new decisions; improves retrievability and corrects governance scoping (Director Nid endorses CDM domain ownership; IT team interface via metadata mapping).",
+          "affected_deliverables": "(artifact) `2026-05-13_CRDB-Post-Workshop-Reorientation-Synthesis.md`",
+          "impact_description": "Makes the July 6 execution narrative auditable and reduces context loss between sessions by explicitly listing canonical artifacts (execution spine, tracks, CDM, MVP/workflow, IT boundary, and content-as-asset pivot).",
+          "notes": "Updated artifact: [`2026-05-13_CRDB-Post-Workshop-Reorientation-Synthesis.md`](ψ/incubate/DCCE/CRDB/output/2026-05-13_CRDB-Post-Workshop-Reorientation-Synthesis.md:1)",
+          "": ""
+        }
+      ],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-05/13/17.43_rrr_crdb-postworkshop-reorientation-and-changelog.md",
+      "date": "2026-05-13",
+      "time": "17:43",
+      "focus": "CRDB post-workshop reorientation synthesis + CDM governance framing + context anchors; update change log.",
+      "type": "Refactoring + Governance framing",
+      "sessionSummary": "This session tightened CRDB’s post-workshop execution narrative for the July 6 submission and corrected governance scoping around CDM domain ownership. The main work was refactoring the reorientation note into a concise “execution framing” document and adding an explicit context-retrieval anchor list to reduce future session context loss. We also updated the CRDB change log to record what this reorientation artifact now represents.",
+      "nextSteps": [],
+      "changeLogRows": [
+        {
+          "change_id": "CH-011",
+          "date": "2026-05-13",
+          "change_summary": "Reoriented project for the July 6th deadline following the Consultation Workshop; grouped 10 deliverables into interdependent clusters and formalized the \"MVD as Logical Data Model\" interpretation.",
+          "trigger_s": "T-019, T-020",
+          "affected_decisions": "Confirms the transition from conceptual design to content production and ratification; addresses workshop feedback on simplicity and data liability.",
+          "affected_deliverables": "D-001 (Design Report), D-004 (FGD3 Report), D-027 (Workshop Report), D-028 (MVD/LDM Specification)",
+          "impact_description": "Establishes the execution path for the final Phase 1 submission; ensures technical deliverables (MVD) provide a scalable data architecture (LDM) rather than a flat table, protecting against technical debt.",
+          "notes": "Evidence anchors: E-033 (Workshop note), E-034 (Sitemap v4), and 2026-05-13_CRDB-Post-Workshop-Reorientation-Synthesis.md.",
+          "": ""
+        },
+        {
+          "change_id": "CH-012",
+          "date": "2026-05-13",
+          "change_summary": "Refactored the post-workshop reorientation note into a concise execution framing: clarified Stage 3 as L&D LDM + ELT intake contract, Stage 4 as governed content assets, and Stage 5 as CDM domain ownership ratification; added a context-retrieval anchor list for future sessions.",
+          "trigger_s": "T-020",
+          "affected_decisions": "No new decisions; improves retrievability and corrects governance scoping (Director Nid endorses CDM domain ownership; IT team interface via metadata mapping).",
+          "affected_deliverables": "(artifact) `2026-05-13_CRDB-Post-Workshop-Reorientation-Synthesis.md`",
+          "impact_description": "Makes the July 6 execution narrative auditable and reduces context loss between sessions by explicitly listing canonical artifacts (execution spine, tracks, CDM, MVP/workflow, IT boundary, and content-as-asset pivot).",
+          "notes": "Updated artifact: [`2026-05-13_CRDB-Post-Workshop-Reorientation-Synthesis.md`](ψ/incubate/DCCE/CRDB/output/2026-05-13_CRDB-Post-Workshop-Reorientation-Synthesis.md:1)",
+          "": ""
+        }
+      ],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-05/18/21.23_tor-strategic-review-hardening.md",
+      "date": "2026-05-18",
+      "time": "21:23",
+      "focus": "Strategic audit and re-engineering of the National Climate Adaptation Database Draft TOR.",
+      "type": "Research | Refactoring | Strategic Planning",
+      "sessionSummary": "Conducted a deep-dive strategic review and \\\"hardening\\\" of the 25M THB Draft TOR for the National Climate Adaptation Database. Pivoted from rejected MVP concepts to validated Stakeholder Needs as the primary functional requirements. Performed a granular, item-by-item audit of Section 5 (Scope of Work), integrating 2026 technical standards (WIS 2.0, DCAT 3.0, OGC APIs). Analyzed potential contractor Ditto (Thailand) PCL, identifying a \\\"Domain-Light\\\" risk and providing a strategy to mitigate this through redlined personnel requirements.",
+      "nextSteps": [
+        "[ ] Redline Section 11 (Personnel) to mandate specific Climate Science and Geospatial Data Architecture roles.",
+        "[ ] Consolidate all Section 5 and 11 redlines into a final Synthesis Memo.",
+        "[ ] Deliver the \\\"Strategic TOR Review Package\\\" to the user."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-05/20/00.43_blueprint-procurement-shield.md",
+      "date": "2026-05-20",
+      "time": "00:43",
+      "focus": "Defining the \"Blueprint-as-a-Shield\" strategy for CRDB procurement.",
+      "type": "Unspecified",
+      "sessionSummary": "In this session, I pivoted the project strategy from a general \"research\" mode to a surgical \"Procurement Shielding\" mode. By auditing the May 19 meeting transcript, I identified a critical identity gap where DCCE leadership (Director Toey) was inadvertently delegating product ownership to a technical contractor. To prevent this \"Expert Drift,\" I codified a new strategy that defines success as the delivery of a comprehensive **8-Pillar Inception Package** (CDM, Business Glossary, Logic Rules, etc.). This package ensures that the 25M THB contractor focuses on technical implementation of the Architect's (DCCE/Boss) logic rather than inventing their own.",
+      "nextSteps": [
+        "Tier the **Building Block Catalog** (Pillar 8) based on Must-Have / Nice-to-Have categories.",
+        "Draft the **\"Nid Memo\"** for Division-level Stewardship ratification.",
+        "Perform surgical redlines to TOR Sections 5 and 11 to enforce the \"Inception Package\" requirement.",
+        "Flesh out the **Business Glossary** and **Logic Rules**."
+      ],
+      "changeLogRows": [
+        {
+          "change_id": "CH-013",
+          "date": "2026-05-20",
+          "change_summary": "Adopted \"Blueprint-as-a-Shield\" strategy; re-calibrated 8 Pillars against project reality (Reference Data/Mapping/Logic scope) and established the Deliverable \"Tuck-in\" mapping for the July 6 submission.",
+          "trigger_s": "T-021",
+          "affected_decisions": "Extends CH-011 reorientation into a hardened procurement defense strategy; aligns with TOR deliverable requirements",
+          "affected_deliverables": "D-031, D-032",
+          "impact_description": "Protects DCCE from contractor logic invention by delivering a hardened Inception Package (8 Pillars) tucked into mandated deliverables. Reduces \"expert drift\" risk by clarifying that CRDB project scope is design/architecture, not full data processing.",
+          "notes": "Strategy Anchor: [`ψ/incubate/DCCE/CRDB/output/2026-05-20_CRDB-Blueprint-Handoff-and-Procurement-Shield-Strategy.md`](ψ/incubate/DCCE/CRDB/output/2026-05-20_CRDB-Blueprint-Handoff-and-Procurement-Shield-Strategy.md)",
+          "": ""
+        }
+      ],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-05/21/00.48_crdb_strategy_and_handoff.md",
+      "date": "2026-05-21",
+      "time": "00:48",
+      "focus": "Strategic alignment and execution hardening for the CRDB July 6th handoff.",
+      "type": "Strategy | Research | Documentation",
+      "sessionSummary": "This session successfully transitioned the CRDB project from a collection of \"conceptual reports\" into a **\"Hardened Inception Package\"**. The core breakthrough was the definition of the **\"Blueprint-as-a-Shield\"** strategy, which contractually mandates that the upcoming 25M THB technical contractor must treat our 8 Pillars as a frozen baseline, effectively prohibiting a redundant \"Discovery Phase.\" We grounded project identities in industry-standard DAMA-DMBOK roles (Data Architect vs. System Integrator) and refined the governance framework to focus on **Division-Level Stewardship Oversight**.",
+      "nextSteps": [
+        "**Pillar 2 Hardening**: Create the physical CSV/Excel for the 100+ approved terms.",
+        "**Pillar 3 Hardening**: Build the deterministic Excel model for the MVD logic rules.",
+        "**TOR Redlines**: Apply the \"Zero-Discovery\" clauses to the draft TOR."
+      ],
+      "changeLogRows": [
+        {
+          "change_id": "CH-014",
+          "date": "2026-05-21",
+          "change_summary": "Hardened 8 Pillars into Decoupled Technical Specifications. Established a \"Zero-Discovery\" handoff baseline to protect the 25M implementation from semantic and logical drift.",
+          "trigger_s": "T-022",
+          "affected_decisions": "(Recorded in Anchor D-032)",
+          "affected_deliverables": "D-032, D-033",
+          "impact_description": "Pivoted from conceptual design to \"Hardened Specifications.\" Decoupled semantics (P5) and RACI (P6) from data inventories (P4/P7) to create an enforceable, modular handoff package.",
+          "notes": "Strategy Anchor: [[ψ/incubate/DCCE/CRDB/output/00_Strategy_Reports/2026-05-20_CRDB-9-Pillar-Inception-Package-Anchor\\|2026-05-20_CRDB-9-Pillar-Inception-Package-Anchor]]",
+          "": ""
+        }
+      ],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-05/21/11.52_crdb-pillar-hardening-and-anchor-sync.md",
+      "date": "2026-05-21",
+      "time": "11:52",
+      "focus": "CRDB blueprint hardening — TOR-first pillar specs, governance scope realism, and package anchor synchronization",
+      "type": "Specification hardening / governance design",
+      "sessionSummary": "This session hardened the CRDB “8 Pillars” technical specifications so they match (1) TOR contract reality and (2) existing project evidence, while explicitly reducing implementation overclaims.\n\nKey outcomes:\n- Pillar 4 (Interface Map) and Pillar 7 (Reference Data Matrix) were re-scoped as **TOR-supporting scaffolds** (crosswalk + dependency/authority map) with explicit honesty flags.\n- Governance semantics were separated cleanly: Pillar 5 defines **G1–G5 meaning**, Pillar 6 defines **decision rights + operating cadence**, while Pillar 4/7 keep the minimal audit spine required to stay executable.\n- Pillar 6 was reframed as an **execution plan for division-wide buy-in** (anti-shelfware), not just a RACI table.\n- Pillar 8 was reframed to satisfy **TOR 5.2** with **budgeting/strategy-oriented presentation as primary** and catalog as secondary.\n- The “8-pillar package anchor” was updated so its Section 4 summaries match the hardened specs (prevents future drift).",
+      "nextSteps": [
+        "Draft TOR redlines aligned with the hardened pillars (if choosing TOR slice).",
+        "Clean git state (review modified files; decide on handling of ψ/ vault paths before committing).",
+        "If continuing pillar hardening: validate Pillar 8 against the latest NCAIF sitemap v4 structure and ensure evidence anchors exist for Tier-1 blocks."
+      ],
+      "changeLogRows": [
+        {
+          "change_id": "CH-014",
+          "date": "2026-05-21",
+          "change_summary": "Hardened 8 Pillars into Decoupled Technical Specifications. Established a \"Zero-Discovery\" handoff baseline to protect the 25M implementation from semantic and logical drift.",
+          "trigger_s": "T-022",
+          "affected_decisions": "(Recorded in Anchor D-032)",
+          "affected_deliverables": "D-032, D-033",
+          "impact_description": "Pivoted from conceptual design to \"Hardened Specifications.\" Decoupled semantics (P5) and RACI (P6) from data inventories (P4/P7) to create an enforceable, modular handoff package.",
+          "notes": "Strategy Anchor: [[ψ/incubate/DCCE/CRDB/output/00_Strategy_Reports/2026-05-20_CRDB-9-Pillar-Inception-Package-Anchor\\|2026-05-20_CRDB-9-Pillar-Inception-Package-Anchor]]",
+          "": ""
+        }
+      ],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-05/21/12.15_crdb-pillar-hardening-and-ledger-closure.md",
+      "date": "2026-05-21",
+      "time": "12:15",
+      "focus": "Decoupling and hardening the 8-Pillar CRDB Inception Package into standalone technical specifications.",
+      "type": "Refactoring | Strategy | Documentation",
+      "sessionSummary": "This session served as the **\"Hardening Bridge\"** for the CRDB Inception Package. We transitioned from high-level strategic memos into a suite of **8 standalone technical specifications** (Pillar 1-8). The core objective was to create a **\"Zero-Discovery\" mandate** for the upcoming 25M THB implementation contractor. Key technical achievements include the structural decoupling of governance logic (Pillar 5/6) from data inventories (Pillar 4/7), the refinement of analytical maturity rules (G3/G5), and the contractual anchoring of building blocks to TOR 5.2. We successfully closed the session by formalizing the **Audit-to-Asset traceability chain** in the project ledgers (Trigger T-022, Evidence E-040, Change CH-014, Deliverable D-033).",
+      "nextSteps": [],
+      "changeLogRows": [
+        {
+          "change_id": "CH-014",
+          "date": "2026-05-21",
+          "change_summary": "Hardened 8 Pillars into Decoupled Technical Specifications. Established a \"Zero-Discovery\" handoff baseline to protect the 25M implementation from semantic and logical drift.",
+          "trigger_s": "T-022",
+          "affected_decisions": "(Recorded in Anchor D-032)",
+          "affected_deliverables": "D-032, D-033",
+          "impact_description": "Pivoted from conceptual design to \"Hardened Specifications.\" Decoupled semantics (P5) and RACI (P6) from data inventories (P4/P7) to create an enforceable, modular handoff package.",
+          "notes": "Strategy Anchor: [[ψ/incubate/DCCE/CRDB/output/00_Strategy_Reports/2026-05-20_CRDB-9-Pillar-Inception-Package-Anchor\\|2026-05-20_CRDB-9-Pillar-Inception-Package-Anchor]]",
+          "": ""
+        }
+      ],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-05/21/17.10_crdb-strategic-alignment-deck-design.md",
+      "date": "2026-05-21",
+      "time": "17:10",
+      "focus": "Strategic Alignment Deck Design & EDSDLC Grounding for DCCE Director Toey.",
+      "type": "Strategy | Technical Specification | Documentation",
+      "sessionSummary": "This session focused on the design and technical hardening of a strategic alignment deck for Director Toey, bridging the transition from Project A (CRDB Logical Design) to Project B (25M THB Physical Implementation). The core achievement was the formalization of the **\"Zero-Discovery\" Handoff Protocol**, grounded in a 7-phase **Enterprise Data System Development Lifecycle (EDSDLC)** and **DAMA-DMBOK v2** roles. We successfully refactored the project's strategic documentation into a generic technical framework and an applied project strategy, ensuring that DCCE retains \"Logical Sovereignty\" over the system's logic and rules.",
+      "nextSteps": [],
+      "changeLogRows": [
+        {
+          "change_id": "CH-014",
+          "date": "2026-05-21",
+          "change_summary": "Hardened 8 Pillars into Decoupled Technical Specifications. Established a \"Zero-Discovery\" handoff baseline to protect the 25M implementation from semantic and logical drift.",
+          "trigger_s": "T-022",
+          "affected_decisions": "(Recorded in Anchor D-032)",
+          "affected_deliverables": "D-032, D-033",
+          "impact_description": "Pivoted from conceptual design to \"Hardened Specifications.\" Decoupled semantics (P5) and RACI (P6) from data inventories (P4/P7) to create an enforceable, modular handoff package.",
+          "notes": "Strategy Anchor: [[ψ/incubate/DCCE/CRDB/output/00_Strategy_Reports/2026-05-20_CRDB-9-Pillar-Inception-Package-Anchor\\|2026-05-20_CRDB-9-Pillar-Inception-Package-Anchor]]",
+          "": ""
+        }
+      ],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-05/22/13.50_9-pillar-realignment.md",
+      "date": "2026-05-22",
+      "time": "13:50",
+      "focus": "Aligning project pillars with TOR-mandated deliverables and hardening logical specs.",
+      "type": "Refactoring | Strategy | Documentation",
+      "sessionSummary": "This session was a high-stakes strategic alignment phase for the CRDB (Climate Risk Data Blueprint) project. We transitioned from an abstract \"8-Pillar\" technical framework to a **\"9-Pillar TOR-Direct Alignment\"** model. This ensures that every primary deliverable requested by the Digital Government Agency (DCCE) is treated as a first-class citizen in our technical blueprint. We updated the master `Inception Package Anchor` document, mapped technical \"Bridges\" (like Interface Mapping and Ref Data Matrix) into the TOR pillars, and established a \"Zero-Discovery\" mandate for the upcoming implementation contractor.",
+      "nextSteps": [
+        "[ ] Physically reorganize folders `01` through `09` in `ψ/incubate/DCCE/CRDB/output/`.",
+        "[ ] Perform a \"Global Link Healing\" pass to ensure all Wikilinks and Markdown links are updated.",
+        "[ ] Start hardening **Pillar 1 (Interface Mapping)** for the Provincial Risk Profile node.",
+        "[ ] Start hardening **Pillar 6 (L&D Math Engine)** to provide the frozen computation formulas."
+      ],
+      "changeLogRows": [
+        {
+          "change_id": "CH-035",
+          "date": "2026-05-22",
+          "change_summary": "Physicalized the pillar definitions — first drafted as 8 Pillars in E-038, then decoupled into 9 pillars via CH-014/D-032 — into a numeric `output/` folder taxonomy (`00_Strategy_Reports` through `09_BuildingBlocks`), converting the Inception Package Anchor from a planning document into the projects enforced filesystem structure.",
+          "trigger_s": "T-021, T-022",
+          "affected_decisions": "Extends CH-013 and CH-014 from conceptual pillar definition into physical directory enforcement.",
+          "affected_deliverables": "D-056",
+          "impact_description": "Establishes the canonical numeric output-folder convention still in use as of August 2026; TOR70 review and A-BTR requirement analysis remain outside it as dated, project-specific exception folders rather than renumbered pillars.",
+          "notes": "Physical execution: git commit 1a1572e (\"crdb: start 9-pillar output restructure (rename + pillar stubs)\", E-069). Amendment (2026-08-04): folder numbers 01-09 map exactly to D-032's Section 3 pillar table, NOT to E-038's original 8-pillar order — the decoupling in CH-014 also reordered the pillars (architecture-first CDM=P1 in E-038 became deliverable/TOR-first Sitemap=P1 in D-032) and inserted a new Use Case Inventory pillar (P2) absent from E-038. See D-032 Section 3 \"Summary of Pillar-to-Deliverable Mapping\" for the authoritative folder<->pillar crosswalk.",
+          "": ""
+        }
+      ],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-05/22/18.31_crdb-governance-alignment.md",
+      "date": "2026-05-22",
+      "time": "18:31",
+      "focus": "Aligning CRDB Technical Specifications with Formal Governance Standards",
+      "type": "Strategy | Documentation | Research",
+      "sessionSummary": "This session focused on hardening the strategic and technical foundation of the Climate Resilience Database (CRDB) project. I transitioned the project deliverables into a formalized 9-Pillar taxonomy and drafted a high-stakes Executive Strategy Memo for Director Toey. A key achievement was bridging the \"Authority Gap\" between Director Toey (Project Lead) and Director Nid (Adaptation Division) by defining clear roles for Data Owners and Data Stewards. We also purged informal metaphors in favor of strictly formal DAMA-DMBOK terminology to ensure professional legitimacy.",
+      "nextSteps": [
+        "Finalize the Normalized Glossary (Pillar 4) with 100+ terms and UUIDs.",
+        "Draft Slide 2 (RACI & Roles) using the formal terminology established in the memo.",
+        "Conduct a \"Surgical Redline\" of the original TOR Sections 5 and 11 based on the new governance pillars."
+      ],
+      "changeLogRows": [
+        {
+          "change_id": "CH-035",
+          "date": "2026-05-22",
+          "change_summary": "Physicalized the pillar definitions — first drafted as 8 Pillars in E-038, then decoupled into 9 pillars via CH-014/D-032 — into a numeric `output/` folder taxonomy (`00_Strategy_Reports` through `09_BuildingBlocks`), converting the Inception Package Anchor from a planning document into the projects enforced filesystem structure.",
+          "trigger_s": "T-021, T-022",
+          "affected_decisions": "Extends CH-013 and CH-014 from conceptual pillar definition into physical directory enforcement.",
+          "affected_deliverables": "D-056",
+          "impact_description": "Establishes the canonical numeric output-folder convention still in use as of August 2026; TOR70 review and A-BTR requirement analysis remain outside it as dated, project-specific exception folders rather than renumbered pillars.",
+          "notes": "Physical execution: git commit 1a1572e (\"crdb: start 9-pillar output restructure (rename + pillar stubs)\", E-069). Amendment (2026-08-04): folder numbers 01-09 map exactly to D-032's Section 3 pillar table, NOT to E-038's original 8-pillar order — the decoupling in CH-014 also reordered the pillars (architecture-first CDM=P1 in E-038 became deliverable/TOR-first Sitemap=P1 in D-032) and inserted a new Use Case Inventory pillar (P2) absent from E-038. See D-032 Section 3 \"Summary of Pillar-to-Deliverable Mapping\" for the authoritative folder<->pillar crosswalk.",
+          "": ""
+        }
+      ],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-05/26/17.01_crdb-workshop-analysis-retro.md",
+      "date": "2026-05-26",
+      "time": "17:01",
+      "focus": "Analyze and synthesize CRDB Workshop Activity 2 outputs",
+      "type": "Analysis & Refactoring",
+      "sessionSummary": "Processed the raw outputs from the CRDB consultation workshop (Activity 2). Extracted service concepts from mixed-format markdown files (some narrative, some tabular), normalized them against the canonical Use Case Menu, clustered the demand, and derived strategic implications for the July 6 roadmap. During the review, the human host identified that my initial mapping over-counted \"New Use Cases.\" I corrected the logic, which revealed a powerful 77% alignment with the pre-workshop design.",
+      "nextSteps": [
+        "Deliver the final analysis to the project sponsor.",
+        "Update the CRDB Technical Specifications (Pillar 2 and Pillar 4) to reflect the \"Utility Shift\" (API-first delivery).",
+        "Prepare the DOPA-Compliant Spatial API demo for FGD3."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-05/27/12.14_rrr_pillar2-sealed-and-registered.md",
+      "date": "2026-05-27",
+      "time": "12:14",
+      "focus": "Pillar 2 (Use Cases & Functional Specs) Sealing and Registration",
+      "type": "Documentation / Strategy / Governance",
+      "sessionSummary": "- Successfully executed the Pillar 2 sealing plan, transforming workshop evidence and interview findings into a formal deliverable package.\n- Consolidated 26 workshop concepts into 10 high-impact canonical use cases (UC-01 to UC-10).\n- Produced a detailed Strategic Prioritization & Discussion Note drawing on global best practices (SSOT, API-first, localized mapping).\n- Formally registered the \"Audit-to-Asset\" chain for Pillar 2 in the project ledgers (Trigger T-023, Evidence E-041, Change CH-016, Deliverable D-034).\n- Established the workspace orientation for the upcoming Pillar 3 (Data Inventory) phase.",
+      "nextSteps": [
+        "Transition to **Pillar 3 (Data Inventory & DQ)**.",
+        "Identify the mandatory baseline data layers required to support UC-01 and UC-02.",
+        "Build the **Information Product Inventory** aligned to TOR §5.3.4.",
+        "Map the Pillar 3 data gates (G1-G5) to the newly sealed use cases."
+      ],
+      "changeLogRows": [
+        {
+          "change_id": "CH-016",
+          "date": "2026-05-27",
+          "change_summary": "Consolidated 26 workshop concepts into 10 Canonical Use Cases (UC-01 to UC-10) to create a testable functional baseline.",
+          "trigger_s": "T-023",
+          "affected_decisions": "Aligns with \"Zero-Discovery\" handoff mandate (CH-014)",
+          "affected_deliverables": "D-034",
+          "impact_description": "Shield DCCE from procurement-stage \"logic invention\" by defining explicit functional modules before contractor onboarding.",
+          "notes": "Deliverable Suite in `output/02_UseCases_FunctionalSpecs/`",
+          "": ""
+        },
+        {
+          "change_id": "CH-017",
+          "date": "2026-05-27",
+          "change_summary": "Established the \\\"Universal Semantic Layer\\\" and decoupled scientific data modeling from system presentation concerns.",
+          "trigger_s": "T-024",
+          "affected_decisions": "Aligns with \\\"Zero-Discovery\\\" handoff mandate and TOR Section 5.7 (CMS)",
+          "affected_deliverables": "D-035, D-036",
+          "impact_description": "Shields the CDM from semantic drift and CMS-coupling technical debt. Mandates Glossary Term IDs as a prerequisite for data model sealing.",
+          "notes": "Deliverables D-035 & D-036",
+          "": ""
+        }
+      ],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-05/27/12.25_unblocking-pillar5-cdm-ear-catalog.md",
+      "date": "2026-05-27",
+      "time": "12:25",
+      "focus": "Pillar 5 (CDM) & Pillar 4 (Glossary) Sealing",
+      "type": "Unspecified",
+      "sessionSummary": "Successfully unblocked the CRDB data architecture by identifying a critical semantic dependency between Pillar 5 (CDM) and Pillar 4 (Glossary). Conducted a rapid seeding of the Pillar 4 Glossary with 22 core terms anchored in ISO 14090/14091, which enabled the compilation and \"sealing\" of the Pillar 5 EAR Catalog deliverable. Conducted a 100% functional audit of the CDM against Pillar 2 Use Cases and the NCAIF Sitemap v4.",
+      "nextSteps": [
+        "**Audit Pillar 6 (LDM)**: Now that the entities are conceptualized, we need to harden the rules and templates in Pillar 6.",
+        "**Audit Pillar 3 (Data Inventory)**: Map the 17 core entities to actual data sources identified in previous audits.",
+        "**Pillar 2 Completion**: Review the sealed functional specs one last time against the now-canonical glossary terms."
+      ],
+      "changeLogRows": [
+        {
+          "change_id": "CH-016",
+          "date": "2026-05-27",
+          "change_summary": "Consolidated 26 workshop concepts into 10 Canonical Use Cases (UC-01 to UC-10) to create a testable functional baseline.",
+          "trigger_s": "T-023",
+          "affected_decisions": "Aligns with \"Zero-Discovery\" handoff mandate (CH-014)",
+          "affected_deliverables": "D-034",
+          "impact_description": "Shield DCCE from procurement-stage \"logic invention\" by defining explicit functional modules before contractor onboarding.",
+          "notes": "Deliverable Suite in `output/02_UseCases_FunctionalSpecs/`",
+          "": ""
+        },
+        {
+          "change_id": "CH-017",
+          "date": "2026-05-27",
+          "change_summary": "Established the \\\"Universal Semantic Layer\\\" and decoupled scientific data modeling from system presentation concerns.",
+          "trigger_s": "T-024",
+          "affected_decisions": "Aligns with \\\"Zero-Discovery\\\" handoff mandate and TOR Section 5.7 (CMS)",
+          "affected_deliverables": "D-035, D-036",
+          "impact_description": "Shields the CDM from semantic drift and CMS-coupling technical debt. Mandates Glossary Term IDs as a prerequisite for data model sealing.",
+          "notes": "Deliverables D-035 & D-036",
+          "": ""
+        }
+      ],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-05/28/16.47_glossary-v4-semantic-hardening.md",
+      "date": "2026-05-28",
+      "time": "16:47",
+      "focus": "Finalizing Pillar 4 Business Glossary (V4) & Semantic Hardening",
+      "type": "Data Engineering & Semantic Review",
+      "sessionSummary": "The session focused on evolving the CRDB Business Glossary from a draft CSV into a fully populated, database-ready artifact (V4). The process involved utilizing parallel sub-agents to research missing terms (like Hazard Modeling and NAP Modules), enforcing strict RFC 4180 formatting for Excel compatibility, and critically, reconciling automated data extraction with precise, manual user edits. The session culminated in a 100% complete dataset (56 terms) mapped explicitly to Pillar 5 CDM entities.",
+      "nextSteps": [
+        "Review Pillar 5 CDM Entity-Relationship diagrams to ensure 1:1 mapping with the finalized Glossary V4.",
+        "Begin the structural transition from Pillar 2 to Pillar 3, utilizing the clarified definitions of Risk vs. Resilience Assessment."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-05/28/18.00_pillar5-cdm-v2-hardening.md",
+      "date": "2026-05-28",
+      "time": "18:00",
+      "focus": "Pillar 5 CDM Hardening (V2)",
+      "type": "Architecture & Data Engineering",
+      "sessionSummary": "Following the finalization of the Pillar 4 Business Glossary (V4), this session focused on hardening the Pillar 5 Conceptual Data Model (CDM). The objective was to align the logical entities with the canonical design and the new glossary definitions. I successfully normalized the subject areas into four Domains (DOM_01 to DOM_04), expanded the entity catalog to 29 entities, and established the physical schema via four CSV exports.",
+      "nextSteps": [
+        "Verify Domain 4 (Adaptation Planning) entities with the subdivision leads.",
+        "Begin Pillar 3 Data Inventory mapping to the new Domain 2/3 entities."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-05/28/18.20_cdm-symmetrical-hardening.md",
+      "date": "2026-05-28",
+      "time": "18:20",
+      "focus": "Pillar 5 CDM Hardening (V2) & Symmetrical Glossary Alignment",
+      "type": "Architecture & Data Engineering",
+      "sessionSummary": "Following the finalization of the Pillar 4 Business Glossary (V4), this session focused on hardening the Pillar 5 Conceptual Data Model (CDM). The objective was to align the logical entities with the canonical design and the new glossary definitions. After an initial update, a second \"Symmetry & Alignment\" pass was executed to reconcile naming misalignments (specifically renaming Vulnerability Definition to Vulnerability Framework). I successfully enforced a symmetrical hierarchy (Framework -> Dimension -> Structure) for both Vulnerability and Resilience clusters across both Pillar 4 and Pillar 5.",
+      "nextSteps": [
+        "Present the Symmetrical CDM v2.1 to the data architecture team.",
+        "Proceed to Pillar 3 (Data Inventory) with the newly hardened naming convention."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-05/28/18.30_cdm-symmetrical-hardening.md",
+      "date": "2026-05-28",
+      "time": "18:30",
+      "focus": "Pillar 5 CDM Hardening (v2.1) & Symmetrical Glossary Alignment",
+      "type": "Architecture & Data Engineering",
+      "sessionSummary": "Following the finalization of the Pillar 4 Business Glossary (V4), this session focused on hardening the Pillar 5 Conceptual Data Model (CDM). The objective was to align the logical entities with the canonical design and the new glossary definitions. After an initial update, a second \"Symmetry & Alignment\" pass was executed to reconcile naming misalignments (specifically renaming Vulnerability Definition to Vulnerability Framework). I successfully enforced a symmetrical hierarchy (Framework -> Dimension -> Structure) for both Vulnerability and Resilience clusters across both Pillar 4 and Pillar 5.",
+      "nextSteps": [
+        "Present the Symmetrical CDM v2.1 to the data architecture team.",
+        "Proceed to Pillar 3 (Data Inventory) with the newly hardened naming convention."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-06/12/05.03_crdb-pillar2-service-detailing-retro.md",
+      "date": "2026-06-12",
+      "time": "05:03",
+      "focus": "05.03_crdb-pillar2-service-detailing-retro.md",
+      "type": "Unspecified",
+      "sessionSummary": "This session converted the Director Toey reflection into an actionable Pillar 2 service-detailing plan, then strengthened the conceptual model that links stakeholder use cases to reusable services. The Loss & Damage Economic Impact Briefing Service was used as the concrete wedge to prove the abstraction. The CRDB ledgers were then sealed with a corrected audit-to-asset spine, and the Pillar 2 workspace was cleaned so only the current canonical files remained active.",
+      "nextSteps": [],
+      "changeLogRows": [
+        {
+          "change_id": "CH-026",
+          "date": "2026-06-12",
+          "change_summary": "Service Intelligence → Data-Gap Policy Report Hardening: transformed the sealed D-043 service baseline into a downstream policy-facing data-gap report.",
+          "trigger_s": "T-033",
+          "affected_decisions": "Service-level data-gap policy storyline",
+          "affected_deliverables": "D-044",
+          "impact_description": "Separated Chapter 2 empirical data-readiness diagnosis, Chapter 3 service-level bottlenecks, and Chapter 4 strategic actions; grounded the report in the 260-dataset inventory, 40-use-case readiness logic, and the 8-service baseline.",
+          "notes": "Treats D-043 as an ancestor baseline, not a discarded version.",
+          "": ""
+        },
+        {
+          "change_id": "CH-027",
+          "date": "2026-06-12",
+          "change_summary": "Service-Detailing Framework and Use-Case/Service Translation Hardening: formalized the implicit linkage between use cases and services, then promoted it into a Loss & Damage alpha service example and a broader dossier plan.",
+          "trigger_s": "T-034",
+          "affected_decisions": "Service detailing and alpha-product planning",
+          "affected_deliverables": "D-045, D-046",
+          "impact_description": "Added the conceptual model that explains how stakeholder use cases become reusable service capabilities, plus the execution plan for service dossiers and portfolio prioritization.",
+          "notes": "Establishes the operational bridge from service intelligence to executable service design.",
+          "": ""
+        }
+      ],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-06/24/15.41_crdb-5.2-naturalization-style-hardening.md",
+      "date": "2026-06-24",
+      "time": "15:41",
+      "focus": "15.41_crdb-5.2-naturalization-style-hardening.md",
+      "type": "Unspecified",
+      "sessionSummary": "This session focused on restarting the CRDB final report effort by checking the current state of chapters [5.2](ψ/incubate/DCCE/CRDB/output/final_report/5.2/) and [5.3](ψ/incubate/DCCE/CRDB/output/final_report/5.3/), then narrowing the work to the style and tone of sections [5.2.2](ψ/incubate/DCCE/CRDB/output/final_report/5.2/5.2.2%20การศึกษาโครงสร้างและรูปแบบการเผยแพร่ข้อมูลด้านการปรับตัวฯ%20และการจัดการข้อมูลภายในกรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม%20(DCCE).md) through [5.2.5](ψ/incubate/DCCE/CRDB/output/final_report/5.2/5.2.5%20การปรับปรุง%20(ร่าง)%20กรอบ%20NCAIF%20และโครงสร้างการบริหารจัดการข้อมูลตามข้อเสนอแนะ.md). The key conclusion was that the chapter content already existed, but the prose still carried interim-report DNA. The practical task became a sentence-level and paragraph-level naturalization pass rather than a structural rewrite.\n\nThe human made the scope narrow and consistent after the first audit. That helped convert the task from a vague report-refresh exercise into a controlled editing sequence. We rewrote [5.2.3](ψ/incubate/DCCE/CRDB/output/final_report/5.2/5.2.3%20การจัดทำ%20(ร่าง)%20โครงสร้างข้อมูลด้านการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศของประเทศ%20(NCAIF).md), then adjusted agentive wording so the acting subject became [คณะทำงาน](ψ/incubate/DCCE/CRDB/output/final_report/5.2/5.2.3%20การจัดทำ%20(ร่าง)%20โครงสร้างข้อมูลด้านการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศของประเทศ%20(NCAIF).md) rather than [โครงการ](ψ/incubate/DCCE/CRDB/output/final_report/5.2/5.2.3%20การจัดทำ%20(ร่าง)%20โครงสร้างข้อมูลด้านการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศของประเทศ%20(NCAIF).md), because the section needed to read as team action, not project-as-actor language. After that, we rewrote [5.2.4](ψ/incubate/DCCE/CRDB/output/final_report/5.2/5.2.4%20สรุปผลการประชุมกลุ่มย่อยเพื่อให้ความเห็นต่อ%20(ร่าง)%20โครงสร้างข้อมูลด้านการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศของประเทศ%20และหารือแนวทางการบริหารจัดการข้อมูล.md) and [5.2.5](ψ/incubate/DCCE/CRDB/output/final_report/5.2/5.2.5%20การปรับปรุง%20(ร่าง)%20กรอบ%20NCAIF%20และโครงสร้างการบริหารจัดการข้อมูลตามข้อเสนอแนะ.md) using the TOR5.5 style pack as the human-tone benchmark.",
+      "nextSteps": [
+        "Continue the same naturalization pass on the remaining CRDB chapter sections that still carry interim-report phrasing.",
+        "Revisit [5.2.1](ψ/incubate/DCCE/CRDB/output/final_report/5.2/5.2.1%20ศึกษาโครงสร้างและรูปแบบของการเผยแพร่ข้อมูลด้านการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศของต่างประเทศ%20เช่น%20ญี่ปุ่น%20(A-PLAT)%20เยอรมัน%20(Klimadapt)%20สหภาพยุโรป%20เป็นต้น.md) and [5.2.2](ψ/incubate/DCCE/CRDB/output/final_report/5.2/5.2.2%20การศึกษาโครงสร้างและรูปแบบการเผยแพร่ข้อมูลด้านการปรับตัวฯ%20และการจัดการข้อมูลภายในกรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม%20(DCCE).md) for the next humanization pass.",
+        "Keep the same separation between status analysis and writing execution so future edits stay controlled and traceable."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-06/24/18.18_rrr_tor55_phase3_phase4_and_workflow_hardening.md",
+      "date": "2026-06-24",
+      "time": "18:18",
+      "focus": "18.18_rrr_tor55_phase3_phase4_and_workflow_hardening.md",
+      "type": "Unspecified",
+      "sessionSummary": "This session focused on turning the TOR 5.5 article workflow from a loose drafting sequence into a more explicit operational system. I first helped re-anchor the distinction between Phase 3 and Phase 4, then corrected the plan so that final drafting is clearly owned by Phase 4 and not by a redundant pre-phase gate. From there, I operationalized the new rules on real paper folders: I prepared and refined delta-only Phase 3 packets, captured style signals when the human’s edits materially changed framing, and executed final drafting for completed papers through delegated subtasks. The net result is not only new article outputs, but a sharper contract for how evidence, style, and final prose should interact across all remaining papers.",
+      "nextSteps": [
+        "Continue the integrated Phase 3 process for remaining papers, starting from the updated plan as the only source of truth.",
+        "Resume manual NotebookLM-assisted promotion for papers whose `raw-copy.md` packets are prepared but not yet filled.",
+        "Advance remaining papers into Phase 4 once their Phase 3 package is materially complete."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-06/25/07.35_crdb-5.3-service-gap-and-policy-drafts.md",
+      "date": "2026-06-25",
+      "time": "07:35",
+      "focus": "07.35_crdb-5.3-service-gap-and-policy-drafts.md",
+      "type": "Unspecified",
+      "sessionSummary": "This session focused on extending the CRDB final report from the already completed Chapter 5.2 work into the interconnected sections in Chapter 5.3, especially the consultation-to-service logic that links stakeholder interviews, consultation workshop outputs, prioritized use cases, data readiness assessment, gap analysis, and policy/technical recommendations. The work began by establishing a structured evidence-first workflow similar to the one used for Section 5.2, then splitting the process into explicit subtasks for gathering artifacts, synthesizing evidence, and drafting the report sections. From there, the main effort concentrated on producing grounded Thai prose for Sections 5.3.3, 5.3.8, and 5.3.9, while maintaining continuity with the surrounding report voice and preserving the distinction between evidence notes, backup drafts, and final section files.\n\nThe strongest outcome was not only that the three sections were drafted, but that the logic chain became more coherent: stakeholder needs were traced into use cases, use cases were consolidated into key services, service feasibility was tested against available datasets and delivery constraints, and the resulting gap analysis was turned into recommendations that connect directly to data governance, organizational policy, technical standards, and strategic partnerships. That matters because these sections are not isolated writing tasks. They form the backbone of the argument for why DCCE should invest selectively in information services that are both institutionally defensible and operationally differentiating.",
+      "nextSteps": [
+        "Review the new Chapter 5.3 drafts for editorial tightening, especially whether the long-form recommendations in Section 5.3.9 need further sharpening around sequencing and institutional feasibility.",
+        "Normalize the task tracker whenever a drafting subtask has already completed its substantive deliverables.",
+        "Continue the same evidence-first workflow for subsequent CRDB sections so style, logic, and governance linkages remain consistent across the report."
+      ],
+      "changeLogRows": [
+        {
+          "change_id": "CH-029",
+          "date": "2026-06-25",
+          "change_summary": "Upgraded report sections 5.3.8 (Gap Analysis) and 5.3.9 (Policy & Technical Recommendations) to resolve 5 key user-feedback gaps.",
+          "trigger_s": "T-036",
+          "affected_decisions": "5.3.8 & 5.3.9 draft and master files",
+          "affected_deliverables": "Physical scale mismatch details (DEM, Stream Routing) added; root causes of 80% manual request rate analyzed (PDPA, security, API budgets); Centralized \"Risk Methodology Catalog\" recommended; DCCE infrastructure and specialized domain expert shortages addressed; 8 service gaps structured into a table.",
+          "impact_description": "Aligned drafts and master files to ensure 100% consistency and compliance with human feedback.",
+          "notes": "",
+          "": ""
+        }
+      ],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-06/25/16.00_crdb-ldm-rewrite-hardening.md",
+      "date": "2026-06-25",
+      "time": "16:00",
+      "focus": "16.00_crdb-ldm-rewrite-hardening.md",
+      "type": "Unspecified",
+      "sessionSummary": "This session focused on repairing a weak draft rather than merely extending a report. The human judged the first Thai drafts of [`5.3.6`](../../../incubate/DCCE/CRDB/output/final_report/5.3/5.3.6%20ศึกษาและวิเคราะห์ระบบการรายงานสาธารณะภัยของหน่วยงานที่เกี่ยวข้องเทียบกับมาตรฐานสากล%20เพื่อนำมาระบุช่องว่างและนำมาออกแบบร่างมาตราฐานชุดข้อมูลขั้นต่ำ%20และร่างแบบฟอร์มการรายงานความสูญเสียและความเสียหาย%20ที่ตอบโจทย์การรวบรวมข้อมูลผลกระทบจากภัยพิบัติ.md) and [`5.3.7`](../../../incubate/DCCE/CRDB/output/final_report/5.3/5.3.7%20นำร่างมาตรฐานชุดข้อมูลขั้นต่ำ%20สำหรับเหตุการณ์ด้านสภาพภูมิอากาศมาทดลองรวบรวมข้อมูลตามมาตรฐานกำหนด%20โดยคัดเลือกการรวบรวมข้อมูลจากเหตุการณ์ที่เกิดขึ้นในอดีต.md) to be generic, shallow, and insufficiently grounded. In response, the work shifted from drafting mode into an evidence-hardening cycle: first decomposing the rewrite into non-overlapping evidence blocks, then extracting claim-level support from PDNA materials, international standards, interoperability logic, and DDPM-specific practice notes, and only then rewriting the final prose.\n\nThe strongest accomplishment was structural discipline. Instead of jumping straight back into writing, the session created a controlled pathway from source to claim to paragraph. This included PDNA extraction, standard-by-standard extraction for [`DesInventar`](../../../incubate/DCCE/CRDB/inbox_source/Disaster_Loss_Standards_Analysis.md), [`DaLA`](../../../incubate/DCCE/CRDB/inbox_source/Disaster_Loss_Standards_Analysis.md), [`ADLA`](../../../incubate/DCCE/CRDB/inbox_source/Disaster_Loss_Standards_Analysis.md), and [`ECLAC`](../../../incubate/DCCE/CRDB/inbox_source/Disaster_Loss_Standards_Analysis.md), interoperability-schema extraction, DDPM context extraction, and paragraph-oriented source-to-claim matrices for both sections. That chain materially improved the final prose because it forced every major claim to be anchored to named evidence instead of relying on generic analytical language.",
+      "nextSteps": [
+        "Have the human review the rewritten [`5.3.6`](../../../incubate/DCCE/CRDB/output/final_report/5.3/5.3.6%20ศึกษาและวิเคราะห์ระบบการรายงานสาธารณะภัยของหน่วยงานที่เกี่ยวข้องเทียบกับมาตรฐานสากล%20เพื่อนำมาระบุช่องว่างและนำมาออกแบบร่างมาตราฐานชุดข้อมูลขั้นต่ำ%20และร่างแบบฟอร์มการรายงานความสูญเสียและความเสียหาย%20ที่ตอบโจทย์การรวบรวมข้อมูลผลกระทบจากภัยพิบัติ.md) and [`5.3.7`](../../../incubate/DCCE/CRDB/output/final_report/5.3/5.3.7%20นำร่างมาตรฐานชุดข้อมูลขั้นต่ำ%20สำหรับเหตุการณ์ด้านสภาพภูมิอากาศมาทดลองรวบรวมข้อมูลตามมาตรฐานกำหนด%20โดยคัดเลือกการรวบรวมข้อมูลจากเหตุการณ์ที่เกิดขึ้นในอดีต.md) files against tone and claim sharpness.",
+        "Reuse the evidence-packet plus claim-matrix workflow for any remaining CRDB sections that require cross-framework synthesis.",
+        "Harden the Windows `/rrr` execution path further so root detection, session detection, and metrics append are less brittle in future closures."
+      ],
+      "changeLogRows": [
+        {
+          "change_id": "CH-029",
+          "date": "2026-06-25",
+          "change_summary": "Upgraded report sections 5.3.8 (Gap Analysis) and 5.3.9 (Policy & Technical Recommendations) to resolve 5 key user-feedback gaps.",
+          "trigger_s": "T-036",
+          "affected_decisions": "5.3.8 & 5.3.9 draft and master files",
+          "affected_deliverables": "Physical scale mismatch details (DEM, Stream Routing) added; root causes of 80% manual request rate analyzed (PDPA, security, API budgets); Centralized \"Risk Methodology Catalog\" recommended; DCCE infrastructure and specialized domain expert shortages addressed; 8 service gaps structured into a table.",
+          "impact_description": "Aligned drafts and master files to ensure 100% consistency and compliance with human feedback.",
+          "notes": "",
+          "": ""
+        }
+      ],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-06/25/17.52_wrap_up_tor5.5.md",
+      "date": "2026-06-25",
+      "time": "17:52",
+      "focus": "17.52_wrap_up_tor5.5.md",
+      "type": "Unspecified",
+      "sessionSummary": "This session completed the entire 10-article drafting series under TOR 5.5. The primary focus of the latter half of this session was executing Phase 3 and Phase 4 for [ART09_BMR_UrbanSprawl_Floods](../../../incubate/DCCE/CRDB/output/TOR5.5_article_and_infoghraphic/ART09_BMR_UrbanSprawl_Floods) and [ART10_WIM_ExCom_Sea_Level_Rise](../../../incubate/DCCE/CRDB/output/TOR5.5_article_and_infoghraphic/ART10_WIM_ExCom_Sea_Level_Rise), as well as integrating style enforcer loops to auto-verify files before completion.\n\nA major pivot occurred when the human pointed out that the drafting of Paper 9 had erased the specific language choices and additions present in the user-provided draft, and that it lacked critical research analysis. In response, the drafting workflow was corrected to prioritize surgical edits over complete text regeneration. The final draft of Paper 10 was successfully aligned with the decision log's structural blueprints, including Bangkok's Bang Khun Tian local case study, and concluded with a provocative public warning urging policy discussions before a 20-30 year deadline.",
+      "nextSteps": [
+        "Ask the human to verify the final drafts of [ART09 04_Final_Draft.md](file:///C:/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/incubate/DCCE/CRDB/output/TOR5.5_article_and_infoghraphic/ART09_BMR_UrbanSprawl_Floods/04_Final_Draft.md) and [ART10 04_Final_Draft.md](file:///C:/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/incubate/DCCE/CRDB/output/TOR5.5_article_and_infoghraphic/ART10_WIM_ExCom_Sea_Level_Rise/04_Final_Draft.md).",
+        "Switch gears to the next phase of the TOR 5.5 roadmap (e.g., preparing infographics, layout, or translation if needed)."
+      ],
+      "changeLogRows": [
+        {
+          "change_id": "CH-029",
+          "date": "2026-06-25",
+          "change_summary": "Upgraded report sections 5.3.8 (Gap Analysis) and 5.3.9 (Policy & Technical Recommendations) to resolve 5 key user-feedback gaps.",
+          "trigger_s": "T-036",
+          "affected_decisions": "5.3.8 & 5.3.9 draft and master files",
+          "affected_deliverables": "Physical scale mismatch details (DEM, Stream Routing) added; root causes of 80% manual request rate analyzed (PDPA, security, API budgets); Centralized \"Risk Methodology Catalog\" recommended; DCCE infrastructure and specialized domain expert shortages addressed; 8 service gaps structured into a table.",
+          "impact_description": "Aligned drafts and master files to ensure 100% consistency and compliance with human feedback.",
+          "notes": "",
+          "": ""
+        }
+      ],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-06/26/22.15_crdb_5.3.6_5.3.7_second_version_drafting_and_gap_review.md",
+      "date": "2026-06-26",
+      "time": "22:15",
+      "focus": "22.15_crdb_5.3.6_5.3.7_second_version_drafting_and_gap_review.md",
+      "type": "Unspecified",
+      "sessionSummary": "This session completed a full evidence-to-prose cycle for the CRDB loss-and-damage reporting package, then extended the work by testing the proposed design against concrete DDPM data availability in the CRI project. The first major outcome was the successful orchestration of a research-backed rewrite of sections 5.3.6 and 5.3.7. The workflow moved from NotebookLM retrieval, to methodology synthesis, to data-model redesign, to Thai narrative preparation, and finally to full second-version section drafting. Rather than merely patching weak paragraphs, the work rebuilt the conceptual chain from DDPM reporting reality, through PDNA/DaLA/DesInventar comparison, into a layered relational target architecture that can support later implementation and policy interpretation.\n\nThe second major outcome was the CRI/DDPM forensic review. By tracing Bronze definition sheets, Silver normalizations, Gold analytical tables, and pipeline logic, the session clarified what DDPM actually reports natively and what CRI derives analytically. This materially improved the rigor of the argument in the report: DDPM is strong on event and early-impact reporting, but weak on baseline-driven valuation, structured assessment context, and true loss/recovery accounting. That distinction enabled a cleaner gap analysis against the proposed CRDB MVD design and reduced the risk of overstating what current operational data can support.\n\nThe third major outcome was process hardening. The work respected the staged orchestration model: plan, extraction, sufficiency review, artifact production, synthesis, and then prose drafting. The final outputs are therefore not isolated files but a linked chain: raw captures, methodology notes, design spec, gap analysis, edit notes, execution plan, and second-version Thai sections.\n\n---",
+      "nextSteps": [],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-06/27/17.31_crdb-writing-workflow-best-practice.md",
+      "date": "2026-06-27",
+      "time": "17:31",
+      "focus": "17.31_crdb-writing-workflow-best-practice.md",
+      "type": "Unspecified",
+      "sessionSummary": "This session developed a stronger working method for long-form Thai technical report writing in the CRDB 5.3.6 / 5.3.7 stream. The work did not consist only of drafting prose. It also established a repeatable discipline for how technical writing should be produced, challenged, corrected, and hardened. The most important outcome was the progressive tightening of the writing loop: source retrieval first, then narrative framing, then section drafting, then human correction, then style-pack revision, then structural rewriting. This made the writing process itself visible as a reusable method rather than a one-off drafting effort.\n\nThe session also showed that the best results came when the human forced the prose away from translated English architecture language and back toward Thai institutional report voice. That pressure improved Section 1, Topic 2, Topic 3, Topic 4, Topic 5, and Topic 6 in different ways. NotebookLM was used under a query-only discipline, with raw responses preserved before harmonisation. The style pack was upgraded so future drafting can reject the same kinds of phrasing errors earlier. A full technical data dictionary was also added to Topic 6, and the section was explicitly bridged to 5.3.7 for field mapping.",
+      "nextSteps": [
+        "Finish [`Topic 5`](ψ/incubate/DCCE/CRDB/output/final_report/5.3/5.3.6_edited_v1.md:76) in the same Thai institutional voice as the edited parts of Topic 2",
+        "Revisit [`Topic 6`](ψ/incubate/DCCE/CRDB/output/final_report/5.3/5.3.6_edited_v1.md:89) if needed to ensure the full data dictionary reads naturally in Thai, not like a translated specification",
+        "Continue into [`5.3.7`](ψ/incubate/DCCE/CRDB/output/final_report/5.3/5.3.6_edited_v1.md:1) by mapping DDPM fields into the MVD tables",
+        "Reuse the strengthened vetting stack in [`STYLE_PACK_NCAIF-Institutional.md`](ψ/memory/style/STYLE_PACK_NCAIF-Institutional.md:20) as the default writing gate for future Thai report tasks"
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-07/10/16.49_design-proposal-groundtruthing-and-semantic-governance.md",
+      "date": "2026-07-10",
+      "time": "16:49",
+      "focus": "16.49_design-proposal-groundtruthing-and-semantic-governance.md",
+      "type": "Unspecified",
+      "sessionSummary": "This session focused on groundtruthing the proposed DCCE adaptation information platform design against NotebookLM source material and then converting the findings into implementation-facing architecture language. The work moved in three clear research iterations. First, we validated the broad architecture direction: loose coupling, metadata-driven control, and a separation between governed data assets and presentation/content layers. Second, we drilled into semantic-layer literature and climate/ontology sources to test whether the proposed model should be centralized, federated, lightweight, or ontology-heavy. Third, we narrowed the question to the minimum viable semantic-governance stack required for the Adaptation Division so that the design would remain implementable under current project constraints rather than turning into an over-designed enterprise-semantics program.\n\nThe session also hardened process discipline. We created a reusable NotebookLM CLI wrapper, renamed raw evidence files to align with the clarified iteration vocabulary, and established a decision log so architecture reasoning and human decisions would not remain scattered across chat history. The result is that the design proposal now carries explicit language about division scope, semantic governance boundaries, lightweight-first implementation, and the distinction between topic content management and semantic-definition control.",
+      "nextSteps": [
+        "Resolve the remaining open policy question on publishing risk posture.",
+        "Decide whether the semantic implementation depth should stay lightweight-first or start introducing more formal structures sooner.",
+        "If needed, translate the design proposal and gap analysis into a management-facing summary or procurement note.",
+        "Use the updated strategy reports as the baseline for any future CDM refinement or implementation-scoping work."
+      ],
+      "changeLogRows": [
+        {
+          "change_id": "CH-031",
+          "date": "2026-07-10",
+          "change_summary": "Realignment of sitemap nodes to nest and merge BTR-compliant details.",
+          "trigger_s": "T-038",
+          "affected_decisions": "NCAIF Sitemap Structure",
+          "affected_deliverables": "D-050",
+          "impact_description": "Moved slow-onset profiles, finance tracking, and institutional coordination under logical sub-nodes (3.2.2.1, 2.3.1, 2.3.2) and integrated GESI/barriers into planning/roadmap nodes to reduce sitemap size to 41 total nodes.",
+          "notes": "Ensures front-end clarity for practitioners while keeping 100% of BTR requirements mapped.",
+          "": "Final Sitemap v8.0 baseline."
+        },
+        {
+          "change_id": "CH-033",
+          "date": "2026-07-10",
+          "change_summary": "Groundtruthed DCCE adaptation information platform system architecture, separating quantitative Data Assets from CMS-managed Knowledge Assets and locking semantic governance rules.",
+          "trigger_s": "T-040",
+          "affected_decisions": "Locks 8 governance decisions (scope, boundaries, domain scope, glossary, model scope, specs).",
+          "affected_deliverables": "D-052",
+          "impact_description": "Establishes the authoritative loose-coupling database gateway design and Adaptation Division semantic control boundary to prevent vendor lock-in, integrate M&E platform datasets, and ensure future scalability.",
+          "notes": "Sealed as project steering guidance.",
+          "": ""
+        }
+      ],
+      "tracePath": "ψ/memory/traces/2026-07-10/0935_strategy-report-numbered-output-deliverables.md",
+      "traceSummary": "",
+      "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-08/04/01.37_tor70-briefing-deck-planning.md",
+      "date": "2026-08-04",
+      "time": "01:37",
+      "focus": "TOR70 climate-data-hub review — workflow explainer, literature validation, analysis note, briefing deck",
+      "type": "Research / Analysis / Content synthesis",
+      "sessionSummary": "A long, multi-stage TOR review session for DCCE's climate adaptation data hub tender (TOR70, 25M THB). Started from a recap, moved through four connected deliverables, each building on the last: (1) a Thai HTML workflow explainer of TOR §5.1–5.10 for non-technical teammates, (2) a 7-failure-mode literature validation against a NotebookLM notebook (\"Enterprise Data Architecture\"), executed via parallel delegation to a Codex agent (FM1–FM4) and a Haiku subagent (FM5–FM7 + NFRs), (3) a 4-section modern-architecture analysis note that went through ~5 rounds of user-directed revision, and (4) the start of a 14-slide formal briefing deck synthesizing everything for a mixed internal/DCCE audience. Pulse data is stale (last updated 2026-03-09, `totalSessions: 1`) — not representative, no momentum claims drawn from it.",
+      "nextSteps": [
+        "Finish drafting slides 1–2 review and build the HTML version of the 14-slide briefing deck (plan already approved, source-mapped, text drafted).",
+        "Confirm placeholder fields on the cover slide (team/company name) before final delivery.",
+        "After the deck is built, verify Part 4's formal-register constraint held (no first-person \"ผม\") since the audience may include DCCE staff."
+      ],
+      "changeLogRows": [
+        {
+          "change_id": "CH-034",
+          "date": "2026-08-04",
+          "change_summary": "Adopted the 3-layer decoupled architecture (raw landing → metadata translation → canonical CDM) as DCCE's recommended TOR70 posture, reframed TOR clauses from function-focused language to verifiable system-behavior/NFR framing, and kept product research/design funding internal to the existing 25M THB contract.",
+          "trigger_s": "T-041",
+          "affected_decisions": "Locks the architecture recommendation, the NFR-framing rewrite guidance, and the internal-funding decision for product research/design across all three TOR70 output artifacts.",
+          "affected_deliverables": "D-053, D-054, D-055",
+          "impact_description": "Converts literature-validated failure-mode findings (E-068) into a single coherent recommendation posture applied consistently across the formal briefing deck, the architecture analysis note, and the workflow explainer — closing the recurring \"N of M completeness\" gap flagged in three prior retrospectives.",
+          "notes": "Sealed as the TOR70 review's final recommendation baseline.",
+          "": ""
+        }
+      ],
+      "tracePath": "ψ/memory/traces/2026-08-04/1533_crdb-9-pillar-status-vs-original-intent.md",
+      "traceSummary": "**Verdict distribution across the 9 pillars**: 1 Fulfilled (P1), 3 Scope-changed (P2, P5, P7), 2 Partial (P4, P6), 3 Stale (P3, P8, P9).\n\n**Three structural governance defects surfaced, independent of any single pillar's content quality**:\n1. **Dual-seal conflict**: P5's CDM has two \"Sealed\" deliverable-map entries (D-036 at 17 entities, D-051 at 41 entities) with no supersession relationship recorded — both are simultaneously canonical in the ledger.\n2. **Ledger blind spot**: P6 (LDM) is arguably the most mature, best-aligned-to-original-intent pillar of all nine, but has zero Deliverable-Map entry — it was never sealed, logged, or tracked.\n3. **Abandonment without closure**: P8 and P9 were scoped in their own technical specs as intentionally incomplete pending later physicalization (\"before physicalization (Excel/CSV templates)\" — D-033 status \"Logic Hardened\") — that later step never happened, and no retrospective or ledger note documents this as a deliberate deferral versus a dropped ball.\n\n**Cross-pillar drift not caught by any single-pillar review**: P4's glossary (frozen at 56 terms, May 28) was never updated when P5's CDM v3 (July) introduced new entity types (`CLIMATE_PROJECTION`, `ENVIRONMENTAL_DATA`) — a live terminology-to-schema mismatch that no retrospective has flagged.\n\n### Potential Ledger Yields (T-E-D-A Hypothesis)\n- **[T] Potential Trigger**: The 9-pillar structure was designed to enforce a \"Zero-Discovery\" baseline for procurement, but three pillars (P3, P8, P9) went dormant post-restructure without a governance mechanism to detect or flag the stall, and P5's dual-seal was never reconciled.\n- **[E] Supporting Evidence**: This trace's three sub-audits (pillar folders, git logs, `CRDB-Deliverable-Map.md`, `CRDB-Change-Log.md`, relevant retrospectives 2026-06-02, 2026-06-12, 2026-07-10, 2026-07-13).\n- **[D] Potential Decision**: Reconcile D-036/D-051 (mark D-036 superseded), backfill a Deliverable-Map entry for Pillar 6, and add an explicit \"dormant pillar\" review gate before the 25M THB contract's technical baseline is finalized.\n- **[A] Target Asset**: `ψ/incubate/DCCE/CRDB/CRDB-Deliverable-Map.md` (supersession fix); new D-row for Pillar 6.",
+      "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-08/04/13.39_tor70-deck-strengthening.md",
+      "date": "2026-08-04",
+      "time": "13:39",
+      "focus": "Strengthening the TOR70 briefing deck (DCCE climate data hub, 25M THB) — content depth, gap coverage, TOR-writing principles, and budget reasoning",
+      "type": "Research + Writing (procurement/requirements analysis, not code)",
+      "sessionSummary": "Continued directly from the prior session's handoff (`2026-08-04_01-40_tor70-briefing-deck.md`), which had left the 14-slide briefing deck text drafted but flagged as \"too weak\" in three places. This session was almost entirely iterative content-hardening driven by sharp, specific user feedback, taking the deck from 14 → 20 slides. Pulse data is stale (last updated 2026-03-09, `totalSessions: 1`) — not representative, no momentum claims drawn from it.",
+      "nextSteps": [
+        "[ ] Build the HTML version of the now-20-slide deck from `TOR70_briefing-deck_slide-text.md` (16:9, corporate-consulting doc-slide style, restrained palette, formal register) — still not started",
+        "[ ] Fill in the cover slide's `[ระบุชื่อทีม/บริษัท]` placeholder once Boss confirms attribution",
+        "[ ] Before HTML build: do one explicit completeness pass — every \"N of M\" claim in speaker notes (7 failure modes, 5 core products, etc.) should be checked against what's actually presented in slides",
+        "[ ] Decide whether the phase→principle→artifact mapping table (proposed for slide 14, not yet added) is still wanted, now that budget/personnel discussion has moved on"
+      ],
+      "changeLogRows": [
+        {
+          "change_id": "CH-034",
+          "date": "2026-08-04",
+          "change_summary": "Adopted the 3-layer decoupled architecture (raw landing → metadata translation → canonical CDM) as DCCE's recommended TOR70 posture, reframed TOR clauses from function-focused language to verifiable system-behavior/NFR framing, and kept product research/design funding internal to the existing 25M THB contract.",
+          "trigger_s": "T-041",
+          "affected_decisions": "Locks the architecture recommendation, the NFR-framing rewrite guidance, and the internal-funding decision for product research/design across all three TOR70 output artifacts.",
+          "affected_deliverables": "D-053, D-054, D-055",
+          "impact_description": "Converts literature-validated failure-mode findings (E-068) into a single coherent recommendation posture applied consistently across the formal briefing deck, the architecture analysis note, and the workflow explainer — closing the recurring \"N of M completeness\" gap flagged in three prior retrospectives.",
+          "notes": "Sealed as the TOR70 review's final recommendation baseline.",
+          "": ""
+        }
+      ],
+      "tracePath": "ψ/memory/traces/2026-08-04/1533_crdb-9-pillar-status-vs-original-intent.md",
+      "traceSummary": "**Verdict distribution across the 9 pillars**: 1 Fulfilled (P1), 3 Scope-changed (P2, P5, P7), 2 Partial (P4, P6), 3 Stale (P3, P8, P9).\n\n**Three structural governance defects surfaced, independent of any single pillar's content quality**:\n1. **Dual-seal conflict**: P5's CDM has two \"Sealed\" deliverable-map entries (D-036 at 17 entities, D-051 at 41 entities) with no supersession relationship recorded — both are simultaneously canonical in the ledger.\n2. **Ledger blind spot**: P6 (LDM) is arguably the most mature, best-aligned-to-original-intent pillar of all nine, but has zero Deliverable-Map entry — it was never sealed, logged, or tracked.\n3. **Abandonment without closure**: P8 and P9 were scoped in their own technical specs as intentionally incomplete pending later physicalization (\"before physicalization (Excel/CSV templates)\" — D-033 status \"Logic Hardened\") — that later step never happened, and no retrospective or ledger note documents this as a deliberate deferral versus a dropped ball.\n\n**Cross-pillar drift not caught by any single-pillar review**: P4's glossary (frozen at 56 terms, May 28) was never updated when P5's CDM v3 (July) introduced new entity types (`CLIMATE_PROJECTION`, `ENVIRONMENTAL_DATA`) — a live terminology-to-schema mismatch that no retrospective has flagged.\n\n### Potential Ledger Yields (T-E-D-A Hypothesis)\n- **[T] Potential Trigger**: The 9-pillar structure was designed to enforce a \"Zero-Discovery\" baseline for procurement, but three pillars (P3, P8, P9) went dormant post-restructure without a governance mechanism to detect or flag the stall, and P5's dual-seal was never reconciled.\n- **[E] Supporting Evidence**: This trace's three sub-audits (pillar folders, git logs, `CRDB-Deliverable-Map.md`, `CRDB-Change-Log.md`, relevant retrospectives 2026-06-02, 2026-06-12, 2026-07-10, 2026-07-13).\n- **[D] Potential Decision**: Reconcile D-036/D-051 (mark D-036 superseded), backfill a Deliverable-Map entry for Pillar 6, and add an explicit \"dormant pillar\" review gate before the 25M THB contract's technical baseline is finalized.\n- **[A] Target Asset**: `ψ/incubate/DCCE/CRDB/CRDB-Deliverable-Map.md` (supersession fix); new D-row for Pillar 6.",
+      "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-08/04/15.41_crdb-pillar-drift-audit-and-sealing.md",
+      "date": "2026-08-04",
+      "time": "15:41",
+      "focus": "TOR70 timeline reconstruction + sealing; CRDB 9-pillar restructure origin trace + sealing; CRDB pillar-drift status audit; handoff for reorg planning",
+      "type": "Research (trace) + Governance (seal) + Audit",
+      "sessionSummary": "Continued directly from a prior TOR70 briefing-deck session. Pulse data is stale (last updated 2026-03-09, `totalSessions: 1`) — not representative of actual session cadence, no momentum claims drawn from it.\n\nFour connected pieces of work, each motivated by the user wanting to understand *why things are the way they are* before deciding what to reorganize:\n\n1. **TOR70 timeline trace** (`/trace --deep`): reconstructed the full arc from first draft (May 2026) through the July TOR revision to the August validation/deck cycle, using 3 parallel Explore agents split by source (repo files, git history, Oracle memory).\n2. **TOR70 sealing** (`/seal`): committed the causal chain (E-068 literature validation → T-041 motive → CH-034 decision → D-053/054/055 assets) into the CRDB ledgers.\n3. **9-pillar restructure origin trace**: user asked a probing question (\"isn't this file important enough to be mentioned?\") that surfaced the actual originating document (E-038, the 8-Pillar table) which I'd initially under-weighted in favor of its successor (D-032, the 9-Pillar Anchor). Sealed as E-069/CH-035/D-056, then further corrected when the user asked why folder numbers didn't match pillar numbers — the real answer was that D-032 *reordered and expanded* E-038's pillars, so folder numbers match D-032's sequence, not E-038's. Amended CH-035 to record this precisely rather than silently living with an inaccurate ledger entry.\n4. **9-pillar status audit** (`/trace --deep`, topic-split): reorganized the standard location-split (repo/git/oracle) into a topic-split (3 agents × 3 pillars each) after reflecting that this was a known-unit comparison task, not open discovery. Found real drift: 1 pillar fulfilled, 3 scope-changed, 2 under-tracked, 3 abandoned — plus two concrete governance defects (a CDM dual-seal conflict and a ledger blind spot for Pillar 6).\n\nSession closed with a `/forward` handoff flagging that CRDB deliverables need reorganizing given both the TOR70 output and the pillar-drift findings.",
+      "nextSteps": [
+        "Decide whether to seal the two flagged governance defects (CDM dual-seal conflict, Pillar 6 ledger blind spot) before starting the reorg",
+        "Plan the actual CRDB deliverable reorganization: retire/consolidate dormant pillars (8, 9), reconcile D-036/D-051, backfill Pillar 6, decide where TOR70's dated-exception folder fits going forward",
+        "Push local commits to origin (currently several ahead, held pending explicit confirmation per session's risk posture)"
+      ],
+      "changeLogRows": [
+        {
+          "change_id": "CH-034",
+          "date": "2026-08-04",
+          "change_summary": "Adopted the 3-layer decoupled architecture (raw landing → metadata translation → canonical CDM) as DCCE's recommended TOR70 posture, reframed TOR clauses from function-focused language to verifiable system-behavior/NFR framing, and kept product research/design funding internal to the existing 25M THB contract.",
+          "trigger_s": "T-041",
+          "affected_decisions": "Locks the architecture recommendation, the NFR-framing rewrite guidance, and the internal-funding decision for product research/design across all three TOR70 output artifacts.",
+          "affected_deliverables": "D-053, D-054, D-055",
+          "impact_description": "Converts literature-validated failure-mode findings (E-068) into a single coherent recommendation posture applied consistently across the formal briefing deck, the architecture analysis note, and the workflow explainer — closing the recurring \"N of M completeness\" gap flagged in three prior retrospectives.",
+          "notes": "Sealed as the TOR70 review's final recommendation baseline.",
+          "": ""
+        }
+      ],
+      "tracePath": "ψ/memory/traces/2026-08-04/1533_crdb-9-pillar-status-vs-original-intent.md",
+      "traceSummary": "**Verdict distribution across the 9 pillars**: 1 Fulfilled (P1), 3 Scope-changed (P2, P5, P7), 2 Partial (P4, P6), 3 Stale (P3, P8, P9).\n\n**Three structural governance defects surfaced, independent of any single pillar's content quality**:\n1. **Dual-seal conflict**: P5's CDM has two \"Sealed\" deliverable-map entries (D-036 at 17 entities, D-051 at 41 entities) with no supersession relationship recorded — both are simultaneously canonical in the ledger.\n2. **Ledger blind spot**: P6 (LDM) is arguably the most mature, best-aligned-to-original-intent pillar of all nine, but has zero Deliverable-Map entry — it was never sealed, logged, or tracked.\n3. **Abandonment without closure**: P8 and P9 were scoped in their own technical specs as intentionally incomplete pending later physicalization (\"before physicalization (Excel/CSV templates)\" — D-033 status \"Logic Hardened\") — that later step never happened, and no retrospective or ledger note documents this as a deliberate deferral versus a dropped ball.\n\n**Cross-pillar drift not caught by any single-pillar review**: P4's glossary (frozen at 56 terms, May 28) was never updated when P5's CDM v3 (July) introduced new entity types (`CLIMATE_PROJECTION`, `ENVIRONMENTAL_DATA`) — a live terminology-to-schema mismatch that no retrospective has flagged.\n\n### Potential Ledger Yields (T-E-D-A Hypothesis)\n- **[T] Potential Trigger**: The 9-pillar structure was designed to enforce a \"Zero-Discovery\" baseline for procurement, but three pillars (P3, P8, P9) went dormant post-restructure without a governance mechanism to detect or flag the stall, and P5's dual-seal was never reconciled.\n- **[E] Supporting Evidence**: This trace's three sub-audits (pillar folders, git logs, `CRDB-Deliverable-Map.md`, `CRDB-Change-Log.md`, relevant retrospectives 2026-06-02, 2026-06-12, 2026-07-10, 2026-07-13).\n- **[D] Potential Decision**: Reconcile D-036/D-051 (mark D-036 superseded), backfill a Deliverable-Map entry for Pillar 6, and add an explicit \"dormant pillar\" review gate before the 25M THB contract's technical baseline is finalized.\n- **[A] Target Asset**: `ψ/incubate/DCCE/CRDB/CRDB-Deliverable-Map.md` (supersession fix); new D-row for Pillar 6.",
+      "resolutionStatus": "resolved",
+      "thai": null
+    }
+  ]
+}

@@ -56,7 +56,7 @@ tools/
 
 !ψ/lab/visual_design/*.jpg
 !ψ/lab/visual_design/*.png
-
+!ψ/data/Creagy_original_logo.png
 # app files
 ψ/incubate/DCCE/CRI/data_system/output/cri_impact_app/dist
 ψ/incubate/DCCE/CRI/data_system/data_system/data

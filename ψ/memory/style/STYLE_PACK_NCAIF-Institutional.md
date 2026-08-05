@@ -1,5 +1,5 @@
 # Style-Pack: NCAIF-Institutional
-**Samples Learnt**: 14 (Technical Precision, Readability, and Analytical Density) | **Last Updated**: 2026-07-03
+**Samples Learnt**: 15 (Technical Precision, Readability, and Analytical Density) | **Last Updated**: 2026-08-05
 
 ## 1. Core Kernel (80/20)
 
@@ -132,6 +132,12 @@ These rules matter, but they should not compete with the Core Kernel during earl
 | "โครงสร้างไอที" | "โครงสร้างทางเทคโนโลยีสารสนเทศ" | Formal registrar terminology. |
 | "หน่วยการจัดการจริง" | "ขอบเขตพื้นที่ที่หน่วยงานรับทุนจำเป็นต้องจัดการจริง" | Grounded spatial boundaries. |
 | "ข้อเสนอเชิงยุทธศาสตร์ที่สุด" | "ข้อเสนอเชิงยุทธศาสตร์ที่สำคัญ" | Remove subjective superlatives. |
+| "จุดยืน..." / "จุดตัดเวลา" | "กำหนด..." / "เส้นตาย" | Abstract positional nouns ("stance", "cutoff point") read as literal-translation scaffolding; state the decision or deadline directly. |
+| "ประตูหลัก" | "โครงสร้างหลัก", "ศูนย์กลาง..." | Literal translation of the English "front door/gateway" metaphor; name the actual function instead. |
+| Quoted English strategy/codename (e.g. "Blueprint-as-a-Shield") | Plain Thai description of the strategy's mechanism | Project-internal English branding should not carry into audience-facing Thai prose, even in quotes. |
+| "ผู้สนับสนุนโครงการ" | "กรม สส." | Generic role noun for an already-named institutional actor; same typology as DCCE -> กรมฯ. |
+| "ที่ขยายผลได้" | "ที่ปรับขยายได้ในอนาคต" | Awkward modifier construction; more natural phrasing for extensibility. |
+| "ปิด[ผลงาน]" to mean "completed" (e.g. "ปิดผังเว็บไซต์", "ปิดพจนานุกรม") | "สรุป[ผลงาน]" or a concrete verb naming the actual action | "ปิด" reads as a literal translation of "close out." Reserve "ปิด"/"ผนึก" for an actual ledger Sealed status only. |
 
 ### Technical Terminology Mapping
 * **Climate Change** -> การเปลี่ยนแปลงสภาพภูมิอากาศ (Climate Change)
