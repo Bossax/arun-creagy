@@ -2,7 +2,7 @@
   "project": "CRDB",
   "projectPath": "ψ/incubate/DCCE/CRDB",
   "prefix": "CRDB",
-  "generatedAt": "2026-08-05T06:05:31.343Z",
+  "generatedAt": "2026-08-05T09:49:36.043Z",
   "entries": [
     {
       "retroPath": "ψ/memory/retrospectives/2026-03/10/11.55_rrr_knowledge-ops-migration.md",
@@ -1785,6 +1785,52 @@
       "tracePath": "ψ/memory/traces/2026-08-04/1533_crdb-9-pillar-status-vs-original-intent.md",
       "traceSummary": "**Verdict distribution across the 9 pillars**: 1 Fulfilled (P1), 3 Scope-changed (P2, P5, P7), 2 Partial (P4, P6), 3 Stale (P3, P8, P9).\n\n**Three structural governance defects surfaced, independent of any single pillar's content quality**:\n1. **Dual-seal conflict**: P5's CDM has two \"Sealed\" deliverable-map entries (D-036 at 17 entities, D-051 at 41 entities) with no supersession relationship recorded — both are simultaneously canonical in the ledger.\n2. **Ledger blind spot**: P6 (LDM) is arguably the most mature, best-aligned-to-original-intent pillar of all nine, but has zero Deliverable-Map entry — it was never sealed, logged, or tracked.\n3. **Abandonment without closure**: P8 and P9 were scoped in their own technical specs as intentionally incomplete pending later physicalization (\"before physicalization (Excel/CSV templates)\" — D-033 status \"Logic Hardened\") — that later step never happened, and no retrospective or ledger note documents this as a deliberate deferral versus a dropped ball.\n\n**Cross-pillar drift not caught by any single-pillar review**: P4's glossary (frozen at 56 terms, May 28) was never updated when P5's CDM v3 (July) introduced new entity types (`CLIMATE_PROJECTION`, `ENVIRONMENTAL_DATA`) — a live terminology-to-schema mismatch that no retrospective has flagged.\n\n### Potential Ledger Yields (T-E-D-A Hypothesis)\n- **[T] Potential Trigger**: The 9-pillar structure was designed to enforce a \"Zero-Discovery\" baseline for procurement, but three pillars (P3, P8, P9) went dormant post-restructure without a governance mechanism to detect or flag the stall, and P5's dual-seal was never reconciled.\n- **[E] Supporting Evidence**: This trace's three sub-audits (pillar folders, git logs, `CRDB-Deliverable-Map.md`, `CRDB-Change-Log.md`, relevant retrospectives 2026-06-02, 2026-06-12, 2026-07-10, 2026-07-13).\n- **[D] Potential Decision**: Reconcile D-036/D-051 (mark D-036 superseded), backfill a Deliverable-Map entry for Pillar 6, and add an explicit \"dormant pillar\" review gate before the 25M THB contract's technical baseline is finalized.\n- **[A] Target Asset**: `ψ/incubate/DCCE/CRDB/CRDB-Deliverable-Map.md` (supersession fix); new D-row for Pillar 6.",
       "resolutionStatus": "resolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-06/06/00.05_pillar2-definitive-synthesis.md",
+      "date": "2026-06-06",
+      "time": "00:05",
+      "focus": "00.05_pillar2-definitive-synthesis.md",
+      "type": "Unspecified",
+      "sessionSummary": "",
+      "nextSteps": [
+        "[ ] Draft Step-by-Step Year 1 Action Plan for Tier 1 services (S01 Centralized Data Catalog & S07 Policy Monitoring).",
+        "[ ] Prepare the \"Tuck-in\" mapping for the July 6th submission package.",
+        "[ ] Review the Service Intelligence Report against the Digital Government Act Article 15 for data exchange protocols."
+      ],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-08/04/20.04_crdb-dissemination-event-5-session-agenda-reconstruction.md",
+      "date": "2026-08-04",
+      "time": "20:04",
+      "focus": "CRI App v4.4 status review & CRDB August 26 Dissemination Event 5-Session Agenda Reconstruction",
+      "type": "Strategy | Event Design | Asset Refactoring",
+      "sessionSummary": "",
+      "nextSteps": [],
+      "changeLogRows": [],
+      "tracePath": "ψ/memory/traces/2026-08-04/1533_crdb-9-pillar-status-vs-original-intent.md",
+      "traceSummary": "**Verdict distribution across the 9 pillars**: 1 Fulfilled (P1), 3 Scope-changed (P2, P5, P7), 2 Partial (P4, P6), 3 Stale (P3, P8, P9).\n\n**Three structural governance defects surfaced, independent of any single pillar's content quality**:\n1. **Dual-seal conflict**: P5's CDM has two \"Sealed\" deliverable-map entries (D-036 at 17 entities, D-051 at 41 entities) with no supersession relationship recorded — both are simultaneously canonical in the ledger.\n2. **Ledger blind spot**: P6 (LDM) is arguably the most mature, best-aligned-to-original-intent pillar of all nine, but has zero Deliverable-Map entry — it was never sealed, logged, or tracked.\n3. **Abandonment without closure**: P8 and P9 were scoped in their own technical specs as intentionally incomplete pending later physicalization (\"before physicalization (Excel/CSV templates)\" — D-033 status \"Logic Hardened\") — that later step never happened, and no retrospective or ledger note documents this as a deliberate deferral versus a dropped ball.\n\n**Cross-pillar drift not caught by any single-pillar review**: P4's glossary (frozen at 56 terms, May 28) was never updated when P5's CDM v3 (July) introduced new entity types (`CLIMATE_PROJECTION`, `ENVIRONMENTAL_DATA`) — a live terminology-to-schema mismatch that no retrospective has flagged.\n\n### Potential Ledger Yields (T-E-D-A Hypothesis)\n- **[T] Potential Trigger**: The 9-pillar structure was designed to enforce a \"Zero-Discovery\" baseline for procurement, but three pillars (P3, P8, P9) went dormant post-restructure without a governance mechanism to detect or flag the stall, and P5's dual-seal was never reconciled.\n- **[E] Supporting Evidence**: This trace's three sub-audits (pillar folders, git logs, `CRDB-Deliverable-Map.md`, `CRDB-Change-Log.md`, relevant retrospectives 2026-06-02, 2026-06-12, 2026-07-10, 2026-07-13).\n- **[D] Potential Decision**: Reconcile D-036/D-051 (mark D-036 superseded), backfill a Deliverable-Map entry for Pillar 6, and add an explicit \"dormant pillar\" review gate before the 25M THB contract's technical baseline is finalized.\n- **[A] Target Asset**: `ψ/incubate/DCCE/CRDB/CRDB-Deliverable-Map.md` (supersession fix); new D-row for Pillar 6.",
+      "resolutionStatus": "unresolved",
+      "thai": null
+    },
+    {
+      "retroPath": "ψ/memory/retrospectives/2026-08/05/15.00_crdb-event-agenda-refinement.md",
+      "date": "2026-08-05",
+      "time": "15:00",
+      "focus": "CRDB Dissemination Event 5-Session Agenda Co-creation & Refinement",
+      "type": "Strategy | Event Design | Stakeholder Anchoring",
+      "sessionSummary": "",
+      "nextSteps": [],
+      "changeLogRows": [],
+      "tracePath": null,
+      "traceSummary": null,
+      "resolutionStatus": "unresolved",
       "thai": null
     }
   ]

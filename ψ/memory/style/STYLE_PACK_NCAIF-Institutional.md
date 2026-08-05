@@ -313,6 +313,29 @@ These rules matter, but they should not compete with the Core Kernel during earl
 - Do **not** use English translations in parentheses unless absolutely necessary for technical precision.
 
 
+### 2026-08-05 — Style-pack upgrade from CRDB timeline-th synthesis corrections
+
+**Source of delta**: [2026-08-05_16-44_NCAIF-Institutional_diff-evidence.md](file:///C:/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/memory/style/evidence/2026-08-05_16-44_NCAIF-Institutional_diff-evidence.md) — direct user corrections to `ψ/incubate/DCCE/CRDB/.timeline-th/curated-events.json` (the `timeline-th` skill's curated project-timeline synthesis, first time this style pack was applied outside the main report body).
+
+#### Preferred direction detected
+- **No abstract positional nouns for decisions**: "จุดยืน" (stance) and "จุดตัดเวลา" (cutoff point) are literal-translation scaffolding around a decision or deadline that should just be stated directly.
+- **No metaphor-translation for institutional roles**: "ประตูหลัก" (front door) reads as an imported English metaphor; name the function ("โครงสร้างหลัก") instead.
+- **No quoted English strategy names in Thai prose**: project-internal codenames like "Blueprint-as-a-Shield" should be described in plain Thai, not carried through in quotes — this generalizes the existing parenthetical-anchor discipline from acronyms/schema names to strategy names.
+- **Named actor over generic role noun**: "ผู้สนับสนุนโครงการ" should become "กรม สส." when it refers to one already-known department — same typology as the existing DCCE -> กรมฯ rule.
+- **"ปิด" is not a general completion verb**: applying "ปิด" to a sitemap, glossary, or dataset ("ปิดผังเว็บไซต์") reads as literal-translated "close out." Use "สรุป" or a concrete verb. The one exception is an actual ledger `Sealed` status, which uses this system's own term "ผนึก" (from `/seal`) — a precision fix, not a naturalization fix.
+
+#### New style rule candidates
+29. **No Abstract-Noun Scaffolding for Decisions**: State the decision or deadline directly rather than naming an abstract position ("จุดยืน", "จุดตัด").
+30. **No Metaphor-Translation for Institutional Roles**: Avoid literal English metaphors translated into Thai nouns ("ประตูหลัก"); name the actual function.
+31. **No Quoted English Strategy Names**: Describe a strategy's mechanism in plain Thai rather than carrying its English codename through in quotes.
+32. **Named Actor Over Generic Role**: Use the real institutional shorthand ("กรม สส.") instead of a generic role noun when the actor is already known.
+33. **"ปิด" Reserved for Ledger-Sealing Status Only**: Use "สรุป" or a concrete verb for "finished producing X"; "ปิด"/"ผนึก" is reserved for an actual sealed ledger entry.
+
+#### Anti-regression note
+- Do **not** reintroduce "จุดยืน"/"จุดตัด" as decision-naming nouns.
+- Do **not** carry a project's internal English strategy codename into Thai prose in quotes.
+- Do **not** use "ปิด" as a stand-in for "we finished making X."
+
 ## 5. Strict Parenthetical Anchor (Anti-regression Update)
 - **Rule**: Do **not** use English translations in parentheses unless absolutely necessary for technical precision.
 - **Allowed**: Exact database schema names (`DISASTER_EVENT`), system keys, or official acronyms (`MVD`).
