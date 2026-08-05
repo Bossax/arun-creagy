@@ -1,0 +1,338 @@
+{
+  "answer": "To build a reliable data platform, requirements-engineering practice must separate **business-driven constraints** (which govern usability, trust, and legal compliance) from **system/infrastructure-driven constraints** (which govern physical hardware, network performance, and IT monitoring) [1-3]. \n\n*   **Business Non-Functional Requirements (NFRs):** These represent the boundaries, quality thresholds, and operational rules that the *business units and end-users* impose on the data platform to ensure the resulting insights are compliant, timely, and trustworthy [1, 4, 5].\n*   **System/Infrastructure NFRs:** These define the physical architecture, hardware parameters, and network constraints that the *engineering and IT infrastructure teams* must deploy to keep the underlying environment running [6-8].\n\n---\n\n### 1. What Specifically Counts as a \"Business\" NFR?\n\nBased on enterprise requirements and data engineering practices, the following areas constitute core Business NFRs:\n\n*   **Data-Freshness and Pipeline Frequency SLAs:** This defines how frequently data must be loaded and refreshed (e.g., real-time streaming, hourly, daily, or weekly batch loads) based on the business case [5]. It focuses on the business necessity of data currency to support decision-making, as opposed to baseline batch reporting [5, 9].\n*   **Regulatory & Compliance Thresholds:** These are the legal, security, and privacy boundaries that the platform must enforce, such as compliance with GDPR, HIPAA, or medical PII auditing [4, 10]. It includes rules on data masking, regional data residency, and field-level access controls [11, 12].\n*   **Data Quality (QA) & Validation Thresholds:** These are the automated verification rules that protect the platform from a \"garbage-in, garbage-out\" effect [13, 14]. It specifies business-logic checks, such as defining specific numeric field divergence limits (e.g., \"numeric field values cannot differ by more than x% across consecutive data pulls\") [5].\n*   **Access Pattern Latency Expectations:** Driven by the operational preferences of different user groups (e.g., data scientists querying raw files vs. business analysts using dashboards) [15], this captures acceptable retrieval and query latency thresholds for target workloads [5, 12].\n*   **Data Lifecycle & Retention Policies:** This details how long certain categories of business data must be stored, when they must be archived to reduce storage costs, and when they must be securely destroyed [14, 16, 17].\n\n### 2. What Counts as a \"System/Infrastructure\" NFR?\n\nIn contrast, System/Infrastructure NFRs are focused on the hardware, virtualization, and technical operations layers:\n\n*   **Hardware and Capacity Configurations:** Sizing of physical servers (e.g., PowerEdge R730xd configurations), memory allocations, and storage array partitioning (e.g., dedicating 20TB to host virtual machine disks and 40TB for backups out of a 60TB storage device) [18-20].\n*   **Power and Environmental Limits:** Physical power constraints, such as restricting power consumption to not exceed 5,000 Watts per server rack [7].\n*   **Network Topology & Throughput:** Configuration of distinct user networks (1Gbe switches) and internal cluster networks (10Gbe switches in High Availability), along with 10Gbe intra-rack backbones to support parallel data transfer between nodes [21, 22].\n*   **System Availability, Clustering, & RAID:** Grouping application server hosts into clusters to prevent single points of failure, configuring OS disks in RAID-1, and setting up storage devices in RAID-6 [21, 23, 24].\n*   **System Hardening & Infrastructure Monitoring:** Implementing agent-based operating system patching schedules, establishing server hardening via the CIS Benchmark, and configuring SNMP traps to forward CPU, memory, and disk health metrics to SolarWinds [8, 25, 26].\n\n---\n\n### 3. In What Form Should a Pre-Build Requirements Package Capture Them?\n\nStandard SRS and BRD practices recommend a **hybrid approach that combines both narrative text and structured thresholds tables** to capture Business NFRs:\n\n#### A. Narrative Text (Capturing Context and Qualitative Constraints)\nNarrative descriptions are essential to capture **the \"why\" behind NFRs, strategic context, and complex policies** that cannot be easily reduced to a single number [27, 28].\n*   **When to Use:** Use narrative text to document strategic goals (e.g., \"improving renewal rates\") [12], user research and win-loss insights [29], data-sharing policies [30], and organizational risks or cross-team dependencies (such as coordination with external legal teams to validate data retention rules) [31].\n*   **Formatting:** In templates (like the Smartsheet BRD or traditional PRDs), narrative text is captured in a dedicated \"Non-Functional Requirements\" section to outline the features and behaviors that shape the overall user experience [32-34].\n\n#### B. Structured Thresholds and Mapping Tables (Capturing Verifiable Specifications)\nTo be credible, requirements-engineering practice dictates that **every requirement must be defined separately and be testable** so its achievement can be verified [35]. Purely narrative descriptions are frequently too subjective (e.g., \"the pipeline must be fast and secure\") to evaluate during acceptance testing [1, 35].\n*   **When to Use:** Use structured tables to define the specific, quantifiable boundaries that developers must program into the data ingestion, validation, and security layers [5, 36].\n*   **Common Table Formats Include:**\n    1.  **Ingestion Parameter Checklists:** A structured table for every data feed detailing its *Source Origin, Ingestion Frequency* (exact refresh timing), *Access Latency Target*, *Divergence QA Limits* (numeric thresholds), and *Output Schema* [5].\n    2.  **Requirements Matrices:** A prioritized table mapping each isolated NFR to a unique ID, a specific priority rating (Critical, High, Medium, Low, Future), and testable success metrics [32, 33, 37].\n    3.  **Role-to-Layer Access Matrices:** Tables mapping specific user roles to data platform layers and permissions, translating qualitative access policies into physical security configurations (like Apache Sentry or Kerberos mappings) [18, 36, 38].\n\n***\n\n📊 I can draft a sample **Business NFR Thresholds Table** mapped to a standard enterprise data pipeline to show you how these metrics are structured for a development team. Would you like to review an example?",
+  "conversation_id": "8f8ae5e6-85be-4de5-8aea-56188a4c08ff",
+  "sources_used": [
+    "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "0f98105a-e702-4086-8695-8219087f4306",
+    "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "e68f4b12-261c-4818-a79b-fc2c022e20b1"
+  ],
+  "citations": {
+    "1": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "2": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "3": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "4": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "5": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "6": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "7": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "8": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "9": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "10": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "11": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "12": "0f98105a-e702-4086-8695-8219087f4306",
+    "13": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "14": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "15": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "16": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "17": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "18": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "19": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "20": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "21": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "22": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "23": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "24": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "25": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "26": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "27": "0f98105a-e702-4086-8695-8219087f4306",
+    "28": "0f98105a-e702-4086-8695-8219087f4306",
+    "29": "0f98105a-e702-4086-8695-8219087f4306",
+    "30": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "31": "0f98105a-e702-4086-8695-8219087f4306",
+    "32": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "33": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "34": "0f98105a-e702-4086-8695-8219087f4306",
+    "35": "e68f4b12-261c-4818-a79b-fc2c022e20b1",
+    "36": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "37": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "38": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf"
+  },
+  "references": [
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 1,
+      "cited_text": "Organizations often use data management, data governance, and data strategy interchangeably. While closely connected, each serves a distinct role in helping organizations turn data into a business asset. The table below clarifies how these disciplines work together. <cited_table>",
+      "cited_table": {
+        "num_columns": 5,
+        "rows": [
+          [
+            "Discipline",
+            "Core Question It Answers",
+            "Primary Focus",
+            "Key Responsibilities",
+            "Typical Deliverables"
+          ],
+          [
+            "Data strategy",
+            "”Why are we investing in data?”",
+            "Business goals, priorities, and long-term vision",
+            "Align data initiatives with business objectives, identify capabilities, prioritize investments",
+            "Data roadmap, modernization plan, AI and analytics strategy"
+          ],
+          [
+            "Data governance",
+            "“What rules should guide data usage?”",
+            "Policies, ownership, accountability, and compliance",
+            "Define standards, stewardship, quality requirements, and regulatory controls",
+            "Governance framework, ownership model, data policies, business glossary"
+          ],
+          [
+            "Data management",
+            "”How is data managed day to day?”",
+            "Operational processes and technology execution",
+            "Data integration, storage, quality management, security, access control, lifecycle management",
+            "Data platforms, integration pipelines, quality processes, security controls"
+          ],
+          [
+            "Data architecture",
+            "”How should enterprise data be structured?”",
+            "Data models, platforms, and technical design",
+            "Design storage, integration, and information flows",
+            "Data architecture blueprint and technology stack"
+          ],
+          [
+            "Data culture & literacy",
+            "”How do people use data effectively?”",
+            "Adoption, education, and decision-making behavior",
+            "Build data skills, encourage data sharing, improve data-driven decision-making",
+            "Training programs, adoption initiatives, literacy frameworks"
+          ]
+        ]
+      }
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 2,
+      "cited_text": "What is the difference between data management, data governance, and data strategy? Data strategy defines how data supports business objectives and long-term priorities. Data governance establishes the rules, ownership structures, and policies that guide how data should be managed. Data management is the operational discipline that implements those policies through processes, technologies, and controls for data quality, security, access, integration, and lifecycle management. Together, these disciplines create a foundation for trusted analytics, compliance, and data-driven decision-making."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 3,
+      "cited_text": "THE IMPALA ENCRYPTION COMPONENTS .................................................................................... 7-21 1-1 1.0 INTRODUCTION The System Design Document (SDD) is a compendium of three documents, providing a single source for requirements, system design, and data design.  The functional and non-functional requirements are drawn from the Information Management Platform for Data Analytics and Aggregation (IMPALA) System Requirements document.  The three elements of requirements, user design, and data design form the baseline from which to build a set of more technical system design specifications for the final product, providing both high-level system design and low-level detailed design."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 4,
+      "cited_text": "Managing these diverse data assets within a unified enterprise data management framework is essential for maintaining data consistency and enabling cross-functional insights. Why Enterprise Data Management Matters As a combination of processes and technology, enterprise data management aims to maintain data quality, reliability, accuracy, accessibility, and usability. Proper EDM ensures data integrity so that: Analytics tools can produce reliable insights Employees can access relevant data whenever needed – and trust it, too Sensitive data is protected from data breaches and theft Data processing remains in line with applicable regulations (e.g., HIPAA, CCPA, GDPR)."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 5,
+      "cited_text": "2.2. Help end-users define the requirements Assume the end-users don't know everything they want or even that they will clearly define it to you. You can't get 100% of the requirements right the first time. Talk with the end-user about their objectives and their difficulties. Understanding the current status of end-user operations will provide valuable insights. The end-user might say “We want X data”. Help the end-user define requirements by asking the following questions: Business impact : How does having this data impact the business? What is the measurable improvement in the bottom line, business OKR, etc? Knowing the business impact helps in determining if this project is worth doing. Semantic understanding : What does the data represent? What business process generates this data? Knowing this will help you model the data and understand its relation to other tables in your warehouse. Data source : Where does the data originate? (an application DB, external vendor via SFTP/Cloud store dumps, API data pull, manual upload, etc). Frequency of data pipeline : How fresh does the data need to be? (n minutes, hourly, daily, weekly, etc). Is there a business case for not allowing a higher frequency? What is the highest frequency of data load acceptable by end-users? Historical data : Does historical data need to be stored? When loading data into a warehouse, the answer is usually yes. Data caveats : Does the data have any caveats? (e.g. seasonality affecting size, data skew, inability to join, or data unavailability). Are there any known issues with upstream data sources, such as late arriving data, or missing data? Access pattern : How will the end user access the data? Is access via SQL, dashboard tool, APIs, or cloud storage? In the case of SQL or dashboard access, What are the commonly used filter columns (e.g. date, some business entity)? What is the expected access latency? Business rules check (QA) : What data quality metrics do the end-users care about? What are business logic-based data quality checks? Which numeric fields should be checked for divergence (e.g. can't differ by more than x%) across data pulls? Data output requirements : What is the data output schema? (column names, API field names, Cloud storage file name/size, etc)"
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 6,
+      "cited_text": "2.2.1 Assumptions The IMPALA Platform infrastructure is built on both hardware and software technologies that are influenced by industry standards.  Some of these standards are in a state of evolution.  To promote the portability of software applications and to reduce overall infrastructure costs, industry standards will be used to implement functions where they are deemed appropriate. The following items are design assumptions for IMPALA’s initial implementation. 1. The MEME network team will provide cabling between the IMPALA rack and the Mission Extended Medical Enterprise (MEME) network."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 7,
+      "cited_text": "9. The MEME network team, to cover all required IMPALA systems, will provide non-routable addresses for internal (intra-IMPALA systems) rack communications. 10. Power consumption for each IMPALA rack is not to exceed 5000 watts. 11. The IMPALA platform websites and/or web services will be registered in the System for Tracking and Registering Applications and Websites (STRAW) by the HH&P IT Security team. 2-3 2.2.2 Constraints 1. The IMPALA platform will only be accessible through NASA networks via approved, dedicated connections or Virtual Private Network (VPN) [e.g., the MEME- Secure Socket Layer (SSL) VPN appliance]."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 8,
+      "cited_text": "The IMPALA NAS (Network Attached Storage) will be used to backup the data reservoir.  This process is described in section 6.2.4. The IMPALA platform leverages existing infrastructure management functionality within the MEME network by providing system SNMP (Simple Network Management Protocol) traps to existing health management tools such as SolarWinds.  The MEME environment currently uses an agent-based log aggregation tool for security auditing.  To ensure compliance, these agents are installed on the MEME servers for security auditing purposes.  The MEME environment currently uses an agent-based tool, Dell KACE, for inventory and system management. The servers within the IMPALA platform leverage the Computer Information Security benchmark to ensure appropriate hardening of the servers."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 9,
+      "cited_text": "Smarter Decision-Making As highlighted by McKinsey , organizations are increasingly moving toward real-time decision-making powered by advanced data capabilities and generative AI, enabling faster and more informed responses to changing business conditions. It helps companies go beyond periodic reporting by embedding intelligence directly into business processes, where data continuously informs real-time actions. In this context, enterprise data management becomes a critical enabler of scalable intelligence rather than just a support function for analytics. Operational and financial data and analytics provide timely insights into organizational performance and health at all levels, from a single branch or team to the line of business and the enterprise as a whole."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 10,
+      "cited_text": "What are the compliance and regulatory risks of poor enterprise data management? Poor enterprise data management increases the risk of violating privacy, security, and industry regulations by making it difficult to control, monitor, and protect sensitive information. Common consequences include regulatory fines, audit failures, security breaches, inaccurate reporting, and reputational damage. Weak governance and inconsistent data handling practices also make compliance with frameworks such as GDPR, HIPAA, and industry-specific regulations more difficult."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 11,
+      "cited_text": "A data security management system is the ensemble of measures taken to prevent unauthorized access to, alteration, or destruction of data. These measures concern data loss prevention, key management, cloud data security, access control, data governance, and authentication and authorization. Common data security measures include data encryption at rest and in transit, data masking, timely data erasure, data resiliency (disaster recovery, backups), and multi-factor authentication. Dmytro Tymofiiev Delivery Manager at SPD Technology"
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 12,
+      "cited_text": "Non-functional requirements Support performant filtering for large enterprise accounts with multi-year histories and high event volume. Comply with enterprise security and privacy standards, including field-level access controls and regional data residency where required. SUCCESS METRICS Quantitative targets Reduce average time spent on weekly account prep by at least thirty percent within two quarters of rollout. Improve renewal rate for monitored strategic accounts by at least five percentage points within one renewal cycle."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 13,
+      "cited_text": "Key Components of Enterprise Data Management Data Quality Management Data quality management encompasses practices, processes, and tools for ensuring your data remains accurate, complete, reliable, consistent, and timely. It can include: Data profiling to map existing data and its structure and evaluate its quality Automated data cleansing and standardization to prevent errors and ensure data usability and reliability Data deduplication, merge, and survivorship rules Validation checks to verify data quality Data quality metrics monitoring (e.g., consensus, relevance, validity) Regular data quality audits and optimization."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 14,
+      "cited_text": "The four components described above address different aspects of managing enterprise data. Together, they form the operational foundation of a successful enterprise data management program. The table below summarizes the role of each component and the business risks associated with neglecting it. <cited_table>",
+      "cited_table": {
+        "num_columns": 5,
+        "rows": [
+          [
+            "Component",
+            "Primary Objective",
+            "Key Activities",
+            "Business Benefits",
+            "Risks if Neglected"
+          ],
+          [
+            "Data quality management",
+            "Maintain accurate, complete, and consistent data",
+            "Profiling, validation, cleansing, deduplication, quality monitoring",
+            "More reliable analytics, reporting, and operational decisions",
+            "Inaccurate reporting, poor decisions, reduced trust in data"
+          ],
+          [
+            "Data security management",
+            "Protect sensitive and business-critical information",
+            "Encryption, access controls, monitoring, threat prevention, compliance controls",
+            "Reduced security risk and stronger regulatory compliance",
+            "Data breaches, regulatory penalties, reputational damage"
+          ],
+          [
+            "Data access management",
+            "Ensure appropriate access to data resources",
+            "Authentication, authorization, role-based permissions, access reviews",
+            "Improved productivity and controlled data sharing",
+            "Unauthorized access or restricted access to needed information"
+          ],
+          [
+            "Data lifecycle management",
+            "Govern data from creation through disposal",
+            "Data creation, storage, sharing, archival, retention, destruction",
+            "Lower storage costs and improved compliance",
+            "Excess storage costs, outdated information, compliance risks"
+          ],
+          [
+            "Cross-component governance",
+            "Coordinate standards and accountability across all data activities",
+            "Ownership assignment, stewardship, policy enforcement, performance monitoring",
+            "Consistent data practices across the organization",
+            "Fragmented processes and inconsistent data management"
+          ]
+        ]
+      }
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 15,
+      "cited_text": "The term end-users denotes people who use the output, and stakeholders denote PMs/BAs/managers. 2.1. Identify the end-users The first step is to identify the end-user(s). The request for the project usually comes up during meetings. Understanding the capabilities and preferences of the end-user is crucial for designing an appropriate solution. End-users (& their preferences) for data projects are usually one of: Data analysts/Scientists: SQL, File Business users: Dashboard, report, Excel Software engineers: SQL, APIs External clients: Cloud storage, SFTP/FTP, APIs"
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 16,
+      "cited_text": "Appropriate access control model (e.g., role-based, rule-based, attribute-based, mandatory, discretionary) User identification, authentication, and authorization rules and procedures Metrics for access monitoring and regular audits. Best practices in this area include granting users the minimum level of access by default (the principle of least privilege), implementing multi-factor authentication, and enforcing password hygiene. Continuous data access logging and monitoring is also a must. Data Lifecycle Management The data lifecycle begins at data entry and ends with its destruction. Data lifecycle management, in turn, means defining how you'll handle data depending on its lifecycle phase and what criteria data has to meet to move from one phase to another."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 17,
+      "cited_text": "When done right, data lifecycle management will help you maintain consistent data quality levels and reduce archiving, backup, and storage costs by removing data when it becomes obsolete. The data lifecycle consists of five phases: Creation : Collecting relevant data from its sources (IoT devices, forms, etc.) Storage : Transforming and adding data to storage Sharing and usage : Making the data available to business and external users with appropriate data access controls Archival : Keeping copies of data that's no longer needed for day-to-day operations Destruction : Securely purging data from archives."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 18,
+      "cited_text": "LIST OF TABLES TABLE 4.1-1 MAPPING OVERVIEW: USER ROLES TO IMPALA PLATFORM LAYERS ...................................................... 4-3 TABLE 4.5-1 SECURITY FUNCTION TO TOOL MAPPING ......................................................................................... 4-17  TABLE 6.1-1 SAMPLE USAGE SCENARIOS MAPPED TO IMPALA ROLES AND LAYERS ................................................... 6-1  TABLE 7.1.1-1   IMPALA VIRTUAL INFRASTRUCTURE SOFTWARE AND FUNCTIONS ....................................................... 7-2 TABLE 7.1.1-2   IMPALA APPLICATIONS AND FUNCTIONS .......................................................................................... 7-2 TABLE 7.1.1-3   IMPALA APPLICATION NODE CONFIGURATION .................................................................................. 7-4 TABLE 7.1.2.1-1 IMPALA MASTER NODE CONFIGURATION ........................................................................................ 7-5 TABLE 7.1.2.2-1 IMPALA DATA NODE CONFIGURATION ............................................................................................ 7-7 TABLE 7.1.3-1 IMPALA STORAGE NODE CONFIGURATION ...................................................................................... 7-7 TABLE 7.1.4-1   SERVER-SIDE OPERATING SYSTEMS AND COUNT ................................................................................. 7-8 TABLE 7.1.5-1   POWER CONSUMPTION ................................................................................................................... 7-8 TABLE 7.1.5-2 POWER CONSUMPTION (CONTINUED) .............................................................................................. 7-9 TABLE 7.2-1 PROTECTION POINT TO IMPALA MODULE MAPPING ......................................................................... 7-9 TABLE 7.2.2-1 IMPALA AUTHENTICATION SECURITY MODULE TERMINOLOGIES ...................................................... 7-13 TABLE 7.2.3-1 IMPALA COMPONENT ROLES AND PRIVILEGES ................................................................................ 7-14 TABLE 7.2.3-2 IMPALA SENTRY COMPONENTS AND FUNCTIONS ............................................................................ 7-17 TABLE 7.2.3-3 RECORD SERVICE COMPONENTS AND FUNCTIONS .......................................................................... 7-18 TABLE 7.2.4-1   IMPALA ENCRYPTION COMPONENTS AND FUNCTIONS ..................................................................... 7-20"
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 19,
+      "cited_text": "6.2.4 Backup & Recovery 6.2.4.1 Data Backup Schedule The IMPALA platform will leverage the NetBackup software used by the MEME Infrastructure team to enable weekly full backup and daily incremental backup schedule.  Incremental backups will be retained for at least two weeks and Full backups retained for two weeks. The storage unit has a 60TB capacity; 20TB will be used to support the virtual infrastructure and ensuring high availability for the virtual machines.  The 40TB left will be devoted to the backup process."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 20,
+      "cited_text": "The applications within the application nodes are the primary means for end users and administrators to interact with the IMPALA Enterprise Data Hub, also known as the IMPALA Data Reservoir (see 7.2 below).  The specifications of the IMPALA platform’s application nodes are listed in the table below: 7-4 TABLE 7.1.1-3   IMPALA APPLICATION NODE CONFIGURATION Component Specifications PowerEdge R730xd PowerEdge R730xd Server Chassis Configuration Chassis with up to 12, 3.5\" Hard Drives and 2, 2.5\" Flex Bay Hard"
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 21,
+      "cited_text": "4-12 Distributed Storage Each block of data is triple replicated across multiple disks and servers to ensure that the loss of one drive or server does not lead to data loss Distributed Processors The IMPALA Platform leverages the processors/cores across all the servers within the cluster to ensure requests such as searching, data mining or analytics are processed fast and in a parallel fashion Network Throughput A 10Gbe intra-rack backbone ensures high speed data transfer between the master nodes, data nodes and application nodes."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 22,
+      "cited_text": "o Application configuration files o Application metadata information such as project files or metadata database generated as a result of usages 4.4 NETWORK ARCHITECTURE The IMPALA platform operates on four main networks: User Network A 1Gbe network dedicated to end user communications.  Two (2) IMPALA Top-of-Rack (TOR) switch configured with HA support this network. Internal Cluster Network A 10Gbe network dedicated to communications between the applications and services within the IMPALA platform.  Two 48 port 10Gbe switches support this communication.  These switches are in a High Availability (HA) configuration"
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 23,
+      "cited_text": "Patches to the operating system and upgrades of the individual components of the IMPALA platform will adhere to the policies set forth by the NASA IT security team.  Section 6.2.3 details the process for patching the IMPALA platform. The IMPALA Platform physical architecture supports high performance through the following means: Clustering The data nodes are clustered enabling sharing of the workload across commodity hardware.  The Application server hosts are also clustered to ensure that the loss of one application server does not lead to a drop in unavailability of any of the applications RAID Configuration The OS hard disks for the servers within the IMPALA Platforms are in RAID-1 configuration to ensure continued operations in the event of a hard disk failure.  The storage device is configured for RAID-6"
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 24,
+      "cited_text": "Enterprise Power Supply Dual, Hot-plug, Redundant Power Supply (1+1), 750W Power Cords (2) NEMA 5-15P to C13 Wall Plug, 125 Volt, 15 AMP, 10 Feet (3m), Power Cord, North America Network Daughter Card Intel X520 DP 10Gb DA/SFP+, + I350 DP 1Gb Ethernet, Network Daughter Card Hardware Support Services 3Yr Basic HW Warranty Repair, 5x10 NBD Onsite 7.1.2 Enterprise Data Hub An Enterprise Data Hub (EDH) is a big data management model that uses a Hadoop platform as the central data repository.  The goal of an enterprise data hub is to provide an organization with a centralized, unified data reservoir that can quickly provide diverse business users with the information they need to do their jobs; to quickly gain value from that data through a collection of frameworks that span data processing, interactive analytics, and real-time serving applications. The IMPALA Enterprise Data Hub (EDH) leverages Cloudera Hadoop as the data reservoir for the IMPALA platform.  As stated in section 4, the data reservoir is configured to be highly redundant.  The enterprise data hub also supports all the functions of executing jobs in parallel within the IMPALA platform.  Users access the functionality of the data reservoir through the applications within the application nodes.  Physically, the IMPALA EDH consists of two (2) master nodes and four (4) data nodes.  These nodes are deployed on physical servers.  The EDH nodes are deployed in a cluster that leverages the resources (CPU and RAM) of all nodes."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 25,
+      "cited_text": "Configured SNMP traps for monitoring IMPALA Platform server components such as CPU, disk, memory etc., as well as availability or uptime of the servers forwarded to the infrastructure management tool provided by the MEME infrastructure team. Anti-virus agents, as provided by the MEME infrastructure team, are deployed on  IMPALA servers Server hardening leveraging the Center for Information Security (CIS) benchmarking requirements as provided by the NASA IT security team Deployment of log aggregation agents as provided by the HHPIT security team for auditing"
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 26,
+      "cited_text": "6-9 Figure 6.2.2.1-1 IMPALA Log aggregation process Figure 6.2.2.1-1 is a high-level depiction of the various components of the IMPALA platform and a sampling of the logs they forward to the log aggregation server. Log aggregation will be configured on each application host server as well as within applications such as Cloudera, which supports the forwarding of logs.  The logs will be used primarily for auditing. 6.2.2.2 Health and Availability Monitoring The IMPALA platform SNMP traps will be configured to forward metrics about the health of each server and application within the IMPALA rack to SolarWinds.  SolarWinds is the network and application monitoring tool provided by the MEME infrastructure team.   Health information reported about the IMPALA platform will include performance data on CPU, memory, disk and network bandwidth utilization.  These traps will utilize the SolarWinds agents for communication with SolarWinds."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 27,
+      "cited_text": "The Product Requirements Document (PRD): Definition and Purpose What defines a PRD? A PRD is the working document product managers use to describe what a team should build and why it matters. It provides engineering and design with clarity on (1) scope, (2) constraints, (3) acceptance criteria, and (4) expected customer value . The goal is alignment. A well-written product requirements document outlines the problem to solve, the intended outcome, and the key requirements needed to deliver that outcome. When it is clear and current, it reduces rework and supports faster decision making across technical teams."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 28,
+      "cited_text": "How Do You Effectively Write a Product Strategy Document? A product strategy document gives every requirement a clear purpose by anchoring it to measurable goals and customer outcomes to align with the broader direction of the business. When maintained well, it becomes the single source of truth that guides priorities. Strong strategy documents show how each initiative supports organizational objectives, and they help teams stay aligned even as conditions shift. They clarify which outcomes matter most, whether the goal is to reduce churn for key customer segments or increase adoption of newly launched capabilities."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 29,
+      "cited_text": "Relevant insights or research that shapes the requirement Interviews with account teams showed that they spend several hours per week compiling updates from email, calls, and support tickets. Win–loss analysis revealed that deals are often lost when no one notices signals from executive sponsors or buying committees. REQUIREMENTS Functions requirements Create a unified account activity timeline that aggregates emails, meetings, support interactions, and key product usage events into a single view. Surface automated alerts when account health drops below a configurable threshold or when critical stakeholders engage after a period of inactivity."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 30,
+      "cited_text": "Lineage Native Key Management KMS/KTS Native Malware & Harmful Code Protection TrendMicro Leveraged User Identity NDC AD Leveraged Application Access Kerberos Native User Access Launchpad Leveraged Inventory/System Management Dell KACE Leveraged Vulnerability Scanning MVM Leveraged Software Vulnerability & Memory Protection EMET Leveraged 5-1 5.0 DATA GOVERNANCE FRAMEWORK A Data Governance Framework will be built for the NASA HHPC program to ensure clear communication within the IMPALA team and across all organizations that it touches and to maintain scope and focus, establish accountabilities, and define measurable successes.  The details of the Data Governance Framework are presented in the Data Governance Framework document."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 31,
+      "cited_text": "Qualitative indicators Account teams report higher confidence in their understanding of stakeholder engagement and risk. Sales leadership cites the unified view as a primary input in forecast reviews and QBRs. RISKS & DEPENDENCIES Known risks and constraints Data quality issues in upstream integrations could undermine trust in the unified activity view. Poor alert tuning could create noise fatigue and cause teams to ignore important signals. Cross-team or technical dependencies Requires stable integrations with email, calendar, support, and product analytics systems that are owned by different platform teams. Depends on collaboration with security and legal teams to validate data handling and retention policies."
+    },
+    {
+      "source_id": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+      "citation_number": 32,
+      "cited_text": "8. NON-FUNCTIONAL REQUIREMENTS 11 9. FINANCIAL STATEMENTS 12 10. COST AND BENEFIT 13 11. RESOURCES 14 12. SCHEDULE, TIMELINE, AND DEADLINES 15 13. ASSUMPTIONS 16 14. GLOSSARY 17 15. REFERENCES 18 16. APPENDIX 19 1. EXECUTIVE SUMMARY SNAPSHOT 2. PROJECT DESCRIPTION 3. PROJECT SCOPE 4. BUSINESS DRIVERS 5. CURRENT PROCESS 6. PROPOSED PROCESS 7. FUNCTIONAL REQUIREMENTS PRIORITY Use the following priority table. It allows you to apply a ratings system to your requirements, so you have the visibility (into the value, status, and description of each requirement) that’s necessary for determining whether a particular requirement is essential to project success:"
+    },
+    {
+      "source_id": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+      "citation_number": 33,
+      "cited_text": "5 Future The requirement is outside of the project’s scope and is included as a possible component of a prospective release and/or feature. REQUIREMENTS CATEGORIES (RC1) ID Requirement Priority Raised By 8. NON-FUNCTIONAL REQUIREMENTS . ID Requirement 9. FINANCIAL STATEMENTS 10. COST AND BENEFIT 11. RESOURCES 12. SCHEDULE, TIMELINE, AND DEADLINES 13. ASSUMPTIONS 14. GLOSSARY Term / Abbreviation Explanation 15. REFERENCES Name Location 16. APPENDIX DISCLAIMER Any articles, templates, or information provided by Smartsheet on the website are for reference only. While we strive to keep the information up to date and correct, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability with respect to the website or the information, articles, templates, or related graphics contained on the website. Any reliance you place on such information is therefore strictly at your own risk."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 34,
+      "cited_text": "Core Components of a Traditional PRD A standard PRD often includes: Problem statement and context Target users and user insights Feature description and functional requirements Non-functional requirements and constraints Acceptance criteria and success measures Open questions and dependencies Release considerations and rollout notes Let's consider a scenario: You work on the product team for an enterprise CRM platform. Executive leadership is concerned after a major customer churned over to your competitor, citing gaps in their view of customer activity."
+    },
+    {
+      "source_id": "e68f4b12-261c-4818-a79b-fc2c022e20b1",
+      "citation_number": 35,
+      "cited_text": "Best Practices for Documenting Business Requirements As you work your way through the template, here are eight best-practices that will guide you in documenting the business requirements and set your development project up for success: Assign resources to write the business requirements who understand all stakeholder needs and the project's software development language. Meet with stakeholders from every business unit impacted by the project—preferably in one-on-one meetings to ensure everyone is heard. Reconcile conflicts among stakeholders who disagree on a requirement; it's critical to do so before development begins. Identify the target audience for each requirement, which will factor into the end-user testing process. Ensure each requirement is testable so that achieving it can be validated. Facilitate testing by defining each requirement separately; combining two or more into one definition may make validation impossible. Specify the exact success metrics for satisfying each requirement; “easy to use” is ambiguous and difficult to define as to when it's achieved. Leverage images, graphs, charts, diagrams, workflows, use-cases and visual prototypes to articulate the documented requirements to non-technical stakeholders."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 36,
+      "cited_text": "4-9 create dashboards for reporting and informing flight surgeons and finally for creating datasets that fulfill request for data. The functionality within the analyze functional layer allows for the creation of MASH reports, Dashboard, Data Cataloging, Searching and Data Wrangling as depicted in figure 4.2-1 Behind these components is the Distributed Data Reservoir (in the store layer).   This component supports the authentication and authorization within the IMPALA platform data reservoir.  Each of the services in the other layers must authenticate against the data reservoir in order to perform any functions with the data reservoir.  This authentication is controlled using Kerberos.  Authorization at the data level is accomplished via role-based access control (RBAC) using Sentry software. This layer also enables the encryption of data at rest for privacy.  Details on the authentication and encryption are discussed section 7 of this of this document."
+    },
+    {
+      "source_id": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+      "citation_number": 37,
+      "cited_text": "Value Rating Description 1 Critical The requirement is critical to the project’s success. Without fulfilling this requirement, the project is not possible. 2 High The requirement is high priority re the project’s success, but the project could still be implemented in a minimum viable product (MVP) scenario. 3 Medium The requirement is important to the project’s success, as it provides value, but the project could still be implemented in an MVP scenario. 4 Low The requirement is low priority (i.e., it would be nice to have), but the project’s success is not dependent upon it."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 38,
+      "cited_text": "TABLE 4.1-1 MAPPING OVERVIEW: USER ROLES TO IMPALA PLATFORM LAYERS Layers IMPALA Roles Function Capture Data Owners Identify data sources to be ingested into IMPALA Transport Developers Connect to multiple data sources Build ETL workflows to ingest data into IMPALA data reservoir at scale Apply common rule-based transformations to data on ingest Refine Data Scientists, Data Owners, Data Stewards Profile data for anomalies and correct Catalog the data by tagging Address exceptions/errors identified during data ingest"
+    }
+  ]
+}

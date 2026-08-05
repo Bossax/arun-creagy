@@ -1,0 +1,130 @@
+{
+  "answer": "To successfully prioritize a candidate list of use cases or data products down to a high-impact, manageable \"first wave\" (such as a Minimum Viable Product or Priority 1 baseline) [1-3], enterprise software and data engineering practices rely on a combination of strategic alignment, operational viability profiling, standardized priority scoring, and gated conflict-resolution frameworks. \n\n---\n\n### 1. Prioritization Criteria\n\nWhen evaluating which use cases or data products should make the \"first wave,\" standard practice demands looking beyond the immediate desires of stakeholders and grading each candidate across three core lenses:\n\n*   **Strategic Alignment & Measurable Business Impact:** Every candidate must tie directly to high-level organizational objectives, OKRs, or bottom-line value (such as reducing strategic account churn or saving manual preparation hours) [4-6]. Connecting requirements to the same success criteria used by leadership ensures that choices are grounded in business necessity [7].\n*   **Operational & Data Feasibility:** A data pipeline or product candidate is evaluated for known technical hazards and dependencies [8]. This involves examining data source origins and explicitly cataloging **data caveats**—such as seasonal volume spikes, data skew, late-arriving data anomalies, or schema instability—which could complicate backend logic and delay a rapid first-wave deployment [4, 8].\n*   **On-Demand Consumer Demand:** In modern distributed data environments (such as a data mesh), prioritizing which data products to build first can be managed via a **staged, on-demand transformation approach** [9]. To prevent overburdening data providers, raw data is cataloged as a \"data asset,\" but is only prioritized for transformation into a fully-refined \"data product\" (complete with metadata, access policies, and certified quality) when a downstream consumer actively requests access [9].\n\n---\n\n### 2. The Priority Scoring Approach\n\nTo bring objective visibility to the process, candidate requirements are scored using a standardized priority rating system directly embedded in the requirements document [10]:\n\n*   **Priority 1: Critical:** The requirement or use case is absolutely essential to the project's success; without fulfilling this P1 baseline, the project is not possible [2].\n*   **Priority 2: High:** High priority for long-term success, but the project can still be successfully implemented without it in a Minimum Viable Product (MVP) scenario [2].\n*   **Priority 3: Medium:** The use case provides clear business value, but can be safely bypassed in an initial MVP rollout [2].\n*   **Priority 4: Low:** \"Nice-to-have\" features or characteristics that have no direct bearing on the success of the core system [2].\n*   **Priority 5: Future:** The requirement is outside of the active project scope and is deferred as a candidate for prospective future releases [11].\n\n---\n\n### 3. Resolving Stakeholder Ties and Disagreements\n\nWhen multiple business units compete for priority or disagree on requirements, requirements engineering utilizes several structured resolution gates to secure a signed-off requirements baseline *before* engineering begins [12, 13]:\n\n*   **One-on-One Discovery Interviews:** Instead of starting with large group workshops where dominant voices can drown out critical feedback, analysts conduct **one-on-one meetings** with stakeholders across every impacted business unit to ensure all operational needs and pain points are independently heard [12].\n*   **Elimination of Subjective Terminology:** Ambiguous goals (such as demanding a system be \"easy to use\" or \"fast\") are a primary source of stakeholder friction [12, 14]. Disagreements are resolved by forcing stakeholders to define **precise, quantitative targets and testable success metrics** (e.g., \"reducing account preparation time by at least 30%\") [4, 12, 15].\n*   **Explicit Assumption Modeling:** Capturing and documenting the core assumptions and constraints behind a requirement creates a shared, objective language for technical teams to evaluate trade-offs [16].\n*   **The \"Last Comment\" Milestone Gate:** Once conflicts are reconciled by the project team, a finalized requirements document (such as a BRD or PRD) is circulated, giving stakeholders a **final, gated opportunity to comment** [17]. After validating and incorporating final feedback, the requirements are formally signed off by stakeholders, logged into a tracker (e.g., JIRA), and the baseline is frozen [13, 18, 19]. To protect the delivery timeline, ad-hoc change requests are strictly blocked from entering the active build phase [18].\n\n***\n\n📋 If you are currently evaluating multiple competing project requirements, I can help you draft a standardized **Prioritization matrix** using these exact priority ratings and feasibility criteria to help your stakeholders align. Would you like to set up the scoring columns?",
+  "conversation_id": "8f8ae5e6-85be-4de5-8aea-56188a4c08ff",
+  "sources_used": [
+    "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "0f98105a-e702-4086-8695-8219087f4306",
+    "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "e68f4b12-261c-4818-a79b-fc2c022e20b1",
+    "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf"
+  ],
+  "citations": {
+    "1": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "2": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "3": "0f98105a-e702-4086-8695-8219087f4306",
+    "4": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "5": "0f98105a-e702-4086-8695-8219087f4306",
+    "6": "0f98105a-e702-4086-8695-8219087f4306",
+    "7": "0f98105a-e702-4086-8695-8219087f4306",
+    "8": "0f98105a-e702-4086-8695-8219087f4306",
+    "9": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "10": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "11": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "12": "e68f4b12-261c-4818-a79b-fc2c022e20b1",
+    "13": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "14": "0f98105a-e702-4086-8695-8219087f4306",
+    "15": "0f98105a-e702-4086-8695-8219087f4306",
+    "16": "0f98105a-e702-4086-8695-8219087f4306",
+    "17": "e68f4b12-261c-4818-a79b-fc2c022e20b1",
+    "18": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "19": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf"
+  },
+  "references": [
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 1,
+      "cited_text": "End-user validating the data may create new requirements and business rule checks. Record any new requirements or changes (e.g. JIRA, etc), and get sign-off from the stakeholders. Do not start work on the transformation logic until you get a sign-off from the stakeholders. 2.4. Deliver iteratively Break down a large project into smaller parts. Work with the stakeholders to decide on a timeline and prioritization. E.g. If you are building an ELT pipeline (REST API => dashboard), you can split it into modeling the data, pulling data from a REST API, loading it into a raw warehouse table, & building a dashboard for the modeled data."
+    },
+    {
+      "source_id": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+      "citation_number": 2,
+      "cited_text": "Value Rating Description 1 Critical The requirement is critical to the project’s success. Without fulfilling this requirement, the project is not possible. 2 High The requirement is high priority re the project’s success, but the project could still be implemented in a minimum viable product (MVP) scenario. 3 Medium The requirement is important to the project’s success, as it provides value, but the project could still be implemented in an MVP scenario. 4 Low The requirement is low priority (i.e., it would be nice to have), but the project’s success is not dependent upon it."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 3,
+      "cited_text": "The Product Requirements Document (PRD): Definition and Purpose What defines a PRD? A PRD is the working document product managers use to describe what a team should build and why it matters. It provides engineering and design with clarity on (1) scope, (2) constraints, (3) acceptance criteria, and (4) expected customer value . The goal is alignment. A well-written product requirements document outlines the problem to solve, the intended outcome, and the key requirements needed to deliver that outcome. When it is clear and current, it reduces rework and supports faster decision making across technical teams."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 4,
+      "cited_text": "2.2. Help end-users define the requirements Assume the end-users don't know everything they want or even that they will clearly define it to you. You can't get 100% of the requirements right the first time. Talk with the end-user about their objectives and their difficulties. Understanding the current status of end-user operations will provide valuable insights. The end-user might say “We want X data”. Help the end-user define requirements by asking the following questions: Business impact : How does having this data impact the business? What is the measurable improvement in the bottom line, business OKR, etc? Knowing the business impact helps in determining if this project is worth doing. Semantic understanding : What does the data represent? What business process generates this data? Knowing this will help you model the data and understand its relation to other tables in your warehouse. Data source : Where does the data originate? (an application DB, external vendor via SFTP/Cloud store dumps, API data pull, manual upload, etc). Frequency of data pipeline : How fresh does the data need to be? (n minutes, hourly, daily, weekly, etc). Is there a business case for not allowing a higher frequency? What is the highest frequency of data load acceptable by end-users? Historical data : Does historical data need to be stored? When loading data into a warehouse, the answer is usually yes. Data caveats : Does the data have any caveats? (e.g. seasonality affecting size, data skew, inability to join, or data unavailability). Are there any known issues with upstream data sources, such as late arriving data, or missing data? Access pattern : How will the end user access the data? Is access via SQL, dashboard tool, APIs, or cloud storage? In the case of SQL or dashboard access, What are the commonly used filter columns (e.g. date, some business entity)? What is the expected access latency? Business rules check (QA) : What data quality metrics do the end-users care about? What are business logic-based data quality checks? Which numeric fields should be checked for divergence (e.g. can't differ by more than x%) across data pulls? Data output requirements : What is the data output schema? (column names, API field names, Cloud storage file name/size, etc)"
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 5,
+      "cited_text": "Below is an example using a PRD template: PROBLEM STATEMENT Q: What problem are we solving? A: Account teams cannot see a single, reliable view of customer activity across regions and tools, which leads to missed renewal risks and slow follow-up on high-intent opportunities. Q: Why is this problem worth solving? A: Fragmented activity data causes revenue leakage, longer sales cycles, and inconsistent customer experiences for strategic accounts. USERS & INSIGHTS Target user groups Enterprise account executives and customer success managers who own renewals and expansion for large customers."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 6,
+      "cited_text": "Productboard supports connecting product strategy to business outcomes so teams always know why their choices matter. Essential Components of a Modern Product Strategy Document To make it easy for teams to understand what they are working toward and how progress will be measured, clear goals come first. These goals tie directly to business objectives or OKRs so product work can be evaluated through the same lens as sales, marketing, and customer success. Good PRDs also define the outcomes that matter most for customers, which helps teams choose between competing ideas with confidence."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 7,
+      "cited_text": "Connecting strategy to execution solves that problem. It creates a system where decisions flow from the company's goals into the day-to-day requirements that guide design and engineering. This connection helps teams move faster because they no longer need to translate intent each time priorities shift. Achieving Product Roadmap Alignment Through Dynamic Requirements Roadmap alignment becomes easier when requirements are tied directly to measurable objectives or OKRs. When a requirement links to the same success criteria used by leadership, decisions feel grounded. Product teams understand what outcome they are working toward. Marketing and sales see how upcoming work supports their goals as well. This alignment strengthens high-level product strategy and portfolio alignment in a way that documents alone cannot achieve."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 8,
+      "cited_text": "Qualitative indicators Account teams report higher confidence in their understanding of stakeholder engagement and risk. Sales leadership cites the unified view as a primary input in forecast reviews and QBRs. RISKS & DEPENDENCIES Known risks and constraints Data quality issues in upstream integrations could undermine trust in the unified activity view. Poor alert tuning could create noise fatigue and cause teams to ignore important signals. Cross-team or technical dependencies Requires stable integrations with email, calendar, support, and product analytics systems that are owned by different platform teams. Depends on collaboration with security and legal teams to validate data handling and retention policies."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 9,
+      "cited_text": "Eichler et al. [ 43 ] recognize that data providers often lack incentives to share their data, because they face additional effort without immediate benefits, discouraging participation. To address this, they subdivide data products further into data assets. Data assets are raw, registered data in a company's catalog, while data products are refined versions with defined metadata, usage policies, and provisioning options. The transformation process follows three scenarios: (1) a provider directly registers data-as-a-product, (2) a consumer requests access to a data asset, prompting its transformation, or (3) a steward or another employee enriches metadata and submits it for approval. This staged approach reduces the initial burden on providers, ensuring they only need to add metadata when data is actually requested."
+    },
+    {
+      "source_id": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+      "citation_number": 10,
+      "cited_text": "8. NON-FUNCTIONAL REQUIREMENTS 11 9. FINANCIAL STATEMENTS 12 10. COST AND BENEFIT 13 11. RESOURCES 14 12. SCHEDULE, TIMELINE, AND DEADLINES 15 13. ASSUMPTIONS 16 14. GLOSSARY 17 15. REFERENCES 18 16. APPENDIX 19 1. EXECUTIVE SUMMARY SNAPSHOT 2. PROJECT DESCRIPTION 3. PROJECT SCOPE 4. BUSINESS DRIVERS 5. CURRENT PROCESS 6. PROPOSED PROCESS 7. FUNCTIONAL REQUIREMENTS PRIORITY Use the following priority table. It allows you to apply a ratings system to your requirements, so you have the visibility (into the value, status, and description of each requirement) that’s necessary for determining whether a particular requirement is essential to project success:"
+    },
+    {
+      "source_id": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+      "citation_number": 11,
+      "cited_text": "5 Future The requirement is outside of the project’s scope and is included as a possible component of a prospective release and/or feature. REQUIREMENTS CATEGORIES (RC1) ID Requirement Priority Raised By 8. NON-FUNCTIONAL REQUIREMENTS . ID Requirement 9. FINANCIAL STATEMENTS 10. COST AND BENEFIT 11. RESOURCES 12. SCHEDULE, TIMELINE, AND DEADLINES 13. ASSUMPTIONS 14. GLOSSARY Term / Abbreviation Explanation 15. REFERENCES Name Location 16. APPENDIX DISCLAIMER Any articles, templates, or information provided by Smartsheet on the website are for reference only. While we strive to keep the information up to date and correct, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability with respect to the website or the information, articles, templates, or related graphics contained on the website. Any reliance you place on such information is therefore strictly at your own risk."
+    },
+    {
+      "source_id": "e68f4b12-261c-4818-a79b-fc2c022e20b1",
+      "citation_number": 12,
+      "cited_text": "Best Practices for Documenting Business Requirements As you work your way through the template, here are eight best-practices that will guide you in documenting the business requirements and set your development project up for success: Assign resources to write the business requirements who understand all stakeholder needs and the project's software development language. Meet with stakeholders from every business unit impacted by the project—preferably in one-on-one meetings to ensure everyone is heard. Reconcile conflicts among stakeholders who disagree on a requirement; it's critical to do so before development begins. Identify the target audience for each requirement, which will factor into the end-user testing process. Ensure each requirement is testable so that achieving it can be validated. Facilitate testing by defining each requirement separately; combining two or more into one definition may make validation impossible. Specify the exact success metrics for satisfying each requirement; “easy to use” is ambiguous and difficult to define as to when it's achieved. Leverage images, graphs, charts, diagrams, workflows, use-cases and visual prototypes to articulate the documented requirements to non-technical stakeholders."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 13,
+      "cited_text": "Clearly define the requirements, record them (e.g. JIRA, etc), and get sign-off from the stakeholders. 2.3. End-user validation Provide end-users with sample data they can analyze (if possible, in the same format as the expected output). Ask the end-users to validate the data (with a timeline). End-users have a deep understanding of data distribution and business rules. Validation includes ensuring that the data has expected business metrics, can be “sliced and diced” as needed and is easy to use by the end-user. This also creates an opportunity to observe the access patterns, such as what filters and columns are being used often."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 14,
+      "cited_text": "What are common mistakes to avoid in a PRD? Traditional PRDs are useful at the moment they are written, yet they rarely keep pace with ongoing work. Documents become outdated almost immediately. Manual updates introduce friction when teams try to keep information aligned across ongoing research, strategy, and design. Requirements often lack strategic context, which weakens decision making. Teams end up prioritizing what feels important in the moment instead of what drives meaningful outcomes for customers or the business. They can't confidently evaluate trade-offs when they don't know which outcomes they're optimizing for."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 15,
+      "cited_text": "Non-functional requirements Support performant filtering for large enterprise accounts with multi-year histories and high event volume. Comply with enterprise security and privacy standards, including field-level access controls and regional data residency where required. SUCCESS METRICS Quantitative targets Reduce average time spent on weekly account prep by at least thirty percent within two quarters of rollout. Improve renewal rate for monitored strategic accounts by at least five percentage points within one renewal cycle."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 16,
+      "cited_text": "A modern strategy document should explain the assumptions that shape your decisions. Two assumptions may relate to customer behavior, while two others may relate to technical feasibility. Capturing these helps teams revisit earlier choices when new information surfaces. It also creates a shared language for evaluating trade-offs. For examples that show how companies structure these decisions in practice, explore real-world product strategy examples . What Your Product Strategy Document Should NOT Be A product requirements document should never be treated as a:"
+    },
+    {
+      "source_id": "e68f4b12-261c-4818-a79b-fc2c022e20b1",
+      "citation_number": 17,
+      "cited_text": "Provide a Final Opportunity to Comment After your team finalizes the document, verify with each stakeholder that the business requirements are on-target. Also give them one last chance to comment before development begins. While it may be frustrating to accommodate change requests at this point, it costs a lot less to address these issues now than it will after the project starts. Your development process will also flow a lot more smoothly. [adinserter name=”Software-Development-eBook-Offer”] SHARE"
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 18,
+      "cited_text": "Delivering in small chunks enables a short feedback cycle from the end-user making changing requirements easy to handle. Track your work (tickets, etc) with clear acceptance criteria. 2.5. Handling changing requirements/new features Do not accept Adhoc change/feature requests! (unless it's an emergency). Create a process to * Allow end-users to request changes/features * Prioritize the change/feature requests with help from stakeholders * Decide and communicate delivery timelines to end-users Educate the end-user on the process of requesting a new feature/change. Following a process will prevent scope creep and allow you to deliver on time."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 19,
+      "cited_text": "The identified transformations, identified data sources, and ingest parameters are transformed into requirements that are tracked within the JIRA component.  The HH&P IT team reviews requirements within JIRA and create: Sqoop jobs for reading data from a relational database and writing the data into IMPALA. Modular scripts used to transform the data using Trifacta and custom scripts. Workflows which orchestrate the connection to the data sources, the querying and filtering of the data, and the transformation of the data as the data is pushed into the data reservoir."
+    }
+  ]
+}

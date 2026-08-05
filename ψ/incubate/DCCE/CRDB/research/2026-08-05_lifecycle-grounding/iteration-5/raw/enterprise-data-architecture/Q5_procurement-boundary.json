@@ -1,0 +1,284 @@
+{
+  "answer": "The standard practice in systems and requirements engineering (codified under frameworks like **IEEE Std 830-1998**) dictates a **strict, formal separation of concerns** between a system's technical/architectural requirements and its procurement/contractual requirements [1, 2]. \n\nThe primary rule of this boundary is that technical specifications must focus entirely on **the behavior and constraints of the product itself**, whereas contractual documents must govern **the process of producing that product** [1].\n\n---\n\n### **1. What Belongs in the Technical & Architectural Requirements (e.g., the SRS/SyRS)**\nThe **System or Software Requirements Specification (SRS)** is an engineering artifact designed to establish an unambiguous, complete baseline for developers, architects, and testers [3, 4]. To remain functional and modifiable, it must strictly contain only **externally perceivable system attributes, behaviors, and constraints** [5]:\n\n*   **Functionality:** What the system is supposed to do, mapped as clear relationships between inputs (stimuli), outputs (responses), and the exact sequence of processing or calculations between them [6, 7].\n*   **External Interfaces:** Highly detailed logical specifications for how the platform interacts with people (user interfaces), physical hardware components, other software applications (APIs/databases), and communication protocols [6, 8, 9].\n*   **Performance Metrics:** Mathematically quantifiable, testable criteria (such as percentile-based throughput, query latency, and database capacity targets) rather than subjective expectations [10-12].\n*   **Software System Attributes:** Objective verification criteria for security controls, system availability, recoverability, and platform maintainability [13-15].\n*   **Necessary Design Constraints:** Only those mandatory technical limitations derived from external regulations (such as HIPAA or GDPR), security policies, or physical hardware boundaries that restrict implementation choices [14, 16].\n\nA properly written technical specification **limits the range of valid designs but does not dictate a specific design** [17, 18]. It must avoid embedding architectural details (such as partitioning software into specific database modules or choosing internal data structures) unless they are mandatory security or safety constraints [19, 20].\n\n---\n\n### **2. What Belongs in the Procurement & Contractual Content (e.g., SOW / Contract)**\n**Project-level requirements** represent a business agreement between the customer and the supplier regarding the mechanics of delivery and **must be kept entirely out of the technical requirements document** [1]. Including them in the technical specification introduces redundant definitions, risks contractual contradictions during updates, and limits design flexibility [1, 2, 21]. \n\nThese elements belong in a **Statement of Work (SOW)**, a Software Development Plan, or a Master Service Agreement, and typically encompass [2]:\n\n*   **Cost and Financial Terms:** Pricing models, licensing structures, software fees, and payment milestone criteria [1, 22, 23].\n*   **Delivery Schedules:** Project timelines, sprint schedules, deployment roadmaps, and specific milestone dates [1, 24].\n*   **Administrative & Reporting Procedures:** Communication plans, progress reports, meeting cadences, and developer status updates [1].\n*   **Development Methodologies:** The operational processes to be used (such as specific Agile/Scrum ceremonies, CI/CD automation tool requirements, or Git branch management workflows) [1, 25, 26].\n*   **Acceptance and Validation Procedures:** The formal, administrative sign-off processes and legal criteria required to verify contractual fulfillment [1].\n\n---\n\n### **Why Keeping the Boundary Clean is Critical**\nWhen technical and project requirements are intermixed, the document loses its effectiveness as a reliable engineering baseline [1, 24]. A change to a project schedule or a payment milestone should never require a re-baseline of the system's technical schema design or query performance objectives. Keeping this boundary clean ensures that developers and testers can focus purely on product correctness and quality, while program managers and procurement leads manage vendor execution against the commercial contract [1, 2, 27, 28].\n\n📝 If you're preparing for an upcoming vendor kickoff, we could draft a clean, IEEE-aligned System Requirements Specification (SRS) template to map out your technical boundaries and non-functional requirements without cluttering them with project timelines.",
+  "conversation_id": "b7785ec2-b06c-46b5-bf6e-f1ff3235d142",
+  "sources_used": [
+    "ef5faf51-b90d-4c47-b067-340eacd7e338",
+    "0cc2e086-203e-4a4b-b1d5-2895a8bd9e08",
+    "b5a4cfdd-e451-4cce-8fba-fe9b229bff79",
+    "09e57aa3-0b7a-4756-8b74-f923200a2138",
+    "3d708130-2bad-4d32-9a7d-ad3f597a8466"
+  ],
+  "citations": {
+    "1": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+    "2": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+    "3": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+    "4": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+    "5": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+    "6": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+    "7": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+    "8": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+    "9": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+    "10": "0cc2e086-203e-4a4b-b1d5-2895a8bd9e08",
+    "11": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+    "12": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+    "13": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+    "14": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+    "15": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+    "16": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+    "17": "0cc2e086-203e-4a4b-b1d5-2895a8bd9e08",
+    "18": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+    "19": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+    "20": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+    "21": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+    "22": "b5a4cfdd-e451-4cce-8fba-fe9b229bff79",
+    "23": "09e57aa3-0b7a-4756-8b74-f923200a2138",
+    "24": "0cc2e086-203e-4a4b-b1d5-2895a8bd9e08",
+    "25": "3d708130-2bad-4d32-9a7d-ad3f597a8466",
+    "26": "3d708130-2bad-4d32-9a7d-ad3f597a8466",
+    "27": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+    "28": "ef5faf51-b90d-4c47-b067-340eacd7e338"
+  },
+  "references": [
+    {
+      "source_id": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+      "citation_number": 1,
+      "cited_text": "4.8 Embedding project requirements in the SRS The SRS should address the software product, not the process of producing the software product. Project requirements represent an understanding between the customer and the supplier about contractual matters pertaining to production of software and thus should not be included in the SRS. These normally include items such as a) Cost; b) Delivery schedules; c) Reporting procedures; d) Software development methods; e) Quality assurance; f) Validation and veriÞcation criteria; g) Acceptance procedures."
+    },
+    {
+      "source_id": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+      "citation_number": 2,
+      "cited_text": "Project requirements are speciÞed in other documents, typically in a software development plan, a software quality assurance plan, or a statement of work. 5. The parts of an SRS This clause discusses each of the essential parts of the SRS. These parts are arranged in Figure 1 in an outline that can serve as an example for writing an SRS. While an SRS does not have to follow this outline or use the names given here for its parts, a good SRS should include all the information discussed here. IEEE SOFTWARE REQUIREMENTS SPECIFICATIONS Std 830-1998"
+    },
+    {
+      "source_id": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+      "citation_number": 3,
+      "cited_text": "Introduction (This introduction is not a part of IEEE Std 830-1998, IEEE Recommended Practice for Software Requirements SpeciÞ-cations.) This recommended practice describes recommended approaches for the speciÞcation of software requirements. It is based on a model in which the result of the software requirements speciÞcation process is an unambiguous and complete speciÞcation document. It should help a) Software customers to accurately describe what they wish to obtain; b) Software suppliers to understand exactly what the customer wants;"
+    },
+    {
+      "source_id": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+      "citation_number": 4,
+      "cited_text": "c) Individuals to accomplish the following goals: 1) Develop a standard software requirements speciÞcation (SRS) outline for their own organizations; 2) DeÞne the format and content of their speciÞc software requirements speciÞcations; 3) Develop additional local supporting items such as an SRS quality checklist, or an SRS writerÕs handbook. To the customers, suppliers, and other individuals, a good SRS should provide several speciÞc beneÞts, such as the following: Ñ Establish the basis for agreement between the customers and the suppliers on what the software product is to do."
+    },
+    {
+      "source_id": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+      "citation_number": 5,
+      "cited_text": "5.2.6 Apportioning of requirements (2.6 of the SRS) This subsection of the SRS should identify requirements that may be delayed until future versions of the system. 5.3 SpeciÞc requirements (Section 3 of the SRS) This section of the SRS should contain all of the software requirements to a level of detail sufÞcient to enable designers to design a system to satisfy those requirements, and testers to test that the system satisÞes those requirements. Throughout this section, every stated requirement should be externally perceivable by users, operators, or other external systems. These requirements should include at a minimum a description of every input (stimulus) into the system, every output (response) from the system, and all functions performed by the system in response to an input or in support of an output. As this is often the largest and most important part of the SRS, the following principles apply:"
+    },
+    {
+      "source_id": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+      "citation_number": 6,
+      "cited_text": "The basic issues that the SRS writer(s) shall address are the following: a) Functionality. What is the software supposed to do? b) External interfaces. How does the software interact with people, the systemÕs hardware, other hardware, and other software? c) Performance. What is the speed, availability, response time, recovery time of various software functions, etc.? d) Attributes. What are the portability, correctness, maintainability, security, etc. considerations? e) Design constraints imposed on an implementation."
+    },
+    {
+      "source_id": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+      "citation_number": 7,
+      "cited_text": "5.3.2 Functions Functional requirements should deÞne the fundamental actions that must take place in the software in accepting and processing the inputs and in processing and generating the outputs. These are generally listed as ÒshallÓ statements starting with ÒThe system shallÉÓ These include a) Validity checks on the inputs b) Exact sequence of operations c) Responses to abnormal situations, including 1) Overßow 2) Communication facilities 3) Error handling and recovery d) Effect of parameters e) Relationship of outputs to inputs, including"
+    },
+    {
+      "source_id": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+      "citation_number": 8,
+      "cited_text": "5.2.1 Product perspective (2.1 of the SRS) This subsection of the SRS should put the product into perspective with other related products. If the product is independent and totally self-contained, it should be so stated here. If the SRS deÞnes a product that is a component of a larger system, as frequently occurs, then this subsection should relate the requirements of that larger system to functionality of the software and should identify interfaces between that system and the software. A block diagram showing the major components of the larger system, interconnections, and external interfaces can be helpful."
+    },
+    {
+      "source_id": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+      "citation_number": 9,
+      "cited_text": "5.3.1 External interfaces This should be a detailed description of all inputs into and outputs from the software system. It should complement the interface descriptions in 5.2 and should not repeat information there. It should include both content and format as follows: a) Name of item; b) Description of purpose; c) Source of input or destination of output; d) Valid range, accuracy, and/or tolerance; e) Units of measure; f) Timing; g) Relationships to other inputs/outputs; h) Screen formats/organization; i) Window formats/organization; j) Data formats; k) Command formats; l) End messages."
+    },
+    {
+      "source_id": "0cc2e086-203e-4a4b-b1d5-2895a8bd9e08",
+      "citation_number": 10,
+      "cited_text": "Write Non-Functional Requirements Every non-functional requirement must be quantifiable, or it cannot be verified. “The system should be fast” fails the verifiability test, while “The website pages shall load within 3 seconds with the total number of simultaneous users below 5,000” can be measured and demonstrated to an auditor. Common categories include performance, reliability, availability, security, maintainability, scalability, and regulatory compliance. The functional and non-functional lines can blur. A safety injection signal in a nuclear system defines when it activates and enforces a safety constraint at the same time."
+    },
+    {
+      "source_id": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+      "citation_number": 11,
+      "cited_text": "1) Input/output sequences 2) Formulas for input to output conversion It may be appropriate to partition the functional requirements into subfunctions or subprocesses. This does not imply that the software design will also be partitioned that way. 5.3.3 Performance requirements This subsection should specify both the static and the dynamic numerical requirements placed on the software or on human interaction with the software as a whole. Static numerical requirements may include the following: a) The number of terminals to be supported; b) The number of simultaneous users to be supported; c) Amount and type of information to be handled."
+    },
+    {
+      "source_id": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+      "citation_number": 12,
+      "cited_text": "IEEE SOFTWARE REQUIREMENTS SPECIFICATIONS Std 830-1998 Static numerical requirements are sometimes identiÞed under a separate section entitled Capacity. Dynamic numerical requirements may include, for example, the numbers of transactions and tasks and the amount of data to be processed within certain time periods for both normal and peak workload conditions. All of these requirements should be stated in measurable terms. For example, 95% of the transactions shall be processed in less than 1 s."
+    },
+    {
+      "source_id": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+      "citation_number": 13,
+      "cited_text": "5.3.6 Software system attributes There are a number of attributes of software that can serve as requirements. It is important that required attributes be speciÞed so that their achievement can be objectively veriÞed. Subclauses 5.3.6.1 through 5.3.6.5 provide a partial list of examples. IEEE Std 830-1998 IEEE RECOMMENDED PRACTICE FOR 5.3.6.1 Reliability This should specify the factors required to establish the required reliability of the software system at time of delivery. 5.3.6.2 Availability"
+    },
+    {
+      "source_id": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+      "citation_number": 14,
+      "cited_text": "This should specify the factors required to guarantee a deÞned availability level for the entire system such as checkpoint, recovery, and restart. 5.3.6.3 Security This should specify the factors that protect the software from accidental or malicious access, use, modiÞcation, destruction, or disclosure. SpeciÞc requirements in this area could include the need to a) Utilize certain cryptographical techniques; b) Keep speciÞc log or history data sets; c) Assign certain functions to different modules; d) Restrict communications between some areas of the program; e) Check data integrity for critical variables."
+    },
+    {
+      "source_id": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+      "citation_number": 15,
+      "cited_text": "5.3.6.4 Maintainability This should specify attributes of software that relate to the ease of maintenance of the software itself. There may be some requirement for certain modularity, interfaces, complexity, etc. Requirements should not be placed here just because they are thought to be good design practices. 5.3.6.5 Portability This should specify attributes of software that relate to the ease of porting the software to other host machines and/or operating systems. This may include the following:"
+    },
+    {
+      "source_id": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+      "citation_number": 16,
+      "cited_text": "5.3.5 Design constraints This should specify design constraints that can be imposed by other standards, hardware limitations, etc. 5.3.5.1 Standards compliance This subsection should specify the requirements derived from existing standards or regulations. They may include the following: a) Report format; b) Data naming; c) Accounting procedures; d) Audit tracing. For example, this could specify the requirement for software to trace processing activity. Such traces are needed for some applications to meet minimum regulatory or Þnancial standards. An audit trace requirement may, for example, state that all changes to a payroll database must be recorded in a trace Þle with before and after values."
+    },
+    {
+      "source_id": "0cc2e086-203e-4a4b-b1d5-2895a8bd9e08",
+      "citation_number": 17,
+      "cited_text": "Writing a system requirements specification means defining the scope, capturing system context, stating functional and non-functional requirements, describing external interfaces, setting acceptance criteria, building traceability to source needs and tests, and putting the document under review and change control. This guide covers each step in order, plus the marks of a well-written SRS, a worked example, and the governing standards. What Is a System Requirements Specification (SRS)? At the system level, an SRS records what the system must do, what qualities it must exhibit, how it interacts with external elements, and what constraints bound the design. It covers hardware, software, interfaces, performance expectations, and operating limits. For software-focused specifications, an SRS documents the conditions that the final software product must meet, as agreed between the project sponsor or client and the development team. A well-written SRS limits the range of valid designs without dictating any single one. Because teams use requirements documents at business, source, system, and software levels, the purpose section should make clear which level is being specified."
+    },
+    {
+      "source_id": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+      "citation_number": 18,
+      "cited_text": "b) Should not describe any design or implementation details. These should be described in the design stage of the project. c) Should not impose additional constraints on the software. These are properly speciÞed in other documents such as a software quality assurance plan. Therefore, a properly written SRS limits the range of valid designs, but does not specify any particular design. 4.3 Characteristics of a good SRS An SRS should be a) Correct; b) Unambiguous; c) Complete; d) Consistent; e) Ranked for importance and/or stability; f) VeriÞable; g) ModiÞable; h) Traceable."
+    },
+    {
+      "source_id": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+      "citation_number": 19,
+      "cited_text": "IEEE Std 830-1998 IEEE RECOMMENDED PRACTICE FOR The SRS should specify what functions are to be performed on what data to produce what results at what location for whom. The SRS should focus on the services to be performed. The SRS should not normally specify design items such as the following: a) Partitioning the software into modules; b) Allocating functions to the modules; c) Describing the ßow of information or control between modules; d) Choosing data structures. 4.7.1 Necessary design requirements"
+    },
+    {
+      "source_id": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+      "citation_number": 20,
+      "cited_text": "In special cases some requirements may severely restrict the design. For example, security or safety requirements may reßect directly into design such as the need to a) Keep certain functions in separate modules; b) Permit only limited communication between some areas of the program; c) Check data integrity for critical variables. Examples of valid design constraints are physical requirements, performance requirements, software development standards, and software quality assurance standards. Therefore, the requirements should be stated from a purely external viewpoint. When using models to illustrate the requirements, remember that the model only indicates the external behavior, and does not specify a design."
+    },
+    {
+      "source_id": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+      "citation_number": 21,
+      "cited_text": "a) Have a coherent and easy-to-use organization with a table of contents, an index, and explicit crossreferencing; b) Not be redundant (i.e., the same requirement should not appear in more than one place in the SRS); c) Express each requirement separately, rather than intermixed with other requirements. Redundancy itself is not an error, but it can easily lead to errors. Redundancy can occasionally help to make an SRS more readable, but a problem can arise when the redundant document is updated. For instance, a requirement may be altered in only one of the places where it appears. The SRS then becomes inconsistent. Whenever redundancy is necessary, the SRS should include explicit cross-references to make it modiÞable."
+    },
+    {
+      "source_id": "b5a4cfdd-e451-4cce-8fba-fe9b229bff79",
+      "citation_number": 22,
+      "cited_text": "cost optimization has not been extensively studied. Methodology Identifying Key Cost Drivers in Snowflake: To optimize Snowflake’s cost, it is critical to first understand the factors contributing to its costs. Snowflake follows pure consumption based pricing. Key factors include: Virtual Warehouse Costs: Snowflake charges based on the size and duration of virtual warehouse usage for compute. Snowflake provides multiple warehouse types such as x-small, small, medium, large, x-large, compute credit which in turn cost doubles with each higher"
+    },
+    {
+      "source_id": "09e57aa3-0b7a-4756-8b74-f923200a2138",
+      "citation_number": 23,
+      "cited_text": "Taken together, these developments mean that a Snowflake team cannot simply rely on SQL scripts alone; they must deliberate on how to govern tests, manage lineage, and centralise metrics in a more automated and auditable way. dbt on Snowflake in a Nutshell The table below compares dbt Cloud and dbt Core across core capability areas, and offers guidance on which edition is likely the best fit. <cited_table>",
+      "cited_table": {
+        "num_columns": 5,
+        "rows": [
+          [
+            "Area",
+            "Shared Capability",
+            "Cloud‑only",
+            "Core‑only",
+            "Choosing tip"
+          ],
+          [
+            "Modelling",
+            "SQL models; Jinja templating",
+            "–",
+            "–",
+            "No functional difference -decide based on other factors."
+          ],
+          [
+            "Testing and documentation",
+            "Schema tests; documentation site; lineage JSON",
+            "–",
+            "–",
+            "Same feature set in both editions."
+          ],
+          [
+            "Development experience",
+            "–",
+            "Managed browser IDE with pre‑configured environment",
+            "Local editor and command‑line interface",
+            "Choose Core"
+          ],
+          [
+            "Orchestration",
+            "–",
+            "Built‑in scheduler with alerting",
+            "Integrate with GitHub Actions, Airflow, Snowflake Tasks, or any CI tool",
+            "Choose Cloud"
+          ],
+          [
+            "Semantic Layer",
+            "–",
+            "Metrics API and Explorer UI powered by MetricFlow",
+            "Not available",
+            "Cloud is required"
+          ],
+          [
+            "Security",
+            "Warehouse role‑based access",
+            "SAML, SCIM, audit logs",
+            "Depends on self‑host configuration",
+            "Choose Cloud"
+          ],
+          [
+            "License and cost",
+            "–",
+            "Per‑seat subscription; minimal operations overhead",
+            "No License fees; infrastructure and maintenance owned internally",
+            "Choose Core"
+          ]
+        ]
+      }
+    },
+    {
+      "source_id": "0cc2e086-203e-4a4b-b1d5-2895a8bd9e08",
+      "citation_number": 24,
+      "cited_text": "How to Write an SRS Step-by-Step Standards-aligned SRS practice allows flexibility in section ordering while defining expected content, so the sequence below follows the structure teams commonly adopt. Design details and project management content, like cost or delivery schedules, do not belong in the SRS. Define Purpose, Scope, and Audience The purpose section identifies the system by name and states who will read it, usually developers who reference it for design, test engineers who derive verification plans from it, and compliance leads who use it to demonstrate regulatory conformance. Scope defines included and excluded system behavior along with its objectives, and must stay consistent with any higher-level system specification or source requirements owned by Systems Engineers, Research and Development (R&D) Program Managers, or Quality & Regulatory Affairs teams. A scope that contradicts its parent specification creates a traceability break that surfaces during review or audit."
+    },
+    {
+      "source_id": "3d708130-2bad-4d32-9a7d-ad3f597a8466",
+      "citation_number": 25,
+      "cited_text": "What is DataOps? DataOps (short for Data Operations ) is an automated, process-oriented methodology used by data teams to improve the quality, speed, and reliability of data analytics. It is not merely a tool or a software platform; rather, it is a cultural and operational movement that unites data engineers, data analysts, data scientists, and business stakeholders. At its core, DataOps brings the rigor of DevOps to the data lifecycle: Continuous Integration & Continuous Deployment (CI/CD) for code and data pipelines. Automated Testing & Validation to prevent bad data from reaching production. Data Observability & Monitoring to detect anomalies before business leaders do. Collaboration & Governance across cross-functional teams."
+    },
+    {
+      "source_id": "3d708130-2bad-4d32-9a7d-ad3f597a8466",
+      "citation_number": 26,
+      "cited_text": "Copy Why DataOps Matters in Modern Data Engineering Traditional data management relied on monolithic batch ETL jobs managed in silos. When a source schema changed, downstream dashboards broke, leading to broken trust and emergency war rooms. DataOps fundamentally changes this dynamic. Here is how modern DataOps compares to traditional approaches: Traditional Data Management vs. Modern DataOps <cited_table>",
+      "cited_table": {
+        "num_columns": 3,
+        "rows": [
+          [
+            "Metric / Dimension",
+            "Traditional Data Management",
+            "Modern DataOps Workflow"
+          ],
+          [
+            "Development Cycle",
+            "Months-long waterfall deployments",
+            "Rapid, iterative deployments (days or hours)"
+          ],
+          [
+            "Testing",
+            "Manual sampling or reactive user bug reports",
+            "Automated data & pipeline testing before production"
+          ],
+          [
+            "Deployment",
+            "Manual script execution on production databases",
+            "Automated CI/CD pipelines via Git version control"
+          ],
+          [
+            "Data Quality",
+            "Assumed accurate until proven broken",
+            "Continuously validated with automated circuit breakers"
+          ],
+          [
+            "Monitoring",
+            "Basic job success/failure alerts",
+            "Deep data observability (freshness, volume, schema, lineage)"
+          ],
+          [
+            "Team Collaboration",
+            "Siloed teams (SREs, DBAs, Data Engineers)",
+            "Cross-functional, collaborative delivery teams"
+          ]
+        ]
+      }
+    },
+    {
+      "source_id": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+      "citation_number": 27,
+      "cited_text": "The complete description of the functions to be performed by the software speciÞed in the SRS will assist the potential users to determine if the software speciÞed meets their needs or how the software must be modiÞed to meet their needs. Ñ Reduce the development effort. The preparation of the SRS forces the various concerned groups in the customerÕs organization to consider rigorously all of the requirements before design begins and reduces later redesign, recoding, and retesting. Careful review of the requirements in the SRS can reveal omissions, misunderstandings, and inconsistencies early in the development cycle when these problems are easier to correct."
+    },
+    {
+      "source_id": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+      "citation_number": 28,
+      "cited_text": "Ñ Provide a basis for estimating costs and schedules. The description of the product to be developed as given in the SRS is a realistic basis for estimating project costs and can be used to obtain approval for bids or price estimates. Ñ Provide a baseline for validation and veriÞcation. Organizations can develop their validation and veriÞcation plans much more productively from a good SRS. As a part of the development contract, the SRS provides a baseline against which compliance can be measured."
+    }
+  ]
+}

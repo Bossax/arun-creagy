@@ -1,0 +1,214 @@
+{
+  "answer": "In standard software and enterprise data platform engineering, maintaining a clear and rigorous boundary between a platform’s **technical/business requirements** (the *what* and the *why*) and its **procurement/contractual agreements** (the *how*, *who*, *when*, and *for how much*) is critical to project success. \n\nWhen these boundaries blur—such as when contractual timelines are written directly into a technical schema, or when data quality expectations are omitted from the contract—projects frequently suffer from scope creep, misaligned expectations, and costly change orders [1, 2].\n\nThe standard separation of these two domains, backed by enterprise practices, is structured as follows:\n\n---\n\n### The Boundary: \"What & Why\" vs. \"Commercials & Terms\"\n\n1.  **The Technical/Business Requirements (The BRD/PRD):** This is a logical, outcome-oriented contract. It defines the business problems, the target users, and the functional rules the technology must obey to deliver value [3, 4]. It is owned by the business analysts, product managers, and data architects [5, 6].\n2.  **The Procurement/Contractual Content (The SOW/Contract):** This is a commercial, liability-oriented contract. It defines the transaction between the buyer and the vendor, covering the pricing structure, resource allocation, legal acceptance milestones, and execution schedules [7, 8]. It is owned by project managers, procurement officers, and legal teams [5, 7].\n\nA standard enterprise blueprint template, such as the **Smartsheet Business Requirements Document (BRD) Template**, explicitly marks this division [9]. Sections 1 through 8 capture the technical and logical requirements of the system, while Sections 9 through 13 isolate the financial, scheduling, and commercial logistics of the build [8, 9].\n\n---\n\n### Standard Checklist: What Belongs on Each Side\n\n#### Side A: The Technical & Business Requirements\nThis document details the logical specifications of the platform. It provides engineering with absolute clarity on scope, logical design, and performance expectations without dictating physical implementation or commercial terms [3].\n\n*   **Strategic Context & Business Drivers:** The problem statement, target personas, and quantitative success metrics (e.g., \"reducing weekly account preparation time by 30%\") [10, 11].\n*   **Logical Architecture Blueprint:** The functional layers of data movement (e.g., Capture, Transport, Refine, Store, Analyze, Distribute, Manage) and platform zones [12, 13].\n*   **Source Pipeline & Interface Inventory:** Detailed parameters of inbound and outbound interfaces (RDBMS, APIs, file shares), ingestion frequencies, and expected data output schemas [14-17].\n*   **Logical Transformation Rules:** Standardized cleansing rules, such as decomposing compound fields, unit conversions, and handling null values [18, 19].\n*   **Specific Data Quality (QA) Rules:** Numeric threshold checks (e.g., divergence thresholds between consecutive pulls) and data profiling expectations [14, 20].\n*   **Security & Access Constraints:** Logical Role-Based Access Control (RBAC) rules, fine-grained row/column-level filtering policies, data masking, and regional residency rules [11, 21, 22].\n*   **Validated Sample Data Schemas:** Representative data structures signed off by business stakeholders to prove the underlying logic is correct [23, 24].\n\n#### Side B: The Procurement, SOW, & Contractual Content\nThis document establishes the business transaction, mapping out how the vendor will be paid, when milestones are achieved, who is liable for project delays, and how the build is legally verified.\n\n*   **Statement of Work (SOW) Task Sequences:** The step-by-step phases of the engagement (e.g., SOW Tasks 1 through 6) that the vendor must execute [7].\n*   **Financial Budgets & Run Costs:** The total cost of implementation (e.g., the standard $50,000–$200,000 for mid-sized data warehouses or $500,000+ for large platform builds), licensing costs, and ongoing platform maintenance budgets [5, 25, 26].\n*   **Project Schedule & Milestones:** The phased roadmap timeline (e.g., establishing a 3-to-6-month window for quick-win governance and a 12-to-24-month horizon for full platform implementation) [27].\n*   **Resource Allocation & Staffing Models:** Defined project roles (Enterprise Data Managers, Architects, DBAs, Developers, and Project Managers) and their respective full-time equivalent (FTE) commitments [5, 8].\n*   **Commercial Assumption Logs & Exclusions:** Explicit logs bounding vendor liability, specifying which third-party systems the client is responsible for provisioning (e.g., Active Directory, hardware, or network cabling) [28-30].\n*   **Formal Acceptance & Sign-Off Procedures:** The legal process for validating, verifying, and formally accepting deliverables, linking technical \"Definition of Done\" criteria directly to progress payments [7, 23, 24].\n\n---\n\n### How They Bridge: The SOW Linkage\nIn professional practice, the **Technical BRD/PRD acts as a \"Technical Appendix\" or \"Exhibit\" to the Statement of Work**. \n\nThe Statement of Work (procurement side) will legally reference the Requirements Document (technical side) to state: *\"The vendor agrees to deliver a system that satisfies all Priority 1 (Critical) requirements outlined in Exhibit A [the requirements document] for the fixed price of X.\"* [8, 31] This prevents the requirements document from becoming a static, forgotten file and anchors the engineering build directly to the commercial contract [32, 33].\n\n***\n\n🧩 I can help you draft a standardized **RACI Matrix** to define exactly how your internal data stewards, developers, and the external vendor team should split ownership across these requirements and contract milestones. Would you like to outline the project roles?",
+  "conversation_id": "8f8ae5e6-85be-4de5-8aea-56188a4c08ff",
+  "sources_used": [
+    "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "0f98105a-e702-4086-8695-8219087f4306",
+    "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "e68f4b12-261c-4818-a79b-fc2c022e20b1"
+  ],
+  "citations": {
+    "1": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "2": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "3": "0f98105a-e702-4086-8695-8219087f4306",
+    "4": "0f98105a-e702-4086-8695-8219087f4306",
+    "5": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "6": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "7": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "8": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "9": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "10": "0f98105a-e702-4086-8695-8219087f4306",
+    "11": "0f98105a-e702-4086-8695-8219087f4306",
+    "12": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "13": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "14": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "15": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "16": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "17": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "18": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "19": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "20": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "21": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "22": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "23": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "24": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "25": "e68f4b12-261c-4818-a79b-fc2c022e20b1",
+    "26": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "27": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "28": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "29": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "30": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "31": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "32": "0f98105a-e702-4086-8695-8219087f4306",
+    "33": "0f98105a-e702-4086-8695-8219087f4306"
+  },
+  "references": [
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 1,
+      "cited_text": "How to gather requirements for your data project – Start Data Engineering Start Data Engineering Home Subscribe Courses & Books About How to gather requirements for your data project Frustrated trying to pry data pipeline requirements out of end users? Is scope creep preventing you from delivering data projects on time? You assume that the end-users know (and communicate) exactly what they want, but that is rarely the case! Adhoc feature/change requests throw off your delivery timelines. You want to deliver on time and make an impact, but you are interrupted constantly! Requirements gathering is rough, but it doesn't have to be! We go over five steps you can follow, to work with the end-user to define requirements, validate data before wasting engineering hours, deliver iteratively, and handle new feature/change requests without context switching."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 2,
+      "cited_text": "Requirements gathering is terrible! Scope creep kills your ability to deliver on time Disappointed that you do not get specific requirements Frustrated dealing with end-users who do not understand the complexities of a data pipeline Interrupted by changing requirements Then this post is for you. You will learn to help end-users define requirements, break down the project into small deliverables, deliver iteratively, and handle feature/change requests. 2. Gathering requirements Here are some steps you can take to ensure the seamless development of your data project. Note that depending on your team/company PMs will perform some of these steps."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 3,
+      "cited_text": "The Product Requirements Document (PRD): Definition and Purpose What defines a PRD? A PRD is the working document product managers use to describe what a team should build and why it matters. It provides engineering and design with clarity on (1) scope, (2) constraints, (3) acceptance criteria, and (4) expected customer value . The goal is alignment. A well-written product requirements document outlines the problem to solve, the intended outcome, and the key requirements needed to deliver that outcome. When it is clear and current, it reduces rework and supports faster decision making across technical teams."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 4,
+      "cited_text": "Core Components of a Traditional PRD A standard PRD often includes: Problem statement and context Target users and user insights Feature description and functional requirements Non-functional requirements and constraints Acceptance criteria and success measures Open questions and dependencies Release considerations and rollout notes Let's consider a scenario: You work on the product team for an enterprise CRM platform. Executive leadership is concerned after a major customer churned over to your competitor, citing gaps in their view of customer activity."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 5,
+      "cited_text": "Resources Make sure you dedicate enough human, technical, and financial resources to your EDM strategy: Human resources . Common EDM roles include enterprise data managers and stewards, database administrators, data architects and engineers, and data and BI analysts. Implementing an enterprise data management solution also requires a business analyst and a project manager. Data resources . The collected data requires enough storage and computing resources for access and analytics, which entail additional costs. Financial resources . Implementing a data warehouse, for example, can cost $50,000-$200,000 for small and midsized projects and $500,000+ for larger ones. EDM also entails running costs (e.g., data quality audits, data warehouse/lake maintenance)."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 6,
+      "cited_text": "design requirement project management Author Joseph Machado Published August 11, 2022 Keywords design, requirement, project management On this page 1. Introduction 2. Gathering requirements 2.1. Identify the end-users 2.2. Help end-users define the requirements 2.3. End-user validation 2.4. Deliver iteratively 2.5. Handling changing requirements/new features 3. Conclusion 4. Further reading 5. Reference 1. Introduction Data engineers are often caught off guard by undefined end-user assumptions. As a data engineer, if you feel"
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 7,
+      "cited_text": "1.1 PURPOSE OF THE SYSTEM DESIGN DOCUMENT The System Design document tracks the design activities that are performed to guide the integration, installation, verification, and acceptance testing of the IMPALA Platform.  The inputs to the design document are derived from the activities recorded in Tasks 1 through 6 of the Statement of Work (SOW), with the proposed technical solution being the completion of Phase 1-A.  With the documentation of the architecture of the IMPALA Platform and the installation steps taken, the SDD will be a living document, capturing the details about capability enhancements and system improvements to the IMPALA Platform to provide users in development of accurate and precise analytical models.  The IMPALA Platform infrastructure team, data architecture team, system integration team, security management team, project manager, NASA data scientists and users are the intended audience of this document."
+    },
+    {
+      "source_id": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+      "citation_number": 8,
+      "cited_text": "8. NON-FUNCTIONAL REQUIREMENTS 11 9. FINANCIAL STATEMENTS 12 10. COST AND BENEFIT 13 11. RESOURCES 14 12. SCHEDULE, TIMELINE, AND DEADLINES 15 13. ASSUMPTIONS 16 14. GLOSSARY 17 15. REFERENCES 18 16. APPENDIX 19 1. EXECUTIVE SUMMARY SNAPSHOT 2. PROJECT DESCRIPTION 3. PROJECT SCOPE 4. BUSINESS DRIVERS 5. CURRENT PROCESS 6. PROPOSED PROCESS 7. FUNCTIONAL REQUIREMENTS PRIORITY Use the following priority table. It allows you to apply a ratings system to your requirements, so you have the visibility (into the value, status, and description of each requirement) that’s necessary for determining whether a particular requirement is essential to project success:"
+    },
+    {
+      "source_id": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+      "citation_number": 9,
+      "cited_text": "SAMPLE BUSINESS REQUIREMENTS DOCUMENT TEMPLATE SAMPLE BUSINESS REQUIREMENTS DOCUMENT TEMPLATE VERSION HISTORY VERSION APPROVED BY REVISION DATE DESCRIPTION OF CHANGE AUTHOR NOTE TO USER: Overwrite the sample text included in this template to complete your project’s business requirements document. TABLE OF CONTENTS 1. EXECUTIVE SUMMARY SNAPSHOT 3 2. PROJECT DESCRIPTION 4 3. PROJECT SCOPE 5 4. BUSINESS DRIVERS 6 5. CURRENT PROCESS 7 6. PROPOSED PROCESS 8 7. FUNCTIONAL REQUIREMENTS 9 PRIORITY 10 REQUIREMENTS CATEGORIES (RC1) 10"
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 10,
+      "cited_text": "Below is an example using a PRD template: PROBLEM STATEMENT Q: What problem are we solving? A: Account teams cannot see a single, reliable view of customer activity across regions and tools, which leads to missed renewal risks and slow follow-up on high-intent opportunities. Q: Why is this problem worth solving? A: Fragmented activity data causes revenue leakage, longer sales cycles, and inconsistent customer experiences for strategic accounts. USERS & INSIGHTS Target user groups Enterprise account executives and customer success managers who own renewals and expansion for large customers."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 11,
+      "cited_text": "Non-functional requirements Support performant filtering for large enterprise accounts with multi-year histories and high event volume. Comply with enterprise security and privacy standards, including field-level access controls and regional data residency where required. SUCCESS METRICS Quantitative targets Reduce average time spent on weekly account prep by at least thirty percent within two quarters of rollout. Improve renewal rate for monitored strategic accounts by at least five percentage points within one renewal cycle."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 12,
+      "cited_text": "4.1 LOGICAL ARCHITECTURE.............................................................................................................................. 4-2 4.1.1 Capture ................................................................................................................................................ 4-3 4.1.2 Transport.............................................................................................................................................. 4-4 4.1.3 Refine ................................................................................................................................................... 4-4 4.1.4 Store ..................................................................................................................................................... 4-5 4.1.5 Analyze ................................................................................................................................................. 4-5 4.1.6 Distribute ............................................................................................................................................. 4-6 4.1.7 Manage ................................................................................................................................................ 4-6"
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 13,
+      "cited_text": "HHPC 10061 4-2 4.1 LOGICAL ARCHITECTURE Figure 4.1-1 IMPALA Key Enablers and Platform Logical Architecture 4-3 As depicted in Figure 4.1-1, the IMPALA Platform enables the NASA community of users to operate within seven (7) key logical layers: Capture, Transport, Refine, Store, Analyze, Distribute, and Manage Data, using the suite of components within the platform.  It also supports the governance of data and collaboration amongst the users.  This section gives a brief description of the seven (7) logical layers, the functions performed within the layer and the user community’s interaction with each layer. Table 4.1-1 provides a brief overview of the different user role groupings, as well as how they interact with the layers of the IMPALA platform."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 14,
+      "cited_text": "2.2. Help end-users define the requirements Assume the end-users don't know everything they want or even that they will clearly define it to you. You can't get 100% of the requirements right the first time. Talk with the end-user about their objectives and their difficulties. Understanding the current status of end-user operations will provide valuable insights. The end-user might say “We want X data”. Help the end-user define requirements by asking the following questions: Business impact : How does having this data impact the business? What is the measurable improvement in the bottom line, business OKR, etc? Knowing the business impact helps in determining if this project is worth doing. Semantic understanding : What does the data represent? What business process generates this data? Knowing this will help you model the data and understand its relation to other tables in your warehouse. Data source : Where does the data originate? (an application DB, external vendor via SFTP/Cloud store dumps, API data pull, manual upload, etc). Frequency of data pipeline : How fresh does the data need to be? (n minutes, hourly, daily, weekly, etc). Is there a business case for not allowing a higher frequency? What is the highest frequency of data load acceptable by end-users? Historical data : Does historical data need to be stored? When loading data into a warehouse, the answer is usually yes. Data caveats : Does the data have any caveats? (e.g. seasonality affecting size, data skew, inability to join, or data unavailability). Are there any known issues with upstream data sources, such as late arriving data, or missing data? Access pattern : How will the end user access the data? Is access via SQL, dashboard tool, APIs, or cloud storage? In the case of SQL or dashboard access, What are the commonly used filter columns (e.g. date, some business entity)? What is the expected access latency? Business rules check (QA) : What data quality metrics do the end-users care about? What are business logic-based data quality checks? Which numeric fields should be checked for divergence (e.g. can't differ by more than x%) across data pulls? Data output requirements : What is the data output schema? (column names, API field names, Cloud storage file name/size, etc)"
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 15,
+      "cited_text": "4-4 Surveillance of Astronaut Health) and MEDB Sharepoint.  Data sources in the capture layer are technically outside the IMPALA platform.  IMPALA interfaces with these data sources to ingest data.  The IMPALA platform is extensible and able to capture data from other types of data sources.  The platform also supports connectivity and capture/identification of relational data sources such as ORACLE, Microsoft SQL Server, and Microsoft Access, as well as data located in file shares, cloud based data stores and local files of varying formats (XML, CSV, JSON, PDF, and more)."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 16,
+      "cited_text": "7.2.5.5 Anti-Virus Monitoring Anti-virus agents provided by the MEME Infrastructure team are deployed on servers within the IMPALA platform.  These agents generate and publish reports to the MEME anti-virus server for auditing. 8-1 8.0 INTERFACES 8.1 INBOUND INTERFACES The following are all the inbound interfaces to the IMPALA Platform Solution. Electronic Medical Records (EMR): Clinical, laboratory, and medical requirements data o Epidemiologic data is ingested from NASA internal data sources such as case"
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 17,
+      "cited_text": "researchers, experiments and management activities. o Medical data collected for a mission program (Med B) from a mission SharePoint site, This data is primarily sourced from SharePoint lists and document libraries (PDF, Word, and Excel documents) Other future inbound interfaces include Ad-hoc Datasets, VIIP, Cardio and CO2 8.2 OUTBOUND INTERFACES The following are some of the outbound interfaces from the IMPALA Platform Solution. Exams and Reports for incorporation into the MASH Report o One operational use of the IMPALA system is to locate the exams and reports produced through clinical and lab activities.  At the end of a mission, these exams and reports are located and summarized for presentation to the crewmember and flight surgeon.  Initially, this interface will present the analysts and flight surgeon with these files in order for offline communication with the crew member.  In the future, if it is desired to allow the crew member view access into IMPALA, these exams and reports could be made available to them through this interface as well."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 18,
+      "cited_text": "The IMPALA platform’s transport layer is not just limited to RDBMS tools previously listed (ORACLE, Access, and MS SQL), it enables connection to any relational data source that supports ODBC or JDBC connectors, connection to file shares and connection to data residing in the cloud. The HHP&IT team will leverage the functions within this layer to build, test and deploy data capture jobs.  These data capture jobs will be scheduled to connect and load data from the data sources (EMR, LSAH, etc.).  As the list of production data sources grows beyond the initial data sources, this team will support the design and development of the required data capture jobs.  This team also manages the interface to the production data source.  The interfaces for relational data stores include ODBC and JDBC as well as the credentials to connect to these production data stores.  The IMPALA platform uses built-in functions, such as secure copy or secure file transfer protocols, to import non-relational data sources such as file.   The data capture jobs are orchestrated using the Pentaho engine.  Within this engine, business rules are defined to apply static transformations  to the data as it is transported into the data reservoir."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 19,
+      "cited_text": "Persistent edits or static transformations may include the following: Decomposing a compound field into multiple fields Unit conversions to standardize the measurement system for data of the same type (such as dates, height, weight) Removing incorrect values Adding additional information Adding lookup or descriptive information Tools used for persistent edits: Trifacta scripts integrated into the Pentaho workflow Non-persisted edits generally describe edits that are made during the course of analyzing or dealing with the data in the data reservoir.  They are performed during analysis and modeling for a particular purpose.  These edits may be documented and shared with other users, but the edits only apply to the data as it is being used in the analysis.   In this type of edit, the data is not persisted and it is only used for the duration of the analysis."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 20,
+      "cited_text": "Key Components of Enterprise Data Management Data Quality Management Data quality management encompasses practices, processes, and tools for ensuring your data remains accurate, complete, reliable, consistent, and timely. It can include: Data profiling to map existing data and its structure and evaluate its quality Automated data cleansing and standardization to prevent errors and ensure data usability and reliability Data deduplication, merge, and survivorship rules Validation checks to verify data quality Data quality metrics monitoring (e.g., consensus, relevance, validity) Regular data quality audits and optimization."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 21,
+      "cited_text": "Appropriate access control model (e.g., role-based, rule-based, attribute-based, mandatory, discretionary) User identification, authentication, and authorization rules and procedures Metrics for access monitoring and regular audits. Best practices in this area include granting users the minimum level of access by default (the principle of least privilege), implementing multi-factor authentication, and enforcing password hygiene. Continuous data access logging and monitoring is also a must. Data Lifecycle Management The data lifecycle begins at data entry and ends with its destruction. Data lifecycle management, in turn, means defining how you'll handle data depending on its lifecycle phase and what criteria data has to meet to move from one phase to another."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 22,
+      "cited_text": "4-9 create dashboards for reporting and informing flight surgeons and finally for creating datasets that fulfill request for data. The functionality within the analyze functional layer allows for the creation of MASH reports, Dashboard, Data Cataloging, Searching and Data Wrangling as depicted in figure 4.2-1 Behind these components is the Distributed Data Reservoir (in the store layer).   This component supports the authentication and authorization within the IMPALA platform data reservoir.  Each of the services in the other layers must authenticate against the data reservoir in order to perform any functions with the data reservoir.  This authentication is controlled using Kerberos.  Authorization at the data level is accomplished via role-based access control (RBAC) using Sentry software. This layer also enables the encryption of data at rest for privacy.  Details on the authentication and encryption are discussed section 7 of this of this document."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 23,
+      "cited_text": "Clearly define the requirements, record them (e.g. JIRA, etc), and get sign-off from the stakeholders. 2.3. End-user validation Provide end-users with sample data they can analyze (if possible, in the same format as the expected output). Ask the end-users to validate the data (with a timeline). End-users have a deep understanding of data distribution and business rules. Validation includes ensuring that the data has expected business metrics, can be “sliced and diced” as needed and is easy to use by the end-user. This also creates an opportunity to observe the access patterns, such as what filters and columns are being used often."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 24,
+      "cited_text": "End-user validating the data may create new requirements and business rule checks. Record any new requirements or changes (e.g. JIRA, etc), and get sign-off from the stakeholders. Do not start work on the transformation logic until you get a sign-off from the stakeholders. 2.4. Deliver iteratively Break down a large project into smaller parts. Work with the stakeholders to decide on a timeline and prioritization. E.g. If you are building an ELT pipeline (REST API => dashboard), you can split it into modeling the data, pulling data from a REST API, loading it into a raw warehouse table, & building a dashboard for the modeled data."
+    },
+    {
+      "source_id": "e68f4b12-261c-4818-a79b-fc2c022e20b1",
+      "citation_number": 25,
+      "cited_text": "Contact 8 Best Practices for Documenting Business Requirements on Software Development Projects Producing world-class software demands well-defined business requirements. These include the project priorities, the release cycle, and allocating the budget for software development and maintenance—which should all be based on the needs of the business. The requirements document should also establish how to resolve conflicts and identify risks. Chances are good, if your organization struggles with software development projects, the cause originates in your methodology for documenting business requirements—the first of seven important areas in the software development process. To help you solve this challenge, you can begin by completing a base requirements template – available from your software development services company."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 26,
+      "cited_text": "In short : enterprise data management connects governance, quality, security, and architecture practices into a unified framework that helps organizations maximize the business value of their data. Turn your data into a valuable asset. Leverage our enterprise data management expertise to drive business value with data. Request a Roadmap FAQ What does enterprise data management cost to implement and maintain? Enterprise data management costs vary based on organization size, data complexity, regulatory requirements, and technology choices. Enterprise data initiatives, such as data warehousing projects, can range from approximately $50,000 to $200,000 for small- and mid-sized implementations , while larger enterprise programs may require significantly higher investments. Ongoing costs typically include governance activities, data quality monitoring, security controls, infrastructure, software licensing, and support. Organizations often reduce risk by implementing EDM incrementally rather than attempting a large-scale transformation all at once."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 27,
+      "cited_text": "How long does it take to implement a full enterprise data management framework? Implementation timelines depend on organizational size, data maturity, and project scope. Focused initiatives such as governance frameworks or data quality programs may begin delivering results within 3–6 months , while comprehensive enterprise-wide EDM programs often require 12–24 months or longer . Many organizations adopt a phased approach, prioritizing high-value data domains and governance improvements before expanding EDM capabilities across the business."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 28,
+      "cited_text": "2.0 GENERAL OVERVIEW AND DESIGN GUIDELINES/APPROACH ................................................................... 2-1 2.1 GENERAL OVERVIEW ................................................................................................................................... 2-1 2.2 ASSUMPTIONS/CONSTRAINTS/RISKS ............................................................................................................ 2-2 2.2.1 Assumptions ......................................................................................................................................... 2-2 2.2.2 Constraints ........................................................................................................................................... 2-3"
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 29,
+      "cited_text": "2.2.1 Assumptions The IMPALA Platform infrastructure is built on both hardware and software technologies that are influenced by industry standards.  Some of these standards are in a state of evolution.  To promote the portability of software applications and to reduce overall infrastructure costs, industry standards will be used to implement functions where they are deemed appropriate. The following items are design assumptions for IMPALA’s initial implementation. 1. The MEME network team will provide cabling between the IMPALA rack and the Mission Extended Medical Enterprise (MEME) network."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 30,
+      "cited_text": "2. End users laptops and /or workstations used in accessing the IMPALA platform will be provided by NASA JSC and not as a not part of the IMPALA platform. 3. Upstream connectivity to the MEME network will provided by the MEME network team. 4. The MEME network and security team will provide security and system health monitoring tools to ensure the health and security posture of the platform. 5.  The IMPALA platform will leverage the existing MEME network virtual center metadata store, which uses an external SQL database."
+    },
+    {
+      "source_id": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+      "citation_number": 31,
+      "cited_text": "5 Future The requirement is outside of the project’s scope and is included as a possible component of a prospective release and/or feature. REQUIREMENTS CATEGORIES (RC1) ID Requirement Priority Raised By 8. NON-FUNCTIONAL REQUIREMENTS . ID Requirement 9. FINANCIAL STATEMENTS 10. COST AND BENEFIT 11. RESOURCES 12. SCHEDULE, TIMELINE, AND DEADLINES 13. ASSUMPTIONS 14. GLOSSARY Term / Abbreviation Explanation 15. REFERENCES Name Location 16. APPENDIX DISCLAIMER Any articles, templates, or information provided by Smartsheet on the website are for reference only. While we strive to keep the information up to date and correct, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability with respect to the website or the information, articles, templates, or related graphics contained on the website. Any reliance you place on such information is therefore strictly at your own risk."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 32,
+      "cited_text": "Both approaches can work, yet the real challenge appears when that document stops reflecting the decisions that shape strategy. Requirements shift and priorities evolve faster than a static artifact can absorb. New customer signals pile up in separate tools, where they rarely influence the next iteration of the PRD. This article shows how teams can move from a one-time requirements list to a living system that connects strategy, customer insight, execution, and stakeholder communication in one place."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 33,
+      "cited_text": "Delivery backlog: Backlogs list work, while PRDs explains why that work matters. Feature spec sheet: Specs describe outputs, but PRDs define outcomes. Static file: Documents stored in disconnected tools cannot reflect customer insights or team objectives in real time. The New Standard: Connecting Strategy to Execution Many teams struggle when strategy and execution live in separate places. One document sets the goals. Another defines the requirements. A third tracks the work. When these artifacts drift apart, the team loses clarity on why certain choices are made—or if they matter at all."
+    }
+  ]
+}

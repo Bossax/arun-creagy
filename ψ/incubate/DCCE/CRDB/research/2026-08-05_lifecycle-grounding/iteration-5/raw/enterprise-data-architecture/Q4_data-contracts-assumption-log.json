@@ -1,0 +1,85 @@
+{
+  "answer": "**Your sources discuss data contracts and assumptions in the context of DataOps lifecycles, agile requirements engineering, and formal system specifications, though they do not outline exhaustive schemas or templates for either artifact.** \n\n---\n\n### **Data Contracts in Data Governance**\nIn the provided literature, data contracts are represented as structural agreements that bridge the gap between software engineering and data teams to manage changes safely.\n\n*   **Timing & Definition:** Data contracts are established during the initial **\"Plan & Design\" phase** of the DataOps lifecycle [1]. They must be defined **before ingesting a single row of data** to clarify the exact business questions being solved [2].\n*   **Purpose:** The primary purpose of a data contract is to **decentralize ownership** by establishing explicit data agreements between software engineering teams (producers) and data platform teams (consumers) [3]. \n*   **Contents & Automation:** Rather than listing exhaustive legal terms, the sources note that a contract can technically contain an **automated schema contract** (such as a JSON Schema validation configuration) enforced during raw data ingestion [4]. \n*   **Change Management:** Data contracts are used to handle schema drift. If an upstream data field is modified, pre-deployment CI/CD checks validate the changes against the data contract to **flag breaking changes** before the code ever reaches production [5].\n\n---\n\n### **Structuring and Maintaining Assumptions (Risk-Bounding)**\nTo bound risks and prevent misunderstandings, the sources suggest documenting assumptions using distinct methods depending on the methodology being utilized:\n\n#### **1. The Agile \"Assumption Wiki-Page\"**\nIn Agile Software Development (ASD), maintaining an **assumption wiki-page** is highlighted as a key facilitating practice [6, 7]. \n*   **Purpose:** This shared page is used to explicitly document assumptions related to the **implementation of non-functional requirements (NFRs)** [8]. \n*   **Maintenance:** In large-scale, multi-team projects, collaborative documentation on a wiki is maintained to prevent **\"hidden assumptions\"** regarding NFR implementation and inter-team collaboration from causing late-stage pipeline failures [9].\n\n#### **2. The SRS \"Assumptions and Dependencies\" Section**\nIn traditional systems engineering (such as an IEEE Std 830-aligned requirements specification), assumptions are structured as a formal subsection within the **Overall Description** of the System Requirements Specification [10, 11].\n*   **Structure:** This section must specifically list **external factors** that are *not* design constraints on the software, but are rather factors that would directly affect the system's requirements if they were to change [12]. \n*   **Maintenance:** It is maintained as a risk-bounding reference; for example, documenting a dependency such as assuming a specific operating system will be available on the designated hardware [12]. If that operating system is not delivered, the requirements in the specification must be formally updated [12].\n\n---\n\n🔍 I can run a web search to retrieve industry-standard YAML/JSON schema formats for Data Contracts (such as those used by modern data mesh frameworks) if you'd like to see a complete template.",
+  "conversation_id": "b7785ec2-b06c-46b5-bf6e-f1ff3235d142",
+  "sources_used": [
+    "3d708130-2bad-4d32-9a7d-ad3f597a8466",
+    "5425649c-6e42-40fc-bb30-594560c387aa",
+    "ef5faf51-b90d-4c47-b067-340eacd7e338"
+  ],
+  "citations": {
+    "1": "3d708130-2bad-4d32-9a7d-ad3f597a8466",
+    "2": "3d708130-2bad-4d32-9a7d-ad3f597a8466",
+    "3": "3d708130-2bad-4d32-9a7d-ad3f597a8466",
+    "4": "3d708130-2bad-4d32-9a7d-ad3f597a8466",
+    "5": "3d708130-2bad-4d32-9a7d-ad3f597a8466",
+    "6": "5425649c-6e42-40fc-bb30-594560c387aa",
+    "7": "5425649c-6e42-40fc-bb30-594560c387aa",
+    "8": "5425649c-6e42-40fc-bb30-594560c387aa",
+    "9": "5425649c-6e42-40fc-bb30-594560c387aa",
+    "10": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+    "11": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+    "12": "ef5faf51-b90d-4c47-b067-340eacd7e338"
+  },
+  "references": [
+    {
+      "source_id": "3d708130-2bad-4d32-9a7d-ad3f597a8466",
+      "citation_number": 1,
+      "cited_text": "Understanding the DataOps Lifecycle The DataOps lifecycle is an ongoing loop that aligns code development with continuous data processing. It is generally divided into two interlocking cycles: the Development Loop (building and refining code) and the Data Pipeline Loop (running data through pipelines). Copy Plan & Design: Define clear business requirements and schema contracts. Code & Version Control: Write SQL, Python, or dbt models using Git feature branches. Automate & Test: Run automated unit tests on synthetic or staging data. Deploy (CI/CD): Merge approved code changes safely into production. Operate & Observe: Run continuous data pipelines while tracking health metrics. Feedback & Iterate: Use monitoring alerts to patch bugs and optimize performance."
+    },
+    {
+      "source_id": "3d708130-2bad-4d32-9a7d-ad3f597a8466",
+      "citation_number": 2,
+      "cited_text": "Step-by-Step Guide: Building a Simple DataOps Workflow Let's build a production-grade, simple DataOps workflow step by step. Step 1: Define Business Goals and Data Requirements Before ingesting a single row of data, clarify what business question you are solving and define clear data contracts. Business Objective: Calculate daily active users (DAU) and sales revenue by region for an e-commerce platform. Service Level Agreement (SLA): Dashboards must update daily by 6:00 AM UTC with 99.9% data freshness. Data Requirements: Order receipts (JSON), customer demographic files (CSV), and product catalogs (PostgreSQL database)."
+    },
+    {
+      "source_id": "3d708130-2bad-4d32-9a7d-ad3f597a8466",
+      "citation_number": 3,
+      "cited_text": "Best Practices for Successful DataOps Implementation Start Small: Don't attempt to automate every enterprise pipeline at once. Build a simple, high-impact pipeline first. Treat Data as Code: Apply software engineering best practices—version control, peer code reviews, unit testing, and modular architecture. Fail Fast with Circuit Breakers: Stop data processing early in the pipeline if raw data fails core quality checks. Automate Environment Ephemerality: Use cloud features like Snowflake Zero-Copy Cloning or Databricks staging schemas for lightweight testing. Decentralize Ownership with Data Contracts: Define explicit data contracts between software engineering teams and data platform teams."
+    },
+    {
+      "source_id": "3d708130-2bad-4d32-9a7d-ad3f597a8466",
+      "citation_number": 4,
+      "cited_text": "Example End-to-End DataOps Workflow: E-Commerce Case Study Let's contextualize this workflow with a real-world scenario: GlobalCart , an e-commerce platform, experiences daily spikes in customer transactions. The Problem Marketing dashboards were constantly out of sync due to unannounced schema changes from the backend dev team. Duplicate payment transactions occasionally inflated revenue metrics by 15%. The DataOps Solution Source Schema Contract: GlobalCart established an automated schema contract using JSON Schema validation during raw ingestion. Ingestion & Lake Storage: Fivetran syncs transactional MySQL data to an S3 raw landing bucket every 15 minutes. dbt Transformation & Quality Tests: dbt runs models in Snowflake. A strict unique test runs on transaction_id . If duplicates appear, dbt triggers a pipeline failure and sends a Slack alert. CI/CD Deployment: Engineers proposing new SQL transformations create a GitHub Pull Request. GitHub Actions creates a temporary lightweight clone of Snowflake data, runs dbt test , and tears down the environment upon completion. Business Impact: GlobalCart reduced dashboard data errors by 98% and lowered pipeline downtime resolution from days to minutes."
+    },
+    {
+      "source_id": "3d708130-2bad-4d32-9a7d-ad3f597a8466",
+      "citation_number": 5,
+      "cited_text": "How do you handle schema changes in a DataOps workflow? Schema changes are managed using Data Contracts and automated schema checks. If an upstream field is modified, pre-deployment CI/CD checks flag breaking changes before code reaches production environments. What is a data circuit breaker? A data circuit breaker is an automated test rule placed inside a pipeline. If data fails validation (such as null values in a primary key), the breaker automatically pauses processing to prevent corrupt data from reaching production tables."
+    },
+    {
+      "source_id": "5425649c-6e42-40fc-bb30-594560c387aa",
+      "citation_number": 6,
+      "cited_text": "I23 Moving to Agile with a waterfall mind-set [75] I24 Difficult testing to verify NFRs as it requires associ- ated FR to be already implemented [83] 8 A. Jarzębowicz and P. Weichbroth Table 2. Practices facilitating implementing NFRs in ASD ID Practice RE Sources P1 Use modified or additional specification techniques for NFRs (including those adopted from plan-driven approaches) + [60], [61], [62], [63], [65], [66], [68], [71], [72], [76] P2 Maintain traceability between FRs and NFRs + [58], [63], [65], [77], [78], [81], [82], [84]"
+    },
+    {
+      "source_id": "5425649c-6e42-40fc-bb30-594560c387aa",
+      "citation_number": 7,
+      "cited_text": "[52], [75] P18 Introduce innovation and planning iteration (IP, term from SAFe) to resolve technical debts related to NFRs [52], [75] P19 Conduct NFR-oriented code reviews [55], [88] P20 Explain to the stakeholders the consequences of over- specified NFRs + [85] P21 Maintain an assumption wiki-page + [52] P22 Use CI environment to utilize automated NFR testing [83] P23 Establish an independent team to test NFRs’ imple- mentation [80] An SLR on Implementing NFRs in Agile Software Development 9"
+    },
+    {
+      "source_id": "5425649c-6e42-40fc-bb30-594560c387aa",
+      "citation_number": 8,
+      "cited_text": "Alternatively, other sources recommend making sure that NFRs are documented together with FRs, using the same, typical representations, e.g. user stories, Definition of Done, Acceptance Criteria (P4). There is also a kind of intermediate solution suggested – instead of specifying NFRs as epics, user stories etc. and mixing them with FRs, a similar but distinct structure dedicated to NFRs can be used (P14). Also, assumptions related to the implementation of NFRs are worth documenting using, e.g. a wiki-page (P21)."
+    },
+    {
+      "source_id": "5425649c-6e42-40fc-bb30-594560c387aa",
+      "citation_number": 9,
+      "cited_text": "I16 Hidden assumptions regarding NFRs implementation in inter-team collaboration (in a large scale project) [52], [75] I17 Misunderstanding the architecture drivers (priorities of NFRs) between teams [52], [75] I18 Lengthy NFR acceptance checklist (e.g. DoD) + [52] I19 Agile process does not include a feedback loop regard- ing NFRs + [55] I20 Unmanaged architecture changes [52] I21 Lack of cost-effective real integration test [52] I22 Adopting legacy architectural decisions complicate the implementation of NFRs of the new system [75]"
+    },
+    {
+      "source_id": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+      "citation_number": 10,
+      "cited_text": "2.1 Product perspective 2.2 Product functions 2.3 User characteristics 2.4 Constraints 2.5 Assumptions and dependencies 3. Specific requirements (See 5.3.1 through 5.3.8 for explanations of possible specific requirements. See also Annex A for several different ways of organizing this section of the SRS.) Appendixes Index IEEE Std 830-1998 IEEE RECOMMENDED PRACTICE FOR 5.1.3 DeÞnitions, acronyms, and abbreviations (1.3 of the SRS) This subsection should provide the deÞnitions of all terms, acronyms, and abbreviations required to properly interpret the SRS. This information may be provided by reference to one or more appendixes in the SRS or by reference to other documents."
+    },
+    {
+      "source_id": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+      "citation_number": 11,
+      "cited_text": "5.2 Overall description (Section 2 of the SRS) This section of the SRS should describe the general factors that affect the product and its requirements. This section does not state speciÞc requirements. Instead, it provides a background for those requirements, which are deÞned in detail in Section 3 of the SRS, and makes them easier to understand. This section usually consists of six subsections, as follows: a) Product perspective; b) Product functions; c) User characteristics; d) Constraints; e) Assumptions and dependencies; f) Apportioning of requirements."
+    },
+    {
+      "source_id": "ef5faf51-b90d-4c47-b067-340eacd7e338",
+      "citation_number": 12,
+      "cited_text": "a) Regulatory policies; b) Hardware limitations (e.g., signal timing requirements); c) Interfaces to other applications; d) Parallel operation; e) Audit functions; f) Control functions; g) Higher-order language requirements; h) Signal handshake protocols (e.g., XON-XOFF, ACK-NACK); i) Reliability requirements; j) Criticality of the application; k) Safety and security considerations. 5.2.5 Assumptions and dependencies (2.5 of the SRS) This subsection of the SRS should list each of the factors that affect the requirements stated in the SRS. These factors are not design constraints on the software but are, rather, any changes to them that can affect the requirements in the SRS. For example, an assumption may be that a speciÞc operating system will be available on the hardware designated for the software product. If, in fact, the operating system is not available, the SRS would then have to change accordingly."
+    }
+  ]
+}

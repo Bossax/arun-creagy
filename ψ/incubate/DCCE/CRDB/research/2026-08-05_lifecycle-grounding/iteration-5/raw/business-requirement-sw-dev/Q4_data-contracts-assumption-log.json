@@ -1,0 +1,202 @@
+{
+  "answer": "In modern requirements-engineering and enterprise data architecture, a **Data Contract** and an **Assumption Log** serve as the two most powerful risk-mitigation tools available to system architects. While a Data Contract establishes a clear service and schema agreement between teams, an Assumption Log creates a strict liability and scope boundary to protect project delivery.\n\nHere is what both of these critical artifacts typically contain and look like in practice:\n\n---\n\n### Part 1: Typical Contents of a Data Contract\n\nA **Data Contract** is a federated interoperability agreement designed to formalize the schema, data quality, and delivery expectations between a data producer (provider) and a data consumer [1, 2]. In practice, it acts as a logical contract that prevents a data platform from degenerating into a chaotic \"data swamp\" [3]. \n\nA complete, well-formed Data Contract typically contains the following core sections:\n\n1. **Schema & Structural Definitions:**\n   * **Data Output Schema:** Explicitly defines the column names, exact data types, nullable rules, and target schema structures (such as expected API field names or flat-file schemas) [4].\n   * **Semantic Mapping:** Translates raw database keys and columns into standard real-world business meanings and formats as defined in an enterprise-wide business glossary [4, 5].\n2. **Data Quality (QA) Rules & SLA Thresholds:**\n   * **Numeric Validation Checks:** Automated checks to catch errors upon ingestion (e.g., specifying that a critical numeric value must not diverge by more than $x\\%$ across consecutive data pulls) [4].\n   * **Data Quality Dimensions:** Metric targets for data completeness, validity, accuracy, and consensus [6, 7].\n3. **Operational Parameters & Delivery SLAs:**\n   * **Ingestion Frequency:** Specifies how fresh the data must be (e.g., near-real-time streaming, hourly, daily, or weekly batch loads) [4].\n   * **Historical Snapshot Rules:** Defines whether historical snapshots, versioning, or auditing logs must be captured and retained in the data store [4].\n4. **Access Modalities:**\n   * **Consumption Patterns:** Outlines exactly how consumers are permitted to query the data (e.g., via SQL queries, JDBC/ODBC connectors, REST APIs, or direct read access to cloud object storage) [4, 8, 9].\n   * **Acceptable Latency:** Sets maximum response-time thresholds for user queries [4].\n5. **Known Data Caveats & Hazards:**\n   * **Defensive Mapping:** Identifies known upstream issues (such as seasonal volume skew, late-arriving data, or missing keys) so the consumer’s pipelines can absorb these anomalies without failing [4].\n\n---\n\n### Part 2: What an Assumption Log Looks Like in Practice\n\nAn **Assumption Log** is a dedicated section within a Business Requirements Document (BRD) or System Design Document (SDD) [10-12]. Its primary purpose is to **document technical boundaries and external dependencies**, establishing a shared language that protects developers or vendors from open-ended liability and scope creep [13, 14].\n\nIn enterprise system design (such as NASA’s IMPALA project), a professional, industry-aligned Assumption Log lists highly concrete constraints and technical expectations [15]:\n\n#### Example of an Explicit, Real-World Assumption Log:\n\n| ID | Assumption Category | Stated Assumption & Technical Constraint | Bounded Project Liability / Responsibility |\n| :--- | :--- | :--- | :--- |\n| **A-01** | **External Infrastructure** | Infrastructure services such as Domain Name Servers (DNS) and Active Directory (AD) are not part of this project's delivery [16]. | **Client Responsibility:** The client must provide pre-configured AD groups and DNS route mapping [17]. |\n| **A-02** | **Hardware & Provisioning** | End-user laptops, workstations, or approved mobile devices used to access the platform are not part of this scope [18]. | **Excluded:** The vendor is not liable for client device configuration, operating system updates, or local peripherals [17, 18]. |\n| **A-03** | **Network & Cabling** | Routable addresses, physical cabling, and network switch uplink configuration are supplied by the internal network team [16, 19]. | **Excluded:** Physical network installations and network address allocation are entirely outside vendor scope [16]. |\n| **A-04** | **System Maintenance** | The platform will not automatically patch or update applications or host operating systems [16]. | **Client Responsibility:** System patching schedules and operating system upgrades are dependent on the host infrastructure team [16, 17]. |\n| **A-05** | **Physical Constraints** | Total power consumption for the system rack is not to exceed a strict ceiling of 5,000 Watts [20]. | **Design Boundary:** The physical hardware configuration must be designed to remain within this power ceiling [20]. |\n| **A-06** | **Third-Party Integrations** | Integrations require stable, pre-configured connections to external databases and SharePoint sites owned by different platform teams [21, 22]. | **Dependency Risk:** Any changes or failures in upstream third-party APIs or source databases will freeze delivery timelines and require a change order [22, 23]. |\n\n***\n\n📋 I can help you draft a custom **Data Contract Template** or a **Project Assumption Log** in Markdown to share with your team before your next sprint. Which would you like to set up first?",
+  "conversation_id": "8f8ae5e6-85be-4de5-8aea-56188a4c08ff",
+  "sources_used": [
+    "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "e68f4b12-261c-4818-a79b-fc2c022e20b1",
+    "0f98105a-e702-4086-8695-8219087f4306"
+  ],
+  "citations": {
+    "1": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "2": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "3": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "4": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "5": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "6": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "7": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "8": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "9": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "10": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "11": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "12": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "13": "e68f4b12-261c-4818-a79b-fc2c022e20b1",
+    "14": "0f98105a-e702-4086-8695-8219087f4306",
+    "15": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "16": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "17": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "18": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "19": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "20": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "21": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "22": "0f98105a-e702-4086-8695-8219087f4306",
+    "23": "dca40f20-a255-4c48-937d-5abfbe6d5dac"
+  },
+  "references": [
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 1,
+      "cited_text": "Eichler et al. [ 43 ] recognize that data providers often lack incentives to share their data, because they face additional effort without immediate benefits, discouraging participation. To address this, they subdivide data products further into data assets. Data assets are raw, registered data in a company's catalog, while data products are refined versions with defined metadata, usage policies, and provisioning options. The transformation process follows three scenarios: (1) a provider directly registers data-as-a-product, (2) a consumer requests access to a data asset, prompting its transformation, or (3) a steward or another employee enriches metadata and submits it for approval. This staged approach reduces the initial burden on providers, ensuring they only need to add metadata when data is actually requested."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 2,
+      "cited_text": "Figure 8: Data mesh architecture inspired by [ 43 , 40 , 62 , 130 ] Finally, federated computational governance establishes global governance standards that ensure interoperability and secure data access while enabling decentralized and autonomous governance by distributed teams. By balancing centralized standards with decentralized decision-making, federated governance ensures that data remains accessible and governed in a structured yet flexible manner [ 33 , 20 , 137 ] . Policies are also designed to balance local, i.e. domain-oriented, autonomy with global standardization. The federated governance model oversees security policies (defining authentication, authorization, and access control), interoperability policies (standardizing schema definitions, data contracts, and API structures), communication policies (guidelines for cross-domain data sharing), and documentation policies (requiring metadata enrichment, lineage tracking, and accessibility compliance)"
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 3,
+      "cited_text": "In 2014, Gartner [ 48 ] raised several criticisms of data lakes, warning that the indiscriminate ingestion of disparate data could lead to a so-called data swamp, making the data unusable without proper metadata management and governance [ 111 ] . Further, concerns included insufficient attention to data security and privacy oversight. In response to these critiques, Dixon revisited the data lake concept [ 39 ] . With Hadoop at the core, a key requirement was that a data lake should offer low-cost, easily accessible storage that supports a schema-on-read approach, meaning the metadata can be populated over time and transformations to apply the schema are only performed once required. This approach allows a data lake to automatically extract metadata from raw data and identify patterns, with users contributing additional descriptive information, such as domain-specific knowledge and attribute linkages. Hence, the idea is that the interaction between users and the data lake continually enhances (meta)data quality and value."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 4,
+      "cited_text": "2.2. Help end-users define the requirements Assume the end-users don't know everything they want or even that they will clearly define it to you. You can't get 100% of the requirements right the first time. Talk with the end-user about their objectives and their difficulties. Understanding the current status of end-user operations will provide valuable insights. The end-user might say “We want X data”. Help the end-user define requirements by asking the following questions: Business impact : How does having this data impact the business? What is the measurable improvement in the bottom line, business OKR, etc? Knowing the business impact helps in determining if this project is worth doing. Semantic understanding : What does the data represent? What business process generates this data? Knowing this will help you model the data and understand its relation to other tables in your warehouse. Data source : Where does the data originate? (an application DB, external vendor via SFTP/Cloud store dumps, API data pull, manual upload, etc). Frequency of data pipeline : How fresh does the data need to be? (n minutes, hourly, daily, weekly, etc). Is there a business case for not allowing a higher frequency? What is the highest frequency of data load acceptable by end-users? Historical data : Does historical data need to be stored? When loading data into a warehouse, the answer is usually yes. Data caveats : Does the data have any caveats? (e.g. seasonality affecting size, data skew, inability to join, or data unavailability). Are there any known issues with upstream data sources, such as late arriving data, or missing data? Access pattern : How will the end user access the data? Is access via SQL, dashboard tool, APIs, or cloud storage? In the case of SQL or dashboard access, What are the commonly used filter columns (e.g. date, some business entity)? What is the expected access latency? Business rules check (QA) : What data quality metrics do the end-users care about? What are business logic-based data quality checks? Which numeric fields should be checked for divergence (e.g. can't differ by more than x%) across data pulls? Data output requirements : What is the data output schema? (column names, API field names, Cloud storage file name/size, etc)"
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 5,
+      "cited_text": "An enterprise data management framework establishes organization-wide data governance, defines the data management architecture, and helps foster a data-driven culture. Enterprise Data Governance Data governance focuses on processes, structures, policies, procedures, and master data management practices implemented across the organization to ensure data security, quality, and integrity. It's a subdomain of data management that: States data goals (e.g., maintaining compliance, improving quality) and metrics to track Outlines roles related to data management (data owners, data stewards, stakeholders) and their duties Defines data standards regarding data formats, models, metadata, naming conventions, etc. Maps data flows and supports metadata management to outline data collection, storage, movement, and archival processes. Establishes auditing and testing procedures."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 6,
+      "cited_text": "Key Components of Enterprise Data Management Data Quality Management Data quality management encompasses practices, processes, and tools for ensuring your data remains accurate, complete, reliable, consistent, and timely. It can include: Data profiling to map existing data and its structure and evaluate its quality Automated data cleansing and standardization to prevent errors and ensure data usability and reliability Data deduplication, merge, and survivorship rules Validation checks to verify data quality Data quality metrics monitoring (e.g., consensus, relevance, validity) Regular data quality audits and optimization."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 7,
+      "cited_text": "The four components described above address different aspects of managing enterprise data. Together, they form the operational foundation of a successful enterprise data management program. The table below summarizes the role of each component and the business risks associated with neglecting it. <cited_table>",
+      "cited_table": {
+        "num_columns": 5,
+        "rows": [
+          [
+            "Component",
+            "Primary Objective",
+            "Key Activities",
+            "Business Benefits",
+            "Risks if Neglected"
+          ],
+          [
+            "Data quality management",
+            "Maintain accurate, complete, and consistent data",
+            "Profiling, validation, cleansing, deduplication, quality monitoring",
+            "More reliable analytics, reporting, and operational decisions",
+            "Inaccurate reporting, poor decisions, reduced trust in data"
+          ],
+          [
+            "Data security management",
+            "Protect sensitive and business-critical information",
+            "Encryption, access controls, monitoring, threat prevention, compliance controls",
+            "Reduced security risk and stronger regulatory compliance",
+            "Data breaches, regulatory penalties, reputational damage"
+          ],
+          [
+            "Data access management",
+            "Ensure appropriate access to data resources",
+            "Authentication, authorization, role-based permissions, access reviews",
+            "Improved productivity and controlled data sharing",
+            "Unauthorized access or restricted access to needed information"
+          ],
+          [
+            "Data lifecycle management",
+            "Govern data from creation through disposal",
+            "Data creation, storage, sharing, archival, retention, destruction",
+            "Lower storage costs and improved compliance",
+            "Excess storage costs, outdated information, compliance risks"
+          ],
+          [
+            "Cross-component governance",
+            "Coordinate standards and accountability across all data activities",
+            "Ownership assignment, stewardship, policy enforcement, performance monitoring",
+            "Consistent data practices across the organization",
+            "Fragmented processes and inconsistent data management"
+          ]
+        ]
+      }
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 8,
+      "cited_text": "The term end-users denotes people who use the output, and stakeholders denote PMs/BAs/managers. 2.1. Identify the end-users The first step is to identify the end-user(s). The request for the project usually comes up during meetings. Understanding the capabilities and preferences of the end-user is crucial for designing an appropriate solution. End-users (& their preferences) for data projects are usually one of: Data analysts/Scientists: SQL, File Business users: Dashboard, report, Excel Software engineers: SQL, APIs External clients: Cloud storage, SFTP/FTP, APIs"
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 9,
+      "cited_text": "The IMPALA platform’s transport layer is not just limited to RDBMS tools previously listed (ORACLE, Access, and MS SQL), it enables connection to any relational data source that supports ODBC or JDBC connectors, connection to file shares and connection to data residing in the cloud. The HHP&IT team will leverage the functions within this layer to build, test and deploy data capture jobs.  These data capture jobs will be scheduled to connect and load data from the data sources (EMR, LSAH, etc.).  As the list of production data sources grows beyond the initial data sources, this team will support the design and development of the required data capture jobs.  This team also manages the interface to the production data source.  The interfaces for relational data stores include ODBC and JDBC as well as the credentials to connect to these production data stores.  The IMPALA platform uses built-in functions, such as secure copy or secure file transfer protocols, to import non-relational data sources such as file.   The data capture jobs are orchestrated using the Pentaho engine.  Within this engine, business rules are defined to apply static transformations  to the data as it is transported into the data reservoir."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 10,
+      "cited_text": "2.0 GENERAL OVERVIEW AND DESIGN GUIDELINES/APPROACH ................................................................... 2-1 2.1 GENERAL OVERVIEW ................................................................................................................................... 2-1 2.2 ASSUMPTIONS/CONSTRAINTS/RISKS ............................................................................................................ 2-2 2.2.1 Assumptions ......................................................................................................................................... 2-2 2.2.2 Constraints ........................................................................................................................................... 2-3"
+    },
+    {
+      "source_id": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+      "citation_number": 11,
+      "cited_text": "SAMPLE BUSINESS REQUIREMENTS DOCUMENT TEMPLATE SAMPLE BUSINESS REQUIREMENTS DOCUMENT TEMPLATE VERSION HISTORY VERSION APPROVED BY REVISION DATE DESCRIPTION OF CHANGE AUTHOR NOTE TO USER: Overwrite the sample text included in this template to complete your project’s business requirements document. TABLE OF CONTENTS 1. EXECUTIVE SUMMARY SNAPSHOT 3 2. PROJECT DESCRIPTION 4 3. PROJECT SCOPE 5 4. BUSINESS DRIVERS 6 5. CURRENT PROCESS 7 6. PROPOSED PROCESS 8 7. FUNCTIONAL REQUIREMENTS 9 PRIORITY 10 REQUIREMENTS CATEGORIES (RC1) 10"
+    },
+    {
+      "source_id": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+      "citation_number": 12,
+      "cited_text": "8. NON-FUNCTIONAL REQUIREMENTS 11 9. FINANCIAL STATEMENTS 12 10. COST AND BENEFIT 13 11. RESOURCES 14 12. SCHEDULE, TIMELINE, AND DEADLINES 15 13. ASSUMPTIONS 16 14. GLOSSARY 17 15. REFERENCES 18 16. APPENDIX 19 1. EXECUTIVE SUMMARY SNAPSHOT 2. PROJECT DESCRIPTION 3. PROJECT SCOPE 4. BUSINESS DRIVERS 5. CURRENT PROCESS 6. PROPOSED PROCESS 7. FUNCTIONAL REQUIREMENTS PRIORITY Use the following priority table. It allows you to apply a ratings system to your requirements, so you have the visibility (into the value, status, and description of each requirement) that’s necessary for determining whether a particular requirement is essential to project success:"
+    },
+    {
+      "source_id": "e68f4b12-261c-4818-a79b-fc2c022e20b1",
+      "citation_number": 13,
+      "cited_text": "Contact 8 Best Practices for Documenting Business Requirements on Software Development Projects Producing world-class software demands well-defined business requirements. These include the project priorities, the release cycle, and allocating the budget for software development and maintenance—which should all be based on the needs of the business. The requirements document should also establish how to resolve conflicts and identify risks. Chances are good, if your organization struggles with software development projects, the cause originates in your methodology for documenting business requirements—the first of seven important areas in the software development process. To help you solve this challenge, you can begin by completing a base requirements template – available from your software development services company."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 14,
+      "cited_text": "A modern strategy document should explain the assumptions that shape your decisions. Two assumptions may relate to customer behavior, while two others may relate to technical feasibility. Capturing these helps teams revisit earlier choices when new information surfaces. It also creates a shared language for evaluating trade-offs. For examples that show how companies structure these decisions in practice, explore real-world product strategy examples . What Your Product Strategy Document Should NOT Be A product requirements document should never be treated as a:"
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 15,
+      "cited_text": "HHPC 10061 Information Management Platform for Data Analytics and Aggregation (IMPALA)  System Design Document Human Health and Performance Directorate Human Systems Engineering and Development Division Configuration Controlled HHPD TRB Verify that this is the correct version before use. August 2016 Baseline National Aeronautics and Space Administration Lyndon B. Johnson Space Center Houston, Texas  77058 CONTRACTOR APPROVAL SHEET Information Management Platform for Data Analytics and Aggregation (IMPALA)"
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 16,
+      "cited_text": "6. Infrastructure services such as Domain Name Server (DNS), Active Directory (AD) are not part of the IMPALA platform but made available from the Information Resource Directorate (IRD) through the Network Access Control Board (NACB). 7. The IMPALA platform will not automatically patch or update applications or operating systems.  Patching and updating schedule is dependent on the MEME environment. 8. Routable addresses used for end user communication are supplied by the MEME network team and not a part of the IMPALA platform design."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 17,
+      "cited_text": "3.2 DEPENDENCIES Implementing the IMPALA system is dependent upon the following: MEME Infrastructure team will provide the tools for monitoring the health of the IMPALA platform. HHPIT security team will provide the tools such as the CIS benchmarking software for hardening the IMPALA systems. 3-2 HHPIT security team will provide the security tools such as log aggregation agents, and processes for auditing the IMPALA platform. MEME Infrastructure team will provide Antivirus package and license instructions for agents installed on the IMPALA servers. IMPALA virtual center database will be backed up by the MEME Infrastructure team post deployment of the platform. The MEME Infrastructure team will execute updates and patching of the IMPALA platform’s Operating Systems. A Domain Name System (DNS) will be provided by the MEME network for identifying servers and service. JSC Active Directory will be provided by the MEME for user profiles and authentication, as well as group membership. Access to the Launchpad application will be provided for PIV card authentication. MEME Network will be provide network connectivity for access to the IMPALA platform for connectivity and access. MEME Infrastructure team will generate template for user requests through NASA Access Management System (NAMS) MEME will provide the peripherals needed for testing the IMPALA platform within the JSC environment (laptops, network connection to IMPALA platform)"
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 18,
+      "cited_text": "2. End users laptops and /or workstations used in accessing the IMPALA platform will be provided by NASA JSC and not as a not part of the IMPALA platform. 3. Upstream connectivity to the MEME network will provided by the MEME network team. 4. The MEME network and security team will provide security and system health monitoring tools to ensure the health and security posture of the platform. 5.  The IMPALA platform will leverage the existing MEME network virtual center metadata store, which uses an external SQL database."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 19,
+      "cited_text": "2.2.1 Assumptions The IMPALA Platform infrastructure is built on both hardware and software technologies that are influenced by industry standards.  Some of these standards are in a state of evolution.  To promote the portability of software applications and to reduce overall infrastructure costs, industry standards will be used to implement functions where they are deemed appropriate. The following items are design assumptions for IMPALA’s initial implementation. 1. The MEME network team will provide cabling between the IMPALA rack and the Mission Extended Medical Enterprise (MEME) network."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 20,
+      "cited_text": "9. The MEME network team, to cover all required IMPALA systems, will provide non-routable addresses for internal (intra-IMPALA systems) rack communications. 10. Power consumption for each IMPALA rack is not to exceed 5000 watts. 11. The IMPALA platform websites and/or web services will be registered in the System for Tracking and Registering Applications and Websites (STRAW) by the HH&P IT Security team. 2-3 2.2.2 Constraints 1. The IMPALA platform will only be accessible through NASA networks via approved, dedicated connections or Virtual Private Network (VPN) [e.g., the MEME- Secure Socket Layer (SSL) VPN appliance]."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 21,
+      "cited_text": "4-4 Surveillance of Astronaut Health) and MEDB Sharepoint.  Data sources in the capture layer are technically outside the IMPALA platform.  IMPALA interfaces with these data sources to ingest data.  The IMPALA platform is extensible and able to capture data from other types of data sources.  The platform also supports connectivity and capture/identification of relational data sources such as ORACLE, Microsoft SQL Server, and Microsoft Access, as well as data located in file shares, cloud based data stores and local files of varying formats (XML, CSV, JSON, PDF, and more)."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 22,
+      "cited_text": "Qualitative indicators Account teams report higher confidence in their understanding of stakeholder engagement and risk. Sales leadership cites the unified view as a primary input in forecast reviews and QBRs. RISKS & DEPENDENCIES Known risks and constraints Data quality issues in upstream integrations could undermine trust in the unified activity view. Poor alert tuning could create noise fatigue and cause teams to ignore important signals. Cross-team or technical dependencies Requires stable integrations with email, calendar, support, and product analytics systems that are owned by different platform teams. Depends on collaboration with security and legal teams to validate data handling and retention policies."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 23,
+      "cited_text": "Delivering in small chunks enables a short feedback cycle from the end-user making changing requirements easy to handle. Track your work (tickets, etc) with clear acceptance criteria. 2.5. Handling changing requirements/new features Do not accept Adhoc change/feature requests! (unless it's an emergency). Create a process to * Allow end-users to request changes/features * Prioritize the change/feature requests with help from stakeholders * Decide and communicate delivery timelines to end-users Educate the end-user on the process of requesting a new feature/change. Following a process will prevent scope creep and allow you to deliver on time."
+    }
+  ]
+}

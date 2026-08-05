@@ -1,0 +1,356 @@
+{
+  "answer": "Unlike generic application software—which primarily focuses on user interface design, transactional clicks, and front-end user flows [1, 2]—the business requirements package for an **enterprise data platform** must specify the complex mechanics of data ingestion, movement, transformation, quality, storage, and governance [3, 4]. \n\nA well-formed data-platform requirements package consists of **six specialized, data-centric components**. The table below outlines these core components and details what distinguishes a robust, well-executed version from a weak, placeholder-level attempt:\n\n---\n\n### 1. Business Drivers & Analytical Workload Profiling\nThis component establishes the strategic \"why\" of the platform, aligning technical capabilities with business goals and classifying the exact analytical workloads the platform must support (e.g., Reporting/OLAP, Data Mining/ML, or Streaming) [5-7].\n*   **A Well-Executed Version:** Anchors the data platform directly to measurable business outcomes or company OKRs (e.g., \"reduce average time spent on weekly account preparation by at least 30%\") [8, 9]. It profiles workloads by capturing explicit non-functional targets, including required latency (e.g., near-real-time vs. weekly batch), target user concurrency (high for BI, low for data science), and expected access patterns [8, 10].\n*   **A Weak Version:** Relies on vague, non-testable placeholders (e.g., \"The platform must be fast, scalable, and enable modern AI capabilities\") or chooses a complex paradigm (like a decentralized data mesh or semantic fabric) without documenting the organizational readiness, staffing, or workload-driven justification to support it [10-13].\n\n### 2. Upstream Data Source Inventory & Caveats\nThis section catalogs the target \"data universe\" by profiling where raw data originates, how it behaves, and how it will be transported into the system [8, 14].\n*   **A Well-Executed Version:** Maps source system origins (e.g., application DBs, external vendors, APIs, local file shares) [8, 15]. It explicitly catalogs **data caveats**—such as seasonality affecting data volume, data skew, late-arriving data anomalies, and potential schema drift over time—enabling engineers to write defensive pipeline logic [8, 16].\n*   **A Well-Executed Version also:** Outlines any static transformations that must occur during transport (such as decomposing compound fields, standardized unit conversions for dates/heights/weights, and handling null values) [17-19].\n*   **A Weak Version:** Simply lists upstream system names (e.g., \"EMR system, LSAH system\") without documenting integration connection methods (ODBC, JDBC, SFTP), data modalities (structured, semi-structured, unstructured), or known upstream data hazards [8, 15, 17, 20].\n\n### 3. Semantic Mapping & Business Glossary\nThis component provides the business context and meaning of the data fields, transforming raw, technical datasets into understandable business assets [8, 12].\n*   **A Well-Executed Version:** Separates physical database column names from their real-world business meanings, providing a standardized Business Glossary and Data Dictionary [12]. For advanced architectures, it establishes semantic relationships and metadata schemas (mapping raw fields to enterprise-wide ontologies or global knowledge graphs) to enable conceptual search and discovery [21-23].\n*   **A Weak Version:** Lacks standard definitions, forcing downstream users to guess what raw columns represent or leaving metadata as an afterthought. This quickly turns the platform into an unusable, fragmented **\"data swamp\"** [24-26].\n\n### 4. Data Quality (QA) & Ingestion Validation Rules\nTo prevent a \"garbage-in, garbage-out\" effect, this component defines the automated tests and logical rules the platform must execute to verify data integrity [27, 28].\n*   **A Well-Executed Version:** Establishes isolated, testable validation checks on ingestion (e.g., \"numeric fields cannot differ by more than x% across consecutive data pulls\") [8]. It defines clear operational metrics for monitoring (completeness, validity, accuracy, consensus) [27] and assigns specific business roles—such as **Data Stewards**—to manage data exceptions, error logs, and profiling jobs [29, 30].\n*   **A Weak Version:** Uses generic requirements (e.g., \"Data must be clean and accurate\") without defining specific numeric threshold checks or logical rules, leaving data testing to be handled manually or by end-users after reports fail [27, 31].\n\n### 5. Role-Based Access Control (RBAC) & Persona Access Patterns\nThis component details the platform's security boundaries, defining who can access what data and the precise methods of consumption [32, 33].\n*   **A Well-Executed Version:** Maps distinct user personas (e.g., Data Scientists vs. Business Analysts) to their preferred access patterns (e.g., direct SQL, REST APIs, interactive dashboards, or direct read access on raw cloud storage) [8, 34]. It specifies **fine-grained security rules**, detailing column-level permissions (projections), row-level permissions (filtering), and necessary data masking to protect sensitive data (such as medical PII or HIPAA-regulated information) [35-37].\n*   **A Weak Version:** Specifies flat, monolithic access rules (e.g., \"Finance has access to the database\") without configuring row/column-level protections, resulting in security vulnerabilities or completely choking user utility by locking down entire tables unnecessarily [35, 37].\n\n### 6. Storage Tiering & Data Lifecycle Management\nThis component dictates how data is physically and logically organized as it progresses from raw ingestion to retirement, directly impacting storage costs and compliance [33, 38].\n*   **A Well-Executed Version:** Integrates a structured, zone-based landing architecture (e.g., transient landing, raw immutable, trusted, refined, and exploratory sandbox zones) [39, 40]. It defines explicit business criteria and timelines for moving data through its lifecycle phases (creation, storage, sharing, archiving, and secure destruction) [35, 38].\n*   **A Weak Version:** Ignores storage architecture layers, treating the platform as a flat \"dumping ground\" for files, which leads to high cloud infrastructure costs, slow query performance, and severe regulatory compliance risks [25, 35, 41].\n\n***\n\n📊 I can help you draft a **Data Source & Access Pattern Matrix** for your upcoming sprint to help map your target users to their specific ingestion frequencies. Would you like to outline the first source?",
+  "conversation_id": "8f8ae5e6-85be-4de5-8aea-56188a4c08ff",
+  "sources_used": [
+    "0f98105a-e702-4086-8695-8219087f4306",
+    "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "7b393f93-4944-47eb-950f-709b3c5096a8"
+  ],
+  "citations": {
+    "1": "0f98105a-e702-4086-8695-8219087f4306",
+    "2": "0f98105a-e702-4086-8695-8219087f4306",
+    "3": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "4": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "5": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "6": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "7": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "8": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "9": "0f98105a-e702-4086-8695-8219087f4306",
+    "10": "7b393f93-4944-47eb-950f-709b3c5096a8",
+    "11": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "12": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "13": "0f98105a-e702-4086-8695-8219087f4306",
+    "14": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "15": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "16": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "17": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "18": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "19": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "20": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "21": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "22": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "23": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "24": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "25": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "26": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "27": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "28": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "29": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "30": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "31": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "32": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "33": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "34": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "35": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "36": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "37": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "38": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "39": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "40": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "41": "e4e1835f-3ede-4158-b4db-97e6919a242f"
+  },
+  "references": [
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 1,
+      "cited_text": "Sign In Try for free Categories AI Product Management Company & Product Engineering Life at Productboard Product Excellence Product Leaders Product Management Product Operations Spark Explore more ProductExcellence.co Books & Guides Webinars An agent that knows your product, customers & business Learn More What is a Product Requirements Document? From Static PRD to Dynamic Strategy PRODUCTBOARD 11th December 2025 Product Management, Product Leaders, Product Excellence A product requirements document (PRD) is often the first place product managers turn when they need to outline what a team should build. Many teams treat it as a checklist that captures scope and specifications. Others use it as a communication tool for engineering and design."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 2,
+      "cited_text": "Delivery backlog: Backlogs list work, while PRDs explains why that work matters. Feature spec sheet: Specs describe outputs, but PRDs define outcomes. Static file: Documents stored in disconnected tools cannot reflect customer insights or team objectives in real time. The New Standard: Connecting Strategy to Execution Many teams struggle when strategy and execution live in separate places. One document sets the goals. Another defines the requirements. A third tracks the work. When these artifacts drift apart, the team loses clarity on why certain choices are made—or if they matter at all."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 3,
+      "cited_text": "Thus, Enterprise Data Management (EDM) can be defined as a comprehensive framework that combines both strategic processes and technological solutions necessary to manage an organization's data and is aimed at ensuring that data is reliable, secure, and readily available to support business decisions. Enterprise data spans multiple business domains and functions. It typically includes: customer data (e.g., contact details, interaction history) transactional data (orders, payments) operational data (inventory levels, logistics flows) financial data (revenue, margins, forecasts)."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 4,
+      "cited_text": "A more effective method to manage astronaut health data and increase personnel productivity must be developed.  To meet the above challenges and needs, Wyle seeks to implement a data analytics platform that will electronically integrate, manage, analyze, visualize, report on and create/share datasets of surveillance, epidemiologic, laboratory, environmental and other data in an efficient, costeffective, and timely manner. The envisioned IMPALA Platform will enable Wyle to standardize a core set of processes, metrics, and capabilities across multiple monitoring and surveillance activities, human space flight-related research"
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 5,
+      "cited_text": "Definition 4. [ Data Lakehouse] “A data lakehouse is a” data architecture “that leverages the same storage type and data format for reporting and OLAP, as for data mining and machine learning, as well as streaming workloads”. 3.4.2 Requirements DLH1 — \"Same storage type and data format: all (meta)data is stored on a single type of storage (no polystore), using a uniform open data format. Hence, a data lakehouse must have an inherently low heterogeneity in terms of the utilized technologies and data formats."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 6,
+      "cited_text": "Smarter Decision-Making As highlighted by McKinsey , organizations are increasingly moving toward real-time decision-making powered by advanced data capabilities and generative AI, enabling faster and more informed responses to changing business conditions. It helps companies go beyond periodic reporting by embedding intelligence directly into business processes, where data continuously informs real-time actions. In this context, enterprise data management becomes a critical enabler of scalable intelligence rather than just a support function for analytics. Operational and financial data and analytics provide timely insights into organizational performance and health at all levels, from a single branch or team to the line of business and the enterprise as a whole."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 7,
+      "cited_text": "To reap the benefits listed above, you need a comprehensive EDM strategy. You can focus on the following steps to develop an effective enterprise data management strategy: Assess the current state : Evaluate existing data architecture, data quality, governance processes, and key pain points Define strategic objectives : Align data initiatives with business goals such as operational efficiency, advanced analytics, or regulatory compliance Establish governance and ownership : Define roles, responsibilities, and accountability for data across business units Design target data architecture : Select appropriate data platforms, integration approaches, and storage solutions Implement data quality and security controls : Ensure data accuracy, consistency, and protection across its lifecycle Enable analytics and data usage : Support business users with reliable access to data and self-service data analytics solutions Develop an implementation roadmap : Prioritize initiatives, define timelines, and allocate resources Monitor and optimize performance : Continuously track KPIs and refine the strategy based on outcomes."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 8,
+      "cited_text": "2.2. Help end-users define the requirements Assume the end-users don't know everything they want or even that they will clearly define it to you. You can't get 100% of the requirements right the first time. Talk with the end-user about their objectives and their difficulties. Understanding the current status of end-user operations will provide valuable insights. The end-user might say “We want X data”. Help the end-user define requirements by asking the following questions: Business impact : How does having this data impact the business? What is the measurable improvement in the bottom line, business OKR, etc? Knowing the business impact helps in determining if this project is worth doing. Semantic understanding : What does the data represent? What business process generates this data? Knowing this will help you model the data and understand its relation to other tables in your warehouse. Data source : Where does the data originate? (an application DB, external vendor via SFTP/Cloud store dumps, API data pull, manual upload, etc). Frequency of data pipeline : How fresh does the data need to be? (n minutes, hourly, daily, weekly, etc). Is there a business case for not allowing a higher frequency? What is the highest frequency of data load acceptable by end-users? Historical data : Does historical data need to be stored? When loading data into a warehouse, the answer is usually yes. Data caveats : Does the data have any caveats? (e.g. seasonality affecting size, data skew, inability to join, or data unavailability). Are there any known issues with upstream data sources, such as late arriving data, or missing data? Access pattern : How will the end user access the data? Is access via SQL, dashboard tool, APIs, or cloud storage? In the case of SQL or dashboard access, What are the commonly used filter columns (e.g. date, some business entity)? What is the expected access latency? Business rules check (QA) : What data quality metrics do the end-users care about? What are business logic-based data quality checks? Which numeric fields should be checked for divergence (e.g. can't differ by more than x%) across data pulls? Data output requirements : What is the data output schema? (column names, API field names, Cloud storage file name/size, etc)"
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 9,
+      "cited_text": "Non-functional requirements Support performant filtering for large enterprise accounts with multi-year histories and high event volume. Comply with enterprise security and privacy standards, including field-level access controls and regional data residency where required. SUCCESS METRICS Quantitative targets Reduce average time spent on weekly account prep by at least thirty percent within two quarters of rollout. Improve renewal rate for monitored strategic accounts by at least five percentage points within one renewal cycle."
+    },
+    {
+      "source_id": "7b393f93-4944-47eb-950f-709b3c5096a8",
+      "citation_number": 10,
+      "cited_text": "Charac- teristics Report- ing/OLAP DM/ML Streaming Analytics types: Descript., diagnostic Diagnostic, predictive, prescriptive Descriptive, diagnostic, predictive Users: Business users, data analysts Data scientists Operators, analysts Data access: Via query language Direct access on storage Direct acc. on stream storage Timing: Batch Batch Near-real- time Data types: Structured All types Structured, semi-struct. User con- currency: High Low Low 4.3 Derived Technical Requirements Based on the previously described analytical workloads, we identified eight technical requirements that a lakehouse must satisfy in order to comply with our lakehouse definition. Table 3 provides an overview over them and indicates how strongly they were influenced by the different workloads."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 11,
+      "cited_text": "For a definition we follow Blohm et al. [ 19 ] once more: Definition 6. [ Data Mesh] “ Data mesh is a socio-technical, decentralized, distributed concept for enterprise data management [ 20 ] . It is characterized by the four principles of data-as-a-product, domain orientation, self-service platforms, and federated computational governance [ 32 ] .” Figure ˜ 8 illustrates the data mesh architecture. Van der Werf et al. [ 135 ] identify four archetypes, out of which the fine-grained fully federated mesh or short pure data mesh is considered to be the most theoretical and decentralized but also the most mature version. We have chosen this pure form in which individual nodes directly exchange data products and deliberately left out a central distribution layer. Every atomic team or business unit is responsible for a single domain and the data products arising from it. While this approach provides high flexibility and strong domain specialization, it might also introduce challenges such as wasting resources, when data transformations are performed redundantly due to lack of communication or transparency between domains. Here, the maturity of the self-service capability and federated governance components are particularly relevant. In the figure, one node is enlarged representatively to display more details. In each domain heterogeneous raw data emerges that will be stored in a data storage and operations platform of choice. Those can be whatever is available and suitable in the specific domain, e.g. data warehouse/lake, cloud storages or file storages etc. Each domain is responsible for transforming and packaging raw data into data products. Data products are further subdivided into data assets and raw data as inspired by Eichler et al. [ 43 ] . In each domain, data consumers and providers have access to self-service capabilities. In the figure, the individual nodes inherit self-service capabilities from a data fabric to represent the close relationship and potential synergy between the two paradigms. They are extended by domain-specific services as well as data product management where domain teams register their data products along with associated metadata, quality metrics, and access policies and facilitate the distribution to other domains. This data product management and distribution is overseen by a central data federated governance layer to enforce global governance standards consistently ensuring policies, interoperability and secure data access."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 12,
+      "cited_text": "Organizations often use data management, data governance, and data strategy interchangeably. While closely connected, each serves a distinct role in helping organizations turn data into a business asset. The table below clarifies how these disciplines work together. <cited_table>",
+      "cited_table": {
+        "num_columns": 5,
+        "rows": [
+          [
+            "Discipline",
+            "Core Question It Answers",
+            "Primary Focus",
+            "Key Responsibilities",
+            "Typical Deliverables"
+          ],
+          [
+            "Data strategy",
+            "”Why are we investing in data?”",
+            "Business goals, priorities, and long-term vision",
+            "Align data initiatives with business objectives, identify capabilities, prioritize investments",
+            "Data roadmap, modernization plan, AI and analytics strategy"
+          ],
+          [
+            "Data governance",
+            "“What rules should guide data usage?”",
+            "Policies, ownership, accountability, and compliance",
+            "Define standards, stewardship, quality requirements, and regulatory controls",
+            "Governance framework, ownership model, data policies, business glossary"
+          ],
+          [
+            "Data management",
+            "”How is data managed day to day?”",
+            "Operational processes and technology execution",
+            "Data integration, storage, quality management, security, access control, lifecycle management",
+            "Data platforms, integration pipelines, quality processes, security controls"
+          ],
+          [
+            "Data architecture",
+            "”How should enterprise data be structured?”",
+            "Data models, platforms, and technical design",
+            "Design storage, integration, and information flows",
+            "Data architecture blueprint and technology stack"
+          ],
+          [
+            "Data culture & literacy",
+            "”How do people use data effectively?”",
+            "Adoption, education, and decision-making behavior",
+            "Build data skills, encourage data sharing, improve data-driven decision-making",
+            "Training programs, adoption initiatives, literacy frameworks"
+          ]
+        ]
+      }
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 13,
+      "cited_text": "What are common mistakes to avoid in a PRD? Traditional PRDs are useful at the moment they are written, yet they rarely keep pace with ongoing work. Documents become outdated almost immediately. Manual updates introduce friction when teams try to keep information aligned across ongoing research, strategy, and design. Requirements often lack strategic context, which weakens decision making. Teams end up prioritizing what feels important in the moment instead of what drives meaningful outcomes for customers or the business. They can't confidently evaluate trade-offs when they don't know which outcomes they're optimizing for."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 14,
+      "cited_text": "The process of identifying these data sources is a collaborative effort between the HH&P IT and the Domain subject matter experts (SMEs).  The SMEs define the data of interest and the HH&P IT teams identify the appropriate data source within the environment containing the requested data. During this capture layer, multiple data sources are identified for transport (import) into the IMPALA platform. 4.1.2 Transport The transport layer of the IMPALA platform focuses on the movement of data from the production data sources, present and future, to the IMPALA platform data store.  Where the Capture layer focuses on the identification of the data, the Transport layer contains the pipeline for bringing the data into the IMPALA platform."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 15,
+      "cited_text": "4-4 Surveillance of Astronaut Health) and MEDB Sharepoint.  Data sources in the capture layer are technically outside the IMPALA platform.  IMPALA interfaces with these data sources to ingest data.  The IMPALA platform is extensible and able to capture data from other types of data sources.  The platform also supports connectivity and capture/identification of relational data sources such as ORACLE, Microsoft SQL Server, and Microsoft Access, as well as data located in file shares, cloud based data stores and local files of varying formats (XML, CSV, JSON, PDF, and more)."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 16,
+      "cited_text": "While Wyle is currently able to meet our NASA customer’s data integration needs to meet mission objectives with the current system and processes, NASA faces a number of process and technical challenges. Inefficient, manual processes to gain access to internal and external data Legacy system challenges that prevent/limit automated integration of data from multiple sources and a comprehensive view (and reuse) of laboratory, crew health records, environmental and epidemiological data Lack of common processes, advanced analytics capability, and formats and controls needed to effectively analyze, visualize, and share/reuse data across multiple systems and users Labor-intensive data request fulfillment processes that depend on manual data aggregation and manual quality control reviews Limited or inefficient data visualization, management, governance and data sharing capabilities (tools, skills and processes) Insufficient controls to store, process, and analyze longitudinal crewmember health data with changes to metrics, data types, and units over time. Inability to apply descriptive, predictive, and prescriptive analytics tools across an array of constantly changing data sets Inability to capture and retain meta-data on analysis and use of data, in principle, by any and all users"
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 17,
+      "cited_text": "The IMPALA platform’s transport layer is not just limited to RDBMS tools previously listed (ORACLE, Access, and MS SQL), it enables connection to any relational data source that supports ODBC or JDBC connectors, connection to file shares and connection to data residing in the cloud. The HHP&IT team will leverage the functions within this layer to build, test and deploy data capture jobs.  These data capture jobs will be scheduled to connect and load data from the data sources (EMR, LSAH, etc.).  As the list of production data sources grows beyond the initial data sources, this team will support the design and development of the required data capture jobs.  This team also manages the interface to the production data source.  The interfaces for relational data stores include ODBC and JDBC as well as the credentials to connect to these production data stores.  The IMPALA platform uses built-in functions, such as secure copy or secure file transfer protocols, to import non-relational data sources such as file.   The data capture jobs are orchestrated using the Pentaho engine.  Within this engine, business rules are defined to apply static transformations  to the data as it is transported into the data reservoir."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 18,
+      "cited_text": "6-2 Figure 6.1.1-1 Data Ingestion Flow The Data Governance board identifies data sources that should be ingested into the IMPALA data reservoir.  Data scientists, Data Owner and Data Stewards define: Filters to ensure that data pulled into the data reservoir are relevant. Static transformations or business rules, like unit changes or dealing with nulls, that need to be applied to the data upon ingest. Refresh intervals and other ingest parameters for the HH&P IT team to create data ingest pipelines"
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 19,
+      "cited_text": "Persistent edits or static transformations may include the following: Decomposing a compound field into multiple fields Unit conversions to standardize the measurement system for data of the same type (such as dates, height, weight) Removing incorrect values Adding additional information Adding lookup or descriptive information Tools used for persistent edits: Trifacta scripts integrated into the Pentaho workflow Non-persisted edits generally describe edits that are made during the course of analyzing or dealing with the data in the data reservoir.  They are performed during analysis and modeling for a particular purpose.  These edits may be documented and shared with other users, but the edits only apply to the data as it is being used in the analysis.   In this type of edit, the data is not persisted and it is only used for the duration of the analysis."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 20,
+      "cited_text": "investigation files, supplemental forms, clinical data and crewmember electronic medical records (EMR system). Lifetime Surveillance of Astronaut Health (LSAH): clinical, laboratory, medical requirements data and various forms of data related to space flight o Laboratory data such as test orders and lab results for crew members ingested from various internal sources such as Lifetime Surveillance of Astronaut Health  (LSAH) system and existing laboratory systems MEDB SharePoint: medical requirements summary data stored in SharePoint o Environmental data from internal and external investigations, operations, studies,"
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 21,
+      "cited_text": "3.3.1 Characteristics We presented a thorough review of the field in [ 66 ] from which we derive the following definition and requirements: Definition 3. [ Semantic data lake] Semantic data lakes are a specific form of traditional data lakes that extend the capabilities through a semantic layer that enriches and connects the stored data semantically. The semantic layer equips data sets in the lake with connections from the data set's metadata to conceptual/logical models, which encapsulate knowledge potentially external to the content of the data, such as domain knowledge."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 22,
+      "cited_text": "3.5 Data Fabric The concept of data fabrics was coined by NetApp in a white paper from 2016 as a “vision for data management […] that seamlessly connects different clouds, whether they are private, public, or hybrid environments” [ 62 ] . Back then, the term meant a combination of different data storage and integration techniques, however, without details about a concrete architecture. In 2019, Gartner defines a data fabric as a design concept for attaining reusable and augmented data integration services, data pipelines and semantics for flexible and integrated data delivery [ 29 ] . Hence, a data fabric is a technical architecture that brings together heterogeneous data that spans across multiple data sources; it allows organizations to monitor and manage data regardless of the location, considering appropriate data governance and data cataloging [ 20 , 83 , 2 ] . Then in 2021, Gartner [ 132 ] redefines a data fabric as a “design concept that serves as an integrated layer (fabric) of data and connecting processes”. In their data fabric architecture, Gartner emphasizes key characteristics, such as the use of AI for metadata management and data cataloging as well as knowledge graphs and ontologies to connect and enrich data sources with business related concepts. They introduce the notion of “passive vs active metadata”, i.e., data models, schema definitions, glossary, various logs are considered as passive metadata, whereas the continuous analysis of data usage with are described as active metadata describing actual experiences. The conversion of passive metadata into active metadata is interpreted as automating the collection and management of metadata [ 29 ] . By now, major vendors in data science have embraced the term; both vendors of semantic technology (e.g., Franz Inc., Ontotext, Pool Party, Stardog, and Top Quadrant) as well as more traditional vendors such as Microsoft, Oracle and Tibco [ 29 ] ."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 23,
+      "cited_text": "Cataloging the profiled data allows users to search the metadata and apply custom tags to quickly locate files with specific content. The Data Governance board provides the processes that will be followed for both automated and customized profiling, cataloging, and file hierarchy.  Collaboratively, Data scientists, Owners, Stewards and Analysts define: 6-4 Filters to ensure that data pulled into the data reservoir is relevant. Domains and tags for that data Filters and tags to define subject-area datasets Business rules for custom tagging Metadata searches"
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 24,
+      "cited_text": "In 2014, Gartner [ 48 ] raised several criticisms of data lakes, warning that the indiscriminate ingestion of disparate data could lead to a so-called data swamp, making the data unusable without proper metadata management and governance [ 111 ] . Further, concerns included insufficient attention to data security and privacy oversight. In response to these critiques, Dixon revisited the data lake concept [ 39 ] . With Hadoop at the core, a key requirement was that a data lake should offer low-cost, easily accessible storage that supports a schema-on-read approach, meaning the metadata can be populated over time and transformations to apply the schema are only performed once required. This approach allows a data lake to automatically extract metadata from raw data and identify patterns, with users contributing additional descriptive information, such as domain-specific knowledge and attribute linkages. Hence, the idea is that the interaction between users and the data lake continually enhances (meta)data quality and value."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 25,
+      "cited_text": "Fragmented Data Silos Across Business Units Large organizations' business data is likely to go back years or decades, scattered across multiple jurisdictions, business units, and departments, with disparate standards and formats, creating significant data silos. The presence of data silos is one of the main challenges for effective enterprise data management, standing in the way of creating a single source of truth. This is where the importance of data integration is particularly felt. When data is siloed, decision-makers can't rely on it due to inconsistencies or incompleteness, while reporting and analytics tools may return inaccurate outputs."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 26,
+      "cited_text": "What are the most common enterprise data management failures? The most common EDM failures include poor data quality, unclear ownership, weak governance, fragmented systems, and the treatment of data management as a technology project rather than a business initiative. Many organizations also struggle because they focus on tools before establishing data standards, governance processes, and business objectives. As a result, data remains inconsistent, difficult to trust, and underutilized across the organization."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 27,
+      "cited_text": "Key Components of Enterprise Data Management Data Quality Management Data quality management encompasses practices, processes, and tools for ensuring your data remains accurate, complete, reliable, consistent, and timely. It can include: Data profiling to map existing data and its structure and evaluate its quality Automated data cleansing and standardization to prevent errors and ensure data usability and reliability Data deduplication, merge, and survivorship rules Validation checks to verify data quality Data quality metrics monitoring (e.g., consensus, relevance, validity) Regular data quality audits and optimization."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 28,
+      "cited_text": "Lack of proper data quality management poses risk management challenges, including the “garbage in, garbage out” effect. Your analytics and BI tools won't produce accurate results if the underlying data is incomplete or full of errors. It can also entail compliance risks, operational inefficiencies, and subpar customer and employee experiences. Data Security Management Any business deals with some amount of sensitive data. Failing to protect it may lead to data breaches and regulatory fines, which in turn cause reputational and financial losses. An average data breach costs businesses $4.4 million worldwide."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 29,
+      "cited_text": "TABLE 4.1-1 MAPPING OVERVIEW: USER ROLES TO IMPALA PLATFORM LAYERS Layers IMPALA Roles Function Capture Data Owners Identify data sources to be ingested into IMPALA Transport Developers Connect to multiple data sources Build ETL workflows to ingest data into IMPALA data reservoir at scale Apply common rule-based transformations to data on ingest Refine Data Scientists, Data Owners, Data Stewards Profile data for anomalies and correct Catalog the data by tagging Address exceptions/errors identified during data ingest"
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 30,
+      "cited_text": "6-1 6.0 OPERATIONAL SCENARIOS The IMPALA Platform provides a single source of data for NASA data analysts, data scientists, and other users to locate data, perform analysis, and share their investigations.  The scope of functionality provided by the tools in the IMPALA platform allows for a large number of operational scenarios. This document will cover some of those operational scenarios most likely at the initial onset of use. Initially, the IMPALA data reservoir is hydrated by scheduled Pentaho jobs that run either on demand or on a scheduled basis (recurring daily or weekly) to refresh the data.  On unsuccessful loads, there will be exceptions and error logs generated.  After data ingest, ETL engineers will use Trifacta to confirm data or cleanse and transform it.  Exception handling will also be handled at this stage and logged into the system.  After the data is imported and cleansed, it is ready for use by the Data Scientists and other end users. Section 6.2, describes expected Operational Scenarios using the data imported into the IMPALA platform."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 31,
+      "cited_text": "Business initiatives and goals that require data and analytics Main data challenges that stand in the way of reaching those goals Data privacy and security challenges that accompany self-service data access Potential data uses that are impossible at the moment Metrics currently used to measure success. Prioritize Data Quality Management Data quality directly impacts how reliable analytics insights will be. Subpar data quality can also easily lead to poor decision-making and operational inefficiencies, as employees will have to double-check the accessed data."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 32,
+      "cited_text": "“ Robust data security management involves both implementing the technical means of protecting data and training employees in matters of cybersecurity. The latter will help you prevent social engineering and accidental exposure .” Data Access Management Data access management regulates who can access which information, as well as the modalities of data access. It's crucial for preventing unauthorized access to sensitive information and maintaining compliance with privacy regulations. Managing data access involves defining:"
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 33,
+      "cited_text": "Appropriate access control model (e.g., role-based, rule-based, attribute-based, mandatory, discretionary) User identification, authentication, and authorization rules and procedures Metrics for access monitoring and regular audits. Best practices in this area include granting users the minimum level of access by default (the principle of least privilege), implementing multi-factor authentication, and enforcing password hygiene. Continuous data access logging and monitoring is also a must. Data Lifecycle Management The data lifecycle begins at data entry and ends with its destruction. Data lifecycle management, in turn, means defining how you'll handle data depending on its lifecycle phase and what criteria data has to meet to move from one phase to another."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 34,
+      "cited_text": "The term end-users denotes people who use the output, and stakeholders denote PMs/BAs/managers. 2.1. Identify the end-users The first step is to identify the end-user(s). The request for the project usually comes up during meetings. Understanding the capabilities and preferences of the end-user is crucial for designing an appropriate solution. End-users (& their preferences) for data projects are usually one of: Data analysts/Scientists: SQL, File Business users: Dashboard, report, Excel Software engineers: SQL, APIs External clients: Cloud storage, SFTP/FTP, APIs"
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 35,
+      "cited_text": "The four components described above address different aspects of managing enterprise data. Together, they form the operational foundation of a successful enterprise data management program. The table below summarizes the role of each component and the business risks associated with neglecting it. <cited_table>",
+      "cited_table": {
+        "num_columns": 5,
+        "rows": [
+          [
+            "Component",
+            "Primary Objective",
+            "Key Activities",
+            "Business Benefits",
+            "Risks if Neglected"
+          ],
+          [
+            "Data quality management",
+            "Maintain accurate, complete, and consistent data",
+            "Profiling, validation, cleansing, deduplication, quality monitoring",
+            "More reliable analytics, reporting, and operational decisions",
+            "Inaccurate reporting, poor decisions, reduced trust in data"
+          ],
+          [
+            "Data security management",
+            "Protect sensitive and business-critical information",
+            "Encryption, access controls, monitoring, threat prevention, compliance controls",
+            "Reduced security risk and stronger regulatory compliance",
+            "Data breaches, regulatory penalties, reputational damage"
+          ],
+          [
+            "Data access management",
+            "Ensure appropriate access to data resources",
+            "Authentication, authorization, role-based permissions, access reviews",
+            "Improved productivity and controlled data sharing",
+            "Unauthorized access or restricted access to needed information"
+          ],
+          [
+            "Data lifecycle management",
+            "Govern data from creation through disposal",
+            "Data creation, storage, sharing, archival, retention, destruction",
+            "Lower storage costs and improved compliance",
+            "Excess storage costs, outdated information, compliance risks"
+          ],
+          [
+            "Cross-component governance",
+            "Coordinate standards and accountability across all data activities",
+            "Ownership assignment, stewardship, policy enforcement, performance monitoring",
+            "Consistent data practices across the organization",
+            "Fragmented processes and inconsistent data management"
+          ]
+        ]
+      }
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 36,
+      "cited_text": "2. The NASA/Wyle Technical Review Board (TRB) must approve all software and hardware technologies and products selected by the Contractor before implementation. 3. The IMPALA Platform constraints may be influenced by NASA JSC Security center policies, procedures and protocols. 3-1 3.0 DESIGN CONSIDERATIONS 3.1 GOALS The goals of the IMPALA system are to: Increase accessibility to accurate and actionable data without compromising security Increase confidence in data through defined data governance processes and controls Enable users to improve the quality of data analysis, reports, recommendations, and decisions substantiated by data stored in the IMPALA Platform Seamlessly ingest, integrate, and manage clinical, life sciences, epidemiological, environmental, laboratory and astronaut's longitudinal health monitoring and surveillance data Provide automated processes to extract, cleanse, validate, transform and curate data in multiple formats from a variety of sources based on analyst defined rules and controls Extract and store metadata and establish relationship between known entities and fields in the source data Provide a highly scalable and available infrastructure to store, process and analyze data as well as continuously refresh the data from the source data Facilitate stakeholder collaboration and real-time data sharing internally and externally with trusted partners, universities and other government agencies to facilitate collateral exploratory analyses and hypothesis testing by trusted outsiders and for more extensive peer review Provide a secure single point of access to the data in the platform for all approved users across multiple end user devices (mobile, desktop, laptop and tablet) with appropriate platformspecific security protocols Comply with NASA's security requirements and be certified to operate within the NASA environment and comply with federal requirements for security and handling of medical PII Interoperate with existing NASA and HHPD systems Analyze and visualize data from multiple data sources in a single unified view including data from external investigators and programs Correlate, aggregate, create and share datasets from multiple data sources for analysis by internal and external scientists as well as reuse these datasets as sources for future data requests Provide advanced analytics capabilities to perform data mining, data exploration and discovery that retains meta-data on analyses and uses of the data by all users Support timely processing and provisioning of new data sources for platform users"
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 37,
+      "cited_text": "Client Integration Libraries This are Client integration Libraries that mostly cater for easy migration to Record Service. Using Record Service with Sentry provides these key benefits: Fine-grained security enforcement: Record Service enforces column-level permissions (projections), row-level permissions (filtering), and data masking across the IMPALA reservoir components. Performance:  Record Service is designed to be on the main data access path, meaning it needs to process every byte of data. Record Service scales horizontally to be able to run on the largest Hadoop clusters and high efficiency. It uses the Apache Impala IO layer, which utilizes low-level optimizations such as HDFS short-circuit reads and dynamic code generation to improve thread throughput and reduce CPU utilization. Record Service brings these performance benefits to the other components in Hadoop and accelerates their performance, despite adding a new layer in the stack. Simplicity: Record Service provides a higher level, logical abstraction for data. Datasets can be specified as logical names (i.e. tables or views) and Record Service returns schemed objects (in contrast to the storage APIs that deal with paths and bytes). This means that applications built on top of the Record Service APIs do not need to worry about differences in file formats, the underlying storage APIs, and other low level details."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 38,
+      "cited_text": "When done right, data lifecycle management will help you maintain consistent data quality levels and reduce archiving, backup, and storage costs by removing data when it becomes obsolete. The data lifecycle consists of five phases: Creation : Collecting relevant data from its sources (IoT devices, forms, etc.) Storage : Transforming and adding data to storage Sharing and usage : Making the data available to business and external users with appropriate data access controls Archival : Keeping copies of data that's no longer needed for day-to-day operations Destruction : Securely purging data from archives."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 39,
+      "cited_text": "DL5 — Unified query mechanism: enable querying of heterogeneous data sources using a unified query interface allowing users to perform federated queries across structured and unstructured data with on-demand data transformations. Azzabi et al. [ 14 ] outline how the initial mono-zone architecture had notable limitations and hence data pond and zone-based architectures were introduced. Zone-based architectures include transient landing, raw, trusted, and refined zones, along with a sandbox zone for exploratory analysis. Each zone has a specific function based on its refinement level, from raw data ingestion and preliminary processing to serving compliant, quality-checked data to end-users [ 125 , 101 , 114 , 88 , 142 , 54 ] . A four-layered data lake architecture was proposed in [ 75 ] and is shown in fig. ˜ 5 . It resembles some ideas of zone-based architectures, such as a raw data 'zone' at the storage layer, and refined data in data marts at the transformation layer. In addition, it emphasizes the role of metadata and quality management on each of the layers."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 40,
+      "cited_text": "Figure 6.1.2-1 Data Cataloging Flow The initial step for organization is determined by the folder structure used for storing data.  The incoming data is held in a landing zone within the IMPALA data reservoir while it is being profiled and cataloged, then it is moved to a pre-established destination.  Datasets and extracts created from the original files can be tracked through the IMPALA platform using lineage and pedigree tools. Profiling establishes metadata for incoming data on both the file and data element levels.  The IMPALA platform provides tools that perform automated profiling and tagging when the data is in the landing zone within the IMPALA data reservoir.  In addition to the tags provided by the tools, the user can define business rules to customize tags based on the content of the incoming data.   Once cataloging and tagging jobs have been defined, a Pentaho Data Integrator workflow is defined and developed by a developer to automate the process of cataloging and profiling when new data is placed into the landing zone."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 41,
+      "cited_text": "Scalability and Performance Bottlenecks in Data Infrastructure It's a safe bet to say that data volumes will only continue to grow, and so will the business impact of Big Data . However, if your data infrastructure isn't built with scalability in mind, it may struggle to sustain the same performance, especially when it comes to real-time analytics, AI/ML models, and high-throughput data processing. Our solution To futureproof your data architecture against rising data volumes, we: Help you move to cloud-based platforms to leverage cloud computing infrastructure benefits Implement scalable enterprise data platforms (e.g., Hadoop, Spark, Snowflake) Optimize your infrastructure and architecture Implement parallel processing and real-time data streaming capabilities."
+    }
+  ]
+}

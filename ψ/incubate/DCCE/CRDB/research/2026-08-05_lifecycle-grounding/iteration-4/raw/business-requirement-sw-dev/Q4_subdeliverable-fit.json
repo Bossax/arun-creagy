@@ -1,0 +1,237 @@
+{
+  "answer": "Based on standard requirements-engineering and enterprise data platform practices, these three elements are organized using a mix of **integrated components** and **distinct deliverables** within a business-requirements package:\n\n### 1. Use-Case Prioritization (Integrated Component)\nUse-case prioritization is typically treated as an **integrated component** directly embedded within the core Business Requirements Document (BRD) or Product Requirements Document (PRD), rather than as a standalone file `[1, 2]`. \n\n*   **In the BRD/PRD:** In a standard Smartsheet BRD template, prioritization is housed directly within the requirements section via a standardized \"Functional Requirements Priority\" table `[1]`. This table uses a 1-to-5 value rating system (*Critical, High, Medium, Low, Future*) to establish what is essential for the initial Minimum Viable Product (MVP) versus what can be deferred `[3, 4]`.\n*   **In Product Strategy:** In modern product systems like Productboard, prioritization is a dynamic attribute linked to business outcomes, company OKRs, and customer insights, helping technical teams continuously weigh trade-offs `[5-7]`.\n*   **In Ingestion/Pipeline Planning:** Within data engineering methodologies, prioritizing is a collaborative step under the \"Deliver Iteratively\" section `[8, 9]`. A massive data project (such as a REST-API-to-dashboard pipeline) is broken down into modular phases (data extraction, raw landing, modeled views, and BI dashboards) and scheduled incrementally with stakeholders based on immediate business value `[9, 10]`.\n\n### 2. Service/Content Design (Integrated Component or Bundled Compendium)\nIn a data-platform context, \"service and content design\" translates to **user persona profiling, access pattern mapping, and data product design** `[11-13]`. These elements are typically **bundled directly into the requirements baseline** or a unified user-design compendium `[14, 15]`.\n\n*   **As an Integrated Compendium:** In highly complex environments, such as the NASA IMPALA System Design Document, requirements are structured as a **single source of truth compendium** that integrates functional requirements, user design, and data design `[14]`. This ensures that visual workflows, operational scenarios, and role-to-platform mapping are explicitly co-located with technical specifications `[14, 16, 17]`.\n*   **Inside the PRD:** A well-formed PRD natively features sections dedicated to target user groups (e.g., mapping whether data analysts, scientists, or external clients prefer SQL, APIs, or SFTP) and their expected latency thresholds `[12, 13, 18]`. \n*   **As a Data Product Interface:** In decentralized data meshes, the design of a \"data product\" (the ultimate service delivered by a domain) packages raw data assets with rich metadata, licensing, schema contracts, and consumption endpoints `[11, 19, 20]`.\n\n### 3. Data Governance Framework & Sign-Off (Distinct Deliverable & Gated Milestone)\nData governance is historically scoped as a **distinct, standalone strategic deliverable**, while \"sign-off\" functions as a **gated milestone** that freezes the requirements baseline `[21-23]`.\n\n*   **A Distinct Strategic Deliverable:** According to NASA's IMPALA specifications, details regarding data load governance, stewardship, and organizational policies are kept in a **separate, distinct \"Data Governance Framework\" document** rather than cluttering the technical SDD `[23, 24]`. The core design package simply references this framework to configure corresponding security controls (e.g., mapping Active Directory groups to Apache Sentry roles for fine-grained row- and column-level data masking) `[25-27]`.\n*   **EDM Scoping Boundaries:** In Enterprise Data Management (EDM) standards, **Data Governance** (answering *\"What rules should guide data usage?\"*) is a distinct discipline producing separate deliverables like governance frameworks, ownership models, and business glossaries `[21, 28]`. This sits completely separate from **Data Management** (answering *\"How is data managed day-to-day?\"*), which produces operational pipelines, ingestion validation rules, and storage platforms `[21, 28, 29]`.\n*   **The Sign-Off Gate:** The actual requirements sign-off is a critical operational milestone recorded in a project tracker (e.g., JIRA) `[22]`. Standard data engineering practice dictates that **no work on transformation or backend engineering logic should begin** until stakeholders and end-users have formally signed off on the requirements baseline and validated sample schemas `[9, 22]`.\n\n***\n\n📋 I can help you draft a standardized **RACI Matrix** to define exactly how your Data Owners, Data Stewards, and Developers should divide responsibilities across these deliverables. Would you like to set up the roles?",
+  "conversation_id": "8f8ae5e6-85be-4de5-8aea-56188a4c08ff",
+  "sources_used": [
+    "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "0f98105a-e702-4086-8695-8219087f4306",
+    "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "e4e1835f-3ede-4158-b4db-97e6919a242f"
+  ],
+  "citations": {
+    "1": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "2": "0f98105a-e702-4086-8695-8219087f4306",
+    "3": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "4": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "5": "0f98105a-e702-4086-8695-8219087f4306",
+    "6": "0f98105a-e702-4086-8695-8219087f4306",
+    "7": "0f98105a-e702-4086-8695-8219087f4306",
+    "8": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "9": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "10": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "11": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "12": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "13": "0f98105a-e702-4086-8695-8219087f4306",
+    "14": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "15": "0f98105a-e702-4086-8695-8219087f4306",
+    "16": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "17": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "18": "0f98105a-e702-4086-8695-8219087f4306",
+    "19": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "20": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "21": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "22": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "23": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "24": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "25": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "26": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "27": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "28": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "29": "e4e1835f-3ede-4158-b4db-97e6919a242f"
+  },
+  "references": [
+    {
+      "source_id": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+      "citation_number": 1,
+      "cited_text": "SAMPLE BUSINESS REQUIREMENTS DOCUMENT TEMPLATE SAMPLE BUSINESS REQUIREMENTS DOCUMENT TEMPLATE VERSION HISTORY VERSION APPROVED BY REVISION DATE DESCRIPTION OF CHANGE AUTHOR NOTE TO USER: Overwrite the sample text included in this template to complete your project’s business requirements document. TABLE OF CONTENTS 1. EXECUTIVE SUMMARY SNAPSHOT 3 2. PROJECT DESCRIPTION 4 3. PROJECT SCOPE 5 4. BUSINESS DRIVERS 6 5. CURRENT PROCESS 7 6. PROPOSED PROCESS 8 7. FUNCTIONAL REQUIREMENTS 9 PRIORITY 10 REQUIREMENTS CATEGORIES (RC1) 10"
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 2,
+      "cited_text": "Sign In Try for free Categories AI Product Management Company & Product Engineering Life at Productboard Product Excellence Product Leaders Product Management Product Operations Spark Explore more ProductExcellence.co Books & Guides Webinars An agent that knows your product, customers & business Learn More What is a Product Requirements Document? From Static PRD to Dynamic Strategy PRODUCTBOARD 11th December 2025 Product Management, Product Leaders, Product Excellence A product requirements document (PRD) is often the first place product managers turn when they need to outline what a team should build. Many teams treat it as a checklist that captures scope and specifications. Others use it as a communication tool for engineering and design."
+    },
+    {
+      "source_id": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+      "citation_number": 3,
+      "cited_text": "8. NON-FUNCTIONAL REQUIREMENTS 11 9. FINANCIAL STATEMENTS 12 10. COST AND BENEFIT 13 11. RESOURCES 14 12. SCHEDULE, TIMELINE, AND DEADLINES 15 13. ASSUMPTIONS 16 14. GLOSSARY 17 15. REFERENCES 18 16. APPENDIX 19 1. EXECUTIVE SUMMARY SNAPSHOT 2. PROJECT DESCRIPTION 3. PROJECT SCOPE 4. BUSINESS DRIVERS 5. CURRENT PROCESS 6. PROPOSED PROCESS 7. FUNCTIONAL REQUIREMENTS PRIORITY Use the following priority table. It allows you to apply a ratings system to your requirements, so you have the visibility (into the value, status, and description of each requirement) that’s necessary for determining whether a particular requirement is essential to project success:"
+    },
+    {
+      "source_id": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+      "citation_number": 4,
+      "cited_text": "Value Rating Description 1 Critical The requirement is critical to the project’s success. Without fulfilling this requirement, the project is not possible. 2 High The requirement is high priority re the project’s success, but the project could still be implemented in a minimum viable product (MVP) scenario. 3 Medium The requirement is important to the project’s success, as it provides value, but the project could still be implemented in an MVP scenario. 4 Low The requirement is low priority (i.e., it would be nice to have), but the project’s success is not dependent upon it."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 5,
+      "cited_text": "How Do You Effectively Write a Product Strategy Document? A product strategy document gives every requirement a clear purpose by anchoring it to measurable goals and customer outcomes to align with the broader direction of the business. When maintained well, it becomes the single source of truth that guides priorities. Strong strategy documents show how each initiative supports organizational objectives, and they help teams stay aligned even as conditions shift. They clarify which outcomes matter most, whether the goal is to reduce churn for key customer segments or increase adoption of newly launched capabilities."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 6,
+      "cited_text": "Productboard supports connecting product strategy to business outcomes so teams always know why their choices matter. Essential Components of a Modern Product Strategy Document To make it easy for teams to understand what they are working toward and how progress will be measured, clear goals come first. These goals tie directly to business objectives or OKRs so product work can be evaluated through the same lens as sales, marketing, and customer success. Good PRDs also define the outcomes that matter most for customers, which helps teams choose between competing ideas with confidence."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 7,
+      "cited_text": "Connecting strategy to execution solves that problem. It creates a system where decisions flow from the company's goals into the day-to-day requirements that guide design and engineering. This connection helps teams move faster because they no longer need to translate intent each time priorities shift. Achieving Product Roadmap Alignment Through Dynamic Requirements Roadmap alignment becomes easier when requirements are tied directly to measurable objectives or OKRs. When a requirement links to the same success criteria used by leadership, decisions feel grounded. Product teams understand what outcome they are working toward. Marketing and sales see how upcoming work supports their goals as well. This alignment strengthens high-level product strategy and portfolio alignment in a way that documents alone cannot achieve."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 8,
+      "cited_text": "Requirements gathering is terrible! Scope creep kills your ability to deliver on time Disappointed that you do not get specific requirements Frustrated dealing with end-users who do not understand the complexities of a data pipeline Interrupted by changing requirements Then this post is for you. You will learn to help end-users define requirements, break down the project into small deliverables, deliver iteratively, and handle feature/change requests. 2. Gathering requirements Here are some steps you can take to ensure the seamless development of your data project. Note that depending on your team/company PMs will perform some of these steps."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 9,
+      "cited_text": "End-user validating the data may create new requirements and business rule checks. Record any new requirements or changes (e.g. JIRA, etc), and get sign-off from the stakeholders. Do not start work on the transformation logic until you get a sign-off from the stakeholders. 2.4. Deliver iteratively Break down a large project into smaller parts. Work with the stakeholders to decide on a timeline and prioritization. E.g. If you are building an ELT pipeline (REST API => dashboard), you can split it into modeling the data, pulling data from a REST API, loading it into a raw warehouse table, & building a dashboard for the modeled data."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 10,
+      "cited_text": "Delivering in small chunks enables a short feedback cycle from the end-user making changing requirements easy to handle. Track your work (tickets, etc) with clear acceptance criteria. 2.5. Handling changing requirements/new features Do not accept Adhoc change/feature requests! (unless it's an emergency). Create a process to * Allow end-users to request changes/features * Prioritize the change/feature requests with help from stakeholders * Decide and communicate delivery timelines to end-users Educate the end-user on the process of requesting a new feature/change. Following a process will prevent scope creep and allow you to deliver on time."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 11,
+      "cited_text": "3.6.1 Characteristics Four principles define the data mesh as originally introduced by Dehghani [ 31 ] : DM1 — Data-as-a-product: creation, management, and distribution of data products via a catalog. Data providers are responsible for publishing and provisioning them and collaborate with data owners and stewards for maintenance. DM2 — Decentralized data ownership and architecture: each domain has ownership over its data products, ensuring that domain teams are responsible for the quality, maintenance, and lifecycle of their data products."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 12,
+      "cited_text": "The term end-users denotes people who use the output, and stakeholders denote PMs/BAs/managers. 2.1. Identify the end-users The first step is to identify the end-user(s). The request for the project usually comes up during meetings. Understanding the capabilities and preferences of the end-user is crucial for designing an appropriate solution. End-users (& their preferences) for data projects are usually one of: Data analysts/Scientists: SQL, File Business users: Dashboard, report, Excel Software engineers: SQL, APIs External clients: Cloud storage, SFTP/FTP, APIs"
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 13,
+      "cited_text": "Core Components of a Traditional PRD A standard PRD often includes: Problem statement and context Target users and user insights Feature description and functional requirements Non-functional requirements and constraints Acceptance criteria and success measures Open questions and dependencies Release considerations and rollout notes Let's consider a scenario: You work on the product team for an enterprise CRM platform. Executive leadership is concerned after a major customer churned over to your competitor, citing gaps in their view of customer activity."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 14,
+      "cited_text": "THE IMPALA ENCRYPTION COMPONENTS .................................................................................... 7-21 1-1 1.0 INTRODUCTION The System Design Document (SDD) is a compendium of three documents, providing a single source for requirements, system design, and data design.  The functional and non-functional requirements are drawn from the Information Management Platform for Data Analytics and Aggregation (IMPALA) System Requirements document.  The three elements of requirements, user design, and data design form the baseline from which to build a set of more technical system design specifications for the final product, providing both high-level system design and low-level detailed design."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 15,
+      "cited_text": "The Product Requirements Document (PRD): Definition and Purpose What defines a PRD? A PRD is the working document product managers use to describe what a team should build and why it matters. It provides engineering and design with clarity on (1) scope, (2) constraints, (3) acceptance criteria, and (4) expected customer value . The goal is alignment. A well-written product requirements document outlines the problem to solve, the intended outcome, and the key requirements needed to deliver that outcome. When it is clear and current, it reduces rework and supports faster decision making across technical teams."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 16,
+      "cited_text": "LIST OF TABLES TABLE 4.1-1 MAPPING OVERVIEW: USER ROLES TO IMPALA PLATFORM LAYERS ...................................................... 4-3 TABLE 4.5-1 SECURITY FUNCTION TO TOOL MAPPING ......................................................................................... 4-17  TABLE 6.1-1 SAMPLE USAGE SCENARIOS MAPPED TO IMPALA ROLES AND LAYERS ................................................... 6-1  TABLE 7.1.1-1   IMPALA VIRTUAL INFRASTRUCTURE SOFTWARE AND FUNCTIONS ....................................................... 7-2 TABLE 7.1.1-2   IMPALA APPLICATIONS AND FUNCTIONS .......................................................................................... 7-2 TABLE 7.1.1-3   IMPALA APPLICATION NODE CONFIGURATION .................................................................................. 7-4 TABLE 7.1.2.1-1 IMPALA MASTER NODE CONFIGURATION ........................................................................................ 7-5 TABLE 7.1.2.2-1 IMPALA DATA NODE CONFIGURATION ............................................................................................ 7-7 TABLE 7.1.3-1 IMPALA STORAGE NODE CONFIGURATION ...................................................................................... 7-7 TABLE 7.1.4-1   SERVER-SIDE OPERATING SYSTEMS AND COUNT ................................................................................. 7-8 TABLE 7.1.5-1   POWER CONSUMPTION ................................................................................................................... 7-8 TABLE 7.1.5-2 POWER CONSUMPTION (CONTINUED) .............................................................................................. 7-9 TABLE 7.2-1 PROTECTION POINT TO IMPALA MODULE MAPPING ......................................................................... 7-9 TABLE 7.2.2-1 IMPALA AUTHENTICATION SECURITY MODULE TERMINOLOGIES ...................................................... 7-13 TABLE 7.2.3-1 IMPALA COMPONENT ROLES AND PRIVILEGES ................................................................................ 7-14 TABLE 7.2.3-2 IMPALA SENTRY COMPONENTS AND FUNCTIONS ............................................................................ 7-17 TABLE 7.2.3-3 RECORD SERVICE COMPONENTS AND FUNCTIONS .......................................................................... 7-18 TABLE 7.2.4-1   IMPALA ENCRYPTION COMPONENTS AND FUNCTIONS ..................................................................... 7-20"
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 17,
+      "cited_text": "NOTE: For the remainder of this document, the Information Management Platform for Data Analytics and Aggregation (IMPALA) is referred to as the IMPALA Platform. The SDD delineates design goals and considerations, provides a high-level overview of the system architecture, and describes the system data design, the human-machine interfaces, and operational scenarios.  The high-level system design is decomposed into low-level detailed design specifications for each system component, including hardware, internal communications, software, system integrity controls, and interfaces."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 18,
+      "cited_text": "Non-functional requirements Support performant filtering for large enterprise accounts with multi-year histories and high event volume. Comply with enterprise security and privacy standards, including field-level access controls and regional data residency where required. SUCCESS METRICS Quantitative targets Reduce average time spent on weekly account prep by at least thirty percent within two quarters of rollout. Improve renewal rate for monitored strategic accounts by at least five percentage points within one renewal cycle."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 19,
+      "cited_text": "DM3 — Self-Service capabilities: a self-service data platform must be established to enable domain teams to create, manage, and consume data products without requiring extensive technical expertise. DM4 — Federated governance: a federated governance model balances decentralized autonomy with global governance standards, ensuring that policies are enforced consistently across all domains while allowing flexibility for domain-specific rules. The data-as-a-product principle frames data products as deliberately distributed and interconnected across individual ”mesh nodes” [ 86 , 129 ] . To give an example for a data product, consider the MLFlow model export functionality that outputs not only the trained model parameters, but also essential metadata, dependencies, and governance information. Each exported model includes environment specifications such as a requirements.txt or conda.yaml, ensuring reproducibility across different infrastructure setups. Additionally, MLFlow tracks experiment metadata, including training hyperparameters, dataset versions, and performance metrics, allowing for model lineage and governance."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 20,
+      "cited_text": "Eichler et al. [ 43 ] recognize that data providers often lack incentives to share their data, because they face additional effort without immediate benefits, discouraging participation. To address this, they subdivide data products further into data assets. Data assets are raw, registered data in a company's catalog, while data products are refined versions with defined metadata, usage policies, and provisioning options. The transformation process follows three scenarios: (1) a provider directly registers data-as-a-product, (2) a consumer requests access to a data asset, prompting its transformation, or (3) a steward or another employee enriches metadata and submits it for approval. This staged approach reduces the initial burden on providers, ensuring they only need to add metadata when data is actually requested."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 21,
+      "cited_text": "Organizations often use data management, data governance, and data strategy interchangeably. While closely connected, each serves a distinct role in helping organizations turn data into a business asset. The table below clarifies how these disciplines work together. <cited_table>",
+      "cited_table": {
+        "num_columns": 5,
+        "rows": [
+          [
+            "Discipline",
+            "Core Question It Answers",
+            "Primary Focus",
+            "Key Responsibilities",
+            "Typical Deliverables"
+          ],
+          [
+            "Data strategy",
+            "”Why are we investing in data?”",
+            "Business goals, priorities, and long-term vision",
+            "Align data initiatives with business objectives, identify capabilities, prioritize investments",
+            "Data roadmap, modernization plan, AI and analytics strategy"
+          ],
+          [
+            "Data governance",
+            "“What rules should guide data usage?”",
+            "Policies, ownership, accountability, and compliance",
+            "Define standards, stewardship, quality requirements, and regulatory controls",
+            "Governance framework, ownership model, data policies, business glossary"
+          ],
+          [
+            "Data management",
+            "”How is data managed day to day?”",
+            "Operational processes and technology execution",
+            "Data integration, storage, quality management, security, access control, lifecycle management",
+            "Data platforms, integration pipelines, quality processes, security controls"
+          ],
+          [
+            "Data architecture",
+            "”How should enterprise data be structured?”",
+            "Data models, platforms, and technical design",
+            "Design storage, integration, and information flows",
+            "Data architecture blueprint and technology stack"
+          ],
+          [
+            "Data culture & literacy",
+            "”How do people use data effectively?”",
+            "Adoption, education, and decision-making behavior",
+            "Build data skills, encourage data sharing, improve data-driven decision-making",
+            "Training programs, adoption initiatives, literacy frameworks"
+          ]
+        ]
+      }
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 22,
+      "cited_text": "Clearly define the requirements, record them (e.g. JIRA, etc), and get sign-off from the stakeholders. 2.3. End-user validation Provide end-users with sample data they can analyze (if possible, in the same format as the expected output). Ask the end-users to validate the data (with a timeline). End-users have a deep understanding of data distribution and business rules. Validation includes ensuring that the data has expected business metrics, can be “sliced and diced” as needed and is easy to use by the end-user. This also creates an opportunity to observe the access patterns, such as what filters and columns are being used often."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 23,
+      "cited_text": "Lineage Native Key Management KMS/KTS Native Malware & Harmful Code Protection TrendMicro Leveraged User Identity NDC AD Leveraged Application Access Kerberos Native User Access Launchpad Leveraged Inventory/System Management Dell KACE Leveraged Vulnerability Scanning MVM Leveraged Software Vulnerability & Memory Protection EMET Leveraged 5-1 5.0 DATA GOVERNANCE FRAMEWORK A Data Governance Framework will be built for the NASA HHPC program to ensure clear communication within the IMPALA team and across all organizations that it touches and to maintain scope and focus, establish accountabilities, and define measurable successes.  The details of the Data Governance Framework are presented in the Data Governance Framework document."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 24,
+      "cited_text": "Data from data sources such as the Electronic Medical Record (EMR), the Lifetime Surveillance of Astronaut Health (LSAH) and Medical Evaluation Document part B (MEDB), as well as future data sources, will be ingested into the IMPALA data nodes.  Layout and landing zone information as well as the governance processes for data loads are in the Data Governance Framework document. As stated in section 4.2, the IMPALA Platform leverages the following existing processes and tools within the MEME environment for health management and security posture:"
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 25,
+      "cited_text": "Figure 4.5-2 User Authentication process overview Service accounts are created within the IMPALA platform for each component to communicate with the data reservoir.   These service accounts are created in Kerberos Key Distribution Center (KDC) so each service has its own unique credentials (as keytabs) to access the data in the data reservoir and to execute tasks against that data.  This process is described in detail in section 7. For authorization, the IMPALA system leverages a role-based access control system at the data and component layers of the platform.  It also leverages groups defined in active directory via a one way trust between the NDC active directory and the Kerberos KDC.  Sentry, described in more detail in section 7, is used to assign privileges based on roles to each data entity within the IMPALA platform."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 26,
+      "cited_text": "Apache Sentry maps users and groups defined within the NDC active directory, as well as component principals defined within the KDC, to roles within the IMPALA data reservoir.  IMPALA administrators, based on guidance from the data governance board, create the roles within the IMPALA data reservoir and map these roles to the NDC active directory groups and component principals.  Privileges to read, write or both are granted to the individual roles for the data entities within the IMPALA platform via policy files or directly using GRANT options within the Sentry Service."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 27,
+      "cited_text": "With Sentry we gain the following RBAC (role-based access control) features for the IMPALA platform: Secure authorization: Sentry provides the ability to control and enforce access to data and/or privileges on data for authenticated users. Fine-grained access control: Sentry provides support for fine-grained access control to data and metadata. Sentry allows access control at the server, database, table, and view scopes at different privilege levels including select, insert, and all — allowing administrators to use views to restrict access to columns or rows. Administrators can also mask data within a file as required by leveraging Sentry and views with case statements or User-Defined Functions (UDF)s. Role-based authorization: Sentry supports ease of administration through role-based authorization; you can easily grant multiple groups access to the same data at different privilege levels. For example, for a particular data set you may give your HHPIT security team rights to view all columns, your MEME admins rights to view only non-sensitive or non-PII (personally identifiable information) columns.  These rights also govern the ingest processing pipeline through the user roles for inserts of new data into HDFS. Multi-tenant administration: Sentry allows permissions on different data sets to be delegated to different administrators. In the case of Hive/Apache Impala, Sentry allows administration of privileges at the level of a database/schema. Unified platform: Sentry provides a unified platform for securing data; it uses existing Hadoop Kerberos security for authentication. In addition, the same Sentry policy can be enforced while accessing data through either Hive or Impala."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 28,
+      "cited_text": "Adoption, education, and decision-making behavior Key Responsibilities Align data initiatives with business objectives, identify capabilities, prioritize investments Define standards, stewardship, quality requirements, and regulatory controls Data integration, storage, quality management, security, access control, lifecycle management Design storage, integration, and information flows Build data skills, encourage data sharing, improve data-driven decision-making Typical Deliverables Data roadmap, modernization plan, AI and analytics strategy"
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 29,
+      "cited_text": "Governance framework, ownership model, data policies, business glossary Data platforms, integration pipelines, quality processes, security controls Data architecture blueprint and technology stack Training programs, adoption initiatives, literacy frameworks 4 Best Practices for Managing Data Within the Organization Only 31% of business executives fully trust the data they receive. To position your organization among those that do so, we recommend that you follow these four best practices. Enterprise Data Management Best Practices"
+    }
+  ]
+}

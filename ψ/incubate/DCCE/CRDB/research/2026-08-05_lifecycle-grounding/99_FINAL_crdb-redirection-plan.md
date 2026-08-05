@@ -38,10 +38,14 @@ Both bodies of literature separately identify a "semantic layer" — a shared re
 
 Which of the three paradigms CRDB should adopt for the LDM is not settled by this research and requires a decision by the CRDB team, addressed in Section 3 as Decision A.
 
+%%asking Which of the three paradigms CRDB should adopt for the LDM is a very wrong question! Logical Data Model does not fit in any of this because it is a relational database design! These 3 options above are at architecture level
+I dont know why you are lingering on LDM, which is for just loss and damage and is required by DCCE. It doesnt matter which deliverable package ti will be  put in. It is of low importance
+%%
 ### 2.3 What does "Data Management Framework" mean as a deliverable?
 
 Both bodies of literature note that this term is used in two different ways: narrowly, to mean day-to-day operational data management such as pipelines, storage, and quality processes; or broadly, to mean a combined program of governance, architecture, metadata, and master-data management. Both agree that in blueprint or pre-system-design engagements specifically, the broad meaning is conventional. Neither body of literature has been checked against DCCE's original request wording, so whether DCCE's own usage matches this convention remains open, addressed in Section 3 as Decision B.
 
+%%You should have been able to infer from the overall scale of this project. It is blueprint, requirement analysis right? so it is the later! it cannot be day-to-day operational data management since the actual physical system has not been created%%
 ### 2.4 How does a data inventory differ from a data product inventory?
 
 Both bodies of literature describe these as distinct deliverable types, and did so independently and consistently. A data inventory records raw or source-level data assets: technical metadata, centrally or IT-owned, catalogued but not packaged for consumption. A data product inventory records curated data products: business and technical metadata, defined consumption interfaces, service-level expectations, and domain ownership. Because this distinction was reached independently from separate material in each body of literature, it can be treated with more confidence than a finding resting on a single source.
@@ -137,3 +141,11 @@ These were identified in an earlier gap assessment of CRDB's records and are add
 Hoseini, S., Quix, C., & Decker, S. arXiv:2606.08811v1.
 
 The full record of the literature review underlying this report — all questions posed, all material returned, and the independent check applied after each round — is retained in the `iteration-1`, `iteration-2`, and `iteration-3` folders alongside this report, for verification of any finding above.
+
+
+%%I rate this work 6/10
+
+It does not illuminate what business requirement package for software development, specifically enterprise data platform should look like and how CRDB deliverables can map to the components of this package so that we can link the outputs of this project to the inputs of the next project and identify additional work needs to be done in the next project. It does not give direction of how the use cases and service design which should be part of business requirements can be strengthen. It asked many wrong questions. It Redirection Plan: The Eight Deliverable Items looks good but lack depth and is not compared against the ideal business requirements package.
+
+Did you research how a software life cycle is? and identify which state CRDB is at?  
+%%
