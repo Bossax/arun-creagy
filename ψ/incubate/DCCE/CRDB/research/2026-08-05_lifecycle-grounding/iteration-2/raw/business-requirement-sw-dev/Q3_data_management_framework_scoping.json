@@ -1,0 +1,144 @@
+{
+  "answer": "In a standard business-requirements deliverable set, an overarching **Enterprise Data Management (EDM) Framework** is scoped as a holistic umbrella that **combines both** strategic, governance-oriented processes and technological, operational solutions [1]. \n\nEDM itself is traditionally defined across two intertwined aspects of managing data: the **process** (policies, rules, and governance practices regulating collection and use) and the **technology** (the physical infrastructure, tools, and pipeline components that execute those rules) [2]. \n\nHowever, to maintain clear boundaries, avoid typical project failures, and ensure proper ownership, modern requirements engineering strictly separates these two areas into distinct, specialized deliverables within a BRD or SRS [3-5]:\n\n### 1. Scoped as a Governance & Standards Artifact: **Data Governance**\nThis discipline answers the core question: **\"What rules should guide data usage?\"** [3, 5] It represents the policy, stewardship, and compliance layer that dictates standard business definitions and boundaries [3, 5].\n*   **Primary Focus:** Policies, ownership, organizational accountability, data standards, and regulatory compliance (such as GDPR or HIPAA) [3, 5, 6].\n*   **Key Responsibilities:** Defining data standards, establishing stewardship roles, setting quality requirements, and establishing regulatory controls [3].\n*   **Typical Deliverables:** \n    *   **Data Governance Framework:** High-level policy document detailing standard practices and guiding principles [3, 7].\n    *   **Data Ownership & Stewardship Model:** Map of roles and business unit accountabilities [3, 8].\n    *   **Data Policies & Business Glossary:** Standardized naming conventions, definitions, and compliance controls [3, 6].\n\n### 2. Scoped as an Operational Capability: **Data Management**\nThis discipline answers the core question: **\"How is data managed day to day?\"** [3, 9] It represents the execution layer where governance policies are implemented through physical pipelines, software tools, and technical processes [5].\n*   **Primary Focus:** Day-to-day operational execution, technical processes, and data system integration [3, 5].\n*   **Key Responsibilities:** Constructing data integration pathways, handling storage, and implementing active controls for data quality, security, and access [3].\n*   **Typical Deliverables:**\n    *   **Data Platforms:** Scalable storage and processing systems (like cloud warehouses or lakes) [3, 10].\n    *   **Integration Pipelines (Data Ops):** ETL/ELT workflows that ingest, aggregate, and transform data [3, 11, 12].\n    *   **Operational Quality Processes & Security Controls:** Automated profiling, validation checks, role-based access controls, and data erasure/archiving mechanisms [3, 13, 14].\n\n### Summary of the Scoping Boundary\nWhen compiling your business-requirements deliverable set, the **Data Governance Framework** acts as the document that **sets the rules, metadata, and standards**, while **Data Management** outlines the **requirements for the pipelines and operational platforms** that will technically enforce those rules [3, 5]. They are supported by **Data Architecture**, which provides the physical design and blueprints detailing how the data models and technology stacks will be structured to satisfy both [3].\n\n***\n\n📋 If you are drafting a project charter, I can help you compile a high-level Table of Contents for an Enterprise Data Management (EDM) Framework that cleanly maps these policy deliverables alongside your technical pipeline requirements.",
+  "conversation_id": "8f8ae5e6-85be-4de5-8aea-56188a4c08ff",
+  "sources_used": [
+    "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "dca40f20-a255-4c48-937d-5abfbe6d5dac"
+  ],
+  "citations": {
+    "1": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "2": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "3": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "4": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "5": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "6": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "7": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "8": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "9": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "10": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "11": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "12": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "13": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "14": "e4e1835f-3ede-4158-b4db-97e6919a242f"
+  },
+  "references": [
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 1,
+      "cited_text": "Thus, Enterprise Data Management (EDM) can be defined as a comprehensive framework that combines both strategic processes and technological solutions necessary to manage an organization's data and is aimed at ensuring that data is reliable, secure, and readily available to support business decisions. Enterprise data spans multiple business domains and functions. It typically includes: customer data (e.g., contact details, interaction history) transactional data (orders, payments) operational data (inventory levels, logistics flows) financial data (revenue, margins, forecasts)."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 2,
+      "cited_text": "What Is Enterprise Data Management? The term enterprise data management, or EDM, can be applied to two different but intertwined aspects of managing the organization's data assets: Process : Enterprise data management is a set of policies, governance practices, and rules that regulate data collection, maintenance, security, and use. Technology : Enterprise data management is the totality of infrastructure components, tools, and software solutions that facilitate data collection, integration, and management."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 3,
+      "cited_text": "Organizations often use data management, data governance, and data strategy interchangeably. While closely connected, each serves a distinct role in helping organizations turn data into a business asset. The table below clarifies how these disciplines work together. <cited_table>",
+      "cited_table": {
+        "num_columns": 5,
+        "rows": [
+          [
+            "Discipline",
+            "Core Question It Answers",
+            "Primary Focus",
+            "Key Responsibilities",
+            "Typical Deliverables"
+          ],
+          [
+            "Data strategy",
+            "”Why are we investing in data?”",
+            "Business goals, priorities, and long-term vision",
+            "Align data initiatives with business objectives, identify capabilities, prioritize investments",
+            "Data roadmap, modernization plan, AI and analytics strategy"
+          ],
+          [
+            "Data governance",
+            "“What rules should guide data usage?”",
+            "Policies, ownership, accountability, and compliance",
+            "Define standards, stewardship, quality requirements, and regulatory controls",
+            "Governance framework, ownership model, data policies, business glossary"
+          ],
+          [
+            "Data management",
+            "”How is data managed day to day?”",
+            "Operational processes and technology execution",
+            "Data integration, storage, quality management, security, access control, lifecycle management",
+            "Data platforms, integration pipelines, quality processes, security controls"
+          ],
+          [
+            "Data architecture",
+            "”How should enterprise data be structured?”",
+            "Data models, platforms, and technical design",
+            "Design storage, integration, and information flows",
+            "Data architecture blueprint and technology stack"
+          ],
+          [
+            "Data culture & literacy",
+            "”How do people use data effectively?”",
+            "Adoption, education, and decision-making behavior",
+            "Build data skills, encourage data sharing, improve data-driven decision-making",
+            "Training programs, adoption initiatives, literacy frameworks"
+          ]
+        ]
+      }
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 4,
+      "cited_text": "What are the most common enterprise data management failures? The most common EDM failures include poor data quality, unclear ownership, weak governance, fragmented systems, and the treatment of data management as a technology project rather than a business initiative. Many organizations also struggle because they focus on tools before establishing data standards, governance processes, and business objectives. As a result, data remains inconsistent, difficult to trust, and underutilized across the organization."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 5,
+      "cited_text": "What is the difference between data management, data governance, and data strategy? Data strategy defines how data supports business objectives and long-term priorities. Data governance establishes the rules, ownership structures, and policies that guide how data should be managed. Data management is the operational discipline that implements those policies through processes, technologies, and controls for data quality, security, access, integration, and lifecycle management. Together, these disciplines create a foundation for trusted analytics, compliance, and data-driven decision-making."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 6,
+      "cited_text": "An enterprise data management framework establishes organization-wide data governance, defines the data management architecture, and helps foster a data-driven culture. Enterprise Data Governance Data governance focuses on processes, structures, policies, procedures, and master data management practices implemented across the organization to ensure data security, quality, and integrity. It's a subdomain of data management that: States data goals (e.g., maintaining compliance, improving quality) and metrics to track Outlines roles related to data management (data owners, data stewards, stakeholders) and their duties Defines data standards regarding data formats, models, metadata, naming conventions, etc. Maps data flows and supports metadata management to outline data collection, storage, movement, and archival processes. Establishes auditing and testing procedures."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 7,
+      "cited_text": "A data governance framework defines best practices, standardized roles, processes, technologies, and guiding principles for managing data assets across their lifecycle, in alignment with the data strategy of the organization. It defines the governance principles of the data ecosystem of an organization. Data architecture refers to the technical design of multiple data-related components and their interactions. It should be developed according to the guidelines and goals defined in the data strategy and governance framework."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 8,
+      "cited_text": "To reap the benefits listed above, you need a comprehensive EDM strategy. You can focus on the following steps to develop an effective enterprise data management strategy: Assess the current state : Evaluate existing data architecture, data quality, governance processes, and key pain points Define strategic objectives : Align data initiatives with business goals such as operational efficiency, advanced analytics, or regulatory compliance Establish governance and ownership : Define roles, responsibilities, and accountability for data across business units Design target data architecture : Select appropriate data platforms, integration approaches, and storage solutions Implement data quality and security controls : Ensure data accuracy, consistency, and protection across its lifecycle Enable analytics and data usage : Support business users with reliable access to data and self-service data analytics solutions Develop an implementation roadmap : Prioritize initiatives, define timelines, and allocate resources Monitor and optimize performance : Continuously track KPIs and refine the strategy based on outcomes."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 9,
+      "cited_text": "Discipline Data strategy Data governance Data management Data architecture Data culture & literacy Core Question It Answers ”Why are we investing in data?” “What rules should guide data usage?” ”How is data managed day to day?” ”How should enterprise data be structured?” ”How do people use data effectively?” Primary Focus Business goals, priorities, and long-term vision Policies, ownership, accountability, and compliance Operational processes and technology execution Data models, platforms, and technical design"
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 10,
+      "cited_text": "Monolithic Architecture vs Distributed Data Mesh Modern enterprise data management architectures increasingly rely on cloud-based data platforms to support scalability and advanced analytics. Cloud data management enables organizations to process large volumes of structured and unstructured data with scalable data storage, while optimizing infrastructure costs. At the same time, it introduces additional requirements for data security, access controls, and regulatory compliance, especially in multi-cloud or hybrid environments."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 11,
+      "cited_text": "Our solution To counter data silos, we: Implement a data integration solution to unify data from multiple sources into a single source of truth while preserving data lineage (data warehouse/data lake) Ensure seamless access to data for business users Enable a 360-degree view of your enterprise data with intuitive data visualization and presentation tools, for example, like those we implemented for HaulHub . Need a guide on building a single source of truth? Learn how to build a data warehouse from our experts."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 12,
+      "cited_text": "End-user validating the data may create new requirements and business rule checks. Record any new requirements or changes (e.g. JIRA, etc), and get sign-off from the stakeholders. Do not start work on the transformation logic until you get a sign-off from the stakeholders. 2.4. Deliver iteratively Break down a large project into smaller parts. Work with the stakeholders to decide on a timeline and prioritization. E.g. If you are building an ELT pipeline (REST API => dashboard), you can split it into modeling the data, pulling data from a REST API, loading it into a raw warehouse table, & building a dashboard for the modeled data."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 13,
+      "cited_text": "Key Components of Enterprise Data Management Data Quality Management Data quality management encompasses practices, processes, and tools for ensuring your data remains accurate, complete, reliable, consistent, and timely. It can include: Data profiling to map existing data and its structure and evaluate its quality Automated data cleansing and standardization to prevent errors and ensure data usability and reliability Data deduplication, merge, and survivorship rules Validation checks to verify data quality Data quality metrics monitoring (e.g., consensus, relevance, validity) Regular data quality audits and optimization."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 14,
+      "cited_text": "A data security management system is the ensemble of measures taken to prevent unauthorized access to, alteration, or destruction of data. These measures concern data loss prevention, key management, cloud data security, access control, data governance, and authentication and authorization. Common data security measures include data encryption at rest and in transit, data masking, timely data erasure, data resiliency (disaster recovery, backups), and multi-factor authentication. Dmytro Tymofiiev Delivery Manager at SPD Technology"
+    }
+  ]
+}

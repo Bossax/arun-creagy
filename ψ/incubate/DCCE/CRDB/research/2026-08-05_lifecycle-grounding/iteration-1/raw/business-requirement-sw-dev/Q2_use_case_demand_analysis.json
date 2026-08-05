@@ -1,0 +1,171 @@
+{
+  "answer": "In standard software requirements specification (SRS) and requirements-engineering practice, a comprehensive **\"use case and demand analysis\"** serves as the vital bridge between high-level business goals and physical system design [1, 2]. \n\nBased on your project documentation and requirements-gathering sources, here is what constitutes the minimum required content of this deliverable, followed by the specific criteria that distinguish a **validated use case** from a purely **descriptive one**.\n\n---\n\n### Part 1: Minimum Required Content of a Use Case & Demand Analysis\n\nTo prevent scope creep and align technical teams, a standard requirements/demand analysis deliverable (such as a Business Requirements Document (BRD) or Product Requirements Document (PRD)) must contain the following core sections [3-5]:\n\n1. **Strategic Context & Business Drivers:**\n   * **Problem Statement:** A clear description of the current operational bottleneck or pain point [6].\n   * **Measurable Business Impact:** The strategic \"why\" behind the initiative, detailing how the deliverable moves the needle on business goals, bottom-line revenue, or company OKRs [7, 8].\n2. **Actor Profiles & Access Preferences:**\n   * **Target Users (Personas):** Identification of the specific groups of end-users (e.g., data scientists, business users, software engineers, or external clients) [9].\n   * **Access Patterns:** Documented user preferences for interacting with the system (e.g., via SQL, interactive dashboards, REST APIs, or cloud storage) alongside expected latency requirements [7].\n3. **Process Flow & Semantic Models:**\n   * **\"As-Is\" vs. \"Proposed\" Processes:** A mapping of how work flows today versus how it will flow in the proposed system [4].\n   * **Semantic Understanding:** A description of what the data fields represent in the real world and the business processes that generate them [7].\n4. **Detailed Functional Requirements:**\n   * A categorized list of system features and behaviors (e.g., data ingestion frequency, historical data retention rules, and automated alerts) [7, 10].\n   * Each requirement must carry a specific priority rating (such as *Critical, High, Medium, Low, or Future*) to establish what constitutes a Minimum Viable Product (MVP) [4, 11].\n5. **Non-Functional Requirements (NFRs) & Constraints:**\n   * Technical constraints, including data volume caveats (e.g., seasonality, data skew), compliance requirements (e.g., medical PII or security auditing), and platform performance expectations [7, 12, 13].\n6. **Explicit, Testable Acceptance Criteria:**\n   * Predefined definitions of success for satisfying each requirement. Requirements must be isolated so that each can be validated independently [5, 14].\n\n---\n\n### Part 2: Descriptive vs. Validated Use Cases\n\nThe critical pivot point in requirements engineering occurs when a use case moves from being merely \"descriptive\" to \"validated.\" \n\n| Dimension | Descriptive Use Case | Validated Use Case |\n| :--- | :--- | :--- |\n| **Source of Truth** | Based on high-level stakeholder wishes, unverified assumptions, and static text documents [3, 15]. | Rooted in empirical end-user feedback and observed interactions with actual system prototypes [14, 16]. |\n| **Typical Phrasing** | Characterized by subjective, non-testable goals (e.g., \"The data pipeline must be fast\" or \"The dashboard should be easy to use\") [7, 14]. | Formulated with isolated, testable criteria and quantitative metrics (e.g., \"Reduce weekly account prep time by 30%\") [13, 14]. |\n| **Stakeholder Status** | Stakeholder conflicts are unresolved; different business units may have contradictory assumptions about scope [14, 17]. | Conflicts are reconciled across impacted business units; stakeholders have formally signed off on a unified requirements baseline [14, 16, 18]. |\n| **Logic Verification** | transformation logic is designed based on what end-users *say* they want, leading to a high risk of design failure [3]. | Back-end development or transformation logic does not begin until the business rules and metrics are validated using representative data [16, 18]. |\n\n#### What Standard Practice Demands to \"Validate\" a Use Case:\n1. **End-User Validation with Sample Data:** A use case is not validated until end-users are provided with representative **sample data** in the exact format they expect to receive (e.g., a sample database view or dashboard mockup) [16]. Users must analyze this sample to verify that the business logic behaves as expected under real-world usage patterns [16].\n2. **Observation of Real Access Patterns:** Instead of relying on what users think they want, the analyst observes the users’ actual interactions with the sample data—noting which columns they query, which filters they use most often, and what data caveats appear [7, 16].\n3. **recorded Sign-Off:** Once conflicts are reconciled and the business metrics are proven accurate via sample testing, the stakeholders record a formal sign-off [14, 18]. Only after this validation milestone does the team baseline the requirements and initiate physical system design and ETL engineering [2, 18].\n\n***\n\n📋 I can help you draft a standardized **Use Case Validation Checklist** based on these principles to use with your stakeholders during your next project.",
+  "conversation_id": "8f8ae5e6-85be-4de5-8aea-56188a4c08ff",
+  "sources_used": [
+    "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "0f98105a-e702-4086-8695-8219087f4306",
+    "e68f4b12-261c-4818-a79b-fc2c022e20b1"
+  ],
+  "citations": {
+    "1": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "2": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "3": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "4": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "5": "0f98105a-e702-4086-8695-8219087f4306",
+    "6": "0f98105a-e702-4086-8695-8219087f4306",
+    "7": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "8": "0f98105a-e702-4086-8695-8219087f4306",
+    "9": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "10": "0f98105a-e702-4086-8695-8219087f4306",
+    "11": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "12": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "13": "0f98105a-e702-4086-8695-8219087f4306",
+    "14": "e68f4b12-261c-4818-a79b-fc2c022e20b1",
+    "15": "0f98105a-e702-4086-8695-8219087f4306",
+    "16": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "17": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "18": "dca40f20-a255-4c48-937d-5abfbe6d5dac"
+  },
+  "references": [
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 1,
+      "cited_text": "Organizations often use data management, data governance, and data strategy interchangeably. While closely connected, each serves a distinct role in helping organizations turn data into a business asset. The table below clarifies how these disciplines work together. <cited_table>",
+      "cited_table": {
+        "num_columns": 5,
+        "rows": [
+          [
+            "Discipline",
+            "Core Question It Answers",
+            "Primary Focus",
+            "Key Responsibilities",
+            "Typical Deliverables"
+          ],
+          [
+            "Data strategy",
+            "”Why are we investing in data?”",
+            "Business goals, priorities, and long-term vision",
+            "Align data initiatives with business objectives, identify capabilities, prioritize investments",
+            "Data roadmap, modernization plan, AI and analytics strategy"
+          ],
+          [
+            "Data governance",
+            "“What rules should guide data usage?”",
+            "Policies, ownership, accountability, and compliance",
+            "Define standards, stewardship, quality requirements, and regulatory controls",
+            "Governance framework, ownership model, data policies, business glossary"
+          ],
+          [
+            "Data management",
+            "”How is data managed day to day?”",
+            "Operational processes and technology execution",
+            "Data integration, storage, quality management, security, access control, lifecycle management",
+            "Data platforms, integration pipelines, quality processes, security controls"
+          ],
+          [
+            "Data architecture",
+            "”How should enterprise data be structured?”",
+            "Data models, platforms, and technical design",
+            "Design storage, integration, and information flows",
+            "Data architecture blueprint and technology stack"
+          ],
+          [
+            "Data culture & literacy",
+            "”How do people use data effectively?”",
+            "Adoption, education, and decision-making behavior",
+            "Build data skills, encourage data sharing, improve data-driven decision-making",
+            "Training programs, adoption initiatives, literacy frameworks"
+          ]
+        ]
+      }
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 2,
+      "cited_text": "THE IMPALA ENCRYPTION COMPONENTS .................................................................................... 7-21 1-1 1.0 INTRODUCTION The System Design Document (SDD) is a compendium of three documents, providing a single source for requirements, system design, and data design.  The functional and non-functional requirements are drawn from the Information Management Platform for Data Analytics and Aggregation (IMPALA) System Requirements document.  The three elements of requirements, user design, and data design form the baseline from which to build a set of more technical system design specifications for the final product, providing both high-level system design and low-level detailed design."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 3,
+      "cited_text": "How to gather requirements for your data project – Start Data Engineering Start Data Engineering Home Subscribe Courses & Books About How to gather requirements for your data project Frustrated trying to pry data pipeline requirements out of end users? Is scope creep preventing you from delivering data projects on time? You assume that the end-users know (and communicate) exactly what they want, but that is rarely the case! Adhoc feature/change requests throw off your delivery timelines. You want to deliver on time and make an impact, but you are interrupted constantly! Requirements gathering is rough, but it doesn't have to be! We go over five steps you can follow, to work with the end-user to define requirements, validate data before wasting engineering hours, deliver iteratively, and handle new feature/change requests without context switching."
+    },
+    {
+      "source_id": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+      "citation_number": 4,
+      "cited_text": "SAMPLE BUSINESS REQUIREMENTS DOCUMENT TEMPLATE SAMPLE BUSINESS REQUIREMENTS DOCUMENT TEMPLATE VERSION HISTORY VERSION APPROVED BY REVISION DATE DESCRIPTION OF CHANGE AUTHOR NOTE TO USER: Overwrite the sample text included in this template to complete your project’s business requirements document. TABLE OF CONTENTS 1. EXECUTIVE SUMMARY SNAPSHOT 3 2. PROJECT DESCRIPTION 4 3. PROJECT SCOPE 5 4. BUSINESS DRIVERS 6 5. CURRENT PROCESS 7 6. PROPOSED PROCESS 8 7. FUNCTIONAL REQUIREMENTS 9 PRIORITY 10 REQUIREMENTS CATEGORIES (RC1) 10"
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 5,
+      "cited_text": "The Product Requirements Document (PRD): Definition and Purpose What defines a PRD? A PRD is the working document product managers use to describe what a team should build and why it matters. It provides engineering and design with clarity on (1) scope, (2) constraints, (3) acceptance criteria, and (4) expected customer value . The goal is alignment. A well-written product requirements document outlines the problem to solve, the intended outcome, and the key requirements needed to deliver that outcome. When it is clear and current, it reduces rework and supports faster decision making across technical teams."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 6,
+      "cited_text": "Core Components of a Traditional PRD A standard PRD often includes: Problem statement and context Target users and user insights Feature description and functional requirements Non-functional requirements and constraints Acceptance criteria and success measures Open questions and dependencies Release considerations and rollout notes Let's consider a scenario: You work on the product team for an enterprise CRM platform. Executive leadership is concerned after a major customer churned over to your competitor, citing gaps in their view of customer activity."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 7,
+      "cited_text": "2.2. Help end-users define the requirements Assume the end-users don't know everything they want or even that they will clearly define it to you. You can't get 100% of the requirements right the first time. Talk with the end-user about their objectives and their difficulties. Understanding the current status of end-user operations will provide valuable insights. The end-user might say “We want X data”. Help the end-user define requirements by asking the following questions: Business impact : How does having this data impact the business? What is the measurable improvement in the bottom line, business OKR, etc? Knowing the business impact helps in determining if this project is worth doing. Semantic understanding : What does the data represent? What business process generates this data? Knowing this will help you model the data and understand its relation to other tables in your warehouse. Data source : Where does the data originate? (an application DB, external vendor via SFTP/Cloud store dumps, API data pull, manual upload, etc). Frequency of data pipeline : How fresh does the data need to be? (n minutes, hourly, daily, weekly, etc). Is there a business case for not allowing a higher frequency? What is the highest frequency of data load acceptable by end-users? Historical data : Does historical data need to be stored? When loading data into a warehouse, the answer is usually yes. Data caveats : Does the data have any caveats? (e.g. seasonality affecting size, data skew, inability to join, or data unavailability). Are there any known issues with upstream data sources, such as late arriving data, or missing data? Access pattern : How will the end user access the data? Is access via SQL, dashboard tool, APIs, or cloud storage? In the case of SQL or dashboard access, What are the commonly used filter columns (e.g. date, some business entity)? What is the expected access latency? Business rules check (QA) : What data quality metrics do the end-users care about? What are business logic-based data quality checks? Which numeric fields should be checked for divergence (e.g. can't differ by more than x%) across data pulls? Data output requirements : What is the data output schema? (column names, API field names, Cloud storage file name/size, etc)"
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 8,
+      "cited_text": "How Do You Effectively Write a Product Strategy Document? A product strategy document gives every requirement a clear purpose by anchoring it to measurable goals and customer outcomes to align with the broader direction of the business. When maintained well, it becomes the single source of truth that guides priorities. Strong strategy documents show how each initiative supports organizational objectives, and they help teams stay aligned even as conditions shift. They clarify which outcomes matter most, whether the goal is to reduce churn for key customer segments or increase adoption of newly launched capabilities."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 9,
+      "cited_text": "The term end-users denotes people who use the output, and stakeholders denote PMs/BAs/managers. 2.1. Identify the end-users The first step is to identify the end-user(s). The request for the project usually comes up during meetings. Understanding the capabilities and preferences of the end-user is crucial for designing an appropriate solution. End-users (& their preferences) for data projects are usually one of: Data analysts/Scientists: SQL, File Business users: Dashboard, report, Excel Software engineers: SQL, APIs External clients: Cloud storage, SFTP/FTP, APIs"
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 10,
+      "cited_text": "Relevant insights or research that shapes the requirement Interviews with account teams showed that they spend several hours per week compiling updates from email, calls, and support tickets. Win–loss analysis revealed that deals are often lost when no one notices signals from executive sponsors or buying committees. REQUIREMENTS Functions requirements Create a unified account activity timeline that aggregates emails, meetings, support interactions, and key product usage events into a single view. Surface automated alerts when account health drops below a configurable threshold or when critical stakeholders engage after a period of inactivity."
+    },
+    {
+      "source_id": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+      "citation_number": 11,
+      "cited_text": "Value Rating Description 1 Critical The requirement is critical to the project’s success. Without fulfilling this requirement, the project is not possible. 2 High The requirement is high priority re the project’s success, but the project could still be implemented in a minimum viable product (MVP) scenario. 3 Medium The requirement is important to the project’s success, as it provides value, but the project could still be implemented in an MVP scenario. 4 Low The requirement is low priority (i.e., it would be nice to have), but the project’s success is not dependent upon it."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 12,
+      "cited_text": "2. The NASA/Wyle Technical Review Board (TRB) must approve all software and hardware technologies and products selected by the Contractor before implementation. 3. The IMPALA Platform constraints may be influenced by NASA JSC Security center policies, procedures and protocols. 3-1 3.0 DESIGN CONSIDERATIONS 3.1 GOALS The goals of the IMPALA system are to: Increase accessibility to accurate and actionable data without compromising security Increase confidence in data through defined data governance processes and controls Enable users to improve the quality of data analysis, reports, recommendations, and decisions substantiated by data stored in the IMPALA Platform Seamlessly ingest, integrate, and manage clinical, life sciences, epidemiological, environmental, laboratory and astronaut's longitudinal health monitoring and surveillance data Provide automated processes to extract, cleanse, validate, transform and curate data in multiple formats from a variety of sources based on analyst defined rules and controls Extract and store metadata and establish relationship between known entities and fields in the source data Provide a highly scalable and available infrastructure to store, process and analyze data as well as continuously refresh the data from the source data Facilitate stakeholder collaboration and real-time data sharing internally and externally with trusted partners, universities and other government agencies to facilitate collateral exploratory analyses and hypothesis testing by trusted outsiders and for more extensive peer review Provide a secure single point of access to the data in the platform for all approved users across multiple end user devices (mobile, desktop, laptop and tablet) with appropriate platformspecific security protocols Comply with NASA's security requirements and be certified to operate within the NASA environment and comply with federal requirements for security and handling of medical PII Interoperate with existing NASA and HHPD systems Analyze and visualize data from multiple data sources in a single unified view including data from external investigators and programs Correlate, aggregate, create and share datasets from multiple data sources for analysis by internal and external scientists as well as reuse these datasets as sources for future data requests Provide advanced analytics capabilities to perform data mining, data exploration and discovery that retains meta-data on analyses and uses of the data by all users Support timely processing and provisioning of new data sources for platform users"
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 13,
+      "cited_text": "Non-functional requirements Support performant filtering for large enterprise accounts with multi-year histories and high event volume. Comply with enterprise security and privacy standards, including field-level access controls and regional data residency where required. SUCCESS METRICS Quantitative targets Reduce average time spent on weekly account prep by at least thirty percent within two quarters of rollout. Improve renewal rate for monitored strategic accounts by at least five percentage points within one renewal cycle."
+    },
+    {
+      "source_id": "e68f4b12-261c-4818-a79b-fc2c022e20b1",
+      "citation_number": 14,
+      "cited_text": "Best Practices for Documenting Business Requirements As you work your way through the template, here are eight best-practices that will guide you in documenting the business requirements and set your development project up for success: Assign resources to write the business requirements who understand all stakeholder needs and the project's software development language. Meet with stakeholders from every business unit impacted by the project—preferably in one-on-one meetings to ensure everyone is heard. Reconcile conflicts among stakeholders who disagree on a requirement; it's critical to do so before development begins. Identify the target audience for each requirement, which will factor into the end-user testing process. Ensure each requirement is testable so that achieving it can be validated. Facilitate testing by defining each requirement separately; combining two or more into one definition may make validation impossible. Specify the exact success metrics for satisfying each requirement; “easy to use” is ambiguous and difficult to define as to when it's achieved. Leverage images, graphs, charts, diagrams, workflows, use-cases and visual prototypes to articulate the documented requirements to non-technical stakeholders."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 15,
+      "cited_text": "And when the product strategy document (another name for a PRD) is a Google Doc or Notion page that isn't integrated with the systems used for core product management activities , decisions may not be based on validated customer needs. Over time, the static nature of the file creates silos; engineering references one version while design works from another. Meanwhile, leadership reviews a deck that no longer reflects current thinking. The result is predictable: decisions drift as the PRD loses its value as a reliable source of truth."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 16,
+      "cited_text": "Clearly define the requirements, record them (e.g. JIRA, etc), and get sign-off from the stakeholders. 2.3. End-user validation Provide end-users with sample data they can analyze (if possible, in the same format as the expected output). Ask the end-users to validate the data (with a timeline). End-users have a deep understanding of data distribution and business rules. Validation includes ensuring that the data has expected business metrics, can be “sliced and diced” as needed and is easy to use by the end-user. This also creates an opportunity to observe the access patterns, such as what filters and columns are being used often."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 17,
+      "cited_text": "design requirement project management Author Joseph Machado Published August 11, 2022 Keywords design, requirement, project management On this page 1. Introduction 2. Gathering requirements 2.1. Identify the end-users 2.2. Help end-users define the requirements 2.3. End-user validation 2.4. Deliver iteratively 2.5. Handling changing requirements/new features 3. Conclusion 4. Further reading 5. Reference 1. Introduction Data engineers are often caught off guard by undefined end-user assumptions. As a data engineer, if you feel"
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 18,
+      "cited_text": "End-user validating the data may create new requirements and business rule checks. Record any new requirements or changes (e.g. JIRA, etc), and get sign-off from the stakeholders. Do not start work on the transformation logic until you get a sign-off from the stakeholders. 2.4. Deliver iteratively Break down a large project into smaller parts. Work with the stakeholders to decide on a timeline and prioritization. E.g. If you are building an ELT pipeline (REST API => dashboard), you can split it into modeling the data, pulling data from a REST API, loading it into a raw warehouse table, & building a dashboard for the modeled data."
+    }
+  ]
+}

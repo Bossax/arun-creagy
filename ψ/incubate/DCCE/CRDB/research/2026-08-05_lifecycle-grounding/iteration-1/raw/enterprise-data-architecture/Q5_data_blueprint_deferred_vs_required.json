@@ -1,0 +1,366 @@
+{
+  "answer": "When developing an early-stage, pre-system-design data blueprint, the organizing rule is to **\"build the rules before the pipes\"** [1-3]. Organizations that prioritize tool selection or immediate ingestion pipeline builds often face expensive rework and accumulate severe architectural debt [4, 5]. \n\nTo build a sustainable roadmap, certain governance, strategic, and conceptual elements must exist at the draft stage, while technical execution and complex organizational models can be deferred to later phases [6-9].\n\n---\n\n### **What Must Exist at the Draft Stage (The Non-Negotiables)**\n\nAt the initial discovery and assessment stage (Months 0–3), the blueprint must focus on establishing a conceptual baseline and securing organizational alignment [6]:\n\n*   **A Documented Current-State Baseline:** An inventory of your existing data systems, owners, and consumers, aiming for approximately 80% coverage rather than exhaustive perfection [6].\n*   **Identification of the Top 10 Critical Data Assets:** To prevent \"boiling-the-ocean syndrome,\" you must narrow your initial scope and document only the top 10 most critical data assets by business impact [6, 10].\n*   **6–10 High-Level Architecture Principles:** A draft document laying out the core rules that all future systems must conform to [6, 11].\n*   **Regulatory and Compliance Mapping:** A clear mapping of primary regulatory and compliance obligations (such as GDPR, CCPA, or HIPAA) to your specific data asset categories [6, 12].\n*   **Core Governance RACI & Stewardship Roles:** A defined governance operating model [13]. You must establish who is accountable and responsible for defining data quality thresholds, resolving data definition conflicts, and approving new data source onboarding [14].\n*   **Initial Business Glossary & KPI Definitions:** A central repository defining the business meaning of data in human language [15]. Centralizing these metrics early prevents the \"spreadsheet of truth\" problem, where different departments calculate identical business KPIs in inconsistent, conflicting ways [16, 17].\n\n---\n\n### **What Can Legitimately Be Deferred to Later Phases**\n\nTo avoid over-engineering and \"modern data stack fatigue,\" several components should be kept out of your early-stage draft [18, 19]:\n\n*   **Specific Technology Stack & Tool Selection:** Choosing specific vendors or platforms (for storage, ingestion, or orchestration) should be deferred until your requirements and patterns are fully designed [5, 7]. Deciding on a platform prematurely often forces you into expensive tools shaped to the wrong problems [5].\n*   **Production Ingestion & Pipelines:** The physical build of data ingestion pipelines, target storage architectures (warehouses, lakes, or lakehouses), and automated lineage tracking catalogs should be deferred to Phase 3 (Build & Integrate) [8]. \n*   **Decentralized Patterns like Data Mesh:** Transitioning data ownership to a full Data Mesh requires significant organizational maturity [20]. Trying to implement this model prematurely creates decentralized chaos instead of distributed ownership [20]. The blueprint should plan to start centralized, shift to a hybrid Center of Excellence (CoE), and defer full domain-driven ownership until the organization reaches a high level of operational maturity [21, 22].\n*   **Real-Time Streaming Workloads:** Building Kappa or Lambda streaming architectures for sub-second latencies and operational data flows should be deferred until batch-oriented, steady-state analytical pipelines are validated [9, 23].\n*   **Advanced AI/ML Infrastructure:** Machine learning feature stores, vector databases, and real-time AI serving environments are highly complex and can be deferred until the underlying data foundation is proven trustworthy [9, 19].\n*   **Automated Quality Monitoring across All Domains:** While you must define quality rules for your top 10 assets early [7], the deployment of automated data quality \"circuit breakers\" and anomaly alerting across secondary domains can be deferred to scaling and optimization phases [9].\n\n---\n\n📊 I can help you draft the 6–10 foundational architecture principles or structure a governance RACI matrix for your top 10 critical data assets to kickstart your Phase 1 blueprint.",
+  "conversation_id": "b7785ec2-b06c-46b5-bf6e-f1ff3235d142",
+  "sources_used": [
+    "3226ed19-da35-4ccd-b02e-adb37035551b",
+    "d0299293-b140-42c5-b204-731800e1688f",
+    "dfd61006-6db9-4046-a052-44523bf8cace",
+    "09e57aa3-0b7a-4756-8b74-f923200a2138",
+    "15a37f18-25f8-4a5a-958f-fbf966ed7684"
+  ],
+  "citations": {
+    "1": "3226ed19-da35-4ccd-b02e-adb37035551b",
+    "2": "3226ed19-da35-4ccd-b02e-adb37035551b",
+    "3": "3226ed19-da35-4ccd-b02e-adb37035551b",
+    "4": "d0299293-b140-42c5-b204-731800e1688f",
+    "5": "3226ed19-da35-4ccd-b02e-adb37035551b",
+    "6": "3226ed19-da35-4ccd-b02e-adb37035551b",
+    "7": "3226ed19-da35-4ccd-b02e-adb37035551b",
+    "8": "3226ed19-da35-4ccd-b02e-adb37035551b",
+    "9": "3226ed19-da35-4ccd-b02e-adb37035551b",
+    "10": "3226ed19-da35-4ccd-b02e-adb37035551b",
+    "11": "3226ed19-da35-4ccd-b02e-adb37035551b",
+    "12": "3226ed19-da35-4ccd-b02e-adb37035551b",
+    "13": "3226ed19-da35-4ccd-b02e-adb37035551b",
+    "14": "3226ed19-da35-4ccd-b02e-adb37035551b",
+    "15": "dfd61006-6db9-4046-a052-44523bf8cace",
+    "16": "09e57aa3-0b7a-4756-8b74-f923200a2138",
+    "17": "09e57aa3-0b7a-4756-8b74-f923200a2138",
+    "18": "d0299293-b140-42c5-b204-731800e1688f",
+    "19": "15a37f18-25f8-4a5a-958f-fbf966ed7684",
+    "20": "3226ed19-da35-4ccd-b02e-adb37035551b",
+    "21": "3226ed19-da35-4ccd-b02e-adb37035551b",
+    "22": "3226ed19-da35-4ccd-b02e-adb37035551b",
+    "23": "3226ed19-da35-4ccd-b02e-adb37035551b"
+  },
+  "references": [
+    {
+      "source_id": "3226ed19-da35-4ccd-b02e-adb37035551b",
+      "citation_number": 1,
+      "cited_text": "• Architecture patterns: selecting the right model for your context • Enterprise data governance and security architecture • Industry-specific architecture considerations • Enterprise data architecture maturity model: score your current state • Building your enterprise data architecture: a phased implementation roadmap • Team structure, roles, and organizational readiness • Anti-patterns and failure modes that derail EDA initiatives • Build the Rules Before the Pipes • References The global enterprise data management market surpassed $111 billion in 2025—yet fewer than 25% of organizations have a documented enterprise data architecture to govern how all that investment actually flows. Billions are spent on data tools, platforms, and engineers. Then the data still can't talk to itself."
+    },
+    {
+      "source_id": "3226ed19-da35-4ccd-b02e-adb37035551b",
+      "citation_number": 2,
+      "cited_text": "Treating migration as a single event. Planning a full legacy-to-modern migration in a single \"big bang\" cutover rather than an incremental, domain-by-domain transition. Big-bang migrations have a disproportionate failure rate; the risk accumulates with every system added to the migration scope. Conclusion Build the Rules Before the Pipes Enterprise data architecture is a business strategy decision, not a technology project. That's not a tagline—it's the organizing principle that separates programs that deliver measurable ROI from those that become cautionary tales."
+    },
+    {
+      "source_id": "3226ed19-da35-4ccd-b02e-adb37035551b",
+      "citation_number": 3,
+      "cited_text": "The market is large and growing fast: $111 billion in 2025, projected to reach more than $220 billion within a decade. The organizations capturing that value aren't necessarily the ones with the most sophisticated technology stacks. They're the ones that established governance before they built pipelines, assigned ownership before they ingested data, and matched their architecture pattern to their organizational maturity rather than to the latest industry trend. Score yourself against the 5-level maturity model in this guide. If you're at Level 1 or 2, the immediate priority is governance foundation, not pattern selection. If you're at Level 3, the phased roadmap gives you the sequencing to reach Level 4. If you're already at Level 4, the anti-patterns section is probably more relevant to you than the framework comparison."
+    },
+    {
+      "source_id": "d0299293-b140-42c5-b204-731800e1688f",
+      "citation_number": 4,
+      "cited_text": "The choice in 2026 is no longer between architectures—it's whether your organization can govern, cost-control, and AI-enable whatever you build. Tools are available. Budget pressure is real. The failure mode is usually organizational, not technical. Audit tip: Run this test before any architecture decision: can your current platform serve a structured GenAI query—retrieve relevant context, apply access controls, and return a traceable result—within 48 hours of a new use case request? If not, you have architecture debt that affects AI delivery, not just analytics."
+    },
+    {
+      "source_id": "3226ed19-da35-4ccd-b02e-adb37035551b",
+      "citation_number": 5,
+      "cited_text": "8 EDA anti-patterns to watch for Tool-first thinking. Selecting the data platform before defining the architecture requirements. The sequence should always be: principles → patterns → governance model → technology selection. Organizations that reverse this sequence end up with expensive tools shaped to the wrong problems. Governance theater. Creating a Data Governance Council, RACI matrix, and data steward roles—then never actually using them to make binding decisions or enforce standards. Governance theater is identifiable by one symptom: nobody has ever said \"no\" to a data initiative on governance grounds."
+    },
+    {
+      "source_id": "3226ed19-da35-4ccd-b02e-adb37035551b",
+      "citation_number": 6,
+      "cited_text": "Building your enterprise data architecture: a phased implementation roadmap The most common implementation mistake is starting with tool selection. The second most common is attempting too much at once. The following roadmap is deliberately sequenced to build organizational capability before scaling technical complexity. Phase 1: discovery and assessment (months 0–3) Goal: Establish the current-state baseline and build the business case. Activities: Inventory all existing data systems, owners, and consumers (aim for 80% coverage, not perfection) Document current data flows and identify the 10 most critical data assets by business impact Assess your organization against the 5-level maturity model above Identify your primary regulatory obligations and map them to data assets Draft architecture principles document (6–10 guiding principles, not a full design) Present current-state findings and investment case to executive sponsors"
+    },
+    {
+      "source_id": "3226ed19-da35-4ccd-b02e-adb37035551b",
+      "citation_number": 7,
+      "cited_text": "Resources required: 1 Enterprise/Data Architect (lead), 1 Data Governance Analyst, 4–6 business stakeholder interviews, existing tooling only. Decision gate: Executive commitment to governance model and budget before Phase 2. Risk: Scope creeps into solution design during discovery. Contain it. Phase 2: design and governance foundation (months 3–6) Goal: Establish the governance model and target architecture design before building anything. Activities: Select and adopt your primary framework (TOGAF, DAMA-DMBOK, or hybrid) Design target-state architecture pattern based on the selection matrix Establish the Data Governance Council and assign data stewards to priority domains Build an enterprise data catalog for priority data assets (not the entire estate) Define data quality rules and ownership RACI for the top 10 critical data assets Design security architecture and map controls to compliance requirements Select core technology stack components (storage, integration, orchestration)"
+    },
+    {
+      "source_id": "3226ed19-da35-4ccd-b02e-adb37035551b",
+      "citation_number": 8,
+      "cited_text": "Build data ingestion pipelines for priority data sources Implement target storage architecture (warehouse, lake, or lakehouse based on Phase 2 design) Deploy an enterprise data catalog with automated lineage tracking Implement security controls and access management Migrate priority data assets with validated quality rules Launch self-service analytics for the first business domain Measure Phase 1 KPIs (data quality score, time-to-insight, pipeline reliability) Resources required: 2–3 Data Engineers , 1 Data Architect, 1 Data Steward per priority domain, security/compliance review."
+    },
+    {
+      "source_id": "3226ed19-da35-4ccd-b02e-adb37035551b",
+      "citation_number": 9,
+      "cited_text": "Decision gate: Quality and reliability thresholds met before expanding to additional domains. Risk: \"Big bang\" migration. If you can't get one domain right in Phase 3, you won't get five right in Phase 4. Phase 4: scale and optimize (months 12–18) Goal: Extend architecture to remaining domains and begin optimization. Activities: Expand architecture to secondary data domains using Phase 3 patterns Implement real-time streaming for time-sensitive workloads Build ML feature store and AI/ML serving infrastructure (if required) Automate data quality monitoring and alerting across all domains Establish ongoing architecture review cadence (quarterly) Measure ROI: time-to-insight, data quality %, infrastructure cost per terabyte, analyst productivity"
+    },
+    {
+      "source_id": "3226ed19-da35-4ccd-b02e-adb37035551b",
+      "citation_number": 10,
+      "cited_text": "Premature centralization. Attempting to centralize all data under a single governance model before the organization has the maturity to support it. This kills domain team morale and creates bottlenecks that cause business units to build shadow IT data environments. Boiling-the-ocean syndrome. Scoping Phase 1 to include all data sources, all business domains, and all use cases simultaneously. Architecture programs that try to do everything first typically deliver nothing in the first 12 months and lose executive support."
+    },
+    {
+      "source_id": "3226ed19-da35-4ccd-b02e-adb37035551b",
+      "citation_number": 11,
+      "cited_text": "What enterprise data architecture actually is (and what it isn't) Enterprise data architecture is the set of rules, models, policies, and standards that govern how data is collected, stored, integrated, and used across an entire organization. It's not a single system or platform—it's the blueprint that all systems must conform to. The distinction matters. Many organizations have data architectures for specific domains: a warehouse for finance, a lake for marketing, a streaming pipeline for operations. What they lack is an enterprise data architecture that connects those domains under shared governance, common data definitions, and consistent quality standards. The result is what data practitioners call a \"silo sprawl\"—isolated data assets that technically exist but can't be combined to answer cross-functional questions.Specialized data architecture services help organizations bridge these gaps by designing the shared governance and common data definitions required to unify disparate systems into a single, functional blueprint."
+    },
+    {
+      "source_id": "3226ed19-da35-4ccd-b02e-adb37035551b",
+      "citation_number": 12,
+      "cited_text": "Security controls mapped to compliance requirements Security architecture in modern enterprise data environments isn't a single layer—it's a set of controls that must map explicitly to your regulatory obligations. The following table maps the primary compliance frameworks to the security controls they require: <cited_table>",
+      "cited_table": {
+        "num_columns": 7,
+        "rows": [
+          [
+            "Compliance Framework",
+            "Encryption at rest",
+            "Encryption in transit",
+            "Access control",
+            "Audit logging",
+            "Data residency",
+            "Breach notification"
+          ],
+          [
+            "GDPR",
+            "Required",
+            "Required",
+            "Role-based minimum",
+            "Required",
+            "Required (EU)",
+            "72 hours"
+          ],
+          [
+            "CCPA",
+            "Recommended",
+            "Required",
+            "Opt-out mechanisms",
+            "Recommended",
+            "California data rules",
+            "Without unreasonable delay"
+          ],
+          [
+            "HIPAA",
+            "Required",
+            "Required",
+            "Minimum necessary access",
+            "Required",
+            "US-only in most cases",
+            "60 days"
+          ],
+          [
+            "SOX",
+            "Required",
+            "Required",
+            "Separation of duties",
+            "Required",
+            "Not specified",
+            "Immediate (material)"
+          ],
+          [
+            "PCI-DSS",
+            "Required (AES-256)",
+            "Required (TLS 1.2+)",
+            "Least-privilege",
+            "Required (1 year)",
+            "Cardholder data scope",
+            "Immediate"
+          ]
+        ]
+      }
+    },
+    {
+      "source_id": "3226ed19-da35-4ccd-b02e-adb37035551b",
+      "citation_number": 13,
+      "cited_text": "Governance operating model and RACI framework A functioning data governance operating model requires four roles working across two levels: strategic and operational. Data Governance Council (strategic level): Executive sponsors—typically CDO, CIO, and business unit heads—who set policy, resolve cross-domain conflicts, and own the business case for data quality. Data Architecture Function (operational level): The team that translates governance policy into technical standards, manages the enterprise data catalog, and owns the data architecture blueprint."
+    },
+    {
+      "source_id": "3226ed19-da35-4ccd-b02e-adb37035551b",
+      "citation_number": 14,
+      "cited_text": "The RACI for day-to-day governance decisions maps as follows: <cited_table>",
+      "cited_table": {
+        "num_columns": 6,
+        "rows": [
+          [
+            "Decision",
+            "Data Owner (Business)",
+            "Data Steward",
+            "Data Architect",
+            "Data Engineer",
+            "Governance Council"
+          ],
+          [
+            "Define data quality thresholds",
+            "Accountable",
+            "Responsible",
+            "Consulted",
+            "Informed",
+            "Informed"
+          ],
+          [
+            "Approve new data source onboarding",
+            "Consulted",
+            "Responsible",
+            "Accountable",
+            "Informed",
+            "Informed"
+          ],
+          [
+            "Set access control policies",
+            "Informed",
+            "Responsible",
+            "Accountable",
+            "Consulted",
+            "Informed"
+          ],
+          [
+            "Resolve data definition conflicts",
+            "Consulted",
+            "Consulted",
+            "Responsible",
+            "Informed",
+            "Accountable"
+          ],
+          [
+            "Approve architecture pattern changes",
+            "Informed",
+            "Informed",
+            "Responsible",
+            "Consulted",
+            "Accountable"
+          ]
+        ]
+      }
+    },
+    {
+      "source_id": "dfd61006-6db9-4046-a052-44523bf8cace",
+      "citation_number": 15,
+      "cited_text": "Metadata represents the \"data about data\" which is critical for human understanding and accurate analysis. What types of metadata require management? Not all metadata is created equal. To build an effective metadata management strategy, organizations must understand and manage five distinct types of metadata, each serving different users and use cases: Business metadata Business metadata defines the business meaning of data in human language. This includes business glossary terms (such as \"Customer\" or \"Active Subscriber\"), metric and KPI definitions with calculation logic, domain ownership and stewardship information, and data product descriptions with service-level objectives. Business metadata is primarily used by business analysts, product owners, and leaders who need to understand what terms mean, who owns specific metrics, and which version is authoritative for decision-making. By aligning on key term definitions in a Business Glossary, organizations ensure all teams speak the same language."
+    },
+    {
+      "source_id": "09e57aa3-0b7a-4756-8b74-f923200a2138",
+      "citation_number": 16,
+      "cited_text": "Why This Question Matters in 2025 Snowflake Dynamic Tables became generally available on 29 April 2024 , offering built-in, continuous pipelines that can overlap with, or even substitute for dbt incremental models. Because Dynamic Tables bill separately for compute, transformation cost and scheduling strategy must be evaluated alongside any dbt-based approach. dbt Core 1.10 entered public beta in April 2025 with stricter YAML validation, optional sample mode for large time-series datasets, and artifact upload support. These changes reduce configuration errors and speed local iteration. As a result, teams cannot afford to rely on purely manual scripting; a code-based framework reduces human error and accelerates change. The dbt Semantic Layer now connects to Tableau, Microsoft Power BI, Google Looker, and Sigma , extending governed metrics to the most widely used business-intelligence tools. Power BI integration moved into private beta in May 2025. By centralizing metric definitions, organizations avoid the “spreadsheet of truth” problem – where different teams compute the same key performance indicators (KPIs) in inconsistent ways."
+    },
+    {
+      "source_id": "09e57aa3-0b7a-4756-8b74-f923200a2138",
+      "citation_number": 17,
+      "cited_text": "A common problem is the “spreadsheet of truth” issue, where different teams compute the same key performance indicators in inconsistent ways. dbt Cloud provides a Semantic Layer powered by MetricFlow that exposes governed metrics – such as customer lifetime value or monthly active users – to Tableau, Microsoft Power BI, Google Looker, and Sigma via a single API. Analysts query the same metric definition, ensuring that every dashboard and report shows identical business logic without requiring each team to recreate calculations."
+    },
+    {
+      "source_id": "d0299293-b140-42c5-b204-731800e1688f",
+      "citation_number": 18,
+      "cited_text": "Premature cloud migration creates a similar problem at the infrastructure level. Organizations that migrated from on-premises warehouses to cloud platforms without redesigning their query patterns or data retention policies often found their cloud spend was 2–4× their original on-premises costs, with equivalent performance. The platform changed; the thinking didn't. Modern data stack fatigue —IBM's term for it in their 2026 analysis—is the consequence of assembling too many point solutions. Organizations that layered an ingestion tool, a transformation tool, a catalog tool, an orchestration tool, an observability tool, and a BI tool on top of a cloud warehouse created integration overhead that consumed more engineering time than the tools collectively saved."
+    },
+    {
+      "source_id": "15a37f18-25f8-4a5a-958f-fbf966ed7684",
+      "citation_number": 19,
+      "cited_text": "This scenario repeats across industries because NFRs occupy an uncomfortable gap between business expectations and engineering specifications. Stakeholders assume the system will be “fast” and “always available.” Engineers assume someone documented what those words actually mean. Nobody tests against a threshold that was never set. This guide closes that gap. You'll learn how to define NFRs that are precise enough to pass or fail, quantify availability and scalability targets with real math, translate stakeholder wishes into testable SLAs, validate every requirement under realistic load, and integrate NFR enforcement into your CI/CD pipeline. Whether you're a QA lead inheriting an undocumented system or an SRE building an error budget from scratch, you'll leave with a framework — and an NFR checklist — you can apply this week."
+    },
+    {
+      "source_id": "3226ed19-da35-4ccd-b02e-adb37035551b",
+      "citation_number": 20,
+      "cited_text": "Key takeaways Organizations with mature data architecture practices achieve 42% higher digital transformation success rates and 35% lower data management costs than those without, according to IRJMETS research (2025). Treat enterprise data architecture as a technology project, and you'll probably fail—the defining factor in successful implementations is executive sponsorship and organizational change management, not tool selection. TOGAF, DAMA-DMBOK, and Zachman serve fundamentally different purposes; using the wrong framework for your organization type is one of the most common and least-discussed failure modes. The data mesh pattern is genuinely powerful for large, domain-rich organizations, but it requires significant organizational maturity—most companies that attempt it prematurely create decentralized chaos instead of distributed ownership. According to Mordor Intelligence (2025), 93% of enterprise data remains unstructured, which means your architecture has to account for far more than the data warehouse you can see."
+    },
+    {
+      "source_id": "3226ed19-da35-4ccd-b02e-adb37035551b",
+      "citation_number": 21,
+      "cited_text": "Data Governance Lead (1 FTE). Operates the governance framework: manages the data catalog, tracks quality metrics, coordinates the governance council, maintains the RACI, and runs the data quality remediation backlog. This role is frequently underinvested and is frequently the reason governance frameworks fail. Centralized vs. federated: choosing your operating model <cited_table>",
+      "cited_table": {
+        "num_columns": 5,
+        "rows": [
+          [
+            "Model",
+            "Architecture control",
+            "Domain team autonomy",
+            "Governance enforcement",
+            "Best for"
+          ],
+          [
+            "Centralized",
+            "High: central team owns all design decisions",
+            "Low: domains consume centrally built products",
+            "Strong",
+            "Organizations at maturity Level 2–3; heavy regulatory environments"
+          ],
+          [
+            "Federated (Data Mesh)",
+            "Distributed: domains own their data products",
+            "High: domain teams build and own pipelines",
+            "Moderate: federated governance council",
+            "Organizations at maturity Level 4+; 5+ distinct business domains with dedicated data teams"
+          ],
+          [
+            "Hybrid (Center of Excellence)",
+            "Moderate - CoE sets standards, domains implement",
+            "Moderate - domains work within defined guardrails",
+            "Moderate–Strong",
+            "Most common practical model for maturity Level 3–4 organizations"
+          ]
+        ]
+      }
+    },
+    {
+      "source_id": "3226ed19-da35-4ccd-b02e-adb37035551b",
+      "citation_number": 22,
+      "cited_text": "The honest answer for most organizations: start centralized, move toward a hybrid CoE model as domain teams develop capability, and only consider full data mesh if you've reached Level 4 maturity with genuine domain team readiness. Anti-patterns and failure modes that derail EDA initiatives Every guide in this space tells you what to do. Here's what most of them skip: the specific, observable ways that well-funded enterprise data architecture programs fall apart. These aren't edge cases. They're the norm."
+    },
+    {
+      "source_id": "3226ed19-da35-4ccd-b02e-adb37035551b",
+      "citation_number": 23,
+      "cited_text": "Architecture patterns: selecting the right model for your context Architecture patterns are the structural blueprints for how data is organized and accessed across the enterprise. The right pattern depends on your data volume, team structure, regulatory complexity, and analytical workloads. Choosing wrong doesn't just slow you down—it creates technical debt that compounds over the years. Architecture pattern selection matrix <cited_table>",
+      "cited_table": {
+        "num_columns": 7,
+        "rows": [
+          [
+            "Pattern",
+            "Best for",
+            "Complexity",
+            "Team size required",
+            "Governance model",
+            "Streaming support",
+            "AI/ML readiness"
+          ],
+          [
+            "Data Mesh",
+            "Large orgs with 5+ distinct business domains, high domain team maturity",
+            "High",
+            "Large (dedicated domain teams)",
+            "Federated",
+            "Moderate",
+            "High"
+          ],
+          [
+            "Data Fabric",
+            "Orgs with heterogeneous, multi-cloud environments needing unified access",
+            "High",
+            "Moderate–Large",
+            "Centralized with AI-driven automation",
+            "High",
+            "High"
+          ],
+          [
+            "Lakehouse",
+            "Orgs needing unified analytics + ML on structured and unstructured data",
+            "Moderate",
+            "Moderate",
+            "Flexible",
+            "Moderate",
+            "Very High"
+          ],
+          [
+            "Lambda Architecture",
+            "Orgs requiring both batch and real-time processing with latency tolerance",
+            "Moderate–High",
+            "Moderate",
+            "Centralized",
+            "High (dual path)",
+            "Moderate"
+          ],
+          [
+            "Kappa Architecture",
+            "Orgs where all data can be treated as a stream; simpler operational model",
+            "Moderate",
+            "Small–Moderate",
+            "Centralized",
+            "Very High",
+            "Moderate"
+          ],
+          [
+            "Medallion Architecture",
+            "Organizations using Databricks or Delta Lake; incremental quality refinement",
+            "Low–Moderate",
+            "Small",
+            "Centralized",
+            "Moderate",
+            "High"
+          ]
+        ]
+      }
+    }
+  ]
+}

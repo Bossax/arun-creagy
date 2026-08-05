@@ -1,0 +1,308 @@
+{
+  "answer": "When conducting a data-domain gap analysis for an early-stage blueprint, standard requirements engineering (SRS/BRD) and enterprise data management practices strongly recommend a **hybrid approach**. \n\nEvaluating data infrastructure is inherently different from assessing a standard software feature set. Software requirements can often be listed as discrete, flat features and prioritized on a simple linear scale (such as a 1-to-5 rating of *Critical, High, Medium, Low, and Future*) [1, 2]. In contrast, data platforms are complex, socio-technical ecosystems where technical layers (like ingestion, storage, and processing) are heavily dependent on organizational layers (like governance, metadata, and culture) [3-6].\n\nA hybrid format integrates the diagnostic precision of a **dimension-scored conformance matrix** with the actionable execution path of a **phased maturity roadmap**.\n\n---\n\n### 1. The Dimension-Scored Conformance Matrix (The Diagnosis)\nAt the early-stage blueprinting phase, many proposed or existing systems do not fully align with clean theoretical models [7]. A dimension-scored matrix is used to diagnose the \"As-Is\" state versus the \"To-Be\" requirements across critical architectural vectors rather than software features.\n\nStandard frameworks like **DATER (Data Architectures and their Technical Requirements)** recommend scoring capabilities on a 1-to-5 scale across nine core dimensions [8]:\n*   **Control, Governance & Trust:** Scoring *Architectural Paradigm* (D1: Centralized to Decentralized), *Governance & Ownership* (D2: Centralized to Domain-oriented), and *Security & Trust* (D3: Static RBAC to policy-enforced) [9, 10].\n*   **Data Modeling & Understanding:** Scoring *Data Formats* (D4: Structured only to Polystore/all formats), *Metadata Management* (D5: Manual to active/AI-driven), and *Knowledge Management* (D6: None to integrated Knowledge Graphs/Ontologies) [10, 11].\n*   **Data Processing:** Scoring *Integration Focus* (D7: Core concern vs. afterthought), *Query Mechanisms* (D8: Local SQL to virtualized querying), and *ML & Analytics Support* (D9: BI-only to full ML pipeline/MLOps) [12, 13].\n\n**Why this matters for your blueprint:** Using this scored approach allows you to pinpoint exactly which technical and organizational capabilities are currently fulfilled, partially addressed, or entirely missing [7]. This prevents you from making the common mistake of treating a data platform modernization as a purely technical feature-implementation project rather than a socio-technical evolution [5, 6, 14].\n\n---\n\n### 2. The Phased Maturity Roadmap (The Execution Path)\nOnce the dimensional gaps are diagnosed, standard practice dictates that they cannot and should not be addressed all at once. Doing so introduces immense architectural risk, drives up the total cost of ownership (TCO), and can result in a chaotic, ungoverned \"data swamp\" [15-17]. \n\nThe gap analysis must therefore feed into a **Phased Maturity Roadmap**:\n*   **Foundational Phase (3–6 Months):** Focuses heavily on \"defensive data management\"—addressing high-impact data quality standards, establishing core governance frameworks, data policies, and domain ownership models [18-20]. Fostering data trust and defining business glossary standards during this initial phase delivers much faster business value than large-scale technological modernization [19].\n*   **Integration & Expansion Phase (12–24+ Months):** Scales the architecture outward once the foundation is stable [20]. This phase addresses \"offensive data management\"—building automated metadata extraction, self-service analytics pipelines, data virtualization, and integrating advanced ML/AI modeling and MLOps workflows [18, 21, 22].\n\n---\n\n### 3. The Recommended Hybrid Blueprint Structure\nTo align with standard enterprise specifications (such as NASA's IMPALA System Design Document and modern data product engineering practices), your early-stage BRD/SRS should merge these formats into the following structured lifecycle [23]:\n\n1.  **Define Logical & Functional Layers:** Map your requirements across the standard logical data processing lifecycle: *Capture, Transport, Refine, Store, Analyze, Distribute, and Manage* [24, 25].\n2.  **Conduct the Dimensional Gap Assessment:** Score your current \"As-Is\" state against your target \"To-Be\" architecture across the 9 DATER dimensions to mathematically define the exact gaps [8, 26].\n3.  **Deploy Iteratively via the Roadmap:** Break the target architecture down into small, iterative deliverables (e.g., first establishing raw data ingestion pipelines and metadata modeling, then building semantic layers, and finally enabling self-service dashboards and predictive models) [27]. This phased, modular deployment ensures short feedback cycles, prevents scope creep, and keeps stakeholders highly invested [28-30].\n\n***\n\n📊 I can help you build an initial draft of a **Dimension-Scored Conformance Matrix** mapped specifically to your project's current \"As-Is\" state. Would you like to define your target data architecture paradigm first?",
+  "conversation_id": "8f8ae5e6-85be-4de5-8aea-56188a4c08ff",
+  "sources_used": [
+    "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "dca40f20-a255-4c48-937d-5abfbe6d5dac"
+  ],
+  "citations": {
+    "1": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "2": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "3": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "4": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "5": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "6": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "7": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "8": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "9": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "10": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "11": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "12": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "13": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "14": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "15": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "16": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "17": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "18": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "19": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "20": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "21": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "22": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "23": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "24": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "25": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "26": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "27": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "28": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "29": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "30": "dca40f20-a255-4c48-937d-5abfbe6d5dac"
+  },
+  "references": [
+    {
+      "source_id": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+      "citation_number": 1,
+      "cited_text": "8. NON-FUNCTIONAL REQUIREMENTS 11 9. FINANCIAL STATEMENTS 12 10. COST AND BENEFIT 13 11. RESOURCES 14 12. SCHEDULE, TIMELINE, AND DEADLINES 15 13. ASSUMPTIONS 16 14. GLOSSARY 17 15. REFERENCES 18 16. APPENDIX 19 1. EXECUTIVE SUMMARY SNAPSHOT 2. PROJECT DESCRIPTION 3. PROJECT SCOPE 4. BUSINESS DRIVERS 5. CURRENT PROCESS 6. PROPOSED PROCESS 7. FUNCTIONAL REQUIREMENTS PRIORITY Use the following priority table. It allows you to apply a ratings system to your requirements, so you have the visibility (into the value, status, and description of each requirement) that’s necessary for determining whether a particular requirement is essential to project success:"
+    },
+    {
+      "source_id": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+      "citation_number": 2,
+      "cited_text": "Value Rating Description 1 Critical The requirement is critical to the project’s success. Without fulfilling this requirement, the project is not possible. 2 High The requirement is high priority re the project’s success, but the project could still be implemented in a minimum viable product (MVP) scenario. 3 Medium The requirement is important to the project’s success, as it provides value, but the project could still be implemented in an MVP scenario. 4 Low The requirement is low priority (i.e., it would be nice to have), but the project’s success is not dependent upon it."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 3,
+      "cited_text": "Data platform, in this article, refers to a concrete implementation of a data architecture. To clearly distinguish each term, we address potential points of confusion by discussing areas where their meanings may overlap. Data ecosystems are usually composed of multiple data architectures, i.e., an organization might have data warehouses as well as data lakes. The abstraction at data ecosystem level should not only focus on technical aspects and tools, it should also include people and policies. In this sense, the term ecosystem emphasizes the socio-technical dimension, focusing on actors, governance structures, interoperability standards, and shared infrastructure."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 4,
+      "cited_text": "For such reasons, Dehghani [ 31 , 33 ] introduces the so-called data mesh, which is not (yet) a typical data architecture with concrete implementations, or infrastructure specifications, but rather “a socio-technical data approach” [ 33 ] . Interestingly, the concept draws inspiration from microservice architectures in software engineering [ 10 ] . While traditional data platforms remain centralized, a data mesh applies the microservice paradigm to data architectures, where each domain functions as an independent service. Just as microservices emerged to overcome the limitations of monolithic applications, the data mesh addresses the constraints of centralized data structures."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 5,
+      "cited_text": "Another major motivating factor is the historical focus of data and analytics research on technological components rather than usage-driven approaches [ 1 , 130 ] , which led to overlooking the significance of federated architectures, governance, and organizational design [ 19 ] . This is the main reason for bottlenecks in centralized data platforms. Most studies have centered on designing technical solutions rather than addressing the organizational, procedural and governance challenges inherent in large-scale data management. Araujo et al. [ 86 ] even go as far as calling the data mesh a paradigm shift in the field of data architectures. In this new paradigm, data is seen as the main concern of a truly data-oriented organization, and the pipelining tools and specific architectures itself are seen as a secondary concern."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 6,
+      "cited_text": "Modern data ecosystems increasingly shift toward decentralization, which promote domain-oriented ownership, federated governance, and peer-to-peer data sharing. The increasing importance of metadata and semantic technologies across architectures, highlights another shift toward more intelligent, discoverable, and machine-interpretable data systems. Architectures like data mesh and data fabric reflect more than technical designs. They also embody operational principles, organizational models, and mark a third cultural shift in data management."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 7,
+      "cited_text": "Selection of evaluated systems The systems included in the evaluation were selected as representative implementations of the architectural paradigms discussed in this review rather than as an exhaustive survey of available platforms. In addition to well-established reference systems, we deliberately included systems whose architectural classification is ambiguous or hybrid in nature. This choice allows us to demonstrate the analytical value of DATER in cases where existing architectural labels are insufficient or contested. By applying DATER to such systems, it becomes possible to pinpoint which architectural layers and technical requirements are fulfilled, partially addressed, or blurred across paradigms."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 8,
+      "cited_text": "4 Evaluation The evaluation begins with a definition of the criteria used to assess and describe the discussed architectures. The criteria are defined in a way that allows to assign a quantitative measure (see table ˜ 1 ). Finally, these evaluation criteria in conjunction with the technical requirements from section ˜ 3 are evaluated against real-world systems to find a suitable match. 4.1 Dimensional Analysis The preceding literature review and the in-depth examination of the discussed data architectures helps us to derive the following dimensions. These aim to (a) describe the characteristics of a given architecture, (b) highlight similarities and differences between them, and (c) provide a framework for assigning existing systems to one of the six categories in section ˜ 3 :"
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 9,
+      "cited_text": "Control, Governance & Trust D1 – Architectural Paradigm: Measures how centralized or decentralized the data architecture is in terms of control, storage infrastructure, and processing. Higher scores reflect distributed, domain-driven models that promote autonomy. D2 – Governance & Ownership: Examines the model of data control from centralized to federated ownership. Higher values indicate domain-level accountability and governance. D3 - Security & Trust Measures how much the architecture gives priority to support secure access, data protection, auditability, and trust-building mechanisms such as data provenance, policy enforcement, or verifiable sharing."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 10,
+      "cited_text": "Dimension 1 = Low 3 = Medium 5 = High <cited_table> <cited_table>",
+      "cited_table": {
+        "num_columns": 5,
+        "rows": [
+          [
+            "Control, Governance & Trust",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "D1",
+            "Architectural Paradigm",
+            "Centralized",
+            "Federated",
+            "Decentralized"
+          ],
+          [
+            "D2",
+            "Governance & Ownership",
+            "Centralized",
+            "Shared or hybrid",
+            "Federated / Domain-oriented"
+          ],
+          [
+            "D3",
+            "Security & Trust",
+            "Minimal/static security",
+            "Moderate control with some auditing",
+            "Integrated, policy-enforced, trust-aware"
+          ]
+        ]
+      }
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 11,
+      "cited_text": "Data Modeling & Understanding D4 – Data Formats: Evaluates how much the architecture considers flexibility in handling different data formats. Higher scores indicate native support for polystores and unstructured, semi-structured, and structured data. D5 – Metadata Management: Assesses how metadata is handled from manual and static to dynamic, automated, and lineage-aware systems. Advanced setups foresee the use of AI or active metadata. D6 – Knowledge Management: Assesses the extent to which the architecture supports modeling, managing, or leveraging domain knowledge alongside data. This includes formal approaches (e.g., SDM) and informal ones, such as business glossaries, tagging systems, or e.g., enterprise LLM-based chatbots [ 139 ] with richer data understanding, reasoning, and integration."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 12,
+      "cited_text": "Data Processing D7 – Integration Focus: Captures how central integration is to the architecture's design. A high score means data integration is a foundational concern rather than an afterthought. D8 – Data Virtualization: Describes how much focus the architecture places on abstracting storage details to enable querying flexibly and transparently without having to move data physically. D9 – ML & Analytics Support: Captures the degree of support for ML and data science. Higher scores indicate built-in tools and pipelines for advanced analytics beyond traditional BI."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 13,
+      "cited_text": "<cited_table> Table 1: Evaluation Dimensions for Data Architectures on a scale from 1 to 5, mapped to General Requirements Data Warehouse [ 112 , 70 , 21 ] Data Lake [ 57 , 111 , 14 , 96 ] Semantic Data Lake [ 66 , 36 , 17 ] Data Lakehouse [ 60 , 121 , 9 ] Data Fabric [ 62 , 19 , 124 ] Data Mesh [ 33 , 124 , 86 ]",
+      "cited_table": {
+        "num_columns": 5,
+        "rows": [
+          [
+            "Data Processing",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "D7",
+            "Integration Focus",
+            "Not central to the architecture",
+            "Localized or externalized",
+            "Core architectural concern"
+          ],
+          [
+            "D8",
+            "Query Mechanisms",
+            "Local SQL only",
+            "SQL + NoSQL / partial federation",
+            "Federated / virtualized querying"
+          ],
+          [
+            "D9",
+            "ML & Analytics Support",
+            "BI only",
+            "Some support for ML",
+            "Full ML pipeline and data science support"
+          ]
+        ]
+      }
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 14,
+      "cited_text": "What are the most common enterprise data management failures? The most common EDM failures include poor data quality, unclear ownership, weak governance, fragmented systems, and the treatment of data management as a technology project rather than a business initiative. Many organizations also struggle because they focus on tools before establishing data standards, governance processes, and business objectives. As a result, data remains inconsistent, difficult to trust, and underutilized across the organization."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 15,
+      "cited_text": "In 2014, Gartner [ 48 ] raised several criticisms of data lakes, warning that the indiscriminate ingestion of disparate data could lead to a so-called data swamp, making the data unusable without proper metadata management and governance [ 111 ] . Further, concerns included insufficient attention to data security and privacy oversight. In response to these critiques, Dixon revisited the data lake concept [ 39 ] . With Hadoop at the core, a key requirement was that a data lake should offer low-cost, easily accessible storage that supports a schema-on-read approach, meaning the metadata can be populated over time and transformations to apply the schema are only performed once required. This approach allows a data lake to automatically extract metadata from raw data and identify patterns, with users contributing additional descriptive information, such as domain-specific knowledge and attribute linkages. Hence, the idea is that the interaction between users and the data lake continually enhances (meta)data quality and value."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 16,
+      "cited_text": "The digital-first world pushes businesses to capitalize on data to secure a competitive edge over their laggard counterparts. C-level executives are privy to this, as 80% of IT organizations consider data silos as the key challenge in their digital transformation efforts. Capitalizing on data, however, requires mastering enterprise data management. If you don't invest wisely in data projects across the value chain, you may end up paying more in data ownership costs. Below, our experts break down the essentials of enterprise data management, along with best practices and solutions for common challenges."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 17,
+      "cited_text": "Core Expertise Data Strategy Consulting Data Warehousing Data Platform Development Need a hand with enterprise data management? Our data management services will help you maximize your data's impact and optimize its TCO. Request a Quote Data Building a Data Warehouse: Your Ultimate Guide Not every business gets the same return on investment from data initiatives. Some gain... Yevheniia Holoborodko Jun. 10, 2026 [-] Data Data Strategy Roadmap: Practical Approach to Implementing Your Data Vision Having to collect and store data on a daily basis, organizations look for measures..."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 18,
+      "cited_text": "Organizations typically balance defensive data management (focused on governance, compliance, and risk mitigation) with offensive data management (focused on analytics, innovation, and value creation) to ensure consistent access to high-quality data. A successful strategy integrates both approaches to maximize the business impact of enterprise data. 4 Key Components of Successful EDM EDM, as a process, encompasses several management areas: data quality, security, access, and lifecycle management. Each of these management areas focuses on a specific dimension of managing data as an asset. Let's break them down."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 19,
+      "cited_text": "TIP: Start by addressing the highest-impact data quality and governance issues first. Improving trust in enterprise data often delivers faster business value than large-scale technology modernization projects. 3 Data Management Challenges and How We Counter Them Enterprise data management is a complex process that comes with its challenges. Let's explore them, along with the solutions that we at SPD Technology employ when devising effective EDM strategies for our clients. Enterprise Data Management Challenges"
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 20,
+      "cited_text": "How long does it take to implement a full enterprise data management framework? Implementation timelines depend on organizational size, data maturity, and project scope. Focused initiatives such as governance frameworks or data quality programs may begin delivering results within 3–6 months , while comprehensive enterprise-wide EDM programs often require 12–24 months or longer . Many organizations adopt a phased approach, prioritizing high-value data domains and governance improvements before expanding EDM capabilities across the business."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 21,
+      "cited_text": "Organizations often use data management, data governance, and data strategy interchangeably. While closely connected, each serves a distinct role in helping organizations turn data into a business asset. The table below clarifies how these disciplines work together. <cited_table>",
+      "cited_table": {
+        "num_columns": 5,
+        "rows": [
+          [
+            "Discipline",
+            "Core Question It Answers",
+            "Primary Focus",
+            "Key Responsibilities",
+            "Typical Deliverables"
+          ],
+          [
+            "Data strategy",
+            "”Why are we investing in data?”",
+            "Business goals, priorities, and long-term vision",
+            "Align data initiatives with business objectives, identify capabilities, prioritize investments",
+            "Data roadmap, modernization plan, AI and analytics strategy"
+          ],
+          [
+            "Data governance",
+            "“What rules should guide data usage?”",
+            "Policies, ownership, accountability, and compliance",
+            "Define standards, stewardship, quality requirements, and regulatory controls",
+            "Governance framework, ownership model, data policies, business glossary"
+          ],
+          [
+            "Data management",
+            "”How is data managed day to day?”",
+            "Operational processes and technology execution",
+            "Data integration, storage, quality management, security, access control, lifecycle management",
+            "Data platforms, integration pipelines, quality processes, security controls"
+          ],
+          [
+            "Data architecture",
+            "”How should enterprise data be structured?”",
+            "Data models, platforms, and technical design",
+            "Design storage, integration, and information flows",
+            "Data architecture blueprint and technology stack"
+          ],
+          [
+            "Data culture & literacy",
+            "”How do people use data effectively?”",
+            "Adoption, education, and decision-making behavior",
+            "Build data skills, encourage data sharing, improve data-driven decision-making",
+            "Training programs, adoption initiatives, literacy frameworks"
+          ]
+        ]
+      }
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 22,
+      "cited_text": "Scalability and Performance Bottlenecks in Data Infrastructure It's a safe bet to say that data volumes will only continue to grow, and so will the business impact of Big Data . However, if your data infrastructure isn't built with scalability in mind, it may struggle to sustain the same performance, especially when it comes to real-time analytics, AI/ML models, and high-throughput data processing. Our solution To futureproof your data architecture against rising data volumes, we: Help you move to cloud-based platforms to leverage cloud computing infrastructure benefits Implement scalable enterprise data platforms (e.g., Hadoop, Spark, Snowflake) Optimize your infrastructure and architecture Implement parallel processing and real-time data streaming capabilities."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 23,
+      "cited_text": "THE IMPALA ENCRYPTION COMPONENTS .................................................................................... 7-21 1-1 1.0 INTRODUCTION The System Design Document (SDD) is a compendium of three documents, providing a single source for requirements, system design, and data design.  The functional and non-functional requirements are drawn from the Information Management Platform for Data Analytics and Aggregation (IMPALA) System Requirements document.  The three elements of requirements, user design, and data design form the baseline from which to build a set of more technical system design specifications for the final product, providing both high-level system design and low-level detailed design."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 24,
+      "cited_text": "4.1 LOGICAL ARCHITECTURE.............................................................................................................................. 4-2 4.1.1 Capture ................................................................................................................................................ 4-3 4.1.2 Transport.............................................................................................................................................. 4-4 4.1.3 Refine ................................................................................................................................................... 4-4 4.1.4 Store ..................................................................................................................................................... 4-5 4.1.5 Analyze ................................................................................................................................................. 4-5 4.1.6 Distribute ............................................................................................................................................. 4-6 4.1.7 Manage ................................................................................................................................................ 4-6"
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 25,
+      "cited_text": "HHPC 10061 4-2 4.1 LOGICAL ARCHITECTURE Figure 4.1-1 IMPALA Key Enablers and Platform Logical Architecture 4-3 As depicted in Figure 4.1-1, the IMPALA Platform enables the NASA community of users to operate within seven (7) key logical layers: Capture, Transport, Refine, Store, Analyze, Distribute, and Manage Data, using the suite of components within the platform.  It also supports the governance of data and collaboration amongst the users.  This section gives a brief description of the seven (7) logical layers, the functions performed within the layer and the user community’s interaction with each layer. Table 4.1-1 provides a brief overview of the different user role groupings, as well as how they interact with the layers of the IMPALA platform."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 26,
+      "cited_text": "To reap the benefits listed above, you need a comprehensive EDM strategy. You can focus on the following steps to develop an effective enterprise data management strategy: Assess the current state : Evaluate existing data architecture, data quality, governance processes, and key pain points Define strategic objectives : Align data initiatives with business goals such as operational efficiency, advanced analytics, or regulatory compliance Establish governance and ownership : Define roles, responsibilities, and accountability for data across business units Design target data architecture : Select appropriate data platforms, integration approaches, and storage solutions Implement data quality and security controls : Ensure data accuracy, consistency, and protection across its lifecycle Enable analytics and data usage : Support business users with reliable access to data and self-service data analytics solutions Develop an implementation roadmap : Prioritize initiatives, define timelines, and allocate resources Monitor and optimize performance : Continuously track KPIs and refine the strategy based on outcomes."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 27,
+      "cited_text": "End-user validating the data may create new requirements and business rule checks. Record any new requirements or changes (e.g. JIRA, etc), and get sign-off from the stakeholders. Do not start work on the transformation logic until you get a sign-off from the stakeholders. 2.4. Deliver iteratively Break down a large project into smaller parts. Work with the stakeholders to decide on a timeline and prioritization. E.g. If you are building an ELT pipeline (REST API => dashboard), you can split it into modeling the data, pulling data from a REST API, loading it into a raw warehouse table, & building a dashboard for the modeled data."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 28,
+      "cited_text": "How to gather requirements for your data project – Start Data Engineering Start Data Engineering Home Subscribe Courses & Books About How to gather requirements for your data project Frustrated trying to pry data pipeline requirements out of end users? Is scope creep preventing you from delivering data projects on time? You assume that the end-users know (and communicate) exactly what they want, but that is rarely the case! Adhoc feature/change requests throw off your delivery timelines. You want to deliver on time and make an impact, but you are interrupted constantly! Requirements gathering is rough, but it doesn't have to be! We go over five steps you can follow, to work with the end-user to define requirements, validate data before wasting engineering hours, deliver iteratively, and handle new feature/change requests without context switching."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 29,
+      "cited_text": "Answering the above questions will give you a good starting point. Help the end-users feel invested in the project by following the steps below. Thank end-users for their time/expertise Update them on progress Ask & incorporate their feedback Recommend solutions(or different ways to do things) for their common issues Acknowledge their help & expertise when presenting the project to a wider audience End-users who feel invested will root for the project, and help evangelize it. Having end-users who root for the project helps a lot with resource allocation."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 30,
+      "cited_text": "Delivering in small chunks enables a short feedback cycle from the end-user making changing requirements easy to handle. Track your work (tickets, etc) with clear acceptance criteria. 2.5. Handling changing requirements/new features Do not accept Adhoc change/feature requests! (unless it's an emergency). Create a process to * Allow end-users to request changes/features * Prioritize the change/feature requests with help from stakeholders * Decide and communicate delivery timelines to end-users Educate the end-user on the process of requesting a new feature/change. Following a process will prevent scope creep and allow you to deliver on time."
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "answer": "In a rapid **two-week requirements-engineering engagement**, a credible \"draft\" is not just a document that is partially written; it is a **validated requirements baseline** that has undergone structured discovery and stakeholder validation, even if the physical system design has not begun [1, 2]. \n\nThe sources outline a very clear minimum-content bar and methodological standard that separates a professional, highly credible draft from a shallow, static placeholder.\n\n---\n\n### The \"Credible Draft\" Checklist: 5 Core Distinctions\n\nTo ensure a requirements deliverable is credible rather than a placeholder, it must satisfy the following criteria:\n\n#### 1. Strategic Context Over Feature Lists\n*   **The Placeholder:** A bulleted laundry list of features with vague goals (e.g., *\"The system must be fast and easy to use\"*). \n*   **The Credible Draft:** Requirements are anchored to **measurable business outcomes**, objectives, and OKRs [3, 4]. The draft must state a clear problem statement [5], the strategic \"why\" [6], and **explicit, quantitative success metrics** [7, 8]. Subjective terms like *\"easy to use\"* are strictly prohibited as they are impossible to validate [7].\n*   **Source Standard:** A standard Product Requirements Document (PRD) must clearly isolate expected customer value [6] and map it to quantitative targets (such as reducing manual preparation time by a specific percentage) [8].\n\n#### 2. Isolated, Testable, and Prioritized Requirements\n*   **The Placeholder:** Large, compound paragraphs combining user roles, data feeds, and security rules in a single sentence.\n*   **The Credible Draft:** Each requirement is **defined separately** so it can be validated independently [7]. Every item is mapped to a standardized priority-rating system (such as the standard 1-to-5 scale of *Critical, High, Medium, Low, and Future*) [9, 10].\n*   **Source Standard:** Requirements must not be written as a \"delivery backlog\" (a list of developer tasks) or a \"feature spec sheet\" (technical outputs) [11]. Instead, they must serve as logical, testable outcome definitions [11] with clear acceptance criteria [6].\n\n#### 3. Reconciled Stakeholder Gaps & Identified Audiences\n*   **The Placeholder:** Section headers marked *\"TBD after future stakeholder meetings.\"*\n*   **The Credible Draft:** The document must show active evidence that the analyst has conducted structured interviews with stakeholders across **all impacted business units** [7] and actively **reconciled conflicting needs** before finalizing the draft [7]. \n*   **Source Standard:** The deliverable must explicitly identify distinct **target user groups** (personas) and record their operational access preferences (e.g., SQL, interactive dashboards, REST APIs, or cloud storage) [5, 12, 13]. \n\n#### 4. End-User Data Validation (The Logic Check)\n*   **The Placeholder:** A purely static text document describing theoretical transformation rules.\n*   **The Credible Draft:** Even if the database has not been built, the requirements-only phase is not complete or credible until the underlying business rules have been validated using **representative sample data** [14].\n*   **Source Standard:** Standard practice requires providing end-users with a mock schema or sample output (such as a sample CSV file) [14]. The draft is validated when users analyze this sample to verify that the logic, data distribution, and expected business metrics hold true under real-world usage [14].\n\n#### 5. Documented Dependencies and Non-Functional Constraints\n*   **The Placeholder:** Omission of operational boundaries, or generic statements like *\"Security will be handled by the IT team.\"*\n*   **The Credible Draft:** Explicit documentation of system boundaries, performance thresholds, and known upstream data hazards [8, 15, 16].\n*   **Source Standard:** The draft must document data volume skew, seasonality, late-arriving data caveats [15], security guidelines (such as field-level access controls and data retention policies) [8, 16], and cross-team platform dependencies [16].\n\n---\n\n### Standard Minimum-Content Bar (The Smartsheet/Productboard Standards)\n\nIf you are structuring a Business Requirements Document (BRD) or PRD under a tight deadline, standard practice expects the draft to have, at a minimum, populated entries for these standard sections:\n\n1.  **Executive Summary Snapshot & Strategic Drivers** (The business value justification) [17, 18]\n2.  **\"As-Is\" vs. \"Proposed\" Process Workflows** (Expressed visually via diagrams or charts) [7, 17, 18]\n3.  **Prioritized Functional Requirements Table** (With unique IDs and priority ratings) [9, 10]\n4.  **Non-Functional Requirements (NFRs) & Security Constraints** [5, 18]\n5.  **Testable Acceptance Criteria & Quantitative Success Metrics** [5, 6, 8]\n6.  **Validated Sample Data Schema & End-User Feedback Log** [14, 15]\n7.  **Assumptions, Risks, and Open Dependencies** [5, 18]\n\n***\n\n📋 I can generate a structured, ready-to-fill **Markdown PRD Template** tailored to your current project so you can start drafting these core sections immediately. Would you like me to outline it for you?",
+  "conversation_id": "8f8ae5e6-85be-4de5-8aea-56188a4c08ff",
+  "sources_used": [
+    "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "0f98105a-e702-4086-8695-8219087f4306",
+    "e68f4b12-261c-4818-a79b-fc2c022e20b1",
+    "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "dca40f20-a255-4c48-937d-5abfbe6d5dac"
+  ],
+  "citations": {
+    "1": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "2": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+    "3": "0f98105a-e702-4086-8695-8219087f4306",
+    "4": "0f98105a-e702-4086-8695-8219087f4306",
+    "5": "0f98105a-e702-4086-8695-8219087f4306",
+    "6": "0f98105a-e702-4086-8695-8219087f4306",
+    "7": "e68f4b12-261c-4818-a79b-fc2c022e20b1",
+    "8": "0f98105a-e702-4086-8695-8219087f4306",
+    "9": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "10": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "11": "0f98105a-e702-4086-8695-8219087f4306",
+    "12": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "13": "0f98105a-e702-4086-8695-8219087f4306",
+    "14": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "15": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+    "16": "0f98105a-e702-4086-8695-8219087f4306",
+    "17": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+    "18": "c6c7adcc-b68a-4164-84e4-aca332998f37"
+  },
+  "references": [
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 1,
+      "cited_text": "THE IMPALA ENCRYPTION COMPONENTS .................................................................................... 7-21 1-1 1.0 INTRODUCTION The System Design Document (SDD) is a compendium of three documents, providing a single source for requirements, system design, and data design.  The functional and non-functional requirements are drawn from the Information Management Platform for Data Analytics and Aggregation (IMPALA) System Requirements document.  The three elements of requirements, user design, and data design form the baseline from which to build a set of more technical system design specifications for the final product, providing both high-level system design and low-level detailed design."
+    },
+    {
+      "source_id": "6ad185e2-b75f-4b88-bd2b-bdaf1968afbf",
+      "citation_number": 2,
+      "cited_text": "1.1 PURPOSE OF THE SYSTEM DESIGN DOCUMENT The System Design document tracks the design activities that are performed to guide the integration, installation, verification, and acceptance testing of the IMPALA Platform.  The inputs to the design document are derived from the activities recorded in Tasks 1 through 6 of the Statement of Work (SOW), with the proposed technical solution being the completion of Phase 1-A.  With the documentation of the architecture of the IMPALA Platform and the installation steps taken, the SDD will be a living document, capturing the details about capability enhancements and system improvements to the IMPALA Platform to provide users in development of accurate and precise analytical models.  The IMPALA Platform infrastructure team, data architecture team, system integration team, security management team, project manager, NASA data scientists and users are the intended audience of this document."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 3,
+      "cited_text": "How Do You Effectively Write a Product Strategy Document? A product strategy document gives every requirement a clear purpose by anchoring it to measurable goals and customer outcomes to align with the broader direction of the business. When maintained well, it becomes the single source of truth that guides priorities. Strong strategy documents show how each initiative supports organizational objectives, and they help teams stay aligned even as conditions shift. They clarify which outcomes matter most, whether the goal is to reduce churn for key customer segments or increase adoption of newly launched capabilities."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 4,
+      "cited_text": "Productboard supports connecting product strategy to business outcomes so teams always know why their choices matter. Essential Components of a Modern Product Strategy Document To make it easy for teams to understand what they are working toward and how progress will be measured, clear goals come first. These goals tie directly to business objectives or OKRs so product work can be evaluated through the same lens as sales, marketing, and customer success. Good PRDs also define the outcomes that matter most for customers, which helps teams choose between competing ideas with confidence."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 5,
+      "cited_text": "Core Components of a Traditional PRD A standard PRD often includes: Problem statement and context Target users and user insights Feature description and functional requirements Non-functional requirements and constraints Acceptance criteria and success measures Open questions and dependencies Release considerations and rollout notes Let's consider a scenario: You work on the product team for an enterprise CRM platform. Executive leadership is concerned after a major customer churned over to your competitor, citing gaps in their view of customer activity."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 6,
+      "cited_text": "The Product Requirements Document (PRD): Definition and Purpose What defines a PRD? A PRD is the working document product managers use to describe what a team should build and why it matters. It provides engineering and design with clarity on (1) scope, (2) constraints, (3) acceptance criteria, and (4) expected customer value . The goal is alignment. A well-written product requirements document outlines the problem to solve, the intended outcome, and the key requirements needed to deliver that outcome. When it is clear and current, it reduces rework and supports faster decision making across technical teams."
+    },
+    {
+      "source_id": "e68f4b12-261c-4818-a79b-fc2c022e20b1",
+      "citation_number": 7,
+      "cited_text": "Best Practices for Documenting Business Requirements As you work your way through the template, here are eight best-practices that will guide you in documenting the business requirements and set your development project up for success: Assign resources to write the business requirements who understand all stakeholder needs and the project's software development language. Meet with stakeholders from every business unit impacted by the project—preferably in one-on-one meetings to ensure everyone is heard. Reconcile conflicts among stakeholders who disagree on a requirement; it's critical to do so before development begins. Identify the target audience for each requirement, which will factor into the end-user testing process. Ensure each requirement is testable so that achieving it can be validated. Facilitate testing by defining each requirement separately; combining two or more into one definition may make validation impossible. Specify the exact success metrics for satisfying each requirement; “easy to use” is ambiguous and difficult to define as to when it's achieved. Leverage images, graphs, charts, diagrams, workflows, use-cases and visual prototypes to articulate the documented requirements to non-technical stakeholders."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 8,
+      "cited_text": "Non-functional requirements Support performant filtering for large enterprise accounts with multi-year histories and high event volume. Comply with enterprise security and privacy standards, including field-level access controls and regional data residency where required. SUCCESS METRICS Quantitative targets Reduce average time spent on weekly account prep by at least thirty percent within two quarters of rollout. Improve renewal rate for monitored strategic accounts by at least five percentage points within one renewal cycle."
+    },
+    {
+      "source_id": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+      "citation_number": 9,
+      "cited_text": "Value Rating Description 1 Critical The requirement is critical to the project’s success. Without fulfilling this requirement, the project is not possible. 2 High The requirement is high priority re the project’s success, but the project could still be implemented in a minimum viable product (MVP) scenario. 3 Medium The requirement is important to the project’s success, as it provides value, but the project could still be implemented in an MVP scenario. 4 Low The requirement is low priority (i.e., it would be nice to have), but the project’s success is not dependent upon it."
+    },
+    {
+      "source_id": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+      "citation_number": 10,
+      "cited_text": "5 Future The requirement is outside of the project’s scope and is included as a possible component of a prospective release and/or feature. REQUIREMENTS CATEGORIES (RC1) ID Requirement Priority Raised By 8. NON-FUNCTIONAL REQUIREMENTS . ID Requirement 9. FINANCIAL STATEMENTS 10. COST AND BENEFIT 11. RESOURCES 12. SCHEDULE, TIMELINE, AND DEADLINES 13. ASSUMPTIONS 14. GLOSSARY Term / Abbreviation Explanation 15. REFERENCES Name Location 16. APPENDIX DISCLAIMER Any articles, templates, or information provided by Smartsheet on the website are for reference only. While we strive to keep the information up to date and correct, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability with respect to the website or the information, articles, templates, or related graphics contained on the website. Any reliance you place on such information is therefore strictly at your own risk."
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 11,
+      "cited_text": "Delivery backlog: Backlogs list work, while PRDs explains why that work matters. Feature spec sheet: Specs describe outputs, but PRDs define outcomes. Static file: Documents stored in disconnected tools cannot reflect customer insights or team objectives in real time. The New Standard: Connecting Strategy to Execution Many teams struggle when strategy and execution live in separate places. One document sets the goals. Another defines the requirements. A third tracks the work. When these artifacts drift apart, the team loses clarity on why certain choices are made—or if they matter at all."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 12,
+      "cited_text": "The term end-users denotes people who use the output, and stakeholders denote PMs/BAs/managers. 2.1. Identify the end-users The first step is to identify the end-user(s). The request for the project usually comes up during meetings. Understanding the capabilities and preferences of the end-user is crucial for designing an appropriate solution. End-users (& their preferences) for data projects are usually one of: Data analysts/Scientists: SQL, File Business users: Dashboard, report, Excel Software engineers: SQL, APIs External clients: Cloud storage, SFTP/FTP, APIs"
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 13,
+      "cited_text": "Relevant insights or research that shapes the requirement Interviews with account teams showed that they spend several hours per week compiling updates from email, calls, and support tickets. Win–loss analysis revealed that deals are often lost when no one notices signals from executive sponsors or buying committees. REQUIREMENTS Functions requirements Create a unified account activity timeline that aggregates emails, meetings, support interactions, and key product usage events into a single view. Surface automated alerts when account health drops below a configurable threshold or when critical stakeholders engage after a period of inactivity."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 14,
+      "cited_text": "Clearly define the requirements, record them (e.g. JIRA, etc), and get sign-off from the stakeholders. 2.3. End-user validation Provide end-users with sample data they can analyze (if possible, in the same format as the expected output). Ask the end-users to validate the data (with a timeline). End-users have a deep understanding of data distribution and business rules. Validation includes ensuring that the data has expected business metrics, can be “sliced and diced” as needed and is easy to use by the end-user. This also creates an opportunity to observe the access patterns, such as what filters and columns are being used often."
+    },
+    {
+      "source_id": "dca40f20-a255-4c48-937d-5abfbe6d5dac",
+      "citation_number": 15,
+      "cited_text": "2.2. Help end-users define the requirements Assume the end-users don't know everything they want or even that they will clearly define it to you. You can't get 100% of the requirements right the first time. Talk with the end-user about their objectives and their difficulties. Understanding the current status of end-user operations will provide valuable insights. The end-user might say “We want X data”. Help the end-user define requirements by asking the following questions: Business impact : How does having this data impact the business? What is the measurable improvement in the bottom line, business OKR, etc? Knowing the business impact helps in determining if this project is worth doing. Semantic understanding : What does the data represent? What business process generates this data? Knowing this will help you model the data and understand its relation to other tables in your warehouse. Data source : Where does the data originate? (an application DB, external vendor via SFTP/Cloud store dumps, API data pull, manual upload, etc). Frequency of data pipeline : How fresh does the data need to be? (n minutes, hourly, daily, weekly, etc). Is there a business case for not allowing a higher frequency? What is the highest frequency of data load acceptable by end-users? Historical data : Does historical data need to be stored? When loading data into a warehouse, the answer is usually yes. Data caveats : Does the data have any caveats? (e.g. seasonality affecting size, data skew, inability to join, or data unavailability). Are there any known issues with upstream data sources, such as late arriving data, or missing data? Access pattern : How will the end user access the data? Is access via SQL, dashboard tool, APIs, or cloud storage? In the case of SQL or dashboard access, What are the commonly used filter columns (e.g. date, some business entity)? What is the expected access latency? Business rules check (QA) : What data quality metrics do the end-users care about? What are business logic-based data quality checks? Which numeric fields should be checked for divergence (e.g. can't differ by more than x%) across data pulls? Data output requirements : What is the data output schema? (column names, API field names, Cloud storage file name/size, etc)"
+    },
+    {
+      "source_id": "0f98105a-e702-4086-8695-8219087f4306",
+      "citation_number": 16,
+      "cited_text": "Qualitative indicators Account teams report higher confidence in their understanding of stakeholder engagement and risk. Sales leadership cites the unified view as a primary input in forecast reviews and QBRs. RISKS & DEPENDENCIES Known risks and constraints Data quality issues in upstream integrations could undermine trust in the unified activity view. Poor alert tuning could create noise fatigue and cause teams to ignore important signals. Cross-team or technical dependencies Requires stable integrations with email, calendar, support, and product analytics systems that are owned by different platform teams. Depends on collaboration with security and legal teams to validate data handling and retention policies."
+    },
+    {
+      "source_id": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+      "citation_number": 17,
+      "cited_text": "SAMPLE BUSINESS REQUIREMENTS DOCUMENT TEMPLATE SAMPLE BUSINESS REQUIREMENTS DOCUMENT TEMPLATE VERSION HISTORY VERSION APPROVED BY REVISION DATE DESCRIPTION OF CHANGE AUTHOR NOTE TO USER: Overwrite the sample text included in this template to complete your project’s business requirements document. TABLE OF CONTENTS 1. EXECUTIVE SUMMARY SNAPSHOT 3 2. PROJECT DESCRIPTION 4 3. PROJECT SCOPE 5 4. BUSINESS DRIVERS 6 5. CURRENT PROCESS 7 6. PROPOSED PROCESS 8 7. FUNCTIONAL REQUIREMENTS 9 PRIORITY 10 REQUIREMENTS CATEGORIES (RC1) 10"
+    },
+    {
+      "source_id": "c6c7adcc-b68a-4164-84e4-aca332998f37",
+      "citation_number": 18,
+      "cited_text": "8. NON-FUNCTIONAL REQUIREMENTS 11 9. FINANCIAL STATEMENTS 12 10. COST AND BENEFIT 13 11. RESOURCES 14 12. SCHEDULE, TIMELINE, AND DEADLINES 15 13. ASSUMPTIONS 16 14. GLOSSARY 17 15. REFERENCES 18 16. APPENDIX 19 1. EXECUTIVE SUMMARY SNAPSHOT 2. PROJECT DESCRIPTION 3. PROJECT SCOPE 4. BUSINESS DRIVERS 5. CURRENT PROCESS 6. PROPOSED PROCESS 7. FUNCTIONAL REQUIREMENTS PRIORITY Use the following priority table. It allows you to apply a ratings system to your requirements, so you have the visibility (into the value, status, and description of each requirement) that’s necessary for determining whether a particular requirement is essential to project success:"
+    }
+  ]
+}

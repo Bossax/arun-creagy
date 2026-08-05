@@ -1,0 +1,208 @@
+{
+  "answer": "In requirements-engineering and enterprise architecture practice, the relationship between a domain-specific data/requirements model (e.g., for a single business area or risk domain) and an organization-wide conceptual data model depends heavily on the **architectural paradigm** of the enterprise. \n\nBased on your enterprise data management and software development sources, this relationship typically falls into one of three structural categories:\n\n---\n\n### 1. The Centralized / Monolithic Paradigm: Bounded Specialization\nIn traditional enterprise architectures (such as centralized Data Warehouses), the organization-wide conceptual model serves as the absolute logical master [1, 2]. In this scenario, a domain-specific model operates as a **bounded specialization** or **logical subset** [2]:\n*   **Thematic Subsets (Data Marts):** Domain-specific models are represented as Data Marts—modular, use-case-specific subsets of the master warehouse that are optimized for a particular business unit's analytical (OLAP) requirements [2].\n*   **Tight Coupling & Schema-on-Write:** These models are tightly coupled to the central database schemas [3]. Because of the centralized **schema-on-write** policy, any domain-specific requirements or local data structures must be reconciled and mapped directly to the predefined, unified master schema before any data can be ingested or integrated [3, 4].\n\n### 2. The Decentralized Paradigm (Data Mesh): Independently Governed Artifact\nIn a modern, decentralized enterprise architecture (such as a Data Mesh), domain-specific data models are treated as **independently governed artifacts** [5, 6]:\n*   **Domain Autonomy & Ownership:** Individual business areas or risk domains have complete end-to-end ownership over their own data products, pipelines, and underlying logical schemas [6-8]. The domain teams are independently responsible for the lifecycle, maintenance, and quality of these models based on their specific operational logic [6, 9].\n*   **Federated Computational Governance:** Instead of enforcing a monolithic organization-wide conceptual data model, global alignment is managed through a **federated governance framework** [7, 10]. This global layer balances local domain autonomy with organization-wide consistency by overseeing **interoperability policies**—standardizing global data contracts, schema definitions, and API structures to ensure that these independently governed domain models can seamlessly communicate and share data [7, 10].\n\n### 3. The Semantic / Virtualized Paradigm (Data Fabric): Semantic Extension\nIn an integrated, metadata-driven architecture (such as a Semantic Data Lake or Data Fabric), domain-specific models function as **semantic extensions** that map local requirements to a shared organization-wide conceptual model [11, 12]:\n*   **Ontology and Knowledge Graph Alignment:** Individual business domains maintain their own local data models, but their specific attributes, fields, and relationships are mapped (or annotated) to an organization-wide shared ontology or central Knowledge Graph [13, 14].\n*   **Abstracting Complexity:** This approach abstracts the physical storage layer [14]. It allows the enterprise to maintain a highly interconnected, unified conceptual metadata model that spans multiple business and geographic boundaries [15] while allowing individual business domains the flexibility to extend the central model with specialized local vocabularies and custom tagging rules [13, 16].\n\n---\n\n### How this Relates to a BRD/SRS\nWhen documented in a Business Requirements Document (BRD) or System Requirements Specification (SRS), these paradigms dictate how requirements are baselined:\n*   Under **centralized governance**, the BRD enforces a single, standardized business glossary and centralized data policies that all business units must strictly follow to prevent a fragmented \"data swamp\" [17, 18].\n*   Under a **federated model**, the BRD or SRS establishes a master data management (MDM) framework that defines a single, consistent conceptual view for shared business entities (such as *Customer* or *Product*), while granting local domains the autonomy to independently govern their specialized operational schemas [19].\n\n***\n\n🧩 I can help you draft a standardized **Data Contract Template** that defines how a domain-specific model registers its schema with a federated enterprise governance layer. Would you like to outline the core contract fields?",
+  "conversation_id": "8f8ae5e6-85be-4de5-8aea-56188a4c08ff",
+  "sources_used": [
+    "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "e4e1835f-3ede-4158-b4db-97e6919a242f"
+  ],
+  "citations": {
+    "1": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "2": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "3": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "4": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "5": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "6": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "7": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "8": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "9": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "10": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "11": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "12": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "13": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "14": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "15": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "16": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "17": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+    "18": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+    "19": "e4e1835f-3ede-4158-b4db-97e6919a242f"
+  },
+  "references": [
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 1,
+      "cited_text": "3.1 Data Warehouse In the 1990s, data warehouses [ 70 ] emerged as a standard solution for enterprise-wide analytical data management. They enabled organizations to run overnight ETL processes (Extract-Transform-Load) that extracted data from heterogeneous sources, transformed it to meet analytical requirements, and loaded it into a centralized, materialized repository. This architecture supported business intelligence by providing a consistent and integrated view of enterprise data. Traditionally based on relational database technology, data warehouses are the most established form of analytical data architecture [ 70 ] and remain widely used in industry. They have evolved to support cloud-native implementations that offer greater scalability and lower operational costs. For instance, Apache Hive [ 68 ] introduced data warehouse functionality for big data by enabling SQL queries on top of Hadoop , while Snowflake [ 63 ] exemplifies a commercial, cloud-native data warehouse. Despite these innovations, data warehouses primarily support predefined analytical queries for reporting purposes and are less suited for exploratory or unstructured analytics such as text or web mining [ 25 , 21 ] ."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 2,
+      "cited_text": "The architecture, illustrated in Figure ˜ 3 [ 73 , 78 , 109 ] , revolves around ETL processes that consolidate data from various sources. While the core storage is generally relational, the staging area may involve other systems, including NoSQL stores [ 28 ] . To support performance and modular access, data marts are employed as thematic subsets of the warehouse, optimized for Online Analytical Processing (OLAP) [ 25 ] . Figure 3: Data warehouse architecture based on [ 73 , 74 ] Data sources are independent systems from which data is extracted. The staging area serves as a buffer for cleansing and transforming data before integration. A mediator integrates this harmonized data into a consistent, unified store. The operational data store holds historical data independently of specific use cases. The data warehouse acts as the central, structured repository optimized for analysis. Data marts are thematic subsets designed to support modular and secure data access. Finally, the metadata system manages schema and lineage information, enabling effective data governance and understanding."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 3,
+      "cited_text": "<cited_table>",
+      "cited_table": {
+        "num_columns": 7,
+        "rows": [
+          [
+            "Data Processing",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "D7",
+            "5 – ETL",
+            "3 – on–demand integration (ELT)",
+            "4 – Semantic–level integration",
+            "2 – Mix between DL and DW",
+            "4 – Integration driven by metadata",
+            "2 – Local integration within data products"
+          ],
+          [
+            "D8",
+            "2 – access remains tightly coupled to internal engine and physical schemas",
+            "3 – Raw file-based querying; flexibility via tools like Spark/Presto, but limited abstraction",
+            "5 – OBDA-based access over heterogeneous data using semantic models.",
+            "3 – Combines files and tables with SQL engines, but limited abstraction from physical storage",
+            "5 – virtualized access, logical layers, and cross-platform queries",
+            "3 – Varies by domain; considers APIs or connectors; lacks global query abstraction"
+          ],
+          [
+            "D9",
+            "1 – Focus on reporting & BI",
+            "2 – Not the primary focus",
+            "1 – No focus",
+            "5 – Full ML lifecycle support",
+            "3 – Moderate",
+            "1 — Not a focus"
+          ]
+        ]
+      }
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 4,
+      "cited_text": "3.1.2 Requirements The following technical requirements capture the essential features of a data warehouse ( [ 70 , 25 , 74 ] ): DW1 — Schema-on-write: data must conform to a predefined schema before it is written and stored. Hence, an ETL process consolidating data from heterogeneous sources is required to transform the data into the desired target schema. DW2 — Structured data model: data is organized into a structured schema following a relational or multi-dimensional model. DW3 — Consistency guarantees: provide means for checking and enforcing the consistency of structure and content across data collections."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 5,
+      "cited_text": "For such reasons, Dehghani [ 31 , 33 ] introduces the so-called data mesh, which is not (yet) a typical data architecture with concrete implementations, or infrastructure specifications, but rather “a socio-technical data approach” [ 33 ] . Interestingly, the concept draws inspiration from microservice architectures in software engineering [ 10 ] . While traditional data platforms remain centralized, a data mesh applies the microservice paradigm to data architectures, where each domain functions as an independent service. Just as microservices emerged to overcome the limitations of monolithic applications, the data mesh addresses the constraints of centralized data structures."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 6,
+      "cited_text": "3.6.1 Characteristics Four principles define the data mesh as originally introduced by Dehghani [ 31 ] : DM1 — Data-as-a-product: creation, management, and distribution of data products via a catalog. Data providers are responsible for publishing and provisioning them and collaborate with data owners and stewards for maintenance. DM2 — Decentralized data ownership and architecture: each domain has ownership over its data products, ensuring that domain teams are responsible for the quality, maintenance, and lifecycle of their data products."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 7,
+      "cited_text": "For a definition we follow Blohm et al. [ 19 ] once more: Definition 6. [ Data Mesh] “ Data mesh is a socio-technical, decentralized, distributed concept for enterprise data management [ 20 ] . It is characterized by the four principles of data-as-a-product, domain orientation, self-service platforms, and federated computational governance [ 32 ] .” Figure ˜ 8 illustrates the data mesh architecture. Van der Werf et al. [ 135 ] identify four archetypes, out of which the fine-grained fully federated mesh or short pure data mesh is considered to be the most theoretical and decentralized but also the most mature version. We have chosen this pure form in which individual nodes directly exchange data products and deliberately left out a central distribution layer. Every atomic team or business unit is responsible for a single domain and the data products arising from it. While this approach provides high flexibility and strong domain specialization, it might also introduce challenges such as wasting resources, when data transformations are performed redundantly due to lack of communication or transparency between domains. Here, the maturity of the self-service capability and federated governance components are particularly relevant. In the figure, one node is enlarged representatively to display more details. In each domain heterogeneous raw data emerges that will be stored in a data storage and operations platform of choice. Those can be whatever is available and suitable in the specific domain, e.g. data warehouse/lake, cloud storages or file storages etc. Each domain is responsible for transforming and packaging raw data into data products. Data products are further subdivided into data assets and raw data as inspired by Eichler et al. [ 43 ] . In each domain, data consumers and providers have access to self-service capabilities. In the figure, the individual nodes inherit self-service capabilities from a data fabric to represent the close relationship and potential synergy between the two paradigms. They are extended by domain-specific services as well as data product management where domain teams register their data products along with associated metadata, quality metrics, and access policies and facilitate the distribution to other domains. This data product management and distribution is overseen by a central data federated governance layer to enforce global governance standards consistently ensuring policies, interoperability and secure data access."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 8,
+      "cited_text": "Enterprise Data Management Architecture A data management architecture is your organization's blueprint for collecting, storing, securing, arranging, integrating, and using data through interconnected management systems. There's no one-size-fits-all architecture; it's shaped by business needs, goals, and constraints. Common approaches to enterprise data management architecture are: Monolithic architecture . All data is handled by a single centralized data store. It's simple in implementation but comes with high latency and limited scalability. Distributed data mesh . Domain-specific data owners handle their data products and pipelines, with the architecture consisting of smaller decentralized components. It offers better scalability and flexibility, but is more complex in implementation."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 9,
+      "cited_text": "Domain-oriented ownership shifts data responsibility to individual business domains, allowing them to manage and utilize their own data according to their specific operational logic. This model fosters agility and autonomy by structuring data management around product-focused teams [ 86 , 20 ] ). Self-service platforms serve as a technical abstraction layer, enabling unified access to data products while reducing complexity for users [ 137 , 20 ] . By providing a standardized infrastructure, they eliminate redundant technical efforts and simplify the management of data products across their lifecycle [ 33 , 20 , 6 ] ."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 10,
+      "cited_text": "Figure 8: Data mesh architecture inspired by [ 43 , 40 , 62 , 130 ] Finally, federated computational governance establishes global governance standards that ensure interoperability and secure data access while enabling decentralized and autonomous governance by distributed teams. By balancing centralized standards with decentralized decision-making, federated governance ensures that data remains accessible and governed in a structured yet flexible manner [ 33 , 20 , 137 ] . Policies are also designed to balance local, i.e. domain-oriented, autonomy with global standardization. The federated governance model oversees security policies (defining authentication, authorization, and access control), interoperability policies (standardizing schema definitions, data contracts, and API structures), communication policies (guidelines for cross-domain data sharing), and documentation policies (requiring metadata enrichment, lineage tracking, and accessibility compliance)"
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 11,
+      "cited_text": "3.3.1 Characteristics We presented a thorough review of the field in [ 66 ] from which we derive the following definition and requirements: Definition 3. [ Semantic data lake] Semantic data lakes are a specific form of traditional data lakes that extend the capabilities through a semantic layer that enriches and connects the stored data semantically. The semantic layer equips data sets in the lake with connections from the data set's metadata to conceptual/logical models, which encapsulate knowledge potentially external to the content of the data, such as domain knowledge."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 12,
+      "cited_text": "3.5 Data Fabric The concept of data fabrics was coined by NetApp in a white paper from 2016 as a “vision for data management […] that seamlessly connects different clouds, whether they are private, public, or hybrid environments” [ 62 ] . Back then, the term meant a combination of different data storage and integration techniques, however, without details about a concrete architecture. In 2019, Gartner defines a data fabric as a design concept for attaining reusable and augmented data integration services, data pipelines and semantics for flexible and integrated data delivery [ 29 ] . Hence, a data fabric is a technical architecture that brings together heterogeneous data that spans across multiple data sources; it allows organizations to monitor and manage data regardless of the location, considering appropriate data governance and data cataloging [ 20 , 83 , 2 ] . Then in 2021, Gartner [ 132 ] redefines a data fabric as a “design concept that serves as an integrated layer (fabric) of data and connecting processes”. In their data fabric architecture, Gartner emphasizes key characteristics, such as the use of AI for metadata management and data cataloging as well as knowledge graphs and ontologies to connect and enrich data sources with business related concepts. They introduce the notion of “passive vs active metadata”, i.e., data models, schema definitions, glossary, various logs are considered as passive metadata, whereas the continuous analysis of data usage with are described as active metadata describing actual experiences. The conversion of passive metadata into active metadata is interpreted as automating the collection and management of metadata [ 29 ] . By now, major vendors in data science have embraced the term; both vendors of semantic technology (e.g., Franz Inc., Ontotext, Pool Party, Stardog, and Top Quadrant) as well as more traditional vendors such as Microsoft, Oracle and Tibco [ 29 ] ."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 13,
+      "cited_text": "3.3.2 Requirements The following, together with the requirements for a traditional data lake (see section ˜ 3.2 ), confine the semantic data lake. SDL1 — Creation of semantic labels: enable the mapping of data attributes and other schema elements to elements of a KG (might be internal or external, domain-specific). SDL2 — Semantic relationships: represent any form of hierarchical, generic, or pre-defined semantic relationships (semantic connections between data sets, e.g., for provenance or governance)."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 14,
+      "cited_text": "SDL3 — Metamodel as ontology: the metamodel of the lake itself is modeled as ontology using semantic web technologies. SDL4 — Semantics-based data access: the ability to query and access data using semantic-based query languages like SPARQL, i.e., abstracting from physical storage and allowing to interact with the data conceptually using techniques like ontology-based data access [ 138 ] . In [ 66 ] , we introduce a semantic data lake architecture (see fig. ˜ 5 ) based on the four-layered architecture. Dibowski et al. [ 37 ] describe a semantic data lake as a “ specific form of data lakes in which a semantic layer on top enriches and connects the data semantically”. This definition suggests to extend the four-layered architecture by a fifth layer. In our view, proper semantic data management is only possible if it is an integral part of the data architecture. Therefore, incorporating semantics demands adjustment across the entire functionality, starting possibly already at the ingestion, where users (or AI-based technologies) annotate a dataset with semantic labels, before it is fully available inside the lake for accessing. Thus, each layer of the architecture has been extended with enhanced metadata functions with semantic capabilities. For instance, semantic labeling in the ingestion layer assigns semantic labels to metadata elements. Data quality management benefits from an expanded semantic metadata repository managed within the storage layer, which supports functions such as ontology-based data access (OBDA) [ 66 ] , aiding in data usage and interpretation. Consequently, the interaction layer incorporates additional features, such as exploration of the knowledge graph and the semantic model, semantic query formulation using languages like SPARQL, and tools for refining semantic mappings and models."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 15,
+      "cited_text": "Similarly, various proposals include the use of knowledge graphs, ontologies and semantic web technologies explicitly [ 29 ] and others do not mention them at all [ 115 ] . DeBellis et al. [ 29 ] provide strong arguments in favor of using semantic web technologies because they ensure reuse and interoperability of data. Modeling metadata for a data fabric requires a complex, highly interconnected model that typically spans multiple organizational, geographic, and business boundaries. Obviously, relational data models are too rigid to easily store this type of data. Knowledge graphs are more suitable to represent such information because they are more flexible, heterogeneous, formal as well as fast and scalable [ 29 ] . Martinez-Casanueva et al. [ 91 ] present CANDIL, a data architecture to convert heterogeneous data into an RDF-based representation using mappings. They call their platform a data fabric; however, besides the use of semantic data management techniques, we do not recognize other technical features in their approach. Therefore, we consider it as an ontology-based data integration pipeline."
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 16,
+      "cited_text": "<cited_table>",
+      "cited_table": {
+        "num_columns": 7,
+        "rows": [
+          [
+            "Data Modeling & Understanding",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "D4",
+            "1 – relational",
+            "5 – raw data in original format",
+            "5 – raw data in original format",
+            "3 – Mainly relational",
+            "5 – arbitrary format",
+            "5 – Data products of arbitrary format"
+          ],
+          [
+            "D5",
+            "1 – Fixed, scoped model",
+            "3 – Automated metadata extraction",
+            "4 – Metadata enriched with semantics",
+            "3 – Automated metadata extraction",
+            "5 – AI–driven, automated",
+            "2 – Decentralized, on–demand"
+          ],
+          [
+            "D6",
+            "1 – None",
+            "1 – None",
+            "5 – Ontologies & KGs",
+            "3 – Basic",
+            "5 – KG–based metadata",
+            "2 – local vocabularies, but no global semantic layer"
+          ]
+        ]
+      }
+    },
+    {
+      "source_id": "b61e8c9a-b582-45c8-966a-9a06cc76fd99",
+      "citation_number": 17,
+      "cited_text": "In 2014, Gartner [ 48 ] raised several criticisms of data lakes, warning that the indiscriminate ingestion of disparate data could lead to a so-called data swamp, making the data unusable without proper metadata management and governance [ 111 ] . Further, concerns included insufficient attention to data security and privacy oversight. In response to these critiques, Dixon revisited the data lake concept [ 39 ] . With Hadoop at the core, a key requirement was that a data lake should offer low-cost, easily accessible storage that supports a schema-on-read approach, meaning the metadata can be populated over time and transformations to apply the schema are only performed once required. This approach allows a data lake to automatically extract metadata from raw data and identify patterns, with users contributing additional descriptive information, such as domain-specific knowledge and attribute linkages. Hence, the idea is that the interaction between users and the data lake continually enhances (meta)data quality and value."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 18,
+      "cited_text": "An enterprise data management framework establishes organization-wide data governance, defines the data management architecture, and helps foster a data-driven culture. Enterprise Data Governance Data governance focuses on processes, structures, policies, procedures, and master data management practices implemented across the organization to ensure data security, quality, and integrity. It's a subdomain of data management that: States data goals (e.g., maintaining compliance, improving quality) and metrics to track Outlines roles related to data management (data owners, data stewards, stakeholders) and their duties Defines data standards regarding data formats, models, metadata, naming conventions, etc. Maps data flows and supports metadata management to outline data collection, storage, movement, and archival processes. Establishes auditing and testing procedures."
+    },
+    {
+      "source_id": "e4e1835f-3ede-4158-b4db-97e6919a242f",
+      "citation_number": 19,
+      "cited_text": "A common source of confusion in enterprise data initiatives is the distinction between enterprise data management and master data management (MDM) . Enterprise data management covers the full lifecycle of all data assets, including governance, integration, storage, and usage. MDM, on the other hand, focuses on a narrower yet critical domain to ensure a single and consistent view of key business entities such as customers, products, and suppliers. This distinction becomes especially important at scale, where master data management ensures consistency across systems. As organizations grow, inconsistencies in master data can lead to fragmented customer views, reporting discrepancies, and inefficiencies across business functions. By establishing MDM as part of the governance layer, companies can create a reliable foundation for analytics, operational processes, and cross-functional collaboration. In this context, master data management is not a standalone initiative but an essential component that strengthens the overall effectiveness of enterprise data management."
+    }
+  ]
+}
