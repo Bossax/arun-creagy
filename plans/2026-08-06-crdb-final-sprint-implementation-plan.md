@@ -123,9 +123,9 @@ WP1 ran as a TOR-grounded first draft followed by a full collaborative-session p
 
 ---
 
-## Open Decision Needed Before WP6 Can Finish
+## Open Decision Before WP6 Can Finish — RESOLVED (2026-08-06)
 
-Which **1–2 use cases** get the full Functional Spec (sample data, sign-off, ECA discipline)? The TOR70 briefing deck (D-053) already names a 3+2 priority list (spatial risk database, hazard/exposure map, Climate Risk Index, then A-BTR + disaster-loss-statistics) — but the redirection plan's Section 2.6 scale correction caps *full* Functional Specs at 1–2 for the two-week window. This needs Boss's pick from that list before WP6's Functional Spec sub-track can start (the NFR-enrichment sub-track can proceed on all 9 regardless).
+Which **1–2 use cases** get the full Functional Spec (sample data, sign-off, ECA discipline)? Resolved: **A-BTR reporting system + disaster-loss statistics analysis** — the 2 new products from the TOR70 briefing deck's "3+2" grouping (Slide 15, `TOR70_briefing-deck_slide-text.md`). The "3" in that grouping are DCCE's existing tools, which DCCE itself owns the enhancement-requirements for — out of CRDB's Functional Spec scope. CRDB's own scope centers on the 2 new products it proposed, which have no other owner, and the count (2) matches the 1–2 cap exactly. No further narrowing needed. (The NFR-enrichment sub-track still proceeds on all 9 services regardless.)
 
 ---
 
