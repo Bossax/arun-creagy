@@ -22,28 +22,25 @@ There are **two numbering schemes** layered on this project's history. Knowing w
 
 **The physical folders were renamed/merged on 2026-08-06 to match scheme 2.** The 4 ledgers and most older docs still cite scheme-1 paths (e.g. `output/05_CDM_EARCatalog/...`), which **no longer exist at that path**. Full relink is deferred to WP10 (Final Packaging) — until then, use the translation table below or `output/CRDB-Execution-Architecture-Index.md` (kept current, authoritative navigation entrypoint).
 
-| Current folder | DCCE Item | Old path (still cited in ledgers/history) |
-|---|---|---|
-| `00_Strategy_Reports/` | — (not a DCCE item; internal strategy/decision trail) | unchanged |
-| `01_Business_Objective_Platform_Rationale/` | Item 1 (new) | none — new |
-| `02_Data_Inventory/` | Item 2 | `03_DataInventory_DQ/` |
-| `03_Data_Product_Inventory/` | Item 3 (new) | none — new |
-| `04_Sitemap/` | Item 4 | `01_Sitemap_InterfaceMapping/` |
-| `05_Data_Management_Framework/Glossary/` | Item 5 (sub) | `04_Glossary/` |
-| `05_Data_Management_Framework/CDM_EARCatalog/` | Item 5 (sub) | `05_CDM_EARCatalog/` |
-| `05_Data_Management_Framework/Governance_RACI/` | Item 5 (sub) | `07_Governance_RACI/` |
-| `05_Data_Management_Framework/RefData_Matrix/` | Item 5 (sub) | `08_RefData_Matrix/` |
-| `06_Use_Case_Demand_Analysis/` | Item 6 | `02_UseCases_FunctionalSpecs/` (also absorbed `A-BTR_requirement_analysis/`, previously at output root, as a subfolder) |
-| `07_Gap_Analysis/` | Item 7 (new) | none — new |
-| `08_Recommendations/` | Item 8 (new) | none — new |
-| `09_LDM_LossDamage_DataModel/` | Item 9 | `06_LDM_LossDamage_DataModel/` |
-| `99_BuildingBlocks_Dormant/` | — (no DCCE item; retire-or-continue call still open) | `09_BuildingBlocks/` |
+| Current folder                                  | DCCE Item                                             | Old path (still cited in ledgers/history)                                                                               |
+| ----------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `00_Strategy_Reports/`                          | — (not a DCCE item; internal strategy/decision trail) | unchanged                                                                                                               |
+| `01_Business_Objective_Platform_Rationale/`     | Item 1 (new)                                          | none — new                                                                                                              |
+| `02_Data_Inventory/`                            | Item 2                                                | `03_DataInventory_DQ/`                                                                                                  |
+| `03_Data_Product_Inventory/`                    | Item 3 (new)                                          | none — new                                                                                                              |
+| `04_Sitemap/`                                   | Item 4                                                | `01_Sitemap_InterfaceMapping/`                                                                                          |
+| `05_Data_Management_Framework/Glossary/`        | Item 5 (sub)                                          | `04_Glossary/`                                                                                                          |
+| `05_Data_Management_Framework/CDM_EARCatalog/`  | Item 5 (sub)                                          | `05_CDM_EARCatalog/`                                                                                                    |
+| `05_Data_Management_Framework/Governance_RACI/` | Item 5 (sub)                                          | `07_Governance_RACI/`                                                                                                   |
+| `05_Data_Management_Framework/RefData_Matrix/`  | Item 5 (sub)                                          | `08_RefData_Matrix/`                                                                                                    |
+| `06_Use_Case_Demand_Analysis/`                  | Item 6                                                | `02_UseCases_FunctionalSpecs/` (also absorbed `A-BTR_requirement_analysis/`, previously at output root, as a subfolder) |
+| `07_Gap_Analysis/`                              | Item 7 (new)                                          | none — new                                                                                                              |
+| `08_Recommendations/`                           | Item 8 (new)                                          | none — new                                                                                                              |
+| `09_LDM_LossDamage_DataModel/`                  | Item 9                                                | `06_LDM_LossDamage_DataModel/`                                                                                          |
+
 
 Why one DCCE item spans four subfolders (Item 5): the redirection plan's own gap analysis found that "Data Management Framework" is DCCE's umbrella term for glossary + conceptual model + governance + reference data together — CRDB's four separate pillar categories don't collapse into one DCCE ask by accident, they're genuinely one deliverable with four parts.
 
-**Other moves from the same restructure:**
-- `interim-report/` and `Interview summary notes/` → `archive/` (both stale/superseded, not touched further this sprint)
-- CDM's superseded `Domains`/`Entities`/`Relationships` CSV versions → `05_Data_Management_Framework/CDM_EARCatalog/archive/`. Canonical CDM data is always the **highest version number** present outside that archive subfolder (currently `Domains-v3.csv`, `Entities-v3.csv`, `Relationships-v4.csv`, D-051) plus the narrative doc `Pillar_05_CDM_EARCatalog_Deliverable.md` (D-036). The older `Conceptual Data Model for climate risk and adaptation data system.md` (D-010) is marked superseded in-file — don't treat it as current.
 
 **Untouched, not part of either numbering scheme:**
 - `final_report/` — submission staging, organized by TOR clause number (5.2–5.5 + appendices)

@@ -34,7 +34,7 @@ Numbering below is the **new 9-item DCCE deliverable list** (Item 1 = new). Each
 
 | WP   | Item                                              | What happens                                                                                                                                                                                                                                                                                                                       | Folder                                                                            | Days           | Status |
 | ---- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | -------------- | ------ |
-| WP0  | Housekeeping                                      | Retire/rewrite stale `CRDB-Execution-Architecture-Index.md`; resolve CDM's two conflicting sealed records (pick canonical, mark other superseded); log Reference Data as deferred-to-TOR70 decision; flag the stray venv for Boss's exclude/delete call                                                                            | root + `05_CDM_EARCatalog/`                                                       | 1              |        |
+| WP0  | Housekeeping                                      | Retire/rewrite stale `CRDB-Execution-Architecture-Index.md`; resolve CDM's two conflicting sealed records (pick canonical, mark other superseded); log Reference Data as deferred-to-TOR70 decision; flag the stray venv for Boss's exclude/delete call                                                                            | root + `05_CDM_EARCatalog/`                                                       | 1              | **Done — see WP0 Completion Log** |
 | WP1  | **Business Objective / Platform Rationale (NEW)** | Draft: why this platform exists, who it serves, what's lost without it — grounded in TOR language + Strategic Alignment Deck already accepted by Director Toey. Feeds WP6 (Gap Analysis) and WP8 (Recommendations) as the thing they're justified against                                                                          | new file in `00_Strategy_Reports/`                                                | 1–3            |        |
 | WP2  | Data Inventory                                    | Re-score `data_catalog_v3.csv` (260 rows) against the top-10-critical-asset test; deep-capture the 9-field profile (Section 2.1) for those 10                                                                                                                                                                                      | `03_DataInventory_DQ/`                                                            | 2–4            |        |
 | WP3  | Data Product Inventory                            | Business metadata + 5-role governance assignment + compliance classification for the same 10 assets. **No Data Contracts** (cut — see WP8)                                                                                                                                                                                         | `03_DataInventory_DQ/` or `02_UseCases_FunctionalSpecs/`                          | 3–5            |        |
@@ -48,6 +48,54 @@ Numbering below is the **new 9-item DCCE deliverable list** (Item 1 = new). Each
 | WP11 | Communication Deck                                | Executive-facing slide deck for DCCE: platform rationale (WP1), what's being delivered (WP2–9 summary), gap analysis headline (WP7), recommendations + budget ask (WP8), TOR70 bridge. Likely reuses the executive-deck design system from D-058                                                                                   | new Artifact or `00_Strategy_Reports/`                                            | 12–14          |        |
 
 **Sealing note:** per project rules, none of WP0–WP11's outputs get written into `CRDB-Change-Log.md`, `CRDB-Deliverable-Map.md`, `CRDB-Evidence-Registry.md`, or `CRDB-Trigger-Log.md` directly — each WP's output gets drafted as a normal file first, then committed to those ledgers via the `seal` skill once Boss confirms it's ready (consistent with the existing D-057/D-058 pattern).
+
+---
+
+## WP0 Completion Log (2026-08-06)
+
+WP0 went beyond the original housekeeping scope — the folder restructure (originally a later, undated ask) got pulled forward and executed in the same session. What actually happened, in order:
+
+**1. CDM conflicting-records resolution**
+- Confirmed via Boss: D-010 (`Conceptual Data Model for climate risk and adaptation data system.md`) is the original conceptual/prototyping-stage note. Canonical CDM content is the **highest-version CSVs** (`Domains-v3.csv`, `Entities-v3.csv`, `Relationships-v4.csv`, D-051) plus the hardened narrative doc (`Pillar_05_CDM_EARCatalog_Deliverable.md`, D-036, already "v3.0 Institutionalized & Hardened" — needed no changes).
+- Added an in-file superseded marker to D-010 pointing to D-036/D-051. **Ledger status change (D-010 → superseded) is not yet applied to `CRDB-Deliverable-Map.md` — still pending `/seal`.**
+
+**2. Reference Data deferral logged**
+- New decision file: `DECISION-2026-08-06-Reference-Data-Deferred-to-TOR70.md` (now at `05_Data_Management_Framework/RefData_Matrix/` after the restructure below). Records that Reference Data is out of scope for this sprint and named as a TOR70/next-phase task in WP8, not silently dropped.
+
+**3. Stray venv (`consultation_workshop/mvp/code/`)**
+- Confirmed already covered by existing `.gitignore` patterns (`venv/`, `venv_clean/`, `**/venv/`) and confirmed untracked via `git ls-files` (0 matches). No action needed; left in place per Boss's call.
+
+**4. Folder restructure — physical `git mv`, not just an index**
+Boss chose the higher-risk option explicitly: physically merge the old 9-pillar taxonomy into the new 9-item DCCE structure now, and defer relinking historical references to WP10 ("move now, relink later"). Executed via `git mv` (history preserved) across ~214 files:
+
+| New folder | Item | Was |
+|---|---|---|
+| `00_Strategy_Reports/` | — (not a DCCE item) | unchanged |
+| `01_Business_Objective_Platform_Rationale/` | Item 1 (new) | new, empty — placeholder `README.md` added |
+| `02_Data_Inventory/` | Item 2 | `03_DataInventory_DQ/` |
+| `03_Data_Product_Inventory/` | Item 3 (new) | new, empty — placeholder `README.md` added |
+| `04_Sitemap/` | Item 4 | `01_Sitemap_InterfaceMapping/` |
+| `05_Data_Management_Framework/{Glossary,CDM_EARCatalog,Governance_RACI,RefData_Matrix}/` | Item 5 | `04_Glossary/`, `05_CDM_EARCatalog/`, `07_Governance_RACI/`, `08_RefData_Matrix/` |
+| `06_Use_Case_Demand_Analysis/` | Item 6 | `02_UseCases_FunctionalSpecs/`; also absorbed `A-BTR_requirement_analysis/` (was at output root) as a subfolder |
+| `07_Gap_Analysis/` | Item 7 (new) | new, empty — placeholder `README.md` added |
+| `08_Recommendations/` | Item 8 (new) | new, empty — placeholder `README.md` added |
+| `09_LDM_LossDamage_DataModel/` | Item 9 | `06_LDM_LossDamage_DataModel/` |
+| `99_BuildingBlocks_Dormant/` | — (no DCCE item; retire/continue call still open) | `09_BuildingBlocks/` |
+
+Also archived (not deleted): `interim-report/` and `Interview summary notes/` → `archive/`.
+
+**Known gap left open by "relink later":** the 4 ledgers (`CRDB-Change-Log.md`, `CRDB-Deliverable-Map.md`, `CRDB-Evidence-Registry.md`, `CRDB-Trigger-Log.md`) and most historical docs still cite the **old** pillar paths. `CRDB-Execution-Architecture-Index.md` carries an old→new path translation table as a bridge until WP10's full relink pass.
+
+**5. CDM version-sprawl cleanup**
+- 12 superseded `Domains`/`Entities`/`Relationships` CSV versions (`-v2`, `-edited`, `-v2-final`, etc.) archived into `05_Data_Management_Framework/CDM_EARCatalog/archive/`, leaving only the canonical v3/v4 files and current docs visible at the top level.
+
+**6. `CRDB-Execution-Architecture-Index.md` rewritten**
+- Replaced stale April-2026 links with the current 9-item folder table, the old→new path bridge, and pointers to `final_report/`, the 4 ledgers, and this sprint plan.
+
+**7. New orientation docs**
+- `ψ/incubate/DCCE/CRDB/AGENTS.md` and `CLAUDE.md` (the latter just `@`-includes the former, matching the repo-root pattern) — explain the dual old/new taxonomy, the ledger no-direct-edit rule, and working conventions (highest-version-wins, archive-not-delete, Thai filenames) to any future session working in this folder.
+
+**Committed:** `9804e48` (sealed redirection plan, pre-existing), `a09d256` (WP0 restructuring + orientation docs), `32b3ead` (session retrospective). Not yet pushed beyond `a09d256`.
 
 ---
 
