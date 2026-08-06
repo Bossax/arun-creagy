@@ -42,21 +42,21 @@ Grounded in Phase B, iterations 4–5 (requirements-engineering literature and e
 
 Both literatures converge on the same functional core, though they group it differently. Combined, a well-formed package contains:
 
-| Component | Owner | Notes |
-|---|---|---|
-| Business drivers & workload profiling | CRDB | Measurable business impact, not aspiration |
-| Source inventory with documented caveats (per source: business impact, semantic meaning, origin, refresh frequency, retention, caveats, access pattern, QA rules, output schema) | CRDB | This is CRDB's Data Inventory, made complete |
-| Business glossary / governed semantic layer | CRDB | Non-negotiable in both literatures; CRDB's existing Glossary pillar |
-| Data-quality & ingestion-validation rules (numeric, testable) | CRDB | "Data must be clean" is a named anti-pattern in both literatures |
-| RBAC / access mapped to personas | CRDB | Not a flat policy — per-persona |
-| Prioritized data-product inventory | CRDB | CRDB's Data Product Inventory pillar |
-| Business NFRs (see 2.2) | **CRDB** | Corrected from Phase A — see below |
-| Functional Specification per prioritized use case (see 2.3) | CRDB | The core handoff artifact for step (a) |
-| Data Contract + Assumption Log (see 2.4) | CRDB | Standard mitigation for the "ambiguous adjectives" failure mode |
-| Governance/RACI model, sign-off gate | CRDB | Standalone deliverable, not folded into the narrative — corroborates DCCE's step (c) |
-| System NFRs (index strategy, node sizing) | TOR70 | Not CRDB's job |
-| Bidirectional Requirements Traceability Matrix (RTM) | TOR70 | Confirmed out of scope for CRDB (Settled Finding, Phase A) |
-| Procurement terms: cost, schedule, staffing, acceptance procedure | DCCE's procurement instrument | Kept structurally separate — see 2.5 |
+| Component                                                                                                                                                                        | Owner                         | Notes                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- | ------------------------------------------------------------------------------------ |
+| Business drivers & workload profiling                                                                                                                                            | CRDB                          | Measurable business impact, not aspiration                                           |
+| Source inventory with documented caveats (per source: business impact, semantic meaning, origin, refresh frequency, retention, caveats, access pattern, QA rules, output schema) | CRDB                          | This is CRDB's Data Inventory, made complete                                         |
+| Business glossary / governed semantic layer                                                                                                                                      | CRDB                          | Non-negotiable in both literatures; CRDB's existing Glossary pillar                  |
+| Data-quality & ingestion-validation rules (numeric, testable)                                                                                                                    | CRDB                          | "Data must be clean" is a named anti-pattern in both literatures                     |
+| RBAC / access mapped to personas                                                                                                                                                 | CRDB                          | Not a flat policy — per-persona                                                      |
+| Prioritized data-product inventory                                                                                                                                               | CRDB                          | CRDB's Data Product Inventory pillar                                                 |
+| Business NFRs (see 2.2)                                                                                                                                                          | **CRDB**                      | Corrected from Phase A — see below                                                   |
+| Functional Specification per prioritized use case (see 2.3)                                                                                                                      | CRDB                          | The core handoff artifact for step (a)                                               |
+| Data Contract + Assumption Log (see 2.4)                                                                                                                                         | CRDB                          | Standard mitigation for the "ambiguous adjectives" failure mode                      |
+| Governance/RACI model, sign-off gate                                                                                                                                             | CRDB                          | Standalone deliverable, not folded into the narrative — corroborates DCCE's step (c) |
+| System NFRs (index strategy, node sizing)                                                                                                                                        | TOR70                         | Not CRDB's job                                                                       |
+| Bidirectional Requirements Traceability Matrix (RTM)                                                                                                                             | TOR70                         | Confirmed out of scope for CRDB (Settled Finding, Phase A)                           |
+| Procurement terms: cost, schedule, staffing, acceptance procedure                                                                                                                | DCCE's procurement instrument | Kept structurally separate — see 2.5                                                 |
 
 **Structure of the whole package:** one coherent, cross-referenced content baseline — requirements, data design, and governance context living together, not scattered across disconnected documents, so TOR70 does not have to reconcile them — but with contractual/procurement mechanics kept in a separate instrument that references the baseline (see 2.5), not merged into it.
 
