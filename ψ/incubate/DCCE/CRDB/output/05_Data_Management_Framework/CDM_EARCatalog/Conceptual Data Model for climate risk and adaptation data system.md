@@ -1,12 +1,19 @@
 ---
 type: task
-status: In Progress
+status: Superseded
 project:
   - DCCE_CRDB
 start date: 2026-01-09T00:00:00.000Z
 due date: 2026-02-06T00:00:00.000Z
 color: var(--mk-color-green)
 ---
+
+> **SUPERSEDED (2026-08-06):** This file (D-010) is the original conceptual/prototyping-stage CDM note. It has been superseded by the hardened v3.0 model:
+> - Narrative: [`Pillar_05_CDM_EARCatalog_Deliverable.md`](Pillar_05_CDM_EARCatalog_Deliverable.md) (D-036)
+> - Data: [`Domains-v3.csv`](Domains-v3.csv), [`Entities-v3.csv`](Entities-v3.csv), [`Relationships-v4.csv`](Relationships-v4.csv) (D-051, highest version numbers in this folder)
+>
+> Retained for historical traceability only — do not treat as current CDM content. Ledger status update pending `/seal`.
+
 # Where CDM Fits: Mapping to TOR Clauses
 
  **Implicit Requirements That Demand a CDM:**
