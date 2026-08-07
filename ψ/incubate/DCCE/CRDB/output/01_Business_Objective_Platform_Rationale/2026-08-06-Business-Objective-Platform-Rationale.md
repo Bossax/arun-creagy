@@ -25,6 +25,18 @@ DCCE's own TORs describe **two nested problems**, at two different altitudes. Th
 - `(project fact, not TOR)`: the actual data-governance framework — who owns which data domain — was only just proposed, for the first time, at the **July 2, 2026 focus group meeting**, and it currently covers domain ownership specifically, not a fuller framework. This is live, current evidence that the capability gap named in CRDB-TOR §1 is real and only now starting to close — it should be cited as project history, not inferred from TOR sequencing.
 - TOR70-TOR §5.5 (CMS with a draft → review → approve → publish workflow, explicit reviewer/approver roles) and §5.4.13–§5.4.14 (RBAC, audit trail) reveal DCCE anticipated a **trust problem**, not just a display problem: content published under DCCE's name has to be checked before it goes live, and every change has to be attributable to a specific person. That's a safeguard against a fear that isn't stated outright in §1 but is clearly designed against in §5.
 
+## 1a. Web Platform vs. Data Platform: Naming What DCCE Actually Asked For
+
+`(this session's analysis — not TOR, not a secondary source; a terminology-precision pass applied to the two-altitude reading above)`: Section 1's two altitudes read as two problems at different depths. They are more precisely described as two different *kinds* of infrastructure, and naming that distinction resolves why DCCE's own TORs describe them the way they do.
+
+**The terms, precisely.** A **web platform** is the foundational infrastructure for building and serving user-facing interaction — a CMS, a dashboard, an API layer, a site people log into and click through. A **data platform** is the foundational infrastructure for storing, moving, and governing data — ingestion, storage, governance, and delivery, the integrated stack that a web platform (or anything else) gets built on top of. They are parallel, not equivalent: one is not a subset or a "simpler version" of the other.
+
+**TOR70-TOR §1's "central, modern, easy-to-use Data Hub dashboard" is, in this precise sense, a web-platform ask.** It describes a display and interaction surface: somewhere the public and DCCE staff go to see data presented well. CRDB-TOR §1's named pain — data scattered across sources with no shared inventory or ownership model — is not a display problem. It is a data-platform-shaped problem, and a web platform cannot resolve it on its own. A web platform is a *producer and consumer* of data, not a system of record or a governance layer; built well, it can enforce consistent data entry within itself, but it cannot reconcile fragmentation across the agencies and sources CRDB-TOR §1 names, because those live outside the one application it controls. Feed a well-designed dashboard from still-fragmented, still-ungoverned sources, and it faithfully displays that fragmentation — this is precisely the "Frankenstein Dashboard" failure mode already named in Section 2b's success criterion #4 (the same indicator disagreeing across the 3 enhanced tools because it isn't computed once in a shared layer).
+
+**This reframes the two altitudes as one pattern, not two depths.** DCCE's TORs don't describe a shallow problem sitting on top of a deep one — they describe DCCE's own mental model reaching for the visible half of what it needs. "A central place to see the data" (TOR70-TOR) is what a data platform looks like from the outside, before the distinction between the display layer and the governance/storage layer underneath it has been drawn. CRDB-TOR §1's capability gap is not a *separate, deeper* problem from TOR70-TOR's dashboard ask — it is the thing that has to exist for the dashboard ask to be more than a Frankenstein Dashboard waiting to happen.
+
+**This substantially answers open item #1** (Section 5's diagnosis table: "Merged problem statement," owned by CRDB): the merge is not forcing two altitudes into one flat sentence — it is stating plainly that *DCCE asked for a website; what closes the named gap is the data platform the website has to be built on.* Boss should confirm this reads right before it's treated as fully closed.
+
 ## 2. Who It Serves
 
 The two TORs name meaningfully different audiences. TOR text alone leaves this unresolved, but it is resolved by direct project guidance, cited below as a project fact rather than a TOR claim.
@@ -135,7 +147,7 @@ Reading the two TORs together, and now cross-checked against live project facts,
 
 | # | Item | Owner | Status / Next step |
 |---|------|-------|---------------------|
-| 1 | Merged problem statement (Section 1's two altitudes) | **CRDB** (Boss) | Open — synthesis work, not a DCCE decision |
+| 1 | Merged problem statement (Section 1's two altitudes) | **CRDB** (Boss) | Substantially resolved via Section 1a (web platform vs. data platform framing) — pending Boss's confirmation it reads right |
 | 2 | Prioritization of ~13 appendix needs | **CRDB** (Boss) | Open — synthesis work, not a DCCE decision |
 | 3 | Adoption/usage metric definition | **DCCE** | Deliberately deferred; CRDB proposes options in Item 8 (Recommendations), doesn't decide |
 | 4 | Phase-2 trigger condition (catalog items 5–8) | **DCCE** | Deliberately deferred; CRDB proposes options in Item 8, doesn't decide |
