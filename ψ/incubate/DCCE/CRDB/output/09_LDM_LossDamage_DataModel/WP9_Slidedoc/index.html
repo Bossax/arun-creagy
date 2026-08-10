@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WP9: การพัฒนาระบบฐานข้อมูลความสูญเสียและความเสียหาย — Creagy Corporate SlideDoc</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+/* ===========================================
+   CREAGY CORPORATE TEMPLATE PRESET 9 (STYLE_PRESETS.md & creagy_template_example.html)
+   - Background: #FFFFFF (Pure White)
+   - Header: Main Title (32px) + Sub Title (28px #000000) on Left, Creagy/DCCE Logos Top-Right
+   - NO top category tags (NO kicker pills)
+   - Subtitle = Executive Summary Takeaway Line (28px #000000)
+   - Footer: © 2026 The Creagy Company Limited. All Rights Reserved. | STRICTLY PRIVATE AND CONFIDENTIAL
+   - Fonts: TH Sarabun PSK / TH Sarabun New / Sarabun
+   - Sizes: Heading 32px, Subheading 28px, Body 21px, Captions 18px
+   =========================================== */
+:root {
+    --creagy-blue: #00618B;
+    --creagy-dark-navy: #031B2A;
+    --creagy-navy-mid: #0A324A;
+    --creagy-sky: #317ABD;
+    --creagy-accent-blue: #00A3E0;
+    --creagy-light-blue: #F0F7FB;
+    
+    --text-dark: #000000;
+    --text-heading: #031B2A;
+    --text-subheading: #000000; /* Pure Black */
+    --text-medium: #1E293B;
+    --text-muted: #64748B;
+    
+    --bg-page: #E2E8F0;
+    --slide-bg: #FFFFFF; /* Pure White */
+    --card-bg: #FFFFFF;
+    --border-color: #E2E8F0;
+    
+    --font-thai: 'TH Sarabun PSK', 'TH Sarabun New', 'Sarabun', sans-serif;
+    --font-heading: 'TH Sarabun PSK', 'TH Sarabun New', 'Sarabun', sans-serif;
+    --font-body: 'TH Sarabun PSK', 'TH Sarabun New', 'Sarabun', sans-serif;
+    
+    --font-size-hero: 62px;       /* 62px Cover Title (+4pt) */
+    --font-size-heading: 42px;    /* 42px Heading (+4pt) */
+    --font-size-subheading: 38px; /* 38px Sub Heading (+4pt) */
+    --font-size-body: 27px;       /* 27px Body Text (+4pt) */
+    --font-size-caption: 22px;    /* 22px Caption (+4pt) */
+    
+    --gap-red: #C0392B;
+    --gap-red-bg: #FDF2F1;
+    --solve-green: #0B7A4B;
+    --solve-green-bg: #EBF7F1;
+    
+    --shadow-sm: 0 4px 14px rgba(0, 97, 139, 0.05);
+    --shadow-md: 0 8px 24px rgba(0, 97, 139, 0.08);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ===========================================
+   FIXED 16:9 STAGE BASE
+   =========================================== */
+html, body {
+    width: 100%; height: 100%; margin: 0; overflow: hidden;
+    background: var(--bg-page); font-family: var(--font-body);
+    font-size: var(--font-size-body); color: var(--text-dark); font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+}
+
+.deck-viewport { position: fixed; inset: 0; overflow: hidden; background: var(--bg-page); }
+
+.deck-stage {
+    position: absolute; left: 0; top: 0; width: 1920px; height: 1080px;
+    overflow: hidden; transform-origin: 0 0; background: var(--slide-bg);
+}
+
+.slide {
+    position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: hidden;
+    display: flex; flex-direction: column; justify-content: space-between;
+    visibility: hidden; opacity: 0; pointer-events: none;
+    background: var(--slide-bg); padding: 48px 72px 36px 72px;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.slide.active, .slide.visible { visibility: visible; opacity: 1; pointer-events: auto; z-index: 1; }
+
+@media print {
+    @page { size: A4 landscape; margin: 0; }
+    html, body { width: 1920px; height: auto; overflow: visible; background: #fff; }
+    .deck-viewport { position: static; overflow: visible; background: #fff; }
+    .deck-stage { position: static; width: auto; height: auto; transform: none !important; background: none; }
+    .slide { position: relative; display: flex !important; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important; width: 1920px; height: 1080px; break-after: page; page-break-after: always; zoom: 0.585; }
+    .slide:last-child { break-after: auto; page-break-after: auto; }
+    .deck-controls, .edit-hotzone, .edit-toggle { display: none !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.2s !important; }
+}
+
+/* ===========================================
+   CREAGY HEADER CHROME (NO KICKER TAG, TITLE 32px, SUBTITLE 28px #000000)
+   =========================================== */
+.slide-header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    padding-bottom: 16px; border-bottom: 2px solid var(--border-color);
+    margin-bottom: 24px; flex-shrink: 0;
+}
+
+.header-main-title {
+    font-family: var(--font-heading); font-size: var(--font-size-heading); /* 42px */
+    font-weight: 800; color: var(--text-heading); line-height: 1.25;
+}
+
+.header-sub-title {
+    font-family: var(--font-heading); font-size: 36px;
+    font-weight: 800; color: var(--text-subheading); /* Pure Black #000000 */ line-height: 1.3;
+    white-space: nowrap; letter-spacing: -0.01em;
+}
+
+.header-logos {
+    display: flex; align-items: center; gap: 14px; background: #FFFFFF;
+    padding: 8px 18px; border-radius: 12px; border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm); flex-shrink: 0;
+}
+
+.header-logo-img { height: 42px; object-fit: contain; }
+
+/* ===========================================
+   CREAGY FOOTER CHROME
+   =========================================== */
+.slide-footer {
+    margin-top: auto; height: 40px; display: flex; justify-content: space-between; align-items: center;
+    border-top: 1px solid var(--border-color); padding-top: 10px;
+    font-family: var(--font-body); font-size: var(--font-size-caption); /* 22px */
+    color: var(--text-muted); flex-shrink: 0; font-weight: 600;
+}
+
+.footer-left { display: flex; align-items: center; gap: 12px; font-weight: 600; }
+.footer-separator { color: #CBD5E1; }
+.slide-number-badge { font-family: var(--font-heading); font-weight: 800; font-size: 26px; color: var(--creagy-blue); }
+
+/* ===========================================
+   SLIDE BODY & ALIGNED CARD SYSTEM
+   =========================================== */
+.slide-body { display: flex; flex-direction: column; justify-content: center; gap: 24px; flex: 1; overflow: hidden; }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; align-items: stretch; }
+.grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px; align-items: stretch; }
+.grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; align-items: stretch; }
+
+.doc-card {
+    background: var(--card-bg); border: 1px solid var(--border-color);
+    border-radius: 12px; padding: 22px 26px; box-shadow: var(--shadow-sm);
+    display: flex; flex-direction: column; justify-content: flex-start; gap: 12px;
+    height: 100%;
+}
+
+.doc-card.blue-border { border-top: 5px solid var(--creagy-blue); }
+.doc-card.sky-border { border-top: 5px solid var(--creagy-sky); }
+.doc-card.red-border { border-top: 5px solid var(--gap-red); }
+.doc-card.green-border { border-top: 5px solid var(--solve-green); background: var(--solve-green-bg); }
+
+.card-title {
+    font-family: var(--font-heading); font-size: 36px;
+    font-weight: 800; color: var(--text-subheading); /* Pure Black */
+    display: flex; align-items: center; gap: 10px; line-height: 1.25;
+}
+
+.card-num {
+    width: 36px; height: 36px; border-radius: 50%; background: var(--creagy-blue);
+    color: #FFFFFF; display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-heading); font-weight: 800; font-size: 24px; flex-shrink: 0;
+}
+.red-border .card-num { background: var(--gap-red); }
+.green-border .card-num { background: var(--solve-green); }
+
+.card-text { font-family: var(--font-body); font-size: var(--font-size-body); font-weight: 600; line-height: 1.5; color: var(--text-medium); }
+
+.doc-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.doc-list li {
+    font-family: var(--font-body); font-size: var(--font-size-body); font-weight: 600; line-height: 1.5;
+    color: var(--text-dark); position: relative; padding-left: 22px;
+}
+.doc-list li::before {
+    content: "•"; color: var(--creagy-blue); font-weight: bold; font-size: 30px;
+    position: absolute; left: 0; top: -3px;
+}
+
+code.field {
+    font-family: var(--font-body); font-size: 0.92em; background: var(--creagy-light-blue);
+    border: 1px solid var(--border-color); border-radius: 4px; padding: 1px 6px; color: var(--creagy-blue); font-weight: 700;
+}
+
+/* Data Tables */
+.table-wrap { width: 100%; border-radius: 10px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); }
+table.data-table { width: 100%; border-collapse: collapse; font-size: var(--font-size-body); }
+table.data-table th { background: var(--creagy-dark-navy); color: #FFFFFF; font-weight: 800; text-align: left; padding: 10px 14px; font-size: 30px; }
+table.data-table td { padding: 10px 14px; border-bottom: 1px solid var(--border-color); vertical-align: top; line-height: 1.4; background: #FFF; font-size: var(--font-size-body); font-weight: 600; }
+table.data-table tr:nth-child(even) td { background: var(--creagy-light-blue); }
+table.data-table td:first-child, table.data-table th:first-child { font-weight: 800; color: var(--creagy-dark-navy); }
+
+/* Timeline Steps */
+.timeline-step {
+    background: #FFFFFF; border-radius: 12px; border: 1px solid var(--border-color);
+    border-top: 5px solid var(--creagy-blue); padding: 18px 22px; display: flex; flex-direction: column; gap: 6px; height: 100%;
+}
+.step-num { font-family: var(--font-heading); font-size: 28px; font-weight: 800; color: var(--creagy-sky); }
+.step-title { font-family: var(--font-heading); font-size: 36px; font-weight: 800; color: var(--text-subheading); }
+
+/* Stat Banner Callout */
+.stat-banner {
+    background: linear-gradient(135deg, var(--creagy-dark-navy) 0%, var(--creagy-blue) 100%);
+    color: #FFFFFF; border-radius: 12px; padding: 20px 36px; display: flex; align-items: center; gap: 32px; box-shadow: var(--shadow-md);
+}
+.stat-val { font-family: var(--font-heading); font-size: 52px; font-weight: 800; color: #FFFFFF; line-height: 1; min-width: 140px; }
+.stat-lbl { font-family: var(--font-body); font-size: var(--font-size-body); font-weight: 600; color: #D4ECF9; line-height: 1.4; }
+
+/* 3-Layer Architecture Stack */
+.layer-stack { display: flex; flex-direction: column; gap: 12px; }
+.layer-stack .layer { border-radius: 10px; padding: 16px 22px; color: #FFF; box-shadow: var(--shadow-sm); }
+.layer-stack .layer h4 { font-family: var(--font-heading); font-size: 32px; font-weight: 800; margin-bottom: 2px; }
+.layer-stack .layer p { font-family: var(--font-body); font-size: 26px; font-weight: 600; line-height: 1.4; opacity: 0.95; }
+.layer-1 { background: var(--creagy-dark-navy); border-left: 6px solid var(--creagy-sky); }
+.layer-2 { background: var(--creagy-blue); border-left: 6px solid #00A3E0; }
+.layer-3 { background: var(--creagy-sky); border-left: 6px solid #94D3F3; }
+
+/* ===========================================
+   SLIDE 1: CREAGY TITLE SLIDE
+   =========================================== */
+.title-slide {
+    background: linear-gradient(135deg, #031B2A 0%, #063552 50%, #00618B 100%);
+    color: #FFFFFF; padding: 85px 100px; justify-content: space-between;
+}
+.title-top-logos { display: flex; align-items: center; justify-content: space-between; }
+.title-logo-box { background: #FFFFFF; padding: 14px 30px; border-radius: 14px; display: flex; align-items: center; gap: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+.title-logo-box img { height: 50px; object-fit: contain; }
+.title-body { margin-top: 15px; max-width: 1720px; }
+.title-badge { display: inline-block; background: rgba(0, 163, 224, 0.25); border: 1px solid rgba(255, 255, 255, 0.3); color: #EEF7FC; font-family: var(--font-heading); font-size: 32px; font-weight: 700; padding: 6px 22px; border-radius: 24px; margin-bottom: 16px; }
+.main-hero-title { font-family: var(--font-heading); font-size: var(--font-size-hero); /* 62px */ font-weight: 800; line-height: 1.2; color: #FFFFFF; margin-bottom: 16px; }
+.main-subtitle { font-family: var(--font-body); font-size: 35px; line-height: 1.45; color: #D4ECF9; font-weight: 600; max-width: 1720px; white-space: nowrap; letter-spacing: -0.01em; }
+.title-metadata { display: flex; gap: 60px; border-top: 1px solid rgba(255, 255, 255, 0.2); padding-top: 22px; }
+.meta-item { display: flex; flex-direction: column; gap: 2px; }
+.meta-lbl { font-family: var(--font-body); font-size: 24px; font-weight: 600; color: #94D3F3; }
+.meta-val { font-family: var(--font-heading); font-size: 34px; font-weight: 800; color: #FFFFFF; }
+
+/* Table of Contents List */
+.toc-grid { display: grid; grid-template-columns: 1fr 1fr; grid-auto-flow: column; grid-template-rows: repeat(8, auto); gap: 0 44px; }
+.toc-item { display: flex; gap: 14px; align-items: baseline; padding: 10px 0; border-bottom: 1px solid var(--border-color); }
+.toc-num { font-family: var(--font-heading); font-size: 30px; font-weight: 800; color: var(--creagy-blue); min-width: 36px; }
+.toc-text { font-family: var(--font-body); font-size: 26px; color: var(--text-dark); line-height: 1.35; font-weight: 700; }
+
+/* REVEAL ANIMATIONS */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.4s ease, transform 0.4s ease; }
+.slide.visible .reveal { opacity: 1; transform: translateY(0); }
+.slide.visible .reveal:nth-child(1) { transition-delay: 0.08s; }
+.slide.visible .reveal:nth-child(2) { transition-delay: 0.16s; }
+.slide.visible .reveal:nth-child(3) { transition-delay: 0.24s; }
+
+/* CONTROLS & INLINE EDITOR */
+.deck-controls {
+    position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); z-index: 1000;
+    background: rgba(3, 27, 42, 0.92); backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 30px;
+    padding: 6px 20px; display: flex; align-items: center; gap: 16px; color: #FFFFFF;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+.control-btn { background: transparent; border: none; color: #FFFFFF; font-size: 18px; cursor: pointer; padding: 4px 10px; font-family: var(--font-body); font-weight: 600; }
+.control-btn:hover { color: var(--creagy-accent-blue); }
+.counter { font-family: var(--font-heading); font-size: 20px; font-weight: 700; min-width: 60px; text-align: center; }
+
+.edit-hotzone { position: fixed; top: 0; left: 0; width: 80px; height: 80px; z-index: 10000; cursor: pointer; }
+.edit-toggle { position: fixed; top: 16px; left: 16px; z-index: 10001; background: var(--creagy-blue); color: #FFFFFF; border: none; padding: 8px 18px; border-radius: 20px; font-family: var(--font-body); font-size: 17px; font-weight: 600; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; box-shadow: 0 4px 14px rgba(0,0,0,0.25); }
+.edit-toggle.show, .edit-toggle.active { opacity: 1; pointer-events: auto; }
+</style>
+</head>
+<body>
+
+<div class="edit-hotzone" id="editHotzone"></div>
+<button class="edit-toggle" id="editToggle">✏️ โหมดแก้ไขข้อความ (กด E)</button>
+
+<div class="deck-viewport">
+<main class="deck-stage" id="deckStage">
+
+<!-- ============ SLIDE 0: TITLE ============ -->
+<section class="slide title-slide active">
+  <div class="title-top-logos reveal">
+    <div class="title-logo-box">
+      <img src="assets/creagy_logo.png" alt="Creagy">
+      <img src="assets/dcce_logo.jpg" alt="DCCE">
+    </div>
+  </div>
+  <div class="title-body reveal">
+    <div class="main-hero-title">การพัฒนาระบบฐานข้อมูลความสูญเสียและความเสียหาย</div>
+    <div class="main-subtitle">ยกระดับการประเมินผลกระทบสาธารณภัยสู่มาตรฐานสากล MVD และทดสอบย้อนหลัง 3 เหตุการณ์จริง</div>
+  </div>
+  <div class="title-metadata reveal">
+    <div class="meta-item"><div class="meta-lbl">โครงการ</div><div class="meta-val">โครงการจัดจ้างที่ปรึกษาพัฒนาระบบฐานข้อมูลด้านการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศของประเทศ</div></div>
+    <div class="meta-item"><div class="meta-lbl">หน่วยงาน / วันที่</div><div class="meta-val">กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม &nbsp;|&nbsp; 11 สิงหาคม 2569</div></div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 1: TABLE OF CONTENTS ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">Table of Contents</div>
+      <div class="header-sub-title">โครงสร้างการนำเสนอ 16 หัวข้อหลักสำหรับการพัฒนาระบบฐานข้อมูลความสูญเสียและความเสียหาย</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="toc-grid reveal">
+      <div class="toc-item"><div class="toc-num">01</div><div class="toc-text">บริบทและข้อกำหนด TOR: ขอบเขตการพัฒนาฐานข้อมูลความสูญเสียและความเสียหาย (TOR ข้อ 5.3.6–5.3.7)</div></div>
+      <div class="toc-item"><div class="toc-num">02</div><div class="toc-text">สภาพการณ์ปัจจุบันของการจัดเก็บข้อมูลภัยพิบัติของกรมป้องกันและบรรเทาสาธารณภัย</div></div>
+      <div class="toc-item"><div class="toc-num">03</div><div class="toc-text">กรอบการทำงานประเมินความต้องการหลังเกิดภัยพิบัติ 4 ระยะ และฐานคิดสากล</div></div>
+      <div class="toc-item"><div class="toc-num">04</div><div class="toc-text">คอขวดเชิงปฏิบัติงานของการประเมินความต้องการหลังเกิดภัยพิบัติในประเทศไทย</div></div>
+      <div class="toc-item"><div class="toc-num">05</div><div class="toc-text">ช่องว่างเชิงระบบและการปฏิบัติงาน 4 ประการ</div></div>
+      <div class="toc-item"><div class="toc-num">06</div><div class="toc-text">การทบทวนมาตรฐานและกรอบแนวคิดสากล</div></div>
+      <div class="toc-item"><div class="toc-num">07</div><div class="toc-text">ตารางเปรียบเทียบมาตรฐานสากลกับระบบปัจจุบันของกรมป้องกันและบรรเทาสาธารณภัย</div></div>
+      <div class="toc-item"><div class="toc-num">08</div><div class="toc-text">กรอบแนวคิดและการประเมินมูลค่าความสูญเสียและความเสียหายของ สศช.</div></div>
+      <div class="toc-item"><div class="toc-num">09</div><div class="toc-text">การตีความใหม่ของแบบฟอร์มจัดเก็บข้อมูลภาคสนามสู่ผลิตภัณฑ์นำเข้าข้อมูล</div></div>
+      <div class="toc-item"><div class="toc-num">10</div><div class="toc-text">โครงสร้างฐานข้อมูลความสูญเสียและความเสียหาย แบบ 3 ชั้น</div></div>
+      <div class="toc-item"><div class="toc-num">11</div><div class="toc-text">เหตุผลเชิงยุทธศาสตร์ที่ผู้บริหารต้องอนุมัติโครงสร้าง 6 ตารางหลัก</div></div>
+      <div class="toc-item"><div class="toc-num">12</div><div class="toc-text">กรอบการจัดเก็บข้อมูลระดับเผชิญเหตุและการพิสูจน์ยืนยันภัยพิบัติ</div></div>
+      <div class="toc-item"><div class="toc-num">13</div><div class="toc-text">กรอบการประเมินมูลค่าความเสียหายทางกายภาพและความสูญเสียทางเศรษฐกิจ</div></div>
+      <div class="toc-item"><div class="toc-num">14</div><div class="toc-text">ธรรมาภิบาลข้อมูลและระบบควบคุมคุณภาพ 5 ระดับ</div></div>
+      <div class="toc-item"><div class="toc-num">15</div><div class="toc-text">ผลการทดสอบมาตรฐานชุดข้อมูลขั้นต่ำย้อนหลังกับ 3 เหตุการณ์ในอดีต</div></div>
+      <div class="toc-item"><div class="toc-num">16</div><div class="toc-text">สรุปช่องว่างเชิงระบบและแผนที่นำทางการพัฒนาระบบในโครงการตาม</div></div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">02 / 23</div></div>
+</section>
+
+<!-- ============ SLIDE 2 (source Slide 1): TOR CONTEXT ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">01. บริบทและข้อกำหนด TOR: ขอบเขตการพัฒนาฐานข้อมูลความสูญเสียและความเสียหาย (TOR ข้อ 5.3.6–5.3.7)</div>
+      <div class="header-sub-title">ยกระดับการประเมินผลกระทบสาธารณภัยสู่มาตรฐานสากล MVD และทดสอบย้อนหลัง 3 เหตุการณ์จริง รองรับ (ร่าง) พ.ร.บ. สภาพภูมิอากาศ</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="card-text reveal" style="margin-bottom: 6px;">หัวข้อนี้วางบริบทของโครงการก่อนเข้าสู่รายละเอียดทางเทคนิค โดยอธิบายที่มาทางกฎหมายและสัญญาที่ผลักดันให้ต้องพัฒนาฐานข้อมูล L&amp;D ก่อนสรุปขอบเขตงานที่ผูกพันตาม TOR ทั้งสองข้อ</div>
+    <div class="grid-2 reveal">
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">1</div>บริบทสัญญาจ้างและกรอบกฎหมายอ้างอิง</div>
+        <ul class="doc-list">
+          <li><b>โครงการสัญญาจ้าง:</b> โครงการจัดจ้างที่ปรึกษาพัฒนาระบบฐานข้อมูลด้านการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศของประเทศ โดย กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (กรมฯ) กรอบวงเงินงบประมาณ <b>4,000,000 บาท</b> ระยะเวลาดำเนินงานรวม <b>270 วัน</b></li>
+          <li><b>ฐานการรองรับตามกฎหมาย:</b> ดำเนินการเพื่อรองรับบทบัญญัติภายใต้ <b>(ร่าง) พระราชบัญญัติการเปลี่ยนแปลงสภาพภูมิอากาศ พ.ศ. ...</b> ที่กำหนดให้ประเทศต้องมีระบบข้อมูลการประเมินความเสี่ยง ผลกระทบ และความสูญเสียและความเสียหาย (Loss and Damage) เพื่อสนับสนุนแผน NAP ใน 6 สาขาหลัก</li>
+          <li><b>การเชื่อมโยงระบบเดิม:</b> บูรณาการร่วมกับ พ.ร.บ. ป้องกันและบรรเทาสาธารณภัย พ.ศ. 2550 และแผนป้องกันภัยแห่งชาติ 2564–2570 เพื่อปิดช่องว่างระหว่างรายงานฉุกเฉินกับการคำนวณมูลค่าเชิงเศรษฐศาสตร์ระยะยาว</li>
+        </ul>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">2</div>ข้อกำหนดขอบเขตงานตาม TOR ข้อ 5.3.6 และ 5.3.7</div>
+        <ul class="doc-list">
+          <li><b>TOR ข้อ 5.3.6 (วิเคราะห์ระบบรายงาน เปรียบเทียบสากล ออกแบบ MVD และแบบฟอร์ม L&amp;D):</b> ศึกษาวิเคราะห์ระบบรายงานสาธารณภัยเดิม เทียบกับ UNECLAC/World Bank DaLA และ UNDRR DesInventar ออกแบบ (ร่าง) มาตรฐานชุดข้อมูลขั้นต่ำ (Minimum Viable Dataset: MVD) และแบบฟอร์มรายงาน L&amp;D</li>
+          <li><b>TOR ข้อ 5.3.7 (ทดสอบชุดข้อมูลขั้นต่ำ MVD กับเหตุการณ์ในอดีตอย่างน้อย 3 เหตุการณ์):</b> นำ (ร่าง) มาตรฐาน MVD มาทดลองจัดเก็บข้อมูลจริงกับเหตุการณ์ในอดีต<b>อย่างน้อย 3 เหตุการณ์</b> ทดสอบการนำเข้าข้อมูล การจัดลงโครงสร้างตารางสัมพันธ์ 6 ชุด และการแปลงข้อมูลเดิมของ ปภ.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">03 / 23</div></div>
+</section>
+
+<!-- ============ SLIDE 3 (source Slide 2): DDPM CURRENT STATE ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">02. สภาพการณ์ปัจจุบันของการจัดเก็บข้อมูลภัยพิบัติของกรมป้องกันและบรรเทาสาธารณภัย</div>
+      <div class="header-sub-title">วิเคราะห์การจัดเก็บข้อมูล ปภ. ซึ่งถูกจำกัดด้วยเพดานจ่ายตามระเบียบกระทรวงการคลัง ทำให้ไม่สะท้อนมูลค่าความเสียหายจริงตามราคาตลาด</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="card-text reveal" style="margin-bottom: 6px;">ก่อนเสนอโครงสร้างใหม่ จำเป็นต้องเข้าใจว่าระบบจัดเก็บข้อมูลของ ปภ. ในปัจจุบันทำงานอย่างไร ภายใต้กรอบกฎหมายใด และเพราะเหตุใดตัวเลขที่มีอยู่จึงไม่สะท้อนมูลค่าความเสียหายจริง</div>
+    <div class="grid-3 reveal">
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">1</div>กรอบกฎหมายและสายการบัญชาการ</div>
+        <div class="card-text">ดำเนินการภายใต้ <b>พ.ร.บ. ป้องกันและบรรเทาสาธารณภัย พ.ศ. 2550</b> และแผนป้องกันภัยแห่งชาติ 2564–2570 กำหนดวงจรภัย 4 ระยะ (เตรียมพร้อม, ลดความเสี่ยง, ตอบสนอง, ฟื้นฟู)</div>
+        <div class="card-text">สายรายงานระยะตอบสนอง: <b>อปท. $\rightarrow$ อำเภอ $\rightarrow$ จังหวัด $\rightarrow$ ปภ. ส่วนกลาง</b> ผ่าน "แบบรายงานเหตุด่วนสาธารณภัย" เน้นรับรู้สถานการณ์เร็วเพื่อสั่งการกู้ภัยหน้างาน</div>
+      </div>
+      <div class="doc-card red-border">
+        <div class="card-title"><div class="card-num">2</div>ข้อจำกัดเพดานเงินชดเชยทางคลัง</div>
+        <div class="card-text">ข้อมูลผูกกับขั้นตอนอนุมัติเงินช่วยเหลือตาม <b>ระเบียบกระทรวงการคลังว่าด้วยเงินทดรองราชการฯ พ.ศ. 2562</b></div>
+        <div class="card-text">หลักเกณฑ์กำหนดอัตราเงินช่วยเหลือขั้นสูงคงที่ต่อครัวเรือน/ไร่/สิ่งปลูกสร้าง ทำให้ตัวเลขในฐานข้อมูลเป็นเพียง <b>"วงเงินงบประมาณเยียวยาที่รัฐเบิกจ่าย"</b> ไม่ใช่มูลค่าสินทรัพย์จริงตามราคาตลาด</div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">3</div>โครงสร้างชุดข้อมูลเปิดปัจจุบัน</div>
+        <ul class="doc-list">
+          <li><b>ผลกระทบระยะต้น:</b> สถิติจำนวนผู้บาดเจ็บ/สูญหาย/เสียชีวิต, บ้านเรือนเสียหาย 3 ระดับ</li>
+          <li><b>เบิกจ่ายเงินทดรองราชการ:</b> จำแนก 6 ด้าน (บรรเทาภัย, เกษตร, ประมง, การดำรงชีพ, สาธารณสุข, ป้องกันภัย)</li>
+          <li><b>ข้อจำกัดประเมินราคา:</b> ตัวเลขในแบบรายงานเป็นเพียงค่าประมาณเบื้องต้น ขาดเครื่องมือราคากลางทางวิศวกรรม/เศรษฐศาสตร์</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">04 / 23</div></div>
+</section>
+
+<!-- ============ SLIDE 4 (source Slide 3): PDNA 4 PHASES ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">03. กรอบการทำงานประเมินความต้องการหลังเกิดภัยพิบัติ 4 ระยะ และฐานคิดสากล</div>
+      <div class="header-sub-title">วางโครงสร้างการประเมิน 4 ระยะของ ปภ. และการแยกแยะมิติความเสียหายกายภาพสะสม กับความสูญเสียกระแสเศรษฐกิจตามหลักสากล</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="card-text reveal" style="margin-bottom: 4px;">กรอบ PDNA สากลแบ่งวงจรการประเมินหลังภัยพิบัติออกเป็น 5 ระยะต่อเนื่องกัน ตั้งแต่การเตรียมความพร้อมไปจนถึงยุทธศาสตร์ฟื้นฟู โดยแต่ละระยะต้องแยกแยะความเสียหายทางกายภาพออกจากความสูญเสียทางเศรษฐกิจตามนิยามสากลด้านล่าง</div>
+    <div class="grid-5 reveal" style="margin-bottom:10px;">
+      <div class="timeline-step"><div class="step-num">ระยะ 0</div><div class="step-title">เตรียมความพร้อม</div><div class="card-text">ข้อมูลฐานก่อนเกิดภัย: ประชากร สินทรัพย์ พื้นฐาน แหล่งน้ำ GPS ประวัติภัย</div></div>
+      <div class="timeline-step"><div class="step-num">ระยะ 1 (0–72 ชม.)</div><div class="step-title">ประเมินเหตุด่วน</div><div class="card-text">ประเภทภัย วันเวลา พื้นที่ ผู้เสียชีวิต/บาดเจ็บ/สูญหาย เสียหายเบื้องต้น</div></div>
+      <div class="timeline-step"><div class="step-num">ระยะ 2 (14 วัน)</div><div class="step-title">ประเมินรายละเอียด</div><div class="card-text">อาชีพ ครอบครัว สาธารณูปโภค สุขาภิบาล ที่พักชั่วคราว การช่วยเหลือที่มอบแล้ว</div></div>
+      <div class="timeline-step"><div class="step-num">ระยะ 3</div><div class="step-title">ประเมิน PDNA</div><div class="card-text">ประเมินเมื่อฉุกเฉินสิ้นสุด แยก <b>Damage</b>, <b>Loss</b>, <b>Recovery Need</b></div></div>
+      <div class="timeline-step"><div class="step-num">ระยะ 4</div><div class="step-title">ยุทธศาสตร์ฟื้นฟู</div><div class="card-text">แผนงานบูรณะฟื้นฟู ยึดหลักการฟื้นฟูที่ดีกว่าเดิม (Build Back Better)</div></div>
+    </div>
+    <div class="grid-3 reveal">
+      <div class="doc-card blue-border">
+        <div class="card-title">ความเสียหายทางกายภาพ (Physical Damage)</div>
+        <div class="card-text">สินทรัพย์ โครงสร้างพื้นฐาน หรือปัจจัยการผลิตที่ถูกทำลายหรือชำรุดโดยตรง คิดมูลค่าจากต้นทุนซ่อมแซมหรือจัดหาทดแทนตามราคาตลาด</div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title">ความสูญเสียทางเศรษฐกิจ (Economic Loss)</div>
+        <div class="card-text">การเปลี่ยนแปลงของผลผลิต รายได้ บริการ หรือค่าใช้จ่ายดำเนินงานที่เพิ่มขึ้นช่วงฟื้นฟูเมื่อเทียบกับสภาวะปกติ</div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title">ความต้องการฟื้นฟู (Recovery Need)</div>
+        <div class="card-text">งบประมาณที่ต้องใช้ในการซ่อมสร้างและยกระดับโครงสร้างพื้นฐาน/ระบบชีวิตตามหลักการฟื้นฟูที่ดีกว่าเดิม (Build Back Better)</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">05 / 23</div></div>
+</section>
+
+<!-- ============ SLIDE 5 (source Slide 4): BOTTLENECKS ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">04. คอขวดเชิงปฏิบัติงานของการประเมินความต้องการหลังเกิดภัยพิบัติในประเทศไทย</div>
+      <div class="header-sub-title">ขาดฐานข้อมูล Baseline ในท้องถิ่น และภาระงานของหน่วยตอยสนองภัยและหน่วยกู้ภัยหน้างาน</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="card-text reveal" style="margin-bottom: 6px;">แม้กรอบ PDNA จะมีความชัดเจนในทางทฤษฎี แต่การนำมาปฏิบัติจริงในไทยเผชิญคอขวดเชิงระบบ 3 ประการ ซึ่งตารางด้านล่างแสดงช่องว่างระหว่างข้อกำหนดตามมาตรฐานกับสภาพการปฏิบัติงานจริงในแต่ละระยะ</div>
+    <div class="grid-3 reveal">
+      <div class="doc-card red-border">
+        <div class="card-title"><div class="card-num">1</div>ขาดฐานข้อมูล Baseline ท้องถิ่น</div>
+        <div class="card-text">ท้องถิ่นขาดระบบจัดเก็บข้อมูลสินทรัพย์และราคาผลผลิตอ้างอิงก่อนเกิดภัย ทำให้ไม่สามารถเปรียบเทียบส่วนต่างเพื่อคำนวณ Loss ที่แท้จริงได้</div>
+      </div>
+      <div class="doc-card red-border">
+        <div class="card-title"><div class="card-num">2</div>ภาระงานบุคลากรระดับท้องถิ่น</div>
+        <div class="card-text">การบังคับใช้แบบฟอร์ม PDNA ที่ซับซ้อนกับ อปท. ตั้งแต่ช่วงเกิดเหตุเป็นไปได้ยาก เพราะเจ้าหน้าที่ต้องเน้นงานกู้ภัยและบรรเทาทุกข์เร่งด่วน</div>
+      </div>
+      <div class="doc-card red-border">
+        <div class="card-title"><div class="card-num">3</div>ขาดกลไกเชื่อมโยงข้อมูล</div>
+        <div class="card-text">ขาดระบบกลางในการนำชุดข้อมูลสถิติเบื้องต้นที่ อปท. จัดเก็บอยู่แล้ว มาแปลงเข้าสูตรคำนวณมูลค่าทางเศรษฐกิจในระยะฟื้นฟู</div>
+      </div>
+    </div>
+    <div class="table-wrap reveal">
+      <table class="data-table">
+        <thead><tr><th>ระยะการประเมิน</th><th>ข้อกำหนดตามมาตรฐาน PDNA</th><th>สภาพการปฏิบัติงานจริงในไทย</th><th>ช่องว่างสำคัญ</th></tr></thead>
+        <tbody>
+          <tr><td><b>ระยะที่ 0 (Baseline)</b></td><td>ตาราง Baseline สินทรัพย์ ผลผลิต รายได้ และ GIS</td><td>ข้อมูลกระจัดกระจายต่างกระทรวง ไม่มีฐานข้อมูลกลาง</td><td>ขาดข้อมูลอ้างอิงก่อนเกิดภัยเพื่อคำนวณส่วนต่าง Loss</td></tr>
+          <tr><td><b>ระยะที่ 1 (0–72 ชม.)</b></td><td>สำรวจผลกระทบหลักและสิ่งปลูกสร้างชำรุดเบื้องต้น</td><td>รายงานผ่าน "แบบรายงานเหตุด่วนสาธารณภัย" ของ ปภ.</td><td>เน้นตัวเลขประชากรเดือดร้อน ขาดพิกัด GIS สินทรัพย์</td></tr>
+          <tr><td><b>ระยะที่ 2 (ภายใน 14 วัน)</b></td><td>สำรวจรายละเอียด WASH สุขภาพ อาชีพ ที่พักชั่วคราว</td><td>สำรวจเพื่อจ่ายเงินเยียวยาตามระเบียบกระทรวงการคลัง</td><td>ข้อมูลถูกผูกกับเพดานเงินเยียวยา ไม่ใช่มูลค่าจริง</td></tr>
+          <tr><td><b>ระยะที่ 3 (PDNA)</b></td><td>ประเมินแยก Damage, Loss และ Recovery Need</td><td>ดำเนินการเฉพาะภัยขนาดใหญ่มาก ขาดเครื่องมือมาตรฐาน</td><td>ขาดนักวิเคราะห์เศรษฐศาสตร์และราคากลางอ้างอิง</td></tr>
+          <tr><td><b>ระยะที่ 4 (ยุทธศาสตร์)</b></td><td>จัดทำแผนฟื้นฟูตามหลัก Build Back Better</td><td>จัดทำโครงการขอเสนอตั้งงบประมาณรายปีตามปกติ</td><td>โครงการฟื้นฟูไม่ได้เชื่อมโยงกับผลประเมิน Damage/Loss</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">06 / 23</div></div>
+</section>
+
+<!-- ============ SLIDE 6 (source Slide 5): 4 SYSTEMIC GAPS ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">05. ช่องว่างเชิงระบบและการปฏิบัติงาน 4 ประการ</div>
+      <div class="header-sub-title">จำแนก 4 ช่องว่างวิกฤตที่ขัดขวางการประเมินมูลค่าความสูญเสียระดับชาติ พร้อมเสนอแนวทางแก้ไขเชิงระบบ</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="card-text reveal" style="margin-bottom: 6px;">จากคอขวดเชิงปฏิบัติงานที่พบ สามารถสรุปเป็นช่องว่างเชิงระบบ 4 ประการที่ขัดขวางการประเมินมูลค่าความสูญเสียระดับชาติ พร้อมแนวทางแก้ไขเชิงระบบสำหรับแต่ละประเด็นในตารางด้านล่าง</div>
+    <div class="grid-4 reveal">
+      <div class="doc-card red-border">
+        <div class="card-title"><div class="card-num">1</div>เพดานวงเงินชดเชยที่ถูกกำหนดจากส่วนกลาง</div>
+        <div class="card-text">ตัวเลขความเสียหายรวมต่ำกว่าความเป็นจริงมาก ใช้เรียกร้องเงินชดเชยจากกองทุน L&amp;D สากลไม่ได้</div>
+      </div>
+      <div class="doc-card red-border">
+        <div class="card-title"><div class="card-num">2</div>คลาดเคลื่อนพื้นที่/เวลา</div>
+        <div class="card-text">บันทึกระดับตำบล/อำเภอไร้พิกัด GIS และจับเฉพาะช่วงฉุกเฉิน 0–14 วัน ขาดกลไกจัดเก็บผลกระทบที่ยืดเยื้อ</div>
+      </div>
+      <div class="doc-card red-border">
+        <div class="card-title"><div class="card-num">3</div>ปะปน Damage/Loss ในฐานข้อมูลเดียวกัน</div>
+        <div class="card-text">จำนวนสิ่งปลูกสร้างเสียหายปะปนกับวงเงินเยียวยา โดยไม่มีการจัดเก็บความสูญเสียทางเศรษฐกิจแยก</div>
+      </div>
+      <div class="doc-card red-border">
+        <div class="card-title"><div class="card-num">4</div>แยกส่วนระหว่างกระทรวง</div>
+        <div class="card-text">ขาดมาตรฐานพจนานุกรมกลาง ขาดรหัสอ้างอิงเหตุการณ์กลาง (disaster_id) </div>
+      </div>
+    </div>
+    <div class="table-wrap reveal">
+      <table class="data-table">
+        <thead><tr><th>ช่องว่างเชิงระบบ</th><th>สภาพปัญหาปัจจุบัน</th><th>ผลกระทบต่อระบบ L&amp;D</th><th>แนวทางแก้ไขเชิงระบบ</th></tr></thead>
+        <tbody>
+          <tr><td><b>1. ข้อจำกัดการคลัง</b></td><td>ข้อมูลผูกกับเพดานเบิกจ่ายเงินทดรองราชการ</td><td>ตัวเลขความเสียหายต่ำกว่าความจริง ไม่สะท้อนราคาตลาด</td><td>แยกตารางเบิกจ่ายเยียวยา ออกจากตารางประเมินความเสียหายกายภาพ</td></tr>
+          <tr><td><b>2. ความคลาดเคลื่อนพื้นที่/เวลา</b></td><td>สรุปยอดตามเขตปกครอง บันทึกเฉพาะช่วงฉุกเฉิน 0–14 วัน</td><td>ไม่เห็นขอบเขตภัยจริงบน GIS และยังไม่มีกลไกจัดเก็บผลกระทบยืดเยื้อ</td><td>เพิ่มพิกัด GPS  (<code class="field">EVENT_LOCATION</code>) และกำหนดกรอบเวลาวิเคราะห์ (<code class="field">analysis_horizon</code>)</td></tr>
+          <tr><td><b>3. การปะปน Damage/Loss</b></td><td>เก็บจำนวนสิ่งปลูกสร้างปะปนกับวงเงินช่วยเหลือ</td><td>สับสนระหว่าง Stock และ Flow คำนวณมูลค่าผิดพลาด</td><td>แยกตาราง <code class="field">LD_PHYSICAL_DAMAGE</code> และ <code class="field">LD_ECONOMIC_LOSS</code> ออกจากกัน</td></tr>
+          <tr><td><b>4. ไซโลข้อมูลระหว่างกระทรวง</b></td><td>ต่างกระทรวงต่างเก็บตามแบบฟอร์มตนเอง ไร้มาตรฐานกลาง</td><td>ข้อมูลกระจัดกระจาย ไม่สามารถรวมภาพรวมประเทศได้</td><td>สร้างกุญแจเชื่อมโยงกลาง (<code class="field">disaster_event_id</code>) และตารางบริบท (<code class="field">ASSESSMENT_CONTEXT</code>)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">07 / 23</div></div>
+</section>
+
+<!-- ============ SLIDE 7 (source Slide 6): INTERNATIONAL FRAMEWORKS ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">06. การทบทวนมาตรฐานและกรอบแนวคิดสากล</div>
+      <div class="header-sub-title">ถอดแบบมาตรฐาน DesInventar และ DaLA เพื่อวางรากฐาน MVD สอดรับกับเป้าหมายระดับโลก Sendai Framework 2015–2030</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="card-text reveal" style="margin-bottom: 6px;">เพื่อออกแบบมาตรฐาน MVD ให้สอดคล้องกับสากล จึงทบทวนกรอบแนวคิดหลัก 2 ระบบที่ใช้กันแพร่หลายทั่วโลกก่อน แล้วจึงเชื่อมโยงเข้ากับเป้าหมายการรายงานระดับโลกภายใต้กรอบเซนได 4 เป้าหมาย</div>
+    <div class="grid-2 reveal">
+      <div class="doc-card blue-border">
+        <div class="card-title">UNDRR DesInventar</div>
+        <div class="card-text"><b>จุดเน้น:</b> ระบบทะเบียนสถิติภัยพิบัติระดับท้องถิ่นถึงระดับชาติ บันทึกเหตุการณ์ภัยพิบัติทุกขนาด โดยเฉพาะภัยขนาดเล็กถึงกลางที่เกิดขึ้นบ่อยครั้งในระดับท้องถิ่น ซึ่งส่งผลกระทบสะสมต่อความยากจนแต่ขาดกระบวนงานบันทึกระดับชาติ</div>
+        <div class="card-text"><b>กลไก:</b> ใช้ระเบียนมาตรฐาน: ประเภทภัย วันเวลา รหัสพื้นที่ สถิติผู้เสียชีวิต ผู้บาดเจ็บ ผู้สูญหาย ประชากรได้รับผลกระทบ</div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title">UNECLAC / World Bank DaLA</div>
+        <div class="card-text"><b>จุดเน้น:</b> Damage, Loss, and Need Assessment ใช้แบบจำลองสินทรัพย์และกระแสกิจกรรมทางเศรษฐกิจ แปลงผลกระทบทางกายภาพเป็นมูลค่าตัวเงินทางเศรษฐศาสตร์</div>
+        <div class="card-text"><b>จำแนก:</b> <b>Physical Damage</b> (มูลค่าสินทรัพย์กายภาพที่ถูกทำลาย ประเมินจากต้นทุนทดแทน/ซ่อมแซมตามราคาตลาด) และ <b>Economic Loss</b> (มูลค่าผลผลิต รายได้ บริการที่สูญเสีย + ค่าใช้จ่ายดำเนินงานส่วนเพิ่ม)</div>
+      </div>
+    </div>
+    <div class="grid-4 reveal">
+      <div class="doc-card sky-border"><div class="card-title">Target A</div><div class="card-text"><b>อัตราการเสียชีวิต:</b> ลดอัตราการเสียชีวิตจากภัยพิบัติระดับโลก</div></div>
+      <div class="doc-card sky-border"><div class="card-title">Target B</div><div class="card-text"><b>ผู้ได้รับผลกระทบ:</b> ลดจำนวนผู้ได้รับผลกระทบจากภัยพิบัติ</div></div>
+      <div class="doc-card sky-border"><div class="card-title">Target C</div><div class="card-text"><b>ความสูญเสียเศรษฐกิจ:</b> ลดความสูญเสียทางเศรษฐกิจโดยตรงต่อ GDP</div></div>
+      <div class="doc-card sky-border"><div class="card-title">Target D</div><div class="card-text"><b>โครงสร้างพื้นฐาน:</b> ลดความเสียหายของภัยพิบัติกับโครงสร้างพื้นฐานวิกฤต</div></div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">08 / 23</div></div>
+</section>
+
+<!-- ============ SLIDE 8 (source Slide 7): COMPARISON TABLE ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">07. ตารางเปรียบเทียบมาตรฐานสากลกับระบบปัจจุบันของกรมป้องกันและบรรเทาสาธารณภัย</div>
+      <div class="header-sub-title">เปรียบเทียบจุดเน้น กลไก และความเหมาะสมของกรอบสากลเพื่อการเชื่อมต่อข้อมูลระดับท้องถิ่นเข้าสู่ระบบสารสนเทศส่วนกลาง</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="card-text reveal" style="font-weight:600; color:var(--creagy-dark-navy); margin-bottom: 8px;">
+      การออกแบบโครงสร้างข้อมูล MVD ของไทย ได้ผสานข้อดีของ DesInventar ในการตรึงระเบียนเหตุการณ์ฉุกเฉิน เข้ากับระเบียบวิธี DaLA ในการประเมินมูลค่าทางเศรษฐศาสตร์ โดยปรับให้เข้ากับโครงสร้างการปฏิบัติงานจริงของ อปท. และ ปภ. ในปัจจุบัน
+    </div>
+    <div class="table-wrap reveal">
+      <table class="data-table">
+        <thead><tr><th>มิติการพิจารณา</th><th>UNDRR DesInventar</th><th>World Bank DaLA</th><th>ระบบปัจจุบันของ ปภ.</th><th>ร่างมาตรฐาน MVD ที่เสนอ</th></tr></thead>
+        <tbody>
+          <tr><td><b>วัตถุประสงค์หลัก</b></td><td>ทะเบียนสถิติภัยพิบัติสะสมระยะยาว</td><td>คำนวณมูลค่าเศรษฐกิจเพื่อจัดทำแผนฟื้นฟู</td><td>รับรู้สถานการณ์เร่งด่วนและจ่ายเงินเยียวยา</td><td>บูรณาการทะเบียนภัยพิบัติ + ประเมินมูลค่า L&amp;D</td></tr>
+          <tr><td><b>หน่วยวิเคราะห์</b></td><td>สถิติตัวเลขกายภาพและจำนวนคน</td><td>มูลค่าตัวเงิน (บาท)</td><td>ตัวเลขคนเดือดร้อน + วงเงินชดเชยคลัง</td><td>โครงสร้างสัมพันธ์ (พื้นที่ + ตัวเงิน + Baseline)</td></tr>
+          <tr><td><b>การจำแนก Damage/Loss</b></td><td>เน้นรวมสถิติความเสียหายกายภาพ</td><td>แยก Physical Damage และ Economic Loss</td><td>เก็บรวมปะปนในแบบรายงานเดียว</td><td>แยกตาราง <code class="field">LD_PHYSICAL_DAMAGE</code> &amp; <code class="field">LD_ECONOMIC_LOSS</code></td></tr>
+          <tr><td><b>การรองรับ Sendai</b></td><td>รองรับ Target A, B, C, D สถิติพื้นฐาน</td><td>รองรับ Target C (Direct Economic Loss)</td><td>รองรับเฉพาะ Target A, B เบื้องต้น</td><td>รองรับ Target A, B, C, D เต็มรูปแบบ</td></tr>
+          <tr><td><b>ความเหมาะสมบริบทไทย</b></td><td>เหมาะเป็นระเบียนเหตุการณ์ขั้นต้น</td><td>เหมาะใช้ประเมินระยะหลังโดยผู้เชี่ยวชาญ</td><td>เป็นฐานปฏิบัติงานจริงของ อปท. ในปัจจุบัน</td><td><b>เชื่อมชุดข้อมูล อปท. เข้าสู่ตารางสัมพันธ์สากล</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">09 / 23</div></div>
+</section>
+
+<!-- ============ SLIDE 9a: SLIDE 8 PART 1 ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">08. กรอบแนวคิดและการประเมินมูลค่าความสูญเสียและความเสียหายของ สศช. (1/2)</div>
+      <div class="header-sub-title">ปรับประมวลการคำนวณมูลค่าทางเศรษฐศาสตร์ด้วย 5 ภาคส่วนหลัก และเพิ่มความสูญเสียภาคสังคมเชื่อมโยงระบบบัญชีประชาชาติ</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="card-text reveal" style="font-weight:600; color:var(--creagy-blue); margin-bottom: 8px;">ขอบเขต 5 ภาคส่วนหลักของ สศช. — จำกัดค่า sector_id ใน MVD อ้างอิงระบบบัญชีประชาชาติ (GDP)</div>
+    <div class="grid-5 reveal">
+      <div class="doc-card blue-border"><div class="card-title">1. Agriculture</div><div class="card-text">ภาคเกษตรกรรม: พืชผล ปศุสัตว์ ประมง — กษ.</div></div>
+      <div class="doc-card blue-border"><div class="card-title">2. Production</div><div class="card-text">การผลิตและบริการ: โรงงาน โรงแรม/ท่องเที่ยว — อก./กก.</div></div>
+      <div class="doc-card blue-border"><div class="card-title">3. Housing</div><div class="card-text">ภาคที่อยู่อาศัย: บ้านเรือนและสิ่งปลูกสร้างประชาชน</div></div>
+      <div class="doc-card blue-border"><div class="card-title">4. Public_Utilities</div><div class="card-text">สาธารณูปโภค/โครงสร้างพื้นฐาน: คมนาคม ไฟฟ้า ประปา — คค./มท./ดศ.</div></div>
+      <div class="doc-card blue-border"><div class="card-title">5. Cultural_Heritage</div><div class="card-text">โบราณสถาน/มรดกวัฒนธรรม: ศาสนสถาน แหล่งท่องเที่ยว — วธ.</div></div>
+    </div>
+    <div class="grid-3 reveal">
+      <div class="doc-card sky-border"><div class="card-title">World Bank DaLA</div><div class="card-text">แยก Damage (ความเสียหายทางกายภาพ) ออกจาก Loss (ความสูญเสียกระแสเศรษฐกิจ)</div></div>
+      <div class="doc-card sky-border"><div class="card-title">FAO ADLA</div><div class="card-text">สมการประเมินภาคเกษตรกรรมเปรียบเทียบกับเส้นฐานผลผลิตเปรียบเทียบ (Baseline Yield)</div></div>
+      <div class="doc-card sky-border"><div class="card-title">UNDRR Sendai / DesInventar</div><div class="card-text">สถิติตั้งต้นเชิงกายภาพและผลกระทบต่อมนุษย์</div></div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">10 / 23</div></div>
+</section>
+
+<!-- ============ SLIDE 9b: SLIDE 8 PART 2 ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">08. กรอบแนวคิดและการประเมินมูลค่าความสูญเสียและความเสียหายของ สศช. (2/2)</div>
+      <div class="header-sub-title">ผสานงานวิจัยของ สศช. สู่การออกแบบ MVD</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="card-text reveal" style="margin-bottom: 6px;">ก่อนหน้านี้โครงสร้าง MVD ไม่มีหมวดข้อมูลที่บันทึกค่าใช้จ่ายจากการอพยพพลัดถิ่น ทำให้ความสูญเสียทางเศรษฐกิจของครัวเรือนที่ต้องเช่าที่พักชั่วคราวไม่ถูกนับรวมในการประเมินมูลค่า L&amp;D จึงเพิ่มหมวด <code class="field">Rent_Housing</code> ในตัวแปร <code class="field">loss_category</code> เพื่อปิดช่องว่างข้อมูลนี้ ให้ สศช. คำนวณผลกระทบต่อหนี้สินครัวเรือนได้ครบถ้วน</div>
+    <div class="table-wrap reveal">
+      <table class="data-table">
+        <thead><tr><th>องค์ประกอบข้อมูล</th><th>โครงสร้างเดิม</th><th>โครงสร้างใหม่ปรับประสาน สศช.</th><th>เหตุผลและความจำเป็นเชิงระบบ</th></tr></thead>
+        <tbody>
+          <tr><td><b>ขอบเขตภาคส่วน (<code class="field">sector_id</code>)</b></td><td>ข้อความอิสระ หรือหมวดทั่วไป</td><td>จำกัดค่า <b>5 ภาคส่วนหลัก</b> อ้างอิงระบบ GDP</td><td>รองรับการไหลของข้อมูลและการจัดทำงบประมาณจำแนกรายกระทรวง</td></tr>
+          <tr><td><b>หมวดความสูญเสีย (<code class="field">loss_category</code>)</b></td><td>ค่าพื้นฐานทั่วไป</td><td>เพิ่ม <b><code class="field">Rent_Housing</code></b> และปรับนิยาม <code class="field">Yield_Reduction</code></td><td>จับความสูญเสียภาคสังคม (ค่าเช่าบ้านชั่วคราวจากการพลัดถิ่น) ที่เคยสูญหาย</td></tr>
+          <tr><td><b>ตัวแปรย่อย (<code class="field">subsector_id</code>)</b></td><td>ขาดการจัดหมวดหมู่ย่อย ข้อมูลกระจัดกระจาย</td><td>จัดกลุ่มพารามิเตอร์ย่อย (Crops, Livestock, Manufacturing)</td><td>บังคับใช้เป็นเงื่อนไขเพื่อดึงราคากลางต่อหน่วยคำนวณอัตโนมัติ</td></tr>
+          <tr><td><b>จุดเชื่อมโยงข้อมูลสนาม</b></td><td>เจ้าหน้าที่ท้องถิ่นกรอกมูลค่าเงินประมาณการเอง</td><td>บันทึกพารามิเตอร์เชิงประจักษ์ (Downtime, ไร่เสียหายจริง)</td><td>ให้ฐานข้อมูลทำหน้าที่คำนวณมูลค่าแทนการคาดเดาของเจ้าหน้าที่สนาม</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">11 / 23</div></div>
+</section>
+
+<!-- ============ SLIDE 10a: SLIDE 9 PART 1 ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">09. การตีความใหม่ของแบบฟอร์มจัดเก็บข้อมูลภาคสนามสู่ผลิตภัณฑ์นำเข้าข้อมูล (1/2)</div>
+      <div class="header-sub-title">เปลี่ยนผ่านแบบฟอร์มกระดาษสู่ "ผลิตภัณฑ์นำเข้าข้อมูลสนามมาตรฐาน" โดยแยกระบบประมวลผลหลังบ้านออกจากแบบสำรวจภาคสนาม</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-2 reveal">
+      <!-- LEFT COLUMN: SYSTEM ARCHITECTURE & PARAMETERS -->
+      <div style="display: flex; flex-direction: column; gap: 14px; justify-content: space-between;">
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div class="doc-card blue-border"><div class="card-title">1. แกนประมวลผลข้อมูลหลังบ้าน</div><div class="card-text">ตารางเชิงสัมพันธ์ 6 ชุด, กฎทวนสอบคุณภาพข้อมูล, และเครื่องมือคำนวณมูลค่า</div></div>
+          <div class="doc-card blue-border"><div class="card-title">2. ส่วนแสดงผลบนเว็บ</div><div class="card-text">หน้าแสดงผลแผนที่ความเสี่ยงและสรุปสารสนเทศผู้บริหาร</div></div>
+          <div class="doc-card blue-border"><div class="card-title">3. ผลิตภัณฑ์นำเข้าข้อมูลภาคสนาม</div><div class="card-text">แบบฟอร์มสำรวจภาคสนาม ทำหน้าที่เป็น <b>ผลิตภัณฑ์นำเข้าข้อมูลสนามมาตรฐาน</b> ที่ผูกตรงกับโครงสร้างข้อมูล MVD หลังบ้าน</div></div>
+        </div>
+        <div class="grid-2" style="gap: 10px;">
+          <div class="doc-card sky-border" style="padding: 10px 14px;"><div class="card-title">พื้นที่/ทรัพย์สินเสียหาย</div><div class="card-text">ไร่เกษตรถูกน้ำท่วม, บ้านพังทลาย</div></div>
+          <div class="doc-card sky-border" style="padding: 10px 14px;"><div class="card-title">ระยะเวลาหยุดชะงัก</div><div class="card-text">จำนวนวันที่ตัดไฟ/น้ำ, วัน Downtime</div></div>
+          <div class="doc-card sky-border" style="padding: 10px 14px;"><div class="card-title">อายุพืชผลเกษตร</div><div class="card-text">ใช้คำนวณผลผลิตที่สูญเสียจริง</div></div>
+          <div class="doc-card sky-border" style="padding: 10px 14px;"><div class="card-title">วันและครัวเรือนอพยพ</div><div class="card-text">จำนวนวันและครัวเรือนที่เช่าบ้านชั่วคราว</div></div>
+        </div>
+     
+      </div>
+      <!-- RIGHT COLUMN: LOSS & DAMAGE FIELD REPORTING FORM IMAGE -->
+      <div class="doc-card blue-border" style="display: flex; flex-direction: column; gap: 10px; height: 100%; padding: 16px; background: #FFFFFF; justify-content: flex-start; overflow: hidden;">
+        <div class="card-title" style="color: var(--creagy-dark-navy);">
+          ตัวอย่างแบบฟอร์มเก็บข้อมูล
+        </div>
+        <div style="flex: 1; width: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden; background: #F8FAFC; border-radius: 8px; border: 1px solid var(--border-color); padding: 6px;">
+          <img src="assets/loss_damage_reporting_form.jpg" alt="Loss &amp; Damage Field Reporting Form (NESDC-Aligned Standard)" style="max-width: 100%; max-height: 720px; object-fit: contain; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">12 / 23</div></div>
+</section>
+
+<!-- ============ SLIDE 10b: SLIDE 9 PART 2 ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">09. การตีความใหม่ของแบบฟอร์มจัดเก็บข้อมูลภาคสนามสู่ผลิตภัณฑ์นำเข้าข้อมูล (2/2)</div>
+      <div class="header-sub-title">มุมมองเดิมต่อแบบฟอร์ม เทียบกับการตีความใหม่เป็นผลิตภัณฑ์นำเข้าข้อมูล</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="card-text reveal" style="margin-bottom: 6px;">ตารางด้านล่างเปรียบเทียบแบบฟอร์มกระดาษแบบเดิมกับการตีความใหม่เป็นผลิตภัณฑ์นำเข้าข้อมูลมาตรฐานใน 5 มิติ ตั้งแต่สถานะเชิงระบบไปจนถึงการรองรับระบบสารสนเทศ</div>
+    <div class="table-wrap reveal">
+      <table class="data-table">
+        <thead><tr><th>มิติการเปรียบเทียบ</th><th>มุมมองเดิม</th><th>มุมมองใหม่เป็นผลิตภัณฑ์นำเข้าข้อมูล</th></tr></thead>
+        <tbody>
+          <tr><td><b>สถานะเชิงระบบ</b></td><td>เอกสารกระดาษอนุมัติเงินเยียวยาชั่วคราว</td><td>ผลิตภัณฑ์นำเข้าข้อมูลมาตรฐานที่ผูกกับโครงสร้างข้อมูล MVD หลังบ้าน</td></tr>
+          <tr><td><b>บทบาทเจ้าหน้าที่สนาม</b></td><td>ผู้ประเมินมูลค่าความเสียหายเป็นตัวเงิน</td><td>ผู้จัดเก็บพารามิเตอร์เชิงปริมาณกายภาพที่ประจักษ์ชัด</td></tr>
+          <tr><td><b>หน่วยข้อมูลที่จัดเก็บ</b></td><td>วงเงินช่วยเหลือตามเพดานทางคลัง (บาท)</td><td>ปริมาณกายภาพ (ไร่, สิ่งปลูกสร้าง, วัน Downtime, ครัวเรือนเช่าบ้าน)</td></tr>
+          <tr><td><b>การคำนวณมูลค่าเงิน</b></td><td>ประเมินแบบกระจัดกระจายและใช้ดุลยพินิจ</td><td>คำนวณอัตโนมัติที่ส่วนกลางด้วยราคากลางและสมการ สศช.</td></tr>
+          <tr><td><b>การรองรับระบบสารสนเทศ</b></td><td>เก็บเข้าแฟ้มเอกสารเพื่อการตรวจสอบเบิกจ่าย</td><td>นำเข้าฐานข้อมูล Relational Schema (MVD 6 ตาราง) ทันที</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">13 / 23</div></div>
+</section>
+
+<!-- ============ SLIDE 11 (source Slide 10): 3-LAYER DB STRUCTURE ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">10. โครงสร้างฐานข้อมูลความสูญเสียและความเสียหาย แบบ 3 ชั้น</div>
+      <div class="header-sub-title">จัดโครงสร้างระบบแบบ 3 ชั้น แยกตรรกะการแจ้งเหตุฉุกเฉิน ออกจากการประเมินมูลค่าทางเศรษฐกิจและการวางแผนฟื้นฟู</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="card-text reveal" style="margin-bottom: 6px;">ความล้มเหลวของการออกแบบฐานข้อมูลแบบตารางเดียวในอดีต (ซ้าย) เป็นเหตุผลโดยตรงที่นำไปสู่โครงสร้างใหม่แบบ 3 ชั้น (ขวา) ซึ่งแยกตรรกะการแจ้งเหตุฉุกเฉินออกจากการประเมินมูลค่าและการวางแผนฟื้นฟูอย่างชัดเจน</div>
+    <div class="grid-2 reveal">
+      <div class="doc-card red-border">
+        <div class="card-title">ปัญหาของการรวบตารางเดียวของการจัดการข้อมูลที่ผ่านมา</div>
+        <ul class="doc-list">
+          <li><b>1. ข้อมูลเก่าถูกเขียนทับ:</b> ข้อมูลสำรวจด่วนช่วงเผชิญเหตุ (0–72 ชม.) ถูกลบทับเมื่อส่งข้อมูลเบิกจ่ายเงินเยียวยาใน 14 วัน ทำให้สถิติตั้งต้นหายไป</li>
+          <li><b>2. ขอบเขตภัยพิบัติผิดเพี้ยน:</b> ภัยพิบัติ 1 ครั้งที่ครอบคลุม 10 จังหวัด ถูกนับแยกเป็น 10 เหตุการณ์อิสระ ทำให้ประเทศไม่มีตัวเลขรวมรายเหตุการณ์ที่แท้จริง</li>
+          <li><b>3. ตัวเลขเงินชดเชยบิดเบือนค่าความเสียหายจริง:</b> มูลค่าความเสียหายถูกบีบให้เท่ากับเพดานเบิกจ่ายเยียวยา ทำให้ประเทศเสียสิทธิอ้างอิง True Loss ต่อสถาบันการเงินสากล</li>
+        </ul>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title">โครงสร้างฐานข้อมูล แบบ 3 ชั้น</div>
+        <div class="layer-stack">
+          <div class="layer layer-1"><h4>ชั้นที่ 1 — ตารางอ้างอิงเหตุการณ์ภัยพิบัติ</h4><p>ตรึงแกนกลางของเหตุการณ์ภัยพิบัติ ในช่วงระยะเผชิญเหตุฉุกเฉิน (0–72 ชม. ถึง 14 วัน) อ้างอิงตรรกะ DesInventar</p></div>
+          <div class="layer layer-2"><h4>ชั้นที่ 2 — การประเมินมูลค่าระดับภาคส่วน</h4><p>ประเมินเชิงลึกหลังพ้นระยะฉุกเฉิน โดยกระทรวงภาคส่วนร่วมกับ สศช.</p></div>
+          <div class="layer layer-3"><h4>ชั้นที่ 3 — โครงสร้างเชื่อมโยงระดับชาติ</h4><p>เชื่อมโยงแกนเหตุการณ์ (ชั้นที่ 1) เข้ากับระเบียนวิเคราะห์ภาคส่วน (ชั้นที่ 2) ผ่านความสัมพันธ์แบบ 1-to-Many</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">14 / 23</div></div>
+</section>
+
+<!-- ============ SLIDE 12a (source Slide 11 part 1): 6 TABLES RATIONALE ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">11. เหตุผลเชิงยุทธศาสตร์ที่ผู้บริหารต้องอนุมัติโครงสร้าง 6 ตารางหลัก (1/2)</div>
+      <div class="header-sub-title">6 ตารางหลัก เพื่อปิดปัญหารายงานซ้ำซ้อน ทวนสอบงบประมาณ และเรียกร้องเงินชดเชยสากล</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="card-text reveal" style="margin-bottom: 6px;">โครงสร้างฐานข้อมูล 3 ชั้นในทางปฏิบัติ ประกอบด้วยตารางเชิงสัมพันธ์หลัก 6 ชุด แต่ละตารางมีเหตุผลเชิงยุทธศาสตร์เฉพาะดังนี้</div>
+    <div class="grid-3 reveal">
+      <div class="doc-card blue-border">
+        <div class="card-title">1. <code class="field">DISASTER_EVENT</code></div>
+        <div class="card-text"><b>"สร้างศูนย์รวมข้อมูลหนึ่งเดียวของประเทศ"</b> — ยุติปัญหาต่างกระทรวงต่างตั้งชื่อและนับภัยซ้ำซ้อน ออกรหัส <code class="field">disaster_event_id</code> เดียวเป็นกุญแจกลางผูกทุกกระทรวง</div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title">2. <code class="field">EVENT_LOCATION</code></div>
+        <div class="card-text"><b>"เขตภัยพิบัติไม่ผูกติดกับแนวเขตการปกครอง"</b> — พายุ 1 ลูกเคลื่อนผ่านหลายจังหวัด การแยกตาราง <code class="field">EVENT_LOCATION</code> ออกจากตารางเหตุการณ์หลัก ทำให้บันทึกพิกัดได้หลายจุดต่อหนึ่งเหตุการณ์โดยไม่ต้องสร้างระเบียนเหตุการณ์ซ้ำ และนำพิกัดเหล่านั้นไปซ้อนทับภาพถ่ายดาวเทียมได้โดยตรง</div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title">3. <code class="field">ASSESSMENT_CONTEXT</code></div>
+        <div class="card-text"><b>"สร้างระบบบันทึกประวัติการทวนสอบ เพื่อความโปร่งใส"</b> — บันทึกประวัติการประเมิน ให้ สตง. และผู้ตรวจสอบสากลทวนสอบย้อนหลังได้</div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title">4. <code class="field">LD_PHYSICAL_DAMAGE</code></div>
+        <div class="card-text"><b>"แยกบัญชีสินทรัพย์กายภาพออกจากเพดานเงินเยียวยา"</b> — จัดเก็บปริมาณสิ่งปลูกสร้างและพื้นที่เกษตรเสียหายจริงตามราคาตลาด ไม่ถูกเพดานเงินคลังบีบ</div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title">5. <code class="field">LD_ECONOMIC_LOSS</code></div>
+        <div class="card-text"><b>"รองรับรายได้ที่หายไปและผลกระทบทางสังคมทางอ้อม"</b> — ความเสียหายกายภาพเป็นเพียง 30% ของผลกระทบ บันทึกรายได้ที่หยุดชะงักและค่าเช่าบ้านพลัดถิ่น</div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title">6. <code class="field">LD_RECOVERY_NEEDS</code></div>
+        <div class="card-text"><b>"เชื่อมความเสียหายจริง สู่คำขอตั้งงบประมาณฟื้นฟู"</b> — เปลี่ยนจากการขอตั้งงบฟื้นฟูแบบเหมาจ่าย มาเป็นการคำนวณงบตามหลักฐานจริง (BBB)</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">15 / 23</div></div>
+</section>
+
+<!-- ============ SLIDE 12b (source Slide 11 part 2): 6 TABLES TABLE ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">11. เหตุผลเชิงยุทธศาสตร์ที่ผู้บริหารต้องอนุมัติโครงสร้าง 6 ตารางหลัก (2/2)</div>
+      <div class="header-sub-title">ตารางสรุปประโยชน์เชิงการบริหารของการแยก 6 ตารางหลัก</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="card-text reveal" style="margin-bottom: 6px;"> ประโยชน์ของการมี 6 ตารางนี้</div>
+    <div class="table-wrap reveal">
+      <table class="data-table">
+        <thead><tr><th>ชื่อตาราง</th><th>ปัญหาเดิมในระบบตารางเดียว</th><th>สิ่งที่ถูกแก้ไข</th></tr></thead>
+        <tbody>
+          <tr><td><b>1. <code class="field">DISASTER_EVENT</code></b></td><td>ต่างหน่วยงานต่างนับภัยซ้ำซ้อน ตัวเลขไม่ตรงกัน</td><td>ได้รหัสอ้างอิงกลางเดียวทั้งประเทศ เชื่อมโยงข้อมูลได้ทุกกระทรวง</td></tr>
+          <tr><td><b>2. <code class="field">EVENT_LOCATION</code></b></td><td>สรุปข้อมูลรายจังหวัด ทำให้ไม่เห็นพิกัดภัยจริง</td><td>สามารถซ้อนทับภาพถ่ายดาวเทียม GIS วิเคราะห์พื้นที่เสี่ยงในอนาคตได้</td></tr>
+          <tr><td><b>3. <code class="field">ASSESSMENT_CONTEXT</code></b></td><td>ข้อมูลใหม่เขียนทับข้อมูลเก่า ขาดการทวนสอบ</td><td>มีระบบบันทึกประวัติการทวนสอบ รองรับการตรวจสอบของ สตง.</td></tr>
+          <tr><td><b>4. <code class="field">LD_PHYSICAL_DAMAGE</code></b></td><td>ตัวเลขความเสียหายถูกเพดานเงินเยียวยาคลังบีบให้ต่ำ</td><td>ได้ตัวเลขความเสียหายกายภาพจริงตามราคาตลาด สำหรับอ้างอิงสากล</td></tr>
+          <tr><td><b>5. <code class="field">LD_ECONOMIC_LOSS</code></b></td><td>ไม่เคยจัดเก็บรายได้ที่หายไปและค่าเช่าบ้านพลัดถิ่น</td><td>ได้ตัวเลขความสูญเสียทางเศรษฐกิจที่แท้จริง สำหรับ สศช. คำนวณ GDP</td></tr>
+          <tr><td><b>6. <code class="field">LD_RECOVERY_NEEDS</code></b></td><td>โครงการฟื้นฟูตัดขาดจากข้อมูลความเสียหายจริง</td><td>ได้แผนขอตั้งงบฟื้นฟู Build Back Better ที่มีหลักฐานอ้างอิงชัดเจน</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">16 / 23</div></div>
+</section>
+
+<!-- ============ SLIDE 13 (source Slide 12): RESPONSE & VALIDATION ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">12. กรอบการจัดเก็บข้อมูลระดับเผชิญเหตุและการพิสูจน์ยืนยันภัยพิบัติ</div>
+      <div class="header-sub-title">วางกลไกการตรึงรหัสภัยพิบัติกลางระดับชาติ กระจายพิกัดภูมิสารสนเทศ และระบบบันทึกบริบทประวัติการประเมิน</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="card-text reveal" style="margin-bottom: 6px;">การจัดเก็บข้อมูลระดับเผชิญเหตุวางอยู่บนกลไกหลัก 3 ส่วนที่ทำงานร่วมกัน ตั้งแต่การตรึงรหัสอ้างอิงกลาง การกระจายพิกัดภูมิสารสนเทศ ไปจนถึงการบันทึกประวัติการทวนสอบ</div>
+    <div class="grid-3 reveal">
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">1</div>การสร้างรหัสภัยพิบัติกลางระดับชาติ</div>
+        <div class="card-text">เมื่อเกิดภัยพิบัติขึ้น ระบบจะสร้างรหัสภัยพิบัติกลาง (<code class="field">disaster_event_id</code>) เพียงชุดเดียวในระดับประเทศ เพื่อทำหน้าที่เป็น "เข็มทิศกลาง" เชื่อมโยงทุกแบบรายงานจากทุกกระทรวง ป้องกันปัญหาสถิติซ้ำซ้อน เช่น น้ำท่วมลุ่มเจ้าพระยาที่เดิม 3 กระทรวงนับเป็น 3 เหตุการณ์</div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">2</div>การกระจายพิกัดทางภูมิสารสนเทศ</div>
+        <div class="card-text">แยกการบันทึกพื้นที่ประสบภัย (<code class="field">EVENT_LOCATION</code>) ออกจากระเบียนหลัก เพื่อรองรับภัยพิบัติที่ครอบคลุมหลายจังหวัด/อำเภอ อนุญาตให้นำเข้าพิกัด GPS ซ้อนทับกับแผนที่ความเสี่ยงและแผนที่สินทรัพย์เสี่ยงระดับประเทศ</div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">3</div>ระบบบันทึกประวัติบริบทการประเมิน</div>
+        <div class="card-text">จัดตั้งตารางกำกับบริบทการประเมิน (<code class="field">ASSESSMENT_CONTEXT</code>) ทำหน้าที่เป็น "กล่องบันทึกเวลา" ตรึงประวัติการทวนสอบข้อมูลทุกระยะ สร้างธรรมาภิบาลที่ดีและความโปร่งใส รองรับการตรวจสอบย้อนหลังโดย สตง. และกรมบัญชีกลาง</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">17 / 23</div></div>
+</section>
+
+<!-- ============ SLIDE 14 (source Slide 13): DAMAGE / LOSS / RECOVERY ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">13. กรอบการประเมินมูลค่าความเสียหายทางกายภาพและความสูญเสียทางเศรษฐกิจ</div>
+      <div class="header-sub-title">จัดระบบประเมินมูลค่าทรัพย์สินกายภาพ ความสูญเสียทางเศรษฐกิจ 5 ภาคส่วน และแผนงบฟื้นฟู Build Back Better</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="card-text reveal" style="margin-bottom: 6px;">ตารางทั้ง 3 ชุดในชั้นที่ 2 ทำหน้าที่ประเมินมูลค่าตามลำดับ ตั้งแต่ความเสียหายทางกายภาพ ความสูญเสียทางเศรษฐกิจ ไปจนถึงความต้องการฟื้นฟู เชื่อมโยงกันเป็นห่วงโซ่การประเมินมูลค่าเดียว</div>
+    <div class="grid-3 reveal">
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">4</div><code class="field">LD_PHYSICAL_DAMAGE</code> (ความเสียหายทางกายภาพ)</div>
+        <div class="card-text">บันทึกการทำลายล้างทรัพย์สินถาวร โดยประเมินตาม <b>ต้นทุนการจัดหาทดแทนหรือซ่อมแซมตามราคาตลาด</b> แทนการอิงเพดานวงเงินช่วยเหลือทางคลัง จำแนกตาม 5 ภาคส่วนหลักของ สศช. เพื่อส่งต่อตัวเลขความเสียหายจริงให้กระทรวงเจ้าสังกัด</div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">5</div><code class="field">LD_ECONOMIC_LOSS</code> (ความสูญเสียทางเศรษฐกิจ)</div>
+        <div class="card-text">บันทึกการหยุดชะงักของกระแสเศรษฐกิจ เช่น รายได้ท่องเที่ยวที่หายไป ค่าใช้จ่ายดำเนินงานส่วนเพิ่ม ผลผลิตเกษตรลดลง — <b>เพิ่มหมวดความสูญเสียภาคสังคม (<code class="field">Rent_Housing</code>):</b> บันทึกค่าเช่าบ้าน/หอพักชั่วคราวของผู้พลัดถิ่น ให้รัฐบาลเห็น True Loss ที่กระทบหนี้ครัวเรือน</div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">6</div><code class="field">LD_RECOVERY_NEEDS</code> (ความต้องการฟื้นฟู)</div>
+        <div class="card-text">บูรณาการผลประเมินความเสียหายและความสูญเสียเข้าสู่ตารางคำขอตั้งงบฟื้นฟู เพื่อแปลงความเสียหายจริงเป็นโครงการฟื้นฟูเชิงโครงสร้างที่ทนทานต่อภัยพิบัติ ให้หลักฐานเชิงประจักษ์แก่สำนักงบประมาณและกองทุน L&amp;D สากลในการอนุมัติวงเงิน</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">18 / 23</div></div>
+</section>
+
+<!-- ============ SLIDE 15 (source Slide 14): QUALITY GATES ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">14. ธรรมาภิบาลข้อมูลและระบบควบคุมคุณภาพ 5 ระดับ</div>
+      <div class="header-sub-title">บังคับใช้ 5 ด่านการตรวจสอบคุณภาพข้อมูล ป้องกันข้อมูลขยะ และเตรียมความพร้อมยื่นขอชดเชยจากกองทุน L&amp;D สากล</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="card-text reveal" style="margin-bottom: 4px;">เพื่อป้องกันข้อมูลขยะไม่ให้เข้าสู่ระบบ MVD จึงบังคับใช้ด่านตรวจสอบคุณภาพอัตโนมัติ 5 ด่านต่อเนื่องกัน ก่อนข้อมูลจะผ่านเข้าสู่กระบวนการอนุมัติงบประมาณและการรายงานต่อกองทุนสากล</div>
+    <div class="grid-5 reveal">
+      <div class="doc-card blue-border"><div class="card-title">G1</div><div class="card-text"><b>Master Key Integrity:</b> ทุกระเบียนต้องเชื่อมกับรหัสภัยพิบัติกลาง ป้องกันข้อมูลลอย</div></div>
+      <div class="doc-card blue-border"><div class="card-title">G2</div><div class="card-text"><b>Temporal Boundary:</b> ตรวจกรอบเวลาเกิดภัยและช่วงประเมิน ป้องกันวันสิ้นสุดคลาดเคลื่อน</div></div>
+      <div class="doc-card blue-border"><div class="card-title">G3</div><div class="card-text"><b>Sector ENUM:</b> บังคับให้ข้อมูลจำแนกตรงตาม 5 ENUM ของ สศช.</div></div>
+      <div class="doc-card blue-border"><div class="card-title">G4</div><div class="card-text"><b>Baseline Non-Zero:</b> การประเมินความสูญเสียต้องอ้างอิงสถิติภาวะปกติ</div></div>
+      <div class="doc-card blue-border"><div class="card-title">G5</div><div class="card-text"><b>Audit Trail Check:</b> ล็อกคำขอบฟื้นฟูจนกว่าจะผ่านการอนุมัติทวนสอบ</div></div>
+    </div>
+    <div class="grid-2 reveal">
+      <div class="doc-card sky-border"><div class="card-text"><b>มาตรฐานการรายงานสากล:</b> โครงสร้างธรรมาภิบาลข้อมูล MVD 6 ตารางหลัก ออกแบบให้สอดคล้องกับมาตรฐานการรายงานของสถาบันการเงินสากล (World Bank / ADB) และกรอบ UNFCCC L&amp;D Fund</div></div>
+      <div class="doc-card green-border"><div class="card-text"><b>การนำเสนอในเวทีระดับโลก:</b> ประเทศไทยมีฐานข้อมูลอ้างอิงมูลค่าความสูญเสียและความเสียหายที่ผ่านการทวนสอบทางกฎหมายและเศรษฐศาสตร์ พร้อมสำหรับเจรจาขอรับการสนับสนุนเงินชดเชยระดับโลก</div></div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">19 / 23</div></div>
+</section>
+
+<!-- ============ SLIDE 16 (source Slide 15): PILOT VALIDATION ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">15. ผลการทดสอบมาตรฐานชุดข้อมูลขั้นต่ำย้อนหลังกับ 3 เหตุการณ์ในอดีต</div>
+      <div class="header-sub-title">ถอดบทเรียนการจัดเก็บข้อมูลย้อนหลัง 3 เหตุการณ์ (อุทกภัย วาตภัย ภัยแล้ง) เพื่อประเมินความสมบูรณ์และข้อจำกัดในเชิงประจักษ์</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="card-text reveal" style="margin-bottom: 6px;">ผลการนำมาตรฐาน MVD ไปทดลองจัดเก็บข้อมูลย้อนหลังกับ 3 เหตุการณ์จริงที่มีลักษณะต่างกัน แสดงทั้งเขตข้อมูลที่ระบบเดิมรองรับได้และช่องว่างที่ยังพบในแต่ละกรณี ดังนี้</div>
+    <div class="grid-3 reveal">
+      <div class="doc-card blue-border">
+        <div class="card-title">1. อุทกภัย · จ.พิจิตร 2557 (159 วัน)</div>
+        <div class="card-text"><b style="color:var(--solve-green);">รองรับ 31 เขต:</b> DISASTER_EVENT (34 ครัวเรือน), EVENT_LOCATION, ASSESSMENT_CONTEXT, LD_PHYSICAL_DAMAGE ครบ</div>
+        <div class="card-text"><b style="color:var(--gap-red);">ขาด 48 เขต:</b> ข้อมูลประชากรรายบุคคลเป็นค่าว่าง, LD_ECONOMIC_LOSS สูญหายทั้งหมด ขาดรหัสเชื่อมไปบัญชีเบิกจ่ายเยียวยา</div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title">2. ภัยแล้ง · จ.ศรีสะเกษ 2557 (126 วัน)</div>
+        <div class="card-text"><b style="color:var(--solve-green);">รองรับ 22 เขต:</b> DISASTER_EVENT (76 ครัวเรือน) และ EVENT_LOCATION เท่านั้น</div>
+        <div class="card-text"><b style="color:var(--gap-red);">ขาด 57 เขต:</b> <b>ตาราง LD_PHYSICAL_DAMAGE และ LD_ECONOMIC_LOSS เป็นค่าว่าง 100%</b> ขาดกลไกบันทึก Yield_Reduction</div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title">3. วาตภัย · จ.ลำปาง 2559 (เฉียบพลัน)</div>
+        <div class="card-text"><b style="color:var(--solve-green);">รองรับ 27 เขต:</b> LD_PHYSICAL_DAMAGE ชัดเจน (ที่อยู่อาศัยชำรุด 17 หลัง)</div>
+        <div class="card-text"><b style="color:var(--gap-red);">ขาด 52 เขต:</b> <b>event_end_date เป็นค่าว่าง</b> ไม่มีขั้นตอนบังคับปิดสถานการณ์ในระบบ</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">20 / 23</div></div>
+</section>
+
+<!-- ============ SLIDE 17a (source Slide 16 part 1): SUMMARY & TOR70 ROADMAP ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">16. สรุปช่องว่างเชิงระบบและแผนที่นำทางการพัฒนาระบบในโครงการตาม TOR70 (1/2)</div>
+      <div class="header-sub-title">วิเคราะห์รากเหง้าของปัญหาเชิงระบบ 3 ประการที่ขัดขวางการประเมินมูลค่าความสูญเสียระดับชาติ</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="card-text reveal" style="margin-bottom: 6px;">ผลการทดสอบย้อนหลังทั้ง 3 เหตุการณ์ชี้ให้เห็นรากเหง้าของปัญหาเชิงระบบร่วมกัน 3 ประการ ซึ่งอธิบายว่าเหตุใดช่องว่างข้อมูลจึงเกิดขึ้นซ้ำในทุกกรณีที่ทดสอบ</div>
+    <div class="grid-3 reveal">
+      <div class="doc-card red-border">
+        <div class="card-title">1. รายงานอิงครัวเรือนมากกว่ารายบุคคล</div>
+        <div class="card-text">ระบบรายงานสาธารณภัยของ ปภ. ถูกออกแบบมาเพื่อเร่งอนุมัติเงินทดรองราชการช่วยเหลือผู้ประสบภัยเป็นหลัก หน่วยในการบันทึกและอนุมัติจึงเป็น "ครัวเรือน" ไม่ใช่ "บุคคล" เนื่องจากขั้นตอนเบิกจ่ายอ้างอิงจำนวนครัวเรือนที่ได้รับผลกระทบเป็นเกณฑ์หลัก สถิติรายบุคคลอย่างจำนวนผู้เสียชีวิต (<code class="field">num_dead</code>) และผู้บาดเจ็บ (<code class="field">num_injured</code>) จึงถูกกรอกอย่างไม่สม่ำเสมอ เพราะไม่มีขั้นตอนใดในกระบวนการเบิกจ่ายที่บังคับให้ต้องกรอกครบ เมื่อประเทศต้องรายงานตัวชี้วัด Sendai Target A และ B ซึ่งกำหนดเป็นจำนวนผู้เสียชีวิตและผู้ได้รับผลกระทบรายบุคคล ฐานข้อมูลที่มีอยู่จึงไม่มีตัวเลขครบถ้วนพอจะใช้อ้างอิงได้โดยตรง</div>
+      </div>
+      <div class="doc-card red-border">
+        <div class="card-title">2. ไซโลข้อมูลระหว่างกระทรวง</div>
+        <div class="card-text">ข้อมูลผลกระทบแต่ละด้านถูกเก็บโดยกระทรวงที่รับผิดชอบภารกิจนั้นโดยตรง เช่น กระทรวงสาธารณสุขเก็บข้อมูลผู้บาดเจ็บ/เสียชีวิตผ่านระบบรายงานของโรงพยาบาล ขณะที่กระทรวงคมนาคมเก็บข้อมูลความเสียหายโครงสร้างพื้นฐานผ่านระบบสำรวจทรัพย์สินของตนเอง แต่ละระบบถูกสร้างขึ้นเพื่อรองรับภารกิจภายในของกระทรวงนั้น ไม่ได้ออกแบบให้ส่งข้อมูลกลับเข้าสู่ทะเบียนภัยพิบัติกลางของ ปภ. เมื่อไม่มีกลไกส่งข้อมูลกลับ ปภ. ซึ่งถือครองระเบียนเหตุการณ์หลักจึงไม่เห็นภาพความเสียหายที่แท้จริงของเหตุการณ์ที่ตนบันทึกไว้</div>
+      </div>
+      <div class="doc-card red-border">
+        <div class="card-title">3. ตัดขาดรหัสเหตุการณ์กับเงินเบิกจ่าย</div>
+        <div class="card-text">บัญชีเบิกจ่ายเงินทดรองราชการที่กรมบัญชีกลางดูแล บันทึกยอดเบิกจ่ายเป็นยอดรวมสะสมระดับจังหวัด โดยไม่ผูกกับรหัสอ้างอิงเหตุการณ์ <code class="field">disaster_event_id</code> ของภัยพิบัติแต่ละครั้ง เมื่อไม่มีกุญแจเชื่อมโยงนี้ ตัวเลขเงินเบิกจ่ายกับตัวเลขความเสียหายที่บันทึกในระบบ MVD จึงจับคู่กันในระดับเหตุการณ์เดียวไม่ได้ ทำให้ไม่สามารถคำนวณมูลค่าความเสียหายที่แท้จริง (True Loss) ของภัยพิบัติแต่ละครั้งได้อย่างสมบูรณ์ ซึ่งเป็นตัวเลขที่จำเป็นสำหรับใช้เจรจาขอรับการสนับสนุนจากกองทุน Loss and Damage สากล</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">21 / 23</div></div>
+</section>
+
+<!-- ============ SLIDE 17b (source Slide 16 part 2): SUMMARY TABLE ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">16. สรุปช่องว่างเชิงระบบและแผนที่นำทางการพัฒนาระบบในโครงการตาม TOR70 (2/2)</div>
+      <div class="header-sub-title">ลำดับขั้นการขับเคลื่อนระบบฐานข้อมูล L&amp;D ตามกรอบ TOR70</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="card-text reveal" style="margin-bottom: 6px;">การขับเคลื่อนระบบฐานข้อมูล L&amp;D ให้ใช้งานได้จริงทั่วประเทศ ควรดำเนินการเป็นลำดับขั้นต่อเนื่องกัน 3 ขั้น ดังนี้</div>
+    <div class="grid-3 reveal">
+      <div class="timeline-step">
+        <div class="step-num">ขั้นที่ 1</div>
+        <div class="step-title">วางรหัสอ้างอิงเหตุการณ์กลาง (Master Event Key)</div>
+        <div class="card-text">บังคับใช้รหัสอ้างอิงเหตุการณ์กลาง <code class="field">disaster_event_id</code> ให้เป็นกุญแจเดียวกันที่ทุกกระทรวงต้องอ้างอิงเมื่อบันทึกข้อมูลของภัยพิบัติครั้งเดียวกัน พร้อมเปิดใช้งานตาราง <code class="field">ASSESSMENT_CONTEXT</code> เพื่อแยกข้อมูลแจ้งเหตุระยะแรกออกจากข้อมูลประเมินมูลค่าระยะหลัง เป็นรากฐานที่ทุกกระทรวงต้องยึดถือร่วมกันก่อนขั้นตอนถัดไปจะเดินหน้าได้</div>
+      </div>
+      <div class="timeline-step">
+        <div class="step-num">ขั้นที่ 2</div>
+        <div class="step-title">กระจายผลิตภัณฑ์นำเข้าข้อมูลภาคสนาม</div>
+        <div class="card-text">เมื่อรหัสอ้างอิงเหตุการณ์กลางจากขั้นที่ 1 พร้อมใช้งานแล้ว จึงกระจายผลิตภัณฑ์นำเข้าข้อมูลภาคสนามมาตรฐานให้เจ้าหน้าที่ ปภ. และ อปท. ใช้จัดเก็บเฉพาะพารามิเตอร์เชิงปริมาณทางกายภาพที่สังเกตได้จริง เช่น ไร่เกษตรเสียหายและจำนวนวัน Downtime แทนการให้เจ้าหน้าที่หน้างานประเมินมูลค่าตัวเงินด้วยดุลยพินิจของตนเอง</div>
+      </div>
+      <div class="timeline-step">
+        <div class="step-num">ขั้นที่ 3</div>
+        <div class="step-title">เชื่อมระบบคำนวณมูลค่าส่วนกลาง</div>
+        <div class="card-text">เชื่อมต่อฐานข้อมูลราคากลางส่วนกลางและแบบจำลองคำนวณมูลค่า 5 ภาคส่วนของ สศช. เข้ากับพารามิเตอร์เชิงกายภาพที่จัดเก็บได้จากขั้นที่ 2 เพื่อคำนวณมูลค่าความเสียหายและความสูญเสียโดยอัตโนมัติ และประมวลผลเป็นรายงานผลกระทบระดับชาติที่พร้อมใช้อ้างอิงต่อกองทุน Loss and Damage สากล</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">22 / 23</div></div>
+</section>
+
+<!-- ============ SLIDE 18: CLOSING ============ -->
+<section class="slide title-slide">
+  <div class="title-top-logos reveal">
+    <div class="title-logo-box"><img src="assets/creagy_logo.png" alt="Creagy"></div>
+  </div>
+  <div class="title-body reveal">
+    <div class="main-hero-title">ขอบคุณ</div>
+    <div class="main-subtitle">การพัฒนาระบบฐานข้อมูลความสูญเสียและความเสียหาย จัดทำโดย The Creagy สำหรับกรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (DCCE)</div>
+  </div>
+  <div class="title-metadata reveal">
+    <div class="meta-item"><div class="meta-lbl">Website</div><div class="meta-val">thecreagy.com</div></div>
+    <div class="meta-item"><div class="meta-lbl">Email</div><div class="meta-val">happy@thecreagy.com</div></div>
+    <div class="meta-item"><div class="meta-lbl">Telephone</div><div class="meta-val">+66 (0) 82 048 6575</div></div>
+  </div>
+</section>
+
+</main>
+</div>
+
+<!-- Navigation Controls -->
+<div class="deck-controls">
+  <button id="prevBtn" class="control-btn" aria-label="Previous slide">&#8592;</button>
+  <span class="counter" id="pageIndicator">1 / 23</span>
+  <button id="nextBtn" class="control-btn" aria-label="Next slide">&#8594;</button>
+</div>
+
+<script>
+/* ===========================================
+   SLIDE PRESENTATION CONTROLLER
+   =========================================== */
+class SlidePresentation {
+    constructor() {
+        this.slides = document.querySelectorAll('.slide');
+        this.currentSlide = 0;
+        this.stage = document.getElementById('deckStage');
+        this.pageIndicator = document.getElementById('pageIndicator');
+        this.setupStageScale();
+        this.setupKeyboardNav();
+        this.setupTouchNav();
+        this.setupWheelNav();
+        this.setupButtons();
+        this.showSlide(0);
+    }
+
+    setupStageScale() {
+        const scale = () => {
+            const factor = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+            const x = (window.innerWidth - 1920 * factor) / 2;
+            const y = (window.innerHeight - 1080 * factor) / 2;
+            this.stage.style.transform = `translate(${x}px, ${y}px) scale(${factor})`;
+        };
+        scale();
+        window.addEventListener('resize', scale);
+    }
+
+    setupKeyboardNav() {
+        document.addEventListener('keydown', (e) => {
+            if (e.target.getAttribute('contenteditable') === 'true') return;
+            if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); this.next(); }
+            if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); this.prev(); }
+        });
+    }
+
+    setupTouchNav() {
+        let startX = 0;
+        this.stage.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+        this.stage.addEventListener('touchend', (e) => {
+            const diff = startX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 50) { diff > 0 ? this.next() : this.prev(); }
+        }, { passive: true });
+    }
+
+    setupWheelNav() {
+        let locked = false;
+        window.addEventListener('wheel', (e) => {
+            if (locked) return;
+            if (Math.abs(e.deltaY) < 30) return;
+            locked = true;
+            e.deltaY > 0 ? this.next() : this.prev();
+            setTimeout(() => { locked = false; }, 500);
+        }, { passive: true });
+    }
+
+    setupButtons() {
+        document.getElementById('nextBtn').addEventListener('click', () => this.next());
+        document.getElementById('prevBtn').addEventListener('click', () => this.prev());
+    }
+
+    next() { this.showSlide(this.currentSlide + 1); }
+    prev() { this.showSlide(this.currentSlide - 1); }
+
+    showSlide(index) {
+        this.currentSlide = Math.max(0, Math.min(index, this.slides.length - 1));
+        this.slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === this.currentSlide);
+            slide.classList.toggle('visible', i === this.currentSlide);
+        });
+        this.pageIndicator.textContent = `${this.currentSlide + 1} / ${this.slides.length}`;
+    }
+}
+
+/* ===========================================
+   INLINE EDIT MODE
+   =========================================== */
+class InlineEditor {
+    constructor() {
+        this.isActive = false;
+        this.toggle = document.getElementById('editToggle');
+        this.hotzone = document.getElementById('editHotzone');
+        this.storageKey = 'wp9-slidedoc-edits-creagy-v7';
+        try { localStorage.clear(); } catch (e) {}
+        this.setupHoverReveal();
+        this.setupHandlers();
+        this.loadSavedEdits();
+    }
+
+    setupHoverReveal() {
+        let hideTimeout = null;
+        const show = () => { clearTimeout(hideTimeout); this.toggle.classList.add('show'); };
+        const hide = () => { hideTimeout = setTimeout(() => { if (!this.isActive) this.toggle.classList.remove('show'); }, 400); };
+        this.hotzone.addEventListener('mouseenter', show);
+        this.hotzone.addEventListener('mouseleave', hide);
+        this.toggle.addEventListener('mouseenter', show);
+        this.toggle.addEventListener('mouseleave', hide);
+    }
+
+    setupHandlers() {
+        this.toggle.addEventListener('click', () => this.toggleEditMode());
+        this.hotzone.addEventListener('click', () => this.toggleEditMode());
+        document.addEventListener('keydown', (e) => {
+            if ((e.key === 'e' || e.key === 'E') && !e.target.getAttribute('contenteditable')) {
+                this.toggleEditMode();
+            }
+            if (e.key === 's' && (e.ctrlKey || e.metaKey) && this.isActive) {
+                e.preventDefault();
+                this.saveEdits();
+            }
+        });
+    }
+
+    toggleEditMode() {
+        this.isActive = !this.isActive;
+        this.toggle.classList.toggle('active', this.isActive);
+        const editableSelectors = 'h1, h2, h3, h4, p, li, td, th, .header-main-title, .header-sub-title, .card-title, .card-text, .stat-lbl';
+        document.querySelectorAll('.slide ' + editableSelectors).forEach(el => {
+            el.setAttribute('contenteditable', this.isActive ? 'true' : 'false');
+        });
+        if (!this.isActive) this.saveEdits();
+    }
+
+    saveEdits() {
+        const data = {};
+        document.querySelectorAll('.slide').forEach((slide, i) => { data[i] = slide.innerHTML; });
+        try { localStorage.setItem(this.storageKey, JSON.stringify(data)); } catch (e) {}
+    }
+
+    loadSavedEdits() {
+        try {
+            const raw = localStorage.getItem(this.storageKey);
+            if (!raw) return;
+            const data = JSON.parse(raw);
+            document.querySelectorAll('.slide').forEach((slide, i) => {
+                if (data[i]) slide.innerHTML = data[i];
+            });
+        } catch (e) {}
+    }
+}
+
+new SlidePresentation();
+new InlineEditor();
+</script>
+</body>
+</html>

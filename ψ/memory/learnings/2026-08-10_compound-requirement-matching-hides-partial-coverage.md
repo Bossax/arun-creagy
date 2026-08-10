@@ -1,0 +1,9 @@
+# Lesson: Compound requirement items hide partial coverage in binary match/gap pipelines
+
+**Context**: WP4 (CRDB project) content-source gap analysis — matching 73 sitemap content requirements against a 391-asset digital inventory. A requirement item is marked "matched" the moment any one relevant asset is found.
+
+**What happened**: Several requirement items were compound — they named multiple distinct sub-topics in one line (e.g. "non-economic losses: mental health, biodiversity, cultural heritage"). The binary matching pass marked these "matched" as soon as *any one* named sub-topic found a source, even when the majority of what the item asked for had nothing behind it. This was only caught because Boss sample-checked individual results by hand against the literal requirement text — it was invisible in the aggregate 39-matched/34-gap statistics.
+
+**Why it matters**: Aggregate match/gap counts can look clean (39/73 "matched" = 53% coverage) while badly overstating real readiness (the true figure, after decomposing compound items, was 20 full + 19 partial = only 27% fully covered). Anyone downstream trusting the binary label as "this page is sourced" would be wrong for roughly half of the "matched" rows.
+
+**How to apply**: When building any evidence-matching or requirement-coverage pipeline, check upfront whether individual items are compound (a list or enumeration of several named things bundled into one requirement/criterion). If so, decompose them into separate matchable sub-units *before* running the matching pass, not as a follow-up audit after a human catches it. This is a sibling lesson to the earlier WP2 finding (grounding criteria must be independent of what's being scored) — same family of failure: a pipeline's aggregate output can look rigorous while a structural blind spot in how items are defined quietly inflates the numbers.
