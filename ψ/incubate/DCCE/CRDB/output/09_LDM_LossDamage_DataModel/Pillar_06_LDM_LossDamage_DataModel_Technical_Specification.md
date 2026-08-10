@@ -23,6 +23,14 @@ This revision is consistent with the bounded findings in [`DaLA_methodology_repo
 
 This specification defines the revised MVD design package for CRDB relational architecture. It does **not** claim that all required baseline, valuation, validation, and recovery-planning fields are already available in current DDPM operational intake. It also does **not** convert the MVD into a single all-purpose disaster record.
 
+### 1.3 Platform Layer Tagging & Product Classification
+
+Per the CRDB Final Sprint Architecture Plan ([`01_Business_Objective_Platform_Rationale/2026-08-06-Business-Objective-Platform-Rationale.md`](../01_Business_Objective_Platform_Rationale/2026-08-06-Business-Objective-Platform-Rationale.md)), this specification explicitly delineates the **Data Platform Engine** from the **Web Presentation Layer**:
+
+- **Data Platform Core Engine (Backend & Schema)**: The 6 relational MVD tables (`DISASTER_EVENT`, `EVENT_LOCATION`, `ASSESSMENT_CONTEXT`, `LD_PHYSICAL_DAMAGE`, `LD_ECONOMIC_LOSS`, `LD_RECOVERY_RECONSTRUCTION_NEEDS`), G1–G5 data quality validation gates, and NESDC 5-sector valuation math ($\text{Damage} + \text{Loss}$).
+- **Web Presentation Layer (Frontend & Services)**: Service Package 4 visualization endpoints (e.g. disaster risk maps, dashboard summary cards).
+- **Data Ingestion & Field Collection Product**: The standalone field survey template ([`LossDamage_Printable_Reporting_Form.md`](LossDamage_Printable_Reporting_Form.md)) is classified as an explicit **Data Ingestion & Field Collection Product** backed by this MVD database schema, standardizing ground-level survey collection across provincial and local officers prior to database ingestion.
+
 ---
 
 ## 2. Why the architecture must be layered and relational

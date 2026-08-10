@@ -10,7 +10,7 @@ This mandate defines the standardized architecture of the documentation system.
 4. **writing/**: Drafts, reports, and working documents.
 5. **lab/**: Skill development. Contains project-based development folders (e.g., `ψ/lab/<project-slug>/`).
 6. **learn/**: Reference materials and study resources.
-7. **archive/**: Completed and versioned files, preserving project history.
+7. **archive/**: Completed and versioned files, preserving project history. Treat the files as superseded.
 8. **outbox/**: Finalized updates and deployments.
 
 ## Structure Rules
