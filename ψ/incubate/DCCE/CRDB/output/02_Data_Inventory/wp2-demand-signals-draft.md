@@ -16,7 +16,7 @@ No numbered "กรณีการใช้งานที่เกี่ยว�
    - Source: บริการ 1, narrative (paragraph 2)
    - Quote (TH): "บริการนี้จึงทำหน้าที่เป็นแพลตฟอร์มกลางสำหรับการค้นหาและเข้าถึงชุดข้อมูลที่ได้รับการรับรองมาตรฐานและคุณภาพจากกรมการเปลี่ยนแปลงสภาพภูมิอากาศ โดยทำหน้าที่เป็นแหล่งข้อมูลความจริงเพียงหนึ่งเดียว (Single Source of Truth) ที่มีการจัดการชุดอธิบายข้อมูล (metadata) ตามมาตรฐานของประเทศไทย"
    - Gloss (EN): "This service acts as a central platform for discovering and accessing datasets that have been certified to standard and quality by the Department of Climate Change and Environment, serving as a Single Source of Truth with metadata management per Thailand's national standard."
-   - Ambiguity flag: **Yes.** This is a meta-level demand for a certification/discovery *service*, not a named data variable or dataset. It does not point to any specific dataset in the catalog and cannot itself be used to rank individual catalog rows — it is structural/process demand, distinct from the concrete variable-level signals in Services 2–8. Included for completeness but flagged as out-of-shape for Stage B's dataset-matching purpose.
+   - Ambiguity flag: **Yes — out of scope, not merely ambiguous.** Boss review: Service 1 *is* the open-access catalog itself — every dataset within it is exposed uniformly, so the concept of a "priority" subset doesn't apply inside this service. This is a category mismatch with WP2's ranking exercise, not an ambiguous-but-usable signal. Excluded from Stage B matching.
 
 ---
 
@@ -226,7 +226,7 @@ No numbered "กรณีการใช้งานที่เกี่ยว�
     - Source: บริการ 6, use case 5
     - Quote (TH): "การตั้งค่าเกณฑ์น้ำท่วมฉับพลันระดับพื้นที่ (Localized Flood Thresholds) โดยใช้ขีดความสามารถในการดูดซับน้ำของดินในแต่ละตำบลเป็นตัวกำหนดจุดเตือนภัย"
     - Gloss (EN): "Setting localized flash-flood thresholds, using each sub-district's soil water-absorption capacity as the determinant of the warning trigger point."
-    - Note: This duplicates/reinforces signal #30 (soil water-absorption capacity per sub-district) — same concrete data need appears in both the service narrative and this use case.
+    - Note: This duplicates/reinforces signal #30 (soil water-absorption capacity per sub-district) — same concrete data need appears in both the service narrative and this use case. Confirmed by Boss review.
 
 ---
 
@@ -250,13 +250,13 @@ No numbered "กรณีการใช้งานที่เกี่ยว�
     - Source: บริการ 7, use case 2
     - Quote (TH): "แนวทางในการปรับตัวชี้วัดประสิทธิภาพการทำงานขององค์กรปกครองส่วนท้องถิ่นให้สอดคล้องกับเป้าหมายการปรับตัวของประเทศ"
     - Gloss (EN): "An approach for adapting local-government performance indicators to align with the country's adaptation targets."
-    - Ambiguity flag: No specific named dataset — this is a process/indicator-alignment need rather than a data variable per se.
+    - Ambiguity flag: **Revised per Boss review — a named dataset does exist, with access and resolution caveats.** This maps to the Local Performance Assessment (LPA), a set of indicators collected by the Department of Provincial Administration (DOPA) as part of their administrative M&E (the CRI project reportedly holds more detail on this). Two caveats matter for Stage B: (1) **not open-access** — available only on request; (2) **resolution mismatch** — DOPA's national office does not hold municipality-level reported values; each province self-administers its own evaluation, and what DOPA sees nationally is an aggregated score per area across 5 key performance areas. So even if sourced, this dataset likely cannot satisfy demand at the local-government/municipal resolution the use case implies.
 
 39. **Signal**: Area-based funding for spatial/area-based hazard-prevention planning.
     - Source: บริการ 7, use case 3
     - Quote (TH): "หน่วยงานให้ทุนเชิงพื้นที่ต้องการให้ทุนในการวางแผนเชิงพื้นที่ เพื่อป้องกันภัยที่อาจเกิดขึ้นในอนาคต"
     - Gloss (EN): "Area-based funding agencies want to fund spatial/area-based planning, to prevent hazards that may occur in the future."
-    - Ambiguity flag: This reads as a funding-mechanism need, not a specific data-variable ask; no named dataset.
+    - Ambiguity flag: This reads as a funding-mechanism need, not a specific data-variable ask; no named dataset. Boss review confirms: the demand itself is real, but which data would actually support the funding-allocation decision is undetermined — this is upstream ambiguity in the source, not an extraction gap.
 
 40. **Signal**: Data collection to support Global Goal on Adaptation (GGA) reporting.
     - Source: บริการ 7, use case 4
@@ -273,7 +273,7 @@ No numbered "กรณีการใช้งานที่เกี่ยว�
     - Source: บริการ 8, narrative (paragraph 2)
     - Quote (TH): "โดยบริการนี้ควรมีองค์ประกอบหลักที่สามารถประเมิน สถานะความพร้อม และการใช้งานที่เหมาะสม ของผลิตภัณฑ์ข้อมูลและชุดข้อมูลต่างๆ ในบริบทของการจัดการความเสี่ยงจากการเปลี่ยนแปลวสภาพภูมิอากาศ"
     - Gloss (EN): "This service should have core components able to assess the readiness status and appropriate use of data products and datasets, in the context of climate-change risk management."
-    - Ambiguity flag: This is a meta-level (data-quality/fitness-for-use assessment capability) demand, not a request for a specific dataset or variable — similar in kind to Service 1's signal.
+    - Ambiguity flag: **Revised per Boss review — out of WP2 scope, not merely ambiguous.** This is a demand for a guideline/methodology capability (a knowledge asset), not a data or information service. It does not point to any dataset in the catalog and shouldn't be scored against `data_catalog_v3.csv` in Stage B; it belongs to a different deliverable category (see #42–44 below, same cluster).
 
 ### Use-case-level signals
 
@@ -295,11 +295,16 @@ No numbered "กรณีการใช้งานที่เกี่ยว�
     - Gloss (EN): "Communicating the uncertainty of risk data."
     - Ambiguity flag: Refers to uncertainty *metadata/handling* of risk data generally, not a named dataset or variable.
 
+**Boss review, Service 8 cluster (#41–44)**: these four signals are not dataset demands — they read as topics/components of a single guideline-type knowledge asset (uncertainty-governance methodology), not requests for data the catalog could satisfy. Recommend excluding this cluster from Stage B's dataset-matching entirely and flagging it as input to a different deliverable (governance/framework or recommendations), not WP2.
+
 ---
 
 ## Summary
 
 - **Total demand signals extracted: 44** (across 8 services; Service 1 contributes 1 narrative-level signal with no numbered use cases in the source; Services 2–8 contribute narrative + numbered use-case signals as itemized above).
-- **Signals flagged as ambiguous / not directly variable-specific: 9** — signals #1 (Service 1 narrative), #4 (Service 2 UC1, vague hazard scope), #38, #39 (Service 7 UC2–3, process/funding-mechanism asks), #41 (Service 8 narrative, meta-level fitness-for-use), #42, #43, #44 (Service 8 UC1–3, general scenario/policy/uncertainty-communication asks without a named variable), plus #35 flagged as a duplicate/reinforcement rather than a distinct new signal.
+- **Boss review completed** on completeness (checked), translation/gloss accuracy (checked), and the duplicate/reinforcement call on #35 (confirmed). Boss-supplied domain corrections incorporated into #1, #38, #39, #41–44 above — see those entries for detail.
+- **Signals now flagged as out of Stage B scope entirely (5)**: #1 (Service 1 — category mismatch, this service *is* the open-access catalog, no "priority" subset applies) and the Service 8 cluster #41–44 (guideline/knowledge-asset demand, not dataset demand — recommend routing to a different deliverable, not WP2).
+- **Signals flagged ambiguous but still data-shaped (4)**: #4 (Service 2 UC1, vague hazard scope), #38 (Service 7 UC2 — **revised**: a named dataset does exist, DOPA's Local Performance Assessment, but is request-only access and nationally available only as area-level aggregates, not at the municipal resolution the use case implies), #39 (Service 7 UC3 — demand confirmed real, but which data would satisfy it is genuinely undetermined in the source, not an extraction gap).
+- #35 flagged as a duplicate/reinforcement of #30 rather than a distinct new signal — confirmed by Boss review.
 - Recurring concrete named-variable/resolution asks that appear more than once across services (useful signal strength for Stage B): **soil water-absorption capacity at sub-district level** (Service 6 narrative + UC5); **sub-district/ตำบล-level spatial resolution generally** (Service 2 narrative, Service 2 narrative EA reference, Service 6); **Rainfall Intensity / IDF curves** (Service 5 UC1 and UC3); **economic loss / non-economic loss statistics** (Service 3 UC1–2, Service 4 narrative + UC1–5).
 - No signal in this document has been matched against `data_catalog_v3.csv`. That matching is explicitly Stage B and out of scope here.
