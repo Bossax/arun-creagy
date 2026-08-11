@@ -207,7 +207,7 @@ These rules matter, but they should not compete with the Core Kernel during earl
 
 ### 2026-06-25 — Style-pack upgrade from institutional analysis failure
 
-**Source of delta**: review of CRDB section [`5.3.8`](ψ/incubate/DCCE/CRDB/output/final_report/5.3/2026-06-25_draft_section-5.3.8.md) and [`5.3.9`](ψ/incubate/DCCE/CRDB/output/final_report/5.3/2026-06-25_draft_section-5.3.9.md), plus comparison with [`STYLE_PACK_TOR5.5-Articles.md`](ψ/memory/style/STYLE_PACK_TOR5.5-Articles.md).
+**Source of delta**: review of CRDB section [`5.3.8`](ψ/incubate/DCCE/CRDB/output/draft_final_report/5.3/2026-06-25_draft_section-5.3.8.md) and [`5.3.9`](ψ/incubate/DCCE/CRDB/output/draft_final_report/5.3/2026-06-25_draft_section-5.3.9.md), plus comparison with [`STYLE_PACK_TOR5.5-Articles.md`](ψ/memory/style/STYLE_PACK_TOR5.5-Articles.md).
 
 #### Preferred direction detected
 - **Readable prose is useful, but it must not become a license for abstraction**.

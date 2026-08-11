@@ -32,7 +32,7 @@ confidence: high
 6. **Structured As-Is Inventory**: [[ψ/incubate/DCCE/CRDB/output/03_DataInventory_DQ/2026-03-12-DCCE_Website_Content_Gap_Inventory.md|2026-03-12-DCCE_Website_Content_Gap_Inventory.md]]
 7. **Coverage Rating Matrix**: [[ψ/incubate/DCCE/CRDB/output/03_DataInventory_DQ/2026-03-12-DCCE_Website_Content_Gap_Matrix.md|2026-03-12-DCCE_Website_Content_Gap_Matrix.md]]
 8. **IA Bridging Priorities**: [[ψ/incubate/DCCE/CRDB/output/03_DataInventory_DQ/2026-03-12-DCCE_Website_Content_Gap_Summary.md|2026-03-12-DCCE_Website_Content_Gap_Summary.md]]
-9. **Draft Final Report Section 5.2.2**: [[ψ/incubate/DCCE/CRDB/output/final_report/5.2/5.2.2 การศึกษาโครงสร้างและรูปแบบการเผยแพร่ข้อมูลด้านการปรับตัวฯ และการจัดการข้อมูลภายในกรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (DCCE).md|5.2.2 การศึกษาโครงสร้างและรูปแบบการเผยแพร่ข้อมูลด้านการปรับตัวฯ และการจัดการข้อมูลภายในกรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (DCCE).md]]
+9. **Draft Final Report Section 5.2.2**: [[ψ/incubate/DCCE/CRDB/output/draft_final_report/5.2/5.2.2 การศึกษาโครงสร้างและรูปแบบการเผยแพร่ข้อมูลด้านการปรับตัวฯ และการจัดการข้อมูลภายในกรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (DCCE)|5.2.2 การศึกษาโครงสร้างและรูปแบบการเผยแพร่ข้อมูลด้านการปรับตัวฯ และการจัดการข้อมูลภายในกรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (DCCE).md]]
 
 ## Git History
 None.
@@ -95,6 +95,6 @@ When evaluated against the proposed **NCAIF v6.1 Sitemap** (which models a unifi
 - **[E] Supporting Evidence**:
   - [[ψ/incubate/DCCE/CRDB/inbox_source/2026-03-12 - Comprehensive Digital Infrastructure Inventory and Content Gap Analysis of the Department of Climate Change and Environment (DCCE) Portal -.md|Comprehensive Digital Infrastructure Inventory]]
   - [[ψ/incubate/DCCE/CRDB/output/03_DataInventory_DQ/2026-03-12-DCCE_Website_Content_Gap_Inventory.md|DCCE Website Content Gap Inventory]]
-  - [[ψ/incubate/DCCE/CRDB/output/final_report/5.2/5.2.2 การศึกษาโครงสร้างและรูปแบบการเผยแพร่ข้อมูลด้านการปรับตัวฯ และการจัดการข้อมูลภายในกรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (DCCE).md|Draft Final Report Section 5.2.2]]
+  - [[ψ/incubate/DCCE/CRDB/output/draft_final_report/5.2/5.2.2 การศึกษาโครงสร้างและรูปแบบการเผยแพร่ข้อมูลด้านการปรับตัวฯ และการจัดการข้อมูลภายในกรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (DCCE)|Draft Final Report Section 5.2.2]]
 - **[D] Potential Decision**: Propose a modular, Phase-1 implementation sequence in the Final Report that prioritizes quick IA reorganizing (Priority A) and simple landing page templates (Priority B) over complex database consolidations.
 - **[A] Target Asset**: [[ψ/incubate/DCCE/CRDB/output/01_Sitemap_InterfaceMapping/NCAIF_Detailed_Sitemap_v6.md|NCAIF_Detailed_Sitemap_v6.md]]
