@@ -9,7 +9,7 @@ The main report makes its case with three worked examples, picked to illustrate 
 
 All 15 second-level nodes are covered below, in sitemap order. Per the same convention as the main report: no internal asset codes or reference IDs in the body — real names and plain descriptions throughout. Full traceability (asset IDs, exact match rationale) lives in the working CSV.
 
-The per-node tallies below sum to the same totals as the main report: **21 full, 24 partial, 28 gap, 73 requirements.**
+The per-node tallies below sum to the same totals as the main report: **18 full, 25 partial, 30 gap, 73 requirements.**
 
 ---
 
@@ -23,9 +23,9 @@ Historical natural-disaster trends and history for the country; the IPCC-standar
 
 ### What actually exists
 
-The IPCC framework definitions are well covered — the impact-chain manual embeds the methodology, and a dataset is explicitly tagged with IPCC, vulnerability, and adaptation terms. Sector and regional hotspots have a real, purpose-built source in the six-sector spatial risk dataset. The NAP summary is one of the strongest matches anywhere in the sitemap — the official document itself, a dataset entry, and multiple English- and Thai-language media explainers all exist. High-value adaptation measure examples are backed by a cross-sector success-factors media piece and a nature-based-solutions dataset with concrete content.
+The IPCC framework definitions are well covered — the impact-chain manual embeds the methodology, and a dataset is explicitly tagged with IPCC, vulnerability, and adaptation terms (these are correctly assigned to their corresponding data domains). Sector and regional hotspots have a real, purpose-built source in the six-sector spatial risk dataset. The NAP summary is one of the strongest matches anywhere in the sitemap — the official document itself, a dataset entry, and multiple English- and Thai-language media explainers all exist. High-value adaptation measure examples are backed by a cross-sector success-factors media piece and a nature-based-solutions dataset with concrete content.
 
-What's missing or partial: historical disaster trend history has nothing behind it at all — no dataset or publication tracks Thailand's natural-disaster history as a narrative or time series. Physical-risk-versus-transition-risk framing, a conceptual pairing common in climate-finance literature, is also a total gap. And the risk-profile summary cards, after the dataset-catalog cross-check, moved from gap to partial: DCCE's seven-sector composite risk index supplies real numbers, but it's flagged draft/unverified and isn't rendered into anything resembling a summary card yet.
+What's missing or partial: historical disaster trend history has nothing behind it at all — no dataset or publication tracks Thailand's natural-disaster history as a narrative or time series. Physical-risk-versus-transition-risk framing, a conceptual pairing common in climate-finance literature, is also a total gap. And the risk-profile summary cards, after the dataset-catalog cross-check, moved from gap to partial: DCCE's seven-sector composite risk index supplies real numbers, but it's flagged draft/unverified and isn't rendered into anything resembling a summary card yet. 
 
 ### Coverage tally
 
@@ -47,17 +47,19 @@ A search hierarchy supporting province → district → subdistrict administrati
 
 ### What actually exists
 
-The spatial risk map overlay is fully covered — DCCE's existing risk-map web application, backed by the six-sector spatial dataset and, per the dataset-catalog cross-check, further supported by province-granularity composite risk index data, genuinely does render spatial risk over administrative boundaries. The quick-view dashboard is partial: the same web application could plausibly be extended into a point-level summary UI, and real vulnerability/threat data exists to populate half of it, but the "recommended measures" half has zero data support anywhere, and no purpose-built dashboard product exists yet.
+This node has evolved in v6 to be an "Interactive Search" UI rather than a distinct repository of new content. It serves as a navigational gateway to the data mart that powers Node 2.2 and the spatial risk database. 
 
-The administrative search hierarchy itself (province → district → subdistrict drill-down) is a pure gap — and a different kind of gap than most in this report: it's a navigation/UI feature, not something a document or dataset would ever directly address.
+The spatial risk map overlay is a gap — while raw spatial dataset exists, there is no actual built map-overlay UI or design currently available from DCCE. The quick-view dashboard is partial: the data could plausibly be extended into a point-level summary UI (pointing to the spatial risk database), and real vulnerability/threat data exists to populate half of it, but the "recommended measures" half has zero data support anywhere, and no purpose-built dashboard product exists yet.
+
+The administrative search hierarchy itself (province → district → subdistrict drill-down) presents a hard data gap: the DCCE spatial climate risk map only provides composite risk indices at the province level. District and subdistrict granularities do not exist in the current spatial risk map and require more granular data from other line agencies. However, scattered provincial climate change plans do exist and can serve as sources of sectoral and location risk hotspots to help flesh out the lower-level details.
 
 ### Coverage tally
 
-1 full · 1 partial · 1 gap (out of 3 requirements)
+0 full · 1 partial · 2 gap (out of 3 requirements)
 
 ### Assessment
 
-This node is really two different kinds of work wearing one page title. The map-overlay piece is close to done. The search hierarchy is a pure engineering/UX build task with no content-sourcing angle at all — worth flagging to the build team early so it isn't mistakenly bundled into "content gap" planning and left unscoped. The quick-view dashboard's "recommended measures" gap connects to a pattern that recurs across the sitemap: DCCE's inventory is much better at describing risk than prescribing what to do about it.
+This node is a UI/UX navigational gateway rather than a pure content node. The map-overlay piece is a gap since no design or interface has been built yet. The search hierarchy reveals a severe data limitation: drilling down past the province level is not currently supported by DCCE's own spatial risk database. Planners should note that populating this interactive search below the province level will require aggregating scattered provincial climate change plans or securing data from other line agencies. The quick-view dashboard's "recommended measures" gap connects to a recurring pattern: DCCE's inventory is much better at describing risk than prescribing what to do about it.
 
 ---
 
@@ -71,11 +73,13 @@ Historical extreme-weather-event statistics (temperature max/min, cumulative rai
 
 ### What actually exists
 
-Exposure trends are fully covered by the six-sector spatial dataset. The other two both improved under the dataset-catalog cross-check but remain partial: historical extreme-weather statistics now have real underlying data (1981–2023 daily/monthly temperature and rainfall grids), though it's Restricted-access raw grid data, not pre-computed event statistics. The macroeconomic loss-and-damage database is confirmed partial even after the deeper check — real per-hazard economic loss records exist in the dataset catalog, but nothing aggregates them into a genuine macroeconomic database, and the records are fragmented, access-restricted, and self-flagged by their own source as needing data-quality cleanup.
+Exposure trends are a total gap. While the six-sector spatial dataset provides a static snapshot of exposure, it does not inherently provide a time-series trend of how exposure is changing. The other two items are partial: historical extreme-weather statistics have real underlying data (1981–2023 daily/monthly temperature and rainfall grids), though it's Restricted-access raw grid data, not pre-computed event statistics. 
+
+Crucially, the macroeconomic loss-and-damage database is heavily restricted/partial. We do not have true macroeconomic economic loss records. What exists in the dataset catalog are records of reported damaged assets, human impacts, and government advance payments (เงินทดรองราชการ). These fiscal payout caps and damage tallies do not reflect the true reality of economic damage, they are not aggregated into a macroeconomic database, and they are self-flagged as needing data-quality cleanup.
 
 ### Coverage tally
 
-1 full · 2 partial · 0 gap (out of 3 requirements)
+0 full · 2 partial · 1 gap (out of 3 requirements)
 
 ### Assessment
 
@@ -93,15 +97,22 @@ Risk and vulnerability profile summaries at both the sub-national level (all 77 
 
 ### What actually exists
 
-The sector-specific version is fully covered — the same six-sector spatial risk dataset, reused extensively across this sitemap, is organized exactly along the sector lines the requirement asks for. The province/local-government version has nothing behind it at all: no dataset or publication currently disaggregates risk profiles down to all 77 provinces and local administrative units in a summarized, ready-to-use form.
+Note that this node fundamentally relies on the same underlying data mart as the Interactive Search (Node 1.2), just presented through a different interface (a summary profile rather than an interactive query).
+
+The sector-specific version is partially covered. The six-sector spatial risk dataset provides the spatial baseline, but there is no summarized, ready-to-use profile document. However, scattered sectoral studies and plans (like the Health National Adaptation Plan - HNAP) do exist and can be leveraged to build these profiles. The province/local-government version has nothing behind it at all: no dataset or publication currently disaggregates risk profiles down to all 77 provinces and local administrative units in a summarized, ready-to-use form.
 
 ### Coverage tally
 
-1 full · 0 partial · 1 gap (out of 2 requirements)
+0 full · 1 partial · 1 gap (out of 2 requirements)
 
 ### Assessment
 
 A clean, sharply-defined node — half genuinely done, half a genuine gap. The gap is notable because the underlying province-level risk data does exist elsewhere in DCCE's holdings (the composite risk index found during the dataset-catalog cross-check is province-level), so this may be less a "no data" problem and more a "no summarized, localized presentation layer built on top of existing data" problem — worth a build-team conversation about whether this is really a content gap or a product-design gap.
+
+
+%%this is the same thing as "Area-Based Data Search" just different interfaces (should rely on the same data mart%%
+
+	%%also there are scattering sectoral studies or sectoral plan like HNAP%%
 
 ---
 
@@ -366,9 +377,9 @@ This is a genuinely new capability for DCCE to build, not a content gap — a st
 | Node | Topic | Full | Partial | Gap | Total |
 |---|---|---|---|---|---|
 | 1.1 | Overview of Thailand's Climate Risk | 4 | 1 | 2 | 7 |
-| 1.2 | Area-Based Data Search | 1 | 1 | 1 | 3 |
-| 2.1 | National Climate Change Situation | 1 | 2 | 0 | 3 |
-| 2.2 | Area and Sector Risk Profile Summary | 1 | 0 | 1 | 2 |
+| 1.2 | Area-Based Data Search | 0 | 1 | 2 | 3 |
+| 2.1 | National Climate Change Situation | 0 | 2 | 1 | 3 |
+| 2.2 | Area and Sector Risk Profile Summary | 0 | 1 | 1 | 2 |
 | 2.3 | Policy, Legal & Financial Tools | 4 | 2 | 5 | 11 |
 | 2.4 | Planning Data Services | 2 | 1 | 0 | 3 |
 | 3.1 | Climate Drivers: Observation, Drivers & Future Scenarios | 0 | 3 | 5 | 8 |
@@ -380,6 +391,6 @@ This is a genuinely new capability for DCCE to build, not a content gap — a st
 | 4.3 | External Tools & Data Hub | 0 | 0 | 1 | 1 |
 | 5.1 | Announcements & Engagement Activities | 1 | 0 | 0 | 1 |
 | 5.2 | Feedback Channels & User Services | 0 | 0 | 1 | 1 |
-| **Total** | | **21** | **24** | **28** | **73** |
+| **Total** | | **18** | **25** | **30** | **73** |
 
 Node 3.3 (Adaptation Planning & Measures) and node 3.1 (Climate Drivers) are the two weakest clusters by gap count — 9 and 5 confirmed gaps respectively, together accounting for exactly half of the sitemap's 28 total gaps. Node 3.2 (Risk & Loss-Damage Analysis) is the largest concentration of partial coverage, at 10 of its 14 requirements. Nodes 4.1, 3.4, 5.1, and 4.3/5.2 sit at the opposite extremes — fully solved or fully unaddressed, with no middle ground.
