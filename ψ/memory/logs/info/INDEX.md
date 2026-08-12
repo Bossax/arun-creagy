@@ -1,5 +1,8 @@
 # Info Log Index
 
+- [2026-08-12 17:57] WP4 DRD verification: a check failed because it grepped for fixed "unknown" markers and missed a valid third phrasing ("Not applicable"). Data was fine; the check was too narrow. Lesson: read actual values before assuming the deliverable is wrong when a self-written check fails.
+  - File: ψ/memory/logs/info/2026-08-12_17-57_wp4-drd-verification-check-false-positive.md
+
 - [2026-07-14 12:52] 🚩 **Prompt Atomicity vs. Source Boundaries (Important)**: Learning that atomicity in NotebookLM query design must be enforced at the conceptual/question level rather than the source file level, requiring multiple micro-queries per file to extract complex frameworks.
   - File: ψ/memory/logs/info/2026-07-14_12-52_prompt-atomicity-vs-source-boundaries.md
 
