@@ -38,8 +38,8 @@ PUB-053,การเปิดโอกาสให้เกิดการมี
 PUB-054,การเปิดโอกาสให้เกิดการมีส่วนร่วม ปีงบประมาณ พ.ศ. 2568,Knowledge Asset,กองยุทธศาสตร์และความร่วมมือระหว่างประเทศ,https://www.dcce.go.th/datacenter/5809/,1,REQ-026
 PUB-055,การเปิดโอกาสให้เกิดการมีส่วนร่วม ปีงบประมาณ พ.ศ. 2567,Knowledge Asset,กองยุทธศาสตร์และความร่วมมือระหว่างประเทศ,https://www.dcce.go.th/datacenter/5798/,1,REQ-026
 MED-015,การวิเคราะห์ความเปราะบางและขีดความสามารถในการปรับตัว (Measuring Vulnerability &amp; Adaptive Capacity),Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/23820/,2,REQ-027; REQ-038
-PUB-052,คู่มือแนวทางปฏิบัติการจัดทำธรรมาภิบาลข้อมูล (Data Governance User Manual),Knowledge Asset,กองยุทธศาสตร์และความร่วมมือระหว่างประเทศ,https://www.dcce.go.th/datacenter/22355/,2,REQ-029; REQ-069
-MED-026,คู่มือแนวทางปฏิบัติการจัดทำธรรมาภิบาลข้อมูล (Data Governance User Manual),Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/22369/,1,REQ-029
+PUB-052,คู่มือแนวทางปฏิบัติการจัดทำธรรมาภิบาลข้อมูล (Data Governance User Manual),Knowledge Asset,กองยุทธศาสตร์และความร่วมมือระหว่างประเทศ,https://www.dcce.go.th/datacenter/22355/,1,REQ-069
+MED-026,คู่มือแนวทางปฏิบัติการจัดทำธรรมาภิบาลข้อมูล (Data Governance User Manual),Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/22369/,0,
 MED-105,ทำความรู้จักกับ “สภาวะ ENSO-Neutral”,Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/8254/,1,REQ-032
 DCCE_2_11,"ปริมาณน้ำฝน (RegCM5, EC-Earth3-Veg)",Dataset,DCCE,https://clim-webbased.dcce.go.th/DataServices,1,REQ-035
 DCCE_2_16,"ปริมาณน้ำฝน (Statistical Downscaling, CMIP6)",Dataset,DCCE,https://clim-webbased.dcce.go.th/DataServices,1,REQ-035
@@ -85,3 +85,5 @@ SYS-002,ระบบบัญชีข้อมูล (Data Catalog) กรม�
 PUB-051,บัญชีข้อมูล (Data Catalogue),Knowledge Asset,กองยุทธศาสตร์และความร่วมมือระหว่างประเทศ,https://www.dcce.go.th/datacenter/3427/,1,REQ-069
 SYS-004,ระบบสัมมนาและฝึกอบรมด้านสิ่งแวดล้อม,Data Product,กลุ่มพัฒนาเทคโนโลยีดิจิทัล,https://datacenter.dcce.go.th/training,1,REQ-072
 PUB-049,ข่าวสารประชาสัมพันธ์,Knowledge Asset,กองยุทธศาสตร์และความร่วมมือระหว่างประเทศ,https://www.dcce.go.th/datacenter/4624/,1,REQ-072
+clim-webbased.dcce.go.th,DCCE downscaled climate projection platform,Data Product,UNKNOWN - not yet in either canonical asset registry; needs formal entry,https://clim-webbased.dcce.go.th/Home,1,REQ-035
+DDPM_2_1,ข้อมูลเหตุการณ์ภัยพิบัติย้อนหลัง 10 ปี (10-year historical disaster occurrence data),Dataset,DDPM,https://www.disaster.go.th,1,REQ-001

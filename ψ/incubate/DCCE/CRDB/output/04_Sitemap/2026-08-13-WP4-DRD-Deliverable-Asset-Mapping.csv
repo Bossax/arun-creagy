@@ -1,0 +1,70 @@
+deliverable_id,asset_id,asset_title,asset_type,owner,link,registry_source,status_flags,match_type
+DEL-1,DCCE_2_1,"ปริมาณน้ำฝน (GridData, historical)",Dataset,DCCE,https://clim-webbased.dcce.go.th/DataServices,data_catalog_v4,"Restricted; Unverified-Baseline",confirmed
+DEL-1,DCCE_2_2,"อุณหภูมิสูงสุด (GridData, historical)",Dataset,DCCE,https://clim-webbased.dcce.go.th/DataServices,data_catalog_v4,"Restricted; Unverified-Baseline",confirmed
+DEL-1,DCCE_2_3,"อุณหภูมิต่ำสุด (GridData, historical)",Dataset,DCCE,https://clim-webbased.dcce.go.th/DataServices,data_catalog_v4,"Restricted; Unverified-Baseline",potentially-relevant
+DEL-1,DCCE_2_4,"อุณหภูมิเฉลี่ย (GridData, historical)",Dataset,DCCE,https://clim-webbased.dcce.go.th/DataServices,data_catalog_v4,"Restricted; Unverified-Baseline",potentially-relevant
+DEL-1,DCCE_2_5,"ความชื้นสัมพัทธ์ (GridData, historical)",Dataset,DCCE,https://clim-webbased.dcce.go.th/DataServices,data_catalog_v4,"Restricted; Unverified-Baseline",potentially-relevant
+DEL-1,TMD_6_1,TXx - อุณหภูมิสูงสุดของอุณหภูมิสูงสุดรายวัน,Dataset,TMD,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed",potentially-relevant
+DEL-1,TMD_6_9,Rx1day - ปริมาณฝนสูงสุดใน 1 วัน,Dataset,TMD,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed",potentially-relevant
+DEL-1,TMD_6_19,SPI-1 - ดัชนีฝนมาตรฐาน 1 เดือน,Dataset,TMD,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed",potentially-relevant
+DEL-2,MED-015,การวิเคราะห์ความเปราะบางและขีดความสามารถในการปรับตัว,E-book Reader,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/23820/,DCCE_Unified_Digital_Asset_Database,"methodology explainer only, no index dataset",confirmed
+DEL-2,DOPA_1_1,จำนวนประชากร,Dataset,DOPA,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed",potentially-relevant
+DEL-2,DOPA_1_2,จุดหมู่บ้าน,Dataset,DOPA,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed",potentially-relevant
+DEL-2,DOPA_2_1,จำนวนครัวเรือนในขอบเขตเทศบาล,Dataset,DOPA,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed",potentially-relevant
+DEL-2,NESDC_2_5,ดัชนีความยากจนหลายมิติ (MPI),Dataset,NESDC,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed",potentially-relevant
+DEL-2,NSO_1_2,สำมะโนประชากรและเคหะ,Dataset,NSO,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed",potentially-relevant
+DEL-3,TMD_1_1,ปริมาณฝนสะสม 1 ชั่วโมง (P1H),Dataset,TMD,unknown,data_catalog_v4,"external - link target, not a DCCE asset",potentially-relevant
+DEL-3,TMD_1_5,อุณหภูมิผิวพื้น ที่ระดับ 2 เมตร (T2M),Dataset,TMD,unknown,data_catalog_v4,"external - link target, not a DCCE asset",potentially-relevant
+DEL-3,GISTDA_1_1,ข้อมูลขอบเขตพื้นที่เผาไหม้ (ล่าสุด),Dataset,GISTDA,unknown,data_catalog_v4,"external - link target, not a DCCE asset",potentially-relevant
+DEL-3,GISTDA_3_1,ขอบเขตน้ำท่วมจากภาพถ่ายดาวเทียม,Dataset,GISTDA,unknown,data_catalog_v4,"external - link target, not a DCCE asset",potentially-relevant
+DEL-3,DMCR_2_1,ปะการังฟอกขาว,Dataset,DMCR,unknown,data_catalog_v4,"external - link target, not a DCCE asset",potentially-relevant
+DEL-4,MD_1_2,ข้อมูลระดับน้ำทะเล,Dataset,MD,http://hydro.md.go.th/,data_catalog_v4,"Restricted; Unverified-Baseline",confirmed
+DEL-4,DMCR_1_1,พื้นที่กัดเซาะชายฝั่ง (WebGIS DCCE),Dataset,DMCR,https://tcs.dmcr.go.th/dmcr/v2/router?page=dashboard,data_catalog_v4,"Restricted; Unverified-Baseline",confirmed
+DEL-4,DMCR_4_1,พื้นที่กัดเซาะชายฝั่ง (DMCR ภาคสนาม),Dataset,DMCR,https://tcs.dmcr.go.th/dmcr/v2/router?page=dashboard,data_catalog_v4,"Restricted; Unverified-Baseline",confirmed
+DEL-4,MED-127,ชายฝั่งในภาวะโลกรวน (coastal infographic 1 of 9),Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/,DCCE_Unified_Digital_Asset_Database,narrative only,confirmed
+DEL-4,DMCR_3_2,แนวป่าชายเลน,Dataset,DMCR,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed",potentially-relevant
+DEL-4,RTSD_1_1,ระดับความสูงจากระดับน้ำทะเล,Dataset,RTSD,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed",potentially-relevant
+DEL-5,MED-105,ทำความรู้จักกับ สภาวะ ENSO-Neutral,E-book Reader,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/8254/,DCCE_Unified_Digital_Asset_Database,"one-off explainer, not a live feed",confirmed
+DEL-5,DCCE_2_11,"ปริมาณน้ำฝน (RegCM5, EC-Earth3-Veg)",Dataset,DCCE,https://clim-webbased.dcce.go.th/DataServices,data_catalog_v4,"Restricted; Unverified-Baseline",confirmed
+DEL-5,DCCE_2_16,"ปริมาณน้ำฝน (Statistical Downscaling, CMIP6)",Dataset,DCCE,https://clim-webbased.dcce.go.th/DataServices,data_catalog_v4,"Restricted; Unverified-Baseline",confirmed
+DEL-5,DCCE_2_17,"อุณหภูมิสูงสุด (Statistical Downscaling, CMIP6)",Dataset,DCCE,https://clim-webbased.dcce.go.th/DataServices,data_catalog_v4,"Restricted; Unverified-Baseline",confirmed
+DEL-5,DCCE_2_18,"อุณหภูมิต่ำสุด (Statistical Downscaling, CMIP6)",Dataset,DCCE,https://clim-webbased.dcce.go.th/DataServices,data_catalog_v4,"Restricted; Unverified-Baseline",confirmed
+DEL-5,DCCE_2_19,"อุณหภูมิเฉลี่ย (Statistical Downscaling, CMIP6)",Dataset,DCCE,https://clim-webbased.dcce.go.th/DataServices,data_catalog_v4,"Restricted; Unverified-Baseline",confirmed
+DEL-5,clim-webbased.dcce.go.th,DCCE downscaled climate projection platform,Data Product,UNKNOWN - needs formal registry entry,https://clim-webbased.dcce.go.th/Home,none - unregistered,"referenced as url in data_catalog_v4 rows",confirmed
+DEL-5,TMD_6_19,SPI-1 - ดัชนีฝนมาตรฐาน 1 เดือน,Dataset,TMD,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed",potentially-relevant
+DEL-6,DAT-014,ข้อมูลการประเมินผลการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศ,Document,กลุ่มประเมินผลการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศ,https://dgf.dcce.go.th/dataset/m-and-e,DCCE_Unified_Digital_Asset_Database,,confirmed
+DEL-6,MED-015,Measuring Vulnerability & Adaptive Capacity,E-book Reader,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/23820/,DCCE_Unified_Digital_Asset_Database,,confirmed
+DEL-6,PUB-012,คู่มือการจัดทำห่วงโซ่ผลกระทบจากการเปลี่ยนแปลงสภาพภูมิอากาศ,Document,กองยุทธศาสตร์และความร่วมมือระหว่างประเทศ,https://www.dcce.go.th/datacenter/19243/,DCCE_Unified_Digital_Asset_Database,"closest proxy, not purpose-built",confirmed
+DEL-6,MED-125,คู่มือการจัดทำห่วงโซ่ผลกระทบ (media reprint),E-book Reader,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/5075/,DCCE_Unified_Digital_Asset_Database,,confirmed
+DEL-6,PUB-026,กองทุนจัดการความสูญเสียและความเสียหายจากสภาพภูมิอากาศ (FRLD),Web Page,กองยุทธศาสตร์และความร่วมมือระหว่างประเทศ,https://www.dcce.go.th/datacenter/25096/,DCCE_Unified_Digital_Asset_Database,"funding page, not a framework explainer",confirmed
+DEL-7,MED-048,เจาะลึกห่วงโซ่ผลกระทบ น้ำท่วมหาดใหญ่ 2025,E-book Reader,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/21308/,DCCE_Unified_Digital_Asset_Database,urban/flood case only,confirmed
+DEL-7,DDPM_2_1,ข้อมูลเหตุการณ์ภัยพิบัติย้อนหลัง 10 ปี,Dataset,DDPM,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed",potentially-relevant
+DEL-7,OAE_1_3,พื้นที่การเกษตร,Dataset,OAE,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed",potentially-relevant
+DEL-9,MED-002,ซูเปอร์เอลนีโญกับสุขภาพคนไทย,E-book Reader,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/26317/,DCCE_Unified_Digital_Asset_Database,"topically adjacent only, heat-health not the 4 named groups",confirmed
+DEL-9,MSDHS_1_1,ทะเบียนกลุ่มเปราะบางและสวัสดิการของ พม.,Dataset,MSDHS,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed",potentially-relevant
+DEL-9,MSDHS_2_2,จำนวนผู้พิการหรือผู้ทุพพลภาพ,Dataset,MSDHS,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed",potentially-relevant
+DEL-9,CDD_1_1,จำนวนครัวเรือนกลุ่มเปราะบาง,Dataset,CDD,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed",potentially-relevant
+DEL-9,NESDC_2_1,สัดส่วนของกลุ่มเปราะบาง (ผู้สูงอายุ/เด็ก),Dataset,NESDC,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed",potentially-relevant
+DEL-10,DAT-022,ชุดเเนวทางการปรับตัว NbS,Document,กองขับเคลื่อนการปรับตัวต่อการเปลี่ยนเเปลงสภาพภูมิอากาศ,https://dgf.dcce.go.th/dataset/nbs,DCCE_Unified_Digital_Asset_Database,NbS only,confirmed
+DEL-10,MED-042,แนวทางการแก้ปัญหาโดยอาศัยธรรมชาติเป็นฐาน,E-book Reader,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/6463/,DCCE_Unified_Digital_Asset_Database,NbS only,confirmed
+DEL-10,VID-036,รู้ไหม? ธรรมชาติก็เป็นนักแก้ปัญหาตัวยง,Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.youtube.com/watch?v=cgFAOTv64cE,DCCE_Unified_Digital_Asset_Database,NbS only,confirmed
+DEL-12,DDPM_2_1,ข้อมูลเหตุการณ์ภัยพิบัติย้อนหลัง 10 ปี,Dataset,DDPM,https://www.disaster.go.th,data_catalog_v4,"Restricted; Baseline-Draft; Unverified-Baseline; confirmed REQ-001's real starting point (Boss review 2026-08-13); one-way reporting, no ground-truthing, no UNDRR taxonomy",confirmed
+DEL-12,DDPM_3_1,พื้นที่ประสบภัยน้ำแล้งรุนแรง,Dataset,DDPM,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed",potentially-relevant
+DEL-12,DDPM_3_3,พื้นที่ประสบภัยน้ำท่วมรุนแรง,Dataset,DDPM,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed",potentially-relevant
+DEL-13,SYS-003,ฐานข้อมูลความเสี่ยงจากการเปลี่ยนแปลงสภาพภูมิอากาศ (application),Data Product,กลุ่มพัฒนาเทคโนโลยีดิจิทัล,https://ccic.dcce.go.th/riskarea,DCCE_Unified_Digital_Asset_Database,,confirmed
+DEL-13,DAT-005,ข้อมูลความเสี่ยงจากการเปลี่ยนแปลงสภาพภูมิอากาศ (6-sector spatial data),Data Product,กองขับเคลื่อนการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศ,https://dgf.dcce.go.th/dataset/db0303-001,DCCE_Unified_Digital_Asset_Database,"Public; Unverified-Baseline",confirmed
+DEL-13,DCCE_3_1,ความเสี่ยงสาขาการเกษตรและความมั่นคงทางอาหาร,Dataset,DCCE,https://ccic.dcce.go.th/riskarea,data_catalog_v4,"Restricted scenarios; Unverified-Baseline",confirmed
+DEL-13,DCCE_3_2,ความเสี่ยงสาขาการจัดการน้ำ,Dataset,DCCE,https://ccic.dcce.go.th/riskarea,data_catalog_v4,"Restricted scenarios; Unverified-Baseline",confirmed
+DEL-13,DCCE_3_3,ความเสี่ยงสาขาการตั้งถิ่นฐานและความมั่นคงมนุษย์,Dataset,DCCE,https://ccic.dcce.go.th/riskarea,data_catalog_v4,"Restricted scenarios; Unverified-Baseline",confirmed
+DEL-13,DCCE_3_4,ความเสี่ยงสาขาการท่องเที่ยว,Dataset,DCCE,https://ccic.dcce.go.th/riskarea,data_catalog_v4,"Restricted scenarios; Unverified-Baseline",confirmed
+DEL-13,DCCE_3_5,ความเสี่ยงสาขาทรัพยากรธรรมชาติและสิ่งแวดล้อม,Dataset,DCCE,https://ccic.dcce.go.th/riskarea,data_catalog_v4,"Restricted scenarios; Unverified-Baseline",confirmed
+DEL-13,DCCE_3_6,ความเสี่ยงสาขาสาธารณสุข,Dataset,DCCE,https://ccic.dcce.go.th/riskarea,data_catalog_v4,"Restricted scenarios; Unverified-Baseline",confirmed
+DEL-13,DCCE_3_7,ดัชนีภูมิอากาศ,Dataset,DCCE,https://ccic.dcce.go.th/riskarea,data_catalog_v4,"Restricted scenarios; Unverified-Baseline",confirmed
+DEL-13,DAT-014,ข้อมูลการประเมินผลการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศ,Document,กลุ่มประเมินผลการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศ,https://dgf.dcce.go.th/dataset/m-and-e,DCCE_Unified_Digital_Asset_Database,,confirmed
+DEL-13,MED-004,ซูเปอร์เอลนีโญกับความมั่นคงด้านน้ำของประเทศไทย,E-book Reader,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/26076/,DCCE_Unified_Digital_Asset_Database,,confirmed
+DEL-13,MED-033,เกษตรบนเส้นทางเปราะบางต่อภูมิอากาศ,E-book Reader,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/22841/,DCCE_Unified_Digital_Asset_Database,,confirmed
+DEL-13,DDPM_1_1,แผนที่ความเสี่ยงอุทกภัย,Dataset,DDPM,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed - input to B2 investigation",potentially-relevant
+DEL-13,DMR_2_1,พื้นที่เสี่ยงภัยดินถล่ม น้ำป่าไหลหลาก และน้ำท่วมฉับพลัน,Dataset,DMR,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed - input to B2 investigation",potentially-relevant
+DEL-13,DPT_1_1,แผนที่พื้นที่เสี่ยงน้ำท่วมเพื่อการวางผังเมือง,Dataset,DPT,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed - input to B2 investigation",potentially-relevant
+DEL-13,HII_1_1,พื้นที่เสี่ยงภัยแล้ง,Dataset,HII,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed - input to B2 investigation",potentially-relevant
+DEL-13,TMD_6_22,HI_Heat - ดัชนีภัยอันตรายจากความร้อน,Dataset,TMD,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed - input to B2 investigation",potentially-relevant

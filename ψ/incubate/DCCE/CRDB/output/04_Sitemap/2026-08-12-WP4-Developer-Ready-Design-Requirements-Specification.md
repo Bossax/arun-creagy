@@ -1,7 +1,7 @@
 # NCAIF Website — Design Requirements for the Build Phase
 
-**Date** 12 August 2026
-**Covers** All 73 content and function requirements across the 15 main sections of the site map
+**Date** 12 August 2026 (revised 13 August 2026)
+**Covers** 72 content and function requirements across the 15 main sections of the site map (one requirement, REQ-029, was reviewed and dropped as not relevant — see Appendix E)
 **Companion to** `2026-08-11-WP4-Node-Level-Deep-Dives.md` and `2026-08-10-WP4-Content-Source-Gap-Analysis-Report.md`
 
 ---
@@ -24,23 +24,23 @@ Everything in the appendices is also published as CSV, in the same folder as thi
 
 | File | Holds |
 |---|---|
-| `2026-08-12-WP4-DRD-requirements.csv` | All 73 requirements, one per row, with status, handling, deliverable, brief, data specification, matched assets and the reasoning behind each match |
-| `2026-08-12-WP4-DRD-deliverables.csv` | The 11 deliverables and the requirements each one serves |
-| `2026-08-12-WP4-DRD-service-briefs.csv` | The 4 services awaiting a decision, with readiness and blocker |
+| `2026-08-12-WP4-DRD-requirements.csv` | 72 requirements, one per row, with status, handling, deliverable, brief, data specification, matched assets and the reasoning behind each match (REQ-029 kept as a struck-through, excluded record) |
+| `2026-08-12-WP4-DRD-deliverables.csv` | The 13 deliverables and the requirements each one serves |
+| `2026-08-12-WP4-DRD-service-briefs.csv` | The 6 services awaiting a decision (E-1 through E-6), plus the Loss and Damage product line — committed, not awaiting a decision |
 | `2026-08-12-WP4-DRD-data-specs.csv` | The 11 data specifications as structured fields |
-| `2026-08-12-WP4-DRD-assets-cited.csv` | The 86 assets cited, with owner, link, and which requirements rely on each |
+| `2026-08-12-WP4-DRD-assets-cited.csv` | The 87 assets cited, with owner, link, and which requirements rely on each |
 
 The requirements file carries both the Thai requirement text and its English rendering, along with the status before and after the correction of 11 August, so the change is traceable without reading the diff.
 
 ### The five ways a requirement is handled
 
-Not every requirement needs a full specification. Writing one for something that already exists wastes the reader's time, and writing one for a service nobody has agreed to build wastes the writer's. Each of the 73 requirements is handled in one of five ways.
+Not every requirement needs a full specification. Writing one for something that already exists wastes the reader's time, and writing one for a service nobody has agreed to build wastes the writer's. Each of the 72 addressable requirements is handled in one of five ways (a 73rd, REQ-029, was reviewed and dropped — see Appendix E).
 
 | | Handling | Count | What you get |
 |---|---|---|---|
-| **A** | Already covered | 16 | One line naming the existing source |
+| **A** | Already covered | 15 | One line naming the existing source |
 | **B** | An existing product could sit here | 9 | One line naming the product, with an explicit warning that we have not verified whether its data is sufficient |
-| **C** | Belongs to the loss and damage work | 4 | A forward reference, since that specification is not written yet |
+| **C** | Belongs to the loss and damage work | 4 | A forward reference, since that specification is not written yet — but committed and high priority, not optional (see the Loss and Damage entry, Appendix B) |
 | **D** | **Ready to build** | **30** | **A full specification with acceptance criteria** |
 | **E** | Waiting on a decision | 14 | A summary in Appendix B, not a specification |
 
@@ -50,9 +50,9 @@ The thirty items marked D are the working part of this document.
 
 ## What the numbers say
 
-Of 73 requirements, 16 are already served by something DCCE holds today. The remaining 57 need work, and they divide sharply.
+Of 72 addressable requirements, 15 are already served by something DCCE holds today. The remaining 57 need work, and they divide sharply.
 
-Thirty can be specified and built now. Fourteen belong to services DCCE has not yet decided to build, so they are described rather than specified. Four belong to the loss and damage work being scoped separately. Nine sit on pages where an existing DCCE product could appear, and those carry an important caution explained below.
+Thirty can be specified and built now. Fourteen belong to services DCCE has not yet decided to build, so they are described rather than specified. Four belong to the loss and damage work being scoped separately — committed and high priority, not optional. Nine sit on pages where an existing DCCE product could appear, and those carry an important caution explained below.
 
 | Section | | A | B | C | D | E | Total |
 |---|---|---|---|---|---|---|---|
@@ -61,7 +61,7 @@ Thirty can be specified and built now. Fourteen belong to services DCCE has not 
 | 2.1 | National climate change situation | 0 | 1 | 1 | 1 | 0 | 3 |
 | 2.2 | Area and sector risk profiles | 0 | 1 | 0 | 1 | 0 | 2 |
 | 2.3 | Policy, legal and financial tools | 4 | 0 | 0 | 2 | 5 | 11 |
-| 2.4 | Planning data services | 1 | 1 | 0 | 1 | 0 | 3 |
+| 2.4 | Planning data services | 0 | 1 | 0 | 1 | 0 | 2 |
 | 3.1 | Climate drivers and future scenarios | 0 | 0 | 0 | 6 | 2 | 8 |
 | 3.2 | Risk, impact chains and loss and damage | 1 | 1 | 3 | 8 | 1 | 14 |
 | 3.3 | Adaptation planning and measures | 1 | 0 | 0 | 6 | 6 | 13 |
@@ -71,7 +71,7 @@ Thirty can be specified and built now. Fourteen belong to services DCCE has not 
 | 4.3 | External tools and data hub | 0 | 0 | 0 | 1 | 0 | 1 |
 | 5.1 | Announcements and activities | 1 | 0 | 0 | 0 | 0 | 1 |
 | 5.2 | Feedback and user services | 0 | 0 | 0 | 1 | 0 | 1 |
-| | **Total** | **16** | **9** | **4** | **30** | **14** | **73** |
+| | **Total** | **15** | **9** | **4** | **30** | **14** | **72** |
 
 Two patterns are worth naming before the detail.
 
@@ -121,38 +121,40 @@ This section is in reasonable shape. The national adaptation plan summary is one
 
 - **REQ-002** The IPCC framework for hazard, exposure and vulnerability. Covered by DCCE's impact chain manual and a dataset tagged to IPCC terms.
 - **REQ-006** National adaptation plan summary. Covered by the plan itself, a dataset entry, and several Thai and English explainers.
-- **REQ-007** Examples of high-value adaptation measures. Covered by a success factors article spanning several sectors and a nature-based solutions dataset.
+- **REQ-007** Examples of high-value adaptation measures. Covered by a success factors article spanning several sectors and the nature-based solutions guidance dataset (`DAT-022`).
 
 **An existing product could sit here**
 
-- **REQ-004** National risk summary cards. The seven-sector composite risk index holds real numbers, but they are flagged draft and unverified, and nothing renders them as summary cards. Whether the index is fit for this purpose is **not assessed**.
-- **REQ-005** Critical hotspots by sector and region. This is recorded as fully covered, and the source is the same risk dataset behind the existing products. It rests on the same reasoning that was found wanting for three other requirements during the 11 August review. Treat its completeness as **unverified** until the investigation in Appendix B2 is done.
+- **REQ-004** National risk summary cards. The seven-sector composite risk index holds real numbers, but they are flagged draft and unverified, and nothing renders them as summary cards. Whether the index is fit for this purpose is **not assessed**. Depends on where the index itself ends up hosted — see DEL-13, Appendix A.
+- **REQ-005** Critical hotspots by sector and region. This is recorded as fully covered, and the source is the same risk dataset behind the existing products. **Confirmed limitation: the risk map product does not carry location-level exposure, vulnerability, or risk data.** Where the underlying index is province-level, any "hotspot" claim below that level is not spatially explicit — it rests on the same reasoning that was found wanting for three other requirements during the 11 August review. See the investigation in Appendix B2 and DEL-13 (Appendix A) before treating this as complete.
 
 ### Ready to build
 
-#### REQ-001 — History and trends of natural disasters in Thailand
+#### REQ-001 — History and trends of natural disaster events
 
-**Status today** Nothing exists. No dataset or publication tracks Thailand's disaster history as a narrative or a time series.
+**Status today** Partial. DDPM holds a real 10-year historical disaster occurrence dataset (`DDPM_2_1`), but it has real limits: restricted access, `Baseline-Draft`/`Unverified-Baseline`, one-way reporting from local administrative organizations up to province level with no ground-truthing, and no UNDRR-aligned taxonomy. No DCCE asset addresses this on its own.
 
 **Who this is for** A first-time visitor, and a policy maker who needs the national picture before looking at any specific hazard.
 
-**What exists today** No DCCE asset addresses this. Records exist across other government bodies, particularly the disaster prevention department, but they have not been gathered or written up.
+**What exists today** `DDPM_2_1` (10-year historical disaster occurrence data, DDPM) is a genuine starting point, not a from-scratch compilation task — but its data quality issues (one-way reporting, no ground-truthing, missing taxonomy) need handling before it's presentable. Records also exist across other DDPM holdings more broadly; some may still need gathering beyond this one dataset.
 
 **What the system must do**
-- Present a chronological account of significant natural disasters in Thailand, covering at minimum flood, drought, storm and heat events.
-- Show frequency and severity over time, so that a change in pattern is visible rather than asserted.
+- Present a chronological account of significant natural disaster events in Thailand, covering at minimum flood, drought, and storm. Extreme heat is excluded — it has not been registered as a disaster event category in Thailand.
+- Build from `DDPM_2_1` as the primary source, structuring it into DS-08 and presenting frequency and severity over time as an interactive product, not a static narrative — this is one of the two new native-hosted products built in the next project (see DEL-12, Appendix A), alongside the Loss and Damage dashboard, which draws on the same underlying DDPM source records.
+- Handle `DDPM_2_1`'s known data-quality issues explicitly: flag that reporting is one-way and unverified, and note where the missing UNDRR taxonomy limits how finely events can be categorized.
 - Name the source and period for every figure shown.
-- Link each hazard type to the relevant analysis section deeper in the site.
+- Link each hazard type to the specific pages that already cover it — the Thailand Climatology Dashboard (temperature and rainfall extremes) and the Slow-Onset Hazards Profile (coastal and subsidence hazards) — rather than assuming a complete hazard-by-hazard analysis library exists.
 
 **Data spec** DS-08
 
 **Done when**
-- [ ] A reader can see how disaster frequency has changed over at least the last three decades.
+- [ ] A reader can see how disaster frequency has changed over at least the last two decades.
 - [ ] Every figure carries a named source and a date.
-- [ ] Each hazard type links to its corresponding section of the site.
+- [ ] `DDPM_2_1`'s reporting caveats (one-way, unverified, no UNDRR taxonomy) are stated on the page, not hidden.
+- [ ] Each hazard type links to the specific page that covers it, where one exists.
 - [ ] The page states clearly which hazards are not covered and why.
 
-**Note** This is compilation work rather than new data collection, which makes it one of the cheaper items in this document relative to its position on the site.
+**Note** `DDPM_2_1` gives this a real head start — not a from-scratch compilation. It's the same underlying DDPM source data that feeds the Loss and Damage dashboard (REQ-049); gather it once, use it for both. See DEL-12, Appendix A.
 
 #### REQ-003 — Physical risk and transition risk
 
@@ -166,7 +168,7 @@ This section is in reasonable shape. The national adaptation plan summary is one
 - Define physical risk and transition risk, and explain how they differ.
 - Give Thai examples of each, drawn from sectors the site already covers.
 - Explain why an organisation planning adaptation needs to consider both.
-- Connect physical risk to the risk analysis sections and transition risk to the policy and finance sections.
+- Connect physical risk to the risk analysis sections and transition risk to the policy and finance sections, including the Climate Change Act and the EU's Carbon Border Adjustment Mechanism (CBAM) as concrete transition-risk drivers for Thai exporters.
 
 **Data spec** None needed. This is explanatory content.
 
@@ -185,8 +187,8 @@ The whole section depends on data granularity, and that is where it runs into tr
 
 **An existing product could sit here**
 
-- **REQ-009** Map integration showing administrative boundaries over the risk map. No map overlay interface or design exists today. The spatial data exists, but whether it supports this overlay is **not assessed**.
-- **REQ-010** Quick-view dashboard showing vulnerability, threats and recommended measures for a selected point. Real vulnerability data exists for part of it. The recommended measures half has nothing behind it anywhere on the site. Adequacy of the rest is **not assessed**.
+- **REQ-009** Map integration showing administrative boundaries over the risk map. No map overlay interface or design exists today. **Confirmed limitation: the underlying spatial data does not carry sub-provincial location data**, so an overlay below province level would show administrative boundaries with no real data behind them. See DEL-13, Appendix A.
+- **REQ-010** Quick-view dashboard showing vulnerability, threats and recommended measures for a selected point. **Confirmed limitation: vulnerability and threat data has not been compiled anywhere on the site, at any level.** The recommended-measures half has nothing behind it either.
 
 ### Ready to build
 
@@ -196,10 +198,10 @@ The whole section depends on data granularity, and that is where it runs into tr
 
 **Who this is for** A provincial or local government planner who thinks in terms of their own administrative area, not in terms of grid cells.
 
-**What exists today** The spatial risk database provides composite risk indices at province level. District and sub-district figures are not in it and would have to come from other agencies. Provincial climate change plans exist and are scattered. They contain sectoral and location-specific risk information that could populate the lower levels, but they are documents rather than data.
+**What exists today** The spatial risk database provides composite risk indices at province level. District and sub-district figures are not in it. **Confirmed limitation: DCCE's current data assets and the risk map do not carry sub-provincial exposure, vulnerability, or risk data at all.** Closing that gap needs one of two separate undertakings, not assumed into this build: extracting content from Provincial Climate Change Plans and Provincial Disaster Prevention & Mitigation Plans (Brief E-5, Appendix B), or re-aggregating the risk map's own input data onto real administrative geometry (Brief E-6, Appendix B).
 
 **What the system must do**
-- Let a user select a province, then a district, then a sub-district.
+- Let a user select a province, then a district, then a sub-district. Note that this hierarchy follows DOPA's administrative boundaries (province/district/sub-district), which is **not the same geography as LAO jurisdiction** — a municipality can span or straddle sub-district lines, so a "district" or "sub-district" selection does not represent a municipality's actual boundary. อบจ. is province-wide and unaffected by this mismatch.
 - Return risk information at the finest level available for that place.
 - **When data below province level does not exist, show the province figure, state plainly that it is a province-level figure, and mark the finer levels as not yet available.** The interface must never return an empty result or imply that no risk exists where data is simply missing.
 - Record which places have finer data, so coverage improves visibly as it is added.
@@ -211,8 +213,9 @@ The whole section depends on data granularity, and that is where it runs into tr
 - [ ] Selecting a district or sub-district without data returns the province figure with a clear label saying so, never a blank result.
 - [ ] The label distinguishes "data not yet available" from "no risk identified".
 - [ ] Adding finer data for one area does not require a code change.
+- [ ] The interface does not imply that a "district" or "sub-district" result represents a municipality's actual jurisdiction.
 
-**Note** The fallback behaviour is the important part of this specification. Without it a developer will build a search that appears broken across most of the country.
+**Note** The fallback behaviour is the important part of this specification. Without it a developer will build a search that appears broken across most of the country. See Appendix E for the broader DOPA-versus-LAO geography limitation.
 
 ---
 
@@ -222,11 +225,11 @@ The national picture in numbers. Historical extremes, economic losses, and how e
 
 **An existing product could sit here**
 
-- **REQ-013** National exposure trends. The six-sector spatial dataset gives a snapshot of exposure but not a trend over time. Recorded as a gap after the 11 August review. Whether the underlying data can produce a trend is **not assessed**.
+- **REQ-013** National exposure trends. The six-sector spatial dataset gives a snapshot of exposure but not a trend over time. Recorded as a gap after the 11 August review. **Confirmed limitation: the underlying data does not support a trend view**, not just for exposure but for hazard and risk equally — this is a limit of the six-sector dataset itself, not something specific to exposure. Kept scoped to exposure trends here; present alongside the disaster-statistics product (REQ-001) rather than standalone, so a reader sees both the trend and the actual events together.
 
 **Belongs to the loss and damage work**
 
-- **REQ-012** National macroeconomic loss and damage statistics. What exists in the catalog is records of damaged assets, human impacts and government emergency payments. Those are not macroeconomic loss figures, they are not aggregated, and their own source flags them as needing cleanup. **See Appendix B2. Specification belongs to the loss and damage work package.**
+- **REQ-012** National macroeconomic loss and damage statistics. What exists in the catalog is records of damaged assets, human impacts and government emergency payments. Those are not macroeconomic loss figures, they are not aggregated, and their own source flags them as needing cleanup. This can likely be delivered as a summary/rollup view built on the same underlying data as the Loss and Damage dashboard (REQ-049) rather than as its own independent build. **See the Loss and Damage entry in Appendix B.**
 
 ### Ready to build
 
@@ -236,11 +239,11 @@ The national picture in numbers. Historical extremes, economic losses, and how e
 
 **Who this is for** Planners and researchers who need to know how often an extreme event has occurred and how severe it was.
 
-**What exists today** Daily and monthly temperature maximum and minimum and rainfall grid data covering 1981 to 2023, national coverage. It is raw grid data, access is restricted, and it is flagged draft and unverified. Nothing has been computed from it.
+**What exists today** Daily and monthly temperature maximum and minimum and rainfall grid data covering 1981 to 2023, national coverage. It is raw grid data, access is restricted, and it is flagged draft and unverified. Nothing has been computed from it. **Open question, not yet resolved by the catalog: whether this grid is built from station-interpolated observations or model reanalysis output.** This affects how the derived statistics should be caveated and should be confirmed before publishing.
 
 **What the system must do**
-- Derive event statistics from the grids, covering at minimum maximum and minimum temperature and accumulated rainfall.
-- Present frequency, intensity and duration for each extreme type, aggregated to a level a planner can use.
+- This is one view of the shared Thailand Climatology Dashboard backend (DEL-1, Appendix A), not a standalone build — derive event statistics from the same grids that feed REQ-033's climatology view, covering at minimum maximum and minimum temperature and accumulated rainfall.
+- Present frequency, intensity and duration for each extreme type, aggregated to a level a planner can use, surfaced both as an embedded view on this page and inside the full Climatology Dashboard app (4.2/4.3).
 - State the period covered and the number of observations behind each figure.
 - Handle the restricted access status, either by publishing derived statistics that are releasable or by placing the raw layer behind appropriate control.
 
@@ -251,6 +254,7 @@ The national picture in numbers. Historical extremes, economic losses, and how e
 - [ ] Each statistic shows its period and observation count.
 - [ ] Access control matches the restriction on the source data.
 - [ ] The method used to define an extreme is documented on the page.
+- [ ] The grid's provenance (station-interpolated vs. reanalysis) is confirmed and stated before publication.
 
 ---
 
@@ -260,7 +264,7 @@ Risk profiles for all 77 provinces and for the six priority sectors. This sectio
 
 **An existing product could sit here**
 
-- **REQ-015** Risk profiles for the six priority sectors. The six-sector spatial dataset provides a baseline, but no summarised profile document exists. Sectoral studies and plans such as the health national adaptation plan could support this. Adequacy is **not assessed**.
+- **REQ-015** Risk profiles for the six priority sectors. The six-sector spatial dataset provides a baseline, but no summarised profile document exists. Sectoral studies and plans such as the health national adaptation plan could support this. **Confirmed limitation: this rests on the same province-level-only spatial data as the rest of this cluster** — treat any sub-provincial sectoral claim as unsupported until Brief E-5 or E-6 (Appendix B) closes the gap.
 
 ### Ready to build
 
@@ -268,14 +272,14 @@ Risk profiles for all 77 provinces and for the six priority sectors. This sectio
 
 **Status today** Nothing exists in usable form.
 
-**Who this is for** A provincial officer who needs their own province's profile without running an analysis.
+**Who this is for** อบจ. staff, provincial line-agency offices, and the Governor's office — the province-level profile serves all three of these as-is. It does **not**, and structurally cannot, serve municipality-tier Local Administrative Organizations (LAO) below province level: this isn't only a missing-data problem, a municipality's actual boundary doesn't nest inside the district/sub-district geometry this data would use even if the data existed. See Appendix E for the DOPA-versus-LAO geography limitation.
 
-**What exists today** No dataset or publication presents risk profiles for all 77 provinces in a summarised, ready-to-use form. Province-level composite index figures exist within the risk data, so this may be a presentation problem rather than a data problem. That cannot be confirmed until the investigation in Appendix B2 is done.
+**What exists today** No dataset or publication presents risk profiles for all 77 provinces in a summarised, ready-to-use form. Province-level composite index figures exist within the risk data, so this may be a presentation problem rather than a data problem. That cannot be confirmed until the investigation in Appendix B2 is done. Provincial Climate Change Plans and Provincial Disaster Prevention & Mitigation Plans could add real sub-provincial detail — see Brief E-5, Appendix B, for the scale of that undertaking.
 
 **What the system must do**
 - Produce a profile for each of the 77 provinces covering the main hazards, the exposed sectors, and the vulnerability picture.
 - Use one consistent structure across all provinces so they can be compared.
-- Show local government level where data supports it, and say so plainly where it does not.
+- State plainly that municipality-tier LAO coverage is not available at this level, rather than attempting a sub-provincial cut this data can't support.
 - State the source and vintage of every figure, including any draft or unverified flag carried from the source.
 
 **Data spec** DS-01
@@ -284,7 +288,7 @@ Risk profiles for all 77 provinces and for the six priority sectors. This sectio
 - [ ] All 77 provinces have a profile with no blanks in the standard structure.
 - [ ] Profiles follow one structure and are comparable side by side.
 - [ ] Draft or unverified source flags are visible to the reader rather than hidden.
-- [ ] Local government coverage is stated explicitly, including where it is absent.
+- [ ] The page states plainly that municipality-tier LAO coverage is not available at this level, and why.
 
 ---
 
@@ -292,7 +296,7 @@ Risk profiles for all 77 provinces and for the six priority sectors. This sectio
 
 The largest section in the first half of the site, covering the climate change act, funding sources, budget tracking and institutional arrangements.
 
-The pattern here is sharp. Everything about what money exists, who is in charge, and how participation is tracked is well covered. Everything adjacent to that, meaning how to justify a budget, how to tag climate spending, and how to track technology and technical assistance, is thin or absent.
+The pattern here is sharp, but not in the direction the source material first suggests. Who is in charge and how participation is tracked is well covered. Adaptation finance itself — which funds exist, how to justify a budget, how to tag climate spending, how to track technology and technical assistance — is thin across the board, not just at the edges. The funding directory names the major funds, but genuine finance guidance is light.
 
 **Already covered**
 
@@ -314,8 +318,9 @@ The pattern here is sharp. Everything about what money exists, who is in charge,
 **What exists today** No DCCE asset summarises the supporting legal framework. The climate change act itself is well covered, but the surrounding instruments, particularly the disaster prevention and mitigation act and town planning regulations, are not.
 
 **What the system must do**
-- Summarise each relevant legal and policy instrument that supports adaptation action.
-- For each one, state what it enables, who it applies to, and its current status.
+- Start from the adaptation measures the site already describes, then work backward to which legal and policy instruments support them — not the other way around. Compiling a legal-instrument list first, in isolation from the measures it's meant to support, risks producing a list that doesn't actually line up with what the site's own content needs.
+- For each instrument, state which institutional actor it binds — Local Administrative Organizations (LAO), under decentralization/local-administration law, a specific line agency under its own sectoral mandate, or both. LAO and line agencies operate under genuinely different legal bases; a flat, actor-blind list isn't usable by either.
+- For each one, also state what it enables and its current status.
 - Link to the authoritative text of each instrument.
 - Show how each relates to the climate change act, so the reader sees one framework rather than a list.
 
@@ -323,7 +328,7 @@ The pattern here is sharp. Everything about what money exists, who is in charge,
 
 **Done when**
 - [ ] The disaster prevention act and town planning regulations are both covered.
-- [ ] Each instrument states what it enables and who it applies to.
+- [ ] Each instrument states which actor (LAO, a named line agency, or both) it binds, plus what it enables and its current status.
 - [ ] Each links to its authoritative source text.
 - [ ] The relationship to the climate change act is explained.
 
@@ -336,15 +341,16 @@ The pattern here is sharp. Everything about what money exists, who is in charge,
 **What exists today** DCCE's own role and the national committee structure are documented. The mechanism connecting national bodies to local administrations is not.
 
 **What the system must do**
-- Describe the coordination mechanisms between national agencies and local administrative organisations.
-- Show the route a local plan takes to reach national attention, and the route a national policy takes to reach local implementation.
+- Describe coordination as it actually works: two parallel channels, not one hierarchy. Each central-ministry line agency runs its own vertical line down to its own provincial or regional office (the provincial administration, including DOPA's own office, is itself one line agency among these, structurally a peer of the rest). Separately, Local Administrative Organizations — municipalities and อบจ. — operate on independent, centrally-funded authority under their own decision-making. The Governor, a DOPA official, chairs a loose convening role across the province's line-agency offices, but this is coordination, not command — each office still reports up its own ministry's line.
+- State plainly that this looseness is the accurate description of how coordination works, not a documentation gap — while still flagging any place a defined mechanism is genuinely absent.
+- Show the route a local plan takes to reach national attention, and the route a national policy takes to reach local implementation, for both channels.
 - Name the responsible body at each step.
-- Identify where coordination currently has no defined mechanism, rather than presenting an incomplete picture as complete.
 
 **Data spec** None needed. This is content.
 
 **Done when**
-- [ ] Both directions of coordination are described.
+- [ ] Both the line-agency channel and the LAO channel are described as parallel, not sequential.
+- [ ] The Governor's convening role is described accurately as loose coordination, not a command hierarchy.
 - [ ] A responsible body is named at each step.
 - [ ] Gaps in the mechanism are stated rather than glossed.
 
@@ -352,15 +358,11 @@ The pattern here is sharp. Everything about what money exists, who is in charge,
 
 ## 2.4 Planning data services
 
-One of the strongest sections on the site. Two of its three requirements are already met.
-
-**Already covered**
-
-- **REQ-029** National data security guidance for research use. Covered by DCCE's data governance manual in both document and media form.
+A small section. One requirement is a genuine product-surface case pending investigation; the other is content-only.
 
 **An existing product could sit here**
 
-- **REQ-028** Integrated spatial risk map. Recorded as fully covered by the existing risk map application and its dataset. This rests on the same product credit found wanting elsewhere, so treat completeness as **unverified** until the Appendix B2 investigation is done.
+- **REQ-028** Integrated spatial risk map. Recorded as fully covered by the existing risk map application and its dataset. This rests on the same product credit found wanting elsewhere, so treat completeness as **unverified** until the Appendix B2 investigation and DEL-13 (hosting migration, Appendix A) are done. The data product inventory holds more entries relevant to this page than are currently cited here — worth a fresh pass during that same investigation.
 
 ### Ready to build
 
@@ -373,28 +375,26 @@ One of the strongest sections on the site. Two of its three requirements are alr
 **What exists today** An explainer on how vulnerability and adaptive capacity are measured. No actual index. Underlying proxy indicators exist in quantity, including weather station density, water monitoring station counts and agricultural census vulnerability measures.
 
 **What the system must do**
-- Compute vulnerability and adaptive capacity indices from the available proxy indicators.
-- Publish the method, including which indicators are used and how they are weighted.
-- Produce values at province level for all 77 provinces, and at finer levels where indicators support it.
-- **Where an indicator is missing for an area, show the index as incomplete for that area rather than substituting a national average silently.**
+- Present vulnerability and adaptive capacity at a theoretical, concept level — framed as a named concept, the **Climate Resilience Index** — explaining what it would measure, the logic behind it, and how it relates to the risk framework used elsewhere on the site.
+- Publish the intended method in principle: which categories of indicator it would draw on and roughly how they'd be weighted.
+- Do **not** compute or publish actual index values per province in this phase — that's analytical content, out of scope until the underlying proxy indicators have been properly assessed.
 
 **Data spec** DS-03
 
 **Done when**
-- [ ] Index values exist for all 77 provinces.
-- [ ] The method and indicator list are published alongside the values.
-- [ ] Areas with missing indicators are marked incomplete, not filled in silently.
-- [ ] The index can be recomputed when new indicators are added.
+- [ ] The Climate Resilience Index concept is explained clearly, in Thai and English, without asserting computed values.
+- [ ] The intended method and indicator categories are described.
+- [ ] The page does not present any per-province number as if it were computed.
 
-**Note** This is synthesis from data DCCE already holds, not new collection, which makes it lighter than most items in this section of the document.
+**Note** This is a lighter, explainer-only deliverable in this phase. Computing and publishing real index values is a separate, later undertaking once the underlying indicators are assessed.
 
 ---
 
 ## 3.1 Climate drivers, observations and future scenarios
 
-The weakest section on the site. Nothing here is fully covered. Six of its eight requirements are ready to build, but several of those depend on getting access to data another agency holds, which is a different kind of task from writing content.
+The weakest section on the site by raw coverage, but most of that gap should not be closed by DCCE building analytical dashboards. Most of the analytical work this section might imply — station networks, satellite monitoring, seasonal forecasting — is already done elsewhere, by GISTDA and TMD in particular, and is outside DCCE's expertise to run or maintain. This section's job is mostly communication: explain what these observations and drivers mean, and link out to the agency that actually holds and maintains them. Ingesting external feeds into this platform to run DCCE's own statistical analysis is something to do deliberately, not by default.
 
-Read the notes on data partnership carefully. Five requirements in this document cannot be completed by DCCE alone, and four of them are here.
+The one deliberate exception is the **Thailand Climatology Dashboard** (REQ-011, in section 2.1, and REQ-033 below) — a Thailand-specific analytical product in the spirit of the World Bank's Climate Knowledge Portal, built once as a shared backend and surfaced both as a full app (sections 4.2/4.3) and as embedded views on the pages where its content is relevant. This is judged unique and strategic enough to justify building, unlike the station/satellite/seasonal-monitoring items below.
 
 **Waiting on a decision** — two requirements belonging to the uncertainty governance service. See Brief E-2 in Appendix B.
 
@@ -406,22 +406,21 @@ Read the notes on data partnership carefully. Five requirements in this document
 
 **Who this is for** Researchers and engineers who need point measurements rather than modelled grids.
 
-**What exists today** No DCCE asset holds station-level weather data. The meteorological department holds it.
+**What exists today** No DCCE asset holds station-level weather data. The meteorological department (TMD) holds it and already publishes it.
 
 **What the system must do**
-- Establish a route for station observation data from the meteorological department, whether by data sharing agreement or service connection.
-- Present station data with location, elevation, variables recorded, and period of record.
-- Show which stations are active and which are historical.
-- State the update frequency and the delay between observation and publication.
+- Explain what station observation data is and how it differs from modelled grids, in plain language.
+- Link directly to TMD's own station data services rather than re-hosting the data on this platform.
+- State what TMD's data covers (variables, typical update cadence) so a reader knows what to expect before clicking through.
 
 **Data spec** DS-04
 
 **Done when**
-- [ ] A formal data route from the meteorological department exists and is documented.
-- [ ] Station metadata includes location, variables and period of record.
-- [ ] Update frequency and publication delay are stated on the page.
+- [ ] The explainer clearly distinguishes station observations from modelled grids.
+- [ ] A working link to TMD's station data service is in place.
+- [ ] The page states what TMD's data covers without duplicating it.
 
-**Note** This requires an agreement with another agency before any build work. Treat the agreement as the first task, not the interface.
+**Note** A live data connection (rather than a link) would still require a formal agreement with TMD — that stays a future, budget-contingent option, not committed scope here.
 
 #### REQ-031 — Satellite observation data for forest, land cover, water and coral
 
@@ -429,22 +428,20 @@ Read the notes on data partnership carefully. Five requirements in this document
 
 **Who this is for** Analysts tracking change in natural systems over time.
 
-**What exists today** No DCCE asset holds satellite observation data. The space technology agency holds relevant products, and marine bodies hold coral observations.
+**What exists today** No DCCE asset holds satellite observation data. GISTDA holds the relevant land/water products, and marine bodies hold coral observations — both already publish this material.
 
 **What the system must do**
-- Establish routes to satellite-derived products for forest cover, land cover, water bodies and coral bleaching.
-- Present each layer with its resolution, observation date and processing level.
-- Allow comparison of the same layer across dates so change is visible.
-- State the source agency and licence for each layer.
+- Explain what each layer (forest cover, land cover, water bodies, coral bleaching) is and why it matters for adaptation.
+- Link directly to GISTDA's and the relevant marine body's own published products rather than re-hosting them.
+- State the source agency and how current each external product is.
 
 **Data spec** DS-04
 
 **Done when**
-- [ ] All four layers named in the requirement have an established source.
-- [ ] Each layer shows resolution, date and processing level.
-- [ ] Two dates of the same layer can be compared.
+- [ ] All four layers named in the requirement have an explainer and a working link to the source agency's own product.
+- [ ] The source agency is named for each layer.
 
-**Note** Also requires agreements with other agencies before build work.
+**Note** A live data connection would still require agreements with GISTDA and the relevant marine bodies — a future, budget-contingent option, not committed scope here.
 
 #### REQ-032 — Monitoring of globally significant climate phenomena
 
@@ -452,18 +449,18 @@ Read the notes on data partnership carefully. Five requirements in this document
 
 **Who this is for** Planners who need to know whether the coming season is likely to be unusual.
 
-**What exists today** One general-audience article explaining ENSO-neutral conditions. Nothing on the Atlantic overturning circulation at all. There is no monitoring feed, only a one-off explainer.
+**What exists today** One general-audience article explaining ENSO-neutral conditions. Nothing on the Indo-Pacific/Interdecadal Pacific Oscillation (IPO) or the Atlantic overturning circulation. There is no monitoring feed, only a one-off explainer.
 
 **What the system must do**
-- Present the current state of ENSO and its expected trajectory, refreshed on a stated cycle.
-- Explain what the current state means for Thailand in seasonal terms.
-- Cover the Atlantic overturning circulation at explanatory level, since no Thai monitoring role exists for it.
+- Explain ENSO and IPO — what they are, and why Thailand's seasonal outlook depends on them — and link to TMD's or another authoritative source's live monitoring rather than running an independent feed.
+- Explain what the current state of these phenomena typically means for Thailand in seasonal terms.
+- Cover the Atlantic overturning circulation at explanatory level only, since no Thai monitoring role exists for it.
 - Link each phenomenon to the sectors it most affects.
 
 **Data spec** DS-05
 
 **Done when**
-- [ ] ENSO state is shown with a date and a stated refresh cycle, not as static text.
+- [ ] ENSO and IPO are both explained, with a working link to an authoritative live monitoring source.
 - [ ] The seasonal implication for Thailand is stated in plain language.
 - [ ] The overturning circulation is explained even though it is not monitored locally.
 
@@ -473,11 +470,11 @@ Read the notes on data partnership carefully. Five requirements in this document
 
 **Who this is for** Anyone who needs the baseline climate against which change is measured.
 
-**What exists today** National grid data for temperature and rainfall covering 1981 to 2023. Raw grid, restricted access, flagged draft and unverified. No trend statistics have been computed.
+**What exists today** National grid data for temperature and rainfall covering 1981 to 2023. Raw grid, restricted access, flagged draft and unverified. No trend statistics have been computed. Provenance (station-interpolated versus reanalysis output) is not stated in the catalog — confirm before publishing derived statistics.
 
 **What the system must do**
-- Derive climatological baselines and trend statistics for temperature and rainfall from the existing grids.
-- Present trends at a level a planner can use, meaning province or region rather than grid cell.
+- This is the core view of the shared Thailand Climatology Dashboard backend (DEL-1, Appendix A), built once alongside REQ-011 (section 2.1) — derive climatological baselines and trend statistics for temperature and rainfall from the same grids.
+- Present trends at a level a planner can use, meaning province or region rather than grid cell, surfaced both as an embedded view on this page and inside the full Climatology Dashboard app (4.2/4.3).
 - State the baseline period used and keep it consistent across the site.
 - Show the uncertainty around each trend rather than a single number alone.
 
@@ -488,29 +485,29 @@ Read the notes on data partnership carefully. Five requirements in this document
 - [ ] One baseline period is used consistently across every page that shows a trend.
 - [ ] Each trend is presented with its uncertainty.
 - [ ] Access control matches the restriction on the source.
+- [ ] The grid's provenance is confirmed and stated before publication.
 
-**Note** Depends on the same restricted grid data as REQ-011. Resolve access once for both.
+**Note** Depends on the same restricted grid data as REQ-011. Resolve access once for both — they share one backend.
 
 #### REQ-035 — Library of high-resolution downscaled future projections
 
-**Status today** Partial. Real projection data exists, but not at the resolution the requirement asks for.
+**Status today** Partial. Real projection data exists, but not at the resolution the requirement asks for, and DCCE already runs a platform for this.
 
 **Who this is for** Engineers and planners designing for conditions decades ahead.
 
-**What exists today** Downscaled projection datasets running to 2099 and 2100, produced both dynamically and statistically, covering national extent. Access is restricted and resolution is national grid rather than the high-resolution sub-national product the requirement describes.
+**What exists today** Downscaled projection datasets running to 2099 and 2100, produced both dynamically and statistically, covering national extent. Access is restricted and resolution is national grid rather than the high-resolution sub-national product the requirement describes. DCCE's own `clim-webbased.dcce.go.th` platform already appears to serve this kind of material — **this asset is not yet in either canonical asset registry checked for this document and needs a formal registry entry**, but should be the link target rather than re-publishing the datasets here.
 
 **What the system must do**
-- Publish the available projection datasets with their driving model, downscaling method, scenario and period.
-- State plainly that resolution is national grid, and what that means for sub-national use.
-- Allow selection by scenario and period.
+- Explain what downscaled projections are and what "national grid resolution" means for a reader planning at sub-national scale.
+- Link to `clim-webbased.dcce.go.th` (or a Thai-language front end of it) rather than ingesting and re-hosting the underlying datasets on this platform.
+- State plainly that resolution is national grid, not the high-resolution sub-national product the original requirement describes, and what that means for sub-national use.
 - Record what higher-resolution product would be needed to meet the requirement fully, so the gap is visible rather than implied.
 
 **Data spec** DS-06
 
 **Done when**
-- [ ] Every published dataset shows model, method, scenario and period.
+- [ ] The explainer states what's available (model, method, scenario, period) and links to `clim-webbased.dcce.go.th`.
 - [ ] The resolution limitation is stated on the page, not buried in metadata.
-- [ ] A user can select by scenario and period.
 - [ ] The remaining gap to true high-resolution projections is documented.
 
 **Note** Whether the existing national-resolution data is sufficient is a judgement for DCCE, not one this document makes.
@@ -540,7 +537,7 @@ Read the notes on data partnership carefully. Five requirements in this document
 
 ## 3.2 Risk, vulnerability, impact chains, and loss and damage
 
-The analytical core of the site, and the section where the most work sits. Fourteen requirements, of which eight are ready to build and three belong to the loss and damage work.
+The analytical core of the site, and the section where the most work sits. Fourteen requirements, of which eight are ready to build and three belong to the loss and damage work. Most of this section is content — definitions, methodology explainers, case studies — rather than new analytical products; the exceptions are the Slow-Onset Hazards Profile (REQ-042/043/044/045, its own consolidated deliverable below) and the Loss and Damage product line.
 
 One strength runs through this section. DCCE's impact chain manual is a real, purpose-built document. It is also being asked to stand in for several things it was not written to be, which is why some requirements below are partial rather than covered.
 
@@ -550,13 +547,13 @@ One strength runs through this section. DCCE's impact chain manual is a real, pu
 
 **An existing product could sit here**
 
-- **REQ-041** Sector risk results for food security, water, health and business disruption. The six-sector dataset provides results for food, water and settlement. Heat and health impact and business disruption are not represented. Adequacy of the rest is **not assessed**.
+- **REQ-041** Sector risk results for food security, water, health and business disruption. The six-sector dataset provides results for food, water and settlement. Heat and health impact and business disruption are not represented. **Confirmed limitation: what exists is the risk map at provincial level only** — any sector-level insight beyond that would need to be synthesized from literature review, not asserted from the existing dataset.
 
 **Belongs to the loss and damage work**
 
-- **REQ-049** Dashboard of historical economic and physical losses. Real machine-readable damage records exist for several hazards but are not dashboard-ready. **See Appendix B2.**
-- **REQ-050** Record of non-economic losses covering mental health, biodiversity and cultural heritage. Only biodiversity has material. **See Appendix B2.**
-- **REQ-051** Standard national manual for risk, impact and loss calculation. The impact chain manual is the closest proxy and was not written for this. **See Appendix B2.**
+- **REQ-049** Dashboard of historical economic and physical losses. Real machine-readable damage records exist for several hazards but are not dashboard-ready. Shares its underlying DDPM source data with REQ-001's disaster-statistics product (DEL-12) — gather that data once, use it for both. **See the Loss and Damage entry in Appendix B.**
+- **REQ-050** Record of non-economic losses covering mental health, biodiversity and cultural heritage. Only biodiversity has material. **See the Loss and Damage entry in Appendix B.**
+- **REQ-051** Standard national manual for risk, impact and loss calculation. The impact chain manual is the closest proxy and was not written for this. **See the Loss and Damage entry in Appendix B.**
 
 **Waiting on a decision** — one requirement, the sector damage function library. See Brief E-1 in Appendix B.
 
@@ -583,27 +580,29 @@ One strength runs through this section. DCCE's impact chain manual is a real, pu
 - [ ] Definitions follow IPCC usage and say so.
 - [ ] Other analytical pages link here rather than redefining terms locally.
 
-#### REQ-040 — A single national risk assessment methodology
+#### REQ-040 — A national risk assessment methodology
 
 **Status today** Partial. A proxy exists.
 
 **Who this is for** Any agency conducting a risk assessment that should be comparable with others.
 
-**What exists today** DCCE's impact chain manual, which is the closest existing methodology document. No purpose-built national risk assessment standard exists.
+**What exists today** DCCE's impact chain manual, which is the closest existing methodology document. No purpose-built national risk assessment standard exists. Existing multi-hazard methodologies — CRVA and CRM, from GIZ and UNDRR — offer a more analytical, quantitative reference point DCCE could adapt rather than starting from nothing.
 
 **What the system must do**
-- Set out the national methodology for risk assessment, covering the steps, the required inputs and the expected outputs.
-- State how it relates to the impact chain method, whether as an extension or a distinct procedure.
-- Define what makes an assessment compliant, so results from different agencies can be compared.
-- Provide a template or worked example.
+- Committed scope is an explainer-level framework: set out the broad steps, the required inputs, and the expected outputs of a national risk assessment, in plain language.
+- State how it relates to the impact chain method, whether as an extension or a distinct procedure, and note CRVA/CRM as reference methodologies DCCE could draw on.
+- Defer the official, binding guideline — compliance criteria and a formal template or worked example — to a later phase. Publishing those now would imply a standard-setting decision this project doesn't make.
 
 **Data spec** None needed. This is methodology content.
 
 **Done when**
-- [ ] The methodology is published as its own document, not as a reading of the impact chain manual.
-- [ ] Its relationship to the impact chain method is stated explicitly.
-- [ ] Compliance criteria are defined.
-- [ ] A template or worked example is included.
+- [ ] The framework is published as its own explainer, not as a reading of the impact chain manual.
+- [ ] Its relationship to the impact chain method, and to CRVA/CRM, is stated explicitly.
+- [ ] The page states plainly that compliance criteria and a formal template are a later, separate undertaking, not covered here.
+
+### Slow-Onset Hazards Profile — REQ-042, REQ-043, REQ-044, REQ-045
+
+These four requirements are one page in the sitemap (node 3.2.2.1, Slow-Onset Hazards Profile), not four separate pages — they're presented as one consolidated deliverable (DEL-4, Appendix A). All four follow the same pattern: a static explainer is the committed scope now, and any real rate, index, or source-establishment work is a budget-contingent stretch item for later, not committed in this phase.
 
 #### REQ-042 — Statistics and assessment of slow-onset hazards
 
@@ -614,17 +613,18 @@ One strength runs through this section. DCCE's impact chain manual is a real, pu
 **What exists today** No consolidated slow-onset assessment. Individual components exist separately, including sea level data covered under REQ-043 and erosion data under REQ-045.
 
 **What the system must do**
+- This trend content shares its backend with the Thailand Climatology Dashboard (REQ-011/033, DEL-1) — the same DS-02 pipeline computes it — but it's displayed here, on the Slow-Onset Hazards page, not on the climate-drivers page.
 - Consolidate slow-onset hazard tracking covering rising average temperature and shifting rainfall distribution.
 - Present rate of change with its uncertainty, not just current state.
 - Distinguish observed change from projected change.
-- Link to the individual hazard datasets rather than duplicating them.
+- Link to the other slow-onset hazards on this same page (REQ-043/044/045) rather than treating them as separate topics.
 
 **Data spec** DS-02
 
 **Done when**
 - [ ] Temperature and rainfall distribution change are both covered with rates and uncertainty.
 - [ ] Observed and projected change are visually and textually distinct.
-- [ ] The page links to source datasets instead of restating their figures.
+- [ ] The page presents this alongside sea level, subsidence/salinity, and erosion as one Slow-Onset Hazards Profile.
 
 #### REQ-043 — Sea level rise along the Thai coast and the Gulf
 
@@ -635,17 +635,16 @@ One strength runs through this section. DCCE's impact chain manual is a real, pu
 **What exists today** An annual sea level observation dataset from the marine department hydrology group, national coverage through 2026, tagged to sea level rise. These are raw annual readings, restricted access, and no rate of rise has been derived.
 
 **What the system must do**
-- Derive rate of sea level rise from the annual observations, with uncertainty.
-- Present rates by coastal segment rather than one national figure, since the Gulf and Andaman differ.
-- Show the observation record alongside the derived rate.
+- Committed scope: a static explainer covering what's observed, why sea level rise matters for the Thai coast, and what the observation record shows in general terms.
+- Deferred, budget-contingent scope: deriving an actual rate of rise by coastal segment with uncertainty. A real rate treatment at this resolution is a substantial undertaking on its own — worth doing if DCCE can allocate resource for it in the contractor's scope, but not committed here.
+- Show the observation record itself alongside the explainer, even without a derived rate.
 - State the period of record and any gaps in it.
 
 **Data spec** DS-07
 
 **Done when**
-- [ ] A rate of rise with uncertainty is derived from the observations.
-- [ ] Rates are presented by coastal segment.
-- [ ] The observation record and its gaps are visible.
+- [ ] The static explainer is published, covering the observation record and its significance.
+- [ ] The page states plainly whether a derived rate exists yet, and if not, that it's a future undertaking.
 - [ ] Access control matches the source restriction.
 
 #### REQ-044 — Land subsidence and salinity intrusion
@@ -657,19 +656,16 @@ One strength runs through this section. DCCE's impact chain manual is a real, pu
 **What exists today** No DCCE asset covers either subsidence or salinity intrusion. Neither appeared in the document inventory or the dataset catalog.
 
 **What the system must do**
-- Establish sources for land subsidence measurement in Bangkok and the surrounding provinces.
-- Establish sources for salinity intrusion in the affected river systems.
-- Present both with location, rate and period.
-- Show how subsidence interacts with sea level rise and flooding, since the combined effect is the planning concern.
+- Committed scope: a static explainer covering what land subsidence and salinity intrusion are, why they matter for Bangkok and the central region, and how they interact with sea level rise and flooding.
+- Deferred, budget-contingent scope: establishing real data sources for subsidence and salinity intrusion measurement and presenting them with location, rate, and period. This needs agreements with other bodies and is foundational data a build team cannot substitute from DCCE material — not committed in this phase.
 
 **Data spec** DS-04
 
 **Done when**
-- [ ] A source is established for each of subsidence and salinity intrusion.
-- [ ] Both are presented with location, rate and period.
-- [ ] The interaction with sea level rise and flooding is explained.
+- [ ] The static explainer is published, covering both hazards and their interaction with sea level rise and flooding.
+- [ ] The page states plainly that source data for either hazard doesn't yet exist and is a future undertaking.
 
-**Note** Requires agreements with other bodies. This is foundational data that a build team cannot substitute from DCCE material.
+**Note** Requires agreements with other bodies for the deferred scope. Treat that agreement as a separate, later task from the explainer.
 
 #### REQ-045 — Coastal erosion index and beach area loss
 
@@ -680,16 +676,15 @@ One strength runs through this section. DCCE's impact chain manual is a real, pu
 **What exists today** Real area-based erosion extent data from marine resource bodies, alongside a series of nine coastal adaptation infographics. The data is raw area figures rather than a computed index.
 
 **What the system must do**
-- Compute an erosion index from the existing extent data, covering the affected coastline.
-- Present beach area lost over time by coastal segment.
-- Publish the index method alongside the values.
+- Committed scope: a static explainer using the existing extent data and the nine coastal adaptation infographics, presenting what's known about erosion in general terms.
+- Deferred, budget-contingent scope: computing a real erosion index and presenting beach area lost over time by coastal segment with a published method. Worth doing if DCCE can allocate resource for it, not committed here.
 - Link to the existing coastal adaptation material rather than duplicating it.
 
 **Data spec** DS-07
 
 **Done when**
-- [ ] An erosion index is computed and published with its method.
-- [ ] Area loss over time is shown by coastal segment.
+- [ ] The static explainer is published, using the existing extent data and infographics.
+- [ ] The page states plainly whether a computed index exists yet, and if not, that it's a future undertaking.
 - [ ] Existing coastal adaptation content is linked rather than rewritten.
 
 #### REQ-047 — Impact chain case studies for agriculture and urban settlement
@@ -899,11 +894,11 @@ Fully covered, by two different routes worth keeping distinct.
 
 ## 4.1 Data catalog
 
-The cleanest section on the site. Infrastructure that already exists and needs linking rather than building.
+Infrastructure that already exists, but the content it holds is not settled yet.
 
-**Already covered**
+**Already covered, with a scope decision still pending**
 
-- **REQ-069** Searchable system for datasets, data products and metadata meeting national security standards. DCCE already operates the catalog, has a publication describing it, and has a governance manual covering metadata and security.
+- **REQ-069** Searchable system for datasets, data products and metadata meeting national security standards. DCCE already operates the catalog, has a publication describing it, and has a governance manual covering metadata and security. **This is not zero-effort.** CRDB provides only an initial data-inventory seed for the catalog; what actually goes into it — its final scope and content — needs formal approval in the next project, not just a link to the existing system.
 
 ---
 
@@ -914,6 +909,8 @@ One requirement, and it needs care. The page-level picture looks better than the
 **An existing product could sit here**
 
 - **REQ-070** Interactive application showing hazard maps and supporting risk analysis, specifically so an engineer can obtain rainfall intensity and temperature design values at plot level. DCCE's existing risk map application is a real working tool and could appear here. Its adequacy is **not assessed**.
+
+**Hosting architecture for this page.** Native-hosted, on the new platform's own infrastructure: the three existing DCCE analytical products once migrated (DEL-13, Appendix A) and the new strategic products built in the next project — the disaster-statistics product (DEL-12), the Loss and Damage dashboard, and the Thailand Climatology Dashboard (DEL-1). Link-out hub, not natively hosted: anything not owned by DCCE.
 
 **The important part of this requirement is not covered at all.** A search across both the document inventory and the dataset catalog for intensity-duration-frequency curves or engineering design curves returned nothing of any kind. That is the specific reason this page exists as its own section rather than repeating the general risk map elsewhere on the site.
 
@@ -999,37 +996,41 @@ One requirement, entirely uncovered, and a genuinely new capability for DCCE.
 
 The thirty ready-to-build requirements are not thirty separate pieces of work. Several pages draw on the same underlying effort, so building once serves several requirements.
 
-This appendix groups them into eleven deliverables. **This is the planning view. Anyone scheduling the build should work from this table rather than counting requirement cards.**
+This appendix groups them into thirteen deliverables. **This is the planning view. Anyone scheduling the build should work from this table rather than counting requirement cards.**
 
 | | Deliverable | Type | Serves | Requirements |
 |---|---|---|---|---|
-| **DEL-1** | Climate grid processing | Data engineering | 2.1, 3.1, 3.2 | REQ-011, REQ-033, REQ-042 |
+| **DEL-1** | Thailand Climatology Dashboard | Data engineering + product | 2.1, 3.1 | REQ-011, REQ-033 |
 | **DEL-2** | Provincial risk profile layer | Data engineering and interface | 1.2, 2.2, 2.4 | REQ-008, REQ-014, REQ-027 |
-| **DEL-3** | Line agency data agreements | Partnership | 3.1, 3.2 | REQ-030, REQ-031, REQ-044 |
-| **DEL-4** | Coastal and marine data derivation | Data engineering | 3.2 | REQ-043, REQ-045 |
-| **DEL-5** | Projection and monitoring publication | Data publication | 3.1 | REQ-032, REQ-035 |
+| **DEL-3** | External-source explainers with data-sharing agreements | Content + partnership | 3.1 | REQ-030, REQ-031 |
+| **DEL-4** | Slow-Onset Hazards Profile | Content, with derivation as a later stretch | 3.2 | REQ-042, REQ-043, REQ-044, REQ-045 |
+| **DEL-5** | External-source explainers, monitoring and projections | Content + partnership | 3.1 | REQ-032, REQ-035 |
 | **DEL-6** | Concept and methodology standards | Content | 3.2 | REQ-038, REQ-040, REQ-048 |
-| **DEL-7** | Risk framing and worked examples | Content | 1.1, 3.1, 3.2 | REQ-001, REQ-003, REQ-037, REQ-047 |
+| **DEL-7** | Risk framing and worked examples | Content | 1.1, 3.1, 3.2 | REQ-003, REQ-037, REQ-047 |
 | **DEL-8** | Policy and institutional content | Content | 2.3, 3.3 | REQ-017, REQ-025, REQ-057 |
 | **DEL-9** | Inclusion and community adaptation content | Content | 3.3 | REQ-053, REQ-054, REQ-055 |
 | **DEL-10** | Adaptation measures library | Product and content | 3.3 | REQ-060, REQ-061 |
 | **DEL-11** | New operational capabilities | Build | 4.3, 5.2 | REQ-071, REQ-073 |
+| **DEL-12** | Disaster statistics product | Data engineering + product | 1.1 | REQ-001 |
+| **DEL-13** | Migrate existing DCCE analytical products onto platform infrastructure | Data engineering + hosting | 1.1, 1.2, 2.1, 2.2, 2.4, 3.2, 4.2 | — (serves the product-surface items: REQ-004, REQ-005, REQ-009, REQ-010, REQ-013, REQ-015, REQ-028, REQ-041, REQ-070) |
 
-Three observations for whoever plans this work.
+Four observations for whoever plans this work.
 
-**DEL-3 has to start first.** Data agreements with other agencies take longer than anything else here and nothing downstream can proceed without them. It is also the only deliverable DCCE cannot complete alone.
+**DEL-1, DEL-4 (in part), and DEL-12 share a backend.** The Thailand Climatology Dashboard (DEL-1) and the temperature/rainfall trend view inside the Slow-Onset Hazards Profile (DEL-4) run on the same DS-02 pipeline — resolve restricted-access questions once, for both. DEL-12's disaster-statistics product and the Loss and Damage dashboard (Appendix B) draw on the same underlying DDPM source records — gather that data once, use it for both.
 
-**DEL-1 and DEL-4 share a constraint.** Both derive statistics from restricted-access source data. Resolve the access question once, for both, rather than twice.
+**DEL-13 is separate from the Appendix B2 investigation, but related.** B2 asks what data actually feeds the three existing analytical products. DEL-13 is the follow-on hosting work — migrating those products onto this platform's own infrastructure once that question is answered. Treat them as two ordered steps, not one task.
 
-**Six of the eleven are content production.** DEL-6 through DEL-10 and part of DEL-7 need writers and subject specialists rather than engineers. That is a different procurement from the rest of this document and is easy to overlook when reading a specification framed around a website build.
+**DEL-3 and DEL-5 no longer gate anything downstream.** Now that these deliverables are explainer-and-link content rather than data ingestion, the underlying agency data-sharing agreements (TMD, GISTDA) are a future, budget-contingent option — not a precondition for shipping the committed content.
+
+**Six of the thirteen are primarily content production.** DEL-6 through DEL-10, DEL-3, and DEL-5 need writers and subject specialists rather than engineers. That is a different procurement from the rest of this document and is easy to overlook when reading a specification framed around a website build.
 
 ---
 
-# Appendix B — Services awaiting a decision
+# Appendix B — Services awaiting a decision, and one committed but blocked
 
-Fourteen requirements belong to services DCCE has not yet decided to build. Writing full specifications for them would imply a commitment that has not been made, so they are summarised here instead.
+Fourteen requirements belong to services DCCE has not yet decided to build. Writing full specifications for them would imply a commitment that has not been made, so they are summarised here instead. Two further briefs (E-5, E-6) cover data-quality undertakings that need a resourcing decision rather than a policy decision. A separate entry, the Loss and Damage product line, is **not** in this category — it's already a committed, high-priority requirement, blocked on a sequencing dependency rather than a decision; it's placed here because, like the others, its full specification isn't written in this document.
 
-**If DCCE selects any of these, proper requirement gathering is needed before building.** These briefs establish scale and blockers. They are not specifications.
+**If DCCE selects any of the E-series briefs, proper requirement gathering is needed before building.** These briefs establish scale and blockers. They are not specifications.
 
 ## Brief E-1 — Financial and budget evidence
 
@@ -1041,7 +1042,7 @@ REQ-018, REQ-019, REQ-020, REQ-021, REQ-022, REQ-039, REQ-052, REQ-058, REQ-059,
 
 **Demand.** The strongest single cluster in this document. Ten of the fourteen waiting requirements sit here, and the demand analysis records it as a repeated concern from agencies facing budget scrutiny.
 
-**What exists.** The funding side is genuinely well covered. DCCE's funding guide and dedicated publications for the major international climate funds are real and operational.
+**What exists.** The funding directory names the major funds — DCCE's funding guide and dedicated publications for AF, GCF, and GEF are real and operational. Beyond naming those sources, adaptation finance content is genuinely light, not well covered — there's no guidance on using them, no cost-benefit method, and no budget-tagging material.
 
 **Core blocker.** Everything beyond listing funding sources is absent. There is no cost-benefit methodology, no budget tagging statistics, no avoided-losses calculation standard, and no damage function library to compute avoided losses from. This is a methodology development problem before it is a platform problem.
 
@@ -1097,6 +1098,52 @@ REQ-062, REQ-063
 
 **A warning for planners.** Because REQ-070 reads as partially covered at page level, this work is easy to miss entirely. It should be scoped explicitly rather than assumed to fall out of the visualisation build.
 
+## Brief E-5 — Provincial & District Plan Synthesis
+
+**Requirements** 0 of their own — closes a gap underlying REQ-008, REQ-014, REQ-015 · **Sections affected** 1.2, 2.2
+
+**What this service would do.** Extract structured, sub-provincial risk and vulnerability content from Thailand's 77 Provincial Climate Change Plans and Provincial Disaster Prevention & Mitigation Plans, and turn it into usable data for the area-based search and provincial profile pages.
+
+**Why it appears here.** Neither DCCE's current data assets nor the risk map carry real sub-provincial exposure, vulnerability, or risk data. These plans are the only path to genuine sub-provincial content — but they exist as scattered documents, not data.
+
+**What exists.** Nothing structured. The plans themselves exist across 77 provinces but have never been synthesized into a common format.
+
+**Core blocker.** Scale. Reading and structuring content from 77 provinces' worth of planning documents is a large document-synthesis undertaking, not a data-engineering task. It genuinely provides information not available anywhere else in DCCE's holdings or the risk map.
+
+**Readiness.** High value, high effort. Needs an explicit DCCE resourcing decision before it's scheduled — not assumed as part of this build phase.
+
+## Brief E-6 — LAO-level data disaggregation
+
+**Requirements** 0 of their own — closes a gap underlying REQ-008, REQ-014 · **Sections affected** 1.2, 2.2
+
+**What this service would do.** Re-aggregate the risk map's underlying input datasets — currently disaggregated only to DOPA's administrative boundary (province/district/sub-district) — onto actual Local Administrative Organization (LAO) polygons, producing genuine LAO-level figures rather than administrative-boundary approximations.
+
+**Why this is not a display problem.** The source data was never collected or tagged at LAO granularity in the first place, so no simple crosswalk of existing figures is possible. Municipalities in particular can span or straddle sub-district lines; อบจ. is province-wide and unaffected. Producing a real LAO-level figure means geospatial reallocation (e.g. area-weighted redistribution) of the underlying data — genuine geospatial engineering, distinct in kind from Brief E-5's document-synthesis work.
+
+**What exists.** Nothing at LAO resolution. The underlying datasets exist only at DOPA administrative-boundary resolution.
+
+**Core blocker.** A daunting geospatial/data-engineering undertaking. Real added value for municipality-tier LAO officials, who currently cannot get a figure that represents their actual jurisdiction.
+
+**Readiness.** High value, high effort. Needs an explicit DCCE resourcing decision, distinct from Brief E-5 — the two are complementary, not substitutes for each other.
+
+---
+
+## Loss and Damage product line — committed, not awaiting a decision
+
+**Requirements** 4 · **Sections affected** 2.1, 3.2
+
+REQ-012, REQ-049, REQ-050, REQ-051
+
+**Priority, per sitemap v8.** REQ-012 MUST · REQ-049 MUST · REQ-051 MUST · REQ-050 SHOULD. Three of the four are mandatory requirements, not optional ones — "belongs to a separate work package" should not be read as "belongs to a lower priority."
+
+**What this would do.** A national macroeconomic loss and damage database (REQ-012), a dashboard of historical economic and physical losses (REQ-049), a record of non-economic losses (REQ-050), and a standard national manual for risk, impact, and loss calculation (REQ-051).
+
+**What exists.** Real, machine-readable damage records exist for several hazards but aren't dashboard-ready. Only biodiversity has material for non-economic losses. The impact chain manual is the closest proxy for a calculation methodology, but it wasn't written for this purpose. REQ-049 shares its underlying source data with REQ-001's disaster-statistics product (DEL-12, Appendix A) — both draw on the same DDPM records, so that data-gathering step should happen once, for both. REQ-012 can likely be delivered as a summary or rollup view built on REQ-049's data rather than as its own independent build.
+
+**Core blocker.** This is not a DCCE decision to make — it's a sequencing dependency. The loss-and-damage work package's own specification hasn't been written yet, and this document's requirements can't be built ahead of that methodology without guessing at it.
+
+**Readiness.** Committed and high priority. Blocked on the separate work package's specification landing, not on DCCE choosing whether to build it.
+
 ---
 
 # Appendix B2 — Data specifications, and one thing to do first
@@ -1119,6 +1166,8 @@ The stricter review of 11 August 2026 found three requirements recorded as compl
 
 **What this will change.** Some recorded gaps will close, because the data turns out to exist. Some items recorded as covered will reopen. Either way the picture becomes real, and the schedule built on it becomes trustworthy. Doing this at the start costs weeks. Discovering it midway through the build costs more.
 
+**This investigation is step one of two.** Once the inventory is done, DEL-13 (Appendix A) is the follow-on work — actually migrating those three products onto this platform's own infrastructure. Treat them as ordered, not interchangeable.
+
 ## Data specifications
 
 Each specification covers one dataset or group, and is referenced from the requirement cards above. Fields are taken from DCCE's data catalog. **Where a field is not recorded there, it is marked unknown rather than estimated.**
@@ -1129,15 +1178,14 @@ Two observations apply to every sheet below. Every DCCE dataset examined carries
 **Serves** REQ-008, REQ-014 · **Source** `DCCE_3_1` to `DCCE_3_6`, six sector datasets
 **Granularity** Province · **Coverage** National, 1960 to 2100 · **Frequency** Annual
 **Format** CSV · **Access** Public · **Status** Baseline-Draft, Unverified-Baseline
-**Limitations** Scenarios limited to two pathways. Composite method is not reversible to inputs.
+**Limitations** Scenarios limited to two pathways. Composite method is not reversible to inputs. **Confirmed: does not carry sub-provincial exposure, vulnerability, or risk data.** Closing that gap is Brief E-5 (document synthesis) or Brief E-6 (geospatial disaggregation), Appendix B — not assumed into this specification.
 **Maintainer** UNKNOWN — pending investigation
-**Note** Whether this supports anything below province level is **unassessed**. This is the central question for the investigation above.
 
 ### DS-02 — Historical climate grids
-**Serves** REQ-011, REQ-033, REQ-042 · **Source** `DCCE_2_1` rainfall, `DCCE_2_2` maximum temperature
+**Serves** REQ-011, REQ-033, REQ-042 (REQ-042's trend view shares this same pipeline but displays on the Slow-Onset Hazards page, DEL-4) · **Source** `DCCE_2_1` rainfall, `DCCE_2_2` maximum temperature
 **Granularity** Grid · **Coverage** National, 1981 to 2023 · **Frequency** Daily and monthly
 **Format** Raster · **Access** **Restricted** · **Status** Baseline-Draft, Unverified-Baseline
-**Limitations** Raw grids only. No derived statistics exist. Access restriction must be resolved before publication.
+**Limitations** Raw grids only. No derived statistics exist. Access restriction must be resolved before publication. Provenance (station-interpolated versus reanalysis) is not recorded — confirm before publishing derived statistics.
 **Maintainer** UNKNOWN — pending investigation
 
 ### DS-03 — Vulnerability and adaptive capacity indicators
@@ -1148,11 +1196,11 @@ Two observations apply to every sheet below. Every DCCE dataset examined carries
 **Maintainer** UNKNOWN — pending investigation
 
 ### DS-04 — Observation data held by other agencies
-**Serves** REQ-030, REQ-031, REQ-044 · **Source** External. Meteorological department, space technology agency, marine and groundwater bodies
+**Serves** REQ-030, REQ-031 (both now explainer + link, not ingestion), REQ-044 (deferred, budget-contingent scope only) · **Source** External. Meteorological department, space technology agency, marine and groundwater bodies
 **Granularity** UNKNOWN · **Coverage** UNKNOWN · **Frequency** UNKNOWN
 **Access** **Not currently available to DCCE**
 **Limitations** None of this data is in DCCE's catalog. Every field is unknown until an agreement exists.
-**Note** This specification cannot be completed by DCCE alone. Treat the data agreement as the first deliverable.
+**Note** A live data connection under any of these three requirements needs a formal agreement first — this stays a future, budget-contingent option, not committed scope in this phase.
 
 ### DS-05 — Climate phenomena monitoring
 **Serves** REQ-032 · **Source** No dataset. One general-audience article only
@@ -1175,9 +1223,12 @@ Two observations apply to every sheet below. Every DCCE dataset examined carries
 **Maintainer** UNKNOWN — pending investigation
 
 ### DS-08 — Historical disaster record
-**Serves** REQ-001 · **Source** None in DCCE's holdings. Records exist across other government bodies
-**Granularity** UNKNOWN · **Coverage** None currently
-**Limitations** Compilation task. Sources exist but are scattered and have not been gathered.
+**Serves** REQ-001 (DEL-12, its own native product) and REQ-049 (the Loss and Damage dashboard, Appendix B) · **Source** `DDPM_2_1` — 10-year historical disaster occurrence data, DDPM
+**Granularity** หมู่บ้าน (village) · **Coverage** DDPM's historical holdings, exact period unstated in the catalog · **Format** Database
+**Access** Restricted · **Status** Baseline-Draft, Unverified-Baseline
+**Limitations** Reporting is one-way, from local administrative organizations up to province level, with no central ground-truthing. No UNDRR-aligned hazard taxonomy. A real starting point, not a from-scratch compilation, but these quality issues need handling before publication.
+**Maintainer** UNKNOWN — pending investigation
+**Note** REQ-001 and REQ-049 draw on the same underlying DDPM records — gather this data once, use it for both, rather than treating them as two separate compilation tasks.
 
 ### DS-09 — Adaptation measures library
 **Serves** REQ-060, REQ-061 · **Source** New. To be compiled from existing publications and new content
@@ -1203,21 +1254,21 @@ Also published as `2026-08-12-WP4-DRD-requirements.csv`, which carries the Thai 
 
 | ID | Section | Requirement | Status | Handling | Goes to | Source assets |
 |---|---|---|---|---|---|---|
-| REQ-001 | 1.1 | History and trends of natural disasters | Gap | Ready to build | DEL-7 | — |
+| REQ-001 | 1.1 | History and trends of natural disaster events | Partial | Ready to build | DEL-12 | DDPM_2_1 |
 | REQ-002 | 1.1 | IPCC risk framework and definitions | Full | Already covered | — | PUB-012, DAT-014 |
 | REQ-003 | 1.1 | Physical risk and transition risk | Gap | Ready to build | DEL-7 | — |
-| REQ-004 | 1.1 | National risk summary cards | Partial | Product surface | Investigation, App. B2 | DCCE_3_1, DCCE_3_2, DCCE_3_3, DCCE_3_4, DCCE_3_5, DCCE_3_6, DCCE_3_7 |
-| REQ-005 | 1.1 | Critical hotspots by sector and region | Full | Product surface | Investigation, App. B2 | DAT-005 |
+| REQ-004 | 1.1 | National risk summary cards | Partial | Product surface | Investigation, App. B2 + DEL-13 | DCCE_3_1, DCCE_3_2, DCCE_3_3, DCCE_3_4, DCCE_3_5, DCCE_3_6, DCCE_3_7 |
+| REQ-005 | 1.1 | Critical hotspots by sector and region | Full | Product surface | Investigation, App. B2 + DEL-13 | DAT-005 |
 | REQ-006 | 1.1 | National adaptation plan summary | Full | Already covered | — | PUB-009, DAT-021, MED-025, MED-111, MED-112 |
 | REQ-007 | 1.1 | Examples of high-value adaptation measures | Full | Already covered | — | MED-008, DAT-022 |
 | REQ-008 | 1.2 | Search by administrative level | Gap | Ready to build | DEL-2 | — |
-| REQ-009 | 1.2 | Map integration with administrative boundaries | Gap | Product surface | Investigation, App. B2 | SYS-003, DAT-005 |
-| REQ-010 | 1.2 | Quick-view point dashboard | Partial | Product surface | Investigation, App. B2 | SYS-003 |
+| REQ-009 | 1.2 | Map integration with administrative boundaries | Gap | Product surface | Investigation, App. B2 + DEL-13 | SYS-003, DAT-005 |
+| REQ-010 | 1.2 | Quick-view point dashboard | Partial | Product surface | Investigation, App. B2 + DEL-13 | SYS-003 |
 | REQ-011 | 2.1 | Historical extreme weather statistics | Partial | Ready to build | DEL-1 | DCCE_2_1, DCCE_2_2 |
-| REQ-012 | 2.1 | National macroeconomic loss and damage statistics | Partial | Loss and damage | Loss and damage work | PUB-026, MED-050 |
-| REQ-013 | 2.1 | National exposure trends | Gap | Product surface | Investigation, App. B2 | DAT-005 |
+| REQ-012 | 2.1 | National macroeconomic loss and damage statistics | Partial | Loss and Damage | Loss and Damage entry, App. B | PUB-026, MED-050 |
+| REQ-013 | 2.1 | National exposure trends | Gap | Product surface | Investigation, App. B2 + DEL-13 | DAT-005 |
 | REQ-014 | 2.2 | Risk profiles for 77 provinces and local government | Gap | Ready to build | DEL-2 | — |
-| REQ-015 | 2.2 | Risk profiles for the six priority sectors | Partial | Product surface | Investigation, App. B2 | DAT-005, DAT-014 |
+| REQ-015 | 2.2 | Risk profiles for the six priority sectors | Partial | Product surface | Investigation, App. B2 + DEL-13 | DAT-005, DAT-014 |
 | REQ-016 | 2.3 | Status of the climate change act | Full | Already covered | — | PUB-003, PUB-004, MED-074, MED-075 |
 | REQ-017 | 2.3 | Summary of supporting laws and policy instruments | Gap | Ready to build | DEL-8 | — |
 | REQ-018 | 2.3 | Avoided losses certification system | Gap | Awaiting decision | Brief E-1 | — |
@@ -1230,30 +1281,30 @@ Also published as `2026-08-12-WP4-DRD-requirements.csv`, which carries the Thai 
 | REQ-025 | 2.3 | National to local government coordination | Gap | Ready to build | DEL-8 | — |
 | REQ-026 | 2.3 | Participation channels and statistics | Full | Already covered | — | SYS-024, PUB-053, PUB-054, PUB-055 |
 | REQ-027 | 2.4 | Local vulnerability and adaptive capacity indices | Partial | Ready to build | DEL-2 | MED-015 |
-| REQ-028 | 2.4 | Integrated spatial risk map | Full | Product surface | Investigation, App. B2 | SYS-003, DAT-005 |
-| REQ-029 | 2.4 | National data security guidance | Full | Already covered | — | PUB-052, MED-026 |
+| REQ-028 | 2.4 | Integrated spatial risk map | Full | Product surface | Investigation, App. B2 + DEL-13 | SYS-003, DAT-005 |
+| REQ-029 | 2.4 | ~~National data security guidance~~ | — | **Dropped — not relevant** | — | — |
 | REQ-030 | 3.1 | Weather station observation data | Gap | Ready to build | DEL-3 | — |
 | REQ-031 | 3.1 | Satellite observation data | Gap | Ready to build | DEL-3 | — |
 | REQ-032 | 3.1 | Monitoring of global climate phenomena | Partial | Ready to build | DEL-5 | MED-105 |
 | REQ-033 | 3.1 | Climatology and key climate variables | Partial | Ready to build | DEL-1 | DCCE_2_1, DCCE_2_2 |
 | REQ-034 | 3.1 | Climate scenario usage guide | Gap | Awaiting decision | Brief E-2 | — |
-| REQ-035 | 3.1 | Downscaled future projection library | Partial | Ready to build | DEL-5 | DCCE_2_11, DCCE_2_16, DCCE_2_17, DCCE_2_18, DCCE_2_19 |
+| REQ-035 | 3.1 | Downscaled future projection library | Partial | Ready to build | DEL-5 | DCCE_2_11, DCCE_2_16, DCCE_2_17, DCCE_2_18, DCCE_2_19, clim-webbased.dcce.go.th (unregistered — needs a formal asset entry) |
 | REQ-036 | 3.1 | National uncertainty management standard | Gap | Awaiting decision | Brief E-2 | — |
 | REQ-037 | 3.1 | Case studies applying projections to planning | Gap | Ready to build | DEL-7 | — |
 | REQ-038 | 3.2 | Definitions of core vulnerability concepts | Partial | Ready to build | DEL-6 | DAT-014, MED-015 |
 | REQ-039 | 3.2 | Sector damage function library | Gap | Awaiting decision | Brief E-1 | — |
 | REQ-040 | 3.2 | National risk assessment methodology | Partial | Ready to build | DEL-6 | PUB-012, MED-125 |
-| REQ-041 | 3.2 | Sector risk results | Partial | Product surface | Investigation, App. B2 | DAT-005, MED-004, MED-033 |
-| REQ-042 | 3.2 | Slow-onset hazard statistics | Gap | Ready to build | DEL-1 | — |
+| REQ-041 | 3.2 | Sector risk results | Partial | Product surface | Investigation, App. B2 + DEL-13 | DAT-005, MED-004, MED-033 |
+| REQ-042 | 3.2 | Slow-onset hazard statistics | Gap | Ready to build | DEL-4 | — |
 | REQ-043 | 3.2 | Sea level rise along the coast | Partial | Ready to build | DEL-4 | MD_1_2 |
-| REQ-044 | 3.2 | Land subsidence and salinity intrusion | Gap | Ready to build | DEL-3 | — |
+| REQ-044 | 3.2 | Land subsidence and salinity intrusion | Gap | Ready to build | DEL-4 | — |
 | REQ-045 | 3.2 | Coastal erosion index and beach area loss | Partial | Ready to build | DEL-4 | MED-127, MED-128, MED-129, MED-130, MED-133, MED-134, MED-135, MED-136, MED-137, DMCR_1_1, DMCR_4_1 |
 | REQ-046 | 3.2 | Multi-hazard impact chain diagram | Full | Already covered | — | PUB-012, MED-125, MED-048 |
 | REQ-047 | 3.2 | Impact chain case studies, agriculture and urban | Partial | Ready to build | DEL-7 | MED-048 |
 | REQ-048 | 3.2 | Loss and damage framework under the UNFCCC | Partial | Ready to build | DEL-6 | PUB-026 |
-| REQ-049 | 3.2 | Historical loss dashboard | Partial | Loss and damage | Loss and damage work | MED-050, DDPM_3_2, DDPM_2_3, RFD_1_2 |
-| REQ-050 | 3.2 | Non-economic loss records | Partial | Loss and damage | Loss and damage work | MED-108, MED-150 |
-| REQ-051 | 3.2 | National risk and loss calculation manual | Partial | Loss and damage | Loss and damage work | PUB-012, MED-125 |
+| REQ-049 | 3.2 | Historical loss dashboard | Partial | Loss and Damage | Loss and Damage entry, App. B | MED-050, DDPM_3_2, DDPM_2_3, RFD_1_2 |
+| REQ-050 | 3.2 | Non-economic loss records | Partial | Loss and Damage | Loss and Damage entry, App. B | MED-108, MED-150 |
+| REQ-051 | 3.2 | National risk and loss calculation manual | Partial | Loss and Damage | Loss and Damage entry, App. B | PUB-012, MED-125 |
 | REQ-052 | 3.3 | Cost-benefit and avoided losses methodology | Gap | Awaiting decision | Brief E-1 | — |
 | REQ-053 | 3.3 | Gender equality and social inclusion guidance | Gap | Ready to build | DEL-9 | — |
 | REQ-054 | 3.3 | Protection measures for vulnerable groups | Partial | Ready to build | DEL-9 | MED-002 |
@@ -1271,8 +1322,8 @@ Also published as `2026-08-12-WP4-DRD-requirements.csv`, which carries the Thai 
 | REQ-066 | 3.4 | Link to global goal on adaptation indicators | Full | Already covered | — | MED-024, MED-049 |
 | REQ-067 | 3.4 | National monitoring and evaluation tracker | Full | Already covered | — | DAT-014 |
 | REQ-068 | 3.4 | Successful project case study library | Full | Already covered | — | MED-008, MED-009, MED-010, MED-011, MED-012, MED-013, MED-014, MED-017 |
-| REQ-069 | 4.1 | Searchable data catalog and metadata | Full | Already covered | — | SYS-002, PUB-051, PUB-052 |
-| REQ-070 | 4.2 | Visualisation and analytics application | Partial | Product surface | Investigation, App. B2 | SYS-003, DAT-005 |
+| REQ-069 | 4.1 | Searchable data catalog and metadata | Full | Already covered, scope pending | — | SYS-002, PUB-051, PUB-052 |
+| REQ-070 | 4.2 | Visualisation and analytics application | Partial | Product surface | Investigation, App. B2 + DEL-13 | SYS-003, DAT-005 |
 | REQ-071 | 4.3 | Connections to external data portals | Gap | Ready to build | DEL-11 | — |
 | REQ-072 | 5.1 | Announcements and training distribution | Full | Already covered | — | SYS-004, PUB-049 |
 | REQ-073 | 5.2 | Feedback platform for user agencies | Gap | Ready to build | DEL-11 | — |
@@ -1373,6 +1424,8 @@ Also published as `2026-08-12-WP4-DRD-assets-cited.csv`, which adds the owner, t
 | `PUB-051` | บัญชีข้อมูล (Data Catalogue) | Knowledge Asset |
 | `SYS-004` | ระบบสัมมนาและฝึกอบรมด้านสิ่งแวดล้อม | Data Product |
 | `PUB-049` | ข่าวสารประชาสัมพันธ์ | Knowledge Asset |
+| `clim-webbased.dcce.go.th` | DCCE's downscaled climate projection platform | Data Product — **not yet in either canonical asset registry checked for this document; needs a formal registry entry** |
+| `DDPM_2_1` | ข้อมูลเหตุการณ์ภัยพิบัติย้อนหลัง 10 ปี (10-year historical disaster occurrence data) | Dataset, DDPM |
 
 ---
 
@@ -1382,9 +1435,13 @@ This document is bounded. What follows is what it does not cover and where it is
 
 ## The loss and damage specification does not exist yet
 
-Four requirements point to the loss and damage work rather than carrying a specification here. That work has not started, so those pointers are forward references rather than links.
+Four requirements — REQ-012, REQ-049, REQ-050, REQ-051 — depend on the loss and damage work package's own specification, which hasn't been written yet. **See the Loss and Damage entry in Appendix B** for demand, what exists, and the sequencing blocker. Three of these four are MUST-priority per sitemap v8, not optional — whoever writes that specification should start from these four, since they establish where the loss and damage product surfaces on the site and what each page needs from it.
 
-REQ-012, REQ-049, REQ-050 and REQ-051 are affected. **Whoever writes that specification should start from these four**, since they establish where the loss and damage product surfaces on the site and what each page needs from it. That linkage does not exist anywhere else.
+## Administrative geography: DOPA boundaries are not LAO boundaries
+
+Any sub-provincial content on this site (search, profiles) is organized on DOPA's province/district/sub-district hierarchy. Local Administrative Organization (LAO) jurisdiction — especially municipalities — does not nest cleanly inside that hierarchy. A municipality can span multiple tambons or straddle sub-district lines. อบจ. is province-wide and unaffected.
+
+This is not a display problem to fix with better UI. The underlying risk-map input data is itself only disaggregated to DOPA administrative boundary, not to LAO geometry, so there's no existing figure to simply relabel. A real fix means either extracting content from provincial planning documents (Brief E-5, Appendix B) or geospatially re-aggregating the underlying data onto actual LAO polygons (Brief E-6, Appendix B) — two distinct undertakings, not resolved in this document. See REQ-008 and REQ-014 for where this bites directly, and DEL-2 (Appendix A).
 
 ## Reporting requirements are handled separately, and later
 
@@ -1392,7 +1449,11 @@ Thailand's adaptation reporting obligations produce a large body of requirements
 
 The reason is sequencing. Reporting sits at the data layer, and the sensible order is to settle the website content and the products first, then compare the finished design against the reporting requirements. That comparison will show how much of the reporting need the platform already meets, and where extending the data layer slightly would close the rest.
 
-The linkage already exists in the underlying data. Fifty-one of the 73 requirements carry a reporting tag, so the comparison can be made mechanically when the time comes. **It is not part of this document and should not be attempted before the design settles.**
+The linkage already exists in the underlying data. Fifty-one of the 72 addressable requirements carry a reporting tag (REQ-029 was dropped as not relevant — see below), so the comparison can be made mechanically when the time comes. **It is not part of this document and should not be attempted before the design settles.**
+
+## REQ-029 was dropped
+
+National data security guidance for research use (REQ-029, section 2.4) was reviewed and judged not relevant to this platform. It's removed from the live requirement count and the traceability matrix rather than carried forward as "already covered" — kept as a struck-through record in the traceability matrix (Appendix C) rather than deleted outright, so the exclusion itself stays visible.
 
 ## Two services have nowhere to live on the site
 
@@ -1408,7 +1469,7 @@ This is a limit of the site map rather than of this analysis. A requirement-by-r
 
 REQ-005 and REQ-028 are recorded as fully covered, and both rest on the presence of an existing analytical product. Three other requirements resting on the same reasoning were moved back to gap or partial during the 11 August review.
 
-They are handled here as product surfaces rather than as covered, and both are in the investigation list in Appendix B2. **Do not treat either as finished until that investigation resolves them.**
+They are handled here as product surfaces rather than as covered, and both are in the investigation list in Appendix B2, and in scope for DEL-13's hosting migration (Appendix A). **Do not treat either as finished until that investigation resolves them.**
 
 ## Almost all source data is flagged draft
 

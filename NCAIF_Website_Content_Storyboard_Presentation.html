@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCAIF Website — Content Storyboard & Synthesis Guide</title>
+
+    <!-- Google Fonts: Sarabun & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===========================================
+           GLOBAL BOX-SIZING RESET & CREAGY DESIGN SYSTEM
+           =========================================== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Creagy Brand Colors */
+            --creagy-blue: #00618B;
+            --creagy-dark-navy: #031B2A;
+            --creagy-navy-mid: #0A324A;
+            --creagy-sky: #317ABD;
+            --creagy-accent-blue: #00A3E0;
+            --creagy-light-blue: #F0F7FB;
+            
+            /* Structural & Text */
+            --text-dark: #031B2A;
+            --text-body: #1E293B;
+            --text-muted: #64748B;
+            --bg-page: #0B132B; /* Dark background frame */
+            --slide-bg: #FFFFFF;
+            --card-bg: #FFFFFF;
+            --border-color: #CBD5E1;
+            
+            /* Readiness Level Colors */
+            --level-5: #059669;
+            --level-5-bg: #ECFDF5;
+            --level-4: #0284C7;
+            --level-4-bg: #F0F9FF;
+            --level-3: #D97706;
+            --level-3-bg: #FFFBEB;
+            --level-2: #EA580C;
+            --level-2-bg: #FFF7ED;
+            --level-1: #DC2626;
+            --level-1-bg: #FEF2F2;
+
+            /* Typography */
+            --font-main: 'Sarabun', 'Plus Jakarta Sans', sans-serif;
+            --duration: 0.35s;
+            --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* ===========================================
+           FULL VIEWPORT STAGE SCALING (1.0 FIT)
+           =========================================== */
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: var(--bg-page);
+            font-family: var(--font-main);
+            color: var(--text-dark);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .deck-viewport {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background: var(--bg-page);
+        }
+
+        /* Absolute Top-Left Positioned Stage */
+        .deck-stage {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1920px;
+            height: 1080px;
+            overflow: hidden;
+            transform-origin: 0 0;
+            background: var(--slide-bg);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+            border-radius: 4px;
+        }
+
+        .slide {
+            position: absolute;
+            inset: 0;
+            width: 1920px;
+            height: 1080px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            background: var(--slide-bg);
+            padding: 32px 48px 24px 48px;
+            transition: opacity var(--duration) ease, visibility var(--duration) ease;
+        }
+
+        .slide.active, .slide.visible {
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+            z-index: 1;
+        }
+
+        /* ===========================================
+           HEADER WITH NODE BREADCRUMBS & NAVIGATION
+           =========================================== */
+        .slide-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid var(--creagy-blue);
+            padding-bottom: 12px;
+            margin-bottom: 14px;
+        }
+
+        .header-left { flex: 1; }
+
+        .section-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14.5px;
+            font-weight: 800;
+            color: var(--creagy-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 4px;
+        }
+
+        .section-kicker-pill {
+            background: var(--creagy-light-blue);
+            border: 1px solid rgba(0, 97, 139, 0.3);
+            padding: 3px 10px;
+            border-radius: 4px;
+        }
+
+        .slide-title {
+            font-size: 34px;
+            font-weight: 800;
+            color: var(--creagy-dark-navy);
+            line-height: 1.15;
+            margin-bottom: 4px;
+        }
+
+        .slide-subtitle {
+            font-size: 21px;
+            font-weight: 500;
+            color: var(--text-body);
+            line-height: 1.3;
+        }
+
+        .header-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 8px;
+        }
+
+        .node-breadcrumb-bar {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: #F1F5F9;
+            border: 1px solid var(--border-color);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--creagy-dark-navy);
+        }
+
+        .node-breadcrumb-item { color: var(--creagy-blue); }
+
+        .node-jump-nav { display: flex; gap: 6px; }
+
+        .jump-btn {
+            background: #FFFFFF;
+            border: 1px solid var(--border-color);
+            color: var(--creagy-dark-navy);
+            font-size: 13px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .jump-btn:hover, .jump-btn.active {
+            background: var(--creagy-blue);
+            color: #FFFFFF;
+            border-color: var(--creagy-blue);
+        }
+
+        .slide-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-color);
+            padding-top: 12px;
+            font-size: 15px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .footer-copyright { color: var(--text-muted); }
+        .footer-page-num { font-weight: 700; color: var(--creagy-blue); }
+
+        .slide-body {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 18px;
+            overflow: hidden;
+        }
+
+        /* ===========================================
+           VISUAL TREE HIERARCHY CARDS & NESTED NODES
+           Occupies > 50% of slide area with enlarged text
+           =========================================== */
+        .grid-2-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: stretch; }
+        .grid-3-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: stretch; }
+        .grid-4-col { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; align-items: stretch; }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 22px 26px;
+            box-shadow: 0 4px 14px rgba(0, 97, 139, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: left;
+            position: relative;
+            min-height: 220px;
+        }
+
+        .card.tint-blue {
+            background: var(--creagy-light-blue);
+            border-color: rgba(0, 97, 139, 0.3);
+        }
+
+        .card-top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .node-tag { font-size: 15px; font-weight: 800; color: var(--creagy-dark-navy); letter-spacing: 0.02em; }
+
+        .parent-node-tag {
+            background: var(--creagy-dark-navy);
+            color: #FFFFFF;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        .card-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--creagy-dark-navy);
+            margin-bottom: 8px;
+            line-height: 1.25;
+        }
+
+        .card-desc {
+            font-size: 18px;
+            color: var(--text-body);
+            line-height: 1.45;
+            font-weight: 400;
+            flex: 1;
+        }
+
+        .card-desc ul { list-style: none; padding: 0; margin: 0; }
+        .card-desc li { margin-bottom: 6px; position: relative; padding-left: 14px; }
+        .card-desc li::before { content: '•'; position: absolute; left: 0; color: var(--creagy-blue); font-weight: bold; }
+
+        /* NESTED SUB-NODE CARDS (Hierarchical Child Cards inside Parent Node) */
+        .child-nodes-container {
+            margin-top: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-left: 10px;
+            border-left: 4px solid var(--creagy-sky);
+        }
+
+        .child-node-box {
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 97, 139, 0.25);
+            border-radius: 6px;
+            padding: 12px 14px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .child-node-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+
+        .child-node-title { font-size: 17.5px; font-weight: 800; color: var(--creagy-dark-navy); }
+        .child-node-desc { font-size: 16px; color: var(--text-body); line-height: 1.4; }
+
+        .card-action-box {
+            margin-top: 12px;
+            padding: 8px 12px;
+            background: rgba(0, 97, 139, 0.06);
+            border-left: 4px solid var(--creagy-blue);
+            border-radius: 4px;
+            font-size: 16px;
+            color: var(--creagy-dark-navy);
+            font-weight: 500;
+        }
+
+        /* Readiness Badges */
+        .badge-readiness {
+            display: inline-flex;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 4px;
+            line-height: 1;
+            white-space: nowrap;
+        }
+
+        .badge-level-5 { background: var(--level-5-bg); color: var(--level-5); border: 1px solid rgba(5, 150, 105, 0.3); }
+        .badge-level-4 { background: var(--level-4-bg); color: var(--level-4); border: 1px solid rgba(2, 132, 199, 0.3); }
+        .badge-level-3 { background: var(--level-3-bg); color: var(--level-3); border: 1px solid rgba(217, 119, 6, 0.3); }
+        .badge-level-2 { background: var(--level-2-bg); color: var(--level-2); border: 1px solid rgba(234, 88, 12, 0.3); }
+        .badge-level-1 { background: var(--level-1-bg); color: var(--level-1); border: 1px solid rgba(220, 38, 38, 0.3); }
+
+        /* Cover Slide Styling */
+        .cover-slide {
+            background: linear-gradient(135deg, #031B2A 0%, #0A324A 60%, #00618B 100%);
+            color: #FFFFFF;
+            padding: 56px 72px 40px 72px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .cover-header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 16px;
+        }
+
+        .cover-org { font-size: 20px; font-weight: 700; letter-spacing: 0.05em; color: var(--creagy-accent-blue); }
+        .cover-date { font-size: 18px; color: rgba(255, 255, 255, 0.8); }
+
+        .cover-main { margin: 24px 0; max-width: 1550px; }
+        .cover-kicker { font-size: 24px; font-weight: 600; color: var(--creagy-accent-blue); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.08em; }
+        .cover-title { font-size: 58px; font-weight: 800; line-height: 1.15; margin-bottom: 16px; color: #FFFFFF; }
+        .cover-subtitle { font-size: 24px; line-height: 1.45; color: rgba(255, 255, 255, 0.9); max-width: 1400px; font-weight: 300; }
+
+        .cover-footer-grid {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 18px;
+        }
+
+        .cover-metric-box {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 8px;
+            padding: 16px 18px;
+        }
+
+        .cover-metric-num { font-size: 36px; font-weight: 800; color: #FFFFFF; margin-bottom: 4px; }
+        .cover-metric-label { font-size: 15px; color: rgba(255, 255, 255, 0.85); font-weight: 500; }
+
+        /* Animation reveals */
+        .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.35s var(--ease-out), transform 0.35s var(--ease-out); }
+        .slide.visible .reveal { opacity: 1; transform: translateY(0); }
+
+        /* Edit Mode Overlay */
+        .edit-hotzone { position: fixed; top: 0; left: 0; width: 80px; height: 80px; z-index: 10000; cursor: pointer; }
+        .edit-toggle {
+            position: fixed; top: 20px; left: 20px; z-index: 10001;
+            background: var(--creagy-dark-navy); color: #FFFFFF;
+            border: 1px solid var(--creagy-accent-blue); border-radius: 6px;
+            padding: 8px 16px; font-size: 14px; font-weight: 700; cursor: pointer;
+            opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+        }
+        .edit-toggle.show, .edit-toggle.active { opacity: 1; pointer-events: auto; }
+    </style>
+</head>
+<body>
+    <div class="edit-hotzone"></div>
+    <button class="edit-toggle" id="editToggle">✏️ Edit Mode (E)</button>
+
+    <div class="deck-viewport">
+        <main class="deck-stage" id="deckStage">
+
+            <!-- SLIDE 1: COVER -->
+            <section class="slide cover-slide active visible">
+                <div class="cover-header reveal">
+                    <div class="cover-org">DEPARTMENT OF CLIMATE CHANGE AND ENVIRONMENT (DCCE) — CRDB</div>
+                    <div class="cover-date">13 August 2026</div>
+                </div>
+
+                <div class="cover-main">
+                    <div class="cover-kicker reveal">Node Content Storyboard & Synthesis Guide</div>
+                    <h1 class="cover-title reveal">NCAIF Website Sitemap & Node Audit</h1>
+                    <p class="cover-subtitle reveal">Structured audit of all 31 addressable sitemap pages across 5 site sections, content readiness evaluations (Levels 1–5), reader experience sequencing, and synthesis blueprint for Thailand's climate risk portal.</p>
+                </div>
+
+                <div class="cover-footer-grid reveal">
+                    <div class="cover-metric-box">
+                        <div class="cover-metric-num" style="color: var(--creagy-accent-blue);">31 Pages</div>
+                        <div class="cover-metric-label">Total Sitemap Scope</div>
+                    </div>
+                    <div class="cover-metric-box">
+                        <div class="cover-metric-num" style="color: #34D399;">9 Pages</div>
+                        <div class="cover-metric-label">Ready to Format & Compile</div>
+                    </div>
+                    <div class="cover-metric-box">
+                        <div class="cover-metric-num" style="color: #FBBF24;">19 Pages</div>
+                        <div class="cover-metric-label">Synthesis & Authoring Required</div>
+                    </div>
+                    <div class="cover-metric-box">
+                        <div class="cover-metric-num" style="color: #F87171;">3 Pages</div>
+                        <div class="cover-metric-label">Policy Decision Blocked</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 2: READINESS FRAMEWORK -->
+            <section class="slide">
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="section-kicker">
+                            <span class="section-kicker-pill">AUDIT METHODOLOGY</span>
+                            <span>Sitemap Evaluation Framework</span>
+                        </div>
+                        <h2 class="slide-title">Readiness Scale (Levels 1 to 5)</h2>
+                        <div class="slide-subtitle">Operational evaluation model measuring content availability, analytical effort, and publication readiness</div>
+                    </div>
+                    <div class="header-right">
+                        <div class="node-breadcrumb-bar">
+                            <span>Sitemap</span> <span>›</span> <span class="node-breadcrumb-item">Audit Scale</span>
+                        </div>
+                        <div class="node-jump-nav">
+                            <button class="jump-btn" onclick="presentation.showSlide(2)">Sec 1</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(3)">Sec 2</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(5)">Sec 3</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(10)">Sec 4&5</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(11)">Summary</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-body">
+                    <div class="grid-3-col">
+                        <div class="card tint-blue">
+                            <div class="card-top-bar">
+                                <span class="node-tag">TIER 5</span>
+                                <span class="badge-readiness badge-level-5">Level 5 — Format</span>
+                            </div>
+                            <div class="card-title">Direct Web Porting</div>
+                            <div class="card-desc">Real, matched material covers the page in full. The remaining work is strictly technical formatting into web components.</div>
+                        </div>
+
+                        <div class="card tint-blue">
+                            <div class="card-top-bar">
+                                <span class="node-tag">TIER 4</span>
+                                <span class="badge-readiness badge-level-4">Level 4 — Compile</span>
+                            </div>
+                            <div class="card-title">Multi-Doc Compilation</div>
+                            <div class="card-desc">Real material exists across multiple existing documents. Requires compiling into one coherent page without new research.</div>
+                        </div>
+
+                        <div class="card tint-blue">
+                            <div class="card-top-bar">
+                                <span class="node-tag">TIER 3</span>
+                                <span class="badge-readiness badge-level-3">Level 3 — Synthesize</span>
+                            </div>
+                            <div class="card-title">Data & Spatial Synthesis</div>
+                            <div class="card-desc">Real underlying datasets exist but require spatial computation, analytical structuring, or synthesis before publishing.</div>
+                        </div>
+                    </div>
+
+                    <div class="grid-2-col">
+                        <div class="card">
+                            <div class="card-top-bar">
+                                <span class="node-tag">TIER 2</span>
+                                <span class="badge-readiness badge-level-2">Level 2 — Authoring</span>
+                            </div>
+                            <div class="card-title">Original Authoring & Research</div>
+                            <div class="card-desc">Little or no existing material. Original writing or literature research required, but no external dependency blocks execution.</div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-top-bar">
+                                <span class="node-tag">TIER 1</span>
+                                <span class="badge-readiness badge-level-1">Level 1 — Blocked</span>
+                            </div>
+                            <div class="card-title">External & Policy Dependency</div>
+                            <div class="card-desc">Cannot move forward until external agreements, DCCE executive decisions, or methodology work package outputs land.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-footer">
+                    <span class="footer-copyright">© 2026 The Creagy Company Limited. All Rights Reserved. | STRICTLY PRIVATE AND CONFIDENTIAL</span>
+                    <span class="footer-page-num">Slide 2 / 13</span>
+                </div>
+            </section>
+
+            <!-- SLIDE 3: SECTION 1 (HOME & OVERVIEW) -->
+            <section class="slide">
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="section-kicker">
+                            <span class="section-kicker-pill">SECTION 1</span>
+                            <span>หน้าแรก — Home and Overview</span>
+                        </div>
+                        <h2 class="slide-title">Section 1.1 & 1.2 — Risk Overview & Area Search</h2>
+                        <div class="slide-subtitle">Foundation pages establishing climate risk concepts, national priorities, and sub-provincial data lookup</div>
+                    </div>
+                    <div class="header-right">
+                        <div class="node-breadcrumb-bar">
+                            <span>Section 1</span> <span>›</span> <span class="node-breadcrumb-item">Nodes 1.1 & 1.2</span>
+                        </div>
+                        <div class="node-jump-nav">
+                            <button class="jump-btn active" onclick="presentation.showSlide(2)">Sec 1</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(3)">Sec 2</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(5)">Sec 3</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(10)">Sec 4&5</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(11)">Summary</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-body">
+                    <div class="grid-3-col">
+                        <div class="card">
+                            <div class="card-top-bar">
+                                <span class="node-tag">Node 1.1.1</span>
+                                <span class="badge-readiness badge-level-2">Readiness 2/5</span>
+                            </div>
+                            <div class="card-title">Overview of Thailand's Climate Risk</div>
+                            <div class="card-desc">
+                                <ul>
+                                    <li>• IPCC hazard, exposure, and vulnerability definitions.</li>
+                                    <li>• Physical risk vs. transition risk explainer with Thai examples.</li>
+                                    <li>• National 7-sector summary cards (draft status flag).</li>
+                                    <li>• 2-decade DDPM disaster occurrence trend chart.</li>
+                                </ul>
+                            </div>
+                            <div class="card-action-box"><strong>Synthesis:</strong> Port IPCC definitions. Author physical vs. transition explainer. Resolve DDPM reporting caveats.</div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-top-bar">
+                                <span class="node-tag">Node 1.1.2</span>
+                                <span class="badge-readiness badge-level-3">Readiness 3/5</span>
+                            </div>
+                            <div class="card-title">Key Risks & Adaptation Priorities</div>
+                            <div class="card-desc">
+                                <ul>
+                                    <li>• National Adaptation Plan (NAP) strategy summary.</li>
+                                    <li>• Sector & regional climate risk hotspot breakdown.</li>
+                                    <li>• High-value adaptation success measures & nature-based solutions guidance.</li>
+                                </ul>
+                            </div>
+                            <div class="card-action-box"><strong>Synthesis:</strong> Port NAP & success articles. Explicitly flag hotspots as province-level composite index.</div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-top-bar">
+                                <span class="node-tag">Node 1.2</span>
+                                <span class="badge-readiness badge-level-2">Readiness 2/5</span>
+                            </div>
+                            <div class="card-title">Area-Based Data Search Tool</div>
+                            <div class="card-desc">
+                                <ul>
+                                    <li>• Interactive search hierarchy (Province -> District -> Sub-district).</li>
+                                    <li>• Fallback UI logic when sub-provincial data is missing.</li>
+                                    <li>• Administrative boundary map overlay & point lookup summary.</li>
+                                </ul>
+                            </div>
+                            <div class="card-action-box"><strong>Synthesis:</strong> Build fallback UI logic first. Display point lookup recommended measures as pending data.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-footer">
+                    <span class="footer-copyright">© 2026 The Creagy Company Limited. All Rights Reserved. | STRICTLY PRIVATE AND CONFIDENTIAL</span>
+                    <span class="footer-page-num">Slide 3 / 13</span>
+                </div>
+            </section>
+
+            <!-- SLIDE 4: SECTION 2 PART 1 (POLICY MAKER CENTER) -->
+            <section class="slide">
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="section-kicker">
+                            <span class="section-kicker-pill">SECTION 2</span>
+                            <span>ศูนย์ข้อมูลสำหรับผู้กำหนดนโยบาย — Policy Maker Information Center</span>
+                        </div>
+                        <h2 class="slide-title">Section 2.1 & 2.2 — Situation & Regional Profiles</h2>
+                        <div class="slide-subtitle">Historical extreme weather statistics, exposure trends, and 77-province vulnerability profiles</div>
+                    </div>
+                    <div class="header-right">
+                        <div class="node-breadcrumb-bar">
+                            <span>Section 2</span> <span>›</span> <span class="node-breadcrumb-item">Nodes 2.1 & 2.2</span>
+                        </div>
+                        <div class="node-jump-nav">
+                            <button class="jump-btn" onclick="presentation.showSlide(2)">Sec 1</button>
+                            <button class="jump-btn active" onclick="presentation.showSlide(3)">Sec 2</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(5)">Sec 3</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(10)">Sec 4&5</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(11)">Summary</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-body">
+                    <div class="grid-2-col">
+                        <div class="card">
+                            <div class="card-top-bar">
+                                <span class="node-tag">Node 2.1</span>
+                                <span class="badge-readiness badge-level-2">Readiness 2/5</span>
+                            </div>
+                            <div class="card-title">National Climate Change Situation</div>
+                            <div class="card-desc">
+                                <ul>
+                                    <li>• <strong>Extreme Weather Stats:</strong> Climatology extreme weather indices (temperature & rainfall frequency/intensity).</li>
+                                    <li>• <strong>Exposure Trends:</strong> 6-sector spatial exposure trend next to disaster history statistics.</li>
+                                    <li>• <strong>Loss & Damage Pointer:</strong> Forward note linking to future Loss & Damage dashboard.</li>
+                                </ul>
+                            </div>
+                            <div class="card-action-box"><strong>Synthesis:</strong> Resolve grid data access restriction with TMD. Frame exposure trend explicitly without inferring hazard trend.</div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-top-bar">
+                                <span class="node-tag">Node 2.2</span>
+                                <span class="badge-readiness badge-level-2">Readiness 2/5</span>
+                            </div>
+                            <div class="card-title">Area & Sector Risk Profiles (77 Provinces)</div>
+                            <div class="card-desc">
+                                <ul>
+                                    <li>• <strong>77 Province Profiles:</strong> Standardized profile covering main hazards, exposed sectors, and vulnerability picture.</li>
+                                    <li>• <strong>6 Priority Sectors:</strong> Sector breakdown reusing spatial risk datasets.</li>
+                                    <li>• <strong>Boundary Caveat:</strong> Visible note that sub-provincial municipal coverage is unavailable.</li>
+                                </ul>
+                            </div>
+                            <div class="card-action-box"><strong>Synthesis:</strong> Combine DCCE composite index with NESDC provincial indicators and NSO census datasets for enriched profiles.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-footer">
+                    <span class="footer-copyright">© 2026 The Creagy Company Limited. All Rights Reserved. | STRICTLY PRIVATE AND CONFIDENTIAL</span>
+                    <span class="footer-page-num">Slide 4 / 13</span>
+                </div>
+            </section>
+
+            <!-- SLIDE 5: SECTION 2 PART 2 (POLICY MAKER CENTER: NODE 2.3 WITH NESTED SUB-NODES 2.3.1 & 2.3.2) -->
+            <section class="slide">
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="section-kicker">
+                            <span class="section-kicker-pill">SECTION 2</span>
+                            <span>ศูนย์ข้อมูลสำหรับผู้กำหนดนโยบาย — Policy Maker Information Center</span>
+                        </div>
+                        <h2 class="slide-title">Section 2.3 & 2.4 — Legislation, Governance & Vulnerability</h2>
+                        <div class="slide-subtitle">Climate Change Act parent framework, nested finance & local role sub-nodes, and local resilience index</div>
+                    </div>
+                    <div class="header-right">
+                        <div class="node-breadcrumb-bar">
+                            <span>Section 2</span> <span>›</span> <span class="node-breadcrumb-item">Nodes 2.3 & 2.4</span>
+                        </div>
+                        <div class="node-jump-nav">
+                            <button class="jump-btn" onclick="presentation.showSlide(2)">Sec 1</button>
+                            <button class="jump-btn active" onclick="presentation.showSlide(4)">Sec 2</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(5)">Sec 3</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(10)">Sec 4&5</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(11)">Summary</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-body">
+                    <div class="grid-2-col">
+
+                        <!-- PARENT NODE 2.3 WITH NESTED CHILD NODES 2.3.1 & 2.3.2 INSIDE IT -->
+                        <div class="card tint-blue">
+                            <div class="card-top-bar">
+                                <span class="parent-node-tag">PARENT NODE 2.3</span>
+                                <span class="badge-readiness badge-level-2">Readiness 2/5</span>
+                            </div>
+                            <div class="card-title">Climate Change Act & Supporting Laws</div>
+                            <div class="card-desc">
+                                Draft Climate Change Act summary and supporting adaptation laws mapped by authority (Line Agency vs. Local Administrative Organization).
+
+                                <!-- CHILD NODES CONTAINER FOR 2.3.1 AND 2.3.2 -->
+                                <div class="child-nodes-container">
+                                    <div class="child-node-box">
+                                        <div class="child-node-header">
+                                            <span class="child-node-title">↳ Sub-Node 2.3.1: Funding & Finance Tracking</span>
+                                            <span class="badge-readiness badge-level-1">Level 1: Blocked</span>
+                                        </div>
+                                        <div class="child-node-desc">
+                                            Directory of international climate funds (GCF, AF, GEF), cost-benefit guidance, and budget tagging. <em>(Awaiting DCCE Brief E-1 policy decision)</em>.
+                                        </div>
+                                    </div>
+
+                                    <div class="child-node-box">
+                                        <div class="child-node-header">
+                                            <span class="child-node-title">↳ Sub-Node 2.3.2: DCCE Role & Local Governance</span>
+                                            <span class="badge-readiness badge-level-4">Level 4: Compile</span>
+                                        </div>
+                                        <div class="child-node-desc">
+                                            UNFCCC focal point role, National Climate Policy Committee structure, and dual-channel line agency vs. local government coordination model.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-action-box"><strong>Synthesis:</strong> Port Climate Act text. Compile 2.3.2 local governance structure. Await 2.3.1 policy decision.</div>
+                        </div>
+
+                        <!-- NODE 2.4 -->
+                        <div class="card">
+                            <div class="card-top-bar">
+                                <span class="node-tag">Node 2.4</span>
+                                <span class="badge-readiness badge-level-2">Readiness 2/5</span>
+                            </div>
+                            <div class="card-title">Local Vulnerability Index & Risk Map</div>
+                            <div class="card-desc">
+                                <ul>
+                                    <li>• <strong>Resilience Index Explainer:</strong> Climate Resilience Index methodology, rationale, and relationship with IPCC risk framework.</li>
+                                    <li>• <strong>Integrated Spatial Risk Map:</strong> DCCE spatial risk map interface with visible boundary & data verification flags.</li>
+                                </ul>
+                            </div>
+                            <div class="card-action-box"><strong>Synthesis:</strong> Draft concept explainer. Flag integrated map pending spatial data verification.</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="slide-footer">
+                    <span class="footer-copyright">© 2026 The Creagy Company Limited. All Rights Reserved. | STRICTLY PRIVATE AND CONFIDENTIAL</span>
+                    <span class="footer-page-num">Slide 5 / 13</span>
+                </div>
+            </section>
+
+            <!-- SLIDE 6: SECTION 3 PART 1 (ADAPTATION CYCLE) -->
+            <section class="slide">
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="section-kicker">
+                            <span class="section-kicker-pill">SECTION 3</span>
+                            <span>วงจรขับเคลื่อนการปรับตัว — Adaptation Knowledge Cycle</span>
+                        </div>
+                        <h2 class="slide-title">Section 3.1 — Climate Observations & Projections</h2>
+                        <div class="slide-subtitle">Weather observational feeds, climatology grids, projection models, and uncertainty case studies</div>
+                    </div>
+                    <div class="header-right">
+                        <div class="node-breadcrumb-bar">
+                            <span>Section 3</span> <span>›</span> <span class="node-breadcrumb-item">Node 3.1</span>
+                        </div>
+                        <div class="node-jump-nav">
+                            <button class="jump-btn" onclick="presentation.showSlide(2)">Sec 1</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(3)">Sec 2</button>
+                            <button class="jump-btn active" onclick="presentation.showSlide(5)">Sec 3</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(10)">Sec 4&5</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(11)">Summary</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-body">
+                    <div class="grid-3-col">
+                        <div class="card">
+                            <div class="card-top-bar">
+                                <span class="node-tag">Node 3.1.1</span>
+                                <span class="badge-readiness badge-level-2">Readiness 2/5</span>
+                            </div>
+                            <div class="card-title">Weather & Satellite Monitoring</div>
+                            <div class="card-desc">Explainer linking out to external authoritative agencies: TMD weather station data, GISTDA satellite layers (forest, land, water), and ENSO/IPO monitoring.</div>
+                            <div class="card-action-box"><strong>Role:</strong> DCCE points to authoritative sources (TMD/GISTDA). No need to build duplicate feeds.</div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-top-bar">
+                                <span class="node-tag">Node 3.1.2</span>
+                                <span class="badge-readiness badge-level-2">Readiness 2/5</span>
+                            </div>
+                            <div class="card-title">Thailand Climatology Dashboard</div>
+                            <div class="card-desc">Temperature & rainfall climatology and trend statistics derived from 1981-2023 grid data, linked to projection platform.</div>
+                            <div class="card-action-box"><strong>Action:</strong> Verify grid reanalysis provenance. Link to existing web projection platform.</div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-top-bar">
+                                <span class="node-tag">Node 3.1.3</span>
+                                <span class="badge-readiness badge-level-2">Readiness 2/5</span>
+                            </div>
+                            <div class="card-title">Uncertainty & Case Studies</div>
+                            <div class="card-desc">Worked multi-sector case studies demonstrating climate projection data application in long-term investment decisions and uncertainty handling.</div>
+                            <div class="card-action-box"><strong>Action:</strong> Write two real Thai sector investment case studies showing data & uncertainty management.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-footer">
+                    <span class="footer-copyright">© 2026 The Creagy Company Limited. All Rights Reserved. | STRICTLY PRIVATE AND CONFIDENTIAL</span>
+                    <span class="footer-page-num">Slide 6 / 13</span>
+                </div>
+            </section>
+
+            <!-- SLIDE 7: SECTION 3 PART 2 (ADAPTATION CYCLE: RISK METHODOLOGY & NESTED SUB-NODE 3.2.2.1) -->
+            <section class="slide">
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="section-kicker">
+                            <span class="section-kicker-pill">SECTION 3</span>
+                            <span>วงจรขับเคลื่อนการปรับตัว — Adaptation Knowledge Cycle</span>
+                        </div>
+                        <h2 class="slide-title">Section 3.2.1 & 3.2.2 — Risk Assessment & Slow-Onset Hazards</h2>
+                        <div class="slide-subtitle">IPCC risk terminology, national risk assessment methodology, and nested slow-onset hazard profile (Node 3.2.2.1)</div>
+                    </div>
+                    <div class="header-right">
+                        <div class="node-breadcrumb-bar">
+                            <span>Section 3</span> <span>›</span> <span class="node-breadcrumb-item">Nodes 3.2.1 & 3.2.2</span>
+                        </div>
+                        <div class="node-jump-nav">
+                            <button class="jump-btn" onclick="presentation.showSlide(2)">Sec 1</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(3)">Sec 2</button>
+                            <button class="jump-btn active" onclick="presentation.showSlide(6)">Sec 3</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(10)">Sec 4&5</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(11)">Summary</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-body">
+                    <div class="grid-2-col">
+                        <div class="card">
+                            <div class="card-top-bar">
+                                <span class="node-tag">Node 3.2.1</span>
+                                <span class="badge-readiness badge-level-2">Readiness 2/5</span>
+                            </div>
+                            <div class="card-title">Defining Risk Concepts & Damage Cost Library</div>
+                            <div class="card-desc">
+                                <ul>
+                                    <li>• IPCC standard definitions in Thai/English for Exposure, Sensitivity, Adaptive Capacity, and Resilience.</li>
+                                    <li>• Grounded Thai sector examples for each core concept.</li>
+                                    <li>• Sector damage function library note (pending budget evidence decision).</li>
+                                </ul>
+                            </div>
+                            <div class="card-action-box"><strong>Action:</strong> Port exposure & adaptive capacity. Draft sensitivity & resilience definitions to complete set.</div>
+                        </div>
+
+                        <!-- PARENT NODE 3.2.2 WITH NESTED SUB-NODE 3.2.2.1 INSIDE IT -->
+                        <div class="card tint-blue">
+                            <div class="card-top-bar">
+                                <span class="parent-node-tag">PARENT NODE 3.2.2</span>
+                                <span class="badge-readiness badge-level-2">Readiness 2/5</span>
+                            </div>
+                            <div class="card-title">Risk Assessment Methodology & Sector Results</div>
+                            <div class="card-desc">
+                                National step-by-step risk assessment methodology explainer (from Impact Chain Manual) and sector risk results covering food security, water resources, health, and settlements.
+
+                                <!-- SUB-NODE 3.2.2.1 NESTED DIRECTLY UNDER 3.2.2 -->
+                                <div class="child-nodes-container">
+                                    <div class="child-node-box">
+                                        <div class="child-node-header">
+                                            <span class="child-node-title">↳ Sub-Node 3.2.2.1: Slow-Onset Hazards Profile</span>
+                                            <span class="badge-readiness badge-level-3">Level 3: Synthesize</span>
+                                        </div>
+                                        <div class="child-node-desc">
+                                            Integrated profile covering 4 slow-moving hazards: 
+                                            <strong>Rising Temp/Rainfall</strong>, <strong>Sea Level Rise</strong>, <strong>Land Subsidence & Salinity Intrusion</strong>, and <strong>Coastal Erosion</strong> (supported by 9 DMCR infographics).
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-action-box"><strong>Action:</strong> Draft methodology explainer. Conduct literature review for health heat impacts. Synthesize 4 slow-onset hazards.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-footer">
+                    <span class="footer-copyright">© 2026 The Creagy Company Limited. All Rights Reserved. | STRICTLY PRIVATE AND CONFIDENTIAL</span>
+                    <span class="footer-page-num">Slide 7 / 13</span>
+                </div>
+            </section>
+
+            <!-- SLIDE 8: SECTION 3 PART 3 (ADAPTATION CYCLE: IMPACT CHAINS & LOSS AND DAMAGE) -->
+            <section class="slide">
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="section-kicker">
+                            <span class="section-kicker-pill">SECTION 3</span>
+                            <span>วงจรขับเคลื่อนการปรับตัว — Adaptation Knowledge Cycle</span>
+                        </div>
+                        <h2 class="slide-title">Section 3.2.3, 3.2.4 & 3.2.5 — Impact Chains & Loss and Damage</h2>
+                        <div class="slide-subtitle">Multi-hazard impact chain methods, economic/non-economic loss frameworks, and national calculation manuals</div>
+                    </div>
+                    <div class="header-right">
+                        <div class="node-breadcrumb-bar">
+                            <span>Section 3</span> <span>›</span> <span class="node-breadcrumb-item">Nodes 3.2.3–3.2.5</span>
+                        </div>
+                        <div class="node-jump-nav">
+                            <button class="jump-btn" onclick="presentation.showSlide(2)">Sec 1</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(3)">Sec 2</button>
+                            <button class="jump-btn active" onclick="presentation.showSlide(7)">Sec 3</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(10)">Sec 4&5</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(11)">Summary</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-body">
+                    <div class="grid-3-col">
+                        <div class="card">
+                            <div class="card-top-bar">
+                                <span class="node-tag">Node 3.2.3</span>
+                                <span class="badge-readiness badge-level-4">Readiness 4/5</span>
+                            </div>
+                            <div class="card-title">Impact Chain Method & Studies</div>
+                            <div class="card-desc">
+                                <ul>
+                                    <li>• Multi-hazard impact chain diagram.</li>
+                                    <li>• Worked urban case study (Hat Yai flood study - Ready).</li>
+                                    <li>• Matching agriculture sector impact chain case study.</li>
+                                </ul>
+                            </div>
+                            <div class="card-action-box"><strong>Action:</strong> Port diagram and Hat Yai study. Use 10-year disaster event data for agriculture study.</div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-top-bar">
+                                <span class="node-tag">Node 3.2.4</span>
+                                <span class="badge-readiness badge-level-2">Readiness 2/5</span>
+                            </div>
+                            <div class="card-title">Loss & Damage Framework</div>
+                            <div class="card-desc">
+                                <ul>
+                                    <li>• UNFCCC economic vs non-economic loss concept.</li>
+                                    <li>• Historical disaster damage records (DDPM data).</li>
+                                    <li>• Non-economic loss logs (biodiversity, mental health, heritage).</li>
+                                </ul>
+                            </div>
+                            <div class="card-action-box"><strong>Sequencing:</strong> Write framework now. Dashboard wait for Loss & Damage methodology work package.</div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-top-bar">
+                                <span class="node-tag">Node 3.2.5</span>
+                                <span class="badge-readiness badge-level-2">Readiness 2/5</span>
+                            </div>
+                            <div class="card-title">National Calculation Manual</div>
+                            <div class="card-desc">
+                                <ul>
+                                    <li>• Government-wide standard manual for calculating risk, impact, and loss.</li>
+                                    <li>• Uses Impact Chain manual as structural proxy model.</li>
+                                </ul>
+                            </div>
+                            <div class="card-action-box"><strong>Dependency:</strong> Maintain placeholder page explaining scope until Loss & Damage methodology lands.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-footer">
+                    <span class="footer-copyright">© 2026 The Creagy Company Limited. All Rights Reserved. | STRICTLY PRIVATE AND CONFIDENTIAL</span>
+                    <span class="footer-page-num">Slide 8 / 13</span>
+                </div>
+            </section>
+
+            <!-- SLIDE 9: SECTION 3 PART 4 (ADAPTATION CYCLE: INCLUSION & ROADMAPS) -->
+            <section class="slide">
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="section-kicker">
+                            <span class="section-kicker-pill">SECTION 3</span>
+                            <span>วงจรขับเคลื่อนการปรับตัว — Adaptation Knowledge Cycle</span>
+                        </div>
+                        <h2 class="slide-title">Section 3.3.1, 3.3.2 & 3.3.3 — Inclusion, Roadmaps & Measures</h2>
+                        <div class="slide-subtitle">GEDSI social inclusion guidelines, vulnerable group protection, systemic barriers, and measures database</div>
+                    </div>
+                    <div class="header-right">
+                        <div class="node-breadcrumb-bar">
+                            <span>Section 3</span> <span>›</span> <span class="node-breadcrumb-item">Node 3.3</span>
+                        </div>
+                        <div class="node-jump-nav">
+                            <button class="jump-btn" onclick="presentation.showSlide(2)">Sec 1</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(3)">Sec 2</button>
+                            <button class="jump-btn active" onclick="presentation.showSlide(8)">Sec 3</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(10)">Sec 4&5</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(11)">Summary</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-body">
+                    <div class="grid-3-col">
+                        <div class="card">
+                            <div class="card-top-bar">
+                                <span class="node-tag">Node 3.3.1</span>
+                                <span class="badge-readiness badge-level-2">Readiness 2/5</span>
+                            </div>
+                            <div class="card-title">Gender & Vulnerable Groups</div>
+                            <div class="card-desc">Social inclusion guidelines for adaptation design, protection measures for vulnerable groups (children, elderly, coastal communities), and local wisdom.</div>
+                            <div class="card-action-box"><strong>Data Lead:</strong> Request access to national welfare registry data to ground demographic exposure.</div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-top-bar">
+                                <span class="node-tag">Node 3.3.2</span>
+                                <span class="badge-readiness badge-level-2">Readiness 2/5</span>
+                            </div>
+                            <div class="card-title">Adaptation Roadmap & Barriers</div>
+                            <div class="card-desc">National adaptation execution staging diagram and systemic barriers report (data, financial, and institutional constraints by sector).</div>
+                            <div class="card-action-box"><strong>Action:</strong> Format NAP roadmap diagram. Conduct sector barrier review with explicit source logging.</div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-top-bar">
+                                <span class="node-tag">Node 3.3.3</span>
+                                <span class="badge-readiness badge-level-2">Readiness 2/5</span>
+                            </div>
+                            <div class="card-title">Adaptation Measures Library</div>
+                            <div class="card-desc">Searchable collection filtering measures by hazard, sector, and budget, pairing Nature-Based Solutions with structural infrastructure.</div>
+                            <div class="card-action-box"><strong>Action:</strong> Enter NbS measures immediately. Source structural measures from line agencies.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-footer">
+                    <span class="footer-copyright">© 2026 The Creagy Company Limited. All Rights Reserved. | STRICTLY PRIVATE AND CONFIDENTIAL</span>
+                    <span class="footer-page-num">Slide 9 / 13</span>
+                </div>
+            </section>
+
+            <!-- SLIDE 10: SECTION 3 PART 5 (ADAPTATION CYCLE: TRACKING & M&E WITH NESTED SUB-NODES 3.3.4 & 3.3.5) -->
+            <section class="slide">
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="section-kicker">
+                            <span class="section-kicker-pill">SECTION 3</span>
+                            <span>วงจรขับเคลื่อนการปรับตัว — Adaptation Knowledge Cycle</span>
+                        </div>
+                        <h2 class="slide-title">Section 3.3.4, 3.3.5 & 3.4 — Tracking & National M&E</h2>
+                        <div class="slide-subtitle">Institutional plan repositories, Global Goal on Adaptation (GGA) indicators, and live M&E systems</div>
+                    </div>
+                    <div class="header-right">
+                        <div class="node-breadcrumb-bar">
+                            <span>Section 3</span> <span>›</span> <span class="node-breadcrumb-item">Node 3.4</span>
+                        </div>
+                        <div class="node-jump-nav">
+                            <button class="jump-btn" onclick="presentation.showSlide(2)">Sec 1</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(3)">Sec 2</button>
+                            <button class="jump-btn active" onclick="presentation.showSlide(9)">Sec 3</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(10)">Sec 4&5</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(11)">Summary</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-body">
+                    <div class="grid-3-col">
+                        <div class="card">
+                            <div class="card-top-bar">
+                                <span class="parent-node-tag">NODES 3.3.4 & 3.3.5</span>
+                                <span class="badge-readiness badge-level-1">Readiness 1/5</span>
+                            </div>
+                            <div class="card-title">Institutional Tracking & Budget Readiness</div>
+                            <div class="card-desc">
+                                Tracking adaptation execution across local governance and national budget readiness.
+                                <div class="child-nodes-container">
+                                    <div class="child-node-box">
+                                        <div class="child-node-header">
+                                            <span class="child-node-title">↳ Node 3.3.4: Local & Private Plans Repository</span>
+                                        </div>
+                                        <div class="child-node-desc">Searchable repository of municipal and corporate climate risk management plans.</div>
+                                    </div>
+                                    <div class="child-node-box">
+                                        <div class="child-node-header">
+                                            <span class="child-node-title">↳ Node 3.3.5: Project Budget Readiness</span>
+                                        </div>
+                                        <div class="child-node-desc">Status indicators for national adaptation project funding readiness.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-action-box"><strong>Blocked:</strong> Depends on DCCE policy decision (Brief E-3). Establish reporting routines.</div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-top-bar">
+                                <span class="node-tag">Node 3.4.1</span>
+                                <span class="badge-readiness badge-level-4">Readiness 4/5</span>
+                            </div>
+                            <div class="card-title">Technology Readiness & GGA</div>
+                            <div class="card-desc">Technology Readiness Level (TRL) framework for adaptation and Global Goal on Adaptation alignment (59 Belém Indicators).</div>
+                            <div class="card-action-box"><strong>Action:</strong> Compile GGA Belém indicator articles directly. Verify TRL framework in DCCE portal.</div>
+                        </div>
+
+                        <div class="card tint-blue">
+                            <div class="card-top-bar">
+                                <span class="node-tag">Nodes 3.4.2 & 3.4.3</span>
+                                <span class="badge-readiness badge-level-5">Readiness 5/5</span>
+                            </div>
+                            <div class="card-title">National M&E Tracker & Successes</div>
+                            <div class="card-desc">Live national adaptation M&E tracker (tied to UNFCCC BTR reporting) and library of 8 successful adaptation project case studies.</div>
+                            <div class="card-action-box"><strong>Ready to Format:</strong> Highest readiness in sitemap. Connect live M&E data feed and format 8 case studies.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-footer">
+                    <span class="footer-copyright">© 2026 The Creagy Company Limited. All Rights Reserved. | STRICTLY PRIVATE AND CONFIDENTIAL</span>
+                    <span class="footer-page-num">Slide 10 / 13</span>
+                </div>
+            </section>
+
+            <!-- SLIDE 11: SECTIONS 4 & 5 (TOOLS, SERVICES & NEWS) -->
+            <section class="slide">
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="section-kicker">
+                            <span class="section-kicker-pill">SECTIONS 4 & 5</span>
+                            <span>เครื่องมือ สารสนเทศ & ข่าวสาร — Tools, Services & Engagement</span>
+                        </div>
+                        <h2 class="slide-title">Sections 4 & 5 — Data Catalog, Analytics & Feedback</h2>
+                        <div class="slide-subtitle">Searchable datasets, spatial visualization tools, external data hubs, and public engagement</div>
+                    </div>
+                    <div class="header-right">
+                        <div class="node-breadcrumb-bar">
+                            <span>Sections 4 & 5</span> <span>›</span> <span class="node-breadcrumb-item">Nodes 4 & 5</span>
+                        </div>
+                        <div class="node-jump-nav">
+                            <button class="jump-btn" onclick="presentation.showSlide(2)">Sec 1</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(3)">Sec 2</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(5)">Sec 3</button>
+                            <button class="jump-btn active" onclick="presentation.showSlide(10)">Sec 4&5</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(11)">Summary</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-body">
+                    <div class="grid-3-col">
+                        <div class="card">
+                            <div class="card-top-bar">
+                                <span class="node-tag">Nodes 4.1 & 4.2</span>
+                                <span class="badge-readiness badge-level-4">Readiness 4/5 & 2/5</span>
+                            </div>
+                            <div class="card-title">Data Catalog & Analytics Portal</div>
+                            <div class="card-desc">
+                                <ul>
+                                    <li>• <strong>Data Catalog (4/5):</strong> Search/browse data catalog system (Seed inventory ready; needs scope sign-off).</li>
+                                    <li>• <strong>Analytics App (2/5):</strong> Embedded hazard map tool. Plot-level IDF engineering curves missing.</li>
+                                </ul>
+                            </div>
+                            <div class="card-action-box">Get catalog scope sign-off. Split analytics app from engineering IDF curve development.</div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-top-bar">
+                                <span class="node-tag">Node 4.3</span>
+                                <span class="badge-readiness badge-level-2">Readiness 2/5</span>
+                            </div>
+                            <div class="card-title">External Tools & Data Hub</div>
+                            <div class="card-desc">Direct links & API status indicators for external partners: TMD weather service, GISTDA geo-informatics portal, and Copernicus Climate Data Store.</div>
+                            <div class="card-action-box">Technical partnership effort. Initiate outreach for data connection terms with TMD and GISTDA.</div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-top-bar">
+                                <span class="node-tag">Nodes 5.1 & 5.2</span>
+                                <span class="badge-readiness badge-level-5">Readiness 5/5 & 2/5</span>
+                            </div>
+                            <div class="card-title">News, Training & User Services</div>
+                            <div class="card-desc">
+                                <ul>
+                                    <li>• <strong>News & Workshops (5/5):</strong> Announcements, workshop calendar & training feeds (Connect existing PR systems).</li>
+                                    <li>• <strong>Feedback Channels (2/5):</strong> Structured user feedback form & ticket tracking.</li>
+                                </ul>
+                            </div>
+                            <div class="card-action-box">Connect news section to PR feeds immediately. Design feedback routing logic after DCCE owner is named.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-footer">
+                    <span class="footer-copyright">© 2026 The Creagy Company Limited. All Rights Reserved. | STRICTLY PRIVATE AND CONFIDENTIAL</span>
+                    <span class="footer-page-num">Slide 11 / 13</span>
+                </div>
+            </section>
+
+            <!-- SLIDE 12: READINESS SUMMARY TABLE -->
+            <section class="slide">
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="section-kicker">
+                            <span class="section-kicker-pill">AUDIT SUMMARY</span>
+                            <span>Master Sitemap Page Index</span>
+                        </div>
+                        <h2 class="slide-title">Master Sitemap Readiness Audit Table</h2>
+                        <div class="slide-subtitle">Complete inventory of 31 addressable pages categorized by readiness rating, section cluster, and operational action</div>
+                    </div>
+                    <div class="header-right">
+                        <div class="node-breadcrumb-bar">
+                            <span>Audit Summary</span> <span>›</span> <span class="node-breadcrumb-item">Master Table</span>
+                        </div>
+                        <div class="node-jump-nav">
+                            <button class="jump-btn" onclick="presentation.showSlide(2)">Sec 1</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(3)">Sec 2</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(5)">Sec 3</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(10)">Sec 4&5</button>
+                            <button class="jump-btn active" onclick="presentation.showSlide(11)">Summary</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-body" style="gap: 0;">
+                    <div class="grid-3-col" style="margin-bottom: 14px;">
+                        <div class="card tint-blue" style="padding: 14px 18px;">
+                            <div style="font-size: 15px; font-weight: 700; color: var(--creagy-dark-navy);">🚀 Immediate Launch (Level 4 & 5)</div>
+                            <div style="font-size: 26px; font-weight: 800; color: var(--level-5);">9 Pages (29%)</div>
+                        </div>
+                        <div class="card tint-blue" style="padding: 14px 18px;">
+                            <div style="font-size: 15px; font-weight: 700; color: var(--creagy-dark-navy);">📝 Content & Synthesis (Level 2 & 3)</div>
+                            <div style="font-size: 26px; font-weight: 800; color: var(--level-3);">19 Pages (61%)</div>
+                        </div>
+                        <div class="card tint-blue" style="padding: 14px 18px;">
+                            <div style="font-size: 15px; font-weight: 700; color: var(--creagy-dark-navy);">⛔ Policy Decision Blocked (Level 1)</div>
+                            <div style="font-size: 26px; font-weight: 800; color: var(--level-1);">3 Pages (10%)</div>
+                        </div>
+                    </div>
+
+                    <div style="background: #FFFFFF; border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; font-size: 16px;">
+                        <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                            <thead style="background: var(--creagy-dark-navy); color: #FFFFFF; font-weight: 700;">
+                                <tr>
+                                    <th style="padding: 10px 14px; width: 15%;">Readiness Rating</th>
+                                    <th style="padding: 10px 14px; width: 22%;">Sitemap Section</th>
+                                    <th style="padding: 10px 14px; width: 38%;">Target Page Topics</th>
+                                    <th style="padding: 10px 14px; width: 25%;">Primary Operational Task</th>
+                                </tr>
+                            </thead>
+                            <tbody style="color: var(--text-body);">
+                                <tr style="border-bottom: 1px solid var(--border-color); background: var(--level-5-bg);">
+                                    <td style="padding: 8px 14px;"><span class="badge-readiness badge-level-5">Level 5 (3 Pages)</span></td>
+                                    <td style="padding: 8px 14px; font-weight: 700;">M&E & News (Sec 3.4 & 5.1)</td>
+                                    <td style="padding: 8px 14px;">National M&E Tracker, Success Case Studies, News & Training</td>
+                                    <td style="padding: 8px 14px; font-weight: 600;">Format & connect live feeds</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--border-color); background: var(--level-4-bg);">
+                                    <td style="padding: 8px 14px;"><span class="badge-readiness badge-level-4">Level 4 (6 Pages)</span></td>
+                                    <td style="padding: 8px 14px; font-weight: 700;">Governance & Hubs (Sec 2.3, 3.2, 3.4, 4.1)</td>
+                                    <td style="padding: 8px 14px;">DCCE Local Coordination, Impact Chain Studies, GGA Indicators, Data Catalog</td>
+                                    <td style="padding: 8px 14px; font-weight: 600;">Compile existing multi-doc assets & sign off scope</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--border-color); background: var(--level-3-bg);">
+                                    <td style="padding: 8px 14px;"><span class="badge-readiness badge-level-3">Level 3 (2 Pages)</span></td>
+                                    <td style="padding: 8px 14px; font-weight: 700;">Risks & Hazards (Sec 1.1 & 3.2)</td>
+                                    <td style="padding: 8px 14px;">Key Risks & Hotspots, Slow-Onset Hazards Profile</td>
+                                    <td style="padding: 8px 14px; font-weight: 600;">Synthesize multi-hazard spatial data</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--border-color); background: var(--level-2-bg);">
+                                    <td style="padding: 8px 14px;"><span class="badge-readiness badge-level-2">Level 2 (17 Pages)</span></td>
+                                    <td style="padding: 8px 14px; font-weight: 700;">Core Science & Action (Sec 1-5)</td>
+                                    <td style="padding: 8px 14px;">Climate Risk Overview, Area Search, Situation, Profiles, Laws, Climatology...</td>
+                                    <td style="padding: 8px 14px; font-weight: 600;">Execute targeted writing & research</td>
+                                </tr>
+                                <tr style="background: var(--level-1-bg);">
+                                    <td style="padding: 8px 14px;"><span class="badge-readiness badge-level-1">Level 1 (3 Pages)</span></td>
+                                    <td style="padding: 8px 14px; font-weight: 700;">Budget & Tracking (Sec 2.3 & 3.3)</td>
+                                    <td style="padding: 8px 14px;">Budget Evidence Tracking, Plans Repository, Project Budget Readiness</td>
+                                    <td style="padding: 8px 14px; font-weight: 600; color: var(--level-1);">Awaiting DCCE policy decisions</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="slide-footer">
+                    <span class="footer-copyright">© 2026 The Creagy Company Limited. All Rights Reserved. | STRICTLY PRIVATE AND CONFIDENTIAL</span>
+                    <span class="footer-page-num">Slide 12 / 13</span>
+                </div>
+            </section>
+
+            <!-- SLIDE 13: ACTION ROADMAP -->
+            <section class="slide">
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="section-kicker">
+                            <span class="section-kicker-pill">ACTION PLAN</span>
+                            <span>Implementation & Staging Roadmap</span>
+                        </div>
+                        <h2 class="slide-title">Strategic Next Steps & Work Package Roadmap</h2>
+                        <div class="slide-subtitle">Phased execution plan for content owners, data analysts, and engineering teams</div>
+                    </div>
+                    <div class="header-right">
+                        <div class="node-breadcrumb-bar">
+                            <span>Roadmap</span> <span>›</span> <span class="node-breadcrumb-item">Action Plan</span>
+                        </div>
+                        <div class="node-jump-nav">
+                            <button class="jump-btn" onclick="presentation.showSlide(2)">Sec 1</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(3)">Sec 2</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(5)">Sec 3</button>
+                            <button class="jump-btn" onclick="presentation.showSlide(10)">Sec 4&5</button>
+                            <button class="jump-btn active" onclick="presentation.showSlide(12)">Roadmap</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-body">
+                    <div class="grid-3-col">
+                        <div class="card" style="border-top: 4px solid var(--level-5);">
+                            <div class="card-top-bar">
+                                <span class="node-tag">PHASE 1</span>
+                                <span class="badge-readiness badge-level-5">Weeks 1-2</span>
+                            </div>
+                            <div class="card-title">Quick Wins & Porting</div>
+                            <div class="card-desc">
+                                <ul>
+                                    <li>• Port Level 5 pages (M&E Tracker, Success Case Studies, News Feeds).</li>
+                                    <li>• Compile Level 4 pages (Local Governance Role, Impact Chain Studies, GGA Indicators).</li>
+                                    <li>• Obtain formal sign-off on CRDB Data Catalog scope.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card" style="border-top: 4px solid var(--level-3);">
+                            <div class="card-top-bar">
+                                <span class="node-tag">PHASE 2</span>
+                                <span class="badge-readiness badge-level-3">Weeks 3-6</span>
+                            </div>
+                            <div class="card-title">Data Synthesis & Authoring</div>
+                            <div class="card-desc">
+                                <ul>
+                                    <li>• Synthesize Slow-Onset Hazards Profile & Hotspot map caveats.</li>
+                                    <li>• Resolve TMD historical grid access restriction for climatology views.</li>
+                                    <li>• Execute literature reviews for heat health impacts & agriculture case study.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card" style="border-top: 4px solid var(--level-1);">
+                            <div class="card-top-bar">
+                                <span class="node-tag">PHASE 3</span>
+                                <span class="badge-readiness badge-level-1">Weeks 7-10</span>
+                            </div>
+                            <div class="card-title">Executive Gates & Integration</div>
+                            <div class="card-desc">
+                                <ul>
+                                    <li>• Resolve DCCE Executive Decisions on Climate Finance and Tracking services.</li>
+                                    <li>• Await Loss & Damage methodology work package for historical loss dashboard.</li>
+                                    <li>• Conduct external agency outreach (TMD/GISTDA) for live API hub connections.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-footer">
+                    <span class="footer-copyright">© 2026 The Creagy Company Limited. All Rights Reserved. | STRICTLY PRIVATE AND CONFIDENTIAL</span>
+                    <span class="footer-page-num">Slide 13 / 13</span>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- PRESENTATION CONTROLLER JS -->
+    <script>
+        class SlidePresentation {
+            constructor() {
+                this.slides = document.querySelectorAll('.slide');
+                this.currentSlide = 0;
+                this.stage = document.getElementById('deckStage');
+                this.editMode = false;
+                
+                this.setupStageScale();
+                this.setupKeyboardNav();
+                this.setupTouchNav();
+                this.setupInlineEditing();
+                this.showSlide(0);
+            }
+
+            setupStageScale() {
+                const scale = () => {
+                    const vw = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                    const vh = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+                    
+                    // Full 1.0 viewport fit ratio
+                    const factor = Math.min(vw / 1920, vh / 1080);
+                    const x = (vw - 1920 * factor) / 2;
+                    const y = (vh - 1080 * factor) / 2;
+                    
+                    this.stage.style.transform = `translate(${x}px, ${y}px) scale(${factor})`;
+                };
+                
+                scale();
+                window.addEventListener('resize', scale);
+                window.addEventListener('load', scale);
+                document.addEventListener('DOMContentLoaded', scale);
+                setTimeout(scale, 100);
+                setTimeout(scale, 500);
+            }
+
+            setupKeyboardNav() {
+                document.addEventListener('keydown', (e) => {
+                    if (this.editMode && e.target.getAttribute('contenteditable') === 'true') return;
+                    
+                    if (e.key === 'ArrowRight' || e.key === 'Space' || e.key === 'PageDown') {
+                        e.preventDefault();
+                        this.nextSlide();
+                    } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+                        e.preventDefault();
+                        this.prevSlide();
+                    } else if (e.key === 'Home') {
+                        e.preventDefault();
+                        this.showSlide(0);
+                    } else if (e.key === 'End') {
+                        e.preventDefault();
+                        this.showSlide(this.slides.length - 1);
+                    } else if (e.key === 'e' || e.key === 'E') {
+                        this.toggleEditMode();
+                    }
+                });
+            }
+
+            setupTouchNav() {
+                let startX = 0;
+                document.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                }, { passive: true });
+                document.addEventListener('touchend', (e) => {
+                    const diffX = e.changedTouches[0].clientX - startX;
+                    if (diffX < -50) this.nextSlide();
+                    if (diffX > 50) this.prevSlide();
+                }, { passive: true });
+            }
+
+            setupInlineEditing() {
+                const hotzone = document.querySelector('.edit-hotzone');
+                const editToggle = document.getElementById('editToggle');
+                let hideTimeout = null;
+
+                hotzone.addEventListener('mouseenter', () => {
+                    clearTimeout(hideTimeout);
+                    editToggle.classList.add('show');
+                });
+                hotzone.addEventListener('mouseleave', () => {
+                    hideTimeout = setTimeout(() => {
+                        if (!this.editMode) editToggle.classList.remove('show');
+                    }, 400);
+                });
+                editToggle.addEventListener('mouseenter', () => clearTimeout(hideTimeout));
+                editToggle.addEventListener('mouseleave', () => {
+                    hideTimeout = setTimeout(() => {
+                        if (!this.editMode) editToggle.classList.remove('show');
+                    }, 400);
+                });
+
+                editToggle.addEventListener('click', () => this.toggleEditMode());
+                hotzone.addEventListener('click', () => this.toggleEditMode());
+            }
+
+            toggleEditMode() {
+                this.editMode = !this.editMode;
+                const editToggle = document.getElementById('editToggle');
+                editToggle.classList.toggle('active', this.editMode);
+                editToggle.innerHTML = this.editMode ? '💾 Save & Exit (E)' : '✏️ Edit Mode (E)';
+
+                const editableElements = document.querySelectorAll('.slide-title, .slide-subtitle, .card-title, .card-desc, .cover-title, .cover-subtitle');
+                editableElements.forEach(el => {
+                    el.contentEditable = this.editMode;
+                    el.style.outline = this.editMode ? '2px dashed var(--creagy-accent-blue)' : 'none';
+                    el.style.borderRadius = '4px';
+                });
+            }
+
+            nextSlide() {
+                if (this.currentSlide < this.slides.length - 1) {
+                    this.showSlide(this.currentSlide + 1);
+                }
+            }
+
+            prevSlide() {
+                if (this.currentSlide > 0) {
+                    this.showSlide(this.currentSlide - 1);
+                }
+            }
+
+            showSlide(index) {
+                this.currentSlide = Math.max(0, Math.min(index, this.slides.length - 1));
+                this.slides.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === this.currentSlide);
+                    slide.classList.toggle('visible', i === this.currentSlide);
+                });
+            }
+        }
+
+        const presentation = new SlidePresentation();
+    </script>
+</body>
+</html>

@@ -1,5 +1,8 @@
-﻿brief_id,service,sections_affected,readiness,core_blocker,requirement_count,requirements
+brief_id,service,sections_affected,readiness,core_blocker,requirement_count,requirements
 E-1,Financial and budget evidence,"2.3, 3.3, 3.2",Ready for joint development,"No cost-benefit methodology, no budget tagging, no avoided-losses standard, no damage function library",10,REQ-018; REQ-019; REQ-020; REQ-021; REQ-022; REQ-039; REQ-052; REQ-058; REQ-059; REQ-064
 E-2,Uncertainty governance,3.1,Foundation that touches everything else,Requires methodology development and institutional agreement rather than data or software,2,REQ-034; REQ-036
 E-3,Institutional and project tracking,3.3,Dependent on foundations,Information held by programme staff and external bodies; needs internal reporting routines first,2,REQ-062; REQ-063
 E-4,Engineering design variables,4.2,Ready for joint development,Intensity-duration-frequency statistics do not exist in DCCE holdings at any resolution,0,
+E-5,Provincial & District Plan Synthesis,"1.2, 2.2",High value high effort - needs DCCE resourcing decision,Large-scale document synthesis across 77 provinces' worth of planning documents; not a data-engineering task,0,
+E-6,LAO-level data disaggregation,"1.2, 2.2",High value high effort - needs DCCE resourcing decision; complements E-5 rather than substituting for it,Underlying data is only disaggregated to DOPA administrative boundary; real LAO-level figures need geospatial reallocation,0,
+LD-1,Loss and Damage product line - COMMITTED not awaiting a decision,"2.1, 3.2",Committed and high priority; blocked on the separate work package's specification landing,Loss-and-damage work package's own methodology has not been written yet,4,REQ-012; REQ-049; REQ-050; REQ-051
