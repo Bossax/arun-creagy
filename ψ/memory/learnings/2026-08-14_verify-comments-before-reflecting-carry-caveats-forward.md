@@ -1,0 +1,11 @@
+# Lesson: Verify review comments against source before reflecting, and carry caveats forward when a citation gets rehabilitated
+
+**Context**: WP4 DRD review session, 2026-08-14. Boss left short, low-context inline comments ("SYS-003 is the main source isn't it?", "I believe A-BTR has information about this too") across two documents. Every comment checked out as a real, verifiable miss in the original gap analysis when actually investigated against source files — never once was a comment a misunderstanding on Boss's part.
+
+**Pattern observed**: A short skeptical comment from a domain-knowledgeable user, on a document produced by an earlier automated/thorough-seeming pass, is a strong prior that something real was missed — not that the user is misremembering. The right response is direct verification against primary sources (in this case, re-reading the actual A-BTR section files and the unified asset database), not a plausibility judgment from memory of what was already checked.
+
+**Compounding lesson**: once this pattern repeated 3+ times, it became worth proactively scoping a systematic re-check (via a short plan-mode pass) rather than continuing to treat each new comment as an isolated one-off. Repeated confirmation of a pattern is itself evidence to act on, not just a string of coincidences.
+
+**Second lesson, layered on top**: when a fix "rehabilitates" a previously-labeled gap by citing an asset that does exist, the citation must carry forward that asset's own documented limitations verbatim (access restrictions, unverified status, methodological caveats like an irreversible composite index) rather than presenting the fix as a clean "gap closed." The failure mode being corrected — a status that overstates certainty — can be reintroduced in the opposite direction if the correction itself overclaims. This surfaced directly when the user pointed out that two of the most-cited datasets in the document (`DDPM_2_1` and `SYS-003`/`DCCE_3_x`) already had real, documented provenance problems affecting several other requirements, and any new citation of the same data needed to inherit those same caveats, not present a fresh, uncaveated win.
+
+**Tags**: source-verification, review-comment-handling, gap-analysis, data-provenance, citation-caveats, WP4-DRD, CRDB
