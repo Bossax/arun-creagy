@@ -17,8 +17,8 @@ MED-112,แผนการปรับตัวต่อการเปลี่
 MED-008,ถอดรหัสความสำเร็จจากพื้นที่ต้นแบบทั้ง 6 สาขา ปัจจัยสู่ความเข้มแข็งและการปรับตัวอย่างยั่งยืน,Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/24129/,2,REQ-007; REQ-068
 DAT-022,ชุดเเนวทางการปรับตัวต่อการเปลี่ยนเเปลงสภาพภูมิอากาศโดยใช้เเนวทางธรรมชาติ (Nbs),Knowledge Asset,กองขับเคลื่อนการปรับตัวต่อการเปลี่ยนเเปลงสภาพภูมิอากาศ กลุ่มพัฒนาเเนวทางเเละศักยภาพในการปรับตัวต่อการเปลี่ยนเเปลงสภาพภูมิอากาศ,https://dgf.dcce.go.th/dataset/nbs,2,REQ-007; REQ-061
 SYS-003,ฐานข้อมูลความเสี่ยงจากการเปลี่ยนแปลงสภาพภูมิอากาศ,Data Product,กลุ่มพัฒนาเทคโนโลยีดิจิทัล,https://ccic.dcce.go.th/riskarea,4,REQ-009; REQ-010; REQ-028; REQ-070
-DCCE_2_1,"ปริมาณน้ำฝน (GridData, historical)",Dataset,DCCE,https://clim-webbased.dcce.go.th/DataServices,2,REQ-011; REQ-033
-DCCE_2_2,"อุณหภูมิสูงสุด (GridData, historical)",Dataset,DCCE,https://clim-webbased.dcce.go.th/DataServices,2,REQ-011; REQ-033
+DCCE_2_1,"ปริมาณน้ำฝน (GridData, historical)",Dataset,DCCE,https://clim-webbased.dcce.go.th/DataServices,1,REQ-033
+DCCE_2_2,"อุณหภูมิสูงสุด (GridData, historical)",Dataset,DCCE,https://clim-webbased.dcce.go.th/DataServices,1,REQ-033
 PUB-026,กองทุนจัดการความสูญเสียและความเสียหายจากสภาพภูมิอากาศ (FRLD),Knowledge Asset,กองยุทธศาสตร์และความร่วมมือระหว่างประเทศ,https://www.dcce.go.th/datacenter/25096/,2,REQ-012; REQ-048
 MED-050,รายงานฉบับสมบูรณ์ (Final report) การประเมินเบื้องต้นต่อสถานภาพการดำเนินงานที่เกี่ยวข้องกับความสูญเสียและความเสียหาย,Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/19744/,2,REQ-012; REQ-049
 PUB-003,สรุป สาระสำคัญของร่างพระราชบัญญัติการเปลี่ยนแปลงสภาพภูมิอากาศ พ.ศ. ...,Knowledge Asset,กองยุทธศาสตร์และความร่วมมือระหว่างประเทศ,https://www.dcce.go.th/datacenter/3350/,1,REQ-016
@@ -86,4 +86,4 @@ PUB-051,บัญชีข้อมูล (Data Catalogue),Knowledge Asset,ก�
 SYS-004,ระบบสัมมนาและฝึกอบรมด้านสิ่งแวดล้อม,Data Product,กลุ่มพัฒนาเทคโนโลยีดิจิทัล,https://datacenter.dcce.go.th/training,1,REQ-072
 PUB-049,ข่าวสารประชาสัมพันธ์,Knowledge Asset,กองยุทธศาสตร์และความร่วมมือระหว่างประเทศ,https://www.dcce.go.th/datacenter/4624/,1,REQ-072
 clim-webbased.dcce.go.th,DCCE downscaled climate projection platform,Data Product,UNKNOWN - not yet in either canonical asset registry; needs formal entry,https://clim-webbased.dcce.go.th/Home,1,REQ-035
-DDPM_2_1,ข้อมูลเหตุการณ์ภัยพิบัติย้อนหลัง 10 ปี (10-year historical disaster occurrence data),Dataset,DDPM,https://www.disaster.go.th,1,REQ-001
+DDPM_2_1,ข้อมูลเหตุการณ์ภัยพิบัติย้อนหลัง 10 ปี (10-year historical disaster occurrence data),Dataset,DDPM,https://www.disaster.go.th,2,REQ-001; REQ-011

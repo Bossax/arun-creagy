@@ -4,9 +4,6 @@ DEL-1,DCCE_2_2,"อุณหภูมิสูงสุด (GridData, historical
 DEL-1,DCCE_2_3,"อุณหภูมิต่ำสุด (GridData, historical)",Dataset,DCCE,https://clim-webbased.dcce.go.th/DataServices,data_catalog_v4,"Restricted; Unverified-Baseline",potentially-relevant
 DEL-1,DCCE_2_4,"อุณหภูมิเฉลี่ย (GridData, historical)",Dataset,DCCE,https://clim-webbased.dcce.go.th/DataServices,data_catalog_v4,"Restricted; Unverified-Baseline",potentially-relevant
 DEL-1,DCCE_2_5,"ความชื้นสัมพัทธ์ (GridData, historical)",Dataset,DCCE,https://clim-webbased.dcce.go.th/DataServices,data_catalog_v4,"Restricted; Unverified-Baseline",potentially-relevant
-DEL-1,TMD_6_1,TXx - อุณหภูมิสูงสุดของอุณหภูมิสูงสุดรายวัน,Dataset,TMD,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed",potentially-relevant
-DEL-1,TMD_6_9,Rx1day - ปริมาณฝนสูงสุดใน 1 วัน,Dataset,TMD,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed",potentially-relevant
-DEL-1,TMD_6_19,SPI-1 - ดัชนีฝนมาตรฐาน 1 เดือน,Dataset,TMD,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed",potentially-relevant
 DEL-2,MED-015,การวิเคราะห์ความเปราะบางและขีดความสามารถในการปรับตัว,E-book Reader,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/23820/,DCCE_Unified_Digital_Asset_Database,"methodology explainer only, no index dataset",confirmed
 DEL-2,DOPA_1_1,จำนวนประชากร,Dataset,DOPA,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed",potentially-relevant
 DEL-2,DOPA_1_2,จุดหมู่บ้าน,Dataset,DOPA,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed",potentially-relevant
@@ -48,9 +45,12 @@ DEL-9,NESDC_2_1,สัดส่วนของกลุ่มเปราะบ�
 DEL-10,DAT-022,ชุดเเนวทางการปรับตัว NbS,Document,กองขับเคลื่อนการปรับตัวต่อการเปลี่ยนเเปลงสภาพภูมิอากาศ,https://dgf.dcce.go.th/dataset/nbs,DCCE_Unified_Digital_Asset_Database,NbS only,confirmed
 DEL-10,MED-042,แนวทางการแก้ปัญหาโดยอาศัยธรรมชาติเป็นฐาน,E-book Reader,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/6463/,DCCE_Unified_Digital_Asset_Database,NbS only,confirmed
 DEL-10,VID-036,รู้ไหม? ธรรมชาติก็เป็นนักแก้ปัญหาตัวยง,Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.youtube.com/watch?v=cgFAOTv64cE,DCCE_Unified_Digital_Asset_Database,NbS only,confirmed
-DEL-12,DDPM_2_1,ข้อมูลเหตุการณ์ภัยพิบัติย้อนหลัง 10 ปี,Dataset,DDPM,https://www.disaster.go.th,data_catalog_v4,"Restricted; Baseline-Draft; Unverified-Baseline; confirmed REQ-001's real starting point (Boss review 2026-08-13); one-way reporting, no ground-truthing, no UNDRR taxonomy",confirmed
+DEL-12,DDPM_2_1,ข้อมูลเหตุการณ์ภัยพิบัติย้อนหลัง 10 ปี,Dataset,DDPM,https://www.disaster.go.th,data_catalog_v4,"Restricted; Baseline-Draft; Unverified-Baseline; confirmed REQ-001's real starting point (Boss review 2026-08-13); also serves REQ-011 (re-scoped from DEL-1 2026-08-13); one-way reporting, no ground-truthing, no UNDRR taxonomy",confirmed
 DEL-12,DDPM_3_1,พื้นที่ประสบภัยน้ำแล้งรุนแรง,Dataset,DDPM,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed",potentially-relevant
 DEL-12,DDPM_3_3,พื้นที่ประสบภัยน้ำท่วมรุนแรง,Dataset,DDPM,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed",potentially-relevant
+DEL-12,TMD_6_1,TXx - อุณหภูมิสูงสุดของอุณหภูมิสูงสุดรายวัน,Dataset,TMD,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed; supplementary lead for REQ-011, secondary to DDPM_2_1",potentially-relevant
+DEL-12,TMD_6_9,Rx1day - ปริมาณฝนสูงสุดใน 1 วัน,Dataset,TMD,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed; supplementary lead for REQ-011, secondary to DDPM_2_1",potentially-relevant
+DEL-12,TMD_6_19,SPI-1 - ดัชนีฝนมาตรฐาน 1 เดือน,Dataset,TMD,unknown,data_catalog_v4,"Unverified-Baseline; not yet assessed; supplementary lead for REQ-011, secondary to DDPM_2_1",potentially-relevant
 DEL-13,SYS-003,ฐานข้อมูลความเสี่ยงจากการเปลี่ยนแปลงสภาพภูมิอากาศ (application),Data Product,กลุ่มพัฒนาเทคโนโลยีดิจิทัล,https://ccic.dcce.go.th/riskarea,DCCE_Unified_Digital_Asset_Database,,confirmed
 DEL-13,DAT-005,ข้อมูลความเสี่ยงจากการเปลี่ยนแปลงสภาพภูมิอากาศ (6-sector spatial data),Data Product,กองขับเคลื่อนการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศ,https://dgf.dcce.go.th/dataset/db0303-001,DCCE_Unified_Digital_Asset_Database,"Public; Unverified-Baseline",confirmed
 DEL-13,DCCE_3_1,ความเสี่ยงสาขาการเกษตรและความมั่นคงทางอาหาร,Dataset,DCCE,https://ccic.dcce.go.th/riskarea,data_catalog_v4,"Restricted scenarios; Unverified-Baseline",confirmed

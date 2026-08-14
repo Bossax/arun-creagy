@@ -5,7 +5,7 @@
 
 ## How to read this
 
-Each of the 13 deliverables in Appendix A of the DRD gets two lists here.
+Each of the 14 deliverables in Appendix A of the DRD gets two lists here.
 
 **Confirmed assets** are the assets the WP4 gap-analysis process already matched to a requirement in this deliverable. They are named directly — asset ID, title, type, owner, link — pulled from `2026-08-12-WP4-DRD-requirements.csv` and resolved against DCCE's two asset registries. Where a requirement in the deliverable has no matched asset at all, that is stated plainly as a confirmed gap, not left blank.
 
@@ -17,7 +17,9 @@ Two registries were used to resolve confirmed assets: `DCCE_Unified_Digital_Asse
 
 ## DEL-1 — Thailand Climatology Dashboard
 
-**Serves** REQ-011, REQ-033 · **Sections** 2.1, 3.1
+**Serves** REQ-033 · **Section** 3.1
+
+*Correction, 2026-08-13: REQ-011 was previously listed here. It has been re-scoped to DEL-12 (Disaster statistics product) — REQ-011 is DDPM disaster-event data, a different product from this dashboard's climatology grids. See DEL-12 below.*
 
 ### Confirmed assets
 
@@ -25,8 +27,6 @@ Two registries were used to resolve confirmed assets: `DCCE_Unified_Digital_Asse
 |---|---|---|---|---|---|
 | `DCCE_2_1` | ปริมาณน้ำฝน (GridData, historical) | Dataset | DCCE | https://clim-webbased.dcce.go.th/DataServices | Restricted, Unverified-Baseline |
 | `DCCE_2_2` | อุณหภูมิสูงสุด (GridData, historical) | Dataset | DCCE | https://clim-webbased.dcce.go.th/DataServices | Restricted, Unverified-Baseline |
-
-Both requirements resolve to the same two datasets — this is the shared backend for the dashboard.
 
 ### Other potentially relevant datasets
 
@@ -38,11 +38,9 @@ The same DCCE grid family has more variables than the two currently matched, all
 | `DCCE_2_4` | อุณหภูมิเฉลี่ย (GridData, historical) |
 | `DCCE_2_5` | ความชื้นสัมพัทธ์ (GridData, historical) |
 
-TMD's climate extreme indices are a strong lead for the dashboard's "extreme statistics" view (REQ-011) — these look purpose-built for exactly this kind of product, though not yet assessed for this use: `TMD_6_1` (TXx, max of daily max temp), `TMD_6_2` (TNx), `TMD_6_9` (Rx1day, max 1-day rainfall), `TMD_6_10` (Rx5day), `TMD_6_11` (SDII, daily rainfall intensity), `TMD_6_14` (PRCPTOT), `TMD_6_19` (SPI-1, standardized precipitation index), `TMD_6_22`–`TMD_6_24` (heat/flood/drought hazard indices).
-
 ### Developer headstart
 
-Start by resolving the `DCCE_2_1`/`DCCE_2_2` access restriction — that unblocks both REQ-011 and REQ-033 at once. Then check whether the TMD extreme-indices series above is something DCCE can pull in directly (it would save real derivation work) or whether it needs its own agreement with TMD.
+Start by resolving the `DCCE_2_1`/`DCCE_2_2` access restriction for REQ-033.
 
 ---
 
@@ -55,10 +53,13 @@ Start by resolving the `DCCE_2_1`/`DCCE_2_2` access restriction — that unblock
 | Asset | Title | Type | Owner | Link | Flags |
 |---|---|---|---|---|---|
 | `MED-015` | การวิเคราะห์ความเปราะบางและขีดความสามารถในการปรับตัว (Measuring Vulnerability & Adaptive Capacity) | E-book Reader | กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม | https://www.dcce.go.th/media/23820/ | Unverified — matched to REQ-027 as a methodology explainer only, not an actual index dataset |
+| `DCCE_3_1`–`DCCE_3_6` | Province-level composite risk index, six sector datasets (DS-01) | Dataset | DCCE | https://ccic.dcce.go.th/riskarea | `Baseline-Draft`/`Unverified-Baseline`, two scenarios only, composite method not reversible to inputs — REQ-008, REQ-014 (province level only, confirmed no sub-provincial coverage) |
 
-REQ-008 and REQ-014 both have **no matched asset** — confirmed gap. The province-level composite data they'd draw on lives in DS-01 (`DCCE_3_1`–`DCCE_3_7`, see DEL-13 below), and neither requirement can get below province level without Brief E-5 or E-6.
+REQ-008 and REQ-014 are **confirmed partial, not a full gap** — DS-01 (`DCCE_3_1`–`DCCE_3_6`, Appendix B2) already names both as served by the province-level composite risk index. Carrying DS-01's caveats forward exactly as stated there: `Baseline-Draft`/`Unverified-Baseline` status, scenarios limited to two pathways (ssp585/ssp245), and the composite method is **not reversible to inputs**. Confirmed: it does not carry sub-provincial exposure, vulnerability, or risk data — that part remains a real gap, closable only via Brief E-5 or E-6, not something this asset can be stretched to cover.
 
 ### Other potentially relevant datasets
+
+A-BTR Section B (climate evidence and risk) has real province-level hazard framing not yet cross-referenced here: B-039 names subnational flood-risk hotspots (Chao Phraya Basin, coastal/southern provinces), and B-045 names projected drought-intensity hotspots by province (Bueng Kan, Udon Thani, Nong Khai, Amnat Charoen, Sukhothai, Nakhon Si Thammarat) under SSP5-8.5. Useful narrative grounding for REQ-014's per-province hazard picture, alongside the composite index.
 
 For sub-provincial administrative geography (the DOPA-vs-LAO boundary problem, see Appendix E of the DRD): `DOPA_1_1` (population counts), `DOPA_1_2` (village points), `DOPA_2_1` (households within municipal boundaries) — these carry the actual DOPA administrative geometry a build team would need to even attempt Brief E-6's disaggregation work.
 
@@ -105,15 +106,17 @@ Nothing to build yet beyond the explainer pages and the outbound links. If DCCE 
 | `DMCR_4_1` | พื้นที่กัดเซาะชายฝั่ง (DMCR ภาคสนาม) | Dataset | DMCR | https://tcs.dmcr.go.th/dmcr/v2/router?page=dashboard | Restricted, Unverified-Baseline |
 | `MED-127`–`MED-137` (9 items) | Coastal adaptation infographic series | Knowledge Asset | กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม | dcce.go.th/media/… (see Appendix D of the DRD for each link) | Narrative infographics, no underlying data |
 
-REQ-042 (temp/rainfall slow-onset trend) shares its data with DEL-1 (`DCCE_2_1`/`DCCE_2_2`) — no separate asset. REQ-044 (subsidence/salinity) has **no matched asset anywhere** — confirmed gap, nothing in either registry.
+REQ-042 (temp/rainfall slow-onset trend) shares its data with DEL-1 (`DCCE_2_1`/`DCCE_2_2`) — no separate asset. REQ-044 (subsidence/salinity) has no matched *asset* in either registry, but is not a content blank: A-BTR Section B gives real, citable figures — B-073 states Bangkok's relative sea-level rise reached about 0.021 m/year before groundwater regulation and declined to about 0.013 m/year after (subsidence-amplified), and B-040 reports Bangkok's compound flood risk from low elevation (0.5–1.5m above mean sea level) plus land subsidence. Salinity specifically remains uncovered by any source found.
+
+A-BTR Section B also strengthens REQ-043 (sea-level rise) beyond the existing Restricted `MD_1_2` asset: B-072 gives historical observed sea-level rise rates (16.4 ± 0.85 mm/year at Fort Phrachul, 1951–1991; ~6mm/year average along the Thai coast, 1940–2014), B-074 gives recent Gulf of Thailand rates (3.0–5.5 mm/year) and seasonal variability, and B-076 gives projected future rates by scenario (~2mm/year under SSP2-4.5, exceeding 5mm/year under SSP5-8.5 by end-century). Separately, B-095 gives coastal erosion extent (more than 77 sub-districts affected 2019–2024, worst loss in Bang Tawa Sub-district, Pattani) — real quantitative support for REQ-045's erosion index (already PARTIAL via `DMCR_1_1`/`DMCR_4_1`), one page over from this one. These are real numbers a content writer can cite directly while the Restricted DCCE assets' access is being resolved.
 
 ### Other potentially relevant datasets
 
-`DMCR_3_2` (mangrove extent) is a lead for coastal resilience context alongside erosion. `RTSD_1_1` (elevation above sea level) could support both the sea-level and subsidence explainers. Nothing in the 260-row catalog addresses land subsidence directly — this confirms REQ-044's "nothing exists" status rather than surfacing a hidden lead.
+`DMCR_3_2` (mangrove extent) is a lead for coastal resilience context alongside erosion. `RTSD_1_1` (elevation above sea level) could support both the sea-level and subsidence explainers. Nothing in the 260-row catalog addresses land subsidence directly, and salinity remains uncovered by any source checked so far, A-BTR included.
 
 ### Developer headstart
 
-Ship the four static explainers first — they don't depend on any of the Restricted assets above. If DCCE later funds the stretch items (rate derivation, index computation, subsidence source-finding), `MD_1_2` and `DMCR_1_1`/`DMCR_4_1` access needs resolving first for the sea-level and erosion pieces; subsidence has no starting point in DCCE's holdings at all and needs a new external source.
+Ship the four static explainers first — they don't depend on any of the Restricted assets above, and A-BTR's Section B figures (rates, extents) mean REQ-042/043/044 can open with real citable numbers even before those access requests clear. If DCCE later funds the stretch items (rate derivation, index computation), `MD_1_2` and `DMCR_1_1`/`DMCR_4_1` access needs resolving for the sea-level and erosion pieces; salinity still has no starting point anywhere and needs a new external source.
 
 ---
 
@@ -192,15 +195,19 @@ REQ-003 is pure explanatory content, no data dependency. REQ-037 (case studies a
 
 ### Confirmed assets
 
-All three requirements have **no matched asset** — confirmed gap across the board. This deliverable is pure content synthesis (legal instruments, institutional coordination, systemic barriers reporting) with nothing in DCCE's current holdings to build from directly.
+No DCCE-published asset in the unified digital asset database covers any of the three — that search was re-run specifically for this review (legal instruments, town planning regulations, institutional coordination) and came back empty, confirming the original scan. But A-BTR has real grounding for two of the three:
+
+- **REQ-017** (legal instruments summary): A-BTR Section A already extracts the exact instrument REQ-017 says DCCE doesn't cover — A-REQ-029 identifies the Disaster Prevention and Mitigation Act (2007) as the primary DRM framework and describes its coverage of prevention, preparedness, response, recovery, and institutional responsibilities. Section A also covers the Gender Equality Act, Child Protection Act, Older Persons Act, and Persons with Disabilities Empowerment Act as supporting instruments. Town planning regulations remain genuinely uncovered by any source checked.
+- **REQ-025** (national-to-local coordination): A-BTR Section A's institutional-arrangements entries (A-REQ-019–022) cover sectoral focal points, cross-cutting interagency collaboration, and stakeholder participation across the adaptation cycle — real adjacent grounding, though CRDB's own DOPA-vs-LAO-vs-Governor's-office two-parallel-channels model (Appendix E) is a sharper institutional read than A-BTR's more general framing and still needs writing as its own content.
+- **REQ-057** (systemic barriers by sector): already fixed in the storyboard (node 3.3.2) using A-BTR Section C (C-017, C-018 — barriers spanning the full planning-to-reporting cycle). That fix needs to be reflected here and in REQ-057's status, not just in the storyboard.
 
 ### Other potentially relevant datasets
 
-None found — this is legal/institutional analysis work, not something a dataset catalog scan surfaces leads for.
+None found in the dataset catalogs — this remains legal/institutional analysis and narrative-grounding work, not something a raw dataset scan surfaces leads for.
 
 ### Developer headstart
 
-All three need original research and writing, not data engineering. REQ-017 and REQ-025 both depend on getting the institutional-actor model right first (LAO vs. line agencies vs. the Governor's office, per Appendix E of the DRD) before drafting content.
+REQ-017 and REQ-025 can now start from A-BTR's institutional/legal baseline instead of a blank page, though both still need original synthesis — A-BTR's framing is BTR-reporting-shaped, not built for this site's LAO/line-agency/Governor institutional model (Appendix E) or this site's instrument-by-instrument structure. REQ-057 starts from A-BTR Section C, confirm and expand sector by sector, keeping a named source for each barrier per the requirement's own done-when criteria.
 
 ---
 
@@ -214,7 +221,7 @@ All three need original research and writing, not data engineering. REQ-017 and 
 |---|---|---|---|---|
 | `MED-002` | ซูเปอร์เอลนีโญกับสุขภาพคนไทย ปกป้องชีวิตและกลุ่มเปราะบาง | E-book Reader | กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม | https://www.dcce.go.th/media/26317/ |
 
-Matched to REQ-054 but only topically adjacent (general heat-health vulnerability, not a protection-measures inventory for the four named groups). REQ-053 and REQ-055 have **no matched asset** — confirmed gap.
+Matched to REQ-054 but only topically adjacent (general heat-health vulnerability, not a protection-measures inventory for the four named groups). REQ-053 (gender/inclusion guidance) is confirmed partial, not a full gap: A-BTR Section A names the Gender Equality Act, Child Protection Act, Older Persons Act, and Persons with Disabilities Empowerment Act as the legal grounding for gender-responsive and inclusive adaptation — legal/rights framing, not the practical stage-by-stage steps the requirement also needs. REQ-055 (local wisdom, traditional knowledge, cultural heritage) has **no matched asset** — confirmed gap. The one A-BTR hit found (E-043, non-economic loss and damage naming cultural heritage as a loss category) is a different subject — loss accounting, not adaptation practice with named community examples — and doesn't change this requirement's status.
 
 ### Other potentially relevant datasets
 
@@ -250,13 +257,29 @@ The nature-based-solutions half of REQ-061 is well-supported and can move fast. 
 
 ---
 
-## DEL-11 — New operational capabilities
+## DEL-11 — New operational capability (feedback platform)
 
-**Serves** REQ-071, REQ-073 · **Sections** 4.3, 5.2
+**Serves** REQ-073 · **Sections** 5.2
 
 ### Confirmed assets
 
-Both requirements have **no matched asset** — confirmed gap, as expected. This deliverable is new build work (external portal connections, feedback platform), not content synthesis.
+No matched asset — confirmed gap, as expected. This deliverable is new build work (feedback platform), not content synthesis.
+
+### Developer headstart
+
+Integration/build work. No content dependency to resolve first.
+
+---
+
+## DEL-14 — External data hub links
+
+**Serves** REQ-071 · **Sections** 4.3
+
+*Split out from DEL-11 on 2026-08-14 (Boss review) — REQ-071 was re-scoped from a live-connection build to a curated links page, so it no longer belongs with REQ-073's genuine build work.*
+
+### Confirmed assets
+
+No matched asset — confirmed gap, as expected. This is a fresh content compile, not a match against existing DCCE material.
 
 ### Other potentially relevant datasets
 
@@ -264,25 +287,29 @@ Not applicable — REQ-071 explicitly names its target portals (TMD weather API,
 
 ### Developer headstart
 
-Both requirements are integration/build work. Start REQ-071 by requesting API access terms from TMD, GISTDA, and Copernicus in parallel — that's the actual bottleneck, not implementation.
+This is a content compilation task, not integration work. Write a link entry for each of the three named portals — what it holds, access conditions, relationship to local data — using public information. No API access, agreements, or live connections are required to launch it.
 
 ---
 
 ## DEL-12 — Disaster statistics product
 
-**Serves** REQ-001 · **Section** 1.1
+**Serves** REQ-001, REQ-011 · **Sections** 1.1, 2.1
+
+*REQ-011 added here 2026-08-13 (re-scoped from DEL-1). REQ-011 is "historical extreme weather statistics" (2.1) — event-based, per the v8 sitemap's own wording (เหตุการณ์อากาศสุดขั้ว, extreme weather events) — not the climatology-grid product it was previously matched to. It shares its underlying source with REQ-001.*
 
 ### Confirmed assets
 
-`DDPM_2_1` — ข้อมูลเหตุการณ์ภัยพิบัติย้อนหลัง 10 ปี (10-year historical disaster occurrence data). Type: Dataset. Owner: DDPM. Link: https://www.disaster.go.th. Status: Restricted, Baseline-Draft, Unverified-Baseline. Confirmed as REQ-001's real starting point (Boss review, 2026-08-13) — not a from-scratch compilation. Known limitations: reporting is one-way, from local administrative organizations up to province level, with no central ground-truthing, and no UNDRR-aligned hazard taxonomy. These need handling before the data is presentable, but the dataset itself is real.
+`DDPM_2_1` — ข้อมูลเหตุการณ์ภัยพิบัติย้อนหลัง 10 ปี (10-year historical disaster occurrence data). Type: Dataset. Owner: DDPM. Link: https://www.disaster.go.th. Status: Restricted, Baseline-Draft, Unverified-Baseline. Confirmed as REQ-001's real starting point (Boss review, 2026-08-13) — not a from-scratch compilation. Serves REQ-011 the same way: REQ-001 presents the chronological event history (1.1), REQ-011 presents aggregated extreme-event frequency/intensity/duration statistics (2.1), both computed from this one dataset. Known limitations: reporting is one-way, from local administrative organizations up to province level, with no central ground-truthing, and no UNDRR-aligned hazard taxonomy. These need handling before the data is presentable, but the dataset itself is real.
 
 ### Other potentially relevant datasets
 
 Also worth checking against `DDPM_2_1`'s coverage: `DDPM_3_1` (severe drought-affected areas), `DDPM_3_3` (severe flood-affected areas), `DDPM_1_1` (flood risk map) — not yet assessed for this specific use.
 
+TMD's climate extreme indices are a supplementary lead specifically for REQ-011's statistics, if DDPM's event records turn out to need a meteorological cross-check: `TMD_6_1` (TXx, max of daily max temp), `TMD_6_2` (TNx), `TMD_6_9` (Rx1day, max 1-day rainfall), `TMD_6_10` (Rx5day), `TMD_6_11` (SDII, daily rainfall intensity), `TMD_6_14` (PRCPTOT), `TMD_6_19` (SPI-1, standardized precipitation index), `TMD_6_22`–`TMD_6_24` (heat/flood/drought hazard indices) — not yet assessed for this use, and secondary to `DDPM_2_1` as the primary source.
+
 ### Developer headstart
 
-Start from `DDPM_2_1` directly — request access and evaluate its one-way-reporting and taxonomy gaps first; that's the real work, not gathering records from scratch. This also directly feeds REQ-049 (Loss and Damage dashboard, same DDPM source family) — resolving access to DDPM's disaster-event data once serves both.
+Start from `DDPM_2_1` directly — request access and evaluate its one-way-reporting and taxonomy gaps first; that's the real work, not gathering records from scratch. This same dataset now feeds three requirements: REQ-001 (disaster history, 1.1), REQ-011 (extreme-weather statistics, 2.1), and REQ-049 (Loss and Damage dashboard) — resolving access to DDPM's disaster-event data once serves all three.
 
 ---
 
@@ -294,8 +321,8 @@ Start from `DDPM_2_1` directly — request access and evaluate its one-way-repor
 
 | Asset | Title | Type | Owner | Link | Flags |
 |---|---|---|---|---|---|
-| `SYS-003` | ฐานข้อมูลความเสี่ยงจากการเปลี่ยนแปลงสภาพภูมิอากาศ (risk map application) | Data Product | กลุ่มพัฒนาเทคโนโลยีดิจิทัล | https://ccic.dcce.go.th/riskarea | The application itself — REQ-009, REQ-010, REQ-028, REQ-070 |
-| `DAT-005` | ข้อมูลความเสี่ยงจากการเปลี่ยนแปลงสภาพภูมิอากาศ (6-sector spatial risk data) | Data Product | กองขับเคลื่อนการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศ | https://dgf.dcce.go.th/dataset/db0303-001 | Public but Unverified-Baseline — REQ-005, REQ-009, REQ-013, REQ-015, REQ-028, REQ-041, REQ-070 |
+| `SYS-003` | ฐานข้อมูลความเสี่ยงจากการเปลี่ยนแปลงสภาพภูมิอากาศ (risk map application) | Data Product | กลุ่มพัฒนาเทคโนโลยีดิจิทัล | https://ccic.dcce.go.th/riskarea | The application itself — REQ-009, REQ-010, REQ-028, REQ-070 (launch/map component only — does not feed REQ-070's engineering design-value component, which is deferred and needs its own data, see Brief E-4) |
+| `DAT-005` | ข้อมูลความเสี่ยงจากการเปลี่ยนแปลงสภาพภูมิอากาศ (6-sector spatial risk data) | Data Product | กองขับเคลื่อนการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศ | https://dgf.dcce.go.th/dataset/db0303-001 | Public but Unverified-Baseline — REQ-005, REQ-009, REQ-013, REQ-015, REQ-028, REQ-041, REQ-070 (launch/map component only, same caveat as SYS-003) |
 | `DCCE_3_1`–`DCCE_3_7` | Seven-sector composite risk index + climate index, by province | Dataset | DCCE | https://ccic.dcce.go.th/riskarea | Restricted scenarios (ssp585/ssp245 only), Public access, Unverified-Baseline — REQ-004 |
 | `DAT-014` | ข้อมูลการประเมินผลการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศ | Document | กลุ่มประเมินผลการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศ | https://dgf.dcce.go.th/dataset/m-and-e | REQ-015 |
 | `MED-004` | ซูเปอร์เอลนีโญกับความมั่นคงด้านน้ำของประเทศไทย | E-book Reader | กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม | https://www.dcce.go.th/media/26076/ | REQ-041 |

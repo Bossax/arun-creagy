@@ -38,12 +38,12 @@ Part of this page is finished (the concept definitions in REQ-002) and part of i
 1. A short opening statement on why climate risk matters for Thailand, setting up everything that follows. Nothing in the current requirements writes this explicitly, but the page needs it before the detail begins.
 2. The IPCC framework for hazard, exposure, and vulnerability, defined in Thai and English (REQ-002). This is already covered material, so it can go up largely as-is.
 3. Physical risk and transition risk, defined and contrasted with Thai examples, connected forward to the risk-analysis sections and to the policy sections including the Climate Change Act and the EU's CBAM (REQ-003).
-4. National risk summary cards showing the seven-sector composite index at a glance (REQ-004). These should carry a visible flag that the underlying figures are still draft and unverified.
-5. History and trends of natural disaster events in Thailand, shown as an interactive chart covering at least the last two decades, built from DDPM's disaster occurrence data (REQ-001). The chart should state its source and period clearly and link out to the Thailand Climatology Dashboard and the Slow-Onset Hazards page for hazard types covered in more depth elsewhere.
+4. National risk summary cards showing the seven-sector composite index at a glance (REQ-004). These should carry a visible flag that the underlying figures are still draft and unverified, and a note that the composite index is currently the only available measure for this purpose, not necessarily the right one long-term.
+5. History and trends of natural disaster events in Thailand, shown as an interactive chart covering at least the last two decades, built from DDPM's disaster occurrence data (REQ-001). The chart should state its source and period clearly and link out to the disaster statistics product, not the Thailand Climatology Dashboard — disaster events and losses are a different, politically-determined dataset from the Dashboard's meteorological and climatic variables, and the two should not be cross-linked as if they were the same product.
 
 ### What's already there and how to start
 
-- REQ-002 is done. DCCE's impact chain manual and the IPCC-tagged dataset already say what's needed. Port this content directly.
+- REQ-002 is done. DCCE's impact chain manual and the IPCC-tagged dataset already say what's needed — the dataset is explanatory/definitional grounding for the IPCC framework terms, not an analytical input the page computes from. Port this content directly.
 - REQ-007-style success content does not belong here (it's on the next page), so skip ahead for that.
 - REQ-003 has nothing to build from. Someone needs to write the physical-versus-transition-risk explainer from scratch, including at least two Thai examples for each term and the link to the Climate Change Act and CBAM.
 - REQ-004 has real numbers behind it (the seven-sector composite index, `DCCE_3_1` through `DCCE_3_7`), but nobody has confirmed whether those numbers are fit to show as summary cards, and they carry a draft/unverified flag. Wait for the hosting-migration investigation (DEL-13) before publishing this with confidence, or publish now with the draft flag stated plainly.
@@ -55,19 +55,21 @@ Part of this page is finished (the concept definitions in REQ-002) and part of i
 
 **Readiness: 3/5 — Ready to synthesize**
 
+The hotspot synthesis for this page draws on a literature review, not on the spatial risk database (risk map) product, which is why readiness stays at 3/5. (Side note: if sub-district-level risk turns out to be required instead, readiness drops to 1/5, blocked by data availability.)
+
 Two of the three pieces here are genuinely finished and just need to be laid out. The third, the hotspot map, has a real problem: it was recorded as complete on the assumption that the risk map shows location-specific detail, and it does not.
 
 ### What this page should contain, in order
 
-1. A summary of Thailand's National Adaptation Plan, giving the reader the country's overall direction before drilling into specific risks (REQ-006).
-2. Critical hotspots by sector and region, drawn from the same composite risk data used elsewhere on the site. This needs a visible caveat: the underlying index is province-level, so anything presented as a finer-grained hotspot is not actually spatially precise yet (REQ-005).
+1. Critical hotspots by sector and region, drawn from the same composite risk data used elsewhere on the site. This needs a visible caveat: the underlying index is province-level, so anything presented as a finer-grained hotspot is not actually spatially precise yet (REQ-005). Presenting these hotspots at province scale is pending DCCE's explicit sign-off on whether that scale of "hotspot" presentation is useful at all; if DCCE does not approve it, this section falls back to literature-reviewed content instead.
+2. A summary of Thailand's National Adaptation Plan, giving the reader the country's overall direction after the risk picture, so the plan reads as a response to the risk just shown (REQ-006).
 3. Examples of high-value adaptation measures that have worked in Thailand, moving the page from problem framing into concrete solutions (REQ-007).
 
 ### What's already there and how to start
 
 - REQ-006 is done. The National Adaptation Plan itself, its dataset entry, and several Thai and English explainers already exist. Port this content directly.
 - REQ-007 is done. A success-factors article covering six sectors already exists, and the nature-based solutions guidance dataset (`DAT-022`) backs it directly. Cite that dataset by name rather than describing it vaguely.
-- REQ-005 needs care before it goes up as "complete." The composite risk data is real, but do not publish or imply hotspots below province level until the Appendix B2 investigation confirms what the index actually supports. In the meantime, present the hotspots explicitly as province-level, with the same draft and unverified flag the underlying data carries.
+- REQ-005 needs care before it goes up as "complete." The composite risk data is real, but do not publish or imply hotspots below province level until the Appendix B2 investigation confirms what the index actually supports. In the meantime, present the hotspots explicitly as province-level, with the same draft and unverified flag the underlying data carries, and hold this section for DCCE's explicit approval on whether province-level "hotspot" framing is worth shipping at all — without that approval, fall back to literature-reviewed content instead.
 
 ---
 
@@ -75,20 +77,20 @@ Two of the three pieces here are genuinely finished and just need to be laid out
 
 **Readiness: 2/5 — Needs new content**
 
-This is an interactive search tool, not a content page, and it needs real interface and fallback-logic work. None of its three pieces has a matched data asset behind it yet, and one part (recommended measures for a selected point) has nothing anywhere on the site to draw from.
+This is an interactive search tool, not a content page, and it needs real interface and fallback-logic work. It is also a different access surface onto the same composite risk index / risk map used across the site (see also 1.1.2 and 2.2, which surface the same underlying data), not a separate analytical build — worth keeping in mind so this and related pages aren't scoped as if each needed its own new analysis. None of its three pieces has a matched data asset behind it yet, and one part (recommended measures for a selected point) has nothing anywhere on the site to draw from.
 
 ### What this page should contain, in order
 
 1. A search that lets a user pick a province, then a district, then a sub-district (REQ-008). This follows the standard government administrative hierarchy, which is a different geography from Local Administrative Organization boundaries, so a "district" or "sub-district" pick will not always match a municipality's real boundary.
 2. A result view that always shows something. When finer-than-province data does not exist, the province figure should display with a clear label saying so. It should never come back empty or imply there is no risk when the truth is that there is no data yet.
 3. A map showing administrative boundaries layered over the risk map, with the same province-level caveat carried through visually (REQ-009).
-4. A quick-view summary for a selected point, showing whatever vulnerability information genuinely exists, and marking the "recommended measures" portion as not yet available rather than leaving it blank without explanation (REQ-010).
+4. A quick-view summary for a selected point, covering three things per the sitemap: vulnerability, main hazards/threats, and recommended measures. Show whatever vulnerability and hazard information genuinely exists, and mark the "recommended measures" portion as not yet available rather than leaving it blank without explanation (REQ-010). The "vulnerability" shown here is the non-climatic parameter grouping already inside DCCE's risk map, so this needs to add real value beyond re-displaying that same figure — otherwise it is just a repeat of what 1.1.2 and 2.2 already show.
 
 ### What's already there and how to start
 
 - REQ-008 has no matched asset. The province-level composite data it would draw on (`DCCE_3_1` through `DCCE_3_7`) exists but stops at the province. Build the fallback behavior first (always show a labeled result, never a blank one) since that is the part of the specification that actually determines whether the tool feels broken. Closing the gap below province level is a separate, larger undertaking, either compiling content from Provincial Climate Change Plans and Disaster Prevention & Mitigation Plans, or re-working the underlying data onto real municipal geometry.
 - REQ-009 can use the existing risk-map application as its base, but it can only meaningfully show province-level boundaries for now. Say so on the page rather than letting the map imply finer coverage than the data supports.
-- REQ-010 can also start from the existing risk-map application for the point-lookup interaction, but there is no dedicated quick-view product today, and the recommended-measures content does not exist anywhere on the site. That half needs original content work, independent of anything data-related.
+- REQ-010 can also start from the existing risk-map application for the point-lookup interaction, but there is no dedicated quick-view product today, and neither the vulnerability-and-hazard content nor the recommended-measures content has been compiled anywhere on the site, at any level. Since this quick-view content covers the same "country risk" ground as 1.1.2 (Thailand's key risks and adaptation priorities), build the two together rather than as independent efforts — they can share underlying content while differing in framing (general risk overview vs. point-specific lookup).
 
 ---
 
@@ -102,14 +104,14 @@ One piece of this page has real underlying data waiting on an access decision, o
 
 ### What this page should contain, in order
 
-1. Historical extreme weather statistics, shown as the extremes view of the shared Thailand Climatology Dashboard (frequency, intensity, and duration of temperature and rainfall extremes), anchoring the page's "numbers" focus (REQ-011).
-2. National exposure trends, presented next to the disaster-history content rather than as an isolated chart, with a plain note that only exposure, not hazard or risk, can be shown as a trend given current data (REQ-013).
+1. Historical extreme weather statistics, anchoring the page's "numbers" focus (REQ-011). This should be built from DDPM's disaster occurrence data, not the Thailand Climatology Dashboard — disaster events and losses are a distinct, politically-determined dataset from the Dashboard's meteorological and climatic variables, and the two should not be conflated here either.
+2. National exposure trends, presented next to the disaster-history content rather than as an isolated chart, with a plain note that only exposure, not hazard or risk, can be shown as a trend given current data (REQ-013). This is a long-term monitoring-design problem, not a simple chart: the exposure variables shown need to be chosen against defined criteria for giving an unbiased picture of Thailand's climate exposure, not picked ad hoc through stakeholder consultation alone. Until that criteria-based selection is done, fall back to a descriptive summary rather than presenting an unvetted trend.
 3. A forward-pointing note on national macroeconomic loss and damage statistics, explaining that this section will host a summary view once the Loss and Damage dashboard exists elsewhere on the site, with a link there rather than a placeholder chart (REQ-012).
 
 ### What's already there and how to start
 
-- REQ-011 shares its backend with the Thailand Climatology Dashboard. The underlying grids (`DCCE_2_1`, `DCCE_2_2`) are real but restricted and still flagged draft and unverified. The first step is resolving that access question, which also unblocks the dashboard's climatology view at the same time, so coordinate the two rather than solving them twice. Worth checking first whether TMD already publishes comparable extreme-climate indices before committing to deriving these from scratch.
-- REQ-013 does not need new data collection. Reuse the six-sector spatial dataset already in use elsewhere on the site, but state plainly on the page that it only supports a trend for exposure, not for hazard or risk, and place it next to the disaster-statistics content rather than on its own.
+- REQ-011 has been re-scoped: it draws on `DDPM_2_1`, DDPM's ten-year disaster occurrence dataset (the same dataset backing REQ-001 in section 1.1.1), not on the Thailand Climatology Dashboard's grids (`DCCE_2_1`, `DCCE_2_2`). This is now reflected consistently across the DRD, the Deliverable-Asset Mapping, and all five DRD CSVs — REQ-011 moved from DEL-1/DS-02 to DEL-12/DS-08.
+- REQ-013 does not need new data collection, but it does need a criteria-based selection pass before the six-sector spatial dataset already in use elsewhere on the site can be shown as a monitoring trend. State plainly on the page that it only supports a trend for exposure, not for hazard or risk, place it next to the disaster-statistics content rather than on its own, and use a descriptive summary instead of a computed trend until the underlying variables have been checked against defined criteria.
 - REQ-012 has nothing to build yet. Don't attempt an independent macroeconomic loss database. Point to the future Loss and Damage dashboard instead, since the loss-and-damage work package's own methodology has not been published.
 
 ---
@@ -118,16 +120,18 @@ One piece of this page has real underlying data waiting on an access decision, o
 
 **Readiness: 2/5 — Needs new content**
 
-The province-level version of this page is buildable now, using real source material beyond the single composite index, but both pieces need the same honest caveat: nothing below province level exists yet, and no source has been assessed for how to close that.
+This page is the same underlying tool and data as 1.2 (Area-based data search), presented for the policy-maker audience — the two should be built identically underneath, differing mainly in their introductory framing, not as two separate builds. The province-level version of this page is buildable now, using real source material beyond the single composite index, but both pieces need the same honest caveat: nothing below province level exists yet, and no source has been assessed for how to close that.
 
 ### What this page should contain, in order
 
-1. One consistent profile structure for all 77 provinces, covering main hazards, exposed sectors, and the vulnerability picture, so any two provinces can be compared side by side (REQ-014).
-2. Within that structure, a breakdown for the six priority sectors, drawing on the same risk data used across the site rather than a separately built dataset (REQ-015).
-3. A clear, plainly worded note, repeated wherever relevant, that municipality-tier Local Administrative Organization coverage is not available at this level, and why, plus a visible flag on any figure carried over in draft or unverified status.
+1. An introductory paragraph framed for a policy maker or planner: what this profile is for and how to use it when comparing provinces or sectors, distinct from 1.2's general-search framing but built on the same underlying data.
+2. One consistent profile structure for all 77 provinces, covering main hazards, exposed sectors, and the vulnerability picture, so any two provinces can be compared side by side (REQ-014).
+3. Within that structure, a breakdown for the six priority sectors, drawing on the same risk data used across the site rather than a separately built dataset (REQ-015).
+4. A clear, plainly worded note, repeated wherever relevant, that municipality-tier Local Administrative Organization coverage is not available at this level, and why, plus a visible flag on any figure carried over in draft or unverified status.
 
 ### What's already there and how to start
 
+- The introductory paragraph is the only genuinely new writing this page needs beyond what 1.2 already requires — write it once 1.2's underlying tool is scoped, so the two pages share build effort rather than duplicating it.
 - REQ-014 has no matched asset in the formal registry yet, but real building blocks exist. The province-level composite index (`DCCE_3_1` through `DCCE_3_7`) is the backbone. Beyond that, NESDC's provincial indicators (poverty, elderly and child counts, human development index, income per capita) and NSO's census series (population and housing, agriculture, labor force, socio-economic survey) are strong, not-yet-checked leads for making these profiles more than a single index number. Confirm access terms on the NESDC and NSO material before relying on it.
 - REQ-015 can reuse the same six-sector spatial dataset and the adaptation-evaluation dataset already used elsewhere on the site. Nothing new needs to be collected. The work here is presentation and honesty about the province-level limit, not new data gathering.
 
@@ -142,13 +146,13 @@ One part of this page is already finished, one needs original writing, and one i
 ### What this page should contain, in order
 
 1. The current status of the draft Climate Change Act: what stage it is at, what the act does, and links to the official summary and the full draft text. This part is ready now.
-2. A summary of the other laws and policies that support adaptation action, built the right way round: start from the adaptation measures the site already describes, then work backward to which legal instruments back them up, not the other way around. Each law should say plainly whether it applies to a Local Administrative Organization (LAO), to a specific line agency, or to both, since LAOs and line agencies operate under different legal bases and a law that does not say who it binds is not usable by either.
-3. If DCCE decides to build the avoided-losses certification system (a separate, not-yet-decided feature, see the financial evidence service in Appendix B of the DRD), a clearly marked section describing that feature. It should not be blended into the two sections above, since committing to build it is a decision DCCE has not made yet.
+2. A summary of the other laws and policies that support adaptation action, built the right way round: start from the adaptation measures the site already describes, then work backward to which legal instruments back them up, not the other way around. At minimum, this must cover the Disaster Prevention and Mitigation Act and town planning ministerial regulations — both currently uncovered anywhere on the site, and both explicitly required. Each law should say plainly whether it applies to a Local Administrative Organization (LAO), to a specific line agency, or to both, since LAOs and line agencies operate under different legal bases and a law that does not say who it binds is not usable by either.
+3. If DCCE decides to build the avoided-losses certification system, a clearly marked section describing that feature in plain terms: a formal system for certifying an agency's avoided-losses calculation — validating that a climate-resilient design's higher upfront cost is justified by the future losses it avoids, so the agency can cite that certification when justifying its budget request to สตง (the state audit office). This is a separate, not-yet-decided feature (see the financial evidence service, Brief E-1, in Appendix B of the DRD) and should not be blended into the two sections above, since committing to build it is a decision DCCE has not made yet.
 
 ### What's already there and how to start
 
 - The Climate Change Act summary is ready to use directly: the official summary, the full draft text, and two existing explainer pieces (owned by the strategy and international cooperation division) cover this in full. Port this content as-is.
-- Nothing exists yet for the supporting-laws summary. Before writing, get the correct list of adaptation measures the rest of the site already covers, since the law list has to be built from that, not from a general legal survey. Then identify which laws apply to LAOs and which apply to named line agencies — this determines how the content gets organized, not just how it reads.
+- Nothing exists yet for the supporting-laws summary, including the two laws explicitly required: the Disaster Prevention and Mitigation Act and town planning ministerial regulations. Before writing, get the correct list of adaptation measures the rest of the site already covers, since the law list has to be built from that, not from a general legal survey. Then identify which laws apply to LAOs and which apply to named line agencies — this determines how the content gets organized, not just how it reads.
 - The certification-system section is not something to start on now. It only becomes real work if DCCE decides to commission the financial evidence service described in Appendix B.
 
 ---
@@ -171,13 +175,13 @@ None of this should be built as a full specification yet. If DCCE has not commit
 
 ### What's already there and how to start
 
-- The funding directory itself has real material to draw on right now, independent of the larger decision: DCCE's own funding guide, and dedicated publications for the Adaptation Fund, Green Climate Fund, and Global Environment Facility (all owned by the strategy and international cooperation division). A simple directory listing these could be published as an interim step even before DCCE decides on the full service.
+- The funding directory itself has real material to draw on right now, independent of the larger decision: DCCE's own funding guide, and dedicated publications for the Adaptation Fund, Green Climate Fund, and Global Environment Facility (all owned by the strategy and international cooperation division). A simple directory listing these could be published as an interim step even before DCCE decides on the full service, converted into a summary or explainer style that also links back to the original source rather than a bare listing.
 - Everything past that (cost-benefit method, budget tagging, technology and technical-assistance tracking, private-sector mobilization) has nothing behind it. The existing GCF/AF/GEF-related assets, including the no-objection endorsement process material, only track money moving through those specific channels. They do not cover technology transfer or capacity-building support at all, which is a real, repeated gap DCCE should know about before scoping the service.
 - Do not start building the cost-benefit methodology or budget-tagging pieces until DCCE has actually decided to commission this. The first real step is that decision, not a content draft.
 
 ---
 
-##  2.3.2 — DCCE's role and coordination with local government
+##  2.3.2 — Institutional Governance and Coordination
 
 **Readiness: 4/5 — Ready to compile**
 
@@ -197,21 +201,25 @@ Three of the four pieces on this page already exist and mostly need porting. The
 
 ---
 
-##  2.4 — Local vulnerability index and the integrated risk map
+##  2.4 — Planning data services
 
 **Readiness: 2/5 — Needs new content**
 
-One piece is a straightforward explainer that can be written now. The other depends on an investigation that has not happened yet and should not be assumed finished.
+This page is a planning-guideline hub, not a bare list of tools — it needs an opening frame that ties the two analytical tools below to an actual planning use case before either tool is presented, plus a forward pointer to tools not yet built. One tool is a straightforward explainer that can be written now. The other depends on an investigation that has not happened yet and should not be assumed finished.
 
 ### What this page should contain, in order
 
-1. An explainer introducing the idea of a "Climate Resilience Index" — what it would measure, the reasoning behind it, and how it relates to the risk framework used elsewhere on the site. This is a concept explainer only. It should not present any computed per-province numbers, since the actual index has not been built and computing it is separate, later work.
-2. A section presenting DCCE's integrated spatial risk map as an existing tool a reader can use. This section carries an important caveat: whether the map is actually fit for this purpose has not been confirmed, and it should not be presented as finished until the investigation described in Appendix B2 of the DRD, and the related infrastructure work in DEL-13, are both done.
+1. A short planning-guideline framing: what a planner should come to this page to do, and how the tools below support that task. Without this framing the page is just a hub of links, not planning guidance.
+2. An explainer introducing the idea of a "Climate Resilience Index" — what it would measure, the reasoning behind it, and how it relates to the risk framework used elsewhere on the site. Alongside the concept, publish the intended method in principle: which categories of indicator it would draw on and roughly how they'd be weighted. This is a concept-and-method explainer, not a working tool — it should not present any computed per-province numbers, since the actual index has not been built and computing it is separate, later work.
+3. A section presenting DCCE's integrated spatial risk map as an existing tool a reader can use. This section carries an important caveat: whether the map is actually fit for this purpose has not been confirmed, and it should not be presented as finished until the investigation described in Appendix B2 of the DRD, and the related infrastructure work in DEL-13, are both done.
+4. A forward-pointing note on other planning tools still to come, such as the disaster statistics product, so the page reads as a growing planning hub rather than a closed list.
 
 ### What's already there and how to start
 
-- For the Climate Resilience Index explainer, one existing media piece explains how vulnerability and adaptive capacity are measured (owned by the communications division) — use it as a starting reference for the concept explanation, but write new content rather than reusing it directly, since it does not name or frame the index concept itself.
+- The planning-guideline framing has nothing to draw from yet and needs to be written first, since it determines how the rest of the page is organized, not just how it opens.
+- For the Climate Resilience Index explainer, one existing media piece explains how vulnerability and adaptive capacity are measured (owned by the communications division) — use it as a starting reference for the concept explanation, but write new content rather than reusing it directly, since it does not name or frame the index concept itself. The "method in principle" component (indicator categories, rough weighting) also has to be written from scratch — nothing today states even a proposed method, only the underlying proxy indicators (station density, water monitoring counts, agricultural census measures) that a future method could draw on.
 - For the risk map section, the map application itself is real and live. But do not describe it as finished. The composite data behind it needs the Appendix B2 investigation before anyone can say what it actually supports. Flag this section as pending rather than presenting the map as a complete answer to this requirement.
+- The forward-pointing note on future tools has nothing to draw from yet beyond naming the disaster statistics product as the clearest known candidate.
 
 ---
 
@@ -248,37 +256,39 @@ This page holds the site's one committed analytical build alongside two lighter,
 
 ### What this page should contain, in order
 
-1. The Thailand Climatology Dashboard: climatology and trend statistics for temperature and rainfall, computed from DCCE's own historical grid data and shown at province or region level with uncertainty ranges. This is the same backend that powers the historical extreme-weather statistics shown in section 2.1, built once and shown as an embedded view here and as a full application under the tools section of the site.
-2. If DCCE commits to the uncertainty governance service (see Appendix B of the DRD), a scenario usage guide explaining how to choose and interpret climate scenarios. This section should be clearly marked as conditional.
-3. An explainer on downscaled future climate projections, stating plainly that DCCE's data is at national grid resolution, not the finer sub-national resolution the original ask describes, and linking to DCCE's own existing projection platform rather than republishing the datasets on this page.
+1. The **Thailand Climatology Dashboard**: climatology and trend statistics for temperature and rainfall, computed from DCCE's own historical grid data and shown at province or region level with uncertainty ranges. This is the same backend that powers the historical extreme-weather statistics shown in section 2.1, built once and shown as an embedded view here and as a full application under the tools section of the site.
+2. A small link to the scenario usage guide (see 3.1.3), rather than a full section here — the fuller guide on choosing and interpreting climate scenarios belongs on 3.1.3, and can also surface in the planning section once climate scenarios are introduced there.
+3. An explainer on downscaled future climate projections. DCCE's downscaled projection data actually goes down to 5–25km grid resolution, not the coarser national-only resolution the original ask implied — state the real resolution plainly, note where it falls short of the finer sub-national resolution the original ask describes, and link to DCCE's own existing projection platform rather than republishing the datasets on this page.
 
 ### What's already there and how to start
 
 - The Climatology Dashboard (item 1) has real underlying data: multi-decade temperature and rainfall grids covering 1981 to 2023. But the grids are restricted access and nothing has been computed from them yet, and it is not currently recorded whether the grid is built from weather stations or from a model reanalysis. Confirm that provenance question before computing and publishing any trend statistics, and resolve the access restriction once, since this same data also feeds the extreme-weather statistics in section 2.1.
-- The scenario usage guide (item 2) has nothing behind it and should not be started unless DCCE decides to commission the uncertainty governance service.
-- The projections explainer (item 3) has real data to describe: downscaled projection datasets running out to 2099 and 2100. DCCE already runs a platform for this at clim-webbased.dcce.go.th. Link to that platform rather than rebuilding it here — and note that this platform is not yet formally registered as a DCCE asset, which should be fixed as part of this work.
+- The scenario-guide link (item 2) just points to 3.1.3 — no separate content needs to be written here.
+- The projections explainer (item 3) has real data to describe: downscaled projection datasets at 5–25km resolution running out to 2099 and 2100. DCCE already runs a platform for this at clim-webbased.dcce.go.th. Link to that platform rather than rebuilding it here — and note that this platform is not yet formally registered as a DCCE asset, which should be fixed as part of this work.
 
 ---
 
-##  3.1.3 — Uncertainty standards and projection case studies
+##  3.1.3 — Future climate scenarios
 
 **Readiness: 2/5 — Needs new content**
 
-One piece here is blocked on a decision DCCE has not made. The other is a straightforward content-writing task that can proceed on its own.
+One piece here is blocked on a decision DCCE has not made. The other two are straightforward content-writing tasks that can proceed on their own.
 
 ### What this page should contain, in order
 
-1. If DCCE commits to the uncertainty governance service (see Appendix B of the DRD), a national standard for managing and communicating uncertainty in climate data. This section should be clearly marked as conditional and kept separate from the case studies below, since committing to it is a decision that has not been made.
-2. Worked case studies showing climate projection data being used in a real long-term planning or investment decision, covering more than one sector, each one showing the decision made, the data used, how uncertainty was handled, and the outcome.
+1. An explainer on what a climate scenario is (for example, the SSP/RCP pathways), why projections are presented as a range of scenarios rather than a single forecast, and how to read them. This grounds the reader before the uncertainty and case-study content that follows.
+2. If DCCE commits to the uncertainty governance service (see Appendix B of the DRD), a national standard for managing and communicating uncertainty in climate data. This section should be clearly marked as conditional and kept separate from the case studies below, since committing to it is a decision that has not been made.
+3. Worked case studies showing climate projection data being used in a real long-term planning or investment decision, covering more than one sector, each one showing the decision made, the data used, how uncertainty was handled, and the outcome. This page is not part of the planning section, so keep the case studies focused on how the projection data itself was used and interpreted, and close with a link out to the planning section's own material rather than duplicating planning content here.
 
 ### What's already there and how to start
 
+- The climate-scenario explainer has nothing dedicated to it yet. Write it from the same scenario framing used elsewhere on the site (SSP/RCP), keeping it plain-language and Thailand-specific where possible.
 - The uncertainty standard has nothing behind it and should not be started unless DCCE decides to commission the uncertainty governance service.
 - The case studies have nothing behind them yet either, but nothing is blocking them. Find at least two real examples, from different sectors, where a Thai planning or investment decision actually used climate projection data, and write them up showing the decision, the data, and how uncertainty in that data was handled. This can proceed independently of the uncertainty-standard section above.
 
 ---
-
-##  3.2.1 — Defining risk concepts, and the sector damage cost library
+# 3.2 การวิเคราะห์ผลกระทบ ความเสี่ยง และความเปราะบาง (Risk Analysis)
+##  3.2.1 — Vulnerability and Exposure Analysis
 
 **Readiness: 2/5 — Needs new content**
 
@@ -300,7 +310,7 @@ Real source material exists but only covers part of what the page needs, and one
 
 ---
 
-##  3.2.2 — How Thailand assesses risk, and what the sector results show
+##  3.2.2 — Risk Analysis: Methodology and Sector Results
 
 **Readiness: 2/5 — Needs new content**
 
@@ -393,17 +403,18 @@ One part of this page can move forward now. Two other parts have real supporting
 
 ---
 
-##  3.2.5 — The national manual for calculating risk, impact, and loss
+##  3.2.5 — Theoretical Framework and the National Risk, Impact, and Loss Manual
 
 **Readiness: 2/5 — Needs new content, blocked on a dependency**
 
-A proxy document exists, but it was not written for this purpose, and the real manual cannot be finished until the loss and damage work package's methodology is written.
+A proxy document exists, but it was not written for this purpose, and the real manual cannot be finished until the loss and damage work package's methodology is written. This node's "theoretical framework" half is not a separate build — it's satisfied by the concept definitions on 3.2.1 and the risk-assessment methodology on 3.2.2, which this manual should explicitly cite as its grounding rather than re-deriving. A second pass through the full DCCE asset catalog for any other risk-assessment-framework document turned up nothing beyond the impact-chain manual already cited on 3.2.2 — the near-hits (an internal anti-corruption risk assessment, an ecological/pollution-control video) are a different subject entirely, so the proxy framing above still stands.
 
 ### What this page should contain, in order
 
 1. Present this page as the standard, government-wide manual for how to calculate risk, impact, and loss and damage, the kind of document another agency would follow to produce results comparable with DCCE's own.
-2. State plainly that DCCE's impact chain manual is the closest existing document, but that it was written for a narrower purpose and was not designed as a loss and damage calculation standard.
-3. Note that finishing this manual depends on the loss and damage work package's methodology, which has not been written yet. This is a mandatory requirement under the sitemap, so the page should say clearly that the manual is coming, not that it does not matter.
+2. Open by citing the theoretical grounding this manual builds on: the exposure/sensitivity/adaptive-capacity/resilience definitions on 3.2.1 and the national risk assessment methodology on 3.2.2. This manual is the calculation procedure built on top of that framework, not a separate theory of its own — say so explicitly rather than repeating the definitions here.
+3. State plainly that DCCE's impact chain manual is the closest existing document, but that it was written for a narrower purpose and was not designed as a loss and damage calculation standard.
+4. Note that finishing this manual depends on the loss and damage work package's methodology, which has not been written yet. This is a mandatory requirement under the sitemap, so the page should say clearly that the manual is coming, not that it does not matter.
 
 ### What's already there and how to start
 
@@ -412,12 +423,12 @@ A proxy document exists, but it was not written for this purpose, and the real m
 - First step: hold this page as a short placeholder explaining what the manual will cover and why it is not ready yet, rather than attempting a first draft before the loss and damage methodology exists. Revisit once that methodology work package delivers its output.
 
 ---
-
-##  3.3.1 — Gender inclusion, vulnerable groups, and local wisdom in adaptation
+# 3.3 การวางแผนการปรับตัวและการปฏิบัติ (Planning & Implementation)
+##  3.3.1 — Planning Guidelines & Inclusive Adaptation
 
 **Readiness: 2/5 — Needs new content**
 
-Three of the four requirements on this page have nothing behind them today. The fourth exists only as a general heat-health article, not the dedicated coverage the page needs.
+Three of the four committed requirements on this page have nothing dedicated behind them today, though A-BTR's legal-framework citations give two of them real grounding to start from. The fourth exists only as a general heat-health article, not the dedicated coverage the page needs. A fifth, conditional piece — cost-benefit and avoided-losses methodology — depends on a decision DCCE has not made yet and is kept structurally separate from the committed content.
 
 ### What this page should contain, in order
 
@@ -425,16 +436,17 @@ Three of the four requirements on this page have nothing behind them today. The 
 2. Follow with protection and assistance measures for each of four named groups, covered separately: children, elderly people, disabled people, and border or coastal communities. For each group, state the specific risks they face and the measures that address them, covering flood, drought, and storm as well as heat. Name the responsible body for each measure.
 3. Close with how local wisdom and traditional knowledge apply to community adaptation. Give documented Thai examples naming the community and region, and explain how traditional practice combines with technical measures rather than standing as an alternative to them. Cover cultural heritage both as something at risk and as a resource for adaptation.
 4. Link the gender/inclusion guidance and the vulnerable-groups section to each other throughout, since they're meant to work together.
-
-Cost-benefit and avoided-losses methodology (REQ-052) does not belong on this page yet. That work depends on DCCE deciding to build the financial evidence service (Brief E-1) and is not committed content — treat it as a possible future section, not something to draft now.
+5. If DCCE commits to the financial and budget evidence service (Brief E-1, see Appendix B of the DRD), a cost-benefit and avoided-losses methodology section explaining how a climate-resilient design's cost compares to a historical benchmark. This section should be clearly marked as conditional and kept structurally separate from the committed content above, since committing to it is a decision that has not been made.
 
 ### What's already there and how to start
 
 - One article on protecting vulnerable groups during extreme heat exists (`MED-002`, DCCE public relations). It's a useful reference but only covers one hazard and doesn't break out the four named groups.
-- Nothing exists yet for gender/inclusion guidance or for local wisdom and traditional knowledge. Both need to be written from scratch.
+- A-BTR's institutional and legal baseline (Section A) names the Gender Equality Act, the Child Protection Act, the Older Persons Act, and the Persons with Disabilities Empowerment Act as the legal grounding for gender-responsive adaptation and protecting the four named groups. This is legal/rights framing, not practical measures — pair it with the welfare registry below and the heat-health article for the operational detail.
+- Nothing exists yet for local wisdom and traditional knowledge — that still needs to be written from scratch. Gender/inclusion guidance has real legal grounding to build on now; the practical, stage-by-stage steps still need writing.
 - Before writing the vulnerable-groups section, check the Ministry of Social Development and Human Security's welfare registry (`MSDHS_1_1`) — it's the closest thing to real data on the four named groups and is worth requesting access to early, since it can ground the content in real numbers rather than description alone.
 - Population data for children and elderly people (from NESDC sources) can support the exposure framing for those two groups, though it's demographic background, not a protection-measures inventory on its own.
 - Local wisdom content will need outreach to community organizations or provincial offices to gather documented examples — this isn't sitting in any DCCE catalog waiting to be compiled.
+- The cost-benefit and avoided-losses methodology has nothing behind it and should not be started unless DCCE decides to commission the financial and budget evidence service.
 
 ---
 
@@ -442,7 +454,7 @@ Cost-benefit and avoided-losses methodology (REQ-052) does not belong on this pa
 
 **Readiness: 2/5 — Needs new content**
 
-The roadmap diagram itself is solid and ready to use. Everything else on this page needs to be written, and two of the four requirements depend on a decision DCCE hasn't made yet.
+The roadmap diagram itself is solid and ready to use. The systemic barriers report has real source material to start from in A-BTR; the support-needs piece still depends on a decision DCCE hasn't made yet.
 
 ### What this page should contain, in order
 
@@ -453,16 +465,16 @@ The roadmap diagram itself is solid and ready to use. Everything else on this pa
 ### What's already there and how to start
 
 - The roadmap diagram can be pulled directly from the National Adaptation Plan (`PUB-009`, `DAT-021`) with light formatting work.
-- The systemic barriers report has nothing to build from. Start by identifying barriers sector by sector, and keep a running log of the source for each one as you go, since the requirement is explicit that assertions without a named source don't count.
+- A-BTR's Section C (priorities, barriers and strategy) already frames systemic barriers across the full planning-to-reporting cycle — data limitations, institutional coordination gaps, and financial constraints among them. Use it as the starting inventory and named-source base, then confirm and expand sector by sector, keeping a running log of the source for each one, since the requirement is explicit that assertions without a named source don't count.
 - The support-needs and personnel-development content should not be started until DCCE decides whether to build the financial evidence service. If that decision comes through, the existing funding-source material (DCCE's funding guide, and the AF/GCF/GEF publications) covers money only, not technology transfer or capacity building, so that gap would still need filling separately.
 
 ---
 
 ##  3.3.3 — Adaptation measures library
 
-**Readiness: 2/5 — Needs new content**
+**Readiness: 3/5 — Real sector material exists, needs compiling and building**
 
-Nature-based solutions content is genuinely strong. The searchable database itself and the grey infrastructure half of the comparison both need to be built from nothing.
+Nature-based solutions content is genuinely strong, and six sector-specific good-practice case studies — already compiled for the case-study library on 3.4.3 — give the searchable database real material to mine across every priority sector, not just nature-based. The searchable database itself and the grey infrastructure half of the comparison still need to be built. Note: this feature's build is owned by DCCE's adaptation measure development division, not the content/communications team — flag ownership before build starts, not after.
 
 ### What this page should contain, in order
 
@@ -472,41 +484,44 @@ Nature-based solutions content is genuinely strong. The searchable database itse
 ### What's already there and how to start
 
 - Nature-based solutions content is ready to compile: a guidance dataset (`DAT-022`), an explainer (`MED-042`), and a video (`VID-036`) all exist and cover this material in depth.
+- Six sector-specific good-practice assets (`MED-009` through `MED-014`, one each for human settlements & security, natural resources, public health, tourism, agriculture & food security, and water resources management) already cover concrete measures by sector — the same set used for the case-study library on 3.4.3. Mine these into structured, measure-level entries (what it does, where it's been used, what it costs) rather than treating them as case-study-only material.
 - Grey and structural infrastructure measures have nothing behind them in DCCE's holdings. This will likely need to be sourced from outside DCCE, for example from the Department of Public Works and Town & Country Planning or the Royal Irrigation Department's own infrastructure planning material.
-- The searchable database itself (filtering by hazard, sector, budget, with a "cost unknown" state) is a structured content-entry task once the measure descriptions exist for both categories. Start entering nature-based measures now, since that content is ready, while grey infrastructure content is being sourced.
+- The searchable database itself (filtering by hazard, sector, budget, with a "cost unknown" state) is a structured content-entry task once the measure descriptions exist across categories. Start entering nature-based and sector good-practice measures now, since that content is ready, while grey infrastructure content is being sourced.
 
 ---
 
 ##  3.3.4 — Repository of local and private sector risk management plans
 
-**Readiness: 1/5 — Blocked**
+**Readiness: 2/5 — Narrative case material exists, structured repository still blocked**
 
-This entire page depends on DCCE deciding to build the institutional and project tracking service. Nothing here is committed content yet.
+The structured, searchable repository depends on DCCE deciding to build the institutional and project tracking service. But real local and private-sector adaptation cases already exist in narrative form and can open the page today, even while that decision is pending.
 
 ### What this page should contain, in order
 
-If DCCE selects this service (Brief E-3, Appendix B), the page would hold a repository of local and private sector climate risk management plans. Nothing exists to build from today, and the underlying information sits with DCCE programme staff and external organizations rather than in any searchable inventory.
+If DCCE selects this service (Brief E-3, Appendix B), the page would grow into a searchable repository of local and private sector climate risk management plans. That structured repository has nothing to build from today, and the underlying plan documents sit with DCCE programme staff and external organizations rather than in any searchable inventory. In the meantime, the page can open with illustrative local and private-sector cases DCCE has already published, rather than sitting empty until the decision lands.
 
 ### What's already there and how to start
 
-- Nothing exists. Do not start drafting this page until DCCE makes the decision.
-- If the decision comes through, the first real task is establishing internal reporting routines to actually collect these plans, since they aren't findable through any current inventory search. That's the genuine starting point, not content writing.
+- Real narrative case material exists: `MED-043` covers lessons from the Mae Sai flood toward recovery and adaptation guidelines, `MED-028` covers small-scale pig farm operators adapting to extreme heat, and `MED-006` covers model-area lessons feeding national-level rollout. None of these are formal risk management plan documents, but they're genuine local and private-sector adaptation cases DCCE already holds — compile them as the page's opening content now.
+- The structured, searchable repository of actual plan documents is a separate matter and should not be drafted until DCCE makes the Brief E-3 decision.
+- If that decision comes through, the first real task is establishing internal reporting routines to actually collect the plans themselves, since they aren't findable through any current inventory search. That's the genuine starting point for the structured repository, not content writing.
 
 ---
 
-##  3.3.5 — National adaptation project tracking and budget readiness
+##  3.3.5 — Project Tracking Status
 
 **Readiness: 1/5 — Blocked**
 
-Both requirements on this page wait on separate DCCE decisions. Neither has anything to build from yet.
+Both requirements on this page wait on separate DCCE decisions. Neither has anything to build from yet. The institutional tracking piece also carries a second, independent blocker: it depends on the current status and maturity of DCCE's own M&E platform, not just on DCCE choosing to build Brief E-3.
 
 ### What this page should contain, in order
 
-If DCCE selects the institutional tracking service (Brief E-3), this page would show the status of national adaptation projects and their progress. If DCCE separately selects the financial evidence service (Brief E-1), it would also carry budget readiness indicators for adaptation projects. These are two different decisions and could land on different timelines, so plan for the page to potentially grow in two separate steps rather than all at once.
+If DCCE selects the institutional tracking service (Brief E-3), this page would show the status of national adaptation projects and their progress — the kind of projects the sitemap names as examples: crop insurance schemes, use of the Agri-Map database, and water-control infrastructure improvement. These are illustrative of the page's scope, not a commitment to track these specific projects. If DCCE separately selects the financial evidence service (Brief E-1), it would also carry budget readiness indicators for adaptation projects. These are two different decisions and could land on different timelines, so plan for the page to potentially grow in two separate steps rather than all at once.
 
 ### What's already there and how to start
 
 - Nothing exists for either piece. Do not start drafting until the relevant decision is made.
+- Even once DCCE decides on Brief E-3, this page can't move until the M&E platform itself is mature enough to support it — that's a separate gating condition, not just a sequencing note. Check the M&E platform's current status before assuming a green light on E-3 is enough to start building.
 - Project tracking depends on the same internal reporting routines needed for  3.3.4's plans repository — worth scoping both together if DCCE commits to Brief E-3, since they share the same underlying blocker.
 
 ---
@@ -554,7 +569,7 @@ This is the best-supported page in this whole document. Real material already ex
 
 ### What this page should contain, in order
 
-1. Present a library of case studies distilling lessons learned from successful adaptation projects, drawn from DCCE's monitoring and evaluation lesson-extraction work.
+1. Present a library of case studies distilling lessons learned from successful adaptation projects, covering not just what worked but the obstacles encountered along the way and the best-practice takeaways from both, drawn from DCCE's monitoring and evaluation lesson-extraction work.
 
 ### What's already there and how to start
 
@@ -574,7 +589,7 @@ The catalog system itself already works. What's missing is a decision on final s
 ### What this page should contain, in order
 
 1. A short introduction explaining what the data catalog is and who it serves — researchers, agencies, and the public looking for climate and adaptation data.
-2. Search and browse access to the catalog itself, embedded or linked from DCCE's existing system.
+2. Search and browse access to the catalog itself, covering three distinct content types: raw datasets, analytical data products, and the metadata directory describing them — embedded or linked from DCCE's existing system.
 3. A brief note on the security and governance standards the catalog follows, so users understand how access levels work.
 4. A pointer to how users can request a dataset that isn't yet listed, or report an issue with an entry.
 
@@ -590,45 +605,41 @@ First step: get formal sign-off on catalog scope in the next project, using CRDB
 
 ##  4.2 — Visualisation and analytics application
 
-**Readiness: 2/5 — Needs new content, with one component effectively blocked**
+**Readiness: 4/5 — Ready to host once migration lands; one component is real work but deferred to a future project**
 
-This page looks more finished than it is. An existing DCCE application could sit here, but the specific thing engineers actually need from this page, rainfall and temperature design values at plot level, does not exist anywhere in DCCE's holdings.
+This page ships two things on different timelines. The hazard map and risk analysis tool is DCCE's existing, working application (`SYS-003`) — it hosts here once migrated. The rainfall/temperature design values engineers actually want (IDF curves) are real, needed work, but confirmed out of scope for this platform's launch — a future-project workstream, not something this build produces.
 
 ### What this page should contain, in order
 
-1. An introduction explaining what the page offers: hazard maps and risk analysis for general planning, plus (eventually) engineering design values for site-level work.
-2. The embedded hazard map and risk analysis tool. Per the platform's hosting decision, DCCE's existing analytical tools live natively on this platform once migrated, alongside the new disaster-statistics, Loss and Damage, and Thailand Climatology products built in the next project. Anything not owned by DCCE is linked out rather than rebuilt here.
-3. A clearly separated section for engineering design values (rainfall intensity-duration-frequency curves and similar), stating plainly that this content does not exist yet and explaining what it would take to produce it.
-4. A note on how an engineer can get in touch or request updates on this specific gap.
+1. An introduction explaining what the page offers: hazard maps and risk analysis for general planning.
+2. The embedded hazard map and risk analysis tool (`SYS-003`), migrated per the platform's hosting decision, alongside the new disaster-statistics, Loss and Damage, and Thailand Climatology products built in the next project. Anything not owned by DCCE is linked out rather than rebuilt here.
+3. A short, clearly separated note that engineering design values (rainfall intensity-duration-frequency curves) are planned as a future workstream, not part of this launch — say so plainly rather than building out a section that isn't coming yet.
 
 ### What's already there and how to start
 
-DCCE's existing risk map application is real and working, and can be migrated onto the new platform once the underlying data investigation (Appendix B2 in the DRD) is complete.
+DCCE's existing risk map application (`SYS-003`) is real and working, and can be migrated onto the new platform once the underlying data investigation (Appendix B2 in the DRD) is complete. That's this page's actual launch scope, and it's close to ready.
 
-The design-value curves are a different matter entirely. A full search of DCCE's document and dataset holdings turned up nothing on intensity-duration-frequency curves, at any resolution. This is not a formatting or compiling task. It needs new statistical work using rainfall data DCCE does not currently have in a usable form, plus validation from engineering standards bodies.
-
-Do not treat this page as "mostly done because an app exists." Split the two pieces early: the map/analysis half can move forward once the hosting migration happens, while the design-curve half needs to be scoped and resourced as its own project, with the right technical partners involved from the start.
+The design-value curves are separate, deferred work, not part of this build. A full search of DCCE's document and dataset holdings turned up nothing on intensity-duration-frequency curves, at any resolution, and this will not be built from `SYS-003`'s composite risk index — that data serves the general hazard map, not plot-level engineering statistics, and the two should not be conflated. It needs new statistical work using rainfall data DCCE does not currently have in a usable form, plus validation from engineering standards bodies. Scope and resource it as its own future project (Brief E-4), not as a page-content task for this build.
 
 ---
 
 ##  4.3 — External tools and data hub
 
-**Readiness: 2/5 — Needs new content, gated on outside agreements for live connections**
+**Readiness: 4/5 — Ready to compile as a curated links page**
 
-Nothing exists today. This is genuinely new work, and part of it depends on other agencies agreeing to connect.
+This page hosts links to external sources — a curated reference list DCCE can compile from public information, not a live-integration build. No agency agreements or API access are required to launch it.
 
 ### What this page should contain, in order
 
-1. A short explanation of what this page offers: direct links and, where possible, live connections to major external data sources relevant to climate work in Thailand.
+1. A short explanation of what this page offers: curated links to major external data sources relevant to climate work in Thailand.
 2. An entry for each named external source (the meteorological department's weather service, the space agency's geo-informatics portal, and the Copernicus climate data store), each stating what data it holds, what access conditions apply, and how it relates to data already on this site.
-3. A clear status indicator for each connection, so a visitor can tell whether it's a live, working link or just a reference.
-4. A note on the agreement or licence each connection operates under, where one exists.
+3. The agreement or licence each connection operates under, where publicly known.
 
 ### What's already there and how to start
 
-No DCCE asset covers this today. This is integration and partnership work, not a content-writing task, so there is no existing material to draw from.
+No DCCE asset covers this today, but none is needed — this is a curated links page, compiled from public information about each external source, not a data-matching task.
 
-The real first step is reaching out to the meteorological department, the space agency, and the Copernicus programme to ask what kind of connection is possible, whether that's a live data feed, an API link, or simply a well-maintained reference link. Building the page shell (the layout, the status indicators, the "what does this hold" descriptions) can start in parallel, using placeholder status until each agreement is settled. Budget this as a technical partnership effort, separate from the site's content production work.
+First step: write the three entries directly, using each agency's own public documentation for the "what it holds" and "access conditions" fields. No outreach, agreement, or live-connection work is required to launch this page.
 
 ---
 
@@ -686,22 +697,22 @@ First step: decide who at DCCE owns feedback triage and routing before building 
 | 2.2 | Area and sector risk profiles | 2/5 |
 | 2.3 | Climate Change Act and supporting laws | 2/5 |
 | 2.3 | Funding, budget evidence, finance tracking | 1/5 |
-| 2.3 | DCCE's role and local coordination | 4/5 |
-| 2.4 | Local vulnerability index and risk map | 2/5 |
+| 2.3 | Institutional governance and coordination | 4/5 |
+| 2.4 | Planning data services | 2/5 |
 | 3.1 | Weather stations, satellite, global monitoring | 2/5 |
 | 3.1 | Climate variables and projections | 2/5 |
-| 3.1 | Uncertainty standards and case studies | 2/5 |
-| 3.2 | Defining risk concepts, damage cost library | 2/5 |
-| 3.2 | Risk assessment methodology and sector results | 2/5 |
+| 3.1 | Future climate scenarios | 2/5 |
+| 3.2 | Vulnerability and exposure analysis | 2/5 |
+| 3.2 | Risk analysis: methodology and sector results | 2/5 |
 | 3.2 | Slow-Onset Hazards Profile | 3/5 |
 | 3.2 | Impact chain method and sector case studies | 4/5 |
 | 3.2 | Loss and damage, historical losses | 2/5 |
-| 3.2 | National risk/loss calculation manual | 2/5 |
-| 3.3 | Gender inclusion, vulnerable groups, local wisdom | 2/5 |
+| 3.2 | Theoretical framework and national risk/loss manual | 2/5 |
+| 3.3 | Planning guidelines and inclusive adaptation | 2/5 |
 | 3.3 | Adaptation roadmap, barriers, support needs | 2/5 |
 | 3.3 | Adaptation measures library | 2/5 |
 | 3.3 | Local/private sector plans repository | 1/5 |
-| 3.3 | Project tracking and budget readiness | 1/5 |
+| 3.3 | Project tracking status | 1/5 |
 | 3.4 | Technology readiness and GGA indicators | 4/5 |
 | 3.4 | National M&E tracker | 5/5 |
 | 3.4 | Successful project case studies | 5/5 |
