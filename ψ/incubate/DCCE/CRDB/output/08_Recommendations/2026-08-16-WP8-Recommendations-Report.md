@@ -64,7 +64,7 @@ One question sits ahead of the calculation side of that service. A national meth
 
 ---
 
-## 4. System Development and Technical Standards. What Comes Next
+## 4. System Development and Technical Standards 
 
 The conceptual data model, the shared glossary, and the metadata standard are complete. The metadata standard defines twelve required fields aligned with ISO 19115 and with the Digital Government Development Agency's national guideline. The next step is to make these operate automatically. A Technical Steward should turn them into validation rules enforced by the content management system, so that meeting the standard becomes part of publishing rather than a separate review. Changes to the underlying model should go to the Data Governance Committee for approval, which keeps the model stable as the platform grows and different teams contribute to it.
 
