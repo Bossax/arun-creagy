@@ -16,9 +16,11 @@ The recommendations here build on the work completed across this project. The pl
 
 DCCE should hold continuous ownership of the platform and everything on it, across contracts and across phases. That ownership sits with the department rather than with any party it hires, because DCCE is the party that sits closest to the people who depend on this data and is best placed to judge what they need.
 
-In practice this means DCCE gathers the requirements, decides what gets built first, and writes down what each product and service is meant to do before development begins. A contractor builds well when it is told clearly what to build. DCCE should give that direction, review work while it is underway rather than only at delivery, and carry the same role into every phase that follows.
+In practice this means DCCE gathers the requirements, decides what gets built first, and writes down what each product and service is meant to do before development begins. A contractor builds well when it is told clearly what to build. DCCE should give that direction, review work while it is underway, and carry the same role into every phase that follows.
 
 The work divides into seven stages. Planning, requirement analysis, and design have been completed in this project. Development, testing, deployment, and ongoing maintenance come next. DCCE's ownership runs across all seven, including the last one, since a platform earns its value in the years after launch rather than on the day it opens.
+
+Development should not wait for a finished product before it is tested by the people who will use it. This is standard practice in government digital delivery elsewhere. The UK government's digital service guidance structures a build into discovery, alpha, beta, and live phases, where alpha tests candidate approaches, beta releases a working version to real users first in a private group and then more widely, and each phase closes with an assessment before the next begins. A contract for this platform can require the same shape directly — asking for two build iterations rather than one, with a beta milestone partway through the project where a working version reaches real users. That version runs for a period with the audience it is meant to serve, and the feedback gathered through surveys, workshops, and interviews becomes the prioritized backlog the contractor addresses in the following build cycle. This suits data platform work particularly well now, when the pace at which usable software can be built and revised has shortened considerably.
 
 DCCE should also position itself as the party that sets standards and certifies climate information for Thailand. Raw observations and modelling stay with the agencies that already produce them well, including the meteorological department and GISTDA. DCCE's contribution is to decide what gets certified, what gets built into a usable product, and what a planner or a bank can rely on when they take a figure from the platform and act on it.
 
@@ -44,7 +46,7 @@ This project produced four bodies of work that are ready to be carried forward. 
 
 ### Service definitions
 
-A business case now exists for each of the nine planned services, covering the problem, the evidence behind it, the value of solving it, and what currently stands in the way. The next step is a functional specification a developer can build from. A business analyst should produce this, and DCCE's own owner for each service should review and approve every requirement it contains. That review is what keeps the built service aligned with what the department actually intends.
+A business case now exists for each of the nine services identified through this project as high signal, in that each addresses more than one use case, covering the problem, the evidence behind it, the value of solving it, and what currently stands in the way. The next step is a functional specification a developer can build from. A business analyst should produce this, and DCCE's own owner for each service should review and approve every requirement it contains. That review is what keeps the built service aligned with what the department actually intends.
 
 Four decisions would strengthen this work if taken early. The scope of the non-financial loss categories, covering mental health, biodiversity, and cultural heritage, shapes what the loss and damage service is specified to do. Whether to extend the existing national monitoring platform or build a replacement shapes the policy tracking service. Where the impact based warning service belongs in the site structure shapes both its design and its content. Each of these is a decision for DCCE rather than for an analyst to settle.
 
@@ -72,12 +74,14 @@ Written data exchange agreements with source agencies follow from that foundatio
 
 Two clarifications would make this work more precise. Deciding how datasets should be classified for licensing determines how much of the catalog can be shared and under what terms, and it is a prerequisite for opening a meaningful share of it. Confirming whether the formats recorded in the catalog describe how data is delivered today, or a target not yet reached everywhere, would let pipeline design proceed on firm ground.
 
-Alongside these, DCCE should publish national technical standards in four areas.
+Alongside these, DCCE should publish national technical standards in the areas where a specific service is already waiting on one. This is not the full list of methodology work ahead, and none of it needs to land at once. The order in which these four areas, and the further gaps described in the accompanying gap analysis, get taken up is a decision for the Data Governance Committee to sequence against the platform's build timeline.
 
 - **Interoperability.** Standards covering automated interfaces, data exchange formats, version management, and access control let other agencies pull data into their own systems reliably.
 - **Risk assessment methodology.** A national catalog of risk assessment methods, with guidance on which method suits which context, keeps local planning from resting on an unsuitable approach.
 - **Converting science into decision inputs.** Methods for turning climate variables into engineering parameters and economic loss values give every sector a common reference to work from.
 - **Communicating uncertainty.** Standards requiring confidence ranges, model limitations, and a plain language explanation of what a projection does and does not say help institutional users act on probabilistic information with appropriate confidence.
+
+These four are not the only methodology gap. The gap analysis also identifies missing methods for weighing costs against benefits, classifying climate-related spending, and valuing avoided losses, none of which is covered above. Committee sequencing should draw on that fuller list rather than stopping at these four.
 
 This work needs capabilities DCCE should build up. Specialists in risk engineering, environmental economics, and data science are needed to keep translating climate data into products people can use. The platform will need cloud infrastructure sized for genuine interface traffic. International climate finance is worth pursuing as a route to fund that infrastructure across the longer term.
 

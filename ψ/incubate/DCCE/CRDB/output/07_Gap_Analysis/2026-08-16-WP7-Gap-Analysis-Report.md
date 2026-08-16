@@ -1,179 +1,217 @@
-# What's Missing to Build Thailand's National Climate Adaptation Information Platform
+# Gap Analysis: Data Demand and Data Supply for Thailand's National Climate Adaptation Information Platform
 
 **Date:** 16 August 2026
 
-## Purpose
+## 1. Purpose and Scope
 
-Thailand's planned national climate adaptation platform is meant to do two things at once: hold the country's climate and disaster data in a governed, trustworthy way, and present that data to the people who need it — planners, engineers, banks, policymakers — through a website. Those are genuinely different jobs. A website can look finished while the data behind it is thin, restricted, or doesn't exist at all; and well-governed data is worthless to a user who can't find or understand it. This report looks at both, for everything the platform is meant to do, and asks the same question throughout: what's missing, and why.
+This report compares what users need from Thailand's climate adaptation data system against what the country currently holds, and describes the distance between the two.
 
-This is meant to be the one place to read that picture in full — not a summary that sends the reader chasing four other documents for the details. It replaces an earlier version of this same exercise, written in June, which covered the same ground with an older map of the country's data holdings and an earlier version of the platform's own service list. Everything in that June report has been re-checked here against the current data catalog and the current, more detailed set of services; where the two agree, that's noted; where the picture has changed, this report explains why.
+It covers three layers together: the national dataset catalog that supplies the platform, the nine information services and reporting duties the platform is being designed to deliver, and the content the platform's website will need to publish. It is intended as the single place to read that picture in full.
 
-The rest of this report is organized in six parts: what the country's underlying data currently looks like as a whole (Section 1); what's blocking each of the platform's planned services or reporting duties specifically, one at a time (Section 2); what's missing from the website itself, as content (Section 3); the same findings regrouped by what *kind* of gap they are, since that shapes what fixing each one actually takes (Section 4); the handful of decisions nobody has made yet that several of these gaps are actually waiting on (Section 5); and what this report deliberately did not try to answer (Section 6).
+The analysis extends an earlier version of this work by refreshing every quantitative finding against the current dataset catalog, adding two reporting duties that were defined after the first version was written, and adding the website content layer. The gap numbering used here is carried forward unchanged from that earlier version, so a reader familiar with it can follow the same references.
 
----
-
-## Section 1 — The State of the Underlying Data
-
-Thailand's central catalog for this platform currently lists **260 datasets**, drawn from across government. This section asks: as a body of raw material, is it ready to build a trustworthy climate information service on top of?
-
-### Nothing in the catalog has been formally certified yet
-
-Every single one of the 260 entries — all of them — is still recorded as a draft, not yet formally verified or endorsed. This isn't a comment on data quality; some of these datasets are genuinely solid, well-maintained records from agencies like the Thai Meteorological Department. It's a comment on process: there is currently no step in which a dataset gets checked, signed off, and marked as an official, citable reference. Nothing has been through it yet. A related, quieter finding: none of the 260 are marked as belonging to Thailand's "high-value dataset" open-data tier either — a classification question nobody has worked through for this catalog.
-
-### Ownership is concentrated in a handful of agencies
-
-Half of the catalog's holdings sit with just six organizations: the Thai Meteorological Department (37 datasets), DCCE itself (26), the Geo-Informatics and Space Technology Development Agency (17), the Department of Disaster Prevention and Mitigation (15), and the National Statistical Office and the Office of the National Economic and Social Development Council (14 each). This matters for two reasons: it means a small number of coordination relationships, if made to work well, would unlock a large share of the catalog — but it also means the platform's dependability rests heavily on a handful of external partners' own data practices, not DCCE's.
-
-### The catalog leans toward hazard science and away from who and what is exposed
-
-Broken down by subject: **72 datasets (28%) describe vulnerability** — who and what is at risk — and **68 (26%) describe exposure** — where people, buildings, and assets actually are. The rest is split between the physical climate signals that feed hazard models (49 datasets, 19%) and processed hazard products themselves like flood or drought maps (36, 14%), with a small remainder covering loss-and-damage records, composite risk indices, and a few other categories. Read together, hazard-related data of some kind — either the raw physical drivers or the finished hazard products — makes up roughly a third of the catalog, close to what the June review found, but split here across two more specific categories than before. What hasn't changed since June: the catalog is still noticeably thinner on the exposure and vulnerability side — the human and asset picture — than it looks once every hazard-related entry is added up.
-
-### Most of the catalog isn't fine-grained enough for real project decisions
-
-Almost half the catalog (47%) is recorded at province level — useful for national strategy, not for deciding where to build a drain or how high to set a seawall. Only 16% is recorded at a genuinely local grain — sub-district, municipality, village, or a specific monitoring point. A further **23% has no resolution recorded at all**, which is its own finding: for close to a quarter of the catalog, nobody currently knows how fine- or coarse-grained the data actually is without opening the file directly. That gap in the catalog's own record-keeping is arguably as much of a problem as the resolution numbers themselves.
-
-### Most of the catalog is locked behind a request, not open for reuse
-
-**82% of the catalog is marked Restricted** at the dataset level, and even the metadata describing what a dataset contains is Restricted for 68% of entries — meaning a user often can't even read a clear description of a dataset without first requesting access to it. This is the one number from the June review that holds up almost exactly against the current catalog.
-
-*A caveat on data format:* the June review characterized much of the catalog as locked in PDF or spreadsheet form, hard to process automatically. The catalog's own format field tells a more structured-looking story — half of all entries are recorded as CSV, with PDF-only entries a small minority. It isn't clear from the catalog record alone whether this field describes what a dataset is actually delivered as today, or an intended/target format that hasn't been realized yet for every entry. This is worth a direct spot-check before anyone plans work around it — recorded as an open question in Section 5, not resolved here.
+Two of the platform's layers are worth separating throughout. The **data platform** is the infrastructure that stores, moves, and governs data. The **web platform** is what people see and interact with. Sections 3 to 5 concern the data platform. Section 6 concerns the web platform. A well-built website drawing on ungoverned sources will present fragmentation faithfully, so both layers need to hold.
 
 ---
 
-## Section 2 — What's Blocking Each Planned Service
+## 2. What Users Need
 
-The platform's service concept was built from real conversations with the government agencies, banks, engineers, and planners who'd actually use it. Nine distinct services or duties came out of that process. Each one is presented here on equal footing, in the order they were originally conceived — this section is a diagnosis of what's blocking each one, not a ranking of which matters most; deciding what to build first is a separate, later decision, not something this report tries to settle.
+The demand side of this analysis comes from interviews, a stakeholder workshop, and a survey of how government and private organizations currently work with climate data.
 
-For two of these nine — the disaster loss-and-damage service, and Thailand's international climate reporting duty (its Biennial Transparency Report, "BTR") — a much more detailed check has already been done: every individual piece of information those two need was checked one by one against the catalog. The other seven have only been checked at the level of "what's the blocker," not signal by signal. That's simply because the detailed check hasn't been run for them yet, not a judgment that they matter less.
+A consistent theme ran through all of it. Users want data they can put directly to work inside their own mandate, in the form and vocabulary their organization already uses. Local government wants sub-district and municipal figures that connect to local development planning and budget requests. Financial institutions want asset-level probability of loss they can price into investment risk. Transport and infrastructure agencies want variables already converted into engineering design criteria. Policy and budget offices want a central reference dataset with enough standing to cite in a funding decision.
 
-### Thailand's international climate reporting duty (the BTR)
+Grouped, that demand takes seven forms.
 
-Thailand has a standing obligation to report its climate adaptation progress internationally on a fixed cycle, using indicators that are supposed to be comparable across reporting rounds. Today, producing that report means several people manually pulling numbers from spreadsheets held by different agencies, without a shared way to check that "avoided losses" or "adaptation coverage" means the same thing to everyone contributing a number. The final figures in the report are difficult to trace back to their source once compiled. Four structural problems sit underneath this: gaps in the underlying data and shared definitions, poor coordination between the agencies who each hold a piece of the picture, limited resourcing for the compilation work itself, and no consistent way to monitor or report progress in the first place.
+**Central reference baselines and indicators.** A single authoritative set of figures that different organizations can cite and be understood to mean the same thing.
 
-This is the one duty, alongside disaster loss-and-damage below, where the underlying information need was broken down into its individual pieces and checked one by one — 122 distinct pieces of information in total, everything from indicator definitions to specific figures the report is expected to cite. Of those 122, roughly half already have something real behind them in the catalog — a genuine dataset or figure that matches what's being asked for, sometimes needing further work to reach the standard the report requires, sometimes ready as-is. The other roughly half came back with nothing at all. Six further cases are genuinely ambiguous and need a person to make a judgment call, not more data-hunting: chief among them, whether a dataset DCCE already tracks under a different name is in fact the same "resilience index" the reporting framework refers to — nobody has confirmed either way yet.
+**Spatial data fine enough to act on.** Sub-district, municipal, or individual asset grain, rather than a single value covering a whole province.
 
-Where the no-matches cluster is telling: it's rarely raw hazard data that's missing. It's the *calculated* figures the report actually needs to cite — return periods, scenario-specific probability estimates, the specific loss-and-damage assessment methodology the international reporting standard expects, financial stress-test results. The raw ingredients often exist somewhere in the catalog; the arithmetic and methodology that turns them into a reportable number does not.
+**Data and methods for calculating sector impact.** Not only the hazard information, but the means of converting it into an impact figure for agriculture, health, infrastructure, or the economy.
 
-### Recording the true cost of past disasters
+**Access that connects to working systems.** Data that arrives through a repeatable connection into the analysis a team already runs, rather than through a document request each time it is needed.
 
-Government relief and recovery spending today doesn't add up to a real picture of what disasters actually cost the country economically over time — only what was paid out, which isn't the same thing. Financial institutions want a validated national economic loss record they can build stress-test scenarios on; the same record could name the true value of past damage to justify future protective investment.
+**A standard way of communicating uncertainty.** Enough context accompanying a projection that a reader can tell how confident it is and where it stops being appropriate to use.
 
-The good news here is real progress: national economic planners commissioned a university-led research effort to build exactly this kind of methodology, aligned with the international standards this kind of loss accounting is supposed to follow. That work, focused first on agricultural losses, is due to run through mid-2026, and has already produced a first estimate — cumulative disaster loss and damage of roughly ฿1.62 trillion between 2006 and 2024. This project has begun aligning its own approach to recording disaster losses with that emerging methodology, though it's worth being direct about the current status: it's a promising candidate for one part of what this service needs — a formal calculation manual — not a confirmed match yet. Someone still needs to check that connection properly rather than assume it (see Section 5).
+Two further demands were defined after the original synthesis and are carried here for the first time.
 
-With a plausible methodology finally in view, the blocker has shifted from "how do we calculate this" to "do we have the data to calculate it with." Disaster-agency records currently capture who was affected, how many people, and how much relief was paid — but not a monetary damage figure, not a sector-by-sector or provincial breakdown, and with a real ambiguity buried in the numbers: a recorded zero sometimes means nothing happened, and sometimes just means nobody recorded it. Getting the more detailed records released also raises a genuine privacy question, since some of them are household-level, and nobody yet knows how long that release process might take.
+**Traceable figures for international climate reporting.** Thailand reports adaptation progress on a fixed international cycle using indicators meant to stay comparable between rounds. That requires figures whose source can be traced after compilation.
 
-Of the six specific figures this service needs, three already have real data behind them somewhere in the catalog. The other three turned out not to be missing-data problems at all: they're requests for better *accuracy*, for adopting an international disclosure practice, and for financial stress-testing capability — process and methodology asks that no dataset alone could satisfy, however complete the catalog eventually gets.
-
-Beyond the historical record itself, this service's design already names four specific things the finished product needs to include: a national economic loss database, a public-facing dashboard of that history, a record of losses that don't show up on a balance sheet at all (below), and the calculation manual discussed above. All four were flagged as blocked for the same reason — the methodology didn't exist yet to build them on. That's now closing, per the above, but three of the four are still waiting on the data-access questions in this section, and the manual is still waiting on the methodology-candidacy question in Section 5.
-
-**One category inside this service deserves its own callout: losses that aren't financial at all** — harm to mental health, to biodiversity, and to cultural heritage. Of those three, only biodiversity currently has any supporting material behind it. The emerging national loss-and-damage methodology is economic-loss-focused and doesn't reach into this territory at all. Whether the finished service should scope down to biodiversity alone, or explicitly flag mental health and cultural heritage as future work, is a real open decision — see Section 5.
-
-### A certified, trustworthy home for official climate data
-
-Stakeholders' single most common complaint about Thailand's climate data landscape is fragmentation — no one, including DCCE internally, has ever had a complete picture of what the department itself holds, let alone the rest of government. There's no consistent way today to tell a dataset that's been checked and endorsed apart from one that hasn't.
-
-The platform's planned certified-data catalog — deliberately a separate thing from DCCE's existing general-purpose open-data system, built specifically for the kind of trust and sourcing information a climate dataset needs — currently has only a starting seed of content, with its real scope still undecided. Section 1's finding that every catalog entry is still a draft is the sharpest version of this same problem: not one dataset examined so far has a named person or office responsible for keeping it accurate and current, and any agency can currently decline to share what it holds with no real recourse. A related, still-open decision: nobody has settled how these datasets should be classified for licensing purposes, which is a prerequisite for sharing many of them at all (Section 5).
-
-### Risk information fine-grained enough to act on
-
-Banks assessing loan risk and infrastructure planners both say the same thing: province-level risk scores are close to useless for a real decision. They need to know flood depth and duration for a specific plot of land, not a single number for an entire province.
-
-Two separate structural problems sit behind this. First, DCCE's existing risk index is built with the province as its basic unit from the very start of the calculation — the number can't be taken apart and rebuilt at a finer grain after the fact, because the province-level boundary is baked into the method itself. Second, the index's underlying calculation multiplies and normalizes several inputs into one final score, which means the calculation can't be run in reverse to recover the finer-grained detail that went into it, even where that detail technically exists somewhere upstream. Fixes have been identified — more detail could be pulled out of the country's 77 provincial risk-reduction plans, and municipal boundary data could be reworked to support this — but both are waiting on a decision to actually resource that work, not on anything technical.
-
-### Financial and budget justification for adaptation spending
-
-Building infrastructure that can withstand a more volatile climate costs more than historical comparisons suggest it should, and government officials currently have no defensible way to explain that gap to auditors or budget reviewers.
-
-This is, honestly, the single largest cluster of open questions found anywhere in this review. No accepted method exists yet for weighing the costs and benefits of a climate-resilience investment. No standard exists for tagging government spending as "climate-related" in the first place. No accepted way exists to calculate the value of losses that were *avoided* by making an investment — which is, awkwardly, often the main point being made to justify the investment. And no reference library exists connecting a given hazard to the physical damage it typically causes, which almost every one of these calculations would need as a building block. Separately, records of international climate finance and technology-transfer support show money moving, but essentially nothing about what capability or technology actually resulted from it. This service also needs direct research with the people who'd use it, since it isn't yet clear which specific figures different kinds of users would actually find convincing.
-
-### Engineering-grade climate variables for infrastructure design
-
-Engineering design standards — how much rainfall a drain is built to handle, how high a seawall needs to be — are still built on historical weather statistics that no longer reflect current climate volatility.
-
-This one has been set aside deliberately for now, not attempted in the current phase. The specific technical variables this service needs — rainfall-intensity curves, runoff coefficients, peak flow rates, extreme temperature ranges, wind gust speeds, all adjusted for a changing climate — don't currently exist anywhere in DCCE's holdings, at any level of detail. DCCE's general risk index can't fill this gap either; it's built for broad hazard awareness, not the plot-level design curves an engineer actually needs. Closing it will take a sustained partnership with engineering specialists, not something a data-catalog fix can solve alone.
-
-### Warnings that describe real-world impact, not just weather
-
-Practitioners want a warning that tells them what to *do* — activate cooling shelters, estimate likely business disruption — not a bare number like a forecast temperature.
-
-This is the most immature item on the list: the product doesn't exist in any form yet, and there's currently no page on the platform's site design that this service is even meant to occupy. The only related material found is a static diagram explaining, in general terms, how a hazard cascades into downstream impacts — informative, but not a working service. Where this content should actually live on the site is itself an unresolved question, since it's an operational tool, not a page of background reading, and the site's current structure doesn't have an obvious home for that distinction (see Section 3 and Section 5).
-
-### Tracking whether adaptation policy is actually working
-
-Policymakers need to see what's working, both to avoid wasting budget and to demonstrate real progress in international forums.
-
-Unlike most of the items above, there's already a live system here: a national monitoring platform is currently collecting manually-entered progress data from eighteen government agencies across the national adaptation plan's six sectors. The open question isn't whether the data exists — it's whether this platform should build on that existing system, or replace it with something better designed, a decision nobody has made yet (see Section 5). Two smaller things remain genuinely unclear even about the existing system: whether it already has any built-in way of judging a technology's readiness level, and where individual project status is tracked at all — right now, that seems to live mostly in staff members' own knowledge, findable by asking someone directly rather than through any system. Worth flagging for scale: the existing platform currently holds only a couple hundred data rows a year, entered entirely by hand, with no automated data feed of any kind.
-
-### Helping institutions use uncertain data with confidence
-
-Banks and infrastructure planners are wary of using probabilistic climate projections for real decisions, worried about legal exposure if a projection turns out wrong — banks have been candid that they currently treat a flood *probability* map as though it were a flood *certainty* map, which is a real risk in itself.
-
-This isn't a missing-data problem or a missing-page problem. It's a methodology and institutional-trust problem: uncertainty in a climate projection is still an unfamiliar concept to many of the people this service would serve, and building real institutional confidence in how to interpret it is a standalone piece of work, not something that can be folded into another service as a shared feature. A logical home for this content has been identified on the site, but nothing has been built there yet.
+**A validated national record of disaster loss.** A record of what past disasters actually cost, separate from what was paid out in relief, suitable for baselining models and for financial stress testing.
 
 ---
 
-## Section 3 — What's Missing From the Website Itself
+## 3. What Exists Today
 
-The platform's page-by-page site design is already finished and approved — that part of the work doesn't need repeating. What hadn't been checked until recently was whether the actual *content* each page promises already exists somewhere in DCCE's records, or still needs to be written or built from scratch.
+The national catalog assembled for this platform holds **260 datasets** drawn from across government.
 
-That check broke the site design down into 73 distinct, specific content promises — not just "does this page have a topic," but every individual thing a page claims it will show, checked one by one against DCCE's full digital inventory (391 items: publications, datasets, live tools, and media) plus, for the more data-driven pages, the same 260-item dataset catalog discussed in Section 1.
+Ownership concentrates in a small number of organizations. The Thai Meteorological Department holds 37 datasets, DCCE itself 26, the Geo-Informatics and Space Technology Development Agency 17, the Department of Disaster Prevention and Mitigation 15, and the National Statistical Office and the Office of the National Economic and Social Development Council 14 each. Roughly half the catalog sits with those six. A working relationship with each would reach a large share of the whole.
 
-The result: **21 of the 73 (29%) are genuinely ready to build from today.** A further **24 (33%) have some real material behind them, but are missing a specific piece the page promises** — and for a meaningful share of those, the "real material" that does exist is raw, access-restricted, or unverified data, not something a writer could simply pick up and publish. The remaining **28 (38%) have nothing at all** — no dataset, report, or existing page speaks to them.
+By subject, the catalog holds 72 vulnerability datasets, 68 exposure datasets, 49 covering the physical climate signals that drive hazard models, and 36 finished hazard products such as flood and drought maps. The remainder covers loss and damage records, composite indices, risk metrics, and spatial reference layers.
 
-A pattern worth naming, since it recurs in more than one place on the site: wherever a page promises information on financial support, technology transfer, *and* capacity-building together, DCCE's records reliably cover the financial piece well — but technology-transfer and capacity-building tracking are consistently missing, on more than one page independently. That's not a coincidence; it points to a real, structural blind spot in what DCCE currently tracks, not a one-off content gap. The same pattern shows up with raw climate science data — checking against publications alone made this look like a total blank, but the fuller check against the dataset catalog found that real (if raw, access-restricted, national-grid-resolution) climate data and future-projection datasets do exist behind several of these pages. They're not ready to publish as trend charts today, but they're not a from-scratch build either.
+Around 17% of the catalog is openly published. The rest is available on request. About half the catalog is recorded as CSV, with raster, vector, and document formats making up most of the balance.
 
-Two structural findings connect directly back to Section 2. First, most of what currently exists to support the site is narrative and explanatory material — background, policy summaries, case studies — which is in reasonably good shape overall. Pages that are meant to be live, data-driven features — dashboards, interactive maps, calculators — have almost nothing structured behind them yet, even on pages nominally "covered" by a document that discusses the topic in prose. Second, the impact-warning service described in Section 2 doesn't just lack a built product — it doesn't have a clear place on the current site structure to live, since it's meant to be operational rather than informational, and the site's current sections weren't designed with that distinction in mind.
+On resolution, 122 datasets are held at province level, 41 at a local grain of sub-district, municipality, village, or individual monitoring point, and 36 as gridded surfaces. For 59 datasets — close to a quarter of the catalog — resolution is not recorded, so the grain is not knowable from the catalog alone.
 
----
+All 260 entries currently carry draft status and none has completed a verification step, because that step does not yet exist as a process. This says nothing about the quality of the underlying data, much of which is sound; it describes a stage the catalog has not yet reached.
 
-## Section 4 — The Shape of These Gaps
-
-Read one at a time, the findings in Sections 1–3 look like a long, unconnected list. Grouped by *kind*, a smaller number of real patterns emerge — and the kind of gap matters, because each kind needs a different fix. A missing dataset needs someone to go collect it; a missing decision needs someone to make a call; neither is solved by more analysis.
-
-**Data that doesn't exist anywhere yet.** No dataset, no record, nothing to point to. This covers roughly half of the BTR's 122 information needs, all of the engineering design variables (rainfall-intensity curves, runoff coefficients, and the rest), the damage-relationship library the financial-justification service needs, and 28 of the website's 73 content promises.
-
-**Data that exists but isn't ready to use.** This is the single largest category by volume, and the one Section 1's catalog statistics describe directly: 82% of the whole catalog is access-restricted, and literally every entry is still in unverified draft status. The same pattern shows up service by service — the disaster-loss records have the right subject but the wrong shape (no monetary breakdown, ambiguous zeros), the spatial-risk index has real data locked behind a calculation that can't be reversed, and a meaningful share of the website's 24 "partial" content gaps turn out, on inspection, to be real but raw, restricted, or unverified data rather than something ready to publish.
-
-**No agreed method exists to turn the numbers into an answer.** The raw data may be sitting right there, but nobody has built or agreed on the calculation that turns it into what's actually needed. The financial-justification service is the starkest case — four separate missing methods at once (cost-benefit, avoided-loss, spending classification, damage relationships). The BTR's missing figures are mostly this too: return periods and scenario probabilities that need calculating, not collecting. The disaster-loss service's calculation manual sits right on the edge of this category — a strong candidate exists, just not yet confirmed.
-
-**No decision has been made about ownership, classification, or which system to build on.** Not a technical gap at all. The certified-catalog's licensing-classification question, the policy-monitoring platform's build-versus-consolidate question, and the non-financial-loss scope question all belong here — each one is genuinely just waiting for someone to decide.
-
-**The product itself hasn't been started.** Only one service is really in this category — the impact-based warning service has no build and no settled place on the site to live.
-
-**Underneath most of the above, one structural theme repeats:** very little of this moves through a shared, automatic pipeline. It moves through one person asking another person, case by case. That's the connective thread between the catalog's 82% restricted-access rate, the BTR's missing derived figures, the certified-catalog's no-recourse problem when an agency declines to share, and the uncertain timeline for getting disaster records released. Even where the underlying data technically exists, turning it into something usable and timely still depends on an individual relationship, not a system.
+One recent addition changes the resolution picture materially. DCCE's Climate Change Research Center has produced statistically downscaled climate data at **5km resolution**, covering precipitation and maximum, minimum, and mean temperature, under both the SSP2-4.5 and SSP5-8.5 scenarios. This is the starting point from which finer-grained hazard and risk information can be derived, and it is a substantially better foundation than the 25km grid available when this analysis was first run.
 
 ---
 
-## Section 5 — Decisions This Report Surfaces But Doesn't Make
+## 4. The Gaps
 
-A number of the gaps described above aren't waiting on more data collection or more analysis — they're waiting on a decision that only DCCE can make. Naming them clearly is this report's job; deciding them is not.
+Eleven gaps separate the demand in Section 2 from the supply in Section 3. Numbering for the first eight is carried forward from the earlier version of this analysis.
 
-- **How to scope the non-financial-loss category.** Only biodiversity currently has real material behind it, out of the three categories (mental health, biodiversity, cultural heritage) the disaster-loss service is meant to cover. Should the near-term build scope down to biodiversity alone, with the other two explicitly named as future work?
-- **Whether the emerging national loss methodology can serve as this platform's official calculation manual.** It's a strong-looking candidate, but nobody has formally confirmed the connection — someone needs to check it directly rather than assume it.
-- **How datasets should be classified for licensing.** This is a prerequisite for sharing a meaningful share of the catalog at all, and nothing has been decided about how that classification should work.
-- **Whether to build on the existing policy-monitoring platform or replace it.** The existing system works, after a fashion, but nobody has decided whether its current approach should be carried forward, rebuilt, or replaced outright.
-- **Where the impact-warning service should live on the site**, given it doesn't fit the site's current informational-page structure.
-- **Whether the data catalog's recorded format (mostly CSV) reflects what's actually delivered today**, or an intended format not yet realized for every entry — worth a direct spot-check before planning work that assumes the data is already structured.
+**Gap 1 — Balance between hazard, exposure, and vulnerability data.** The catalog describes hazards well, drawing on climate models, meteorological records, and satellite observation. Information describing the people, assets, and services that hazards affect is thinner and more scattered, particularly for infrastructure, economic assets, and social vulnerability. Work that requires several of these layers at once — identifying which vulnerable groups sit inside a risk area, ranking adaptation projects, assessing risk across an asset portfolio — needs that side of the catalog to grow. Even where hazard data itself is strong, it is mostly delivered as a single deterministic map or figure. Probabilistic detail, the range a projection covers and the assumptions a model rests on, is rarely exposed alongside it, which limits how safely that hazard information can be reused in someone else's risk calculation.
+
+**Gap 2 — Spatial resolution.** Province-level figures support national strategy. Deciding where to build a drain or how high to set a seawall needs sub-district or asset grain. The new 5km downscaled climate data closes much of this at the climate-driver end. The environmental layers needed alongside it — digital elevation models, stream and sub-basin routing — still come from several sources at resolutions that do not align with each other, and population and asset data broken down by social and economic category is not yet available at a matching grain.
+
+**Gap 3 — Compatibility between spatial units.** Hazard data arrives as grids. Population and social data arrives bounded by administrative areas. Asset data arrives as points and lines. Some economic data arrives at province or regional level. Without an agreed method for relating these to one another, each user converts and overlays them independently, which costs time, introduces error, and leaves results from different organizations that cannot be compared. The practical result is that no single scale can be served reliably. A risk figure at a given resolution needs its hazard, exposure, and vulnerability inputs all available at that resolution together, and that alignment does not yet exist for most combinations.
+
+**Gap 4 — Access.** Most of the catalog is available on request rather than published. Three things drive this: internal rules at data-holding agencies with no systematic cross-ministry sharing policy; personal data protection requirements, which are sometimes read as preventing release of an entire dataset when aggregation would resolve the concern; and limited budget and technical staffing for building and maintaining automated data connections. The effect is sharpest on work that needs current information — impact-based warning, periodic financial analysis, risk assessment on a refresh cycle, and policy monitoring drawing on many sources.
+
+**Gap 5 — Metadata standards.** There is not yet an agreed national standard covering the descriptive information that travels with a dataset: discovery metadata for finding it, technical metadata for using it, a data dictionary for interpreting its fields, and lineage for tracing where it came from. Update frequency and expected lag between an event and its appearance in the data are also generally unstated. Without these, a user cannot judge whether a dataset is suitable before relying on it. Which of these fields matter most for a given product's credibility is not yet settled either, and until it is named as an official, enforced requirement rather than a general expectation, metadata quality will keep varying by how much a given data holder chooses to provide.
+
+**Gap 6 — Format of products and services.** A finished information product delivers less than it could when it can only be viewed. A crop suitability map published solely through a web interface can be read on screen but cannot be taken as input to further analysis. This matters most for the work that treats a product as an ingredient: financial risk assessment, conversion of climate data into engineering variables, macroeconomic impact analysis, infrastructure risk modelling, and warning systems that draw several sources together. This overlaps with Gap 4. A data owner who would allow a document or a map to be viewed is often unwilling to release the same information as a downloadable analytical file, because a file that leaves their control is a file whose downstream use they can no longer answer for.
+
+**Gap 7 — Time coverage and delay.** Different uses need different time horizons. Comparing risk against a stable reference needs 10 to 20 years of history. Planning national infrastructure needs projections 20 to 50 years out. Warning systems need information arriving close to real time. The catalog does not yet cover all three consistently.
+
+**Gap 8 — Risk methodology and data selection.** Thailand does not yet have a national approach to defining risk or a catalog of risk methods matched to the purposes they suit. Without that guidance, data can be applied outside the context it was built for — a single-scenario long-range projection used directly as an engineering design value without accounting for model uncertainty, for instance, where comparing relative risk between areas would be better served by an index-based map than by asset-level financial loss statistics. This carries a real risk of maladaptation.
+
+**Gap 9 — Certification and stewardship.** No step currently exists in which a dataset is checked, endorsed, and marked as an official reference, which is why all 260 entries sit in draft. No dataset yet has a named person or office responsible for keeping it current, and there is no agreed process when a holding agency declines to share.
+
+**Gap 10 — Calculation methods that do not yet exist.** Distinct from Gap 8, which concerns choosing among available methods, several services need a method that has not been built. There is no agreed approach to weighing costs against benefits for a resilience investment, no standard for classifying government spending as climate-related, no accepted way to value losses avoided by an investment, and no reference library relating a hazard to the damage it typically causes. National economic planners have commissioned a university-led effort to build an economic loss and damage methodology aligned to international practice, which addresses part of this.
+
+**Gap 11 — Decisions awaiting a determination.** Several gaps close on a decision rather than on new data or analysis. These are listed in Section 8.
 
 ---
 
-## Section 6 — What This Report Doesn't Cover
+## 5. How the Gaps Affect Each Service
 
-This report deliberately leaves three things untouched:
+The platform's nine services and reporting duties each meet a different combination of these gaps.
 
-- **A stocktake of DCCE's data *products*** (as opposed to raw datasets) — ownership, business metadata, and compliance classification for a shortlist of priority assets. No work has been done on this yet; it's a separate, still-unstarted piece of work, not folded into this report.
-- **A formal maturity assessment of DCCE's overall data architecture** — how centralized or federated its governance is, how automated its metadata practices are, and similar questions, benchmarked against established data-platform models. An earlier plan for this report considered running that kind of assessment; on review, it didn't fit well, since DCCE's current state (largely manual coordination, no unified system yet) doesn't map cleanly onto a framework built to compare different *kinds* of already-built data platforms against each other. That question may still be worth answering in a future recommendations stage, framed narrowly, but it isn't part of this gap analysis.
-- **Anything to do with how the eventual system gets built, integrated, or connected to other platforms** — those are questions for whoever builds this platform next, once the requirements in this report and its companion documents are finalized.
+| Service | Gaps involved |
+| :--- | :--- |
+| 1. Certified climate data repository and official endorsement | 4, 5, 6, 9 |
+| 2. High-resolution spatial risk analysis | 1, 2, 3 |
+| 3. Finance and budget decision support | 6, 7, 8, 10 |
+| 4. Historical loss and damage assessment | 1, 3, 7, 10 |
+| 5. Engineering design variables | 2, 7, 8, 10 |
+| 6. Multi-hazard impact-based warning | 4, 6, 7 |
+| 7. Adaptation policy monitoring and evaluation | 1, 3, 5, 11 |
+| 8. Uncertainty management standards | 5, 8 |
+| 9. International climate reporting pipeline | 5, 10 |
+
+### Service 1 — Certified climate data repository and official endorsement
+
+Fragmentation is the most frequently raised difficulty across every stakeholder group, and there is currently no consistent way to distinguish a checked dataset from an unchecked one. The platform's certified catalog, planned as a separate system from DCCE's general open data service and built for the sourcing and trust information climate data needs, holds a starting seed of content with its full scope still to be set. Gap 9 is the central one here. How datasets should be classified for licensing remains open, and that classification is a prerequisite for sharing a meaningful share of the catalog.
+
+### Service 2 — High-resolution spatial risk analysis
+
+Banks assessing loan exposure and infrastructure planners both need flood depth and duration for a specific site rather than a single province-wide value. Two structural properties of the current risk index stand in the way. Its unit of analysis is fixed at province before the calculation begins, so a finer result cannot be recovered afterward. Its inputs are multiplied and normalized into one score, which cannot be worked backward to the detail that went into it. Two routes forward have been identified — extracting detail from the country's 77 provincial risk reduction plans, and reworking municipal boundary data — both awaiting a decision to resource them.
+
+This service shows how gaps compound. Even with rainfall projections in hand, if the model is coarse relative to the decision (Gap 2) and stored on a grid that cuts across administrative boundaries (Gap 3), it cannot be combined with community-level vulnerability data (Gap 1), and local risk mapping does not become possible. The new 5km downscaled data materially improves the first of those three.
+
+### Service 3 — Finance and budget decision support
+
+Climate-resilient infrastructure costs more than historical comparisons suggest, and officials need a defensible way to explain that difference to auditors and budget reviewers. This service depends on Gap 10 more than any other: it needs a cost-benefit method, a spending classification standard, an avoided-loss calculation, and a damage function library, none of which exist yet. Records of international climate finance and technology transfer show funds moving but little about the resulting capability. Direct research with intended users will be needed, since which figures would actually persuade different audiences is not yet established.
+
+### Service 4 — Historical loss and damage assessment
+
+Relief and recovery spending records what was paid, which is a different quantity from what disasters cost the economy. The commissioned national methodology noted under Gap 10 addresses the method side; focused initially on agricultural losses and running through mid-2026, it has produced a first estimate of roughly ฿1.62 trillion in cumulative loss and damage between 2006 and 2024. Whether it can also serve as the platform's official calculation manual is a strong possibility that has not been confirmed.
+
+With the method in view, the remaining distance is data. Disaster agency records capture who was affected and what relief was paid, without a monetary damage figure or a breakdown by sector and province, and with recorded zeros that may mean either no event or no collection. Releasing the more detailed records raises a personal data question, since some are household-level, and the timeline for that release is not yet known.
+
+Of the six specific figures this service needs, three have supporting data in the catalog. The other three are requests for improved accuracy, for adopting an international disclosure practice, and for stress-testing capability — needs that no dataset alone would meet.
+
+Four elements of the finished product were recorded as blocked pending this methodology: a national economic loss database, a public dashboard of that history, a record of losses that do not appear on a balance sheet, and the calculation manual. Of the three loss categories in that third element — mental health, biodiversity, and cultural heritage — only biodiversity currently has supporting material, and the commissioned economic methodology does not extend to any of them.
+
+### Service 5 — Engineering design variables
+
+Design standards still rest on historical statistics that no longer describe current conditions. The variables this service needs — rainfall intensity-duration-frequency curves adjusted for climate scenario, runoff coefficients, peak flow, temperature extremes, wind gust — are not yet held anywhere, at any grain. The general risk index serves hazard awareness rather than plot-level design, so it cannot substitute. This service has been set aside for the current phase; closing it will take a sustained working relationship with engineering specialists alongside the data work.
+
+### Service 6 — Multi-hazard impact-based warning
+
+Practitioners want a warning that states what to do — open cooling centers, estimate likely business interruption — rather than a forecast value alone. This service is the least developed: no product exists yet, and the only related material is a static diagram showing how hazards cascade into impacts. Gap 4 and Gap 7 are decisive here, since a warning service needs automated connections to sensors, models, and operating agencies on a timescale the current request-based access cannot support. Where this belongs on the site is also unsettled, since it is an operational tool rather than a page of reference material.
+
+### Service 7 — Adaptation policy monitoring and evaluation
+
+A national monitoring platform already operates here, collecting manually entered progress data from eighteen agencies across the national plan's six sectors, holding a few hundred rows a year with no automated feed. The open question is whether this platform builds on that system or replaces it, which is a Gap 11 decision. Two details about the existing system remain unclear: whether it already assesses technology readiness, and where individual project status is held, which currently appears to rest on staff knowledge. Comparing results across agencies is additionally limited by scattered vulnerability data on differing spatial units (Gaps 1 and 3) and by unstated update cycles (Gap 5).
+
+### Service 8 — Uncertainty management standards
+
+Financial institutions and infrastructure planners are cautious about using probabilistic projections in decisions that carry liability, and some currently treat a flood probability map as a certainty map. This is a methodology and confidence question rather than a data question. Uncertainty in a projection remains an unfamiliar concept for many intended users, and building shared institutional understanding of how to read it is work in its own right rather than a feature of another service. A place for this content has been identified on the site.
+
+### Service 9 — International climate reporting pipeline
+
+Producing Thailand's international adaptation report currently means compiling figures by hand from spreadsheets held across several agencies, without a shared definition of terms like avoided loss or adaptation coverage, and with final figures difficult to trace back to source. Four structural conditions sit underneath: gaps in underlying data and shared definitions, coordination across the agencies holding each piece, resourcing for the compilation work, and a consistent means of monitoring progress.
+
+The information this report needs was broken into 122 individual items and checked against the catalog. Roughly half have supporting data, some ready and some needing further work. Roughly half return nothing. Six items need a judgment rather than a search, the most consequential being whether a dataset DCCE already maintains is the same measure the reporting framework refers to under a different name.
+
+Where the unmatched items concentrate is instructive. Raw hazard data is rarely the missing piece. What is missing is the calculated figure the report cites — return periods, scenario-specific probabilities, the loss and damage assessment methodology international reporting expects, financial stress test results. The ingredients are often present; the method that turns them into a reportable number is Gap 10.
+
+---
+
+## 6. Website Content
+
+The platform's page-by-page design is complete and approved. Separately, each page's content promises were checked against DCCE's full digital holdings — 391 publications, datasets, live tools, and media items — and, for pages needing structured data, against the 260-dataset catalog.
+
+That check identified 73 distinct content promises. **21 (29%) have everything they need available now.** **24 (33%) have real supporting material with a specific named element still to source** — and for several, the available material is raw, restricted, or unverified data rather than publishable content. **28 (38%) have no current source.**
+
+Two patterns recur. Wherever a page promises financial support, technology transfer, and capacity building together, the financial material is reliably present and the other two are not — on several pages independently, which points to what is tracked rather than to how any single page was written. And for raw climate science content, checking publications alone suggested a complete absence, while the fuller check against the dataset catalog found historical climate grids and downscaled projections that do exist, as restricted national-grid raw data rather than as the finished trend figures the pages describe.
+
+Two findings connect back to Section 5. Narrative and explanatory pages — background, policy summaries, case studies — are in reasonable shape overall. Pages designed as live data features such as dashboards, maps, and calculators have little structured material behind them, including pages counted as covered by a document discussing the topic in prose. This is Gap 6 appearing on the web layer. And the impact-based warning service needs a placement decision on the site as well as a build.
+
+---
+
+## 7. The Institutional Gap
+
+Read together, these eleven gaps point to something beyond the volume of data held. Very little currently moves through a shared, repeatable connection. It moves through one person asking another, case by case. That thread runs through the share of the catalog available only on request, the absence of a recourse when an agency declines to share, the uncertain timeline for releasing disaster records, and the manual compilation behind the international report.
+
+What the workshop and interviews describe is a coordinating role that no organization currently holds — between the agencies producing data, the teams building services on it, and the people using it at the end.
+
+Stakeholders were consistent that they do not expect DCCE simply to produce more data or to operate more storage. They expect DCCE to take up three roles:
+
+- **Standard setter**, defining the technical norms — metadata standards, risk methodology — that let data from different sources work together.
+- **Data authenticator**, providing the endorsement step that gives a dataset standing to be cited in a funding decision or a policy.
+- **Science-to-decision facilitator**, connecting scientific data to the specialist knowledge needed to turn it into something an engineer, a bank, or a local planner can act on.
+
+Closing these gaps rests on that role as much as on the data work itself.
+
+---
+
+## 8. Decisions Awaiting a Determination
+
+These gaps close on a decision rather than on further analysis.
+
+- **Scope of the non-financial loss record.** Of mental health, biodiversity, and cultural heritage, only biodiversity currently has supporting material. Whether the near-term build covers biodiversity alone, with the other two named as later work, is open.
+- **Standing of the commissioned loss methodology as the official calculation manual.** A strong candidate that has not been confirmed.
+- **Dataset classification for licensing.** A prerequisite for sharing a substantial share of the catalog.
+- **Whether to build on or replace the existing policy monitoring platform.**
+- **Placement of the impact-based warning service on the site**, given it is operational rather than informational.
+- **Whether the catalog's recorded formats describe current delivery or an intended target**, which is worth confirming before planning work that assumes structured data.
+
+---
+
+## 9. Outside the Scope of This Report
+
+- **A stocktake of DCCE's data products** — ownership, business metadata, and compliance classification for a shortlist of priority assets. This remains to be done.
+- **A maturity assessment of DCCE's overall data architecture**, benchmarked against established data platform models. This suits a later stage, once the platform has a form to assess.
+- **How the system is built, integrated, and connected to other platforms.** These are questions for the implementation phase, once the requirements in this report and its companion documents are settled.
 
 ---
 
 ## Appendix — Internal Traceability
 
-*(For project-internal use; not required reading for understanding the findings above.)*
+*(Project-internal reference; not required for the findings above.)*
 
-- Catalog-level statistics (Section 1): recomputed directly from `data_catalog_v4.csv` (260 rows), superseding the same statistics as originally reported in the June 2026 report, which were built against an earlier catalog version (v3) with a different domain taxonomy.
-- Service-level blockers (Section 2): drawn from the Service Business Narratives document (all 8 services + BTR pipeline section).
-- BTR and disaster-loss-statistics signal-level detail (Section 2): drawn from the Data Domain Highlight technical draft (Track 1: 122 signals; Track 2: 6 signals).
-- Disaster-loss-statistics build-requirement detail (Section 2): drawn from the Service 4 / Developer-Ready Design Requirements reconciliation (four requirements, three essential/one recommended, all blocked on methodology — now substantially resolved per the discussion above).
-- Website content findings (Section 3): drawn from the WP4 Content-Source Gap Analysis Report (73 requirements: 21 full / 24 partial / 28 gap) — the finished, audience-facing version of that analysis, not its earlier internal working draft.
-- This report supersedes the June 2026 Thai-language gap analysis in full. That earlier document is retained on disk, unmodified, as a historical record.
+- **Structure.** Follows the analytical spine of the submitted draft `5.3.8` (demand → supply → numbered gaps → per-service application → institutional conclusion), extended with the website layer, the two later use cases, and the decisions and scope sections. Gap numbering 1–8 preserved from `5.3.8`; gaps 9–11 added here.
+- **Section 3 statistics.** Recomputed from `data_catalog_v4.csv` (260 rows) using `cdm_sub_domain`, `spatial_resolution`, `access_rights_dataset`, `endorsement_status`, and `validation_flag`. Supersedes the equivalent figures in D-044, which were computed against catalog v3 under a different domain taxonomy. Resolution figures differ from D-044's 70%/26% split because v4 records 23% of entries with resolution unstated.
+- **5km downscaling detail** (Section 3, Gap 2): from `5.3.8`.
+- **Gaps 1–8** (Section 4): carried from `5.3.8`, refreshed against v4 figures. Gaps 9–11 derived from WP2, WP6, and the v4 recount.
+- **Service blockers** (Section 5): from the WP6 Service Business Narratives (D-071), all 8 services plus the BTR pipeline section. Service-to-gap mapping in the Section 5 table extends `5.3.8`'s equivalent table to nine rows.
+- **Service 9 signal detail** (122 items) and **Service 4 signal detail** (6 items): from the WP2 Data Domain Highlight draft.
+- **Service 4 build-requirement detail** (four elements: REQ-012, REQ-049, REQ-050, REQ-051): from the Service 4 / DRD reconciliation.
+- **Section 6**: from `2026-08-10-WP4-Content-Source-Gap-Analysis-Report.md` (D-061), the finished audience-facing version — 21/24/28 of 73 — not the earlier working draft, which carries superseded totals.
+- **Section 7**: three institutional roles carried from `5.3.8`'s conclusion.
+- **Supersession.** This report supersedes D-044 (`รายงานการวิเคราะห์ช่องว่างข้อมูลและข้อเสนอแนะเชิงนโยบาย_v5.0.md`) in full, and supersedes `5.3.8` as the current gap analysis. Both are retained on disk unmodified.
