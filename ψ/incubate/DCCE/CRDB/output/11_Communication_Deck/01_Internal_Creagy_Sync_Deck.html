@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NCAIF Internal Creagy Strategy, Scope Defense &amp; Execution Playbook — Creagy Corporate SlideDoc</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+/* ===========================================
+   CREAGY CORPORATE TEMPLATE PRESET 9 (STYLE_PRESETS.md & WP9_Slidedoc)
+   - Background: #FFFFFF (Pure White)
+   - Header: Main Title (42px #031B2A) + Sub Title Takeaway (38px #000000) on Left, Creagy/DCCE Logos Top-Right
+   - NO top category tags (NO kicker pills)
+   - Subtitle = Executive Summary Takeaway Line (38px #000000)
+   - Footer: © 2026 The Creagy Company Limited. All Rights Reserved. | STRICTLY PRIVATE AND CONFIDENTIAL — FOR INTERNAL STRATEGY & DEFENSE ONLY
+   - Fonts: TH Sarabun PSK / TH Sarabun New / Sarabun
+   - Sizes: Hero 62px, Heading 42px, Subheading 38px, Body 27px, Captions 22px
+   =========================================== */
+:root {
+    --creagy-blue: #00618B;
+    --creagy-dark-navy: #031B2A;
+    --creagy-navy-mid: #0A324A;
+    --creagy-sky: #317ABD;
+    --creagy-accent-blue: #00A3E0;
+    --creagy-light-blue: #F0F7FB;
+    
+    --text-dark: #000000;
+    --text-heading: #031B2A;
+    --text-subheading: #000000; /* Pure Black */
+    --text-medium: #1E293B;
+    --text-muted: #64748B;
+    
+    --bg-page: #E2E8F0;
+    --slide-bg: #FFFFFF; /* Pure White */
+    --card-bg: #FFFFFF;
+    --border-color: #E2E8F0;
+    
+    --font-thai: 'TH Sarabun PSK', 'TH Sarabun New', 'Sarabun', sans-serif;
+    --font-heading: 'TH Sarabun PSK', 'TH Sarabun New', 'Sarabun', sans-serif;
+    --font-body: 'TH Sarabun PSK', 'TH Sarabun New', 'Sarabun', sans-serif;
+    
+    --font-size-hero: 62px;       /* 62px Cover Title */
+    --font-size-heading: 42px;    /* 42px Heading */
+    --font-size-subheading: 38px; /* 38px Sub Heading */
+    --font-size-body: 27px;       /* 27px Body Text */
+    --font-size-caption: 22px;    /* 22px Caption */
+    
+    --gap-red: #C0392B;
+    --gap-red-bg: #FDF2F1;
+    --solve-green: #0B7A4B;
+    --solve-green-bg: #EBF7F1;
+    
+    --shadow-sm: 0 4px 14px rgba(0, 97, 139, 0.05);
+    --shadow-md: 0 8px 24px rgba(0, 97, 139, 0.08);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ===========================================
+   FIXED 16:9 STAGE BASE
+   =========================================== */
+html, body {
+    width: 100%; height: 100%; margin: 0; overflow: hidden;
+    background: var(--bg-page); font-family: var(--font-body);
+    font-size: var(--font-size-body); color: var(--text-dark); font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+}
+
+.deck-viewport { position: fixed; inset: 0; overflow: hidden; background: var(--bg-page); }
+
+.deck-stage {
+    position: absolute; left: 0; top: 0; width: 1920px; height: 1080px;
+    overflow: hidden; transform-origin: 0 0; background: var(--slide-bg);
+}
+
+.slide {
+    position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: hidden;
+    display: flex; flex-direction: column; justify-content: space-between;
+    visibility: hidden; opacity: 0; pointer-events: none;
+    background: var(--slide-bg); padding: 44px 68px 30px 68px;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.slide.active, .slide.visible { visibility: visible; opacity: 1; pointer-events: auto; z-index: 1; }
+
+@media print {
+    @page { size: A4 landscape; margin: 0; }
+    html, body { width: 1920px; height: auto; overflow: visible; background: #fff; }
+    .deck-viewport { position: static; overflow: visible; background: #fff; }
+    .deck-stage { position: static; width: auto; height: auto; transform: none !important; background: none; }
+    .slide { position: relative; display: flex !important; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important; width: 1920px; height: 1080px; break-after: page; page-break-after: always; zoom: 0.585; }
+    .slide:last-child { break-after: auto; page-break-after: auto; }
+    .deck-controls, .edit-hotzone, .edit-toggle { display: none !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.2s !important; }
+}
+
+/* ===========================================
+   CREAGY HEADER CHROME (NO KICKER TAG, TITLE 42px, SUBTITLE 38px #000000)
+   =========================================== */
+.slide-header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    padding-bottom: 12px; border-bottom: 2px solid var(--border-color);
+    margin-bottom: 16px; flex-shrink: 0; gap: 24px;
+}
+
+.header-left-box { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0; }
+
+.header-main-title {
+    font-family: var(--font-heading); font-size: var(--font-size-heading); /* 42px */
+    font-weight: 800; color: var(--text-heading); line-height: 1.22;
+}
+
+.header-sub-title {
+    font-family: var(--font-heading); font-size: var(--font-size-subheading); /* 38px */
+    font-weight: 800; color: var(--text-subheading); /* Pure Black #000000 */ line-height: 1.22;
+    letter-spacing: -0.01em;
+}
+
+.header-logos {
+    display: flex; align-items: center; gap: 14px; background: #FFFFFF;
+    padding: 6px 16px; border-radius: 12px; border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm); flex-shrink: 0;
+}
+
+.header-logo-img { height: 42px; object-fit: contain; }
+
+/* ===========================================
+   CREAGY FOOTER CHROME
+   =========================================== */
+.slide-footer {
+    margin-top: auto; height: 36px; display: flex; justify-content: space-between; align-items: center;
+    border-top: 1px solid var(--border-color); padding-top: 8px;
+    font-family: var(--font-body); font-size: var(--font-size-caption); /* 22px */
+    color: var(--text-muted); flex-shrink: 0; font-weight: 600;
+}
+
+.footer-left { display: flex; align-items: center; gap: 12px; font-weight: 600; }
+.footer-separator { color: #CBD5E1; }
+.slide-number-badge { font-family: var(--font-heading); font-weight: 800; font-size: 26px; color: var(--creagy-blue); }
+
+/* ===========================================
+   SLIDE BODY & ALIGNED CARD SYSTEM
+   =========================================== */
+.slide-body {
+    display: flex; flex-direction: column; justify-content: flex-start;
+    gap: 16px; flex: 1; overflow: hidden;
+}
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: stretch; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; align-items: stretch; }
+.grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 16px; align-items: stretch; }
+.grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; align-items: stretch; }
+
+.doc-card {
+    background: var(--card-bg); border: 1px solid var(--border-color);
+    border-radius: 12px; padding: 18px 22px; box-shadow: var(--shadow-sm);
+    display: flex; flex-direction: column; justify-content: flex-start; gap: 10px;
+    height: 100%;
+}
+
+.doc-card.blue-border { border-top: 5px solid var(--creagy-blue); }
+.doc-card.sky-border { border-top: 5px solid var(--creagy-sky); }
+.doc-card.red-border { border-top: 5px solid var(--gap-red); background: var(--gap-red-bg); }
+.doc-card.green-border { border-top: 5px solid var(--solve-green); background: var(--solve-green-bg); }
+.doc-card.navy-border { border-top: 5px solid var(--creagy-dark-navy); }
+
+.card-title {
+    font-family: var(--font-heading); font-size: 36px;
+    font-weight: 800; color: var(--text-subheading); /* Pure Black */
+    display: flex; align-items: center; gap: 10px; line-height: 1.22;
+}
+
+.card-title-sm {
+    font-family: var(--font-heading); font-size: 30px;
+    font-weight: 800; color: var(--text-subheading);
+    display: flex; align-items: center; gap: 8px; line-height: 1.22;
+}
+
+.card-num {
+    width: 36px; height: 36px; border-radius: 50%; background: var(--creagy-blue);
+    color: #FFFFFF; display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-heading); font-weight: 800; font-size: 22px; flex-shrink: 0;
+}
+.red-border .card-num { background: var(--gap-red); }
+.green-border .card-num { background: var(--solve-green); }
+.navy-border .card-num { background: var(--creagy-dark-navy); }
+
+.card-text { font-family: var(--font-body); font-size: var(--font-size-body); font-weight: 600; line-height: 1.42; color: var(--text-medium); }
+
+.doc-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.doc-list li {
+    font-family: var(--font-body); font-size: var(--font-size-body); font-weight: 600; line-height: 1.4;
+    color: var(--text-dark); position: relative; padding-left: 20px;
+}
+.doc-list li::before {
+    content: "•"; color: var(--creagy-blue); font-weight: bold; font-size: 28px;
+    position: absolute; left: 0; top: -4px;
+}
+.doc-list.dense li { font-size: 24px; line-height: 1.35; }
+.doc-list.red-bullets li::before { color: var(--gap-red); }
+.doc-list.green-bullets li::before { color: var(--solve-green); }
+
+code.field {
+    font-family: var(--font-body); font-size: 0.92em; background: var(--creagy-light-blue);
+    border: 1px solid var(--border-color); border-radius: 4px; padding: 1px 6px; color: var(--creagy-blue); font-weight: 700;
+}
+
+/* Data Tables */
+.table-wrap { width: 100%; border-radius: 10px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); }
+table.data-table { width: 100%; border-collapse: collapse; font-size: var(--font-size-body); }
+table.data-table th { background: var(--creagy-dark-navy); color: #FFFFFF; font-weight: 800; text-align: left; padding: 8px 12px; font-size: 30px; }
+table.data-table td { padding: 8px 12px; border-bottom: 1px solid var(--border-color); vertical-align: top; line-height: 1.35; background: #FFF; font-size: 25px; font-weight: 600; }
+table.data-table tr:nth-child(even) td { background: var(--creagy-light-blue); }
+table.data-table td:first-child, table.data-table th:first-child { font-weight: 800; color: var(--creagy-dark-navy); }
+
+/* Timeline Steps */
+.timeline-step {
+    background: #FFFFFF; border-radius: 12px; border: 1px solid var(--border-color);
+    border-top: 5px solid var(--creagy-blue); padding: 16px 20px; display: flex; flex-direction: column; gap: 6px; height: 100%;
+}
+.step-num { font-family: var(--font-heading); font-size: 26px; font-weight: 800; color: var(--creagy-sky); }
+.step-title { font-family: var(--font-heading); font-size: 32px; font-weight: 800; color: var(--text-subheading); }
+
+/* Stat Banner Callout */
+.stat-banner {
+    background: linear-gradient(135deg, var(--creagy-dark-navy) 0%, var(--creagy-blue) 100%);
+    color: #FFFFFF; border-radius: 12px; padding: 16px 30px; display: flex; align-items: center; gap: 24px; box-shadow: var(--shadow-md);
+}
+.stat-val { font-family: var(--font-heading); font-size: 48px; font-weight: 800; color: #FFFFFF; line-height: 1; min-width: 120px; }
+.stat-lbl { font-family: var(--font-body); font-size: 24px; font-weight: 600; color: #D4ECF9; line-height: 1.35; }
+
+/* Stat Badge Cards */
+.stat-card-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.stat-card {
+    background: #FFFFFF; border: 1px solid var(--border-color); border-radius: 12px; padding: 14px 20px;
+    display: flex; align-items: center; gap: 18px; box-shadow: var(--shadow-sm); border-left: 6px solid var(--creagy-blue);
+}
+.stat-card.ready { border-left-color: var(--solve-green); background: var(--solve-green-bg); }
+.stat-card.partial { border-left-color: #D97706; background: #FFFBEB; }
+.stat-card.gap { border-left-color: var(--gap-red); background: var(--gap-red-bg); }
+.stat-card-val { font-family: var(--font-heading); font-size: 46px; font-weight: 800; line-height: 1; }
+.stat-card.ready .stat-card-val { color: var(--solve-green); }
+.stat-card.partial .stat-card-val { color: #D97706; }
+.stat-card.gap .stat-card-val { color: var(--gap-red); }
+.stat-card-meta { display: flex; flex-direction: column; gap: 2px; }
+.stat-card-title { font-family: var(--font-heading); font-size: 30px; font-weight: 800; color: var(--text-heading); }
+.stat-card-desc { font-family: var(--font-body); font-size: 22px; font-weight: 600; color: var(--text-medium); line-height: 1.25; }
+
+/* ===========================================
+   SLIDE 1: CREAGY TITLE SLIDE
+   =========================================== */
+.title-slide {
+    background: linear-gradient(135deg, #031B2A 0%, #063552 50%, #00618B 100%);
+    color: #FFFFFF; padding: 70px 85px; justify-content: space-between;
+}
+.title-top-logos { display: flex; align-items: center; justify-content: space-between; }
+.title-logo-box { background: #FFFFFF; padding: 10px 24px; border-radius: 14px; display: flex; align-items: center; gap: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+.title-logo-box img { height: 46px; object-fit: contain; }
+.title-body { margin-top: 8px; max-width: 1740px; display: flex; flex-direction: column; gap: 10px; }
+.title-badge { display: inline-block; align-self: flex-start; background: rgba(0, 163, 224, 0.25); border: 1px solid rgba(255, 255, 255, 0.3); color: #EEF7FC; font-family: var(--font-heading); font-size: 28px; font-weight: 700; padding: 4px 18px; border-radius: 20px; }
+.main-hero-title { font-family: var(--font-heading); font-size: var(--font-size-hero); /* 62px */ font-weight: 800; line-height: 1.18; color: #FFFFFF; }
+.main-subtitle { font-family: var(--font-body); font-size: 35px; line-height: 1.35; color: #D4ECF9; font-weight: 600; }
+.title-cards-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 18px; margin-top: 8px; }
+.title-content-card { background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 12px; padding: 16px 20px; display: flex; flex-direction: column; gap: 6px; }
+.title-content-card h4 { font-family: var(--font-heading); font-size: 30px; font-weight: 800; color: #94D3F3; }
+.title-content-card p, .title-content-card li { font-family: var(--font-body); font-size: 24px; font-weight: 600; color: #FFFFFF; line-height: 1.35; }
+.title-metadata { display: flex; gap: 50px; border-top: 1px solid rgba(255, 255, 255, 0.2); padding-top: 14px; margin-top: 8px; }
+.meta-item { display: flex; flex-direction: column; gap: 2px; }
+.meta-lbl { font-family: var(--font-body); font-size: 22px; font-weight: 600; color: #94D3F3; }
+.meta-val { font-family: var(--font-heading); font-size: 30px; font-weight: 800; color: #FFFFFF; }
+
+/* REVEAL ANIMATIONS */
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.4s ease, transform 0.4s ease; }
+.slide.visible .reveal { opacity: 1; transform: translateY(0); }
+.slide.visible .reveal:nth-child(1) { transition-delay: 0.06s; }
+.slide.visible .reveal:nth-child(2) { transition-delay: 0.12s; }
+.slide.visible .reveal:nth-child(3) { transition-delay: 0.18s; }
+
+/* CONTROLS & INLINE EDITOR */
+.deck-controls {
+    position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); z-index: 1000;
+    background: rgba(3, 27, 42, 0.92); backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 30px;
+    padding: 6px 20px; display: flex; align-items: center; gap: 16px; color: #FFFFFF;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+.control-btn { background: transparent; border: none; color: #FFFFFF; font-size: 20px; cursor: pointer; padding: 4px 12px; font-family: var(--font-body); font-weight: 700; }
+.control-btn:hover { color: var(--creagy-accent-blue); }
+.counter { font-family: var(--font-heading); font-size: 22px; font-weight: 800; min-width: 80px; text-align: center; }
+
+.edit-hotzone { position: fixed; top: 0; left: 0; width: 80px; height: 80px; z-index: 10000; cursor: pointer; }
+.edit-toggle { position: fixed; top: 16px; left: 16px; z-index: 10001; background: var(--creagy-blue); color: #FFFFFF; border: none; padding: 8px 18px; border-radius: 20px; font-family: var(--font-body); font-size: 17px; font-weight: 600; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; box-shadow: 0 4px 14px rgba(0,0,0,0.25); }
+.edit-toggle.show, .edit-toggle.active { opacity: 1; pointer-events: auto; }
+</style>
+</head>
+<body>
+
+<div class="edit-hotzone" id="editHotzone"></div>
+<button class="edit-toggle" id="editToggle">✏️ โหมดแก้ไขข้อความ (กด E)</button>
+
+<div class="deck-viewport">
+<main class="deck-stage" id="deckStage">
+
+<!-- ============ SLIDE 01: TITLE & STRATEGIC ORIENTATION ============ -->
+<section class="slide title-slide active">
+  <div class="title-top-logos reveal">
+    <div class="title-badge">National Climate Adaptation Information Framework (NCAIF / CRDB)</div>
+    <div class="title-logo-box">
+      <img src="assets/creagy_logo.png" alt="Creagy">
+      <img src="assets/dcce_logo.jpg" alt="DCCE">
+    </div>
+  </div>
+  <div class="title-body reveal">
+    <div class="main-hero-title">The National Climate Adaptation Information Framework (NCAIF) Bridges the Structural Void Between Fragmented National Data and Production-Grade Decision Support.</div>
+    <div class="main-subtitle">Creagy Internal Strategic Alignment, Scope Defense, and Executive Execution Playbook (22-Slide Master Blueprint).</div>
+    <div class="title-cards-grid">
+      <div class="title-content-card">
+        <h4>Consulting Mandate</h4>
+        <p>Creagy has been commissioned by DCCE to deliver the foundational blueprint for Thailand’s NCAIF. This master slide-doc synthesizes the complete body of strategic, analytical, architectural, and governance deliverables across Work Packages 0 through 11.</p>
+      </div>
+      <div class="title-content-card">
+        <h4>Operational Objectives</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 4px;">
+          <li>1. Defend project scope boundaries and agile delivery choices during formal inspection reviews.</li>
+          <li>2. Guide executive briefings with DCCE leadership (DG, Dir. Toey, Dir. Nid).</li>
+          <li>3. Execute an airtight technical handoff to downstream contractor (TOR70).</li>
+        </ul>
+      </div>
+      <div class="title-content-card">
+        <h4>Core Strategic Anchors</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 4px;">
+          <li>• <strong>Dual-Layer Architecture:</strong> Decoupling 15-Node CMS from 8-Domain data engine.</li>
+          <li>• <strong>Empirical Grounding:</strong> Forensic audit of 391 DCCE assets &amp; 260 national datasets.</li>
+          <li>• <strong>Audience Focus:</strong> Policymakers, sector analysts &amp; sub-district planners.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="title-metadata reveal">
+    <div class="meta-item"><div class="meta-lbl">Date</div><div class="meta-val">17 August 2026</div></div>
+    <div class="meta-item"><div class="meta-lbl">Audience</div><div class="meta-val">Creagy Consulting Team, Technical Leads &amp; Engagement Managers</div></div>
+    <div class="meta-item"><div class="meta-lbl">Document Target</div><div class="meta-val">WP11 Internal Creagy Strategy Master SlideDoc</div></div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 02: THE REALITY CHECK ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">DCCE Commissioned a Public Website, but Thailand’s Adaptation Ecosystem Suffers from a Foundational Governance and Data Architecture Deficit.</div>
+      <div class="header-sub-title">Moving Beyond the "Website Trap" to Address the 80% Historical Failure Rate of Ungoverned Public Sector Data Portals.</div>
+    </div>
+    <div class="header-logos">
+      <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+      <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+    </div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-2 reveal">
+      <div class="doc-card red-border">
+        <div class="card-title"><div class="card-num">!</div>The Client's Literal Expectation (The "Website Trap")</div>
+        <ul class="doc-list red-bullets">
+          <li><strong>The Surface Request:</strong> DCCE’s original Terms of Reference framed the mandate largely as a digital communication challenge, requesting a modern, interactive web portal featuring GIS risk maps, climate trend charts, infographics, and storytelling articles.</li>
+          <li><strong>The Underlying Assumption:</strong> It assumed that line agencies (TMD, GISTDA, DDPM, RID, ONEP) possessed ready-to-ingest, structured data feeds that could simply be wired directly into web visualization widgets.</li>
+          <li><strong>The Fatal Flaw:</strong> Over 80% of government digital portals become abandoned "ghost systems" within 12 to 18 months of launch. Building frontend dashboards on top of ungoverned, unstandardized data assets guarantees immediate failure when source formats shift or maintenance contracts end.</li>
+        </ul>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">✓</div>The Hard Reality (National Data Ecosystem Audit)</div>
+        <ul class="doc-list">
+          <li><strong>Severe Data Monopolization:</strong> Auditing 260 national datasets revealed that over 50% of critical data is siloed within just 6 agencies (TMD: 37 datasets, DCCE: 26, GISTDA: 17, DDPM: 15, NSO: 14, NESDC: 14).</li>
+          <li><strong>The Access Bottleneck:</strong> Only 17% of datasets are openly accessible via automated or public channels; 83% remain trapped behind manual, ad-hoc, paper-based document request workflows.</li>
+          <li><strong>Zero Verified Baseline:</strong> 100% of the 260 cataloged datasets currently sit in "Draft / Unverified" status due to the complete absence of a national certification authority or quality verification protocol.</li>
+          <li><strong>Spatial Granularity Mismatch:</strong> 122 datasets exist only at coarse provincial boundaries, 59 lack recorded spatial grain, and only 41 offer sub-district or monitoring-point resolution.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR INTERNAL STRATEGY &amp; DEFENSE ONLY</span></div>
+    <div class="slide-number-badge">02 / 22</div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 03: THE STRATEGIC REFRAME ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">Decoupling the Visible Web Storefront from the Governed Data Warehouse is the Only Scalable Defense Against Frankenstein Dashboards.</div>
+      <div class="header-sub-title">Establishing the Dual-Layer Enterprise System Architecture for National Climate Adaptation Services.</div>
+    </div>
+    <div class="header-logos">
+      <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+      <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+    </div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-2 reveal">
+      <div class="doc-card sky-border">
+        <div class="card-title"><div class="card-num">1</div>The Web Platform (The Visible Storefront)</div>
+        <ul class="doc-list">
+          <li><strong>Core Function:</strong> The interaction and dissemination surface designed to communicate insights, display interactive spatial maps, host policy directories, and provide user routing.</li>
+          <li><strong>Architectural Scope:</strong> Encompasses the 15-node sitemap, headless CMS dynamic rendering engines, responsive GIS map viewports, user role-based access control (RBAC), and stakeholder feedback channels.</li>
+          <li><strong>Operational Nature:</strong> The Web Platform is purely a <em>producer and consumer</em> of data. It owns zero analytical truth; it dynamically requests certified payloads from the underlying data warehouse via authenticated REST and GraphQL APIs.</li>
+        </ul>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">2</div>The Data Platform (The Governed Warehouse)</div>
+        <ul class="doc-list">
+          <li><strong>Core Function:</strong> The authoritative system of record and governed data pipeline responsible for ingestion, validation, harmonization, spatial indexing, semantic standardization, and lifecycle storage.</li>
+          <li><strong>Architectural Scope:</strong> Encompasses the 8 Conceptual Data Domains (DOM_010 to DOM_080), 74-term Master Glossary, ISO 19115 / DGA metadata validation engines, PostGIS spatial databases, and automated ETL connectors.</li>
+          <li><strong>Strategic Impact:</strong> Eliminates the "Frankenstein Dashboard" anti-pattern. If three separate web pages display flood risk for Chiang Mai, they all query a single, centralized computation model in the Data Platform, guaranteeing 100% numerical consistency across the portal.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR INTERNAL STRATEGY &amp; DEFENSE ONLY</span></div>
+    <div class="slide-number-badge">03 / 22</div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 04: ENTERPRISE LIFECYCLE POSITIONING ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">CRDB Strictly Operates as the Architectural Planning and Design Authority (Phases 1–3), Handing Production-Ready Blueprints to the Downstream Build Contractor (Phases 4–7).</div>
+      <div class="header-sub-title">Clear Contractual and Methodological Demarcation Between Architectural Blueprinting (CRDB) and Software Engineering Execution (TOR70).</div>
+    </div>
+    <div class="header-logos">
+      <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+      <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+    </div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-2 reveal">
+      <div class="doc-card green-border">
+        <div class="card-title"><div class="card-num">A</div>Stage 1 — CRDB Mandate: Architecture &amp; Requirement Engineering (Phases 1 to 3 — 100% Complete)</div>
+        <ul class="doc-list green-bullets">
+          <li><strong>Phase 1: Planning &amp; Business Objective:</strong> Formulated strategic platform rationale, multi-tiered target audience personas, institutional scoping, and lifecycle sustainability frameworks.</li>
+          <li><strong>Phase 2: Requirement Analysis &amp; Gap Assessment:</strong> Executed demand-side stakeholder surveys, audited 391 DCCE digital assets and 260 national datasets, identified 11 systemic ecosystem gaps, and audited 73 web content requirements.</li>
+          <li><strong>Phase 3: Architectural &amp; Conceptual Design:</strong> Authored the 15-node Sitemap, 8-Domain Conceptual Data Model (CDM), 74-term Master Glossary, 12-field ISO 19115 metadata standard, and deep functional specifications for priority services.</li>
+        </ul>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">B</div>Stage 2 — TOR70 Mandate: Software Engineering &amp; Operational Deployment (Phases 4 to 7 — Downstream Execution)</div>
+        <ul class="doc-list">
+          <li><strong>Phase 4: Software Development &amp; Coding:</strong> Database schema instantiation, API microservice development, CMS customization, frontend component engineering, and data pipeline construction.</li>
+          <li><strong>Phase 5: Verification, Quality Assurance &amp; UAT:</strong> Unit testing, inter-agency API integration testing, security auditing, vulnerability scanning, and User Acceptance Testing with DCCE staff.</li>
+          <li><strong>Phase 6: Production Deployment &amp; Cloud Infrastructure:</strong> Containerized deployment on government cloud (GDCC), SSL/TLS certification, domain configuration, and load balancing.</li>
+          <li><strong>Phase 7: Maintenance, Operations &amp; Data Refresh:</strong> Day-to-day database administration, continuous ETL pipeline monitoring, user support, and regular data refresh cycles.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR INTERNAL STRATEGY &amp; DEFENSE ONLY</span></div>
+    <div class="slide-number-badge">04 / 22</div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 05: AGILE 'TWO AND DONE' DELIVERY RATIONALE ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">International Agile Digital Standards Dictate Deep, Production-Ready Engineering for Two Priority Services Rather Than Shallow Specifications for Nine.</div>
+      <div class="header-sub-title">Applying UK Government Digital Service (GDS) Frameworks to Maximize Software Build Feasibility and Prevent Vendor Failure.</div>
+    </div>
+    <div class="header-logos">
+      <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+      <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+    </div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-3 reveal">
+      <div class="doc-card red-border">
+        <div class="card-title-sm"><div class="card-num">1</div>The Dilution Trap (The 9-Service Fallacy)</div>
+        <ul class="doc-list dense red-bullets">
+          <li>DCCE's initial ambition suggested generating functional specifications for 9 distinct national adaptation services simultaneously within a single sprint.</li>
+          <li>Attempting to specify 9 complex services across unverified line-agency data sources would have resulted in superficial, 2-page generic summaries.</li>
+          <li>No software engineering team could build against shallow documentation, ensuring project failure during Phase 4.</li>
+        </ul>
+      </div>
+      <div class="doc-card green-border">
+        <div class="card-title-sm"><div class="card-num">2</div>Agile Pivot to Production Depth ('Two and Done')</div>
+        <ul class="doc-list dense green-bullets">
+          <li>Adopting UK GDS and Agile Alliance digital procurement standards, Creagy delivered 100% build-ready specifications for the two highest-value services:</li>
+          <li><strong>Service 1: A-BTR Reporting System:</strong> Statutorily mandated under Article 13 of Paris Agreement (Nov 2026 deadline); automates data across 18 agencies &amp; 6 NAP sectors.</li>
+          <li><strong>Service 2: Disaster Loss &amp; Damage Portal:</strong> Reconciles disaster records against ฿1.62 Trillion cumulative loss baseline (2006–2024).</li>
+        </ul>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title-sm"><div class="card-num">3</div>The Structured Developer Backlog</div>
+        <ul class="doc-list dense">
+          <li>The remaining 7 secondary services are structured into the Developer Handoff Backlog with clear technical prerequisites and data dependency roadmaps:</li>
+          <li>• Spatial Risk Analysis Engine</li>
+          <li>• Budget Decision Support (CBT)</li>
+          <li>• Engineering IDF Curves Tool</li>
+          <li>• Impact-Based Warning Feeds</li>
+          <li>• Policy M&amp;E Integration</li>
+          <li>• Uncertainty Communication Standard</li>
+          <li>• Certified Data Catalog Services</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR INTERNAL STRATEGY &amp; DEFENSE ONLY</span></div>
+    <div class="slide-number-badge">05 / 22</div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 06: DEFENDING DEFERRED ITEMS: DATA CONTRACTS ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">Technical Data Contracts Require Live API Negotiation and Organizational Mandates That Legally and Operationally Belong to the Software Build Phase.</div>
+      <div class="header-sub-title">Contractual Justification for Deferring Low-Level JSON-Schema Protocol Binding to the Downstream Implementation Contractor.</div>
+    </div>
+    <div class="header-logos">
+      <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+      <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+    </div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-3 reveal">
+      <div class="doc-card sky-border">
+        <div class="card-title-sm"><div class="card-num">1</div>Live Schema &amp; Protocol Binding Dependency</div>
+        <ul class="doc-list dense">
+          <li><strong>The Reality:</strong> A formal Data Contract is a binding technical agreement specifying exact REST/gRPC endpoints, payload schemas, JSON validation rules, polling frequencies, error-handling protocols, and latency SLAs.</li>
+          <li><strong>The Constraint:</strong> Engineering executable data contracts requires live technical sandboxes, active server endpoints, and authenticated handshake testing with line-agency engineers (TMD, GISTDA, DDPM, RID). Designing rigid contracts before live systems exist produces obsolete documentation.</li>
+        </ul>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title-sm"><div class="card-num">2</div>Inter-Agency Legal &amp; Institutional Prerequisite</div>
+        <ul class="doc-list dense">
+          <li><strong>The Reality:</strong> Data contracts enforce legal data-sharing boundaries, data classification levels (Public, Restricted, Confidential), and automated access privileges across ministerial silos.</li>
+          <li><strong>The Constraint:</strong> External agencies will not sign or adhere to technical data contracts until DCCE formally establishes its institutional data-sharing mechanisms under the forthcoming National Climate Change Act.</li>
+        </ul>
+      </div>
+      <div class="doc-card green-border">
+        <div class="card-title-sm"><div class="card-num">3</div>The Delivered Foundational Enablers</div>
+        <ul class="doc-list dense green-bullets">
+          <li><strong>Creagy's Contribution:</strong> While deferring low-level protocol binding to TOR70, Creagy delivered the exact normative prerequisites:
+            <br>• The 8-Domain Conceptual Data Model
+            <br>• The 74-term Master Glossary
+            <br>• The 12-field ISO 19115 metadata schema.</li>
+          <li>The incoming contractor inherits the exact data structures needed to negotiate live contracts on Day 1.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR INTERNAL STRATEGY &amp; DEFENSE ONLY</span></div>
+    <div class="slide-number-badge">06 / 22</div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 07: DEFENDING DEFERRED ITEMS: REFERENCE DATA ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">Prematurely Hardcoding Reference Data Tables Without Ratified National Classifications Introduces Systemic Architectural Debt.</div>
+      <div class="header-sub-title">Deferring Canonical Administrative Reference Data Matrices (Pillar 8 / RefData) as a Formally Logged Institutional Constraint.</div>
+    </div>
+    <div class="header-logos">
+      <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+      <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+    </div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-2 reveal">
+      <div class="doc-card red-border">
+        <div class="card-title"><div class="card-num">!</div>The Risk of False Normalization (The Technical Anti-Pattern)</div>
+        <ul class="doc-list red-bullets">
+          <li><strong>Master Data Fragmentation:</strong> Thailand's public sector currently lacks a universally harmonized administrative master dataset. The Department of Provincial Administration (DOPA), GISTDA, the Land Development Department (LDD), and DEQP employ conflicting sub-district polygon boundaries, administrative code sequences, and historical boundary revisions.</li>
+          <li><strong>Systemic Risk:</strong> If Creagy had arbitrarily hardcoded static reference tables for all 77 provinces, 928 districts, and 7,436 sub-districts into the database schemas, any future national master data harmonization by the Digital Government Development Agency (DGA) would trigger cascading breaking changes across all physical database tables and foreign key constraints.</li>
+        </ul>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">✓</div>The Governed Reference Data Strategy</div>
+        <ul class="doc-list">
+          <li><strong>Documented Decision (DECISION-2026-08-06):</strong> Reference data engineering was formally designated as an institutional dependency awaiting DCCE Data Governance Committee ratification.</li>
+          <li><strong>Handoff Protocol for TOR70:</strong> The downstream contractor is instructed to implement dynamic lookup adapters that bind to DGA’s centralized Government Data Exchange (GDX) administrative master services upon system deployment, rather than embedding hardcoded static tables.</li>
+          <li><strong>Provided Guidance:</strong> Creagy established the relational mapping rules connecting Spatial Administrative Units (<code class="field">DOM_010</code>) to Hazard Extents (<code class="field">DOM_021</code>) and Disaster Records (<code class="field">DOM_024</code>).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR INTERNAL STRATEGY &amp; DEFENSE ONLY</span></div>
+    <div class="slide-number-badge">07 / 22</div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 08: PENDING CLIENT BLOCKERS ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">Platform Operationalization is Gated by Four Critical Policy Decisions That Reside Exclusively Within DCCE Leadership Authority.</div>
+      <div class="header-sub-title">Formal Identification of Client Institutional Bottlenecks Requiring Immediate Executive Determination.</div>
+    </div>
+    <div class="header-logos">
+      <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+      <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+    </div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-4 reveal">
+      <div class="doc-card sky-border">
+        <div class="card-title-sm"><div class="card-num">1</div>Governance Ratification</div>
+        <div class="card-text" style="font-size: 23px; line-height: 1.35;">
+          <strong>Current State:</strong> 4-Tier Governance Charter &amp; 5 divisional work groups accepted at FGD3 (July 2, 2026) but not formally gazetted.<br><br>
+          <strong>Operational Impact:</strong> Stewards lack legal mandate to enforce quality standards or request external data.<br><br>
+          <span style="color: var(--creagy-blue); font-weight: 800;">Required Action:</span> DG must sign ministerial order establishing DCCE Data Governance Committee.
+        </div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title-sm"><div class="card-num">2</div>Appoint Data Owners</div>
+        <div class="card-text" style="font-size: 23px; line-height: 1.35;">
+          <strong>Current State:</strong> Group Directors have not formally assigned named staff to serve as dedicated Data Stewards.<br><br>
+          <strong>Operational Impact:</strong> 260 datasets in national catalog cannot transition from "Draft" to "Certified" status.<br><br>
+          <span style="color: var(--creagy-blue); font-weight: 800;">Required Action:</span> Division Directors (Climate, Risk, Adaptation, M&amp;E) issue internal role appointment letters.
+        </div>
+      </div>
+      <div class="doc-card navy-border">
+        <div class="card-title-sm"><div class="card-num">3</div>Non-Financial L&amp;D Scope</div>
+        <div class="card-text" style="font-size: 23px; line-height: 1.35;">
+          <strong>Current State:</strong> DCCE leadership has not finalized whether initial L&amp;D covers biodiversity only, or expands to mental health &amp; heritage.<br><br>
+          <strong>Operational Impact:</strong> TOR70 cannot finalize physical schemas for non-economic loss reporting tables.<br><br>
+          <span style="color: var(--creagy-blue); font-weight: 800;">Required Action:</span> Dir. Toey confirm phased scope (Phase 1: Biodiversity; Phase 2: Cultural).
+        </div>
+      </div>
+      <div class="doc-card green-border">
+        <div class="card-title-sm"><div class="card-num">4</div>National M&amp;E Integration</div>
+        <div class="card-text" style="font-size: 23px; line-height: 1.35;">
+          <strong>Current State:</strong> Open policy question whether new platform replaces manual M&amp;E web system or builds automated data bridge.<br><br>
+          <strong>Operational Impact:</strong> Determines whether TOR70 builds a full M&amp;E data entry module or an external API ingestion adapter.<br><br>
+          <span style="color: var(--solve-green); font-weight: 800;">Required Action:</span> DCCE IT and Adaptation M&amp;E teams ratify integration architecture option.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR INTERNAL STRATEGY &amp; DEFENSE ONLY</span></div>
+    <div class="slide-number-badge">08 / 22</div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 09: THE 15-NODE SITEMAP MASTER STRUCTURE ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">The 15-Node Information Architecture Implements a Rigorous, User-Centric Navigation Hierarchy Across Five Core Operational Pillars.</div>
+      <div class="header-sub-title">Translating Complex Adaptation Science and Governance Workflows into an Intuitive Public and Specialist Digital Experience.</div>
+    </div>
+    <div class="header-logos">
+      <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+      <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+    </div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-5 reveal">
+      <div class="doc-card blue-border">
+        <div class="card-title-sm"><div class="card-num">P1</div>Executive Home</div>
+        <ul class="doc-list dense">
+          <li><strong>Node 1.1 — Overview of Thailand's Climate Risk:</strong> Executive dashboard, IPCC framing, macro indicators, NAP priorities.</li>
+          <li><strong>Node 1.2 — Area-Based Interactive Search:</strong> Spatial search gateway (Province ➔ District ➔ Sub-District).</li>
+        </ul>
+      </div>
+      <div class="doc-card sky-border">
+        <div class="card-title-sm"><div class="card-num">P2</div>Policy Center</div>
+        <ul class="doc-list dense">
+          <li><strong>Node 2.1 — Situation:</strong> Extreme trends &amp; macroeconomic losses.</li>
+          <li><strong>Node 2.2 — Area/Sector Profiles:</strong> 77 provinces &amp; 6 NAP sectors.</li>
+          <li><strong>Node 2.3 — Policy, Law &amp; Finance:</strong> Climate Act, funds &amp; CBT.</li>
+          <li><strong>Node 2.4 — Planning Services:</strong> Local data &amp; risk layers.</li>
+        </ul>
+      </div>
+      <div class="doc-card navy-border">
+        <div class="card-title-sm"><div class="card-num">P3</div>Knowledge Cycle</div>
+        <ul class="doc-list dense">
+          <li><strong>Node 3.1 — Climate Drivers:</strong> 5km gridded projections.</li>
+          <li><strong>Node 3.2 — Risk &amp; L&amp;D Analysis:</strong> Impact chains &amp; L&amp;D.</li>
+          <li><strong>Node 3.3 — Measures Library:</strong> Grey &amp; NbS solutions, GESI.</li>
+          <li><strong>Node 3.4 — M&amp;E Tracking:</strong> GGA linkage &amp; project cases.</li>
+        </ul>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title-sm"><div class="card-num">P4</div>Tools &amp; Services</div>
+        <ul class="doc-list dense">
+          <li><strong>Node 4.1 — Certified Data Catalog:</strong> ISO 19115 repository &amp; metadata.</li>
+          <li><strong>Node 4.2 — Visualization &amp; Analytics:</strong> GIS sandbox &amp; IDF curves.</li>
+          <li><strong>Node 4.3 — External Data Hub:</strong> APIs for TMD, GISTDA, Copernicus.</li>
+        </ul>
+      </div>
+      <div class="doc-card green-border">
+        <div class="card-title-sm"><div class="card-num">P5</div>Engagement</div>
+        <ul class="doc-list dense green-bullets">
+          <li><strong>Node 5.1 — Announcements &amp; Activities:</strong> Workshops &amp; technical training.</li>
+          <li><strong>Node 5.2 — Feedback &amp; Services:</strong> Helpdesk, bug reporting, data quality feedback.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR INTERNAL STRATEGY &amp; DEFENSE ONLY</span></div>
+    <div class="slide-number-badge">09 / 22</div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 10: PILLAR 1 & PILLAR 2 DEEP DIVE ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">Pillars 1 and 2 Serve Executive and Policy Decision-Makers Through Interactive Spatial Drill-Downs and Climate Budget Governance.</div>
+      <div class="header-sub-title">Bridging National Macroeconomic Climate Policy with Sub-District Spatial Prioritization.</div>
+    </div>
+    <div class="header-logos">
+      <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+      <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+    </div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-2 reveal">
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">1</div>Pillar 1: Executive Home Deep Dive</div>
+        <ul class="doc-list">
+          <li><strong>Node 1.1 (National Overview):</strong> Designed as the executive entry point. Features 4 high-level summary cards (Hazard Exposure, Vulnerability Index, Economic Loss Baseline, NAP Execution Status). Integrates IPCC AR6 risk framework definitions to establish conceptual clarity for high-level officials.</li>
+          <li><strong>Node 1.2 (Interactive Area Search):</strong> Acts as the primary navigational gateway to the underlying data mart. Allows users to select Province ➔ District ➔ Sub-District to dynamically render local risk scores, key climate hazards (flood, drought, coastal erosion), and recommended adaptation measures.</li>
+        </ul>
+      </div>
+      <div class="doc-card sky-border">
+        <div class="card-title"><div class="card-num">2</div>Pillar 2: Policy Maker Information Center Deep Dive</div>
+        <ul class="doc-list">
+          <li><strong>Node 2.1 (Situation &amp; Macro Losses):</strong> Displays multi-decadal historical climate trends and tracks cumulative national loss and damage baselines (reconciled against Thailand's ฿1.62 Trillion agricultural and infrastructure loss records).</li>
+          <li><strong>Node 2.2 (Area &amp; Sector Profiles):</strong> Hosts downloadable risk profile dossiers for all 77 provinces and the 6 NAP sectors (Agriculture, Water, Public Health, Forestry, Tourism, Human Settlements).</li>
+          <li><strong>Node 2.3 (Policy, Law &amp; Climate Finance):</strong> Provides real-time legislative tracking for the draft Climate Change Act, a comprehensive directory of international climate funds (GCF, GEF, AF), and tools for national Climate Budget Tagging (CBT) and avoided-loss cost-benefit analysis.</li>
+          <li><strong>Node 2.4 (Planning Services):</strong> Delivers verified spatial datasets and proxy vulnerability indicators to provincial planning officers and municipal engineers.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR INTERNAL STRATEGY &amp; DEFENSE ONLY</span></div>
+    <div class="slide-number-badge">10 / 22</div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 11: PILLAR 3 DEEP DIVE ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">Pillar 3 Operationalizes the End-to-End Scientific Adaptation Cycle from 5km Downscaled Climate Drivers to Closed-Loop M&amp;E.</div>
+      <div class="header-sub-title">The Analytical Core: Integrating Climate Projections, Vulnerability Models, Sector Measures, and UNFCCC Reporting.</div>
+    </div>
+    <div class="header-logos">
+      <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+      <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+    </div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-4 reveal">
+      <div class="timeline-step">
+        <div class="step-num">STAGE 1</div>
+        <div class="step-title">Node 3.1: Climate Drivers &amp; Projections</div>
+        <ul class="doc-list dense" style="margin-top: 6px;">
+          <li>Houses Thailand's downscaled climate models (<strong>5km grid resolution</strong>) covering precipitation, min/max temp, and extremes under SSP2-4.5 &amp; SSP5-8.5 through 2099.</li>
+          <li>Incorporates 1981–2023 historical grids from TMD and uncertainty guidelines.</li>
+        </ul>
+      </div>
+      <div class="timeline-step">
+        <div class="step-num">STAGE 2</div>
+        <div class="step-title">Node 3.2: Risk &amp; Loss/Damage Analysis</div>
+        <ul class="doc-list dense" style="margin-top: 6px;">
+          <li>Operationalizes ISO 14091 impact-chain methodology, mapping hazards through exposure to calculate vulnerability.</li>
+          <li>Tracks slow-onset hazards (sea-level rise, erosion, salinity) and national L&amp;D accounting.</li>
+        </ul>
+      </div>
+      <div class="timeline-step">
+        <div class="step-num">STAGE 3</div>
+        <div class="step-title">Node 3.3: Adaptation Measures Library</div>
+        <ul class="doc-list dense" style="margin-top: 6px;">
+          <li>Searchable catalog of structural (grey) and Nature-based Solutions (NbS) indexed by hazard, sector, budget.</li>
+          <li>Integrates Gender Equality &amp; Social Inclusion (GESI) manuals and local wisdom.</li>
+        </ul>
+      </div>
+      <div class="timeline-step">
+        <div class="step-num">STAGE 4</div>
+        <div class="step-title">Node 3.4: Adaptation Monitoring &amp; Eval</div>
+        <ul class="doc-list dense" style="margin-top: 6px;">
+          <li>Connects national progress to UNFCCC Global Goal on Adaptation (GGA).</li>
+          <li>Powers closed-loop feedback: verified project results dynamically update resilience scores.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR INTERNAL STRATEGY &amp; DEFENSE ONLY</span></div>
+    <div class="slide-number-badge">11 / 22</div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 12: PILLAR 4 & PILLAR 5 DEEP DIVE ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">Pillars 4 and 5 Provide Operational Utility and Human-in-the-Loop Feedback Mechanisms That Guarantee Long-Term Platform Vitality.</div>
+      <div class="header-sub-title">Transforming Data Assets into Active Engineering Utilities and Institutional Collaboration Channels.</div>
+    </div>
+    <div class="header-logos">
+      <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+      <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+    </div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-2 reveal">
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">4</div>Pillar 4: Tools &amp; Data Services Deep Dive</div>
+        <ul class="doc-list">
+          <li><strong>Node 4.1 (Certified Data Catalog):</strong> Central metadata clearinghouse adhering to ISO 19115 and DGA Open Data standards. Features faceted search by climate domain, administrative unit, data format (GeoJSON, GeoTIFF, CSV), and licensing class.</li>
+          <li><strong>Node 4.2 (Visualization &amp; Analytics Application):</strong> Interactive GIS mapping sandbox allowing users to overlay hazard layers, infrastructure assets, and social vulnerability. Houses the specification for infrastructure design curves and plot-level Rainfall Intensity-Duration-Frequency (IDF) calculations.</li>
+          <li><strong>Node 4.3 (External Tools &amp; Data Hub):</strong> Automated API registry connecting DCCE to external data endpoints, including TMD Weather APIs, GISTDA Geo-Informatics Portals, and the European Copernicus Climate Data Store.</li>
+        </ul>
+      </div>
+      <div class="doc-card green-border">
+        <div class="card-title"><div class="card-num">5</div>Pillar 5: News &amp; Stakeholder Engagement Deep Dive</div>
+        <ul class="doc-list green-bullets">
+          <li><strong>Node 5.1 (Announcements &amp; Training Activities):</strong> Integrated event management system for scheduling national capacity-building workshops, technical training on spatial risk tools, and public adaptation webinars.</li>
+          <li><strong>Node 5.2 (Feedback Channels &amp; User Services):</strong> Institutional service desk enabling line-agency users to report data discrepancies, request new dataset ingestion, submit methodology feedback, and access technical user manuals.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR INTERNAL STRATEGY &amp; DEFENSE ONLY</span></div>
+    <div class="slide-number-badge">12 / 22</div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 13: CONTENT GAP FINDINGS ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">A Granular 73-Point Content Audit Replaces Guesswork with an Empirical Baseline: 29% Ready to Build, 33% Requiring Cleansing, and 38% Genuine Sourcing Gaps.</div>
+      <div class="header-sub-title">Eliminating Developer Blindspots by Mapping Exact Sourcing Reality Across DCCE's 391 Digital Assets and 260 National Datasets.</div>
+    </div>
+    <div class="header-logos">
+      <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+      <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+    </div>
+  </div>
+  <div class="slide-body">
+    <div class="stat-card-row reveal">
+      <div class="stat-card ready">
+        <div class="stat-card-val">21</div>
+        <div class="stat-card-meta">
+          <div class="stat-card-title">Fully Ready (29%)</div>
+          <div class="stat-card-desc">Sourced from existing DCCE publications, NAP documents, 5km projections.</div>
+        </div>
+      </div>
+      <div class="stat-card partial">
+        <div class="stat-card-val">24</div>
+        <div class="stat-card-meta">
+          <div class="stat-card-title">Partially Covered (33%)</div>
+          <div class="stat-card-desc">Data exists but sits raw, restricted, or provincial; needs ETL pipelines.</div>
+        </div>
+      </div>
+      <div class="stat-card gap">
+        <div class="stat-card-val">28</div>
+        <div class="stat-card-meta">
+          <div class="stat-card-title">Genuine Gaps (38%)</div>
+          <div class="stat-card-desc">Zero national data; requires dedicated research or inter-agency agreements.</div>
+        </div>
+      </div>
+    </div>
+    <div class="table-wrap reveal">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th style="width: 22%;">Sitemap Pillar</th>
+            <th style="width: 20%;">Readiness Status</th>
+            <th style="width: 29%;">Existing Strengths</th>
+            <th style="width: 29%;">Critical Identified Gaps</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Pillars 1 &amp; 2 (Home &amp; Policy)</strong></td>
+            <td>6 Ready / 5 Partial / 8 Gaps<br><span style="font-size: 21px; color: var(--text-muted);">(19 requirements total)</span></td>
+            <td>NAP executive summaries, Climate Change Act legislative tracking.</td>
+            <td>Sub-district spatial drill-downs, dynamic Climate Budget Tagging (CBT) feeds.</td>
+          </tr>
+          <tr>
+            <td><strong>Pillar 3 (Knowledge Cycle)</strong></td>
+            <td>6 Ready / 16 Partial / 17 Gaps<br><span style="font-size: 21px; color: var(--text-muted);">(39 requirements total)</span></td>
+            <td>5km climate grids, ISO impact-chain manuals, M&amp;E case studies.</td>
+            <td>Sector damage functions, engineering IDF curves, non-economic loss metrics, GESI planning manuals.</td>
+          </tr>
+          <tr>
+            <td><strong>Pillars 4 &amp; 5 (Tools &amp; Engagement)</strong></td>
+            <td>3 Ready / 1 Partial / 2 Gaps<br><span style="font-size: 21px; color: var(--text-muted);">(6 requirements total)</span></td>
+            <td>Data catalog metadata rules, capacity-building workshop events.</td>
+            <td>Automated external API connectors, inter-agency user service desk workflows.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR INTERNAL STRATEGY &amp; DEFENSE ONLY</span></div>
+    <div class="slide-number-badge">13 / 22</div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 14: MASTER GLOSSARY & POLICY-SCHEMA MAPPING ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">The 74-Term Canonical Master Glossary Establishes Unambiguous Semantic Precision, Directly Binding Legal Definitions to Database Schemas.</div>
+      <div class="header-sub-title">Eliminating Inter-Agency Semantic Friction and Ensuring Complete Conceptual-to-Physical Entity Traceability.</div>
+    </div>
+    <div class="header-logos">
+      <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+      <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+    </div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-2 reveal">
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">A</div>Canonical Semantic Normalization (74 Terms)</div>
+        <ul class="doc-list">
+          <li><strong>The Problem:</strong> Thai government agencies frequently use conflicting definitions for identical climate terms. TMD defines "Hazard" as meteorological events; DDPM defines it as declared disaster areas; NESDC defines it as economic damage.</li>
+          <li><strong>The Solution:</strong> Creagy authored a 74-term Master Glossary providing standardized definitions in Thai &amp; English, harmonized strictly with UNFCCC, IPCC AR6, ISO 14090/14091, WMO-CHE, and draft Climate Change Act.</li>
+          <li><strong>Scope:</strong> Covers physical climate variables, risk dynamics, vulnerability metrics, adaptation interventions, finance mechanisms, and loss &amp; damage accounting.</li>
+        </ul>
+      </div>
+      <div class="doc-card green-border">
+        <div class="card-title"><div class="card-num">B</div>Direct Entity-to-Schema Mapping Engine</div>
+        <ul class="doc-list green-bullets">
+          <li><strong>Zero Ambiguity Rule:</strong> Every canonical term binds directly to a specific physical table and attribute in the database architecture:</li>
+          <li>• <em>Glossary:</em> <strong>Slow-Onset Hazard (ภัยคุกคามที่เกิดขึ้นช้า)</strong><br>&nbsp;&nbsp;➔ <em>Physical Entity:</em> <code class="field">Slow_Onset_Hazard_Profile</code> (<code class="field">DOM_021</code>)</li>
+          <li>• <em>Glossary:</em> <strong>Avoided Losses (มูลค่าความสูญเสียที่หลีกเลี่ยงได้)</strong><br>&nbsp;&nbsp;➔ <em>Physical Entity:</em> <code class="field">Avoided_Loss_Valuation</code> (<code class="field">DOM_040</code>)</li>
+          <li>• <em>Glossary:</em> <strong>Climate Budget Tagging (การติดแท็กงบประมาณด้านภูมิอากาศ)</strong><br>&nbsp;&nbsp;➔ <em>Physical Entity:</em> <code class="field">Climate_Budget_Allocation</code> (<code class="field">DOM_050</code>)</li>
+          <li>• <em>Glossary:</em> <strong>Adaptive Capacity (ขีดความสามารถในการปรับตัว)</strong><br>&nbsp;&nbsp;➔ <em>Physical Entity:</em> <code class="field">Adaptive_Capacity_Score</code> (<code class="field">DOM_030</code>)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR INTERNAL STRATEGY &amp; DEFENSE ONLY</span></div>
+    <div class="slide-number-badge">14 / 22</div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 15: THE 8 CONCEPTUAL DATA DOMAINS ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">The Conceptual Data Model Partitions National Climate Adaptation into Eight Governed Subject Areas with Clear Institutional Boundaries.</div>
+      <div class="header-sub-title">A Modular, Domain-Driven Architecture Designed for Decentralized Ownership and High-Performance Relational Integrity.</div>
+    </div>
+    <div class="header-logos">
+      <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+      <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+    </div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-4 reveal">
+      <div class="doc-card blue-border">
+        <div class="card-title-sm"><code class="field">DOM_010</code> Physical Climate</div>
+        <div class="card-text" style="font-size: 23px; line-height: 1.35;">
+          <strong>Lead:</strong> Climate Science &amp; Modeling Group<br>
+          <strong>Core Logic:</strong> Ingestion of raw meteorological observations, climate drivers, and historical climate grids.
+        </div>
+      </div>
+      <div class="doc-card sky-border">
+        <div class="card-title-sm"><code class="field">DOM_020</code> Hazard Modeling</div>
+        <div class="card-text" style="font-size: 23px; line-height: 1.35;">
+          <strong>Lead:</strong> Risk Analysis Group (DOM_021)<br>
+          <strong>Core Logic:</strong> Simulation of future scenarios (SSP2-4.5, SSP5-8.5) and spatial hazard extent maps.
+        </div>
+      </div>
+      <div class="doc-card navy-border">
+        <div class="card-title-sm"><code class="field">DOM_030</code> Vulnerability &amp; Exp</div>
+        <div class="card-text" style="font-size: 23px; line-height: 1.35;">
+          <strong>Lead:</strong> Risk Analysis Group (DOM_022)<br>
+          <strong>Core Logic:</strong> Spatial mapping of exposed population, infrastructure, ecosystems, and sensitivity.
+        </div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title-sm"><code class="field">DOM_040</code> Risk Analysis</div>
+        <div class="card-text" style="font-size: 23px; line-height: 1.35;">
+          <strong>Lead:</strong> Risk Analysis Group (DOM_023)<br>
+          <strong>Core Logic:</strong> Computational engine calculating probabilistic risk metrics and composite indices.
+        </div>
+      </div>
+      <div class="doc-card red-border">
+        <div class="card-title-sm"><code class="field">DOM_050</code> Disaster &amp; L/D</div>
+        <div class="card-text" style="font-size: 23px; line-height: 1.35;">
+          <strong>Lead:</strong> Risk Analysis Group (DOM_024)<br>
+          <strong>Core Logic:</strong> Auditing realized disaster events, relief disbursements, and macroeconomic loss attribution.
+        </div>
+      </div>
+      <div class="doc-card sky-border">
+        <div class="card-title-sm"><code class="field">DOM_060</code> Resilience Assess</div>
+        <div class="card-text" style="font-size: 23px; line-height: 1.35;">
+          <strong>Lead:</strong> Policy &amp; Planning Group (DOM_030)<br>
+          <strong>Core Logic:</strong> Hierarchical scoring of institutional, economic, and community adaptive capacity.
+        </div>
+      </div>
+      <div class="doc-card green-border">
+        <div class="card-title-sm"><code class="field">DOM_070</code> Adaptation Plans</div>
+        <div class="card-text" style="font-size: 23px; line-height: 1.35;">
+          <strong>Lead:</strong> Implementation Group (DOM_040)<br>
+          <strong>Core Logic:</strong> Management of ISO 14090 adaptation portfolios, project registries, and cost-benefit records.
+        </div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title-sm"><code class="field">DOM_080</code> MEL Learning</div>
+        <div class="card-text" style="font-size: 23px; line-height: 1.35;">
+          <strong>Lead:</strong> Policy &amp; Planning Group (DOM_050)<br>
+          <strong>Core Logic:</strong> Closed-loop tracking of adaptation project outputs, outcomes, and national resilience progress.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR INTERNAL STRATEGY &amp; DEFENSE ONLY</span></div>
+    <div class="slide-number-badge">15 / 22</div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 16: PHYSICAL SCHEMA & EAR ARCHITECTURE ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">The Entity-Attribute-Relationship (EAR) Architecture Enforces Relational Integrity Across Spatial Units, Hazard Maps, and Loss Attribution.</div>
+      <div class="header-sub-title">Structural Hardening: The Hazard Hub, Administrative Anchor, and Closed-Loop MEL Mechanisms.</div>
+    </div>
+    <div class="header-logos">
+      <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+      <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+    </div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-3 reveal">
+      <div class="doc-card sky-border">
+        <div class="card-title-sm"><div class="card-num">1</div>Polymorphic Hazard Hub</div>
+        <div class="card-text" style="font-size: 23px; line-height: 1.35;">
+          <code class="field">HAZARD_MAP</code> serves as central data commodity. Consumes both forward simulations (<code class="field">HAZARD_MODELS</code>) and historical footprints (<code class="field">SATELLITE_OBSERVATION</code>), providing a unified interface for risk calculations.
+        </div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title-sm"><div class="card-num">2</div>Administrative Anchor</div>
+        <div class="card-text" style="font-size: 23px; line-height: 1.35;">
+          <code class="field">SPATIAL_UNIT</code> explicitly anchors scientific hazard data to official administrative hierarchies (Province ➔ District ➔ Sub-District ➔ Village), aligning climate models with DDPM disaster reporting.
+        </div>
+      </div>
+      <div class="doc-card green-border">
+        <div class="card-title-sm"><div class="card-num">3</div>Closed-Loop MEL Engine</div>
+        <div class="card-text" style="font-size: 23px; line-height: 1.35;">
+          Links project results (<code class="field">INTERV_RESULT</code>) directly back to national resilience scores (<code class="field">COMPOSITE_INDEX</code>), proving adaptation effectiveness for UNFCCC reporting.
+        </div>
+      </div>
+    </div>
+    <div class="table-wrap reveal">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th style="width: 32%;">Core Relational Chain</th>
+            <th style="width: 18%;">Cardinality</th>
+            <th style="width: 50%;">Architectural &amp; Scientific Function</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code class="field">CLIMATE_DRIVER</code> ➔ <code class="field">HAZARD_MODELS</code> ➔ <code class="field">HAZARD_MAP</code></td>
+            <td><strong>1 : N : N</strong></td>
+            <td>Forward Simulation Chain connecting global climate drivers to localized hazard grids.</td>
+          </tr>
+          <tr>
+            <td><code class="field">SATELLITE_OBSERV</code> ➔ <code class="field">HAZARD_MAP</code> ➔ <code class="field">DISASTER_RECORD</code></td>
+            <td><strong>1 : N : 1</strong></td>
+            <td>Historical Footprint Verification anchoring satellite observations to declared disaster events.</td>
+          </tr>
+          <tr>
+            <td><code class="field">DISASTER_RECORD</code> ➔ <code class="field">SPATIAL_UNIT</code></td>
+            <td><strong>1 : N</strong></td>
+            <td>Village-Level Administrative Alignment linking disaster declarations to official boundaries.</td>
+          </tr>
+          <tr>
+            <td><code class="field">DISASTER_RECORD</code> ➔ <code class="field">LOSS_DAMAGE_REC</code> ➔ <code class="field">ATTRIBUTION_LNK</code></td>
+            <td><strong>1 : N : 1</strong></td>
+            <td>Scientific Loss Attribution linking verified economic damages back to specific climate drivers.</td>
+          </tr>
+          <tr>
+            <td><code class="field">ADAPTATION_PROJ</code> ➔ <code class="field">INTERV_RESULT</code> ➔ <code class="field">COMPOSITE_INDEX</code></td>
+            <td><strong>1 : N : 1</strong></td>
+            <td>Dynamic Resilience Recalculation updating national vulnerability baselines with project M&amp;E.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR INTERNAL STRATEGY &amp; DEFENSE ONLY</span></div>
+    <div class="slide-number-badge">16 / 22</div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 17: ARCHITECTURAL GUARDRAILS ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">Strict Architectural Guardrails Mandate Dynamic API Ingestion, Forbidding Hardcoded Frontend JSON and Static Data Islands.</div>
+      <div class="header-sub-title">Enforcing Dynamic Decoupling to Protect Platform Scalability and Prevent Data Corruption.</div>
+    </div>
+    <div class="header-logos">
+      <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+      <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+    </div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-2 reveal">
+      <div class="doc-card red-border">
+        <div class="card-title"><div class="card-num">✕</div>The Forbidden Anti-Pattern ("Frankenstein Dashboards")</div>
+        <ul class="doc-list red-bullets">
+          <li><strong>The Practice:</strong> Software contractors embed static CSV exports, hardcoded JSON objects, or custom one-off visualization scripts directly into frontend web pages to cut development corners.</li>
+          <li><strong>The Catastrophic Result:</strong>
+            <br>1. <em>Data Divergence:</em> The same climate indicator (e.g., Bangkok flood risk score) displays conflicting numbers across different pages because each page queries a different static file.
+            <br>2. <em>Immediate Data Rot:</em> When TMD or GISTDA updates annual projections, the web portal fails to reflect the update, requiring expensive manual recoding of frontend pages.
+            <br>3. <em>Zero Interoperability:</em> External government agencies cannot query or consume the data via APIs.</li>
+        </ul>
+      </div>
+      <div class="doc-card green-border">
+        <div class="card-title"><div class="card-num">✓</div>The Mandatory Decoupled Architecture (Enforced by Creagy)</div>
+        <ul class="doc-list green-bullets">
+          <li><strong>Strict Headless Decoupling:</strong> 100% of frontend charts, GIS maps, and data tables must query the governed Data Catalog Layer via authenticated REST/GraphQL API endpoints.</li>
+          <li><strong>Single Source of Truth:</strong> Every indicator is computed exactly once within its designated back-end domain database before being served to the web layer.</li>
+          <li><strong>Enforcement Gate:</strong> DCCE inspection committees must reject any contractor code deliverable containing hardcoded analytical data values during Phase 4 technical reviews.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR INTERNAL STRATEGY &amp; DEFENSE ONLY</span></div>
+    <div class="slide-number-badge">17 / 22</div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 18: PREVENTING WEBSITE ROT ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">Without the Underlying Governance Engine and Data Models, Public-Facing Portals Inevitably Degrade into Abandoned Digital Relics.</div>
+      <div class="header-sub-title">The Economic and Strategic Imperative of Backend Infrastructure Investment Over Superficial Frontends.</div>
+    </div>
+    <div class="header-logos">
+      <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+      <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+    </div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-3 reveal">
+      <div class="doc-card blue-border">
+        <div class="card-title-sm"><div class="card-num">1</div>Automated Data Freshness &amp; Pipelines</div>
+        <div class="card-text" style="font-size: 24px; line-height: 1.4;">
+          Government websites rot because manual data re-entry is unsustainable. Our engine provides standardized ETL pipeline adapters and metadata ingestion schemas that automate data ingestion from TMD, GISTDA, and DDPM, ensuring datasets update continuously without human intervention.
+        </div>
+      </div>
+      <div class="doc-card sky-border">
+        <div class="card-title-sm"><div class="card-num">2</div>Trust, Verification &amp; Institutional Lineage</div>
+        <div class="card-text" style="font-size: 24px; line-height: 1.4;">
+          Public officials and commercial banks cannot make multi-million baht investment decisions based on unverified web charts. Our engine embeds full data lineage, ISO 19115 compliance metadata, and digital sign-off records into every published dataset, guaranteeing legal standing and institutional trust.
+        </div>
+      </div>
+      <div class="doc-card green-border">
+        <div class="card-title-sm"><div class="card-num">3</div>Vendor-Independent Maintainability</div>
+        <div class="card-text" style="font-size: 24px; line-height: 1.4;">
+          By enforcing open data models (PostgreSQL/PostGIS), standardized semantic naming (Master Glossary), and decoupled API contracts, DCCE eliminates vendor lock-in. Any competent software contractor can maintain and extend the system without relying on proprietary codebases.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR INTERNAL STRATEGY &amp; DEFENSE ONLY</span></div>
+    <div class="slide-number-badge">18 / 22</div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 19: THE 4-TIER GOVERNANCE MODEL ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">Operationalizing Data Governance Requires a Four-Tier Accountability Structure with Clear Decision Rights at Every Level.</div>
+      <div class="header-sub-title">Bridging Ministerial Executive Leadership with Ground-Level Data Curation and Public Utilization.</div>
+    </div>
+    <div class="header-logos">
+      <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+      <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+    </div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-4 reveal">
+      <div class="doc-card navy-border">
+        <div class="card-title-sm"><div class="card-num">T1</div>Governance Committee</div>
+        <ul class="doc-list dense">
+          <li><strong>Executive Steering:</strong> Chaired by Director-General; includes Division Directors and Legal Counsel.</li>
+          <li><strong>Mandate:</strong> Establishes departmental data policy, ratifies data standards, resolves cross-ministry data-sharing disputes, and approves annual platform budgets.</li>
+        </ul>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title-sm"><div class="card-num">T2</div>Data Owners</div>
+        <ul class="doc-list dense">
+          <li><strong>Domain Accountability:</strong> DCCE Group Directors / Division Heads (Physical Climate, Risk, Adaptation, M&amp;E).</li>
+          <li><strong>Mandate:</strong> Ultimate business and legal accountability for domains (<code class="field">DOM_010</code>–<code class="field">DOM_080</code>). Approves dataset publication from staging to production.</li>
+        </ul>
+      </div>
+      <div class="doc-card sky-border">
+        <div class="card-title-sm"><div class="card-num">T3</div>Data Stewards</div>
+        <ul class="doc-list dense">
+          <li><strong>Operational Curation:</strong> Assigned Technical Officers, IT Specialists, and Domain Analysts.</li>
+          <li><strong>Mandate:</strong> Manages day-to-day data ingestion, executes cleansing pipelines, verifies ISO 19115 metadata completeness, and enforces Master Glossary naming standards.</li>
+        </ul>
+      </div>
+      <div class="doc-card green-border">
+        <div class="card-title-sm"><div class="card-num">T4</div>Data Users</div>
+        <ul class="doc-list dense green-bullets">
+          <li><strong>Consumption &amp; Feedback:</strong> Line agencies, provincial planners, researchers, banks, and the public.</li>
+          <li><strong>Mandate:</strong> Consumes certified data via APIs and web interfaces; submits data quality feedback and enhancement requests through Node 5.2.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR INTERNAL STRATEGY &amp; DEFENSE ONLY</span></div>
+    <div class="slide-number-badge">19 / 22</div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 20: CLIENT ENGAGEMENT PLAYBOOK ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">Strategic Executive Alignment Relies on Leading with Tangible Front-End Value Before Pivoting to Indispensable Governance Infrastructure.</div>
+      <div class="header-sub-title">Meeting Scripts, Psychological Anchors, and Objection Handling for DCCE Decision-Makers.</div>
+    </div>
+    <div class="header-logos">
+      <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+      <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+    </div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-2 reveal">
+      <div class="doc-card sky-border">
+        <div class="card-title"><div class="card-num">1</div>Meeting Stage 1: Lead with Tangible Front-End</div>
+        <ul class="doc-list">
+          <li><strong>Psychological Objective:</strong> Eliminate executive anxiety regarding deliverable tangibility. Prove that Creagy has thoroughly designed the visible system they envisioned.</li>
+          <li><strong>Engagement Script:</strong> <em>"Director Toey, we have completely structured the 15-node navigation architecture. We have mapped exactly how provincial governors, local planners, and engineers will interact with your portal down to the sub-district level."</em></li>
+        </ul>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">2</div>Meeting Stage 2: Pivot to Governance Engine</div>
+        <ul class="doc-list">
+          <li><strong>Psychological Objective:</strong> Position backend data governance not as an abstract burden, but as the indispensable shield protecting their public reputation.</li>
+          <li><strong>Engagement Script:</strong> <em>"Director Nid, our forensic audit revealed that 28 of the 73 content promises on the website currently have zero data behind them in national holdings. Without the 4-Tier Governance Model and Data Management Framework, these web pages will launch completely empty. Governance is the engine that fills these pages with certified data."</em></li>
+        </ul>
+      </div>
+    </div>
+    <div class="doc-card green-border reveal">
+      <div class="card-title-sm"><div class="card-num">💡</div>Objection Handling Guide: Deferred Technical Data Contracts</div>
+      <div class="card-text" style="font-size: 24px; line-height: 1.4;">
+        <strong>Objection: "Why are some data contracts deferred?"</strong> ➔ <strong>Creagy Response:</strong> <em>"Technical contracts require live server testing during the build phase; we have provided the locked data schemas, entity models, and glossary to ensure TOR70 executes them smoothly on Day 1."</em>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR INTERNAL STRATEGY &amp; DEFENSE ONLY</span></div>
+    <div class="slide-number-badge">20 / 22</div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 21: FINAL DELIVERABLE PACKAGE ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">The CRDB Deliverable Package is Structured to Provide Seamless Traceability Across All TOR Clauses and Technical Blueprints.</div>
+      <div class="header-sub-title">Complete Inventory of Handover Assets Across Work Packages 0 Through 11.</div>
+    </div>
+    <div class="header-logos">
+      <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+      <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+    </div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-4 reveal">
+      <div class="doc-card blue-border">
+        <div class="card-title-sm"><div class="card-num">1</div>Strategic Reports (TOR §1, §2)</div>
+        <ul class="doc-list dense">
+          <li><strong>WP1:</strong> Business Objective &amp; Platform Rationale (<code class="field">01_Business_Objective</code>)</li>
+          <li><strong>WP7:</strong> Comprehensive Gap Analysis Report (<code class="field">07_Gap_Analysis</code>)</li>
+          <li><strong>WP8:</strong> Policy &amp; Technical Recommendations Report (<code class="field">08_Recommendations</code>)</li>
+        </ul>
+      </div>
+      <div class="doc-card sky-border">
+        <div class="card-title-sm"><div class="card-num">2</div>Front-End Blueprints (TOR §5.2, §5.5)</div>
+        <ul class="doc-list dense">
+          <li><strong>WP4:</strong> 15-Node Sitemap Specifications &amp; Storyboards (<code class="field">04_Sitemap</code>)</li>
+          <li><strong>WP4:</strong> Developer-Ready Design (DRD) Specs (<code class="field">04_Sitemap</code>)</li>
+          <li><strong>WP4:</strong> Content-Source Gap Analysis (73 Requirements Audit) (<code class="field">04_Sitemap</code>)</li>
+        </ul>
+      </div>
+      <div class="doc-card navy-border">
+        <div class="card-title-sm"><div class="card-num">3</div>Back-End Models (TOR §5.3, §5.4)</div>
+        <ul class="doc-list dense">
+          <li><strong>WP2 &amp; WP3:</strong> Baseline Inventories (260 datasets) (<code class="field">02_Data_Inventory</code>)</li>
+          <li><strong>WP5:</strong> 74-Term Canonical Master Glossary (v5) (<code class="field">05_Glossary</code>)</li>
+          <li><strong>WP5:</strong> 8-Domain CDM &amp; EAR Catalog (v3) (<code class="field">05_CDM_EAR</code>)</li>
+          <li><strong>WP5:</strong> Governance RACI Matrices (<code class="field">05_Governance</code>)</li>
+          <li><strong>WP6 &amp; WP9:</strong> Priority Services (A-BTR &amp; L&amp;D)</li>
+        </ul>
+      </div>
+      <div class="doc-card green-border">
+        <div class="card-title-sm"><div class="card-num">4</div>Communication Decks (WP11)</div>
+        <ul class="doc-list dense green-bullets">
+          <li><strong>WP11:</strong> DCCE Executive Briefing (Thai) (<code class="field">11_Communication_Deck</code>)</li>
+          <li><strong>WP11:</strong> SW Developer Deck (English) (<code class="field">11_Communication_Deck</code>)</li>
+          <li><strong>WP11:</strong> Internal Creagy Sync Master Deck (<code class="field">11_Communication_Deck</code>)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR INTERNAL STRATEGY &amp; DEFENSE ONLY</span></div>
+    <div class="slide-number-badge">21 / 22</div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 22: PATH TO FORMAL INSPECTION SIGN-OFF ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">The Road to Successful Contract Completion and Software Build Handoff Follows a Disciplined Three-Step Operational Sequence.</div>
+      <div class="header-sub-title">Clear Milestones for Formal Deliverable Acceptance, Steering Committee Ratification, and Developer Onboarding.</div>
+    </div>
+    <div class="header-logos">
+      <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+      <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+    </div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-3 reveal">
+      <div class="timeline-step">
+        <div class="step-num">MILESTONE 1 (WEEK 1)</div>
+        <div class="step-title">Deliverable Staging &amp; Inspection Committee Sign-Off</div>
+        <ul class="doc-list dense" style="margin-top: 6px;">
+          <li>Assemble complete deliverable binder structured strictly by TOR clause numbers (Clauses 5.2 through 5.5).</li>
+          <li>Conduct formal inspection committee walkthrough with DCCE evaluators, presenting 100% completion verification across all 11 Work Packages.</li>
+          <li>Secure signed inspection acceptance protocols, formally closing Planning, Requirement Analysis, and Design phases.</li>
+        </ul>
+      </div>
+      <div class="timeline-step">
+        <div class="step-num">MILESTONE 2 (WEEK 2)</div>
+        <div class="step-title">Executive Ratification &amp; Data Owner Appointments</div>
+        <ul class="doc-list dense" style="margin-top: 6px;">
+          <li>Facilitate Director-General's signing of ministerial order establishing DCCE Data Governance Committee.</li>
+          <li>Formalize appointment of Division Directors as Data Owners for the 8 Conceptual Data Domains.</li>
+          <li>Embed delivered Data Management Framework and Master Glossary as official departmental standards.</li>
+        </ul>
+      </div>
+      <div class="timeline-step">
+        <div class="step-num">MILESTONE 3 (WEEK 3)</div>
+        <div class="step-title">Technical Onboarding &amp; TOR70 Sprint 1 Handoff</div>
+        <ul class="doc-list dense" style="margin-top: 6px;">
+          <li>Conduct 2-day intensive technical briefing with incoming TOR70 software engineering vendor.</li>
+          <li>Transfer Developer-Ready Design (DRD) specs, EAR schemas, and PostGIS dictionaries directly into contractor's sprint backlog.</li>
+          <li>Initiate Day 1 implementation of A-BTR Reporting Pipeline and Disaster Loss &amp; Damage Database.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR INTERNAL STRATEGY &amp; DEFENSE ONLY</span></div>
+    <div class="slide-number-badge">22 / 22</div>
+  </div>
+</section>
+
+</main>
+</div>
+
+<!-- Navigation Controls -->
+<div class="deck-controls">
+  <button id="prevBtn" class="control-btn" aria-label="Previous slide">&#8592;</button>
+  <span class="counter" id="pageIndicator">1 / 22</span>
+  <button id="nextBtn" class="control-btn" aria-label="Next slide">&#8594;</button>
+</div>
+
+<script>
+/* ===========================================
+   SLIDE PRESENTATION CONTROLLER
+   =========================================== */
+class SlidePresentation {
+    constructor() {
+        this.slides = document.querySelectorAll('.slide');
+        this.currentSlide = 0;
+        this.stage = document.getElementById('deckStage');
+        this.pageIndicator = document.getElementById('pageIndicator');
+        this.setupStageScale();
+        this.setupKeyboardNav();
+        this.setupTouchNav();
+        this.setupWheelNav();
+        this.setupButtons();
+        this.showSlide(0);
+    }
+
+    setupStageScale() {
+        const scale = () => {
+            const factor = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+            const x = (window.innerWidth - 1920 * factor) / 2;
+            const y = (window.innerHeight - 1080 * factor) / 2;
+            this.stage.style.transform = `translate(${x}px, ${y}px) scale(${factor})`;
+        };
+        scale();
+        window.addEventListener('resize', scale);
+    }
+
+    setupKeyboardNav() {
+        document.addEventListener('keydown', (e) => {
+            if (e.target.getAttribute('contenteditable') === 'true') return;
+            if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); this.next(); }
+            if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); this.prev(); }
+        });
+    }
+
+    setupTouchNav() {
+        let startX = 0;
+        this.stage.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+        this.stage.addEventListener('touchend', (e) => {
+            const diff = startX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 50) { diff > 0 ? this.next() : this.prev(); }
+        }, { passive: true });
+    }
+
+    setupWheelNav() {
+        let locked = false;
+        window.addEventListener('wheel', (e) => {
+            if (locked) return;
+            if (Math.abs(e.deltaY) < 30) return;
+            locked = true;
+            e.deltaY > 0 ? this.next() : this.prev();
+            setTimeout(() => { locked = false; }, 500);
+        }, { passive: true });
+    }
+
+    setupButtons() {
+        document.getElementById('nextBtn').addEventListener('click', () => this.next());
+        document.getElementById('prevBtn').addEventListener('click', () => this.prev());
+    }
+
+    next() { this.showSlide(this.currentSlide + 1); }
+    prev() { this.showSlide(this.currentSlide - 1); }
+
+    showSlide(index) {
+        this.currentSlide = Math.max(0, Math.min(index, this.slides.length - 1));
+        this.slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === this.currentSlide);
+            slide.classList.toggle('visible', i === this.currentSlide);
+        });
+        this.pageIndicator.textContent = `${this.currentSlide + 1} / ${this.slides.length}`;
+    }
+}
+
+/* ===========================================
+   INLINE EDIT MODE
+   =========================================== */
+class InlineEditor {
+    constructor() {
+        this.isActive = false;
+        this.toggle = document.getElementById('editToggle');
+        this.hotzone = document.getElementById('editHotzone');
+        this.storageKey = 'wp11-slidedoc-edits-syncdeck-v2';
+        try { localStorage.clear(); } catch (e) {}
+        this.setupHoverReveal();
+        this.setupHandlers();
+        this.loadSavedEdits();
+    }
+
+    setupHoverReveal() {
+        let hideTimeout = null;
+        const show = () => { clearTimeout(hideTimeout); this.toggle.classList.add('show'); };
+        const hide = () => { hideTimeout = setTimeout(() => { if (!this.isActive) this.toggle.classList.remove('show'); }, 400); };
+        this.hotzone.addEventListener('mouseenter', show);
+        this.hotzone.addEventListener('mouseleave', hide);
+        this.toggle.addEventListener('mouseenter', show);
+        this.toggle.addEventListener('mouseleave', hide);
+    }
+
+    setupHandlers() {
+        this.toggle.addEventListener('click', () => this.toggleEditMode());
+        this.hotzone.addEventListener('click', () => this.toggleEditMode());
+        document.addEventListener('keydown', (e) => {
+            if ((e.key === 'e' || e.key === 'E') && !e.target.getAttribute('contenteditable')) {
+                this.toggleEditMode();
+            }
+            if (e.key === 's' && (e.ctrlKey || e.metaKey) && this.isActive) {
+                e.preventDefault();
+                this.saveEdits();
+            }
+        });
+    }
+
+    toggleEditMode() {
+        this.isActive = !this.isActive;
+        this.toggle.classList.toggle('active', this.isActive);
+        const editableSelectors = 'h1, h2, h3, h4, p, li, td, th, .header-main-title, .header-sub-title, .card-title, .card-title-sm, .card-text, .stat-lbl, .stat-card-title, .stat-card-desc, .step-title';
+        document.querySelectorAll('.slide ' + editableSelectors).forEach(el => {
+            el.setAttribute('contenteditable', this.isActive ? 'true' : 'false');
+        });
+        if (!this.isActive) this.saveEdits();
+    }
+
+    saveEdits() {
+        const data = {};
+        document.querySelectorAll('.slide').forEach((slide, i) => { data[i] = slide.innerHTML; });
+        try { localStorage.setItem(this.storageKey, JSON.stringify(data)); } catch (e) {}
+    }
+
+    loadSavedEdits() {
+        try {
+            const raw = localStorage.getItem(this.storageKey);
+            if (!raw) return;
+            const data = JSON.parse(raw);
+            document.querySelectorAll('.slide').forEach((slide, i) => {
+                if (data[i]) slide.innerHTML = data[i];
+            });
+        } catch (e) {}
+    }
+}
+
+new SlidePresentation();
+new InlineEditor();
+</script>
+</body>
+</html>

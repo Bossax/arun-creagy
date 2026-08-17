@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NCAIF: Technical Handoff Deck — Software Development Contractor Briefing & System Architecture Blueprint</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+/* ===========================================
+   CREAGY CORPORATE TEMPLATE PRESET 9 (WP9 Canonical Template)
+   - Background: #FFFFFF (Pure White) on #E2E8F0 Viewport Backdrop
+   - Fixed stage: 1920x1080 stage inside .deck-viewport
+   - Header: Main Title (42px #031B2A, 800) + Subtitle Takeaway (38px #000000, 800)
+   - NO top category tags (NO kicker pills)
+   - Footer: © 2026 The Creagy Company Limited. All Rights Reserved. | STRICTLY PRIVATE AND CONFIDENTIAL — FOR TOR70 DEVELOPER HANDOVER ONLY
+   - Fonts: 'TH Sarabun PSK', 'TH Sarabun New', 'Sarabun', sans-serif + Fira Code for technical code
+   - Font weights: 600 for body text (27px), 800 for titles (42px/38px/36px/62px)
+   =========================================== */
+:root {
+    --creagy-blue: #00618B;
+    --creagy-dark-navy: #031B2A;
+    --creagy-navy-mid: #0A324A;
+    --creagy-sky: #317ABD;
+    --creagy-accent-blue: #00A3E0;
+    --creagy-light-blue: #F0F7FB;
+    
+    --text-dark: #000000;
+    --text-heading: #031B2A;
+    --text-subheading: #000000; /* Pure Black */
+    --text-medium: #1E293B;
+    --text-muted: #64748B;
+    
+    --bg-page: #E2E8F0;
+    --slide-bg: #FFFFFF; /* Pure White */
+    --card-bg: #FFFFFF;
+    --border-color: #E2E8F0;
+    
+    --font-thai: 'TH Sarabun PSK', 'TH Sarabun New', 'Sarabun', sans-serif;
+    --font-heading: 'TH Sarabun PSK', 'TH Sarabun New', 'Sarabun', sans-serif;
+    --font-body: 'TH Sarabun PSK', 'TH Sarabun New', 'Sarabun', sans-serif;
+    --font-mono: 'Fira Code', 'JetBrains Mono', 'Consolas', monospace;
+    
+    --font-size-hero: 62px;       /* 62px Cover Title */
+    --font-size-heading: 42px;    /* 42px Heading */
+    --font-size-subheading: 38px; /* 38px Sub Heading */
+    --font-size-card-title: 36px; /* 36px Card Title */
+    --font-size-body: 27px;       /* 27px Body Text */
+    --font-size-caption: 22px;    /* 22px Caption */
+    
+    --gap-red: #C0392B;
+    --gap-red-bg: #FDF2F1;
+    --solve-green: #0B7A4B;
+    --solve-green-bg: #EBF7F1;
+    --amber-tag: #D97706;
+    --amber-bg: #FEF3C7;
+    
+    --shadow-sm: 0 4px 14px rgba(0, 97, 139, 0.05);
+    --shadow-md: 0 8px 24px rgba(0, 97, 139, 0.08);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ===========================================
+   FIXED 16:9 STAGE BASE
+   =========================================== */
+html, body {
+    width: 100%; height: 100%; margin: 0; overflow: hidden;
+    background: var(--bg-page); font-family: var(--font-body);
+    font-size: var(--font-size-body); color: var(--text-dark); font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+}
+
+.deck-viewport { position: fixed; inset: 0; overflow: hidden; background: var(--bg-page); }
+
+.deck-stage {
+    position: absolute; left: 0; top: 0; width: 1920px; height: 1080px;
+    overflow: hidden; transform-origin: 0 0; background: var(--slide-bg);
+}
+
+.slide {
+    position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: hidden;
+    display: flex; flex-direction: column; justify-content: space-between;
+    visibility: hidden; opacity: 0; pointer-events: none;
+    background: var(--slide-bg); padding: 48px 72px 36px 72px;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.slide.active, .slide.visible { visibility: visible; opacity: 1; pointer-events: auto; z-index: 1; }
+
+@media print {
+    @page { size: A4 landscape; margin: 0; }
+    html, body { width: 1920px; height: auto; overflow: visible; background: #fff; }
+    .deck-viewport { position: static; overflow: visible; background: #fff; }
+    .deck-stage { position: static; width: auto; height: auto; transform: none !important; background: none; }
+    .slide { position: relative; display: flex !important; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important; width: 1920px; height: 1080px; break-after: page; page-break-after: always; zoom: 0.585; }
+    .slide:last-child { break-after: auto; page-break-after: auto; }
+    .deck-controls, .edit-hotzone, .edit-toggle { display: none !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.2s !important; }
+}
+
+/* ===========================================
+   CREAGY HEADER CHROME
+   =========================================== */
+.slide-header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    padding-bottom: 16px; border-bottom: 2px solid var(--border-color);
+    margin-bottom: 22px; flex-shrink: 0;
+}
+
+.header-left-box {
+    display: flex; flex-direction: column; gap: 4px; max-width: 1480px;
+}
+
+.header-main-title {
+    font-family: var(--font-heading); font-size: var(--font-size-heading); /* 42px */
+    font-weight: 800; color: var(--text-heading); line-height: 1.25;
+}
+
+.header-sub-title {
+    font-family: var(--font-heading); font-size: var(--font-size-subheading); /* 38px */
+    font-weight: 800; color: var(--text-subheading); /* Pure Black #000000 */ line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+.header-logos {
+    display: flex; align-items: center; gap: 14px; background: #FFFFFF;
+    padding: 8px 18px; border-radius: 12px; border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm); flex-shrink: 0;
+}
+
+.header-logo-img { height: 42px; object-fit: contain; }
+
+/* ===========================================
+   CREAGY FOOTER CHROME
+   =========================================== */
+.slide-footer {
+    margin-top: auto; height: 40px; display: flex; justify-content: space-between; align-items: center;
+    border-top: 1px solid var(--border-color); padding-top: 10px;
+    font-family: var(--font-body); font-size: var(--font-size-caption); /* 22px */
+    color: var(--text-muted); flex-shrink: 0; font-weight: 600;
+}
+
+.footer-left { display: flex; align-items: center; gap: 12px; font-weight: 600; }
+.footer-separator { color: #CBD5E1; }
+.slide-number-badge { font-family: var(--font-heading); font-weight: 800; font-size: 26px; color: var(--creagy-blue); }
+
+/* ===========================================
+   SLIDE BODY & ALIGNED CARD SYSTEM
+   =========================================== */
+.slide-body { display: flex; flex-direction: column; justify-content: center; gap: 20px; flex: 1; overflow: hidden; }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 22px; align-items: stretch; }
+.grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 18px; align-items: stretch; }
+.grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; align-items: stretch; }
+
+.doc-card {
+    background: var(--card-bg); border: 1px solid var(--border-color);
+    border-radius: 12px; padding: 20px 24px; box-shadow: var(--shadow-sm);
+    display: flex; flex-direction: column; justify-content: flex-start; gap: 10px;
+    height: 100%;
+}
+
+.doc-card.blue-border { border-top: 5px solid var(--creagy-blue); }
+.doc-card.navy-border { border-top: 5px solid var(--creagy-dark-navy); }
+.doc-card.sky-border { border-top: 5px solid var(--creagy-sky); }
+.doc-card.red-border { border-top: 5px solid var(--gap-red); background: var(--gap-red-bg); }
+.doc-card.green-border { border-top: 5px solid var(--solve-green); background: var(--solve-green-bg); }
+
+.card-title {
+    font-family: var(--font-heading); font-size: var(--font-size-card-title); /* 36px */
+    font-weight: 800; color: var(--text-subheading); /* Pure Black */
+    display: flex; align-items: center; gap: 10px; line-height: 1.25;
+}
+
+.card-num {
+    width: 36px; height: 36px; border-radius: 50%; background: var(--creagy-blue);
+    color: #FFFFFF; display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-heading); font-weight: 800; font-size: 24px; flex-shrink: 0;
+}
+.red-border .card-num { background: var(--gap-red); }
+.green-border .card-num { background: var(--solve-green); }
+.navy-border .card-num { background: var(--creagy-dark-navy); }
+.sky-border .card-num { background: var(--creagy-sky); }
+
+.card-text { font-family: var(--font-body); font-size: var(--font-size-body); font-weight: 600; line-height: 1.45; color: var(--text-medium); }
+
+.doc-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.doc-list li {
+    font-family: var(--font-body); font-size: var(--font-size-body); font-weight: 600; line-height: 1.45;
+    color: var(--text-dark); position: relative; padding-left: 22px;
+}
+.doc-list li::before {
+    content: "•"; color: var(--creagy-blue); font-weight: bold; font-size: 28px;
+    position: absolute; left: 0; top: -3px;
+}
+
+code.field {
+    font-family: var(--font-mono); font-size: 0.9em; background: var(--creagy-light-blue);
+    border: 1px solid var(--border-color); border-radius: 4px; padding: 2px 6px; color: var(--creagy-blue); font-weight: 700;
+}
+
+.code-box {
+    background: #031B2A; color: #E2E8F0; border-radius: 8px; padding: 14px 18px;
+    font-family: var(--font-mono); font-size: 21px; line-height: 1.4; overflow-x: auto;
+    border: 1px solid #1E293B; box-shadow: inset 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.code-box .c-kw { color: #38BDF8; font-weight: 700; }
+.code-box .c-fn { color: #FBBF24; font-weight: 600; }
+.code-box .c-str { color: #4ADE80; }
+.code-box .c-cm { color: #94A3B8; font-style: italic; }
+.code-box .c-val { color: #F472B6; }
+
+/* Data Tables */
+.table-wrap { width: 100%; border-radius: 10px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); }
+table.data-table { width: 100%; border-collapse: collapse; font-size: var(--font-size-body); }
+table.data-table th { background: var(--creagy-dark-navy); color: #FFFFFF; font-weight: 800; text-align: left; padding: 10px 14px; font-size: 30px; }
+table.data-table td { padding: 10px 14px; border-bottom: 1px solid var(--border-color); vertical-align: middle; line-height: 1.4; background: #FFF; font-size: var(--font-size-body); font-weight: 600; }
+table.data-table tr:nth-child(even) td { background: var(--creagy-light-blue); }
+table.data-table td:first-child, table.data-table th:first-child { font-weight: 800; color: var(--creagy-dark-navy); }
+
+/* Timeline Steps */
+.timeline-step {
+    background: #FFFFFF; border-radius: 12px; border: 1px solid var(--border-color);
+    border-top: 5px solid var(--creagy-blue); padding: 18px 22px; display: flex; flex-direction: column; gap: 6px; height: 100%;
+}
+.step-num { font-family: var(--font-heading); font-size: 28px; font-weight: 800; color: var(--creagy-sky); }
+.step-title { font-family: var(--font-heading); font-size: 36px; font-weight: 800; color: var(--text-subheading); }
+
+/* Stat Banner Callout */
+.stat-banner {
+    background: linear-gradient(135deg, var(--creagy-dark-navy) 0%, var(--creagy-blue) 100%);
+    color: #FFFFFF; border-radius: 12px; padding: 18px 32px; display: flex; align-items: center; gap: 28px; box-shadow: var(--shadow-md);
+}
+.stat-val { font-family: var(--font-heading); font-size: 50px; font-weight: 800; color: #FFFFFF; line-height: 1; min-width: 140px; }
+.stat-lbl { font-family: var(--font-body); font-size: var(--font-size-body); font-weight: 600; color: #D4ECF9; line-height: 1.4; }
+
+/* 3-Layer Architecture Stack */
+.layer-stack { display: flex; flex-direction: column; gap: 10px; }
+.layer-stack .layer { border-radius: 10px; padding: 14px 20px; color: #FFF; box-shadow: var(--shadow-sm); }
+.layer-stack .layer h4 { font-family: var(--font-heading); font-size: 30px; font-weight: 800; margin-bottom: 2px; }
+.layer-stack .layer p { font-family: var(--font-body); font-size: 25px; font-weight: 600; line-height: 1.35; opacity: 0.95; }
+.layer-1 { background: var(--creagy-dark-navy); border-left: 6px solid var(--creagy-sky); }
+.layer-2 { background: var(--creagy-blue); border-left: 6px solid #00A3E0; }
+.layer-3 { background: var(--creagy-sky); border-left: 6px solid #94D3F3; }
+
+/* ===========================================
+   SLIDE 1: CREAGY TITLE SLIDE
+   =========================================== */
+.title-slide {
+    background: linear-gradient(135deg, #031B2A 0%, #063552 50%, #00618B 100%);
+    color: #FFFFFF; padding: 75px 90px; justify-content: space-between;
+}
+.title-top-logos { display: flex; align-items: center; justify-content: space-between; }
+.title-logo-box { background: #FFFFFF; padding: 12px 26px; border-radius: 14px; display: flex; align-items: center; gap: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+.title-logo-box img { height: 48px; object-fit: contain; }
+.title-body { margin-top: 10px; max-width: 1740px; }
+.title-badge { display: inline-block; background: rgba(0, 163, 224, 0.25); border: 1px solid rgba(255, 255, 255, 0.3); color: #EEF7FC; font-family: var(--font-heading); font-size: 30px; font-weight: 700; padding: 6px 20px; border-radius: 24px; margin-bottom: 12px; }
+.main-hero-title { font-family: var(--font-heading); font-size: var(--font-size-hero); /* 62px */ font-weight: 800; line-height: 1.2; color: #FFFFFF; margin-bottom: 12px; }
+.main-subtitle { font-family: var(--font-body); font-size: 35px; line-height: 1.4; color: #D4ECF9; font-weight: 600; max-width: 1740px; }
+.title-metadata { display: flex; gap: 50px; border-top: 1px solid rgba(255, 255, 255, 0.2); padding-top: 18px; }
+.meta-item { display: flex; flex-direction: column; gap: 2px; }
+.meta-lbl { font-family: var(--font-body); font-size: 23px; font-weight: 600; color: #94D3F3; }
+.meta-val { font-family: var(--font-heading); font-size: 32px; font-weight: 800; color: #FFFFFF; }
+
+/* ===========================================
+   INTERACTIVE CONTROLS & EDIT MODE
+   =========================================== */
+.deck-controls {
+    position: fixed; bottom: 20px; right: 24px; z-index: 100;
+    display: flex; align-items: center; gap: 10px; background: rgba(3, 27, 42, 0.85);
+    padding: 8px 16px; border-radius: 30px; backdrop-filter: blur(8px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.15);
+}
+.ctrl-btn {
+    background: transparent; border: none; color: #FFF; font-size: 22px; cursor: pointer;
+    width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s ease;
+}
+.ctrl-btn:hover { background: rgba(255,255,255,0.2); }
+.page-indicator { color: #FFF; font-family: var(--font-heading); font-size: 22px; font-weight: 700; padding: 0 8px; }
+
+.edit-hotzone { position: fixed; top: 0; left: 0; width: 140px; height: 70px; z-index: 9998; cursor: pointer; }
+.edit-toggle {
+    position: fixed; top: 16px; left: 16px; z-index: 9999;
+    background: rgba(3, 27, 42, 0.9); color: #94D3F3; border: 1px solid var(--creagy-sky);
+    border-radius: 20px; padding: 6px 14px; font-size: 18px; font-family: var(--font-body);
+    font-weight: 700; cursor: pointer; opacity: 0; transition: opacity 0.3s ease; pointer-events: none;
+}
+.edit-toggle.show, .edit-toggle.active { opacity: 1; pointer-events: auto; }
+.edit-toggle.active { background: #0B7A4B; color: #FFF; border-color: #2ECC71; }
+[contenteditable="true"] { outline: 2px dashed var(--creagy-sky) !important; background: rgba(0, 163, 224, 0.05) !important; }
+</style>
+</head>
+<body>
+
+<div class="edit-hotzone" id="editHotzone"></div>
+<button class="edit-toggle" id="editToggle">✏️ Edit Mode (E)</button>
+
+<div class="deck-viewport">
+<div class="deck-stage" id="deckStage">
+
+<!-- SLIDE 1: COVER & MISSION HANDOVER -->
+<div class="slide title-slide active" data-slide="1">
+    <div class="title-top-logos">
+        <div class="title-badge">NCAIF-SW-TOR70-SPEC-v1.0 &bull; Technical Architecture Blueprint</div>
+        <div class="title-logo-box">
+            <img src="assets/creagy_logo.png" alt="Creagy">
+            <img src="assets/dcce_logo.jpg" alt="DCCE">
+        </div>
+    </div>
+    <div class="title-body">
+        <h1 class="main-hero-title">National Climate Adaptation Information Framework (NCAIF)</h1>
+        <h2 class="main-subtitle">Technical Handoff Deck: Software Development Contractor Briefing & System Architecture Blueprint</h2>
+        
+        <div class="grid-3" style="margin-top: 24px; margin-bottom: 24px;">
+            <div class="doc-card sky-border" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2);">
+                <div class="card-title" style="color: #FFFFFF;"><span class="card-num" style="background: var(--creagy-sky);">1</span> Scope & Mandate</div>
+                <div class="card-text" style="color: #D4ECF9;">Execution of Phases 4–7: Physical Database, API Gateway, Dynamic CMS Frontend, and Automated Quality Gates without architectural redesign.</div>
+            </div>
+            <div class="doc-card sky-border" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2);">
+                <div class="card-title" style="color: #FFFFFF;"><span class="card-num" style="background: var(--creagy-sky);">2</span> Inherited Specifications</div>
+                <div class="card-text" style="color: #D4ECF9;">15-Node Sitemap v8, 8-Domain CDM v3 with 46 normalized entities, 74-Term Master Glossary, A-BTR Database, and LDM 3-Layer MVD Spec.</div>
+            </div>
+            <div class="doc-card sky-border" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2);">
+                <div class="card-title" style="color: #FFFFFF;"><span class="card-num" style="background: var(--creagy-sky);">3</span> Sprint Phasing Funnel</div>
+                <div class="card-text" style="color: #D4ECF9;">Phased engineering across 73 requirements: 21 Live Ready (Sprint 1), 24 Ingestion Adapters (Sprint 2), and 28 UI Containers & Mock Stubs (Sprint 3).</div>
+            </div>
+        </div>
+    </div>
+    <div class="title-metadata">
+        <div class="meta-item"><span class="meta-lbl">Target Audience</span><span class="meta-val">TOR70 Software Contractor & Leads</span></div>
+        <div class="meta-item"><span class="meta-lbl">Authoring Agency</span><span class="meta-val">The Creagy Company Limited (for DCCE)</span></div>
+        <div class="meta-item"><span class="meta-lbl">Release Date</span><span class="meta-val">17 August 2026</span></div>
+        <div class="meta-item"><span class="meta-lbl">Total Slide Scope</span><span class="meta-val">22 Technical Specification Slides</span></div>
+    </div>
+</div>
+
+<!-- SLIDE 2: THE GOLDEN ARCHITECTURAL RULE -->
+<div class="slide" data-slide="2">
+    <div class="slide-header">
+        <div class="header-left-box">
+            <h1 class="header-main-title">The Golden Architectural Rule: Strict Decoupling of CMS and Data Catalog</h1>
+            <h2 class="header-sub-title">Zero direct database coupling: 100% of frontend dashboards, interactive maps, and calculation widgets must query governed REST/GraphQL endpoints rather than executing raw database queries or embedding static data.</h2>
+        </div>
+        <div class="header-logos">
+            <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+            <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+        </div>
+    </div>
+    <div class="slide-body">
+        <div class="grid-2">
+            <div class="doc-card blue-border">
+                <div class="card-title"><span class="card-num">1</span> System Architecture Tiering & Interface Contracts</div>
+                <ul class="doc-list">
+                    <li><strong>Tier 1: Presentation Layer (Headless Web CMS):</strong> Responsible exclusively for HTML rendering, user interaction, routing, and visual analytics. Consumes dynamic CMS blocks and analytical API payloads. <em>Zero Business Logic Rule:</em> frontend must never perform raw spatial clipping or statistical aggregation client-side.</li>
+                    <li><strong>Tier 2: API Gateway & Security Layer:</strong> Enforces JSON-Schema payload validation, OAuth2/JWT authentication, rate limiting, and Redis response caching (P95 &lt; 200ms). Exposes versioned endpoints (<code class="field">/api/v1/spatial/risk-profile</code>).</li>
+                    <li><strong>Tier 3: Governed Data Platform & Calculation Engine:</strong> PostgreSQL 16+ with PostGIS 3.4+ spatial engine implementing the 8 CDM Domains. Background ETL workers (Airflow/Celery) managing automated line-agency ingestion.</li>
+                </ul>
+            </div>
+            <div class="doc-card navy-border">
+                <div class="card-title"><span class="card-num">2</span> Architectural Topology Flow</div>
+                <div class="layer-stack" style="gap: 12px; margin-top: 4px;">
+                    <div class="layer layer-1">
+                        <h4>PRESENTATION LAYER (Web Portal / CMS)</h4>
+                        <p>15-Node Next.js / Nuxt.js SSR/SSG &bull; Dynamic Bilingual CMS Blocks &bull; MapLibre GL Vector Tiles</p>
+                    </div>
+                    <div style="text-align: center; color: var(--creagy-blue); font-weight: 800; font-size: 24px;">▲ ▼ HTTPS / TLS 1.3 &bull; REST / GraphQL OpenAPI v3.1 (JWT Authenticated)</div>
+                    <div class="layer layer-2">
+                        <h4>API GATEWAY & SECURITY SERVICE MESH</h4>
+                        <p>OAuth2/OIDC Auth &bull; Redis Response Cache &bull; JSON-Schema Payload Validator & WAF Rate Limiting</p>
+                    </div>
+                    <div style="text-align: center; color: var(--creagy-blue); font-weight: 800; font-size: 24px;">▲ ▼ Governed Relational SQL & PostGIS Spatial Streams</div>
+                    <div class="layer layer-3">
+                        <h4>GOVERNED DATA CATALOG & CALCULATION ENGINE</h4>
+                        <p>8-Domain CDM Database &bull; LDM 3-Layer Loss & Damage Engine &bull; A-BTR Aggregator &bull; G1–G5 Quality Gates</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slide-footer">
+        <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR TOR70 DEVELOPER HANDOVER ONLY</span></div>
+        <div class="slide-number-badge">02 / 22</div>
+    </div>
+</div>
+
+<!-- SLIDE 3: ANTI-PATTERN FRANKENSTEIN DASHBOARD -->
+<div class="slide" data-slide="3">
+    <div class="slide-header">
+        <div class="header-left-box">
+            <h1 class="header-main-title">Anti-Pattern: The Forbidden "Frankenstein Dashboard"</h1>
+            <h2 class="header-sub-title">Hardcoding static data files, CSV tables, or standalone visualization widgets directly into frontend components is strictly prohibited as a catastrophic anti-pattern.</h2>
+        </div>
+        <div class="header-logos">
+            <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+            <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+        </div>
+    </div>
+    <div class="slide-body">
+        <div class="grid-2">
+            <div class="doc-card red-border">
+                <div class="card-title"><span class="card-num">!</span> Failure Mode Analysis & Risks</div>
+                <ul class="doc-list">
+                    <li><strong>Definition of Anti-Pattern:</strong> Embedding local JSON arrays, static GeoJSON files, or CSV dumps inside React/Vue components to rapidly build visual charts or risk maps.</li>
+                    <li><strong>1. Schema Drift & Data Inconsistency:</strong> When line agencies (TMD, GISTDA, DDPM) update climate projections or loss records, static components display stale, conflicting numbers.</li>
+                    <li><strong>2. Audit Trail Destruction:</strong> UNFCCC A-BTR reporting requires 100% cryptographic provenance tracing back to source agency records. Static files sever this audit link.</li>
+                    <li><strong>3. Mobile Spatial Breakdown:</strong> Static GeoJSON bundles bypass PostGIS spatial indexing, crashing client browsers when loading high-density national grids (20,000+ polygons).</li>
+                </ul>
+            </div>
+            <div class="doc-card blue-border">
+                <div class="card-title"><span class="card-num">✓</span> Mandatory Engineering Standards</div>
+                <div class="table-wrap" style="margin-top: 4px;">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Aspect</th>
+                                <th style="background: #991B1B;">Forbidden Anti-Pattern</th>
+                                <th style="background: #0B7A4B;">Mandatory Standard</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Data Sourcing</strong></td>
+                                <td><code>import data from './risk.json'</code></td>
+                                <td><code>useSWR('/api/v1/hazards/summary')</code></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Spatial Bounds</strong></td>
+                                <td>Static bundled <code>.geojson</code> files</td>
+                                <td>Dynamic Vector Tiles (<code>.pbf</code>) from PostGIS</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Calculations</strong></td>
+                                <td>Client-side JS mathematical aggregation</td>
+                                <td>Server-side SQL analytical engine</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Audit Provenance</strong></td>
+                                <td>Untracked static strings</td>
+                                <td>Payload includes <code>provenance_hash</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="code-box">
+            <span class="c-cm">// Mandatory API Response Payload with Cryptographic Audit Provenance</span><br>
+            { <span class="c-kw">"status"</span>: <span class="c-str">"success"</span>, <span class="c-kw">"data_domain"</span>: <span class="c-str">"DOM_024"</span>, <span class="c-kw">"entity"</span>: <span class="c-str">"LD_PHYSICAL_DAMAGE"</span>,<br>
+            &nbsp;&nbsp;<span class="c-kw">"provenance"</span>: { <span class="c-kw">"source_agency"</span>: <span class="c-str">"DDPM"</span>, <span class="c-kw">"dataset_id"</span>: <span class="c-str">"DDPM-LD-2024-V1"</span>, <span class="c-kw">"verification_gate"</span>: <span class="c-str">"G4_APPROVED"</span>, <span class="c-kw">"provenance_hash"</span>: <span class="c-str">"sha256:e3b0c44298fc1c149afbf4c8..."</span> },<br>
+            &nbsp;&nbsp;<span class="c-kw">"payload"</span>: { <span class="c-kw">"spatial_unit_code"</span>: <span class="c-str">"TH-50"</span>, <span class="c-kw">"disaster_event_id"</span>: <span class="c-str">"FL-2024-NORTH-001"</span>, <span class="c-kw">"physical_damage_thb"</span>: <span class="c-val">45200000.00</span> } }
+        </div>
+    </div>
+    <div class="slide-footer">
+        <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR TOR70 DEVELOPER HANDOVER ONLY</span></div>
+        <div class="slide-number-badge">03 / 22</div>
+    </div>
+</div>
+
+<!-- SLIDE 4: DCCE TECHNICAL LANDSCAPE -->
+<div class="slide" data-slide="4">
+    <div class="slide-header">
+        <div class="header-left-box">
+            <h1 class="header-main-title">DCCE Technical Landscape: 391 Assets, 260 Datasets, 5km Downscaled Grids</h1>
+            <h2 class="header-sub-title">Contractors must build ingestion pipelines and spatial stores capable of handling heterogeneous source formats, varying update frequencies, and multi-temporal climate projections (1981–2099).</h2>
+        </div>
+        <div class="header-logos">
+            <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+            <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+        </div>
+    </div>
+    <div class="slide-body">
+        <div class="grid-3">
+            <div class="doc-card blue-border">
+                <div class="card-title"><span class="card-num">1</span> 391 Digital Asset Typology</div>
+                <ul class="doc-list">
+                    <li><strong>260 Structured Datasets:</strong> Spanning 8 line agencies (TMD, GISTDA, DDPM, DWR, RID, ONEP, DNP, DCCE).</li>
+                    <li><strong>84 Official Strategy Publications:</strong> National Adaptation Plan (NAP), Climate Change Act drafts, NDC/BTR annexes.</li>
+                    <li><strong>28 Operational Web Services:</strong> Climate Risk Map, GISTDA Disaster API, TMD Weather feeds.</li>
+                    <li><strong>19 Public Outreach Media:</strong> Infographics, guides, and community adaptation handbooks.</li>
+                </ul>
+            </div>
+            <div class="doc-card sky-border">
+                <div class="card-title"><span class="card-num">2</span> Spatial-Temporal Specs</div>
+                <ul class="doc-list">
+                    <li><strong>5km &times; 5km Downscaled Grids:</strong> ~20,400 active meteorological grid polygons covering Thailand.</li>
+                    <li><strong>4-Tier Admin Hierarchy:</strong> Nation &rarr; 6 Regions &rarr; 77 Provinces &rarr; 928 Districts &rarr; 7,255 Sub-Districts (อปท.).</li>
+                    <li><strong>Historical Climatology:</strong> 1981–2023 baseline observations (43-year continuous series).</li>
+                    <li><strong>Future CMIP6 Projections:</strong> SSP2-4.5 and SSP5-8.5 scenarios across 2021–2040, 2041–2060, 2081–2100.</li>
+                </ul>
+            </div>
+            <div class="doc-card navy-border">
+                <div class="card-title"><span class="card-num">3</span> Source Ingestion Readiness</div>
+                <div class="layer-stack" style="gap: 8px;">
+                    <div class="layer" style="background: #0B7A4B;">
+                        <h4 style="font-size: 26px;">TIER A: LIVE & STRUCTURED (29%)</h4>
+                        <p style="font-size: 22px;">Direct Ingestion via REST/WFS &bull; Verified baselines, NAP policies, M&E platform feeds.</p>
+                    </div>
+                    <div class="layer" style="background: #D97706;">
+                        <h4 style="font-size: 26px;">TIER B: RESTRICTED / RAW (33%)</h4>
+                        <p style="font-size: 22px;">Staging ETL & Adapters Required &bull; NetCDF4/GeoTIFF grids, DDPM restricted loss logs.</p>
+                    </div>
+                    <div class="layer" style="background: #C0392B;">
+                        <h4 style="font-size: 26px;">TIER C: GENUINE DATA GAPS (38%)</h4>
+                        <p style="font-size: 22px;">Container Shells & Mock Stubs &bull; Damage functions, IDF curves, non-economic losses.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slide-footer">
+        <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR TOR70 DEVELOPER HANDOVER ONLY</span></div>
+        <div class="slide-number-badge">04 / 22</div>
+    </div>
+</div>
+
+<!-- SLIDE 5: 15-NODE SITEMAP ROUTING -->
+<div class="slide" data-slide="5">
+    <div class="slide-header">
+        <div class="header-left-box">
+            <h1 class="header-main-title">15-Node Sitemap Scaffolding & Routing Architecture</h1>
+            <h2 class="header-sub-title">Implement deterministic URL routes, strict breadcrumb hierarchies, and route-level authorization guards mirroring NCAIF_Detailed_Sitemap_v8.md.</h2>
+        </div>
+        <div class="header-logos">
+            <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+            <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+        </div>
+    </div>
+    <div class="slide-body">
+        <div class="grid-2">
+            <div class="doc-card blue-border">
+                <div class="card-title"><span class="card-num">1</span> 15-Node Navigation Hierarchy</div>
+                <div class="code-box" style="font-size: 19px; line-height: 1.35; padding: 12px 14px;">
+                    <strong>NCAIF Portal Root (/)</strong><br>
+                    ├── 1. Home (Executive Overview & Spatial Search)<br>
+                    │&nbsp;&nbsp;&nbsp;├── 1.1 Executive Summary Cards (/executive-summary)<br>
+                    │&nbsp;&nbsp;&nbsp;└── 1.2 Interactive Area Search (/area-search)<br>
+                    ├── 2. Policy Maker Information Center<br>
+                    │&nbsp;&nbsp;&nbsp;├── 2.1 Climate Situation & Extreme Events (/policy/climate-situation)<br>
+                    │&nbsp;&nbsp;&nbsp;├── 2.2 Area & Sector Risk Profiles (/policy/risk-profiles)<br>
+                    │&nbsp;&nbsp;&nbsp;├── 2.3 Policy, Legal & Climate Finance (/policy/legal-finance)<br>
+                    │&nbsp;&nbsp;&nbsp;└── 2.4 Spatial Planning Data Services (/policy/planning-services)<br>
+                    ├── 3. Adaptation Knowledge Cycle<br>
+                    │&nbsp;&nbsp;&nbsp;├── 3.1 Climate Science & Projections (/knowledge/climate-science)<br>
+                    │&nbsp;&nbsp;&nbsp;├── 3.2 Risk, Vulnerability & L&D (/knowledge/risk-loss-damage)<br>
+                    │&nbsp;&nbsp;&nbsp;├── 3.3 Adaptation Solutions Library (/knowledge/adaptation-planning)<br>
+                    │&nbsp;&nbsp;&nbsp;└── 3.4 Monitoring, Evaluation & Learning (/knowledge/mel-tracker)<br>
+                    ├── 4. Tools & Services (/tools/data-catalog, /tools/risk-map-analytics, /tools/external-hub)<br>
+                    └── 5. News & Engagement (/news/announcements, /news/feedback-helpdesk)
+                </div>
+            </div>
+            <div class="doc-card navy-border">
+                <div class="card-title"><span class="card-num">2</span> Route Specification & Binding Matrix</div>
+                <div class="table-wrap" style="max-height: 520px; overflow-y: auto;">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Node</th>
+                                <th>Route Path</th>
+                                <th>Mode</th>
+                                <th>Auth Guard</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>1.1</strong></td><td><code>/executive-summary</code></td><td>SSR / ISR</td><td>Public</td></tr>
+                            <tr><td><strong>1.2</strong></td><td><code>/area-search</code></td><td>Client SPA</td><td>Public</td></tr>
+                            <tr><td><strong>2.1</strong></td><td><code>/policy/climate-situation</code></td><td>SSR</td><td>Public</td></tr>
+                            <tr><td><strong>2.2</strong></td><td><code>/policy/risk-profiles</code></td><td>SSR</td><td>Public</td></tr>
+                            <tr><td><strong>2.3</strong></td><td><code>/policy/legal-finance</code></td><td>ISR (24 hr)</td><td>Public</td></tr>
+                            <tr><td><strong>2.4</strong></td><td><code>/policy/planning-services</code></td><td>Client SPA</td><td>Authenticated</td></tr>
+                            <tr><td><strong>3.1</strong></td><td><code>/knowledge/climate-science</code></td><td>SSR</td><td>Public</td></tr>
+                            <tr><td><strong>3.2</strong></td><td><code>/knowledge/risk-loss-damage</code></td><td>Client SPA</td><td>Public</td></tr>
+                            <tr><td><strong>3.3</strong></td><td><code>/knowledge/adaptation-planning</code></td><td>SSR</td><td>Public</td></tr>
+                            <tr><td><strong>3.4</strong></td><td><code>/knowledge/mel-tracker</code></td><td>SSR</td><td>Public</td></tr>
+                            <tr><td><strong>4.1</strong></td><td><code>/tools/data-catalog</code></td><td>Client SPA</td><td>Public / Token</td></tr>
+                            <tr><td><strong>4.2</strong></td><td><code>/tools/risk-map-analytics</code></td><td>WebGL SPA</td><td>Public</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slide-footer">
+        <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR TOR70 DEVELOPER HANDOVER ONLY</span></div>
+        <div class="slide-number-badge">05 / 22</div>
+    </div>
+</div>
+
+<!-- SLIDE 6: DYNAMIC CMS CONTENT TEMPLATING -->
+<div class="slide" data-slide="6">
+    <div class="slide-header">
+        <div class="header-left-box">
+            <h1 class="header-main-title">Dynamic CMS Content Templating & Headless Integration</h1>
+            <h2 class="header-sub-title">Non-analytical content pages must be powered by a headless CMS utilizing structured JSON content models to enable non-technical DCCE staff to maintain bilingual text without code deployments.</h2>
+        </div>
+        <div class="header-logos">
+            <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+            <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+        </div>
+    </div>
+    <div class="slide-body">
+        <div class="grid-2">
+            <div class="doc-card blue-border">
+                <div class="card-title"><span class="card-num">1</span> Content Modeling & Headless Architecture</div>
+                <ul class="doc-list">
+                    <li><strong>Headless CMS Engine:</strong> Enterprise headless instance (Strapi / Directus / Decap) connected to PostgreSQL.</li>
+                    <li><strong>Dynamic Block Components:</strong> Reorderable modular components:
+                        <ul style="padding-left: 20px; list-style: circle; margin-top: 4px;">
+                            <li><code class="field">HeroBannerBlock</code>: Title, subtitle, background image, CTA buttons.</li>
+                            <li><code class="field">RichTextAccordionBlock</code>: Structured policy explanations with collapsible headers.</li>
+                            <li><code class="field">MetricSummaryCardBlock</code>: Highlighting key indicators (Avoided Losses).</li>
+                            <li><code class="field">DocumentDownloadBlock</code>: Versioned PDFs with checksums and dates.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Bilingual Localization Rules:</strong> Mandatory Thai (<code class="field">th-TH</code>) and English (<code class="field">en-US</code>) locales with automatic fallback.</li>
+                </ul>
+            </div>
+            <div class="doc-card navy-border">
+                <div class="card-title"><span class="card-num">2</span> Headless Content Schema Contract</div>
+                <div class="code-box" style="font-size: 20px; line-height: 1.35;">
+                    { <span class="c-kw">"page_id"</span>: <span class="c-str">"node-2-3-legal-finance"</span>, <span class="c-kw">"route"</span>: <span class="c-str">"/policy/legal-finance"</span>,<br>
+                    &nbsp;&nbsp;<span class="c-kw">"locale"</span>: <span class="c-str">"th-TH"</span>, <span class="c-kw">"meta"</span>: { <span class="c-kw">"title"</span>: <span class="c-str">"เครื่องมือทางนโยบายและกฎหมาย"</span> },<br>
+                    &nbsp;&nbsp;<span class="c-kw">"content_blocks"</span>: [<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;{ <span class="c-kw">"block_type"</span>: <span class="c-str">"RichTextAccordionBlock"</span>, <span class="c-kw">"order"</span>: <span class="c-val">1</span>,<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-kw">"properties"</span>: { <span class="c-kw">"section_code"</span>: <span class="c-str">"2.3.1"</span>, <span class="c-kw">"header_th"</span>: <span class="c-str">"แหล่งทุนและการติดตามงบประมาณ"</span>, <span class="c-kw">"btr_tag"</span>: <span class="c-str">"[4, MUST]"</span> } },<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;{ <span class="c-kw">"block_type"</span>: <span class="c-str">"MetricSummaryCardBlock"</span>, <span class="c-kw">"order"</span>: <span class="c-val">2</span>,<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-kw">"properties"</span>: { <span class="c-kw">"metric_key"</span>: <span class="c-str">"INTERNATIONAL_SUPPORT_USD"</span>, <span class="c-kw">"api_endpoint"</span>: <span class="c-str">"/api/v1/finance/summary"</span> } }<br>
+                    &nbsp;&nbsp;]<br>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slide-footer">
+        <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR TOR70 DEVELOPER HANDOVER ONLY</span></div>
+        <div class="slide-number-badge">06 / 22</div>
+    </div>
+</div>
+
+<!-- SLIDE 7: SUB-DISTRICT SPATIAL QUERY & MAP ENGINE -->
+<div class="slide" data-slide="7">
+    <div class="slide-header">
+        <div class="header-left-box">
+            <h1 class="header-main-title">Sub-District Spatial Query & Interactive Map Engine Requirements</h1>
+            <h2 class="header-sub-title">The spatial analytics engine must deliver sub-second vector polygon rendering and point-in-polygon queries down to the sub-district level (7,255 Sub-Districts / อปท.).</h2>
+        </div>
+        <div class="header-logos">
+            <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+            <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+        </div>
+    </div>
+    <div class="slide-body">
+        <div class="grid-2">
+            <div class="doc-card blue-border">
+                <div class="card-title"><span class="card-num">1</span> Vector Tile & Rendering Architecture</div>
+                <div class="layer-stack" style="gap: 8px;">
+                    <div class="layer layer-1">
+                        <h4>1. PostGIS 3.4 Spatial Database</h4>
+                        <p><code>spatial_unit</code> (7,255 sub-districts, EPSG:4326) &bull; <code>hazard_map_grid</code> (20,400 5km grid polygons)</p>
+                    </div>
+                    <div class="layer layer-2">
+                        <h4>2. Vector Tile Server (pg_tileserv / Martin)</h4>
+                        <p>Dynamic <code>ST_AsMVT()</code> tile clipping &bull; Zoom level LOD (Z0-Z6 Province, Z7-Z10 District, Z11+ Sub-District)</p>
+                    </div>
+                    <div class="layer layer-3">
+                        <h4>3. MapLibre GL JS / Deck.gl Frontend</h4>
+                        <p>GPU-accelerated vector rendering &bull; Sub-second dynamic choropleth color ramping</p>
+                    </div>
+                </div>
+            </div>
+            <div class="doc-card navy-border">
+                <div class="card-title"><span class="card-num">2</span> Spatial Intersection Query & Benchmarks</div>
+                <div class="code-box" style="font-size: 19px; line-height: 1.35;">
+                    <span class="c-kw">SELECT</span> su.spatial_unit_code, su.name_th, hm.hazard_type, hm.intensity_value, ra.composite_risk_score<br>
+                    <span class="c-kw">FROM</span> domain_exp.spatial_unit su<br>
+                    <span class="c-kw">JOIN</span> domain_haz.hazard_map_grid hm <span class="c-kw">ON</span> <span class="c-fn">ST_Intersects</span>(su.geom, hm.geom)<br>
+                    <span class="c-kw">LEFT JOIN</span> domain_risk.risk_analysis ra <span class="c-kw">ON</span> ra.spatial_unit_id = su.spatial_unit_id<br>
+                    <span class="c-kw">WHERE</span> su.admin_level = <span class="c-str">'SUB_DISTRICT'</span><br>
+                    &nbsp;&nbsp;<span class="c-kw">AND</span> <span class="c-fn">ST_Contains</span>(su.geom, <span class="c-fn">ST_SetSRID</span>(<span class="c-fn">ST_Point</span>(:lng, :lat), <span class="c-val">4326</span>)) <span class="c-kw">LIMIT</span> <span class="c-val">1</span>;
+                </div>
+                <ul class="doc-list" style="margin-top: 10px;">
+                    <li><strong>Vector Tile P95 Latency:</strong> &lt; 150 ms (cached); &lt; 400 ms (uncached spatial join).</li>
+                    <li><strong>Framerate Budget:</strong> Steady 60 FPS on client zoom/pan/hover.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="slide-footer">
+        <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR TOR70 DEVELOPER HANDOVER ONLY</span></div>
+        <div class="slide-number-badge">07 / 22</div>
+    </div>
+</div>
+
+<!-- SLIDE 8: ACCESSIBILITY, PERFORMANCE & UI/UX -->
+<div class="slide" data-slide="8">
+    <div class="slide-header">
+        <div class="header-left-box">
+            <h1 class="header-main-title">Accessibility, Performance & UI/UX Design Standards</h1>
+            <h2 class="header-sub-title">The platform must achieve WCAG 2.1 AA accessibility compliance, sub-1.5-second P95 page load speeds, and fully responsive layouts across mobile, tablet, and desktop screens.</h2>
+        </div>
+        <div class="header-logos">
+            <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+            <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+        </div>
+    </div>
+    <div class="slide-body">
+        <div class="grid-3">
+            <div class="doc-card blue-border">
+                <div class="card-title"><span class="card-num">1</span> WCAG 2.1 AA Standards</div>
+                <ul class="doc-list">
+                    <li><strong>Contrast Ratios:</strong> Minimum 4.5:1 for body text; 3.0:1 for headings and UI controls.</li>
+                    <li><strong>Keyboard Navigation:</strong> 100% of interactive elements accessible via Tab/Enter/Esc with visible focus rings.</li>
+                    <li><strong>Semantic HTML & ARIA:</strong> Strict HTML5 landmark tags; tabular text alternatives for all maps and charts.</li>
+                </ul>
+            </div>
+            <div class="doc-card navy-border">
+                <div class="card-title"><span class="card-num">2</span> Core Web Vitals Budget</div>
+                <div class="table-wrap">
+                    <table class="data-table">
+                        <thead><tr><th>Metric</th><th>Target</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>LCP (P95)</strong></td><td>&le; 1.5 s</td></tr>
+                            <tr><td><strong>FID / INP</strong></td><td>&le; 100 ms</td></tr>
+                            <tr><td><strong>CLS</strong></td><td>&le; 0.05</td></tr>
+                            <tr><td><strong>JS Bundle</strong></td><td>&le; 250 KB (init)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="doc-card red-border">
+                <div class="card-title"><span class="card-num">3</span> Forbidden UI Tropes</div>
+                <ul class="doc-list">
+                    <li>❌ <em>No Frankenstein bloated dashboards on general pages.</em></li>
+                    <li>❌ <em>No purple/violet fonts on dark backgrounds.</em></li>
+                    <li>❌ <em>No glowing neon borders or particle mesh grids.</em></li>
+                    <li>❌ <em>No un-tracked large typefaces or nested cards.</em></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="slide-footer">
+        <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR TOR70 DEVELOPER HANDOVER ONLY</span></div>
+        <div class="slide-number-badge">08 / 22</div>
+    </div>
+</div>
+
+<!-- SLIDE 9: SPRINT PHASING STRATEGY -->
+<div class="slide" data-slide="9">
+    <div class="slide-header">
+        <div class="header-left-box">
+            <h1 class="header-main-title">Sprint Phasing Strategy Against the 73 Content Requirements</h1>
+            <h2 class="header-sub-title">Adopt a decoupled build strategy: wire live endpoints for Ready items (Sprint 1), construct ingestion adapters for Partial items (Sprint 2), and build UI container shells for Gap items (Sprint 3).</h2>
+        </div>
+        <div class="header-logos">
+            <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+            <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+        </div>
+    </div>
+    <div class="slide-body">
+        <div class="stat-banner">
+            <div class="stat-val">73 Total</div>
+            <div class="stat-lbl">Planned Content Requirements across 15 Nodes &bull; Sorted by Empirical Data Readiness: <strong>21 Ready (29%)</strong> &bull; <strong>24 Partial (33%)</strong> &bull; <strong>28 Gap (38%)</strong>.</div>
+        </div>
+        <div class="grid-3">
+            <div class="doc-card green-border">
+                <div class="card-title"><span class="card-num">1</span> Sprint 1: Build & Wire Live</div>
+                <p><strong>21 Items (29%) &bull; Weeks 1–4</strong></p>
+                <div class="card-text">Verified, structured in-house data exists. Bootstrap CDM tables and wire directly to live production API endpoints. Zero external blockers.</div>
+            </div>
+            <div class="doc-card sky-border">
+                <div class="card-title"><span class="card-num">2</span> Sprint 2: Ingestion Staging</div>
+                <p><strong>24 Items (33%) &bull; Weeks 5–8</strong></p>
+                <div class="card-text">Raw NetCDF grids and restricted logs. Build automated ETL adapters, PostGIS spatial reprojection, and Data Steward verification gates.</div>
+            </div>
+            <div class="doc-card blue-border">
+                <div class="card-title"><span class="card-num">3</span> Sprint 3: Container Shells</div>
+                <p><strong>28 Items (38%) &bull; Weeks 9–12</strong></p>
+                <div class="card-text">Genuine national data gaps. Build elegant responsive UI container shells and OpenAPI mock JSON stubs. Prevent platform launch blocking.</div>
+            </div>
+        </div>
+    </div>
+    <div class="slide-footer">
+        <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR TOR70 DEVELOPER HANDOVER ONLY</span></div>
+        <div class="slide-number-badge">09 / 22</div>
+    </div>
+</div>
+
+<!-- SLIDE 10: SPRINT PHASE 1 LIVE ENDPOINTS -->
+<div class="slide" data-slide="10">
+    <div class="slide-header">
+        <div class="header-left-box">
+            <h1 class="header-main-title">Sprint Phase 1: Build & Wire Live Endpoints (21 Ready Items)</h1>
+            <h2 class="header-sub-title">Zero external dependencies: execute physical database migrations, populate seed tables, and wire live SSR/API components for climate baselines, projections, and national policies.</h2>
+        </div>
+        <div class="header-logos">
+            <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+            <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+        </div>
+    </div>
+    <div class="slide-body">
+        <div class="grid-2">
+            <div class="doc-card blue-border">
+                <div class="card-title"><span class="card-num">1</span> 21 Live Ready Scope Breakdown</div>
+                <ul class="doc-list">
+                    <li><strong>Node 1.1 (Executive Cards):</strong> <code>REQ-002</code> Risk Profile Cards, <code>REQ-003</code> NAP Strategy Highlights.</li>
+                    <li><strong>Node 2.3 (Policy & Finance):</strong> <code>REQ-011</code> Climate Act Roadmap, <code>REQ-013</code> International Climate Finance Directory.</li>
+                    <li><strong>Node 3.1 (Climate Science):</strong> <code>REQ-022</code> 1981–2023 Climatology Baseline, <code>REQ-024</code> CMIP6 5km Projections Grid.</li>
+                    <li><strong>Node 3.4 (M&E Tracker):</strong> <code>REQ-052</code>–<code>055</code> National Adaptation M&E and GGA Indicators.</li>
+                    <li><strong>Node 4.1 & 5.1:</strong> <code>REQ-056</code> Data Catalog Search, <code>REQ-058</code> Workshop Feed.</li>
+                </ul>
+            </div>
+            <div class="doc-card navy-border">
+                <div class="card-title"><span class="card-num">2</span> Target Tables & Live API Endpoints</div>
+                <div class="table-wrap">
+                    <table class="data-table">
+                        <thead>
+                            <tr><th>Requirement</th><th>Target Table</th><th>Production API Route</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><code>REQ-002, 003</code></td><td><code>risk_analysis</code></td><td><code>GET /api/v1/overview/national-summary</code></td></tr>
+                            <tr><td><code>REQ-011–014</code></td><td><code>funding_source</code></td><td><code>GET /api/v1/policy/governance-finance</code></td></tr>
+                            <tr><td><code>REQ-022, 024</code></td><td><code>climate_projection</code></td><td><code>GET /api/v1/climate/projections-grid</code></td></tr>
+                            <tr><td><code>REQ-052–055</code></td><td><code>adaptation_outcome</code></td><td><code>GET /api/v1/mel/progress-indicators</code></td></tr>
+                            <tr><td><code>REQ-056</code></td><td><code>dataset_catalog_master</code></td><td><code>GET /api/v1/catalog/search</code></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slide-footer">
+        <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR TOR70 DEVELOPER HANDOVER ONLY</span></div>
+        <div class="slide-number-badge">10 / 22</div>
+    </div>
+</div>
+
+<!-- SLIDE 11: SPRINT PHASE 2 INGESTION ADAPTERS -->
+<div class="slide" data-slide="11">
+    <div class="slide-header">
+        <div class="header-left-box">
+            <h1 class="header-main-title">Sprint Phase 2: Ingestion Adapters & Staging Pipelines (24 Partial Items)</h1>
+            <h2 class="header-sub-title">Transform raw NetCDF raster grids, restricted agency tables, and unformatted provincial records into normalized, query-optimized PostGIS relational tables.</h2>
+        </div>
+        <div class="header-logos">
+            <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+            <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+        </div>
+    </div>
+    <div class="slide-body">
+        <div class="grid-2">
+            <div class="doc-card blue-border">
+                <div class="card-title"><span class="card-num">1</span> Staging Pipeline Architecture</div>
+                <div class="layer-stack" style="gap: 8px;">
+                    <div class="layer layer-1">
+                        <h4>Step 1: Ingestion & Format Scanning</h4>
+                        <p>Virus scanning, checksum verification, and NetCDF / GeoTIFF / CSV parsing.</p>
+                    </div>
+                    <div class="layer layer-2">
+                        <h4>Step 2: Spatial Reprojection & Normalization</h4>
+                        <p>Reproject all coordinates to EPSG:4326 PostGIS geometry; match DOPA 6-digit codes.</p>
+                    </div>
+                    <div class="layer layer-3">
+                        <h4>Step 3: Staging Schema & G1–G3 Verification</h4>
+                        <p>Store in <code>staging_*</code> schema; promote to <code>public_*</code> upon Steward digital sign-off.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="doc-card navy-border">
+                <div class="card-title"><span class="card-num">2</span> Priority Ingestion Adapters</div>
+                <div class="table-wrap">
+                    <table class="data-table">
+                        <thead>
+                            <tr><th>Source Feed</th><th>Format</th><th>Ingestion Adapter Task</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>5km Climate Grids</strong></td><td>NetCDF4 (<code>.nc</code>)</td><td>Python <code>xarray/gdal</code> worker converts rasters to PostGIS polygons / COG tiles.</td></tr>
+                            <tr><td><strong>Disaster Loss Logs</strong></td><td>DDPM CSV / Excel</td><td>Parses event types, binds administrative codes to Layer A MVD tables.</td></tr>
+                            <tr><td><strong>Satellite Land Cover</strong></td><td>GISTDA GeoTIFF</td><td>Raster-to-vector polygonizer clips classifications against 7,255 sub-districts.</td></tr>
+                            <tr><td><strong>Climate Budget Markers</strong></td><td>BB Excel Sheets</td><td>Cleans budget tags and normalizes fiscal allocations to constant THB.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slide-footer">
+        <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR TOR70 DEVELOPER HANDOVER ONLY</span></div>
+        <div class="slide-number-badge">11 / 22</div>
+    </div>
+</div>
+
+<!-- SLIDE 12: SPRINT PHASE 3 UI CONTAINER SHELLS -->
+<div class="slide" data-slide="12">
+    <div class="slide-header">
+        <div class="header-left-box">
+            <h1 class="header-main-title">Sprint Phase 3: UI Container Shells & Mock Endpoints (28 Gap Items)</h1>
+            <h2 class="header-sub-title">Implement gracefully degrading UI component shells, structured empty-state messaging, and strict TypeScript/JSON mock fixtures aligned with future data contracts.</h2>
+        </div>
+        <div class="header-logos">
+            <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+            <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+        </div>
+    </div>
+    <div class="slide-body">
+        <div class="grid-2">
+            <div class="doc-card blue-border">
+                <div class="card-title"><span class="card-num">1</span> Container Shell Architectural Rules</div>
+                <ul class="doc-list">
+                    <li><strong>Nature of 28 Gaps:</strong> Data currently uncollected across Thailand (e.g. empirical damage functions, non-economic loss valuation, rainfall IDF curves).</li>
+                    <li><strong>Zero Broken Pages Rule:</strong> Never render blank screens or generic 404 errors. Every gap gets a complete layout with methodology narratives.</li>
+                    <li><strong>Structured Pipeline Banner:</strong> Clearly identifies responsible lead ministries, collection protocols, and target baseline years.</li>
+                    <li><strong>Toggle Switch Ready:</strong> Switch from mock to live data via environment flag (<code class="field">NEXT_PUBLIC_ENABLE_LIVE_GAP_FEEDS=true</code>).</li>
+                </ul>
+            </div>
+            <div class="doc-card navy-border">
+                <div class="card-title"><span class="card-num">2</span> Mock API TypeScript Interface</div>
+                <div class="code-box" style="font-size: 20px; line-height: 1.35;">
+                    <span class="c-kw">export interface</span> SectorDamageFunctionResponse {<br>
+                    &nbsp;&nbsp;sector_id: <span class="c-str">'AGRICULTURE'</span> | <span class="c-str">'INFRASTRUCTURE'</span> | <span class="c-str">'HOUSING'</span>;<br>
+                    &nbsp;&nbsp;hazard_type: <span class="c-str">'FLOOD_INUNDATION'</span> | <span class="c-str">'DROUGHT'</span>;<br>
+                    &nbsp;&nbsp;curve_model: <span class="c-str">'EMPIRICAL_VULNERABILITY_V1'</span>;<br>
+                    &nbsp;&nbsp;data_status: <span class="c-str">'GAP_CONTAINER_MOCK'</span>;<br>
+                    &nbsp;&nbsp;damage_curve_points: Array&lt;{<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;water_depth_meters: number;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;damage_ratio: number; <span class="c-cm">// 0.00 to 1.00</span><br>
+                    &nbsp;&nbsp;}&gt;;<br>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slide-footer">
+        <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR TOR70 DEVELOPER HANDOVER ONLY</span></div>
+        <div class="slide-number-badge">12 / 22</div>
+    </div>
+</div>
+
+<!-- SLIDE 13: 8-DOMAIN CDM SCHEMA STRUCTURE -->
+<div class="slide" data-slide="13">
+    <div class="slide-header">
+        <div class="header-left-box">
+            <h1 class="header-main-title">The 8-Domain Conceptual Data Model (CDM) Schema Structure</h1>
+            <h2 class="header-sub-title">Translate the 8 conceptual domains (DOM_EV through DOM_050) into distinct PostgreSQL database schemas, entity namespaces, and clear governance ownership.</h2>
+        </div>
+        <div class="header-logos">
+            <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+            <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+        </div>
+    </div>
+    <div class="slide-body">
+        <div class="table-wrap">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Domain</th>
+                        <th>Domain Name</th>
+                        <th>Core Entity Tables</th>
+                        <th>Domain Scope & Logic</th>
+                        <th>Governance Owner</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>DOM_EV</code></td><td>Essential Variables</td><td><code>meteorological_obs</code>, <code>environmental_data</code></td><td>Weather observations, slow-onset drivers, baselines.</td><td>Climate Science Division</td></tr>
+                    <tr><td><code>DOM_HAZ</code></td><td>Hazard & Modeling</td><td><code>climate_projection</code>, <code>hazard_map</code></td><td>CMIP6 projections, simulations, intensity maps.</td><td>Risk Modeling Division</td></tr>
+                    <tr><td><code>DOM_022</code></td><td>Exposure & Vulnerability</td><td><code>spatial_unit</code>, <code>exposed_asset</code></td><td>Admin boundaries, exposed population and assets.</td><td>Spatial Analytics Team</td></tr>
+                    <tr><td><code>DOM_023</code></td><td>Risk Analysis</td><td><code>risk_analysis</code>, <code>composite_index</code></td><td>Probabilistic risk scores, Expected Annual Loss (EAL).</td><td>Risk Modeling Division</td></tr>
+                    <tr><td><code>DOM_024</code></td><td>Disaster & Impact (LDM)</td><td><code>disaster_event</code>, <code>ld_physical_damage</code></td><td>3-Layer MVD disaster events, physical damage valuation.</td><td>Disaster Data Division</td></tr>
+                    <tr><td><code>DOM_030</code></td><td>Resilience Assessment</td><td><code>resilience_framework</code>, <code>resilience_dimension</code></td><td>Community and sector adaptive capacity framework.</td><td>Policy & Strategy Team</td></tr>
+                    <tr><td><code>DOM_040</code></td><td>Adaptation Planning</td><td><code>adaptation_portfolio</code>, <code>adaptation_project</code></td><td>Adaptation Options Library and project registry.</td><td>Adaptation Planning Div.</td></tr>
+                    <tr><td><code>DOM_050</code></td><td>Monitoring & Finance</td><td><code>adaptation_outcome</code>, <code>budget_tag_record</code></td><td>SMART project milestones, budget tagging records.</td><td>Climate Finance Division</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="slide-footer">
+        <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR TOR70 DEVELOPER HANDOVER ONLY</span></div>
+        <div class="slide-number-badge">13 / 22</div>
+    </div>
+</div>
+
+<!-- SLIDE 14: ENTITY-RELATIONSHIP MODELS & FK RULES -->
+<div class="slide" data-slide="14">
+    <div class="slide-header">
+        <div class="header-left-box">
+            <h1 class="header-main-title">Entity-Relationship Models & Foreign Key Integrity Rules</h1>
+            <h2 class="header-sub-title">Relational integrity across the 46 core entities is enforced through 52 strict foreign-key constraints, cascading delete rules, and associative bridge tables.</h2>
+        </div>
+        <div class="header-logos">
+            <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+            <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+        </div>
+    </div>
+    <div class="slide-body">
+        <div class="grid-2">
+            <div class="doc-card blue-border">
+                <div class="card-title"><span class="card-num">1</span> Core Relational Bridges</div>
+                <ul class="doc-list">
+                    <li><code class="field">SPATIAL_UNIT</code> 1:N &rarr; <code class="field">METEOROLOGICAL_OBSERVATION</code>, <code class="field">EXPOSED_ASSET</code>.</li>
+                    <li><code class="field">DISASTER_EVENT</code> 1:N &rarr; <code class="field">EVENT_LOCATION</code> &rarr; <code class="field">SPATIAL_UNIT</code>.</li>
+                    <li><code class="field">DISASTER_EVENT</code> 1:N &rarr; <code class="field">ASSESSMENT_CONTEXT</code> 1:N &rarr; <code class="field">LD_PHYSICAL_DAMAGE</code>, <code class="field">LD_ECONOMIC_LOSS</code>.</li>
+                    <li><code class="field">ADAPTATION_PROJECT</code> N:M &rarr; <code class="field">ADAPTATION_OUTCOME</code> bridged via <code class="field">ADAPTATION_PROJECT_OUTCOME_CONTRIBUTION</code>.</li>
+                </ul>
+            </div>
+            <div class="doc-card navy-border">
+                <div class="card-title"><span class="card-num">2</span> DDL Referential Integrity Constraints</div>
+                <div class="code-box" style="font-size: 19px; line-height: 1.35;">
+                    <span class="c-kw">CREATE TABLE</span> domain_ldm.event_location (<br>
+                    &nbsp;&nbsp;event_location_id UUID <span class="c-kw">PRIMARY KEY DEFAULT</span> <span class="c-fn">gen_random_uuid</span>(),<br>
+                    &nbsp;&nbsp;disaster_event_id VARCHAR(<span class="c-val">64</span>) <span class="c-kw">REFERENCES</span> domain_ldm.disaster_event <span class="c-kw">ON DELETE CASCADE</span>,<br>
+                    &nbsp;&nbsp;spatial_unit_id UUID <span class="c-kw">REFERENCES</span> domain_exp.spatial_unit <span class="c-kw">ON DELETE RESTRICT</span>,<br>
+                    &nbsp;&nbsp;<span class="c-kw">CONSTRAINT</span> uq_event_spatial <span class="c-kw">UNIQUE</span>(disaster_event_id, spatial_unit_id)<br>
+                    );<br>
+                    <span class="c-cm">-- Resolves N:M Project to Outcome Level Mismatch</span><br>
+                    <span class="c-kw">CREATE TABLE</span> domain_mel.adaptation_project_outcome_contribution (<br>
+                    &nbsp;&nbsp;project_id UUID <span class="c-kw">REFERENCES</span> domain_plan.adaptation_project <span class="c-kw">ON DELETE CASCADE</span>,<br>
+                    &nbsp;&nbsp;outcome_id UUID <span class="c-kw">REFERENCES</span> domain_mel.adaptation_outcome <span class="c-kw">ON DELETE RESTRICT</span>,<br>
+                    &nbsp;&nbsp;contribution_weight NUMERIC(<span class="c-val">5,2</span>) <span class="c-kw">CHECK</span> (contribution_weight <span class="c-kw">BETWEEN</span> <span class="c-val">0.00</span> <span class="c-kw">AND</span> <span class="c-val">100.00</span>)<br>
+                    );
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slide-footer">
+        <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR TOR70 DEVELOPER HANDOVER ONLY</span></div>
+        <div class="slide-number-badge">14 / 22</div>
+    </div>
+</div>
+
+<!-- SLIDE 15: POSTGIS SPATIAL INDEXING & 5KM OVERLAYS -->
+<div class="slide" data-slide="15">
+    <div class="slide-header">
+        <div class="header-left-box">
+            <h1 class="header-main-title">PostGIS Spatial Indexing & 5km Grid Polygon Overlays</h1>
+            <h2 class="header-sub-title">Configure PostGIS geometry columns in EPSG:4326, generate Generalized Search Tree (GiST) indexes, and cluster physical table storage by spatial geometry.</h2>
+        </div>
+        <div class="header-logos">
+            <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+            <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+        </div>
+    </div>
+    <div class="slide-body">
+        <div class="grid-2">
+            <div class="doc-card blue-border">
+                <div class="card-title"><span class="card-num">1</span> Spatial Table DDL & GiST Indexing</div>
+                <div class="code-box" style="font-size: 19px; line-height: 1.35;">
+                    <span class="c-kw">CREATE EXTENSION IF NOT EXISTS</span> postgis;<br>
+                    <span class="c-kw">CREATE TABLE</span> domain_exp.spatial_unit (<br>
+                    &nbsp;&nbsp;spatial_unit_id UUID <span class="c-kw">PRIMARY KEY DEFAULT</span> <span class="c-fn">gen_random_uuid</span>(),<br>
+                    &nbsp;&nbsp;spatial_unit_code VARCHAR(<span class="c-val">16</span>) <span class="c-kw">UNIQUE NOT NULL</span>,<br>
+                    &nbsp;&nbsp;geom GEOMETRY(MultiPolygon, <span class="c-val">4326</span>) <span class="c-kw">NOT NULL</span><br>
+                    );<br>
+                    <span class="c-kw">CREATE INDEX</span> idx_spatial_unit_geom <span class="c-kw">ON</span> domain_exp.spatial_unit <span class="c-kw">USING GIST</span>(geom);<br>
+                    <span class="c-kw">CLUSTER</span> domain_exp.spatial_unit <span class="c-kw">USING</span> idx_spatial_unit_geom;<br>
+                    <br>
+                    <span class="c-cm">-- 5km Hazard Grid (~20,400 Polygons)</span><br>
+                    <span class="c-kw">CREATE TABLE</span> domain_haz.hazard_map_grid (<br>
+                    &nbsp;&nbsp;grid_cell_id VARCHAR(<span class="c-val">32</span>) <span class="c-kw">PRIMARY KEY</span>,<br>
+                    &nbsp;&nbsp;geom GEOMETRY(Polygon, <span class="c-val">4326</span>) <span class="c-kw">NOT NULL</span><br>
+                    );<br>
+                    <span class="c-kw">CREATE INDEX</span> idx_hazard_map_grid_geom <span class="c-kw">ON</span> domain_haz.hazard_map_grid <span class="c-kw">USING GIST</span>(geom);
+                </div>
+            </div>
+            <div class="doc-card navy-border">
+                <div class="card-title"><span class="card-num">2</span> Spatial Optimization Benchmarks</div>
+                <div class="code-box" style="font-size: 19px; line-height: 1.35;">
+                    <span class="c-kw">SELECT</span> su.name_th, <span class="c-fn">AVG</span>(cp.projected_value) <span class="c-kw">AS</span> avg_temp<br>
+                    <span class="c-kw">FROM</span> domain_exp.spatial_unit su<br>
+                    <span class="c-kw">JOIN</span> domain_haz.hazard_map_grid hg <span class="c-kw">ON</span> <span class="c-fn">ST_Intersects</span>(su.geom, hg.geom)<br>
+                    <span class="c-kw">JOIN</span> domain_haz.climate_projection cp <span class="c-kw">ON</span> cp.grid_cell_id = hg.grid_cell_id<br>
+                    <span class="c-kw">WHERE</span> su.parent_code = <span class="c-str">'5001'</span> <span class="c-kw">AND</span> cp.scenario_code = <span class="c-str">'SSP5_85'</span><br>
+                    <span class="c-kw">GROUP BY</span> su.spatial_unit_code, su.name_th;
+                </div>
+                <ul class="doc-list" style="margin-top: 10px;">
+                    <li><strong>Index Scan Speedup:</strong> Spatial join reduced from 4,800 ms (seq scan) to &lt; 12 ms (GiST index scan).</li>
+                    <li><strong>Vector Tiles:</strong> Materialized admin boundary views generate MVTs in &lt; 5 ms.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="slide-footer">
+        <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR TOR70 DEVELOPER HANDOVER ONLY</span></div>
+        <div class="slide-number-badge">15 / 22</div>
+    </div>
+</div>
+
+<!-- SLIDE 16: 74-TERM MASTER GLOSSARY NOMENCLATURE -->
+<div class="slide" data-slide="16">
+    <div class="slide-header">
+        <div class="header-left-box">
+            <h1 class="header-main-title">74-Term Master Glossary Nomenclature & Schema Attribute Binding</h1>
+            <h2 class="header-sub-title">Zero tolerance for ad-hoc column naming: enforce strict semantic compliance with Glossary-v5.csv to ensure cross-service interoperability and international reporting validity.</h2>
+        </div>
+        <div class="header-logos">
+            <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+            <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+        </div>
+    </div>
+    <div class="slide-body">
+        <div class="table-wrap">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Term ID</th>
+                        <th>Glossary English Term</th>
+                        <th>Canonical DB Column</th>
+                        <th>SQL Type</th>
+                        <th>Bilingual Display (TH / EN)</th>
+                        <th>API JSON Key</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>TERM_001</code></td><td>Hazardous Event</td><td><code>hazard_event_type</code></td><td><code>VARCHAR(64)</code></td><td>เหตุการณ์ภัยคุกคาม / Hazardous Event</td><td><code>hazardous_event</code></td></tr>
+                    <tr><td><code>TERM_002</code></td><td>Climate Driver</td><td><code>climate_driver_name</code></td><td><code>VARCHAR(64)</code></td><td>ปัจจัยขับเคลื่อนภูมิอากาศ / Climate Driver</td><td><code>climate_driver</code></td></tr>
+                    <tr><td><code>TERM_010</code></td><td>Exposed Asset</td><td><code>exposed_asset_category</code></td><td><code>VARCHAR(64)</code></td><td>ทรัพย์สินที่เปิดรับภัย / Exposed Asset</td><td><code>exposed_asset</code></td></tr>
+                    <tr><td><code>TERM_013</code></td><td>Spatial Unit</td><td><code>spatial_unit_code</code></td><td><code>VARCHAR(16)</code></td><td>หน่วยเชิงพื้นที่ / Spatial Unit</td><td><code>spatial_unit_code</code></td></tr>
+                    <tr><td><code>TERM_031</code></td><td>Risk Metric</td><td><code>expected_annual_loss</code></td><td><code>NUMERIC(14,2)</code></td><td>ค่าความสูญเสียคาดการณ์รายปี / Expected Annual Loss</td><td><code>expected_annual_loss</code></td></tr>
+                    <tr><td><code>TERM_039</code></td><td>Impact Function</td><td><code>damage_ratio_curve</code></td><td><code>JSONB</code></td><td>ฟังก์ชันผลกระทบ / Impact Function</td><td><code>impact_function</code></td></tr>
+                    <tr><td><code>TERM_050</code></td><td>Adaptation Option</td><td><code>adaptation_option_code</code></td><td><code>VARCHAR(32)</code></td><td>ทางเลือกการปรับตัว / Adaptation Option</td><td><code>adaptation_option</code></td></tr>
+                    <tr><td><code>TERM_065</code></td><td>Physical Damage</td><td><code>physical_damage_thb</code></td><td><code>NUMERIC(14,2)</code></td><td>ความเสียหายทางกายภาพ / Physical Damage</td><td><code>physical_damage_thb</code></td></tr>
+                    <tr><td><code>TERM_066</code></td><td>Economic Loss</td><td><code>economic_loss_thb</code></td><td><code>NUMERIC(14,2)</code></td><td>ความสูญเสียทางเศรษฐกิจ / Economic Loss</td><td><code>economic_loss_thb</code></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="slide-footer">
+        <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR TOR70 DEVELOPER HANDOVER ONLY</span></div>
+        <div class="slide-number-badge">16 / 22</div>
+    </div>
+</div>
+
+<!-- SLIDE 17: TIME-SERIES DATA PARTITIONING -->
+<div class="slide" data-slide="17">
+    <div class="slide-header">
+        <div class="header-left-box">
+            <h1 class="header-main-title">Time-Series Data Partitioning & Meteorological Ingestion</h1>
+            <h2 class="header-sub-title">High-volume meteorological observations and climate projections require declarative PostgreSQL range partitioning by time horizon and scenario.</h2>
+        </div>
+        <div class="header-logos">
+            <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+            <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+        </div>
+    </div>
+    <div class="slide-body">
+        <div class="grid-2">
+            <div class="doc-card blue-border">
+                <div class="card-title"><span class="card-num">1</span> Declarative Partitioning Scheme</div>
+                <div class="code-box" style="font-size: 19px; line-height: 1.35;">
+                    <span class="c-cm">-- Master Table Partitioned by Observation Date</span><br>
+                    <span class="c-kw">CREATE TABLE</span> domain_ev.meteorological_obs (<br>
+                    &nbsp;&nbsp;obs_id UUID <span class="c-kw">DEFAULT</span> <span class="c-fn">gen_random_uuid</span>(),<br>
+                    &nbsp;&nbsp;station_id VARCHAR(<span class="c-val">32</span>) <span class="c-kw">NOT NULL</span>,<br>
+                    &nbsp;&nbsp;observation_date DATE <span class="c-kw">NOT NULL</span>,<br>
+                    &nbsp;&nbsp;temp_max_celsius NUMERIC(<span class="c-val">4,2</span>),<br>
+                    &nbsp;&nbsp;rainfall_mm NUMERIC(<span class="c-val">6,2</span>),<br>
+                    &nbsp;&nbsp;<span class="c-kw">CONSTRAINT</span> pk_met_obs <span class="c-kw">PRIMARY KEY</span> (observation_date, obs_id)<br>
+                    ) <span class="c-kw">PARTITION BY RANGE</span> (observation_date);<br>
+                    <br>
+                    <span class="c-cm">-- Yearly Partitions</span><br>
+                    <span class="c-kw">CREATE TABLE</span> domain_ev.obs_y2024 <span class="c-kw">PARTITION OF</span> domain_ev.meteorological_obs<br>
+                    &nbsp;&nbsp;<span class="c-kw">FOR VALUES FROM</span> (<span class="c-str">'2024-01-01'</span>) <span class="c-kw">TO</span> (<span class="c-str">'2025-01-01'</span>);
+                </div>
+            </div>
+            <div class="doc-card navy-border">
+                <div class="card-title"><span class="card-num">2</span> High-Velocity Ingestion Worker</div>
+                <ul class="doc-list">
+                    <li><strong>PostgreSQL COPY Protocol:</strong> Ingestion from TMD weather station feeds must utilize binary/stream <code>COPY</code> via Python <code>psycopg3</code>, bypassing single <code>INSERT</code> overhead.</li>
+                    <li><strong>Throughput Benchmark:</strong> Target ingestion rate &ge; <strong>50,000 records/sec</strong> during historical data backfills.</li>
+                    <li><strong>Partition Pruning:</strong> Analytical queries scan only targeted yearly partitions, preventing multi-gigabyte table scans.</li>
+                    <li><strong>Automated Maintenance:</strong> Deploy <code>pg_partman</code> extension to create future yearly partitions automatically.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="slide-footer">
+        <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR TOR70 DEVELOPER HANDOVER ONLY</span></div>
+        <div class="slide-number-badge">17 / 22</div>
+    </div>
+</div>
+
+<!-- SLIDE 18: PRIORITY BUILD 1 A-BTR REPORTING -->
+<div class="slide" data-slide="18">
+    <div class="slide-header">
+        <div class="header-left-box">
+            <h1 class="header-main-title">Priority Build 1: A-BTR International Reporting ETL Pipeline & Audit Trail</h1>
+            <h2 class="header-sub-title">The Adaptation Biennial Transparency Report (A-BTR) engine must automate data aggregation across 6 chapters and 379 dissected requirements with an immutable audit trail.</h2>
+        </div>
+        <div class="header-logos">
+            <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+            <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+        </div>
+    </div>
+    <div class="slide-body">
+        <div class="grid-2">
+            <div class="doc-card blue-border">
+                <div class="card-title"><span class="card-num">1</span> 6 Mandatory Reporting Chapters</div>
+                <ul class="doc-list">
+                    <li><strong>Section A (58 reqs):</strong> National Circumstances, Legal Frameworks.</li>
+                    <li><strong>Section B (112 reqs):</strong> Climate Hazards & Sector Risk Profiles.</li>
+                    <li><strong>Section C (74 reqs):</strong> National Adaptation Priorities & Barriers.</li>
+                    <li><strong>Section D (65 reqs):</strong> Progress Metrics & International Support.</li>
+                    <li><strong>Section E (42 reqs):</strong> Loss & Damage Historical Impact Records.</li>
+                    <li><strong>Section F (28 reqs):</strong> Good Practices & Flagship Case Studies.</li>
+                </ul>
+            </div>
+            <div class="doc-card navy-border">
+                <div class="card-title"><span class="card-num">2</span> Cryptographic Provenance Engine</div>
+                <div class="code-box" style="font-size: 19px; line-height: 1.35;">
+                    <span class="c-kw">def</span> <span class="c-fn">generate_btr_section_export</span>(section_code: str) -&gt; dict:<br>
+                    &nbsp;&nbsp;records = db.query(<span class="c-str">"""SELECT rs.req_code, eu.evidence_text, qv.numeric_value, eu.source_agency<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;FROM requirement_statement rs<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;JOIN requirement_evidence_link rel ON rs.req_id = rel.req_id<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;JOIN evidence_unit eu ON rel.evidence_id = eu.evidence_id<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;LEFT JOIN quantitative_value qv ON eu.evidence_id = qv.evidence_id<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;WHERE rs.section_code = :section_code"""</span>, {<span class="c-str">"section_code"</span>: section_code})<br>
+                    <br>
+                    &nbsp;&nbsp;<span class="c-cm"># Cryptographic Hash of all raw evidentiary records</span><br>
+                    &nbsp;&nbsp;payload_str = json.dumps(records, sort_keys=<span class="c-kw">True</span>)<br>
+                    &nbsp;&nbsp;prov_hash = hashlib.sha256(payload_str.encode(<span class="c-str">'utf-8'</span>)).hexdigest()<br>
+                    &nbsp;&nbsp;<span class="c-kw">return</span> { <span class="c-str">"btr_section"</span>: section_code, <span class="c-str">"provenance_hash"</span>: f<span class="c-str">"sha256:{prov_hash}"</span>, <span class="c-str">"data"</span>: records }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slide-footer">
+        <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR TOR70 DEVELOPER HANDOVER ONLY</span></div>
+        <div class="slide-number-badge">18 / 22</div>
+    </div>
+</div>
+
+<!-- SLIDE 19: PRIORITY BUILD 2 LDM ENGINE -->
+<div class="slide" data-slide="19">
+    <div class="slide-header">
+        <div class="header-left-box">
+            <h1 class="header-main-title">Priority Build 2: National Disaster Loss & Damage Calculation Engine</h1>
+            <h2 class="header-sub-title">Implement the 6 core LDM tables, enforce G1–G5 automated data validation gates, and execute NESDC 5-sector valuation math (Impact = Damage + Loss).</h2>
+        </div>
+        <div class="header-logos">
+            <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+            <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+        </div>
+    </div>
+    <div class="slide-body">
+        <div class="grid-2">
+            <div class="doc-card blue-border">
+                <div class="card-title"><span class="card-num">1</span> 3-Layer MVD Architecture</div>
+                <div class="layer-stack" style="gap: 8px;">
+                    <div class="layer layer-1">
+                        <h4>LAYER A: DDPM Incident Intake Anchor</h4>
+                        <p><code>disaster_event</code> &bull; <code>event_location</code> (Administrative link to 7,255 sub-districts)</p>
+                    </div>
+                    <div class="layer layer-2">
+                        <h4>LAYER B: Post-Disaster DaLA / PDNA Assessments</h4>
+                        <p><code>assessment_context</code> &bull; <code>ld_physical_damage</code> (THB) &bull; <code>ld_economic_loss</code> (THB)</p>
+                    </div>
+                    <div class="layer layer-3">
+                        <h4>LAYER C: Governed CRDB Attribution Engine</h4>
+                        <p><code>environmental_loss_record</code> &bull; <code>relief_payment_record</code> &bull; <code>attribution_link</code></p>
+                    </div>
+                </div>
+            </div>
+            <div class="doc-card navy-border">
+                <div class="card-title"><span class="card-num">2</span> G1–G5 Automated Quality Gates</div>
+                <div class="table-wrap">
+                    <table class="data-table">
+                        <thead>
+                            <tr><th>Gate</th><th>Verification Target</th><th>Automated Rule</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>G1</strong></td><td>Schema & Format</td><td>Mandatory fields present; <code>start_date &le; end_date</code>.</td></tr>
+                            <tr><td><strong>G2</strong></td><td>Admin Match</td><td><code>spatial_unit_code</code> in canonical DOPA register.</td></tr>
+                            <tr><td><strong>G3</strong></td><td>Physical Plausibility</td><td>Damage &gt; 0; asset count &le; registered total.</td></tr>
+                            <tr><td><strong>G4</strong></td><td>Steward Digital Review</td><td>Designated DCCE Domain Steward signs off dataset.</td></tr>
+                            <tr><td><strong>G5</strong></td><td>Public Integrity</td><td>SHA-256 verified; PDPA personal data scrubbed.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slide-footer">
+        <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR TOR70 DEVELOPER HANDOVER ONLY</span></div>
+        <div class="slide-number-badge">19 / 22</div>
+    </div>
+</div>
+
+<!-- SLIDE 20: 4-TIER RBAC & APPROVAL GATES -->
+<div class="slide" data-slide="20">
+    <div class="slide-header">
+        <div class="header-left-box">
+            <h1 class="header-main-title">Implementing the 4-Tier RBAC & Human Ingestion Approval Gates</h1>
+            <h2 class="header-sub-title">Data promotion from raw staging to certified public production is strictly governed by automated validation checks and mandatory 4-tier human sign-off.</h2>
+        </div>
+        <div class="header-logos">
+            <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+            <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+        </div>
+    </div>
+    <div class="slide-body">
+        <div class="grid-2">
+            <div class="doc-card blue-border">
+                <div class="card-title"><span class="card-num">1</span> 4-Tier RBAC Permission Matrix</div>
+                <ul class="doc-list">
+                    <li><strong>Tier 1: Data Governance Committee (Executive):</strong> Full system audit, policy threshold override, cross-agency MOU approval.</li>
+                    <li><strong>Tier 2: Data Owners (DCCE Division Directors):</strong> Final production publication approval, sensitive dataset declassification.</li>
+                    <li><strong>Tier 3: Data Stewards (Ministry Technical Leads):</strong> Dataset staging upload, running ETL pipelines, executing G1–G3 validation, metadata tagging.</li>
+                    <li><strong>Tier 4: Data Consumers (Public & Authenticated APIs):</strong> Read-only access to certified public APIs; token-based access to research layers.</li>
+                </ul>
+            </div>
+            <div class="doc-card navy-border">
+                <div class="card-title"><span class="card-num">2</span> Dataset State Machine & Audit Schema</div>
+                <div class="code-box" style="font-size: 19px; line-height: 1.35;">
+                    <span class="c-cm">-- Immutable Audit Trail for Dataset Promotion</span><br>
+                    <span class="c-kw">CREATE TABLE</span> domain_admin.audit_approval_log (<br>
+                    &nbsp;&nbsp;audit_id UUID <span class="c-kw">PRIMARY KEY DEFAULT</span> <span class="c-fn">gen_random_uuid</span>(),<br>
+                    &nbsp;&nbsp;dataset_id VARCHAR(<span class="c-val">64</span>) <span class="c-kw">NOT NULL</span>,<br>
+                    &nbsp;&nbsp;action_type VARCHAR(<span class="c-val">32</span>) <span class="c-kw">NOT NULL CHECK</span> (action_type <span class="c-kw">IN</span> (<span class="c-str">'UPLOAD'</span>, <span class="c-str">'VALIDATE'</span>, <span class="c-str">'CURATE'</span>, <span class="c-str">'APPROVE'</span>, <span class="c-str">'PUBLISH'</span>)),<br>
+                    &nbsp;&nbsp;performed_by_user_id UUID <span class="c-kw">NOT NULL</span>,<br>
+                    &nbsp;&nbsp;user_role VARCHAR(<span class="c-val">32</span>) <span class="c-kw">NOT NULL</span>,<br>
+                    &nbsp;&nbsp;timestamp TIMESTAMP WITH TIME ZONE <span class="c-kw">DEFAULT CURRENT_TIMESTAMP</span>,<br>
+                    &nbsp;&nbsp;digital_signature_hash VARCHAR(<span class="c-val">128</span>) <span class="c-kw">NOT NULL</span><br>
+                    );
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slide-footer">
+        <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR TOR70 DEVELOPER HANDOVER ONLY</span></div>
+        <div class="slide-number-badge">20 / 22</div>
+    </div>
+</div>
+
+<!-- SLIDE 21: INHERITED BACKLOG & DATA CONTRACTS -->
+<div class="slide" data-slide="21">
+    <div class="slide-header">
+        <div class="header-left-box">
+            <h1 class="header-main-title">Inherited Backlog: Data Contracts, Reference Data & 7 Secondary Services</h1>
+            <h2 class="header-sub-title">Execution boundaries: CRDB provides the architectural blueprint; the TOR70 contractor must implement external API adapters, seed reference tables, and flesh out secondary use cases.</h2>
+        </div>
+        <div class="header-logos">
+            <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+            <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+        </div>
+    </div>
+    <div class="slide-body">
+        <div class="grid-3">
+            <div class="doc-card blue-border">
+                <div class="card-title"><span class="card-num">1</span> External Agency Contracts</div>
+                <ul class="doc-list">
+                    <li><strong>TMD Weather API:</strong> JSON-Schema contract for automated daily weather feeds.</li>
+                    <li><strong>GISTDA Geo-Informatics:</strong> WFS/WMS raster ingestion pipelines for annual land cover.</li>
+                    <li><strong>DDPM Disaster Record:</strong> Secure SFTP/REST exchange formats for disaster event logs.</li>
+                </ul>
+            </div>
+            <div class="doc-card navy-border">
+                <div class="card-title"><span class="card-num">2</span> Reference Data Seeding</div>
+                <ul class="doc-list">
+                    <li><strong>DOPA Admin Bounds:</strong> Ingest and lock canonical 6-digit administrative codes.</li>
+                    <li><strong>NAP Sector Codes:</strong> Seed the 6 NAP priority sectors and sub-sector taxonomies.</li>
+                    <li><strong>UNDRR Hazard Types:</strong> Standardized multi-hazard typology (Flood, Drought, Heat).</li>
+                </ul>
+            </div>
+            <div class="doc-card sky-border">
+                <div class="card-title"><span class="card-num">3</span> 7 Secondary Services</div>
+                <ul class="doc-list">
+                    <li><em>Service 3:</em> Climate Finance Directory (Phase 2).</li>
+                    <li><em>Service 5:</em> Infrastructure IDF Curves (Future).</li>
+                    <li><em>Service 6:</em> Multi-Hazard Early Warning (Phase 2).</li>
+                    <li><em>Service 7:</em> National MEL Tracking (Sprint 1).</li>
+                    <li><em>Service 8:</em> Climate Uncertainty Shield (Sprint 1).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="slide-footer">
+        <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR TOR70 DEVELOPER HANDOVER ONLY</span></div>
+        <div class="slide-number-badge">21 / 22</div>
+    </div>
+</div>
+
+<!-- SLIDE 22: DAY 1 SPRINT ACTION PLAN -->
+<div class="slide" data-slide="22">
+    <div class="slide-header">
+        <div class="header-left-box">
+            <h1 class="header-main-title">Day 1 Sprint Action Plan & Technical Acceptance Criteria</h1>
+            <h2 class="header-sub-title">Day 1 engineering directives: initialize repository, bootstrap PostgreSQL/PostGIS, seed Glossary-v5 dictionary, and deliver the 21 live ready endpoints within 14 working days.</h2>
+        </div>
+        <div class="header-logos">
+            <img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy">
+            <img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE">
+        </div>
+    </div>
+    <div class="slide-body">
+        <div class="grid-2">
+            <div class="doc-card blue-border">
+                <div class="card-title"><span class="card-num">1</span> Day 1–14 Engineering Execution Checklist</div>
+                <ul class="doc-list">
+                    <li><strong>Day 1–2 (Bootstrapping):</strong> Initialize monorepo, provision PostgreSQL 16 + PostGIS 3.4, run DDL migrations across 8 CDM schemas, seed <code>Glossary-v5.csv</code>.</li>
+                    <li><strong>Day 3–6 (Sitemap & Core UI):</strong> Build 15-node routing scaffolding in Next.js matching Sitemap v8, set up WCAG 2.1 AA design tokens and breadcrumbs.</li>
+                    <li><strong>Day 7–10 (Wiring 21 Endpoints):</strong> Populate historical climatology and 5km projection grids; wire live API endpoints for Risk Cards and NAP Policy.</li>
+                    <li><strong>Day 11–14 (Testing & Review):</strong> Run automated PostGIS spatial benchmarks; present functional milestone demonstration to DCCE Technical Committee.</li>
+                </ul>
+            </div>
+            <div class="doc-card navy-border">
+                <div class="card-title"><span class="card-num">2</span> Definition of Done (DoD) Matrix</div>
+                <div class="table-wrap">
+                    <table class="data-table">
+                        <thead>
+                            <tr><th>Dimension</th><th>Pass Threshold</th><th>Verification Method</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Database Schema</strong></td><td>100% of CDM v3 tables, PKs, FKs, GiST indexes deployed.</td><td>Automated SQL migration check</td></tr>
+                            <tr><td><strong>Semantic Match</strong></td><td>0% unmapped columns; matches Glossary-v5 exactly.</td><td>CI/CD <code>test_glossary_conformance.py</code></td></tr>
+                            <tr><td><strong>API Performance</strong></td><td>P95 &lt; 200 ms standard; &lt; 400 ms spatial queries.</td><td><code>k6</code> load test under 100 VUs</td></tr>
+                            <tr><td><strong>Spatial Query</strong></td><td>Sub-district polygon and vector tile &lt; 150 ms.</td><td>PostGIS <code>EXPLAIN ANALYZE</code></td></tr>
+                            <tr><td><strong>Accessibility</strong></td><td>Zero WCAG 2.1 AA errors; Lighthouse &ge; 95.</td><td>Automated Axe-core & Lighthouse CI</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slide-footer">
+        <div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL — FOR TOR70 DEVELOPER HANDOVER ONLY</span></div>
+        <div class="slide-number-badge">22 / 22</div>
+    </div>
+</div>
+
+</div> <!-- /deckStage -->
+</div> <!-- /deckViewport -->
+
+<!-- CONTROLS & NAVIGATION -->
+<div class="deck-controls">
+    <button class="ctrl-btn" id="prevBtn" title="Previous Slide (ArrowLeft)">&#9664;</button>
+    <span class="page-indicator" id="pageIndicator">01 / 22</span>
+    <button class="ctrl-btn" id="nextBtn" title="Next Slide (ArrowRight)">&#9654;</button>
+</div>
+
+<script>
+/* ===========================================
+   SLIDE PRESENTATION CONTROLLER
+   =========================================== */
+class SlidePresentation {
+    constructor() {
+        this.slides = document.querySelectorAll('.slide');
+        this.currentSlide = 0;
+        this.stage = document.getElementById('deckStage');
+        this.pageIndicator = document.getElementById('pageIndicator');
+        this.setupStageScale();
+        this.setupKeyboardNav();
+        this.setupTouchNav();
+        this.setupWheelNav();
+        this.setupButtons();
+        this.showSlide(0);
+    }
+
+    setupStageScale() {
+        const scale = () => {
+            const factor = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+            const x = (window.innerWidth - 1920 * factor) / 2;
+            const y = (window.innerHeight - 1080 * factor) / 2;
+            this.stage.style.transform = `translate(${x}px, ${y}px) scale(${factor})`;
+        };
+        scale();
+        window.addEventListener('resize', scale);
+    }
+
+    setupKeyboardNav() {
+        document.addEventListener('keydown', (e) => {
+            if (e.target.getAttribute('contenteditable') === 'true') return;
+            if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); this.next(); }
+            if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); this.prev(); }
+        });
+    }
+
+    setupTouchNav() {
+        let startX = 0;
+        this.stage.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+        this.stage.addEventListener('touchend', (e) => {
+            const diff = startX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 50) { diff > 0 ? this.next() : this.prev(); }
+        }, { passive: true });
+    }
+
+    setupWheelNav() {
+        let locked = false;
+        window.addEventListener('wheel', (e) => {
+            if (locked) return;
+            if (Math.abs(e.deltaY) < 30) return;
+            locked = true;
+            e.deltaY > 0 ? this.next() : this.prev();
+            setTimeout(() => { locked = false; }, 500);
+        }, { passive: true });
+    }
+
+    setupButtons() {
+        document.getElementById('nextBtn').addEventListener('click', () => this.next());
+        document.getElementById('prevBtn').addEventListener('click', () => this.prev());
+    }
+
+    next() { this.showSlide(this.currentSlide + 1); }
+    prev() { this.showSlide(this.currentSlide - 1); }
+
+    showSlide(index) {
+        this.currentSlide = Math.max(0, Math.min(index, this.slides.length - 1));
+        this.slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === this.currentSlide);
+            slide.classList.toggle('visible', i === this.currentSlide);
+        });
+        const pad = (n) => n < 10 ? '0' + n : n;
+        this.pageIndicator.textContent = `${pad(this.currentSlide + 1)} / ${pad(this.slides.length)}`;
+    }
+}
+
+/* ===========================================
+   INLINE EDIT MODE
+   =========================================== */
+class InlineEditor {
+    constructor() {
+        this.isActive = false;
+        this.toggle = document.getElementById('editToggle');
+        this.hotzone = document.getElementById('editHotzone');
+        this.storageKey = 'sw-contractor-slidedoc-edits-v1';
+        this.setupHoverReveal();
+        this.setupHandlers();
+        this.loadSavedEdits();
+    }
+
+    setupHoverReveal() {
+        let hideTimeout = null;
+        const show = () => { clearTimeout(hideTimeout); this.toggle.classList.add('show'); };
+        const hide = () => { hideTimeout = setTimeout(() => { if (!this.isActive) this.toggle.classList.remove('show'); }, 400); };
+        this.hotzone.addEventListener('mouseenter', show);
+        this.hotzone.addEventListener('mouseleave', hide);
+        this.toggle.addEventListener('mouseenter', show);
+        this.toggle.addEventListener('mouseleave', hide);
+    }
+
+    setupHandlers() {
+        this.toggle.addEventListener('click', () => this.toggleEditMode());
+        this.hotzone.addEventListener('click', () => this.toggleEditMode());
+        document.addEventListener('keydown', (e) => {
+            if ((e.key === 'e' || e.key === 'E') && !e.target.getAttribute('contenteditable')) {
+                this.toggleEditMode();
+            }
+            if (e.key === 's' && (e.ctrlKey || e.metaKey) && this.isActive) {
+                e.preventDefault();
+                this.saveEdits();
+            }
+        });
+    }
+
+    toggleEditMode() {
+        this.isActive = !this.isActive;
+        this.toggle.classList.toggle('active', this.isActive);
+        const editableSelectors = 'h1, h2, h3, h4, p, li, td, th, .header-main-title, .header-sub-title, .card-title, .card-text, .stat-lbl, .main-hero-title, .main-subtitle, .meta-val';
+        document.querySelectorAll('.slide ' + editableSelectors).forEach(el => {
+            el.setAttribute('contenteditable', this.isActive ? 'true' : 'false');
+        });
+        if (!this.isActive) this.saveEdits();
+    }
+
+    saveEdits() {
+        const data = {};
+        document.querySelectorAll('.slide').forEach((slide, i) => { data[i] = slide.innerHTML; });
+        try { localStorage.setItem(this.storageKey, JSON.stringify(data)); } catch (e) {}
+    }
+
+    loadSavedEdits() {
+        try {
+            const raw = localStorage.getItem(this.storageKey);
+            if (!raw) return;
+            const data = JSON.parse(raw);
+            document.querySelectorAll('.slide').forEach((slide, i) => {
+                if (data[i]) slide.innerHTML = data[i];
+            });
+        } catch (e) {}
+    }
+}
+
+new SlidePresentation();
+new InlineEditor();
+</script>
+</body>
+</html>

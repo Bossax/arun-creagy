@@ -53,6 +53,7 @@ tools/
 !ψ/incubate/DCCE/CRI/data_system/data_system/data/*.xlsx
 !ψ/incubate/DCCE/CRI/data_system/data_system/data/*.csv
 !*/GGA_indicator_TH.csv
+!ψ/incubate/GGGI/NAP_AP/*.xlsx
 
 !ψ/lab/visual_design/*.jpg
 !ψ/lab/visual_design/*.png
