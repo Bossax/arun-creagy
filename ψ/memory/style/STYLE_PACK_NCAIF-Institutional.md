@@ -1,5 +1,5 @@
 # Style-Pack: NCAIF-Institutional
-**Samples Learnt**: 15 (Technical Precision, Readability, and Analytical Density) | **Last Updated**: 2026-08-05
+**Samples Learnt**: 16 (Technical Precision, Readability, and Analytical Density) | **Last Updated**: 2026-08-17
 
 ## 1. Core Kernel (80/20)
 
@@ -335,6 +335,27 @@ These rules matter, but they should not compete with the Core Kernel during earl
 - Do **not** reintroduce "จุดยืน"/"จุดตัด" as decision-naming nouns.
 - Do **not** carry a project's internal English strategy codename into Thai prose in quotes.
 - Do **not** use "ปิด" as a stand-in for "we finished making X."
+
+### 2026-08-17 — Style-pack upgrade from CRDB Executive Briefing SlideDoc in-place edits
+
+**Source of delta**: [2026-08-17_12-51_NCAIF-Institutional_diff-evidence.md](file:///C:/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/memory/style/evidence/2026-08-17_12-51_NCAIF-Institutional_diff-evidence.md) — human refinement on [`02_DCCE_Executive_Briefing.html`](file:///C:/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/incubate/DCCE/CRDB/output/11_Communication_Deck/02_DCCE_Executive_Briefing.html).
+
+#### Preferred direction detected
+- **De-metaphorization (No dramatic mechanical/retail analogies in institutional decks)**: Replace AI metaphors like `หน้ากากแดชบอร์ดโดยไร้เครื่องยนต์ข้อมูล`, `หน้าร้านเว็บไซต์`, `เครื่องยนต์ข้อมูล`, `เกราะป้องกันเชิงระบบ`, `หลุมพรางระบบสารสนเทศร้าง` with precise modern data architecture and web terms (`ส่วนแสดงเนื้อหาและข้อมูลโดยไม่มีการจัดการข้อมูลหลังบ้าน`, `ระบบหน้าบ้าน (frontend)`, `ระบบหลังบ้าน (backend)`, `Data Platform`, `กลไกการป้องกันความผิดพลาด`, `Information Architecture`, `semantic layer`).
+- **De-hyping and metric deflation**: Eliminate ungrounded dramatic multipliers (`25 เท่า`, `ก้าวกระโดด`, `ขุมพลังทางวิทยาศาสตร์ใหม่`) in favor of clear qualitative precision (`แม่นยำขึ้น`).
+- **Project deliverable neutrality**: Use standard deliverable terms (`ผลผลิตของโครงการ`, `ผลลัพธ์ของโครงการ`) over self-praising consulting adjectives (`ผลสัมฤทธิ์ที่ส่งมอบครบถ้วน`).
+- **Natural taxonomy**: Use `ผังเว็บไซต์ 15 หมวด` rather than graph-theory `15 โหนด`, and standardize `ทรัพย์สินดิจิทัล / Digital Assets`.
+
+#### New style rule candidates
+34. **Zero Dramatic/Mechanical Metaphors**: Never use machine or storefront analogies (`เครื่องยนต์ข้อมูล`, `หน้าร้านเว็บไซต์`, `หน้ากากแดชบอร์ด`, `เกราะป้องกันเชิงระบบ`). Use standard architecture terms: `ระบบหน้าบ้าน (frontend)`, `ระบบหลังบ้าน (backend)`, `Data Platform`, `Information Architecture`, `semantic layer`.
+35. **No Artificial Metric Multipliers / Dramatic Claims**: Do not invent or emphasize quantitative multiplier leaps (`25 เท่า`, `ก้าวกระโดด`, `ขุมพลังใหม่`). State qualitative or empirical improvements directly (`แม่นยำขึ้น`).
+36. **Institutional Deliverable Terminology Neutrality**: Use standard project terms (`ผลผลิตของโครงการ`, `ผลลัพธ์ของโครงการ`) instead of self-congratulatory consulting jargon (`ผลสัมฤทธิ์ที่ส่งมอบครบถ้วน`).
+37. **Information Architecture Taxonomy**: Use `หมวด` (sections/categories) for website navigation rather than graph-theory abstractions like `โหนด`.
+
+#### Anti-regression note
+- Do **not** use `เครื่องยนต์ข้อมูล` or `หน้าร้านเว็บไซต์` in presentation decks or reports.
+- Do **not** add artificial multiplier hype (`25 เท่า`) without cited benchmark verification.
+- Do **not** use `ผลสัมฤทธิ์ที่ส่งมอบครบถ้วน` — use `ผลผลิตของโครงการ`.
 
 ## 5. Strict Parenthetical Anchor (Anti-regression Update)
 - **Rule**: Do **not** use English translations in parentheses unless absolutely necessary for technical precision.

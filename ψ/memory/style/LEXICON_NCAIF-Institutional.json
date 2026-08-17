@@ -176,6 +176,51 @@
       "banned": "ปิด[ผลงาน/deliverable] เพื่อสื่อว่า 'ทำเสร็จแล้ว' (เช่น ปิดผังเว็บไซต์, ปิดพจนานุกรม, ปิดชุดข้อมูล)",
       "preferred": "สรุป[ผลงาน] หรือกริยาที่ตรงกับการกระทำจริง (เช่น จัดทำ...ครบ, แปลง...เป็น)",
       "reason": "ปิด reads as a literal translation of 'close out'. Reserve ปิด/ผนึก for an actual ledger Sealed status only, not general completion."
+    },
+    {
+      "banned": "หน้ากากแดชบอร์ดโดยไร้เครื่องยนต์ข้อมูล",
+      "preferred": "ส่วนแสดงเนื้อหาและข้อมูลโดยไม่มีการจัดการข้อมูลหลังบ้าน",
+      "reason": "Eliminates dramatic marketing metaphors; uses precise architecture terms."
+    },
+    {
+      "banned": "หน้าร้านเว็บไซต์",
+      "preferred": "หน้าเว็บไซต์ (Website) / frontend",
+      "reason": "Removes commercial/retail metaphor; uses standard web/institutional terminology."
+    },
+    {
+      "banned": "เครื่องยนต์ข้อมูล",
+      "preferred": "Data Platform / ระบบหลังบ้าน (backend)",
+      "reason": "Removes mechanical metaphor; uses standard data platform architecture terms."
+    },
+    {
+      "banned": "ผลสัมฤทธิ์ที่ส่งมอบครบถ้วน",
+      "preferred": "ผลผลิตของโครงการ / ผลลัพธ์ของโครงการ",
+      "reason": "Replaces self-praising consulting adjectives with standard institutional deliverable terminology."
+    },
+    {
+      "banned": "ผังเว็บไซต์ 15 โหนด",
+      "preferred": "ผังเว็บไซต์ 15 หมวด",
+      "reason": "Replaces graph-theory 'โหนด' with natural information architecture 'หมวด'."
+    },
+    {
+      "banned": "เกราะป้องกันเชิงระบบ",
+      "preferred": "กลไกการป้องกันความผิดพลาด",
+      "reason": "Replaces warrior/shield buzzwords with functional governance concept."
+    },
+    {
+      "banned": "ขุมพลังทางวิทยาศาสตร์",
+      "preferred": "ข้อมูลแบบจำลองสภาพภูมิอากาศ / ความก้าวหน้าทางวิชาการ",
+      "reason": "Cuts dramatic AI hype phrases."
+    },
+    {
+      "banned": "คอขวดที่กรมฯ ต้องแก้ไขเชิงนโยบาย",
+      "preferred": "อุปสรรคที่กีดขวางการใช้ประโยชน์ข้อมูลในวงกว้าง",
+      "reason": "Precise real-world impact statement over generic consulting jargon."
+    },
+    {
+      "banned": "สินทรัพย์ดิจิทัล",
+      "preferred": "ทรัพย์สินดิจิทัล / Digital Assets",
+      "reason": "Standardized Thai technical terminology for digital assets."
     }
   ],
   "technical_terms": [
