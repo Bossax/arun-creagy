@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>เอกสารสรุปสำหรับผู้บริหาร — พิมพ์เขียว NCAIF — Creagy Corporate SlideDoc</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+/* ===========================================
+   CREAGY CORPORATE TEMPLATE PRESET 9 (WP9 Canonical Template — verbatim reuse)
+   =========================================== */
+:root {
+    --creagy-blue: #00618B;
+    --creagy-dark-navy: #031B2A;
+    --creagy-navy-mid: #0A324A;
+    --creagy-sky: #317ABD;
+    --creagy-accent-blue: #00A3E0;
+    --creagy-light-blue: #F0F7FB;
+
+    --text-dark: #000000;
+    --text-heading: #031B2A;
+    --text-subheading: #000000;
+    --text-medium: #1E293B;
+    --text-muted: #64748B;
+
+    --bg-page: #E2E8F0;
+    --slide-bg: #FFFFFF;
+    --card-bg: #FFFFFF;
+    --border-color: #E2E8F0;
+
+    --font-thai: 'TH Sarabun PSK', 'TH Sarabun New', 'Sarabun', sans-serif;
+    --font-heading: 'TH Sarabun PSK', 'TH Sarabun New', 'Sarabun', sans-serif;
+    --font-body: 'TH Sarabun PSK', 'TH Sarabun New', 'Sarabun', sans-serif;
+
+    --font-size-hero: 62px;
+    --font-size-heading: 42px;
+    --font-size-subheading: 38px;
+    --font-size-body: 27px;
+    --font-size-caption: 22px;
+
+    --gap-red: #C0392B;
+    --gap-red-bg: #FDF2F1;
+    --solve-green: #0B7A4B;
+    --solve-green-bg: #EBF7F1;
+
+    --shadow-sm: 0 4px 14px rgba(0, 97, 139, 0.05);
+    --shadow-md: 0 8px 24px rgba(0, 97, 139, 0.08);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+    width: 100%; height: 100%; margin: 0; overflow: hidden;
+    background: var(--bg-page); font-family: var(--font-body);
+    font-size: var(--font-size-body); color: var(--text-dark); font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+}
+
+.deck-viewport { position: fixed; inset: 0; overflow: hidden; background: var(--bg-page); }
+
+.deck-stage {
+    position: absolute; left: 0; top: 0; width: 1920px; height: 1080px;
+    overflow: hidden; transform-origin: 0 0; background: var(--slide-bg);
+}
+
+.slide {
+    position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: hidden;
+    display: flex; flex-direction: column; justify-content: space-between;
+    visibility: hidden; opacity: 0; pointer-events: none;
+    background: var(--slide-bg); padding: 48px 72px 36px 72px;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.slide.active, .slide.visible { visibility: visible; opacity: 1; pointer-events: auto; z-index: 1; }
+
+@media print {
+    @page { size: A4 landscape; margin: 0; }
+    html, body { width: 1920px; height: auto; overflow: visible; background: #fff; }
+    .deck-viewport { position: static; overflow: visible; background: #fff; }
+    .deck-stage { position: static; width: auto; height: auto; transform: none !important; background: none; }
+    .slide { position: relative; display: flex !important; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important; width: 1920px; height: 1080px; break-after: page; page-break-after: always; zoom: 0.585; }
+    .slide:last-child { break-after: auto; page-break-after: auto; }
+    .deck-controls, .edit-hotzone, .edit-toggle { display: none !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.2s !important; }
+}
+
+.slide-header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    padding-bottom: 16px; border-bottom: 2px solid var(--border-color);
+    margin-bottom: 24px; flex-shrink: 0;
+}
+
+.header-main-title {
+    font-family: var(--font-heading); font-size: var(--font-size-heading);
+    font-weight: 800; color: var(--text-heading); line-height: 1.25;
+}
+
+.header-sub-title {
+    font-family: var(--font-heading); font-size: 34px;
+    font-weight: 800; color: var(--text-subheading); line-height: 1.3;
+    letter-spacing: -0.01em; margin-top: 6px;
+}
+
+.header-logos {
+    display: flex; align-items: center; gap: 14px; background: #FFFFFF;
+    padding: 8px 18px; border-radius: 12px; border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm); flex-shrink: 0;
+}
+
+.header-logo-img { height: 42px; object-fit: contain; }
+
+.slide-footer {
+    margin-top: auto; height: 40px; display: flex; justify-content: space-between; align-items: center;
+    border-top: 1px solid var(--border-color); padding-top: 10px;
+    font-family: var(--font-body); font-size: var(--font-size-caption);
+    color: var(--text-muted); flex-shrink: 0; font-weight: 600;
+}
+
+.footer-left { display: flex; align-items: center; gap: 12px; font-weight: 600; }
+.footer-separator { color: #CBD5E1; }
+.slide-number-badge { font-family: var(--font-heading); font-weight: 800; font-size: 26px; color: var(--creagy-blue); }
+
+.slide-body { display: flex; flex-direction: column; justify-content: center; gap: 22px; flex: 1; overflow: hidden; }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; align-items: stretch; }
+.grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px; align-items: stretch; }
+.grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; align-items: stretch; }
+
+.doc-card {
+    background: var(--card-bg); border: 1px solid var(--border-color);
+    border-radius: 12px; padding: 22px 26px; box-shadow: var(--shadow-sm);
+    display: flex; flex-direction: column; justify-content: flex-start; gap: 12px;
+    height: 100%;
+}
+
+.doc-card.blue-border { border-top: 5px solid var(--creagy-blue); }
+.doc-card.sky-border { border-top: 5px solid var(--creagy-sky); }
+.doc-card.red-border { border-top: 5px solid var(--gap-red); }
+.doc-card.green-border { border-top: 5px solid var(--solve-green); background: var(--solve-green-bg); }
+.doc-card.amber-border { border-top: 5px solid #C08A0B; background: #FDF8EC; }
+
+.card-title {
+    font-family: var(--font-heading); font-size: 34px;
+    font-weight: 800; color: var(--text-subheading);
+    display: flex; align-items: center; gap: 10px; line-height: 1.25;
+}
+
+.card-num {
+    width: 36px; height: 36px; border-radius: 50%; background: var(--creagy-blue);
+    color: #FFFFFF; display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-heading); font-weight: 800; font-size: 24px; flex-shrink: 0;
+}
+.red-border .card-num { background: var(--gap-red); }
+.green-border .card-num { background: var(--solve-green); }
+.amber-border .card-num { background: #C08A0B; }
+
+.card-text { font-family: var(--font-body); font-size: 24px; font-weight: 600; line-height: 1.48; color: var(--text-medium); }
+
+.doc-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.doc-list li {
+    font-family: var(--font-body); font-size: 24px; font-weight: 600; line-height: 1.48;
+    color: var(--text-dark); position: relative; padding-left: 22px;
+}
+.doc-list li::before {
+    content: "•"; color: var(--creagy-blue); font-weight: bold; font-size: 28px;
+    position: absolute; left: 0; top: -3px;
+}
+.red-border .doc-list li::before { color: var(--gap-red); }
+.green-border .doc-list li::before { color: var(--solve-green); }
+
+.table-wrap { width: 100%; border-radius: 10px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); }
+table.data-table { width: 100%; border-collapse: collapse; font-size: 24px; }
+table.data-table th { background: var(--creagy-dark-navy); color: #FFFFFF; font-weight: 800; text-align: left; padding: 10px 14px; font-size: 26px; }
+table.data-table td { padding: 9px 14px; border-bottom: 1px solid var(--border-color); vertical-align: top; line-height: 1.4; background: #FFF; font-size: 24px; font-weight: 600; }
+table.data-table tr:nth-child(even) td { background: var(--creagy-light-blue); }
+table.data-table td:first-child, table.data-table th:first-child { font-weight: 800; color: var(--creagy-dark-navy); }
+
+.timeline-step {
+    background: #FFFFFF; border-radius: 12px; border: 1px solid var(--border-color);
+    border-top: 5px solid var(--creagy-blue); padding: 18px 20px; display: flex; flex-direction: column; gap: 6px; height: 100%;
+}
+.step-num { font-family: var(--font-heading); font-size: 26px; font-weight: 800; color: var(--creagy-sky); }
+.step-title { font-family: var(--font-heading); font-size: 30px; font-weight: 800; color: var(--text-subheading); }
+
+.stat-banner {
+    background: linear-gradient(135deg, var(--creagy-dark-navy) 0%, var(--creagy-blue) 100%);
+    color: #FFFFFF; border-radius: 12px; padding: 20px 36px; display: flex; align-items: center; gap: 32px; box-shadow: var(--shadow-md);
+}
+.stat-val { font-family: var(--font-heading); font-size: 48px; font-weight: 800; color: #FFFFFF; line-height: 1; min-width: 130px; }
+.stat-lbl { font-family: var(--font-body); font-size: 24px; font-weight: 600; color: #D4ECF9; line-height: 1.4; }
+
+.layer-stack { display: flex; flex-direction: column; gap: 12px; }
+.layer-stack .layer { border-radius: 10px; padding: 16px 22px; color: #FFF; box-shadow: var(--shadow-sm); }
+.layer-stack .layer h4 { font-family: var(--font-heading); font-size: 30px; font-weight: 800; margin-bottom: 2px; }
+.layer-stack .layer p { font-family: var(--font-body); font-size: 24px; font-weight: 600; line-height: 1.4; opacity: 0.95; }
+.layer-1 { background: var(--creagy-dark-navy); border-left: 6px solid var(--creagy-sky); }
+.layer-2 { background: var(--creagy-blue); border-left: 6px solid #00A3E0; }
+.layer-3 { background: var(--creagy-sky); border-left: 6px solid #94D3F3; }
+
+.title-slide {
+    background: linear-gradient(135deg, #031B2A 0%, #063552 50%, #00618B 100%);
+    color: #FFFFFF; padding: 85px 100px; justify-content: space-between;
+}
+.title-top-logos { display: flex; align-items: center; justify-content: space-between; }
+.title-logo-box { background: #FFFFFF; padding: 14px 30px; border-radius: 14px; display: flex; align-items: center; gap: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+.title-logo-box img { height: 50px; object-fit: contain; }
+.title-body { margin-top: 15px; max-width: 1720px; }
+.title-badge { display: inline-block; background: rgba(0, 163, 224, 0.25); border: 1px solid rgba(255, 255, 255, 0.3); color: #EEF7FC; font-family: var(--font-heading); font-size: 30px; font-weight: 700; padding: 6px 22px; border-radius: 24px; margin-bottom: 16px; }
+.main-hero-title { font-family: var(--font-heading); font-size: var(--font-size-hero); font-weight: 800; line-height: 1.2; color: #FFFFFF; margin-bottom: 16px; }
+.main-subtitle { font-family: var(--font-body); font-size: 32px; line-height: 1.45; color: #D4ECF9; font-weight: 600; max-width: 1720px; letter-spacing: -0.01em; }
+.title-metadata { display: flex; gap: 60px; border-top: 1px solid rgba(255, 255, 255, 0.2); padding-top: 22px; }
+.meta-item { display: flex; flex-direction: column; gap: 2px; }
+.meta-lbl { font-family: var(--font-body); font-size: 22px; font-weight: 600; color: #94D3F3; }
+.meta-val { font-family: var(--font-heading); font-size: 28px; font-weight: 800; color: #FFFFFF; }
+
+.toc-grid { display: grid; grid-template-columns: 1fr 1fr; grid-auto-flow: column; grid-template-rows: repeat(10, auto); gap: 0 44px; }
+.toc-item { display: flex; gap: 14px; align-items: baseline; padding: 9px 0; border-bottom: 1px solid var(--border-color); }
+.toc-num { font-family: var(--font-heading); font-size: 28px; font-weight: 800; color: var(--creagy-blue); min-width: 36px; }
+.toc-text { font-family: var(--font-body); font-size: 24px; color: var(--text-dark); line-height: 1.35; font-weight: 700; }
+
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.4s ease, transform 0.4s ease; }
+.slide.visible .reveal { opacity: 1; transform: translateY(0); }
+.slide.visible .reveal:nth-child(1) { transition-delay: 0.08s; }
+.slide.visible .reveal:nth-child(2) { transition-delay: 0.16s; }
+.slide.visible .reveal:nth-child(3) { transition-delay: 0.24s; }
+
+.deck-controls {
+    position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); z-index: 1000;
+    background: rgba(3, 27, 42, 0.92); backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 30px;
+    padding: 6px 20px; display: flex; align-items: center; gap: 16px; color: #FFFFFF;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+.control-btn { background: transparent; border: none; color: #FFFFFF; font-size: 18px; cursor: pointer; padding: 4px 10px; font-family: var(--font-body); font-weight: 600; }
+.control-btn:hover { color: var(--creagy-accent-blue); }
+.counter { font-family: var(--font-heading); font-size: 20px; font-weight: 700; min-width: 60px; text-align: center; }
+
+.edit-hotzone { position: fixed; top: 0; left: 0; width: 80px; height: 80px; z-index: 10000; cursor: pointer; }
+.edit-toggle { position: fixed; top: 16px; left: 16px; z-index: 10001; background: var(--creagy-blue); color: #FFFFFF; border: none; padding: 8px 18px; border-radius: 20px; font-family: var(--font-body); font-size: 17px; font-weight: 600; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; box-shadow: 0 4px 14px rgba(0,0,0,0.25); }
+.edit-toggle.show, .edit-toggle.active { opacity: 1; pointer-events: auto; }
+</style>
+</head>
+<body>
+
+<div class="edit-hotzone" id="editHotzone"></div>
+<button class="edit-toggle" id="editToggle">✏️ โหมดแก้ไขข้อความ (กด E)</button>
+
+<div class="deck-viewport">
+<main class="deck-stage" id="deckStage">
+
+<!-- ============ SLIDE 0: TITLE ============ -->
+<section class="slide title-slide active">
+  <div class="title-top-logos reveal">
+    <div class="title-logo-box">
+      <img src="assets/creagy_logo.png" alt="Creagy">
+      <img src="assets/dcce_logo.jpg" alt="DCCE">
+    </div>
+  </div>
+  <div class="title-body reveal">
+    <div class="title-badge">เอกสารสรุปสำหรับผู้บริหาร</div>
+    <div class="main-hero-title">พิมพ์เขียวระบบสารสนเทศการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศระดับชาติ (NCAIF)</div>
+    <div class="main-subtitle">แพลตฟอร์มสารสนเทศการปรับตัวระดับชาติสนับสนุนการบริหารความเสี่ยงสภาพภูมิอากาศของประเทศไทย</div>
+  </div>
+  <div class="title-metadata reveal">
+    <div class="meta-item"><div class="meta-lbl">กลุ่มเป้าหมาย</div><div class="meta-val">อธิบดี, รองอธิบดี, ผู้อำนวยการกอง, ผู้อำนวยการกลุ่ม</div></div>
+    <div class="meta-item"><div class="meta-lbl">หน่วยงาน / วันที่มีผลบังคับใช้</div><div class="meta-val">กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม &nbsp;|&nbsp; 17 สิงหาคม 2569</div></div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 1: TABLE OF CONTENTS ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">สารบัญ</div>
+      <div class="header-sub-title">โครงสร้างการนำเสนอ 19 สไลด์ ใน 6 บท</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="toc-grid reveal">
+      <div class="toc-item"><div class="toc-num">01</div><div class="toc-text">หน้าปกและภาพรวมโครงการ</div></div>
+      <div class="toc-item"><div class="toc-num">02</div><div class="toc-text">โครงสร้างข้อมูลที่มีธรรมาภิบาล</div></div>
+      <div class="toc-item"><div class="toc-num">03</div><div class="toc-text">ผลผลิตของโครงการตามข้อกำหนด TOR</div></div>
+      <div class="toc-item"><div class="toc-num">04</div><div class="toc-text">โครงสร้างระบบสองส่วน</div></div>
+      <div class="toc-item"><div class="toc-num">05</div><div class="toc-text">การสำรวจสินทรัพย์ดิจิทัลของกรมฯ และภูมิทัศน์ข้อมูลระดับชาติ</div></div>
+      <div class="toc-item"><div class="toc-num">06</div><div class="toc-text">การกระจายตัวของข้อมูลระดับชาติ</div></div>
+      <div class="toc-item"><div class="toc-num">07</div><div class="toc-text">โครงสร้างเว็บไซต์ 5 หมวดหลัก</div></div>
+      <div class="toc-item"><div class="toc-num">08</div><div class="toc-text">หมวดที่ 1–2 หน้าแรกและศูนย์ข้อมูลนโยบาย</div></div>
+      <div class="toc-item"><div class="toc-num">09</div><div class="toc-text">หมวดที่ 3–5 วงจรความรู้ เครื่องมือ และการมีส่วนร่วม</div></div>
+      <div class="toc-item"><div class="toc-num">10</div><div class="toc-text">ผลการวิเคราะห์ช่องว่างเนื้อหา 73 รายการ</div></div>
+      <div class="toc-item"><div class="toc-num">11</div><div class="toc-text">พจนานุกรมศัพท์มาตรฐานด้านการปรับตัว 74 คำ</div></div>
+      <div class="toc-item"><div class="toc-num">12</div><div class="toc-text">แบบจำลองข้อมูลเชิงแนวคิด 8 โดเมนหลัก (CDM)</div></div>
+      <div class="toc-item"><div class="toc-num">13</div><div class="toc-text">พันธกรณีรายงาน A-BTR</div></div>
+      <div class="toc-item"><div class="toc-num">14</div><div class="toc-text">ระบบบันทึกความสูญเสียและความเสียหาย</div></div>
+      <div class="toc-item"><div class="toc-num">15</div><div class="toc-text">ระบบธรรมาภิบาลข้อมูล 4 ระดับ</div></div>
+      <div class="toc-item"><div class="toc-num">16</div><div class="toc-text">มาตรฐานข้อมูลกลางที่พร้อมบังคับใช้</div></div>
+      <div class="toc-item"><div class="toc-num">17</div><div class="toc-text">ภารกิจของกรมฯ ในช่วง 6 เดือนแรก</div></div>
+      <div class="toc-item"><div class="toc-num">18</div><div class="toc-text">การบรรจุพิมพ์เขียวสู่เอกสารประกวดราคา (TOR)</div></div>
+      <div class="toc-item"><div class="toc-num">19</div><div class="toc-text">แผนงานและก้าวต่อไป</div></div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">02 / 21</div></div>
+</section>
+
+<!-- ============ SLIDE 2 (source 1): OVERVIEW ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">01. หน้าปกและภาพรวมโครงการ</div>
+      <div class="header-sub-title">แพลตฟอร์มสารสนเทศการปรับตัวระดับชาติสนับสนุนการบริหารความเสี่ยงสภาพภูมิอากาศของประเทศไทย</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-2 reveal">
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">1</div>บริบทเชิงนโยบายและภารกิจ</div>
+        <div class="card-text">การเปลี่ยนแปลงสภาพภูมิอากาศก่อให้เกิดภัยพิบัติที่มีความถี่และความรุนแรงเพิ่มขึ้นอย่างต่อเนื่อง ประเทศไทยมีความจำเป็นเร่งด่วนในการยกระดับขีดความสามารถการปรับตัวตามแผนการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศแห่งชาติ (NAP) และพันธกรณีระหว่างประเทศตามกรอบความตกลงปารีส</div>
+        <div class="card-text">แพลตฟอร์มสารสนเทศการปรับตัวระดับชาติ (NCAIF) เป็นโครงสร้างพื้นฐานดิจิทัลกลางของประเทศที่รวบรวม บูรณาการ และสังเคราะห์ข้อมูลสภาพภูมิอากาศ การเปิดรับภัย ความเปราะบาง และความสูญเสีย เพื่อสนับสนุนการตัดสินใจเชิงนโยบายของภาครัฐ การจัดสรรงบประมาณเชิงพื้นที่ขององค์กรปกครองส่วนท้องถิ่น และการประเมินความเสี่ยงทางการเงินของภาคเอกชน</div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">2</div>ผลผลิตของโครงการในระยะนี้</div>
+        <ul class="doc-list">
+          <li>ตรวจสอบระบบนิเวศข้อมูลดิจิทัลของกรมฯ 391 รายการ</li>
+          <li>ผังโครงสร้างเว็บไซต์ 5 หมวดหลัก</li>
+          <li>แบบจำลองข้อมูลเชิงแนวคิด 8 โดเมน</li>
+          <li>พจนานุกรมศัพท์มาตรฐาน 74 คำ</li>
+          <li>กรอบธรรมาภิบาลข้อมูล 4 ระดับ</li>
+        </ul>
+        <div class="card-text">พร้อมส่งมอบเป็นพิมพ์เขียวสำหรับผู้รับจ้างพัฒนาซอฟต์แวร์ในระยะถัดไป</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">03 / 21</div></div>
+</section>
+
+<!-- ============ SLIDE 3 (source 2): GOVERNED DATA STRUCTURE ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">02. โครงสร้างข้อมูลที่มีธรรมาภิบาล</div>
+      <div class="header-sub-title">แยก Data Platform ออกจาก Website เพื่อให้ปรับปรุงหน้าเว็บได้โดยไม่กระทบฐานข้อมูล</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-2 reveal">
+      <div class="doc-card red-border">
+        <div class="card-title"><div class="card-num">1</div>ความเสี่ยงทั่วไปที่ขาดการวางโครงสร้างเบื้องหลัง</div>
+        <ul class="doc-list">
+          <li>โครงการดิจิทัลภาครัฐส่วนหนึ่งทุ่มงบประมาณไปกับการจ้างพัฒนาหน้าจอแสดงผลและส่วนติดต่อผู้ใช้งาน โดยขาดกระบวนงานในการจัดระเบียบและวางมาตรฐานโครงสร้างข้อมูลเบื้องหลัง</li>
+          <li>เมื่อเกิดการเปลี่ยนแปลงขอบเขตการปกครอง ข้อมูลตรวจวัดสภาพอากาศเปลี่ยน หรือผู้รับจ้างหมดสัญญา หน้าเว็บไซต์ที่ไม่มีโครงสร้างข้อมูลรองรับจะแสดงผลคลาดเคลื่อนและขาดการปรับปรุง</li>
+          <li>เมื่อไม่มีผู้รับผิดชอบชุดข้อมูลชัดเจน ไม่มีผู้ทวนสอบความถูกต้อง ทำให้งบประมาณที่ลงทุนไปไม่เกิดผลลัพธ์เชิงยุทธศาสตร์ตามที่ตั้งใจ</li>
+        </ul>
+      </div>
+      <div class="doc-card green-border">
+        <div class="card-title"><div class="card-num">2</div>กลไกที่โครงการนี้วางไว้เพื่อป้องกันปัญหาดังกล่าว</div>
+        <ul class="doc-list">
+          <li><b>โครงสร้างระบบแยกส่วน:</b> แยกส่วนแสดงผลของเว็บไซต์ (frontend) ออกจาก Data Platform ที่จัดการข้อมูลอย่างเป็นระบบ (backend) ทำให้การปรับปรุงหน้าเว็บในอนาคตไม่กระทบความถูกต้องและความสมบูรณ์ของฐานข้อมูล</li>
+          <li><b>ข้อกำหนดธรรมาภิบาลตั้งแต่ระดับพิมพ์เขียว:</b> ระบุบทบาทเจ้าของข้อมูลและผู้บริกรข้อมูลชัดเจนในทุกโดเมนข้อมูล</li>
+          <li><b>แบบจำลองข้อมูลเชิงแนวคิด (CDM) และพจนานุกรมศัพท์:</b> ควบคุมโครงสร้างข้อมูลให้เป็นมาตรฐานเดียวกันทั่วทั้งกรมฯ ไม่ว่าผู้รับจ้างพัฒนาระบบจะเปลี่ยนผ่านกี่รุ่น ข้อมูลจะยังคงเชื่อมโยงกันได้</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">04 / 21</div></div>
+</section>
+
+<!-- ============ SLIDE 4 (source 3): TOR OUTPUTS ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">03. ผลผลิตของโครงการตามข้อกำหนด TOR</div>
+      <div class="header-sub-title">งานออกแบบครบทุกหมวดตามข้อกำหนด TOR พร้อมส่งต่อสู่การสร้างระบบจริง</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-4 reveal">
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">1</div>ยุทธศาสตร์และความต้องการระบบ</div>
+        <div class="card-text">กำหนดเหตุผลความจำเป็นทางธุรกิจและคุณค่าเชิงยุทธศาสตร์ของแพลตฟอร์มสารสนเทศระดับชาติ ศึกษาความต้องการของผู้มีส่วนได้ส่วนเสีย และกำหนดบริการหลัก 8 บริการ</div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">2</div>การสำรวจและบัญชีข้อมูลดิจิทัล</div>
+        <div class="card-text">รวบรวมและจัดทำบัญชีสินทรัพย์ดิจิทัลของกรมฯ ครอบคลุม 391 รายการ เทียบกับภูมิทัศน์ข้อมูลระดับชาติที่มีมากกว่า 260 ชุดข้อมูลกระจายอยู่ในกว่า 40 หน่วยงาน</div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">3</div>พิมพ์เขียวเว็บไซต์และแบบจำลองข้อมูล</div>
+        <div class="card-text">ออกแบบโครงสร้างเว็บไซต์ 5 หมวดหลัก พัฒนาแบบจำลองข้อมูลเชิงแนวคิด (CDM) 8 โดเมน และจัดทำพจนานุกรมศัพท์มาตรฐาน 74 คำ</div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">4</div>การวิเคราะห์ช่องว่างและงานทางเทคนิค</div>
+        <div class="card-text">ประเมินความพร้อมของเนื้อหา 73 รายการ ออกแบบข้อกำหนดทางเทคนิคสำหรับผู้รับจ้างพัฒนาซอฟต์แวร์ และกรอบธรรมาภิบาลข้อมูล 4 ระดับ</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">05 / 21</div></div>
+</section>
+
+<!-- ============ SLIDE 5 (source 4): TWO-PART SYSTEM ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">04. โครงสร้างระบบสองส่วน</div>
+      <div class="header-sub-title">Website ให้บริการประชาชน ส่วน Data Platform บูรณาการข้อมูลระดับชาติ</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-2 reveal">
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">1</div>Website (frontend)</div>
+        <div class="card-text"><b>กลุ่มเป้าหมาย:</b> ประชาชนทั่วไป, เจ้าหน้าที่องค์กรปกครองส่วนท้องถิ่น (อปท.), ภาคธุรกิจ, และสื่อมวลชน</div>
+        <div class="card-text"><b>คุณลักษณะหลัก:</b> การสืบค้นความเสี่ยงเชิงพื้นที่ระดับตำบล อำเภอ จังหวัด, แผนที่แบบตอบสนอง, บทความวิชาการที่เข้าใจง่าย, คู่มือการปรับตัว และระบบขอรับข้อมูล</div>
+        <div class="card-text"><b>เป้าประสงค์:</b> ลดความซับซ้อนของข้อมูลวิทยาศาสตร์ภูมิอากาศให้กลายเป็นสารสนเทศที่นำไปปฏิบัติได้จริง</div>
+      </div>
+      <div class="doc-card sky-border">
+        <div class="card-title"><div class="card-num">2</div>Data Platform (backend)</div>
+        <div class="card-text"><b>กลุ่มเป้าหมาย:</b> นักวิจัย, นักวิเคราะห์นโยบายของกรมฯ, กรมอุตุนิยมวิทยา, สศช., ธนาคารแห่งประเทศไทย, และกรอบอนุสัญญาสหประชาชาติว่าด้วยการเปลี่ยนแปลงสภาพภูมิอากาศ (UNFCCC)</div>
+        <div class="card-text"><b>คุณลักษณะหลัก:</b> การจัดเก็บข้อมูลตามแบบจำลอง 8 โดเมน (CDM), ระบบการแปลงและประมวลผลข้อมูล (ETL/Data Pipeline), การเชื่อมต่อผ่านช่องทางเชื่อมต่อโปรแกรม (API), และระบบตรวจสอบคุณภาพข้อมูล</div>
+        <div class="card-text"><b>เป้าประสงค์:</b> รักษาความถูกต้องตามหลักวิทยาศาสตร์ ตรวจสอบย้อนกลับได้ทุกแหล่งที่มา และรองรับการประมวลผลข้อมูลความละเอียดสูง</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">06 / 21</div></div>
+</section>
+
+<!-- ============ SLIDE 6 (source 5): DIGITAL ASSET SURVEY ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">05. การสำรวจสินทรัพย์ดิจิทัลของกรมฯ และภูมิทัศน์ข้อมูลระดับชาติ</div>
+      <div class="header-sub-title">กรมฯ มีสินทรัพย์ดิจิทัล 391 รายการ เทียบกับภูมิทัศน์ข้อมูลระดับชาติกว่า 260 ชุดข้อมูล</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-2 reveal" style="margin-bottom:10px;">
+      <div class="stat-banner"><div class="stat-val">391</div><div class="stat-lbl">สินทรัพย์ดิจิทัลของกรมฯ ที่สำรวจครบถ้วน</div></div>
+      <div class="stat-banner"><div class="stat-val">260+</div><div class="stat-lbl">ชุดข้อมูลในภูมิทัศน์ข้อมูลระดับชาติ กระจายในกว่า 40 หน่วยงาน</div></div>
+    </div>
+    <div class="grid-2 reveal">
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">1</div>สินทรัพย์ดิจิทัลภายในกรมฯ (391 รายการ)</div>
+        <ul class="doc-list">
+          <li>สินทรัพย์ความรู้ (Knowledge Asset) 315 รายการ — สื่อสิ่งพิมพ์ 158, เอกสารศูนย์ข้อมูลกลาง 57, วิดีโอมัลติมีเดีย 56, รายงานวิจัย 8, เอกสาร PDF/คู่มือบนระบบบัญชีข้อมูล (CKAN) 36</li>
+          <li>สินทรัพย์ข้อมูล (Data Asset) 47 รายการ ในรูปแบบไฟล์ตารางข้อมูลพร้อมใช้งานทางเทคนิค (CSV/XLSX/SHP)</li>
+          <li>ผลิตภัณฑ์ข้อมูล (Data Product) 29 รายการ เช่น ระบบแผนที่ความเสี่ยง</li>
+        </ul>
+        <div class="card-text">องค์ความรู้ส่วนใหญ่ (ร้อยละ 81) ยังอยู่ในรูปแบบเอกสารและสื่อ ไม่ใช่ข้อมูลเชิงโครงสร้าง จึงเป็นโจทย์สำคัญของการออกแบบ Data Platform</div>
+      </div>
+      <div class="doc-card sky-border">
+        <div class="card-title"><div class="card-num">2</div>ภูมิทัศน์ข้อมูลระดับชาติ</div>
+        <div class="card-text">ครอบคลุมข้อมูลความเปราะบาง การเปิดรับภัย สัญญาณสภาพภูมิอากาศ ผลิตภัณฑ์แผนที่ภัยพิบัติ และข้อมูลความสูญเสีย กระจายอยู่ในหน่วยงานที่เกี่ยวข้องทั่วประเทศ ไม่ได้กระจุกอยู่ที่กรมฯ เพียงหน่วยงานเดียว</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">07 / 21</div></div>
+</section>
+
+<!-- ============ SLIDE 7 (source 6): DATA DISTRIBUTION ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">06. การกระจายตัวของข้อมูลระดับชาติ</div>
+      <div class="header-sub-title">ข้อมูลด้านภูมิอากาศกระจายอยู่ในหลายหน่วยงาน การพัฒนาแพลตฟอร์มจึงต้องอาศัยการประสานงานข้ามหน่วยงาน</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-3 reveal">
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">1</div>ตัวอย่างที่เป็นรูปธรรม</div>
+        <div class="card-text">กรมฯ เปิดให้บริการแผนที่ความเสี่ยงเชิงพื้นที่ระดับชาติผ่านศูนย์ข้อมูลการเปลี่ยนแปลงสภาพภูมิอากาศอยู่แล้ว แต่ชุดข้อมูลต้นทางที่ป้อนแผนที่นี้ — สถิติประชากร การใช้ที่ดิน ทรัพยากรน้ำ ตัวชี้วัดสุขภาพ สถิติการเกษตร — กระจายอยู่ในหน่วยงานเดียวกับที่ดูแลภูมิทัศน์ข้อมูล 260 ชุดข้อมูล</div>
+      </div>
+      <div class="doc-card sky-border">
+        <div class="card-title"><div class="card-num">2</div>นัยต่อการพัฒนาแพลตฟอร์ม</div>
+        <div class="card-text">แผนที่ความเสี่ยงที่มีอยู่ควรใช้เป็นผลผลิตสำหรับการสื่อสารสาธารณะและการจัดลำดับความสำคัญระดับสูง ส่วนชุดข้อมูลต้นทางที่แท้จริงคือสินทรัพย์ระยะยาวสำหรับต่อยอดผลิตภัณฑ์วิเคราะห์เพิ่มเติม</div>
+      </div>
+      <div class="doc-card green-border">
+        <div class="card-title"><div class="card-num">3</div>ข้อเสนอเชิงสถาบัน</div>
+        <div class="card-text">การจัดทำข้อตกลงแลกเปลี่ยนข้อมูล (Data Exchange Agreement) ที่ระบุชัดว่าข้อมูลใดไหลอย่างไร ความถี่เท่าใด รูปแบบใด และประสานกับใคร เป็นเงื่อนไขที่ต้องดำเนินการคู่ขนานกับงานพัฒนาซอฟต์แวร์ ไม่ใช่งานที่ตามมาทีหลัง</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">08 / 21</div></div>
+</section>
+
+<!-- ============ SLIDE 8 (source 7): SITEMAP 5 SECTIONS ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">07. โครงสร้างเว็บไซต์ 5 หมวดหลัก</div>
+      <div class="header-sub-title">แต่ละหมวดมีชั้นย่อยไม่เท่ากัน จัดตามน้ำหนักเนื้อหาจริง ไม่ใช่รายการเรียบ 15 ช่อง</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-5 reveal">
+      <div class="timeline-step"><div class="step-num">หมวด 1</div><div class="step-title">หน้าแรก</div><div class="card-text">สรุปสถานการณ์ความเสี่ยงระดับชาติ และระบบสืบค้นความเสี่ยงรายพื้นที่แบบโต้ตอบ</div></div>
+      <div class="timeline-step"><div class="step-num">หมวด 2</div><div class="step-title">ศูนย์ข้อมูลนโยบาย</div><div class="card-text">สถิติภูมิอากาศ โปรไฟล์ความเสี่ยง เครื่องมือนโยบายและการเงิน — โครงสร้างย่อยลึกที่สุดหมวดหนึ่ง</div></div>
+      <div class="timeline-step"><div class="step-num">หมวด 3</div><div class="step-title">วงจรขับเคลื่อนการปรับตัว</div><div class="card-text">หมวดที่มีเนื้อหาลึกที่สุด ตั้งแต่วิทยาศาสตร์ภูมิอากาศจนถึงการติดตามประเมินผล</div></div>
+      <div class="timeline-step"><div class="step-num">หมวด 4</div><div class="step-title">เครื่องมือและบริการสารสนเทศ</div><div class="card-text">บัญชีข้อมูลกลาง เครื่องมือแผนที่ความเสี่ยงเชิงโต้ตอบ จุดเชื่อมต่อพอร์ทัลภายนอก</div></div>
+      <div class="timeline-step"><div class="step-num">หมวด 5</div><div class="step-title">ข่าวสารและการมีส่วนร่วม</div><div class="card-text">ประกาศและกิจกรรม ช่องทางรับฟังเสียงสะท้อนและบริการช่วยเหลือผู้ใช้งาน</div></div>
+    </div>
+    <div class="doc-card blue-border reveal" style="margin-top:16px;">
+      <div class="card-text">โครงสร้างนี้ไม่ได้ออกแบบให้ทุกหมวดมีขนาดเท่ากัน แต่สะท้อนน้ำหนักเนื้อหาจริงตามความต้องการของผู้ใช้งานแต่ละกลุ่ม หมวดที่ 2 และ 3 จึงมีรายละเอียดมากกว่าหมวดอื่นอย่างมีเหตุผล</div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">09 / 21</div></div>
+</section>
+
+<!-- ============ SLIDE 9 (source 8): SITEMAP 1-2 DEEP DIVE ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">08. หมวดที่ 1–2 หน้าแรกและศูนย์ข้อมูลนโยบาย</div>
+      <div class="header-sub-title">หน้าแรกให้สืบค้นความเสี่ยงเชิงพื้นที่ ศูนย์ข้อมูลนโยบายให้เครื่องมือติดตามงบประมาณปรับตัว</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-2 reveal">
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">1</div>หมวดที่ 1 หน้าแรก</div>
+        <ul class="doc-list">
+          <li>ระบบสืบค้นตามลำดับชั้นการปกครอง (จังหวัด → อำเภอ → ตำบล) เชื่อมกับแผนที่ความเสี่ยงโดยอัตโนมัติ</li>
+          <li>บัตรสรุปข้อมูลเฉพาะพื้นที่ 3 ประเด็น: ภัยคุกคามหลัก, กลุ่มเปราะบางสูงสุด, มาตรการที่แนะนำเบื้องต้น</li>
+        </ul>
+      </div>
+      <div class="doc-card sky-border">
+        <div class="card-title"><div class="card-num">2</div>หมวดที่ 2 ศูนย์ข้อมูลนโยบาย</div>
+        <ul class="doc-list">
+          <li>โปรไฟล์ความเสี่ยงรายสาขาเป้าหมาย 6 สาขา: การจัดการน้ำ, เกษตรกรรมและความมั่นคงทางอาหาร, การท่องเที่ยว, สาธารณสุข, ทรัพยากรธรรมชาติและระบบนิเวศ, การตั้งถิ่นฐานและความมั่นคงของมนุษย์ — เชื่อมโยงกับเป้าหมายและตัวชี้วัดของแผน NAP รายสาขา</li>
+          <li>เครื่องมือทางการเงิน: แหล่งทุนภาครัฐ/เอกชน/ต่างประเทศ, สถิติการจัดสรรงบประมาณ, การติดตามทุนระหว่างประเทศ เช่น กองทุนภูมิอากาศสีเขียว (Green Climate Fund: GCF), กองทุนการปรับตัว (Adaptation Fund: AF), กองทุนสิ่งแวดล้อมโลก (Global Environment Facility: GEF)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">10 / 21</div></div>
+</section>
+
+<!-- ============ SLIDE 10 (source 9): SITEMAP 3-5 DEEP DIVE ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">09. หมวดที่ 3–5 วงจรความรู้ เครื่องมือ และการมีส่วนร่วม</div>
+      <div class="header-sub-title">หมวดที่ 3 เชื่อมวิทยาศาสตร์สู่การวางแผน หมวดที่ 4 ให้เครื่องมือใช้งานจริง หมวดที่ 5 เปิดช่องทางรับฟังผู้ใช้งาน</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-3 reveal">
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">3</div>วงจรขับเคลื่อนการปรับตัว</div>
+        <div class="card-text">วิทยาศาสตร์ภูมิอากาศและข้อมูลสังเกตการณ์ → การวิเคราะห์ความเสี่ยง ความเปราะบาง และผลกระทบลูกโซ่ (รวมการติดตามภัยคุกคามที่เกิดขึ้นช้า เช่น การเพิ่มขึ้นของระดับน้ำทะเลและการทรุดตัวของแผ่นดิน) → การวางแผนปรับตัวและการติดตามประเมินผล</div>
+      </div>
+      <div class="doc-card sky-border">
+        <div class="card-title"><div class="card-num">4</div>เครื่องมือและบริการสารสนเทศ</div>
+        <div class="card-text">บัญชีข้อมูลกลางพร้อมข้อมูลอธิบายตามมาตรฐานสากล เครื่องมือแผนที่ความเสี่ยงเชิงโต้ตอบที่แปลงค่าคาดการณ์เป็นเกณฑ์ทางวิศวกรรม เช่น เส้นโค้งความเข้มฝน-ระยะเวลา-ความถี่ (IDF Curve) สำหรับออกแบบระบบระบายน้ำ จุดเชื่อมต่อไปยังช่องทางเชื่อมต่อโปรแกรม (API) ของกรมอุตุนิยมวิทยา (TMD), สำนักงานพัฒนาเทคโนโลยีอวกาศและภูมิสารสนเทศ (GISTDA) และ Copernicus</div>
+      </div>
+      <div class="doc-card green-border">
+        <div class="card-title"><div class="card-num">5</div>ข่าวสารและการมีส่วนร่วม</div>
+        <div class="card-text">ระบบรับแจ้งปัญหาข้อมูล (Helpdesk) และช่องทางรับฟังความคิดเห็นจากผู้ใช้งานจริง เพื่อนำข้อเสนอแนะมาปรับปรุงคุณภาพข้อมูลในรอบถัดไป</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">11 / 21</div></div>
+</section>
+
+<!-- ============ SLIDE 11 (source 10): CONTENT GAP ANALYSIS ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">10. ผลการวิเคราะห์ช่องว่างเนื้อหา 73 รายการ</div>
+      <div class="header-sub-title">21 รายการพร้อมทันที 24 รายการพร้อมบางส่วน และ 28 รายการยังไม่มีวัตถุดิบรองรับ</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-3 reveal">
+      <div class="doc-card green-border">
+        <div class="card-title"><div class="card-num">21</div>พร้อมทันที (ร้อยละ 29)</div>
+        <div class="card-text">มีข้อมูลและเอกสารที่เกี่ยวข้องครบถ้วน ผู้รับจ้างพัฒนาซอฟต์แวร์เริ่มพัฒนาหน้าจอส่วนนี้ได้ตั้งแต่วันแรกของสัญญา</div>
+      </div>
+      <div class="doc-card amber-border">
+        <div class="card-title"><div class="card-num">24</div>พร้อมบางส่วน (ร้อยละ 33)</div>
+        <div class="card-text">มีวัตถุดิบที่เกี่ยวข้อง แต่ยังขาดองค์ประกอบเฉพาะที่หน้านั้นต้องการ หลายรายการเป็นข้อมูลดิบหรือข้อมูลที่ต้องขออนุญาตเข้าถึง</div>
+      </div>
+      <div class="doc-card red-border">
+        <div class="card-title"><div class="card-num">28</div>ยังไม่มีวัตถุดิบ (ร้อยละ 38)</div>
+        <div class="card-text">ไม่มีชุดข้อมูล เอกสาร ระบบ หรือสื่อใดในบัญชีของกรมฯ ที่ตอบโจทย์นี้ได้เลย ต้องจัดหาหรือจัดทำขึ้นใหม่</div>
+      </div>
+    </div>
+    <div class="doc-card blue-border reveal" style="margin-top:16px;">
+      <div class="card-text">จุดเริ่มต้นที่ตรงตามความเป็นจริง: ใกล้ร้อยละ 30 ของเนื้อหาที่วางแผนไว้พร้อมจัดหาได้ทันที อีกหนึ่งในสามมีวัตถุดิบแต่ต้องดำเนินการเพิ่มเติม (จัดหา เจรจาสิทธิ์เข้าถึง หรือประมวลผลข้อมูล) และที่เหลือร้อยละ 38 ต้องจัดหาใหม่ทั้งหมด</div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">12 / 21</div></div>
+</section>
+
+<!-- ============ SLIDE 12 (source 11): GLOSSARY ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">11. พจนานุกรมศัพท์มาตรฐานด้านการปรับตัว 74 คำ</div>
+      <div class="header-sub-title">พจนานุกรมศัพท์ 74 คำ เชื่อมภาษานโยบายเข้ากับโครงสร้างฐานข้อมูล</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-3 reveal">
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">1</div>ความจำเป็น</div>
+        <div class="card-text">ปัญหาข้อมูลไม่เชื่อมโยงกันในอดีตส่วนหนึ่งเกิดจากหน่วยงานต่าง ๆ ให้นิยามคำศัพท์ไม่ตรงกัน เช่น "ความเสี่ยง" "ความเปราะบาง" หรือ "ความเสียหาย" พจนานุกรมนี้กำหนดนิยามมาตรฐาน 74 คำ ทั้งภาษาไทยและภาษาอังกฤษ โดยอ้างอิงตามกรอบของคณะกรรมการระหว่างรัฐบาลว่าด้วยการเปลี่ยนแปลงสภาพภูมิอากาศ (IPCC) รายงานการประเมินสถานการณ์ฉบับที่ 6 (AR6) และข้อกำหนดของ UNFCCC</div>
+      </div>
+      <div class="doc-card sky-border">
+        <div class="card-title"><div class="card-num">2</div>ขอบเขตการใช้งาน</div>
+        <div class="card-text">ครอบคลุมขอบเขตของแพลตฟอร์มสารสนเทศการปรับตัว เพื่อใช้เป็นแหล่งอ้างอิงเดียวสำหรับการแลกเปลี่ยนข้อมูลระหว่างหน่วยงาน ลดความคลุมเครือในการประสานงานระหว่างนักวิชาการนโยบายและนักพัฒนาระบบซอฟต์แวร์</div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">3</div>การเชื่อมต่อกับแบบจำลองข้อมูล</div>
+        <div class="card-text">ทุกคำศัพท์มีรหัสเชื่อมโยงโดยตรงกับเอนทิตีในแบบจำลองข้อมูล ทำให้เมื่อผู้บริหารเรียกดูข้อมูลใด ระบบจะประมวลผลจากตารางข้อมูลที่ตรงตามนิยามทางวิชาการ</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">13 / 21</div></div>
+</section>
+
+<!-- ============ SLIDE 13 (source 12): CDM 8 DOMAINS ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">12. แบบจำลองข้อมูลเชิงแนวคิด 8 โดเมนหลัก (CDM)</div>
+      <div class="header-sub-title">CDM แบ่งข้อมูลเป็น 8 โดเมนตามวงจรงานตั้งแต่การสังเกตการณ์จนถึงการปรับตัว</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="table-wrap reveal">
+      <table class="data-table">
+        <thead><tr><th>รหัสโดเมน</th><th>ชื่อโดเมน</th><th>ตรรกะหลัก</th></tr></thead>
+        <tbody>
+          <tr><td>DOM_EV</td><td>ตัวแปรพื้นฐาน (Essential Variables)</td><td>ทะเบียนข้อมูลสังเกตการณ์สภาพภูมิอากาศ ปัจจัยขับเคลื่อน และชุดข้อมูลเชิงพื้นที่สิ่งแวดล้อม</td></tr>
+          <tr><td>DOM_HAZ</td><td>ภัยและแบบจำลอง (Hazard and Modeling)</td><td>การจำลองฉากทัศน์ภูมิอากาศคาดการณ์และเหตุการณ์ภัยพิบัติ</td></tr>
+          <tr><td>DOM_022</td><td>การเปิดรับภัยและความเปราะบาง</td><td>การประมวลผลข้อมูลการเปิดรับภัยและแบบจำลองความเปราะบาง</td></tr>
+          <tr><td>DOM_023</td><td>การวิเคราะห์ความเสี่ยง</td><td>การคำนวณความเสี่ยงทั้งเชิงคุณภาพและเชิงปริมาณ</td></tr>
+          <tr><td>DOM_024</td><td>ภัยพิบัติและผลกระทบ</td><td>การติดตามเหตุการณ์ภัยพิบัติและความสูญเสียแบบสามชั้น (event / impact / disbursement)</td></tr>
+          <tr><td>DOM_030</td><td>การประเมินภูมิคุ้มกัน (Resilience Assessment)</td><td>การประเมินขีดความสามารถในการปรับตัวแบบลำดับชั้น</td></tr>
+          <tr><td>DOM_040</td><td>การวางแผนปรับตัว</td><td>บริบทการตัดสินใจและโครงการตามวงจรการปรับตัว</td></tr>
+          <tr><td>DOM_050</td><td>การติดตาม ประเมินผล และถอดบทเรียน</td><td>การติดตามผลผลิต ผลลัพธ์ งบประมาณ และการสนับสนุนของโครงการ</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="doc-card blue-border reveal" style="margin-top:14px;">
+      <div class="card-text">การแบ่งเส้นขอบเขต 8 โดเมนที่ชัดเจน ทำให้กรมฯ มอบหมายให้ผู้อำนวยการกลุ่มแต่ละกลุ่มทำหน้าที่เป็นเจ้าของข้อมูลได้โดยไม่มีหน้าที่ทับซ้อนกัน CDM คือพิมพ์เขียวที่พร้อมนำไปสร้างเป็นฐานข้อมูล PostgreSQL/PostGIS จริงได้ โดยผู้รับจ้างไม่ต้องเสียเวลาออกแบบโครงสร้างใหม่ทั้งหมด</div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">14 / 21</div></div>
+</section>
+
+<!-- ============ SLIDE 14 (source 13): A-BTR ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">13. พันธกรณีรายงาน A-BTR</div>
+      <div class="header-sub-title">ข้อกำหนดของรายงาน A-BTR ถูกแจกแจงเป็น 379 ข้อความ และจับคู่กับข้อมูลที่กรมฯ มีอยู่จริง</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-3 reveal">
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">1</div>พันธกรณีตามกรอบความตกลงปารีส มาตรา 13</div>
+        <div class="card-text">รายงานความโปร่งใสรายสองปีด้านการปรับตัว (A-BTR) ต้องครอบคลุม 6 หมวด: บริบทเชิงสถาบัน, หลักฐานทางวิทยาศาสตร์และความเสี่ยง, ลำดับความสำคัญและยุทธศาสตร์การปรับตัว, ความก้าวหน้าของการดำเนินงานและตัวชี้วัด, ความสูญเสียและความเสียหาย, และแนวปฏิบัติที่ดีและบทเรียน</div>
+      </div>
+      <div class="doc-card sky-border">
+        <div class="card-title"><div class="card-num">2</div>ผลการวิเคราะห์</div>
+        <div class="card-text">ข้อความในร่าง BTR ทั้ง 6 หมวดถูกแจกแจงเป็น 379 ข้อความความต้องการที่เป็นรูปธรรม แต่ละข้อความเชื่อมโยงกับหลักฐานอ้างอิงและถูกจับคู่กับชุดข้อมูลหรือหน้าเว็บที่เกี่ยวข้อง เพื่อระบุว่าข้อใดมีข้อมูลรองรับแล้วและข้อใดยังเป็นช่องว่าง</div>
+      </div>
+      <div class="doc-card green-border">
+        <div class="card-title"><div class="card-num">3</div>ความหมายต่อการออกแบบแพลตฟอร์ม</div>
+        <div class="card-text">ผังเว็บไซต์ 5 หมวดหลักถูกออกแบบให้ครอบคลุมข้อกำหนด A-BTR ไปพร้อมกัน แต่ละหมวดย่อยที่เกี่ยวข้องมีการอ้างอิงมาตราของ BTR กำกับไว้อย่างชัดเจน</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">15 / 21</div></div>
+</section>
+
+<!-- ============ SLIDE 15 (source 14): LOSS AND DAMAGE ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">14. ระบบบันทึกความสูญเสียและความเสียหาย</div>
+      <div class="header-sub-title">มาตรฐานชุดข้อมูลนี้ผ่านการทดสอบแล้วกับข้อมูลภัยพิบัติย้อนหลัง 10 ปีของ ปภ.</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-2 reveal">
+      <div class="doc-card red-border">
+        <div class="card-title"><div class="card-num">1</div>สถานะข้อมูลความสูญเสียในปัจจุบัน</div>
+        <div class="card-text">ประเทศไทยบันทึกเป็นหลักเพียง "งบประมาณเบิกจ่ายเงินช่วยเหลือผู้ประสบภัย" ซึ่งเป็นตัวเลขที่ต่ำกว่ามูลค่าความเสียหายทางเศรษฐกิจจริง และข้อมูลการเบิกจ่ายที่มีอยู่เก็บในรูปแบบสรุปรวม ไม่สามารถจับคู่กับเหตุการณ์ภัยพิบัติแต่ละครั้งได้</div>
+      </div>
+      <div class="doc-card green-border">
+        <div class="card-title"><div class="card-num">2</div>ผลการทดสอบมาตรฐานใหม่</div>
+        <div class="card-text">มาตรฐานชุดข้อมูลขั้นต่ำและแบบฟอร์มรายงานที่ออกแบบในโครงการนี้ผ่านการทดสอบกับข้อมูลเหตุการณ์ภัยพิบัติระดับหมู่บ้านย้อนหลัง 10 ปีของ ปภ. ผลการทดสอบยืนยันว่ามาตรฐานนี้ใช้บันทึกข้อมูลเหตุการณ์และผลกระทบได้จริง</div>
+      </div>
+    </div>
+    <div class="grid-2 reveal" style="margin-top:16px;">
+      <div class="doc-card amber-border">
+        <div class="card-title"><div class="card-num">3</div>งานทางวิศวกรรมที่เหลืออยู่</div>
+        <div class="card-text">เชื่อมโยงข้อมูลการเบิกจ่ายเงินช่วยเหลือ (ที่เก็บในรูปแบบสรุปรวม) เข้ากับเหตุการณ์ภัยพิบัติแต่ละครั้งเป็นรายบันทึก ต้องอาศัยวิศวกรข้อมูลทำงานร่วมกับผู้ประสานงานจาก ปภ. โดยตรง</div>
+      </div>
+      <div class="doc-card sky-border">
+        <div class="card-title"><div class="card-num">4</div>ประเด็นที่ต้องยืนยันก่อนเดินหน้า</div>
+        <div class="card-text">ขณะนี้มีการพัฒนาระเบียบวิธีคำนวณมูลค่าความเสียหายจากภัยพิบัติระดับชาติอยู่ในอีกหน่วยงานของภาครัฐ กรมฯ ควรยืนยันว่าระเบียบวิธีดังกล่าวจะใช้เป็นวิธีคำนวณอย่างเป็นทางการของแพลตฟอร์มนี้หรือไม่</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">16 / 21</div></div>
+</section>
+
+<!-- ============ SLIDE 16 (source 15): GOVERNANCE 4 TIERS ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">15. ระบบธรรมาภิบาลข้อมูล 4 ระดับ</div>
+      <div class="header-sub-title">แบ่งบทบาทเป็นคณะกรรมการ เจ้าของข้อมูล ผู้บริกรข้อมูล และผู้ใช้ข้อมูล</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-4 reveal">
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">1</div>คณะกรรมการกำกับดูแลข้อมูล</div>
+        <div class="card-text">คณะกรรมการบริหารระดับสูง มีอธิบดีเป็นประธาน ทำหน้าที่รับรองมาตรฐานและแก้ไขข้อขัดแย้งระหว่างกอง/กลุ่ม</div>
+      </div>
+      <div class="doc-card sky-border">
+        <div class="card-title"><div class="card-num">2</div>เจ้าของข้อมูล (Data Owner)</div>
+        <div class="card-text">ผู้อำนวยการกลุ่ม (ผอ.กลุ่ม) รับผิดชอบสูงสุดต่อคุณภาพ ความมั่นคงปลอดภัย และการเผยแพร่ข้อมูลในโดเมนที่ตนดูแล เช่น ผู้อำนวยการกลุ่มประเมินความเสี่ยงดูแล DOM_022 และ DOM_023</div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">3</div>ผู้บริกรข้อมูล (Data Steward)</div>
+        <div class="card-text">เจ้าหน้าที่ผู้เชี่ยวชาญด้านเนื้อหาร่วมกับเจ้าหน้าที่เทคโนโลยีสารสนเทศ ตรวจสอบคุณภาพข้อมูลและดูแลระบบให้พร้อมใช้งาน</div>
+      </div>
+      <div class="doc-card sky-border">
+        <div class="card-title"><div class="card-num">4</div>ผู้ใช้ข้อมูล (Data User)</div>
+        <div class="card-text">หน่วยงานรัฐ อปท. สถาบันการเงิน ภาคเอกชน สถาบันการศึกษา และประชาชนที่นำข้อมูลไปใช้และส่งข้อเสนอแนะกลับเข้าสู่ระบบ</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">17 / 21</div></div>
+</section>
+
+<!-- ============ SLIDE 17 (source 16): METADATA STANDARD ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">16. มาตรฐานข้อมูลกลางที่พร้อมบังคับใช้</div>
+      <div class="header-sub-title">แบบจำลองข้อมูลและพจนานุกรมศัพท์เสร็จแล้ว ขั้นต่อไปคือแปลงเป็นกฎตรวจสอบอัตโนมัติ</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-3 reveal">
+      <div class="doc-card green-border">
+        <div class="card-title"><div class="card-num">1</div>มาตรฐานที่เสร็จสมบูรณ์แล้ว</div>
+        <div class="card-text">แบบจำลองข้อมูลเชิงแนวคิด (CDM), พจนานุกรมศัพท์ 74 คำ, และมาตรฐานข้อมูลอธิบาย (metadata) ที่กำหนดฟิลด์บังคับ 12 ฟิลด์ตามมาตรฐานขององค์การระหว่างประเทศว่าด้วยการมาตรฐาน (ISO) เลขที่ 19115 และแนวทางของสำนักงานพัฒนารัฐบาลดิจิทัล (DGA)</div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">2</div>ขั้นต่อไป</div>
+        <div class="card-text">ผู้บริกรข้อมูลด้านเทคนิคควรแปลงมาตรฐานเหล่านี้เป็นกฎการตรวจสอบ (validation rules) ที่ระบบจัดการเนื้อหาบังคับใช้โดยอัตโนมัติ ทำให้การปฏิบัติตามมาตรฐานเป็นส่วนหนึ่งของการเผยแพร่ข้อมูล ไม่ใช่ขั้นตอนตรวจสอบแยกต่างหาก</div>
+      </div>
+      <div class="doc-card sky-border">
+        <div class="card-title"><div class="card-num">3</div>ข้อตกลงแลกเปลี่ยนข้อมูลกับหน่วยงานภายนอก</div>
+        <div class="card-text">ควรต่อยอดจากมาตรฐานนี้ โดยระบุชัดว่าข้อมูลใดไหลอย่างไร ความถี่เท่าใด รูปแบบใด และประสานกับใคร การเปลี่ยนแปลงแบบจำลองในอนาคตต้องผ่านความเห็นชอบของคณะกรรมการกำกับดูแลข้อมูลเพื่อรักษาความมั่นคงของระบบ</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">18 / 21</div></div>
+</section>
+
+<!-- ============ SLIDE 18 (source 17): FIRST SIX MONTHS ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">17. ภารกิจของกรมฯ ในช่วง 6 เดือนแรก</div>
+      <div class="header-sub-title">4 การตัดสินใจเชิงสถาบันที่ต้องดำเนินการก่อนเริ่มพัฒนาซอฟต์แวร์</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-4 reveal">
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">1</div>ประกาศมาตรฐานข้อมูล</div>
+        <div class="card-text">ประกาศมาตรฐานข้อมูลอธิบาย แบบจำลองข้อมูล และพจนานุกรมศัพท์ เป็นมาตรฐานระดับกรมฯ อย่างเป็นทางการ</div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">2</div>แต่งตั้งเจ้าของข้อมูล</div>
+        <div class="card-text">แต่งตั้งเจ้าของข้อมูลระดับผู้อำนวยการกลุ่ม และให้แต่ละท่านมอบหมายผู้บริกรข้อมูลของตน</div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">3</div>จัดตั้งคณะกรรมการ</div>
+        <div class="card-text">จัดตั้งคณะกรรมการกำกับดูแลข้อมูลอย่างเป็นทางการ โดยมีอธิบดีเป็นประธาน</div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">4</div>จัดทำบัญชีสินทรัพย์</div>
+        <div class="card-text">จัดทำบัญชีสินทรัพย์ข้อมูลและผลิตภัณฑ์ข้อมูลที่แต่ละกลุ่มงานถือครองอยู่ในปัจจุบัน ให้ครบถ้วน</div>
+      </div>
+    </div>
+    <div class="doc-card green-border reveal" style="margin-top:16px;">
+      <div class="card-text">ทั้ง 4 ภารกิจนี้เป็นงานเชิงสถาบันที่กรมฯ ดำเนินการได้ทันทีโดยไม่ต้องรอสัญญาจ้างผู้พัฒนาซอฟต์แวร์ และเป็นเงื่อนไขที่ทำให้ผู้รับจ้างเริ่มงานได้อย่างมีประสิทธิภาพเมื่อสัญญาเริ่มต้น</div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">19 / 21</div></div>
+</section>
+
+<!-- ============ SLIDE 19 (source 18): TOR PACKAGING ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">18. การบรรจุพิมพ์เขียวสู่เอกสารประกวดราคา (TOR)</div>
+      <div class="header-sub-title">มาตรฐานข้อมูลและแบบจำลอง CDM แนบท้ายเอกสารประกวดราคาเป็นข้อกำหนดบังคับ</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-3 reveal">
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">1</div>บรรจุแบบจำลองข้อมูลและพจนานุกรมศัพท์</div>
+        <div class="card-text">กำหนดใน TOR ว่าผู้รับจ้างต้องออกแบบโครงสร้างฐานข้อมูลจริงให้ตรงตามแบบจำลองเชิงแนวคิดใน CDM และใช้ชื่อฟิลด์ตามพจนานุกรมศัพท์มาตรฐานเท่านั้น เพื่อป้องกันไม่ให้ผู้รับจ้างนำโครงสร้างฐานข้อมูลสำเร็จรูปเดิมของตนมาใช้แทน</div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">2</div>บรรจุผังเว็บไซต์และข้อกำหนดเนื้อหา</div>
+        <div class="card-text">แนบข้อกำหนดทางเทคนิคที่ระบุรายละเอียดอินพุต-เอาต์พุตของทุกหน้าจอ ใช้เป็นเกณฑ์การตรวจรับงานแต่ละงวดที่ตรวจนับความก้าวหน้าได้อย่างโปร่งใส</div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">3</div>เงื่อนไขการทดสอบและถ่ายทอดเทคโนโลยี</div>
+        <div class="card-text">บังคับให้มีการทดสอบความถูกต้องของข้อมูลและการทดสอบการใช้งานจริง (UAT) ร่วมกับเจ้าของข้อมูลแต่ละกลุ่ม และกำหนดให้ผู้รับจ้างส่งมอบ Source Code, Data Pipeline Script และเอกสารคู่มือทางเทคนิคทั้งหมดเป็นกรรมสิทธิ์ของกรมฯ</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">20 / 21</div></div>
+</section>
+
+<!-- ============ SLIDE 20 (source 19): ROADMAP ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">19. แผนงานและก้าวต่อไป</div>
+      <div class="header-sub-title">วางมาตรฐานและผู้รับผิดชอบก่อน แล้วจึงขยายการจัดหาข้อมูล</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-2 reveal">
+      <div class="layer-stack">
+        <div class="layer layer-1">
+          <h4>ช่วง 6 เดือนแรก</h4>
+          <p>ประกาศมาตรฐานข้อมูล แต่งตั้งเจ้าของข้อมูลและผู้บริกรข้อมูล จัดตั้งคณะกรรมการกำกับดูแลข้อมูล และจัดทำบัญชีสินทรัพย์ข้อมูลของแต่ละกลุ่มงานให้ครบถ้วน</p>
+        </div>
+        <div class="layer layer-2">
+          <h4>หลังปีแรกเป็นต้นไป</h4>
+          <p>นำบัญชีข้อมูลภายในมาใช้งานจริงในงานประจำวัน กำหนดให้ข้อกำหนดธรรมาภิบาลข้อมูลเป็นส่วนหนึ่งของขอบเขตงานพัฒนาระบบในอนาคต ใช้มาตรฐานที่ประกาศแล้วเป็นฐานสำหรับข้อตกลงกับหน่วยงานเจ้าของข้อมูล และขยายนโยบายบริหารจัดการข้อมูลให้ครอบคลุมทุกโดเมนภูมิอากาศ</p>
+        </div>
+      </div>
+      <div class="doc-card blue-border">
+        <div class="card-title"><div class="card-num">$</div>หลักการจัดสรรงบประมาณ</div>
+        <div class="card-text">ควรจัดสรรงบประมาณสำหรับงานวิจัยผลิตภัณฑ์ การพัฒนาระเบียบวิธี การมีส่วนร่วมของผู้ใช้งาน และการทำต้นแบบ ก่อนเริ่มงานพัฒนาซอฟต์แวร์ เพื่อให้งานก่อสร้างระบบมีข้อกำหนดที่มั่นคงและลดงานทำซ้ำในภายหลัง</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">21 / 21</div></div>
+</section>
+
+</main>
+</div>
+
+<!-- Navigation Controls -->
+<div class="deck-controls">
+  <button id="prevBtn" class="control-btn" aria-label="Previous slide">&#8592;</button>
+  <span class="counter" id="pageIndicator">1 / 21</span>
+  <button id="nextBtn" class="control-btn" aria-label="Next slide">&#8594;</button>
+</div>
+
+<script>
+class SlidePresentation {
+    constructor() {
+        this.slides = document.querySelectorAll('.slide');
+        this.currentSlide = 0;
+        this.stage = document.getElementById('deckStage');
+        this.pageIndicator = document.getElementById('pageIndicator');
+        this.setupStageScale();
+        this.setupKeyboardNav();
+        this.setupTouchNav();
+        this.setupWheelNav();
+        this.setupButtons();
+        this.showSlide(0);
+    }
+
+    setupStageScale() {
+        const scale = () => {
+            const factor = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+            const x = (window.innerWidth - 1920 * factor) / 2;
+            const y = (window.innerHeight - 1080 * factor) / 2;
+            this.stage.style.transform = `translate(${x}px, ${y}px) scale(${factor})`;
+        };
+        scale();
+        window.addEventListener('resize', scale);
+    }
+
+    setupKeyboardNav() {
+        document.addEventListener('keydown', (e) => {
+            if (e.target.getAttribute('contenteditable') === 'true') return;
+            if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); this.next(); }
+            if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); this.prev(); }
+        });
+    }
+
+    setupTouchNav() {
+        let startX = 0;
+        this.stage.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+        this.stage.addEventListener('touchend', (e) => {
+            const diff = startX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 50) { diff > 0 ? this.next() : this.prev(); }
+        }, { passive: true });
+    }
+
+    setupWheelNav() {
+        let locked = false;
+        window.addEventListener('wheel', (e) => {
+            if (locked) return;
+            if (Math.abs(e.deltaY) < 30) return;
+            locked = true;
+            e.deltaY > 0 ? this.next() : this.prev();
+            setTimeout(() => { locked = false; }, 500);
+        }, { passive: true });
+    }
+
+    setupButtons() {
+        document.getElementById('nextBtn').addEventListener('click', () => this.next());
+        document.getElementById('prevBtn').addEventListener('click', () => this.prev());
+    }
+
+    next() { this.showSlide(this.currentSlide + 1); }
+    prev() { this.showSlide(this.currentSlide - 1); }
+
+    showSlide(index) {
+        this.currentSlide = Math.max(0, Math.min(index, this.slides.length - 1));
+        this.slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === this.currentSlide);
+            slide.classList.toggle('visible', i === this.currentSlide);
+        });
+        this.pageIndicator.textContent = `${this.currentSlide + 1} / ${this.slides.length}`;
+    }
+}
+
+class InlineEditor {
+    constructor() {
+        this.isActive = false;
+        this.toggle = document.getElementById('editToggle');
+        this.hotzone = document.getElementById('editHotzone');
+        this.storageKey = 'wp11-dcce-executive-briefing-edits-v1';
+        try { localStorage.clear(); } catch (e) {}
+        this.setupHoverReveal();
+        this.setupHandlers();
+        this.loadSavedEdits();
+    }
+
+    setupHoverReveal() {
+        let hideTimeout = null;
+        const show = () => { clearTimeout(hideTimeout); this.toggle.classList.add('show'); };
+        const hide = () => { hideTimeout = setTimeout(() => { if (!this.isActive) this.toggle.classList.remove('show'); }, 400); };
+        this.hotzone.addEventListener('mouseenter', show);
+        this.hotzone.addEventListener('mouseleave', hide);
+        this.toggle.addEventListener('mouseenter', show);
+        this.toggle.addEventListener('mouseleave', hide);
+    }
+
+    setupHandlers() {
+        this.toggle.addEventListener('click', () => this.toggleEditMode());
+        this.hotzone.addEventListener('click', () => this.toggleEditMode());
+        document.addEventListener('keydown', (e) => {
+            if ((e.key === 'e' || e.key === 'E') && !e.target.getAttribute('contenteditable')) {
+                this.toggleEditMode();
+            }
+            if (e.key === 's' && (e.ctrlKey || e.metaKey) && this.isActive) {
+                e.preventDefault();
+                this.saveEdits();
+            }
+        });
+    }
+
+    toggleEditMode() {
+        this.isActive = !this.isActive;
+        this.toggle.classList.toggle('active', this.isActive);
+        const editableSelectors = 'h1, h2, h3, h4, p, li, td, th, .header-main-title, .header-sub-title, .card-title, .card-text, .stat-lbl';
+        document.querySelectorAll('.slide ' + editableSelectors).forEach(el => {
+            el.setAttribute('contenteditable', this.isActive ? 'true' : 'false');
+        });
+        if (!this.isActive) this.saveEdits();
+    }
+
+    saveEdits() {
+        const data = {};
+        document.querySelectorAll('.slide').forEach((slide, i) => { data[i] = slide.innerHTML; });
+        try { localStorage.setItem(this.storageKey, JSON.stringify(data)); } catch (e) {}
+    }
+
+    loadSavedEdits() {
+        try {
+            const raw = localStorage.getItem(this.storageKey);
+            if (!raw) return;
+            const data = JSON.parse(raw);
+            document.querySelectorAll('.slide').forEach((slide, i) => {
+                if (data[i]) slide.innerHTML = data[i];
+            });
+        } catch (e) {}
+    }
+}
+
+new SlidePresentation();
+new InlineEditor();
+</script>
+</body>
+</html>
