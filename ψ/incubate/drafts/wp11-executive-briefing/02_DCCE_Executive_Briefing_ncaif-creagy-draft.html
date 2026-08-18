@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <style>
 /* ===========================================
-   CREAGY CORPORATE TEMPLATE PRESET 9 (WP9 Canonical Template — verbatim reuse)
+   CREAGY CORPORATE — official frontend-slides bold template
    =========================================== */
 :root {
     --creagy-blue: #00618B;
@@ -21,32 +21,25 @@
 
     --text-dark: #000000;
     --text-heading: #031B2A;
-    --text-subheading: #000000;
+    --text-subheading: #031B2A;
     --text-medium: #1E293B;
     --text-muted: #64748B;
 
     --bg-page: #E2E8F0;
     --slide-bg: #FFFFFF;
-    --card-bg: #FFFFFF;
+    --card-bg: rgba(0, 97, 139, 0.04);
     --border-color: #E2E8F0;
+    --border-tint: rgba(0, 97, 139, 0.2);
 
-    --font-thai: 'TH Sarabun PSK', 'TH Sarabun New', 'Sarabun', sans-serif;
-    --font-heading: 'TH Sarabun PSK', 'TH Sarabun New', 'Sarabun', sans-serif;
-    --font-body: 'TH Sarabun PSK', 'TH Sarabun New', 'Sarabun', sans-serif;
+    --font-thai: 'Sarabun', sans-serif;
+    --font-heading: 'Sarabun', sans-serif;
+    --font-body: 'Sarabun', sans-serif;
 
-    --font-size-hero: 62px;
-    --font-size-heading: 42px;
-    --font-size-subheading: 38px;
-    --font-size-body: 27px;
-    --font-size-caption: 22px;
-
-    --gap-red: #C0392B;
-    --gap-red-bg: #FDF2F1;
-    --solve-green: #0B7A4B;
-    --solve-green-bg: #EBF7F1;
-
-    --shadow-sm: 0 4px 14px rgba(0, 97, 139, 0.05);
-    --shadow-md: 0 8px 24px rgba(0, 97, 139, 0.08);
+    --font-size-hero: 72px;
+    --font-size-heading: 58px;
+    --font-size-subheading: 30px;
+    --font-size-body: 28px;
+    --font-size-caption: 25px;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -101,15 +94,15 @@ html, body {
 }
 
 .header-sub-title {
-    font-family: var(--font-heading); font-size: 34px;
-    font-weight: 800; color: var(--text-subheading); line-height: 1.3;
+    font-family: var(--font-body); font-size: var(--font-size-subheading);
+    font-weight: 600; color: var(--text-muted); line-height: 1.35;
     letter-spacing: -0.01em; margin-top: 6px;
 }
 
 .header-logos {
     display: flex; align-items: center; gap: 14px; background: #FFFFFF;
-    padding: 8px 18px; border-radius: 12px; border: 1px solid var(--border-color);
-    box-shadow: var(--shadow-sm); flex-shrink: 0;
+    padding: 8px 18px; border-radius: 12px; border: 1px solid var(--border-tint);
+    flex-shrink: 0;
 }
 
 .header-logo-img { height: 42px; object-fit: contain; }
@@ -127,27 +120,29 @@ html, body {
 
 .slide-body { display: flex; flex-direction: column; justify-content: center; gap: 22px; flex: 1; overflow: hidden; }
 
-.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; }
-.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; align-items: stretch; }
-.grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px; align-items: stretch; }
-.grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; align-items: stretch; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: stretch; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; align-items: stretch; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; align-items: stretch; }
+.grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; align-items: stretch; }
+.sequence-row { display: grid; grid-template-columns: 1fr 1fr 1.7fr 1fr 1fr; gap: 24px; align-items: stretch; }
+.open-block { display: flex; flex-direction: column; gap: 12px; }
+.accent-line { width: 52px; height: 4px; border-radius: 2px; background: var(--creagy-blue); }
+.grid-4 .card-title { font-size: 33px !important; }
+.grid-4 .card-text { font-size: 26px !important; line-height: 1.55; }
+.grid-4 .card-num { width: 38px !important; height: 38px !important; font-size: 22px !important; }
 
 .doc-card {
-    background: var(--card-bg); border: 1px solid var(--border-color);
-    border-radius: 12px; padding: 22px 26px; box-shadow: var(--shadow-sm);
+    background: var(--card-bg); border: 1.5px solid var(--border-tint);
+    border-radius: 14px; padding: 22px 26px;
     display: flex; flex-direction: column; justify-content: flex-start; gap: 12px;
     height: 100%;
 }
 
-.doc-card.blue-border { border-top: 5px solid var(--creagy-blue); }
-.doc-card.sky-border { border-top: 5px solid var(--creagy-sky); }
-.doc-card.red-border { border-top: 5px solid var(--gap-red); }
-.doc-card.green-border { border-top: 5px solid var(--solve-green); background: var(--solve-green-bg); }
-.doc-card.amber-border { border-top: 5px solid #C08A0B; background: #FDF8EC; }
+.doc-card.blue-border, .doc-card.sky-border, .doc-card.red-border, .doc-card.green-border, .doc-card.amber-border { border: 1.5px solid var(--border-tint); background: var(--card-bg); }
 
 .card-title {
-    font-family: var(--font-heading); font-size: 34px;
-    font-weight: 800; color: var(--text-subheading);
+    font-family: var(--font-heading); font-size: 36px;
+    font-weight: 800; color: var(--text-heading);
     display: flex; align-items: center; gap: 10px; line-height: 1.25;
 }
 
@@ -156,25 +151,18 @@ html, body {
     color: #FFFFFF; display: flex; align-items: center; justify-content: center;
     font-family: var(--font-heading); font-weight: 800; font-size: 24px; flex-shrink: 0;
 }
-.red-border .card-num { background: var(--gap-red); }
-.green-border .card-num { background: var(--solve-green); }
-.amber-border .card-num { background: #C08A0B; }
-
-.card-text { font-family: var(--font-body); font-size: 24px; font-weight: 600; line-height: 1.48; color: var(--text-medium); }
+.card-text { font-family: var(--font-body); font-size: 28px; font-weight: 600; line-height: 1.6; color: var(--text-medium); }
 
 .doc-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
 .doc-list li {
-    font-family: var(--font-body); font-size: 24px; font-weight: 600; line-height: 1.48;
+    font-family: var(--font-body); font-size: 28px; font-weight: 600; line-height: 1.6;
     color: var(--text-dark); position: relative; padding-left: 22px;
 }
 .doc-list li::before {
     content: "•"; color: var(--creagy-blue); font-weight: bold; font-size: 28px;
     position: absolute; left: 0; top: -3px;
 }
-.red-border .doc-list li::before { color: var(--gap-red); }
-.green-border .doc-list li::before { color: var(--solve-green); }
-
-.table-wrap { width: 100%; border-radius: 10px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); }
+.table-wrap { width: 100%; border-radius: 14px; overflow: hidden; border: 1.5px solid var(--border-tint); }
 table.data-table.compact th { font-size: 22px; padding: 7px 14px; }
 table.data-table.compact td { font-size: 19px; padding: 6px 14px; line-height: 1.3; }
 table.data-table { width: 100%; border-collapse: collapse; font-size: 24px; }
@@ -184,11 +172,11 @@ table.data-table tr:nth-child(even) td { background: var(--creagy-light-blue); }
 table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-navy); }
 
 .timeline-step {
-    background: #FFFFFF; border-radius: 12px; border: 1px solid var(--border-color);
-    border-top: 5px solid var(--creagy-blue); padding: 18px 20px; display: flex; flex-direction: column; gap: 6px; height: 100%;
+    background: var(--card-bg); border-radius: 14px; border: 1.5px solid var(--border-tint);
+    padding: 22px 26px; display: flex; flex-direction: column; gap: 8px; height: 100%;
 }
-.step-num { font-family: var(--font-heading); font-size: 26px; font-weight: 800; color: var(--creagy-sky); }
-.step-title { font-family: var(--font-heading); font-size: 30px; font-weight: 800; color: var(--text-subheading); }
+.step-num { font-family: var(--font-heading); font-size: 26px; font-weight: 800; color: #FFFFFF; background: var(--creagy-blue); border-radius: 100px; padding: 2px 14px; align-self: flex-start; }
+.step-title { font-family: var(--font-heading); font-size: 33px; font-weight: 800; color: var(--text-heading); }
 
 .stat-banner {
     background: linear-gradient(135deg, var(--creagy-dark-navy) 0%, var(--creagy-blue) 100%);
@@ -198,12 +186,10 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
 .stat-lbl { font-family: var(--font-body); font-size: 24px; font-weight: 600; color: #D4ECF9; line-height: 1.4; }
 
 .layer-stack { display: flex; flex-direction: column; gap: 12px; }
-.layer-stack .layer { border-radius: 10px; padding: 16px 22px; color: #FFF; box-shadow: var(--shadow-sm); }
+.layer-stack .layer { border-radius: 14px; padding: 16px 22px; color: var(--text-medium); background: var(--card-bg); border: 1.5px solid var(--border-tint); }
 .layer-stack .layer h4 { font-family: var(--font-heading); font-size: 30px; font-weight: 800; margin-bottom: 2px; }
 .layer-stack .layer p { font-family: var(--font-body); font-size: 24px; font-weight: 600; line-height: 1.4; opacity: 0.95; }
-.layer-1 { background: var(--creagy-dark-navy); border-left: 6px solid var(--creagy-sky); }
-.layer-2 { background: var(--creagy-blue); border-left: 6px solid #00A3E0; }
-.layer-3 { background: var(--creagy-sky); border-left: 6px solid #94D3F3; }
+.layer-1, .layer-2, .layer-3 { background: var(--card-bg); border-left: 6px solid var(--creagy-blue); }
 
 .title-slide {
     background: linear-gradient(135deg, #031B2A 0%, #063552 50%, #00618B 100%);
@@ -261,7 +247,7 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
   <div class="title-top-logos reveal">
     <div class="title-logo-box">
       <img src="assets/creagy_logo.png" alt="Creagy">
-      <img src="assets/dcce_logo.jpg" alt="DCCE">
+      <img src="assets/dcce_logo.jpg" alt="กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม">
     </div>
   </div>
   <div class="title-body reveal">
@@ -282,7 +268,7 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
       <div class="header-main-title">สารบัญ</div>
       <div class="header-sub-title">โครงสร้างการนำเสนอ 19 สไลด์ ใน 6 บท</div>
     </div>
-    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม"></div>
   </div>
   <div class="slide-body">
     <div class="toc-grid reveal">
@@ -290,7 +276,7 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
       <div class="toc-item"><div class="toc-num">02</div><div class="toc-text">โครงสร้างข้อมูลที่มีธรรมาภิบาล</div></div>
       <div class="toc-item"><div class="toc-num">03</div><div class="toc-text">ผลผลิตของโครงการตามข้อกำหนด TOR</div></div>
       <div class="toc-item"><div class="toc-num">04</div><div class="toc-text">โครงสร้างระบบสองส่วน</div></div>
-      <div class="toc-item"><div class="toc-num">05</div><div class="toc-text">การสำรวจสินทรัพย์ดิจิทัลของกรมฯ และภูมิทัศน์ข้อมูลระดับชาติ</div></div>
+      <div class="toc-item"><div class="toc-num">05</div><div class="toc-text">การสำรวจทรัพย์สินดิจิทัลของกรมฯ และภูมิทัศน์ข้อมูลระดับชาติ</div></div>
       <div class="toc-item"><div class="toc-num">06</div><div class="toc-text">การกระจายตัวของข้อมูลระดับชาติ</div></div>
       <div class="toc-item"><div class="toc-num">07</div><div class="toc-text">โครงสร้างเว็บไซต์ 5 หมวดหลัก</div></div>
       <div class="toc-item"><div class="toc-num">08</div><div class="toc-text">หมวดที่ 1–2 หน้าแรกและศูนย์ข้อมูลนโยบาย</div></div>
@@ -314,10 +300,10 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
 <section class="slide">
   <div class="slide-header">
     <div class="header-left-box">
-      <div class="header-main-title">01. หน้าปกและภาพรวมโครงการ</div>
+      <div class="header-main-title">ภาพรวมโครงการ</div>
       <div class="header-sub-title">แพลตฟอร์มสารสนเทศการปรับตัวระดับชาติสนับสนุนการบริหารความเสี่ยงสภาพภูมิอากาศของประเทศไทย</div>
     </div>
-    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม"></div>
   </div>
   <div class="slide-body">
     <div class="grid-2 reveal">
@@ -346,10 +332,10 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
 <section class="slide">
   <div class="slide-header">
     <div class="header-left-box">
-      <div class="header-main-title">02. โครงสร้างข้อมูลที่มีธรรมาภิบาล</div>
-      <div class="header-sub-title">แยก Data Platform ออกจาก Website เพื่อให้ปรับปรุงหน้าเว็บได้โดยไม่กระทบฐานข้อมูล</div>
+      <div class="header-main-title">โครงสร้างข้อมูลภายใต้ธรรมาภิบาล</div>
+      <div class="header-sub-title">แยกแพลตฟอร์มข้อมูลออกจากเว็บไซต์ เพื่อปรับปรุงบริการสาธารณะโดยไม่กระทบฐานข้อมูล</div>
     </div>
-    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม"></div>
   </div>
   <div class="slide-body">
     <div class="grid-2 reveal">
@@ -378,10 +364,10 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
 <section class="slide">
   <div class="slide-header">
     <div class="header-left-box">
-      <div class="header-main-title">03. ผลผลิตของโครงการตามข้อกำหนด TOR</div>
-      <div class="header-sub-title">งานออกแบบครบทุกหมวดตามข้อกำหนด TOR พร้อมส่งต่อสู่การสร้างระบบจริง</div>
+      <div class="header-main-title">ผลผลิตตามข้อกำหนด TOR</div>
+      <div class="header-sub-title">งานออกแบบครอบคลุมทุกหมวดตามข้อกำหนด TOR และใช้เป็นฐานสำหรับการพัฒนาระบบ</div>
     </div>
-    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม"></div>
   </div>
   <div class="slide-body">
     <div class="grid-4 reveal">
@@ -391,7 +377,7 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
       </div>
       <div class="doc-card blue-border">
         <div class="card-title"><div class="card-num">2</div>การสำรวจและบัญชีข้อมูลดิจิทัล</div>
-        <div class="card-text">รวบรวมและจัดทำบัญชีสินทรัพย์ดิจิทัลของกรมฯ ครอบคลุม 391 รายการ เทียบกับภูมิทัศน์ข้อมูลระดับชาติที่มีมากกว่า 260 ชุดข้อมูลกระจายอยู่ในกว่า 40 หน่วยงาน</div>
+        <div class="card-text">รวบรวมและจัดทำบัญชีทรัพย์สินดิจิทัลของกรมฯ ครอบคลุม 391 รายการ เทียบกับภูมิทัศน์ข้อมูลระดับชาติที่มีมากกว่า 260 ชุดข้อมูลกระจายอยู่ในกว่า 40 หน่วยงาน</div>
       </div>
       <div class="doc-card blue-border">
         <div class="card-title"><div class="card-num">3</div>พิมพ์เขียวเว็บไซต์และแบบจำลองข้อมูล</div>
@@ -410,10 +396,10 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
 <section class="slide">
   <div class="slide-header">
     <div class="header-left-box">
-      <div class="header-main-title">04. โครงสร้างระบบสองส่วน</div>
-      <div class="header-sub-title">Website ให้บริการประชาชน ส่วน Data Platform บูรณาการข้อมูลระดับชาติ</div>
+      <div class="header-main-title">โครงสร้างระบบสองส่วน</div>
+      <div class="header-sub-title">เว็บไซต์ให้บริการประชาชน ส่วนแพลตฟอร์มข้อมูลบูรณาการข้อมูลระดับชาติ</div>
     </div>
-    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม"></div>
   </div>
   <div class="slide-body">
     <div class="grid-2 reveal">
@@ -438,23 +424,23 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
 <section class="slide">
   <div class="slide-header">
     <div class="header-left-box">
-      <div class="header-main-title">05. การสำรวจสินทรัพย์ดิจิทัลของกรมฯ และภูมิทัศน์ข้อมูลระดับชาติ</div>
-      <div class="header-sub-title">กรมฯ มีสินทรัพย์ดิจิทัล 391 รายการ เทียบกับภูมิทัศน์ข้อมูลระดับชาติกว่า 260 ชุดข้อมูล</div>
+      <div class="header-main-title">ทรัพย์สินดิจิทัลของกรมฯ และภูมิทัศน์ข้อมูลระดับชาติ</div>
+      <div class="header-sub-title">กรมฯ มีทรัพย์สินดิจิทัล 391 รายการ เทียบกับภูมิทัศน์ข้อมูลระดับชาติกว่า 260 ชุดข้อมูล</div>
     </div>
-    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม"></div>
   </div>
   <div class="slide-body">
     <div class="grid-2 reveal" style="margin-bottom:10px;">
-      <div class="stat-banner"><div class="stat-val">391</div><div class="stat-lbl">สินทรัพย์ดิจิทัลของกรมฯ ที่สำรวจครบถ้วน</div></div>
+      <div class="stat-banner"><div class="stat-val">391</div><div class="stat-lbl">ทรัพย์สินดิจิทัลของกรมฯ ที่สำรวจครบถ้วน</div></div>
       <div class="stat-banner"><div class="stat-val">260+</div><div class="stat-lbl">ชุดข้อมูลในภูมิทัศน์ข้อมูลระดับชาติ กระจายในกว่า 40 หน่วยงาน</div></div>
     </div>
     <div class="grid-2 reveal">
       <div class="doc-card blue-border">
-        <div class="card-title"><div class="card-num">1</div>สินทรัพย์ดิจิทัลภายในกรมฯ (391 รายการ)</div>
+        <div class="card-title"><div class="card-num">1</div>ทรัพย์สินดิจิทัลภายในกรมฯ (391 รายการ)</div>
         <ul class="doc-list">
-          <li>สินทรัพย์ความรู้ (Knowledge Asset) 315 รายการ — สื่อสิ่งพิมพ์ 158, เอกสารศูนย์ข้อมูลกลาง 57, วิดีโอมัลติมีเดีย 56, รายงานวิจัย 8, เอกสาร PDF/คู่มือบนระบบบัญชีข้อมูล (CKAN) 36</li>
-          <li>สินทรัพย์ข้อมูล (Data Asset) 47 รายการ ในรูปแบบไฟล์ตารางข้อมูลพร้อมใช้งานทางเทคนิค (CSV/XLSX/SHP)</li>
-          <li>ผลิตภัณฑ์ข้อมูล (Data Product) 29 รายการ เช่น ระบบแผนที่ความเสี่ยง</li>
+          <li>ทรัพย์สินความรู้ 315 รายการ — สื่อสิ่งพิมพ์ 158, เอกสารศูนย์ข้อมูลกลาง 57, วิดีโอมัลติมีเดีย 56, รายงานวิจัย 8, และเอกสารหรือคู่มือบนระบบบัญชีข้อมูล 36 รายการ</li>
+          <li>ทรัพย์สินข้อมูล 47 รายการ ในรูปแบบไฟล์ตารางข้อมูลพร้อมใช้งานทางเทคนิค</li>
+          <li>ผลิตภัณฑ์ข้อมูล 29 รายการ เช่น ระบบแผนที่ความเสี่ยง</li>
         </ul>
         <div class="card-text">องค์ความรู้ส่วนใหญ่ (ร้อยละ 81) ยังอยู่ในรูปแบบเอกสารและสื่อ ไม่ใช่ข้อมูลเชิงโครงสร้าง จึงเป็นโจทย์สำคัญของการออกแบบ Data Platform</div>
       </div>
@@ -471,10 +457,10 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
 <section class="slide">
   <div class="slide-header">
     <div class="header-left-box">
-      <div class="header-main-title">06. การกระจายตัวของข้อมูลระดับชาติ</div>
+      <div class="header-main-title">การกระจายตัวของข้อมูลระดับชาติ</div>
       <div class="header-sub-title">ข้อมูลด้านภูมิอากาศกระจายอยู่ในหลายหน่วยงาน การพัฒนาแพลตฟอร์มจึงต้องอาศัยการประสานงานข้ามหน่วยงาน</div>
     </div>
-    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม"></div>
   </div>
   <div class="slide-body">
     <div class="grid-3 reveal">
@@ -499,21 +485,22 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
 <section class="slide">
   <div class="slide-header">
     <div class="header-left-box">
-      <div class="header-main-title">07. โครงสร้างเว็บไซต์ 5 หมวดหลัก</div>
-      <div class="header-sub-title">แต่ละหมวดมีชั้นย่อยไม่เท่ากัน จัดตามน้ำหนักเนื้อหาจริง ไม่ใช่รายการเรียบ 15 ช่อง</div>
+      <div class="header-main-title">โครงสร้างเว็บไซต์ 5 หมวดหลัก</div>
+      <div class="header-sub-title">แต่ละหมวดมีโครงสร้างย่อยตามน้ำหนักเนื้อหาและบทบาทของผู้ใช้งาน</div>
     </div>
-    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม"></div>
   </div>
   <div class="slide-body">
-    <div class="grid-5 reveal">
+    <div class="sequence-row reveal">
       <div class="timeline-step"><div class="step-num">หมวด 1</div><div class="step-title">หน้าแรก</div><div class="card-text">สรุปสถานการณ์ความเสี่ยงระดับชาติ และระบบสืบค้นความเสี่ยงรายพื้นที่แบบโต้ตอบ</div></div>
       <div class="timeline-step"><div class="step-num">หมวด 2</div><div class="step-title">ศูนย์ข้อมูลนโยบาย</div><div class="card-text">สถิติภูมิอากาศ โปรไฟล์ความเสี่ยง เครื่องมือนโยบายและการเงิน — โครงสร้างย่อยลึกที่สุดหมวดหนึ่ง</div></div>
       <div class="timeline-step"><div class="step-num">หมวด 3</div><div class="step-title">วงจรขับเคลื่อนการปรับตัว</div><div class="card-text">หมวดที่มีเนื้อหาลึกที่สุด ตั้งแต่วิทยาศาสตร์ภูมิอากาศจนถึงการติดตามประเมินผล</div></div>
       <div class="timeline-step"><div class="step-num">หมวด 4</div><div class="step-title">เครื่องมือและบริการสารสนเทศ</div><div class="card-text">บัญชีข้อมูลกลาง เครื่องมือแผนที่ความเสี่ยงเชิงโต้ตอบ จุดเชื่อมต่อพอร์ทัลภายนอก</div></div>
       <div class="timeline-step"><div class="step-num">หมวด 5</div><div class="step-title">ข่าวสารและการมีส่วนร่วม</div><div class="card-text">ประกาศและกิจกรรม ช่องทางรับฟังเสียงสะท้อนและบริการช่วยเหลือผู้ใช้งาน</div></div>
     </div>
-    <div class="doc-card blue-border reveal" style="margin-top:16px;">
-      <div class="card-text">โครงสร้างนี้ไม่ได้ออกแบบให้ทุกหมวดมีขนาดเท่ากัน แต่สะท้อนน้ำหนักเนื้อหาจริงตามความต้องการของผู้ใช้งานแต่ละกลุ่ม หมวดที่ 2 และ 3 จึงมีรายละเอียดมากกว่าหมวดอื่นอย่างมีเหตุผล</div>
+    <div class="open-block reveal" style="margin-top:16px;">
+      <div class="accent-line"></div>
+      <div class="card-text">โครงสร้างเว็บไซต์จัดน้ำหนักเนื้อหาตามภารกิจของผู้ใช้งาน โดยหมวดศูนย์ข้อมูลนโยบายและวงจรขับเคลื่อนการปรับตัวมีรายละเอียดมากกว่าหมวดอื่นเพื่อรองรับการใช้ข้อมูลเชิงนโยบายและการวางแผน</div>
     </div>
   </div>
   <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">09 / 21</div></div>
@@ -523,10 +510,10 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
 <section class="slide">
   <div class="slide-header">
     <div class="header-left-box">
-      <div class="header-main-title">08. หมวดที่ 1–2 หน้าแรกและศูนย์ข้อมูลนโยบาย</div>
+      <div class="header-main-title">หน้าแรกและศูนย์ข้อมูลนโยบาย</div>
       <div class="header-sub-title">หน้าแรกให้สืบค้นความเสี่ยงเชิงพื้นที่ ศูนย์ข้อมูลนโยบายให้เครื่องมือติดตามงบประมาณปรับตัว</div>
     </div>
-    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม"></div>
   </div>
   <div class="slide-body">
     <div class="grid-2 reveal">
@@ -553,10 +540,10 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
 <section class="slide">
   <div class="slide-header">
     <div class="header-left-box">
-      <div class="header-main-title">09. หมวดที่ 3–5 วงจรความรู้ เครื่องมือ และการมีส่วนร่วม</div>
+      <div class="header-main-title">วงจรความรู้ เครื่องมือ และการมีส่วนร่วม</div>
       <div class="header-sub-title">หมวดที่ 3 เชื่อมวิทยาศาสตร์สู่การวางแผน หมวดที่ 4 ให้เครื่องมือใช้งานจริง หมวดที่ 5 เปิดช่องทางรับฟังผู้ใช้งาน</div>
     </div>
-    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม"></div>
   </div>
   <div class="slide-body">
     <div class="grid-3 reveal">
@@ -581,10 +568,10 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
 <section class="slide">
   <div class="slide-header">
     <div class="header-left-box">
-      <div class="header-main-title">10. ผลการวิเคราะห์ช่องว่างเนื้อหา 73 รายการ</div>
+      <div class="header-main-title">ผลการวิเคราะห์ช่องว่างเนื้อหา 73 รายการ</div>
       <div class="header-sub-title">21 รายการพร้อมทันที 24 รายการพร้อมบางส่วน และ 28 รายการยังไม่มีวัตถุดิบรองรับ</div>
     </div>
-    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม"></div>
   </div>
   <div class="slide-body">
     <div class="grid-3 reveal">
@@ -612,10 +599,10 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
 <section class="slide">
   <div class="slide-header">
     <div class="header-left-box">
-      <div class="header-main-title">11. พจนานุกรมศัพท์มาตรฐานด้านการปรับตัว 74 คำ</div>
+      <div class="header-main-title">พจนานุกรมศัพท์มาตรฐานด้านการปรับตัว 74 คำ</div>
       <div class="header-sub-title">พจนานุกรมศัพท์ 74 คำ เชื่อมภาษานโยบายเข้ากับโครงสร้างฐานข้อมูล</div>
     </div>
-    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม"></div>
   </div>
   <div class="slide-body">
     <div class="grid-3 reveal">
@@ -640,20 +627,20 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
 <section class="slide">
   <div class="slide-header">
     <div class="header-left-box">
-      <div class="header-main-title">12. แบบจำลองข้อมูลเชิงแนวคิด 8 โดเมนหลัก (CDM)</div>
+      <div class="header-main-title">แบบจำลองข้อมูลเชิงแนวคิด 8 โดเมนหลัก (CDM)</div>
       <div class="header-sub-title">CDM แบ่งข้อมูลเป็น 8 โดเมนตามวงจรงานตั้งแต่การสังเกตการณ์จนถึงการปรับตัว</div>
     </div>
-    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม"></div>
   </div>
   <div class="slide-body">
     <div class="grid-4 reveal">
       <div class="doc-card blue-border">
         <div class="card-title" style="font-size:26px;"><div class="card-num" style="width:30px;height:30px;font-size:16px;">EV</div>ตัวแปรพื้นฐาน</div>
-        <div class="card-text" style="font-size:19px;">(Essential Variables) — ข้อมูลสังเกตการณ์สภาพภูมิอากาศ ปัจจัยขับเคลื่อน และข้อมูลเชิงพื้นที่สิ่งแวดล้อม</div>
+        <div class="card-text" style="font-size:26px;">ข้อมูลตัวแปรพื้นฐาน: ข้อมูลสังเกตการณ์สภาพภูมิอากาศ ปัจจัยขับเคลื่อน และข้อมูลเชิงพื้นที่สิ่งแวดล้อม</div>
       </div>
       <div class="doc-card blue-border">
         <div class="card-title" style="font-size:26px;"><div class="card-num" style="width:30px;height:30px;font-size:16px;">HZ</div>ภัยและแบบจำลอง</div>
-        <div class="card-text" style="font-size:19px;">(Hazard and Modeling) — ฉากทัศน์ภูมิอากาศคาดการณ์และเหตุการณ์ภัยพิบัติ</div>
+        <div class="card-text" style="font-size:26px;">ข้อมูลภัยและแบบจำลอง: ฉากทัศน์ภูมิอากาศคาดการณ์และเหตุการณ์ภัยพิบัติ</div>
       </div>
       <div class="doc-card blue-border">
         <div class="card-title" style="font-size:26px;"><div class="card-num" style="width:30px;height:30px;font-size:16px;">22</div>เปิดรับภัย/เปราะบาง</div>
@@ -669,7 +656,7 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
       </div>
       <div class="doc-card sky-border">
         <div class="card-title" style="font-size:26px;"><div class="card-num" style="width:30px;height:30px;font-size:16px;">30</div>การประเมินภูมิคุ้มกัน</div>
-        <div class="card-text" style="font-size:19px;">(Resilience Assessment) — ขีดความสามารถในการปรับตัวแบบลำดับชั้น</div>
+        <div class="card-text" style="font-size:26px;">การประเมินภูมิคุ้มกัน: ขีดความสามารถในการปรับตัวแบบลำดับชั้น</div>
       </div>
       <div class="doc-card sky-border">
         <div class="card-title" style="font-size:26px;"><div class="card-num" style="width:30px;height:30px;font-size:16px;">40</div>การวางแผนปรับตัว</div>
@@ -691,10 +678,10 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
 <section class="slide">
   <div class="slide-header">
     <div class="header-left-box">
-      <div class="header-main-title">13. พันธกรณีรายงาน A-BTR</div>
+      <div class="header-main-title">พันธกรณีรายงาน A-BTR</div>
       <div class="header-sub-title">ข้อกำหนดของรายงาน A-BTR ถูกแจกแจงเป็น 379 ข้อความ และจับคู่กับข้อมูลที่กรมฯ มีอยู่จริง</div>
     </div>
-    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม"></div>
   </div>
   <div class="slide-body">
     <div class="grid-3 reveal">
@@ -719,10 +706,10 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
 <section class="slide">
   <div class="slide-header">
     <div class="header-left-box">
-      <div class="header-main-title">14. ระบบบันทึกความสูญเสียและความเสียหาย</div>
+      <div class="header-main-title">ระบบบันทึกความสูญเสียและความเสียหาย</div>
       <div class="header-sub-title">มาตรฐานชุดข้อมูลนี้ผ่านการทดสอบแล้วกับข้อมูลภัยพิบัติย้อนหลัง 10 ปีของ ปภ.</div>
     </div>
-    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม"></div>
   </div>
   <div class="slide-body">
     <div class="grid-2 reveal">
@@ -753,10 +740,10 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
 <section class="slide">
   <div class="slide-header">
     <div class="header-left-box">
-      <div class="header-main-title">15. ระบบธรรมาภิบาลข้อมูล 4 ระดับ</div>
+      <div class="header-main-title">ระบบธรรมาภิบาลข้อมูล 4 ระดับ</div>
       <div class="header-sub-title">แบ่งบทบาทเป็นคณะกรรมการ เจ้าของข้อมูล ผู้บริกรข้อมูล และผู้ใช้ข้อมูล</div>
     </div>
-    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม"></div>
   </div>
   <div class="slide-body">
     <div class="grid-4 reveal">
@@ -765,15 +752,15 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
         <div class="card-text">คณะกรรมการบริหารระดับสูง มีอธิบดีเป็นประธาน ทำหน้าที่รับรองมาตรฐานและแก้ไขข้อขัดแย้งระหว่างกอง/กลุ่ม</div>
       </div>
       <div class="doc-card sky-border">
-        <div class="card-title"><div class="card-num">2</div>เจ้าของข้อมูล (Data Owner)</div>
+        <div class="card-title"><div class="card-num">2</div>เจ้าของข้อมูล</div>
         <div class="card-text">ผู้อำนวยการกลุ่ม (ผอ.กลุ่ม) รับผิดชอบสูงสุดต่อคุณภาพ ความมั่นคงปลอดภัย และการเผยแพร่ข้อมูลในโดเมนที่ตนดูแล เช่น ผู้อำนวยการกลุ่มประเมินความเสี่ยงดูแล DOM_022 และ DOM_023</div>
       </div>
       <div class="doc-card blue-border">
-        <div class="card-title"><div class="card-num">3</div>ผู้บริกรข้อมูล (Data Steward)</div>
+        <div class="card-title"><div class="card-num">3</div>ผู้บริกรข้อมูล</div>
         <div class="card-text">เจ้าหน้าที่ผู้เชี่ยวชาญด้านเนื้อหาร่วมกับเจ้าหน้าที่เทคโนโลยีสารสนเทศ ตรวจสอบคุณภาพข้อมูลและดูแลระบบให้พร้อมใช้งาน</div>
       </div>
       <div class="doc-card sky-border">
-        <div class="card-title"><div class="card-num">4</div>ผู้ใช้ข้อมูล (Data User)</div>
+        <div class="card-title"><div class="card-num">4</div>ผู้ใช้ข้อมูล</div>
         <div class="card-text">หน่วยงานรัฐ อปท. สถาบันการเงิน ภาคเอกชน สถาบันการศึกษา และประชาชนที่นำข้อมูลไปใช้และส่งข้อเสนอแนะกลับเข้าสู่ระบบ</div>
       </div>
     </div>
@@ -785,10 +772,10 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
 <section class="slide">
   <div class="slide-header">
     <div class="header-left-box">
-      <div class="header-main-title">16. มาตรฐานข้อมูลกลางที่พร้อมบังคับใช้</div>
-      <div class="header-sub-title">แบบจำลองข้อมูลและพจนานุกรมศัพท์เสร็จแล้ว ขั้นต่อไปคือแปลงเป็นกฎตรวจสอบอัตโนมัติ</div>
+      <div class="header-main-title">มาตรฐานข้อมูลกลางสำหรับการนำไปใช้</div>
+      <div class="header-sub-title">กรมฯ จัดทำแบบจำลองข้อมูลและพจนานุกรมศัพท์แล้ว และต้องแปลงเป็นกฎตรวจสอบอัตโนมัติก่อนพัฒนาระบบ</div>
     </div>
-    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม"></div>
   </div>
   <div class="slide-body">
     <div class="grid-3 reveal">
@@ -813,10 +800,10 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
 <section class="slide">
   <div class="slide-header">
     <div class="header-left-box">
-      <div class="header-main-title">17. ภารกิจของกรมฯ ในช่วง 6 เดือนแรก</div>
+      <div class="header-main-title">ภารกิจของกรมฯ ในช่วง 6 เดือนแรก</div>
       <div class="header-sub-title">4 การตัดสินใจเชิงสถาบันที่ต้องดำเนินการก่อนเริ่มพัฒนาซอฟต์แวร์</div>
     </div>
-    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม"></div>
   </div>
   <div class="slide-body">
     <div class="grid-4 reveal">
@@ -848,10 +835,10 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
 <section class="slide">
   <div class="slide-header">
     <div class="header-left-box">
-      <div class="header-main-title">18. การบรรจุพิมพ์เขียวสู่เอกสารประกวดราคา (TOR)</div>
+      <div class="header-main-title">การบรรจุพิมพ์เขียวในเอกสารประกวดราคา (TOR)</div>
       <div class="header-sub-title">มาตรฐานข้อมูลและแบบจำลอง CDM แนบท้ายเอกสารประกวดราคาเป็นข้อกำหนดบังคับ</div>
     </div>
-    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม"></div>
   </div>
   <div class="slide-body">
     <div class="grid-3 reveal">
@@ -876,10 +863,10 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
 <section class="slide">
   <div class="slide-header">
     <div class="header-left-box">
-      <div class="header-main-title">19. แผนงานและก้าวต่อไป</div>
-      <div class="header-sub-title">วางมาตรฐานและผู้รับผิดชอบก่อน แล้วจึงขยายการจัดหาข้อมูล</div>
+      <div class="header-main-title">แผนงานระยะต่อไป</div>
+      <div class="header-sub-title">กำหนดมาตรฐานและผู้รับผิดชอบก่อนเริ่มขยายการจัดหาและเชื่อมต่อข้อมูล</div>
     </div>
-    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม"></div>
   </div>
   <div class="slide-body">
     <div class="grid-2 reveal">

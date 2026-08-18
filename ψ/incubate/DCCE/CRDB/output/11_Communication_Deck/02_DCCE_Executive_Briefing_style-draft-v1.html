@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STYLE DRAFT — Creagy Corporate x Blue Professional (Single-Accent) — WP11</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+/* ===========================================
+   CREAGY CORPORATE x BLUE PROFESSIONAL — STYLE DRAFT
+   Kept unchanged from original Creagy template: header typography
+   (.header-main-title / .header-sub-title), .slide-footer, Thai font stack,
+   and the --creagy-* color values themselves.
+   Adapted from Blue Professional: tinted-card depth (no shadows/no colored
+   borders), single-accent-color discipline (status colors folded into
+   creagy-blue), radius ladder, diminishing-opacity step sequences,
+   border-left highlight blocks.
+   =========================================== */
+:root {
+    --creagy-blue: #00618B;
+    --creagy-dark-navy: #031B2A;
+    --creagy-navy-mid: #0A324A;
+    --creagy-sky: #317ABD;
+    --creagy-accent-blue: #00A3E0;
+    --creagy-light-blue: #F0F7FB;
+
+    --text-dark: #000000;
+    --text-heading: #031B2A;
+    --text-subheading: #000000;
+    --text-medium: #1E293B;
+    --text-muted: #64748B;
+    --text-light: #94A3B8;
+
+    --bg-page: #E2E8F0;
+    --slide-bg: #FFFFFF;
+    --border-color: #E2E8F0;
+
+    /* Blue Professional tinted-depth system, recolored to creagy-blue */
+    --accent-light: rgba(0, 97, 139, 0.08);
+    --accent-medium: rgba(0, 97, 139, 0.15);
+    --border-tint: rgba(0, 97, 139, 0.2);
+    --card-tint: rgba(0, 97, 139, 0.04);
+
+    --font-thai: 'TH Sarabun PSK', 'TH Sarabun New', 'Sarabun', sans-serif;
+    --font-heading: 'TH Sarabun PSK', 'TH Sarabun New', 'Sarabun', sans-serif;
+    --font-body: 'TH Sarabun PSK', 'TH Sarabun New', 'Sarabun', sans-serif;
+
+    --font-size-hero: 72px;
+    --font-size-heading: 48px;
+    --font-size-subheading: 44px;
+    --font-size-body: 31px;
+    --font-size-caption: 25px;
+
+    /* Single-accent hover-only shadow (Blue Professional allows exactly one) */
+    --shadow-hover: 0 8px 24px rgba(0, 97, 139, 0.25);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+    width: 100%; height: 100%; margin: 0; overflow: hidden;
+    background: var(--bg-page); font-family: var(--font-body);
+    font-size: var(--font-size-body); color: var(--text-dark); font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+}
+
+.deck-viewport { position: fixed; inset: 0; overflow: hidden; background: var(--bg-page); }
+
+.deck-stage {
+    position: absolute; left: 0; top: 0; width: 1920px; height: 1080px;
+    overflow: hidden; transform-origin: 0 0; background: var(--slide-bg);
+}
+
+.slide {
+    position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: hidden;
+    display: flex; flex-direction: column; justify-content: space-between;
+    visibility: hidden; opacity: 0; pointer-events: none;
+    background: var(--slide-bg); padding: 48px 72px 36px 72px;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.slide.active, .slide.visible { visibility: visible; opacity: 1; pointer-events: auto; z-index: 1; }
+
+@media print {
+    @page { size: 1920px 1080px; margin: 0; }
+    html, body { width: 1920px; height: auto; overflow: visible; background: #fff; }
+    .deck-viewport { position: static; overflow: visible; background: #fff; }
+    .deck-stage { position: static; width: auto; height: auto; transform: none !important; background: none; }
+    .slide { position: relative; display: flex !important; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important; width: 1920px; height: 1080px; break-after: page; page-break-after: always; }
+    .slide:last-child { break-after: auto; page-break-after: auto; }
+    .reveal { opacity: 1 !important; transform: none !important; }
+    .deck-controls, .edit-hotzone, .edit-toggle, .draft-banner { display: none !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.2s !important; }
+}
+
+/* === HEADER: unchanged from original Creagy template === */
+.slide-header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    padding-bottom: 16px; border-bottom: 2px solid var(--border-color);
+    margin-bottom: 24px; flex-shrink: 0;
+}
+.header-main-title {
+    font-family: var(--font-heading); font-size: 58px;
+    font-weight: 800; color: var(--text-heading); line-height: 1.2;
+}
+.header-sub-title {
+    font-family: var(--font-heading); font-size: 30px;
+    font-weight: 600; color: var(--text-muted); line-height: 1.35;
+    letter-spacing: -0.005em; margin-top: 8px;
+}
+.header-logos {
+    display: flex; align-items: center; gap: 14px; background: #FFFFFF;
+    padding: 8px 18px; border-radius: 12px; border: 1px solid var(--border-color);
+    flex-shrink: 0;
+}
+.header-logo-img { height: 42px; object-fit: contain; }
+
+/* === FOOTER: unchanged from original Creagy template === */
+.slide-footer {
+    margin-top: auto; height: 40px; display: flex; justify-content: space-between; align-items: center;
+    border-top: 1px solid var(--border-color); padding-top: 10px;
+    font-family: var(--font-body); font-size: var(--font-size-caption);
+    color: var(--text-muted); flex-shrink: 0; font-weight: 600;
+}
+.footer-left { display: flex; align-items: center; gap: 12px; font-weight: 600; }
+.footer-separator { color: #CBD5E1; }
+.slide-number-badge { font-family: var(--font-heading); font-weight: 800; font-size: 26px; color: var(--creagy-blue); }
+
+.slide-body { display: flex; flex-direction: column; justify-content: center; gap: 32px; flex: 1; overflow: hidden; }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: stretch; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; align-items: stretch; }
+.grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 28px; align-items: stretch; }
+.grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; align-items: stretch; }
+/* mixed rows (open text next to a card) shouldn't stretch the open text to card height */
+.grid-2.align-top { align-items: start; }
+
+/* === CARD: Blue Professional tinted-depth pattern, single accent === */
+.doc-card {
+    background: var(--card-tint); border: 1.5px solid var(--border-tint);
+    border-radius: 14px; padding: 22px 26px;
+    display: flex; flex-direction: column; justify-content: flex-start; gap: 12px;
+    height: 100%;
+}
+/* status-color variants folded into the single-accent system: no hue changes,
+   differentiation now comes from card-num opacity + label text, per Blue
+   Professional's "no secondary accent color" discipline. */
+.doc-card.step-1 .card-num { opacity: 1; }
+.doc-card.step-2 .card-num { opacity: 0.85; }
+.doc-card.step-3 .card-num { opacity: 0.7; }
+.doc-card.step-4 .card-num { opacity: 0.55; }
+
+.card-title {
+    font-family: var(--font-heading); font-size: 36px;
+    font-weight: 800; color: var(--text-heading);
+    display: flex; align-items: center; gap: 12px; line-height: 1.25;
+    margin-bottom: 2px;
+}
+.card-num {
+    width: 40px; height: 40px; border-radius: 50%; background: var(--creagy-blue);
+    color: #FFFFFF; display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-heading); font-weight: 800; font-size: 26px; flex-shrink: 0;
+}
+.card-text { font-family: var(--font-body); font-size: 28px; font-weight: 600; line-height: 1.6; color: var(--text-medium); }
+
+.doc-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.doc-list li {
+    font-family: var(--font-body); font-size: 28px; font-weight: 600; line-height: 1.55;
+    color: var(--text-dark); position: relative; padding-left: 24px;
+}
+.doc-list li::before {
+    content: "•"; color: var(--creagy-blue); font-weight: bold; font-size: 28px;
+    position: absolute; left: 0; top: -3px;
+}
+
+/* === Open text block: narrative content stays OFF the canvas, unboxed.
+   Only an eyebrow label + accent-line signal it's a distinct topic — this is
+   Blue Professional's negative-space discipline, not every text needs a card. === */
+.open-block {
+    display: flex; flex-direction: column; gap: 16px; max-width: 900px;
+    padding: 4px 0;
+}
+.open-eyebrow {
+    display: flex; align-items: center; gap: 14px;
+    font-family: var(--font-heading); font-size: 36px; font-weight: 800;
+    color: var(--text-heading); line-height: 1.25; margin-bottom: 2px;
+}
+.accent-line { width: 52px; height: 4px; background: var(--creagy-blue); border-radius: 2px; flex-shrink: 0; }
+.open-block .card-text { color: var(--text-medium); }
+
+/* === Split-highlight (Blue Professional pull-quote / callout) — reserved for
+   an actual standalone takeaway line, not a third box repeating card content === */
+.split-highlight {
+    display: flex; align-items: center; gap: 18px; padding: 4px 0 0 0;
+}
+.split-highlight .accent-line { width: 40px; }
+.split-highlight .card-text { color: var(--text-medium); max-width: 1400px; }
+
+/* === Section divider: full-bleed chapter break to interrupt slide monotony === */
+.section-divider {
+    background: linear-gradient(135deg, #031B2A 0%, #063552 55%, #00618B 100%);
+    color: #FFFFFF; justify-content: center; padding: 100px 120px;
+    position: relative; overflow: hidden;
+}
+.section-divider::before {
+    content: ""; position: absolute; right: -100px; bottom: -180px; width: 560px; height: 560px;
+    border-radius: 50%; border: 1px solid rgba(255,255,255,0.14);
+}
+.section-divider::after {
+    content: ""; position: absolute; right: 60px; bottom: 20px; width: 380px; height: 380px;
+    border-radius: 50%; border: 1px solid rgba(255,255,255,0.1);
+}
+.divider-title { font-family: var(--font-heading); font-size: 66px; font-weight: 800; color: #FFFFFF; max-width: 1200px; line-height: 1.25; position: relative; z-index: 1; }
+.divider-sub { font-family: var(--font-body); font-size: 32px; font-weight: 600; color: #B8DCF0; margin-top: 22px; max-width: 1100px; line-height: 1.55; position: relative; z-index: 1; }
+
+/* === Big-numeral stat metric: replaces same-size badge-in-card for lead stats.
+   Number is the visual anchor; a bar-fill makes the proportion legible at a glance. === */
+.stat-metric {
+    display: flex; flex-direction: column; gap: 10px;
+    padding: 28px 32px; background: var(--card-tint); border: 1.5px solid var(--border-tint);
+    border-radius: 14px;
+}
+.stat-metric .metric-num { font-family: var(--font-heading); font-size: 92px; font-weight: 800; color: var(--creagy-blue); line-height: 1; }
+.stat-metric .metric-label { font-family: var(--font-heading); font-size: 36px; font-weight: 800; color: var(--text-heading); }
+.stat-metric .metric-desc { font-family: var(--font-body); font-size: 24px; font-weight: 600; color: var(--text-muted); line-height: 1.5; }
+.stat-metric .bar-track { margin-top: 8px; height: 14px; background: var(--accent-light); border-radius: 7px; overflow: hidden; }
+.stat-metric .bar-fill { height: 100%; background: var(--creagy-blue); border-radius: 7px; }
+/* Fade the bar-fill only (it sits on a visible track, so reduced opacity
+   still reads as a progress indicator) — never fade metric-num itself.
+   A colored numeral faded toward its own light card background becomes
+   unreadable; text contrast is never the thing that carries sequence. */
+.stat-metric.step-2 .bar-fill { opacity: 0.75; }
+.stat-metric.step-3 .bar-fill { opacity: 0.55; }
+
+/* === Minimal inline line-icon accent for card titles (no icon library) === */
+.card-icon { width: 30px; height: 30px; flex-shrink: 0; }
+.card-icon svg { width: 100%; height: 100%; stroke: var(--creagy-blue); fill: none; stroke-width: 1.8; }
+
+/* === Metric column: a headline stat + its OWN supporting content, stacked as
+   one self-contained story. Never place a stat-metric as an isolated row
+   disconnected from what it's about. === */
+.metric-column { display: flex; flex-direction: column; gap: 20px; }
+.metric-column .stat-metric { flex-shrink: 0; }
+
+/* === Bento grid: mixed card sizes (one hero + several supporting cells) so a
+   slide fills its space with color/weight instead of uniform boxes floating
+   in margin. One hero column spans both rows; the other two columns hold four
+   smaller supporting cells. === */
+.bento-grid {
+    display: grid; grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: repeat(2, 1fr);
+    gap: 20px; flex: 1; min-height: 0;
+}
+.bento-hero { grid-column: 1; grid-row: 1 / 3; }
+
+/* Sequence row: for numbered items readers must scan IN ORDER. Emphasis on
+   the featured item comes from extra width + color, never from moving it
+   out of its numeric position — size-as-emphasis must never fight reading
+   order. All items stay in one row, left to right, in sequence. */
+.sequence-row {
+    display: grid; grid-template-columns: 1fr 1fr 1.7fr 1fr 1fr;
+    gap: 18px; flex: 1; min-height: 0; align-items: stretch;
+}
+.sequence-featured { justify-content: center; gap: 14px; }
+
+/* Inverse tile: solid navy fill, used to color-block a slide instead of
+   leaving it as uniform light tint + white margin.
+   NOTE: uses compound selectors (.doc-card.card-inverse etc.) deliberately —
+   .doc-card/.timeline-step/.stat-metric each set their own light background
+   later in this stylesheet, and a bare ".card-inverse" single-class rule
+   would silently lose that cascade fight regardless of which came "first"
+   when read top-to-bottom, because equal-specificity rules resolve by
+   source order, not by selector name. Compound selectors raise specificity
+   so this override always wins. */
+.doc-card.card-inverse, .timeline-step.card-inverse, .stat-metric.card-inverse {
+    background: linear-gradient(135deg, var(--creagy-dark-navy) 0%, var(--creagy-blue) 100%);
+    border: none; color: #FFFFFF;
+}
+.card-inverse .card-title, .card-inverse .metric-label, .card-inverse .step-title { color: #FFFFFF; }
+.card-inverse .card-text, .card-inverse .doc-list li { color: #D4ECF9; }
+.card-inverse .card-num { background: rgba(255,255,255,0.22); color: #FFFFFF; }
+.card-inverse .doc-list li::before { color: #7FC4E8; }
+.card-inverse .metric-num { color: #FFFFFF; }
+.card-inverse .step-num { color: #94D3F3; }
+
+/* Compact supporting cell: shorter label + one support line, sized to sit in
+   a smaller bento cell without needing paragraph-length text. */
+.doc-card.compact, .timeline-step.compact {
+    padding: 24px 26px; gap: 12px; justify-content: flex-start;
+    position: relative; overflow: hidden;
+}
+.doc-card.compact .card-title { font-size: 33px; gap: 12px; }
+.doc-card.compact .card-num { width: 38px; height: 38px; font-size: 22px; }
+.doc-card.compact .card-text, .timeline-step.compact .card-text { font-size: 26px; line-height: 1.55; }
+.timeline-step.compact .step-num { font-size: 27px; }
+.timeline-step.compact .step-title { font-size: 31px; }
+
+/* === Stat banner: the deck's one permitted solid-accent + shadow element === */
+.stat-banner {
+    background: linear-gradient(135deg, var(--creagy-dark-navy) 0%, var(--creagy-blue) 100%);
+    color: #FFFFFF; border-radius: 14px; padding: 20px 36px; display: flex; align-items: center; gap: 32px;
+    box-shadow: var(--shadow-hover);
+}
+.stat-val { font-family: var(--font-heading); font-size: 48px; font-weight: 800; color: #FFFFFF; line-height: 1; min-width: 130px; }
+.stat-lbl { font-family: var(--font-body); font-size: 24px; font-weight: 600; color: #D4ECF9; line-height: 1.4; }
+
+/* === Timeline / step sequence: tinted card + diminishing accent opacity === */
+.timeline-step {
+    background: var(--card-tint); border-radius: 12px; border: 1.5px solid var(--border-tint);
+    padding: 18px 20px; display: flex; flex-direction: column; gap: 6px; height: 100%;
+}
+.step-num { font-family: var(--font-heading); font-size: 30px; font-weight: 800; color: var(--creagy-blue); }
+.step-title { font-family: var(--font-heading); font-size: 34px; font-weight: 800; color: var(--text-subheading); }
+/* Sequence differentiation never fades bare colored text against its own
+   card background (that's how the metric-num and step-num bugs happened) —
+   it fades a solid-filled badge instead, where contrast is preserved
+   because the number and its background dim together. Mirrors
+   .doc-card.step-N .card-num below. */
+.timeline-step.step-2 .step-num, .timeline-step.step-3 .step-num, .timeline-step.step-4 .step-num {
+    display: inline-flex; align-items: center; justify-content: center;
+    background: var(--creagy-blue); color: #FFFFFF; border-radius: 100px;
+    padding: 2px 14px; width: fit-content;
+}
+.timeline-step.step-3 .step-num { opacity: 0.85; }
+.timeline-step.step-4 .step-num { opacity: 0.7; }
+
+.title-slide {
+    background: linear-gradient(135deg, #031B2A 0%, #063552 50%, #00618B 100%);
+    color: #FFFFFF; padding: 85px 100px; justify-content: space-between;
+}
+.title-top-logos { display: flex; align-items: center; justify-content: space-between; }
+.title-logo-box { background: #FFFFFF; padding: 14px 30px; border-radius: 14px; display: flex; align-items: center; gap: 16px; }
+.title-logo-box img { height: 50px; object-fit: contain; }
+.title-body { margin-top: 15px; max-width: 1720px; }
+.title-badge { display: inline-block; background: rgba(0, 163, 224, 0.2); border: 1px solid rgba(255, 255, 255, 0.3); color: #EEF7FC; font-family: var(--font-heading); font-size: 34px; font-weight: 700; padding: 6px 22px; border-radius: 100px; margin-bottom: 16px; }
+.main-hero-title { font-family: var(--font-heading); font-size: var(--font-size-hero); font-weight: 800; line-height: 1.2; color: #FFFFFF; margin-bottom: 16px; }
+.main-subtitle { font-family: var(--font-body); font-size: 32px; line-height: 1.45; color: #D4ECF9; font-weight: 600; max-width: 1720px; letter-spacing: -0.01em; }
+.title-metadata { display: flex; gap: 60px; border-top: 1px solid rgba(255, 255, 255, 0.2); padding-top: 22px; }
+.meta-item { display: flex; flex-direction: column; gap: 2px; }
+.meta-lbl { font-family: var(--font-body); font-size: 25px; font-weight: 600; color: #94D3F3; }
+.meta-val { font-family: var(--font-heading); font-size: 32px; font-weight: 800; color: #FFFFFF; }
+
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.4s ease, transform 0.4s ease; }
+.slide.visible .reveal { opacity: 1; transform: translateY(0); }
+.slide.visible .reveal:nth-child(1) { transition-delay: 0.08s; }
+.slide.visible .reveal:nth-child(2) { transition-delay: 0.16s; }
+.slide.visible .reveal:nth-child(3) { transition-delay: 0.24s; }
+
+.deck-controls {
+    position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); z-index: 1000;
+    background: rgba(3, 27, 42, 0.92); backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 30px;
+    padding: 6px 20px; display: flex; align-items: center; gap: 16px; color: #FFFFFF;
+}
+.control-btn { background: transparent; border: none; color: #FFFFFF; font-size: 18px; cursor: pointer; padding: 4px 10px; font-family: var(--font-body); font-weight: 600; }
+.control-btn:hover { color: var(--creagy-accent-blue); }
+.counter { font-family: var(--font-heading); font-size: 20px; font-weight: 700; min-width: 60px; text-align: center; }
+
+.draft-banner {
+    position: fixed; top: 16px; right: 16px; z-index: 10001;
+    background: rgba(3, 27, 42, 0.92); color: #FFFFFF; font-family: var(--font-body);
+    font-size: 16px; font-weight: 600; padding: 8px 16px; border-radius: 100px;
+}
+</style>
+</head>
+<body>
+
+<div class="draft-banner">STYLE DRAFT — ไม่ใช่ไฟล์ใช้งานจริง</div>
+
+<div class="deck-viewport">
+<main class="deck-stage" id="deckStage">
+
+<!-- ============ SLIDE 0: TITLE ============ -->
+<section class="slide title-slide active">
+  <div class="title-top-logos reveal">
+    <div class="title-logo-box">
+      <img src="assets/creagy_logo.png" alt="Creagy">
+      <img src="assets/dcce_logo.jpg" alt="DCCE">
+    </div>
+  </div>
+  <div class="title-body reveal">
+    <div class="title-badge">เอกสารสรุปสำหรับผู้บริหาร</div>
+    <div class="main-hero-title">พิมพ์เขียวระบบสารสนเทศการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศระดับชาติ (NCAIF)</div>
+    <div class="main-subtitle">แพลตฟอร์มสารสนเทศการปรับตัวระดับชาติสนับสนุนการบริหารความเสี่ยงสภาพภูมิอากาศของประเทศไทย</div>
+  </div>
+  <div class="title-metadata reveal">
+    <div class="meta-item"><div class="meta-lbl">กลุ่มเป้าหมาย</div><div class="meta-val">อธิบดี, รองอธิบดี, ผู้อำนวยการกอง, ผู้อำนวยการกลุ่ม</div></div>
+    <div class="meta-item"><div class="meta-lbl">หน่วยงาน / วันที่มีผลบังคับใช้</div><div class="meta-val">กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม &nbsp;|&nbsp; 17 สิงหาคม 2569</div></div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 0.5: SECTION DIVIDER (breaks slide-to-slide monotony) ============ -->
+<section class="slide section-divider">
+  <div class="reveal">
+    <div class="divider-title">ภาพรวมโครงการ</div>
+    <div class="divider-sub">แพลตฟอร์มสารสนเทศการปรับตัวระดับชาติสนับสนุนการบริหารความเสี่ยงสภาพภูมิอากาศของประเทศไทย</div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 1: OVERVIEW (tinted cards) ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">ภาพรวมโครงการ</div>
+      <div class="header-sub-title">แพลตฟอร์มสารสนเทศการปรับตัวระดับชาติสนับสนุนการบริหารความเสี่ยงสภาพภูมิอากาศของประเทศไทย</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="bento-grid reveal">
+      <div class="doc-card card-inverse bento-hero">
+        <div class="card-title">
+          <span class="card-icon" style="filter:brightness(0) invert(1);"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6V2z"/><path d="M15 2v5h5"/><path d="M9 13h6M9 17h6M9 9h2"/></svg></span>
+          บริบทเชิงนโยบายและภารกิจ
+        </div>
+        <div class="card-text">การเปลี่ยนแปลงสภาพภูมิอากาศก่อให้เกิดภัยพิบัติที่มีความถี่และความรุนแรงเพิ่มขึ้นอย่างต่อเนื่อง ประเทศไทยมีความจำเป็นเร่งด่วนในการยกระดับขีดความสามารถการปรับตัวตามแผนการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศแห่งชาติ (NAP) และพันธกรณีระหว่างประเทศตามกรอบความตกลงปารีส</div>
+        <div class="card-text">แพลตฟอร์มสารสนเทศการปรับตัวระดับชาติ (NCAIF) เป็นโครงสร้างพื้นฐานดิจิทัลกลางของประเทศที่รวบรวม บูรณาการ และสังเคราะห์ข้อมูลสภาพภูมิอากาศ การเปิดรับภัย ความเปราะบาง และความสูญเสีย เพื่อสนับสนุนการตัดสินใจเชิงนโยบายของภาครัฐ</div>
+        <div class="card-text" style="margin-top:auto; opacity:0.9;">พร้อมส่งมอบเป็นพิมพ์เขียวสำหรับผู้รับจ้างพัฒนาซอฟต์แวร์ในระยะถัดไป</div>
+      </div>
+      <div class="doc-card compact"><div class="card-title"><div class="card-num">1</div>สินทรัพย์ดิจิทัล</div><div class="card-text">ตรวจสอบระบบนิเวศข้อมูลดิจิทัลของกรมฯ ครบ 391 รายการ ครอบคลุมสินทรัพย์ความรู้ ข้อมูล และผลิตภัณฑ์ข้อมูล</div></div>
+      <div class="doc-card compact"><div class="card-title"><div class="card-num">2</div>ผังเว็บไซต์</div><div class="card-text">โครงสร้างเว็บไซต์ 5 หมวดหลัก จัดตามน้ำหนักเนื้อหาจริงของผู้ใช้งานแต่ละกลุ่ม</div></div>
+      <div class="doc-card compact"><div class="card-title"><div class="card-num">3</div>แบบจำลองข้อมูล</div><div class="card-text">แบบจำลองข้อมูลเชิงแนวคิด (CDM) 8 โดเมน ควบคุมมาตรฐานโครงสร้างข้อมูลทั่วทั้งกรมฯ</div></div>
+      <div class="doc-card compact"><div class="card-title"><div class="card-num">4</div>พจนานุกรมศัพท์</div><div class="card-text">คำศัพท์มาตรฐาน 74 คำ เชื่อมภาษานโยบายเข้ากับโครงสร้างฐานข้อมูล</div></div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">03 / 21</div></div>
+</section>
+
+<!-- ============ SLIDE 2: STAT BANNER ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">การสำรวจสินทรัพย์ดิจิทัลของกรมฯ และภูมิทัศน์ข้อมูลระดับชาติ</div>
+      <div class="header-sub-title">กรมฯ มีสินทรัพย์ดิจิทัล 391 รายการ เทียบกับภูมิทัศน์ข้อมูลระดับชาติกว่า 260 ชุดข้อมูล</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="grid-2 align-top reveal">
+      <div class="metric-column">
+        <div class="stat-metric">
+          <div class="metric-num">391</div>
+          <div class="metric-label">สินทรัพย์ดิจิทัลภายในกรมฯ</div>
+        </div>
+        <ul class="doc-list">
+          <li>สินทรัพย์ความรู้ (Knowledge Asset) 315 รายการ</li>
+          <li>สินทรัพย์ข้อมูล (Data Asset) 47 รายการ</li>
+          <li>ผลิตภัณฑ์ข้อมูล (Data Product) 29 รายการ</li>
+        </ul>
+      </div>
+      <div class="metric-column">
+        <div class="stat-metric">
+          <div class="metric-num">260+</div>
+          <div class="metric-label">ภูมิทัศน์ข้อมูลระดับชาติ</div>
+        </div>
+        <div class="card-text">กระจายในกว่า 40 หน่วยงาน ครอบคลุมข้อมูลความเปราะบาง การเปิดรับภัย สัญญาณสภาพภูมิอากาศ ผลิตภัณฑ์แผนที่ภัยพิบัติ และข้อมูลความสูญเสีย ทั่วประเทศ</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">07 / 21</div></div>
+</section>
+
+<!-- ============ SLIDE 3: GAP ANALYSIS (status colors folded into single accent) ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">ผลการวิเคราะห์ช่องว่างเนื้อหา 73 รายการ</div>
+      <div class="header-sub-title">21 รายการพร้อมทันที 24 รายการพร้อมบางส่วน และ 28 รายการยังไม่มีวัตถุดิบรองรับ</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="split-highlight reveal" style="margin-bottom:8px;">
+      <span class="accent-line"></span>
+      <div class="card-text">จุดเริ่มต้นที่ตรงตามความเป็นจริง: ใกล้ร้อยละ 30 ของเนื้อหาที่วางแผนไว้พร้อมจัดหาได้ทันที อีกหนึ่งในสามมีวัตถุดิบแต่ต้องดำเนินการเพิ่มเติม และที่เหลือร้อยละ 38 ต้องจัดหาใหม่ทั้งหมด</div>
+    </div>
+    <div class="grid-3 reveal">
+      <div class="stat-metric step-1">
+        <div class="metric-num">21</div>
+        <div class="metric-label">พร้อมทันที</div>
+        <div class="bar-track"><div class="bar-fill" style="width:29%;"></div></div>
+        <div class="metric-desc">ร้อยละ 29 — มีข้อมูลและเอกสารครบถ้วน เริ่มพัฒนาหน้าจอได้ตั้งแต่วันแรกของสัญญา</div>
+      </div>
+      <div class="stat-metric step-2">
+        <div class="metric-num">24</div>
+        <div class="metric-label">พร้อมบางส่วน</div>
+        <div class="bar-track"><div class="bar-fill" style="width:33%;"></div></div>
+        <div class="metric-desc">ร้อยละ 33 — มีวัตถุดิบแต่ยังขาดองค์ประกอบเฉพาะ หรือต้องขออนุญาตเข้าถึง</div>
+      </div>
+      <div class="stat-metric step-3">
+        <div class="metric-num">28</div>
+        <div class="metric-label">ยังไม่มีวัตถุดิบ</div>
+        <div class="bar-track"><div class="bar-fill" style="width:38%;"></div></div>
+        <div class="metric-desc">ร้อยละ 38 — ไม่มีชุดข้อมูล เอกสาร หรือสื่อใดตอบโจทย์นี้ได้ ต้องจัดหาใหม่ทั้งหมด</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">12 / 21</div></div>
+</section>
+
+<!-- ============ SLIDE 4: SITEMAP 5 SECTIONS (diminishing-opacity step sequence) ============ -->
+<section class="slide">
+  <div class="slide-header">
+    <div class="header-left-box">
+      <div class="header-main-title">โครงสร้างเว็บไซต์ 5 หมวดหลัก</div>
+      <div class="header-sub-title">แต่ละหมวดมีชั้นย่อยไม่เท่ากัน จัดตามน้ำหนักเนื้อหาจริง ไม่ใช่รายการเรียบ 15 ช่อง</div>
+    </div>
+    <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
+  </div>
+  <div class="slide-body">
+    <div class="sequence-row reveal">
+      <div class="timeline-step compact"><div class="step-num">หมวด 1</div><div class="step-title">หน้าแรก</div><div class="card-text">สรุปสถานการณ์ความเสี่ยงระดับชาติ พร้อมระบบสืบค้นความเสี่ยงรายพื้นที่แบบโต้ตอบ</div></div>
+      <div class="timeline-step compact"><div class="step-num">หมวด 2</div><div class="step-title">ศูนย์ข้อมูลนโยบาย</div><div class="card-text">สถิติภูมิอากาศ โปรไฟล์ความเสี่ยงรายสาขา และเครื่องมือทางการเงิน</div></div>
+      <div class="timeline-step card-inverse sequence-featured">
+        <div class="open-eyebrow" style="color:#94D3F3; margin-bottom:0;">หมวดที่เนื้อหาลึกที่สุด</div>
+        <div class="step-num">หมวด 3</div>
+        <div class="step-title" style="font-size:34px;">วงจรขับเคลื่อนการปรับตัว</div>
+        <div class="card-text">ครอบคลุมตั้งแต่วิทยาศาสตร์ภูมิอากาศและข้อมูลสังเกตการณ์ ไปจนถึงการวิเคราะห์ความเสี่ยง ความเปราะบาง และการติดตามประเมินผลของแผนปรับตัว</div>
+      </div>
+      <div class="timeline-step compact"><div class="step-num">หมวด 4</div><div class="step-title">เครื่องมือและบริการ</div><div class="card-text">บัญชีข้อมูลกลาง เครื่องมือแผนที่ความเสี่ยงเชิงโต้ตอบ</div></div>
+      <div class="timeline-step compact"><div class="step-num">หมวด 5</div><div class="step-title">ข่าวสารและการมีส่วนร่วม</div><div class="card-text">ประกาศและกิจกรรม ช่องทางรับฟังเสียงสะท้อน</div></div>
+    </div>
+  </div>
+  <div class="slide-footer"><div class="footer-left"><span>© 2026 The Creagy Company Limited. All Rights Reserved.</span><span class="footer-separator">|</span><span>STRICTLY PRIVATE AND CONFIDENTIAL</span></div><div class="slide-number-badge">09 / 21</div></div>
+</section>
+
+</main>
+</div>
+
+<!-- Navigation Controls -->
+<div class="deck-controls">
+  <button id="prevBtn" class="control-btn" aria-label="Previous slide">&#8592;</button>
+  <span class="counter" id="pageIndicator">1 / 6</span>
+  <button id="nextBtn" class="control-btn" aria-label="Next slide">&#8594;</button>
+</div>
+
+<script>
+class SlidePresentation {
+    constructor() {
+        this.slides = document.querySelectorAll('.slide');
+        this.currentSlide = 0;
+        this.stage = document.getElementById('deckStage');
+        this.pageIndicator = document.getElementById('pageIndicator');
+        this.setupStageScale();
+        this.setupKeyboardNav();
+        this.setupTouchNav();
+        this.setupWheelNav();
+        this.setupButtons();
+        this.showSlide(0);
+    }
+
+    setupStageScale() {
+        const scale = () => {
+            const factor = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+            const x = (window.innerWidth - 1920 * factor) / 2;
+            const y = (window.innerHeight - 1080 * factor) / 2;
+            this.stage.style.transform = `translate(${x}px, ${y}px) scale(${factor})`;
+        };
+        scale();
+        window.addEventListener('resize', scale);
+    }
+
+    setupKeyboardNav() {
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); this.next(); }
+            if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); this.prev(); }
+        });
+    }
+
+    setupTouchNav() {
+        let startX = 0;
+        this.stage.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+        this.stage.addEventListener('touchend', (e) => {
+            const diff = startX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 50) { diff > 0 ? this.next() : this.prev(); }
+        }, { passive: true });
+    }
+
+    setupWheelNav() {
+        let locked = false;
+        window.addEventListener('wheel', (e) => {
+            if (locked) return;
+            if (Math.abs(e.deltaY) < 30) return;
+            locked = true;
+            e.deltaY > 0 ? this.next() : this.prev();
+            setTimeout(() => { locked = false; }, 500);
+        }, { passive: true });
+    }
+
+    setupButtons() {
+        document.getElementById('nextBtn').addEventListener('click', () => this.next());
+        document.getElementById('prevBtn').addEventListener('click', () => this.prev());
+    }
+
+    next() { this.showSlide(this.currentSlide + 1); }
+    prev() { this.showSlide(this.currentSlide - 1); }
+
+    showSlide(index) {
+        this.currentSlide = Math.max(0, Math.min(index, this.slides.length - 1));
+        this.slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === this.currentSlide);
+            slide.classList.toggle('visible', i === this.currentSlide);
+        });
+        this.pageIndicator.textContent = `${this.currentSlide + 1} / ${this.slides.length}`;
+    }
+}
+
+new SlidePresentation();
+</script>
+</body>
+</html>
