@@ -111,9 +111,9 @@ So for these nine, this document says only that the page is a place where the pr
 
 ---
 
-## 1.1 Overview of Thailand's climate risk
+## 1.1 Overview of Thailand's climate risk (Country Overview)
 
-The front door of the site. It sets out what climate risk means for Thailand before a reader reaches anything detailed.
+**Structure note (19 August 2026):** No longer the homepage's own content — per the Homepage Concept draft, this lives in its own Country Overview section, a sibling of Home rather than nested under it. Home becomes a router (search + task-based service cards); a reader reaches this page from there. It sets out what climate risk means for Thailand before a reader reaches anything detailed.
 
 This section is in reasonable shape. The national adaptation plan summary is one of the best-supported requirements anywhere on the site, and the sector and regional analysis has a real dataset behind it. What is missing is the opening framing, the part that explains why any of this matters before the detail begins.
 

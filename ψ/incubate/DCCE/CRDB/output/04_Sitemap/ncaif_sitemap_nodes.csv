@@ -1,8 +1,8 @@
 sitemap_node_id,node_code,title_th,title_en,parent_node_id,hierarchy_level,content_requirements_summary
-SIT-1,1,หน้าแรก,Home: National Climate Adaptation Portal,,1,
-SIT-1.1,1.1,สรุปสำหรับผู้บริหาร,Executive Overview,SIT-1,2,
-SIT-1.1.1,1.1.1,ภาพรวมความเสี่ยงจากการเปลี่ยนแปลงสภาพภูมิอากาศในประเทศไทย,,SIT-1.1,3,ประวัติศาสตร์ของภัยธรรมชาติในประเทศไทย; กรอบทฤษฎีและนิยามของความเสี่ยง IPCC; ความเสี่ยงทางกายภาพและความเสี่ยงของการเปลี่ยนผ่าน; แผนภาพสรุปโปรไฟล์ความเสี่ยงของประเทศไทย
-SIT-1.1.2,1.1.2,ความเสี่ยงสำคัญ และลำดับความสำคัญในการปรับตัวของประเทศไทย,,SIT-1.1,3,Hotspot ของความเสี่ยงในแต่ละภัย และภาคส่วน; สรุปแผนการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศระดับชาติ; ตัวอย่างมาตรการหลักหรือโครงการเด่นในการปรับตัว
+SIT-1,1,หน้าแรก,Home: National Climate Adaptation Portal,,1,Router page per 2026-08-19 Homepage Concept: hero + area search (1.2) + task-based routing + thin national-context strip linking to Country Overview (SIT-1.1) + latest updates + help/feedback. No longer contains 1.1/1.1.1/1.1.2 content directly.
+SIT-1.1,1B,ภาพรวมประเทศ,Country Overview,,1,Section wrapper for 1.1.1/1.1.2. Re-parented from Home (SIT-1) 19 Aug 2026 per Homepage Concept — now a top-level sibling of Home, not nested under it. node_code "1B" is provisional pending final site renumbering.
+SIT-1.1.1,1.1.1,ภาพรวมความเสี่ยงจากการเปลี่ยนแปลงสภาพภูมิอากาศในประเทศไทย,,SIT-1.1,2,ประวัติศาสตร์ของภัยธรรมชาติในประเทศไทย; กรอบทฤษฎีและนิยามของความเสี่ยง IPCC; ความเสี่ยงทางกายภาพและความเสี่ยงของการเปลี่ยนผ่าน; แผนภาพสรุปโปรไฟล์ความเสี่ยงของประเทศไทย
+SIT-1.1.2,1.1.2,ความเสี่ยงสำคัญ และลำดับความสำคัญในการปรับตัวของประเทศไทย,,SIT-1.1,2,Hotspot ของความเสี่ยงในแต่ละภัย และภาคส่วน; สรุปแผนการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศระดับชาติ; ตัวอย่างมาตรการหลักหรือโครงการเด่นในการปรับตัว
 SIT-1.2,1.2,สืบค้นข้อมูลรายพื้นที่,,SIT-1,2,**Search Hierarchy**: รองรับการค้นหาตามระดับการปกครอง (จังหวัด -> อำเภอ -> ตำบล); **Map Integration**: แสดงผลตำแหน่งบนแผนที่ความเสี่ยง (Spatial Risk Map integration); **Quick-view Dashboard**: แสดงบัตรข้อมูลสรุป (Summary Cards) เกี่ยวกับภัยคุกคามหลัก ดัชนีความเปราะบาง และมาตรการที่แนะนำในเบื้องต้น ก่อนส่งผู้ใช้ไปยังหน้ารายละเอียดใน Section 4
 SIT-2,2,ศูนย์ข้อมูลสำหรับผู้กำหนดนโยบายและแผน,Policy Maker Information Center,,1,
 SIT-2.1,2.1,สถานการณ์การเปลี่ยนแปลงสภาพภูมิอากาศของประเทศ,,SIT-2,2,

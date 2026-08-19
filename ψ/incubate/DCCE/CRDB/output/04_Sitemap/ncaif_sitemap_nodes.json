@@ -7,17 +7,17 @@
     "parent_node_id": "",
     "hierarchy_level": 1,
     "content_requirements": [],
-    "content_requirements_summary": ""
+    "content_requirements_summary": "Router page per 2026-08-19 Homepage Concept: hero + area search (1.2) + task-based routing + thin national-context strip linking to Country Overview (SIT-1.1) + latest updates + help/feedback. No longer contains 1.1/1.1.1/1.1.2 content directly."
   },
   {
     "sitemap_node_id": "SIT-1.1",
-    "node_code": "1.1",
-    "title_th": "สรุปสำหรับผู้บริหาร",
-    "title_en": "Executive Overview",
-    "parent_node_id": "SIT-1",
-    "hierarchy_level": 2,
+    "node_code": "1B",
+    "title_th": "ภาพรวมประเทศ",
+    "title_en": "Country Overview",
+    "parent_node_id": "",
+    "hierarchy_level": 1,
     "content_requirements": [],
-    "content_requirements_summary": ""
+    "content_requirements_summary": "Section wrapper for 1.1.1/1.1.2. Re-parented from Home (SIT-1) 19 Aug 2026 per Homepage Concept — now a top-level sibling of Home, not nested under it. node_code \"1B\" is provisional pending final site renumbering."
   },
   {
     "sitemap_node_id": "SIT-1.1.1",
@@ -25,7 +25,7 @@
     "title_th": "ภาพรวมความเสี่ยงจากการเปลี่ยนแปลงสภาพภูมิอากาศในประเทศไทย",
     "title_en": "",
     "parent_node_id": "SIT-1.1",
-    "hierarchy_level": 3,
+    "hierarchy_level": 2,
     "content_requirements": [
       "ประวัติศาสตร์ของภัยธรรมชาติในประเทศไทย",
       "กรอบทฤษฎีและนิยามของความเสี่ยง IPCC",
@@ -40,7 +40,7 @@
     "title_th": "ความเสี่ยงสำคัญ และลำดับความสำคัญในการปรับตัวของประเทศไทย",
     "title_en": "",
     "parent_node_id": "SIT-1.1",
-    "hierarchy_level": 3,
+    "hierarchy_level": 2,
     "content_requirements": [
       "Hotspot ของความเสี่ยงในแต่ละภัย และภาคส่วน",
       "สรุปแผนการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศระดับชาติ",

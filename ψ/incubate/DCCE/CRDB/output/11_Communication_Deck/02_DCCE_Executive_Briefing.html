@@ -131,6 +131,7 @@ html, body {
 .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; align-items: stretch; }
 .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px; align-items: stretch; }
 .grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; align-items: stretch; }
+.grid-6 { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; align-items: stretch; }
 
 .doc-card {
     background: var(--card-bg); border: 1px solid var(--border-color);
@@ -292,7 +293,7 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
       <div class="toc-item"><div class="toc-num">04</div><div class="toc-text">โครงสร้างระบบสองส่วน</div></div>
       <div class="toc-item"><div class="toc-num">05</div><div class="toc-text">การสำรวจสินทรัพย์ดิจิทัลของกรมฯ และภูมิทัศน์ข้อมูลระดับชาติ</div></div>
       <div class="toc-item"><div class="toc-num">06</div><div class="toc-text">การกระจายตัวของข้อมูลระดับชาติ</div></div>
-      <div class="toc-item"><div class="toc-num">07</div><div class="toc-text">โครงสร้างเว็บไซต์ 5 หมวดหลัก</div></div>
+      <div class="toc-item"><div class="toc-num">07</div><div class="toc-text">โครงสร้างเว็บไซต์ 6 หมวดหลัก</div></div>
       <div class="toc-item"><div class="toc-num">08</div><div class="toc-text">หมวดที่ 1–2 หน้าแรกและศูนย์ข้อมูลนโยบาย</div></div>
       <div class="toc-item"><div class="toc-num">09</div><div class="toc-text">หมวดที่ 3–5 วงจรความรู้ เครื่องมือ และการมีส่วนร่วม</div></div>
       <div class="toc-item"><div class="toc-num">10</div><div class="toc-text">ผลการวิเคราะห์ช่องว่างเนื้อหา 73 รายการ</div></div>
@@ -330,7 +331,7 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
         <div class="card-title"><div class="card-num">2</div>ผลผลิตของโครงการในระยะนี้</div>
         <ul class="doc-list">
           <li>ตรวจสอบระบบนิเวศข้อมูลดิจิทัลของกรมฯ 391 รายการ</li>
-          <li>ผังโครงสร้างเว็บไซต์ 5 หมวดหลัก</li>
+          <li>ผังโครงสร้างเว็บไซต์ 6 หมวดหลัก</li>
           <li>แบบจำลองข้อมูลเชิงแนวคิด 8 โดเมน</li>
           <li>พจนานุกรมศัพท์มาตรฐาน 74 คำ</li>
           <li>กรอบธรรมาภิบาลข้อมูล 4 ระดับ</li>
@@ -395,7 +396,7 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
       </div>
       <div class="doc-card blue-border">
         <div class="card-title"><div class="card-num">3</div>พิมพ์เขียวเว็บไซต์และแบบจำลองข้อมูล</div>
-        <div class="card-text">ออกแบบโครงสร้างเว็บไซต์ 5 หมวดหลัก พัฒนาแบบจำลองข้อมูลเชิงแนวคิด (CDM) 8 โดเมน และจัดทำพจนานุกรมศัพท์มาตรฐาน 74 คำ</div>
+        <div class="card-text">ออกแบบโครงสร้างเว็บไซต์ 6 หมวดหลัก พัฒนาแบบจำลองข้อมูลเชิงแนวคิด (CDM) 8 โดเมน และจัดทำพจนานุกรมศัพท์มาตรฐาน 74 คำ</div>
       </div>
       <div class="doc-card blue-border">
         <div class="card-title"><div class="card-num">4</div>การวิเคราะห์ช่องว่างและงานทางเทคนิค</div>
@@ -499,14 +500,15 @@ table.data-table td:first-child { font-weight: 800; color: var(--creagy-dark-nav
 <section class="slide">
   <div class="slide-header">
     <div class="header-left-box">
-      <div class="header-main-title">07. โครงสร้างเว็บไซต์ 5 หมวดหลัก</div>
+      <div class="header-main-title">07. โครงสร้างเว็บไซต์ 6 หมวดหลัก</div>
       <div class="header-sub-title">แต่ละหมวดมีชั้นย่อยไม่เท่ากัน จัดตามน้ำหนักเนื้อหาจริง ไม่ใช่รายการเรียบ 15 ช่อง</div>
     </div>
     <div class="header-logos"><img class="header-logo-img" src="assets/creagy_logo.png" alt="Creagy"><img class="header-logo-img" src="assets/dcce_logo.jpg" alt="DCCE"></div>
   </div>
   <div class="slide-body">
-    <div class="grid-5 reveal">
-      <div class="timeline-step"><div class="step-num">หมวด 1</div><div class="step-title">หน้าแรก</div><div class="card-text">สรุปสถานการณ์ความเสี่ยงระดับชาติ และระบบสืบค้นความเสี่ยงรายพื้นที่แบบโต้ตอบ</div></div>
+    <div class="grid-6 reveal">
+      <div class="timeline-step"><div class="step-num">หมวด 1</div><div class="step-title">หน้าแรก (Router)</div><div class="card-text">จุดเข้าเดียว — ระบบสืบค้นความเสี่ยงรายพื้นที่ ทางลัดตามงาน และแถบบริบทประเทศแบบบาง</div></div>
+      <div class="timeline-step"><div class="step-num">หมวด 1B</div><div class="step-title">ภาพรวมประเทศ</div><div class="card-text">สรุปสถานการณ์ความเสี่ยงระดับชาติ นิยาม IPCC และแผน NAP — เดิมอยู่ใต้หน้าแรก แยกออกมาเป็นหมวดของตนเอง</div></div>
       <div class="timeline-step"><div class="step-num">หมวด 2</div><div class="step-title">ศูนย์ข้อมูลนโยบาย</div><div class="card-text">สถิติภูมิอากาศ โปรไฟล์ความเสี่ยง เครื่องมือนโยบายและการเงิน — โครงสร้างย่อยลึกที่สุดหมวดหนึ่ง</div></div>
       <div class="timeline-step"><div class="step-num">หมวด 3</div><div class="step-title">วงจรขับเคลื่อนการปรับตัว</div><div class="card-text">หมวดที่มีเนื้อหาลึกที่สุด ตั้งแต่วิทยาศาสตร์ภูมิอากาศจนถึงการติดตามประเมินผล</div></div>
       <div class="timeline-step"><div class="step-num">หมวด 4</div><div class="step-title">เครื่องมือและบริการสารสนเทศ</div><div class="card-text">บัญชีข้อมูลกลาง เครื่องมือแผนที่ความเสี่ยงเชิงโต้ตอบ จุดเชื่อมต่อพอร์ทัลภายนอก</div></div>

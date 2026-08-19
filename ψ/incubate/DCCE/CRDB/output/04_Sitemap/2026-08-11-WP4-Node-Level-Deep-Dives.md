@@ -13,7 +13,9 @@ The per-node tallies below sum to the same totals as the main report: **18 full,
 
 ---
 
-## Node 1.1 — Overview of Thailand's Climate Risk
+## Node 1.1 — Overview of Thailand's Climate Risk (Country Overview)
+
+**Structure note (19 August 2026):** Per the Homepage Concept draft, this node no longer sits under Home — it's its own Country Overview section, a sibling of Home. Home becomes a router (search + task-based service cards).
 
 *Rolls up: Overview of Climate Change Risk in Thailand (1.1.1), Key Risks and National Adaptation Priorities (1.1.2) — 7 requirements.*
 
@@ -33,7 +35,7 @@ What's missing or partial: historical disaster trend history has nothing behind 
 
 ### Assessment
 
-This node is the site's front door, and it's in genuinely good shape for the "here's what the country's adaptation priorities are" half — NAP summary and hotspot data are strong, reusable assets. But the "why this matters" framing half is thinner than it looks: historical disaster trends and transition-risk framing are both completely unaddressed, and they're exactly the kind of scene-setting content a front-door page needs before it gets into NAP details. Both gaps are also unusually cheap relative to most gaps in this sitemap — historical disaster trends, in particular, is closer to a compilation task from existing (if scattered) government records than new data collection.
+This node is the Country Overview a user reaches from Home's router, and it's in genuinely good shape for the "here's what the country's adaptation priorities are" half — NAP summary and hotspot data are strong, reusable assets. But the "why this matters" framing half is thinner than it looks: historical disaster trends and transition-risk framing are both completely unaddressed, and they're exactly the kind of scene-setting content this page needs before it gets into NAP details. Both gaps are also unusually cheap relative to most gaps in this sitemap — historical disaster trends, in particular, is closer to a compilation task from existing (if scattered) government records than new data collection.
 
 ---
 

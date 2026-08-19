@@ -17,7 +17,23 @@
 ---
 
 ## 1. หน้าแรก (Home: National Climate Adaptation Portal)
-### 1.1 สรุปสำหรับผู้บริหาร (Executive Overview)
+
+> [!NOTE]
+> **Structure note (19 August 2026):** Per the Homepage Concept draft (`2026-08-19-WP4-Homepage-Concept.md`), Home is a router, not an info page. Its function: hero statement, area search (1.2 below), task-based routing into the site's sections, a thin national-context strip linking out to Country Overview (1B), latest updates, and help/feedback. It no longer carries the Executive Overview content — that moved to its own section, 1B, below. Detailed page design is next-project scope.
+
+### 1.2 สืบค้นข้อมูลรายพื้นที่ (Interactive Area Search)
+* ระบบสืบค้นข้อมูลความเสี่ยงเชิงพื้นที่แบบโต้ตอบ (Interactive Search Engine) เพื่อนำทางผู้ใช้ไปสู่ผลวิเคราะห์เชิงปฏิบัติการ
+    *   **Search Hierarchy**: รองรับการค้นหารายระดับการปกครอง (จังหวัด -> อำเภอ -> ตำบล)
+    *   **Map Integration**: แสดงตำแหน่งและขอบเขตการปกครองซ้อนทับบนแผนที่ความเสี่ยงเชิงพื้นที่ (Spatial Risk Map) `[2, MUST]`
+    *   **Quick-view Dashboard**: แสดงบัตรข้อมูลสรุปความเปราะบางเฉพาะจุด ภัยคุกคามหลัก และมาตรการที่แนะนำในเบื้องต้น
+
+---
+
+## 1B. ภาพรวมประเทศ (Country Overview)
+
+> [!NOTE]
+> **Structure note (19 August 2026):** Formerly "1.1 สรุปสำหรับผู้บริหาร (Executive Overview)", nested under Home. Re-parented out to its own top-level section, sibling to Home — reached via Home's router, not shown on Home itself. Node code "1B" is provisional pending final site renumbering.
+
 *   **1.1.1 ภาพรวมความเสี่ยงจากการเปลี่ยนแปลงสภาพภูมิอากาศในประเทศไทย**: 
     *   ประวัติศาสตร์และแนวโน้มภัยธรรมชาติของประเทศ
     *   กรอบแนวคิดและนิยามความเสี่ยงตามมาตรฐาน IPCC (Hazard, Exposure, Vulnerability) `[2, MUST]`
@@ -27,12 +43,6 @@
     *   พื้นที่เป้าหมายวิกฤต (Hotspots) รายสาขาและระดับภูมิภาค `[2, MUST]`
     *   สรุปสาระสำคัญของแผนการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศระดับชาติ (NAP Summary) `[1, MUST]`
     *   ตัวอย่างมาตรการปรับตัวเด่นเชิงรุกที่มีความคุ้มค่าสูง
-
-### 1.2 สืบค้นข้อมูลรายพื้นที่ (Interactive Area Search)
-* ระบบสืบค้นข้อมูลความเสี่ยงเชิงพื้นที่แบบโต้ตอบ (Interactive Search Engine) เพื่อนำทางผู้ใช้ไปสู่ผลวิเคราะห์เชิงปฏิบัติการ
-    *   **Search Hierarchy**: รองรับการค้นหารายระดับการปกครอง (จังหวัด -> อำเภอ -> ตำบล)
-    *   **Map Integration**: แสดงตำแหน่งและขอบเขตการปกครองซ้อนทับบนแผนที่ความเสี่ยงเชิงพื้นที่ (Spatial Risk Map) `[2, MUST]`
-    *   **Quick-view Dashboard**: แสดงบัตรข้อมูลสรุปความเปราะบางเฉพาะจุด ภัยคุกคามหลัก และมาตรการที่แนะนำในเบื้องต้น
 
 ---
 

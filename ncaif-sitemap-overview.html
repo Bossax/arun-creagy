@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCAIF Platform Architecture & Sitemap Overview — DCCE</title>
+    <!-- Google Fonts: Plus Jakarta Sans, Prompt (Thai), Space Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Prompt:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* ===========================================
+           FIXED 16:9 STAGE: MANDATORY BASE STYLES
+           Canonical 1920×1080 Stage Scaling
+           =========================================== */
+        :root {
+            --bg-stage: #0A192F;
+            --bg-slide: #F8FAFC;
+            --surface-white: #FFFFFF;
+            --surface-subtle: #F1F5F9;
+            --surface-blue-tint: #F0F7FF;
+            
+            --ink-primary: #0A192F;
+            --ink-secondary: #334155;
+            --ink-muted: #64748B;
+            --ink-light: #94A3B8;
+            
+            --mckinsey-blue: #006699;
+            --mckinsey-deep: #003366;
+            --accent-cyan: #0284C7;
+            --accent-sky: #0EA5E9;
+            --accent-navy: #0F172A;
+            --border-crisp: #CBD5E1;
+            --border-light: #E2E8F0;
+            --border-blue: #BAE6FD;
+            
+            --font-display: 'Plus Jakarta Sans', 'Prompt', sans-serif;
+            --font-body: 'Plus Jakarta Sans', 'Prompt', sans-serif;
+            --font-mono: 'Space Mono', monospace;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: var(--bg-stage);
+            font-family: var(--font-body);
+            color: var(--ink-primary);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .deck-viewport {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            background: var(--bg-stage);
+        }
+
+        .deck-stage {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1920px;
+            height: 1080px;
+            overflow: hidden;
+            transform-origin: 0 0;
+            background: var(--bg-slide);
+            box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Standardized Slide Visibility Architecture */
+        .slide {
+            position: absolute;
+            inset: 0;
+            width: 1920px;
+            height: 1080px;
+            overflow: hidden;
+            display: flex;
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            background: var(--bg-slide);
+            padding: 65px 90px 55px 90px;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .slide.active,
+        .slide.visible {
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+            z-index: 1;
+        }
+
+        /* ===========================================
+           MCKINSEY CORPORATE DESIGN SYSTEM
+           =========================================== */
+        
+        /* Top Presentation Header */
+        .slide-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 2px solid var(--ink-primary);
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+            flex-shrink: 0;
+        }
+        .header-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .header-eyebrow {
+            font-family: var(--font-mono);
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--mckinsey-blue);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+        .header-title-main {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--ink-primary);
+            letter-spacing: -0.01em;
+        }
+        .header-meta {
+            font-family: var(--font-mono);
+            font-size: 13px;
+            color: var(--ink-muted);
+            text-align: right;
+            letter-spacing: 0.05em;
+        }
+
+        /* Action Takeaway Title Block */
+        .action-headline-block {
+            margin-bottom: 24px;
+            flex-shrink: 0;
+        }
+        .action-title {
+            font-size: 36px;
+            font-weight: 800;
+            line-height: 1.25;
+            color: var(--ink-primary);
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+        .action-title span.highlight {
+            color: var(--mckinsey-blue);
+        }
+        .action-subtitle {
+            font-size: 19px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: var(--ink-secondary);
+            max-width: 1600px;
+        }
+
+        /* Footer Bar */
+        .slide-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-crisp);
+            padding-top: 14px;
+            margin-top: 18px;
+            font-family: var(--font-mono);
+            font-size: 13px;
+            color: var(--ink-muted);
+            letter-spacing: 0.04em;
+            flex-shrink: 0;
+        }
+        .footer-highlight {
+            color: var(--mckinsey-deep);
+            font-weight: 700;
+        }
+
+        /* Reusable Card Styles */
+        .corp-card {
+            background: var(--surface-white);
+            border: 1px solid var(--border-crisp);
+            border-top: 4px solid var(--mckinsey-blue);
+            padding: 24px;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+        .corp-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+        }
+        
+        .pill-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--surface-blue-tint);
+            border: 1px solid var(--border-blue);
+            color: var(--mckinsey-blue);
+            font-family: var(--font-mono);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 3px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            width: fit-content;
+        }
+
+        /* ===========================================
+           SLIDE 1: EXECUTIVE TITLE SLIDE
+           =========================================== */
+        .s1-container {
+            display: grid;
+            grid-template-columns: 1.25fr 0.75fr;
+            gap: 80px;
+            align-items: center;
+            flex: 1;
+            padding: 20px 0;
+        }
+        .s1-title-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .s1-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #E0F2FE;
+            border-left: 4px solid var(--mckinsey-blue);
+            padding: 8px 18px;
+            font-family: var(--font-mono);
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--mckinsey-deep);
+            margin-bottom: 24px;
+            width: fit-content;
+            letter-spacing: 0.08em;
+        }
+        .s1-main-title {
+            font-size: 68px;
+            font-weight: 900;
+            line-height: 1.1;
+            color: var(--ink-primary);
+            letter-spacing: -0.03em;
+            margin-bottom: 18px;
+        }
+        .s1-main-title span {
+            color: var(--mckinsey-blue);
+        }
+        .s1-thai-title {
+            font-size: 30px;
+            font-weight: 700;
+            color: var(--ink-secondary);
+            margin-bottom: 24px;
+            line-height: 1.35;
+        }
+        .s1-lead {
+            font-size: 20px;
+            line-height: 1.6;
+            color: var(--ink-secondary);
+            max-width: 950px;
+        }
+
+        .s1-metrics-card {
+            background: var(--surface-white);
+            border: 2px solid var(--ink-primary);
+            box-shadow: 12px 12px 0px #0A192F;
+            padding: 36px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .s1-metric-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            border-bottom: 1px solid var(--border-light);
+            padding-bottom: 18px;
+        }
+        .s1-metric-row:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .s1-metric-num {
+            font-family: var(--font-mono);
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--mckinsey-blue);
+            line-height: 1;
+            min-width: 75px;
+        }
+        .s1-metric-content h4 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--ink-primary);
+            margin-bottom: 4px;
+        }
+        .s1-metric-content p {
+            font-size: 13.5px;
+            color: var(--ink-muted);
+            line-height: 1.4;
+        }
+
+        /* ===========================================
+           SLIDE 2: 5 CORE ZONES (MASTER OVERVIEW)
+           =========================================== */
+        .s2-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 14px;
+            flex: 1;
+        }
+        .s2-zone-card {
+            background: var(--surface-white);
+            border: 1px solid var(--border-crisp);
+            border-top: 5px solid var(--mckinsey-blue);
+            border-radius: 4px;
+            padding: 22px 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 14px rgba(15, 23, 42, 0.03);
+            position: relative;
+        }
+        .s2-zone-card.highlight-zone {
+            border-top-color: var(--accent-cyan);
+            background: linear-gradient(180deg, #FFFFFF 0%, #F8FBFF 100%);
+        }
+        .s2-zone-header {
+            margin-bottom: 12px;
+        }
+        .s2-zone-num {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--mckinsey-blue);
+            letter-spacing: 0.1em;
+            margin-bottom: 4px;
+        }
+        .s2-zone-title {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--ink-primary);
+            line-height: 1.25;
+            margin-bottom: 6px;
+        }
+        .s2-zone-subtitle {
+            font-size: 12.5px;
+            color: var(--ink-muted);
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+        .s2-page-badge {
+            background: var(--surface-blue-tint);
+            border: 1px solid var(--border-blue);
+            color: var(--mckinsey-deep);
+            font-family: var(--font-mono);
+            font-size: 11.5px;
+            font-weight: 700;
+            padding: 3px 7px;
+            border-radius: 3px;
+            display: inline-block;
+            margin-bottom: 14px;
+        }
+        .s2-feature-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+        .s2-feature-item {
+            font-size: 13.5px;
+            line-height: 1.45;
+            color: var(--ink-secondary);
+            padding-left: 14px;
+            position: relative;
+        }
+        .s2-feature-item::before {
+            content: "■";
+            position: absolute;
+            left: 0;
+            font-size: 8px;
+            color: var(--mckinsey-blue);
+            top: 4px;
+        }
+        .s2-target-audience {
+            border-top: 1px solid var(--border-light);
+            padding-top: 12px;
+            font-size: 12px;
+            color: var(--ink-muted);
+            line-height: 1.35;
+        }
+        .s2-target-audience strong {
+            color: var(--ink-primary);
+        }
+
+        /* ===========================================
+           SLIDE 3: ADAPTATION CYCLE (ZONE 3 DEEP DIVE)
+           =========================================== */
+        .s3-stages-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            flex: 1;
+        }
+        .s3-stage-card {
+            background: var(--surface-white);
+            border: 1px solid var(--border-crisp);
+            border-top: 6px solid var(--mckinsey-deep);
+            border-radius: 4px;
+            padding: 24px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+        .s3-stage-card:nth-child(1) { border-top-color: #0369A1; }
+        .s3-stage-card:nth-child(2) { border-top-color: #0284C7; }
+        .s3-stage-card:nth-child(3) { border-top-color: #0D9488; }
+        .s3-stage-card:nth-child(4) { border-top-color: #059669; }
+
+        .s3-stage-badge {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--mckinsey-blue);
+            margin-bottom: 4px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .s3-stage-name {
+            font-size: 21px;
+            font-weight: 800;
+            color: var(--ink-primary);
+            line-height: 1.25;
+            margin-bottom: 4px;
+        }
+        .s3-stage-sub {
+            font-size: 12.5px;
+            color: var(--ink-muted);
+            margin-bottom: 14px;
+        }
+        .s3-page-count {
+            display: inline-block;
+            font-family: var(--font-mono);
+            font-size: 11.5px;
+            font-weight: 700;
+            padding: 2px 7px;
+            background: var(--surface-subtle);
+            border: 1px solid var(--border-crisp);
+            border-radius: 3px;
+            margin-bottom: 16px;
+            color: var(--ink-primary);
+        }
+        .s3-items-block {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .s3-item {
+            background: #F8FAFC;
+            border: 1px solid var(--border-light);
+            border-left: 3px solid var(--mckinsey-blue);
+            padding: 8px 10px;
+            font-size: 12.5px;
+            color: var(--ink-secondary);
+            line-height: 1.4;
+        }
+        .s3-item strong {
+            color: var(--ink-primary);
+            display: block;
+            margin-bottom: 2px;
+        }
+        .s3-stage-bottom {
+            border-top: 1px solid var(--border-light);
+            padding-top: 12px;
+            font-size: 12px;
+            color: var(--ink-muted);
+        }
+
+        /* ===========================================
+           SLIDE 4: DATA GOVERNANCE & SSOT
+           =========================================== */
+        .s4-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            flex: 1;
+        }
+        .s4-panel {
+            background: var(--surface-white);
+            border: 1px solid var(--border-crisp);
+            border-top: 6px solid var(--mckinsey-blue);
+            padding: 28px 30px;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .s4-panel.accent-panel {
+            border-top-color: var(--accent-cyan);
+            background: #FAFDFF;
+        }
+        .s4-panel-title {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--ink-primary);
+            margin-bottom: 4px;
+        }
+        .s4-panel-sub {
+            font-size: 13.5px;
+            color: var(--ink-muted);
+            margin-bottom: 18px;
+        }
+        .s4-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .s4-list-item {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            padding: 12px 14px;
+            background: var(--surface-white);
+            border: 1px solid var(--border-light);
+            border-radius: 3px;
+        }
+        .s4-list-icon {
+            font-family: var(--font-mono);
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--mckinsey-blue);
+            background: #E0F2FE;
+            padding: 4px 8px;
+            border-radius: 3px;
+            min-width: 30px;
+            text-align: center;
+        }
+        .s4-list-text h5 {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--ink-primary);
+            margin-bottom: 3px;
+        }
+        .s4-list-text p {
+            font-size: 13px;
+            color: var(--ink-secondary);
+            line-height: 1.42;
+        }
+        .s4-bottom-callout {
+            background: #EFF6FF;
+            border: 1px solid #BFDBFE;
+            padding: 14px 18px;
+            border-radius: 4px;
+            font-size: 13.5px;
+            color: #1E40AF;
+            line-height: 1.5;
+            font-weight: 500;
+            margin-top: 14px;
+        }
+
+        /* ===========================================
+           SLIDE NAVIGATION CONTROLS & CHROME
+           =========================================== */
+        .deck-controls {
+            position: fixed;
+            left: 50%;
+            bottom: 18px;
+            transform: translateX(-50%);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: rgba(10, 25, 47, 0.85);
+            backdrop-filter: blur(12px);
+            padding: 8px 18px;
+            border-radius: 9999px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #FFFFFF;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            transition: all 0.2s ease;
+        }
+        .nav-btn:hover {
+            background: var(--mckinsey-blue);
+            border-color: var(--mckinsey-blue);
+        }
+        .slide-counter {
+            font-family: var(--font-mono);
+            font-size: 13px;
+            color: #E2E8F0;
+            letter-spacing: 0.1em;
+            font-weight: 700;
+        }
+        .edit-hint {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: #94A3B8;
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
+            padding-left: 12px;
+        }
+
+        /* Edit Mode Styling */
+        [contenteditable="true"] {
+            outline: 2px dashed var(--mckinsey-blue);
+            background: rgba(2, 132, 199, 0.05);
+            padding: 2px 4px;
+            border-radius: 2px;
+        }
+
+        /* Print Override */
+        @media print {
+            html, body {
+                width: 1920px;
+                height: auto;
+                overflow: visible;
+                background: #FFF;
+            }
+            .deck-viewport { position: static; overflow: visible; background: #FFF; }
+            .deck-stage { position: static; width: auto; height: auto; transform: none !important; }
+            .slide {
+                position: relative;
+                display: flex !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                pointer-events: auto !important;
+                page-break-after: always;
+                break-after: page;
+            }
+            .deck-controls { display: none !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="deck-viewport">
+        <div class="deck-stage" id="stage">
+
+            <!-- =========================================================================
+                 SLIDE 1: EXECUTIVE TITLE & PLATFORM MANDATE
+                 ========================================================================= -->
+            <section class="slide active" id="slide-1">
+                <div class="slide-header">
+                    <div class="header-brand">
+                        <div class="header-eyebrow">DEPARTMENT OF CLIMATE CHANGE AND ENVIRONMENT &bull; THAILAND</div>
+                        <div class="header-title-main">National Climate Adaptation Information Framework (NCAIF)</div>
+                    </div>
+                    <div class="header-meta">
+                        <div>STRATEGIC DISCLOSURE / ARCHITECTURE BRIEFING</div>
+                        <div>AUGUST 2026 &bull; DCCE DATA HUB</div>
+                    </div>
+                </div>
+
+                <div class="s1-container">
+                    <div class="s1-title-group">
+                        <div class="s1-tag">WP4 COMPREHENSIVE SITEMAP &bull; 31 ADDRESSABLE NODES</div>
+                        <h1 class="s1-main-title">
+                            National Climate Adaptation<br>
+                            <span>Information Framework</span>
+                        </h1>
+                        <h2 class="s1-thai-title">
+                            ผังโครงสร้างสถาปัตยกรรมสารสนเทศและบริการข้อมูลการปรับตัวแห่งชาติ
+                        </h2>
+                        <p class="s1-lead">
+                            การจัดวางโครงสร้างเว็บไซต์ 31 หน้า ภายใต้ 5 หมวดหลัก ที่ตอบโจทย์วงจรการปรับตัวของประเทศ 4 ระยะ เพื่อเปลี่ยนข้อมูลภูมิอากาศที่กระจัดกระจายสู่ <strong>"แหล่งข้อมูลความจริงหนึ่งเดียว" (Single Source of Truth)</strong> สนับสนุนการวางแผนและจัดสรรงบประมาณเชิงยุทธศาสตร์
+                        </p>
+                    </div>
+
+                    <div class="s1-metrics-card">
+                        <div class="s1-metric-row">
+                            <div class="s1-metric-num">05</div>
+                            <div class="s1-metric-content">
+                                <h4>หมวดหมู่หลัก (Core Zones)</h4>
+                                <p>จัดวางตามบทบาทผู้ใช้งาน ตั้งแต่ผู้บริหาร ผู้วางแผน นักวิเคราะห์ สู่ผู้ปฏิบัติงาน</p>
+                            </div>
+                        </div>
+                        <div class="s1-metric-row">
+                            <div class="s1-metric-num">31</div>
+                            <div class="s1-metric-content">
+                                <h4>หน้าระบบสารสนเทศ (Addressable Pages)</h4>
+                                <p>ครอบคลุมการใช้งานจริงทั้ง 77 จังหวัด และ 6 สาขาตามแผน NAP</p>
+                            </div>
+                        </div>
+                        <div class="s1-metric-row">
+                            <div class="s1-metric-num">04</div>
+                            <div class="s1-metric-content">
+                                <h4>ระยะวงจรการปรับตัว (Adaptation Stages)</h4>
+                                <p>โครงสร้างปิดลูป: ตรวจวัด &rarr; วิเคราะห์ความเสี่ยง &rarr; วางแผน &rarr; ติดตามประเมินผล</p>
+                            </div>
+                        </div>
+                        <div class="s1-metric-row">
+                            <div class="s1-metric-num">100%</div>
+                            <div class="s1-metric-content">
+                                <h4>ธรรมาภิบาลข้อมูลกลาง (Data Governance)</h4>
+                                <p>กำกับเมทาดาทาและกระบวนการอนุมัติเผยแพร่ตามมาตรฐาน DGA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-footer">
+                    <div>EXECUTIVE BRIEFING &bull; NATIONAL CLIMATE ADAPTATION PLATFORM</div>
+                    <div>STATUS: <span class="footer-highlight">DEVELOPER-READY SPECIFICATION (WP4)</span></div>
+                </div>
+            </section>
+
+
+            <!-- =========================================================================
+                 SLIDE 2: THE 5 CORE ZONES (MASTER SITEMAP ARCHITECTURE)
+                 ========================================================================= -->
+            <section class="slide" id="slide-2">
+                <div class="slide-header">
+                    <div class="header-brand">
+                        <div class="header-eyebrow">NCAIF SITEMAP ARCHITECTURE &bull; 31 PAGES</div>
+                        <div class="header-title-main">ภาพรวมโครงสร้างเว็บไซต์ 6 หมวดหลัก (6 Core Functional Zones)</div>
+                    </div>
+                    <div class="header-meta">
+                        <div>SLIDE 02 / 04</div>
+                        <div>EXECUTIVE OVERVIEW</div>
+                    </div>
+                </div>
+
+                <div class="action-headline-block">
+                    <h2 class="action-title">
+                        จัดระเบียบ 31 หน้าระบบตาม <span class="highlight">เส้นทางการตัดสินใจจริง</span> ของผู้มีส่วนได้ส่วนเสียทุกระดับ
+                    </h2>
+                    <p class="action-subtitle">
+                        สถาปัตยกรรมแบ่งออกเป็น 6 โซน เพื่อเชื่อมโยงตั้งแต่หน้าแรกที่ทำหน้าที่นำทาง ภาพรวมประเทศ ระดับนโยบายผู้บริหาร การวิเคราะห์เชิงลึก เครื่องมือข้อมูล ไปจนถึงช่องทางสะท้อนผลกลับสู่ระบบ
+                    </p>
+                </div>
+
+                <div class="s2-grid">
+                    <!-- Zone 1 -->
+                    <div class="s2-zone-card">
+                        <div class="s2-zone-header">
+                            <div class="s2-zone-num">ZONE 01</div>
+                            <h3 class="s2-zone-title">หน้าแรก</h3>
+                            <div class="s2-zone-subtitle">Home (Router)</div>
+                            <span class="s2-page-badge">1 PAGE (1.2)</span>
+                        </div>
+                        <ul class="s2-feature-list">
+                            <li class="s2-feature-item"><strong>Hero + ค้นหาพื้นที่ (1.2):</strong> สืบค้นความเสี่ยง จ. / อ. / ต. พร้อมระบบ Fallback</li>
+                            <li class="s2-feature-item"><strong>เส้นทางตามงาน (Task Routing):</strong> ทางลัดเข้าสู่แต่ละโซนตามงานที่ผู้ใช้ต้องการ — รายละเอียดออกแบบในโปรเจกต์ถัดไป</li>
+                            <li class="s2-feature-item"><strong>แถบบริบทประเทศแบบบาง + อัปเดตล่าสุด:</strong> ลิงก์ไปหน้าภาพรวมประเทศ (Zone 1B) ไม่แสดงเนื้อหาเต็ม</li>
+                        </ul>
+                        <div class="s2-target-audience">
+                            <strong>กลุ่มผู้ใช้หลัก:</strong> ผู้เยี่ยมชมทุกกลุ่ม — จุดเริ่มต้นก่อนกระจายไปตามงาน
+                        </div>
+                    </div>
+
+                    <!-- Zone 1B -->
+                    <div class="s2-zone-card">
+                        <div class="s2-zone-header">
+                            <div class="s2-zone-num">ZONE 01B</div>
+                            <h3 class="s2-zone-title">ภาพรวมประเทศ</h3>
+                            <div class="s2-zone-subtitle">Country Overview</div>
+                            <span class="s2-page-badge">2 PAGES (1.1.1 – 1.1.2)</span>
+                        </div>
+                        <ul class="s2-feature-list">
+                            <li class="s2-feature-item"><strong>1.1.1 ภาพรวมความเสี่ยง:</strong> นิยาม IPCC, Physical vs Transition Risk, สถิติภัยย้อนหลัง 20 ปี</li>
+                            <li class="s2-feature-item"><strong>1.1.2 ประเด็นวิกฤต:</strong> แผนที่ Hotspots ระดับจังหวัด และแผน NAP</li>
+                        </ul>
+                        <div class="s2-target-audience">
+                            <strong>กลุ่มผู้ใช้หลัก:</strong> ผู้บริหารระดับสูง, ผู้เยี่ยมชมทั่วไป — เดิมอยู่ใต้หน้าแรก แยกออกมาเป็นหมวดของตนเอง (19 ส.ค. 2026)
+                        </div>
+                    </div>
+
+                    <!-- Zone 2 -->
+                    <div class="s2-zone-card">
+                        <div class="s2-zone-header">
+                            <div class="s2-zone-num">ZONE 02</div>
+                            <h3 class="s2-zone-title">ศูนย์ข้อมูลผู้วางแผน</h3>
+                            <div class="s2-zone-subtitle">Policy Maker Center</div>
+                            <span class="s2-page-badge">6 PAGES (2.1 – 2.4)</span>
+                        </div>
+                        <ul class="s2-feature-list">
+                            <li class="s2-feature-item"><strong>2.1–2.2 สถานการณ์ & โปรไฟล์:</strong> ความเสี่ยง 77 จังหวัด และ 6 สาขา NAP</li>
+                            <li class="s2-feature-item"><strong>2.3 กฎหมายสนับสนุน:</strong> พ.ร.บ. ภูมิอากาศ, พ.ร.บ. ปภ., ผังเมือง</li>
+                            <li class="s2-feature-item"><strong>2.3.1 การเงิน & งบประมาณ:</strong> แหล่งทุน GCF/AF, หลีกเลี่ยงความเสียหาย (Avoided Losses)</li>
+                            <li class="s2-feature-item"><strong>2.3.2 ธรรมาภิบาล:</strong> โครงสร้าง กก. และกลไกเชื่อมโยง อปท.</li>
+                        </ul>
+                        <div class="s2-target-audience">
+                            <strong>กลุ่มผู้ใช้หลัก:</strong> ผู้วางนโยบาย, สำนักงบประมาณ, ผู้ว่าฯ, อปท.
+                        </div>
+                    </div>
+
+                    <!-- Zone 3 (Highlight) -->
+                    <div class="s2-zone-card highlight-zone">
+                        <div class="s2-zone-header">
+                            <div class="s2-zone-num" style="color: var(--accent-cyan);">ZONE 03 (CORE)</div>
+                            <h3 class="s2-zone-title">วงจรขับเคลื่อนการปรับตัว</h3>
+                            <div class="s2-zone-subtitle">Adaptation Cycle</div>
+                            <span class="s2-page-badge" style="background: #E0F2FE; color: #0369A1;">17 PAGES (3.1.1 – 3.4.3)</span>
+                        </div>
+                        <ul class="s2-feature-list">
+                            <li class="s2-feature-item"><strong>3.1 ตรวจวัด & คาดการณ์:</strong> แดชบอร์ดภูมิอากาศไทย, กริด 5–25 กม., SSP/RCP</li>
+                            <li class="s2-feature-item"><strong>3.2 วิเคราะห์ความเสี่ยง:</strong> Impact Chains, ภัยช้า (SLR/ดินทรุด), Loss & Damage</li>
+                            <li class="s2-feature-item"><strong>3.3 วางแผนปฏิบัติการ:</strong> กลุ่มเปราะบาง, คลังมาตรการ NBS vs Grey</li>
+                            <li class="s2-feature-item"><strong>3.4 ติดตามประเมินผล:</strong> ตัวชี้วัดสากล GGA, M&E Tracker</li>
+                        </ul>
+                        <div class="s2-target-audience">
+                            <strong>กลุ่มผู้ใช้หลัก:</strong> นักวิเคราะห์เทคนิค, ผู้เชี่ยวชาญรายสาขา, นักวิจัย
+                        </div>
+                    </div>
+
+                    <!-- Zone 4 -->
+                    <div class="s2-zone-card">
+                        <div class="s2-zone-header">
+                            <div class="s2-zone-num">ZONE 04</div>
+                            <h3 class="s2-zone-title">เครื่องมือและบริการ</h3>
+                            <div class="s2-zone-subtitle">Tools & Services</div>
+                            <span class="s2-page-badge">3 PAGES (4.1 – 4.3)</span>
+                        </div>
+                        <ul class="s2-feature-list">
+                            <li class="s2-feature-item"><strong>4.1 Data Catalog:</strong> แค็ตตาล็อกข้อมูลดิบ, ผลิตภัณฑ์ข้อมูล, มาตรฐานเมทาดาทา DGA</li>
+                            <li class="s2-feature-item"><strong>4.2 Web Applications:</strong> แผนที่ความเสี่ยงเต็มจอ SYS-003, Hazard Map, Risk Index</li>
+                            <li class="s2-feature-item"><strong>4.3 External Data Hub:</strong> เชื่อมโยงพอร์ทัลพันธมิตร (TMD, GISTDA, Copernicus)</li>
+                        </ul>
+                        <div class="s2-target-audience">
+                            <strong>กลุ่มผู้ใช้หลัก:</strong> Data Scientists, วิศวกร GIS, นักพัฒนาระบบ
+                        </div>
+                    </div>
+
+                    <!-- Zone 5 -->
+                    <div class="s2-zone-card">
+                        <div class="s2-zone-header">
+                            <div class="s2-zone-num">ZONE 05</div>
+                            <h3 class="s2-zone-title">ข่าวและช่องทางติดต่อ</h3>
+                            <div class="s2-zone-subtitle">News & Contact</div>
+                            <span class="s2-page-badge">2 PAGES (5.1 – 5.2)</span>
+                        </div>
+                        <ul class="s2-feature-list">
+                            <li class="s2-feature-item"><strong>5.1 ข่าวประกาศ & กิจกรรม:</strong> อัปเดตข้อมูล, ปฏิทินฝึกอบรมการใช้ข้อมูล, ลงทะเบียนสัมมนา</li>
+                            <li class="s2-feature-item"><strong>5.2 ช่องทางสะท้อนผล:</strong> แบบฟอร์มแจ้งปัญหาคุณภาพข้อมูล, ร้องขอชุดข้อมูล, ติดตาม Ticket</li>
+                        </ul>
+                        <div class="s2-target-audience">
+                            <strong>กลุ่มผู้ใช้หลัก:</strong> หน่วยงานภาคีเครือข่าย, ผู้ใช้งานแพลตฟอร์ม
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-footer">
+                    <div>NCAIF PLATFORM STRUCTURE &bull; 6 ZONES &bull; 31 PAGES TOTAL</div>
+                    <div>CANONICAL SOURCE: <span class="footer-highlight">2026-08-13-WP4-Node-Content-Storyboard</span></div>
+                </div>
+            </section>
+
+
+            <!-- =========================================================================
+                 SLIDE 3: DEEP-DIVE ON ZONE 3 (THE 4 ADAPTATION STAGES)
+                 ========================================================================= -->
+            <section class="slide" id="slide-3">
+                <div class="slide-header">
+                    <div class="header-brand">
+                        <div class="header-eyebrow">ZONE 03 DEEP DIVE &bull; 17 PAGES</div>
+                        <div class="header-title-main">วงจรขับเคลื่อนการปรับตัว 4 ระยะ (The 4-Stage Adaptation Lifecycle)</div>
+                    </div>
+                    <div class="header-meta">
+                        <div>SLIDE 03 / 04</div>
+                        <div>SCIENTIFIC & OPERATIONAL CORE</div>
+                    </div>
+                </div>
+
+                <div class="action-headline-block">
+                    <h2 class="action-title">
+                        โครงสร้างแบบวงจรปิด (Closed-Loop): <span class="highlight">เปลี่ยนการตรวจวัดวิทยาศาสตร์ สู่มาตรการและการรายงานสากล</span>
+                    </h2>
+                    <p class="action-subtitle">
+                        ระยะทั้ง 4 เชื่อมโยงกันอย่างเป็นระบบ เพื่อรองรับพันธกรณีรายงานความโปร่งใสระดับชาติ (BTR / UNFCCC) และการจัดทำแผนปรับตัวระดับท้องถิ่น
+                    </p>
+                </div>
+
+                <div class="s3-stages-grid">
+                    <!-- Stage 3.1 -->
+                    <div class="s3-stage-card">
+                        <div>
+                            <div class="s3-stage-badge">STAGE 3.1</div>
+                            <h3 class="s3-stage-name">สภาพภูมิอากาศและแนวโน้ม</h3>
+                            <div class="s3-stage-sub">Observation & Projections</div>
+                            <span class="s3-page-count">3 PAGES (3.1.1 – 3.1.3)</span>
+
+                            <div class="s3-items-block">
+                                <div class="s3-item">
+                                    <strong>3.1.1 ตรวจวัด & ดาวเทียม</strong>
+                                    เชื่อมโยงสถานี TMD, ข้อมูลป่าไม้/น้ำ GISTDA, ดัชนี ENSO/IPO
+                                </div>
+                                <div class="s3-item">
+                                    <strong>3.1.2 แดชบอร์ดภูมิอากาศไทย</strong>
+                                    สถิติอุณหภูมิ/ฝนย้อนหลัง 40 ปี, แบบจำลองกริด 5–25 กม. ถึงปี 2100
+                                </div>
+                                <div class="s3-item">
+                                    <strong>3.1.3 ฉากทัศน์อนาคต (SSP/RCP)</strong>
+                                    คู่มือการเลือกใช้ฉากทัศน์ และการสื่อสารค่าความไม่แน่นอน
+                                </div>
+                            </div>
+                        </div>
+                        <div class="s3-stage-bottom">
+                            <strong>ผลลัพธ์หลัก:</strong> ข้อมูลตรวจวัดจริงและฉากทัศน์อนาคตอ้างอิงกลาง
+                        </div>
+                    </div>
+
+                    <!-- Stage 3.2 -->
+                    <div class="s3-stage-card">
+                        <div>
+                            <div class="s3-stage-badge">STAGE 3.2</div>
+                            <h3 class="s3-stage-name">วิเคราะห์ผลกระทบและความเสี่ยง</h3>
+                            <div class="s3-stage-sub">Impact & Risk Analysis</div>
+                            <span class="s3-page-count">6 PAGES (3.2.1 – 3.2.5)</span>
+
+                            <div class="s3-items-block">
+                                <div class="s3-item">
+                                    <strong>3.2.1 ความเปราะบาง & การเปิดรับ</strong>
+                                    นิยาม Exposure, Sensitivity, Adaptive Capacity ตาม IPCC
+                                </div>
+                                <div class="s3-item">
+                                    <strong>3.2.2.1 ภัยที่เกิดขึ้นช้า (Slow-Onset)</strong>
+                                    ระดับน้ำทะเลหนุน, กัดเซาะชายฝั่ง, ดินทรุด และน้ำเค็มรุก
+                                </div>
+                                <div class="s3-item">
+                                    <strong>3.2.3 ห่วงโซ่ผลกระทบ (Impact Chains)</strong>
+                                    ไดอะแกรมลูกโซ่ภัยพิบัติ พร้อมกรณีศึกษาหาดใหญ่และภาคเกษตร
+                                </div>
+                                <div class="s3-item">
+                                    <strong>3.2.4–3.2.5 Loss & Damage</strong>
+                                    ฐานข้อมูลความสูญเสียในอดีต และคู่มือมาตรฐานการประเมิน
+                                </div>
+                            </div>
+                        </div>
+                        <div class="s3-stage-bottom">
+                            <strong>ผลลัพธ์หลัก:</strong> แบบจำลองความเสี่ยงเชิงพื้นที่และลูกโซ่ความเสียหาย
+                        </div>
+                    </div>
+
+                    <!-- Stage 3.3 -->
+                    <div class="s3-stage-card">
+                        <div>
+                            <div class="s3-stage-badge">STAGE 3.3</div>
+                            <h3 class="s3-stage-name">การวางแผนและการปฏิบัติการ</h3>
+                            <div class="s3-stage-sub">Planning & Implementation</div>
+                            <span class="s3-page-count">5 PAGES (3.3.1 – 3.3.5)</span>
+
+                            <div class="s3-items-block">
+                                <div class="s3-item">
+                                    <strong>3.3.1 วางแผนครอบคลุมทุกกลุ่ม</strong>
+                                    มาตรการเฉพาะสำหรับ เด็ก, ผู้สูงอายุ, ผู้พิการ, ชุมชนชายแดน และภูมิปัญญา
+                                </div>
+                                <div class="s3-item">
+                                    <strong>3.3.2 แผนที่นำทาง & อุปสรรค</strong>
+                                    Roadmap การปรับตัวระดับชาติ และการปลดล็อกข้อจำกัดสถาบัน
+                                </div>
+                                <div class="s3-item">
+                                    <strong>3.3.3 คลังมาตรการปรับตัว</strong>
+                                    ระบบค้นหามาตรการ: เปรียบเทียบ Nature-based Solutions กับโครงสร้างสีเทา
+                                </div>
+                                <div class="s3-item">
+                                    <strong>3.3.4–3.3.5 แผนท้องถิ่น & ติดตาม</strong>
+                                    คลังแผน อปท./เอกชน และสถานะโครงการลงทุน
+                                </div>
+                            </div>
+                        </div>
+                        <div class="s3-stage-bottom">
+                            <strong>ผลลัพธ์หลัก:</strong> เมนูมาตรการและเครื่องมือออกแบบโครงการ
+                        </div>
+                    </div>
+
+                    <!-- Stage 3.4 -->
+                    <div class="s3-stage-card">
+                        <div>
+                            <div class="s3-stage-badge">STAGE 3.4</div>
+                            <h3 class="s3-stage-name">การติดตามและประเมินผล</h3>
+                            <div class="s3-stage-sub">Monitoring & Evaluation</div>
+                            <span class="s3-page-count">3 PAGES (3.4.1 – 3.4.3)</span>
+
+                            <div class="s3-items-block">
+                                <div class="s3-item">
+                                    <strong>3.4.1 ความพร้อมเทคโนโลยี & GGA</strong>
+                                    การเชื่อมโยงตัวชี้วัดสากล Global Goal on Adaptation (59 Belém Indicators)
+                                </div>
+                                <div class="s3-item">
+                                    <strong>3.4.2 ระบบติดตามความก้าวหน้าระดับชาติ</strong>
+                                    National M&E Tracker รายสาขา/จังหวัด รองรับรายงาน BTR ต่อ UNFCCC
+                                </div>
+                                <div class="s3-item">
+                                    <strong>3.4.3 คลังบทเรียนโครงการสำเร็จ</strong>
+                                    ถอดบทเรียนความสำเร็จและอุปสรรคจากโครงการนำร่อง
+                                </div>
+                            </div>
+                        </div>
+                        <div class="s3-stage-bottom">
+                            <strong>ผลลัพธ์หลัก:</strong> ระบบรายงานความโปร่งใสและการเรียนรู้ข้ามสาขา
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-footer">
+                    <div>ADAPTATION KNOWLEDGE CYCLE &bull; INTEGRATED 4-STAGE PIPELINE</div>
+                    <div>GOVERNED BY: <span class="footer-highlight">DCCE NATIONAL ADAPTATION WORKING GROUPS</span></div>
+                </div>
+            </section>
+
+
+            <!-- =========================================================================
+                 SLIDE 4: DATA GOVERNANCE & SINGLE SOURCE OF TRUTH (SSOT)
+                 ========================================================================= -->
+            <section class="slide" id="slide-4">
+                <div class="slide-header">
+                    <div class="header-brand">
+                        <div class="header-eyebrow">PLATFORM RATIONALE &bull; ARCHITECTURAL INTEGRITY</div>
+                        <div class="header-title-main">ธรรมาภิบาลข้อมูลและความจริงหนึ่งเดียว (Data Governance & SSOT)</div>
+                    </div>
+                    <div class="header-meta">
+                        <div>SLIDE 04 / 04</div>
+                        <div>SUSTAINABILITY & COMPLIANCE</div>
+                    </div>
+                </div>
+
+                <div class="action-headline-block">
+                    <h2 class="action-title">
+                        ขจัดปัญหา <span class="highlight">"Frankenstein Dashboard"</span> ด้วยการสร้างฐานข้อมูลกลางที่ผ่านการกำกับดูแล
+                    </h2>
+                    <p class="action-subtitle">
+                        หน้าเว็บทำหน้าที่เป็นหน้าต่างแสดงผลบนฐานข้อมูลเดียว (Single Source of Truth) เพื่อให้ตัวเลข ดัชนี และรายงานของประเทศสอดคล้องกัน 100%
+                    </p>
+                </div>
+
+                <div class="s4-container">
+                    <!-- Left Panel: Data Platform Governance -->
+                    <div class="s4-panel">
+                        <div>
+                            <div class="pill-badge" style="margin-bottom: 12px;">FOUNDATIONAL LAYER</div>
+                            <h3 class="s4-panel-title">1. โครงสร้างธรรมาภิบาลข้อมูลกลาง (Data Platform)</h3>
+                            <p class="s4-panel-sub">ระบบจัดการข้อมูลเบื้องหลังเพื่อสร้างความน่าเชื่อถือทางวิชาการและกฎหมาย</p>
+
+                            <div class="s4-list">
+                                <div class="s4-list-item">
+                                    <div class="s4-list-icon">01</div>
+                                    <div class="s4-list-text">
+                                        <h5>มาตรฐานเมทาดาทาและแค็ตตาล็อกกลาง</h5>
+                                        <p>จัดทำ Data Catalog ที่ระบุ Data Owner, Data Steward, Lineage และรอบการปรับปรุงข้อมูลตามมาตรฐาน DGA Open Data Standard</p>
+                                    </div>
+                                </div>
+                                <div class="s4-list-item">
+                                    <div class="s4-list-icon">02</div>
+                                    <div class="s4-list-text">
+                                        <h5>กระบวนการตรวจสอบสิทธิ์ก่อนเผยแพร่ (Approval Gate)</h5>
+                                        <p>ระบบ CMS แบบ Role-Based Access Control (RBAC) ควบคุมสถานะ Draft &rarr; Review &rarr; Approve &rarr; Publish พร้อมบันทึกประวัติ (Audit Trail)</p>
+                                    </div>
+                                </div>
+                                <div class="s4-list-item">
+                                    <div class="s4-list-icon">03</div>
+                                    <div class="s4-list-text">
+                                        <h5>การคำนวณแบบ Single Source of Truth</h5>
+                                        <p>ดัชนีชี้วัดความเสี่ยงทั้งหมดถูกประมวลผลจากฐานข้อมูลกลางชุดเดียว ป้องกันไม่ให้แต่ละเครื่องมือบนเว็บแสดงตัวเลขขัดแย้งกันเอง</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="s4-bottom-callout">
+                            <strong>เป้าหมายความยั่งยืน:</strong> เจ้าหน้าที่กรม สส. สามารถจัดการเนื้อหาและอัปเดตข้อมูลผ่านระบบ CMS ได้เองโดยไม่ต้องพึ่งพาผู้รับจ้างภายนอกหลังส่งมอบ
+                        </div>
+                    </div>
+
+                    <!-- Right Panel: Core Products Integration -->
+                    <div class="s4-panel accent-panel">
+                        <div>
+                            <div class="pill-badge" style="margin-bottom: 12px; background: #E0F2FE; color: #0284C7;">INTEGRATED SERVICES</div>
+                            <h3 class="s4-panel-title">2. การบูรณาการ 5 ผลิตภัณฑ์หลักในระยะที่ 1</h3>
+                            <p class="s4-panel-sub">ส่งมอบบริการสารสนเทศและเครื่องมือวิเคราะห์ที่ตอบสนองภารกิจเร่งด่วน</p>
+
+                            <div class="s4-list">
+                                <div class="s4-list-item">
+                                    <div class="s4-list-icon" style="background: #E0F2FE; color: #0284C7;">01</div>
+                                    <div class="s4-list-text">
+                                        <h5>ยกระดับ 3 เครื่องมือวิเคราะห์เดิมของกรม สส.</h5>
+                                        <p>เชื่อมโยง <strong>Spatial Risk Database, Hazard/Exposure Map, และ Climate Risk Index</strong> เข้าสู่ฐานข้อมูลโมเดลกลางเดียวกัน</p>
+                                    </div>
+                                </div>
+                                <div class="s4-list-item">
+                                    <div class="s4-list-icon" style="background: #E0F2FE; color: #0284C7;">02</div>
+                                    <div class="s4-list-text">
+                                        <h5>ระบบออกรายงาน BTR อัตโนมัติ (A-BTR Service)</h5>
+                                        <p>เปลี่ยนการรวบรวมข้อมูลรายงานความโปร่งใสต่อ UNFCCC จากการทำมือ สู่ระบบดิจิทัลที่ดึงข้อมูลจากวงจรการปรับตัวโดยตรง</p>
+                                    </div>
+                                </div>
+                                <div class="s4-list-item">
+                                    <div class="s4-list-icon" style="background: #E0F2FE; color: #0284C7;">03</div>
+                                    <div class="s4-list-text">
+                                        <h5>ฐานข้อมูลสถิติความสูญเสียจากภัยพิบัติ (Disaster Loss Stats)</h5>
+                                        <p>จัดระเบียบสถิติความเสียหายรายเหตุการณ์และรายสาขา เพื่อเป็นหลักฐานสนับสนุนการวางแผนงบประมาณฟื้นฟู</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="s4-bottom-callout" style="background: #F0FDF4; border-color: #BBF7D0; color: #166534;">
+                            <strong>ความพร้อมสู่เฟสถัดไป:</strong> วางรากฐานสถาปัตยกรรมที่พร้อมขยายสู่แค็ตตาล็อกบริการฉบับเต็ม 8 รายการในอนาคต
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-footer">
+                    <div>DATA GOVERNANCE & ARCHITECTURAL INTEGRITY &bull; DCCE DATA HUB</div>
+                    <div>CONFIDENTIAL &bull; <span class="footer-highlight">FOR INTERNAL STAKEHOLDER ALIGNMENT</span></div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- =========================================================================
+         DECK CONTROLS & JAVASCRIPT ENGINE
+         ========================================================================= -->
+    <div class="deck-controls">
+        <button class="nav-btn" id="prevBtn" title="Previous Slide (Left Arrow)">&larr;</button>
+        <span class="slide-counter" id="slideCounter">1 / 4</span>
+        <button class="nav-btn" id="nextBtn" title="Next Slide (Right Arrow, Space)">&rarr;</button>
+        <span class="edit-hint">Press <strong>E</strong> to Edit Text</span>
+    </div>
+
+    <script>
+        /* === 1. Responsive 16:9 Stage Scaling === */
+        function resizeStage() {
+            const stage = document.getElementById('stage');
+            if (!stage) return;
+            const stageWidth = 1920;
+            const stageHeight = 1080;
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+            const scale = Math.min(windowWidth / stageWidth, windowHeight / stageHeight);
+            const left = (windowWidth - stageWidth * scale) / 2;
+            const top = (windowHeight - stageHeight * scale) / 2;
+            stage.style.transform = `translate(${left}px, ${top}px) scale(${scale})`;
+        }
+        window.addEventListener('resize', resizeStage);
+        window.addEventListener('DOMContentLoaded', resizeStage);
+        resizeStage();
+
+        /* === 2. Slide Navigation Logic === */
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        let currentSlide = 0;
+
+        function updateSlide(index) {
+            if (index < 0) index = 0;
+            if (index >= totalSlides) index = totalSlides - 1;
+            
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+            
+            currentSlide = index;
+            document.getElementById('slideCounter').textContent = `${currentSlide + 1} / ${totalSlides}`;
+        }
+
+        document.getElementById('prevBtn').addEventListener('click', () => updateSlide(currentSlide - 1));
+        document.getElementById('nextBtn').addEventListener('click', () => updateSlide(currentSlide + 1));
+
+        /* === 3. Keyboard Shortcuts === */
+        window.addEventListener('keydown', (e) => {
+            // Ignore navigation when editing text
+            if (e.target.isContentEditable) {
+                if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+                    e.preventDefault();
+                    alert('Changes preserved in browser session.');
+                }
+                return;
+            }
+
+            if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+                e.preventDefault();
+                updateSlide(currentSlide + 1);
+            } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+                e.preventDefault();
+                updateSlide(currentSlide - 1);
+            } else if (e.key === 'Home') {
+                e.preventDefault();
+                updateSlide(0);
+            } else if (e.key === 'End') {
+                e.preventDefault();
+                updateSlide(totalSlides - 1);
+            } else if (e.key.toLowerCase() === 'e') {
+                e.preventDefault();
+                toggleEditMode();
+            }
+        });
+
+        /* === 4. Inline Text Editing Mode === */
+        let isEditMode = false;
+        function toggleEditMode() {
+            isEditMode = !isEditMode;
+            const editableElements = document.querySelectorAll('h1, h2, h3, h4, h5, p, li, span, div.s1-metric-num, div.s2-zone-title');
+            
+            editableElements.forEach(el => {
+                if (el.closest('.deck-controls')) return;
+                el.contentEditable = isEditMode ? 'true' : 'false';
+            });
+
+            const hint = document.querySelector('.edit-hint');
+            if (isEditMode) {
+                hint.innerHTML = '<span style="color: #38BDF8;">Editing Mode Active (Ctrl+S to save)</span>';
+            } else {
+                hint.innerHTML = 'Press <strong>E</strong> to Edit Text';
+            }
+        }
+    </script>
+</body>
+</html>

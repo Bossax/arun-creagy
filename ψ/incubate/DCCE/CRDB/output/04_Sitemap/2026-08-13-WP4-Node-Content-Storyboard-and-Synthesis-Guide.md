@@ -7,6 +7,8 @@
 
 The Developer-Ready Design Requirements Specification tells a developer what to build. This document tells a DCCE content owner what each page should actually say, in what order, and how close it is to ready. It covers all 31 addressable pages in the site map, in site order, from the front page through to the feedback channel.
 
+**Structure note (19 August 2026):** Per the Homepage Concept draft (`2026-08-19-WP4-Homepage-Concept.md`), 1.1.1 and 1.1.2 — previously nested under "1. หน้าแรก — Home" — now sit in their own Country Overview section, a sibling of Home rather than Home's content. Home becomes a router (search + task-based service cards); 1.2 (Area Search) is what stays on it. Node codes are unchanged here pending the Tier 1 sitemap-data update.
+
 Each page gets three things:
 
 **A readiness score, from 1 to 5.** This is a quick way to judge how much work a page needs before it can go live.
@@ -25,7 +27,7 @@ Some pages hold content that depends on a decision DCCE has not made yet, or on 
 
 ---
 
-# 1. หน้าแรก — Home and overview
+# ภาพรวมประเทศ — Country Overview (sections 1.1.1–1.1.2)
 
 ##  1.1.1 — Overview of Thailand's climate risk
 
@@ -72,6 +74,8 @@ Two of the three pieces here are genuinely finished and just need to be laid out
 - REQ-005 needs care before it goes up as "complete." The composite risk data is real, but do not publish or imply hotspots below province level until the Appendix B2 investigation confirms what the index actually supports. In the meantime, present the hotspots explicitly as province-level, with the same draft and unverified flag the underlying data carries, and hold this section for DCCE's explicit approval on whether province-level "hotspot" framing is worth shipping at all — without that approval, fall back to literature-reviewed content instead.
 
 ---
+
+# 1. หน้าแรก — Home
 
 ##  1.2 — Area-based data search
 
