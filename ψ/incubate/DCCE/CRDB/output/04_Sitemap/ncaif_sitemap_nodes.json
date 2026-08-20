@@ -27,12 +27,13 @@
     "parent_node_id": "SIT-1.1",
     "hierarchy_level": 2,
     "content_requirements": [
-      "ประวัติศาสตร์ของภัยธรรมชาติในประเทศไทย",
-      "กรอบทฤษฎีและนิยามของความเสี่ยง IPCC",
-      "ความเสี่ยงทางกายภาพและความเสี่ยงของการเปลี่ยนผ่าน",
-      "แผนภาพสรุปโปรไฟล์ความเสี่ยงของประเทศไทย"
+      "ประวัติศาสตร์และแนวโน้มภัยธรรมชาติของประเทศ",
+      "กรอบแนวคิดและนิยามความเสี่ยงตามมาตรฐาน IPCC (Hazard, Exposure, Vulnerability)",
+      "ความเข้าใจความเสี่ยงทางกายภาพ (Physical Risk) และความเสี่ยงจากการเปลี่ยนผ่าน (Transition Risk)",
+      "แผนภาพและบัตรข้อมูลสรุปความเสี่ยงระดับชาติ (National Risk Profile Summary Cards)",
+      "[shared build — see DEL-7, also referenced from 3.1/3.2]"
     ],
-    "content_requirements_summary": "ประวัติศาสตร์ของภัยธรรมชาติในประเทศไทย; กรอบทฤษฎีและนิยามของความเสี่ยง IPCC; ความเสี่ยงทางกายภาพและความเสี่ยงของการเปลี่ยนผ่าน; แผนภาพสรุปโปรไฟล์ความเสี่ยงของประเทศไทย"
+    "content_requirements_summary": "ประวัติศาสตร์และแนวโน้มภัยธรรมชาติของประเทศ; กรอบแนวคิดและนิยามความเสี่ยงตามมาตรฐาน IPCC (Hazard, Exposure, Vulnerability); ความเข้าใจความเสี่ยงทางกายภาพ (Physical Risk) และความเสี่ยงจากการเปลี่ยนผ่าน (Transition Risk); แผนภาพและบัตรข้อมูลสรุปความเสี่ยงระดับชาติ (National Risk Profile Summary Cards); [shared build — see DEL-7, also referenced from 3.1/3.2]"
   },
   {
     "sitemap_node_id": "SIT-1.1.2",
@@ -42,11 +43,11 @@
     "parent_node_id": "SIT-1.1",
     "hierarchy_level": 2,
     "content_requirements": [
-      "Hotspot ของความเสี่ยงในแต่ละภัย และภาคส่วน",
-      "สรุปแผนการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศระดับชาติ",
-      "ตัวอย่างมาตรการหลักหรือโครงการเด่นในการปรับตัว"
+      "พื้นที่เสี่ยงสูง (Hotspots) รายสาขาและระดับภูมิภาค",
+      "สรุปสาระสำคัญของแผนการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศระดับชาติ (NAP Summary)",
+      "ตัวอย่างมาตรการปรับตัวที่มีความคุ้มค่าสูง พร้อมรายละเอียดเบื้องต้น"
     ],
-    "content_requirements_summary": "Hotspot ของความเสี่ยงในแต่ละภัย และภาคส่วน; สรุปแผนการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศระดับชาติ; ตัวอย่างมาตรการหลักหรือโครงการเด่นในการปรับตัว"
+    "content_requirements_summary": "พื้นที่เสี่ยงสูง (Hotspots) รายสาขาและระดับภูมิภาค; สรุปสาระสำคัญของแผนการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศระดับชาติ (NAP Summary); ตัวอย่างมาตรการปรับตัวที่มีความคุ้มค่าสูง พร้อมรายละเอียดเบื้องต้น"
   },
   {
     "sitemap_node_id": "SIT-1.2",
@@ -56,11 +57,12 @@
     "parent_node_id": "SIT-1",
     "hierarchy_level": 2,
     "content_requirements": [
-      "**Search Hierarchy**: รองรับการค้นหาตามระดับการปกครอง (จังหวัด -> อำเภอ -> ตำบล)",
-      "**Map Integration**: แสดงผลตำแหน่งบนแผนที่ความเสี่ยง (Spatial Risk Map integration)",
-      "**Quick-view Dashboard**: แสดงบัตรข้อมูลสรุป (Summary Cards) เกี่ยวกับภัยคุกคามหลัก ดัชนีความเปราะบาง และมาตรการที่แนะนำในเบื้องต้น ก่อนส่งผู้ใช้ไปยังหน้ารายละเอียดใน Section 4"
+      "ระบบสืบค้นข้อมูลความเสี่ยงเชิงพื้นที่แบบโต้ตอบ (Interactive Search Engine) เพื่อนำทางผู้ใช้ไปสู่ผลวิเคราะห์เชิงปฏิบัติการ",
+      "Search Hierarchy: รองรับการค้นหารายระดับการปกครอง (จังหวัด -> อำเภอ -> ตำบล)",
+      "Map Integration: แสดงตำแหน่งและขอบเขตการปกครองซ้อนทับบนแผนที่ความเสี่ยงเชิงพื้นที่ [shared build — see DEL-2/DEL-13, also embedded at 2.2, 2.4-link, 4]",
+      "Quick-view Dashboard: แสดงบัตรข้อมูลสรุปความเปราะบางเฉพาะจุด ภัยคุกคามหลัก และมาตรการที่แนะนำในเบื้องต้น"
     ],
-    "content_requirements_summary": "**Search Hierarchy**: รองรับการค้นหาตามระดับการปกครอง (จังหวัด -> อำเภอ -> ตำบล); **Map Integration**: แสดงผลตำแหน่งบนแผนที่ความเสี่ยง (Spatial Risk Map integration); **Quick-view Dashboard**: แสดงบัตรข้อมูลสรุป (Summary Cards) เกี่ยวกับภัยคุกคามหลัก ดัชนีความเปราะบาง และมาตรการที่แนะนำในเบื้องต้น ก่อนส่งผู้ใช้ไปยังหน้ารายละเอียดใน Section 4"
+    "content_requirements_summary": "ระบบสืบค้นข้อมูลความเสี่ยงเชิงพื้นที่แบบโต้ตอบ (Interactive Search Engine) เพื่อนำทางผู้ใช้ไปสู่ผลวิเคราะห์เชิงปฏิบัติการ; Search Hierarchy: รองรับการค้นหารายระดับการปกครอง (จังหวัด -> อำเภอ -> ตำบล); Map Integration: แสดงตำแหน่งและขอบเขตการปกครองซ้อนทับบนแผนที่ความเสี่ยงเชิงพื้นที่ [shared build — see DEL-2/DEL-13, also embedded at 2.2, 2.4-link, 4]; Quick-view Dashboard: แสดงบัตรข้อมูลสรุปความเปราะบางเฉพาะจุด ภัยคุกคามหลัก และมาตรการที่แนะนำในเบื้องต้น"
   },
   {
     "sitemap_node_id": "SIT-2",
@@ -79,8 +81,13 @@
     "title_en": "",
     "parent_node_id": "SIT-2",
     "hierarchy_level": 2,
-    "content_requirements": [],
-    "content_requirements_summary": ""
+    "content_requirements": [
+      "ภาพรวม climatic zone ของประเทศไทยและ historical climatology (linked to 3.1.2)",
+      "สรุปสถิติภัยพิบัติจากภูมิอากาศในอดีต [shared build — see DEL-12, Service 4]",
+      "สรุปข้อมูลความสูญเสียและความเสียหายทางเศรษฐกิจจากภัยพิบัติจากภูมิอากาศ — บัตรสรุปพร้อมลิงก์ไปยังแดชบอร์ดฉบับเต็มที่ 3.2.4 [shared build — see DEL-12/LD-1]",
+      "สรุปแนวโน้มการเปิดรับภัย (Exposure Trends)"
+    ],
+    "content_requirements_summary": "ภาพรวม climatic zone ของประเทศไทยและ historical climatology (linked to 3.1.2); สรุปสถิติภัยพิบัติจากภูมิอากาศในอดีต [shared build — see DEL-12, Service 4]; สรุปข้อมูลความสูญเสียและความเสียหายทางเศรษฐกิจจากภัยพิบัติจากภูมิอากาศ — บัตรสรุปพร้อมลิงก์ไปยังแดชบอร์ดฉบับเต็มที่ 3.2.4 [shared build — see DEL-12/LD-1]; สรุปแนวโน้มการเปิดรับภัย (Exposure Trends)"
   },
   {
     "sitemap_node_id": "SIT-2.2",
@@ -89,8 +96,12 @@
     "title_en": "",
     "parent_node_id": "SIT-2",
     "hierarchy_level": 2,
-    "content_requirements": [],
-    "content_requirements_summary": ""
+    "content_requirements": [
+      "สรุปโปรไฟล์ความเสี่ยงและความเปราะบางรายพื้นที่ (รายภูมิภาค, 77 จังหวัด, และระดับท้องถิ่น/อปท.) [shared build — see DEL-2, same profile layer as 1.2/2.4-link/4]",
+      "สรุปโปรไฟล์ความเสี่ยงเฉพาะสาขาเป้าหมายหลัก 6 สาขา (เกษตรกรรม, น้ำ, สาธารณสุข, ท่องเที่ยว, ป่าไม้/ระบบนิเวศ, พลังงานและการตั้งถิ่นฐาน) — confirmed CCIC-sourced (ccic.dcce.go.th/riskarea), same domain as SYS-003's map, verified against the asset-citation registry this session",
+      "สังเคราะห์แผนจังหวัด/อำเภอ และข้อมูลระดับ อปท. [pending DCCE resourcing decision — see Briefs E-5/E-6]"
+    ],
+    "content_requirements_summary": "สรุปโปรไฟล์ความเสี่ยงและความเปราะบางรายพื้นที่ (รายภูมิภาค, 77 จังหวัด, และระดับท้องถิ่น/อปท.) [shared build — see DEL-2, same profile layer as 1.2/2.4-link/4]; สรุปโปรไฟล์ความเสี่ยงเฉพาะสาขาเป้าหมายหลัก 6 สาขา (เกษตรกรรม, น้ำ, สาธารณสุข, ท่องเที่ยว, ป่าไม้/ระบบนิเวศ, พลังงานและการตั้งถิ่นฐาน) — confirmed CCIC-sourced (ccic.dcce.go.th/riskarea), same domain as SYS-003's map, verified against the asset-citation registry this session; สังเคราะห์แผนจังหวัด/อำเภอ และข้อมูลระดับ อปท. [pending DCCE resourcing decision — see Briefs E-5/E-6]"
   },
   {
     "sitemap_node_id": "SIT-2.3",
@@ -99,8 +110,48 @@
     "title_en": "",
     "parent_node_id": "SIT-2",
     "hierarchy_level": 2,
-    "content_requirements": [],
-    "content_requirements_summary": ""
+    "content_requirements": [
+      "ลิงก์ไปยังสรุปสาระสำคัญของ NAP (full detail at 1.1.2, cross-referenced not duplicated)",
+      "สถานะการดำเนินการตามแผนการปรับตัวระดับชาติ (NAP Implementation Status) — restored from v6",
+      "สถานะการดำเนินการและแผนดำเนินงานภายใต้ พ.ร.บ. การเปลี่ยนแปลงสภาพภูมิอากาศ (พ.ร.บ. โลกร้อน)",
+      "สรุปมาตรการทางกฎหมายและนโยบายที่ส่งเสริมการปรับตัว (พ.ร.บ. ป้องกันและบรรเทาสาธารณภัย, กฎกระทรวงผังเมือง, กฎหมายและนโยบายด้านการจัดการน้ำ)",
+      "สรุปเครื่องมือทางการเงินและแหล่งทุนที่ใช้ในการลงทุนปรับตัว รายการแหล่งทุน และกรณีศึกษาการเงินเพื่อการปรับตัว — restored from v6, detail at 2.3.1",
+      "เครื่องมือ ECA และ Cost-Benefit/Avoided Losses [pending DCCE decision — see Brief E-1]",
+      "ลิงก์ไปยังกรอบการติดตามและประเมินผล (M&E, full detail at 3.4.1) — restored from v6"
+    ],
+    "content_requirements_summary": "ลิงก์ไปยังสรุปสาระสำคัญของ NAP (full detail at 1.1.2, cross-referenced not duplicated); สถานะการดำเนินการตามแผนการปรับตัวระดับชาติ (NAP Implementation Status) — restored from v6; สถานะการดำเนินการและแผนดำเนินงานภายใต้ พ.ร.บ. การเปลี่ยนแปลงสภาพภูมิอากาศ (พ.ร.บ. โลกร้อน); สรุปมาตรการทางกฎหมายและนโยบายที่ส่งเสริมการปรับตัว (พ.ร.บ. ป้องกันและบรรเทาสาธารณภัย, กฎกระทรวงผังเมือง, กฎหมายและนโยบายด้านการจัดการน้ำ); สรุปเครื่องมือทางการเงินและแหล่งทุนที่ใช้ในการลงทุนปรับตัว รายการแหล่งทุน และกรณีศึกษาการเงินเพื่อการปรับตัว — restored from v6, detail at 2.3.1; เครื่องมือ ECA และ Cost-Benefit/Avoided Losses [pending DCCE decision — see Brief E-1]; ลิงก์ไปยังกรอบการติดตามและประเมินผล (M&E, full detail at 3.4.1) — restored from v6"
+  },
+  {
+    "sitemap_node_id": "SIT-2.3.1",
+    "node_code": "2.3.1",
+    "title_th": "แหล่งทุนและการติดตามงบประมาณปรับตัว",
+    "title_en": "Adaptation Finance Directory & Support Tracking",
+    "parent_node_id": "SIT-2.3",
+    "hierarchy_level": 3,
+    "content_requirements": [
+      "รายการแหล่งทุนภาครัฐ/เอกชน/ต่างประเทศ (GCF, AF, GEF, คู่มือการให้ทุนของ DCCE) พร้อมกรณีศึกษาการใช้งานจริง — buildable now",
+      "[pending DCCE decision — see Brief E-1, remaining items below]",
+      "รายงานสถิติการจัดสรรงบประมาณแผ่นดินสำหรับการปรับตัว และการจัดทำระบบงบประมาณจำแนกรายจ่ายภูมิอากาศ (Climate Budget Tagging)",
+      "การติดตามการรับเงินช่วยเหลือ เทคโนโลยี และความช่วยเหลือด้านวิชาการจากต่างประเทศ (Adaptation Finance Tracker) — same product as 3.3.5's mention, named explicitly this session",
+      "การประเมินและการดึงดูดการมีส่วนร่วมของภาคการเงินและภาคเอกชนในการจัดหาทุนเพื่อการปรับตัว"
+    ],
+    "content_requirements_summary": "รายการแหล่งทุนภาครัฐ/เอกชน/ต่างประเทศ (GCF, AF, GEF, คู่มือการให้ทุนของ DCCE) พร้อมกรณีศึกษาการใช้งานจริง — buildable now; [pending DCCE decision — see Brief E-1, remaining items below]; รายงานสถิติการจัดสรรงบประมาณแผ่นดินสำหรับการปรับตัว และการจัดทำระบบงบประมาณจำแนกรายจ่ายภูมิอากาศ (Climate Budget Tagging); การติดตามการรับเงินช่วยเหลือ เทคโนโลยี และความช่วยเหลือด้านวิชาการจากต่างประเทศ (Adaptation Finance Tracker) — same product as 3.3.5's mention, named explicitly this session; การประเมินและการดึงดูดการมีส่วนร่วมของภาคการเงินและภาคเอกชนในการจัดหาทุนเพื่อการปรับตัว"
+  },
+  {
+    "sitemap_node_id": "SIT-2.3.2",
+    "node_code": "2.3.2",
+    "title_th": "กลไกเชิงสถาบันและการประสานงาน",
+    "title_en": "Institutional Governance & Coordination",
+    "parent_node_id": "SIT-2.3",
+    "hierarchy_level": 3,
+    "content_requirements": [
+      "[shared build — see DEL-8, same deliverable as the systemic-barriers content at 3.3.2]",
+      "บทบาทและหน้าที่ของกรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (DCCE) ในฐานะจุดประสานงานกลางของประเทศ",
+      "โครงสร้างคณะกรรมการนโยบายการเปลี่ยนแปลงสภาพภูมิอากาศแห่งชาติ และคณะอนุกรรมการรายสาขา",
+      "กลไกการประสานงานและบูรณาการการดำเนินงานปรับตัวระหว่างหน่วยงานรัฐระดับชาติและระดับท้องถิ่น (อปท.)",
+      "ช่องทางและสถิติการมีส่วนร่วมของภาคประชาสังคม ภาคเอกชน และสถาบันวิชาการในวงจรการปรับตัว"
+    ],
+    "content_requirements_summary": "[shared build — see DEL-8, same deliverable as the systemic-barriers content at 3.3.2]; บทบาทและหน้าที่ของกรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (DCCE) ในฐานะจุดประสานงานกลางของประเทศ; โครงสร้างคณะกรรมการนโยบายการเปลี่ยนแปลงสภาพภูมิอากาศแห่งชาติ และคณะอนุกรรมการรายสาขา; กลไกการประสานงานและบูรณาการการดำเนินงานปรับตัวระหว่างหน่วยงานรัฐระดับชาติและระดับท้องถิ่น (อปท.); ช่องทางและสถิติการมีส่วนร่วมของภาคประชาสังคม ภาคเอกชน และสถาบันวิชาการในวงจรการปรับตัว"
   },
   {
     "sitemap_node_id": "SIT-2.4",
@@ -109,8 +160,10 @@
     "title_en": "",
     "parent_node_id": "SIT-2",
     "hierarchy_level": 2,
-    "content_requirements": [],
-    "content_requirements_summary": ""
+    "content_requirements": [
+      "Links to Section 4 (เครื่องมือและบริการสารสนเทศด้านภูมิอากาศ) — kept as a pure router link per Boss's decision this session; map/profile content (DEL-2/DEL-13) already reachable via 1.2, 2.2, and 4, so a dedicated hub page would duplicate rather than add an entry point"
+    ],
+    "content_requirements_summary": "Links to Section 4 (เครื่องมือและบริการสารสนเทศด้านภูมิอากาศ) — kept as a pure router link per Boss's decision this session; map/profile content (DEL-2/DEL-13) already reachable via 1.2, 2.2, and 4, so a dedicated hub page would duplicate rather than add an entry point"
   },
   {
     "sitemap_node_id": "SIT-3",
@@ -140,18 +193,11 @@
     "parent_node_id": "SIT-3.1",
     "hierarchy_level": 3,
     "content_requirements": [
-      "ข้อมูลสภาพอากาศระยะสั้นและระยะกลาง (TMD Website)",
-      "ข้อมูลการสังเกตุจากดาวเทียม:",
-      "พื้นที่ป่า",
-      "Land cover",
-      "พื้นที่แหล่งน้ำ",
-      "แนวปะการัง",
-      "ระบบนิเวศน์",
-      "ปรากฏการณ์ทางภูมิอากาศที่สำคัญ:",
-      "ENSO (El Niño–Southern Oscillation)",
-      "AMOC (Atlantic Meridional Overturning Circulation)"
+      "บทความและลิงก์ไปยังชุดข้อมูลสภาพอากาศรายสถานีสังเกตการณ์ระยะสั้นและระยะกลาง (ข้อมูลหลักจากกรมอุตุนิยมวิทยา)",
+      "บทความและลิงก์ไปยังชุดข้อมูลสังเกตการณ์ผ่านดาวเทียม (พื้นที่ป่าไม้, การใช้ประโยชน์ที่ดิน Land Cover, แหล่งน้ำ, แนวปะการังฟอกขาว) (ข้อมูลหลักจาก GISTDA)",
+      "ข้อมูลการติดตามปรากฏการณ์สภาพภูมิอากาศที่มีนัยสำคัญระดับสากล (เช่น ดัชนี ENSO, การชะลอตัวของ AMOC)"
     ],
-    "content_requirements_summary": "ข้อมูลสภาพอากาศระยะสั้นและระยะกลาง (TMD Website); ข้อมูลการสังเกตุจากดาวเทียม:; พื้นที่ป่า; Land cover; พื้นที่แหล่งน้ำ; แนวปะการัง; ระบบนิเวศน์; ปรากฏการณ์ทางภูมิอากาศที่สำคัญ:; ENSO (El Niño–Southern Oscillation); AMOC (Atlantic Meridional Overturning Circulation)"
+    "content_requirements_summary": "บทความและลิงก์ไปยังชุดข้อมูลสภาพอากาศรายสถานีสังเกตการณ์ระยะสั้นและระยะกลาง (ข้อมูลหลักจากกรมอุตุนิยมวิทยา); บทความและลิงก์ไปยังชุดข้อมูลสังเกตการณ์ผ่านดาวเทียม (พื้นที่ป่าไม้, การใช้ประโยชน์ที่ดิน Land Cover, แหล่งน้ำ, แนวปะการังฟอกขาว) (ข้อมูลหลักจาก GISTDA); ข้อมูลการติดตามปรากฏการณ์สภาพภูมิอากาศที่มีนัยสำคัญระดับสากล (เช่น ดัชนี ENSO, การชะลอตัวของ AMOC)"
   },
   {
     "sitemap_node_id": "SIT-3.1.2",
@@ -161,32 +207,32 @@
     "parent_node_id": "SIT-3.1",
     "hierarchy_level": 3,
     "content_requirements": [
-      "ข้อมูล Climatology ของประเทศไทย",
-      "ข้อมูลสถิติ Climate Variable ที่สำคัญ",
-      "บทอธิบาย climate scenario",
-      "ข้อมูล downscaled climate data ของประเทศไทย"
+      "ข้อมูล Climatology และตัวแปรทางสภาพภูมิอากาศที่สำคัญ (Temperature trends, Rainfall intensity changes)",
+      "แนวคิดตัวขับเคลื่อนผลกระทบทางภูมิอากาศ Climate Impact Driver",
+      "บทความและลิงก์ไปยังคลังชุดข้อมูลคาดการณ์อนาคตความละเอียดสูงระดับประเทศ (Downscaled climate projections)"
     ],
-    "content_requirements_summary": "ข้อมูล Climatology ของประเทศไทย; ข้อมูลสถิติ Climate Variable ที่สำคัญ; บทอธิบาย climate scenario; ข้อมูล downscaled climate data ของประเทศไทย"
+    "content_requirements_summary": "ข้อมูล Climatology และตัวแปรทางสภาพภูมิอากาศที่สำคัญ (Temperature trends, Rainfall intensity changes); แนวคิดตัวขับเคลื่อนผลกระทบทางภูมิอากาศ Climate Impact Driver; บทความและลิงก์ไปยังคลังชุดข้อมูลคาดการณ์อนาคตความละเอียดสูงระดับประเทศ (Downscaled climate projections)"
   },
   {
     "sitemap_node_id": "SIT-3.1.3",
     "node_code": "3.1.3",
     "title_th": "ฉากทัศน์ภูมิอากาศในอนาคต",
-    "title_en": "",
+    "title_en": "Climate Scenarios",
     "parent_node_id": "SIT-3.1",
     "hierarchy_level": 3,
     "content_requirements": [
-      "บทอธิบายการใช้งาน climate scenario",
-      "แหล่งข้อมูล climate scenario",
-      "ตัวอย่างการใช้งาน climate scenario ในการทำแผนยุทธศาสตร์และประเมินความเสี่ยง"
+      "คู่มือและบทอธิบายการใช้งานฉากทัศน์ภูมิอากาศ",
+      "แหล่งข้อมูล climate scenario — restored from v6",
+      "มาตรฐานการบริหารจัดการความไม่แน่นอนและแนวทางการเลือกชุดข้อมูลคาดการณ์อนาคต (National Climate Uncertainty Governance Standard) [pending DCCE decision — see Brief E-2]",
+      "ตัวอย่างกรณีศึกษาการประยุกต์ใช้แบบจำลองคาดการณ์สภาพภูมิอากาศในการวางแผนกลยุทธ์ระยะยาว"
     ],
-    "content_requirements_summary": "บทอธิบายการใช้งาน climate scenario; แหล่งข้อมูล climate scenario; ตัวอย่างการใช้งาน climate scenario ในการทำแผนยุทธศาสตร์และประเมินความเสี่ยง"
+    "content_requirements_summary": "คู่มือและบทอธิบายการใช้งานฉากทัศน์ภูมิอากาศ; แหล่งข้อมูล climate scenario — restored from v6; มาตรฐานการบริหารจัดการความไม่แน่นอนและแนวทางการเลือกชุดข้อมูลคาดการณ์อนาคต (National Climate Uncertainty Governance Standard) [pending DCCE decision — see Brief E-2]; ตัวอย่างกรณีศึกษาการประยุกต์ใช้แบบจำลองคาดการณ์สภาพภูมิอากาศในการวางแผนกลยุทธ์ระยะยาว"
   },
   {
     "sitemap_node_id": "SIT-3.2",
     "node_code": "3.2",
-    "title_th": "การวิเคราะห์ผลกระทบ ความเสี่ยง และความเปราะบาง",
-    "title_en": "Risk Analysis",
+    "title_th": "การวิเคราะห์ผลกระทบ ความเสี่ยง และความเปราะบางเสี่ยง",
+    "title_en": "Impact, Vulnerability, and Risk Assessment",
     "parent_node_id": "SIT-3",
     "hierarchy_level": 2,
     "content_requirements": [],
@@ -196,43 +242,56 @@
     "sitemap_node_id": "SIT-3.2.1",
     "node_code": "3.2.1",
     "title_th": "การวิเคราะห์ความเปราะบางและการเปิดรับภัย",
-    "title_en": "",
+    "title_en": "Exposure and Vulnerability Analysis",
     "parent_node_id": "SIT-3.2",
     "hierarchy_level": 3,
     "content_requirements": [
-      "บทอธิบายการเปิดรับภัยและความเปราะบาง (Exposure, Sensitivity, Adaptive Capacity)",
-      "Damage function",
-      "Resilience"
+      "บทนิยามและแนวคิดเชิงทฤษฎี (Exposure, Sensitivity, Adaptive Capacity, Resilience)",
+      "คลังแบบจำลองฟังก์ชันความเสียหาย (Damage Functions) รายภาคส่วนสำหรับการประเมินภัย [pending DCCE decision — see Brief E-1; no v6 precedent]"
     ],
-    "content_requirements_summary": "บทอธิบายการเปิดรับภัยและความเปราะบาง (Exposure, Sensitivity, Adaptive Capacity); Damage function; Resilience"
+    "content_requirements_summary": "บทนิยามและแนวคิดเชิงทฤษฎี (Exposure, Sensitivity, Adaptive Capacity, Resilience); คลังแบบจำลองฟังก์ชันความเสียหาย (Damage Functions) รายภาคส่วนสำหรับการประเมินภัย [pending DCCE decision — see Brief E-1; no v6 precedent]"
   },
   {
     "sitemap_node_id": "SIT-3.2.2",
     "node_code": "3.2.2",
     "title_th": "การวิเคราะห์ความเสี่ยง",
-    "title_en": "",
+    "title_en": "Risk Analysis",
     "parent_node_id": "SIT-3.2",
     "hierarchy_level": 3,
     "content_requirements": [
-      "บทอธิบายกรอบการประเมินความเสี่ยงต่างๆ",
-      "บทสรุปความเสี่ยงตามพื้นที่และภาคส่วน",
-      "แหล่งข้อมูลผลการประเมินความเสี่ยงอื่นๆ"
+      "กรอบแนวทางและขั้นตอนการประเมินความเสี่ยงที่เป็นมาตรฐานเดียวกันของประเทศ",
+      "ผลวิเคราะห์ความเสี่ยงรายสาขา (เช่น ความมั่นคงทางอาหาร, ความมั่นคงด้านน้ำ, ผลกระทบต่อสุขภาพจากภัยความร้อน, ความเสี่ยงต่อการชะงักทางธุรกิจของ SME)",
+      "แหล่งข้อมูลผลการประเมินความเสี่ยงอื่นๆ — restored from v6"
     ],
-    "content_requirements_summary": "บทอธิบายกรอบการประเมินความเสี่ยงต่างๆ; บทสรุปความเสี่ยงตามพื้นที่และภาคส่วน; แหล่งข้อมูลผลการประเมินความเสี่ยงอื่นๆ"
+    "content_requirements_summary": "กรอบแนวทางและขั้นตอนการประเมินความเสี่ยงที่เป็นมาตรฐานเดียวกันของประเทศ; ผลวิเคราะห์ความเสี่ยงรายสาขา (เช่น ความมั่นคงทางอาหาร, ความมั่นคงด้านน้ำ, ผลกระทบต่อสุขภาพจากภัยความร้อน, ความเสี่ยงต่อการชะงักทางธุรกิจของ SME); แหล่งข้อมูลผลการประเมินความเสี่ยงอื่นๆ — restored from v6"
+  },
+  {
+    "sitemap_node_id": "SIT-3.2.2.1",
+    "node_code": "3.2.2.1",
+    "title_th": "การติดตามภัยคุกคามที่เกิดขึ้นช้า",
+    "title_en": "Slow-Onset Hazards Profile",
+    "parent_node_id": "SIT-3.2.2",
+    "hierarchy_level": 4,
+    "content_requirements": [
+      "รายงานสถิติและการประเมินภัยคุกคามระยะยาวที่เกิดขึ้นอย่างช้าๆ เช่น การเพิ่มขึ้นของอุณหภูมิเฉลี่ย และการเปลี่ยนแปลงคาบการกระจายน้ำฝน",
+      "ข้อมูลอัตราการเพิ่มขึ้นของระดับน้ำทะเล (Sea-Level Rise) ตลอดแนวชายฝั่งไทยและบริเวณอ่าวไทย",
+      "ข้อมูลการทรุดตัวของแผ่นดิน (Land Subsidence) ในเขตกรุงเทพมหานครและปริมณฑล และการหนุนของน้ำเค็ม (Salinity Intrusion)",
+      "สถิติการกัดเซาะชายฝั่งและการสูญเสียพื้นที่ชายหาด"
+    ],
+    "content_requirements_summary": "รายงานสถิติและการประเมินภัยคุกคามระยะยาวที่เกิดขึ้นอย่างช้าๆ เช่น การเพิ่มขึ้นของอุณหภูมิเฉลี่ย และการเปลี่ยนแปลงคาบการกระจายน้ำฝน; ข้อมูลอัตราการเพิ่มขึ้นของระดับน้ำทะเล (Sea-Level Rise) ตลอดแนวชายฝั่งไทยและบริเวณอ่าวไทย; ข้อมูลการทรุดตัวของแผ่นดิน (Land Subsidence) ในเขตกรุงเทพมหานครและปริมณฑล และการหนุนของน้ำเค็ม (Salinity Intrusion); สถิติการกัดเซาะชายฝั่งและการสูญเสียพื้นที่ชายหาด"
   },
   {
     "sitemap_node_id": "SIT-3.2.3",
     "node_code": "3.2.3",
     "title_th": "ผลกระทบลูกโซ่",
-    "title_en": "",
+    "title_en": "Impact Chain",
     "parent_node_id": "SIT-3.2",
     "hierarchy_level": 3,
     "content_requirements": [
-      "อธิบายแนวคิดผลกระทบลูกโซ่",
-      "อธิบายแนวคิดการวิเคราะห์ผลกระทบ",
-      "อธิบายแนวคิด Impact Chain Analysis"
+      "แผนภูมิแสดงแนวคิดผลกระทบเชื่อมโยงแบบลูกโซ่ (Multi-hazard Impact Chain Analysis)",
+      "กรณีศึกษาแบบจำลอง Impact Chain ในภาคส่วนเกษตรกรรมและการตั้งถิ่นฐานเมือง"
     ],
-    "content_requirements_summary": "อธิบายแนวคิดผลกระทบลูกโซ่; อธิบายแนวคิดการวิเคราะห์ผลกระทบ; อธิบายแนวคิด Impact Chain Analysis"
+    "content_requirements_summary": "แผนภูมิแสดงแนวคิดผลกระทบเชื่อมโยงแบบลูกโซ่ (Multi-hazard Impact Chain Analysis); กรณีศึกษาแบบจำลอง Impact Chain ในภาคส่วนเกษตรกรรมและการตั้งถิ่นฐานเมือง"
   },
   {
     "sitemap_node_id": "SIT-3.2.4",
@@ -242,13 +301,12 @@
     "parent_node_id": "SIT-3.2",
     "hierarchy_level": 3,
     "content_requirements": [
-      "บทอธิบาย Loss and Damage",
-      "UNFCC Loss and Damage framework",
-      "ภาพรวมสถิติภัยพิบัติจากภูมิอากาศ",
-      "ภาพรวมความสูญเสียและความเสียหาย",
-      "Loss and Damage Dashboard"
+      "[shared build — see DEL-12/LD-1; same DDPM-sourced dataset backs 2.1's summary card and 1.1.1's disaster history]",
+      "กรอบทฤษฎี Loss and Damage ภายใต้กรอบอนุสัญญา UNFCCC",
+      "แดชบอร์ดสรุปสถิติภัยพิบัติจากภูมิอากาศและความสูญเสียทางเศรษฐกิจ (Economic Losses) และทางกายภาพจากภัยสภาพอากาศในอดีต — full build lives here, 2.1 links to this rather than duplicating",
+      "การบันทึกสถิติความสูญเสียที่ไม่ใช่เศรษฐกิจ (Non-economic Losses: เช่น ผลกระทบด้านสุขภาพจิต ความหลากหลายทางชีวภาพ มรดกวัฒนธรรมที่สูญหาย)"
     ],
-    "content_requirements_summary": "บทอธิบาย Loss and Damage; UNFCC Loss and Damage framework; ภาพรวมสถิติภัยพิบัติจากภูมิอากาศ; ภาพรวมความสูญเสียและความเสียหาย; Loss and Damage Dashboard"
+    "content_requirements_summary": "[shared build — see DEL-12/LD-1; same DDPM-sourced dataset backs 2.1's summary card and 1.1.1's disaster history]; กรอบทฤษฎี Loss and Damage ภายใต้กรอบอนุสัญญา UNFCCC; แดชบอร์ดสรุปสถิติภัยพิบัติจากภูมิอากาศและความสูญเสียทางเศรษฐกิจ (Economic Losses) และทางกายภาพจากภัยสภาพอากาศในอดีต — full build lives here, 2.1 links to this rather than duplicating; การบันทึกสถิติความสูญเสียที่ไม่ใช่เศรษฐกิจ (Non-economic Losses: เช่น ผลกระทบด้านสุขภาพจิต ความหลากหลายทางชีวภาพ มรดกวัฒนธรรมที่สูญหาย)"
   },
   {
     "sitemap_node_id": "SIT-3.2.5",
@@ -258,17 +316,15 @@
     "parent_node_id": "SIT-3.2",
     "hierarchy_level": 3,
     "content_requirements": [
-      "เอกสารระเบียบวิธีการในการประเมินความเสี่ยง",
-      "เอกสารระเบียบวิธีการในการประเมินผลกระทบ",
-      "เอกสารระเบียบวิธีการในการคำนวณ Loss and Damage"
+      "ระเบียบวิธีและเอกสารมาตรฐาน (Manuals) การประเมินความเสี่ยง ผลกระทบ และการคำนวณ Loss and Damage ของหน่วยงานรัฐ"
     ],
-    "content_requirements_summary": "เอกสารระเบียบวิธีการในการประเมินความเสี่ยง; เอกสารระเบียบวิธีการในการประเมินผลกระทบ; เอกสารระเบียบวิธีการในการคำนวณ Loss and Damage"
+    "content_requirements_summary": "ระเบียบวิธีและเอกสารมาตรฐาน (Manuals) การประเมินความเสี่ยง ผลกระทบ และการคำนวณ Loss and Damage ของหน่วยงานรัฐ"
   },
   {
     "sitemap_node_id": "SIT-3.3",
     "node_code": "3.3",
     "title_th": "การวางแผนการปรับตัวและการปฏิบัติ",
-    "title_en": "Planning & Implementation",
+    "title_en": "Planning and Implementation",
     "parent_node_id": "SIT-3",
     "hierarchy_level": 2,
     "content_requirements": [],
@@ -277,24 +333,31 @@
   {
     "sitemap_node_id": "SIT-3.3.1",
     "node_code": "3.3.1",
-    "title_th": "แนวทางการวางแผนการปรับตัว",
-    "title_en": "",
+    "title_th": "แนวทางการวางแผนและการออกแบบโครงการแบบมีส่วนร่วม",
+    "title_en": "Planning Guidelines & Participatory Project Design",
     "parent_node_id": "SIT-3.3",
     "hierarchy_level": 3,
     "content_requirements": [
-      "รายภาคส่วน, การวิเคราะห์ทางการเงิน"
+      "กรอบกฎหมายและระเบียบที่ต้องปฏิบัติตามในการออกแบบโครงการ (พ.ร.บ. การเปลี่ยนแปลงสภาพภูมิอากาศ, พ.ร.บ. ป้องกันและบรรเทาสาธารณภัย, กฎกระทรวงผังเมือง ฯลฯ) [shared build — see DEL-8, same as 2.3, reframed as project-design compliance guidance — closes the gap Boss flagged: 2.3's legal summary previously had no home in Section 3]",
+      "ระเบียบวิธีประเมินต้นทุนและผลประโยชน์ (Cost-Benefit Analysis) และเครื่องมือ ECA [pending DCCE decision — see Brief E-1, same undecided service as 2.3]",
+      "แนวปฏิบัติการบูรณาการมิติด้านเพศวิถี ความเท่าเทียมทางเพศ และสิทธิมนุษยชนในมาตรการปรับตัว (Gender & Social Inclusion Integration) — new since v6, real ready-to-build content, kept as committed",
+      "ข้อมูลมาตรการคุ้มครองและช่วยเหลือกลุ่มเปราะบาง (เด็ก ผู้สูงอายุ ผู้พิการ และชุมชนชายแดน/ชายฝั่ง)",
+      "การประยุกต์ใช้ภูมิปัญญาท้องถิ่น องค์ความรู้ดั้งเดิม และมรดกทางวัฒนธรรมในการปรับตัวของชุมชน"
     ],
-    "content_requirements_summary": "รายภาคส่วน, การวิเคราะห์ทางการเงิน"
+    "content_requirements_summary": "กรอบกฎหมายและระเบียบที่ต้องปฏิบัติตามในการออกแบบโครงการ (พ.ร.บ. การเปลี่ยนแปลงสภาพภูมิอากาศ, พ.ร.บ. ป้องกันและบรรเทาสาธารณภัย, กฎกระทรวงผังเมือง ฯลฯ) [shared build — see DEL-8, same as 2.3, reframed as project-design compliance guidance — closes the gap Boss flagged: 2.3's legal summary previously had no home in Section 3]; ระเบียบวิธีประเมินต้นทุนและผลประโยชน์ (Cost-Benefit Analysis) และเครื่องมือ ECA [pending DCCE decision — see Brief E-1, same undecided service as 2.3]; แนวปฏิบัติการบูรณาการมิติด้านเพศวิถี ความเท่าเทียมทางเพศ และสิทธิมนุษยชนในมาตรการปรับตัว (Gender & Social Inclusion Integration) — new since v6, real ready-to-build content, kept as committed; ข้อมูลมาตรการคุ้มครองและช่วยเหลือกลุ่มเปราะบาง (เด็ก ผู้สูงอายุ ผู้พิการ และชุมชนชายแดน/ชายฝั่ง); การประยุกต์ใช้ภูมิปัญญาท้องถิ่น องค์ความรู้ดั้งเดิม และมรดกทางวัฒนธรรมในการปรับตัวของชุมชน"
   },
   {
     "sitemap_node_id": "SIT-3.3.2",
     "node_code": "3.3.2",
     "title_th": "เส้นทางกลยุทธ์การปรับตัวของประเทศ",
-    "title_en": "Roadmap",
+    "title_en": "Adaptation Roadmap & Planning",
     "parent_node_id": "SIT-3.3",
     "hierarchy_level": 3,
-    "content_requirements": [],
-    "content_requirements_summary": ""
+    "content_requirements": [
+      "แผนภาพและเส้นทางกลยุทธ์การดำเนินงาน (NAP Roadmap Execution Staging)",
+      "ฉากทัศน์การวางแผนมาตรการปรับตัว (Adaptation Scenarios)"
+    ],
+    "content_requirements_summary": "แผนภาพและเส้นทางกลยุทธ์การดำเนินงาน (NAP Roadmap Execution Staging); ฉากทัศน์การวางแผนมาตรการปรับตัว (Adaptation Scenarios)"
   },
   {
     "sitemap_node_id": "SIT-3.3.3",
@@ -303,8 +366,11 @@
     "title_en": "",
     "parent_node_id": "SIT-3.3",
     "hierarchy_level": 3,
-    "content_requirements": [],
-    "content_requirements_summary": ""
+    "content_requirements": [
+      "ระบบสืบค้นและคัดกรองมาตรการเชิงเทคนิคและนโยบาย (Searchable Database) จำแนกตามภัย ภาคส่วน และงบประมาณ",
+      "รายการมาตรการแบบผสมผสานระหว่างมาตรการวิศวกรรมโครงสร้าง (Grey Infrastructure) และการปรับตัวโดยใช้ธรรมชาติเป็นฐาน (Nature-based Solutions - NBS)"
+    ],
+    "content_requirements_summary": "ระบบสืบค้นและคัดกรองมาตรการเชิงเทคนิคและนโยบาย (Searchable Database) จำแนกตามภัย ภาคส่วน และงบประมาณ; รายการมาตรการแบบผสมผสานระหว่างมาตรการวิศวกรรมโครงสร้าง (Grey Infrastructure) และการปรับตัวโดยใช้ธรรมชาติเป็นฐาน (Nature-based Solutions - NBS)"
   },
   {
     "sitemap_node_id": "SIT-3.3.4",
@@ -314,9 +380,9 @@
     "parent_node_id": "SIT-3.3",
     "hierarchy_level": 3,
     "content_requirements": [
-      "คลังแผนความเสี่ยงขององค์กรต่างๆ"
+      "คลังข้อมูลแนวทางการทำแผนจัดการความเสี่ยงสภาพภูมิอากาศ ของหน่วยงานราชการและภาคเอกชน — distinct from 3.4.3, confirmed by Boss: case studies of the planning process itself (how organizations built their risk-management plans), not the implemented result"
     ],
-    "content_requirements_summary": "คลังแผนความเสี่ยงขององค์กรต่างๆ"
+    "content_requirements_summary": "คลังข้อมูลแนวทางการทำแผนจัดการความเสี่ยงสภาพภูมิอากาศ ของหน่วยงานราชการและภาคเอกชน — distinct from 3.4.3, confirmed by Boss: case studies of the planning process itself (how organizations built their risk-management plans), not the implemented result"
   },
   {
     "sitemap_node_id": "SIT-3.3.5",
@@ -325,14 +391,17 @@
     "title_en": "Project Tracking Status",
     "parent_node_id": "SIT-3.3",
     "hierarchy_level": 3,
-    "content_requirements": [],
-    "content_requirements_summary": ""
+    "content_requirements": [
+      "ลิงก์ไปยังระบบติดตามความก้าวหน้าโครงการปรับตัว (full detail at 3.4.2's Adaptation M&E Platform) — merged per Boss's decision this session, now a pointer rather than a second description",
+      "การติดตามการเงินเพื่อการปรับตัว (Adaptation Finance Tracker) [pending DCCE decision — see Brief E-1, same undecided finance-tracking service as 2.3.1]"
+    ],
+    "content_requirements_summary": "ลิงก์ไปยังระบบติดตามความก้าวหน้าโครงการปรับตัว (full detail at 3.4.2's Adaptation M&E Platform) — merged per Boss's decision this session, now a pointer rather than a second description; การติดตามการเงินเพื่อการปรับตัว (Adaptation Finance Tracker) [pending DCCE decision — see Brief E-1, same undecided finance-tracking service as 2.3.1]"
   },
   {
     "sitemap_node_id": "SIT-3.4",
     "node_code": "3.4",
     "title_th": "การติดตาม ประเมินผล และถอดบทเรียน",
-    "title_en": "M&E and Learning",
+    "title_en": "Monitoring, Evaluation, and Learning",
     "parent_node_id": "SIT-3",
     "hierarchy_level": 2,
     "content_requirements": [],
@@ -346,9 +415,11 @@
     "parent_node_id": "SIT-3.4",
     "hierarchy_level": 3,
     "content_requirements": [
-      "ทฤษฎี M&E, GGA Indicators"
+      "กรอบการติดตามและประเมินผลการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศของประเทศไทย (info page) — now also linked from 2.3, restored",
+      "กรอบการวิเคราะห์ระดับความก้าวหน้าทางเทคโนโลยีและนวัตกรรมปรับตัว (Technology Readiness Levels - TRL in Adaptation)",
+      "ความเชื่อมโยงกับตัวชี้วัดเป้าหมายการปรับตัวระดับโลก (Global Goal on Adaptation - GGA Indicators)"
     ],
-    "content_requirements_summary": "ทฤษฎี M&E, GGA Indicators"
+    "content_requirements_summary": "กรอบการติดตามและประเมินผลการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศของประเทศไทย (info page) — now also linked from 2.3, restored; กรอบการวิเคราะห์ระดับความก้าวหน้าทางเทคโนโลยีและนวัตกรรมปรับตัว (Technology Readiness Levels - TRL in Adaptation); ความเชื่อมโยงกับตัวชี้วัดเป้าหมายการปรับตัวระดับโลก (Global Goal on Adaptation - GGA Indicators)"
   },
   {
     "sitemap_node_id": "SIT-3.4.2",
@@ -357,18 +428,25 @@
     "title_en": "Adaptation M&E Platform",
     "parent_node_id": "SIT-3.4",
     "hierarchy_level": 3,
-    "content_requirements": [],
-    "content_requirements_summary": ""
+    "content_requirements": [
+      "[pending DCCE resourcing decision — see Brief E-3; nothing built yet, now also the claimed home for 3.3.5's project-tracking function, merged here this session]",
+      "ระบบติดตามความก้าวหน้าและระดับการลดความเปราะบางรายภาคส่วนและรายจังหวัด (National M&E Tracker)",
+      "สถานะและการดำเนินงานโครงการปรับตัวรายโครงการ (Project Tracking Status — เช่น โครงการประกันภัยพืชผล, การใช้งานระบบฐานข้อมูล Agri-Map, การปรับปรุงโครงสร้างควบคุมน้ำ) — moved here from 3.3.5"
+    ],
+    "content_requirements_summary": "[pending DCCE resourcing decision — see Brief E-3; nothing built yet, now also the claimed home for 3.3.5's project-tracking function, merged here this session]; ระบบติดตามความก้าวหน้าและระดับการลดความเปราะบางรายภาคส่วนและรายจังหวัด (National M&E Tracker); สถานะและการดำเนินงานโครงการปรับตัวรายโครงการ (Project Tracking Status — เช่น โครงการประกันภัยพืชผล, การใช้งานระบบฐานข้อมูล Agri-Map, การปรับปรุงโครงสร้างควบคุมน้ำ) — moved here from 3.3.5"
   },
   {
     "sitemap_node_id": "SIT-3.4.3",
     "node_code": "3.4.3",
-    "title_th": "กรณีศึกษาโครงการปรับตัวที่ประสบความสำเร็จ การคัดสรรและถอดบทเรียนโครงการเด่น",
+    "title_th": "กรณีศึกษาโครงการปรับตัวที่ประสบความสำเร็จ",
     "title_en": "Flagship Projects",
     "parent_node_id": "SIT-3.4",
     "hierarchy_level": 3,
-    "content_requirements": [],
-    "content_requirements_summary": ""
+    "content_requirements": [
+      "distinct from 3.3.4, confirmed by Boss: case studies of implemented results (flagship projects that came out of the planning process), not the planning process itself",
+      "คลังบทเรียนโครงการเด่น (Flagship Projects Case Studies) ถอดบทเรียนความสำเร็จ อุปสรรค และแนวทางปฏิบัติที่เป็นเลิศ (Best Practices)"
+    ],
+    "content_requirements_summary": "distinct from 3.3.4, confirmed by Boss: case studies of implemented results (flagship projects that came out of the planning process), not the planning process itself; คลังบทเรียนโครงการเด่น (Flagship Projects Case Studies) ถอดบทเรียนความสำเร็จ อุปสรรค และแนวทางปฏิบัติที่เป็นเลิศ (Best Practices)"
   },
   {
     "sitemap_node_id": "SIT-4",
@@ -377,38 +455,17 @@
     "title_en": "Tools & Services",
     "parent_node_id": "",
     "hierarchy_level": 1,
-    "content_requirements": [],
-    "content_requirements_summary": ""
-  },
-  {
-    "sitemap_node_id": "SIT-4.1",
-    "node_code": "4.1",
-    "title_th": "บัญชีข้อมูล",
-    "title_en": "Data Catalog",
-    "parent_node_id": "SIT-4",
-    "hierarchy_level": 3,
-    "content_requirements": [],
-    "content_requirements_summary": ""
-  },
-  {
-    "sitemap_node_id": "SIT-4.2",
-    "node_code": "4.2",
-    "title_th": "Visualization and Analytics Application",
-    "title_en": "",
-    "parent_node_id": "SIT-4",
-    "hierarchy_level": 3,
-    "content_requirements": [],
-    "content_requirements_summary": ""
-  },
-  {
-    "sitemap_node_id": "SIT-4.3",
-    "node_code": "4.3",
-    "title_th": "ศูนย์รวมเครื่องมือและแหล่งข้อมูลภายนอก",
-    "title_en": "",
-    "parent_node_id": "SIT-4",
-    "hierarchy_level": 3,
-    "content_requirements": [],
-    "content_requirements_summary": ""
+    "content_requirements": [
+      "Structure note (decided this session): no 4.1/4.2/4.3 category split — one searchable grid of tools with search + category filter pills (ทั้งหมด, บัญชีข้อมูล, แผนที่เสี่ยงภัย, ผลกระทบ, เศรษฐศาสตร์/เงิน, มาตรการ)",
+      "บัญชีข้อมูล (Data Catalog) [บัญชีข้อมูล]: ระบบสืบค้นชุดข้อมูลดิบ ผลิตภัณฑ์วิเคราะห์ข้อมูล และ Metadata Directory",
+      "แผนที่ความเสี่ยงภูมิอากาศ (Climate Risk Map) [แผนที่เสี่ยงภัย] [shared build — see DEL-13, canonical hosting point also embedded at 1.2, 2.2]: ระบบแผนที่ภัยและวิเคราะห์ความเสี่ยงเชิงโต้ตอบสำหรับดึงตัวแปรไปใช้งานวิศวกรรมโยธา",
+      "ตัวสำรวจผลกระทบภูมิอากาศ (Climate Impact Explorer) [ผลกระทบ] [mockup-sourced — not yet cross-checked against a DRD deliverable, flag for Phase 3]",
+      "เครื่องมือการประเมินทางเศรษฐศาสตร์ของการลงทุนด้านการปรับตัว (ECA) [เศรษฐศาสตร์/เงิน] [pending DCCE decision — see Brief E-1, same as 2.3/3.3.1]",
+      "ตัวสำรวจมาตรการปรับตัว (Adaptation Options Explorer) [มาตรการ] [mockup-sourced — not yet cross-checked against a DRD deliverable, flag for Phase 3]",
+      "ระบบติดตามการเงินเพื่อการปรับตัว (Adaptation Finance Tracker) [เศรษฐศาสตร์/เงิน] [pending DCCE decision — see Brief E-1, same as 2.3.1/3.3.5]",
+      "ศูนย์รวมเครื่องมือและแหล่งข้อมูลภายนอก (external hub, not natively built): TMD Weather API, GISTDA Geo-Informatics Portal, Copernicus Climate Data Store"
+    ],
+    "content_requirements_summary": "Structure note (decided this session): no 4.1/4.2/4.3 category split — one searchable grid of tools with search + category filter pills (ทั้งหมด, บัญชีข้อมูล, แผนที่เสี่ยงภัย, ผลกระทบ, เศรษฐศาสตร์/เงิน, มาตรการ). Tools: บัญชีข้อมูล (Data Catalog) [บัญชีข้อมูล] — ระบบสืบค้นชุดข้อมูลดิบ ผลิตภัณฑ์วิเคราะห์ข้อมูล และ Metadata Directory; แผนที่ความเสี่ยงภูมิอากาศ (Climate Risk Map) [แผนที่เสี่ยงภัย] [shared build — see DEL-13, canonical hosting point also embedded at 1.2, 2.2] — ระบบแผนที่ภัยและวิเคราะห์ความเสี่ยงเชิงโต้ตอบสำหรับดึงตัวแปรไปใช้งานวิศวกรรมโยธา; ตัวสำรวจผลกระทบภูมิอากาศ (Climate Impact Explorer) [ผลกระทบ] [mockup-sourced — not yet cross-checked against a DRD deliverable, flag for Phase 3]; เครื่องมือการประเมินทางเศรษฐศาสตร์ของการลงทุนด้านการปรับตัว (ECA) [เศรษฐศาสตร์/เงิน] [pending DCCE decision — see Brief E-1, same as 2.3/3.3.1]; ตัวสำรวจมาตรการปรับตัว (Adaptation Options Explorer) [มาตรการ] [mockup-sourced — not yet cross-checked against a DRD deliverable, flag for Phase 3]; ระบบติดตามการเงินเพื่อการปรับตัว (Adaptation Finance Tracker) [เศรษฐศาสตร์/เงิน] [pending DCCE decision — see Brief E-1, same as 2.3.1/3.3.5]; ศูนย์รวมเครื่องมือและแหล่งข้อมูลภายนอก (external hub, not natively built) — TMD Weather API, GISTDA Geo-Informatics Portal, Copernicus Climate Data Store"
   },
   {
     "sitemap_node_id": "SIT-5",
@@ -423,21 +480,25 @@
   {
     "sitemap_node_id": "SIT-5.1",
     "node_code": "5.1",
-    "title_th": "ประกาศกิจกรรมของศูนย์ การอัพเดทชุดข้อมูล การเผยแพร่ชุดข้อมูล ความร่วมมือกับหน่วยงาน กิจกรรม workshop งานอบรมที่เกี่ยวกับข้อมูลสภาพภูมิอากาศ",
+    "title_th": "ประกาศและกิจกรรมการมีส่วนร่วม",
     "title_en": "",
     "parent_node_id": "SIT-5",
-    "hierarchy_level": 3,
-    "content_requirements": [],
-    "content_requirements_summary": ""
+    "hierarchy_level": 2,
+    "content_requirements": [
+      "ระบบกระจายข่าวสารการอัปเดตข้อมูล กิจกรรมอบรมเชิงปฏิบัติการ (Workshops) ในการวิเคราะห์และตีความข้อมูลสภาพภูมิอากาศเพื่อการวางแผนเชิงพื้นที่"
+    ],
+    "content_requirements_summary": "ระบบกระจายข่าวสารการอัปเดตข้อมูล กิจกรรมอบรมเชิงปฏิบัติการ (Workshops) ในการวิเคราะห์และตีความข้อมูลสภาพภูมิอากาศเพื่อการวางแผนเชิงพื้นที่"
   },
   {
     "sitemap_node_id": "SIT-5.2",
     "node_code": "5.2",
-    "title_th": "ช่องทางการรับ feedback ที่เป็นระบบเพื่อการปรับปรุงผลิตภัณฑ์ข้อมูล ชุดข้อมูล บริการสารสนเทศ การสื่อสาร",
-    "title_en": "",
+    "title_th": "ช่องทางการรับฟังข้อคิดเห็นและบริการผู้ใช้",
+    "title_en": "Feedback & Helpdesk",
     "parent_node_id": "SIT-5",
-    "hierarchy_level": 3,
-    "content_requirements": [],
-    "content_requirements_summary": ""
+    "hierarchy_level": 2,
+    "content_requirements": [
+      "แพลตฟอร์มรับเสียงสะท้อนจากหน่วยงานผู้ใช้งานในแบบที่เป็นระบบเพื่อปรับปรุงคุณภาพชุดข้อมูล ขยายขอบเขตการบริการ และทวนสอบการตอบสนองความต้องการเชิงสถาบัน"
+    ],
+    "content_requirements_summary": "แพลตฟอร์มรับเสียงสะท้อนจากหน่วยงานผู้ใช้งานในแบบที่เป็นระบบเพื่อปรับปรุงคุณภาพชุดข้อมูล ขยายขอบเขตการบริการ และทวนสอบการตอบสนองความต้องการเชิงสถาบัน"
   }
 ]

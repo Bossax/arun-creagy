@@ -1,0 +1,89 @@
+asset_id,name,kind,owner,url,cited_by_count,cited_by
+PUB-012,คู่มือการจัดทำห่วงโซ่ผลกระทบจากการเปลี่ยนแปลงสภาพภูมิอากาศ,Knowledge Asset,กองยุทธศาสตร์และความร่วมมือระหว่างประเทศ,https://www.dcce.go.th/datacenter/19243/,4,REQ-002; REQ-040; REQ-046; REQ-051
+DAT-014,ข้อมูลการประเมินผลการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศ,Knowledge Asset,กลุ่มประเมินผลการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศ,https://dgf.dcce.go.th/dataset/m-and-e,5,REQ-002; REQ-015; REQ-038; REQ-065; REQ-067
+DCCE_3_1,ความเสี่ยงสาขาการเกษตรและความมั่นคงทางอาหาร,Dataset,DCCE,https://ccic.dcce.go.th/riskarea,1,REQ-004
+DCCE_3_2,ความเสี่ยงสาขาการจัดการน้ำ,Dataset,DCCE,https://ccic.dcce.go.th/riskarea,1,REQ-004
+DCCE_3_3,ความเสี่ยงสาขาการตั้งถิ่นฐานและความมั่นคงมนุษย์,Dataset,DCCE,https://ccic.dcce.go.th/riskarea,1,REQ-004
+DCCE_3_4,ความเสี่ยงสาขาการท่องเที่ยว,Dataset,DCCE,https://ccic.dcce.go.th/riskarea,1,REQ-004
+DCCE_3_5,ความเสี่ยงสาขาทรัพยากรธรรมชาติและสิ่งแวดล้อม,Dataset,DCCE,https://ccic.dcce.go.th/riskarea,1,REQ-004
+DCCE_3_6,ความเสี่ยงสาขาสาธารณสุข,Dataset,DCCE,https://ccic.dcce.go.th/riskarea,1,REQ-004
+DCCE_3_7,ดัชนีภูมิอากาศ,Dataset,DCCE,https://ccic.dcce.go.th/riskarea,1,REQ-004
+DAT-005,ข้อมูลความเสี่ยงจากการเปลี่ยนแปลงสภาพภูมิอากาศ,Data Product,กองขับเคลื่อนการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศ,https://dgf.dcce.go.th/dataset/db0303-001,7,REQ-005; REQ-009; REQ-013; REQ-015; REQ-028; REQ-041; REQ-070
+PUB-009,แผนการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศแห่งชาติ (Thailand's National Adaptation Plan : NAP),Knowledge Asset,กองยุทธศาสตร์และความร่วมมือระหว่างประเทศ,https://www.dcce.go.th/datacenter/6553/adaptation/national-adaptation-plan-nap-2568/,2,REQ-006; REQ-056
+DAT-021,แผนการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศแหงชาติ,Knowledge Asset,กลุมขับเคลื่อนการปรับตัวตอการเปลี่ยนแปลงสภาพภูมิอากาศ,https://dgf.dcce.go.th/dataset/db0302-001,2,REQ-006; REQ-056
+MED-025,แผนการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศแห่งชาติ  (National Adaptation Plan: NAP),Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/23703/,1,REQ-006
+MED-111,Thailand’s National Adaptation Plan (NAP) | English Edition,Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/6583/,1,REQ-006
+MED-112,แผนการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศ (Thailand's National Adaptation Plan : NAP),Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/6554/,1,REQ-006
+MED-008,ถอดรหัสความสำเร็จจากพื้นที่ต้นแบบทั้ง 6 สาขา ปัจจัยสู่ความเข้มแข็งและการปรับตัวอย่างยั่งยืน,Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/24129/,2,REQ-007; REQ-068
+DAT-022,ชุดเเนวทางการปรับตัวต่อการเปลี่ยนเเปลงสภาพภูมิอากาศโดยใช้เเนวทางธรรมชาติ (Nbs),Knowledge Asset,กองขับเคลื่อนการปรับตัวต่อการเปลี่ยนเเปลงสภาพภูมิอากาศ กลุ่มพัฒนาเเนวทางเเละศักยภาพในการปรับตัวต่อการเปลี่ยนเเปลงสภาพภูมิอากาศ,https://dgf.dcce.go.th/dataset/nbs,2,REQ-007; REQ-061
+SYS-003,ฐานข้อมูลความเสี่ยงจากการเปลี่ยนแปลงสภาพภูมิอากาศ,Data Product,กลุ่มพัฒนาเทคโนโลยีดิจิทัล,https://ccic.dcce.go.th/riskarea,4,REQ-009; REQ-010; REQ-028; REQ-070
+DCCE_2_1,"ปริมาณน้ำฝน (GridData, historical)",Dataset,DCCE,https://clim-webbased.dcce.go.th/DataServices,1,REQ-033
+DCCE_2_2,"อุณหภูมิสูงสุด (GridData, historical)",Dataset,DCCE,https://clim-webbased.dcce.go.th/DataServices,1,REQ-033
+PUB-026,กองทุนจัดการความสูญเสียและความเสียหายจากสภาพภูมิอากาศ (FRLD),Knowledge Asset,กองยุทธศาสตร์และความร่วมมือระหว่างประเทศ,https://www.dcce.go.th/datacenter/25096/,2,REQ-012; REQ-048
+MED-050,รายงานฉบับสมบูรณ์ (Final report) การประเมินเบื้องต้นต่อสถานภาพการดำเนินงานที่เกี่ยวข้องกับความสูญเสียและความเสียหาย,Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/19744/,2,REQ-012; REQ-049
+PUB-003,สรุป สาระสำคัญของร่างพระราชบัญญัติการเปลี่ยนแปลงสภาพภูมิอากาศ พ.ศ. ...,Knowledge Asset,กองยุทธศาสตร์และความร่วมมือระหว่างประเทศ,https://www.dcce.go.th/datacenter/3350/,1,REQ-016
+PUB-004,ร่างพระราชบัญญัติการเปลี่ยนแปลงสภาพภูมิอากาศ พ.ศ. ...,Knowledge Asset,กองยุทธศาสตร์และความร่วมมือระหว่างประเทศ,https://www.dcce.go.th/datacenter/3345/,1,REQ-016
+MED-074,(ร่าง) พระราชบัญญัติการเปลี่ยนแปลงสภาพภูมิอากาศ พ.ศ. .... (2/2),Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/14864/,1,REQ-016
+MED-075,(ร่าง) พระราชบัญญัติการเปลี่ยนแปลงสภาพภูมิอากาศ พ.ศ. .... (1/2),Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/14863/,1,REQ-016
+MED-079,คู่มือ แหล่งทุนด้านการเปลี่ยนแปลงสภาพภูมิอากาศ,Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/11172/,2,REQ-019; REQ-058
+PUB-027,กองทุนด้านการปรับตัวต่อผลกระทบจากการเปลี่ยนแปลงสภาพภูมิอากาศ (AF),Knowledge Asset,กองยุทธศาสตร์และความร่วมมือระหว่างประเทศ,https://www.dcce.go.th/datacenter/6704/,3,REQ-019; REQ-021; REQ-058
+PUB-028,กองทุนภูมิอากาศสีเขียว (GCF),Knowledge Asset,กองยุทธศาสตร์และความร่วมมือระหว่างประเทศ,https://www.dcce.go.th/datacenter/6700/,3,REQ-019; REQ-021; REQ-058
+PUB-029,กองทุนสิ่งแวดล้อมโลก (GEF),Knowledge Asset,กองยุทธศาสตร์และความร่วมมือระหว่างประเทศ,https://www.dcce.go.th/datacenter/6691/,3,REQ-019; REQ-021; REQ-058
+DAT-054,คู่มือการพิจารณาออกหนังสือรับรองที่ประเทศไทยไม่มีข้อคัดค้าน (No-Objection Procedure: NOP) ต่อข้อเสนอโครงการด้านการเปลี่ยนแปลงสภาพภูมิอากาศ,Knowledge Asset,กลุ่มพัฒนามาตรการและกลไก,https://dgf.dcce.go.th/dataset/no-objection-procedure-nop,1,REQ-021
+MED-147,กระบวนการพิจารณาออกหนังสือรับรองว่าประเทศไทยไม่มีข้อคัดค้านต่อข้อเสนอโครงการ GCF ฉบับปรับปรุง (พ.ศ.2567),Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/4025/,1,REQ-021
+PUB-025,กระบวนการพิจารณาโครงการด้านการเปลี่ยนแปลงสภาพภูมิอากาศที่ขอรับการสนับสนุนทางการเงินในกรอบระหว่างประเทศ,Knowledge Asset,กองยุทธศาสตร์และความร่วมมือระหว่างประเทศ,https://www.dcce.go.th/datacenter/25115/,1,REQ-023
+DAT-013,คำสั่งแต่งตั้งคณะกรรมการ อนุกรรมการ คณะทำงาน ของหน่วยงานอื่น,Knowledge Asset,กลุ่มช่วยอำนวยการนักบริหาร,https://dgf.dcce.go.th/dataset/ess-data,1,REQ-024
+SYS-024,การเปิดโอกาสให้เกิดการมีส่วนร่วม,Data Product,กลุ่มพัฒนาเทคโนโลยีดิจิทัล,,1,REQ-026
+PUB-053,การเปิดโอกาสให้เกิดการมีส่วนร่วม ปีงบประมาณ พ.ศ. 2569,Knowledge Asset,กองยุทธศาสตร์และความร่วมมือระหว่างประเทศ,https://www.dcce.go.th/datacenter/24905/,1,REQ-026
+PUB-054,การเปิดโอกาสให้เกิดการมีส่วนร่วม ปีงบประมาณ พ.ศ. 2568,Knowledge Asset,กองยุทธศาสตร์และความร่วมมือระหว่างประเทศ,https://www.dcce.go.th/datacenter/5809/,1,REQ-026
+PUB-055,การเปิดโอกาสให้เกิดการมีส่วนร่วม ปีงบประมาณ พ.ศ. 2567,Knowledge Asset,กองยุทธศาสตร์และความร่วมมือระหว่างประเทศ,https://www.dcce.go.th/datacenter/5798/,1,REQ-026
+MED-015,การวิเคราะห์ความเปราะบางและขีดความสามารถในการปรับตัว (Measuring Vulnerability &amp; Adaptive Capacity),Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/23820/,2,REQ-027; REQ-038
+PUB-052,คู่มือแนวทางปฏิบัติการจัดทำธรรมาภิบาลข้อมูล (Data Governance User Manual),Knowledge Asset,กองยุทธศาสตร์และความร่วมมือระหว่างประเทศ,https://www.dcce.go.th/datacenter/22355/,1,REQ-069
+MED-026,คู่มือแนวทางปฏิบัติการจัดทำธรรมาภิบาลข้อมูล (Data Governance User Manual),Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/22369/,0,
+MED-105,ทำความรู้จักกับ “สภาวะ ENSO-Neutral”,Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/8254/,1,REQ-032
+DCCE_2_11,"ปริมาณน้ำฝน (RegCM5, EC-Earth3-Veg)",Dataset,DCCE,https://clim-webbased.dcce.go.th/DataServices,1,REQ-035
+DCCE_2_16,"ปริมาณน้ำฝน (Statistical Downscaling, CMIP6)",Dataset,DCCE,https://clim-webbased.dcce.go.th/DataServices,1,REQ-035
+DCCE_2_17,"อุณหภูมิสูงสุด (Statistical Downscaling, CMIP6)",Dataset,DCCE,https://clim-webbased.dcce.go.th/DataServices,1,REQ-035
+DCCE_2_18,"อุณหภูมิต่ำสุด (Statistical Downscaling, CMIP6)",Dataset,DCCE,https://clim-webbased.dcce.go.th/DataServices,1,REQ-035
+DCCE_2_19,"อุณหภูมิเฉลี่ย (Statistical Downscaling, CMIP6)",Dataset,DCCE,https://clim-webbased.dcce.go.th/DataServices,1,REQ-035
+MED-125,คู่มือการจัดทำห่วงโซ่ผลกระทบจากการเปลี่ยนแปลงสภาพภูมิอากาศ,Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/5075/,3,REQ-040; REQ-046; REQ-051
+MED-004,ซูเปอร์เอลนีโญกับความมั่นคงด้านน้ำของประเทศไทย เมื่อ “น้ำ” กลายเป็นความเสี่ยงอันดับแรกที่ทุกภาคส่วนต้องร่วมรับมือ (การจัดการทรัพยากรน้ำ),Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/26076/,1,REQ-041
+MED-033,เกษตรบนเส้นทางเปราะบางต่อภูมิอากาศ : บังกลาเทศการปรับตัวเพื่อความมั่นคงทางอาหาร,Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/22841/,1,REQ-041
+MD_1_2,ข้อมูลระดับน้ำทะเล,Dataset,MD,http://hydro.md.go.th/,1,REQ-043
+MED-127,ชายฝั่งในภาวะโลกรวน : หากอยากปรับตัวให้รอด ต้องอาศัยความร่วมมือจากทุกฝ่าย (Climate Impacts on Coastal Areas : The Planet will Survive Only When All Stakeholders Join Hands.),Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/%e0%b8%8a%e0%b8%b2%e0%b8%a2%e0%b8%9d%e0%b8%b1%e0%b9%88%e0%b8%87%e0%b9%83%e0%b8%99%e0%b8%a0%e0%b8%b2%e0%b8%a7%e0%b8%b0%e0%b9%82%e0%b8%a5%e0%b8%81%e0%b8%a3%e0%b8%a7%e0%b8%99-%e0%b8%ab%e0%b8%b2/,1,REQ-045
+MED-128,ชายฝั่งในภาวะโลกรวน : 4 จังหวัดฝั่งอ่าวไทย ปรับตัวต่อโลกรวนอย่างเข้าใจธรรมชาติ (Climate Impacts on Coastal Areas : How do 4 Thai Gulf Provinces Adapt to Climate Change?,Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/4469/,1,REQ-045
+MED-129,ชายฝั่งในภาวะโลกรวน : แก้ปัญหาอย่างเนียนไปกับธรรมชาติ (Climate Impacts on Coastal Areas : Adapting with Nature-Based Solutions ),Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/4466/,1,REQ-045
+MED-130,ชายฝั่งในภาวะโลกรวน : ตั้งรับ ยืดหยุ่น ปรับตัวต่อการเปลี่ยนแปลง (Climate Impacts on Coastal Areas : Adapting and Building Resilience to Climate Change),Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/4467/,1,REQ-045
+MED-133,"ชายฝั่งในภาวะโลกรวน : กระทบที่อยู่ ปากท้อง และทรัพยากรในท้องทะเล (Climate Impacts on Coastal Areas : From Life at Home, Day-to-Day Life, To Life Below Water)",Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/4121/,1,REQ-045
+MED-134,ชายฝั่งในภาวะโลกรวน : 24 จังหวัดทะเลไทยแปรปรวน รวน ร้อน (Climate Impacts on Coastal Areas : 24 Coastal Provinces Amid Climate Change),Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/4104/,1,REQ-045
+MED-135,ชายฝั่งในภาวะโลกรวน : ชายฝั่งเอเชียตะวันออกเฉียงใต้ เปราะบางต่อโลกรวน (Climate Impacts on Coastal Areas : South-East Asia's Coastal Areas are Vulnerable to Climate Change),Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/4101/,1,REQ-045
+MED-136,ชายฝั่งในภาวะโลกรวน  ปะการังอาจตายหมดหากโลกร้อนกว่านี้ (Climate Impacts on Coastal Areas  Coral Reefs Under Critical Threat),Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/4100/,1,REQ-045
+MED-137,ชายฝั่งในภาวะโลกรวน : จากภัยพิบัติบนฝั่งถึงวิกฤตใต้ทะเล (Climate Impacts on Coastal Areas : From Disasters to Ocean Crisis),Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/4093/,1,REQ-045
+DMCR_1_1,พื้นที่กัดเซาะชายฝั่ง (WebGIS DCCE),Dataset,DMCR,https://tcs.dmcr.go.th/dmcr/v2/router?page=dashboard,1,REQ-045
+DMCR_4_1,พื้นที่กัดเซาะชายฝั่ง (DMCR ภาคสนาม),Dataset,DMCR,https://tcs.dmcr.go.th/dmcr/v2/router?page=dashboard,1,REQ-045
+MED-048,เจาะลึกห่วงโซ่ผลกระทบ &#8220;น้ำท่วมหาดใหญ่ 2025&#8221; : มากกว่าแค่น้ำท่วม คือความเสียหายที่ต้องถอดบทเรียน,Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/21308/,2,REQ-046; REQ-047
+DDPM_3_2,มูลค่าความเสียหายจากภัยแล้ง,Dataset,DDPM,https://www.disaster.go.th,1,REQ-049
+DDPM_2_3,ข้อมูลความเสียหายของทรัพย์สิน (ถนน ปศุสัตว์ วัด ฯลฯ) ตามรายงานของ อปท. (LAO-reported damage counts),Dataset,DDPM,https://www.disaster.go.th,1,REQ-049
+RFD_1_2,อัตราการสูญเสียพื้นที่ป่าในระยะเวลา 5 ปี รายจังหวัด,Dataset,RFD,https://www.forest.go.th,1,REQ-049
+MED-108,การคาดการณ์ผลกระทบต่อความหลากหลายทางชีวภาพภายใต้อุณหภูมิที่สูงขึ้น,Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/6637/,1,REQ-050
+MED-150,คู่มือกิจกรรมสิ่งแวดล้อมศึกษา การเปลี่ยนแปลงสภาพภูมิอากาศและความหลากหลายทางชีวภาพ,Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/4018/,1,REQ-050
+MED-002,ซูเปอร์เอลนีโญกับสุขภาพคนไทย ปกป้องชีวิตและกลุ่มเปราะบาง ท่ามกลางโลกที่ร้อนขึ้น (สาขาสาธารณสุข),Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/26317/,1,REQ-054
+MED-042,แนวทางการแก้ปัญหาโดยอาศัยธรรมชาติเป็นฐาน (NbS) : Nature-Based Solutions,Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/6463/,1,REQ-061
+VID-036,รู้ไหม? ธรรมชาติก็เป็นนักแก้ปัญหาตัวยง!.มารู้จัก “Nature-based Solutions” กัน,Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.youtube.com/watch?v=cgFAOTv64cE,1,REQ-061
+MED-016,เริ่มอย่างไรกับแนวทางการทำระบบติดตามประเมินผล (Monitoring &amp; Evaluation; M&amp;E),Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/23799/,1,REQ-065
+MED-019,ระบบ M&amp;E เครื่องมือวัดความรอดในยุคโลกรวน กรณีศึกษาระบบติดตามประเมินผลของต่างประเทศ,Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/23769/,1,REQ-065
+MED-024,Global Goal on Adaptation (GGA) Indicator กับการปรับตัวของไทย,Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/23705/,1,REQ-066
+MED-049,รู้จัก 59 ตัวชี้วัด &#8220;เบเล็ง&#8221; (Belém Indicators) เข็มทิศใหม่สู้โลกเดือด!,Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/21306/,1,REQ-066
+MED-009,โครงการจัดทำระบบติดตามประเมินผลการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศถอดบทเรียน “พื้นที่ปฏิบัติที่ดี (Good Practices)” สาขาการตั้งถิ่นฐานและความมั่นคงของมนุษย์,Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/24014/,1,REQ-068
+MED-010,โครงการจัดทำระบบติดตามประเมินผลการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศถอดบทเรียน “พื้นที่ปฏิบัติที่ดี (Good Practices)” สาขาทรัพยากรธรรมชาติ,Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/24004/,1,REQ-068
+MED-011,โครงการจัดทำระบบติดตามประเมินผลการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศถอดบทเรียน “พื้นที่ปฏิบัติที่ดี (Good Practices)” สาขาสาธารณสุข,Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/23996/,1,REQ-068
+MED-012,โครงการจัดทำระบบติดตามประเมินผลการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศถอดบทเรียน “พื้นที่ปฏิบัติที่ดี (Good Practices)” สาขาการท่องเที่ยว,Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/23983/,1,REQ-068
+MED-013,โครงการจัดทำระบบติดตามประเมินผลการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศ ถอดบทเรียน “พื้นที่ปฏิบัติที่ดี (Good Practices)” สาขาการเกษตรและความมั่นคงอาหาร,Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/23975/,1,REQ-068
+MED-014,โครงการจัดทำระบบติดตามประเมินผลการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศถอดบทเรียน “พื้นที่ปฏิบัติที่ดี (Good Practices)” สาขาการจัดการทรัพยากรน้ำ,Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/23827/,1,REQ-068
+MED-017,ก้าวสำคัญของการรับมือโลกร้อน “โครงการจัดทำระบบติดตามประเมินผลการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศ”,Knowledge Asset,กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม,https://www.dcce.go.th/media/23792/,1,REQ-068
+SYS-002,ระบบบัญชีข้อมูล (Data Catalog) กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม,Data Product,กลุ่มพัฒนาเทคโนโลยีดิจิทัล,https://dgf.dcce.go.th/,1,REQ-069
+PUB-051,บัญชีข้อมูล (Data Catalogue),Knowledge Asset,กองยุทธศาสตร์และความร่วมมือระหว่างประเทศ,https://www.dcce.go.th/datacenter/3427/,1,REQ-069
+SYS-004,ระบบสัมมนาและฝึกอบรมด้านสิ่งแวดล้อม,Data Product,กลุ่มพัฒนาเทคโนโลยีดิจิทัล,https://datacenter.dcce.go.th/training,1,REQ-072
+PUB-049,ข่าวสารประชาสัมพันธ์,Knowledge Asset,กองยุทธศาสตร์และความร่วมมือระหว่างประเทศ,https://www.dcce.go.th/datacenter/4624/,1,REQ-072
+clim-webbased.dcce.go.th,DCCE downscaled climate projection platform,Data Product,UNKNOWN - not yet in either canonical asset registry; needs formal entry,https://clim-webbased.dcce.go.th/Home,1,REQ-035
+DDPM_2_1,ข้อมูลเหตุการณ์ภัยพิบัติย้อนหลัง 10 ปี (10-year historical disaster occurrence data),Dataset,DDPM,https://www.disaster.go.th,2,REQ-001; REQ-011

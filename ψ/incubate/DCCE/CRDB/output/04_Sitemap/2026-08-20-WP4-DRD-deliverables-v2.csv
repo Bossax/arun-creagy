@@ -1,0 +1,15 @@
+deliverable_id,name,type,sections_served,requirement_count,requirements
+DEL-1,Thailand Climatology Dashboard,Data engineering + product,3.1,1,REQ-033
+DEL-2,Risk map & profile layer (merged with former DEL-13 map/profile scope),Data engineering and interface,"1.1.1, 1.2, 2.2, 4",6,REQ-004; REQ-008; REQ-009; REQ-014; REQ-015; REQ-070
+DEL-3,External-source explainers with data-sharing agreements,Content + partnership,3.1,2,REQ-030; REQ-031
+DEL-4,Slow-Onset Hazards Profile,"Content, with derivation as a later stretch",3.2,4,REQ-042; REQ-043; REQ-044; REQ-045
+DEL-5,External-source explainers - monitoring and projections,Content + partnership,3.1,2,REQ-032; REQ-035
+DEL-6,Concept and methodology standards,Content,3.2,3,REQ-038; REQ-040; REQ-048
+DEL-7,Risk framing and worked examples,Content,"1.1, 3.1, 3.2",3,REQ-003; REQ-037; REQ-047
+DEL-8,"Policy and institutional content (also reframed at 3.3.1 as project-design compliance guidance for planners, per Boss's review this session)",Content,"2.3, 3.3.1, 3.3.2",3,REQ-017; REQ-025; REQ-057
+DEL-9,Inclusion and community adaptation content,Content,3.3,3,REQ-053; REQ-054; REQ-055
+DEL-10,Adaptation measures library,Product and content,3.3,2,REQ-060; REQ-061
+DEL-11,New operational capability (feedback platform),Build,5.2,1,REQ-073
+DEL-12,Disaster statistics product,Data engineering + product,"1.1, 2.1",2,REQ-001; REQ-011
+DEL-13,Migrate existing DCCE analytical products onto platform infrastructure (non-map-cluster remainder),Data engineering + hosting,"1.1.2, 2.1, 3.2.2",3,REQ-005; REQ-013; REQ-041
+DEL-14,External data hub links,Content,4.3,1,REQ-071
