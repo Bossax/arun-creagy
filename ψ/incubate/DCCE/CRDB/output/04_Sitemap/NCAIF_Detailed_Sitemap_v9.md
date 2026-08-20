@@ -13,40 +13,54 @@
 
 ---
 
-## 1. หน้าแรก (Home: National Climate Adaptation Portal)
+## 0. หน้าแรก (Home: National Climate Adaptation Portal)
 
 > [!NOTE]
-> **Structure note (19 August 2026, carried from v8):** Per the Homepage Concept draft (`2026-08-19-WP4-Homepage-Concept.md`), Home is a router, not an info page. Its function: hero statement, area search (1.2 below), task-based routing into the site's sections, a thin national-context strip linking out to Country Overview (1B), latest updates, and help/feedback. Detailed page design is next-project scope.
+> **Structure note (19 August 2026, carried from v8):** Per the Homepage Concept draft (`2026-08-19-WP4-Homepage-Concept.md`), Home is a router, not an info page. Its function: hero statement, area search (1.2 below), task-based routing into the site's sections, latest updates, and help/feedback. Detailed page design is next-project scope.
+
+### 1.1 ข้อความหลักบอกว่าแพลตฟอร์มนี้คืออะไร (Hero Statement)
+- ข้อความสั้น ๆ ด้านบนสุดของหน้าแรก บอกผู้ใช้ครั้งแรกว่าเว็บไซต์นี้ให้อะไรได้บ้าง ก่อนที่ผู้ใช้จะเริ่มค้นหาหรือกดเข้าส่วนอื่น
 
 ### 1.2 สืบค้นข้อมูลรายพื้นที่ (Interactive Area Search)
-* ระบบสืบค้นข้อมูลความเสี่ยงเชิงพื้นที่แบบโต้ตอบ (Interactive Search Engine) เพื่อนำทางผู้ใช้ไปสู่ผลวิเคราะห์เชิงปฏิบัติการ
-    *   **Search Hierarchy**: รองรับการค้นหารายระดับการปกครอง (จังหวัด -> อำเภอ -> ตำบล)
-    *   **Map Integration**: แสดงตำแหน่งและขอบเขตการปกครองซ้อนทับบนแผนที่ความเสี่ยงเชิงพื้นที่ (Spatial Risk Map) *(shared build — see DEL-2/DEL-13, also embedded at 2.2, 2.4-link, and 4.2)*
-    *   **Quick-view Dashboard**: แสดงบัตรข้อมูลสรุปความเปราะบางเฉพาะจุด ภัยคุกคามหลัก และมาตรการที่แนะนำในเบื้องต้น
+* ระบบสืบค้นข้อมูลความเสี่ยงเชิงพื้นที่ ( Search Bar) เพื่อนำทางผู้ใช้ไปสู่ข้อมูลที่ต้องการ
+    * Should be topic-wise at provincial level
+	    * e.g. land cover -> province
+
+### 1.3 Dynamic  task-based routing Cards
+- ทางลัดสำหรับผู้ที่มีโจทย์ในใจอยู่แล้ว เช่น ตรวจสอบความก้าวหน้าโครงการปรับตัว, ค้นหาข้อมูลแหล่งทุน, วางแผนการปรับตัวระดับเทศบาล เป็นต้น ส่วนนี้ควรจะเป็น dynamic แสดงตัวเลือก service ที่คนมาใช้บ่อยๆ 
+
+### 1.4 เมนูนำทางหลัก ครอบคลุมทุก section (Persistent Global Navigation)
+เมนูถาวรที่แสดงอยู่ทุกหน้า ให้เข้าถึงทุก section หลักของเว็บไซต์ได้โดยตรง ไม่ใช่แค่ section ที่มีทางลัดเด่นบนหน้าแรก: หน้าแรก, ภาพรวมประเทศ, ศูนย์ข้อมูลสำหรับผู้กำหนดนโยบายและแผน, วงจรขับเคลื่อนการปรับตัว, เครื่องมือและบริการสารสนเทศด้านภูมิอากาศ, ข่าวและช่องทางการติดต่อ ส่วนนี้คือแผนที่เว็บไซต์แบบสมบูรณ์ ในขณะที่ 1.3 คือทางลัดสำหรับงานที่พบบ่อย ทั้งสองส่วนทำงานคู่กัน ไม่ใช่คนละระบบนำทาง
+
+### 1.5 ข้อมูลอัปเดตล่าสุด (Recently Updated)
+รายการชุดข้อมูลหรือหน้าที่เพิ่งมีการอัปเดต แสดงบนหน้าแรกเพื่อให้ผู้ใช้ที่กลับมาเห็นว่าแพลตฟอร์มมีการดูแลและปรับปรุงต่อเนื่อง
+
+### 1.6 ช่องทางแจ้งปัญหาและข้อเสนอแนะ (Feedback / Help)
+ทางออกที่มองเห็นได้ชัดสำหรับผู้ใช้ที่หาสิ่งที่ต้องการไม่พบ ให้แจ้งปัญหาคุณภาพข้อมูลหรือขอความช่วยเหลือได้จากหน้าแรกโดยตรง
 
 ---
 
-## 1B. ภาพรวมประเทศ (Country Overview)
+## 1. ภาพรวมประเทศ (Country Overview)
 
 > [!NOTE]
 > **Structure note, carried from v8:** Formerly "1.1 สรุปสำหรับผู้บริหาร," re-parented to its own top-level section, sibling to Home. Node code "1B" is provisional pending final site renumbering.
 
-*   **1.1.1 ภาพรวมความเสี่ยงจากการเปลี่ยนแปลงสภาพภูมิอากาศในประเทศไทย** *(shared build — see DEL-7, also referenced from 3.1/3.2)*:
-    *   ประวัติศาสตร์และแนวโน้มภัยธรรมชาติของประเทศ
+*   **1.1 ภาพรวมความเสี่ยงจากการเปลี่ยนแปลงสภาพภูมิอากาศในประเทศไทย** *(shared build — see DEL-7, also referenced from 3.1/3.2)*:
+    * ประวัติศาสตร์และแนวโน้มภัยธรรมชาติของประเทศ
     *   กรอบแนวคิดและนิยามความเสี่ยงตามมาตรฐาน IPCC (Hazard, Exposure, Vulnerability)
     *   ความเข้าใจความเสี่ยงทางกายภาพ (Physical Risk) และความเสี่ยงจากการเปลี่ยนผ่าน (Transition Risk)
     *   แผนภาพและบัตรข้อมูลสรุปความเสี่ยงระดับชาติ (National Risk Profile Summary Cards)
-*   **1.1.2 ความเสี่ยงสำคัญ และลำดับความสำคัญในการปรับตัวของประเทศไทย**:
+*   **1.2 ความเสี่ยงสำคัญ และลำดับความสำคัญในการปรับตัวของประเทศไทย**:
     *   พื้นที่เสี่ยงสูง (Hotspots) รายสาขาและระดับภูมิภาค
     *   สรุปสาระสำคัญของแผนการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศระดับชาติ (NAP Summary)
-    *   ตัวอย่างมาตรการปรับตัวที่มีความคุ้มค่าสูง พร้อมรายละเอียดเบื้องต้น
+    *   ตัวอย่างมาตรการปรับตัวที่มีความคุ้มค่าสูง พร้อมรายละเอียดเบื้องต้น 
 
 ---
 
 ## 2. ศูนย์ข้อมูลสำหรับผู้กำหนดนโยบายและแผน (Policy Maker Information Center)
 
 ### 2.1 สถานการณ์การเปลี่ยนแปลงสภาพภูมิอากาศของประเทศ
-* ภาพรวม climatic zone ของประเทศไทยและ historical climatology (linked to 3.1.2)
+* ภาพรวม key physical changes of Thailand's climatology
 * สรุปสถิติภัยพิบัติจากภูมิอากาศในอดีต *(shared build — see DEL-12, Service 4; a different view of the same data as the loss/damage summary below, not a separate compilation)*
 * สรุปข้อมูลความสูญเสียและความเสียหายทางเศรษฐกิจจากภัยพิบัติจากภูมิอากาศ — บัตรสรุปพร้อมลิงก์ไปยังแดชบอร์ดฉบับเต็มที่ 3.2.4 *(shared build — see DEL-12/LD-1; the full dashboard is built once, at 3.2.4, not duplicated here)*
 *   สรุปแนวโน้มการเปิดรับภัย (Exposure Trends) (data from existing products. different view is presented here with some analysis )
@@ -83,7 +97,7 @@
 
 ---
 
-## 3. วงจรขับเคลื่อนการปรับตัว (Adaptation Knowledge Cycle)
+## 3. วงจรขับเคลื่อนการปรับตัว (Adaptation  Cycle)
 
 ### 3.1 วิทยาศาสตร์ของสภาพภูมิอากาศ (Climate Science)
 *   **3.1.1 ข้อมูลสังเกตุการณ์**:
@@ -207,6 +221,12 @@ Tools in the grid, each tagged by category:
 
 **Deliberately kept as-is (not restored):**
 - 2.4: kept as a pure router link to Section 4, rather than rebuilt as a 6-item planning hub — the map/profile content it would have carried is already reachable via 1.2/2.2/4
+
+**Homepage section folded in from the concept doc (20 August 2026):**
+- Added 1.1 (hero statement), 1.5 (recently updated), 1.6 (feedback/help path) — three of the concept's six stated homepage functions that hadn't made it into the sitemap yet
+- Expanded 1.4 from "entry to section 2 and 3" to a persistent global-nav item covering all top-level sections, per the concept's requirement that every section (including Country Overview, which has no natural task-shortcut) stay reachable from anywhere on the site
+- The concept's function 4 (thin national-context strip) is deliberately excluded — the homepage sitemap doesn't carry it
+- `2026-08-19-WP4-Homepage-Concept.md` moved to `archive/`; its content now lives in this section
 
 **New this round (Boss's inline review):**
 - 2.3's NAP Summary bullet changed from freshly-duplicated text to a cross-reference back to 1.1.2
