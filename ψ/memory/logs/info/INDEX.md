@@ -1,5 +1,8 @@
 # Info Log Index
 
+- [2026-08-19 15:55] 🚩 **Slide & Webpage Mockup Language Guardrails (Important)**: Strict prohibition of hyperbolic jargon (Pulse, Infrastructure) and internal developer logic (Task-Based Routing, 1B node codes) on presentation slides and mockups; enforce authentic user-centric terminology.
+  - File: ψ/memory/logs/info/2026-08-19_15-55_slide-making-and-mockup-language-guardrails.md
+
 - [2026-08-12 17:57] WP4 DRD verification: a check failed because it grepped for fixed "unknown" markers and missed a valid third phrasing ("Not applicable"). Data was fine; the check was too narrow. Lesson: read actual values before assuming the deliverable is wrong when a self-written check fails.
   - File: ψ/memory/logs/info/2026-08-12_17-57_wp4-drd-verification-check-false-positive.md
 

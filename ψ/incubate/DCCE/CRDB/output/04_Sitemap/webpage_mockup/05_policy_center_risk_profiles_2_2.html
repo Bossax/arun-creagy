@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2.2 สรุปโปรไฟล์ของความเสี่ยงรายพื้นที่และรายภาคส่วน - NCAIF</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '"Noto Sans Thai"', 'sans-serif'],
+            thai: ['"Noto Sans Thai"', 'sans-serif'],
+          },
+          colors: {
+            brand: { 50: '#F0F9FF', 100: '#E0F2FE', 600: '#0284C7', 700: '#0369A1', 900: '#0C4A6E' },
+            dcce: { teal: '#0D9488', navy: '#0F172A', slate: '#1E293B' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', 'Noto Sans Thai', sans-serif;
+      background-color: #0F172A;
+      color: #1E293B;
+      margin: 0;
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .frame-10-8 {
+      width: 1280px;
+      height: 1024px;
+      background: #FFFFFF;
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(51, 65, 85, 0.5);
+    }
+    .custom-shadow {
+      box-shadow: 0 2px 8px -1px rgba(15, 23, 42, 0.06);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="frame-10-8">
+    
+    <!-- Browser Bar -->
+    <div class="bg-slate-900 px-4 py-2.5 flex items-center justify-between border-b border-slate-800 flex-shrink-0">
+      <div class="flex items-center space-x-2">
+        <div class="w-3 h-3 rounded-full bg-rose-500"></div>
+        <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+        <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+      </div>
+      <div class="bg-slate-800 text-slate-300 text-xs px-5 py-1 rounded-full flex items-center space-x-2 font-mono border border-slate-700">
+        <svg class="w-3.5 h-3.5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+        <span>https://ncaif.dcce.go.th/policy-center/risk-profiles</span>
+      </div>
+      <div class="text-slate-400 text-xs font-semibold">DCCE Portal</div>
+    </div>
+
+    <!-- Header / Nav -->
+    <header class="border-b border-slate-200 px-6 py-2.5 flex items-center justify-between bg-white flex-shrink-0">
+      <div class="flex items-center space-x-3">
+        <div class="w-8 h-8 rounded-lg bg-teal-700 flex items-center justify-center text-white font-bold text-sm">N</div>
+        <div>
+          <span class="font-bold text-slate-900 text-sm">NCAIF</span>
+          <span class="text-[10px] text-slate-500 ml-1.5">กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม</span>
+        </div>
+      </div>
+      <nav class="flex items-center space-x-1 text-xs font-thai">
+        <a href="#" class="px-2.5 py-1 text-slate-600 hover:text-slate-900">หน้าแรก</a>
+        <a href="#" class="px-2.5 py-1 text-slate-600 hover:text-slate-900">ภาพรวมประเทศ</a>
+        <a href="#" class="px-2.5 py-1 rounded font-bold text-sky-700 bg-sky-50">ศูนย์ข้อมูลนโยบาย</a>
+        <a href="#" class="px-2.5 py-1 text-slate-600 hover:text-slate-900">วงจรการปรับตัว (NAP)</a>
+        <a href="#" class="px-2.5 py-1 text-slate-600 hover:text-slate-900">เครื่องมือและคลังข้อมูล</a>
+        <a href="#" class="px-2.5 py-1 text-slate-600 hover:text-slate-900">ข่าวสารและติดต่อ</a>
+      </nav>
+    </header>
+
+    <!-- Subheader / Breadcrumb -->
+    <div class="bg-slate-50 border-b border-slate-200 px-6 py-3 flex-shrink-0 flex items-center justify-between">
+      <div>
+        <div class="flex items-center space-x-1.5 text-[11px] text-slate-500 mb-0.5">
+          <span>ศูนย์ข้อมูลสำหรับผู้กำหนดนโยบายและแผน</span>
+          <span>›</span>
+          <span class="text-slate-800 font-medium">2.2 สรุปโปรไฟล์ของความเสี่ยงรายพื้นที่และรายภาคส่วน</span>
+        </div>
+        <h1 class="text-lg font-bold text-slate-900 tracking-tight">สรุปโปรไฟล์ของความเสี่ยงรายพื้นที่และรายภาคส่วน</h1>
+      </div>
+      <div class="flex space-x-2 text-xs">
+        <span class="bg-sky-50 text-sky-800 border border-sky-200 px-2.5 py-1 rounded font-medium">ครอบคลุม 77 จังหวัด และ 6 สาขาเป้าหมายหลัก</span>
+      </div>
+    </div>
+
+    <!-- Main Content Area (Compact 10:8 Fit) -->
+    <div class="flex-1 p-5 bg-slate-50/50 flex flex-col justify-between overflow-hidden">
+      
+      <!-- Top Section: สรุปโปรไฟล์ความเสี่ยงและความเปราะบางรายพื้นที่ -->
+      <div class="bg-white p-4 rounded-xl border border-slate-200 custom-shadow flex-shrink-0">
+        <div class="flex items-center justify-between mb-2.5">
+          <div>
+            <h2 class="text-xs font-bold text-slate-900 uppercase tracking-wider flex items-center space-x-1.5">
+              <span class="w-2 h-2 rounded-full bg-teal-600"></span>
+              <span>สรุปโปรไฟล์ความเสี่ยงและความเปราะบางรายพื้นที่ (รายภูมิภาค, 77 จังหวัด, และระดับท้องถิ่น/อปท.)</span>
+            </h2>
+            <p class="text-[10px] text-slate-500">โครงสร้างโปรไฟล์มาตรฐานสำหรับเปรียบเทียบสถานะความเสี่ยงระหว่างพื้นที่เพื่อการจัดสรรงบประมาณ</p>
+          </div>
+          <div class="flex items-center space-x-1 text-xs">
+            <span class="bg-sky-100 text-sky-800 px-2 py-0.5 rounded font-bold">รายภูมิภาค</span>
+            <span class="bg-slate-100 text-slate-600 px-2 py-0.5 rounded">77 จังหวัด</span>
+            <span class="bg-slate-100 text-slate-600 px-2 py-0.5 rounded">ระดับท้องถิ่น (อปท.)</span>
+          </div>
+        </div>
+
+        <!-- 4 Regional Profile Cards -->
+        <div class="grid grid-cols-4 gap-3 text-xs">
+          
+          <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 flex flex-col justify-between">
+            <div>
+              <span class="font-bold text-slate-800 block text-xs mb-1">ภาคเหนือ (17 จังหวัด)</span>
+              <div class="space-y-1 text-[10px] text-slate-600">
+                <p><strong class="text-slate-700">ภัยหลัก:</strong> ดินถล่ม, ภัยแล้งเกษตร, หมอกควัน</p>
+                <p><strong class="text-slate-700">กลุ่มเปราะบาง:</strong> ชุมชนบนที่สูง, เกษตรกรพืชไร่</p>
+              </div>
+            </div>
+            <span class="text-[9px] text-teal-700 font-bold mt-2 pt-1 border-t border-slate-200">จังหวัดเสี่ยงสูง: เชียงใหม่, น่าน, ตาก</span>
+          </div>
+
+          <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 flex flex-col justify-between">
+            <div>
+              <span class="font-bold text-slate-800 block text-xs mb-1">ภาคตะวันออกเฉียงเหนือ (20 จังหวัด)</span>
+              <div class="space-y-1 text-[10px] text-slate-600">
+                <p><strong class="text-slate-700">ภัยหลัก:</strong> ภัยแล้งซ้ำซาก, อุทกภัยลุ่มน้ำชี-มูล</p>
+                <p><strong class="text-slate-700">กลุ่มเปราะบาง:</strong> เกษตรกรนอกเขตชลประทาน</p>
+              </div>
+            </div>
+            <span class="text-[9px] text-teal-700 font-bold mt-2 pt-1 border-t border-slate-200">จังหวัดเสี่ยงสูง: อุบลฯ, โคราช, ขอนแก่น</span>
+          </div>
+
+          <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 flex flex-col justify-between">
+            <div>
+              <span class="font-bold text-slate-800 block text-xs mb-1">ภาคกลางและตะวันออก (26 จังหวัด)</span>
+              <div class="space-y-1 text-[10px] text-slate-600">
+                <p><strong class="text-slate-700">ภัยหลัก:</strong> น้ำท่วมชุมชนเมือง, น้ำเค็มรุก, ทรุดตัว</p>
+                <p><strong class="text-slate-700">กลุ่มเปราะบาง:</strong> ชุมชนแออัด, พื้นที่อุตสาหกรรม</p>
+              </div>
+            </div>
+            <span class="text-[9px] text-teal-700 font-bold mt-2 pt-1 border-t border-slate-200">จังหวัดเสี่ยงสูง: กทม., สมุทรปราการ, ระยอง</span>
+          </div>
+
+          <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 flex flex-col justify-between">
+            <div>
+              <span class="font-bold text-slate-800 block text-xs mb-1">ภาคใต้ (14 จังหวัด)</span>
+              <div class="space-y-1 text-[10px] text-slate-600">
+                <p><strong class="text-slate-700">ภัยหลัก:</strong> การกัดเซาะชายฝั่ง, น้ำหลากฉับพลัน</p>
+                <p><strong class="text-slate-700">กลุ่มเปราะบาง:</strong> ประมงพื้นบ้าน, แหล่งท่องเที่ยว</p>
+              </div>
+            </div>
+            <span class="text-[9px] text-teal-700 font-bold mt-2 pt-1 border-t border-slate-200">จังหวัดเสี่ยงสูง: นครศรีฯ, สุราษฎร์ฯ, สงขลา</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bottom Section: สรุปโปรไฟล์ความเสี่ยงเฉพาะสาขาเป้าหมายหลัก 6 สาขา -->
+      <div class="bg-white p-4 rounded-xl border border-slate-200 custom-shadow flex-1 flex flex-col justify-between">
+        <div class="flex items-center justify-between mb-2">
+          <div>
+            <h2 class="text-xs font-bold text-slate-900 uppercase tracking-wider">สรุปโปรไฟล์ความเสี่ยงเฉพาะสาขาเป้าหมายหลัก 6 สาขา</h2>
+            <p class="text-[10px] text-slate-500">ผลการวิเคราะห์ความเปราะบางและผลกระทบจำแนกตามรายสาขายุทธศาสตร์</p>
+          </div>
+          <span class="text-[10px] text-slate-400">กรอบการรายงานตามเกณฑ์ BTR</span>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3">
+          
+          <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-[11px] font-bold text-slate-800">1. เกษตรกรรม (Agriculture)</span>
+              <span class="text-[10px] text-rose-600 font-bold">เสี่ยงสูง</span>
+            </div>
+            <p class="text-[10px] text-slate-600 leading-relaxed">ความแปรปรวนของฤดูกาลเพาะปลูก ความเสียหายของข้าวและพืชเศรษฐกิจหลัก และผลกระทบต่อความมั่นคงอาหาร</p>
+          </div>
+
+          <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-[11px] font-bold text-slate-800">2. การจัดการน้ำ (Water Resources)</span>
+              <span class="text-[10px] text-rose-600 font-bold">เสี่ยงสูง</span>
+            </div>
+            <p class="text-[10px] text-slate-600 leading-relaxed">ความจุเขื่อนและอ่างเก็บน้ำที่ไม่สอดคล้องกับฝนตกหนัก ความเสี่ยงภัยแล้งนอกเขตชลประทาน และปัญหาคุณภาพน้ำดิบ</p>
+          </div>
+
+          <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-[11px] font-bold text-slate-800">3. สาธารณสุข (Public Health)</span>
+              <span class="text-[10px] text-amber-600 font-bold">เสี่ยงปานกลาง</span>
+            </div>
+            <p class="text-[10px] text-slate-600 leading-relaxed">การแพร่ระบาดของโรคเขตร้อน โรคที่เกิดจากน้ำและอาหาร และผลกระทบจากคลื่นความร้อนในกลุ่มผู้สูงอายุ</p>
+          </div>
+
+          <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-[11px] font-bold text-slate-800">4. การท่องเที่ยว (Tourism)</span>
+              <span class="text-[10px] text-amber-600 font-bold">เสี่ยงปานกลาง</span>
+            </div>
+            <p class="text-[10px] text-slate-600 leading-relaxed">ความเสื่อมโทรมของแนวปะการัง ชายหาดที่ถูกกัดเซาะ และฤดูกาลท่องเที่ยวที่ได้รับผลกระทบจากสภาพอากาศรุนแรง</p>
+          </div>
+
+          <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-[11px] font-bold text-slate-800">5. ป่าไม้และระบบนิเวศ (Forestry & Ecosystem)</span>
+              <span class="text-[10px] text-rose-600 font-bold">เสี่ยงสูง</span>
+            </div>
+            <p class="text-[10px] text-slate-600 leading-relaxed">การเปลี่ยนแปลงของเขตพรรณพืช ไฟป่า หมอกควัน และการสูญเสียความหลากหลายทางชีวภาพในป่าต้นน้ำ</p>
+          </div>
+
+          <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-[11px] font-bold text-slate-800">6. พลังงานและการตั้งถิ่นฐาน (Energy & Human Settlements)</span>
+              <span class="text-[10px] text-amber-600 font-bold">เสี่ยงปานกลาง</span>
+            </div>
+            <p class="text-[10px] text-slate-600 leading-relaxed">ความต้องการพลังงานไฟฟ้าทำความเย็นสูงขึ้น ความเปราะบางของโครงข่ายสายส่ง และน้ำท่วมขังในเขตเมืองหนาแน่น</p>
+          </div>
+
+        </div>
+
+        <div class="flex items-center justify-between text-[10px] text-slate-500 mt-2 pt-2 border-t border-slate-100">
+          <span>*หมายเหตุ: โปรไฟล์ความเสี่ยงเฉพาะพื้นที่สามารถนำไปใช้อ้างอิงการจัดทำแผนพัฒนาจังหวัดและแผนปรับตัวระดับท้องถิ่น</span>
+          <a href="#" class="text-sky-700 font-bold hover:underline">ดูรายละเอียดในหน้าถัดไป: 2.3 เครื่องมือทางนโยบาย กฎหมาย และการเงิน →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-[10px] px-6 py-2 flex items-center justify-between flex-shrink-0 border-t border-slate-800">
+      <span>NCAIF Thailand | กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (สส.)</span>
+      <span>หน้า 2.2 โปรไฟล์ความเสี่ยงรายพื้นที่และรายภาคส่วน</span>
+    </footer>
+
+  </div>
+
+</body>
+</html>

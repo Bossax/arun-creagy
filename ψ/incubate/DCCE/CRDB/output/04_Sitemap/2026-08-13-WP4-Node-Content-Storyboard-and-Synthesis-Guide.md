@@ -428,7 +428,7 @@ A proxy document exists, but it was not written for this purpose, and the real m
 
 ---
 # 3.3 การวางแผนการปรับตัวและการปฏิบัติ (Planning & Implementation)
-##  3.3.1 — Planning Guidelines & Inclusive Adaptation
+##  3.3.1 — Planning Guidelines & Participatory Project Design
 
 **Readiness: 2/5 — Needs new content**
 

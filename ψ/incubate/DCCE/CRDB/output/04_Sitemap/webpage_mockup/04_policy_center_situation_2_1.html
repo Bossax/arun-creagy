@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2.1 สถานการณ์การเปลี่ยนแปลงสภาพภูมิอากาศของประเทศ - NCAIF</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '"Noto Sans Thai"', 'sans-serif'],
+            thai: ['"Noto Sans Thai"', 'sans-serif'],
+          },
+          colors: {
+            brand: { 50: '#F0F9FF', 100: '#E0F2FE', 600: '#0284C7', 700: '#0369A1', 900: '#0C4A6E' },
+            dcce: { teal: '#0D9488', navy: '#0F172A', slate: '#1E293B' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', 'Noto Sans Thai', sans-serif;
+      background-color: #0F172A;
+      color: #1E293B;
+      margin: 0;
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .frame-10-8 {
+      width: 1280px;
+      height: 1024px;
+      background: #FFFFFF;
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(51, 65, 85, 0.5);
+    }
+    .custom-shadow {
+      box-shadow: 0 2px 8px -1px rgba(15, 23, 42, 0.06);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="frame-10-8">
+    
+    <!-- Browser Bar -->
+    <div class="bg-slate-900 px-4 py-2.5 flex items-center justify-between border-b border-slate-800 flex-shrink-0">
+      <div class="flex items-center space-x-2">
+        <div class="w-3 h-3 rounded-full bg-rose-500"></div>
+        <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+        <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+      </div>
+      <div class="bg-slate-800 text-slate-300 text-xs px-5 py-1 rounded-full flex items-center space-x-2 font-mono border border-slate-700">
+        <svg class="w-3.5 h-3.5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+        <span>https://ncaif.dcce.go.th/policy-center/national-situation</span>
+      </div>
+      <div class="text-slate-400 text-xs font-semibold">DCCE Portal</div>
+    </div>
+
+    <!-- Header / Nav -->
+    <header class="border-b border-slate-200 px-6 py-2.5 flex items-center justify-between bg-white flex-shrink-0">
+      <div class="flex items-center space-x-3">
+        <div class="w-8 h-8 rounded-lg bg-teal-700 flex items-center justify-center text-white font-bold text-sm">N</div>
+        <div>
+          <span class="font-bold text-slate-900 text-sm">NCAIF</span>
+          <span class="text-[10px] text-slate-500 ml-1.5">กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม</span>
+        </div>
+      </div>
+      <nav class="flex items-center space-x-1 text-xs font-thai">
+        <a href="#" class="px-2.5 py-1 text-slate-600 hover:text-slate-900">หน้าแรก</a>
+        <a href="#" class="px-2.5 py-1 text-slate-600 hover:text-slate-900">ภาพรวมประเทศ</a>
+        <a href="#" class="px-2.5 py-1 rounded font-bold text-sky-700 bg-sky-50">ศูนย์ข้อมูลนโยบาย</a>
+        <a href="#" class="px-2.5 py-1 text-slate-600 hover:text-slate-900">วงจรการปรับตัว (NAP)</a>
+        <a href="#" class="px-2.5 py-1 text-slate-600 hover:text-slate-900">เครื่องมือและคลังข้อมูล</a>
+        <a href="#" class="px-2.5 py-1 text-slate-600 hover:text-slate-900">ข่าวสารและติดต่อ</a>
+      </nav>
+    </header>
+
+    <!-- Subheader / Breadcrumb -->
+    <div class="bg-slate-50 border-b border-slate-200 px-6 py-3 flex-shrink-0 flex items-center justify-between">
+      <div>
+        <div class="flex items-center space-x-1.5 text-[11px] text-slate-500 mb-0.5">
+          <span>ศูนย์ข้อมูลสำหรับผู้กำหนดนโยบายและแผน</span>
+          <span>›</span>
+          <span class="text-slate-800 font-medium">2.1 สถานการณ์การเปลี่ยนแปลงสภาพภูมิอากาศของประเทศ</span>
+        </div>
+        <h1 class="text-lg font-bold text-slate-900 tracking-tight">สถานการณ์การเปลี่ยนแปลงสภาพภูมิอากาศของประเทศ</h1>
+      </div>
+      <div class="flex space-x-2 text-xs">
+        <span class="bg-teal-50 text-teal-800 border border-teal-200 px-2.5 py-1 rounded font-medium">สถิติความสูญเสียและความเสียหายระดับชาติ</span>
+      </div>
+    </div>
+
+    <!-- Main Content Area (Compact 10:8 Fit) -->
+    <div class="flex-1 p-5 bg-slate-50/50 flex flex-col justify-between overflow-hidden">
+      
+      <!-- Top Section: สถิติเหตุการณ์อากาศสุดขั้วในอดีต -->
+      <div class="bg-white p-4 rounded-xl border border-slate-200 custom-shadow flex-shrink-0">
+        <div class="flex items-center justify-between mb-2.5">
+          <h2 class="text-xs font-bold text-slate-900 uppercase tracking-wider flex items-center space-x-1.5">
+            <span class="w-2 h-2 rounded-full bg-rose-600"></span>
+            <span>สถิติเหตุการณ์อากาศสุดขั้วในอดีต (Historical Extreme Weather Statistics)</span>
+          </h2>
+          <span class="text-[10px] text-slate-400">แหล่งข้อมูล: กรมอุตุนิยมวิทยา / ปภ.</span>
+        </div>
+
+        <div class="grid grid-cols-4 gap-3 text-center">
+          
+          <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+            <span class="text-[10px] font-bold text-slate-600 block">อุณหภูมิสูงสุดประวัติศาสตร์</span>
+            <span class="text-xl font-bold text-rose-600 block my-0.5">45.4 °C</span>
+            <span class="text-[9px] text-slate-500">จ.ตาก (15 เม.ย. 2566)</span>
+          </div>
+
+          <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+            <span class="text-[10px] font-bold text-slate-600 block">สถิติปริมาณฝนตกหนักสูงสุด</span>
+            <span class="text-xl font-bold text-sky-600 block my-0.5">432.5 มม.</span>
+            <span class="text-[9px] text-slate-500">ปริมาณฝน 24 ชม. (ภาคใต้)</span>
+          </div>
+
+          <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+            <span class="text-[10px] font-bold text-slate-600 block">จำนวนวันที่อุณหภูมิ > 35°C</span>
+            <span class="text-xl font-bold text-amber-600 block my-0.5">+18 วัน</span>
+            <span class="text-[9px] text-slate-500">เพิ่มขึ้นจากค่าเฉลี่ย 30 ปี</span>
+          </div>
+
+          <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+            <span class="text-[10px] font-bold text-slate-600 block">การกระจายตัวของฝนสะสม</span>
+            <span class="text-xl font-bold text-teal-600 block my-0.5">แปรปรวนสูง</span>
+            <span class="text-[9px] text-slate-500">ฤดูฝนสั้นลงแต่ตกหนักรุนแรง</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Middle Section: ฐานข้อมูลสถิติความสูญเสียและความเสียหายทางเศรษฐกิจระดับชาติ -->
+      <div class="bg-white p-4 rounded-xl border border-slate-200 custom-shadow flex-shrink-0 my-1">
+        <div class="flex items-center justify-between mb-2">
+          <h2 class="text-xs font-bold text-slate-900 uppercase tracking-wider flex items-center space-x-1.5">
+            <span class="w-2 h-2 rounded-full bg-teal-600"></span>
+            <span>ฐานข้อมูลสถิติความสูญเสียและความเสียหายทางเศรษฐกิจระดับชาติ (Macroeconomic Loss & Damage Database)</span>
+          </h2>
+          <span class="text-[10px] text-teal-800 font-medium bg-teal-50 px-2 py-0.5 rounded border border-teal-200">เกณฑ์รายงานสากล</span>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3">
+          
+          <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-[11px] font-bold text-slate-800">ความเสียหายในภาคเกษตร</span>
+              <span class="text-[10px] font-bold text-rose-600">ภัยแล้ง & น้ำท่วม</span>
+            </div>
+            <p class="text-[10px] text-slate-600 leading-relaxed">มูลค่าความเสียหายต่อผลผลิตข้าว อ้อย และพืชไร่ เฉลี่ยกว่า 2.8 หมื่นล้านบาท/ปี ในพื้นที่เกษตรนอกเขตชลประทาน</p>
+          </div>
+
+          <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-[11px] font-bold text-slate-800">ความเสียหายทางโครงสร้าง</span>
+              <span class="text-[10px] font-bold text-amber-600">ถนน อาคาร ทรัพย์สิน</span>
+            </div>
+            <p class="text-[10px] text-slate-600 leading-relaxed">ความเสียหายต่อโครงสร้างพื้นฐานคมนาคมและระบบชลประทาน จากอุทกภัยและดินถล่มในเขตชุมชน</p>
+          </div>
+
+          <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-[11px] font-bold text-slate-800">ผลกระทบต่อ GDP ประเทศ</span>
+              <span class="text-[10px] font-bold text-sky-600">การชะงักงันทางเศรษฐกิจ</span>
+            </div>
+            <p class="text-[10px] text-slate-600 leading-relaxed">การประเมินผลกระทบทางอ้อมต่อห่วงโซ่อุปทาน การท่องเที่ยว และต้นทุนการฟื้นฟูหลังเกิดภัยพิบัติระดับชาติ</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bottom Section: สรุปแนวโน้มภัยคุกคามและการเปิดรับภัยของประเทศ (Exposure Trends) -->
+      <div class="bg-white p-4 rounded-xl border border-slate-200 custom-shadow flex-1 flex flex-col justify-between">
+        <div class="flex items-center justify-between mb-2">
+          <div>
+            <h2 class="text-xs font-bold text-slate-900 uppercase tracking-wider">สรุปแนวโน้มภัยคุกคามและการเปิดรับภัยของประเทศ (Exposure Trends)</h2>
+            <p class="text-[10px] text-slate-500">การเปลี่ยนแปลงสัดส่วนประชากร ทรัพย์สิน และพื้นที่กิจกรรมทางเศรษฐกิจที่ตั้งอยู่ในเขตเสี่ยงภัย</p>
+          </div>
+          <span class="text-[10px] text-slate-400">การประเมินแนวโน้มระดับชาติ</span>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3">
+          
+          <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200">
+            <span class="text-[10px] font-bold text-slate-700 block mb-0.5">การเปิดรับของประชากรเมือง (Urban Exposure)</span>
+            <p class="text-[10px] text-slate-600 leading-snug">สัดส่วนประชากรในเขตเทศบาลที่ตั้งอยู่ในแนวเสี่ยงอุทกภัยเพิ่มขึ้น 12% จากการขยายตัวของเมือง</p>
+          </div>
+
+          <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200">
+            <span class="text-[10px] font-bold text-slate-700 block mb-0.5">การเปิดรับพื้นที่ชายฝั่ง (Coastal Exposure)</span>
+            <p class="text-[10px] text-slate-600 leading-snug">สิ่งปลูกสร้าง แหล่งท่องเที่ยว และพื้นที่เพาะเลี้ยงสัตว์น้ำตามแนวชายฝั่งอ่าวไทยและอันดามัน</p>
+          </div>
+
+          <div class="p-2.5 bg-slate-50 rounded-lg border border-slate-200">
+            <span class="text-[10px] font-bold text-slate-700 block mb-0.5">การเปิดรับของภาคความมั่นคงน้ำ</span>
+            <p class="text-[10px] text-slate-600 leading-snug">ความต้องการใช้น้ำในพื้นที่เศรษฐกิจ (เช่น EEC) สูงขึ้นท่ามกลางความผันแปรของปริมาณน้ำต้นทุน</p>
+          </div>
+
+        </div>
+
+        <div class="flex items-center justify-between text-[10px] text-slate-500 mt-2 pt-2 border-t border-slate-100">
+          <span>ข้อมูลสถานการณ์นี้ใช้เป็นฐานในการจัดทำโปรไฟล์ความเสี่ยง 77 จังหวัด</span>
+          <a href="#" class="text-sky-700 font-bold hover:underline">ดูรายละเอียดในหน้าถัดไป: 2.2 สรุปโปรไฟล์ของความเสี่ยงรายพื้นที่และรายภาคส่วน →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-[10px] px-6 py-2 flex items-center justify-between flex-shrink-0 border-t border-slate-800">
+      <span>NCAIF Thailand | กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (สส.)</span>
+      <span>หน้า 2.1 สถานการณ์สภาพภูมิอากาศ</span>
+    </footer>
+
+  </div>
+
+</body>
+</html>
