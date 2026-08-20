@@ -1,0 +1,9 @@
+# Lesson: script structured-document deltas, don't hand-edit them
+
+When regenerating multiple cross-referenced structured documents (e.g. a set of CSVs where rows in one file reference IDs in another — requirements → deliverables → data-specs → assets-cited), write the delta as a small Python script rather than hand-editing each file with Edit/Write calls.
+
+**Why this matters**: In the NCAIF sitemap v8→v9 Phase 3 pass, scripting the delta against the DRD's 5 CSVs and the Content Source Gap Analysis's CSV caught two real bugs a hand-edit likely would have missed — a CSV-escaping error (unquoted commas breaking column alignment) and an orphaned reference (a data-spec row pointing at a requirement that had just been removed elsewhere). Scripting also made referential-integrity verification mechanical: a short check script confirmed every cross-reference resolved, rather than trusting careful reading.
+
+**How to apply**: When a task involves N rows across M cross-referenced files with add/remove/reparent operations, build the delta as code (even a throwaway script) before touching the files directly. Verify with an independent script pass afterward — don't treat "I read it carefully" as equivalent to "I checked it mechanically." This is distinct from prose documents (storyboards, delta notes), where hand-editing with Edit is still the right tool since there's no cross-reference integrity to check.
+
+**Related**: A second finding from the same session — when a plan document describes a "disagreement between two documents," read both documents' actual text before assuming the disagreement lives where the plan says it does. In this case the plan attributed a discrepancy to a DRD-vs-Storyboard disagreement, but the actual contradiction was entirely internal to the Storyboard (one section disagreed with another section of itself). Trusting the plan's framing without re-reading the source would have led to fixing the wrong thing.
