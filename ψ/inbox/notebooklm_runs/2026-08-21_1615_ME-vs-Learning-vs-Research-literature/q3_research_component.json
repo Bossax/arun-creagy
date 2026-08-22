@@ -1,0 +1,111 @@
+{
+  "answer": "Based on a review of the provided literature, the acronym **MERL** (Monitoring, Evaluation, Research and Learning) is **not specifically addressed or defined as a standard, unified construct** within these sources. Instead, the literature recognizes other standard groupings, and where a distinct **\"Research\"** component is included, it serves a highly specific operational purpose that standard evaluation and learning do not cover.\n\n---\n\n### 1. Recognized Constructs in the Adaptation Literature\n\nRather than \"MERL,\" the provided sources standardly organize adaptation tracking around the following distinct frameworks:\n*   **M&E (Monitoring and Evaluation):** The traditional programmatic approach utilized by development agencies, heavily based on **\"Result Based Management (RBM), the Logical Framework Approach and the accompanying logframe\"** [1].\n*   **MEL (Monitoring, Evaluation, and Learning):** Prominently featured in recent high-level governance frameworks, such as COP28’s **UAE Framework for Global Climate Resilience** [2], which mandates that Parties design and operationalize a **\"system for monitoring, evaluation and learning for their national adaptation efforts\"** [3, 4]. \n*   **MRE (Monitoring, Reporting, and Evaluation):** Often used in global tracking contexts where **\"adaptation tracking approaches are a subcomponent of monitoring, reporting and evaluation (MRE) of climate adaptation\"** [5].\n\nWhile frameworks like **TAMD** (Tracking Adaptation and Measuring Development) [6], **UNEP DTU** adaptation metrics publications [7], and **IPCC AR6** findings [8] are cited as reference literature or sources of methodological updates within the texts, the exact four-letter construct of \"MERL\" is not analyzed.\n\n---\n\n### 2. What a Distinct \"Research\" Component is Specifically For\n\nWhen frameworks or agency portfolios do isolate **\"Research\"** as a separate activity category (as analyzed empirically by the OECD across bilateral development projects [1]), its operational focus is distinct from Monitoring, Evaluation, or Learning alone. The literature defines its precise functions as follows:\n\n#### A. Constructing Projected and Shifting Baselines\nTraditional evaluation compares project results against a static baseline. Because **\"baseline climatic risks evolve under climate change\"** [9], a research component is required to generate future projections. This involves the **\"production of climate predictions under different scenarios (indicators, projections, maps, desertification indices)\"** [10] to ensure that baselines **\"include the effects of future climate change, particularly for projects with long-term implications\"** [11].\n\n#### B. Directing Programmatic Prioritization\nMonitoring tracks progress, and evaluation measures retrospective success, but research is required *ex-ante* to target interventions. Research supports adaptation by **\"supplying information that is necessary to understand where training, policy and risk reduction activities are most needed\"** [12] and facilitating **\"the identification of climate vulnerabilities\"** [13].\n\n#### C. Bridging the Decision-Making \"Rationale Gap\"\nEvaluation often reveals a failure to link actions to actual risk reduction. The literature notes a frequent deficit where **\"risk and vulnerability assessments are rarely connected with adaptation decision-making\"** [14]. This leads to a **\"general lack of knowledge regarding whether and how specific measures increase the capacity to adapt or reduce risks to populations, infrastructures, or ecosystems, and in which measure\"** [14]. The research component operates to systematically test and validate these causal pathways (e.g., through **\"action research on adaptation strategies\"** [15]), providing the scientific \"theory of change\" that standard M&E simply takes for granted.\n\n#### D. Ensuring Long-Term Informational Continuity\nWhile evaluations are typically discrete, bounded events (often scheduled 2 to 5 years post-completion [16]), research focuses on **\"the long-term availability of information\"** and ensuring a **\"knowledge platform becomes a basis for better sharing of information and for provision of advisory service\"** [13] to continue informing policy choices long after a project's evaluation cycle has ended.\n\n---\n\n📊 I can map these different components (M&E vs. MEL vs. Research) into a conceptual diagram comparing their inputs, outputs, and timescales to help clarify these divisions for your literature review.",
+  "conversation_id": "f64bbb38-64da-42fd-8f9c-da2751fd2350",
+  "sources_used": [
+    "6e3fbcd3-6cb8-4ed5-b7c2-57c06a256158",
+    "2587cd45-f87f-4e99-a51f-a0275c6ee7fa",
+    "0357bd94-c214-4292-9174-072153e1b27f",
+    "3131b829-1013-4a2d-9dd1-39d8ff9a760b",
+    "aec62fd8-5b62-4964-b8a9-449aa48ae16e"
+  ],
+  "citations": {
+    "1": "6e3fbcd3-6cb8-4ed5-b7c2-57c06a256158",
+    "2": "2587cd45-f87f-4e99-a51f-a0275c6ee7fa",
+    "3": "0357bd94-c214-4292-9174-072153e1b27f",
+    "4": "0357bd94-c214-4292-9174-072153e1b27f",
+    "5": "3131b829-1013-4a2d-9dd1-39d8ff9a760b",
+    "6": "3131b829-1013-4a2d-9dd1-39d8ff9a760b",
+    "7": "aec62fd8-5b62-4964-b8a9-449aa48ae16e",
+    "8": "2587cd45-f87f-4e99-a51f-a0275c6ee7fa",
+    "9": "6e3fbcd3-6cb8-4ed5-b7c2-57c06a256158",
+    "10": "6e3fbcd3-6cb8-4ed5-b7c2-57c06a256158",
+    "11": "6e3fbcd3-6cb8-4ed5-b7c2-57c06a256158",
+    "12": "6e3fbcd3-6cb8-4ed5-b7c2-57c06a256158",
+    "13": "6e3fbcd3-6cb8-4ed5-b7c2-57c06a256158",
+    "14": "aec62fd8-5b62-4964-b8a9-449aa48ae16e",
+    "15": "6e3fbcd3-6cb8-4ed5-b7c2-57c06a256158",
+    "16": "6e3fbcd3-6cb8-4ed5-b7c2-57c06a256158"
+  },
+  "references": [
+    {
+      "source_id": "6e3fbcd3-6cb8-4ed5-b7c2-57c06a256158",
+      "citation_number": 1,
+      "cited_text": "Documents for 106 projects and programmes were reviewed for this analysis. The documents were grouped into five broad categories of adaptation to climate change: i) risk reduction, ii) policy and administrative management, iii) education, training and awareness, iv) research and v) co-ordination. Across the sample, the majority of the activities were concentrated in the last four categories. Relatively few activities focus specifically on risk reduction measures. Result Based Management (RBM), the Logical Framework Approach and the accompanying logframe are the most common approaches used by the agencies to distinguish between outcomes, outputs and activities. A core component of M&E is the selection of appropriate and measurable indicators. While outputs and outcomes outline what the activity hopes to achieve, indicators show how results will be measured. Clear differentiation between the layers of results is particularly important in the context of adaptation where short and intermediate objectives contribute to long-term outcomes that may not materialise until far into the future."
+    },
+    {
+      "source_id": "2587cd45-f87f-4e99-a51f-a0275c6ee7fa",
+      "citation_number": 2,
+      "cited_text": "At the same time, we seek to encourage debate in the adaptation community, in order to foster participatory practices in addressing and determining the indicators that are key to achieving — at least — one of the functions in the purpose of the framework, on reviewing the progress. 2. Exploring the Decision on the GGA and its operationalization After years of inaction on what the Adaptation Committee (2021)6 identified in its technical report as challenges and tradeoffs for assessing collective progress towards the global goal, COP28 adopted the UAE Framework for Global Climate Resilience (Figure 1), whose purpose is to achieve the goal, review its progress in reducing climate impacts, risks, and vulnerabilities, and enhance action and support for adaptation. This purpose is also aligned with the Decision adopted one year before in Sharm el-Sheikh (Decision 3/CMA.4, paragraph 9)."
+    },
+    {
+      "source_id": "0357bd94-c214-4292-9174-072153e1b27f",
+      "citation_number": 3,
+      "cited_text": "countries and needed and received by developing countries for the implementation of national adaptation plans, policy instruments, and planning processes and/or strategies. 13. The indicators for assessing progress under target 10(d), monitoring, evaluation and learning, towards achieving the outcome thereunder – by 2030 all Parties have designed, established and operationalized a system for monitoring, evaluation and learning for their national adaptation efforts and have built the required institutional capacity to fully"
+    },
+    {
+      "source_id": "0357bd94-c214-4292-9174-072153e1b27f",
+      "citation_number": 4,
+      "cited_text": "into national adaptation efforts; (e) Level of institutional capacity to fully operate systems for monitoring, evaluation and learning for national adaptation efforts."
+    },
+    {
+      "source_id": "3131b829-1013-4a2d-9dd1-39d8ff9a760b",
+      "citation_number": 5,
+      "cited_text": "Adaptation tracking refers to the development and application of systematic approaches to assess progress on adaptation efforts over time and space, and between and across populations and sectors3–6. Adaptation tracking approaches are a subcomponent of monitoring, reporting and evaluation (MRE) of climate adaptation7,8. While MRE is typically designed to be tailored to individual projects or governments, adaptation tracking is applied systematically and consistently across governments or organizations, and over time. In doing so, adaptation tracking is particularly relevant to activities such as the Paris Agreement’s five-year review cycles, which necessitates systematic methods for synthesis and appraisal of adaptation progress across diverse countries’ contexts."
+    },
+    {
+      "source_id": "3131b829-1013-4a2d-9dd1-39d8ff9a760b",
+      "citation_number": 6,
+      "cited_text": "16. Fisher, S., Dinshaw, A., McGray, H., Rai, N. & Schaar, J. Evaluating climate change adaptation: learning from methods in international development. New Dir. Eval. 2015, 13–35 (2015). 17. Chen, C., Doherty, M., Coffee, J., Wong, T. & Hellmann, J. Measuring the adaptation gap: a framework for evaluating climate hazards and opportunities in urban areas. Environ. Sci. Pol. 66, 403–419 (2016). 18. Brooks, N. et al. An operational framework for Tracking Adaptation and Measuring Development (TAMD) (IIED, 2013)."
+    },
+    {
+      "source_id": "aec62fd8-5b62-4964-b8a9-449aa48ae16e",
+      "citation_number": 7,
+      "cited_text": "Christiansen, L., Martinez, G., & Naswa, P. (Eds.), 2018. Adaptation metrics: Perspectives on measuring, aggregating and comparing adaptation results (Vol. 1–The functional needs for adaptation metrics objectives of the assessment of adaptation and the use of adaptation metrics have evolved with time). UNEP DTU. Coger, T., Corry, S., Gregorowski, R., 2021. In: Reshaping Monitoring, Evaluation and Learning for Locally Led Adaptation. WRI Publications. https://doi.org/10.46830/ wriwp.20.00060. Dilling, L., Prakash, A., Zommers, Z., Ahmad, F., Singh, N., De Wit, S., Nalau, J., Daly, M., Bowman, K., 2019. Is adaptation success a flawed concept? Nature Clim. Change 9. https://ora.ox.ac.uk/objects/uuid:73a193e4-abb0-434f-9167-6d1578e21a2d."
+    },
+    {
+      "source_id": "2587cd45-f87f-4e99-a51f-a0275c6ee7fa",
+      "citation_number": 8,
+      "cited_text": "guidelines for the transparency framework (MPGs), and the review of the training course on the adaptation chapter of the BTRs. Also,  this mandate does not have an assigned deadline, and when it mentions the review of the course and the review of the MPGs, it refers to 2028. LEG is also entrusted with the request of updating the technical guidance of NAPs, including the UAE Framework and the IPCC AR6 findings. The timeline in Figure 4 seeks to contextualize the discussions in light of the multiple intersecting adaptation mandates."
+    },
+    {
+      "source_id": "6e3fbcd3-6cb8-4ed5-b7c2-57c06a256158",
+      "citation_number": 9,
+      "cited_text": "Adaptation remains a rather vague concept whose boundaries have yet to be defined. Choices made as part of farming practices, land use planning and infrastructure design might all reflect some considerations of current or future climate change, but it remains difficult to isolate and evaluate the individual adaptation components. Similarly, adaptation-specific activities initiated through the international climate change regime require comparison against a “counter-factual” baseline, which is difficult to establish. This is further complicated by the fact that baseline climatic risks evolve under climate change. Furthermore, adaptation strategies viewed as successful in the short-term might, in fact, exacerbate longer-term vulnerability. For example, poorly designed coastal and flood defences can in the short-term lower vulnerability, encouraging population growth and development. In the long-term however, vulnerability can be exacerbated if extreme weather events exceed the design threshold of the defences. These complexities need to be considered when designing, implementing and interpreting evaluations of adaptation activities."
+    },
+    {
+      "source_id": "6e3fbcd3-6cb8-4ed5-b7c2-57c06a256158",
+      "citation_number": 10,
+      "cited_text": "ENV/WKP(2011)8 36 Table 16. Common Indicators on Research INDICATORS CIDA DFID DGIS JICA SDC Sida Development of models and tools produced √    √ Availability of relevant data  √   √ Production of climate predictions under different scenarios (indicators, projections, maps, desertification indices) √    √ √ Studies identify risk and benefits of managing environmental resource(s)  √ Increased capacity to assess vulnerabilities and risks of climate change √   √ Vulnerability profile developed √ √   No. of stakeholders requesting and accessing knowledge products  √     Extent of research dissemination  √ √    No. of organisations engaging with knowledge network  √"
+    },
+    {
+      "source_id": "6e3fbcd3-6cb8-4ed5-b7c2-57c06a256158",
+      "citation_number": 11,
+      "cited_text": "This analysis has found that Result Based Management, the Logical Framework Approach and the accompanying logframe are the most common M&E approaches used for adaptation. In applying these approaches, the long-term perspective of most adaptation initiatives means that it is particularly important to clearly differentiate between outcomes, outputs and activities. In addition, M&E frameworks for adaptation should combine qualitative, quantitative and binary indicators. The baselines for these indicators should include the effects of future climate change, particularly for projects with long-term implications, such as investments in infrastructure. Significant challenges remain in relation to dealing with shifting baselines, attribution and time lags between interventions and outcomes."
+    },
+    {
+      "source_id": "6e3fbcd3-6cb8-4ed5-b7c2-57c06a256158",
+      "citation_number": 12,
+      "cited_text": "The degree to which these activities contribute to climate change adaptation varies. Risk reduction activities have the most direct impact on people’s ability to adapt to climate change or, in the case of infrastructure projects, on damages to the physical environment. Policy making, on the other hand, ensures that climate change risks are taken into account in laws, planning, policies and negotiations. Education, training and awareness aim to change people’s behaviour and habits in accordance with current and projected climate conditions. Such activities do not directly reduce people’s vulnerability, but train them to adapt to the current climate, to consider future climate change in their decision making and to be prepared for extreme events. Climate change research also supports risk reduction by supplying information that is necessary to understand where training, policy and risk reduction activities are most needed. Finally, co-ordination activities ensure that there is a dialogue between stakeholders, that research is disseminated and that community of practice is strengthened."
+    },
+    {
+      "source_id": "6e3fbcd3-6cb8-4ed5-b7c2-57c06a256158",
+      "citation_number": 13,
+      "cited_text": "ENV/WKP(2011)8 37 It is important that climate studies are not just created and published but that they are also diffused, used for policy making and continuously revised. This is illustrated in the evaluation of a Sida project to improve the resilience of ecosystems and economies in the Nile Basin vulnerable to water stress induced by climate change. The research component of the project considers the identification of climate vulnerabilities. The indicators for the main outcomes consider the development of scenarios and their use in policy making (“scenarios developed, and integrated into national development plans and water resource management policies”), the long-term availability of information (“availability of continuous and reliable predictions on flood and other potential risks and impacts”) and how the information is used for decision making processes (“knowledge platform becomes a basis for better sharing of information and for provision of advisory service). With this combination of indicators the evaluation considers the long term impact of the newly created knowledge on policy making as well as the need to continue the research after project completion."
+    },
+    {
+      "source_id": "aec62fd8-5b62-4964-b8a9-449aa48ae16e",
+      "citation_number": 14,
+      "cited_text": "Measuring and evaluating adaptation is a complex challenge. Based on the information collected in this study, we argue that more directions are required to conceptualize adaptation indicators and their evaluation processes. We base this argument on the disproportionate focus on output measurements rather than on outcomes or impacts. In particular, we argue that the process of decision-making in adaptation should facilitate the identification of appropriate indicators and may help in trespassing the ‘output myopia’. There are examples of the deficits encountered in adaptation decision-making that might be at the heart of this problem. Earlier large-scale studies analyzing the state and needs for adaptation policy-making worldwide (Olazabal et al., 2019b), found, in a sample of 226 adaptation policies, that risk and vulnerability assessments are rarely connected with adaptation decision-making, i.e. decisions regarding adaptation measures were not using information derived from diagnoses of risks and vulnerabilities, at least as documented in government reports. This has direct consequences on monitoring and evaluation plans, as, although the goals are clear, there is a general lack of knowledge regarding whether and how specific measures increase the capacity to adapt or reduce risks to populations, infrastructures, or ecosystems, and in which measure. As a result, monitoring and evaluating outcomes and impacts of adaptation measures, interventions, or projects, becomes a challenge. This also explains why, more recent studies synthesizing contents of adaptation policies at the city scale have found a lack of efforts directed toward the prioritization of adaptation options during plan creation (Olazabal & Ruiz De Gopegui, 2021). These stages of adaptation decision-making are critical to identifying decision criteria and then using these in the evaluation of adaptation outcomes and impacts."
+    },
+    {
+      "source_id": "6e3fbcd3-6cb8-4ed5-b7c2-57c06a256158",
+      "citation_number": 15,
+      "cited_text": "For one SDC project on adaptive capacity of rural communities in India, the objective is to strengthen people’s own capacity to take ownership of community-led sustainable adaptation strategies. One approach in doing so is through action research on adaptation strategies for water, organic farming and energy. Indicators for measuring progress include: areas of research are collectively identified and developed; appropriate dialogue platforms at the district level are promoted and organised;"
+    },
+    {
+      "source_id": "6e3fbcd3-6cb8-4ed5-b7c2-57c06a256158",
+      "citation_number": 16,
+      "cited_text": "Table 18. Indicator, Baseline and Target for JICA Project Indicator Baseline (Predicted values for 2014, in the case of not carrying out the project) Target (2014) (Expected value 2 years after project completion) Volume of sedimentation in the reservoir from the Keduang River (106m3/year) 0.77 0 Source: JICA ENV/WKP(2011)8 41 The need to consider long term impacts in adaptation also affects the timing of monitoring and evaluation. Whereas development agencies usually perform evaluations 2 to 5 years after project completion, in the context of adaptation a longer-term review is needed. This would enable agencies to compare actual results with values projected in climate scenarios."
+    }
+  ]
+}
