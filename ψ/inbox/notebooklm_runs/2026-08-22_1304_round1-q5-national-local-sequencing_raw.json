@@ -1,0 +1,114 @@
+{
+  "answer": "In several comparative country cases, national adaptation MEL systems were built incrementally, prioritizing a national-level framework or critical centralized sectors before vertically extending tracking to subnational or local levels **[1]**. Establishing a fully functional system at the national scale first is frequently treated as a prerequisite to managing the immense complexity of local-level data aggregation and reporting **[1, 2]**.\n\n---\n\n### **Documented Cases of Sequential 'National-First' Buildouts**\n\n#### **1. The United Kingdom**\n*   **The Sequenced Build**: Under the Climate Change Act of 2008, the UK focused its early adaptation tracking (starting with its first progress report in 2010) on national risks and large regulated sectors (such as transport, energy, and water companies) via the **Adaptation Reporting Power (ARP)** **[3, 4]**. Local authorities were explicitly **not** required to report progress; in fact, a previous requirement for local governments in England to report on selected national adaptation indicators was discontinued between 2008 and 2010 **[5]**.\n*   **The Trigger for Downward Extension**: Only in its **fourth cycle of reporting (2024)** did the UK Government (through Defra) begin to expand tracking downward **[4, 6]**. The trigger at the national level was a **formal recommendation in the Climate Change Committee’s (CCC) 2023 progress report** **[4]**. This prompted a co-designed pilot program inviting 35 local authorities to report on their risk management, serving as the blueprint for mandatory local reporting in subsequent cycles **[4]**.\n\n#### **2. South Korea**\n*   **The Sequenced Build**: Korea initiated its first National Adaptation Plans (NAPs) and Detailed Implementation Plans (DIPs) at the central level, focusing on 17 national ministries **[7, 8]**. \n*   **The Trigger for Downward Extension**: The extension to Korea's 17 metropolitan cities/provinces and 226 basic local governments was mandated by the **Framework Act on Carbon Neutrality and Green Growth** **[9, 10]**. However, the operational precondition that allowed local governments to establish and monitor their own Local Adaptation Plans (LAPs) was the national Ministry of Environment (MoE) producing **specific LAP establishment guidelines** and developing a centralized **web-based LAP implementation check system (completed in 2020)** **[11]**. This technical infrastructure allowed local governments to upload local project data and automatically calculate progress scores using standardized national rubrics **[11, 12]**.\n\n#### **3. Peru**\n*   **The Sequenced Build**: Peru's Framework Law on Climate Change (2018) established the Ministry of Environment (MINAM) as the national authority for coordinating MEL **[13]**. However, actual data collection has been initially conceptualized and piloted strictly at the national ministerial level **[14]**.\n*   **The Trigger for Downward Extension**: The extension of reporting downward to regional and municipal governments is strictly sequenced **[14, 15]**. The national milestones required to trigger this downward rollout are the completion of Peru’s **four-phase MEL pathway** (moving from Phase 1 'Design' into Phase 2 'Analysis' and Phase 3 'Development' by 2024) **[16]**. The specific operational trigger is the national publication of **four M&E pilot prototypes and standardized reporting guidelines (planned for 2024)** **[15, 17]**. Once finalized, these guidelines will legally bind local and regional governments to submit annual progress reports to MINAM **[15]**.\n\n---\n\n📊 To help us design our clear roadmap, I could draft a timeline of milestones modeled after Korea’s phased national-to-local transition. Would you like me to map that out for our planning team?",
+  "conversation_id": "443784fd-4029-452b-b024-caf0824ec428",
+  "sources_used": [
+    "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "5503bd2b-26d9-42b9-86ee-d7218027c65b"
+  ],
+  "citations": {
+    "1": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "2": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "3": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "4": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "5": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "6": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "7": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "8": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "9": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "10": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "11": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "12": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "13": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "14": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "15": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "16": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "17": "61a7eb9b-ce31-4ee9-b415-75d01b86f124"
+  },
+  "references": [
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 1,
+      "cited_text": "The findings show that all nine countries have initiated work and have at least partly functional MEL systems for adaptation and NAP processes. Among these countries, the operationalization of MEL systems focuses primarily on monitoring and progress reporting, while evaluation and learning remain less developed. Some countries, such as France, the United Kingdom, and Vietnam, have more advanced MEL systems, where the focus has turned to evaluation and learning, while others have just started to develop their MEL frameworks—for example, Somalia. The research conducted for this report shows that there is no one-size-fits-all approach to this work and that MEL systems must fit national contexts and needs, capitalizing on existing monitoring and evaluation systems. This research further shows that establishing a MEL system is generally an incremental process in which components are added over time, taking into account the country’s circumstances, capacities, adaptation needs, and goals."
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 2,
+      "cited_text": "regional disparities in climate risk and adaptation needs mean that sub-national jurisdictions report very different types of data and information, posing a methodological problem for countries in aggregating them in a relevant way at national level (Ellis, 2014[62]). For instance, in Costa Rica, 20 cantons established their own monitoring frameworks for tracking progress. Similarly, changes in the resources or methods devoted to data collection and administrative changes (e.g. staff turnover) can affect the continuity and quality of"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 3,
+      "cited_text": "A8 National MEL System for Adaptation in the United Kingdom A8.1 Policy Context A8.1.1 Background and Status Section 59 of the Climate Change Act (2008) obliges the Climate Change Committee (CCC), an independent advisory body, to prepare reports on the progress made in the implementation of the United Kingdom’s NAP. The act also establishes the Adaptation Reporting Power (ARP) through which the Department for Environment, Food and Rural Affairs (Defra) Secretary of State can direct public and statutory organizations to prepare reports detailing the current and projected impacts of climate change relevant to their area of jurisdiction, proposals for adapting to climate change, and progress toward implementing the policies and proposals set out in previous reporting periods (Department for Environment, Food and Rural Affairs 2023b, p. 127). The Climate Change Acts of Northern Ireland (2022), Scotland (2009), and the Environment Act (2016) of Wales also provide a legal framework for adaptation planning and progress monitoring as a devolved function. These acts require the establishment of adaptation programs in these jurisdictions and mandate the CCC to assess implementation progress."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 4,
+      "cited_text": "A8.1.3 Key Actors in the United Kingdom’s MEL System Two primary mechanisms make up the MEL system for adaptation in the United Kingdom. The first is the sectoral monitoring of adaptation efforts led by Defra. Defra is responsible for coordinating adaptation planning and MEL for adaptation through the ARP, which operates on a 5-year cycle.  Relevant public organizations are responsible for assessing adaptation and reporting to Defra. These organizations include road and rail organizations, harbour authorities, water companies, energy generators, and public bodies, such as the Environment Agency and Forestry Commission, among others (Defra, 2021). Vertical integration within sectors depends on how the sector is structured. Currently, local authorities are not required to report. However, in the fourth reporting cycle, through the ARP, Defra plans to enhance engagement with local authorities in adaptation reporting (Defra, 2023b, p. 136). It plans to co-design a piloting process where 35 local authorities cognizant of the existing risk management practices and responsibilities will be invited to report. The pilot will be reviewed at the end of 2024 to determine the inclusion of local authorities in subsequent adaptation reporting cycles. This plan aligns with the 2023 adaptation progress report recommendation to include local authorities in adaptation reporting. Consideration of aspects such as gender and social inclusion depends on the priorities of the particular department or devolved unit."
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 5,
+      "cited_text": "online to track progress against the Northern Irish plan. In England, local authorities are no longer required to report on adaptation progress, with their requirement to report on selected national adaptation indicators between 2008-2010 now discontinued. A mandate for all the UK’s local authorities to report on implementation of adaptation policies would help feed local information into national reporting, enhance consistency in adaptation progress measurement across the devolved administrations and secure financial"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 6,
+      "cited_text": "The CCC published its first assessment of adaptation progress in 2010. Since then, the MEL has shifted from risk assessment and planning to an assessment of progress toward predefined National Monitoring, Evaluation, and Learning Systems for Climate Change Adaptation:  A comparative analysis of nine countries outcomes (CCC, 2023a, 2023b). The CCC has also increasingly consolidated its framework for assessing adaptation progress, including efforts to better integrate indicators. Within the ARP, in preparation for the fourth assessment cycle, Defra launched a consultation process in 2023 to get feedback on proposed changes in the reporting arrangements. The consultation process, which was open to all members of the public and government organizations, was facilitated through an online portal, and some responses were received via email. The responses and analysis were organized around 33 questions covering topics such as agreement with the objectives and principles of the fourth cycle of reporting, reporting requirements, alignment with other reporting requirements, reporting approach and scope, and cross-cutting and cascading risks (Defra, 2023a). The recommendations from this consultation informed the strategy for the fourth cycle of adaptation reporting, which will end in 2024. Similar to the previous cycles, the fourth reporting cycle will remain voluntary, with plans to make it obligatory for sectoral organizations to report on adaptation in the fifth cycle (Defra, 2023b)."
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 7,
+      "cited_text": "All central ministries need to prepare annual self-evaluation reports to assess progress in implementing the NAP. Based on these reports, the MoE and KACCC conduct an evaluation, which is then reported to and annually reviewed by the CNC. As necessary, the CNC then requests implementing agencies to supplement and improve projects that have made insufficient progress according to the NAP. The requests need to be reflected in the respective agencies’ projects. Figure 4.1. Main bodies in charge of adaptation policy design and implementation in Korea"
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 8,
+      "cited_text": "plan (DIP) has been established as a complement to the NAP. It lists individual projects to be implemented to achieve the NAP’s goals, acting as an action plan. As with the NAP, the DIP is developed by relevant ministries every five years. The third DIP consists of a total of 286 projects and involves 12 major tasks in 36 key areas. Of these, 49 projects have been selected as critical to achieve the main directions of NAP3. Figure 4.2. Timeline of key policy documents for adaptation Note: NAS=National Adaptation Strategy; NAP=National Adaptation Plan; KCCAR= Korea Climate Change Assessment Report."
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 9,
+      "cited_text": "Note: Green: co-ordinating and decision-making bodies; dark blue: ministries; light blue: government agencies. KACCC=Korea Adaptation Centre for Climate Change; KCDC = Korea Disease Control and Prevention Agency; KEI= Korea Environmental Institute. Local adaptation policies (LAPs) are also developed and reviewed. Notably, 17 metropolitan city and province governments as well as 226 basic local governments (cities, counties and districts) have established five-year LAPs and respective action plans. Regional research institutes review and provide"
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 10,
+      "cited_text": "The 2021 Framework Act on Carbon Neutrality and Green Growth for Coping with Climate Crisis provides the legal basis for evaluating the implementation of adaptation policies (Republic of Korea, 2021)( Table 4.1). The act requires each implementing entity at national and local level, including public institutions, to provide an annual report on the status of implementation, best practices and areas for improvement. This must be submitted to the Minister of Environment, who is required to synthesise the"
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 11,
+      "cited_text": "third LAPs based on the NAS and the third NAP, in line with the MoE’s LAP establishment guidelines. They also benefit from the support of the risk assessment tool developed and continuously improved by the MoE. Once the plans are developed, they are reviewed and approved by the MoE and KACCC. The detailed projects included in the LAPs are centrally managed through a web-based LAP implementation check system developed in 2020 (Korea Environment Institute, 2022). The MoE also supports public institutions in developing adaptation plans through guidelines and training for those in charge of setting up"
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 12,
+      "cited_text": "and analyse progress in each local government. Similar to the NAP, the LAP evaluation comprises: An overall evaluation, conducted every five years at the end of the LAP period, assessing achievements and limitations of the current LAP. An annual review of all projects in each LAP’s DIP. An annual review of selected critical projects in the LAPs’ DIPs. The annual review of all projects is carried out in line with the MoE's guidelines for implementation evaluation for local governments, which attempt to account for the different characteristics of each local"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 13,
+      "cited_text": "A5 National MEL System for Adaptation in Peru A5.1 Policy Context A5.1.1 Background and Status Peru’s MEL system for adaptation remains under development. Peru has an ongoing focus on MEL, framed as an integral part of their approach to adaptation (Government of Peru, 2021a, pp. 286–297; 2021b). MEL in Peru is supported by a legal mandate through the 2018 Framework Law on Climate Change (Law Number 30754), 2019 Regulation of the Framework Law on Climate Change (Supreme Decree Nº 013-2019-MINAM), and a subsequent 2021 Ministerial Resolution (Nº 096-2021-MINAM). The 2018 Framework Law designates the Ministry of Environment (MINAM) as the national chief authority for coordinating MEL for adaptation and NAP processes, and national-level ministries are obligated to contribute to MEL for adaptation (Government of Peru, 2021a). Once the MEL system is fully established, they will be mandated to report data and information to the MINAM."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 14,
+      "cited_text": "A5.1.2 Key Actors in Peru’s MEL System for Adaptation The MINAM will manage the MEL system once it is established. National-level ministries will report data and information to the MINAM. As noted in the NAP and the 2016 National Communication, Peru has been undergoing a process of decentralization, perhaps with implications for MEL. While data collection is currently conceptualized only at the national level, the government official interviewed for this study noted that sub-national governments would be included in the MEL system with the possibility of including municipalities in the future. There are also plans to incorporate Indigenous populations into MEL reporting, though how that might occur remains undefined."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 15,
+      "cited_text": "There are four sectoral prototypes at the pilot stage, and they are expected to be key inputs for the final design of the MEL system. Sub-national governments are also expected to develop, implement, and report the progress of adaptation measures defined in their climate change strategies (regional governments) and local climate change plans (local governments). Local governments must report to each regional government, and each regional government reports the progress in the implementation of adaptation measures to MINAM each year."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 16,
+      "cited_text": "A5.2.2 Indicators, Targets, and Methodologies In the NAP, monitoring processes are broadly outlined and defined in terms of planning, doing, checking, and acting (Government of Peru, 2021a, p. 294). MEL is conceptualized in four phases: analysis (establishment of indicators and identification of current platforms and related systems); design (logical and physical design); development (programming, software creation, and capacity building); and implementation. The first phase was completed in 2021; the second and third phases are ongoing; and MINAM intends to complete the last phase by 2025."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 17,
+      "cited_text": "The NAP emphasizes the need for transparency and flexibility with MEL (Government of Peru, 2021a, p. 289), aligning with transparency and participatory principles of the law. M&E will generate timely information on the progress of the implementation of adaptation measures and their outcomes, allowing broad and systematic transparency and accountability. Likewise, the feedback and learning process can be a means for improving the design and planning process, as well as identifying new measures for the following NDC cycle. In 2024, four M&E tools will be published, along with which processes and methods will be set up. National and sub-national authorities are providing feedback on these tools before they are issued. MEL objectives will be based on data, indicators, and targets collaboratively defined mainly with sectoral authorities responsible for NDC implementation, sub-national governments in charge of regional implementation, and non-state actors implementing adaptation actions."
+    }
+  ]
+}

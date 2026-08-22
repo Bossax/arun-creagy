@@ -1,0 +1,191 @@
+{
+  "answer": "### **How Blended M&E Functions Split Organizationally over Time**\n\nNational adaptation Monitoring, Evaluation, and Learning (MEL) systems typically start with a blended, internally managed structure where a single nodal environmental ministry or central coordinating agency oversees both tracking activities and strategic progress [1]. However, as the systems mature, countries often formally separate the **monitoring** function (tracking ongoing implementation) from the **evaluation** function (assessing effectiveness, results, and causal attribution) [2]. \n\nThe literature reveals three primary institutional patterns for how this formal split is operationalized:\n\n#### **1. Independent Statutory Expert Bodies**\n*   **The Pattern**: The country establishes an autonomous, highly credible expert body by law to evaluate government progress, while the central coordinating ministry retains the day-to-day monitoring and data aggregation role [3]. This provides maximum transparency and political accountability [4].\n*   **Real-World Examples**: \n    *   **The United Kingdom**: Under the Climate Change Act (2008), the UK established the **Adaptation Sub-Committee (ASC)** of the Committee on Climate Change (CCC) [5, 6]. The ASC operates as an independent statutory evaluator that reviews progress biennially and reports directly to Parliament [5-7]. Meanwhile, the Department for Environment, Food and Rural Affairs (**Defra**) coordinates and monitors actual implementation [8].\n    *   **Ireland**: Similarly established an independent expert body under national climate law to formally evaluate policy progress separate from executive monitoring [3].\n\n#### **2. Commissioning Third-Party External Evaluators**\n*   **The Pattern**: The government retains the coordination and monitoring role but contracts external research institutions, scientific consortia, or consultants to conduct deep-dive evaluations [3]. This leverages specialized scientific expertise and preserves objectivity without establishing a new permanent agency [1, 4].\n*   **Real-World Examples**:\n    *   **Germany**: The Federal Environment Agency (**UBA**) manages the technical, indicator-based monitoring database in cooperation with line ministries [9]. However, the strategic evaluations of the German Adaptation Strategy (DAS) are commissioned by government agencies but executed by independent **third-party scientific investigators** [3].\n    *   **Mexico**: Follows a similar path, outsourcing its formal evaluative reviews to external third parties rather than relying on internal ministerial self-grading [3].\n\n#### **3. Internal Specialized Cross-Agency Committees (Dependent Relationships)**\n*   **The Pattern**: Rather than an external split, the country creates a dedicated, multi-stakeholder evaluation committee within the government hierarchy [4]. This body is tasked with synthesizing annual progress reports into mid-term and end-of-term evaluations [10].\n*   **Real-World Examples**:\n    *   **France**: The National Observatory on the Effects of Global Warming (**ONERC**) monitors actions annually using a digital tool [10]. To evaluate effectiveness, France convened an **Adaptation Plan Evaluation Committee** composed of civil service representatives, scientific advisors, and NGO observers [10].\n    *   **South Korea**: The government utilizes the high-level **2050 Carbon Neutrality Committee** alongside sector-specific specialist review committees to run annual evaluations, grading projects on a qualitative scale based on self-assessments [11, 12].\n\n---\n\n### **What a Country's Very First Operational \"Learning\" Mechanism Looks Like**\n\nBefore highly structured, formal national feedback loops (such as France’s post-evaluation national environmental conferences) are established, early learning is typically informal, qualitative, and transactional [13, 14]. Rather than being a separate, dedicated administrative apparatus, a country's first operational learning mechanism usually manifests in one of three practical ways:\n\n#### **1. Ad Hoc Coordination Groups and Indicative Self-Assessments**\nIn the earliest stages, learning occurs through temporary, self-funded committees of inter-ministerial and scientific actors who meet to qualitatively reflect on progress [15, 16].\n*   **In Practice (Finland)**: Finland’s earliest learning mechanism was an **ad hoc Coordination Group** consisting of 32 members from ministries, research bodies, and regional organizations [15, 16]. It relied on simple, qualitative sectoral self-assessments and dedicated **stakeholder evaluation workshops** [17]. Learning was implicit in the group's discussions, testing \"are we doing the right things?\" without a formal, separate budget [16, 18].\n\n#### **2. Embedded Qualitative Reflection Questions**\nInstead of building a separate learning forum, the central coordinator integrates open-ended learning prompts directly into existing, mandatory public reporting cycles [19].\n*   **In Practice (Tonga)**: Tonga's JNAP Secretariat partnered with the National Planning Division to leverage their routine quarterly corporate reporting questionnaires [19]. To trigger operational learning, they added a **qualitative questionnaire** directly into this existing reporting cycle, forcing sectoral focal points to explicitly answer: *\"What lessons and opportunities can be drawn from this reporting period?\"* [20, 21].\n\n#### **3. Informal \"Livelihood Innovation Niches\" and Pilot Scenario Workshops**\nIn some contexts, the first operational learning happens entirely \"on the periphery\" of formal government processes through local, researcher-mediated partnerships [22, 23]. \n*   **In Practice (Indonesia)**: Before formal municipal planning systems (*musrenbang*) could adapt, a trans-disciplinary research team (**Tim Kolaboratif**) established informal \"livelihood innovation niches\" [22, 24, 25]. They facilitated **collaborative scenario planning workshops** that segregated local and higher-level actors to manage power, co-generating a mutual understanding of systemic climate risks and building early trust [26-28].\n\n#### **4. Instrumental Learning as a Byproduct**\nThe literature notes that a country's very first \"learning\" is almost always **instrumental learning**—meaning it occurs organically as an unintended byproduct of model-based consultations, basic knowledge-sharing, or indicator design meetings, even when the system has no formal plan to monitor or evaluate learning goals [14, 29].\n\n---\n\n🧩 If we are looking to set up our own transitional learning mechanism, we could design a basic \"Reflection and Lessons Learned\" template to test during our next inter-ministerial working group meeting. Would you like to co-design that qualitative scorecard?",
+  "conversation_id": "443784fd-4029-452b-b024-caf0824ec428",
+  "sources_used": [
+    "cc6d983c-0c56-4eb0-8aba-f49f603bab88",
+    "4b786495-205f-473a-ae50-d9c9a35331cc",
+    "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "302f9da0-a081-4e36-a843-390accad144a",
+    "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+    "9a559729-a5c2-4169-b202-58e49ee8b2e3"
+  ],
+  "citations": {
+    "1": "cc6d983c-0c56-4eb0-8aba-f49f603bab88",
+    "2": "cc6d983c-0c56-4eb0-8aba-f49f603bab88",
+    "3": "cc6d983c-0c56-4eb0-8aba-f49f603bab88",
+    "4": "4b786495-205f-473a-ae50-d9c9a35331cc",
+    "5": "4b786495-205f-473a-ae50-d9c9a35331cc",
+    "6": "4b786495-205f-473a-ae50-d9c9a35331cc",
+    "7": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "8": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "9": "4b786495-205f-473a-ae50-d9c9a35331cc",
+    "10": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "11": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "12": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "13": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "14": "302f9da0-a081-4e36-a843-390accad144a",
+    "15": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+    "16": "4b786495-205f-473a-ae50-d9c9a35331cc",
+    "17": "4b786495-205f-473a-ae50-d9c9a35331cc",
+    "18": "4b786495-205f-473a-ae50-d9c9a35331cc",
+    "19": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "20": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "21": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "22": "9a559729-a5c2-4169-b202-58e49ee8b2e3",
+    "23": "302f9da0-a081-4e36-a843-390accad144a",
+    "24": "9a559729-a5c2-4169-b202-58e49ee8b2e3",
+    "25": "9a559729-a5c2-4169-b202-58e49ee8b2e3",
+    "26": "9a559729-a5c2-4169-b202-58e49ee8b2e3",
+    "27": "9a559729-a5c2-4169-b202-58e49ee8b2e3",
+    "28": "9a559729-a5c2-4169-b202-58e49ee8b2e3",
+    "29": "302f9da0-a081-4e36-a843-390accad144a"
+  },
+  "references": [
+    {
+      "source_id": "cc6d983c-0c56-4eb0-8aba-f49f603bab88",
+      "citation_number": 1,
+      "cited_text": "The development process of NAP M&E systems is generally coordinated by the same government entities that coordinate the NAP, typically the Ministry of the Environment or a technical agency. Some countries have formed technical working groups to coordinate the NAP M&E development process, e.g., in Finland. It is also common to engage government-external expertise. For example, Canada and Finland established advisory groups for the formulation of indicators and Ger-many, South Africa and the UK commissioned studies and involved the scientific community and relevant business associations, e.g., from the insurance or tourism industry. However, the M&E development process is not commonly documented and only few countries have published studies about the development of the NAP M&E system (e.g., Germany and the UK)."
+    },
+    {
+      "source_id": "cc6d983c-0c56-4eb0-8aba-f49f603bab88",
+      "citation_number": 2,
+      "cited_text": "3.2. Research design and analytical framework Previous studies of M&E in national adaptation planning often relied on stated intentions rather than on evidence of M&E systems’ existence and usage. To fill this gap, an empirical research design has been chosen that is able to identify and validate relevant evidence from multiple sources (see Section 3.3). Two comparative frameworks of NAP M&E systems have been considered as possible analytical frameworks, namely the M&E supplementary materials to the NAP technical guidelines (Price-Kelly et al., 2015) and a study of three European NAP M&E systems (Klostermann et al., 2018). Both frameworks outline components of NAP M&E systems but do not describe different stages of their development process and operation that could be used to compare countries. Another gap in both frameworks concerns differences between monitoring and evaluation. Monitoring is commonly defined as tracking ongoing implementation and informing its management whereas evaluation is seen as assessing effectiveness and lessons learned (OECD, 2002). Both processes may be organized separately under a common NAP M&E system. While the two frameworks acknowledge the"
+    },
+    {
+      "source_id": "cc6d983c-0c56-4eb0-8aba-f49f603bab88",
+      "citation_number": 3,
+      "cited_text": "M&E sections in NAPs commonly describe monitoring and evaluation as separate processes whereby the purpose of evaluations is to assess results, generate lessons and provide recommendations. In contrast, progress reports typically assess the degree of implementation (e.g., in Brazil, France and Germany). In several countries, the process of conducting evaluations is organized separately to progress monitoring. In the United Kingdom and Ireland, a national climate law has established independent expert bodies that evaluate progress. In other countries, NAP evaluations are being commissioned by government agencies, but carried out by third parties (e.g., in Germany and Mexico). Some countries combine M&E in a joint report (e.g., intended by Austria) or use the label “M&E report” with different emphases on, for instance, recent implementation (e.g., Brazil’s first NAP M&E report) or on achievements and remaining gaps (e.g., in the Philippines). A smaller number of countries also stated they would undertake government- internal monitoring on an annual basis (e.g., the Czech Republic), but this could not be verified."
+    },
+    {
+      "source_id": "4b786495-205f-473a-ae50-d9c9a35331cc",
+      "citation_number": 4,
+      "cited_text": "Organisational independency may be desirable if the main objective of monitoring and evaluation is to account for adaptation policies, measures and actions. In such cases, an independent commission could be created to report on adaptation at a high political level (e.g. directly to a parliament). However, monitoring programmes with a strong learning focus may need a different approach, with more dependent organisational relationships (e.g. a temporary internal team with a broadly formulated mandate)."
+    },
+    {
+      "source_id": "4b786495-205f-473a-ae50-d9c9a35331cc",
+      "citation_number": 5,
+      "cited_text": "All three countries have established dedicated monitoring organisations. In Finland, the ad hoc Coordination Group is linked to the Ministry of Agriculture and Forestry, and its formation was based on a ministerial decision. The UK’s Adaptation Sub-Committee (ASC) was established under the Climate Change Act, which implies a longer-term commitment. The development of the monitoring system for the German strategy has been coordinated by the Federal Environment Agency and will be implemented in collaboration with responsible organisations at federal and Bundesländer level. The ASC has an independent position, which is supported by its legal status. In Finland and Germany, adaptation monitoring seems an internal learning effort, which is reflected in the more or less dependent status of the responsible organisations."
+    },
+    {
+      "source_id": "4b786495-205f-473a-ae50-d9c9a35331cc",
+      "citation_number": 6,
+      "cited_text": "The ASC is an independent body, which is provided by Government with the human and financial resources needed to monitor adaptation. Its members and secretariat have scientific and policy backgrounds, but they do not represent stakeholder interests. The ASC has a statutory duty to report to Parliament with an independent assessment of Government’s progress in implementing its NAP. The first report (due in 2015) will assess whether the NAP is enabling the UK’s preparedness for the climate change risks that it faces. In support of this, the ASC has published annual indicator-based reports on progress with adaptation (Adaptation Sub-Committee 2010, 2011, 2012, 2013, 2014). These documents describe the UK’s key systems of interest and assesses the preparedness of related sectors for the main risks identified by the CCRA (Adaptation Sub-Committee 2012; Adaptation Sub-Committee 2013; Adaptation Sub-Committee 2014)."
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 7,
+      "cited_text": "(Table 2.1). These are undertaken by the respective governments. Additional independent reviews are conducted by the CCC for Scotland and for Northern Ireland (UK Parliament, 2008[18]; UK Government, 2009[40]). The establishment of a CCC office for Scotland is under consideration. Although the CCC does not have a remit to assess progress in Wales at present, it provides informal advice on indicators, goal setting and evaluation (CCC, 2020[41]). The CCC’s remit is wide compared to its internal capacity, which"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 8,
+      "cited_text": "The Climate Change Act (2008) details mandates for MEL, including reporting frequency and institutional structures. Sectoral adaptation tracking is coordinated by Defra through the Adaptation Reporting Power and is based on reports from relevant public organizations. The CCC uses data from relevant public institutions to assess key indicators of progress in NAP implementation. Sub-national reporting is less prevalent. Vietnam The MEL system is under development. The MEL system for monitoring sectoral actions is in place."
+    },
+    {
+      "source_id": "4b786495-205f-473a-ae50-d9c9a35331cc",
+      "citation_number": 9,
+      "cited_text": "The DAS proposes the development of a methodological approach to vulnerability assessments and for indicator-based reporting to review the progress of adaptation at the Federal level. Since 2008, the Federal Environment Agency (UBA), on behalf of the Federal Ministry for the Environment (BMUB), has been coordinating a multi-stage process to establish an indicator-based monitoring system for the DAS. The UBA operates in close cooperation with the responsible ministries and is, therefore, classified as dependent."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 10,
+      "cited_text": "PNACC-1 (2011–2015) mandates ONERC within the Directorate General for Energy and Climate Directorate General for Energy and Climate to monitor adaptation actions yearly based on indicators defined in PNACC-1. PNACC-1 also directs the Directorate General for Energy and Climate to convene an Adaptation Plan Evaluation Committee comprised of civil service representatives tasked with implementing PNACC-1, representatives from the Grenelle Environment Monitoring Committee specializing in adaptation issues, and representatives from the scientific community (Ministry of Ecological Transition and Territorial Cohesion, 2011, p. 19). This evaluation committee is responsible for producing mid-term and end-of-term evaluation reports detailing the results achieved, including those at the local level, and making recommendations."
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 11,
+      "cited_text": "for budget execution and implementation progress, and a selection of 100 critical projects are put under greater scrutiny: Every year, implementing ministries carry-out self-evaluations for all projects using a standardised template, which are then reported to the 2050 Carbon Neutrality Committee. Ministries score the project based on several qualitative criteria (e.g. level of collaboration, compliance with the budget, target achievement...) and measured on a four-point scale (very good, good, normal, insufficient)."
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 12,
+      "cited_text": "National government Local government NAP/LAP Reporting period 3rd year of implementation, 5th year of implementation 5th year of implementation Reporting entity Ministry of Environment, KACCC, specialist review committees for each field Specialist review committees for each field Approach Expert evaluation for each field Expert evaluation for each field Data Annual evaluation results and self-assessment reports based on plans Annual evaluation results and self-assessment reports based on plans"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 13,
+      "cited_text": "A2.5 Learning Learning in the context of adaptation tracking and planning is supported by a series of M&E reports, whose findings are considered in subsequent decisions. There are also environmental conferences during which relevant actors reflect on the recommendations of progress reports and provide guidance on further actions. For instance, one of the key recommendations from the 2014 Environment Conference was to strengthen France’s adaptation strategy. Consequently, the General Council for the Environment and Sustainable Development was mandated to evaluate PNACC-1. The findings of the evaluation were presented to ONERC and later submitted to CNTE."
+    },
+    {
+      "source_id": "302f9da0-a081-4e36-a843-390accad144a",
+      "citation_number": 14,
+      "cited_text": "3.4.1   |   Instrumental Learning This cluster is characterized by partial implementation of the four learning elements described in our framework (Weber et al. 2018; Werners et al. 2021). The partial implementation of learning that was described emerged as byproducts of other objectives in comparison to planned intentional learning. The instrumental learning is grounded in different combinations of learning and methods, often corresponding to basic knowledge transfer and stakeholder consultation patterns (18/36 papers combined). In the application of the DAPP method for example, the element of distributing knowledge has a designated role in the pathways process. Researchers first distribute knowledge generated using water resource models, which is then used by stakeholders to provide preferences in potential responding measures (Dias et  al.  2020). Instrumental learning can also occur at the researcher level as a result of cross- stakeholder interaction, challenging a hypothesis or presumptions in a pathways process. To illustrate that the choices in collaborative learning impact the outcomes, the case study of Magnan and Duvat  (2018) described a mismatch between the adaptation challenge and the response from stakeholders. As a result, the authors concluded that more learning was required to expand the adaptation policies considered by the stakeholders. All cases with instrumental learning have no monitoring and evaluation plan for the knowledge exchange in the pathways process. Regardless of the specific outcomes described, the primary purpose of cases in this cluster was not learning, yet multiple learning aspects still occurred as byproducts. This demonstrates that some form of learning can emerge irrespective of resource investments or stated objectives, simply through the application of pathways methods across different methodological implementations. In other words, this instrumental learning appears to be an unintended consequence of the researchers' actual purposes and methodological choices, rather than a deliberate design feature. It may also result from resource limitations that constrain more comprehensive learning approaches. This is, however, not extensively described by the case studies."
+    },
+    {
+      "source_id": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+      "citation_number": 15,
+      "cited_text": "Finland shows a weaker-authority but still functioning path. Its 2005 strategy was coordinated by the Ministry of Agriculture and Forestry, reviewed in 2009 by an ad hoc coordination group of 32 members from ministries, research institutes, funders, and regional organizations, and relied on qualitative sectoral self-assessment rather than a separate funded apparatus (Klostermann et al., 2015). That is important for Thailand because it shows an early operational cycle can run before strong legal force exists, but also that such systems remain indicative and fragile when they depend on voluntary sector contributions and self-funded participation (Klostermann et al., 2015)."
+    },
+    {
+      "source_id": "4b786495-205f-473a-ae50-d9c9a35331cc",
+      "citation_number": 16,
+      "cited_text": "The key monitoring objective was to establish what progress had been made in different sectors since the NAS was launched in 2005. A preliminary aggregated indicator for the level of adaptation, based on the four process criteria, was used as a measure of progress. This was based on a qualitative evaluation that provided only indicative information and was used mainly for self-evaluation. The evaluation of adaptation processes was carried out by an ad hoc Coordination Group for Adaptation to Climate Change (Ministry of Agriculture and Forestry of Finland 2009). The Coordination Group was chaired by the Ministry of Agriculture and Forestry and consisted of 32 members from different ministries, research institutes, research funding agencies and regional organisations. Stakeholders from key sectors were also involved in the group. As the group was chaired by the ministry that coordinated the NAS, it cannot be considered to be independent. The group did not have separate funding; all participating members were expected to cover their own costs, with the Ministry of Agriculture and Forestry covering administrative costs and the costs of report writing."
+    },
+    {
+      "source_id": "4b786495-205f-473a-ae50-d9c9a35331cc",
+      "citation_number": 17,
+      "cited_text": "Adaptation monitoring procedures are most transparent in Germany. In Finland, they remain implicit within the learning process, whereas in the UK, certain legal and scientific aspects are made explicit, whilst interactions with stakeholders are not specified. Differences were also found in how monitoring activities are linked to the NAS of the three countries. In Finland, policy-makers and stakeholders were involved in the Coordination Group and the evaluation of outputs, and special stakeholder events were organised. Also, the selection of"
+    },
+    {
+      "source_id": "4b786495-205f-473a-ae50-d9c9a35331cc",
+      "citation_number": 18,
+      "cited_text": "The cyclical iterative approach of this framework should stimulate learning in a wide range of adaptation contexts. It implicitly promotes learning through monitoring and evaluation at all stages of the adaptation policy cycle. This is particularly important in the early stages of adaptation policy development, as learning through monitoring and from experience will provide valuable information on Bare we doing the right things^. The framework is intended to be applicable across all levels of adaptation governance and to all policy areas and sectors."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 19,
+      "cited_text": "The JNAP Secretariat coordinates MEL for adaptation and collaborates with the National Planning Division to collect information from relevant implementing ministries. Horizontal integration is more important than vertical integration. National Monitoring, Evaluation, and Learning Systems for Climate Change Adaptation:  A comparative analysis of nine countries Status Purpose Context3 Leadership Institutional arrangements United Kingdom The national MEL system is operational. Assesses progress in implementing the adaptation plans and collates evidence of adaptation actions within public institutions."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 20,
+      "cited_text": "To what extent have JNAP 2 activities been integrated into the ministry’s corporate planning and reporting process? What progress has been made in activity implementation in the last 3 months? What is the implementation status of all JNAP 2 activities? What capacity issues need to be addressed to facilitate the implementation of JNAP 2 activities in the next 3 months? National Monitoring, Evaluation, and Learning Systems for Climate Change Adaptation:  A comparative analysis of nine countries"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 21,
+      "cited_text": "What lessons and opportunities can be drawn from this reporting period? The JNAP Secretariat then collated and analyzed responses to these questions. As shown in Figures A7 and A8, monitoring aimed to assess the implementation status of JNAP 2 activities based on three-scale criteria. Figure A7. Progress in integrating JNAP 2 activities into the ministry’s corporate planning and reporting process (theme 1) Source: Government of Tonga, 2021, p. 10 (reprinted with permission). Figure A8. Percentage of progress in JNAP 2 activities in the past three months by objective"
+    },
+    {
+      "source_id": "9a559729-a5c2-4169-b202-58e49ee8b2e3",
+      "citation_number": 22,
+      "cited_text": "This is corroborated byWollenberg et al. (2007), who found in another Indonesian province that during a similar period of political upheaval the chaotic institutional environment undermined trust and the legitimacy of decision-making. In this situation, Wollenberg et al. (2007) resorted to establishing ‘spontaneous cooperation’ on the periphery of formal governance processes. In NTB, rather than expecting whole-sale changes to musrenbang, it may have been more realistic to focus on establishing informal ‘livelihood innovation niches’ which create safe arenas for innovation in governance and technology, allowing transformative practice to develop amongst more fluid and emergent rules, and without penalty for failure (Butler et al., 2014). These could act as ‘bridgeheads’ for ACM to expand into formal planning processes when conditions allowed. To some extent this was achieved by the adaptation strategy trials, which created nascent ACM around natural resource management in the case studies, including the emergence of community leaders, cross-scale social networks, knowledge integration, empowerment, learning-by-doing and changes to local institutions."
+    },
+    {
+      "source_id": "302f9da0-a081-4e36-a843-390accad144a",
+      "citation_number": 23,
+      "cited_text": "Correspondence: Wout Jan- Willem Sommerauer (wout.sommerauer@wur.nl) Received: 13 March 2025 | Revised: 6 November 2025 | Accepted: 18 December 2025 Editor- in- Chief: Daniel Friess | Domain Editor: Chandni Singh Keywords: adaptation pathways | climate adaptation | climate policy | co- creation | collaborative learning ABSTRACT We examine how co- creation and collaborative learning have been operationalized in climate adaptation pathway development over the past decade using a systematic review of 36 case study papers. While co- creation and collaborative learning are increasingly recognized as important for effective adaptation planning, it remains unclear how different approaches can support adaptation goals. Our co- creation analysis identifies three participation clusters: (i) information- focused participation involving primarily one- way knowledge extraction through interviews; (ii) researcher- mediated participation featuring two- way engagement through workshops, while researchers maintain process control; and (iii) co- organized participation where stakeholders serve as co- designers with defined leadership roles throughout the process. For collaborative learning, defined as structured knowledge exchange and capacity building among stakeholders, we distinguish between instrumental learning that emerges incidentally from stakeholder interaction versus process- integrated learning that is explicitly designed and monitored throughout pathway development. Cases with co- organized participation consistently aligned with process- integrated learning, suggesting these approaches can be mutually beneficial. Analysis of reported impacts (including policy implementation, follow- up research, and capacity building outcomes) reveals that more extensive participation combined with organized learning correlates with a greater likelihood of impacts. This review contributes to the growing body of knowledge on stakeholder engagement in adaptation pathways planning, and while the identified participation clusters and learning approaches offer systematic guidance for methodology selection, they should be viewed as flexible frameworks rather than prescriptive categories, adaptable to specific contexts and planning objectives. This article is categorized under: Integrated Assessment of Climate Change > Participatory Methods of Integrated Assessment Vulnerability and Adaptation to Climate Change > Learning from Cases and Analogies Integrated Assessment of Climate Change > Integrated Assessment by Expert Panels"
+    },
+    {
+      "source_id": "9a559729-a5c2-4169-b202-58e49ee8b2e3",
+      "citation_number": 24,
+      "cited_text": "As part of a national decentralisation policy, in 2004 the Indonesian government introduced an annual cycle of integrated top-down and bottom-up development planning (‘musrenbang’). Through multi-stakeholder consultations at the village, sub-district and district government levels, the process formulates community development plans which are linked to provincial and national public expenditure planning. While communities are represented at all consultation stages, the process is often captured by political elites and government officials, resulting in communities’ needs not being met. Information on which to base decisions is often unavailable to communities, women and poorer households are marginalised by the lack of procedural justice, and non-government stakeholders are seldom included (Purba, 2011; Aswad et al., 2012). There is also considerable confusion amongst participants about their roles (Aswad et al., 2012), exacerbated by the regular subdivision of districts and sub-districts to create new administrative units and bureaucracies (Hunter, 2004)."
+    },
+    {
+      "source_id": "9a559729-a5c2-4169-b202-58e49ee8b2e3",
+      "citation_number": 25,
+      "cited_text": "Tim Kolaboratif The project was initiated as a formal partnership between researchers from the Australian Commonwealth Scientific and Industrial Research Organisation (CSIRO), the University of Mataram (UNRAM), and Indonesia’s National Agricultural Tech-nology Assessment Agency and the Bureau of Meteorology and Geosciences (BMKG). The first year was spent establishing the Tim Kolaboratif, consisting of 15 biophysical and social scientists (five CSIRO and 10 Indonesian). An experienced bi-lingual Indonesian facilitator was also employed to join the Tim Kolaboratif, who through the project activities coached team members in facilitation techniques. The Tim Kolaboratif was the project’s fulcrum, brokering amongst stakeholders, and organising and facilitating all activities (Fig. 2)."
+    },
+    {
+      "source_id": "9a559729-a5c2-4169-b202-58e49ee8b2e3",
+      "citation_number": 26,
+      "cited_text": "– Parallel processes to manage power Separate stakeholders to manage power, knowledge and competing goals Activity 2’s stage 1 and 2 workshops segregated higher from local level stakeholders prior to integration in Stage 3 – Distributed facilitation Diverse roles and responsibilities to broker knowledge and bridge scales Tim Kolaboratif coached as facilitators and acted as brokers to link stakeholders; skilled facilitator employed; Steering Committee provided political leadership J.R.A. Butler et al. / Climate Risk Management 12 (2016) 1–16 5"
+    },
+    {
+      "source_id": "9a559729-a5c2-4169-b202-58e49ee8b2e3",
+      "citation_number": 27,
+      "cited_text": "6 J.R.A. Butler et al. / Climate Risk Management 12 (2016) 1–16 Activity 2 Planning workshops: Planning workshops aimed to engage stakeholders from the village to international levels (Fig. 2) in the five case studies. The process covered the project’s second 2 years, and involved three stages: Stage 1 provincial scenario planning, Stage 2 sub-district scenario planning, and Stage 3 sub-district integration (see Appendix A). The Stage 1 and 2 workshops analysed future livelihoods from the perspectives of stakeholders from higher and local levels, respectively, which were shown to differ (Bohensky et al., 2016). This parallel process aimed to mitigate potential power asymmetries amongst stakeholders prior to their integration in Stage 3 (Butler et al., 2015b)."
+    },
+    {
+      "source_id": "9a559729-a5c2-4169-b202-58e49ee8b2e3",
+      "citation_number": 28,
+      "cited_text": "Despite the lack of political progress, the evaluation did reveal many positive ACM outcomes, indicating that stakeholders had been successfully primed to transform musrenbang. The mean score for Phase 1 priming stakeholders lay mid-way between ‘agree’ and ‘strongly agree’. All individual indicators’ mean scores were positive, with strong evidence of trust, leadership, enhanced knowledge of the problem and community empowerment. Together with a fifth, the establishment of cross-scale social networks, these were also preconditions for the ACM process to continue (Fig. 5). Interviewees’ responses identified a broad range of evidence for these preconditions. In particular, leadership emerged within the Tim Kolaboratif, a national government agency, the WFP and amongst communities, suggesting that policy entrepreneurs had been established at multiple jurisdictional levels. Hence the capacity to precipitate or exploit policy windows may have been created at several levels in the system, increasing the likelihood of future progress."
+    },
+    {
+      "source_id": "302f9da0-a081-4e36-a843-390accad144a",
+      "citation_number": 29,
+      "cited_text": "– Basic knowledge transfer (11/36 papers) focused primarily on sending information. – Stakeholder consultation (7/36 papers) sought input in some elements of the pathways process. – Dialogue- style interaction (12/36 papers) facilitated dynamic knowledge exchange. – Co- design level engagement (6/36 papers) represented extensive and intentional collaborative learning. From these patterns, two distinct clusters of collaborative learning emerged. First instrumental learning, which is characterized by learning as a consequence of methodological choices or the concepts used, positioning it as a secondary"
+    }
+  ]
+}

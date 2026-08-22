@@ -1,0 +1,115 @@
+{
+  "answer": "**Tonga** and **Finland** represent the clearest, most resource-constrained examples of a complete, low-burden national adaptation MEL cycle running from data collection to actual policy adjustment prior to expanding system scale or mandate [1, 2]. \n\nBoth countries successfully closed the policy-loop using only the coordinating authority and institutional structures they already had.\n\n---\n\n### **The Tongan Example: The Low-Burden Survey Loop**\nFacing zero legal mandates and a completely unfunded M&E officer position, Tonga’s Joint National Action Plan (JNAP) Secretariat executed its first complete sequence by piggybacking on pre-existing government routines [3-5].\n*   **The Existing Authority Hook**: The JNAP Secretariat partnered directly with the **National Planning Division (NPD)**, which already possessed a mandatory quarterly corporate reporting cycle for all government entities [6]. \n*   **Step 1: Collecting Data**: Rather than building a parallel reporting process, the Secretariat added a simple, 5-question adaptation-focused questionnaire directly onto the existing quarterly planning templates distributed by the NPD [6]. This was sent to **22 focal points across 11 climate-relevant ministries** [7].\n*   **Step 2: Usable Indicators**: The questions were strictly qualitative and process-focused (e.g., asking if JNAP activities were integrated into plans, current progress, capacity gaps, and lessons learned) [8, 9]. They translated these responses into simple, low-burden **process indicators** tracking implementation on a three-scale rubric (\"Yes,\" \"Partially,\" \"No\") [9, 10].\n*   **Step 3: Synthesizing the Data**: This information was compiled into the **2021 JNAP 2 Progress Report**, mapping exact delivery bottlenecks and capacity issues by sector [9, 11].\n*   **Step 4: Using Information for Decisions/Revisions**: The first reporting cycles immediately revealed that a quarterly data collection schedule was administratively overwhelming and unsustainable [12]. Based on this specific lesson, the JNAP Secretariat made the **operational decision to permanently reduce the reporting frequency to twice per year** [12].\n\n---\n\n### **The Finnish Example: The Ad Hoc Self-Assessment Loop**\nFinland ran its earliest national adaptation strategy (NAS) tracking cycle without a separate budget or legislative enforcement, relying entirely on ad hoc structures and voluntary, self-funded participation [1, 13].\n*   **The Existing Authority Hook**: The Ministry of Agriculture and Forestry convened a temporary, **ad hoc Coordination Group** consisting of 32 members from various line ministries, regional bodies, and research institutes [13]. \n*   **Step 1: Collecting Data**: Because there was no separate funding, the representatives in the group agreed to self-assess their own sectors' progress and cover their own participation costs, keeping administrative outlays minimal [13]. \n*   **Step 2: Usable Indicators**: Progress was assessed using a simple, qualitative **policy process indicator** based on four criteria, each scored on a 1 to 5 scale (recognition of need, knowledge of impacts, adaptation actions taken, and cross-sectoral cooperation) [14].\n*   **Step 3: Synthesizing the Data**: The representative members compiled and discussed their sector-specific assessments at group meetings, approving a combined national evaluation report in 2009 [13, 15].\n*   **Step 4: Using Information for Decisions/Revisions**: This baseline self-evaluation successfully mapped policy implementation gaps [16]. The lessons directly informed subsequent policy revisions, leading to a major re-evaluation of sector-specific outcomes in 2013 and the formal government approval of **Finland's revised National Adaptation Plan in 2014** [15, 17].\n\n---\n\n📋 Since we are deciding how to set up our first-mover pilot cycle, would you like to draft a qualitative pilot questionnaire modeled after Tonga's NPD-integrated survey to test with our own Ministry of Agriculture?",
+  "conversation_id": "443784fd-4029-452b-b024-caf0824ec428",
+  "sources_used": [
+    "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+    "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "4b786495-205f-473a-ae50-d9c9a35331cc"
+  ],
+  "citations": {
+    "1": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+    "2": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "3": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "4": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "5": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "6": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "7": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "8": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "9": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "10": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "11": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "12": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "13": "4b786495-205f-473a-ae50-d9c9a35331cc",
+    "14": "4b786495-205f-473a-ae50-d9c9a35331cc",
+    "15": "4b786495-205f-473a-ae50-d9c9a35331cc",
+    "16": "4b786495-205f-473a-ae50-d9c9a35331cc",
+    "17": "4b786495-205f-473a-ae50-d9c9a35331cc"
+  },
+  "references": [
+    {
+      "source_id": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+      "citation_number": 1,
+      "cited_text": "Finland shows a weaker-authority but still functioning path. Its 2005 strategy was coordinated by the Ministry of Agriculture and Forestry, reviewed in 2009 by an ad hoc coordination group of 32 members from ministries, research institutes, funders, and regional organizations, and relied on qualitative sectoral self-assessment rather than a separate funded apparatus (Klostermann et al., 2015). That is important for Thailand because it shows an early operational cycle can run before strong legal force exists, but also that such systems remain indicative and fragile when they depend on voluntary sector contributions and self-funded participation (Klostermann et al., 2015)."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 2,
+      "cited_text": "The establishment of MEL systems is an iterative process, with countries gradually building various components. For example, while Tonga’s 2010 Joint National Action Plan (JNAP 1) did not include a MEL framework, the 2018 JNAP 2 marked a step forward with the prioritization of MEL. This was followed by the release of two documents critical to the operationalization of MEL in 2019: the Monitoring and Evaluation System Guide and the Monitoring and Evaluation System Standard Operating Procedure. The operationalization of the MEL system is demonstrated by the publication of an adaptation progress report in 2021. However, disruptions related to the COVID-19 pandemic and natural calamities have slowed this momentum, and Tonga is now in the process of reinitiating the operationalization of the MEL system. In Canada, the NAS includes an M&E framework with a “first set of indicators,” which will be reviewed and refined over time. Peru has also strategically adopted a stepwise approach comprising four phases: design, which was completed in 2021 with the establishment of indicators and platforms; analysis, through which logical and physical elements are being put in place; development (programming, software creation, and capacity building); and implementation."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 3,
+      "cited_text": "A7.1.1 Background and Status Tonga has a MEL system for adaptation in place, which has evolved simultaneously with adaptation planning. The first Joint National Action Plan on Climate Change and Disaster Risk Management (JNAP) was published in 2010 and did not include an MEL framework. This was identified as a priority for the second JNAP (JNAP 2), which was published in 2018 and designed to function through to 2028. JNAP 2 includes a short section on MEL (Government of Tonga, 2019, p. 48) and describes the need to design and implement a MEL system early in the JNAP 2 implementation process, hire a dedicated MEL officer, and publish two progress reports as well as annual reviews. While these plans are described in JNAP 2, there is no legal mandate for MEL for adaptation in Tonga."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 4,
+      "cited_text": "MEL activities began following the publication of the M&E System Guide and SOP. The JNAP Secretariat began working with relevant national-level ministries and the National Planning Division (NPD) to collect data necessary to monitor adaptation and produce the first JNAP 2 progress report and review described in JNAP 2. Data was to be collected from ministries every quarter. However, this monitoring work only occurred for two cycles before the COVID-19 pandemic interrupted work and paused all MEL activities. Currently, the JNAP Secretariat is beginning to restart monitoring efforts. Staff within the JNAP Secretariat are planning workshops for relevant ministries to reintroduce the need for MEL for adaptation and explain how work will be restarted. However, staff turnover, limited resources, and the never-filled MEL officer position have meant that progress on MEL is slow (Government of Tonga, 2018)."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 5,
+      "cited_text": "A7.1.2 Key Actors in Tonga’s MEL System for Adaptation MEL is a task of the JNAP Secretariat, situated in the Department of Climate Change, within the Ministry of Meteorology, Energy, Information, Disaster Management, Environment, Climate Change, and Communication. As noted previously, JNAP 2 describes the need for a National Monitoring, Evaluation, and Learning Systems for Climate Change Adaptation:  A comparative analysis of nine countries MEL officer, though this position has never been filled. Instead, work to date has been carried out by two to three people within the JNAP Secretariat, all of whom also have other primary responsibilities. Funding is precarious, and the positions of the overall M&E officers are not institutionalized within the Tongan government; rather, these positions are funded through international donors."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 6,
+      "cited_text": "A7.2.2 Indicators, Targets, and Methodologies The NPD is an important partner for the JNAP Secretariat in monitoring adaptation efforts. Building on a pre-existing monitoring system for other government functions, the JNAP Secretariat has been able to add a questionnaire to the existing questionnaire distributed by the NPD. These questionnaires are administered by the NPD, and the JNAP Secretariat then receives responses to their questionnaires directly from the NPD. National Monitoring, Evaluation, and Learning Systems for Climate Change Adaptation:  A comparative analysis of nine countries"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 7,
+      "cited_text": "The MEL system is relatively flat, with little vertical integration beyond the national level. This reflects Tonga’s small population and government. While there is some level of sub-national governance in Tonga, most processes occur at the national level. The JNAP Secretariat primarily works with national-level government entities on monitoring, carrying out this work with the NPD, as described above. The JNAP Secretariat collects data from 22 focal points in 11 climate-relevant ministries. There is limited coordination with private sector and non-governmental bodies such as the Chamber of Commerce and Industry as well as NGOs, though it is not clear if any data is collected from them. Given the small size of the country and government, horizontal linkages between ministries and sectors are informal, though straightforward."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 8,
+      "cited_text": "To what extent have JNAP 2 activities been integrated into the ministry’s corporate planning and reporting process? What progress has been made in activity implementation in the last 3 months? What is the implementation status of all JNAP 2 activities? What capacity issues need to be addressed to facilitate the implementation of JNAP 2 activities in the next 3 months? National Monitoring, Evaluation, and Learning Systems for Climate Change Adaptation:  A comparative analysis of nine countries"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 9,
+      "cited_text": "What lessons and opportunities can be drawn from this reporting period? The JNAP Secretariat then collated and analyzed responses to these questions. As shown in Figures A7 and A8, monitoring aimed to assess the implementation status of JNAP 2 activities based on three-scale criteria. Figure A7. Progress in integrating JNAP 2 activities into the ministry’s corporate planning and reporting process (theme 1) Source: Government of Tonga, 2021, p. 10 (reprinted with permission). Figure A8. Percentage of progress in JNAP 2 activities in the past three months by objective"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 10,
+      "cited_text": "MEL work in Tonga has, in practice, focused primarily on process indicators to understand whether the 92 activities identified in JNAP 2 are occurring (in terms of full, partial, or non-implementation). Outcome indicators have not yet been established, in part because baseline data is lacking. While there is interest within the JNAP Secretariat in establishing outcome indicators, these do not seem to have evolved since the M&E System Guide and SOP were published in 2019, shortly after which MEL efforts were paused due to the COVID-19 pandemic."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 11,
+      "cited_text": "A7.3 Monitoring Two cycles of data for the MEL system for adaptation were reported to the JNAP Secretariat by the NPD between the publication of the M&E System Guide and SOP in 2019 and the onset of the COVID-19 pandemic in 2020. This was used to create the JNAP 2 progress report in 2021. To develop this report, the JNAP Secretariat, through the NPD, circulated a questionnaire to ministries assigned specific activities for the implementation of JNAP 2. The questionnaire covered the following key questions as outlined in the JNAP 2 progress report (Government of Tonga, 2021, p. 3):"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 12,
+      "cited_text": "As previously stated, the MEL system’s primary outputs will be two JNAP progress reports over the 10-year implementation period of JNAP 2 with additional annual reviews. Originally, the JNAP Secretariat planned to collect data for the system every quarter, though it has now been agreed that the frequency was too high. The JNAP Secretariat is now planning on collecting data twice per year. Implementation of the MEL system is defined along six themes: cooperation, financing, resilience-building action, capacity development, knowledge management, and mainstreaming. There are 22 resilience targets, divided into 25 sub-objectives and 92 activities. While JNAP 2 suggests some engagement with non-governmental entities and communities for collecting data, in practice, data collection seems limited to questionnaires distributed to climate-relevant ministries. As previously stated, 11 ministries and 22 focal points contribute to this process."
+    },
+    {
+      "source_id": "4b786495-205f-473a-ae50-d9c9a35331cc",
+      "citation_number": 13,
+      "cited_text": "The key monitoring objective was to establish what progress had been made in different sectors since the NAS was launched in 2005. A preliminary aggregated indicator for the level of adaptation, based on the four process criteria, was used as a measure of progress. This was based on a qualitative evaluation that provided only indicative information and was used mainly for self-evaluation. The evaluation of adaptation processes was carried out by an ad hoc Coordination Group for Adaptation to Climate Change (Ministry of Agriculture and Forestry of Finland 2009). The Coordination Group was chaired by the Ministry of Agriculture and Forestry and consisted of 32 members from different ministries, research institutes, research funding agencies and regional organisations. Stakeholders from key sectors were also involved in the group. As the group was chaired by the ministry that coordinated the NAS, it cannot be considered to be independent. The group did not have separate funding; all participating members were expected to cover their own costs, with the Ministry of Agriculture and Forestry covering administrative costs and the costs of report writing."
+    },
+    {
+      "source_id": "4b786495-205f-473a-ae50-d9c9a35331cc",
+      "citation_number": 14,
+      "cited_text": "The NAS lists several existing indicators, such as those relating to water management, which were expected to provide information on progress with adaptation (Ministry of Agriculture and Forestry of Finland 2005). The level of adaptation was assessed with a policy process indicator consisting of four criteria, each on a scale of 1 to 5: & A need for adaptation is recognized (process) & Impacts are known (adaptive capacity) & Adaptation measures are taken (output) & There is cross-sectoral cooperation (mainstreaming)"
+    },
+    {
+      "source_id": "4b786495-205f-473a-ae50-d9c9a35331cc",
+      "citation_number": 15,
+      "cited_text": "In terms of procedures, members of the Coordination Group were responsible for assessing the level of adaptation in different sectors. Each sector was reviewed by a representative member, who produced the required information, either individually or with the assistance of other experts. The draft final report was circulated among group members for comments and discussed at group meetings, before being approved in 2009. In 2013, the NAS was re-evaluated by a new ad hoc Coordination Group (appointed in May 2012), with sectors evaluating their own activities (e.g. Ministry of the Environment—"
+    },
+    {
+      "source_id": "4b786495-205f-473a-ae50-d9c9a35331cc",
+      "citation_number": 16,
+      "cited_text": "Member states shall report to the Commission information on their national adaptation planning and strategies, outlining their implemented or planned actions to facilitate adaptation to climate change. That information shall include the main objectives and the climate change impact category addressed, such as flooding, sea level rise, extreme temperatures, droughts and other extreme weather events. The aim of this study is to support joint learning about adaptation monitoring in Europe. Radelli (2009) distinguished between social learning that involves large-scale paradigmatic changes, reflexive learning about governance, instrumental learning about what seems to work, political learning about playing the game, and cross-national emulation in which models and solutions are imported. Here, the focus is on reflexive and instrumental learning. The main research question focusses on how adaptation can be monitored at the national level to detect a possible mismatch between policy and implementation (Ford et al. 2011). Three sub-questions are posed: (1) What general requirements apply to monitoring adaptation? (2) How is adaptation monitoring different from other monitoring approaches and does this lead to additional requirements? (3) What common elements can be identified that should be included in a framework for monitoring adaptation?"
+    },
+    {
+      "source_id": "4b786495-205f-473a-ae50-d9c9a35331cc",
+      "citation_number": 17,
+      "cited_text": "Mitig Adapt Strateg Glob Change (2018) 23:187–209 199 Hildén and Mäkinen 2013). The focus was still on processes but included consideration of outcomes in specific sectors (Ministry of Agriculture and Forestry of Finland 2014). A new NAS (now called an Badaptation plan^) was approved by the Government in 2014. 5.2 Monitoring and evaluation of the UK’s NAS The Climate Change Act (2008) established a legislative framework for the UK to achieve its long-term goals to reduce greenhouse gas emissions and to adapt to the impacts of climate change (The National Archives 2008). Alongside the targets to reduce emissions, the Act established several duties for Government in relation to adaptation:"
+    }
+  ]
+}

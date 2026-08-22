@@ -1,0 +1,106 @@
+{
+  "answer": "At our current stage—Phase 2 moving into Phase 3—deciding on the right indicators and understanding what level of evaluation capacity we can realistically expect is a critical checkpoint. \n\nHere is what the comparative literature reveals about the composition of indicator sets and the state of evaluation capacity at this specific design juncture:\n\n---\n\n### **1. Typical Composition of Indicator Sets in Phase 2/3**\nDuring the early and advanced design stages, indicator sets are almost always heavily skewed toward **process-based and output-based indicators** rather than outcome- or impact-based metrics. \n\n*   **Process and Output Domination**: Process-based indicators (e.g., establishing committees, drafting policies) and output-based indicators (e.g., number of staff trained, updated building codes) are **significantly easier to establish initially** because they track administrative compliance rather than complex environmental changes [1].\n*   **The Baseline Bottleneck**: Outcome indicators (which measure actual risk and vulnerability reduction) are typically **absent or highly restricted** at this stage because countries lack the necessary baseline data and localized climate impact data to measure physical changes [2, 3].\n*   **Real-World Example (Tonga)**: Tonga’s JNAP 2 framework outlines 104 indicators, but in practice, its early operational tracking focused **exclusively on process indicators** (scoring whether 92 identified policy activities were fully, partially, or not implemented) [2, 4]. Tonga has struggled to transition to outcome indicators due to a persistent **lack of baseline data** [2].\n*   **The Technical Path**: The literature suggests that while a balanced mix of process, output, and outcome indicators is the ultimate goal, early-stage systems should **start with a simple, pragmatic set of process and output indicators** and gradually introduce outcome-based metrics as data systems and policy goals mature [1, 5, 6].\n\n---\n\n### **2. The State of Evaluation Capacity at this Stage**\nFormal, centralized national evaluation capacity—the ability of a central body to analyze *why* policies succeeded or failed and to attribute risk reduction directly to government action—is **almost always absent at this stage** [7, 8]. \n\nHowever, evaluation capacity is **rarely entirely non-existent**; instead, it coexists in highly localized, fragmented, and informal forms before the national MEL system is formalized:\n\n1.  **Project-Level and Donor-Driven M&E**: Robust evaluation capacity is typically concentrated in **externally funded projects** (e.g., bilateral donor projects or GCF/MDB operations) [8, 9]. These projects have dedicated resources to conduct rigorous ex-post evaluations and causal assessments, but these insights remain siloed at the project level and are rarely aggregated nationally [10, 11].\n2.  **Sector-Specific Technical Units**: Root-cause diagnosis and evaluation capacity usually sit within **sectoral technical departments** (such as specialized hydrological or agricultural research units) rather than with the central climate coordinator [12]. These units possess the technical data and domain expertise to evaluate local interventions (e.g., crop yield resilience) long before a central body can do so [12, 13].\n3.  **Ad Hoc External Research**: Central coordinators in the early stages often rely on **commissioning studies from third parties**, academic institutions, or scientific advisory groups to perform qualitative evaluations and fill technical gaps [14, 15].\n\nAt this Phase 2/3 stage, the central coordinator's role is not to conduct deep causal evaluations, but rather to **aggregate, flag, and convene** the scattered data and evaluation capacity that already exist across these project and sectoral silos [12].\n\n---\n\n📋 Since we are navigating this Phase 2/3 transition, I could draft a set of criteria to help us map our existing sectoral and project-level data sources so we don't accidentally duplicate data collection. Would you like me to put that together?",
+  "conversation_id": "443784fd-4029-452b-b024-caf0824ec428",
+  "sources_used": [
+    "4b786495-205f-473a-ae50-d9c9a35331cc",
+    "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "cc3ffc19-b89f-472e-a0e4-e23a8f93754c",
+    "cc6d983c-0c56-4eb0-8aba-f49f603bab88",
+    "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678"
+  ],
+  "citations": {
+    "1": "4b786495-205f-473a-ae50-d9c9a35331cc",
+    "2": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "3": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "4": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "5": "4b786495-205f-473a-ae50-d9c9a35331cc",
+    "6": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "7": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "8": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "9": "cc3ffc19-b89f-472e-a0e4-e23a8f93754c",
+    "10": "cc6d983c-0c56-4eb0-8aba-f49f603bab88",
+    "11": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "12": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+    "13": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "14": "cc6d983c-0c56-4eb0-8aba-f49f603bab88",
+    "15": "5503bd2b-26d9-42b9-86ee-d7218027c65b"
+  },
+  "references": [
+    {
+      "source_id": "4b786495-205f-473a-ae50-d9c9a35331cc",
+      "citation_number": 1,
+      "cited_text": "Create links with adaptation measures Meeting stakeholder needs Involve stakeholders in the monitoring and evaluation process Mitig Adapt Strateg Glob Change (2018) 23:187–209 193 output-based indicators are easier to establish initially, and once policy goals become more targeted, outcome-based indicators will assume a greater importance (Harley et al. 2008; Harley and van Minnen 2009). Brooks et al. (2011) produced a framework for monitoring adaptation from a development perspective. The framework comprises process-based indicators to monitor Bthe capacity of institutions, government and civil society to understand climate change and to integrate adaptation into decision-making^, and outcome-based indicators to monitor Bthe extent to which climate adaptation keeps development ‘on track’ in the short term^. Processes are monitored from a top-down perspective and outcomes (performance) from a bottom-up perspective."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 2,
+      "cited_text": "MEL work in Tonga has, in practice, focused primarily on process indicators to understand whether the 92 activities identified in JNAP 2 are occurring (in terms of full, partial, or non-implementation). Outcome indicators have not yet been established, in part because baseline data is lacking. While there is interest within the JNAP Secretariat in establishing outcome indicators, these do not seem to have evolved since the M&E System Guide and SOP were published in 2019, shortly after which MEL efforts were paused due to the COVID-19 pandemic."
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 3,
+      "cited_text": "can help establish clarity on what needs to be measured and further encourage the development of methodologies and the generation of data. The UK, for instance, developed its indicator list using this approach, but 60% of its indicators remain on the wish-list because data are not yet available to populate them (Chapters 2 and 4). 1.3.2. Building adaptation indicators In addition to collecting data, countries need to find ways of analysing them to report on their risk, impacts, needs and adaptation progress. Standardised indicators allow data to be presented in a simplified manner"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 4,
+      "cited_text": "As previously stated, the MEL system’s primary outputs will be two JNAP progress reports over the 10-year implementation period of JNAP 2 with additional annual reviews. Originally, the JNAP Secretariat planned to collect data for the system every quarter, though it has now been agreed that the frequency was too high. The JNAP Secretariat is now planning on collecting data twice per year. Implementation of the MEL system is defined along six themes: cooperation, financing, resilience-building action, capacity development, knowledge management, and mainstreaming. There are 22 resilience targets, divided into 25 sub-objectives and 92 activities. While JNAP 2 suggests some engagement with non-governmental entities and communities for collecting data, in practice, data collection seems limited to questionnaires distributed to climate-relevant ministries. As previously stated, 11 ministries and 22 focal points contribute to this process."
+    },
+    {
+      "source_id": "4b786495-205f-473a-ae50-d9c9a35331cc",
+      "citation_number": 5,
+      "cited_text": "The literature review provides some basic advice for the selection of indicators (see also Table 2): Use existing indicators and/or data sources, if possible; monitor changes in climate and socio-economic variables to enable data to be normalised; combine qualitative, quantitative and binary indicators; and create explicit links with adaptation measures (GIZ 2013a). It is likely that a combination of process-based, output-based and outcome-based indicators will be needed to monitor progress in adaptation. Process-based indicators can be used to describe the steps and decisions taken in the adaptation process (Table 3). Output-based indicators can show the level of implementation of adaptation policies. Outcome-based indicators measure the effectiveness of adaptation actions in reducing the vulnerability of the system of interest. Distinguishing between these categories is useful when building a balanced set of indicators. However, in reality, drawing a line between the different categories can be difficult; because of complex chains of events, differentiating between what is a process and what is an output, for example, can be arbitrary."
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 6,
+      "cited_text": "Non-domestic water usage) (CCC, 2019[86]). Defra, in its NAP3, acknowledges the challenges of tracking progress to a moving target in a system with interacting and cascading climate and socio-economic risks, the mismatch between short evaluation cycles and the time needed to effect change. The NAP therefore recommends that policy officials identify accompanying process and outcome indicators when developing policy responses for the 61 risks or opportunities (Defra, 2023[8]). The CCC has also made efforts to produce new indicators of impacts (e.g."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 7,
+      "cited_text": "The findings show that all nine countries have initiated work and have at least partly functional MEL systems for adaptation and NAP processes. Among these countries, the operationalization of MEL systems focuses primarily on monitoring and progress reporting, while evaluation and learning remain less developed. Some countries, such as France, the United Kingdom, and Vietnam, have more advanced MEL systems, where the focus has turned to evaluation and learning, while others have just started to develop their MEL frameworks—for example, Somalia. The research conducted for this report shows that there is no one-size-fits-all approach to this work and that MEL systems must fit national contexts and needs, capitalizing on existing monitoring and evaluation systems. This research further shows that establishing a MEL system is generally an incremental process in which components are added over time, taking into account the country’s circumstances, capacities, adaptation needs, and goals."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 8,
+      "cited_text": "National Monitoring, Evaluation, and Learning Systems for Climate Change Adaptation:  A comparative analysis of nine countries 6. Acknowledged that ongoing challenges remain to deepen evaluation, learning, and sustaining resources. In 2014, key challenges included limited financial and human resources, a lack of clear legal mandates, and fragmented institutional arrangements. These issues hindered the development and operationalization of MEL systems. There was a need for greater stakeholder engagement, and better integration of MEL systems across different levels of governance was emphasized. Evaluation exercises were primarily executed as part of donor requirements for bilateral projects rather than evaluative assessments of NAP processes. Learning was also rarely acknowledged, with the processes and activities related only to M&E systems."
+    },
+    {
+      "source_id": "cc3ffc19-b89f-472e-a0e4-e23a8f93754c",
+      "citation_number": 9,
+      "cited_text": "The Common Approach presents climate adaptation and resilience indicators in line with the MDB climate resilience metrics framework, focusing on project results, specifically outputs and outcomes. Climate adap-tation and resilience outputs and outcomes relate to adaptation activities which credibly address a context of climate vulnerability.8 Without a climate vulnerability context, the indicators may reflect a positive devel-opment outcome but not a climate resilience outcome. The high-level principles underpinning the Common Approach and proposed indicators are presented in detail in Annex 1."
+    },
+    {
+      "source_id": "cc6d983c-0c56-4eb0-8aba-f49f603bab88",
+      "citation_number": 10,
+      "cited_text": "To date, literature on monitoring and evaluation (M&E) of adaptation has predominantly focused on the level of projects or communities rather than at the national level (Bours et al., 2014; Adaptation Com-mittee, 2016). Very few articles have addressed mechanisms that countries use to assess the implementation of their NAPs (Leiter, 2015; Klostermann et al., 2018). This article therefore conducts a global stocktake of NAP M&E systems and compares it to a baseline from 2017. In contrast to previous studies, it assesses the actual evidence of M&E practices rather than stated intentions of M&E in government documents. The article concludes by discussing the implications for our"
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 11,
+      "cited_text": "the planned and monitored public actions. For example, private actions driven by economic interests or policies that do not target adaptation can also reduce impact. A dam constructed by a private power operator to produce electricity (driven by a policy favouring the production of renewable energy) can affect flood risks downstream. While quantitative impact assessments exist that highlight impacts on beneficiaries and understand attribution levels, to date these are mainly carried out for individual programmes or projects and are"
+    },
+    {
+      "source_id": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+      "citation_number": 12,
+      "cited_text": "The cases also suggest that “why did we miss the target?” is usually not housed as an autonomous research function inside national MEL. Root-cause diagnosis more often sits within sectoral technical units, existing evaluation processes, or ad hoc review bodies, while central coordinators aggregate, flag, and convene rather than perform detailed causal investigation themselves (Klostermann et al., 2015; Njuguna et al., 2023). The broader literature largely supports the prior finding that “research” is not a standard fourth stage in national adaptation MEL; the dominant cycle remains risk assessment, planning, implementation, and MEL, though some non-adaptation literatures use MERLA or MERL variants where research is an enabling input rather than a separate governance stage (Nowak et al., 2024; Stelmach et al., 2021)."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 13,
+      "cited_text": "The status of MEL systems also varies within countries. It is important to consider sub-national MEL systems, given their potential to capture local adaptation experiences. With adequate coordination and integration, advances in these sectoral and sub-national MEL systems can enrich the understanding of adaptation progress within countries. In Canada, consistent with the mandates of the provincial governments to develop and implement policies, some provinces have adaptation plans and systems for monitoring progress in place. While the provinces do not report directly to the federal government, the Council of Ministers of Environment presents an opportunity for coordination between the two levels of government. There are also notable examples of sectoral MEL systems. For example, in Vietnam and Kenya, the ministries responsible for agriculture have established MEL systems for tracking adaptation efforts within the sector. Information from these sectoral systems is then integrated into the national assessment."
+    },
+    {
+      "source_id": "cc6d983c-0c56-4eb0-8aba-f49f603bab88",
+      "citation_number": 14,
+      "cited_text": "The development process of NAP M&E systems is generally coordinated by the same government entities that coordinate the NAP, typically the Ministry of the Environment or a technical agency. Some countries have formed technical working groups to coordinate the NAP M&E development process, e.g., in Finland. It is also common to engage government-external expertise. For example, Canada and Finland established advisory groups for the formulation of indicators and Ger-many, South Africa and the UK commissioned studies and involved the scientific community and relevant business associations, e.g., from the insurance or tourism industry. However, the M&E development process is not commonly documented and only few countries have published studies about the development of the NAP M&E system (e.g., Germany and the UK)."
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 15,
+      "cited_text": "2019[47]). The CCC assesses quantitative data where possible, but for some important aspects that are difficult to measure quantitatively, such as the mental health impacts of climate change, the CCC uses a qualitative approach, often referring to academic studies or expert judgement. 0% 5% 10% 15% 20% 25% 30% 35% Exposure Vulnerability Hazard Policies & plans Enablers Outcome MEASURING PROGRESS IN IMPLEMENTING ADAPTATION POLICIES IN THE UNITED KINGDOM © OECD 2024 Table 2.7. The use of selected outcomes and their indicators for measuring adaptation progress"
+    }
+  ]
+}

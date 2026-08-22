@@ -1,0 +1,171 @@
+{
+  "answer": "For countries in their early development stages, turning raw administrative data into usable adaptation metrics is primarily an administrative and coordination challenge. The transition from raw data submission to actual planning adjustments follows a clear, structured sequence across several comparative countries:\n\n---\n\n### **1. How Data is Turned into Usable Indicator Values**\nResource-constrained countries typically avoid highly complex quantitative calculations. Instead, they rely on **standardized templates and simple qualitative rubrics** to turn raw submissions into progress metrics:\n*   **Qualitative Scorecard Rubrics**: \n    *   **Tonga**: Turns raw questionnaire data from ministries into basic **process indicators** tracking JNAP 2 activity implementation on a simple three-scale status: **\"Yes\" (fully implemented), \"Partially\" (partially implemented), or \"No\" (not implemented)** [1, 2]. \n    *   **South Korea (early stages)**: Taps into sectoral ministries using a standardized template where project managers grade implementation on a four-point scale: **\"Very Good\", \"Good\", \"Normal\", or \"Insufficient\"** [3, 4].\n*   **Incremental Metrics**: \n    *   **Vietnam**: Utilizes a bottom-up logical framework where provincial and sectoral reports are processed using an **M&E Manual to synthesize \"indicators of action\" (process/output) and \"indicators of results\" (outcome)** at project, provincial, and national scales [5-7].\n*   **Simple Aggregation (Summation)**: \n    *   Most early-stage systems count simple physical units—such as the number of government staff trained, meteorological stations installed, or municipal ordinances adjusted—using basic summation methods [8-11].\n\n---\n\n### **2. Who Checks and Combines the Data**\nData validation and synthesis typically require a partnership between the **central climate coordinating body** and **national statistical agencies** to ensure credibility:\n*   **The Central Coordinating Unit**: \n    *   **Tonga**: The **JNAP Secretariat** collects and compiles data from 22 focal points across 11 climate-relevant ministries [12].\n    *   **Vietnam**: The **Department of Climate Change (DCC) under the Ministry of Natural Resources and Environment (MONRE)** is the nodal body that directly assists in collecting and synthesizing reports across ministries and all 63 provincial People's Committees [13, 14].\n*   **Validation and Quality Checking Methods**:\n    *   **Statistical Audits & Cross-Checking**: In **Kenya**, the **Kenya National Bureau of Statistics (KNBS)** uses its existing administrative databases to verify data supplied by line agencies, actively checking for anomalies and auditing whether county-level offices used correct sampling methodologies [15].\n    *   **Quality Assurance Departments**: **Uganda’s Bureau of Statistics (UBOS)** uses a dedicated quality assurance department to review and approve knowledge-production instruments and ensure data collection follows best practices [15].\n    *   **High-Level Inter-Ministerial Review Meetings**: In **Ethiopia**, the government organizes **high-level quarterly meetings** with regional representatives and technical officers to review, discuss, and provide feedback on progress data submitted against predetermined targets [15].\n\n---\n\n### **3. Who Uses the Resulting Information and for What Decisions**\nOnce the coordinating unit compiles and synthesizes the final progress reports, the results are routed directly to **Cabinet Ministers, Parliaments, and Planning/Finance Ministries** to inform several critical decisions:\n*   **Revising National Adaptation Plans**: \n    In at least half a dozen countries (including **Spain, Chile, and South Korea**), completed evaluations and progress reports have directly **informed and shaped successive iterations of their National Adaptation Plans (NAPs)** by highlighting which strategic priorities were underperforming [16-18].\n*   **Operational Optimization (Reducing reporting burdens)**: \n    In **Tonga**, the JNAP Secretariat's first monitoring cycles revealed that a quarterly reporting schedule was administratively overwhelming and unsustainable for capacity-constrained ministries [19, 20]. Based on this exact feedback, the Secretariat made the **operational decision to permanently reduce the national reporting frequency from quarterly to twice per year** [20].\n*   **On-Site Project Adjustments and Resource Optimization**: \n    In **South Korea**, annual progress reviews identify specific implementation and budget-execution gaps across hundreds of projects [21, 22]. This data allows the Ministry of Environment to **take swift corrective action, reallocate funds, and adjust the work plans of underperforming sectors** midway through the planning cycle [21, 23].\n*   **Fulfilling Global Commitments**: \n    The compiled data is directly integrated into mandatory international reporting instruments under the Paris Agreement, such as **Biennial Transparency Reports (BTRs), National Communications, and National Adaptation Communications (AdComs)** to demonstrate progress toward the Global Goal on Adaptation [24-26].\n\n---\n\n🗺️ If we are looking to adapt Tonga's low-burden approach for our first pilot, we could outline a simple draft questionnaire tailored for our agricultural sector. Would you like to map out those draft questions?",
+  "conversation_id": "443784fd-4029-452b-b024-caf0824ec428",
+  "sources_used": [
+    "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "35e555e6-1212-491e-8701-141ab607e775",
+    "b2ddc784-4a60-4be8-b489-2089a5d8bc77",
+    "cc6d983c-0c56-4eb0-8aba-f49f603bab88"
+  ],
+  "citations": {
+    "1": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "2": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "3": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "4": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "5": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "6": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "7": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "8": "35e555e6-1212-491e-8701-141ab607e775",
+    "9": "35e555e6-1212-491e-8701-141ab607e775",
+    "10": "35e555e6-1212-491e-8701-141ab607e775",
+    "11": "35e555e6-1212-491e-8701-141ab607e775",
+    "12": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "13": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "14": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "15": "b2ddc784-4a60-4be8-b489-2089a5d8bc77",
+    "16": "cc6d983c-0c56-4eb0-8aba-f49f603bab88",
+    "17": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "18": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "19": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "20": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "21": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "22": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "23": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "24": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "25": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "26": "61a7eb9b-ce31-4ee9-b415-75d01b86f124"
+  },
+  "references": [
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 1,
+      "cited_text": "MEL work in Tonga has, in practice, focused primarily on process indicators to understand whether the 92 activities identified in JNAP 2 are occurring (in terms of full, partial, or non-implementation). Outcome indicators have not yet been established, in part because baseline data is lacking. While there is interest within the JNAP Secretariat in establishing outcome indicators, these do not seem to have evolved since the M&E System Guide and SOP were published in 2019, shortly after which MEL efforts were paused due to the COVID-19 pandemic."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 2,
+      "cited_text": "Figur  4. Percent g  of progress in JNAP2 activities in the pas  3 months by objective Yes Partially No No response 0 5 10 15 20 25 30 35 40 45 50 Mainstrea i g Knowledge Management Capacity Development Resilience-Building Action Financing Cooperation 59 50 50 73 68 83 15 6 15 11 11 0 26 41 32 8 21 17 0 3 3 8 0 0 0 20 40 60 80 100 Mainstreaming Knowledge Management Capacity Development Resilience-Building Action Financing Cooperation Yes Partially No No response National Monitoring, Evaluation, and Learning Systems for Climate Change Adaptation:  A comparative analysis of nine countries"
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 3,
+      "cited_text": "Generating new evidence: collecting additional data and information In addition to the use of existing available data (or data collected for other purposes), countries  request and collect additional adaptation-specific information through the following methods: Self-assessment: Data and information, mainly qualitative information, is collected by a number of countries through self-assessments. Korea bases its adaptation measurement to a large extent on annual self-evaluations requested from all ministries and local governments. Each ministry"
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 4,
+      "cited_text": "for budget execution and implementation progress, and a selection of 100 critical projects are put under greater scrutiny: Every year, implementing ministries carry-out self-evaluations for all projects using a standardised template, which are then reported to the 2050 Carbon Neutrality Committee. Ministries score the project based on several qualitative criteria (e.g. level of collaboration, compliance with the budget, target achievement...) and measured on a four-point scale (very good, good, normal, insufficient)."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 5,
+      "cited_text": "A review of implementation progress through indicators and metrics then informs adjustments in the plan before embarking on another cycle of risk assessment and planning. In Vietnam, the MEL logical framework illustrates a bottom-up structure where key indicators of action, risk reduction, and improvements in adaptative capacity are synthesized at project, provincial, and sectoral levels to determine the overall effectiveness of the NAP. Both Kenya’s NCCAP III and the United Kingdom’s National Adaptation Programme use Theories of Change to link the plans and/or IVRAs with components of their MEL system. Kenya uses a Theory of Change to develop indicators on the basis of the NAP’s macro-level adaptation actions and the adaptation vision, while the United Kingdom’s monitoring maps articulate the contextual priority actions and plans, enablers, desired outcomes, and overarching adaptation goal."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 6,
+      "cited_text": "Ministries, ministerial-level agencies and provincial-level People’s Committees shall: organise the M&E of CCA activities under their respective scope of management; synthesise and report annual M&E results to the Ministry of Natural Resources and Environment. 79 M&E for a specific adaptation activity can be generalized according to the process outlined in Figure 1. Process-based M&E will focus on an implementation process that tracks the progress and level of completion of a particular intervention/project/policy/task, etc. Evaluation helps to assess the status of achieved goals and their impacts and considers issues that need to be supplemented and readjusted. Results-based M&E will focus on assessing how the results of the implementation of adaptation activities have contributed to strengthening adaptive capacity, red cing risks from climate cha ge and improving investment efficiency. It evaluates whether or not the r sults of adaptation activiti s re sustainabl  and replic ble"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 7,
+      "cited_text": "Figure 4.2. Logical framework of the National M&E System 76 National Monitoring, Evaluation, and Learning Systems for Climate Change Adaptation:  A comparative analysis of nine countries relies on an online platform for ministries and sub-national government bodies to report information. The M&E Manual outlines how to use that system. Table A7. Guidelines for information collection and calculation for M&E indicators at the ministerial/sectoral level Source: Tue et al., 2023a, p. 43 (reprinted with permission)."
+    },
+    {
+      "source_id": "35e555e6-1212-491e-8701-141ab607e775",
+      "citation_number": 8,
+      "cited_text": "national systems such as the census Calculation of the indicator Scorecard method using Microsoft Excel. Each scorecard lists 4 to 5 key questions that assess pro- gress in implementing the PPCR activities using a score from 0 (no) to 10 (yes/completely). Qualita-tive self-assessments by the monitoring and evaluation team and relevant stakeholders. Spatial scale National and sub-national Disaggregation  By sector, by gender, by vulnerable groups, by livelihoods, by climate hazards, by regions » list of indicators"
+    },
+    {
+      "source_id": "35e555e6-1212-491e-8701-141ab607e775",
+      "citation_number": 9,
+      "cited_text": "Community surveys on climate information provision and access Calculation of the indicator Numerator = number of people (men and/or women) living in drought- and/or flood-prone areas with access to rainfall forecasts; Denominator = total number of people (men and/or women) living in said drought- and/or flood-prone areas Spatial scale Sub-national Disaggregation  By gender » list of indicators Indicator Number of government staff that have received training on adaptation Sectors Capacity building & mainstreaming Focus of indicator Adaptation action Unit of measurement Person Adaptation relevance Government capacity to deliver adaptation is essential for the integration of adaptation into plan-"
+    },
+    {
+      "source_id": "35e555e6-1212-491e-8701-141ab607e775",
+      "citation_number": 10,
+      "cited_text": "Sectors Capacity building & mainstreaming Focus of indicator Adaptation action Unit of measurement Number Adaptation relevance Climate change is an overarching issue and can affect all sectors and levels. As such it should be considered in all government planning processes. Potential limitations This indicator could be combined with other indicators to assess the level of implementation and associated impacts of those policies, plans and programs. Indicator example Number of policies, plans or programmes introduced or adjusted to incorporate climate change"
+    },
+    {
+      "source_id": "35e555e6-1212-491e-8701-141ab607e775",
+      "citation_number": 11,
+      "cited_text": "Common definition for territorial unit and total number of territorial units Data sources, collection methods National Meteorological Service (SMN), World Meteorological Organization (WMO), National insti- tute for statistics and geography (INEGI) Calculation of the indicator Numerator = total number of existing meteorological stations; Denominator = number of territorial units. Develop maps/networks of climate information coverage by using geopraphic coordinates of meteorological stations. Spatial scale National and sub-national Disaggregation  By territorial unit"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 12,
+      "cited_text": "The JNAP Secretariat coordinates MEL for adaptation and collaborates with the National Planning Division to collect information from relevant implementing ministries. Horizontal integration is more important than vertical integration. National Monitoring, Evaluation, and Learning Systems for Climate Change Adaptation:  A comparative analysis of nine countries Status Purpose Context3 Leadership Institutional arrangements United Kingdom The national MEL system is operational. Assesses progress in implementing the adaptation plans and collates evidence of adaptation actions within public institutions."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 13,
+      "cited_text": "There are also efforts to develop sectoral MEL frameworks, notably in the agriculture sector. This sectoral framework is aligned with the NAP and the Sustainable Development Goal targets and seeks to contribute to the national MEL system (FAO & UNDP, 2023). The development of the framework started with a review of existing tools and indicators followed by consultations with state and non-state stakeholders at the national and sub-national levels. A9.1.2 Key Actors in Vietnam’s MEL System MONRE is the nodal authority for MEL in the country, as outlined in Decision 148/QD-TTg, and the DCC, positioned within the MONRE, carries out the MEL work. The DCC is tasked with collecting data from other national climate-relevant ministries, who themselves might collect data from subministerial units. Further, authorities from the country’s 63 provinces—namely, People’s Committees—are mandated to participate in the MEL system. Figures A14 and A15 illustrate the governance structure of the MEL system, and Figure A16 illustrates the MEL system and the relationship between in-process objectives and intended results."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 14,
+      "cited_text": "ministries also participated in creating indicators and were tasked with making some of their own. Engagement with non-governmental entities, including the private sector and NGOs, is limited, as is direct engagement with marginalized or particularly vulnerable populations. Horizontal and sectoral integration is weaker than vertical integration. Figure A14. M&E Framework and focal points at all levels Source: Socialist Republic of Vietnam, 2022, p. 75 (reprinted with permission). The full national adaptation M&E system is an M&E system covering all levels. M&E information and results at lower levels are collected, aggregated, and serve the M&E at higher levels. At the national level, information serving monitoring and evaluation purpose is collected from ministries, sectors and provinces through M&E reports on CCA activities submitted by ministries, sectors and provinces. MONRE synthesises the M&E results of the country’s CCA activities; the Department of Climate Change is the agency directly assisting the MONRE in this role. In addition to synthesising M&E information and results from provinces, ministries and sectors, MONRE lso synthesises M&E inf rmation from plans, progr ms and p ojects directly managed, operat d and implemented by MONRE."
+    },
+    {
+      "source_id": "b2ddc784-4a60-4be8-b489-2089a5d8bc77",
+      "citation_number": 15,
+      "cited_text": "In the three countries, various accountability mechanisms have been established, but their roles differ. In Kenya, the Climate Change Act of 2016 requires county governments to report on their progress in implementing climate actions to the County Assembly and later to the climate change department at the national level. The cabinet secretary in charge of climate change matters then collates all the information and reports to parliament biennially. However, it is unclear how the accounts rendered by the different administrative units support the verification of how the knowledge is produced or the adequacy of efforts. For instance, the Climate Change Act of 2016 requires county governments to submit annual reports on climate actions to the county assembly for “review and debate” and to the climate change directorate “for information purposes” (Article 19 (5)). Similarly, state departments and other public entities are directed to report to the climate change council, which checks whether their performance is satisfactory (Article 15(5)). This contrasts with the official statistics knowledge stream where there are mechanisms for ensuring accountability in how bureaucrats produce data. For instance, KNBS uses its databases to verify data provided by the various actors and to check for anomalies in the data. The sampling department at KNBS also checks that the appropriate sampling strategy is used. Similarly, in Uganda, the climate change department is expected to submit biennial reports to the minister in charge of climate change issues who then submits the report to the Cabinet for review and approval. The report is then submitted to parliament for feedback. UBOS has established a quality assurance department that ensures that knowledge production follows best practices and methods. The Uganda Bureau of Statistics Act also encourages UBOS to review and approve knowledge production instruments in use at the national and sub-national levels. In Ethiopia, every quarter, the government organizes a high-level meeting with regional representatives and technical officers to discuss the knowledge produced within the period. In addition to assessing the achievements of the various administrative"
+    },
+    {
+      "source_id": "cc6d983c-0c56-4eb0-8aba-f49f603bab88",
+      "citation_number": 16,
+      "cited_text": "By now, NAP evaluations have informed the preparation of successive NAP documents in at least half a dozen countries (e.g., in Chile, Spain and South Korea). Mid-term evaluations have provided inputs for the remaining implementation period in, for instance, Belgium and Cambodia. However, the number of countries that have gone through more than one implementation and reporting cycle (i.e., countries that have adopted the third iteration of their NAP) is still small (Germany, South Korea, United Kingdom). These countries have institutionalized NAP reporting and sequenced it in a way that informs the policy review process. Successive NAP iterations have also been informed by insights from progress reports (e.g., in Germany). Hence, the traditional view from project-level M&E where monitoring and evaluation have well- defined and clearly separate functions (OECD, 2002) does not necessarily apply in the same way to national policy M&E arrangements."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 17,
+      "cited_text": "National Monitoring, Evaluation, and Learning Systems for Climate Change Adaptation:  A comparative analysis of nine countries 4.5 Learning The learning component is determined by the presence of evidence where insights from M&E are integrated into adaptation planning and decision making. The most prominent manifestations of learning are in France and the United Kingdom. In France, once evaluation reports are published, the government organizes environmental conferences where stakeholders discuss the recommendations and chart the best course of action. These reports, together with stakeholder consultations, were central to the formulation of France’s second NAP by informing its scope and approach."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 18,
+      "cited_text": "National Monitoring, Evaluation, and Learning Systems for Climate Change Adaptation:  A comparative analysis of nine countries Learning must be an integral part of MEL for adaptation. Tracking efforts are only worthwhile if they also lead to adjustments in adaptation to climate change. Although learning was not the strongest component in the studied MEL systems, there are examples of how countries are using insights from adaptation M&E to inform adaptation planning and decision making. This includes France, Kenya, and the United Kingdom’s use of evaluations and progress reports to feed back into the next cycles of adaptation plans. At the global level, the global stocktake is fundamental for evaluating progress in achieving the Paris Agreement goals, including the GGA. The findings from this synthesis should be considered in the subsequent planning cycle and catalyze more ambitious commitments and implementation through the NDCs. However, given that the stocktake provides a general overview at the global level, it is necessary for countries to internally reflect on the adequacy and effectiveness of their adaptation actions and make necessary adjustments to their adaptation plans and programs."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 19,
+      "cited_text": "MEL activities began following the publication of the M&E System Guide and SOP. The JNAP Secretariat began working with relevant national-level ministries and the National Planning Division (NPD) to collect data necessary to monitor adaptation and produce the first JNAP 2 progress report and review described in JNAP 2. Data was to be collected from ministries every quarter. However, this monitoring work only occurred for two cycles before the COVID-19 pandemic interrupted work and paused all MEL activities. Currently, the JNAP Secretariat is beginning to restart monitoring efforts. Staff within the JNAP Secretariat are planning workshops for relevant ministries to reintroduce the need for MEL for adaptation and explain how work will be restarted. However, staff turnover, limited resources, and the never-filled MEL officer position have meant that progress on MEL is slow (Government of Tonga, 2018)."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 20,
+      "cited_text": "As previously stated, the MEL system’s primary outputs will be two JNAP progress reports over the 10-year implementation period of JNAP 2 with additional annual reviews. Originally, the JNAP Secretariat planned to collect data for the system every quarter, though it has now been agreed that the frequency was too high. The JNAP Secretariat is now planning on collecting data twice per year. Implementation of the MEL system is defined along six themes: cooperation, financing, resilience-building action, capacity development, knowledge management, and mainstreaming. There are 22 resilience targets, divided into 25 sub-objectives and 92 activities. While JNAP 2 suggests some engagement with non-governmental entities and communities for collecting data, in practice, data collection seems limited to questionnaires distributed to climate-relevant ministries. As previously stated, 11 ministries and 22 focal points contribute to this process."
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 21,
+      "cited_text": "level, an indicator-based risk assessment tool was developed to facilitate local risk understanding of hazard, exposure, and vulnerability. Korea relies on well-structured and complementary methods for its adaptation progress reviews. Since its second NAP, the plan is reviewed frequently, through annual, interim (year 3) and final evaluations (year 5). This regularity helps ministries build capacity to identify implementation gaps, take corrective action and use resources efficiently. All adaptation projects (341 in the last round) are reviewed annually"
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 22,
+      "cited_text": "4.4.1. Measuring progress at the national level The national framework for measuring adaptation progress has been gradually established since the second NAP, with the focus on DIPs. Figure 4.3 outlines the key steps in the NAP3 implementation evaluation procedure. The evaluation of performance of the third NAP, based on policy indicators and public perception indicators, will be brought together in the following processes (see also Table 4.2): An annual review of the NAP’s DIP and a joint performance evaluation of the relevant ministries"
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 23,
+      "cited_text": "identify strategic priorities and objectives, specify their implementation actions and define actors responsible for their execution. 16 local adaptation plans reinforce the national policy instruments. Slovakia’s Ministry of Environment plays a driving role in promoting and mainstreaming adaptation across ministries and levels of government. While adaptation measurement is part of the implementation reporting planned to be carried out as part of the NAS and the NAP, there is limited progress to date. Adaptation measurement is"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 24,
+      "cited_text": "Through the Paris Agreement, countries also established the global stocktake as a periodic process for assessing collective progress in the implementation of climate actions in NDCs and NAPs. By the end of 2024, countries are expected to submit Biennial Transparency Reports (BTRs), so it is critically important that they have systems to track adaptation effectively. Together with the GGA, the Paris Agreement also established the Enhanced Transparency Framework through which countries communicate and report on their climate action commitments and implementation progress, including adaptation. Countries also use other communication-focused instruments, like National Communications and Adaptation Communications (AdComs), to communicate and report on their adaptation needs and progress. Moreover, by establishing the global stocktake as a process to evaluate collective adaptation progress and inform subsequent adaptation plans, the Paris Agreement strengthens the rationale for MEL of adaptation at the global level (Beauchamp & Józefiak, 2023)."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 25,
+      "cited_text": "Global efforts for MEL of adaptation are intricately linked with the evidence provided by national MEL systems. The reports and communications submitted by countries, in the form of AdComs, National Communications, BTRs, NDCs, and NAPs, provide insight into adaptation efforts and progress occurring within countries. The critical link between national MEL systems and reporting is emphasized by the UAE FGCR’s target for the adaptation cycle, which ensures that by 2030, all countries will have “designed, established and operationalized a system for monitoring, evaluation and learning for their national adaptation efforts and have built the required institutional capacity to fully implement the system” (Conference of the Parties serving as the meeting of the Parties to the Paris Agreement, 2024, Art. 10 (d))."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 26,
+      "cited_text": "Recommendations Balance the different accountability purposes served by MEL systems. Countries should design their MEL systems to produce information that can be used for various purposes, even if they have one core objective, such as tracking NAP implementation or international reporting. Data collection methods can be designed to not only take stock of actions that are linked to NAPs but also to capture the efforts of other actors who may not have a formal mandate to implement NAPs. Countries should also strategize how the information can be integrated into other policy processes beyond NAPs. To achieve the underlying objective of assessing the effectiveness and adequacy of adaptation efforts, MEL systems need to assess the outcomes and impacts of adaptation efforts. This same information also needs to be tracked for international reporting. It is therefore more impactful if countries focus on national progress reporting as opposed to tracking adaptation solely to meet international reporting obligations. Although experiences from Namibia show that a lack of capacity can hinder this approach, other countries, such as Kenya, Tonga, and the United Kingdom, are already linking progress reporting on adaptation with UNFCCC instruments such as NAPs, National Communications, or AdComs (Guerdat et al., 2023). These linkages can be expected to grow with the forthcoming BTR exercises."
+    }
+  ]
+}

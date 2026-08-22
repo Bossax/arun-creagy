@@ -1,0 +1,295 @@
+{
+  "answer": "To frame the design of our country’s adaptation MEL system, we must distinguish between the individual outputs of **monitoring**, **evaluation**, and **learning**, and understand how they work together to drive the **adaptation cycle**. \n\nRather than treating them as a single combined concept, isolating their specific products allows us to see how each serves as a distinct building block.\n\n---\n\n### **Individual Outputs of Monitoring, Evaluation, and Learning**\n\n#### **1. Monitoring (M)**\n*   **Definition**: The continuous, systematic tracking of activities, budgets, and operational performance to check if implementation is proceeding as planned [1].\n*   **Typical Outputs**:\n    *   **Tracked indicator datasets**: Regular quantitative and qualitative measurements of process and output indicators (e.g., number of updated building codes, hectares of forest restored) [1-3].\n    *   **Implementation progress trackers**: Status registries or digital dashboards displaying whether specific prioritized actions are \"on track\", \"off track\", or \"completed\" [4, 5].\n    *   **Financial and compliance audits**: Clear accounting of resource expenditures, budget tagging, and alignment with implementation schedules [1, 6, 7].\n    *   **Vulnerability & climate baselines**: Systematic tracking of baseline background variables (e.g., temperature trends, hazard exposure) [8-10].\n\n#### **2. Evaluation (E)**\n*   **Definition**: An in-depth, periodic assessment of the relevance, effectiveness, efficiency, equity, and sustainability of adaptation actions, utilizing monitoring data alongside external research [11].\n*   **Typical Outputs**:\n    *   **Mid-term and end-of-term reports**: Strategic evaluations assessing whether implemented programs actually succeeded in reducing climate risks and vulnerability [11-13].\n    *   **Causal contribution analyses**: Plausible explanations and validation of *why* results occurred, mapping the logical links between policy outputs and systemic resilience outcomes [8, 14-16].\n    *   **Bottleneck & maladaptation reviews**: Investigations that diagnose implementation barriers, resource constraints, or unintended negative consequences [17, 18].\n    *   **Actionable strategic recommendations**: Structured directives to guide high-level policy adjustments and optimize resource allocation [11, 19, 20].\n\n#### **3. Learning (L)**\n*   **Definition**: The collective and deliberate process of acquiring, reflecting on, and sharing knowledge to change or reinforce attitudes, behaviors, and institutional routines [21].\n*   **Typical Outputs**:\n    *   **Convergence and shared understanding**: A unified alignment of stakeholder perspectives regarding complex climate risks and collective solutions [22, 23].\n    *   **Enhanced technical capacities**: Practical adaptation skills and methodological expertise internalized by sectoral staff, local officials, and vulnerable groups [24, 25].\n    *   **Co-defined decision metrics**: Collaborative, context-specific indicators and adjusted Theories of Change that represent multiple stakeholder interests [26, 27].\n    *   **Loop-learning cognitive shifts**: Double- or triple-loop insights that fundamentally challenge underlying cause-and-effect assumptions, strategic priorities, or institutional rules [28, 29].\n    *   **Knowledge transfer mechanisms**: Formal platforms, \"train-the-trainer\" networks, and shared learning agendas that distribute lessons across scales [21, 24, 26].\n\n---\n\n### **Mapping Outputs onto the Adaptation Cycle**\n\nThese distinct outputs are designed to feed directly back into the iterative stages of the national **adaptation cycle**:\n\n```\n                  [PLANNING] \n               ↗            ↖\n      [REVISION]              [IMPLEMENTATION]\n          ↑                        ↓\n       [REVIEW]  ← ── ── ──   [INDICATOR TRACKING]\n```\n\n1.  **Planning**:\n    *   *How outputs feed in*: Previous **evaluation recommendations** and baseline risk data directly shape the priorities and targets of the new adaptation strategy [30-32]. Simultaneously, **collaborative learning** is used to co-design the system of interest and establish agreed objectives [26, 27, 33, 34].\n2.  **Implementation**:\n    *   *How outputs feed in*: Continuous **monitoring trackers** ensure that resources are spent efficiently and activities proceed on schedule [1, 6]. Ground-level **learning mechanisms** (like pilot trials or local workshops) allow sector staff to adapt interventions on the fly [35, 36].\n3.  **Indicator Tracking**:\n    *   *How outputs feed in*: Systematic **monitoring** populates the predefined indicator frameworks to synthesize project-level data into national-level progress [1, 37, 38]. If indicators prove too complex, **learning reflections** trigger iterative adjustments to the tracking metrics [39, 40].\n4.  **Review**:\n    *   *How outputs feed in*: **Monitoring progress reports** show what has been done, while **evaluations** investigate *why* targets were achieved or missed [11, 12, 41]. Stakeholders gather in designated **learning spaces** (such as joint workshops or national conferences) to collectively interpret the evidence [19, 28, 42].\n5.  **Revision**:\n    *   *How outputs feed in*: **Evaluation findings** on effectiveness and adequacy justify high-level shifts in budget allocations or strategic focus [19, 20, 43, 44]. Crucially, **double- and triple-loop learning** drives institutional adjustments—reorganizing structures, revising policy tools, or updating legal mandates to permanently embed the MEL system [28, 29, 45, 46].\n\n---\n\n🔄 We can look at how countries like France or the UK set up their \"Review\" to \"Revision\" interfaces—such as France's post-evaluation environmental conferences—to see how we might design our own national feedback loops. Would you like to explore that next?",
+  "conversation_id": "443784fd-4029-452b-b024-caf0824ec428",
+  "sources_used": [
+    "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "4b786495-205f-473a-ae50-d9c9a35331cc",
+    "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "35e555e6-1212-491e-8701-141ab607e775",
+    "c1fbd835-5022-4736-ab9d-4793ef3fee6e",
+    "302f9da0-a081-4e36-a843-390accad144a",
+    "4e514892-33de-42ee-9be7-04da2c315b31",
+    "9a559729-a5c2-4169-b202-58e49ee8b2e3",
+    "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678"
+  ],
+  "citations": {
+    "1": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "2": "4b786495-205f-473a-ae50-d9c9a35331cc",
+    "3": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "4": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "5": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "6": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "7": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "8": "4b786495-205f-473a-ae50-d9c9a35331cc",
+    "9": "35e555e6-1212-491e-8701-141ab607e775",
+    "10": "35e555e6-1212-491e-8701-141ab607e775",
+    "11": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "12": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "13": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "14": "4b786495-205f-473a-ae50-d9c9a35331cc",
+    "15": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "16": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "17": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "18": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "19": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "20": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "21": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "22": "c1fbd835-5022-4736-ab9d-4793ef3fee6e",
+    "23": "302f9da0-a081-4e36-a843-390accad144a",
+    "24": "302f9da0-a081-4e36-a843-390accad144a",
+    "25": "302f9da0-a081-4e36-a843-390accad144a",
+    "26": "c1fbd835-5022-4736-ab9d-4793ef3fee6e",
+    "27": "302f9da0-a081-4e36-a843-390accad144a",
+    "28": "4e514892-33de-42ee-9be7-04da2c315b31",
+    "29": "9a559729-a5c2-4169-b202-58e49ee8b2e3",
+    "30": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "31": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "32": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "33": "302f9da0-a081-4e36-a843-390accad144a",
+    "34": "302f9da0-a081-4e36-a843-390accad144a",
+    "35": "4e514892-33de-42ee-9be7-04da2c315b31",
+    "36": "9a559729-a5c2-4169-b202-58e49ee8b2e3",
+    "37": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "38": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "39": "4e514892-33de-42ee-9be7-04da2c315b31",
+    "40": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "41": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+    "42": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "43": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "44": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "45": "c1fbd835-5022-4736-ab9d-4793ef3fee6e",
+    "46": "61a7eb9b-ce31-4ee9-b415-75d01b86f124"
+  },
+  "references": [
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 1,
+      "cited_text": "Monitoring Monitoring is the systematic tracking of implementation and performance that helps countries to understand if progress is being made and identify problems. Consequently, it informs decision making. Monitoring provides information to confirm if activities are being carried out as planned, resources are being utilized effectively, and progress is being made toward stated goals. Monitoring involves continuous data collection, observation, and documentation to identify any deviations from the planned course and take corrective action when necessary. Most often, monitoring processes also comprise defining approaches, as well as methods and tools for data collection and analysis, including indicators and targets."
+    },
+    {
+      "source_id": "4b786495-205f-473a-ae50-d9c9a35331cc",
+      "citation_number": 2,
+      "cited_text": "Adaptation indicators can be sub-divided into process, output and outcome-based indicators (e.g. Harley et al. 2008; Swart et al. 2009; Harley and van Minnen 2009; Cundill and Fabricius 2009; UKCIP 2011; Bours et al. 2013). Process-based indicators monitor the policy, institutional and governance processes needed to build capacities to develop and implement adaptation policies, measures and actions. Output-based indicators capture the implementation of adaptation policies. They show that governments and other stakeholders have kept word, but they do not show if vulnerability has been reduced. Output-based indicators include mainstreaming with other (existing) environmental and/or sectoral policies (Ahmad 2009). Outcome-based indicators measure the effectiveness of adaptation policies, measures and actions (see also Spittlehouse and Stewart 2003; Spearman and McGray 2011), including the adaptive capacity of people, institutions and governance structures in relation to the delivery of adaptation policies, measures and actions (Georgi et al. 2012). Process-based and"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 3,
+      "cited_text": "indicators of adaptation actions that capture efforts made to limit exposure (e.g., insurance for houses in flood plains), funding and capacity building, as well as output indicators that assess immediate results (e.g., extent of coastline rehabilitated); and impact indicators that monitor the effectiveness of actions. The 2021 updated list of indicators shows that there are 132 indicators. Some of these are proxy indicators, as they were selected based on data availability from relevant organizations. Examples of such indicators include biodiversity indicators monitored by Defra. A second source of indicators is the in-house indicators developed with expertise from consultants for the CCC who undertake literature reviews. A third subset of indicators is developed through bespoke research designed to understand specific adaptation concerns and develop indicators. This category of indicators is more forward-looking, as the indicators focus on future risks (e.g., changes in peatlands and how they affect water security)."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 4,
+      "cited_text": "4.3 Monitoring and Reporting Compared to the evaluation and learning components of MEL, monitoring appears to be the most advanced component across countries in this sample. Monitoring is essential for taking stock of adaptation efforts undertaken by various actors and their immediate results. All sampled countries have published multiple reports detailing progress in the implementation of adaptation priorities (Table 5). All countries, including Somalia and Namibia, have submitted adaptation reports to the UNFCCC. These reports include National Communications with sections on adaptation and AdComs. In addition to these international reports, some countries—for example, France, Kenya, Tonga, and the United Kingdom— have published progress reports detailing the implementation of adaptation plans. These reports often outline sectoral and national vulnerabilities, adaptation programs and activities implemented during the reporting period, and, in most cases, adaptation needs and priorities moving forward."
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 5,
+      "cited_text": "effectiveness and relevance of the actions taken, both quantitatively and qualitatively. Measuring progress in policy implementation Tracking the implementation status of the actions listed in national or sectoral plans helps gauge whether an action has been completed within a set timeframe and budget. Implementation monitoring is a well- established practice in adaptation. In the UK, the NAP Monitoring Tracker tool demonstrated the status (on-track, off-track, delivered) of each of the 253 actions set out in the second NAP (CCC, 2021[33])."
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 6,
+      "cited_text": "conducts the self-evaluation using a standardised template for all adaptation projects for which they are responsible (286 projects are being reviewed for the 3rd NAP). The ministries assign scores to the performance of each action based on changes from the evaluation results from the previous year. They also look at other factors, such as compliance with the implementation schedule and budget disbursement, or the extent to which the target set out in the plan has been achieved. Surveys and questionnaires: Standardised surveys sent to local governments, sectoral"
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 7,
+      "cited_text": "indicators” (16 indicators), which measure the usefulness and relevance of policy progress, such as “number of national drought information portal users”. Measurement gaps remain. The measurement of adaptation investments remains the focus of implementation progress, including budget execution rates, and lacks an appreciation of results and effectiveness of actions. Also the adaptation indicators reflect progress in the inputs and outputs of each action, rather than their outcomes. The expert judgements used for evaluating policy effectiveness criteria"
+    },
+    {
+      "source_id": "4b786495-205f-473a-ae50-d9c9a35331cc",
+      "citation_number": 8,
+      "cited_text": "Specific challenges for adaptation monitoring Proposed solutions Coping with uncertainties Adaptive monitoring Design for learning Addressing shifting baselines Monitor background variables for climate and economy Demonstrating contribution (we use of contribution rather than attribution, acknowledging that an outcome is a combined effect of several factors; see Bours et al. 2014, point 9) Use theories of change to describe causal mechanisms Combine qualitative, quantitative and binary indicators"
+    },
+    {
+      "source_id": "35e555e6-1212-491e-8701-141ab607e775",
+      "citation_number": 9,
+      "cited_text": "Those indicators that are associated with efforts to integrate adaptation into planning or to build capacity for adaptation in general (i.e. not sector-specific) are captured under “Mainstreaming/Capacity Building.” Focus of indicator: The aspect of adaptation the indicator is trying to capture. These are broadly divided into: Climate parameters: Information about observed climatic conditions – e.g. temperature, rainfall, ex- treme events – that help track the climatic context within which adaptation strategies are being im-"
+    },
+    {
+      "source_id": "35e555e6-1212-491e-8701-141ab607e775",
+      "citation_number": 10,
+      "cited_text": "plemented. Climate impacts: Information about the observed impacts of climate variability and change on socio- ecological systems – e.g. number of people displaced due to floods – to help track the climate context within which adaptation strategies are being implemented. Adaptation action (implementation): Information to help track the implementation of adaptation strategies – e.g. number of awareness raising workshops organised, % of building codes updated, etc. Adaptation results (outcome): Information to help monitor and evaluate the outcomes of adaptation"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 11,
+      "cited_text": "Evaluations Evaluations use both monitoring data and information from additional sources, such as research results and external evidence, to determine the performance or success of implementation of adaptation policies, plans, and processes, per their stated goals. Whereas monitoring tracks implementation and looks at trends in performance, evaluation involves a more comprehensive and in-depth analysis of specific performance-related criteria, such as relevance, effectiveness, efficiency, coherence, equity, and sustainability. Evaluations may be carried out for adaptation policies, NAP processes, and programs or for specific aspects, projects, and initiatives linked with adaptation."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 12,
+      "cited_text": "The findings show that all nine countries have initiated work and have at least partly functional MEL systems for adaptation and NAP processes. Among these countries, the operationalization of MEL systems focuses primarily on monitoring and progress reporting, while evaluation and learning remain less developed. Some countries, such as France, the United Kingdom, and Vietnam, have more advanced MEL systems, where the focus has turned to evaluation and learning, while others have just started to develop their MEL frameworks—for example, Somalia. The research conducted for this report shows that there is no one-size-fits-all approach to this work and that MEL systems must fit national contexts and needs, capitalizing on existing monitoring and evaluation systems. This research further shows that establishing a MEL system is generally an incremental process in which components are added over time, taking into account the country’s circumstances, capacities, adaptation needs, and goals."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 13,
+      "cited_text": "PNACC-1 (2011–2015) mandates ONERC within the Directorate General for Energy and Climate Directorate General for Energy and Climate to monitor adaptation actions yearly based on indicators defined in PNACC-1. PNACC-1 also directs the Directorate General for Energy and Climate to convene an Adaptation Plan Evaluation Committee comprised of civil service representatives tasked with implementing PNACC-1, representatives from the Grenelle Environment Monitoring Committee specializing in adaptation issues, and representatives from the scientific community (Ministry of Ecological Transition and Territorial Cohesion, 2011, p. 19). This evaluation committee is responsible for producing mid-term and end-of-term evaluation reports detailing the results achieved, including those at the local level, and making recommendations."
+    },
+    {
+      "source_id": "4b786495-205f-473a-ae50-d9c9a35331cc",
+      "citation_number": 14,
+      "cited_text": "Mitig Adapt Strateg Glob Change (2018) 23:187–209 191 policy areas and sectors may have relevance to adaptation and be able to link measures and actions back to the NAS. Problems associated with attribution can be reduced through a clear description of the system(s) being monitored and through hypotheses or causal chains outlining how policies, measures and actions are likely to contribute to an intended objective (GIZ 2013a). This allows the contribution of a policy, measure or action to a certain outcome to be plausibly stated."
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 15,
+      "cited_text": "rely on qualitative assessments of the impact of their policies. For example, some countries adopt a theory of change approach to understand the causal relationship between actions and results. This approach links inputs to outputs, outcomes and finally overall impacts (Table 1.4) and enables a qualitative discussion on which part of the results can be attributed to the policy action. In Germany’s evaluation of its NAS, it assessed adaptation impacts by establishing plausible causal relations between inputs,"
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 16,
+      "cited_text": "Attribution While there is growing experience of tracking progress across OECD countries, including the UK, there is a need to move towards understanding the outcomes and impacts of policies and actions. Attribution aims to evaluate the contribution of an adaptation policy or action to a certain outcome. It is, however, difficult to identify the factors that shape adaptation outcomes, notably because of the long timescales of adaptation interventions. Adaptation is an ongoing process that is mainstreamed across various policy"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 17,
+      "cited_text": "A9.4 Evaluation In the NAP and the M&E Manual, evaluation is broadly framed as evaluating the effectiveness of adaptation activities in terms of reduced vulnerability, enhanced resilience, adaptive capacity and reduced loss and damage caused by climate change; provide a foundation for the management, coordination, and improvement of the effectiveness of adaptation activities and the state of management of climate change. (Socialist Republic of Vietnam, 2022, p. 33) The DCC is undertaking an evaluation of the NAP process in 2024 to inform an update of the NAP and accelerate the implementation of adaptation priorities. The evaluation is supported by the NAP Global Network and is due to be finalized by the end of 2024."
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 18,
+      "cited_text": "options, as well as essential elements of an action plan (e.g. accounting for different emission scenarios, establishing instruments to mainstream adaptation, estimation of investment needs) and an M&E framework (EC, 2023[54]). In parrallel, some countries (Czechia, Finland and Ireland) qualitatively review the challenges, barriers, maladaptation and potential limits identified in the implementation of measures (UNFCCC, 2022[9]). Generally, adaptation actions can result in a spectrum of outcomes, ranging from maladaptation to"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 19,
+      "cited_text": "National Monitoring, Evaluation, and Learning Systems for Climate Change Adaptation:  A comparative analysis of nine countries 4.5 Learning The learning component is determined by the presence of evidence where insights from M&E are integrated into adaptation planning and decision making. The most prominent manifestations of learning are in France and the United Kingdom. In France, once evaluation reports are published, the government organizes environmental conferences where stakeholders discuss the recommendations and chart the best course of action. These reports, together with stakeholder consultations, were central to the formulation of France’s second NAP by informing its scope and approach."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 20,
+      "cited_text": "The uninterrupted provision of clean water to households needs to be maintained in a changing climate National Monitoring, Evaluation, and Learning Systems for Climate Change Adaptation:  A comparative analysis of nine countries progress and sectoral monitoring), and then go back to implementation and planning. Third, the CCC produces adaptation progress reports that provide a set of recommendations for each thematic area, with a designated government agency responsible for implementation and timelines. These recommendations have been considered in the subsequent adaptation planning and implementation processes. The design of the fourth cycle of tracking adaptation also considers the recommendations from the third round and the stakeholder consultations. The subsequent progress reports also note the recommendations not addressed during the reporting period."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 21,
+      "cited_text": "Learning Learning in the context of MEL for adaptation is defined as the collective and deliberate process of acquiring, assessing, and disseminating new knowledge that results in changed or reinforced knowledge, attitudes, and behaviours related to climate change adaptation (adapted from Heikkila & Gerlak, 2013). This definition underscores that learning is both a process and an outcome. The process of learning through dedicated activities involving acquiring, assessing, and sharing new knowledge does not on its own constitute learning. For example, countries can do monitoring and evaluation (M&E) without learning, and the inverse is also true—countries can learn about adaptation outside of M&E activities—for example, through research and training (Dekens & Harvey, 2024). The learning process needs to lead or contribute to some form of outcome, such as a change in knowledge, attitudes, or behaviours within the iterative adaptation cycle."
+    },
+    {
+      "source_id": "c1fbd835-5022-4736-ab9d-4793ef3fee6e",
+      "citation_number": 22,
+      "cited_text": "Social learning is frequently defined as a convergent change in stakeholders’ perspectives on a particular problem and its possible solutions in light of both their own and other stakeholders’ views, interests, and positions with regard to the problem. Such social learning achieves a change in understanding that goes beyond the individual toward collectives and social networks. Some studies describe how social learning creates the basis for integrated solutions that require collective support and/or concerted action by multiple stakeholders (e.g. McCrum et al. 2009; Huntjens et al. 2011; Baird et al. 2014). McCrum et al. (2009) show that social learning emerges from knowledge exchange and recognize that knowledge is contested, socially constructed, and used in specific contexts. Social learning challenges all actors to consider alternative perspectives, making learning a dynamic and transformative process. Social learning is defined by McCrum et al. (2009) as a form of collective reflection and action to improve the management of human and environmental interrelations."
+    },
+    {
+      "source_id": "302f9da0-a081-4e36-a843-390accad144a",
+      "citation_number": 23,
+      "cited_text": "Two key elements of stakeholder involvement in adaptation pathways are co- creation and collaborative learning (Werners et al. 2021). We consider co- creation as a spectrum with varying degrees of stakeholder influence, ranging from applied research to transformative interventions where stakeholders actively shape both process and outcomes (Dannevig et  al.  2022; van der Voorn et al. 2017). Collaborative learning facilitates capacity building through knowledge exchange, creating shared understanding of adaptation challenges and developing skills needed for pathway development (Hermans et al. 2017). Collaborative learning, grounded in experiential learning cycles (Morris 2020; Park et al. 2012), involves coordinating with stakeholders what, where, and when to learn, with emphasis on process, dissemination, and follow- up (Weber et al. 2018). Additionally, stakeholders through collaborative learning can identify decision- critical performance metrics supporting pathway planning (Werners et al. 2021)."
+    },
+    {
+      "source_id": "302f9da0-a081-4e36-a843-390accad144a",
+      "citation_number": 24,
+      "cited_text": "Several cases focused specifically on addressing community adaptive capacity and policy integration objectives. These approaches often emphasized the integration of adaptation strategies into existing planning and decision- making processes, recognizing the importance of working within established institutional frameworks while promoting transformative change where possible. In practice, this resulted in either a clear learning process (to internalize the adaptation pathways in organizations or individuals) or to consider the feasibility of the adaptation pathways from a policy perspective. An example of a clear learning process was the co- production of knowledge with the aim of creating inclusive climate adaptive management actions to manage risk and foster implementation in New South Wales, Australia (Jacobs et al. 2018). This included exploring the governance roles in an opaque, complex context of the national park and wildlife service of the New South Wales government. Working at strategic and implementation levels with diverse stakeholders (tourism, fire management, heritage, and park management) and vulnerable groups (Aboriginal communities), they adopted a “train the trainer” approach to co- produce knowledge for organizing workshops and to further disseminate knowledge produced in the workshops. The results included the ongoing implementation of adaptation policy, communication, and adaptation workshops (Jacobs et al. 2018). Other examples of policy- focused approaches are the explicit embedding of the DAPP in national guidance that is also accessible for communities (Lawrence et al. 2019) or directly linking preferred climate"
+    },
+    {
+      "source_id": "302f9da0-a081-4e36-a843-390accad144a",
+      "citation_number": 25,
+      "cited_text": "17577799, 2026, 1, D ow nloaded from  https://w ires.onlinelibrary.w iley.com /doi/10.1002/w cc.70038 by SE A  O R C H ID (T hailand), W iley O nline L ibrary on [21/08/2026]. See the T erm s and C onditions (https://onlinelibrary.w iley.com /term s-and-conditions) on W iley O nline L ibrary for rules of use; O A  articles are governed by the applicable C reative C om m ons L The first cluster, “instrumental learning” focused on knowledge distribution where learning served primarily to advance pathway creation through (transactional) information sharing (e.g., Dias et  al.  (2020)). The second cluster “process- integrated learning” emphasized bi- directional learning between stakeholders and researchers, leading to new insights about both problems and uncertainty management (e.g., Carstens et al. (2019)). The trade- off between these clusters is related to the resource requirements (more extensive stakeholder interaction for process- integrated learning) and reported impacts (more likely with process- integrated learning). This trade- off, however, is only valid in the case that the purpose of a (research)- project directly relates to learning. The relationship between participation and learning was particularly evident in cases with high stakeholder engagement. The described learning impacts include more extensive implementation skills, improved understanding of stakeholder roles, and increased capacity for leadership among vulnerable groups. The effectiveness of participatory approaches was further demonstrated through successful integration with existing institutional structures supporting the value of polycentric governance in adaptation pathway development (Hill et al. 2020; Lawrence et al. 2019). Similar work accommodating regional characteristics and acknowledging context was observed in the cases by Uyttewaal et al. (2024) and"
+    },
+    {
+      "source_id": "c1fbd835-5022-4736-ab9d-4793ef3fee6e",
+      "citation_number": 26,
+      "cited_text": "Nevertheless, there is no unified agreement on how to operationalize learning in the publications reviewed, and the suggested frameworks draw on diverse theoretical backgrounds. Axelsson et al. (2013) suggest an analytical framework to assess learning that proposes five criteria, including ownership, stakeholder participation, the processes leading to explicit knowledge, observable results, and networks. To address governance and policy formulation problems, Schout (2009) suggests a framework to position organizational learning in the context of governance learning in the EU’s multi-level administration. The framework differentiates between three interrelated categories – organizational learning, instrumental learning, and governance learning – to analyze positive or desired changes by policy implementation. Drawing on experience with communities of practice, Reed et al. (2014) describe key elements that encourage learning leading to concerted action. These elements include: the convergence of goals, criteria, and knowledge, leading to more accurate mutual expectations and building trust and respect in relations; co-creation of knowledge needed to understand issues and practices; and/or a change in practices, norms, and procedures arising from the development of a mutual understanding of issues."
+    },
+    {
+      "source_id": "302f9da0-a081-4e36-a843-390accad144a",
+      "citation_number": 27,
+      "cited_text": "2.1.2   |   Collaborative Learning Building on the collaborative learning conceptualization in adaptation and pathways literature by Weber et al.  (2018) and Werners et  al.  (2021), our analysis operationalizes collaborative learning through four interconnected sub- elements as shown in Figure  1: (1) defining learning goals that acknowledge diverse value systems and knowledge frameworks, (2) establishing mechanisms for distributing and sharing knowledge across institutional boundaries and knowledge cultures, (3) implementing structured processes for reflection and adjustment that can accommodate contested viewpoints, and (4) co- defining decision- critical metrics that represent multiple stakeholder perspectives. This operationalization responds directly to Bosomworth et al.'s  (2017) call for better engagement with contested values and institutional dimensions in adaptation pathway planning. Collaborative learning plays a dual role in the pathways process: it serves as both a desired outcome and an essential component of the methodology itself. While this"
+    },
+    {
+      "source_id": "4e514892-33de-42ee-9be7-04da2c315b31",
+      "citation_number": 28,
+      "cited_text": "Learning in Adaptation MEL is operationalized through iterative review, structured participation, and embedded knowledge use. Learning is operationalized across three linked facets: processes, tools, and parties/roles. In this literature, learning is usually not a separate end-stage product; it is an iterative function built into adaptation planning, monitoring, evaluation, review, and adjustment (Goodwin & Olazabal, 2025; Van Den Berg et al., 2023; Coger et al., 2021). Learning Processes Learning is most often operationalized as a recurrent cycle: collect information, interpret it jointly, reflect on whether actions and assumptions were right, then revise plans, practices, or institutions (Tschakert & Dietrich, 2010; Butler et al., 2016; Van Den Berg et al., 2023). The literature describes this as learning-by-doing, often with single-, double-, and sometimes triple-loop learning, where actors move from improving actions to questioning causal assumptions and even underlying norms or institutional rules (Butler et al., 2016; Gonzales-Iwanciw et al., 2020; Baird et al., 2014)."
+    },
+    {
+      "source_id": "9a559729-a5c2-4169-b202-58e49ee8b2e3",
+      "citation_number": 29,
+      "cited_text": "ACM is potentially applicable to climate change adaptation because of the necessity to engage private and public actors across societal levels, to build their adaptive capacity, and to develop and implement policy and collective action through collaboration (Plummer, 2013). ACM’s characteristic focus on learning is especially relevant because both individual and social learning are pre-requisites for adaptation (Pelling, 2011). Within this, double-loop (re-visiting of assumptions about cause and effect) and triple-loop learning (re-assessing underlying values and beliefs, potentially resulting in changes to institutional norms; Pahl-Wostl, 2009; Reed et al., 2010) are particularly important because they can identify and challenge the systemic causes of communities’ vulnerability to climate change (Pelling, 2011; Rodima-Taylor et al., 2012). In addition, interventions which apply ACM principles to link actors across sectors and scales can ‘prime’ them to implement adaptation processes (Baird et al., 2014)."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 30,
+      "cited_text": "IVRAs are fundamental to developing an adaptation rationale, informing adaptation priorities, and potentially as the basis for assessing adaptation progress. Most of the sampled countries have undertaken sectoral and/or national vulnerability assessments as part of adaptation planning (Table 4). This aligns with a recent study of measurement systems for adaptation, in which 80% of sampled OECD countries reported to have developed a national or sectoral IVRA (OECD, 2024). The linkages between IVRAs, adaptation planning, and MEL are often implicit. In most countries, the MEL system is designed to monitor progress in implementing prioritized adaptation actions and predefined targets, which are presumed to correspond to the risks identified in the IVRA. Notable exceptions are the United Kingdom, Canada, and Vietnam, which explicitly articulate a logical framework that establishes these linkages. In the United"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 31,
+      "cited_text": "A1.2 Approaches to MEL for Adaptation A1.2.1 Links With Adaptation Plans and Impact, Vulnerability, and Risk Assessments (IVRAs) Canada’s NAS is based on an adaptation cycle that covers various elements, including assessment of risk, identification of priority actions, and assessment of progress, which informs adjustments (Figures A1 and A2). The development of the NAS and the Federal Action Plan was informed by a series of sectoral and thematic climate risk assessments conducted between 2016 and 2022 (Figure A3). The risk assessments were led by various organizations, including Natural Resources Canada, ECCC, and Health Canada. As a manifestation of the linkages between climate risk assessment, adaptation planning, and MEL, priority adaptation actions"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 32,
+      "cited_text": "A8.2 Approaches to MEL for Adaptation A8.2.1 Links With Adaptation Plans and IVRAs Adaptation and assessment of adaptation progress in the United Kingdom are anchored in climate change risk assessments (CCRAs), and the corresponding priority actions are articulated in the NAP. CCRAs consider the level of risk and if it is being managed. They also establish if there is a need to prioritize particular risks during the subsequent 5-year NAP. As such, CCRAs help to prioritize risks based on urgency, while MEL contributes to a better understanding of how those risks are managed. CCRAs are conducted every 5 years. The first CCRA was conducted in 2012, and the corresponding NAP was established in 2013. The second cycle started with a climate risk assessment in 2016 and the adoption of a second NAP in 2018. The third CCRA was conducted in 2022, and the third NAP was published in 2023. A fourth CCRA is planned for 2027, with the adoption of a fourth NAP in 2028."
+    },
+    {
+      "source_id": "302f9da0-a081-4e36-a843-390accad144a",
+      "citation_number": 33,
+      "cited_text": "2   |   Methods 2.1   |   Theoretical Framework To address the identified knowledge gaps in published literature, we developed a theoretical framework that integrates co- creation and collaborative learning approaches within adaptation pathway development (see Figure 1). Our framework operationalizes co- creation using Dannevig et al.'s (2022) spectrum- based conceptualization, ranging from applied research to transformative co- productive interventions (more details in Figure  1 and Section 2.1.1). While collaborative learning is analyzed through four interconnected elements: defining learning goals, establishing knowledge- sharing mechanisms, implementing reflection processes, and co- defining decision metrics (Weber et al. 2018; Werners et al. 2021). This theoretical framework supports systematic documentation on the operationalization of pathways approaches. Which directly responds to calls for better engagement with contested values, including conflicting stakeholder interests, incentives, institutional barriers and power dynamics (Werners et al. 2021), and detailed methodological documentation of adaptation pathways processes."
+    },
+    {
+      "source_id": "302f9da0-a081-4e36-a843-390accad144a",
+      "citation_number": 34,
+      "cited_text": "by the case- study of Carstens et al. (2019), where stakeholders indicate a learning process on climate- related uncertainties and acknowledged that collectively they found more challenges than each of them individually had conceived prior to the workshops. The complex interplay of uncertainty and perceived problems by different stakeholders is acknowledged by Maru et al. (2014), considering the root causes of vulnerability in local capacity building. Campos, Vizinho, et al. (2016) and Campos, Alves, et al.  (2016) add that without diverse knowledge backgrounds and social learning, pathways might fail to identify and respond to perceived barriers. Monitoring and evaluation emerged as a key differentiator between the two approaches. In process- integrated learning cases, monitoring and reflection help participants understand the relationship between different steps in creating pathways (Totin et al. 2021). This improves stakeholder understanding through collegiate collaboration and co- design of the process (Basco- Carrera et al. 2017; Carstens et al. 2019; Lawrence et al. 2019; Magnan and Duvat 2018). In turn, learning becomes an impactful factor in the pathways development processes, which requires the allocation of time and resources to monitor and support learning. Given the extensive participatory methods already applied in this cluster, this would not constitute a significant investment beyond the requirements for co- organizing pathways sessions. Vice versa, process- integrated learning is unlikely if stakeholder involvement is limited, given the interactions required for extensive learning."
+    },
+    {
+      "source_id": "4e514892-33de-42ee-9be7-04da2c315b31",
+      "citation_number": 35,
+      "cited_text": "References Baird, J., Plummer, R., Haug, C., & Huitema, D. (2014). Learning effects of interactive decision-making processes for climate change adaptation. Global Environmental Change-human and Policy Dimensions, 27, 51-63. https://doi.org/10.1016/j.gloenvcha.2014.04.019 Facilitators and brokers help create learning spaces, mediate disciplines, and sustain reflection across scales (Butler et al., 2016). Sector staff and local actors often do the practical review, data interpretation, and adaptation of interventions (Van Den Berg et al., 2023; Coger et al., 2021). Administrative systems matter because coordination, accountability, and existing knowledge flows determine whether learning is actually used (Lucy et al., 2022; Njuguna et al., 2023)."
+    },
+    {
+      "source_id": "9a559729-a5c2-4169-b202-58e49ee8b2e3",
+      "citation_number": 36,
+      "cited_text": "Phase 3 Implementing adaptation Implementation of innovations in arenas that trial, monitor and learn (highest-scoring): All of the strategy trials had been implemented in the case studies, and 6-monthly evaluations were carried out by the Tim Kolaboratif to provide on-going reflection and learning. The national Ministry for Regional Development also signed agreements with UNRAM to scale-out two trialled adaptation strategies to other sub-districts. However, none of the other priority strategies included in each case study’s development plan had been included in their 2013–2014 musrenbang, or implemented."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 37,
+      "cited_text": "A review of implementation progress through indicators and metrics then informs adjustments in the plan before embarking on another cycle of risk assessment and planning. In Vietnam, the MEL logical framework illustrates a bottom-up structure where key indicators of action, risk reduction, and improvements in adaptative capacity are synthesized at project, provincial, and sectoral levels to determine the overall effectiveness of the NAP. Both Kenya’s NCCAP III and the United Kingdom’s National Adaptation Programme use Theories of Change to link the plans and/or IVRAs with components of their MEL system. Kenya uses a Theory of Change to develop indicators on the basis of the NAP’s macro-level adaptation actions and the adaptation vision, while the United Kingdom’s monitoring maps articulate the contextual priority actions and plans, enablers, desired outcomes, and overarching adaptation goal."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 38,
+      "cited_text": "The findings show that all countries reviewed have initiated work and have at least partially functional MEL systems for adaptation. Operationalization, however, focuses on monitoring indicators and progress reporting, while activities around evaluation and learning are less systematic. These results echo the findings from recent studies on national MEL systems for adaptation by the FAO and UNDP (2023) and the OECD (2024). This study was also realized as an update and extension of a previous study on national efforts in MEL systems across 10 countries, Monitoring and Evaluating Adaptation at Aggregated Levels: A Comparative Analysis of Ten Systems (Hammill & Dekens, 2014; referred to herein as “the 2014 study”). Progress on MEL systems for adaptation has been significant over the past decade. When compared with the status of aggregated M&E systems included in the 2014 study, we observe six areas of progress. Over the past decade of evolution of MEL systems for adaptation, countries have accomplished the following tasks."
+    },
+    {
+      "source_id": "4e514892-33de-42ee-9be7-04da2c315b31",
+      "citation_number": 39,
+      "cited_text": "<mermaid_diagram chart=\"flowchart LR; A[Monitor] --> B[Interpret]; B --> C[Reflect]; C --> D[Revise]; D --> E[Act]; E --> A; C --> F{Deeper shift?}; F -->|No| D; F -->|Assumptions| G[Double-loop]; F -->|Values| H[Triple-loop]; G --> D; H --> D\" title=\"Adaptation Learning Cycle\" descriptions='@@json@@:{\"Monitor\":\"Track implementation, context, and emerging effects using quantitative and qualitative evidence.\",\"Interpret\":\"Compare evidence across actors and knowledge sources to make sense of results.\",\"Reflect\":\"Review successes, failures, and unintended effects, including why outcomes differed.\",\"Revise\":\"Adjust indicators, strategies, responsibilities, or assumptions before the next cycle.\",\"Act\":\"Implement modified actions through planning, delivery, or governance routines.\",\"Deeper shift?\":\"Decide whether learning only fine-tunes actions or also challenges"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 40,
+      "cited_text": "Indicators were designed using a stepwise process and evaluated based on the SMART (specific, measurable, assignable, realistic, and time-bound) criteria (Socialist Republic of Vietnam, 2022; Tue et al., 2023a). This design took place with input from ministries and other sub-national government bodies mandated to participate in the MEL system. There were difficulties in the first cycle of MEL, as some indicators have proven too complex or challenging to measure. Ideally, these concerns will be addressed in subsequent cycles using feedback from ministries and sub-national bodies."
+    },
+    {
+      "source_id": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+      "citation_number": 41,
+      "cited_text": "The cases also suggest that “why did we miss the target?” is usually not housed as an autonomous research function inside national MEL. Root-cause diagnosis more often sits within sectoral technical units, existing evaluation processes, or ad hoc review bodies, while central coordinators aggregate, flag, and convene rather than perform detailed causal investigation themselves (Klostermann et al., 2015; Njuguna et al., 2023). The broader literature largely supports the prior finding that “research” is not a standard fourth stage in national adaptation MEL; the dominant cycle remains risk assessment, planning, implementation, and MEL, though some non-adaptation literatures use MERLA or MERL variants where research is an enabling input rather than a separate governance stage (Nowak et al., 2024; Stelmach et al., 2021)."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 42,
+      "cited_text": "A2.5 Learning Learning in the context of adaptation tracking and planning is supported by a series of M&E reports, whose findings are considered in subsequent decisions. There are also environmental conferences during which relevant actors reflect on the recommendations of progress reports and provide guidance on further actions. For instance, one of the key recommendations from the 2014 Environment Conference was to strengthen France’s adaptation strategy. Consequently, the General Council for the Environment and Sustainable Development was mandated to evaluate PNACC-1. The findings of the evaluation were presented to ONERC and later submitted to CNTE."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 43,
+      "cited_text": "Financing NAP PROCESS ENABLING FACTORS Pl an ni ng NAP PROCESS Im plem entation Evaluation: Appraisals and planning assessments Evaluation: End and impact evaluations Monitoring, Evaluation, & Learning Process Evaluation: Mid- and during-term evaluations National Monitoring, Evaluation, and Learning Systems for Climate Change Adaptation:  A comparative analysis of nine countries The overarching aim of MEL systems is to inform policies and practices from the data and evidence generated by the iterative process of tracking, assessing, and learning throughout the national adaptation plan (NAP) and other adaptation planning processes. The information generated from MEL activities produces insights for iterative learning of what works or does not, who benefits from adaptation actions, and how those results were achieved throughout the adaptation policy, planning, and implementation processes. The different activities that countries undertake under MEL are closely connected, as shown in Figure 1 (Beauchamp et al., 2024)."
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 44,
+      "cited_text": "making?”, out of a total of 30 respondents to the questionnaire. Responding countries that have adopted a revised NAS or NAP and also conducted an implementation assessment of the preceding NAS or NAP (first row, left bar) are Austria, France, Germany, Korea, Portugal, Spain and the UK. Source: (OECD, 2022[2]), OECD Survey on Measuring Progress in Implementing National Adaptation Policies. Details in Annex A. The findings from adaptation measurement can also inform adaption budgeting decisions by identifying"
+    },
+    {
+      "source_id": "c1fbd835-5022-4736-ab9d-4793ef3fee6e",
+      "citation_number": 45,
+      "cited_text": "Changes in policies can reflect learning taking place at the level of formal institutions and governments. Rojas et al. (2009) suggest a process by which lessons from past policies can be integrated into decision-making processes to enhance management and governance. Huntjens et al. (2011) favor organizational learning approaches and apply the concept of double- and triple-loop learning to distinguish different levels of policy learning taking place in governance of adaptation processes. Steele et al. (2014) draw on new institutionalism approaches as a theoretical lens for understanding and learning from complex questions, such as why particular governance agendas emerge, how they form, how they become mobilized and translated into action, including the role of key actors and collaborative networks in these processes."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 46,
+      "cited_text": "4. Updated MEL systems in line with adaptation plans. Almost all countries have significantly refined their MEL systems. In 2014, Kenya was just beginning to conceptualize its MEL framework, and the United Kingdom had only recently started developing more detailed adaptation tracking mechanisms. Now the two countries have updated their national plans, with a continued mandate and description of processes for MEL for adaptation. For example, since 2014, Kenya has adopted a NAP that operationalizes adaptation priorities in the NCCAP and assesses progress. Kenya also now has a Climate Change Act that formalizes adaptation tracking, including designating the roles of state and non-state actors. Consequently, Kenya’s agriculture sector has established a strategy, implementation framework, and tools for tracking adaptation efforts (see also FAO & UNDP, 2023). Kenya has also published several progress reports."
+    }
+  ]
+}

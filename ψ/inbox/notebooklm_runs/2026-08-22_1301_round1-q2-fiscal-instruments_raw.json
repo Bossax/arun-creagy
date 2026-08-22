@@ -1,0 +1,157 @@
+{
+  "answer": "In designing an adaptation Monitoring, Evaluation, and Learning (MEL) system under constraints similar to Thailand's DCCE—where the central coordinator has coordination authority but lacks a strong statutory command mandate, a direct budget-review role, or strict reporting enforcement power—the comparative sample offers critical, real-world lessons [1, 2]. \n\nThe overarching consensus across global case studies is that **central climate coordinators without command authority only succeed when they \"piggyback\" on stronger, pre-existing authorizing environments** (such as national budget processes or centralized planning systems) rather than establishing parallel, climate-only reporting loops [3-5].\n\nHere is how specific countries successfully operationalized fiscal and budget instruments to establish routine sectoral reporting:\n\n---\n\n### **1. Trust-Fund Financial Conditionality: The \"Funding-for-Data\" Link**\n*   **Country Example**: **Bangladesh** [6].\n*   **The Instrument**: The **Climate Change Trust Fund (CCTF)**, a national fund established with \\$300 million allocated directly from the government's own domestic budget [6].\n*   **How it was Operationalized**: \n    Rather than requesting voluntary updates on adaptation progress, the government tied reporting obligations directly to the disbursement and management of CCTF funds [7]. \n    *   The Ministry of Environment and Forests (MOEF) was designated as the lead agency tasked with undertaking **monthly monitoring** of all projects financed by the CCTF [7].\n    *   To secure continued monthly fund disbursements and project approvals, implementing line ministries and sectoral agencies were operationally required to submit progress data and monthly tracking inputs to the MOEF climate change unit [7, 8]. \n    *   Furthermore, Bangladesh aligned its Strategic Program for Climate Resilience (SPCR) under the focal point of the **Economic Relations Division of the Ministry of Finance (MOF)**, ensuring that climate funding streams were structurally wired into mainstream public financial management (PFM) [9].\n\n---\n\n### **2. Inter-Agency Questionnaire Integration: Piggybacking on Planning**\n*   **Country Example**: **Tonga** [10, 11].\n*   **The Instrument**: Existing National Planning Division (NPD) routine corporate monitoring templates [10, 12].\n*   **How it was Operationalized**: \n    Tonga's JNAP Secretariat (the climate coordinator) faced severe capacity constraints and lacked a dedicated MEL officer [13]. To get line ministries to report on Joint National Action Plan (JNAP 2) activities, the Secretariat did not build a new reporting system [11].\n    *   Instead, they **partnered directly with the National Planning Division (NPD)**, which already operated a mandatory, non-negotiable quarterly monitoring cycle for all government corporate plans [10, 12].\n    *   The JNAP Secretariat **added a specific climate-adaptation questionnaire directly onto the existing quarterly corporate planning questionnaires** distributed by the NPD [10].\n    *   Line ministries responded to these integrated questionnaires because they were already administratively required to do so by the central planning authority [11]. The NPD then routed the adaptation-specific responses straight to the JNAP Secretariat for collation and progress report synthesis [10, 12].\n\n---\n\n### **3. Climate Budget Tagging (CBT) and Expenditure Linkages**\n*   **Country Examples**: **The Philippines** and **Indonesia** [14, 15].\n*   **The Instrument**: Budget circulars, climate-expenditure coding, and budget-coded expenditure lines [16, 17].\n*   **How it was Operationalized**:\n    *   **The Philippines**: The government integrated Climate Change Expenditure Tagging (CCET) directly into the national budget preparation process [14, 17]. During the annual budget formulation, the Department of Budget and Management (DBM) issues a **joint budget circular** mandating that all line ministries identify and \"tag\" climate-responsive activities using specific PFM codes [14, 16]. Line ministries comply because tagging their proposals is a prerequisite for budget approval and is structurally associated with securing larger climate-finance allocations [14].\n    *   **Indonesia**: Indonesia similarly launched budget-coded expenditure lines to tag sub-national and national climate financing [14, 18]. However, Indonesia's experience also highlights an operational warning: institutionalization can stall when there is \"split authority\" or contestation between the planning ministry (BAPPENAS) and the environment ministry (MoEF) over data and priorities, underscoring the need for clear PFM guidelines [19].\n\n---\n\n### **4. Pre-Existing National M&E System Integration**\n*   **Country Example**: **Kenya** [15].\n*   **The Instrument**: The **National Integrated Monitoring and Evaluation System (NIMES)** [15].\n*   **How it was Operationalized**:\n    *   Kenya's Climate Change Act legally obliges all national and county public entities to integrate adaptation and report annually [20, 21]. \n    *   Rather than creating a standalone climate database, Kenya **integrated climate adaptation M&E directly into NIMES**, the pre-existing state monitoring backbone [15]. \n    *   Sectoral ministries host dedicated Climate Change Units (CCUs) funded by their own department budgets [22, 23]. These CCUs collect local data and report through NIMES to the national-level Climate Change Directorate (CCD), routing climate tracking through the country's default administrative and reporting channels [15, 22].\n\n---\n\n### **Strategic Actions for Our System Framing**\nIf our coordinating body lacks legal teeth or budget-review authority, the comparative literature strongly suggests we avoid trying to build a standalone, voluntary climate reporting database [1, 4]. Instead, the most viable path to get ministries reporting is to:\n1.  **Draft a joint budget circular annex** with the Ministry of Finance, integrating our core adaptation indicators directly into the annual budget submission instructions [5, 16, 24].\n2.  **Embed our sectoral adaptation scorecards** into the central planning agency’s routine quarterly or annual performance tracking questionnaires [10].\n\n---\n\n📋 I can draft a brief 1-page briefing note illustrating how we could structure a \"co-designed\" budget circular annex with the Ministry of Finance to tag adaptation indicators. Would you like me to compile that for us?",
+  "conversation_id": "443784fd-4029-452b-b024-caf0824ec428",
+  "sources_used": [
+    "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+    "02d07f29-42cb-469d-80f5-105ed13c5488",
+    "61a7eb9b-ce31-4ee9-b415-75d01b86f124"
+  ],
+  "citations": {
+    "1": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+    "2": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+    "3": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+    "4": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+    "5": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+    "6": "02d07f29-42cb-469d-80f5-105ed13c5488",
+    "7": "02d07f29-42cb-469d-80f5-105ed13c5488",
+    "8": "02d07f29-42cb-469d-80f5-105ed13c5488",
+    "9": "02d07f29-42cb-469d-80f5-105ed13c5488",
+    "10": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "11": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "12": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "13": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "14": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+    "15": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+    "16": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+    "17": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+    "18": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+    "19": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+    "20": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "21": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "22": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "23": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "24": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678"
+  },
+  "references": [
+    {
+      "source_id": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+      "citation_number": 1,
+      "cited_text": "National Adaptation MEL Pathways Thailand is not at the start of adaptation MEL design; it is at the harder transition from framework creation to routine inter-ministerial use, which other countries usually reached only after adaptation was tied into ordinary planning, budgeting, reporting, or legal review cycles rather than left as a stand-alone climate process. Across the cases, national MEL systems rarely become operational through indicator design alone; they become routine when ministries are made to report through existing state systems, when a central coordinator has either legal review power or fiscal entry points, and when early informal monitoring cycles create enough practice to justify later formalization (Leiter, 2021; Lucy et al., 2022; Njuguna et al., 2023; Bellon & Massetti, 2022)."
+    },
+    {
+      "source_id": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+      "citation_number": 2,
+      "cited_text": "et al., 2016; Haasnoot et al., 2024; Robinson, 2025). The mechanisms that usually trigger each transition are, respectively, political recognition or international commitment; stakeholder consultation and technical assistance; an institutional champion or pilot review cycle; fiscal or legal embedding into existing state systems; and finally independent oversight, repeated reporting, and accumulated administrative habit (Saito, 2013; Butler et al., 2016; Bellon & Massetti, 2022). Applied to Thailand, DCCE appears to be in Phase 2 moving weakly into Phase 3: a detailed MEL framework exists, but regular inter-ministry data submission has not yet become routine practice, and there is no clear legal or budgetary forcing mechanism. The next achievable transition is therefore not full nationwide operation in one procurement cycle, but Phase 3 to Phase 4: run one or two real reporting cycles through a small number of sector ministries, then tie reporting obligations to existing budget or planning instruments so that ministries report because they must do so for their own annual and medium-term management, not because DCCE requests it (Leiter, 2021; Bellon & Massetti, 2022; Njuguna et al., 2023)."
+    },
+    {
+      "source_id": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+      "citation_number": 3,
+      "cited_text": "The most relevant comparator lesson for Thailand is institutional rather than technical. Central climate coordinators without command authority usually succeed only when they piggyback on stronger authorizing environments such as cabinet-backed mainstreaming, statutory review, budget circulars, expenditure tagging, medium-term expenditure frameworks, or mandatory national reporting processes (Rogers et al., 2023; Saito, 2013; Bellon & Massetti, 2022). The literature also shows that adaptation mainstreaming usually advances through phases: recognition and strategy, indicator design and consultation, pilot or ad hoc reporting, integration into sectoral planning and budgets, and only then routine monitoring with recurrent learning and oversight (Olazabal & Castán Broto, 2022;"
+    },
+    {
+      "source_id": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+      "citation_number": 4,
+      "cited_text": "4. Discussion The strongest consensus is that institutionalization is mainly an administrative integration problem, not an indicator-design problem. Many frameworks fail because they are built as stand-alone reporting exercises that do not fit prevailing rules for coordination, accountability, and knowledge production inside government (Lucy et al., 2022; Njuguna et al., 2023). Authority to adapt and capacity to adapt interact: without an authorizing environment, even technically sound indicators remain unused, and without staff, data systems, and reporting routines, mandates stay symbolic (Rogers et al., 2023)."
+    },
+    {
+      "source_id": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+      "citation_number": 5,
+      "cited_text": "Thailand’s adjacent-mechanism question is therefore decisive. The fiscal literature consistently argues that governments should adapt existing PFM tools instead of inventing parallel climate procedures, including climate budget tagging, budget circulars, medium-term expenditure frameworks, and climate expenditure reports (Bellon & Massetti, 2022; Pizarro et al., 2021). The supplied corpus does not provide direct documentary proof that Thailand already runs a national adaptation or mitigation budget-tagging system comparable to the Philippines’ CCET. It does, however, show that Thailand already has climate-relevant statistical and accounting infrastructures, including Green GDP and sectoral emissions accounting, which means the capacity question is less about inventing data systems from zero than about creating an enforceable reporting link between lineagency budgets, indicators, and DCCE’s framework (Kunanuntakij et al., 2017; De Oliveira-Júnior et al., 2025; Kliengchuay et al., 2024)."
+    },
+    {
+      "source_id": "02d07f29-42cb-469d-80f5-105ed13c5488",
+      "citation_number": 6,
+      "cited_text": "Country’s own initiative A key initiative the government took, other than developing the BCCSAP, was establishment of the CCTF with a total allocation of about $300 million in 2009–2011 from its own budget (Huq and Rabbani 2011). The CCTF is being used for various projects under the BCCSAP to strengthen resilience to climate change, clearly demonstrating that climate change adaptation is a priority of the country, not just that of one line ministry. This is despite the common view of most developing countries, including Bangladesh itself, that adaptation efforts by LDCs which are highly vulnerable to the impacts of climate change due to low adaptive capacity, should be fully financed by grants from industrialized countries. The country’s initiatives are “highly demonstrated.”"
+    },
+    {
+      "source_id": "02d07f29-42cb-469d-80f5-105ed13c5488",
+      "citation_number": 7,
+      "cited_text": "6 Bangladesh did not request grant financing for SPCR preparation, and was one of the first countries (together with Niger and Tajikistan) to seek endorsement of its SPCR from the PPCR sub-committee. 7 Based on an interview with an MOEF official made in 2012. Mitig Adapt Strateg Glob Change (2013) 18:825–849 835 (CCTF), a national fund, is financing activities under the BCCSAP, and the MOEF is taking the lead in undertaking monthly monitoring of projects financed by the CCTF with input from implementing agencies. The M&E is “good.”"
+    },
+    {
+      "source_id": "02d07f29-42cb-469d-80f5-105ed13c5488",
+      "citation_number": 8,
+      "cited_text": "M&E Although there is no inter-ministerial monitoring mechanism for the overall implementation of the NAPA, the NAPA is monitored by the MOEF.7 On the other hand, the BCCSAP elaborates on the implementation arrangements of the action plan: climate change focal points in line ministries, climate change unit in MOEF, national steering committee on climate change chaired by the Minister of Environment and Forests, and the National Environment Committee chaired by the Prime Minister. The Climate Change Trust Fund"
+    },
+    {
+      "source_id": "02d07f29-42cb-469d-80f5-105ed13c5488",
+      "citation_number": 9,
+      "cited_text": "4.1.2 Analysis of mainstreaming Coordination The vulnerability assessment and identification of priority adaptation activities was not confined to a practice of the environment ministry, the Ministry of Environment and Forests (MOEF). Adaptation has been well recognized in the Ministry of Finance (MOF) and Ministry of Planning. For example, the government that came into power in 2009 formed a cabinet review committee under the chairmanship of the Minister for Planning to review the BCCSAP; the national focal point of SPCR is the Economic Relations Division of the MOF; integration of BCCSAP in the SFYP was led by the Planning Commission; and the SFYP calls for the need for mainstreaming the poverty-environment-climate nexus in key institutions such as the Planning Commission, Ministry of Planning, MOEF, and MOF. Although lack of coordination among various departments and agencies is still an issue (Rawlani and Sovacool 2011), inter-ministerial coordination in Bangladesh is “good” overall, which could be attributed to the Prime Minister’s commitment to the issue."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 10,
+      "cited_text": "A common purpose reflected across all the sampled countries is the use of the MEL system to track progress in implementing adaptation plans and programs. For example, in Tonga, the preparation of the progress report in 2021 focused on establishing the extent to which relevant ministries had integrated JNAP 2 activities into their plans, implementation progress, and capacity needs for further implementation. Similarly, in the United Kingdom, the CCC evaluates the performance of the government in implementing the NAP, while Defra also includes information on progress in implementing sectoral adaptation plans. As such, the assessment of adaptation progress is undertaken in the context of priorities articulated in the adaptation plans and exclusively relies on data from government departments and ministries."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 11,
+      "cited_text": "MEL activities began following the publication of the M&E System Guide and SOP. The JNAP Secretariat began working with relevant national-level ministries and the National Planning Division (NPD) to collect data necessary to monitor adaptation and produce the first JNAP 2 progress report and review described in JNAP 2. Data was to be collected from ministries every quarter. However, this monitoring work only occurred for two cycles before the COVID-19 pandemic interrupted work and paused all MEL activities. Currently, the JNAP Secretariat is beginning to restart monitoring efforts. Staff within the JNAP Secretariat are planning workshops for relevant ministries to reintroduce the need for MEL for adaptation and explain how work will be restarted. However, staff turnover, limited resources, and the never-filled MEL officer position have meant that progress on MEL is slow (Government of Tonga, 2018)."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 12,
+      "cited_text": "A7.3 Monitoring Two cycles of data for the MEL system for adaptation were reported to the JNAP Secretariat by the NPD between the publication of the M&E System Guide and SOP in 2019 and the onset of the COVID-19 pandemic in 2020. This was used to create the JNAP 2 progress report in 2021. To develop this report, the JNAP Secretariat, through the NPD, circulated a questionnaire to ministries assigned specific activities for the implementation of JNAP 2. The questionnaire covered the following key questions as outlined in the JNAP 2 progress report (Government of Tonga, 2021, p. 3):"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 13,
+      "cited_text": "A7.1.2 Key Actors in Tonga’s MEL System for Adaptation MEL is a task of the JNAP Secretariat, situated in the Department of Climate Change, within the Ministry of Meteorology, Energy, Information, Disaster Management, Environment, Climate Change, and Communication. As noted previously, JNAP 2 describes the need for a National Monitoring, Evaluation, and Learning Systems for Climate Change Adaptation:  A comparative analysis of nine countries MEL officer, though this position has never been filled. Instead, work to date has been carried out by two to three people within the JNAP Secretariat, all of whom also have other primary responsibilities. Funding is precarious, and the positions of the overall M&E officers are not institutionalized within the Tongan government; rather, these positions are funded through international donors."
+    },
+    {
+      "source_id": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+      "citation_number": 14,
+      "cited_text": "Limited direct sanction power Self-assessment or coding quality Fragmented coordination (Klostermann et al., 2015; Firmansyah & Herwanda, 2025; Apresian, 2024) Figure 4: Institutional hooks that move MEL into routine practice The Philippines is not richly detailed in this corpus, but budget tagging is directly relevant because climate budget tagging is widely used to define climate-relevant projects in national budgets and is associated with larger climate-finance inflows in developing countries (Pindiriri & Kwaramba, 2024). Indonesia’s experience shows"
+    },
+    {
+      "source_id": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+      "citation_number": 15,
+      "cited_text": "uneven capacity, unclear outputs and outcomes, and financing gaps (Mutiara et al., 2020; Firmansyah & Herwanda, 2025). 3.4 Middle-Income Analog Cases Kenya, Indonesia, Vietnam, and South Africa are closer analogs to Thailand because each struggles with cross-sector coordination and uneven leverage over implementers. Kenya is described as integrating climate M&E into the broader National Integrated Monitoring and Evaluation System, which is precisely the kind of “use an existing state reporting backbone” move that the wider fit-for-context literature recommends, though implementation gaps remain between national and county levels (Mohamed & Okumu, 2025; Njuguna et al., 2023). Indonesia’s RAN-API was launched after roughly two years of consultations across ministries and agencies, emphasized implementation and M&E through existing governance procedures, and was monitored by BAPPENAS for two years before a review process began in 2017 (Morimoto & Fujikura, 2025)."
+    },
+    {
+      "source_id": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+      "citation_number": 16,
+      "cited_text": "3.3 Mainstreaming and Fiscal Hooks mainstreamed into ordinary planning and budgeting rather than handled as a climate-only side process. Comparative work on mainstreaming finds that interministerial coordination backed by the highest levels of government and compatibility with national development planning horizons are among the strongest predictors of successful mainstreaming (Saito, 2013). Public financial management literature is even more explicit: gradual adjustment of existing budget tools is preferable to creating parallel procedures, and adaptation should be embedded in medium-term budgets, budget circulars, fiscal reports, and climate budget reports (Bellon & Massetti, 2022)."
+    },
+    {
+      "source_id": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+      "citation_number": 17,
+      "cited_text": "Dimension Germany/UK Philippines-type approach Indonesia/Vietnam-type challenge Citations Main forcing hook Monitoring review institutions Budget tagging and expenditure linkage Planning-bias, weak execution linkage (Klostermann et al., 2015; Bellon & Massetti, 2022; Quang et al., 2024) Ministry ownership Via responsible organizations Via budgetcoded expenditure lines Via national plans, less local leverage (Klostermann et al., 2015; Pindiriri & Kwaramba, 2024; Quang et al., 2024) Common weakness"
+    },
+    {
+      "source_id": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+      "citation_number": 18,
+      "cited_text": "Mutiara, Z., Krishnadianty, D., Setiawan, B., & Haryanto, J. (2020). Climate Budget Tagging: Amplifying Sub-National Government’s Role in Climate Planning and Financing in Indonesia. Springer Climate. https://doi.org/10.1007/978-3-030- 55536-8_13 Njuguna, L., Biesbroek, R., Crane, T., Dewulf, A., & Tamás, P. (2023). Do government knowledge production and use systems matter for global climate change adaptation tracking? Insights from Eastern Africa. Regional Environmental Change, 23, 1-15. https://doi.org/10.1007/s10113-023-02077-4"
+    },
+    {
+      "source_id": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+      "citation_number": 19,
+      "cited_text": "Yet Indonesia also shows how institutionalization can stall when authority is split. At least 19 ministries and agencies are involved under RAN-API, and contestation between BAPPENAS and the Ministry of Environment and Forestry has produced discrepancies in data, methods, institutional arrangements, and priorities (Apresian, 2024). Vietnam shows a different bottleneck: national commitment to participation and multi-level involvement is clearer in policy than in local implementation, while provincial bodies face limited leverage and final budget approval remains centralized in the Ministry of Finance and National Assembly (Quang et al., 2024). South Africa’s literature here is stronger on indicator selection than institutionalized cycles: expert consultation narrowed 37 candidate indicators to 8 suitable national tracking indicators, which is progress in design but not proof of routine ministry-owned reporting (Seyisi et al., 2023)."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 20,
+      "cited_text": "National Monitoring, Evaluation, and Learning Systems for Climate Change Adaptation:  A comparative analysis of nine countries For example, Articles 15(5) and 19 of Kenya’s Climate Change Act 2016 articulate mandates for ministries, departments, and government agencies at national and sub-national levels to report on their efforts annually (Republic of Kenya, 2016b). Private sector actors are also required to share reports on their contributions to climate action. These mandates are further expanded in Kenya’s NAP and NCCAP III, which outline adaptation priorities for each sector and the corresponding mandates for state and non-state actors to implement and track progress (Republic of Kenya, 2016a, 2023). Kenya’s Ministry of Environment, Climate Change and Forestry has established tools and processes to capture the adaptation efforts of various actors across the country, albeit with slow progress. The agriculture sector has established a Climate Smart Agriculture Strategy, an implementation framework, and an M&E framework and tool that align with these mandates by guiding how state and non-state actors at national and sub-national levels can report on their efforts."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 21,
+      "cited_text": "Horizontally, each public entity and ministry at the national level is obliged to have a designated CCU, which submits an annual report on climate change duties and functions, including adaptation, to the Climate Change Council. The council then evaluates the performance of the department or public entity and publishes an evaluation report, which is submitted to the National Assembly for “review, discussion and debate” (Art. 15 (9)). Within six months, the National Assembly is required to provide recommendations to the Climate Change Council, the ministry, or the CCD."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 22,
+      "cited_text": "4.1.3.4 Finance, Capacities, and Skills Financial and human capacities are crucial to the effectiveness of MEL operationalization. All the sampled countries have at least one person responsible for MEL at the national level. In some countries, such as Kenya, Vietnam, and France, there are departmental and ministerial focal points responsible for MEL activities. According to Kenya’s Climate Change Act 2016, each ministry and department is responsible for providing resources to its own CCU to coordinate MEL activities in the respective ministry or department and reports to the national-level Climate Change Directorate (CCD)."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 23,
+      "cited_text": "The Climate Change Act (2008) details mandates for MEL, including reporting frequency and institutional structures. Sectoral adaptation tracking is coordinated by Defra through the Adaptation Reporting Power and is based on reports from relevant public organizations. The CCC uses data from relevant public institutions to assess key indicators of progress in NAP implementation. Sub-national reporting is less prevalent. Vietnam The MEL system is under development. The MEL system for monitoring sectoral actions is in place."
+    },
+    {
+      "source_id": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+      "citation_number": 24,
+      "cited_text": "Legal Mandates GAP GAP GAP GAP GAP Indicator Design GAP GAP GAP GAP GAP Operational Cycles GAP GAP GAP GAP GAP Root-Cause Review GAP GAP GAP GAP GAP Open Research Questions The next research need is practical institutional design for Thailand rather than more abstract indicator development. Question Why Which existing Thai budget or planning instrument could most credibly require line ministries to submit adaptation indicator data each fiscal year? Identifies the narrowest feasible enforcement hook and avoids building a parallel reporting system with weak compliance."
+    }
+  ]
+}

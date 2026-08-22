@@ -1,0 +1,160 @@
+{
+  "answer": "### **How GGA Indicators Classify Along the Typology**\n\nUnder the **Global Goal on Adaptation (GGA)** and the **2023 United Arab Emirates (UAE) Framework for Global Climate Resilience (FGCR)**, indicators are categorized across three main areas [1, 2]:\n\n*   **Process Indicators**: The UAE FGCR targets the iterative adaptation cycle, setting **process-based targets**—such as ensuring that by 2030, all countries have successfully designed, established, and operationalized a national MEL system [3, 4].\n*   **Output Indicators**: These track the immediate products, capital goods, and services delivered through adaptation investments (e.g., kilometers of climate-resilient roads built or specific early warning systems installed) [5].\n*   **Outcome Indicators**: These capture the short-to-medium-term changes and systemic benefits resulting from those outputs (e.g., the number of beneficiaries with improved access to water, or increased agricultural yields in a climate-stressed region) [6]. These are mapped across the GGA's thematic results areas such as water, food/agriculture, health, and ecosystems [7, 8].\n*   **Impact Indicators**: These represent long-term, high-level changes in overall climate risk and vulnerability, which are often inferred qualitatively from the outputs and outcomes due to the complexity of direct physical measurement [6].\n\n---\n\n### **Challenges in Aligning National Indicators with GGA Global Targets**\n\nThe literature highlights several critical challenges for countries attempting to align their national metrics with global GGA targets:\n\n*   **The Conflict Between Standardization and Context**: Global frameworks favor standard, comparable top-down metrics to assess collective global progress [9]. However, the literature strongly advises that for MEL systems to be functional and sustained, they must be **country-driven and fit-for-context**, aligning with a country's unique domestic administrative and public financial realities rather than a rigid global blueprint [10-12].\n*   **The Aggregation Bottleneck**: Climate risk is inherently place-specific [13, 14]. Aggregating highly varied, localized data from subnational levels up to a standardized national—and subsequently global—indicator framework is methodologically difficult and risks stripping away the essential local context [15, 16].\n*   **Severe Baseline and Vulnerability Data Gaps**: Aligning with global targets requires robust, granular baselines on hazard exposure and socio-economic vulnerability [17]. Most countries, especially developing nations, face severe financial and technical constraints that prevent them from collecting this longitudinal and spatial data [16, 18]. \n*   **The \"Intent vs. Reality\" Trap**: Global tracking frequently relies on symbolic, intent-based process metrics (e.g., counting the \"number of countries with a national plan\") [19]. This creates an illusion of global alignment on paper while masking a massive global gap in actual, verified implementation [19, 20].\n*   **Attribution and Time Lags**: There is often a multi-decadal lag between executing an adaptation action and observing a measurable reduction in climate impacts [21, 22]. Disentangling natural climate variability from actual policy effectiveness remains a major methodological challenge for both national and global evaluators [23, 24].\n\n---\n\n🧩 We can draft a technical memo mapping out how our country's existing national databases (like our agricultural surveys or water-flow records) can be used to populate these GGA-aligned \"outcome\" indicators without creating new reporting burdens. Would you like to outline that indicator mapping?",
+  "conversation_id": "443784fd-4029-452b-b024-caf0824ec428",
+  "sources_used": [
+    "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "cc3ffc19-b89f-472e-a0e4-e23a8f93754c",
+    "b2ddc784-4a60-4be8-b489-2089a5d8bc77",
+    "4b786495-205f-473a-ae50-d9c9a35331cc",
+    "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "cc6d983c-0c56-4eb0-8aba-f49f603bab88"
+  ],
+  "citations": {
+    "1": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "2": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "3": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "4": "cc3ffc19-b89f-472e-a0e4-e23a8f93754c",
+    "5": "cc3ffc19-b89f-472e-a0e4-e23a8f93754c",
+    "6": "cc3ffc19-b89f-472e-a0e4-e23a8f93754c",
+    "7": "cc3ffc19-b89f-472e-a0e4-e23a8f93754c",
+    "8": "cc3ffc19-b89f-472e-a0e4-e23a8f93754c",
+    "9": "b2ddc784-4a60-4be8-b489-2089a5d8bc77",
+    "10": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "11": "b2ddc784-4a60-4be8-b489-2089a5d8bc77",
+    "12": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "13": "4b786495-205f-473a-ae50-d9c9a35331cc",
+    "14": "cc3ffc19-b89f-472e-a0e4-e23a8f93754c",
+    "15": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "16": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "17": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "18": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "19": "cc6d983c-0c56-4eb0-8aba-f49f603bab88",
+    "20": "cc6d983c-0c56-4eb0-8aba-f49f603bab88",
+    "21": "4b786495-205f-473a-ae50-d9c9a35331cc",
+    "22": "cc3ffc19-b89f-472e-a0e4-e23a8f93754c",
+    "23": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "24": "5503bd2b-26d9-42b9-86ee-d7218027c65b"
+  },
+  "references": [
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 1,
+      "cited_text": "Adaptation has long been understood as a primarily local endeavour, though adaptation actions are inextricably linked with national and international processes. The global goal on adaptation (GGA) established in Article 7 of the Paris Agreement in 2015, the Glasgow– Sharm el-Sheikh Work Programme on the GGA, and the 2023 United Arab Emirates (UAE) Framework for Global Climate Resilience (FGCR) have reinforced the need to monitor, report, assess, and learn from collective adaptation progress across local, national, and international levels (Conference of the Parties serving as the meeting of the Parties to the Paris Agreement [CMA], 2024, p. 3). The UAE FGCR embeds MEL as one of the key four dimensions of the iterative adaptation cycle, emphasizing the need to consider the development and strengthening of MEL systems as an adaptation action in itself (Beauchamp, 2024). With the contextual and localized nature of climate impacts and vulnerability, national MEL systems are not only crucial for informing global processes but, most importantly, key to informing national and sub-national planning for successful adaptation actions (Beauchamp & Gebreyes, 2023)"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 2,
+      "cited_text": "The Paris Agreement, adopted in 2015, builds on these arrangements. The Paris Agreement established the GGA to “enhance adaptative capacity, strengthen resilience and reduce vulnerability to climate change” (UNFCCC, 2015, Art. 7). However, it took until 2023 National Monitoring, Evaluation, and Learning Systems for Climate Change Adaptation:  A comparative analysis of nine countries for the UAE FGCR to be adopted by countries at COP 28 to the UNFCCC (see Figure 2). This framework will be central to the assessment of global progress toward the GGA. Parties also established at COP 28 the 2-year UAE–Belém Work Programme, through which countries will explore how to further implement the UAE FGCR, including by defining indicators for monitoring, reporting, and assessing collective progress on adaptation at the global level (UNFCCC, 2023)."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 3,
+      "cited_text": "Global efforts for MEL of adaptation are intricately linked with the evidence provided by national MEL systems. The reports and communications submitted by countries, in the form of AdComs, National Communications, BTRs, NDCs, and NAPs, provide insight into adaptation efforts and progress occurring within countries. The critical link between national MEL systems and reporting is emphasized by the UAE FGCR’s target for the adaptation cycle, which ensures that by 2030, all countries will have “designed, established and operationalized a system for monitoring, evaluation and learning for their national adaptation efforts and have built the required institutional capacity to fully implement the system” (Conference of the Parties serving as the meeting of the Parties to the Paris Agreement, 2024, Art. 10 (d))."
+    },
+    {
+      "source_id": "cc3ffc19-b89f-472e-a0e4-e23a8f93754c",
+      "citation_number": 4,
+      "cited_text": "COMMON APPROACH TO MEASURING CLIMATE RESULTS • UPDATE ON INDICATORS 4 experts. MDBs will continue to learn from and collaborate with each other and external experts and organiza-tions, particularly under the ongoing process of developing indicators for the Global Goal on Adaptation (GGA) of the United Nations Framework Convention on Climate Change (UNFCCC) Paris Agreement. Level 1 - Global Climate Adaptation and Resilience The UAE Framework for Global Climate Resilience (UAE FGCR)7 recognizes that climate adaptation is a process and sets relevant process-based targets that are critical for achieving climate resilience. Tracking people at high risk from climate shocks is a global indicator which can help to track global progress on adaptation and resilience."
+    },
+    {
+      "source_id": "cc3ffc19-b89f-472e-a0e4-e23a8f93754c",
+      "citation_number": 5,
+      "cited_text": "Types of Indicators Project results include outputs, outcomes and impacts: z Outputs are the products, capital goods, and services that are delivered through the MDB finance, re-sponding to the project-specific context of climate vulnerability in order to build climate resilience. They may also include changes resulting from the project that are relevant to achieving outcomes. 18 This includes all type 1, type 2 and type 3 activities, even if they incur no additional costs, and all acute and chronic climate hazards are relevant."
+    },
+    {
+      "source_id": "cc3ffc19-b89f-472e-a0e4-e23a8f93754c",
+      "citation_number": 6,
+      "cited_text": "COMMON APPROACH TO MEASURING CLIMATE RESULTS • UPDATE ON INDICATORS 13 z Outcomes are the likely or achieved effects of MDB finance, which may take the form of adjustments of physical, human, or environmental systems and associated economic benefits, responding to the proj-ect-specific context of climate vulnerability in order to build climate resilience. z Impacts can be inferred from outputs and outcomes and may be expressed in purely qualitative or de-scriptive terms. Structure of Sectors and Results Areas"
+    },
+    {
+      "source_id": "cc3ffc19-b89f-472e-a0e4-e23a8f93754c",
+      "citation_number": 7,
+      "cited_text": "The Global Goal on Adaptation (GGA)9 of the United Nations Framework Convention on Climate Change (UNF-CCC) Paris Agreement provides a foundation for the development of indicators to track progress on climate resilience and adaptation. To structure the wide variety of results from MDB climate adaptation activities, the Common Approach includes a set of indicators against six of the seven key areas.10 These thematic results areas reflect improved climate resilience across the lens of people, planet, and economy. This lens provides a clear focus on the climate adaptation and resilience impact of MDB investments in terms of the social, envi-ronmental, and economic benefits that they confer11."
+    },
+    {
+      "source_id": "cc3ffc19-b89f-472e-a0e4-e23a8f93754c",
+      "citation_number": 8,
+      "cited_text": "The Global Goal on Adaptation (GGA) of the United Nations Framework Convention on Climate Change (UNFC-CC) Paris Agreement provides a foundation for the development of standard metrics and common indicators to track progress on climate resilience and adaptation. Recognizing that achieving climate resilience is a dynam-ic process, MDBs propose a series of enhanced results that can facilitate the scaling up of climate adaptation finance and ensure that all financing flows are aligned with climate adaptation and resilience goals as outlined in the GGA. The Common Approach also includes a set of example indicators against six of the seven key areas defined within the UAE FGCR, agreed to at COP28, which contribute to the delivery of this overarching aim. The seventh area, cultural heritage, has not been included as further analysis is needed to understand how MDBs' activities may relate to results in this area."
+    },
+    {
+      "source_id": "b2ddc784-4a60-4be8-b489-2089a5d8bc77",
+      "citation_number": 9,
+      "cited_text": "Adaptation tracking entails the systematic assessment of progress in responding to the impacts of climate change across and within populations and sectors, over time (Ford et al. 2013; Berrang-Ford et al. 2019). The temporal and spatial scope for adaptation tracking distinguishes it from the more traditional Monitoring and Evaluation (M&E), which typically focuses on specific interventions and outcomes bounded in time and space. Compared to monitoring greenhouse gas emissions — which has advanced tools and metrics — adaptation tracking is hindered by conceptual, methodological, empirical, and political challenges (Ford et al. 2013, 2015; Bours et al. 2014; Delaney et al. 2016). However, there are growing efforts to identify the best methods for adaptation tracking and reporting to support the assessment of collective progress in light of the global goal on adaptation. Although the Paris Agreement recommends a country-driven approach to adaptation, some of the guiding principles of adaptation tracking include the need for comparable and aggregable of information across countries and over the years (Ford and Berrang-Ford 2016). Consequently, divergent proposals for advancing adaptation tracking have emerged. On the one hand, considerable work aims to establish standard metrics and frameworks applicable across countries without necessarily relying on countries reporting on their adaptation progress (e.g., Magnan and Chalastani 2019; Moehner et al. 2021). On the other hand, there is literature, albeit more limited in scope, that analyzes how adaptation is tracked in diverse country contexts (Hammill and Dekens 2014; European Environment Agency 2015; Leiter 2021). This literature recognizes that for adaption tracking to be meaningful to countries and sustained over time, it is important to strategically integrate adaptation tracking into existing national knowledge production and use systems. Each nation’s system consists of unique interlocking practices, laws, funding mechanisms, and structures for producing and using statistical and qualitative evidence of social, economic,"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 10,
+      "cited_text": "Countries should see the UAE FGCR as complementary to their existing system rather than use it for top-down application. As countries set or review their targets as part of the NAP process and other strategies, they can create a coherent MEL system that reflects both local priorities and global commitments. This alignment can first help ensure that national efforts contribute to the GGA and can inform the UAE FGCR and the global stocktake through reporting. Second, aligned national and global MEL systems can, in turn, support countries in producing information that helps integrate insights from global assessments into national NAP processes and MEL systems (Beauchamp & Gebreyes, 2023). Last, national reporting mechanisms can be instrumental in incentivizing governments to fulfill their adaptation commitments, leading to more ambitious actions that reduce vulnerability and enhance resilience and adaptative capacities across scales (Karlsson-Vinkhuyzen et al., 2018)."
+    },
+    {
+      "source_id": "b2ddc784-4a60-4be8-b489-2089a5d8bc77",
+      "citation_number": 11,
+      "cited_text": "In conclusion, paying attention to how adaptation will be tracked across countries with diverse institutional structures is critical if enhanced transparency is to catalyze more ambitious climate action, particularly in ensuring that adaptation is effective across scales. Contrary to discussions that recommend the use of standardized top-down approaches to assessing adaptation progress at the global level (Magnan and Chalastani 2019; Moehner et al. 2021), we emphasize the importance of linking sub-national, national, and global scales in adaptation tracking. However, as this study has shown, countries have distinct rules and practices of knowledge production and use, underscoring the value of contextualizing adaptation tracking and using a country-driven approach to inform the design of a framework to guide adaptation tracking at the global level. Such an approach"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 12,
+      "cited_text": "National Monitoring, Evaluation, and Learning Systems for Climate Change Adaptation:  A comparative analysis of nine countries Build on existing processes and structures, and then gradually add fundamental components. Countries should take a pragmatic approach, starting by taking stock of existing processes and structures and then identifying capacity needs to fully operationalize adaptation tracking (Dekens, 2021; Njuguna et al., 2023). Even though countries like Namibia and Somalia lack extensive MEL systems, they have other tracking and reporting mechanisms for sustainable development that could be built on to establish MEL systems for adaptation. This approach would ensure alignment between different sectors that pertain to adaptation, such as agriculture, water, and health, with dedicated MEL systems for adaptation and with international reporting obligations. This approach can harness existing resources at national, sub-national, and sectoral scales and avoid additional reporting burdens (Craft & Fisher, 2018; Guerdat et al., 2023). As such, ongoing discussions on the UAE FGCR should draw on the rapidly growing evidence on the status of MEL systems across countries (e.g., FAO & UNDP, 2023; Guerdat et al., 2023; Leiter, 2021; Njuguna et al., 2023) and strive to ensure that the design of MEL systems is cognizant of national circumstances."
+    },
+    {
+      "source_id": "4b786495-205f-473a-ae50-d9c9a35331cc",
+      "citation_number": 13,
+      "cited_text": "Adaptation indicators alone cannot show why adaptation does or does not work, as this can only be explored in retrospect with evaluations based on monitoring results. The three NAS analyses have highlighted the challenges in developing adaptation indicators. From these, it is clear that a combined focus on processes, outputs and outcomes is needed to reveal the complex pathways that turn national policy into effective action (Ford et al. 2011; EEA 2014). The building blocks of the proposed framework are generic and can be applied to both climate and non-climate adaptation processes. However, it is important to determine how the monitoring of climate adaptation differs from other monitoring exercises at the strategic level and whether the differences lead to additional demands on the monitoring. It is also important to recognise that climate adaptation involves many spatial scales. While actions on the ground are local and context-specific, this does not mean that the implementation of adaptation strategies is determined only by local action. Therefore, the system of interest (Fig. 1) and its variations are particularly important in adaptation strategies."
+    },
+    {
+      "source_id": "cc3ffc19-b89f-472e-a0e4-e23a8f93754c",
+      "citation_number": 14,
+      "cited_text": "Scales of Results MDB climate adaptation activities include both adapted activities and activities that enable climate resilience at the system level; they therefore deliver both asset level and system level results. Furthermore, these results may be direct or indirect (e.g. at the level of the project or within the supply chains). Therefore, the indicators are flexible to be applied in the relevant project-specific context and capture the project results at different scales while being conservative in nature."
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 15,
+      "cited_text": "regional disparities in climate risk and adaptation needs mean that sub-national jurisdictions report very different types of data and information, posing a methodological problem for countries in aggregating them in a relevant way at national level (Ellis, 2014[62]). For instance, in Costa Rica, 20 cantons established their own monitoring frameworks for tracking progress. Similarly, changes in the resources or methods devoted to data collection and administrative changes (e.g. staff turnover) can affect the continuity and quality of"
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 16,
+      "cited_text": "climate change projections, population, household and administrative data are needed. Additional information, e.g. on climate impacts and implementation progress, needs to be collected to gather a complete picture of adaptation progress. Countries are working to bring longitudinal and spatial data together and to harmonise information from across levels of government and sectors. Stronger communication between data owners and policy makers will help to fully leverage the range of existing information and data."
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 17,
+      "cited_text": "which are informed by a cross-country survey of OECD and partner countries, four country case studies (Chile, Korea, Slovak Republic and the United Kingdom) and insights gathered during OECD expert workshops. Key Findings Baseline climate hazard and exposure information is becoming widely available. Robust, granular and regularly updated climate hazard, exposure and vulnerability information allow to determine adaptation needs and to formulate and adjust adaptation objectives and targets. While hazard assessments are"
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 18,
+      "cited_text": "(Ministry of Environment Chile, 2020[59]). As vulnerability factors are highly varied and context-specific – ranging from the age of materials and use rates of services and infrastructure to climate risk awareness among citizens – collecting data to assess these factors at the national level can be extremely resource- intensive. As a result, the quality of information on vulnerability varies significantly across countries and some vulnerability information remains limited or coarse. To assess progress on the implementation of adaptation actions, countries need to document information"
+    },
+    {
+      "source_id": "cc6d983c-0c56-4eb0-8aba-f49f603bab88",
+      "citation_number": 19,
+      "cited_text": "5. Discussion Less than 40% of countries that adopted a NAP were found to monitor or evaluate its implementation. Even if the five countries with approved NAP M&E designs are included, it still means the majority of countries with a NAP in place does not have mechanism to systematically track its implementation. Without at least basic ways of following- up on plans, their effectiveness as a main driver of adaptation action can be called into question. Moreover, global indicators such as the SDG indicator “13.2.1 Number of countries with (…) national adaptation plans” (United Nations, 2020, p. 14) risk misleading policy makers and the public by assuming that adaptation is being taken care of. While national adaptation planning is essential, whether it is also effective depends on a variety of factors and cannot be assumed as given. The findings of this study therefore support calls for a greater emphasis on the quality of adaptation planning and highlight the need to assess their implementation and its effects."
+    },
+    {
+      "source_id": "cc6d983c-0c56-4eb0-8aba-f49f603bab88",
+      "citation_number": 20,
+      "cited_text": "An important advancement of the current study is its focus on actual evidence rather than on stated intentions of M&E which, as it turns out, often remain unfulfilled. The evidence-based stocktake demonstrates that a reliance on stated intentions in documents such as NDCs leads to a gross over-estimation of the number of countries that have actually undertaken NAP M&E. For example, the number of countries reported by Möhner et al. (2021) is three to four times higher than what the evidence suggests (67 rather than 23 countries as having “undertaken” monitoring and 60 rather than 15 countries as having an “evaluation planned/undertaken”; see Section 4.2). This finding is potentially transferable to other topics and it cautions against inferring the state of actual practice from future-oriented statements in country submissions to UNFCCC. Instead, the findings confirm the need for more empirical research on the implementation of climate policies (Rykkia et al., 2014)."
+    },
+    {
+      "source_id": "4b786495-205f-473a-ae50-d9c9a35331cc",
+      "citation_number": 21,
+      "cited_text": "In addition to these general requirements, adaptation monitoring should respond to a number of specific challenges. Below, several of these challenges are identified from the literature, and their consequences for monitoring and evaluation are discussed. First, adaptation is characterised by different aspects of uncertainty, especially where a policy, measure or action is intended to anticipate future changes (Wilby and Dessai 2010). There is uncertainty about the magnitude of climatic changes and about the changes in probability of extreme events (IPCC 2012). The uncertainties and potential surprises implicit in planning for multi-decadal climate change are complicated by the fact that society may also undergo fundamental economic and cultural changes (Hallegatte 2009; Bours et al. 2014). The effectiveness of adaptation policies, measures and actions may only become measurable in the future (Brooks et al. 2011). To tackle this challenge, the concept of adaptive management provides a basis from which to improve adaptation (Harley et al. 2008). First introduced in the field of ecology (Holling 1978), adaptive management can be defined as a systematic learning process that works in parallel with the implementation of policies and practices (Pahl-Wostl et al. 2007). Continuous monitoring plays an essential role in adaptive management (Wilby and Dessai 2010; Ford et al. 2011). It promotes learning and the ability of decision-makers to respond to social and environmental change (Cundill and Fabricius 2009). Monitoring of adaptation itself also needs to be flexible, because new knowledge about adaptation policies, measures and actions will become available, and also because the way in which society frames adaptation may change (Howden et al. 2007; Bours et al. 2014). Therefore, adaptive monitoring requires detailed decision procedures that should underpin the monitoring programme. These procedures must foster contacts between scientists and policy makers who discuss how indicators connect adaptive monitoring with adaptive management (Lindenmayer et al. 2011)."
+    },
+    {
+      "source_id": "cc3ffc19-b89f-472e-a0e4-e23a8f93754c",
+      "citation_number": 22,
+      "cited_text": "Timeframes of Project Results Climate resilience metrics must be compatible with the variable and often long timescales over which intend-ed project results may be delivered. There may be long time lags between project design and implementation and the delivery of climate resilience results. Therefore, the indicators are flexible to ensure they are appropri-ate for project-specific temporal as well as spatial scales. Uncertainty Regarding Future Climate Projections Climate resilience metrics must be able to cope with the inherent uncertainties associated with future climate conditions. The longer the timescales for project implementation and the assessment of project results, the greater the climate uncertainties and their implications for project performance. This makes estimating fu-ture project results even more challenging. Therefore, the application of indicators and the interpretation of the results, requires flexibility and cognizance of such uncertainties. The capacity to cope with uncertainty reduces maladaptation risks at the same time."
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 23,
+      "cited_text": "areas and unfolds in a changing context. As a result, adaptation outcomes are intertwined with other drivers (e.g. population growth) (Bours, McGinn and Pringle, 2014[85]). It is also difficult to distinguish inter-annual variability from long-term trends. Thus, being able to attribute impacts to actions requires constant monitoring. It is important to understand the role of formalised attribution study following an event for developing and attributing impact indicators to track changes in impacts. The disaggregation of the data is"
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 24,
+      "cited_text": "be. Secondly, establishing causal links between adaptation actions and the resulting change in climate impacts is complicated. Most causal inference studies involve in-depth research, which makes them difficult to conduct more systematically. Many countries rely on qualitative assessments, such as expert interviews, to capture successes and failures of adaptation actions, and to attribute progress to policy action over time. The data requirements for adaptation measurement are significant. In addition to hazard modelling and"
+    }
+  ]
+}

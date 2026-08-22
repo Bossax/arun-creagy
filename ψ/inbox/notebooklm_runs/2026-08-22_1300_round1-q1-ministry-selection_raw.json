@@ -1,0 +1,172 @@
+{
+  "answer": "For countries embarking on the developmental journey of a national adaptation Monitoring, Evaluation, and Learning (MEL) system, launching a comprehensive nationwide tracking system all at once is rarely successful [1, 2]. Instead, global experience shows that **countries typically initiate their first ad hoc or pilot reporting cycles with a highly targeted subset of sector ministries or specific critical industries** [3, 4]. \n\nThe comparative sample highlights three primary entry-point strategies for selecting \"first mover\" ministries/sectors, driven by specific technical, financial, and institutional advantages:\n\n---\n\n### **1. Agriculture and Natural Resources (The Developing Country Model)**\n*   **Country Examples**: **Kenya**, **Vietnam**, and **Namibia** [5-7].\n*   **First Movers**: The ministries and departments responsible for **Agriculture and Forestry** (e.g., the Ministry of Agriculture and Livestock Development in Kenya, and the Ministry of Agriculture and Rural Development in Vietnam) [5, 7, 8].\n*   **What Made Them Viable First Movers?**\n    *   **High Sectoral Significance**: In these countries, agriculture is the backbone of the economy and rural livelihoods, making it the most climate-vulnerable and politically prioritized sector [9, 10]. \n    *   **International Donor Support**: These ministries had access to substantial **external funding and technical assistance** (e.g., through the FAO, UNDP, the Green Climate Fund’s Readiness Programme, and the NAP Global Network) [11, 12]. This support funded the co-design of sector-specific M&E frameworks (such as Climate-Smart Agriculture) and the development of digital reporting tools, bypassing national budget constraints [6, 8, 13].\n    *   **Existing Localized Data Streams**: They could leverage existing agricultural extension services and local administrative structures (e.g., Kenya's county-level units or Vietnam's provincial committees) to collect data [5, 8, 14].\n\n---\n\n### **2. Critical Utilities and Infrastructure (The High-Income Regulated Model)**\n*   **Country Examples**: **The United Kingdom** [15, 16].\n*   **First Movers**: Public and statutory organizations primarily in the **Water, Transport, and Energy** sectors (including road/rail operators, harbor authorities, and energy generators) reporting to the Department for Environment, Food and Rural Affairs (Defra) [15, 16].\n*   **What Made Them Viable First Movers?**\n    *   **Existing Data Infrastructure & Prior Reporting Habit**: These are highly regulated statutory and commercial organizations that already possessed robust risk management systems, established metrics, and detailed data regarding physical asset vulnerabilities [17, 18].\n    *   **Critical Economic Significance**: Failure or disruption in these key infrastructure areas (e.g., power grid failure or railway heat warping) poses immediate, cascading economic risks, creating high political willingness to participate [18, 19].\n    *   **Statutory Mandate (ARP)**: The UK's Climate Change Act (2008) provided the legal \"Adaptation Reporting Power\" (ARP) to direct these organizations to report on climate risks and actions, providing a strong authorizing environment [20, 21].\n\n---\n\n### **3. Qualitative Policy-Process Trackers (The Lower-Burden Model)**\n*   **Country Examples**: **Finland** [22-24].\n*   **First Movers**: Led and coordinated by the **Ministry of Agriculture and Forestry**, with an ad hoc Coordination Group representing 11 key administrative sectors [22, 23].\n*   **What Made Them Viable First Movers?**\n    *   **Minimal Reporting Burden (Prioritizing Feasibility)**: Rather than trying to collect complex quantitative impact data, Finland started with a simple, qualitative **policy process indicator** (evaluating on a 1-to-5 scale if sectors recognized risks, identified impacts, took actions, and mainstreamed coordination) [25, 26].\n    *   **Low Operational Costs**: The Coordination Group did not have separate funding; participating sectoral members covered their own costs, and the coordinating ministry covered only report writing [23]. This voluntary, self-assessment approach made participation viable without waiting for a dedicated national data infrastructure [23, 24].\n\n---\n\n### **Strategic Takeaway for Our System Design**\nIf we are looking to transition our national system from paper to practice, the fastest route is **Phase 3: run a targeted pilot cycle** [3]. We should avoid trying to track all sectors at once. \n\nInstead, we can either:\n1.  **Select the Agriculture Sector**, leveraging international climate-readiness funds to build localized pilot tracking [6, 12]; or \n2.  **Target highly regulated State-Owned Enterprises (Water & Energy)**, piggybacking on their existing risk-reporting backbones [1, 18].\n\n---\n\n📊 I can map out a draft 10-indicator scorecard specifically tailored for a first agricultural sector pilot to show how we can transition from design to operational tracking. Would you like me to construct that for us?",
+  "conversation_id": "443784fd-4029-452b-b024-caf0824ec428",
+  "sources_used": [
+    "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+    "cc6d983c-0c56-4eb0-8aba-f49f603bab88",
+    "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "02d07f29-42cb-469d-80f5-105ed13c5488",
+    "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "4b786495-205f-473a-ae50-d9c9a35331cc"
+  ],
+  "citations": {
+    "1": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+    "2": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+    "3": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+    "4": "cc6d983c-0c56-4eb0-8aba-f49f603bab88",
+    "5": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "6": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "7": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "8": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "9": "02d07f29-42cb-469d-80f5-105ed13c5488",
+    "10": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "11": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "12": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "13": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "14": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "15": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "16": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "17": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "18": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "19": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+    "20": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "21": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+    "22": "4b786495-205f-473a-ae50-d9c9a35331cc",
+    "23": "4b786495-205f-473a-ae50-d9c9a35331cc",
+    "24": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+    "25": "4b786495-205f-473a-ae50-d9c9a35331cc",
+    "26": "4b786495-205f-473a-ae50-d9c9a35331cc"
+  },
+  "references": [
+    {
+      "source_id": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+      "citation_number": 1,
+      "cited_text": "National Adaptation MEL Pathways Thailand is not at the start of adaptation MEL design; it is at the harder transition from framework creation to routine inter-ministerial use, which other countries usually reached only after adaptation was tied into ordinary planning, budgeting, reporting, or legal review cycles rather than left as a stand-alone climate process. Across the cases, national MEL systems rarely become operational through indicator design alone; they become routine when ministries are made to report through existing state systems, when a central coordinator has either legal review power or fiscal entry points, and when early informal monitoring cycles create enough practice to justify later formalization (Leiter, 2021; Lucy et al., 2022; Njuguna et al., 2023; Bellon & Massetti, 2022)."
+    },
+    {
+      "source_id": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+      "citation_number": 2,
+      "cited_text": "1. Introduction National adaptation MEL systems are now common on paper but still uncommon as routine government practice. Global stocktakes find that although many countries have adopted national adaptation plans, over 60% do not systematically assess implementation, and operational systems remain much rarer than formal frameworks (Leiter, 2021). Adaptation tracking is harder than mitigation tracking because it spans sectors, levels of government, and different kinds of evidence, and because success depends on how new tracking fits existing administrative routines for knowledge production, accountability, and coordination (Goodwin & Olazabal, 2025; Lucy et al., 2022)."
+    },
+    {
+      "source_id": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+      "citation_number": 3,
+      "cited_text": "et al., 2016; Haasnoot et al., 2024; Robinson, 2025). The mechanisms that usually trigger each transition are, respectively, political recognition or international commitment; stakeholder consultation and technical assistance; an institutional champion or pilot review cycle; fiscal or legal embedding into existing state systems; and finally independent oversight, repeated reporting, and accumulated administrative habit (Saito, 2013; Butler et al., 2016; Bellon & Massetti, 2022). Applied to Thailand, DCCE appears to be in Phase 2 moving weakly into Phase 3: a detailed MEL framework exists, but regular inter-ministry data submission has not yet become routine practice, and there is no clear legal or budgetary forcing mechanism. The next achievable transition is therefore not full nationwide operation in one procurement cycle, but Phase 3 to Phase 4: run one or two real reporting cycles through a small number of sector ministries, then tie reporting obligations to existing budget or planning instruments so that ministries report because they must do so for their own annual and medium-term management, not because DCCE requests it (Leiter, 2021; Bellon & Massetti, 2022; Njuguna et al., 2023)."
+    },
+    {
+      "source_id": "cc6d983c-0c56-4eb0-8aba-f49f603bab88",
+      "citation_number": 4,
+      "cited_text": "The stocktake also found that the development of NAP M&E systems is a continuously evolving process that often proceeds even as first monitoring reports have been published. For example, Austria, Ger-many, Kenya, Mexico, South Africa, South Korea and the United Kingdom have all continued to advance their M&E system after the first monitoring or evaluation report was published. Germany, for instance, has developed a methodology for a NAP evaluation as an additional component to the existing monitoring and progress reports. The fastest countries to produce a NAP progress report were those that opted for a pragmatic design with the intention to elaborate it concurrently, e.g., Brazil. Hence, in contrast to the usual practices of M&E of projects where the M&E design is typically kept constant throughout the duration of the intervention, national adaptation M&E systems are more dynamic and often evolve over time."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 5,
+      "cited_text": "The status of MEL systems also varies within countries. It is important to consider sub-national MEL systems, given their potential to capture local adaptation experiences. With adequate coordination and integration, advances in these sectoral and sub-national MEL systems can enrich the understanding of adaptation progress within countries. In Canada, consistent with the mandates of the provincial governments to develop and implement policies, some provinces have adaptation plans and systems for monitoring progress in place. While the provinces do not report directly to the federal government, the Council of Ministers of Environment presents an opportunity for coordination between the two levels of government. There are also notable examples of sectoral MEL systems. For example, in Vietnam and Kenya, the ministries responsible for agriculture have established MEL systems for tracking adaptation efforts within the sector. Information from these sectoral systems is then integrated into the national assessment."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 6,
+      "cited_text": "Namibia is in the process of simultaneously developing NAP and MEL systems. While the NAP process started in 2019, the development of the MEL system for adaptation started in 2022 (NAP Global Network, 2022; Republic of Namibia, 2022). According to the KII conducted for this study, the MEL system for adaptation will draw on the existing data streams within the government. As such, the development of the MEL system started with assessing existing M&E systems and developing a baseline report with indicators for the agriculture sector. This work is supported through the Green Climate Fund’s Readiness Programme and the NAP Global Network."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 7,
+      "cited_text": "There are also efforts to develop sectoral MEL frameworks, notably in the agriculture sector. This sectoral framework is aligned with the NAP and the Sustainable Development Goal targets and seeks to contribute to the national MEL system (FAO & UNDP, 2023). The development of the framework started with a review of existing tools and indicators followed by consultations with state and non-state stakeholders at the national and sub-national levels. A9.1.2 Key Actors in Vietnam’s MEL System MONRE is the nodal authority for MEL in the country, as outlined in Decision 148/QD-TTg, and the DCC, positioned within the MONRE, carries out the MEL work. The DCC is tasked with collecting data from other national climate-relevant ministries, who themselves might collect data from subministerial units. Further, authorities from the country’s 63 provinces—namely, People’s Committees—are mandated to participate in the MEL system. Figures A14 and A15 illustrate the governance structure of the MEL system, and Figure A16 illustrates the MEL system and the relationship between in-process objectives and intended results."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 8,
+      "cited_text": "National Monitoring, Evaluation, and Learning Systems for Climate Change Adaptation:  A comparative analysis of nine countries For example, Articles 15(5) and 19 of Kenya’s Climate Change Act 2016 articulate mandates for ministries, departments, and government agencies at national and sub-national levels to report on their efforts annually (Republic of Kenya, 2016b). Private sector actors are also required to share reports on their contributions to climate action. These mandates are further expanded in Kenya’s NAP and NCCAP III, which outline adaptation priorities for each sector and the corresponding mandates for state and non-state actors to implement and track progress (Republic of Kenya, 2016a, 2023). Kenya’s Ministry of Environment, Climate Change and Forestry has established tools and processes to capture the adaptation efforts of various actors across the country, albeit with slow progress. The agriculture sector has established a Climate Smart Agriculture Strategy, an implementation framework, and an M&E framework and tool that align with these mandates by guiding how state and non-state actors at national and sub-national levels can report on their efforts."
+    },
+    {
+      "source_id": "02d07f29-42cb-469d-80f5-105ed13c5488",
+      "citation_number": 9,
+      "cited_text": "10 Based on an interview with an NEC official made in 2012. 838 Mitig Adapt Strateg Glob Change (2013) 18:825–849 implemented (D’Agostino and Sovacool 2011), and two more for vulnerability assessment and micro watershed management are planned with funding from the LDCF as of April 2012. Another project for coastal adaptation and resilience planning is also ongoing.11 Cambodia developed the SPCR in 2011 nearly five years after the preparation of NAPA. It built upon the NAPA and other relevant country studies and strategies to mainstream climate resilience into national and sub-national development policies, plans, and projects. The SPCR noted, in line with the NAPA, that agriculture and water resources are the most important sectors to the economy but are highly vulnerable to climate change impacts. This leads to the proposal of two investment components under SPCR— strengthening climate resilience of these two sectors mainly through improving (climateproofing) related infrastructure. Another investment component is also for improving climate-resilient infrastructure, focusing on roads and urban environmental infrastructure such as water supply and sanitation. Unlike NAPA, the health sector is not highlighted in the SPCR.12"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 10,
+      "cited_text": "6. Enabling Action – technology and knowledge management  No. of counties developing and implementing climate information service (CIS) plans increased from 9 to 47. (Linked to Action 1 DRM)   15 counties have CIS plans (63% of the national target).  3 counties (Kwale, Narok and Siaya) developed Integrated Climate Risk Management Plans. Chapter Three: Results and Progress Agriculture plays a key role in terms of food and nutritional security, rural livelihoods, and poverty alleviation. The NCCAP reported that the agriculture"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 11,
+      "cited_text": "National Monitoring, Evaluation, and Learning Systems for Climate Change Adaptation:  A comparative analysis of nine countries Countries rarely follow a standardized approach when establishing MEL systems. National circumstances, such as the availability of resources and the extent to which adaptation is prioritized, influence how countries engage in this process. Often, countries have long been tracking adaptation before establishing a comprehensive MEL system, which is typically associated with the adoption of policies relevant to adaptation and NAP documents. For instance, in line with the Pan-Canadian Framework on Green Growth and Climate Change, the Government of Canada has been publishing annual reports that also highlight adaptation progress. However, efforts to establish a MEL system were only formally established with the adoption of the National Adaptation Strategy (NAS) in 2023. Several countries, including Kenya, Peru, and Namibia, have also been tracking adaptation for years to fulfill international reporting requirements, yet the formal establishment of a comprehensive MEL system for adaptation has taken over a decade. For example, Kenya submitted its first National Communication in 2002 and saw the Climate Change Act 2016 mandate national reporting on adaptation in 2016. Namibia, in turn, submitted its first National Communication in 2002, yet started work on its MEL system for adaptation in 2019. Another example is Somalia, which started both its National Communication reporting and its MEL systems for adaptation in 2018."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 12,
+      "cited_text": "National Monitoring, Evaluation, and Learning Systems for Climate Change Adaptation:  A comparative analysis of nine countries Many developing countries rely heavily on international donors and external support to finance their MEL systems for adaptation. This dependency often impacts the sustainability and continuity of MEL activities. In these countries, a common approach to bridge the gap is to use external support through donor-funded projects and outsourcing services to prepare progress reports. All developing countries within the sample (Kenya, Namibia, Peru, Somalia, Tonga, and Vietnam) have received external support to develop and/or operationalize MEL. Sources of external support include the NAP Global Network, the Green Climate Fund, and international aid agencies."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 13,
+      "cited_text": "Kenya has prioritized climate-smart agriculture as the approach for delivering climate action priorities in the agriculture sector. The Ministry of Agriculture and Livestock Development has developed the Kenya Climate Smart Agriculture Strategy, Implementation Framework, and corresponding M&E framework. These documents have provided the foundation for developing an online tool through which state and non-state actors can report on their climate actions that are relevant to the agriculture sector. The tool is fully developed but not yet in use. Stakeholder engagement was fundamental to the development of the M&E framework"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 14,
+      "cited_text": "ministries also participated in creating indicators and were tasked with making some of their own. Engagement with non-governmental entities, including the private sector and NGOs, is limited, as is direct engagement with marginalized or particularly vulnerable populations. Horizontal and sectoral integration is weaker than vertical integration. Figure A14. M&E Framework and focal points at all levels Source: Socialist Republic of Vietnam, 2022, p. 75 (reprinted with permission). The full national adaptation M&E system is an M&E system covering all levels. M&E information and results at lower levels are collected, aggregated, and serve the M&E at higher levels. At the national level, information serving monitoring and evaluation purpose is collected from ministries, sectors and provinces through M&E reports on CCA activities submitted by ministries, sectors and provinces. MONRE synthesises the M&E results of the country’s CCA activities; the Department of Climate Change is the agency directly assisting the MONRE in this role. In addition to synthesising M&E information and results from provinces, ministries and sectors, MONRE lso synthesises M&E inf rmation from plans, progr ms and p ojects directly managed, operat d and implemented by MONRE."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 15,
+      "cited_text": "A8.1.3 Key Actors in the United Kingdom’s MEL System Two primary mechanisms make up the MEL system for adaptation in the United Kingdom. The first is the sectoral monitoring of adaptation efforts led by Defra. Defra is responsible for coordinating adaptation planning and MEL for adaptation through the ARP, which operates on a 5-year cycle.  Relevant public organizations are responsible for assessing adaptation and reporting to Defra. These organizations include road and rail organizations, harbour authorities, water companies, energy generators, and public bodies, such as the Environment Agency and Forestry Commission, among others (Defra, 2021). Vertical integration within sectors depends on how the sector is structured. Currently, local authorities are not required to report. However, in the fourth reporting cycle, through the ARP, Defra plans to enhance engagement with local authorities in adaptation reporting (Defra, 2023b, p. 136). It plans to co-design a piloting process where 35 local authorities cognizant of the existing risk management practices and responsibilities will be invited to report. The pilot will be reviewed at the end of 2024 to determine the inclusion of local authorities in subsequent adaptation reporting cycles. This plan aligns with the 2023 adaptation progress report recommendation to include local authorities in adaptation reporting. Consideration of aspects such as gender and social inclusion depends on the priorities of the particular department or devolved unit."
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 16,
+      "cited_text": "their organisation, and their proposals for adapting to climate change. There have been three rounds of reporting since its introduction, with a fourth underway during 2024: In the first round of reporting (2010-12), over 100 organisations, primarily from the energy, transport and water sectors, reported on their risks, which were evaluated by a third party organisation (Defra, 2012[50]; Defra, 2012[51]). The second round (2014-16) relied on a voluntary approach. This saw a lower level of participation and limited evidence of increased resilience from adaptation actions. An"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 17,
+      "cited_text": "actions to achieve the outcomes, including efforts to remove barriers to adaptation, improve adaptative capacities, structured decision making, and policy to support adaptation. Figure A10. Preparedness ladder Source: Climate Change Committee—Adaptation sub-committee, 2011 (reprinted with permission). A8.2.2 Indicators, Targets, and Methodologies To standardize reporting, Defra provides templates through which relevant sectoral organizations provide information. The templates allow organizations to provide information on their corporate governance and risk profile, as well as measures to address the identified risks. The templates are not prescriptive but are instead guidelines showing the minimum amount of information to be reported, thus giving organizations flexibility in the format they use to provide information."
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 18,
+      "cited_text": "enable a national government to collect data on public and private organisations can bring value to organisation and government reporting (Box 2.2). Box 2.2. Collecting information on actions using the Adaptation Reporting Power The 2008 Climate Change Act gives the UK Government and Welsh Ministers the power to ask organisations, such as those responsible for public services and infrastructure (e.g. energy and transport companies), to produce reports on the current and predicted impacts of climate change on"
+    },
+    {
+      "source_id": "5503bd2b-26d9-42b9-86ee-d7218027c65b",
+      "citation_number": 19,
+      "cited_text": "(Welsh Government, 2019[31]). Northern Ireland’s first (NICCAP1, 2014-19) and second (NICCAP2, 2019-24) adaptation programmes both address five key priority areas, namely natural capital, infrastructure services, people and the built environment, disruption to business and supply chains, food security/global food production (DAERA NI, 2019[11]). NICCAP3 is due to cover the period 2024-29. A number of sectoral policies mainstream adaptation – notably those related to flood and coastal erosion"
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 20,
+      "cited_text": "A8 National MEL System for Adaptation in the United Kingdom A8.1 Policy Context A8.1.1 Background and Status Section 59 of the Climate Change Act (2008) obliges the Climate Change Committee (CCC), an independent advisory body, to prepare reports on the progress made in the implementation of the United Kingdom’s NAP. The act also establishes the Adaptation Reporting Power (ARP) through which the Department for Environment, Food and Rural Affairs (Defra) Secretary of State can direct public and statutory organizations to prepare reports detailing the current and projected impacts of climate change relevant to their area of jurisdiction, proposals for adapting to climate change, and progress toward implementing the policies and proposals set out in previous reporting periods (Department for Environment, Food and Rural Affairs 2023b, p. 127). The Climate Change Acts of Northern Ireland (2022), Scotland (2009), and the Environment Act (2016) of Wales also provide a legal framework for adaptation planning and progress monitoring as a devolved function. These acts require the establishment of adaptation programs in these jurisdictions and mandate the CCC to assess implementation progress."
+    },
+    {
+      "source_id": "61a7eb9b-ce31-4ee9-b415-75d01b86f124",
+      "citation_number": 21,
+      "cited_text": "To operationalize the provisions of these Acts of Parliament, the CCC has established an Adaptation Monitoring Framework. The framework outlines the rationale for tracking adaptation, the approach, including the assessment criteria, and a roadmap for improving adaptation tracking in the United Kingdom. Defra has also taken measures to guide reporting from relevant public organizations, including organizing consultations to inform the scope and approach to adaptation reporting. Generally, the MEL system in the United Kingdom aims to enhance the understanding of the level of preparedness of key sectors to adapt to climate change and support the mainstreaming of climate risk management into the activities of reporting organizations (CCC, 2023b; Defra, 2023b). As described during the KIIs conducted for this study and as is evident in the various progress reports, the approach to MEL for adaptation is based on a periodic assessment of adaptation by tracking policies and plans in place, finance, and activities undertaken by relevant public agencies and departments during the assessment period, as well as laying a roadmap for further adaptation efforts."
+    },
+    {
+      "source_id": "4b786495-205f-473a-ae50-d9c9a35331cc",
+      "citation_number": 22,
+      "cited_text": "5 Comparing three existing monitoring programmes Using the framework proposed above, monitoring of the NAS in three EU member states— Finland, the UK and Germany—was examined. The set of questions in Table 1 guided the analyses for each building block. The analysis for each country and an overview of the results are provided below. 5.1 Monitoring and evaluation of Finland’s NAS Finland was the first country in the world to adopt a NAS (Ministry of Agriculture and Forestry of Finland 2005). The NAS was prepared by a group of Finnish ministries and coordinated by the Ministry of Agriculture and Forestry. It is linked with the National Energy"
+    },
+    {
+      "source_id": "4b786495-205f-473a-ae50-d9c9a35331cc",
+      "citation_number": 23,
+      "cited_text": "The key monitoring objective was to establish what progress had been made in different sectors since the NAS was launched in 2005. A preliminary aggregated indicator for the level of adaptation, based on the four process criteria, was used as a measure of progress. This was based on a qualitative evaluation that provided only indicative information and was used mainly for self-evaluation. The evaluation of adaptation processes was carried out by an ad hoc Coordination Group for Adaptation to Climate Change (Ministry of Agriculture and Forestry of Finland 2009). The Coordination Group was chaired by the Ministry of Agriculture and Forestry and consisted of 32 members from different ministries, research institutes, research funding agencies and regional organisations. Stakeholders from key sectors were also involved in the group. As the group was chaired by the ministry that coordinated the NAS, it cannot be considered to be independent. The group did not have separate funding; all participating members were expected to cover their own costs, with the Ministry of Agriculture and Forestry covering administrative costs and the costs of report writing."
+    },
+    {
+      "source_id": "f74996ab-b4c7-4b9d-b1d6-dd1e090c6678",
+      "citation_number": 24,
+      "cited_text": "Finland shows a weaker-authority but still functioning path. Its 2005 strategy was coordinated by the Ministry of Agriculture and Forestry, reviewed in 2009 by an ad hoc coordination group of 32 members from ministries, research institutes, funders, and regional organizations, and relied on qualitative sectoral self-assessment rather than a separate funded apparatus (Klostermann et al., 2015). That is important for Thailand because it shows an early operational cycle can run before strong legal force exists, but also that such systems remain indicative and fragile when they depend on voluntary sector contributions and self-funded participation (Klostermann et al., 2015)."
+    },
+    {
+      "source_id": "4b786495-205f-473a-ae50-d9c9a35331cc",
+      "citation_number": 25,
+      "cited_text": "The NAS lists several existing indicators, such as those relating to water management, which were expected to provide information on progress with adaptation (Ministry of Agriculture and Forestry of Finland 2005). The level of adaptation was assessed with a policy process indicator consisting of four criteria, each on a scale of 1 to 5: & A need for adaptation is recognized (process) & Impacts are known (adaptive capacity) & Adaptation measures are taken (output) & There is cross-sectoral cooperation (mainstreaming)"
+    },
+    {
+      "source_id": "4b786495-205f-473a-ae50-d9c9a35331cc",
+      "citation_number": 26,
+      "cited_text": "The indicators selected in the UK and Germany focus on the outputs and outcomes of adaptation activities, whereas those in Finland are concerned with adaptation processes. The ASC’s toolkit includes an indicator framework, which uses output and outcome-based indicators to track trends in vulnerability to and preparedness for climate change. The response indicators of the German NAS describe outcome variables for every action field but do not measure the effectiveness of adaptation actions. However, outputs and outcomes can be hard to identify at this early stage in the adaptation process and are further complicated by a range of influencing factors, of which adaptation policies, measures and actions are only a part. In Finland, a policy process indicator is used to establish adaptation progress in different sectors."
+    }
+  ]
+}
