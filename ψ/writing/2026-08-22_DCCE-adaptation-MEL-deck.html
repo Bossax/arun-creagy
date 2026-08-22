@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DCCE Adaptation MEL — Synthesis Deck</title>
+
+<!-- Fonts: Cormorant Garamond (display) + Work Sans (body) — Soft Editorial system -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ===========================================
+   CSS CUSTOM PROPERTIES — SOFT EDITORIAL SYSTEM
+   Cream paper, translucent + pastel cards, Cormorant + Work Sans
+   =========================================== */
+:root {
+    --paper: #F2EEDF;
+    --paper-2: #ECE6D2;
+    --ink: #2A241B;
+    --ink-soft: #5C5345;
+    --pink: #E1A4C2;
+    --lemon: #D6DD63;
+    --blush: #E8C9B6;
+    --sage: #B7C7A8;
+    --lilac: #C9BEDC;
+    --card-fill: rgba(255,255,255,0.55);
+    --card-fill-solid: rgba(255,255,255,0.86);
+    --rule-soft: rgba(42,36,27,0.18);
+    --rule-medium: rgba(42,36,27,0.35);
+
+    --font-serif: 'Cormorant Garamond', Garamond, serif;
+    --font-sans: 'Work Sans', sans-serif;
+
+    --pad-outer: 80px;
+    --pad-top: 60px;
+    --pad-bottom: 50px;
+
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --duration-normal: 0.5s;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ===========================================
+   FIXED 16:9 STAGE: MANDATORY BASE STYLES
+   =========================================== */
+html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: var(--stage-bg, #000); }
+.deck-viewport { position: fixed; inset: 0; overflow: hidden; background: var(--stage-bg, #000); }
+.deck-stage { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; overflow: hidden; transform-origin: 0 0; background: var(--slide-bg, #fff); }
+.slide { position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: hidden; display: block; visibility: hidden; opacity: 0; pointer-events: none; background: var(--slide-bg, #fff); }
+.slide.active, .slide.visible { visibility: visible; opacity: 1; pointer-events: auto; z-index: 1; }
+img, video, canvas, svg { max-width: 100%; max-height: 100%; }
+.deck-controls { position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%); z-index: 1000; }
+@media print {
+    html, body { width: 1920px; height: auto; overflow: visible; background: #fff; }
+    .deck-viewport { position: static; overflow: visible; background: #fff; }
+    .deck-stage { position: static; width: auto; height: auto; transform: none !important; background: none; }
+    .slide { position: relative; display: block !important; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important; width: 1920px; height: 1080px; break-after: page; page-break-after: always; }
+    .slide:last-child { break-after: auto; page-break-after: auto; }
+    .deck-controls { display: none !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.2s !important; }
+}
+
+/* ===========================================
+   REVEAL ANIMATION — gentle fade, editorial pace
+   =========================================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity var(--duration-normal) var(--ease-out-expo),
+                transform var(--duration-normal) var(--ease-out-expo);
+}
+.slide.visible .reveal { opacity: 1; transform: translateY(0); }
+.slide.visible .reveal:nth-child(1) { transition-delay: 0.05s; }
+.slide.visible .reveal:nth-child(2) { transition-delay: 0.15s; }
+.slide.visible .reveal:nth-child(3) { transition-delay: 0.25s; }
+.slide.visible .reveal:nth-child(4) { transition-delay: 0.35s; }
+.slide.visible .reveal:nth-child(5) { transition-delay: 0.45s; }
+.slide.visible .reveal:nth-child(6) { transition-delay: 0.55s; }
+
+/* ===========================================
+   SLIDE CHROME — Soft Editorial fixed positions
+   =========================================== */
+.slide-body {
+    position: relative;
+    width: 100%; height: 100%;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-sans);
+}
+.chrome-eyebrow {
+    position: absolute; top: var(--pad-top); left: var(--pad-outer);
+    font-family: var(--font-sans); font-weight: 400; font-size: 26px;
+    color: var(--ink);
+}
+.chrome-pagedot {
+    position: absolute; top: var(--pad-top); right: var(--pad-outer);
+    font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 25px;
+    color: var(--ink-soft);
+}
+.chrome-footer {
+    position: absolute; bottom: var(--pad-bottom); left: var(--pad-outer); right: var(--pad-outer);
+    display: flex; justify-content: space-between;
+    font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 24px;
+    color: var(--ink-soft);
+}
+
+.content-zone {
+    position: absolute;
+    top: 152px; left: var(--pad-outer); right: var(--pad-outer); bottom: 108px;
+}
+
+.slide-h1 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    font-size: 74px;
+    line-height: 1.0;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    max-width: 1600px;
+}
+.slide-sub {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 33px;
+    line-height: 1.32;
+    color: var(--ink-soft);
+    margin-top: 16px;
+    max-width: 1560px;
+}
+
+/* ===========================================
+   CARDS
+   =========================================== */
+.soft-card {
+    background: var(--card-fill-solid);
+    border-radius: 26px;
+    padding: 28px 30px;
+}
+.color-card {
+    border-radius: 26px;
+    padding: 26px 28px;
+    color: var(--ink);
+}
+.color-card.pink  { background: var(--pink); }
+.color-card.lemon { background: var(--lemon); }
+.color-card.blush { background: var(--blush); }
+.color-card.sage  { background: var(--sage); }
+.color-card.lilac { background: var(--lilac); }
+
+.rule-dashed { border-bottom: 1px dashed var(--rule-soft); }
+.rule-medium { border-bottom: 1.5px solid var(--rule-medium); }
+
+/* pill */
+.pill {
+    display: inline-block;
+    border-radius: 999px;
+    padding: 5px 16px;
+    font-family: var(--font-sans); font-weight: 500; font-size: 16px;
+    color: var(--ink);
+}
+.pill.lemon { background: var(--lemon); }
+.pill.blush { background: var(--blush); }
+.pill.pink  { background: var(--pink); }
+.pill.note  { background: transparent; border: 1px solid var(--rule-medium); }
+
+/* body copy */
+.body-txt { font-family: var(--font-sans); font-weight: 400; font-size: 24px; line-height: 1.5; color: var(--ink); }
+.body-txt.soft { color: var(--ink-soft); }
+.card-head { font-family: var(--font-serif); font-weight: 500; font-size: 32px; line-height: 1.1; color: var(--ink); }
+.card-head.sm { font-size: 26px; }
+.eyebrow-tag { font-family: var(--font-sans); font-weight: 500; font-size: 15px; letter-spacing: 0.04em; color: var(--ink-soft); text-transform: uppercase; }
+
+/* roman step numeral */
+.roman {
+    font-family: var(--font-serif); font-style: italic; font-weight: 500;
+    font-size: 44px; color: var(--ink-soft); line-height: 1;
+}
+
+/* stat tiles slide 1 */
+.stat-row { display: flex; gap: 24px; }
+.stat-tile { flex: 1; text-align: left; }
+.stat-tile .num { font-family: var(--font-serif); font-weight: 500; font-size: 84px; line-height: 1; color: var(--ink); }
+.stat-tile .lbl { font-family: var(--font-sans); font-weight: 500; font-size: 18px; color: var(--ink); margin-top: 6px; }
+
+/* bullet list (dash-marker, editorial) */
+.elist { list-style: none; }
+.elist li {
+    position: relative; padding-left: 30px;
+    font-family: var(--font-sans); font-size: 24px; line-height: 1.48; color: var(--ink);
+    margin-bottom: 14px;
+}
+.elist li::before { content: "—"; position: absolute; left: 0; color: var(--ink-soft); }
+.elist.sm li { font-size: 22px; margin-bottom: 10px; }
+.elist li b { font-weight: 600; }
+
+/* two column */
+.two-col { display: flex; gap: 40px; }
+.two-col .col { flex: 1; }
+
+/* five-stage bar (generic + positioned) */
+.stagebar-wrap { position: relative; }
+.stagebar { display: flex; gap: 10px; }
+.stagebar .seg {
+    flex: 1; height: 70px; border-radius: 16px;
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    font-family: var(--font-sans); font-weight: 500; font-size: 15px; padding: 0 8px;
+    background: var(--card-fill-solid); color: var(--ink-soft);
+}
+.stagebar .seg.filled { background: var(--ink); color: var(--paper); }
+.stagebar .seg.partial { background: linear-gradient(90deg, var(--ink) 0%, var(--ink) 32%, var(--card-fill-solid) 32%); color: var(--ink); }
+.stage-marker {
+    position: absolute; top: -50px;
+    transform: translateX(-50%);
+    font-family: var(--font-serif); font-style: italic; font-weight: 500; font-size: 20px;
+    color: var(--ink); white-space: nowrap;
+}
+.stage-marker::after {
+    content: ""; position: absolute; left: 50%; top: 30px;
+    width: 2px; height: 22px; background: var(--rule-medium); transform: translateX(-50%);
+}
+
+/* cycle flow row */
+.cycle-row { display: flex; align-items: center; gap: 6px; }
+.cycle-node {
+    flex: 1; text-align: center; padding: 16px 6px; border-radius: 20px;
+    background: var(--card-fill-solid);
+    font-family: var(--font-sans); font-weight: 500; font-size: 16px; color: var(--ink);
+}
+.cycle-node.accent { background: var(--pink); }
+.cycle-arrow { font-family: var(--font-serif); font-style: italic; font-size: 26px; color: var(--ink-soft); }
+
+/* sector grid slide 8 */
+.sector-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.sector-tile {
+    border-radius: 20px; padding: 16px 18px; min-height: 74px;
+    display: flex; align-items: center;
+    font-family: var(--font-sans); font-weight: 500; font-size: 19px; color: var(--ink);
+}
+.legend-row { display: flex; gap: 30px; margin-top: 8px; }
+.legend-item { font-family: var(--font-sans); font-size: 16px; color: var(--ink-soft); display: flex; align-items: center; gap: 8px; }
+.legend-item .sw { width: 14px; height: 14px; border-radius: 4px; }
+
+/* comparator list slide 9 */
+.compare-list { display: flex; flex-direction: column; }
+.compare-row { display: flex; gap: 24px; padding: 12px 0; align-items: baseline; }
+.compare-row .country { width: 210px; flex-shrink: 0; font-family: var(--font-serif); font-weight: 500; font-size: 25px; color: var(--ink); }
+.compare-row .detail { flex: 1; font-family: var(--font-sans); font-size: 20px; line-height: 1.4; color: var(--ink-soft); }
+.compare-row .detail b { color: var(--ink); font-weight: 500; }
+
+/* chain diagram slide 10 */
+.chain-row { display: flex; align-items: center; gap: 4px; }
+.chain-node { flex: 1; text-align: center; padding: 12px 4px; border-radius: 16px; background: var(--card-fill-solid); font-family: var(--font-sans); font-weight: 500; font-size: 14px; color: var(--ink); }
+.chain-arrow { font-family: var(--font-serif); font-style: italic; font-size: 20px; color: var(--ink-soft); }
+.watch-span {
+    margin-top: 40px; height: 3px; background: var(--rule-medium); position: relative;
+}
+.watch-span .lbl {
+    position: absolute; left: 50%; top: 12px; transform: translateX(-50%);
+    font-family: var(--font-serif); font-style: italic; font-size: 18px; color: var(--ink-soft); white-space: nowrap;
+}
+.drop-line { display: flex; justify-content: center; margin-top: 36px; }
+.drop-arrow { font-family: var(--font-serif); font-style: italic; font-size: 24px; color: var(--pink); }
+.model-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+
+/* instrument cards slide 12 */
+.card-row { display: flex; gap: 20px; }
+.instr-card { flex: 1; }
+
+/* decision cards slide 13 */
+.decision-row { display: flex; gap: 22px; }
+.decision-card { flex: 1; }
+.decision-card .when { font-family: var(--font-sans); font-weight: 500; font-size: 14px; color: var(--ink-soft); margin-bottom: 8px; }
+
+.callout {
+    font-family: var(--font-serif); font-style: italic; font-weight: 500; font-size: 28px;
+    color: var(--ink); line-height: 1.3;
+}
+
+/* ===========================================
+   INLINE EDITING
+   =========================================== */
+.edit-hotzone { position: fixed; top: 0; left: 0; width: 80px; height: 80px; z-index: 10000; cursor: pointer; }
+.edit-toggle {
+    position: fixed; top: 16px; left: 16px; z-index: 10001;
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--ink); color: var(--paper); border: none;
+    font-size: 18px; cursor: pointer;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+.edit-toggle.show, .edit-toggle.active { opacity: 1; pointer-events: auto; }
+.edit-toggle.active { background: #B24B72; }
+[contenteditable="true"] { outline: 2px dashed var(--pink); outline-offset: 4px; cursor: text; }
+.save-toast {
+    position: fixed; bottom: 70px; left: 50%; transform: translateX(-50%);
+    background: var(--ink); color: var(--paper); padding: 10px 20px; font-family: var(--font-sans);
+    font-size: 14px; border-radius: 999px; opacity: 0; pointer-events: none;
+    transition: opacity 0.3s ease; z-index: 10002;
+}
+.save-toast.show { opacity: 1; }
+
+/* deck nav controls */
+.deck-controls {
+    display: flex; gap: 10px; align-items: center;
+    background: rgba(42,36,27,0.88); padding: 8px 16px; border-radius: 999px;
+}
+.deck-controls button {
+    background: none; border: none; color: var(--paper); font-size: 16px; cursor: pointer;
+    font-family: var(--font-sans); font-weight: 500; padding: 4px 8px;
+}
+.deck-controls .counter { color: var(--paper); font-family: var(--font-serif); font-style: italic; font-size: 15px; min-width: 60px; text-align: center; }
+</style>
+</head>
+<body>
+
+<div class="edit-hotzone"></div>
+<button class="edit-toggle" id="editToggle" title="Edit mode (E)">&#9998;</button>
+<div class="save-toast" id="saveToast">Saved</div>
+
+<div class="deck-viewport">
+    <main class="deck-stage" id="deckStage">
+
+        <!-- ============ SLIDE 1 — STARTING POINT ============ -->
+        <section class="slide active">
+            <div class="slide-body">
+                <div class="chrome-eyebrow">DCCE Adaptation MEL</div>
+                <div class="chrome-pagedot">1 &middot; 13</div>
+                <div class="content-zone">
+                    <h1 class="slide-h1 reveal">Starting point</h1>
+                    <p class="slide-sub reveal">Three rounds of research and a full working analysis have produced a position on what DCCE should do first.</p>
+
+                    <div class="stat-row reveal" style="margin-top:52px;">
+                        <div class="stat-tile"><div class="num">14</div><div class="lbl">Sources reviewed</div></div>
+                        <div class="stat-tile"><div class="num">9</div><div class="lbl">Comparator countries</div></div>
+                        <div class="stat-tile"><div class="num">15</div><div class="lbl">Analysis notes</div></div>
+                        <div class="stat-tile"><div class="num">13</div><div class="lbl">Resolved</div></div>
+                    </div>
+
+                    <div class="soft-card reveal" style="margin-top:44px; max-width:1500px;">
+                        <div class="eyebrow-tag" style="margin-bottom:10px;">This deck, in order</div>
+                        <p class="body-txt">What MEL means &middot; how a system like this normally develops &middot; where DCCE stands &middot; what constrains it &middot; the target design &middot; what to do first.</p>
+                    </div>
+                </div>
+                <div class="chrome-footer"><span>DCCE Adaptation MEL &mdash; Internal review</span><span>2026</span></div>
+            </div>
+        </section>
+
+        <!-- ============ SLIDE 2 — WHAT MEL MEANS ============ -->
+        <section class="slide">
+            <div class="slide-body">
+                <div class="chrome-eyebrow">Background</div>
+                <div class="chrome-pagedot">2 &middot; 13</div>
+                <div class="content-zone">
+                    <h1 class="slide-h1 reveal">What MEL means</h1>
+                    <p class="slide-sub reveal">Monitoring, evaluation and learning are three connected functions, not one blended activity, and MEL is the actual global standard.</p>
+
+                    <div class="reveal" style="margin-top:48px; display:flex; gap:20px;">
+                        <div class="color-card lemon" style="flex:1; text-align:center;">
+                            <div class="card-head">Monitoring</div>
+                            <p class="body-txt" style="font-size:19px; margin-top:8px;">Is it on track?</p>
+                        </div>
+                        <div class="color-card blush" style="flex:1; text-align:center;">
+                            <div class="card-head">Evaluation</div>
+                            <p class="body-txt" style="font-size:19px; margin-top:8px;">Did it work?</p>
+                        </div>
+                        <div class="color-card lilac" style="flex:1; text-align:center;">
+                            <div class="card-head">Learning</div>
+                            <p class="body-txt" style="font-size:19px; margin-top:8px;">What changes next?</p>
+                        </div>
+                    </div>
+
+                    <div class="soft-card reveal" style="margin-top:32px; max-width:1600px;">
+                        <p class="body-txt">The 2023 UAE Framework for Global Climate Resilience sets a 2030 target for every country to have a working MEL system in place. Three letters &mdash; MEL is the term the obligation is actually measured against.</p>
+                    </div>
+
+                    <p class="reveal body-txt soft" style="margin-top:24px; max-width:1600px;">A note on &ldquo;MERL&rdquo;: some of DCCE&rsquo;s own documents add a fourth letter, for Research. That is DCCE&rsquo;s own framing, not the global standard.</p>
+                </div>
+                <div class="chrome-footer"><span>DCCE Adaptation MEL &mdash; Internal review</span><span>2026</span></div>
+            </div>
+        </section>
+
+        <!-- ============ SLIDE 3 — WHAT M, E, L PRODUCE ============ -->
+        <section class="slide">
+            <div class="slide-body">
+                <div class="chrome-eyebrow">Background</div>
+                <div class="chrome-pagedot">3 &middot; 13</div>
+                <div class="content-zone">
+                    <h1 class="slide-h1 reveal" style="font-size:64px;">What M, E and L produce</h1>
+                    <p class="slide-sub reveal" style="font-size:29px;">Each of the three produces something different.</p>
+
+                    <div class="reveal" style="margin-top:36px; display:flex; gap:20px;">
+                        <div class="color-card lemon" style="flex:1;">
+                            <div class="card-head">Monitoring</div>
+                            <p class="body-txt" style="font-size:19px; margin-top:6px;">Continuous tracking of whether implementation matches plan.</p>
+                            <div class="rule-dashed" style="margin:14px 0;"></div>
+                            <p class="body-txt" style="font-size:19px;"><b>Produces:</b> indicator data, status registers, financial records, baselines.</p>
+                        </div>
+                        <div class="color-card blush" style="flex:1;">
+                            <div class="card-head">Evaluation</div>
+                            <p class="body-txt" style="font-size:19px; margin-top:6px;">Periodic judgment against relevance, effectiveness, efficiency, equity.</p>
+                            <div class="rule-dashed" style="margin:14px 0;"></div>
+                            <p class="body-txt" style="font-size:19px;"><b>Produces:</b> mid-term &amp; end-term reports, contribution analysis, recommendations.</p>
+                        </div>
+                        <div class="color-card lilac" style="flex:1;">
+                            <div class="card-head">Learning</div>
+                            <p class="body-txt" style="font-size:19px; margin-top:6px;">Deliberate collective process that changes knowledge, attitudes or behaviour.</p>
+                            <div class="rule-dashed" style="margin:14px 0;"></div>
+                            <p class="body-txt" style="font-size:19px;"><b>Produces:</b> shared understanding, revised assumptions, institutional change.</p>
+                        </div>
+                    </div>
+
+                    <p class="callout reveal" style="margin-top:32px;">Running learning activities is not learning. The process has to produce a change.</p>
+                </div>
+                <div class="chrome-footer"><span>DCCE Adaptation MEL &mdash; Internal review</span><span>2026</span></div>
+            </div>
+        </section>
+
+        <!-- ============ SLIDE 4 — HOW THE OUTPUTS MOVE ============ -->
+        <section class="slide">
+            <div class="slide-body">
+                <div class="chrome-eyebrow">Background</div>
+                <div class="chrome-pagedot">4 &middot; 13</div>
+                <div class="content-zone">
+                    <h1 class="slide-h1 reveal" style="font-size:64px;">How the outputs move</h1>
+                    <p class="slide-sub reveal" style="font-size:29px;">Learning is the only component that closes the loop back into planning.</p>
+
+                    <div class="cycle-row reveal" style="margin-top:48px;">
+                        <div class="cycle-node">Planning</div>
+                        <div class="cycle-arrow">&#8594;</div>
+                        <div class="cycle-node">Implementation</div>
+                        <div class="cycle-arrow">&#8594;</div>
+                        <div class="cycle-node">Indicator tracking</div>
+                        <div class="cycle-arrow">&#8594;</div>
+                        <div class="cycle-node">Review</div>
+                        <div class="cycle-arrow">&#8594;</div>
+                        <div class="cycle-node accent">Revision</div>
+                    </div>
+                    <p class="reveal" style="text-align:right; margin-top:8px; font-family:var(--font-serif); font-style:italic; font-weight:500; font-size:20px; color:var(--ink-soft);">&#8617; back to Planning &mdash; the learning step</p>
+
+                    <div class="soft-card reveal" style="margin-top:34px;">
+                        <div class="two-col">
+                            <div class="col">
+                                <p class="body-txt" style="margin-bottom:14px;"><b>Planning</b> draws on previous evaluation recommendations and baseline risk information.</p>
+                                <p class="body-txt"><b>Implementation and tracking</b> run on monitoring.</p>
+                            </div>
+                            <div class="col">
+                                <p class="body-txt" style="margin-bottom:14px;"><b>Review</b> uses monitoring reports to show what happened, and evaluation to show why.</p>
+                                <p class="body-txt"><b>Revision</b> uses evaluation findings and learning.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="callout reveal" style="margin-top:26px;">A dashboard, however complete, only ever says push harder on the same strategy.</p>
+                </div>
+                <div class="chrome-footer"><span>DCCE Adaptation MEL &mdash; Internal review</span><span>2026</span></div>
+            </div>
+        </section>
+
+        <!-- ============ SLIDE 5 — HOW SYSTEMS LIKE THIS DEVELOP ============ -->
+        <section class="slide">
+            <div class="slide-body">
+                <div class="chrome-eyebrow">Background</div>
+                <div class="chrome-pagedot">5 &middot; 13</div>
+                <div class="content-zone">
+                    <h1 class="slide-h1 reveal" style="font-size:62px;">How systems like this develop</h1>
+                    <p class="slide-sub reveal" style="font-size:28px;">Countries build a working MEL system through five stages, and a different trigger moves each stage to the next.</p>
+
+                    <div class="stagebar-wrap reveal" style="margin-top:56px;">
+                        <div class="stagebar">
+                            <div class="seg">Strategy &amp;<br>coordinating body</div>
+                            <div class="seg">Indicator design<br>&amp; consultation</div>
+                            <div class="seg">Pilot<br>reporting</div>
+                            <div class="seg">Mainstreaming into<br>budgets &amp; plans</div>
+                            <div class="seg">Repeated cycles<br>with oversight</div>
+                        </div>
+                    </div>
+
+                    <div class="reveal" style="margin-top:30px; display:grid; grid-template-columns: repeat(5,1fr); gap:16px;">
+                        <div><span class="roman">i.</span><p class="body-txt" style="font-size:17px; margin-top:6px;">Political recognition or international commitment</p></div>
+                        <div><span class="roman">ii.</span><p class="body-txt" style="font-size:17px; margin-top:6px;">Stakeholder consultation &amp; technical assistance</p></div>
+                        <div><span class="roman">iii.</span><p class="body-txt" style="font-size:17px; margin-top:6px;">An institutional champion runs a first cycle</p></div>
+                        <div><span class="roman">iv.</span><p class="body-txt" style="font-size:17px; margin-top:6px;">A fiscal or legal instrument</p></div>
+                        <div><span class="roman">v.</span><p class="body-txt" style="font-size:17px; margin-top:6px;">Accumulated administrative habit</p></div>
+                    </div>
+
+                    <p class="callout reveal" style="margin-top:34px;">This pattern shows up across very different countries. It is not unique to Thailand.</p>
+                </div>
+                <div class="chrome-footer"><span>DCCE Adaptation MEL &mdash; Internal review</span><span>2026</span></div>
+            </div>
+        </section>
+
+        <!-- ============ SLIDE 6 — WHERE DCCE STANDS ============ -->
+        <section class="slide">
+            <div class="slide-body">
+                <div class="chrome-eyebrow">DCCE Adaptation MEL</div>
+                <div class="chrome-pagedot">6 &middot; 13</div>
+                <div class="content-zone">
+                    <h1 class="slide-h1 reveal" style="font-size:64px;">Where DCCE stands</h1>
+                    <p class="slide-sub reveal" style="font-size:29px;">DCCE is at stage two of five and has just begun stage three.</p>
+
+                    <div class="stagebar-wrap reveal" style="margin-top:64px;">
+                        <div class="stage-marker" style="left:47%;">DCCE is here</div>
+                        <div class="stagebar">
+                            <div class="seg filled">Strategy &amp;<br>coordinating body</div>
+                            <div class="seg filled">Indicator design<br>&amp; consultation</div>
+                            <div class="seg partial">Pilot<br>reporting</div>
+                            <div class="seg">Mainstreaming into<br>budgets &amp; plans</div>
+                            <div class="seg">Repeated cycles<br>with oversight</div>
+                        </div>
+                    </div>
+
+                    <div class="two-col reveal" style="margin-top:38px;">
+                        <div class="col soft-card">
+                            <div class="eyebrow-tag" style="margin-bottom:10px;">What places it there</div>
+                            <ul class="elist sm">
+                                <li>A detailed framework exists.</li>
+                                <li>One round of indicator values has been collected from focal-point agencies.</li>
+                            </ul>
+                        </div>
+                        <div class="col soft-card">
+                            <div class="eyebrow-tag" style="margin-bottom:10px;">What holds it there</div>
+                            <ul class="elist sm">
+                                <li>Regular inter-ministry submission is not yet routine.</li>
+                                <li>No legal or budget instrument requires it.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="callout reveal" style="margin-top:24px;">The achievable next move is stage three to stage four. Not full national operation.</p>
+                </div>
+                <div class="chrome-footer"><span>DCCE Adaptation MEL &mdash; Internal review</span><span>2026</span></div>
+            </div>
+        </section>
+
+        <!-- ============ SLIDE 7 — AUTHORITY AND INSTRUMENTS ============ -->
+        <section class="slide">
+            <div class="slide-body">
+                <div class="chrome-eyebrow">DCCE Adaptation MEL</div>
+                <div class="chrome-pagedot">7 &middot; 13</div>
+                <div class="content-zone">
+                    <h1 class="slide-h1 reveal" style="font-size:64px;">Authority and instruments</h1>
+                    <p class="slide-sub reveal" style="font-size:29px;">Nothing currently requires a line agency to report.</p>
+
+                    <div class="soft-card reveal" style="margin-top:34px;">
+                        <ul class="elist">
+                            <li>Authority is memoranda and accumulated standing. No budget-review role, no statutory reporting duty.</li>
+                            <li>No independent evaluator of project effectiveness exists anywhere in Thai government.</li>
+                            <li>No convening authority with standing to resolve disputes between divisions.</li>
+                            <li>No dedicated provincial presence.</li>
+                        </ul>
+                    </div>
+
+                    <div class="color-card blush reveal" style="margin-top:20px;">
+                        <span class="pill note" style="margin-bottom:8px;">Partial</span>
+                        <p class="body-txt" style="margin-top:8px;">Budget tagging categories already work. Climate is not one of them.</p>
+                    </div>
+
+                    <p class="reveal body-txt soft" style="margin-top:20px; max-width:1650px; font-size:20px;">Who does what today: the Office of the Public Sector Development Commission (OPDC) and the National Economic and Social Development Council (NESDC) check whether targets were met. The Office of the Auditor General audits budget use. Project owners assess themselves.</p>
+                </div>
+                <div class="chrome-footer"><span>DCCE Adaptation MEL &mdash; Internal review</span><span>2026</span></div>
+            </div>
+        </section>
+
+        <!-- ============ SLIDE 8 — WHAT IS BEING MEASURED ============ -->
+        <section class="slide">
+            <div class="slide-body">
+                <div class="chrome-eyebrow">DCCE Adaptation MEL</div>
+                <div class="chrome-pagedot">8 &middot; 13</div>
+                <div class="content-zone">
+                    <h1 class="slide-h1 reveal" style="font-size:58px;">What is being measured</h1>
+                    <p class="slide-sub reveal" style="font-size:26px; margin-top:12px;">The plan being measured comes from policy dialogue rather than risk analysis.</p>
+
+                    <ul class="elist sm reveal" style="margin-top:22px; max-width:1650px;">
+                        <li>The National Adaptation Plan does not build on a Thailand-specific climate risk assessment.</li>
+                        <li>Sector scope and strategy were negotiated, not derived from data.</li>
+                        <li>The action plan is largely existing agency projects relabelled as adaptation, with no consistent test for what qualifies.</li>
+                    </ul>
+
+                    <div class="eyebrow-tag reveal" style="margin-top:6px;">The six sectors follow three different logics</div>
+                    <div class="sector-grid reveal" style="margin-top:12px;">
+                        <div class="sector-tile" style="background:var(--pink);">Water resource management</div>
+                        <div class="sector-tile" style="background:var(--sage);">Food and agriculture</div>
+                        <div class="sector-tile" style="background:var(--lilac);">Human settlement &amp; security</div>
+                        <div class="sector-tile" style="background:var(--pink);">Natural resources</div>
+                        <div class="sector-tile" style="background:var(--sage);">Tourism and the economy</div>
+                        <div class="sector-tile" style="background:var(--lilac);">Public health</div>
+                    </div>
+                    <div class="legend-row reveal">
+                        <div class="legend-item"><span class="sw" style="background:var(--pink);"></span>Resource type</div>
+                        <div class="legend-item"><span class="sw" style="background:var(--sage);"></span>Economic activity</div>
+                        <div class="legend-item"><span class="sw" style="background:var(--lilac);"></span>Vulnerability type</div>
+                    </div>
+
+                    <p class="callout reveal" style="margin-top:18px; font-size:24px;">A system built on this measures compliance labelling, not effectiveness against risk.</p>
+                </div>
+                <div class="chrome-footer"><span>DCCE Adaptation MEL &mdash; Internal review</span><span>2026</span></div>
+            </div>
+        </section>
+
+        <!-- ============ SLIDE 9 — WHAT OTHER COUNTRIES DID ============ -->
+        <section class="slide">
+            <div class="slide-body">
+                <div class="chrome-eyebrow">DCCE Adaptation MEL</div>
+                <div class="chrome-pagedot">9 &middot; 13</div>
+                <div class="content-zone">
+                    <h1 class="slide-h1 reveal" style="font-size:58px;">What other countries did</h1>
+                    <p class="slide-sub reveal" style="font-size:26px; margin-top:10px;">Every country that made reporting routine attached it to something agencies already could not skip.</p>
+
+                    <div class="soft-card reveal compare-list" style="margin-top:22px;">
+                        <div class="compare-row rule-dashed"><div class="country">Tonga</div><div class="detail">Five questions added to the planning office&rsquo;s existing mandatory quarterly report &mdash; <b>no legal requirement, no funded post; agencies answered because the submission was already required.</b></div></div>
+                        <div class="compare-row rule-dashed"><div class="country">Philippines</div><div class="detail">Budget circular making climate tagging a condition of budget approval &mdash; <b>compliance was structural; the audit office still found the arrangement not institutionalised.</b></div></div>
+                        <div class="compare-row rule-dashed"><div class="country">Kenya</div><div class="detail">Integration into the existing national monitoring system &mdash; <b>worked because a statistics bureau already verified agency submissions.</b></div></div>
+                        <div class="compare-row rule-dashed"><div class="country">Bangladesh</div><div class="detail">Reporting tied to disbursement from a national climate fund &mdash; <b>needs a fund the coordinating body administers.</b></div></div>
+                        <div class="compare-row rule-dashed"><div class="country">Finland</div><div class="detail">Voluntary qualitative self-assessment, no separate funding &mdash; <b>ran before legal instrument existed; stayed fragile.</b></div></div>
+                        <div class="compare-row"><div class="country">France</div><div class="detail">Central body monitors, convened cross-agency committee evaluates &mdash; <b>works without an independent evaluator existing.</b></div></div>
+                    </div>
+
+                    <p class="callout reveal" style="margin-top:20px; font-size:24px;">None of them built a parallel process and asked ministries to adopt it.</p>
+                </div>
+                <div class="chrome-footer"><span>DCCE Adaptation MEL &mdash; Internal review</span><span>2026</span></div>
+            </div>
+        </section>
+
+        <!-- ============ SLIDE 10 — THE OPERATING MODEL ============ -->
+        <section class="slide">
+            <div class="slide-body">
+                <div class="chrome-eyebrow">DCCE Adaptation MEL</div>
+                <div class="chrome-pagedot">10 &middot; 13</div>
+                <div class="content-zone">
+                    <h1 class="slide-h1 reveal" style="font-size:58px;">The operating model</h1>
+                    <p class="slide-sub reveal" style="font-size:26px; margin-top:10px;">Monitoring and evaluation stay national. Diagnosis and learning go to whichever sector or project the evidence points to.</p>
+
+                    <div class="reveal" style="margin-top:38px;">
+                        <div class="chain-row">
+                            <div class="chain-node">Policy</div>
+                            <div class="chain-arrow">&#8594;</div>
+                            <div class="chain-node">Activities</div>
+                            <div class="chain-arrow">&#8594;</div>
+                            <div class="chain-node">Regulations</div>
+                            <div class="chain-arrow">&#8594;</div>
+                            <div class="chain-node">Funding mechanisms</div>
+                            <div class="chain-arrow">&#8594;</div>
+                            <div class="chain-node">Funding criteria</div>
+                            <div class="chain-arrow">&#8594;</div>
+                            <div class="chain-node">Ground-level results</div>
+                            <div class="chain-arrow">&#8594;</div>
+                            <div class="chain-node accent-node" style="background:var(--lemon);">Resilience outcome</div>
+                        </div>
+                        <div class="watch-span"><span class="lbl">DCCE watches the whole chain</span></div>
+                        <div class="drop-line"><span class="drop-arrow">&#8595; a weak point is flagged &mdash; learning goes here &mdash; the answer carries back &#8593;</span></div>
+                    </div>
+
+                    <div class="model-grid reveal" style="margin-top:26px;">
+                        <div class="color-card lemon"><div class="card-head sm">Scale</div><p class="body-txt" style="font-size:17px; margin-top:6px;">M&amp;E centralised at DCCE. Diagnosis &amp; learning at whichever sector the evidence points to.</p></div>
+                        <div class="color-card blush"><div class="card-head sm">Collection</div><p class="body-txt" style="font-size:17px; margin-top:6px;">Only what agencies already report. No new data streams.</p></div>
+                        <div class="color-card sage"><div class="card-head sm">Processing</div><p class="body-txt" style="font-size:17px; margin-top:6px;">A plain score or count, checked by DCCE or an existing statistics body.</p></div>
+                        <div class="color-card lilac"><div class="card-head sm">Use</div><p class="body-txt" style="font-size:17px; margin-top:6px;">Carried back into the specific flagged link &mdash; never left as an unused report.</p></div>
+                    </div>
+
+                    <p class="callout reveal" style="margin-top:20px; font-size:22px;">A repeating cycle: evaluation flags where to look, learning finds out why, DCCE carries the answer back.</p>
+                </div>
+                <div class="chrome-footer"><span>DCCE Adaptation MEL &mdash; Internal review</span><span>2026</span></div>
+            </div>
+        </section>
+
+        <!-- ============ SLIDE 11 — WHAT TO DO FIRST ============ -->
+        <section class="slide">
+            <div class="slide-body">
+                <div class="chrome-eyebrow">DCCE Adaptation MEL</div>
+                <div class="chrome-pagedot">11 &middot; 13</div>
+                <div class="content-zone">
+                    <h1 class="slide-h1 reveal" style="font-size:58px;">What to do first</h1>
+                    <p class="slide-sub reveal" style="font-size:26px; margin-top:10px;">One complete cycle, inside one sector, using only data agencies already report.</p>
+
+                    <div class="cycle-row reveal" style="margin-top:30px;">
+                        <div class="cycle-node" style="font-size:15px;">Collect</div>
+                        <div class="cycle-arrow" style="font-size:20px;">&#8594;</div>
+                        <div class="cycle-node" style="font-size:15px;">Score</div>
+                        <div class="cycle-arrow" style="font-size:20px;">&#8594;</div>
+                        <div class="cycle-node" style="font-size:15px;">Evaluate</div>
+                        <div class="cycle-arrow" style="font-size:20px;">&#8594;</div>
+                        <div class="cycle-node" style="font-size:15px;">Identify weak point</div>
+                        <div class="cycle-arrow" style="font-size:20px;">&#8594;</div>
+                        <div class="cycle-node" style="font-size:15px;">Learn</div>
+                        <div class="cycle-arrow" style="font-size:20px;">&#8594;</div>
+                        <div class="cycle-node accent" style="font-size:15px;">Carry back</div>
+                    </div>
+
+                    <div class="two-col reveal" style="margin-top:28px;">
+                        <div class="col soft-card">
+                            <ul class="elist sm">
+                                <li><b>Start</b> from the collection round already completed. Do not design fresh.</li>
+                                <li><b>Indicators</b> &mdash; ten to fifteen, from the platform&rsquo;s own set, not the international reporting list.</li>
+                                <li><b>Scope</b> &mdash; one sector, because sectors are how the whole system describes itself.</li>
+                                <li><b>Data</b> &mdash; only what agencies already submit.</li>
+                            </ul>
+                        </div>
+                        <div class="col soft-card">
+                            <ul class="elist sm">
+                                <li><b>Scoring</b> &mdash; plain three-level, not the weighted composite index.</li>
+                                <li><b>Evaluation</b> &mdash; a convened cross-agency committee, following France.</li>
+                                <li><b>Learning</b> &mdash; sent to whichever sector the evaluation identifies.</li>
+                                <li>Run it <b>twice</b> if the calendar allows.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="chrome-footer"><span>DCCE Adaptation MEL &mdash; Internal review</span><span>2026</span></div>
+            </div>
+        </section>
+
+        <!-- ============ SLIDE 12 — GETTING TO STAGE FOUR ============ -->
+        <section class="slide">
+            <div class="slide-body">
+                <div class="chrome-eyebrow">DCCE Adaptation MEL</div>
+                <div class="chrome-pagedot">12 &middot; 13</div>
+                <div class="content-zone">
+                    <h1 class="slide-h1 reveal" style="font-size:58px;">Getting to stage four</h1>
+                    <p class="slide-sub reveal" style="font-size:26px; margin-top:10px;">The first cycle is also how we find out which instrument could carry reporting afterward.</p>
+
+                    <div class="card-row reveal" style="margin-top:30px;">
+                        <div class="instr-card color-card lemon">
+                            <div class="eyebrow-tag">Philippines &middot; Indonesia</div>
+                            <div class="card-head sm" style="margin-top:6px;">Add adaptation category to existing tagging</div>
+                            <p class="body-txt" style="font-size:16px; margin-top:8px;">Mechanism already runs. Watch for divided authority between ministries.</p>
+                        </div>
+                        <div class="instr-card color-card blush">
+                            <div class="eyebrow-tag">Tonga</div>
+                            <div class="card-head sm" style="margin-top:6px;">Attach to an existing mandatory planning cycle</div>
+                            <p class="body-txt" style="font-size:16px; margin-top:8px;">Lowest cost. Depends on finding the Thai equivalent.</p>
+                        </div>
+                        <div class="instr-card color-card sage">
+                            <div class="eyebrow-tag">Kenya</div>
+                            <div class="card-head sm" style="margin-top:6px;">Connect to OPDC / NESDC monitoring</div>
+                            <p class="body-txt" style="font-size:16px; margin-top:8px;">Carries the reporting flow but not the assessment.</p>
+                        </div>
+                        <div class="instr-card color-card lilac">
+                            <div class="eyebrow-tag">Thailand</div>
+                            <div class="card-head sm" style="margin-top:6px;">Route through existing statistical work</div>
+                            <p class="body-txt" style="font-size:16px; margin-top:8px;">Green GDP, sectoral emissions accounting, national surveys.</p>
+                        </div>
+                    </div>
+
+                    <div class="soft-card reveal" style="margin-top:26px;">
+                        <ul class="elist sm" style="margin-bottom:0;">
+                            <li><b>What the pilot produces toward this</b> &mdash; where reporting stalls, who owns which gap, which data never arrives.</li>
+                            <li>Local work is already happening. The task is testing what exists before formalising it, not waiting for a signal to begin.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chrome-footer"><span>DCCE Adaptation MEL &mdash; Internal review</span><span>2026</span></div>
+            </div>
+        </section>
+
+        <!-- ============ SLIDE 13 — DECISIONS ============ -->
+        <section class="slide">
+            <div class="slide-body">
+                <div class="chrome-eyebrow">DCCE Adaptation MEL</div>
+                <div class="chrome-pagedot">13 &middot; 13</div>
+                <div class="content-zone">
+                    <h1 class="slide-h1 reveal" style="font-size:58px;">What we need to settle</h1>
+                    <p class="slide-sub reveal" style="font-size:26px; margin-top:10px;">Three questions remain open and two of them shape the first cycle directly.</p>
+
+                    <div class="decision-row reveal" style="margin-top:32px;">
+                        <div class="decision-card soft-card">
+                            <div class="when pill lemon">Needed now</div>
+                            <div class="card-head sm" style="margin-top:8px;">Which sector to enter through</div>
+                            <p class="body-txt" style="font-size:18px; margin-top:8px;">Criteria from comparators &mdash; existing data infrastructure, donor support, or simple willingness.</p>
+                        </div>
+                        <div class="decision-card soft-card">
+                            <div class="when pill blush">Can wait for the pilot</div>
+                            <div class="card-head sm" style="margin-top:8px;">Which instrument for stage four</div>
+                            <p class="body-txt" style="font-size:18px; margin-top:8px;">The pilot should be scoped to produce the answer.</p>
+                        </div>
+                        <div class="decision-card soft-card">
+                            <div class="when pill note">Needed at draft stage</div>
+                            <div class="card-head sm" style="margin-top:8px;">How to frame this for DCCE</div>
+                            <p class="body-txt" style="font-size:18px; margin-top:8px;">Once a draft of the Terms of Reference redirect exists.</p>
+                        </div>
+                    </div>
+
+                    <div class="eyebrow-tag reveal" style="margin-top:28px;">Deliberately out of scope</div>
+                    <p class="reveal body-txt soft" style="margin-top:8px; font-size:20px; max-width:1650px;">Full rollout across six sectors and eighteen agencies. An independent evaluator. Any new data collection. Committing to an instrument before evidence exists.</p>
+
+                    <p class="callout reveal" style="margin-top:26px; font-size:30px;">Every part of this depends on someone at DCCE running the cycle after the contract ends.</p>
+                </div>
+                <div class="chrome-footer"><span>DCCE Adaptation MEL &mdash; Internal review</span><span>2026</span></div>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<div class="deck-controls">
+    <button id="prevBtn" title="Previous (&#8592;)">&#8592;</button>
+    <div class="counter" id="counter">1 / 13</div>
+    <button id="nextBtn" title="Next (&#8594; / Space)">&#8594;</button>
+</div>
+
+<script>
+/* ===========================================
+   SLIDE PRESENTATION CONTROLLER
+   =========================================== */
+class SlidePresentation {
+    constructor() {
+        this.slides = document.querySelectorAll('.slide');
+        this.currentSlide = 0;
+        this.stage = document.getElementById('deckStage');
+        this.counter = document.getElementById('counter');
+        this.setupStageScale();
+        this.setupKeyboardNav();
+        this.setupTouchNav();
+        this.setupButtons();
+        this.showSlide(0);
+    }
+
+    setupStageScale() {
+        const scale = () => {
+            const factor = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+            const x = (window.innerWidth - 1920 * factor) / 2;
+            const y = (window.innerHeight - 1080 * factor) / 2;
+            this.stage.style.transform = `translate(${x}px, ${y}px) scale(${factor})`;
+        };
+        scale();
+        window.addEventListener('resize', scale);
+    }
+
+    setupKeyboardNav() {
+        document.addEventListener('keydown', (e) => {
+            if (e.target.getAttribute('contenteditable') === 'true') return;
+            if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+                e.preventDefault();
+                this.showSlide(this.currentSlide + 1);
+            } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+                e.preventDefault();
+                this.showSlide(this.currentSlide - 1);
+            } else if (e.key === 'Home') {
+                this.showSlide(0);
+            } else if (e.key === 'End') {
+                this.showSlide(this.slides.length - 1);
+            }
+        });
+    }
+
+    setupTouchNav() {
+        let startX = 0;
+        this.stage.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+        this.stage.addEventListener('touchend', (e) => {
+            const dx = e.changedTouches[0].clientX - startX;
+            if (Math.abs(dx) > 60) {
+                if (dx < 0) this.showSlide(this.currentSlide + 1);
+                else this.showSlide(this.currentSlide - 1);
+            }
+        }, { passive: true });
+    }
+
+    setupButtons() {
+        document.getElementById('nextBtn').addEventListener('click', () => this.showSlide(this.currentSlide + 1));
+        document.getElementById('prevBtn').addEventListener('click', () => this.showSlide(this.currentSlide - 1));
+    }
+
+    showSlide(index) {
+        this.currentSlide = Math.max(0, Math.min(index, this.slides.length - 1));
+        this.slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === this.currentSlide);
+            slide.classList.toggle('visible', i === this.currentSlide);
+        });
+        this.counter.textContent = `${this.currentSlide + 1} / ${this.slides.length}`;
+    }
+}
+
+const presentation = new SlidePresentation();
+
+/* ===========================================
+   INLINE EDITING
+   =========================================== */
+class InlineEditor {
+    constructor() {
+        this.isActive = false;
+        this.toggle = document.getElementById('editToggle');
+        this.hotzone = document.querySelector('.edit-hotzone');
+        this.toast = document.getElementById('saveToast');
+        this.editableSelectors = '.slide-h1, .slide-sub, .callout, .card-head, .body-txt, .elist li, .stat-tile .num, .stat-tile .lbl, .cycle-node, .chain-node, .sector-tile, .compare-row .country, .compare-row .detail, .eyebrow-tag, .chrome-eyebrow, .pill';
+        this.bindEvents();
+        this.loadFromStorage();
+    }
+    bindEvents() {
+        this.toggle.addEventListener('click', () => this.toggleEditMode());
+        let hideTimeout = null;
+        this.hotzone.addEventListener('mouseenter', () => { clearTimeout(hideTimeout); this.toggle.classList.add('show'); });
+        this.hotzone.addEventListener('mouseleave', () => { hideTimeout = setTimeout(() => { if (!this.isActive) this.toggle.classList.remove('show'); }, 400); });
+        this.toggle.addEventListener('mouseenter', () => { clearTimeout(hideTimeout); });
+        this.toggle.addEventListener('mouseleave', () => { hideTimeout = setTimeout(() => { if (!this.isActive) this.toggle.classList.remove('show'); }, 400); });
+        this.hotzone.addEventListener('click', () => this.toggleEditMode());
+        document.addEventListener('keydown', (e) => {
+            if ((e.key === 'e' || e.key === 'E') && document.activeElement.getAttribute('contenteditable') !== 'true') {
+                this.toggleEditMode();
+            }
+            if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+                e.preventDefault();
+                this.saveToStorage();
+            }
+        });
+    }
+    toggleEditMode() {
+        this.isActive = !this.isActive;
+        this.toggle.classList.toggle('active', this.isActive);
+        this.toggle.classList.toggle('show', this.isActive);
+        document.querySelectorAll(this.editableSelectors).forEach(el => {
+            el.setAttribute('contenteditable', this.isActive ? 'true' : 'false');
+        });
+        if (!this.isActive) this.saveToStorage();
+    }
+    saveToStorage() {
+        const content = {};
+        document.querySelectorAll(this.editableSelectors).forEach((el, i) => { content[i] = el.innerHTML; });
+        try {
+            localStorage.setItem('dcce-mel-deck-content-v2', JSON.stringify(content));
+            this.showToast();
+        } catch (e) { /* storage unavailable, ignore */ }
+    }
+    loadFromStorage() {
+        try {
+            const saved = localStorage.getItem('dcce-mel-deck-content-v2');
+            if (!saved) return;
+            const content = JSON.parse(saved);
+            document.querySelectorAll(this.editableSelectors).forEach((el, i) => {
+                if (content[i] !== undefined) el.innerHTML = content[i];
+            });
+        } catch (e) { /* ignore */ }
+    }
+    showToast() {
+        this.toast.classList.add('show');
+        setTimeout(() => this.toast.classList.remove('show'), 1400);
+    }
+}
+new InlineEditor();
+</script>
+</body>
+</html>
