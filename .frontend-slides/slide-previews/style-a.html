@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>จากแผนที่นำทางสู่การดำเนินงานจริง</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;600;700&family=Archivo:wght@700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#d8d8d4}
+.deck-viewport{position:fixed;inset:0;overflow:hidden}
+.deck-stage{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:hidden;transform-origin:0 0;background:#f7f6f1}
+.slide{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;visibility:hidden;opacity:0;pointer-events:none;background:#f7f6f1}
+.slide.active{visibility:visible;opacity:1;pointer-events:auto}
+.grid{position:absolute;inset:0;background-image:linear-gradient(#1111 1px,transparent 1px),linear-gradient(90deg,#1111 1px,transparent 1px);background-size:120px 120px}
+.top{position:absolute;left:100px;right:100px;top:70px;border-top:10px solid #111;padding-top:22px;display:flex;justify-content:space-between;font:600 25px 'IBM Plex Sans Thai'}
+.count{font-family:Archivo;color:#d73525}
+.copy{position:absolute;left:100px;top:260px;width:1350px;font-family:'IBM Plex Sans Thai'}
+.kicker{color:#d73525;font-size:28px;font-weight:700}
+h1{font-size:106px;line-height:1.08;letter-spacing:-3px;margin:28px 0}
+.bar{position:absolute;right:100px;top:300px;width:255px;height:500px;background:#d73525}
+.foot{position:absolute;left:100px;right:420px;bottom:80px;border-top:3px solid #111;padding-top:22px;display:flex;justify-content:space-between;font:500 29px 'IBM Plex Sans Thai'}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<div class="deck-viewport">
+<main class="deck-stage">
+<section class="slide active">
+<div class="grid"></div>
+<div class="top"><span>ระบบ MERL ด้านการปรับตัว</span><span class="count">01 / 14</span></div>
+<div class="copy"><div class="kicker">ข้อเสนอปรับลำดับการพัฒนา</div><h1>จากแผนที่นำทาง<br>สู่การดำเนินงานจริง</h1></div>
+<div class="bar"></div>
+<div class="foot"><strong>รักษาเป้าหมายเดิม</strong><span>เพิ่มเงื่อนไขความพร้อม • ทดสอบกระบวนงานจริง</span></div>
+</section>
+</main>
+</div>
+<script>
+const s=document.querySelector('.deck-stage');
+function fit(){const q=Math.min(innerWidth/1920,innerHeight/1080);s.style.transform=`translate(${(innerWidth-1920*q)/2}px,${(innerHeight-1080*q)/2}px) scale(${q})`}
+addEventListener('resize',fit);fit();
+</script>
+</body>
+</html>
