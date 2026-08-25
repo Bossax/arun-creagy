@@ -1,5 +1,5 @@
-# Style-Pack: NCAIF-Institutional
-**Samples Learnt**: 16 (Technical Precision, Readability, and Analytical Density) | **Last Updated**: 2026-08-17
+# Style-Pack: TH (Thai institutional writing, repo-wide)
+**Samples Learnt**: 16 (Technical Precision, Readability, and Analytical Density) | **Last Updated**: 2026-08-25 | **Lexicon**: LEXICON_TH.json v4.0, 48 rules
 
 ## 1. Core Kernel (80/20)
 
@@ -193,7 +193,7 @@ These rules matter, but they should not compete with the Core Kernel during earl
 - **DON'T**: Compress by deleting governance content. Cut scaffolding first, not institutional duties, evidence, or conditions of use.
 
 ## 8. Master Implementation Prompt
-> **Writing Mode**: NCAIF-Institutional (v5.0 - Stage-Aware, Evidence-Dense, Institution-Led)
+> **Writing Mode**: TH-Institutional (v5.0 - Stage-Aware, Evidence-Dense, Institution-Led)
 > 
 > **How to use this pack**:
 > 1. First secure the section job and paragraph payload.
@@ -356,6 +356,27 @@ These rules matter, but they should not compete with the Core Kernel during earl
 - Do **not** use `เครื่องยนต์ข้อมูล` or `หน้าร้านเว็บไซต์` in presentation decks or reports.
 - Do **not** add artificial multiplier hype (`25 เท่า`) without cited benchmark verification.
 - Do **not** use `ผลสัมฤทธิ์ที่ส่งมอบครบถ้วน` — use `ผลผลิตของโครงการ`.
+
+### 2026-08-25 — Consolidation: one pack, typed rules
+
+**Source of delta**: harness audit, not a writing sample. No new style rules were learned in this round.
+
+#### What changed
+- **Renamed** `STYLE_PACK_NCAIF-Institutional` → `STYLE_PACK_TH`. The pack governs every Thai deliverable in this repo, not the NCAIF report alone. Prior capture-log entries keep their original evidence filenames.
+- **Consolidated** `STYLE_PACK_TOR5.5-Articles` into this pack and archived it to [`ψ/archive/style/`](file:///C:/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/archive/style/). Its four unique lexicon rules — `นอกจากนี้`, `ยิ่งไปกว่านั้น`, `นับได้ว่า`, `เอฟเฟกต์` — were dormant since 2026-06-25 and had never been enforced, because the linter hardcoded the NCAIF lexicon path. They now apply repo-wide as `scope: universal`.
+- **Lexicon v4.0** (`LEXICON_TH.json`, 48 entries) adds two fields to every rule:
+  - `kind`: `literal` (exact string) · `regex` (explicit `pattern`) · `structural` (needs a grader, never blocks)
+  - `scope`: `universal` (default) · `report` · `article` · `letter`
+
+#### Rules repaired
+Four entries were silently inert or self-defeating before this round:
+- `จุดยืน... / จุดตัด...`, `quoted English strategy/codename (…)`, and `ปิด[ผลงาน/deliverable] …` were prose descriptions sitting in a field the linter compiles as regex. They matched nothing. All three are now `kind: regex` with real patterns.
+- `สมมติฐานแบบเหมารวมนั้นไม่เพียงพอ` had a prescribed replacement containing its own banned string, so applying the fix still failed the rule. It is an expand-the-claim instruction rather than a term swap, and is now `kind: structural`.
+
+#### Anti-regression note
+- A rule that cannot be expressed as an exact string or a compiling pattern belongs in `kind: structural`. Do **not** write its English description into `banned` — that field is matched, not read.
+- `validate_lexicon.py` now blocks all four failure shapes at write time. Run it after every `/style-capture` round.
+
 
 ## 5. Strict Parenthetical Anchor (Anti-regression Update)
 - **Rule**: Do **not** use English translations in parentheses unless absolutely necessary for technical precision.

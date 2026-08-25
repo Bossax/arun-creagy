@@ -1,0 +1,438 @@
+I h<title>Writing-TH Harness</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Public+Sans:wght@400;500;600;700;800&display=swap">
+<style>
+  :root{
+    --bg:#F2F5F7; --surface:#FFFFFF; --surface-2:#E8EDF0;
+    --ink:#131F29; --ink-dim:#4C6172; --line:#C7D2D9;
+    --accent:#1D5C86; --accent-soft:#DCEAF2;
+    --warn:#B8802E; --warn-soft:#F3E6CE;
+    --danger:#B23A2E; --danger-soft:#F6DEDA;
+    --ok:#3D7A54; --ok-soft:#DDEDE1;
+    --mono:'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;
+    --sans:'Public Sans',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0E1720; --surface:#16212C; --surface-2:#1C2933;
+      --ink:#E7EDF1; --ink-dim:#93A8B7; --line:#26404F;
+      --accent:#6FB3D9; --accent-soft:#1A3242;
+      --warn:#E0A94D; --warn-soft:#3A2E17;
+      --danger:#E2776A; --danger-soft:#3B211D;
+      --ok:#7FC79A; --ok-soft:#1B2E22;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0E1720; --surface:#16212C; --surface-2:#1C2933;
+    --ink:#E7EDF1; --ink-dim:#93A8B7; --line:#26404F;
+    --accent:#6FB3D9; --accent-soft:#1A3242;
+    --warn:#E0A94D; --warn-soft:#3A2E17;
+    --danger:#E2776A; --danger-soft:#3B211D;
+    --ok:#7FC79A; --ok-soft:#1B2E22;
+  }
+
+  *{box-sizing:border-box;}
+  @media (prefers-reduced-motion: reduce){*{animation-duration:.001ms!important;transition-duration:.001ms!important;}}
+
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .page{max-width:940px;margin:0 auto;padding:56px 24px 96px;}
+  a{color:var(--accent);}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px;}
+  code,.mono{font-family:var(--mono);}
+
+  header.hero{display:flex;flex-direction:column;gap:14px;padding-bottom:30px;margin-bottom:16px;border-bottom:1px solid var(--line);}
+  .eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);font-weight:600;}
+  h1{font-size:clamp(30px,4.4vw,42px);line-height:1.08;letter-spacing:-.01em;margin:0;text-wrap:balance;font-weight:800;}
+  .hero p{max-width:64ch;color:var(--ink-dim);font-size:16px;margin:0;}
+
+  .shipped{display:flex;gap:12px;align-items:flex-start;background:var(--ok-soft);border:1px solid var(--ok);border-radius:8px;padding:14px 16px;font-size:14px;margin-bottom:44px;}
+  .shipped .tag{font-family:var(--mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;font-weight:700;flex:none;padding:3px 8px;border-radius:4px;background:var(--ok);color:var(--surface);margin-top:2px;}
+  .shipped p{margin:0;color:var(--ink);}
+  .shipped strong{font-variant-numeric:tabular-nums;}
+
+  section{margin-bottom:56px;}
+  h2{font-size:13px;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-dim);margin:0 0 8px;display:flex;align-items:center;gap:10px;}
+  h2::after{content:"";flex:1;height:1px;background:var(--line);}
+  .lede{margin:0 0 22px;font-size:14.5px;color:var(--ink-dim);max-width:66ch;}
+
+  figure{margin:0;}
+  .svg-scroll{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px 20px 12px;}
+  .svg-scroll svg{display:block;min-width:620px;width:100%;height:auto;}
+  figcaption{font-size:12.5px;color:var(--ink-dim);padding-top:12px;max-width:70ch;}
+  .legend{display:flex;flex-wrap:wrap;gap:9px 18px;font-size:12.5px;color:var(--ink-dim);margin-top:16px;padding:0;}
+  .legend li{display:flex;align-items:center;gap:7px;list-style:none;}
+  .swatch{width:11px;height:11px;border-radius:3px;flex:none;}
+  .swatch.dash{border-radius:2px;border:1.5px dashed var(--accent);background:transparent;}
+
+  .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:600px;}
+  thead th{text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-dim);background:var(--surface-2);padding:10px 14px;border-bottom:1px solid var(--line);}
+  tbody td{padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top;background:var(--surface);}
+  tbody tr:last-child td{border-bottom:none;}
+  td.n{font-family:var(--mono);color:var(--ink-dim);font-variant-numeric:tabular-nums;width:30px;}
+  td.stg{font-family:var(--mono);font-size:12px;white-space:nowrap;color:var(--ink);}
+  td.mono{font-family:var(--mono);font-size:12px;}
+  td.src{font-size:12px;color:var(--ink-dim);white-space:nowrap;}
+  .pass{color:var(--ok);font-weight:700;font-family:var(--mono);font-size:12px;}
+  .num{font-variant-numeric:tabular-nums;}
+
+  .rail{display:flex;flex-direction:column;}
+  .stage{position:relative;display:grid;grid-template-columns:52px 1fr;gap:20px;padding-bottom:28px;}
+  .stage:last-child{padding-bottom:0;}
+  .node-col{position:relative;display:flex;justify-content:center;}
+  .node-col::before{content:"";position:absolute;top:44px;bottom:-28px;width:2px;background:var(--line);}
+  .stage:last-child .node-col::before{display:none;}
+  .node{width:40px;height:40px;border-radius:50%;background:var(--surface);border:2px solid var(--accent);color:var(--accent);font-family:var(--mono);font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;z-index:1;font-variant-numeric:tabular-nums;}
+  .node.ret{border-color:var(--warn);color:var(--warn);}
+  .stage-body{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 20px 18px;}
+  .stage-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 12px;margin-bottom:6px;}
+  .stage-head h3{font-size:17px;margin:0;font-weight:700;}
+  .stage-head .th{font-size:13px;color:var(--ink-dim);font-weight:400;}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin-left:auto;}
+  .chip{font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;padding:3px 8px;border-radius:4px;font-weight:600;white-space:nowrap;}
+  .chip.stop{background:var(--warn-soft);color:var(--warn);border:1px solid var(--warn);}
+  .chip.gate{background:var(--ok-soft);color:var(--ok);border:1px solid var(--ok);}
+  .chip.none{background:var(--surface-2);color:var(--ink-dim);border:1px solid var(--line);}
+  .chip.prop{background:transparent;color:var(--accent);border:1.5px dashed var(--accent);}
+  .stage p.desc{margin:0;font-size:14.5px;color:var(--ink-dim);max-width:66ch;}
+
+  .callout{display:flex;gap:10px;align-items:flex-start;border-radius:7px;padding:10px 13px;font-size:13.5px;margin-top:10px;}
+  .callout .tag{font-family:var(--mono);font-size:10px;letter-spacing:.04em;text-transform:uppercase;font-weight:700;flex:none;padding:2px 7px;border-radius:4px;margin-top:1px;}
+  .callout p{margin:0;color:var(--ink);}
+  .callout.fixed{background:var(--ok-soft);}
+  .callout.fixed .tag{background:var(--ok);color:var(--surface);}
+  .callout.open{background:var(--warn-soft);}
+  .callout.open .tag{background:var(--warn);color:var(--surface);}
+  .callout.prop{background:transparent;border:1.5px dashed var(--accent);}
+  .callout.prop .tag{background:var(--accent);color:var(--surface);}
+  .callout code{background:var(--surface);border:1px solid var(--line);padding:1px 5px;border-radius:3px;font-size:12px;}
+
+  footer{font-size:12.5px;color:var(--ink-dim);border-top:1px solid var(--line);padding-top:20px;}
+
+  @media (max-width:640px){
+    .stage{grid-template-columns:36px 1fr;gap:14px;}
+    .node{width:32px;height:32px;font-size:13px;}
+    .node-col::before{top:36px;}
+    .chips{margin-left:0;width:100%;}
+  }
+</style>
+
+<div class="page">
+
+  <header class="hero">
+    <span class="eyebrow">Skill architecture · writing-th + style-capture · 2026-08-25</span>
+    <h1>The Writing&#8209;TH Harness</h1>
+    <p>A closed loop. <code>writing-th</code> draws rules from one style pack and produces a merged Thai deliverable; <code>style-capture</code> reads the edits you make by hand and promotes them back into that same pack. This page shows the pipeline as it runs today, and what is still proposed.</p>
+  </header>
+
+  <div class="shipped">
+    <span class="tag">Shipped</span>
+    <p><strong>Tranche&nbsp;1 is built and verified.</strong> The gates are binding rather than advisory, five defects found by running the code are fixed, and the two style packs are now one typed pack of 48&nbsp;rules. Six verification checks pass. Everything marked <em>proposed</em> below is not built.</p>
+  </div>
+
+  <section aria-label="The loop">
+    <h2>The loop</h2>
+    <p class="lede">Five nodes and two arcs. Every rule the harness enforces lives in one file, and exactly one skill writes to it.</p>
+
+    <figure>
+      <div class="svg-scroll">
+        <svg viewBox="0 0 780 400" role="img" aria-label="A closed loop: the style pack feeds writing-th stages zero to four, which draft in isolation; stages five and six run binding script gates and merge into the real deliverable; you edit that file by hand; style-capture reads the git diff and promotes new rules back into the style pack. A proposed SQLite miss register in the centre would receive lint verdicts and feed the fails-twice promotion decision.">
+          <defs>
+            <marker id="ar-fwd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--accent)"/>
+            </marker>
+            <marker id="ar-ret" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--warn)"/>
+            </marker>
+          </defs>
+
+          <rect x="30" y="24" width="260" height="76" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="160" y="52" text-anchor="middle" font-family="var(--mono)" font-size="12.5" font-weight="700" fill="var(--ink)">STYLE PACK + LEXICON</text>
+          <text x="160" y="70" text-anchor="middle" font-family="var(--mono)" font-size="11" fill="var(--ink-dim)">&#968;/memory/style/</text>
+          <text x="160" y="86" text-anchor="middle" font-family="var(--mono)" font-size="10.5" fill="var(--ink-dim)">STYLE_PACK_TH &#183; LEXICON_TH v4.0</text>
+
+          <rect x="30" y="162" width="260" height="76" rx="8" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1.5"/>
+          <text x="160" y="190" text-anchor="middle" font-family="var(--mono)" font-size="12.5" font-weight="700" fill="var(--ink)">ISOLATED DRAFT</text>
+          <text x="160" y="208" text-anchor="middle" font-family="var(--mono)" font-size="11" fill="var(--ink-dim)">&#968;/incubate/drafts/</text>
+          <text x="160" y="224" text-anchor="middle" font-family="var(--mono)" font-size="10.5" fill="var(--ink-dim)">target unreachable here</text>
+
+          <rect x="30" y="300" width="260" height="76" rx="8" fill="var(--surface-2)" stroke="var(--line)" stroke-width="1.5"/>
+          <text x="160" y="330" text-anchor="middle" font-family="var(--mono)" font-size="12.5" font-weight="700" fill="var(--ink)">REAL DELIVERABLE</text>
+          <text x="160" y="348" text-anchor="middle" font-family="var(--mono)" font-size="11" fill="var(--ink-dim)">merged, tracked in git</text>
+
+          <rect x="490" y="300" width="260" height="76" rx="8" fill="var(--warn-soft)" stroke="var(--warn)" stroke-width="1.5"/>
+          <text x="620" y="330" text-anchor="middle" font-family="var(--mono)" font-size="12.5" font-weight="700" fill="var(--ink)">YOUR HAND EDIT</text>
+          <text x="620" y="348" text-anchor="middle" font-family="var(--mono)" font-size="11" fill="var(--ink-dim)">in place, uncommitted</text>
+
+          <rect x="490" y="162" width="260" height="76" rx="8" fill="var(--surface-2)" stroke="var(--warn)" stroke-width="1.5"/>
+          <text x="620" y="190" text-anchor="middle" font-family="var(--mono)" font-size="12.5" font-weight="700" fill="var(--ink)">EVIDENCE + NEW RULES</text>
+          <text x="620" y="208" text-anchor="middle" font-family="var(--mono)" font-size="11" fill="var(--ink-dim)">&#968;/memory/style/evidence/</text>
+          <text x="620" y="224" text-anchor="middle" font-family="var(--mono)" font-size="10.5" fill="var(--ink-dim)">validated before promotion</text>
+
+          <rect x="318" y="236" width="164" height="68" rx="8" fill="var(--surface)" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="5 3"/>
+          <text x="400" y="262" text-anchor="middle" font-family="var(--mono)" font-size="12" font-weight="700" fill="var(--accent)">MISS REGISTER</text>
+          <text x="400" y="279" text-anchor="middle" font-family="var(--mono)" font-size="10.5" fill="var(--ink-dim)">SQLite, append-only</text>
+          <text x="400" y="294" text-anchor="middle" font-family="var(--mono)" font-size="10" fill="var(--ink-dim)">proposed</text>
+
+          <line x1="160" y1="100" x2="160" y2="156" stroke="var(--accent)" stroke-width="2" marker-end="url(#ar-fwd)"/>
+          <text x="176" y="124" font-family="var(--mono)" font-size="11.5" font-weight="600" fill="var(--accent)">stages 0&#8211;4</text>
+          <text x="176" y="140" font-family="var(--mono)" font-size="10.5" fill="var(--ink-dim)">draft, never touches target</text>
+
+          <line x1="160" y1="238" x2="160" y2="294" stroke="var(--accent)" stroke-width="2" marker-end="url(#ar-fwd)"/>
+          <text x="144" y="262" text-anchor="end" font-family="var(--mono)" font-size="11.5" font-weight="600" fill="var(--accent)">stages 5&#8211;6</text>
+          <text x="144" y="278" text-anchor="end" font-family="var(--mono)" font-size="10.5" fill="var(--ok)">gates now binding</text>
+
+          <line x1="166" y1="270" x2="312" y2="270" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#ar-fwd)"/>
+          <text x="239" y="261" text-anchor="middle" font-family="var(--mono)" font-size="10.5" fill="var(--ink-dim)">lint verdicts</text>
+
+          <polyline points="400,236 400,70" fill="none" stroke="var(--warn)" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#ar-ret)"/>
+          <text x="412" y="150" font-family="var(--mono)" font-size="10.5" font-weight="600" fill="var(--warn)">fails twice</text>
+          <text x="412" y="165" font-family="var(--mono)" font-size="10.5" fill="var(--ink-dim)">&#8594; promote</text>
+
+          <line x1="290" y1="338" x2="484" y2="338" stroke="var(--warn)" stroke-width="2" marker-end="url(#ar-ret)"/>
+          <text x="387" y="360" text-anchor="middle" font-family="var(--mono)" font-size="11.5" font-weight="600" fill="var(--warn)">you edit in place</text>
+
+          <line x1="620" y1="300" x2="620" y2="244" stroke="var(--warn)" stroke-width="2" marker-end="url(#ar-ret)"/>
+          <text x="604" y="268" text-anchor="end" font-family="var(--mono)" font-size="11.5" font-weight="600" fill="var(--warn)">git diff</text>
+          <text x="604" y="284" text-anchor="end" font-family="var(--mono)" font-size="10.5" fill="var(--ink-dim)">deleted = draft</text>
+
+          <polyline points="620,162 620,62 296,62" fill="none" stroke="var(--warn)" stroke-width="2" marker-end="url(#ar-ret)"/>
+          <text x="500" y="48" text-anchor="middle" font-family="var(--mono)" font-size="11.5" font-weight="600" fill="var(--warn)">style-capture promotes</text>
+        </svg>
+      </div>
+      <figcaption>Rules only ever enter through the amber arc, and <code>style-capture</code> is the sole writer to the lexicon the linter reads. That coupling is why an unvalidated rule on the return arc used to become a silently dead gate on the forward arc &#8212; and why <code>validate_lexicon.py</code> now sits on the producing side.</figcaption>
+    </figure>
+
+    <ul class="legend">
+      <li><span class="swatch" style="background:var(--accent)"></span> Forward arc &#8212; writing-th</li>
+      <li><span class="swatch" style="background:var(--warn)"></span> Return arc &#8212; human edit and promotion</li>
+      <li><span class="swatch" style="background:var(--ok)"></span> Binding gate &#8212; exit code, not persuasion</li>
+      <li><span class="swatch dash"></span> Proposed &#8212; not built</li>
+    </ul>
+  </section>
+
+  <section aria-label="Forward arc">
+    <h2>Forward arc &#183; writing-th, as it runs today</h2>
+    <p class="lede">Seven stages, the v4.0.0 order. The content-first reorder is real but unbuilt &#8212; it is listed under tranche&nbsp;2 below rather than drawn here as if it shipped.</p>
+    <div class="rail">
+
+      <div class="stage">
+        <div class="node-col"><div class="node">0</div></div>
+        <div class="stage-body">
+          <div class="stage-head"><h3>Calibration</h3><span class="th">การเตรียมความพร้อม</span>
+            <div class="chips"><span class="chip stop">Stop</span></div></div>
+          <p class="desc">Loads the style pack, builds the jargon ban list, and halts to confirm the writing persona &#8212; before any source document is read.</p>
+          <div class="callout open">
+            <span class="tag">Still open</span>
+            <p>The pack&#8217;s own activation map puts voice at stage&nbsp;D (&#8220;only after structure and payload already work&#8221;) and lexicon at stage&nbsp;E (&#8220;a late-pass sweep, not a first-pass drafting engine&#8221;). Stage&nbsp;0 does both first. Learning 2026&#8209;06&#8209;10 names this as the hollow-draft cause.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="node-col"><div class="node">1</div></div>
+        <div class="stage-body">
+          <div class="stage-head"><h3>Strategy</h3><span class="th">การกำหนดวาทศิลป์</span>
+            <div class="chips"><span class="chip none">No gate</span></div></div>
+          <p class="desc">Defines the victory condition and the evidence&#8594;analysis&#8594;solution shape: stance, risk to manage, and the ask.</p>
+          <div class="callout open">
+            <span class="tag">Still open</span>
+            <p>Scaffolding is a generative anchor. Learning 2026&#8209;04&#8209;05: metaphor here produces metaphor in the final prose, and nothing written at this stage passes through the gates.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="node-col"><div class="node">2</div></div>
+        <div class="stage-body">
+          <div class="stage-head"><h3>Density &amp; Scope Validation</h3><span class="th">ด่านวัดขนาดข้อมูล</span>
+            <div class="chips"><span class="chip stop">Stop</span></div></div>
+          <p class="desc">Lists every table, equation, and framework in the source that must survive the rewrite, then halts for sign-off on that list.</p>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="node-col"><div class="node">3</div></div>
+        <div class="stage-body">
+          <div class="stage-head"><h3>Payload Gate</h3><span class="th">ด่านสกัดความกลวง</span>
+            <div class="chips"><span class="chip none">No gate</span></div></div>
+          <p class="desc">4&#8209;Pillar Extraction &#8212; Claim, Concrete Example, Consequence, Mechanism &#8212; required before drafting is permitted.</p>
+          <div class="callout open">
+            <span class="tag">Still open</span>
+            <p>Applied to every paragraph with no exception. The style pack says each <em>substantive</em> paragraph; a foundation paragraph forced to carry a claim invites the model to invent one.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="node-col"><div class="node">4</div></div>
+        <div class="stage-body">
+          <div class="stage-head"><h3>Governed Execution</h3><span class="th">การร่างที่ถูกควบคุม</span>
+            <div class="chips"><span class="chip none">No gate</span></div></div>
+          <p class="desc">One subagent per subsection. Output goes only to <code>&#968;/incubate/drafts/</code>; the target file is unreachable from here by construction.</p>
+          <div class="callout open">
+            <span class="tag">Still open</span>
+            <p>Subagents get a topic, not a contract. Learning 2026&#8209;07&#8209;03: delegated scope, examples, and qualifiers must be declared non&#8209;removable.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="node-col"><div class="node">5</div></div>
+        <div class="stage-body">
+          <div class="stage-head"><h3>Script Gates</h3><span class="th">ด่านสคริปต์บังคับ</span>
+            <div class="chips"><span class="chip gate">Binding</span></div></div>
+          <p class="desc">Lexicon lint plus density. Exit code 1 is a silent rejection. Rules marked <code>structural</code> print as <strong>[REVIEW]</strong> and do not block &#8212; the stage now states its own coverage instead of implying total enforcement.</p>
+          <div class="callout fixed">
+            <span class="tag">Fixed</span>
+            <p>Three of the five rules from the 2026&#8209;08&#8209;05 round never fired &#8212; prose descriptions sitting in a field compiled as regex, where <code>[ผลงาน/deliverable]</code> became a character class. All three are now <code>kind: regex</code> with real patterns. One caught <code>"storefront"</code> in a live report on its first run.</p>
+          </div>
+          <div class="callout fixed">
+            <span class="tag">Fixed</span>
+            <p>A rule whose prescribed replacement contained its own banned string made the rerun-until-exit-0 loop non-terminating. It is an expand-the-claim instruction, not a term swap, and is now <code>kind: structural</code>.</p>
+          </div>
+          <div class="callout fixed">
+            <span class="tag">Fixed</span>
+            <p>Word and sentence boundaries now come from PyThaiNLP. <code>DCCE</code> no longer fires inside a path, the contrast rule scopes to one sentence, and code spans, link targets, and file paths are excluded from prose linting entirely.</p>
+          </div>
+          <div class="callout open">
+            <span class="tag">Still open</span>
+            <p>Density remains a floor with no ceiling. A draft at 3&#215; source length passes silently, so padding is still the cheapest way to clear the gate.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="node-col"><div class="node">6</div></div>
+        <div class="stage-body">
+          <div class="stage-head"><h3>Merge</h3><span class="th">การอนุมัติและรวมไฟล์</span>
+            <div class="chips"><span class="chip gate">Binding</span><span class="chip stop">Stop</span></div></div>
+          <p class="desc">You approve, and <code>merge_draft.py</code> copies the draft over the real file.</p>
+          <div class="callout fixed">
+            <span class="tag">Fixed</span>
+            <p>The merge used to check only that the draft existed, then copy &#8212; it never called the gates. It now runs them itself and exits 1 without touching the destination, so calling merge directly is safe. <code>--skip-gates</code> exists for deliberate override and prints a loud warning.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section aria-label="Return arc">
+    <h2>Return arc &#183; style-capture</h2>
+    <p class="lede">The learning half. It reads what you changed by hand and turns repeated corrections into permanent rules.</p>
+    <div class="rail">
+
+      <div class="stage">
+        <div class="node-col"><div class="node ret">A</div></div>
+        <div class="stage-body">
+          <div class="stage-head"><h3>Read the delta</h3><div class="chips"><span class="chip stop">Human-initiated</span></div></div>
+          <p class="desc">Runs <code>git diff</code> on the file you edited in place. Deleted lines are the draft, added lines the correction.</p>
+          <div class="callout open">
+            <span class="tag">Open loop</span>
+            <p>Nothing in <code>writing-th</code> invokes this. Stage&nbsp;6 merges and the workflow ends; promotion happens only when you remember to run it.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="node-col"><div class="node ret">B</div></div>
+        <div class="stage-body">
+          <div class="stage-head"><h3>Materialize evidence</h3><div class="chips"><span class="chip gate">Artifact</span></div></div>
+          <p class="desc">Writes a dated diff-evidence file recording the word-for-word changes and candidate rules before anything is promoted. The case that produced each rule is kept, not just the rule.</p>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="node-col"><div class="node ret">C</div></div>
+        <div class="stage-body">
+          <div class="stage-head"><h3>Validate before promoting</h3><div class="chips"><span class="chip gate">Binding</span></div></div>
+          <p class="desc">Every rule declares a <code>kind</code> &#8212; <code>literal</code>, <code>regex</code>, or <code>structural</code> &#8212; and a <code>scope</code>. <code>validate_lexicon.py</code> rejects a literal containing regex metacharacters or an ellipsis, a rule whose fix contains its own banned string, and duplicates.</p>
+          <div class="callout fixed">
+            <span class="tag">Fixed</span>
+            <p>The producing side was ungated while the consuming side was gated. Run against the old lexicon the validator flags <strong>7</strong> malformed entries &#8212; every defect that reached production, caught at the moment of writing.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="node-col"><div class="node ret">D</div></div>
+        <div class="stage-body">
+          <div class="stage-head"><h3>Check the miss register</h3><div class="chips"><span class="chip prop">Proposed</span></div></div>
+          <p class="desc">An append-only SQLite log of every run, every rule that fired, and every correction made by hand. Promotion fires once a pattern has failed twice.</p>
+          <div class="callout prop">
+            <span class="tag">Proposed</span>
+            <p>Learning 2026&#8209;06&#8209;27 already fixed the threshold at two. Nothing counts to two &#8212; markdown files cannot aggregate. The same log would make regression runs possible: replay today&#8217;s ruleset over drafts written before those rules existed.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="node-col"><div class="node ret">E</div></div>
+        <div class="stage-body">
+          <div class="stage-head"><h3>Merge into the pack</h3><div class="chips"><span class="chip none">No gate</span></div></div>
+          <p class="desc">Appends examples and counter-examples to the pack, adds term pairs to the lexicon, and re-ranks rules appearing across multiple samples.</p>
+          <div class="callout open">
+            <span class="tag">Still open</span>
+            <p>When a new pattern contradicts an old rule the instruction is to prefer the new one and &#8220;keep a note.&#8221; Across nine append-only rounds nothing is ever marked retired, so the pack only grows.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="node-col"><div class="node ret">F</div></div>
+        <div class="stage-body">
+          <div class="stage-head"><h3>Index to Oracle</h3><div class="chips"><span class="chip gate">Persisted</span></div></div>
+          <p class="desc">Calls <code>oracle_learn</code> with the delta so the round becomes searchable memory, and synthesizes a prompt that can activate the style in a fresh session.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section aria-label="Verification">
+    <h2>Tranche 1 &#183; verification</h2>
+    <p class="lede">Every check below was run, not asserted.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Check</th><th>Result</th><th>Evidence</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">skill routing</td><td class="pass">PASS</td><td><code>/writing-th</code> and <code>/style-capture</code> appear in the skills list</td></tr>
+          <tr><td class="mono">validate_lexicon</td><td class="pass">PASS</td><td>48 entries &#8212; 42 literal, 4 regex, 2 structural; 40 universal, 8 report</td></tr>
+          <tr><td class="mono">regression suite</td><td class="pass">PASS</td><td><span class="num">20/20</span> fixtures; the same fixtures disagree with the old linter on <span class="num">11/20</span>, including every defect case</td></tr>
+          <tr><td class="mono">skill drift</td><td class="pass">PASS</td><td>both SKILL.md copies identical; <code>--sync</code> verified to recreate a deleted copy</td></tr>
+          <tr><td class="mono">merge refuses bad draft</td><td class="pass">PASS</td><td>exit 1, destination hash unchanged</td></tr>
+          <tr><td class="mono">merge accepts clean draft</td><td class="pass">PASS</td><td>exit 0, content written</td></tr>
+          <tr><td class="mono">Thai filenames with spaces</td><td class="pass">PASS</td><td>found and fixed: <code>os.execv</code> does not quote arguments on Windows</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section aria-label="Tranche 2">
+    <h2>Tranche 2 &#183; not built</h2>
+    <p class="lede">The content-first reorder is the largest item. The pack&#8217;s activation map is the authority for it, not preference.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>#</th><th>Change</th><th>Where</th><th>Source</th></tr></thead>
+        <tbody>
+          <tr><td class="n">1</td><td>Move persona out of Stage 0 into a late voice pass</td><td class="stg">Stage 0 &#8594; 6</td><td class="src">pack §2 D, 2026-06-10</td></tr>
+          <tr><td class="n">2</td><td>Add the missing structural-revision stage</td><td class="stg">new stage</td><td class="src">pack §2 C</td></tr>
+          <tr><td class="n">3</td><td>Move evidence gathering ahead of any framing</td><td class="stg">Stage 1</td><td class="src">2026-06-10</td></tr>
+          <tr><td class="n">4</td><td>Fast / slow track split</td><td class="stg">Stage 0&#8211;2</td><td class="src">this session</td></tr>
+          <tr><td class="n">5</td><td>Paragraph types &#8212; 4-pillar on argumentative only</td><td class="stg">Stage 3</td><td class="src">pack §8</td></tr>
+          <tr><td class="n">6</td><td>SQLite miss register, fails-twice trigger</td><td class="stg">capture · D</td><td class="src">2026-06-27</td></tr>
+          <tr><td class="n">7</td><td>Density ceiling, tied to the Stage 2 preserve-list</td><td class="stg">Stage 5</td><td class="src">verified, 2026-06-09</td></tr>
+          <tr><td class="n">8</td><td>Subagent brief schema with a non-removable clause</td><td class="stg">Stage 4</td><td class="src">2026-07-03</td></tr>
+          <tr><td class="n">9</td><td>Lint the scaffolding, not only the draft</td><td class="stg">Stage 1&#8211;2</td><td class="src">2026-04-05</td></tr>
+          <tr><td class="n">10</td><td>Supersession marking so the pack can shrink</td><td class="stg">capture · E</td><td class="src">this session</td></tr>
+          <tr><td class="n">11</td><td>Parenthetical allowlist for verbatim TOR titles</td><td class="stg">Stage 5</td><td class="src">found in verification</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    Source: <code>&#968;/lab/writing-th-harness/architecture.html</code>. Built from <code>.agents/skills/writing-th/</code>, <code>.agents/skills/style-capture/</code>, and <code>&#968;/memory/style/</code> (pack v5.0, lexicon TH v4.0). Items marked <span style="color:var(--ok);font-weight:600;">fixed</span> were verified by running the code; items marked <span style="color:var(--accent);font-weight:600;">proposed</span> are not built.
+  </footer>
+
+</div>

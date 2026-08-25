@@ -1,0 +1,440 @@
+{
+  "context": "TH",
+  "version": "4.1",
+  "supersedes": [
+    "NCAIF-Institutional v3.2",
+    "TOR5.5-Articles v1.0"
+  ],
+  "lexicon": [
+    {
+      "banned": "พื้นที่การดำเนินงาน",
+      "preferred": "ประเด็นการดำเนินงาน",
+      "reason": "Avoids literal 'Area' translation; more natural for action points.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "ฐานราก",
+      "preferred": "รากฐาน",
+      "reason": "Institutional 'foundation' vs civil engineering 'foundation'.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "อันตรายภูมิอากาศ",
+      "preferred": "ภัยจากภูมิอากาศ",
+      "reason": "Standardized Thai for Hazard.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "การเปิดรับความเสี่ยง",
+      "preferred": "การเปิดรับภัย",
+      "reason": "Exposure links to the hazard source.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "ข้อจำกัดเชิงวิศวกรรม",
+      "preferred": "ข้อจำกัดเชิงเทคนิค",
+      "reason": "More inclusive and less jargon-heavy for policy summaries.",
+      "kind": "literal",
+      "scope": "report"
+    },
+    {
+      "banned": "ความเปราะบางของระบบ",
+      "preferred": "ความเปราะบาง",
+      "reason": "Simplified for institutional narrative flow.",
+      "kind": "literal",
+      "scope": "report"
+    },
+    {
+      "banned": "ข้อมูลระดับตำบล/พิกัด",
+      "preferred": "ข้อมูลระดับปฏิบัติการ",
+      "reason": "Elevates technical scale to institutional workflow terms.",
+      "kind": "literal",
+      "scope": "report"
+    },
+    {
+      "banned": "สถาปัตยกรรมด้านการจัดการความเสี่ยง",
+      "preferred": "การจัดการความเสี่ยง...",
+      "reason": "Avoids overly verbose AI framing for institutional risks.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "แก่นแท้ของยุทธศาสตร์",
+      "preferred": "ใจความหลักของยุทธศาสตร์...",
+      "reason": "Avoids literal or literary AI phrasing.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "มุ่งเน้น",
+      "preferred": "เน้น / ให้ความสำคัญ",
+      "reason": "Redundant prefix word in formal Thai.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "ก่อให้เกิดความท้าทายเชิงโครงสร้างอย่างมีนัยสำคัญ",
+      "preferred": "ก่อให้เกิดช่องว่างของข้อมูล",
+      "reason": "Replaces abstract AI filler with precise fact.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "ไร้รอยต่อ",
+      "preferred": "หลีกเลี่ยงหรือเขียนตามจริงเชิงปฏิบัติงาน",
+      "reason": "Avoids hyperbolic marketing terms.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "สมบูรณ์แบบ",
+      "preferred": "หลีกเลี่ยงหรืออธิบายตามเงื่อนไขทางเทคนิค",
+      "reason": "Avoids hyperbolic marketing terms.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "DCCE",
+      "preferred": "กรมฯ",
+      "reason": "Standard official shorthand for the Department of Climate Change and Environment.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "use case",
+      "preferred": "กรณีการใช้งาน",
+      "reason": "Avoid direct English jargon in formal reports.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "workflow",
+      "preferred": "ขั้นตอนการทำงาน หรือ ระบบงานจริง หรือ กระบวนงาน",
+      "reason": "Naturalizes technical flow concepts into standard Thai institutional terms.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "raster",
+      "preferred": "ขนาดกริด หรือ ข้อมูลกริด",
+      "reason": "Removes redundant technical phrasing.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "interoperability",
+      "preferred": "ความสามารถในการทำงานร่วมกัน หรือ การเชื่อมต่อข้อมูลระหว่างระบบ",
+      "reason": "Translates technical system terms to operational functions.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "usability",
+      "preferred": "ความพร้อมใช้งาน หรือ ความง่ายในการนำข้อมูลไปใช้งาน",
+      "reason": "Translates to plain operational language.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "lag time",
+      "preferred": "จังหวะเวลา หรือ ช่วงเวลาดีเลย์ของข้อมูล",
+      "reason": "Explains latency in a functional, reader-friendly format.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "ตีกรอบความไม่แน่นอน",
+      "preferred": "เปรียบเทียบกับฉากทัศน์ทางเลือก",
+      "reason": "Replaces AI-like abstract metaphor with standard assessment terminology.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "translated contrast template ไม่ใช่เพียง…แต่",
+      "preferred": "ยุทธศาสตร์ของการปรับตัวต้องอาศัยการประเมินความน่าจะเป็นและขนาดของความเสี่ยง",
+      "reason": "Replaces dramatic AI contrast with a grounded, formal policy tone.",
+      "kind": "regex",
+      "scope": "universal",
+      "pattern": "ไม่ใช่เพียง.{0,80}?แต่"
+    },
+    {
+      "banned": "สมมติฐานแบบเหมารวมนั้นไม่เพียงพอ",
+      "preferred": "สมมติฐานแบบเหมารวมนั้นไม่เพียงพอและเป็นสมมุติฐานที่อันตราย",
+      "reason": "Adds critical, human-centric evaluation instead of just stating a fact.",
+      "kind": "structural",
+      "scope": "universal"
+    },
+    {
+      "banned": "สถาปัตยกรรม...",
+      "preferred": "ระบบรายงาน, ฐานข้อมูล, ระบบสารสนเทศ, ระบบบันทึกข้อมูล (เว้นแต่จะหมายถึง Enterprise Architecture ในภาพรวม)",
+      "reason": "Too abstract and academic; use grounded operational terms.",
+      "kind": "structural",
+      "scope": "universal"
+    },
+    {
+      "banned": "ผลกระทบเชิงสถาปัตยกรรม",
+      "preferred": "ผลกระทบเชิงระบบ หรือ ช่องว่างเชิงระบบ",
+      "reason": "More direct and practical for systemic findings.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "ละเลย",
+      "preferred": "ขาดกระบวนงาน, ขาดกลไกการบังคับ",
+      "reason": "Institutional writing must state systemic facts, not judge or moralize operators.",
+      "kind": "literal",
+      "scope": "report"
+    },
+    {
+      "banned": "เพิกเฉย",
+      "preferred": "ขาดกระบวนงาน, ขาดกลไกการบังคับ",
+      "reason": "Avoid moralizing or blaming language.",
+      "kind": "literal",
+      "scope": "report"
+    },
+    {
+      "banned": "มุ่งหวังที่จะ",
+      "preferred": "ตัดทิ้ง หรือใช้กริยาหลัก (เช่น กำหนดให้, จัดทำ)",
+      "reason": "Redundant AI filler word that reduces institutional authority.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "มีความพยายามในการ",
+      "preferred": "ดำเนินการ, หรือตัดทิ้ง",
+      "reason": "Subjective AI filler word.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "abstract positional nouns จุดยืน / จุดตัด",
+      "preferred": "กำหนด..., เส้นตาย...",
+      "reason": "Abstract positional nouns ('stance', 'cutoff point') read as literal-translation scaffolding; state the decision or deadline directly.",
+      "kind": "regex",
+      "scope": "universal",
+      "pattern": "จุดยืน|จุดตัด"
+    },
+    {
+      "banned": "ประตูหลัก",
+      "preferred": "โครงสร้างหลัก, ศูนย์กลาง...",
+      "reason": "Literal translation of the English 'front door/gateway' metaphor; name the actual function instead.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "quoted English strategy codename, e.g. \"Blueprint-as-a-Shield\"",
+      "preferred": "plain Thai description of the strategy's mechanism",
+      "reason": "Project-internal English branding should not carry into audience-facing Thai prose, even in quotes.",
+      "kind": "regex",
+      "scope": "universal",
+      "pattern": "[\"“][A-Za-z][A-Za-z\\-]{3,}[\"”]"
+    },
+    {
+      "banned": "ผู้สนับสนุนโครงการ",
+      "preferred": "กรม สส.",
+      "reason": "Generic role noun for an already-named institutional actor; same typology as DCCE -> กรมฯ — use the department's own shorthand.",
+      "kind": "literal",
+      "scope": "report"
+    },
+    {
+      "banned": "ที่ขยายผลได้",
+      "preferred": "ที่ปรับขยายได้ในอนาคต",
+      "reason": "Awkward modifier construction; more natural phrasing for extensibility.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "ปิด used as a general completion verb",
+      "preferred": "สรุป[ผลงาน] หรือกริยาที่ตรงกับการกระทำจริง (เช่น จัดทำ...ครบ, แปลง...เป็น)",
+      "reason": "ปิด reads as a literal translation of 'close out'. Reserve ปิด/ผนึก for an actual ledger Sealed status only, not general completion.",
+      "kind": "regex",
+      "scope": "universal",
+      "pattern": "ปิด(ผังเว็บไซต์|พจนานุกรม|ชุดข้อมูล|รายงาน|เอกสาร|ผลงาน)"
+    },
+    {
+      "banned": "หน้ากากแดชบอร์ดโดยไร้เครื่องยนต์ข้อมูล",
+      "preferred": "ส่วนแสดงเนื้อหาและข้อมูลโดยไม่มีการจัดการข้อมูลหลังบ้าน",
+      "reason": "Eliminates dramatic marketing metaphors; uses precise architecture terms.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "หน้าร้านเว็บไซต์",
+      "preferred": "หน้าเว็บไซต์ (Website) / frontend",
+      "reason": "Removes commercial/retail metaphor; uses standard web/institutional terminology.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "เครื่องยนต์ข้อมูล",
+      "preferred": "Data Platform / ระบบหลังบ้าน (backend)",
+      "reason": "Removes mechanical metaphor; uses standard data platform architecture terms.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "ผลสัมฤทธิ์ที่ส่งมอบครบถ้วน",
+      "preferred": "ผลผลิตของโครงการ / ผลลัพธ์ของโครงการ",
+      "reason": "Replaces self-praising consulting adjectives with standard institutional deliverable terminology.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "ผังเว็บไซต์ 15 โหนด",
+      "preferred": "ผังเว็บไซต์ 15 หมวด",
+      "reason": "Replaces graph-theory 'โหนด' with natural information architecture 'หมวด'.",
+      "kind": "literal",
+      "scope": "report"
+    },
+    {
+      "banned": "เกราะป้องกันเชิงระบบ",
+      "preferred": "กลไกการป้องกันความผิดพลาด",
+      "reason": "Replaces warrior/shield buzzwords with functional governance concept.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "ขุมพลังทางวิทยาศาสตร์",
+      "preferred": "ข้อมูลแบบจำลองสภาพภูมิอากาศ / ความก้าวหน้าทางวิชาการ",
+      "reason": "Cuts dramatic AI hype phrases.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "คอขวดที่กรมฯ ต้องแก้ไขเชิงนโยบาย",
+      "preferred": "อุปสรรคที่กีดขวางการใช้ประโยชน์ข้อมูลในวงกว้าง",
+      "reason": "Precise real-world impact statement over generic consulting jargon.",
+      "kind": "literal",
+      "scope": "report"
+    },
+    {
+      "banned": "สินทรัพย์ดิจิทัล",
+      "preferred": "ทรัพย์สินดิจิทัล / Digital Assets",
+      "reason": "Standardized Thai technical terminology for digital assets.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "นอกจากนี้",
+      "preferred": "",
+      "reason": "Avoid robotic, mechanical transitions in public articles. (folded from TOR5.5-Articles, 2026-06-25)",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "ยิ่งไปกว่านั้น",
+      "preferred": "",
+      "reason": "Artificial and stiff text flow connector. (folded from TOR5.5-Articles, 2026-06-25)",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "นับได้ว่า",
+      "preferred": "ถือว่า / จัดเป็น",
+      "reason": "Overly formal AI filler. (folded from TOR5.5-Articles, 2026-06-25)",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "เอฟเฟกต์",
+      "preferred": "ผลกระทบ",
+      "reason": "Standard Thai term for impact/effect. (folded from TOR5.5-Articles, 2026-06-25)",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "Data Availability",
+      "preferred": "ความพร้อมของข้อมูล",
+      "reason": "Named as a banned parenthetical in the pack's Strict Parenthetical Anchor.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "Temporal completeness",
+      "preferred": "ความครบถ้วนเชิงเวลา",
+      "reason": "Named as a banned parenthetical in the pack's Strict Parenthetical Anchor.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "Bounded Application Test",
+      "preferred": "การทดสอบขอบเขตการใช้งาน",
+      "reason": "Named as a banned parenthetical in the pack's Strict Parenthetical Anchor.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "Governance",
+      "preferred": "การกำกับดูแล",
+      "reason": "Conceptual term with a settled Thai equivalent; no reason to carry the English.",
+      "kind": "literal",
+      "scope": "universal"
+    }
+  ],
+  "technical_terms": [
+    {
+      "term": "แบบจำลองทำนายสภาพอากาศเชิงตัวเลข",
+      "definition": "Numerical Weather Prediction Model"
+    },
+    {
+      "term": "ตัวแปรขับเคลื่อนภูมิอากาศ",
+      "definition": "Climate Driver"
+    },
+    {
+      "term": "การสังเกตุผ่านดาวเทียม",
+      "definition": "Satellite Observation"
+    },
+    {
+      "term": "แผนจัดการความเสี่ยงแบบพุ่งเป้า",
+      "definition": "Targeted Risk Management Plan"
+    },
+    {
+      "term": "สำนักงานลดความเสี่ยงจากภัยพิบัติแห่งสหประชาชาติ",
+      "definition": "United Nations Office for Disaster Risk Reduction (UNDRR)"
+    },
+    {
+      "term": "คณะกรรมาธิการเศรษฐกิจสำหรับลาตินอเมริกาและแคริบเบียน",
+      "definition": "Economic Commission for Latin America and the Caribbean (ECLAC)"
+    },
+    {
+      "term": "การเปลี่ยนแปลงสภาพภูมิอากาศ",
+      "definition": "Climate Change"
+    },
+    {
+      "term": "ความสูญเสียและความเสียหายที่ไม่ใช่เชิงเศรษฐกิจ",
+      "definition": "Non-Economic Loss and Damage: NELD"
+    },
+    {
+      "term": "อุณหภูมิผิวน้ำทะเล",
+      "definition": "Sea Surface Temperature"
+    },
+    {
+      "term": "พื้นที่คุ้มครองทางทะเล",
+      "definition": "Marine Protected Areas: MPAs"
+    },
+    {
+      "term": "เกาะความร้อนเมือง",
+      "definition": "urban heat island"
+    },
+    {
+      "term": "ผลิตภาพแรงงาน",
+      "definition": "labor productivity"
+    },
+    {
+      "term": "พืชผลการเกษตรเสียหาย",
+      "definition": "crop failure"
+    },
+    {
+      "term": "ความเครียดจากความร้อน",
+      "definition": "heat stress"
+    },
+    {
+      "term": "เรื่องเล่าความเปลี่ยนแปลงที่สำคัญที่สุด",
+      "definition": "Most Significant Change: MSC"
+    }
+  ]
+}

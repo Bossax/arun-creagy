@@ -65,12 +65,23 @@ description: Incrementally learns and refines writing styles from individual sam
         - **The Anti-AI Shield**: Identify phrases or structures that were removed/replaced (Counter-examples).
         - **Lexicon**: Map specific terms to their preferred alternatives.
 
+4b) **Miss Register (Promotion Threshold)**
+    - A single correction is a local edit. The same correction twice is a rule -- learning 2026-06-27 fixed that threshold at two, and the register is what counts to it.
+    - For every candidate pattern found in step 4 that is **not already in the lexicon**, record it:
+      `python .agents/skills/writing-th/scripts/register.py observe "<pattern>" --source <file> --fix "<what you changed it to>"`
+    - Then ask what has earned promotion:
+      `python .agents/skills/writing-th/scripts/register.py ready`
+    - Only patterns listed by `ready` should be promoted into the pack in step 5. A pattern seen once stays in the register and waits -- promoting on a single sighting is how the pack accumulated rules that never earned their place.
+    - After writing a pattern into the pack, close it out:
+      `python .agents/skills/writing-th/scripts/register.py promoted "<pattern>"`
+    - Nothing is deleted. A promoted pattern keeps its full observation history; it simply stops appearing in `ready`.
+
 5) **Cumulative Merging (Update Phase)**
     - **Merge Strategy**:
-        - Append new **Examples** and **Counter-examples** to the `STYLE_PACK`.
+        - Append new **Examples** and **Counter-examples** to the `STYLE_PACK`, limited to patterns that step 4b's `ready` reported at threshold.
         - If a new pattern contradicts an existing rule, prioritize the new evidence as "Style Evolution" but keep a note of the change.
         - **Rank Order**: Re-evaluate the hierarchy. Rules appearing in multiple samples move to "Highest Priority."
-    - Update the `LEXICON_<CONTEXT>.json` with new term pairings. **CRITICAL**: The JSON must strictly adhere to the schema expected by `lint_thai_writing.py`: Each entry must have `"banned"`, `"preferred"`, and `"reason"` keys. Do not deviate from this schema or the deterministic linter will crash.
+    - Update the `LEXICON_<CONTEXT>.json` with new term pairings. **CRITICAL**: Every entry needs `banned`, `preferred`, `reason`, plus `kind` (`literal` | `regex` | `structural`) and `scope` (`universal` | `report` | `article` | `letter`). A `regex` entry also needs `pattern`. A rule that cannot be an exact string or a compiling pattern MUST be `kind: structural` -- writing its English description into `banned` makes it a silent no-op, which is how three rules from the 2026-08-05 round never fired. After any write, run: `python .agents/skills/writing-th/scripts/validate_lexicon.py ψ/memory/style/LEXICON_TH.json`
 6) **Artifact Materialization**
     - Write/Update the `STYLE_PACK_<CONTEXT>.md`.
     - Format:
