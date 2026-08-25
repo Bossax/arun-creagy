@@ -15,7 +15,7 @@ This framework strictly governs the data platform. It does not dictate web desig
 ### 1.3 The 3 Pillars of the Framework
 To achieve this, the Data Management Framework is built upon three inseparable pillars:
 1. **Semantic Standards (Business Glossary):** Defining *what* the data means.
-2. **Climate Data Model (CDM v3.0):** Defining *how* the data is structured and related.
+2. **Conceptual Data Model (CDM v3.0):** Defining *how* the data is structured and related.
 3. **Governance Operating Model:** Defining *who* owns the data and *how* it is managed.
 
 ---
@@ -29,15 +29,15 @@ Data silos often occur not because of technical barriers, but because of semanti
 The current iteration (Glossary v5) contains 74 canonically defined terms in both Thai and English. 
 **Crucially, this glossary is strictly bounded: it covers *only* the data platform for climate adaptation.** It is **not** a DCCE-wide enterprise glossary, nor does it represent the official, finalized terminology for the entire Department of Climate Change and Environment. It serves solely as the specific source of truth required to facilitate cross-departmental data exchange within the exact scope of this adaptation platform.
 
-### 2.3 Integration with the Common Data Model
+### 2.3 Integration with the Conceptual Data Model
 Every term defined in the Business Glossary maps directly to a technical entity within the database. When a policy maker requests data on a "Hazard Profile," the glossary ensures that the IT team queries the exact `DOM_020` entity defined in the architecture, preventing miscommunication and ensuring accurate data retrieval.
 
 ---
 
-## 3. Climate Data Model (CDM v3.0)
+## 3. Conceptual Data Model (CDM v3.0)
 
 ### 3.1 Logical Architecture Overview
-The Climate Data Model (CDM v3.0) is the conceptual data architecture that translates the semantic standards into a structured database blueprint. Superseding all previous drafts, CDM v3.0 is the canonical logical blueprint that will be handed off to the downstream system developer (TOR70).
+The Conceptual Data Model (CDM v3.0) is the conceptual data architecture that translates the semantic standards into a structured database blueprint. Superseding all previous drafts, CDM v3.0 is the canonical logical blueprint that will be handed off to the downstream system developer (TOR70).
 
 ### 3.2 The 8 Domains
 To prevent the database from becoming an unmanageable monolith, the architecture is strictly segmented into 8 functional logical domains:
