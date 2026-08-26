@@ -17,41 +17,32 @@ provider-owned workspace layout.
 
 ---
 
-## /rrr (Default — background dig + parallel write)
+## Workflow: 2-Step Sequential Execution
 
-### 1. Gather git context
+The execution MUST be split into two discrete, sequential steps — NEVER skip the MCP call after writing the file:
 
-```bash
-date "+%H:%M %Z (%A %d %B %Y)"
-git log --oneline -10
-git diff --stat HEAD~5
-```
+### Step 1: Write Retrospective Artifact (Disk State)
+1. **Gather git context**:
+   ```bash
+   date "+%H:%M %Z (%A %d %B %Y)"
+   git log --oneline -10
+   git diff --stat HEAD~5
+   ```
+2. **Write Retrospective Document**:
+   - **Path**: `$PSI/memory/retrospectives/YYYY-MM/DD/HH.MM_slug.md`
+   - Include Timeline, Files Modified, AI Diary with `[→ AGENT DECISION]`, and Lessons Learned.
+3. **Verify on Disk**: Ensure file exists and is cleanly written before proceeding to Step 2.
 
-Obtain optional session identity and timestamps from the shared adapter:
-
-```text
-python .agents/skills/_shared/scripts/session_history.py --host auto --limit 10
-```
-
-The adapter returns normalized JSON for Antigravity or Codex only when the host is
-explicitly selected (`ORACLE_SKILL_HOST`). If unavailable, use active conversation
-and Git timestamps, state that fallback, and do not inspect another host's logs.
-
-### 2. Write Retrospective (main agent)
-
-**Path**: `$PSI/memory/retrospectives/YYYY-MM/DD/HH.MM_slug.md`
-
-### 3. Write Lesson Learned (Knowledge Ingestion)
-
-**Mechanism**: `oracle_learn` is required. Discover it before writing artifacts; if
-it is unavailable, stop and report the missing Oracle capability.
-- **Pattern**: The core technical or philosophical learning.
-- **Concepts**: Relevant tags (e.g., [ontology, causality]).
-- **Project**: The current project ghq path.
+### Step 2: Knowledge Ingestion (Mandatory MCP Call)
+Immediately after Step 1, you MUST execute the `oracle_learn` MCP tool call. Do not end the turn without calling it:
+- **Tool**: `oracle_learn` (or `call_mcp_tool` -> `oracle_learn`)
+- **Pattern**: The core generalized technical or workflow heuristics distilled from the retrospective.
+- **Concepts**: Relevant tags (e.g. `[rrr, <topic-tags>]`).
+- **Project**: The current project name/ghq path.
+- **Source**: `rrr on <retro_slug>`
 
 > [!important]
-> Oracle ingestion keeps the learning indexed in the Oracle brain and available for
-> hybrid search. Do not create an unsynchronized local fallback.
+> Writing the markdown file alone is only 50% of the skill. The turn is NOT complete until the `oracle_learn` MCP tool call has executed and confirmed ingestion into the Oracle Brain.
 
 ---
 
