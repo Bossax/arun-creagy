@@ -70,6 +70,8 @@
 
 **Implication for TOR70**: The critique's underlying instinct is right, but the fix isn't "sequence taxonomy after architecture" — it's "choose an architecture (lakehouse + active metadata management) that lets taxonomy evolve *with* the system," rather than mandating a taxonomy sign-off (§5.3.7) as a one-time, frozen deliverable.
 
+**Update — 2569-08-01 draft (2026-08-26 review)**: The defect persists, rescaled. The new draft's §5.3.8 now requires the consultant to curate **≥30 datasets, ready for display on the website/dashboard/map, with categorization already decided** — still before §5.4's data architecture and database design exist. The specific ask shrank (from an 8-dimension taxonomy plus full catalog to a 30-dataset floor with per-dataset metadata fields), but the sequencing is unchanged: presentation-layer content still gets committed ahead of the schema meant to constrain it. Source: `TOR70_การพัฒนาระบบฐานข้อมูลด้านการปรับตัว_2569-08-01.md`, §5.3.8; see also `2026-08-26_TOR70-SDLC-storyline-for-DCCE-briefing.md` in this folder.
+
 ---
 
 ## FM4 — PDF/unstructured content treated as editorial, not pipeline, material
@@ -116,6 +118,8 @@
 *Source*: Towards Avoiding the Data Mess: Data Mesh, arXiv; Data Fabric or Data Mesh, Tech Mahindra; The Minimalistic Data Stack, The Data Institute; Building a Serverless Data Analytics Pipeline, AWS/dev.to (https://dev.to/aws-builders/building-a-serverless-data-analytics-pipeline-with-aws-premier-league-dashboard-34n0); dbt for Snowflake Data Projects, Ulpia Tech (https://ulpia.tech/is-dbt-right-for-your-snowflake-data-project-key-scenarios-and-benefits/); Postgres as a Data Warehouse, Xata (https://xata.io/blog/postgres-data-warehouse).
 
 **Implication for TOR70**: This is the strongest architectural correction to push into a revised TOR: split §5.5 into an explicit CMS/content layer (thin, presentation + workflow only) and separately scoped backend services (GIS/spatial engine, BI/semantic layer, data catalog, IAM, audit logging), each with its own acceptance criteria — rather than one CMS deliverable implicitly expected to do all of it.
+
+**Update — 2569-08-01 draft (2026-08-26 review)**: The monolith persists, and is now independently corroborated by the drafter's own markup. §5.1.5 — the project-plan clause listing what the consultant's own plan must cover — highlights CMS, Frontend, Data Import/Validation, Map Display, and **Dashboard** (the only doubly-marked term in the document, both highlighted and underlined) as one grouped set. The detailed scope of work confirms this isn't accidental grouping: §5.5's 13 sub-items still build content management, dataset management, dashboard data administration, document/media management, publishing workflow, authentication, and audit logging as a single CMS deliverable — the same bundling this validation flagged in the prior draft, just more elaborated. Source: `TOR70_การพัฒนาระบบฐานข้อมูลด้านการปรับตัว_2569-08-01.md`, §5.1.5 and §5.5.1–§5.5.13.
 
 ---
 
