@@ -17,13 +17,18 @@ Thumbs.db
 Icon?
 ._*
 
-# 4.1 Local secrets / MCP config (do not commit)
+# 4.1 Local secrets / MCP config / Testing artifacts (do not commit)
 .gemini/mandates
 .roo/rules
 .vscode/
 .tmp/
 tmp/
 tools/
+.playwright/
+.playwright-browsers/
+playwright/
+playwright-report/
+test-results/
 
 # 5. Data & Big files
 *.xlsx
