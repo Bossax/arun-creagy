@@ -1,5 +1,5 @@
 # Style-Pack: TH (Thai institutional writing, repo-wide)
-**Samples Learnt**: 16 (Technical Precision, Readability, and Analytical Density) | **Last Updated**: 2026-08-25 | **Lexicon**: LEXICON_TH.json v4.0, 48 rules
+**Samples Learnt**: 17 (Technical Precision, Readability, Analytical Density, and Structural Flow) | **Last Updated**: 2026-08-26 | **Lexicon**: LEXICON_TH.json v4.1, 52 rules
 
 ## 1. Core Kernel (80/20)
 
@@ -377,8 +377,29 @@ Four entries were silently inert or self-defeating before this round:
 - A rule that cannot be expressed as an exact string or a compiling pattern belongs in `kind: structural`. Do **not** write its English description into `banned` — that field is matched, not read.
 - `validate_lexicon.py` now blocks all four failure shapes at write time. Run it after every `/style-capture` round.
 
+### 2026-08-26 — Style-pack upgrade from TOR70 Director Toey Briefing Deck (Anti-Fragmentation & Readability Cadence)
+
+**Source of delta**: [`2026-08-26_20-08_Thai-Briefing_diff-evidence.md`](file:///C:/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/memory/style/evidence/2026-08-26_20-08_Thai-Briefing_diff-evidence.md) — review and refinement of executive briefing deck [`2026-08-26_TOR70-director-toey-briefing-deck-TH.md`](file:///C:/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/archive/2026-08-26_TOR70-director-toey-briefing-deck-TH.md).
+
+#### Preferred direction detected
+- **Elimination of Fragmented Floating Phrases**: Never start an introductory or scoping section with a detached metadata count or standalone noun phrase (e.g., `สไลด์หลัก 14 แผ่น... เอกสารนี้...`). Unify scope metadata and purpose into a single, cohesive sentence (`เอกสารนี้ประกอบด้วย... ซึ่งจัดทำขึ้นเพื่อ...`).
+- **Enumeration Cadence & Punctuation in Tables/Summaries**: In table cells and dense artifact inventories, avoid stringing items together with only spaces. Use commas (`,`) and formal conjunctions (`และ`, `รวมถึง`, `พร้อมด้วย`) to create clean parsing cadence.
+- **List / Bullet Parallelism**: Maintain strict grammatical symmetry across all items in a bulleted list (e.g., all outcome noun phrases with relative clauses `ที่สามารถ...` / `ซึ่งผ่าน...`, rather than mixing full declarative sentences with bare fragments).
+- **Task Table Verb-Object Uniformity**: In operational schedules and modification tables, consistently lead every task item with an active operational verb (`จัดทำ...`, `กำหนด...`, `ออกแบบ...`, `เพิ่ม...`).
+
+#### New style rule candidates (Observed in Miss Register)
+- `ประโยคเกริ่นนำขึ้นต้นด้วยกลุ่มคำนามลอยโดยไม่มีกริยาหลัก` -> Unify into complete sentence with relational connectors.
+- `รายการคำนามในตารางหรือเนื้อหาเว้นวรรคต่อกันโดยไม่มีจุลภาคหรือคำเชื่อม` -> Use commas and connectors (`และ`, `รวมถึง`).
+- `โครงสร้างข้อความย่อยในลิสต์ขาดความสอดคล้องคู่ขนาน (Parallelism)` -> Enforce parallel grammatical structure.
+
+#### Anti-regression note
+- Do **not** leave floating count noun phrases at the start of briefing sections.
+- Do **not** rely on plain whitespace to delimit multiple dense deliverables in table cells.
+- Do **not** alternate between verb clauses and noun fragments within the same bullet list.
+
 
 ## 5. Strict Parenthetical Anchor (Anti-regression Update)
 - **Rule**: Do **not** use English translations in parentheses unless absolutely necessary for technical precision.
 - **Allowed**: Exact database schema names (`DISASTER_EVENT`), system keys, or official acronyms (`MVD`).
 - **Banned**: Translating conceptual terms or phrases (e.g., `(Data Availability)`, `(Temporal completeness)`, `(Bounded Application Test)`). If it's a concept, write it in strong Thai and leave it alone.
+
