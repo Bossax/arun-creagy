@@ -1,5 +1,5 @@
 # Style-Pack: TH (Thai institutional writing, repo-wide)
-**Samples Learnt**: 18 (Technical Precision, Readability, Analytical Density, and Structural Flow) | **Last Updated**: 2026-08-27 | **Lexicon**: LEXICON_TH.json v4.1, 52 rules
+**Samples Learnt**: 20 (Technical Precision, Readability, Analytical Density, and Structural Flow) | **Last Updated**: 2026-08-28 | **Lexicon**: LEXICON_TH.json v4.1, 52 rules
 
 ## 1. Core Kernel (80/20)
 
@@ -416,6 +416,34 @@ Four entries were silently inert or self-defeating before this round:
 - Do **not** leave `คุณค่า`/`ทุนเดิม`/`ข้อจำกัด`/`กลุ่มผู้มีส่วนร่วม`/`ประเด็นหลัก` standing alone in an outline bullet — expand it or cut it.
 - Do **not** silently reword a bullet whose underlying causal claim is wrong; strike it and re-derive the correct chain.
 - **Open tension, do not auto-apply**: do not add conceptual English parentheticals (e.g. `(quality)`, `(Data Platform)`) to prose sections based on this round alone — that contradicts § 5. Confirm with Boss whether planning/outline documents get an exception before generalizing.
+
+### 2026-08-27 — Style-pack upgrade from CRDB exec-summary Stage B draft, internal-artifact leak (severity-promoted, not threshold-promoted)
+
+**Source of delta**: Boss's in-place review of `ψ/incubate/drafts/crdb-exec-summary-intro-1.1/02_th_draft.md` (introduction section) — rated 2/10, most of it manually rewritten rather than incrementally corrected. Documented in full at [`23.55_exec-summary-stage-b-internal-artifact-leak.md`](file:///C:/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/memory/retrospectives/2026-08/27/23.55_exec-summary-stage-b-internal-artifact-leak.md). Promoted on severity and explicitness of Boss's correction rather than the usual 2-sighting miss-register threshold — three distinct sub-patterns each appeared once this round, but the underlying complaint ("I cant believe that you still leak internal artifacts and references into an audience facing report... This mean the style packs does not incorporate these rules") is unambiguous, not a candidate needing a second sighting to confirm.
+
+#### Preferred direction detected
+- **No internal process/sourcing artifacts in reader-facing prose.** Three manifestations found in one draft: (a) slide/artifact citations woven into narrative sentences (`สไลด์ที่ 13 ของชุดนำเสนอเผยแพร่ผลการศึกษา CRDB`, `สไลด์ที่ 9 จึงระบุ...`) — sourcing belongs only in a traceability sidecar, never inline in the reader's sentence; (b) a process flow the brief calls for as a diagram, rendered instead as an arrow-chain sentence (`การรวบรวมหลักฐาน → การสังเคราะห์ → ...`) — must be an actual figure/diagram placeholder, not prose with unicode arrows; (c) meta-commentary describing the report's own section structure (`...ตามตรรกะเดียวกัน กล่าวคือ บทเรียนจากต่างประเทศ (หัวข้อ 1.1)...`) — cut entirely; say what's true about the subject, not about the document.
+- **A full rejection with no replacement offered means cut, not patch.** Boss struck the closing roadmap paragraph and rated it "0/10" with nothing to salvage — the correct response is removal, not a rewrite attempt.
+
+#### New style rule candidates
+40. **No Internal Process Artifacts in Reader-Facing Prose**: Never cite internal working-document locators (slide numbers, page numbers, artifact IDs) inside a narrative sentence meant for the final audience. Never render a called-for process diagram as an inline arrow-chain sentence — represent it as a figure/diagram placeholder instead. Never include meta-commentary describing what the report's own upcoming sections will cover.
+
+#### Anti-regression note
+- Do **not** write `สไลด์ที่ N`, `หน้า N`, or any internal artifact locator into a sentence meant for DCCE or any other final reader — sourcing lives in the evidence-traceability sidecar only.
+- Do **not** translate a requested "diagram"/"figure" brief instruction into an inline arrow-chain sentence — flag it as a figure to be designed, or omit it, rather than faking it in prose.
+- Do **not** write "this section discusses X, the next section discusses Y" — every sentence must be about the subject matter, not about the document's own structure.
+- This is a `kind: structural` check (per `validate_lexicon.py`'s taxonomy) — it depends on recognizing sourcing/process metadata in context, not a fixed string or pattern. It cannot be fully caught by `lint_thai_writing.py` alone; the more reliable fix is an explicit instruction in the content-drafting stage's own prompt, plus an explicit item on any human accuracy-gate checklist: "does this sentence belong in the document, or is it metadata about how the document was made."
+
+### 2026-08-28 — CRDB-project-specific: never write the bare acronym "NCAIF"
+
+**Source of delta**: Boss's own rewrite of the exec-summary introduction eliminated every instance of "NCAIF" (roughly 8 places it could have appeared) in favor of the full Thai name at first mention and "โครงสร้างข้อมูลฯ" as the standing shorthand thereafter — not even a one-time "(NCAIF)" parenthetical gloss. Section 1.1, revised separately in the same document, still had 8 bare "NCAIF" mentions and drew an immediate, emphatic correction ("why NCAIF still gets throufh!!!!!!!!!!!!!!!! dont you see I replaced it all? in the บทนำ"). Promoted immediately on severity/clarity, same basis as rule 40 — this is Boss's own systematic writing choice repeated 8 times, not an ambiguous single instance.
+
+#### New style rule candidate
+41. **No Bare "NCAIF" in Audience-Facing Prose (CRDB project-specific)**: Never write the acronym "NCAIF" in report/exec-summary body text, including as a parenthetical gloss. Use the full Thai name ("โครงสร้างข้อมูลด้านการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศ") at first mention in a document, then "โครงสร้างข้อมูลฯ" as the standing shorthand for every subsequent mention. This generalizes past the single-document case: whenever a human's own rewrite of one section eliminates a term/acronym entirely, check every other section of the same document for the same term before considering a revision pass complete — a pattern established once in a document applies to the whole document, not just the section it was corrected in.
+
+#### Anti-regression note
+- Do **not** write "NCAIF" anywhere in CRDB exec-summary or full-report body prose — use "โครงสร้างข้อมูลฯ".
+- When a human rewrites one section of a multi-section document, scan every other section for the same corrected pattern before calling a revision pass complete, rather than treating the correction as scoped to only the section it appeared in.
 
 ## 5. Strict Parenthetical Anchor (Anti-regression Update)
 - **Rule**: Do **not** use English translations in parentheses unless absolutely necessary for technical precision.
