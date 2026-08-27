@@ -138,7 +138,34 @@ def check_sentence_structures(sentences):
     return errors
 
 
-def lint(draft_path, lexicon_path, scope="report"):
+def check_editorial_review_patterns(sentences):
+    """Surface semantic-risk patterns for mandatory editorial disposition.
+
+    These are deliberately review items, not blockers: the same surface form can
+    be legitimate in an internal plan and wrong in reader-facing prose.
+    """
+    reviews = []
+    roadmap = re.compile(
+        r"(ส่วนที่เหลือของ(บท|รายงาน)|"
+        r"(หัวข้อ|ส่วน)(ถัดไป|ต่อไป|ที่\s*\d+).{0,80}(กล่าวถึง|นำเสนอ|ครอบคลุม)|"
+        r"รายงานฉบับนี้.{0,80}(จัดเรียงเนื้อหา|ประกอบด้วยหัวข้อ))"
+    )
+    for sentence in sentences:
+        clean = sentence.strip()
+        if clean.count("→") >= 2:
+            reviews.append(
+                f"[ARTIFACT] inline arrow chain may be a diagram rendered as prose: "
+                f"'{clean[:90]}...'"
+            )
+        if roadmap.search(clean):
+            reviews.append(
+                f"[META] possible report-roadmap commentary; state the subject matter instead: "
+                f"'{clean[:90]}...'"
+            )
+    return reviews
+
+
+def lint(draft_path, lexicon_path, scope="report", register_run=False):
     raw = Path(draft_path).read_text(encoding="utf-8")
     text = strip_non_prose(raw)
     data = json.loads(Path(lexicon_path).read_text(encoding="utf-8"))
@@ -190,6 +217,7 @@ def lint(draft_path, lexicon_path, scope="report"):
 
     struct_errs = check_sentence_structures(sentences)
     review += check_parentheticals(text, translations)
+    review += check_editorial_review_patterns(sentences)
     errors += struct_errs
     for msg in struct_errs:
         fired.append((msg.split("]")[0].lstrip("[").lower(), "structure"))
@@ -210,21 +238,22 @@ def lint(draft_path, lexicon_path, scope="report"):
         print(f"\n{dormant} structural rule(s) not applicable to this draft.")
 
     verdict = "fail" if errors else "pass"
-    try:
-        from register import log_run
-        log_run(draft_path, f"{data.get('context')} v{data.get('version')}", scope,
-                len(bounds) - 1, len(sentences), verdict, fired)
-    except Exception:
-        pass  # a logging failure must never change a gate's verdict
+    if register_run:
+        try:
+            from register import log_run
+            log_run(draft_path, f"{data.get('context')} v{data.get('version')}", scope,
+                    len(bounds) - 1, len(sentences), verdict, fired)
+        except Exception:
+            pass  # a logging failure must never change a gate's verdict
 
     if errors:
-        print(f"\nLINT FAILED -- {len(errors)} violation(s):")
+        print(f"\nMECHANICAL GATE FAILED -- {len(errors)} violation(s):")
         for e in errors:
             print(f"  - {e}")
         print("\nFix these before the draft can merge.")
         sys.exit(1)
 
-    print("\nLINT PASSED")
+    print("\nMECHANICAL GATE PASSED")
     sys.exit(0)
 
 
@@ -234,5 +263,7 @@ if __name__ == "__main__":
     parser.add_argument("lexicon")
     parser.add_argument("--scope", default="report", choices=["report", "article", "letter"],
                         help="which scoped rules apply on top of the universal set")
+    parser.add_argument("--register", action="store_true",
+                        help="record the run in the style miss register (off by default)")
     ns = parser.parse_args()
-    lint(ns.draft, ns.lexicon, ns.scope)
+    lint(ns.draft, ns.lexicon, ns.scope, ns.register)

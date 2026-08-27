@@ -42,12 +42,18 @@ def run_case(case, lexicon, verbose):
         return "ERROR", proc.stdout + proc.stderr
 
     actual = "pass" if proc.returncode == 0 else "fail"
-    ok = actual == case["expect"]
+    review_ok = not case.get("expect_review") or case["expect_review"] in (proc.stdout or "")
+    ok = actual == case["expect"] and review_ok
     detail = ""
     if not ok or verbose:
         detail = "\n".join(
             l for l in (proc.stdout or "").splitlines()
-            if l.strip().startswith("-") or "LINT" in l)
+            if l.strip().startswith("-")
+            or "MECHANICAL GATE" in l
+            or "[ARTIFACT]" in l
+            or "[META]" in l)
+        if not review_ok:
+            detail += f"\nmissing expected review marker: {case['expect_review']}"
     return ("OK" if ok else "FAIL"), detail
 
 
@@ -89,7 +95,17 @@ def main():
     if failed:
         print(f"FAILED: {len(failed)}/{len(cases)} -- {failed}")
         sys.exit(1)
-    print(f"PASSED: {len(cases)}/{len(cases)}")
+    print(f"PASSED: {len(cases)}/{len(cases)} mechanical cases")
+
+    harness = subprocess.run(
+        [child_python(), str(TESTS / "test_editorial_gate.py")],
+        capture_output=True, text=True, encoding="utf-8", errors="replace")
+    if harness.stdout:
+        print(harness.stdout.rstrip())
+    if harness.stderr:
+        print(harness.stderr.rstrip())
+    if harness.returncode:
+        sys.exit(harness.returncode)
     sys.exit(0)
 
 

@@ -13,20 +13,21 @@ def check_density(source_path, draft_path, min_ratio=0.8):
     draft_len = len(re.sub(r'\s+', '', draft_text))
     
     if src_len == 0:
-        print("✅ Source is empty, no density check required.")
+        print("SIZE HEURISTIC SKIPPED: source is empty.")
         sys.exit(0)
         
     ratio = draft_len / src_len
     
-    print(f"📊 Density Check: Source = {src_len} chars | Draft = {draft_len} chars | Ratio = {ratio:.2f}")
+    print(f"Size heuristic: source={src_len} chars draft={draft_len} chars ratio={ratio:.2f}")
     
     if ratio < min_ratio:
-        print(f"\n❌ DENSITY FAILED! Draft is only {ratio*100:.1f}% the size of the source (Minimum required: {min_ratio*100:.1f}%).")
-        print("Reason: Destructive Compression / Task Executor Bias detected.")
-        print("Action: You must expand the draft to preserve technical details, schemas, and examples.")
+        print(f"\nSIZE HEURISTIC FAILED: draft is {ratio*100:.1f}% of source "
+              f"(minimum {min_ratio*100:.1f}%).")
+        print("This is a rewrite-only lower-bound signal, not an editorial verdict.")
         sys.exit(1)
     else:
-        print("✅ DENSITY PASSED! Structural weight is preserved.")
+        print("SIZE HEURISTIC PASSED")
+        print("This does not certify source fidelity or editorial quality.")
         sys.exit(0)
 
 if __name__ == '__main__':

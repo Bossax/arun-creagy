@@ -111,6 +111,28 @@
       "name": "clean institutional prose",
       "expect": "pass",
       "text": "กรมฯ จัดทำบัญชีรายการชุดข้อมูลพื้นฐาน เพื่อให้หน่วยงานที่เกี่ยวข้องใช้อ้างอิงร่วมกัน โดยกำหนดผู้รับผิดชอบรายชุดข้อมูลไว้อย่างชัดเจน\n"
+    },
+    {
+      "name": "internal slide locator from exec-summary failure",
+      "expect": "fail",
+      "text": "สไลด์ที่ 13 ระบุว่าผู้ใช้ยังค้นหาข้อมูลที่ต้องการไม่พบ\n"
+    },
+    {
+      "name": "bare NCAIF from cross-section regression",
+      "expect": "fail",
+      "text": "คณะที่ปรึกษาจัดทำ NCAIF เพื่อใช้เป็นกรอบการพัฒนาระบบข้อมูล\n"
+    },
+    {
+      "name": "diagram rendered as inline arrow chain",
+      "expect": "pass",
+      "expect_review": "[ARTIFACT]",
+      "text": "กระบวนการประกอบด้วย การรวบรวมหลักฐาน → การสังเคราะห์ → การยกร่าง → การรับฟังความเห็น\n"
+    },
+    {
+      "name": "report roadmap meta-commentary",
+      "expect": "pass",
+      "expect_review": "[META]",
+      "text": "ส่วนที่เหลือของรายงานฉบับนี้จัดเรียงเนื้อหาตามหัวข้อที่กำหนดไว้\n"
     }
   ]
 }

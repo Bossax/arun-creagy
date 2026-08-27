@@ -1,87 +1,147 @@
 ---
 name: writing-th
 description: >
-  v4.0.0 L-SKLL | การเขียนเชิงกลยุทธ์ + Harness Engineering (Hardened Edition)
-  ผสานระบบการเล่าเรื่องเชิงเหตุและผล (Causal Chaining) เข้ากับสถาปัตยกรรมการควบคุม AI (Harness Engineering)
-  เพื่อขจัดความเป็นหุ่นยนต์ ป้องกันการหลอน และบังคับการทำงานแบบ 1-to-1 Micro-Scoping ด้วยระบบ Technical Checkpoints
-  Trigger: "ร่างนโยบาย", "เขียนรายงานเชิงยุทธศาสตร์", "ยกระดับงานเขียน", "write thai report".
-origin: project-local/arun-creagy-oracles
-installer: project
+  v5.0.0 L-SKLL | Draft, revise, and quality-gate Thai institutional writing.
+  Use for Thai policy reports, executive summaries, articles, and formal letters
+  when source fidelity, audience fit, and explicit merge approval matter.
+metadata:
+  origin: project-local/arun-creagy-oracles
+  installer: project
 ---
 
-# /writing-th — การเขียนเชิงกลยุทธ์และสถาปัตยกรรมควบคุม AI (v4.0.0 Harness Edition)
+# /writing-th — Thai Institutional Writing Harness v5
 
-> "เปลี่ยนข้อมูลเทคนิคให้เป็นอำนาจในการตัดสินใจ ภายใต้การควบคุมที่แม่นยำอย่างเด็ดขาด ผ่าน Technical Harness"
+Turn technical evidence into decision-ready Thai prose without confusing a
+mechanical lint pass with editorial quality.
 
-## DNA Prism
-- **Identity**: ที่ปรึกษาเชิงกลยุทธ์ (Strategy Consultant) และผู้ควบคุมสถาปัตยกรรม (Harness Warden)
-- **Lens**: สถาปัตยกรรมแห่งความรับผิดรับชอบ (Accountability Architecture) ป้องกัน Task Executor Bias และ Goal-Completion Bias
-- **Personality**: หนักแน่น เฉียบคม มุ่งเน้นกระบวนการ (Process) มากกว่าความเร็วในการสร้างผลลัพธ์ (Output Speed)
+## Non-negotiable invariants
 
-## Hard Technical Constraints (The Harness)
-1. **Draft Isolation (No Target Overwrites)**: ห้ามเขียนทับ (overwrite) ไฟล์ต้นฉบับจริงในทันที ทุกฉบับร่างต้องบันทึกไปยัง `ψ/incubate/drafts/` หรือ scratch file จนกว่ามนุษย์จะสั่ง "Approve/Merge"
-2. **Anti-Compression Law**: ห้ามบีบอัดเนื้อหาทิ้ง (Lossy Compression) โครงสร้างทางสถิติ เฟรมเวิร์กทางเทคนิค (เช่น DaLA, PDNA) ต้องถูกคงไว้อย่างสมบูรณ์
-3. **Anti-Batching Law**: ห้ามรวบยอดหรือเหมาทำหลายหัวข้อในคราวเดียว
-4. **Style Compliance**: ห้ามใช้โครงสร้างแปลภาษาอังกฤษ (เช่น "ไม่ได้...แต่...") ปฏิเสธศัพท์ AI Jargon และใช้ศัพท์สถาบันตาม NCAIF Style Pack อย่างเคร่งครัด
+1. **Draft isolation** — write only to `ψ/incubate/drafts/`, another approved
+   scratch location, or the chat. Never overwrite the destination before the
+   human explicitly says `Approve`, `Merge`, or `Execute`.
+2. **One scoped unit at a time** — do not batch unrelated sections.
+3. **Source fidelity** — preserve required evidence, distinctions, tables,
+   equations, and frameworks. Compression is governed by the transformation
+   mode, not by a universal character ratio.
+4. **Two different assurances** — mechanical checks detect encoded patterns;
+   editorial review judges meaning, altitude, reader value, and form. Never call
+   a mechanical pass an editorial approval.
+5. **No ledger writes** — do not modify style memory, retrospectives, or the miss
+   register except through their own explicitly invoked maintenance skill. The
+   ordinary linter may log runs only when repository policy permits it.
 
----
+## Required references
 
-## 7-Stage Pipeline (The Hardened Harness Architecture)
+- Read [references/editorial-rubric.md](references/editorial-rubric.md) before
+  creating the content contract or reviewing a draft. Apply the core rubric and
+  only the selected deliverable profile.
+- Read [references/artifact-schemas.md](references/artifact-schemas.md) before
+  creating `writing-contract.json` or `editorial-review.json`.
+- Load the writing plan and the style pack it names. If none is named, use
+  `ψ/memory/style/STYLE_PACK_TH.md` and `ψ/memory/style/LEXICON_TH.json`.
 
-### Stage 0: Calibration (Feedforward Control)
-- **Action**: โหลด Style Pack ที่ระบุใน `Writing Plan` หรือใน `ψ/memory/style/`
-- **Output**: รายการ "คำต้องห้าม (Jargon Ban)" และ "คำกริยาเชิงยุทธศาสตร์" ที่บังคับใช้
-- **STOP**: **ต้องหยุด (STOP)** เพื่อขอยืนยัน Persona กับมนุษย์ก่อนเริ่มอ่านเอกสาร
+## Six-gate workflow
 
-### Stage 1: Strategy (การกำหนดวาทศิลป์)
-- **Action**: นิยามเงื่อนไขแห่งชัยชนะ (Victory Condition) และวางโครงเรื่องเชิงเหตุและผล (Evidence -> Analysis -> Solution)
-- **Output**: บันทึกระบุ จุดยืน (Stance), ความเสี่ยงที่ต้องจัดการ (The Fear), และ สิ่งที่ต้องการให้เกิด (The Ask)
+### 1. Inspect sources and classify the transformation
 
-### Stage 2: Density & Scope Validation (ด่านวัดขนาดข้อมูล - NEW)
-- **Action**: ประเมินและวัดขนาด (Byte-weight / Concept-count) ของเอกสารต้นทางที่จะถูกนำมาร่างใหม่
-- **Rule**: AI ต้องระบุโครงสร้างและเครื่องมือทางเทคนิคทั้งหมด (เช่น ตาราง, สมการ, เฟรมเวิร์ก) ที่ต้องรักษาไว้
-- **Output**: Checklist รายการโครงสร้างเทคนิคที่ "ห้ามหายไป"
-- **STOP**: **ต้องหยุด (STOP)** เพื่อให้มนุษย์อนุมัติ Baseline ก่อนดำเนินการสรุป/สกัด
+Read the brief, source evidence, target section, applicable style material, and
+any approved sample. Select exactly one mode:
 
-### Stage 3: Foraging & Payload Gate (ด่านสกัดความกลวง)
-- **Action**: ดึงหลักฐานเชิงวาทศิลป์ บังคับถอดรหัส **4 เสาหลัก (4-Pillar Extraction)** สำหรับทุกย่อหน้า:
-  1. **Claim**: ข้อเสนอ/ข้อเรียกร้องหลัก
-  2. **Concrete Example**: หลักฐานเชิงประจักษ์
-  3. **Consequence**: ผลกระทบ
-  4. **Mechanism**: กลไกทางสถาบัน/เทคนิคที่รองรับ
-- **Rule**: หากไม่ครบ 4 เสาหลัก ห้ามดำเนินการเขียน เพื่อป้องกันการเขียนแบบสละสลวยแต่ไร้แก่นสาร
+- `rewrite`: the source and draft are comparable in scope; preservation and the
+  size heuristic apply.
+- `synthesis`: the draft intentionally compresses or combines sources; the size
+  heuristic must not run.
+- `new`: no source text is being rewritten; the size heuristic must not run.
 
-### Stage 4: Governed Execution (Draft Isolation)
-- **Action**: สร้าง Subagents (1 หัวข้อย่อย ต่อ 1 Subagent) หรือร่างด้วยตนเอง
-- **Rule**: ร่างข้อความ **ต้องบันทึกลงในไดเรกทอรีชั่วคราว (`ψ/incubate/drafts/`)** หรือแสดงผลในแชทเท่านั้น
-- **Output**: ร่างข้อความ (Draft Artifact) ที่ถูกตัดขาดจากไฟล์เป้าหมายจริง
+Do not draft yet.
 
-### Stage 5: Script Gates (Lexicon, Structure, Density)
-- **Action**: Main Agent MUST run the following commands to validate the draft. Any `python` works — the scripts re-exec into their own venv at `.agents/skills/writing-th/.venv`, so an unrelated project venv being active in the shell does not change the verdict.
-  1. `python .agents/skills/writing-th/scripts/lint_thai_writing.py <draft_path> ψ/memory/style/LEXICON_TH.json [--scope report|article|letter]`
-  2. `python .agents/skills/writing-th/scripts/check_density.py <source_path> <draft_path> 0.8` — only when rewriting an existing source
-- **Rule**: หากสคริปต์ใดแจ้งเตือน Error (Exit Code 1) **ต้องตีกลับ (Silent Rejection)** ห้ามนำเสนอให้มนุษย์เด็ดขาด AI ต้องแก้ไขข้อผิดพลาดตาม Log และรันสคริปต์ใหม่จนกว่าจะผ่าน (Exit Code 0)
-- **Scope of enforcement (state this honestly, do not overclaim)**: the linter enforces `kind: literal` and `kind: regex` rules plus the structural checks below. Rules marked `kind: structural` are printed as **[REVIEW]** and do **not** block — they need human judgment. Most of the style pack's §2–§7 (stage activation, vetting stack, structural DNA, Anti-AI Shield) has no script gate at all.
-- **What the linter actually checks**:
-  - lexicon terms at real Thai token boundaries (PyThaiNLP `newmm`), Latin terms at word boundaries
-  - regex rules scoped to a single sentence, so an unrelated `ไม่ได้` and `แต่` in one paragraph no longer trip the contrast rule
-  - conceptual English in parentheses, allowing only official acronyms and schema names
-  - pseudo-passive agency where the institutional actor is known
-  - code spans, link targets, and file paths are excluded — a banned term inside a path is not a style violation
+### 2. Build one content contract and stop
 
-### Stage 6: The Human Bridge (Merge Execution)
-- **Action**: นำเสนอ Draft Artifact ที่ผ่าน Stage 5 แล้วให้มนุษย์ตรวจสอบ
-- **Rule**: ไฟล์จริงจะถูกอัปเดต (Merge) ก็ต่อเมื่อมนุษย์พิมพ์คำสั่ง "Approve" หรือ "Execute" โดย AI ต้องรันคำสั่ง:
-  `python .agents/skills/writing-th/scripts/merge_draft.py <draft_path> <dest_path> --lexicon ψ/memory/style/LEXICON_TH.json [--source <source_path>]`
-- **The merge is gated, not trusting**: `merge_draft.py` re-runs Stage 5 itself before copying. If a gate fails it exits 1 and the destination is never touched. Skipping Stage 5 and calling merge directly is therefore safe — the gates still run. `--skip-gates` exists for deliberate override only and prints a loud warning.
+Create `writing-contract.json` beside the future isolated draft. It must lock the
+audience, decision use, section job, target altitude, inclusions, exclusions,
+evidence policy, required concepts, terminology, required structures, source
+paths, and reference samples.
 
-### Maintenance
-- After any `/style-capture` round: `python .agents/skills/writing-th/scripts/validate_lexicon.py ψ/memory/style/LEXICON_TH.json`
-  A rule that cannot be an exact string or a compiling pattern must be `kind: structural`. Writing its English description into `banned` makes it a silent no-op — that is how three rules from the 2026-08-05 round never fired.
-- After any edit to this file: `python .agents/skills/writing-th/scripts/check_skill_drift.py --sync` (two copies exist: `.agents/skills/` is canonical, `.claude/skills/` is what Claude Code routes from)
-- Regression suite: `python .agents/skills/writing-th/tests/run_tests.py`
-- Every Stage 5 run is logged to the miss register at `ψ/memory/style/miss_register.db` (which rules fired, on which draft, pass or fail). Logging never changes a verdict; if it fails the gate still returns its own result.
-  `python .agents/skills/writing-th/scripts/register.py stats` shows which rules actually earn their place. Promotion of new patterns happens manually in `/style-capture`, step 4b.
+Present a compact contract summary and stop for human approval. Record that
+approval in the contract. This replaces separate persona and density stops.
 
----
-**Philosophy**: "เปลี่ยนข้อมูลให้เป็นอำนาจ ภายใต้ Harness ที่ปฏิเสธ Task Executor Bias โดยสิ้นเชิง"
+### 3. Draft in isolation
+
+Draft only the approved unit. Treat finding, concrete evidence, consequence,
+and mechanism as the payload of each **substantive argument unit**; do not force
+all four into every paragraph. Keep one dominant job per paragraph.
+
+Evidence-traceability notes, slide/page locators, prompt scaffolding, and report
+roadmaps belong outside audience-facing prose. A requested diagram becomes a
+figure placeholder or actual figure, never an inline arrow chain.
+
+### 4. Run mechanical checks
+
+For report prose, run:
+
+```text
+python .agents/skills/writing-th/scripts/lint_thai_writing.py <draft> ψ/memory/style/LEXICON_TH.json --scope report
+```
+
+For `rewrite` mode only, also run:
+
+```text
+python .agents/skills/writing-th/scripts/check_density.py <source> <draft> 0.8
+```
+
+Fix blocking failures. Carry every non-blocking `[STRUCTURAL]`,
+`[PARENTHETICAL]`, `[ARTIFACT]`, or `[META]` review item into the editorial
+receipt with a disposition. A green result here means only **mechanical pass**.
+
+### 5. Obtain editorial review
+
+Default to an independent clean-context reviewer. Give the reviewer only the
+approved contract, draft, necessary sources or traceability sidecar, selected
+profile rubric, and reference sample. Do not provide the intended verdict or
+the drafting agent's self-justification.
+
+If an independent reviewer is unavailable, perform a structured self-review and
+mark it `reviewer_mode: self`, `assurance: degraded`. Degraded review may pass,
+but must be disclosed prominently.
+
+Create a receipt scaffold with:
+
+```text
+python .agents/skills/writing-th/scripts/editorial_gate.py prepare <draft> <contract> --out <review> --reviewer-mode independent
+```
+
+Complete every required rubric dimension and record located findings. A receipt
+passes only when its verdict is `pass`, all required dimensions pass (or source
+fidelity is legitimately `not_applicable` in `new` mode), and no critical or
+major finding remains unresolved.
+
+Verify it with:
+
+```text
+python .agents/skills/writing-th/scripts/editorial_gate.py verify <draft> <contract> <review>
+```
+
+Any draft or contract change invalidates the receipt. Review the new hashes.
+
+### 6. Human bridge and merge
+
+Present the draft with its editorial assurance and unresolved minor findings.
+Merge only after explicit human approval:
+
+```text
+python .agents/skills/writing-th/scripts/merge_draft.py <draft> <dest> --lexicon ψ/memory/style/LEXICON_TH.json --contract <contract> --review <review> [--source <source>]
+```
+
+Merge reruns mechanical checks, verifies the exact receipt hashes, and confirms
+that all emitted review items have dispositions. `--skip-gates` remains a loud,
+deliberate override; never infer permission to use it.
+
+## Maintenance
+
+- After a style-capture round, validate the lexicon with
+  `validate_lexicon.py`; do not edit style memory from this skill.
+- After changing canonical `SKILL.md`, run `check_skill_drift.py --sync`.
+- Run `tests/run_tests.py` after any harness change.
+- A behaviorally significant revision requires a blind forward test in an
+  isolated temporary workspace. Use an independent reviewer when delegation is
+  available; otherwise document that the test used degraded self-review.
