@@ -373,6 +373,13 @@
       "reason": "Conceptual term with a settled Thai equivalent; no reason to carry the English.",
       "kind": "literal",
       "scope": "universal"
+    },
+    {
+      "banned": "ส่งมอบขีดความสามารถ",
+      "preferred": "ทำให้...สามารถ...ได้ / ช่วยให้...",
+      "reason": "'ขีดความสามารถ' (capacity/capability) is reserved for high-level policy prose. In operational contexts (e.g., 'provides capacity to staff'), avoid awkward literal translations like 'ส่งมอบขีดความสามารถให้แก่...'. Rephrase using natural verbal agency ('ทำให้...สามารถ...ได้' / can / be able to).",
+      "kind": "literal",
+      "scope": "universal"
     }
   ],
   "technical_terms": [
