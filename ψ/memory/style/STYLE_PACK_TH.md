@@ -1,5 +1,5 @@
 # Style-Pack: TH (Thai institutional writing, repo-wide)
-**Samples Learnt**: 17 (Technical Precision, Readability, Analytical Density, and Structural Flow) | **Last Updated**: 2026-08-26 | **Lexicon**: LEXICON_TH.json v4.1, 52 rules
+**Samples Learnt**: 18 (Technical Precision, Readability, Analytical Density, and Structural Flow) | **Last Updated**: 2026-08-27 | **Lexicon**: LEXICON_TH.json v4.1, 52 rules
 
 ## 1. Core Kernel (80/20)
 
@@ -397,6 +397,25 @@ Four entries were silently inert or self-defeating before this round:
 - Do **not** rely on plain whitespace to delimit multiple dense deliverables in table cells.
 - Do **not** alternate between verb clauses and noun fragments within the same bullet list.
 
+### 2026-08-27 — Style-pack upgrade from CRDB chapter-1 plan, exec-summary review marks
+
+**Source of delta**: [`2026-08-27_22-10_TH_diff-evidence.md`](file:///C:/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/memory/style/evidence/2026-08-27_22-10_TH_diff-evidence.md) — Boss's in-place `%%comment%%`/`~~strikethrough~~` review of [`แผนการเขียนบทที่ 1...md`](file:///C:/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/incubate/DCCE/CRDB/output/final_deliverable/แผนการเขียนบทที่%201%20รายงานฉบับสมบูรณ์และรายงานฉบับย่อสำหรับผู้บริหาร.md), section 4 (exec-summary chapter plan).
+
+#### Preferred direction detected
+- **No bare modifier without its head noun**: a noun phrase like `ลำดับชั้นที่ไม่ซับซ้อน` or `การแยกเครื่องมือออกจากบัญชีข้อมูล` reads as incomprehensible when the thing being modified is never named — Boss's own words: "ชอบละนามตลอด อ่านไม่รู้เรื่อง" (habitually drops the noun, unreadable) and "you omit the essential noun very often making reading incomprehensible." This recurred 3x in one review pass (ลำดับชั้น, เครื่องมือ, การนำทาง) — a habit, not a typo.
+- **Abstract summary/collective noun replaced with a concrete enumerated list**: `คุณค่าต่อการกำหนดนโยบาย...`, `ทุนเดิมที่นำมาใช้ต่อยอดได้`, `กลุ่มผู้มีส่วนร่วมที่ให้ความเห็น` + `ประเด็นหลักที่ใช้ทดสอบร่าง` were each replaced with a bullet naming the actual concrete referents (named teams, named meeting types, named data-quality dimensions), usually inside a parenthetical list. This generalizes the existing "abstract gap statement without concrete example" ban (§ line 183) from paragraph prose to bullet-point outline drafting specifically.
+- **Wrong causal logic gets struck through, not reworded**: `ทุนเดิม → ข้อจำกัด → คำตอบเชิงออกแบบ` was cut entirely rather than patched, because the underlying reasoning was backwards — NCAIF is the benchmark of what content/products a user's journey needs; existing DCCE resources get analyzed *against* that benchmark to find gaps, not the other way around. When a bullet's logic (not just its wording) is wrong, treat it as a content defect.
+- **Tension with an existing rule, flagged not resolved**: this same review pass *added* English glosses in parentheses for conceptual terms — `(availability)`, `(quality)`, `(format)`, `(Web Platform)`, `(Data Platform)` — which directly contradicts § 5 below ("Strict Parenthetical Anchor," banned: translating conceptual terms/phrases). Only observed once this round (below the promotion threshold), so it was **not** promoted into a rule. Flagged here so the next capture round checks whether this is genuine style evolution for planning/outline documents specifically, or a one-off Boss wanted for internal traceability that shouldn't generalize to prose.
+
+#### New style rule candidates (promoted from Miss Register, both at 3x within this round)
+38. **No Bare Modifier Without Head Noun**: Never write a noun phrase built on a modifier (ลำดับชั้น, เครื่องมือ, การนำทาง, การเปลี่ยนแปลง) without naming what it modifies. State what it is a hierarchy/tool/navigation/change *of*.
+39. **Concretize Abstract Summary Nouns in Outlines**: When drafting bullet-point outlines or plans, replace an abstract collective noun (คุณค่า, ทุนเดิม, ข้อจำกัด, กลุ่มผู้มีส่วนร่วม, ประเด็นหลัก) with the concrete enumerated list it stands for — named actors, named activity types, named dimensions — typically inside a parenthetical list.
+
+#### Anti-regression note
+- Do **not** leave a noun phrase's head noun implicit — reread every "ลำดับชั้น/เครื่องมือ/การนำทาง"-style phrase and confirm the object is named.
+- Do **not** leave `คุณค่า`/`ทุนเดิม`/`ข้อจำกัด`/`กลุ่มผู้มีส่วนร่วม`/`ประเด็นหลัก` standing alone in an outline bullet — expand it or cut it.
+- Do **not** silently reword a bullet whose underlying causal claim is wrong; strike it and re-derive the correct chain.
+- **Open tension, do not auto-apply**: do not add conceptual English parentheticals (e.g. `(quality)`, `(Data Platform)`) to prose sections based on this round alone — that contradicts § 5. Confirm with Boss whether planning/outline documents get an exception before generalizing.
 
 ## 5. Strict Parenthetical Anchor (Anti-regression Update)
 - **Rule**: Do **not** use English translations in parentheses unless absolutely necessary for technical precision.
