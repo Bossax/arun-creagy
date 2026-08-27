@@ -154,12 +154,12 @@
       "scope": "universal"
     },
     {
-      "banned": "translated contrast template ไม่ใช่เพียง…แต่",
+      "banned": "translated contrast template ไม่ใช่เพียง…(แต่)",
       "preferred": "ยุทธศาสตร์ของการปรับตัวต้องอาศัยการประเมินความน่าจะเป็นและขนาดของความเสี่ยง",
-      "reason": "Replaces dramatic AI contrast with a grounded, formal policy tone.",
+      "reason": "Replaces dramatic AI contrast with a grounded, formal policy tone. Boss's 2026-08-28 correction: the opener 'ไม่ใช่เพียง' is itself the translated-English scaffold (\"not merely...\") -- banning it only when a 'แต่' completes it within 80 chars let a dangling, unresolved variant (\"...ไม่ใช่เพียงเพื่อสร้างความชอบธรรมทางวิชาการ\", no แต่ at all) pass the gate untouched. Ban the opener outright.",
       "kind": "regex",
       "scope": "universal",
-      "pattern": "ไม่ใช่เพียง.{0,80}?แต่"
+      "pattern": "ไม่ใช่เพียง"
     },
     {
       "banned": "สมมติฐานแบบเหมารวมนั้นไม่เพียงพอ",
@@ -380,6 +380,21 @@
       "reason": "'ขีดความสามารถ' (capacity/capability) is reserved for high-level policy prose. In operational contexts (e.g., 'provides capacity to staff'), avoid awkward literal translations like 'ส่งมอบขีดความสามารถให้แก่...'. Rephrase using natural verbal agency ('ทำให้...สามารถ...ได้' / can / be able to).",
       "kind": "literal",
       "scope": "universal"
+    },
+    {
+      "banned": "NCAIF",
+      "preferred": "โครงสร้างข้อมูลฯ (after giving the full Thai name once: โครงสร้างข้อมูลด้านการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศ)",
+      "reason": "Boss eliminated every bare 'NCAIF' from his own rewrite of the CRDB exec-summary introduction (2026-08-28) and corrected a subagent draft that still used it 8 times. CRDB project-specific: report/exec-summary body prose gives the full Thai name once, then uses 'โครงสร้างข้อมูลฯ' as the standing shorthand -- never the bare English acronym, not even as a parenthetical gloss.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "internal artifact locator in narrative prose (สไลด์ที่ N, หน้า N, Slide N)",
+      "preferred": "cite the source by its real descriptive name (e.g. the study/framework's actual title), or omit inline and keep the citation in the evidence-traceability sidecar only",
+      "reason": "CRDB project-specific, 2026-08-28: an internal working-document locator (slide/page number) woven into reader-facing narrative sentences was Boss's sharpest correction this round ('I cant believe that you still leak internal artifacts and references into an audience facing report'). These are sourcing metadata for the writer, not content for the reader.",
+      "kind": "regex",
+      "scope": "universal",
+      "pattern": "(สไลด์ที่\\s*\\d+|หน้า(ที่)?\\s*\\d+|[Ss]lide\\s*\\d+)"
     }
   ],
   "technical_terms": [
