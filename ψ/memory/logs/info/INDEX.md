@@ -1,5 +1,8 @@
 # Info Log Index
 
+- [2026-08-28 11:59] 🟡 **CRDB §4.3 amendment pending: Loss & Damage MVP sequencing + NESDC partner**: Revisit the already-reviewed exec-summary §4.3 draft to add MVP sequencing (foundational disaster stats before full L&D calculation) and name NESDC as key partner for the disaster loss-statistics service, per verified NESDC methodology source. Requires re-running mechanical + editorial gates; do not touch §4.4 onward for this.
+  - File: ψ/memory/logs/info/2026-08-28_11-59_crdb-4.3-loss-damage-mvp-nesdc-partner.md
+
 - [2026-08-19 15:55] 🚩 **Slide & Webpage Mockup Language Guardrails (Important)**: Strict prohibition of hyperbolic jargon (Pulse, Infrastructure) and internal developer logic (Task-Based Routing, 1B node codes) on presentation slides and mockups; enforce authentic user-centric terminology.
   - File: ψ/memory/logs/info/2026-08-19_15-55_slide-making-and-mockup-language-guardrails.md
 

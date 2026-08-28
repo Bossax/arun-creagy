@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "rubric_version": "5.0.0",
+  "draft_sha256": "f82c5952171e42ecd796e8e9f76d146fe3d038d09d90069b0f4901c0dbd1cf55",
+  "contract_sha256": "715880d2bac0c0597035021b4bf64cc84c3ffc3eaef087584ba2dafc9b31d65a",
+  "profile": "executive-summary",
+  "reviewer_mode": "independent",
+  "assurance": "standard",
+  "reviewer": "independent-agent-review",
+  "reviewed_at": "2026-08-28T10:31:08+00:00",
+  "dimensions": {
+    "section_job": {
+      "verdict": "pass",
+      "evidence": "The section performs exactly the job stated in the contract: paragraph 1 positions CRDB on the 6-stage Reference SDLC, paragraph 2 gives the coverage uplift (35%->70%, 40%->80%), paragraph 3 lists the 4 build-ready deliverables, paragraph 4 splits Content Writer vs Software Developer roles, and the final paragraph ties next steps to TOR70's actual sequencing risk. No adjacent-section drift (no relational schema tables, no per-page storyboard detail) is present."
+    },
+    "audience_decision_value": {
+      "verdict": "pass",
+      "evidence": "Every paragraph foregrounds what the executive reader needs for the TOR70 go/no-go decision: coverage percentages framed as decision consequence ('วางรากฐานให้ผู้รับจ้างในโครงการถัดไปเริ่มต้นที่ระยะที่ 3... ได้ทันที'), and the closing paragraph gives concrete actions ('ควรเจรจาให้สัญญาจ้างมีรอบพัฒนาอย่างน้อยสองรอบ') rather than describing consultant workflow for its own sake."
+    },
+    "evidence_payload": {
+      "verdict": "pass",
+      "evidence": "Claim-evidence-consequence units are complete, e.g. paragraph 2: claim (TOR70-only coverage is thin), evidence (35%/40%), and consequence (CRDB work raises it to 70%/80%, closing 'ช่องว่างของสองระยะแรกที่สำคัญที่สุด'). Paragraph 3 backs the 4-deliverable claim with concrete counts (38 nodes/6 categories, 75 requirements, 8 domains/74-term glossary, etc.)."
+    },
+    "causal_logic": {
+      "verdict": "pass",
+      "evidence": "The final paragraph's causal chain holds: TOR70 requires data readiness before its design step, but design 'ควรเป็นตัวกำกับเนื้อหานั้น' (should govern that content) -- this sequencing mismatch is what makes closing the 59-topic gap urgent before TOR70's data-prep phase starts. No reversed causality or decorative transitions found."
+    },
+    "reader_facing_appropriateness": {
+      "verdict": "pass",
+      "evidence": "No internal evidence codes, file paths, or slide references appear in the prose. The only illustration placeholder ('ภาพประกอบที่ 1... DRD Ecosystem Flow') is an approved required_structure per contract, not artifact leakage."
+    },
+    "terminology_agency": {
+      "verdict": "pass",
+      "evidence": "'คณะที่ปรึกษา' is used consistently as the sentence subject for consultant actions ('คณะที่ปรึกษาวางตำแหน่ง...', 'คณะที่ปรึกษาส่งมอบ...'), matching the contract's required sentence_subject. 'Content Writer' and 'Software Developer' are named as the actual owners of their respective next actions throughout, with no substitution of project/consultant/client roles."
+    },
+    "source_fidelity": {
+      "verdict": "pass",
+      "evidence": "Coverage figures verified directly against 2026-08-26_TOR70-SDLC-storyline-for-DCCE-briefing.md lines 230-231 (Stage 1 ~35%->~70%, Stage 2 ~40%->~80%) -- exact match. Deliverable counts (38 nodes/6 categories, 75 requirements/13 deliverables/9 service briefs/12 data specs, 8 domains/12-field metadata/74-term glossary) match the contract's inclusions and evidence-traceability.md source mapping. One minor gap: the contract's required_concept calling for TOR70 '§5.1-5.10' sequencing risk is conveyed in substance (data-prep-before-design mismatch, single-pass review gates) but without literal section-number citations in the prose -- logged as a finding below and accepted rather than blocking, since the specific (non-generic) sequencing risk is otherwise fully present."
+    },
+    "form_readability": {
+      "verdict": "pass",
+      "evidence": "Four flowing paragraphs plus one figure placeholder match an executive-summary information shape; no rhetorical list is misused, and the single blockquote is the approved DRD Ecosystem Flow figure slot."
+    },
+    "altitude": {
+      "verdict": "pass",
+      "evidence": "The draft stays at decision-maker depth throughout: it cites deliverable-level counts (38 nodes, 75 requirements) but never the excluded relational schema tables, full 38-page storyboard content, or per-activity scoring methodology, consistent with target_altitude and exclusions."
+    },
+    "headline_conclusion": {
+      "verdict": "pass",
+      "evidence": "Paragraph 2's closing sentence states the governing finding plainly: 'ผลงานของ CRDB จึงปิดช่องว่างของสองระยะแรกที่สำคัญที่สุดของวงจรชีวิตการพัฒนาไว้เกือบทั้งหมด และวางรากฐานให้ผู้รับจ้างในโครงการถัดไปเริ่มต้นที่ระยะที่ 3... ได้ทันที' -- the reader does not need to reconstruct this from project activities."
+    },
+    "findings_over_process": {
+      "verdict": "pass",
+      "evidence": "The section is organized around institutional stakes (contractor risk of restarting from zero, TOR70 sequencing exposure) and concrete findings (coverage percentages, deliverable inventory), not a narrative of how the consultant worked. Deliverable descriptions in paragraph 3 are framed as what now exists for reuse, not as process steps taken."
+    }
+  },
+  "findings": [
+    {
+      "severity": "minor",
+      "location": "paragraph 5 (closing 'ก้าวต่อไป' paragraph)",
+      "issue": "Contract's required_concepts item 5 calls for next steps 'ที่อ้างอิงจุดเสี่ยงเชิงลำดับจริงของ TOR70 §5.1-5.10 ไม่ใช่คำแนะนำทั่วไป'. The draft conveys the specific sequencing risk (TOR70 requires data readiness before the design step that should govern content; single-pass review gates) accurately and non-generically, but never cites the literal TOR70 section numbers (e.g. §5.3/§5.4) that ground it, unlike the evidence-traceability sidecar which does cite them.",
+      "status": "accepted",
+      "disposition": "Accepted for merge: the substantive, non-generic sequencing risk required by the contract is present and traceable to the TOR70 source. Omitting raw clause numbers is consistent with executive-summary altitude (the exclusions list bars 'internal evidence codes... รหัสไฟล์เทคนิค', and TOR70 clause numbers sit close to that same register). Recommend the human reviewer consider adding a parenthetical '(§5.3)' / '(§5.4)' if officials are expected to cross-reference this against the TOR70 text directly, but this does not block merge."
+    }
+  ],
+  "mechanical_reviews": [
+    {
+      "message": "[STRUCTURAL] 'สถาปัตยกรรม' present -> consider 'ระบบรายงาน, ฐานข้อมูล, ระบบสารสนเทศ, ระบบบันทึกข้อมูล (เว้นแต่จะหมายถึง Enterprise Architecture ในภาพรวม)'. (Too abstract and academic; use grounded operational terms.)",
+      "disposition": "Allowed, no replacement needed -- both occurrences ('ขั้นตอนออกแบบสถาปัตยกรรมที่ควรเป็นตัวกำกับเนื้อหานั้น', 'ขั้นตอนออกแบบสถาปัตยกรรมของ TOR70') use 'สถาปัตยกรรม' in the legitimate system/technical-architecture sense referring to TOR70's own design-phase deliverable, which is exactly the sense the rule's own parenthetical exception permits."
+    },
+    {
+      "message": "[PARENTHETICAL] '(Reference Integrated Data and Web Platform SDLC)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "Allowed -- this is the exact lifecycle_model name mandated verbatim by the writing contract's terminology block; no Thai equivalent is authorized to replace it."
+    },
+    {
+      "message": "[PARENTHETICAL] '(Sitemap v9)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "Allowed -- approved proper-noun deliverable name matching contract inclusions and source file naming; not a translatable common term."
+    },
+    {
+      "message": "[PARENTHETICAL] '(Storyboard v2)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "Allowed -- approved proper-noun deliverable name matching contract inclusions and source file naming; not a translatable common term."
+    },
+    {
+      "message": "[PARENTHETICAL] '(DRD Ecosystem Flow)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "Allowed -- names the specific required_structure figure named in the contract; no Thai equivalent exists in the project lexicon for this figure title."
+    }
+  ],
+  "verdict": "pass"
+}

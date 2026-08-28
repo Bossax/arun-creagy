@@ -1,0 +1,19 @@
+# Evidence traceability — 4.3 (Executive Summary)
+
+| Claim in draft | Source |
+|---|---|
+| 4-tier governance structure (Data Owner/ผอ.กอง, Data Steward, Technical Steward, Data Governance Committee) | `05_Data_Management_Framework/WP5-Data-Management-Framework-Report.md`; `05_Data_Management_Framework/Governance_RACI/` |
+| Product-Led platform strategy: 5 named products (3 existing to operationalize + 2 new to build), using CRDB outputs as baseline instead of building an empty shell first | `2026-05-18_TOR-Review/2026-08-26_TOR70-SDLC-storyline-for-DCCE-briefing.md` §"Illustrative platform strategy: build the platform through five real products" (Steps 1–5) |
+| 3 existing analytical products: spatial climate-risk database, hazard/exposure maps, Climate Risk Index (CRI) | Same source, "Step 2 — Put three existing analytical products into operational use" |
+| 2 new products: A-BTR reporting service, disaster loss-statistics service | Same source, "Step 3 — Develop two new products from approved requirements" |
+| Agile named explicitly as a common modern software development framework; MVP release → user feedback → iterate rationale, stated before the mechanism | General framing per user's explicit instruction this session; consistent with `2026-08-26_TOR70-high-ambition-agile-delivery-note.md`'s framing of agile-like delivery for TOR70's own 270-day/12.5M-baht contract |
+| ≥2 build iterations, mid-contract Beta/UAT milestone before final acceptance | `2026-08-26_TOR70-high-ambition-agile-delivery-note.md` |
+| 5 external agencies hold 97/260 datasets (~37%), DCCE's own 26 datasets excluded as internal work | `02_Data_Inventory/data_catalog_v4.csv` (recomputed and corrected earlier this session — see chapter-4 plan §4.3.2 correction note) |
+| External data exchange framed as valid but lower priority than internal governance and product-led TOR design | Direct user instruction this session — not itself sourced from a WP document; this is the report's own prioritization judgment, stated as such |
+| Disaster loss-statistics service MVP sequencing: foundational disaster statistics (human-impact, asset-damage, affected-area) before economic Loss & Damage calculation | Verified against `inbox_source/NESDC-Loss-and-damage-database-presentation-slide.md`, which lists exactly these categories (พื้นที่เพาะปลูกเสียหาย, พื้นที่สิ่งปลูกสร้างเสียหาย, โครงสร้างพื้นฐานเสียหาย, ทรัพย์สิน/บ้านเรือนเสียหาย) as inputs feeding its Damage/Loss calculation |
+| NESDC named as key partner specifically for the disaster loss-statistics service (distinct from its listing as 1 of 5 agencies for general data exchange) | Same NESDC source: contains concrete Damage-calculation formulas (e.g., Damage = affected structure count × unit price by hazard type) with named data sources (DDPM, Budget Bureau, property-valuation association) — real, usable methodology, not just a workshop announcement |
+
+## Notes for reviewer
+- This section deliberately reorders the plan's original sequence (governance → external agreements → Product Owner mindset → Agile delivery) into: internal governance → product-led platform strategy → Agile rationale-then-mechanism → external agreements last, per explicit direction that external agreements are lower urgency than internally-actionable work.
+- The "Product-Led" platform strategy (5 named products) is new content pulled from the TOR70 Analysis source this session — it was not present in the master chapter-4 plan's 4.3 section before this draft. The master plan itself has not yet been updated to reflect this; recommend a follow-up pass to add it there and to the Full Report's parallel 4.3/4.4 sections for consistency with the cross-consistency table (§5 of the plan).
+- Per contract exclusions, the full RACI matrix and detailed governance meeting cadence are not included here.
