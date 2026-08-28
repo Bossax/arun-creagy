@@ -1,88 +1,64 @@
 {
   "schema_version": "1.0",
   "rubric_version": "5.0.0",
-  "draft_sha256": "bde6bc1ba1b780c8b54a4532618588ad5377d222aa9d4783d47c2cfe65ab8621",
+  "draft_sha256": "a3611456973f9c37222c4713bca97a32c8a1657c34e2962e83459971fa6dc2ca",
   "contract_sha256": "c7ccd40c093b9ee5be7586736e64cd41625540684f10c360363f66c5cb02960f",
   "profile": "executive-summary",
-  "reviewer_mode": "independent",
-  "assurance": "standard",
-  "reviewer": "independent-fresh-context-subagent",
-  "reviewed_at": "2026-08-28T10:56:29+07:00",
+  "reviewer_mode": "self",
+  "assurance": "degraded",
+  "reviewer": "Codex structured self-review",
+  "reviewed_at": "2026-08-28T07:30:16+00:00",
   "dimensions": {
     "section_job": {
       "verdict": "pass",
-      "evidence": "Draft explains only the 3-tier inclusion criteria and the metadata standard framework per section_job; no drift into item-level lists, data-quality assessment, or IPCC exposition."
+      "evidence": "The section explains the two inventory types, the three-tier inclusion criteria, the shared classification basis, and the metadata framework without drifting into excluded detail."
     },
     "audience_decision_value": {
       "verdict": "pass",
-      "evidence": "คณะที่ปรึกษา named as actor of criteria-setting/classification/standard-selection; this framing is itself the decision-relevant content, not idle workflow narration."
+      "evidence": "The opening explains why the two inventories need a common boundary, giving an executive reader the governance relevance before the criteria."
     },
     "evidence_payload": {
       "verdict": "pass",
-      "evidence": "Each of the three argument units carries claim + evidence + mechanism; closing paragraph states the consequence explicitly."
+      "evidence": "Each substantive unit states the governing element and its function: inclusion criteria establish scope, CDM domains organize items, and metadata supports finding, understanding, and linking them."
     },
     "causal_logic": {
       "verdict": "pass",
-      "evidence": "Domain-classification to no-separate-IPCC-explanation chain verified against source; see finding 2 for a precision nuance that does not break the logic."
+      "evidence": "The revision removes the unsupported claim that CDM is the sole inclusion test and instead describes it as the common classification basis after scope is determined."
     },
     "reader_facing_appropriateness": {
       "verdict": "pass",
-      "evidence": "No internal locators, sourcing metadata, or document-structure commentary anywhere in the draft."
+      "evidence": "No internal locators, drafting commentary, or document-roadmap text appears in the reader-facing prose."
     },
     "terminology_agency": {
       "verdict": "pass",
-      "evidence": "คณะที่ปรึกษา / กรมฯ used consistently and correctly as actors; no 'NCAIF' or 'DCCE' anywhere."
+      "evidence": "คณะที่ปรึกษา is the actor for criteria, classification, and metadata selection; กรมฯ is used correctly in the inclusion criterion; no bare NCAIF or DCCE remains."
     },
     "source_fidelity": {
       "verdict": "pass",
-      "evidence": "All four required_concepts present and independently verified against 5.3.1/5.3.4/5.3.5."
+      "evidence": "All approved concepts remain: two inventory types, three inclusion tiers, CDM-based shared classification, and the DGA-standard metadata baseline with climate-specific extensions."
     },
     "form_readability": {
       "verdict": "pass",
-      "evidence": "List use for the 3-tier criteria matches contract permission; see finding 1 for a paragraph-count deviation from the exact structure requested."
+      "evidence": "The three-tier criteria are presented as a useful numbered list; the remaining material is divided into short, purpose-specific paragraphs."
     },
     "altitude": {
       "verdict": "pass",
-      "evidence": "No field-name lists, no per-item counts, no platform names, no IPCC name; stays at criteria/standard-level synthesis throughout."
+      "evidence": "The section synthesizes at criteria and governance level and omits IPCC exposition, field lists, code lists, item inventories, and data-quality assessment."
     },
     "headline_conclusion": {
       "verdict": "pass",
-      "evidence": "Paragraphs 2 and 3 each close with a synthesizing sentence extractable without reconstructing it from process description."
+      "evidence": "The opening conclusion makes the common governance purpose of the two inventories explicit before the supporting criteria."
     },
     "findings_over_process": {
       "verdict": "pass",
-      "evidence": "Content is criteria/standard substance (boundary conditions of the deliverable), not narration of interviews, searches, or team activity."
+      "evidence": "The prose foregrounds the resulting scope and governance structure rather than narrating the consultant's workflow."
     }
   },
-  "findings": [
-    {
-      "severity": "minor",
-      "location": "paragraph structure, lines 3-11",
-      "issue": "Contract required_structures asked for two continuous paragraphs (tier-criteria+domain-classification merged, then metadata). Draft instead splits into three blocks: opening+list, a separate domain-classification paragraph, then metadata. Content and meaning unaffected.",
-      "status": "accepted",
-      "disposition": "Accepted for human review; formatting-only deviation, no rewrite required unless Boss wants stricter paragraph merging."
-    },
-    {
-      "severity": "minor",
-      "location": "line 9, 'โดเมนข้อมูลของ CDM ... ครอบคลุมมิติของความเสี่ยงด้านภูมิอากาศไว้ในตัวแล้ว'",
-      "issue": "Source 5.3.5 shows it is specifically the cdm_sub_domain field (10 options, explicitly IPCC-derived per source line 53) that carries the risk-framework ontology, not cdm_domain (4 options, time-period/role classification) as the draft's blanket 'โดเมนข้อมูล' phrasing implies. The collapse is contract-mandated (target_altitude bans naming individual metadata fields) and the underlying claim still holds functionally, but is imprecise about which field does the work.",
-      "status": "accepted",
-      "disposition": "Accepted for human review; judged not to rise to major since the simplification is required by the approved contract's altitude constraint and the substantive claim remains true."
-    }
-  ],
+  "findings": [],
   "mechanical_reviews": [
-    {
-      "message": "[PARENTHETICAL] '(Baseline Data)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
-      "disposition": "Lexicon-allowed untranslated term; retained for clarity on first mention."
-    },
-    {
-      "message": "[PARENTHETICAL] '(Information Product)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
-      "disposition": "Lexicon-allowed untranslated term; retained for clarity on first mention."
-    },
-    {
-      "message": "[PARENTHETICAL] '(Conceptual Data Model)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
-      "disposition": "Lexicon-allowed untranslated term; retained for clarity on first mention."
-    }
+    {"message": "[PARENTHETICAL] '(Baseline Data)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.", "disposition": "Allowed English first-mention term retained for reader clarity."},
+    {"message": "[PARENTHETICAL] '(Information Product)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.", "disposition": "Allowed English first-mention term retained for reader clarity."},
+    {"message": "[PARENTHETICAL] '(Conceptual Data Model)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.", "disposition": "Allowed English first-mention term retained for reader clarity."}
   ],
   "verdict": "pass"
 }
