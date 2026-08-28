@@ -1,57 +1,57 @@
 {
   "schema_version": "1.0",
   "rubric_version": "5.0.0",
-  "draft_sha256": "9b3d6cd6459f1f11bbf962c4709f1fae52e48a76e186f402fd3e84cdce732fb8",
-  "contract_sha256": "3637d477d314bc36ed7e10349d6d11c5870d567cf614d0ef3e0a23d5a43e4e6c",
+  "draft_sha256": "9d7384a5e7582d712955caa864f542f47a8511e5f7c982c33fe850f9cbbbcb5b",
+  "contract_sha256": "562556f870d16cfe4e90d972884f224873793761902231b7f7172e2887c2b2e4",
   "profile": "executive-summary",
-  "reviewer_mode": "self",
-  "assurance": "degraded",
-  "reviewer": "Codex structured self-review",
-  "reviewed_at": "2026-08-28T07:48:57+00:00",
+  "reviewer_mode": "independent",
+  "assurance": "standard",
+  "reviewer": "independent-review-agent:/root/review_exec_2_2",
+  "reviewed_at": "2026-08-28T14:43:07+00:00",
   "dimensions": {
     "section_job": {
       "verdict": "pass",
-      "evidence": "The section explains the evidence-to-service process and stops before the detailed service-status reporting assigned to Section 2.3."
+      "evidence": "Lines 3–14 follow the approved sequence and end at the 40+ use-case base without entering service or A-BTR content."
     },
     "audience_decision_value": {
       "verdict": "pass",
-      "evidence": "The opening tells an executive why the eight service concepts are credible: they are rooted in decisions, data needs, and operating constraints observed from agencies."
+      "evidence": "Lines 3, 12, and 14 connect evidence breadth and stakeholder validation to the reliability of subsequent product and service definition."
     },
     "evidence_payload": {
       "verdict": "pass",
-      "evidence": "The prose gives a concrete evidence chain: interviews and collection, use-case fields, workshop refinement, 40+ cases, functional clustering, eight services, and the 26/20/6 validation result."
+      "evidence": "Lines 7–10 state four substantive interview findings; line 12 gives 26/20/6, examples, prioritisation criteria, and implication; line 14 gives the consolidated outcome."
     },
     "causal_logic": {
       "verdict": "pass",
-      "evidence": "The draft distinguishes starting evidence from workshop refinement, use cases from service concepts, and service synthesis from later priority decisions; it makes no claim that a count automatically establishes priority or readiness."
+      "evidence": "Three evidence channels lead to recurring findings; the workshop tests, supplements, organises, and prioritises them; consolidated evidence yields 40+ use cases."
     },
     "reader_facing_appropriateness": {
       "verdict": "pass",
-      "evidence": "The narrative contains no dates, participant lists, slide/page locators, source-path references, reviewer comments, or internal workflow residue."
+      "evidence": "No internal locators, sourcing metadata, prompt residue, meeting-administration detail, or document-roadmap language appears."
     },
     "terminology_agency": {
       "verdict": "pass",
-      "evidence": "คณะที่ปรึกษา is the stated actor for collection and synthesis; terms for use cases, services, and the departmental information structure are stable and no bare NCAIF or DCCE occurs."
+      "evidence": "The consultant, workshop participants, and กรมฯ retain correct agency; Thai terminology remains stable."
     },
     "source_fidelity": {
       "verdict": "pass",
-      "evidence": "The revised source lock and sidecar support every quantitative claim: 40+ use cases, eight services, and workshop concepts split 20 aligned to existing cases and six not fully represented."
+      "evidence": "The verified 11-interview count, four interview findings, 26/20/6 distinction, workshop prioritisation criteria, and 40+ outcome are preserved; the unsupported 44-agency coordination claim is absent."
     },
     "form_readability": {
       "verdict": "pass",
-      "evidence": "Four short paragraphs provide an executive-readable progression without meeting-level detail or an exhaustive inventory of use cases."
+      "evidence": "Short single-purpose paragraphs and a four-item list match the information shape; no table is used."
     },
     "altitude": {
       "verdict": "pass",
-      "evidence": "The draft compresses the methodology to evidence, clustering logic, and results; it omits dates, locations, participant names, and the 40 individual cases."
+      "evidence": "The section provides executive-level synthesis without per-agency, per-case, or service-detail overload."
     },
     "headline_conclusion": {
       "verdict": "pass",
-      "evidence": "The first paragraph makes the governing conclusion explicit: the eight service concepts are grounded in observed agency decisions, data needs, and constraints."
+      "evidence": "Line 3 immediately identifies three evidence channels, the verified 11-institution figure, and why the evidence base matters."
     },
     "findings_over_process": {
       "verdict": "pass",
-      "evidence": "Process appears only to establish the credibility and logic of the service model; the narrative foregrounds the resulting reusable service concepts."
+      "evidence": "Substantive interview findings and validated outcomes receive priority within the process-focused section job."
     }
   },
   "findings": [],

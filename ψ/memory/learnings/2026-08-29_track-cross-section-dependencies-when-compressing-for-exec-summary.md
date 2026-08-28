@@ -1,0 +1,11 @@
+# Lesson: Track cross-section dependencies when compressing a multi-section document
+
+**Context**: Drafting CRDB chapter 3's executive summary (5 sections, `/writing-th` skill), section by section.
+
+**What happened**: The full-report version of section 3.3 (pilot-test results) lists 5 systemic gaps found across 3 test events. When compressing to executive-summary altitude, I kept 2 of the 5 (household-unit granularity, missing event-ID linkage) and dropped 3 (health/security data silos, infrastructure-damage silos, event-budget disconnect) as reasonable length cuts. Section 3.4 (recommendations), drafted afterward in the same session, included a recommendation addressing the health/infrastructure silo — which was accurate and traceable to the source document, but no longer supported by anything the reader had actually seen in 3.3's compressed version. The dependency broke silently; neither section's own drafting pass caught it, because each was checked against its own contract and source, not against sibling sections.
+
+**Why this matters**: Per-section correctness (mechanical lint, evidence traceability, editorial review) does not guarantee whole-document coherence. A multi-section document has dependencies that cross section boundaries, and compressing one section for altitude can orphan a downstream section's claim without either section individually failing any check.
+
+**How to apply**: After drafting a batch of sections in the same chapter/document, run an explicit full-document coherence read-through before considering the batch done — not just per-section review. Specifically check: does every later section's claim have a textual anchor earlier in the document (not just in the source material)? When compressing a section that a later section will build on, either keep the dependency's supporting sentence even if trimming elsewhere, or flag the cut explicitly so the coherence pass catches it. This generalizes past this one document — any drafting-in-sequence workflow (report chapters, multi-part specs, sequential PR descriptions) has the same risk.
+
+**Related**: See also the parallel discipline in [[feedback_ai_writing_tells_in_thai_prose]] — both are cases of "the local check passed but the global read caught something real."

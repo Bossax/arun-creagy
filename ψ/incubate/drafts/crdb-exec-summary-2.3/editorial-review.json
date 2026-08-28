@@ -1,60 +1,69 @@
 {
   "schema_version": "1.0",
   "rubric_version": "5.0.0",
-  "draft_sha256": "0620ce1bb550b3ddd1fd7be07241ca79780058daec1a5312f554f72e68930986",
-  "contract_sha256": "2cb7ee730b5f8a56164647c7f314e11fc41fd83603715b9962962f7d807ea7f1",
+  "draft_sha256": "94cd5ef7f3b5109836548ccd7427bdad00b85c509b883e1a2db5cf269367e16c",
+  "contract_sha256": "05df941bbe00e4ec27405c9270dc09efa517a91b6e89debff93430a3286d7a21",
   "profile": "executive-summary",
-  "reviewer_mode": "self",
-  "assurance": "degraded",
-  "reviewer": "Codex structured self-review",
-  "reviewed_at": "2026-08-28T08:07:04+00:00",
+  "reviewer_mode": "independent",
+  "assurance": "standard",
+  "reviewer": "/root/review_exec_2_3",
+  "reviewed_at": "2026-08-28T21:54:44.5904979+07:00",
   "dimensions": {
     "section_job": {
       "verdict": "pass",
-      "evidence": "The section reports the two inventories, their evidence limitations, observed baseline characteristics, eight services, and distinct statuses without performing a gap analysis or recommending action."
+      "evidence": "The section synthesizes 40+ use cases into eight named services, explains each decision function and status, and treats A-BTR separately as required by the approved contract."
     },
     "audience_decision_value": {
       "verdict": "pass",
-      "evidence": "The opening gives the executive reading rule before the counts: inventory totals must be read with verification, access, and service-readiness conditions."
+      "evidence": "The draft gives executives a concise portfolio view and distinguishes prioritization, detailed-development selection, deferral, and proposed status."
     },
     "evidence_payload": {
       "verdict": "pass",
-      "evidence": "The section supports its interpretation with the two-inventory table, baseline status and access counts, product-inventory limitation, the service table, and the priority-status distinction."
+      "evidence": "Every service paragraph carries a decision function, while status claims and the A-BTR boundary are supported in the traceability sidecar."
     },
     "causal_logic": {
       "verdict": "pass",
-      "evidence": "Revised passages treat domain distribution and cross-sector classification as observations, and distinguish inventory counts, service priority, detailed specification, and readiness rather than deriving one from another."
+      "evidence": "The opening explains the clustering logic, each service links information to a decision use, and the conclusion reconciles the different status layers."
     },
     "reader_facing_appropriateness": {
       "verdict": "pass",
-      "evidence": "No internal paths, slide/page locators, calculation commands, or drafting-process residue appears in the reader-facing text."
+      "evidence": "Reader-facing prose contains no file locators, slide references, internal tracking details, inventory statistics, or obsolete terminology."
     },
     "terminology_agency": {
       "verdict": "pass",
-      "evidence": "Terms for both inventories, access conditions, verification status, service concepts, and priority status remain consistent; no bare NCAIF or DCCE occurs."
+      "evidence": "The eight Thai labels follow the approved contract and dissemination-deck card labels; A-BTR is introduced in full and institutional claims remain appropriately qualified."
     },
     "source_fidelity": {
       "verdict": "pass",
-      "evidence": "The draft preserves the required values and caveats: 260/44 baseline inventory, 99/45 product inventory, 214/43/3 access conditions, unverified baseline status, product-count limitation, eight services, status separation, and deferred engineering parameters."
+      "evidence": "Functions match the dissemination deck and business narratives; high-priority, detailed-development, and deferred claims match their respective evidence and do not imply deployment."
     },
     "form_readability": {
       "verdict": "pass",
-      "evidence": "The required two-inventory table, baseline-domain figure placeholder, structured eight-service list, and status-separation explanation are present and use appropriate forms."
+      "evidence": "Ordered subheadings make the eight services scannable without a table; the A-BTR and status sections are clearly separated."
     },
     "altitude": {
       "verdict": "pass",
-      "evidence": "The section provides headline totals and decision-relevant limitations while keeping field names, codes, item lists, case-level service detail, gap analysis, and recommendations out of the prose."
+      "evidence": "The draft stays at executive-summary altitude and excludes technical specifications, individual use cases, and detailed readiness or investment analysis."
     },
     "headline_conclusion": {
       "verdict": "pass",
-      "evidence": "The governing conclusion is explicit in the opening and closing: inventory numbers are not by themselves a measure of service readiness."
+      "evidence": "The opening leads with the finding that recurring decision needs across 40+ use cases resolve into eight reusable products and services."
     },
     "findings_over_process": {
       "verdict": "pass",
-      "evidence": "The draft foregrounds results, evidence conditions, and the meaning of distinct service statuses; it does not narrate collection methods already covered by Section 2.2."
+      "evidence": "Findings, functions, and status distinctions dominate the prose; method is compressed to one sentence needed to explain the synthesis."
     }
   },
   "findings": [],
-  "mechanical_reviews": [],
+  "mechanical_reviews": [
+    {
+      "message": "[STRUCTURAL] 'สถาปัตยกรรม' present -> consider 'ระบบรายงาน, ฐานข้อมูล, ระบบสารสนเทศ, ระบบบันทึกข้อมูล (เว้นแต่จะหมายถึง Enterprise Architecture ในภาพรวม)'. (Too abstract and academic; use grounded operational terms.)",
+      "disposition": "Retained because it is part of the approved exact service name: ตัวแปรสำหรับการออกแบบทางวิศวกรรมและสถาปัตยกรรม."
+    },
+    {
+      "message": "[PARENTHETICAL] '(A-BTR)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "Retained after the required full Thai first mention because A-BTR is the approved institutional abbreviation."
+    }
+  ],
   "verdict": "pass"
 }

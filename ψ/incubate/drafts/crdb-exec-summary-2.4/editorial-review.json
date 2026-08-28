@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "rubric_version": "5.0.0",
+  "draft_sha256": "497998fe05a5861ae0997c11634d70d1584463a8e92120b145f9972ef85d5127",
+  "contract_sha256": "ca137d6b77a681cdd20e441c3b10723fb5653865deb060c5a8d742dc10a00230",
+  "profile": "executive-summary",
+  "reviewer_mode": "independent",
+  "assurance": "standard",
+  "reviewer": "/root/review_exec_2_4_revision",
+  "reviewed_at": "2026-08-28T23:29:34.0188033+07:00",
+  "dimensions": {
+    "section_job": {
+      "verdict": "pass",
+      "evidence": "The section summarizes only the two inventories, their scale, distribution, access, formats, and interpretation limits; it does not duplicate Section 2.3 or add recommendations."
+    },
+    "audience_decision_value": {
+      "verdict": "pass",
+      "evidence": "Executives receive the key counts, percentages, concentration patterns, access conditions, and status caveats needed to interpret the inventories correctly."
+    },
+    "evidence_payload": {
+      "verdict": "pass",
+      "evidence": "The draft includes all required dataset and product counts, shares, qualitative findings, and limitations with sufficient consequences for interpretation."
+    },
+    "causal_logic": {
+      "verdict": "pass",
+      "evidence": "Scale, distribution, access conditions, and delivery patterns are connected to their implications without turning descriptive findings into gap analysis or recommendations."
+    },
+    "reader_facing_appropriateness": {
+      "verdict": "pass",
+      "evidence": "No internal paths, slide numbers, TOR locators, drafting comments, service duplication, or A-BTR material appears; the figure placeholder is required by the contract."
+    },
+    "terminology_agency": {
+      "verdict": "pass",
+      "evidence": "The canonical term โดเมนย่อยที่จำแนกด้วยองค์ประกอบความเสี่ยง is used consistently and baseline records consistently use ชุดข้อมูล."
+    },
+    "source_fidelity": {
+      "verdict": "pass",
+      "evidence": "All baseline counts and percentages, access denominator, CSV count, product geography and delivery counts, cross-sector count, Slide 39 shares, and qualitative product findings match the approved sources."
+    },
+    "form_readability": {
+      "verdict": "pass",
+      "evidence": "The opening table, separate inventory subsections, figure placeholder, and concise conclusion match the approved information shape and naming rules."
+    },
+    "altitude": {
+      "verdict": "pass",
+      "evidence": "The section stays at executive-summary altitude and excludes field lists, code lists, itemized inventories, detailed methods, gap analysis, and recommendations."
+    },
+    "headline_conclusion": {
+      "verdict": "pass",
+      "evidence": "The opening immediately establishes the two canonical inventory names and their 260/44 and 99/45 scale."
+    },
+    "findings_over_process": {
+      "verdict": "pass",
+      "evidence": "Inventory findings and interpretation conditions dominate the prose; consultant process and evidence mechanics remain outside reader-facing content."
+    }
+  },
+  "findings": [],
+  "mechanical_reviews": [],
+  "verdict": "pass"
+}
