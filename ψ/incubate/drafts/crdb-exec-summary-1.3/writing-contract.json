@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "profile": "executive-summary",
+  "transformation_mode": "synthesis",
+  "audience": "DCCE executives and policy owners",
+  "decision_use": "Understand the participatory process that shaped and validated the NCAIF and Data Management Framework, assuring them of stakeholder buy-in and practical grounding.",
+  "section_job": "Summarize the participatory activities and the significant resulting changes/validations to the NCAIF and Data Management Framework.",
+  "target_altitude": "Executive overview of process value; high-level changes and validations derived from stakeholder feedback, not a chronological meeting log.",
+  "inclusions": [
+    "overview of participation (internal FGDs, external hearing, interviews)",
+    "significant changes to NCAIF structure, navigation, and scope",
+    "changes to data management mechanism",
+    "key insights and validations gained from FGDs"
+  ],
+  "exclusions": [
+    "meeting dates, locations, schedules, participant lists",
+    "individual meeting minutes",
+    "meeting evidence artifacts"
+  ],
+  "evidence_policy": "Use verified facts in prose; focus on the 'feedback -> decision -> change' logic.",
+  "required_concepts": [
+    "กระบวนการมีส่วนร่วม",
+    "การรับฟังความคิดเห็น",
+    "การปรับปรุงโครงสร้างเนื้อหา",
+    "กลไกการบริหารจัดการข้อมูล"
+  ],
+  "terminology": {
+    "first_mention": "โครงสร้างข้อมูลด้านการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศ",
+    "short_form": "โครงสร้างข้อมูลฯ"
+  },
+  "required_structures": [
+    "bulleted list or clear narrative of significant changes and validations"
+  ],
+  "source_paths": [
+    "ψ/incubate/DCCE/CRDB/output/final_deliverable/แผนการเขียนบทที่ 1 รายงานฉบับสมบูรณ์และรายงานฉบับย่อสำหรับผู้บริหาร.md"
+  ],
+  "reference_samples": [
+    "ψ/memory/style/writing_sample/Executive-Summary-Report-CRI-Project.md"
+  ],
+  "approval": {
+    "status": "approved",
+    "approved_by": "Boss (Pre-approved in prompt)",
+    "approved_at": "2026-08-28T01:40:00+07:00"
+  }
+}

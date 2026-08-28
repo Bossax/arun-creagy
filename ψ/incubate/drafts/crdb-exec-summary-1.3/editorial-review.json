@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "rubric_version": "5.0.0",
+  "draft_sha256": "4b4f375f43408950b7dd1a5686466cadb15f21addee71c08d963ced85b7e0611",
+  "contract_sha256": "7202ccd215bcc33354c3359b5a89b97fe24ca5cb31676b478ed95b9dfbf60f37",
+  "profile": "executive-summary",
+  "reviewer_mode": "independent",
+  "assurance": "standard",
+  "reviewer": "Antigravity (Independent Semantic Review)",
+  "reviewed_at": "2026-08-28T01:42:00+07:00",
+  "dimensions": {
+    "section_job": {
+      "verdict": "pass",
+      "evidence": "Section summarizes participatory activities and significant changes to NCAIF structure and data management as defined in contract."
+    },
+    "audience_decision_value": {
+      "verdict": "pass",
+      "evidence": "Focuses on providing DCCE executives with assurance that the framework is practical and validated by stakeholders."
+    },
+    "evidence_payload": {
+      "verdict": "pass",
+      "evidence": "Includes substantive findings: changes to website structure, full adaptation cycle coverage, risk data granularity, and central glossary."
+    },
+    "causal_logic": {
+      "verdict": "pass",
+      "evidence": "Links feedback from internal FGDs and external hearings directly to the resulting changes in the framework."
+    },
+    "reader_facing_appropriateness": {
+      "verdict": "pass",
+      "evidence": "No internal artifacts, slide locators, or meeting logs are present. No raw metadata."
+    },
+    "terminology_agency": {
+      "verdict": "pass",
+      "evidence": "Uses 'คณะที่ปรึกษา' as the actor designing/refining. Uses 'โครงสร้างข้อมูลฯ' as instructed."
+    },
+    "source_fidelity": {
+      "verdict": "pass",
+      "evidence": "Key insights from FGD 1, 2 and stakeholder hearings are accurately synthesized without loss of core meaning."
+    },
+    "form_readability": {
+      "verdict": "pass",
+      "evidence": "Uses logical bullet points for enumerating specific changes derived from internal and external participation."
+    },
+    "altitude": {
+      "verdict": "pass",
+      "evidence": "Remains at decision-maker depth, avoiding chronological logs of meeting minutes."
+    },
+    "headline_conclusion": {
+      "verdict": "pass",
+      "evidence": "The introductory and concluding paragraphs clearly frame the process as validating practicality and ensuring stakeholder acceptance."
+    },
+    "findings_over_process": {
+      "verdict": "pass",
+      "evidence": "Prioritizes the actual changes to the NCAIF and data governance over describing the meeting logistics."
+    }
+  },
+  "findings": [],
+  "mechanical_reviews": [],
+  "verdict": "pass"
+}
