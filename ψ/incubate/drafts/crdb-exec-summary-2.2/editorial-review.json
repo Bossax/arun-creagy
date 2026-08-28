@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "rubric_version": "5.0.0",
+  "draft_sha256": "b9b01df59fc38e74c73ad997a22ad7c9e32ffccfef6c20ab250e4b90013d8cad",
+  "contract_sha256": "9f568e3ed736c583ef4e116d6591128507eb080f2642edd8c5f3888bdd92c7c8",
+  "profile": "executive-summary",
+  "reviewer_mode": "self",
+  "assurance": "degraded",
+  "reviewer": "ARUN (Self)",
+  "reviewed_at": "2026-08-28T03:54:40+00:00",
+  "dimensions": {
+    "section_job": {
+      "verdict": "pass",
+      "evidence": "Draft summarizes the survey channels and highlights the 26 new ideas and 8 synthesized services."
+    },
+    "audience_decision_value": {
+      "verdict": "pass",
+      "evidence": "Provides clear executive-level outcomes needed for endorsing the data structure."
+    },
+    "evidence_payload": {
+      "verdict": "pass",
+      "evidence": "Includes required statistics: 44 agencies, 26 new ideas, 8 services."
+    },
+    "causal_logic": {
+      "verdict": "pass",
+      "evidence": "Logical flow from survey methods to discovery and synthesis."
+    },
+    "reader_facing_appropriateness": {
+      "verdict": "pass",
+      "evidence": "No internal artifacts or meta-commentary included."
+    },
+    "terminology_agency": {
+      "verdict": "pass",
+      "evidence": "Uses 'คณะที่ปรึกษา' as the active subject for actions."
+    },
+    "source_fidelity": {
+      "verdict": "pass",
+      "evidence": "Accurately represents the numbers and facts from the plan."
+    },
+    "form_readability": {
+      "verdict": "pass",
+      "evidence": "Uses bulleted lists effectively for the survey channels and concepts."
+    },
+    "altitude": {
+      "verdict": "pass",
+      "evidence": "Maintains an executive summary level without unnecessary meeting details."
+    },
+    "headline_conclusion": {
+      "verdict": "pass",
+      "evidence": "Paragraphs clearly articulate their main point first."
+    },
+    "findings_over_process": {
+      "verdict": "pass",
+      "evidence": "Prioritizes the 26 ideas and 8 services over the logistics of the workshops."
+    }
+  },
+  "findings": [],
+  "mechanical_reviews": [
+    {
+      "message": "[PARENTHETICAL] '(Workshop)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "Accepted as a widely understood term for executive audiences."
+    }
+  ],
+  "verdict": "pass"
+}
