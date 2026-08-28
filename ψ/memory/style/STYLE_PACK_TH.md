@@ -1,5 +1,5 @@
 # Style-Pack: TH (Thai institutional writing, repo-wide)
-**Samples Learnt**: 20 (Technical Precision, Readability, Analytical Density, and Structural Flow) | **Last Updated**: 2026-08-28 | **Lexicon**: LEXICON_TH.json v4.1, 52 rules
+**Samples Learnt**: 23 (Technical Precision, Readability, Analytical Density, and Structural Flow) | **Last Updated**: 2026-08-28 | **Lexicon**: LEXICON_TH.json v4.1, 52 rules
 
 ## 1. Core Kernel (80/20)
 
@@ -445,8 +445,21 @@ Four entries were silently inert or self-defeating before this round:
 - Do **not** write "NCAIF" anywhere in CRDB exec-summary or full-report body prose — use "โครงสร้างข้อมูลฯ".
 - When a human rewrites one section of a multi-section document, scan every other section for the same corrected pattern before calling a revision pass complete, rather than treating the correction as scoped to only the section it appeared in.
 
+### 2026-08-28 — Style-pack audit from executive-summary 1.2–1.4 three-agent human review
+
+**Source of delta**: [`2026-08-28_12-57_TH_diff-evidence.md`](file:///C:/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/memory/style/evidence/2026-08-28_12-57_TH_diff-evidence.md), with section-level evidence in `ψ/incubate/analysis/2026-08-28_exec-summary-1.2-1.4-review/obs-1.2.md`, `obs-1.3.md`, and `obs-1.4.md`.
+
+#### What the review established
+- **A passing editorial receipt is not enough to certify a causal bridge.** In Section 1.2, Boss explicitly rejected an inference that treated ownership distribution as the cause of a design action. The existing Evidence-to-Action Chain remains valid, but its gate must check the truth of the mechanism, not only whether a claim → implication sequence is present.
+- **Substantive correction outweighs surface polish in this corpus.** The three edit inventories record substance-to-style ratios of 9:3 (1.2), 5:1 (1.3), and a contract-conflict-led structural correction in 1.4. A stylistic rewrite must never conceal a changed or unsupported claim.
+- **No new rule was promoted.** Ten candidates were recorded in the miss register, each with one evidenced sighting. None reached the two-sighting threshold; all remain local hypotheses rather than binding Style-Pack or lexicon rules.
+
+#### Guardrails confirmed, not expanded
+- Keep reader-facing prose within the approved chapter plan: detailed content-gap analysis belongs outside this executive-summary chapter. The deleted 16/26/33 readiness paragraph in Section 1.4 is a contract-calibration error, not a drafting failure by the agent that followed the contract.
+- Keep Boss's inline comments and typing slips separate from style evidence. Comments diagnose a problem but do not automatically provide a replacement; slips such as `แต่ล่ะ` or `ปนะมวลผล` are quarantined and must never enter the lexicon.
+- Treat repeated full-name use after a document-level introduction, generic artifact naming, heading compression, and platform-ordering as pending hypotheses until another independent human correction confirms each pattern.
+
 ## 5. Strict Parenthetical Anchor (Anti-regression Update)
 - **Rule**: Do **not** use English translations in parentheses unless absolutely necessary for technical precision.
 - **Allowed**: Exact database schema names (`DISASTER_EVENT`), system keys, or official acronyms (`MVD`).
 - **Banned**: Translating conceptual terms or phrases (e.g., `(Data Availability)`, `(Temporal completeness)`, `(Bounded Application Test)`). If it's a concept, write it in strong Thai and leave it alone.
-
