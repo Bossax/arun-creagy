@@ -1,93 +1,163 @@
 {
   "schema_version": "1.0",
   "rubric_version": "5.0.0",
-  "draft_sha256": "8d47f51a176296e7cc31b07751e09fbab32361c805ba2394fbeec18932424ca5",
+  "draft_sha256": "793f312aa44061a05afe843b7026ec7650af87aed9361a8f2c3b77e9d18bf707",
   "contract_sha256": "ebd92a0a0d0c0c6a028de72ee41db87554662064c0c2a4ecdf0023b73721a432",
   "profile": "executive-summary",
   "reviewer_mode": "independent",
   "assurance": "standard",
-  "reviewer": "independent clean-context reviewer (subagent), 4 passes: initial fail -> 2 revision rounds -> final confirmation",
-  "reviewed_at": "2026-08-28T02:05:00+07:00",
+  "reviewer": "independent-general-purpose-agent-reverify",
+  "reviewed_at": "2026-08-28T15:45:00+07:00",
   "dimensions": {
     "section_job": {
       "verdict": "pass",
-      "evidence": "ทำครบทั้งสองครึ่งของงานตามสัญญา ระบุเกณฑ์ที่บรรทัด 3-8 วัดเทียบที่บรรทัด 30, 44, 54 และสรุปช่องว่างที่บรรทัด 62-64 ไม่รุกล้ำขอบเขตที่กันไว้ (roadmap, gap analysis เชิงลึก, บัญชีรายชิ้น, รายละเอียดการประชุม)"
+      "evidence": "Re-verified: opening paragraph (line 3) still correctly frames the section as baseline analysis of current publication/data-management status, explicitly disclaiming sitemap-level detail. All contract inclusions remain present: website/user-path analysis (lines 5-11), T-PLAT/T-PLAT.INFO lessons (line 13), 391-item digital asset landscape (lines 15-27), 87-dataset catalog stats and responsibility concentration (lines 27-36), TGEIS/CCIC internal data-management status (lines 38-42), three FGD issues (lines 44-48), figure placeholder (line 54), and three closing scope conclusions (lines 56-60). No text outside these edits changed."
     },
     "audience_decision_value": {
       "verdict": "pass",
-      "evidence": "บรรทัด 40 ให้สาระต่อการตัดสินใจ การลงทุนในส่วนบริการตกกับหน่วยงานที่ถือครองราวร้อยละ 11 จึงต้องกำหนดผู้รับผิดชอบข้อมูลควบคู่กับการพัฒนาบริการ ข้อสรุปสามข้อปิดท้ายบอกผู้บริหารได้ว่าอะไรใช้ต่อได้ทันทีและอะไรต้องสร้างใหม่"
+      "evidence": "Re-verified: the section still closes (lines 56-60) with three decision-relevant statements matching the contract's decision_use. Closing conclusion #2 (line 59) now carries the additional relative-vs-absolute risk-index caveat, which strengthens rather than weakens its decision value (a reader now knows exactly what limitation must be disclosed before the risk map is used as-is)."
     },
     "evidence_payload": {
       "verdict": "pass",
-      "evidence": "หน่วยหลักฐานเรื่องผู้รับผิดชอบข้อมูล (บรรทัด 32-40) มีครบทั้งข้ออ้าง หลักฐานแบบลิสต์ การตีความ ผลที่ตามมา และกลไก การแทนคำ superlative ด้วยตัวเลขจริงทำให้ประโยคสรุปหนักแน่นขึ้น"
+      "evidence": "Unchanged from prior review outside the two fixed sentences. The CCIC paragraph (line 42) and closing conclusion #2 (line 59) both still carry claim + consequence structure after the edits. All quantitative claims (391, 315/80%, 47/12%, 29/7%, 87, ~90%, 110/28/11, 214/57/25/17/11, >half, ~11%) re-checked against 01a_evidence_traceability.md and still trace to source rows exactly."
     },
     "causal_logic": {
       "verdict": "pass",
-      "evidence": "ห่วงโซ่เดินตามลำดับเกณฑ์ -> การวัด -> ช่องว่าง ตรวจเฉพาะจุดว่าการเปลี่ยนย่อหน้าเปิดเป็นลิสต์ไม่ทำให้ประโยคถัดไปลอย บรรทัด 10 รับช่วงด้วย \"องค์ประกอบสี่ส่วนนี้\" ไม่พบ contrast scaffolding ที่ต้องห้าม"
+      "evidence": "Unchanged. Line 36's 'หลักฐานที่สอดคล้องกับข้อสังเกตว่า' framing still restates the responsibility figures as a comparison, not a causal assertion. No causal chain in the draft (T-PLAT continuity argument, TGEIS-as-model argument, CCIC-catalog-needs-its-own-domain argument) asserts unsupported causation."
     },
     "reader_facing_appropriateness": {
       "verdict": "pass",
-      "evidence": "grep แล้วไม่พบ NCAIF, DCCE, สินทรัพย์ดิจิทัล, ประตูหลัก, Governance, เลขสไลด์, เลขหน้า หรือ meta-commentary ตำแหน่งภาพประกอบเป็น placeholder จริง ไม่ใช่ประโยคลูกศรแทนแผนภาพ"
+      "evidence": "Re-grepped the full draft for '%%', '[[', HTML comments, TODO/FIXME, and slide/page locators -- zero matches, confirmed clean. The only bracketed callout remains the approved figure placeholder '> **[ตำแหน่งภาพประกอบ — รูปที่ X]**' (line 54), a required_structure."
     },
     "terminology_agency": {
       "verdict": "pass",
-      "evidence": "ชื่อองค์ประกอบที่สี่ตรงกันครบทั้งสี่จุด (บรรทัด 8, 10, 44, 54) ตามรูปแบบที่อนุมัติแล้วในหัวข้อ 1.1 คณะที่ปรึกษาเป็นประธานของประโยควิเคราะห์ ระบบแผนที่ความเสี่ยงเชิงพื้นที่ใช้ชื่อเดียวตลอด"
+      "evidence": "FIX VERIFIED. Line 42 now reads 'กลุ่มพัฒนาเทคโนโลยีดิจิทัลซึ่งร่วมพัฒนาศูนย์ข้อมูลการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (Climate Change Information Center)...' -- the ownership assertion ('เป็นเจ้าของ') has been replaced with 'ร่วมพัฒนา' (co-developed). Cross-checked against raw source `ψ/incubate/DCCE/CRDB/output/archive/FGD 1 result.md` Table 1: row 3.1 lists CCIC under กลุ่มฐานข้อมูลกลางด้านการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (กองยุทธศาสตร์และความร่วมมือระหว่างประเทศ), row 3.2 records กลุ่มพัฒนาเทคโนโลยีดิจิทัล's role verbatim as 'ช่วยพัฒนา CCIC เชื่อมโยงกับข้อมูลทุกกลุ่มงาน...'. 'ร่วมพัฒนา' is a faithful, non-overstating rendering of 'ช่วยพัฒนา' and matches the evidence sidecar's own prescribed fix (01a row: 'จึงใช้ \"ร่วมพัฒนา\" ไม่ใช่ \"พัฒนา\"'). No department is now misattributed as sole owner of a departmental asset it does not own."
     },
     "source_fidelity": {
       "verdict": "pass",
-      "evidence": "ตรวจทุกตัวเลขซ้ำครั้งสุดท้าย 391, 315, 47, 29, 36, 87, 110/28/11, 214/57/25/17/11, 214/391=54.7%, 25+17=42=10.7%, 2561, 2563-2567, 4 จังหวัด ตรงกับต้นทางทั้งหมด องค์ประกอบสี่ส่วนตรงกับ Three-Platform note การแยก T-PLAT สองรอบตรงกับ 5.2.2 และ FGD 1 ครบทั้งเจ็ด required_concepts"
+      "evidence": "BOTH FIXES VERIFIED. (1) CCIC attribution corrected as above -- 'ร่วมพัฒนา' survives the actual organizational structure in FGD 1 result.md Table 1 rows 3.1-3.2 and no longer conflates the two rows into a false ownership claim. (2) required_concept 'ระบบแผนที่ความเสี่ยงเชิงพื้นที่แสดงดัชนีเชิงสัมพัทธ์ ไม่ใช่ค่าความเสี่ยงเชิงสัมบูรณ์ จึงต้องมีคำอธิบายข้อจำกัดกำกับที่จุดใช้งาน' now appears explicitly: line 59 closing conclusion #2 reads '...โดยเฉพาะการระบุให้ชัดเจนว่าดัชนีที่แสดงเป็นค่าความเสี่ยงเชิงสัมพัทธ์ ไม่ใช่ค่าความเสี่ยงเชิงสัมบูรณ์' -- grep confirms 'สัมพัทธ์' and 'สัมบูรณ์' each appear exactly once, both in this sentence, and 'ดัชนี' also appears there. This matches the evidence sidecar's caveat sourced to 5.2.2 ¶140 ('แผนที่ความเสี่ยงใช้ดัชนีเชิงสัมพัทธ์ ไม่ใช่ค่าสัมบูรณ์ | เดียวกัน ¶140'). The T-PLAT/T-PLAT.INFO paragraph (line 13) remains correctly scoped as before. No new source-fidelity break introduced by the edits."
     },
     "form_readability": {
       "verdict": "pass",
-      "evidence": "องค์ประกอบสี่ส่วนเป็นลิสต์ลำดับ แก้ปัญหา และ ซ้อนกันเชิงโครงสร้าง หัวข้อย่อยสี่หัวข้อตรงกับจังหวะหัวข้อ 1.1 ย่อหน้าที่เคยแน่นถูกแยกเป็นสามหน่วย ผู้รับผิดชอบข้อมูลเป็นลิสต์หัวข้อย่อย"
+      "evidence": "Re-verified all required list/table structures still present at required counts (user-impact bullets, asset-classification list, responsibility list, FGD-issue list, figure placeholder, closing conclusion list). Two of the three previously-flagged minor defects are now GONE on inspection: the stray extra parenthesis after '(Dataset)' at line 18 is no longer present (now reads cleanly '2. **ชุดข้อมูล** (Dataset) จากระบบบัญชีข้อมูลของกรมฯ'), and the awkward 'อย่างความต่อเนื่อง' construction at line 13 has been rewritten to 'เพื่อรักษาความต่อเนื่องของกระบวนการพัฒนาแพลตฟอร์มเว็บไซต์', which is grammatically clean. The five-bold-subheading count (vs. contract's four) is unchanged and still accepted as a minor structural deviation -- each heading groups coherent, non-duplicative content."
     },
     "altitude": {
       "verdict": "pass",
-      "evidence": "ไม่มีรายละเอียดระดับรายงานฉบับสมบูรณ์ ไม่มีบัญชีรายชิ้น ไม่มีการอธิบายวิธีการสำรวจ ลิสต์จำแนกสามประเภทให้ตัวเลขเดียวต่อรายการ"
+      "evidence": "Unchanged from prior review. Content stays at category/aggregate level throughout; the two edited passages (CCIC paragraph, closing conclusion #2) remain at the same altitude as the surrounding text -- no new itemized detail, document locators, or procedural walkthroughs were introduced by the fixes."
     },
     "headline_conclusion": {
       "verdict": "pass",
-      "evidence": "ข้อค้นพบหลักอ่านได้จากแปดบรรทัดแรก เกณฑ์สี่ส่วนแล้วตามด้วยผลการเทียบสองทิศทางที่บรรทัด 10"
+      "evidence": "Unchanged from prior review. The section still ends with three explicit, self-contained conclusions (lines 56-60); conclusion #2 is now more complete (includes the relative-index caveat) without becoming less self-contained. The minor note about the section opening leading with consultant activity before a finding (line 3) still applies and is carried forward as accepted -- unchanged text, not a blocker for an interior assessment section."
     },
     "findings_over_process": {
       "verdict": "pass",
-      "evidence": "ประโยคที่ขึ้นต้นด้วยวิธีการทำงานคลี่เป็นข้อค้นพบภายในประโยคเดียวกันทุกจุด (บรรทัด 10, 14, 24) ตรงกับจังหวะของหัวข้อ 1.1 ที่อนุมัติแล้ว ไม่มีรายละเอียดการประชุมหรือการเล่ากระบวนการ"
+      "evidence": "Unchanged from prior review. The section remains organized around institutional findings; the two edited sentences are still findings-shaped (an institutional attribution fix and a technical-limitation disclosure), not process narration."
     }
   },
   "findings": [
     {
-      "severity": "minor",
-      "location": "บรรทัด 40 \"ถือครองรวมกัน 42 รายการ หรือราวร้อยละ 11 ... ถือครองรายการเพียงราวร้อยละ 11\"",
-      "issue": "\"ราวร้อยละ 11\" ปรากฏสองครั้งในอนุประโยคติดกัน ห่างกันราว 15 คำ เกิดจากรอบแก้ไขสุดท้ายที่แทนคำ superlative ด้วยตัวเลขจริง ตัวเลขถูกต้องและผลที่ตามมายังชัด แต่การซ้ำเห็นได้ชัดตรงจุดที่ย่อหน้าสรุป",
-      "status": "accepted",
-      "disposition": "ส่งให้ Boss ตัดสิน แก้ได้ด้วยการตัดตัวเลขออกจากอนุประโยคใดอนุประโยคหนึ่ง ไม่แก้ในรอบนี้เพื่อรักษาความถูกต้องของ hash ในใบรับรองที่ผู้ตรวจอิสระตรวจฉบับนี้จริง"
+      "severity": "major",
+      "location": "02_th_draft.md line 42, 'ในอีกด้านหนึ่ง กลุ่มพัฒนาเทคโนโลยีดิจิทัลซึ่งร่วมพัฒนาศูนย์ข้อมูลการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (Climate Change Information Center)...'",
+      "issue": "[RESOLVED] Draft previously asserted กลุ่มพัฒนาเทคโนโลยีดิจิทัล 'is the owner' (เป็นเจ้าของ) of CCIC, contradicted by source `FGD 1 result.md` Table 1 (CCIC's primary entry sits under กลุ่มฐานข้อมูลกลางด้านการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม / กองยุทธศาสตร์ฯ, row 3.1; กลุ่มพัฒนาเทคโนโลยีดิจิทัล only 'ช่วยพัฒนา CCIC', row 3.2).",
+      "status": "resolved",
+      "disposition": "Draft edited: 'เป็นเจ้าของ' replaced with 'ร่วมพัฒนา' (co-developed), matching the evidence sidecar's own prescribed phrasing. Verified independently against the raw source table -- 'ร่วมพัฒนา' is a faithful rendering of 'ช่วยพัฒนา' and no longer claims sole ownership. No residual ownership claim found elsewhere in the draft."
+    },
+    {
+      "severity": "major",
+      "location": "02_th_draft.md, closing conclusion #2, line 59",
+      "issue": "[RESOLVED] Contract required_concept stating the spatial risk map shows a relative risk index, not an absolute risk value (sourced to 5.2.2 ¶140), was entirely absent from the draft's closing conclusions.",
+      "status": "resolved",
+      "disposition": "Draft edited: closing conclusion #2 now reads '...โดยเฉพาะการระบุให้ชัดเจนว่าดัชนีที่แสดงเป็นค่าความเสี่ยงเชิงสัมพัทธ์ ไม่ใช่ค่าความเสี่ยงเชิงสัมบูรณ์'. Verified the terms 'สัมพัทธ์' and 'สัมบูรณ์' each now appear exactly once, matching the evidence sidecar's caveat citing 5.2.2 ¶140. required_concept now fully present in the draft."
     },
     {
       "severity": "minor",
-      "location": "บรรทัด 26 \"และระเบียนในบัญชีข้อมูลที่แท้จริงเป็นเอกสารตามที่กล่าวข้างต้น\"",
-      "issue": "\"ตามที่กล่าวข้างต้น\" เป็นคำเสริมที่ตัดได้ เพราะสิ่งที่อ้างถึงอยู่ห่างเพียงสองบรรทัดในหัวข้อย่อยเดียวกัน",
+      "location": "02_th_draft.md line 36, 'ลักษณะการกระจายตัวนี้เป็นหลักฐานที่สอดคล้องกับข้อสังเกตว่า...'",
+      "issue": "The transition is circular in form (evidence is said to be 'consistent with an observation' that is itself just a restatement of the same figures given two sentences earlier), even though it does not assert unsupported causation. Reads as a decorative transition rather than a crisp interpretive step.",
       "status": "accepted",
-      "disposition": "ตัดได้ตามดุลยพินิจ ผู้ตรวจระบุว่าไม่ใช่ประเด็นที่ต้องแก้"
+      "disposition": "Carried forward unchanged from the prior review; text at this location was not touched by the fix pass. Flag for human review; does not change governing meaning and the underlying comparison (comms unit >50% vs. technical units ~11%) is accurate."
     },
     {
       "severity": "minor",
-      "location": "บรรทัด 46 \"เป็นความพยายามที่ตรงกับบทบาทของแพลตฟอร์มข้อมูลกลางมากที่สุดในปัจจุบัน\"",
-      "issue": "คำ superlative ที่ตั้งอยู่บนดุลยพินิจของคณะที่ปรึกษา ไม่มีในเอกสารต้นทางและไม่อยู่ใน required_concepts",
+      "location": "02_th_draft.md, bold subheadings at lines 5, 15, 29, 38, 52",
+      "issue": "Contract required_structures specifies four bold subheadings in the rhythm of section 1.1; the draft has five ('ความรับผิดชอบต่อรายการทั้ง 391 รายการยังกระจุกอยู่ที่ไม่กี่หน่วยงาน', line 29, reads as an extra subheading rather than a continuation of the preceding 'ภูมิทัศน์...' subsection).",
       "status": "accepted",
-      "disposition": "คงไว้โดยเจตนา ผู้ตรวจเห็นชอบว่ารับได้ในระดับรายงานฉบับย่อ ส่งให้ Boss ตัดสินขั้นสุดท้าย"
+      "disposition": "Carried forward unchanged from the prior review; heading structure was not touched by the fix pass. Flag for human review; each heading groups coherent, non-duplicative content, so this is a count deviation rather than a comprehension problem."
     },
     {
       "severity": "minor",
-      "location": "บรรทัด 20 \"Thailand Climate Change Adaptation Information Platform (T-PLAT)\"",
-      "issue": "วงเล็บภาษาอังกฤษในเนื้อความ",
+      "location": "02_th_draft.md line 3 (section opening)",
+      "issue": "Section opens with consultant-activity narration ('คณะที่ปรึกษาได้จัดประชุมกลุ่มย่อยเพื่อสัมภาษณ์...') before stating any finding, which is softer than the executive-summary profile's preferred finding-first opening.",
       "status": "accepted",
-      "disposition": "คงไว้โดยเจตนา กฎข้อ 41 ครอบคลุมชื่อกรอบของโครงการเอง ส่วน T-PLAT เป็นชื่อจริงของแพลตฟอร์มภายนอก เช่นเดียวกับ A-PLAT, KlimAdapt และ Climate-ADAPT ในหัวข้อ 1.1 ที่อนุมัติแล้ว"
+      "disposition": "Carried forward unchanged from the prior review; opening sentence was not touched by the fix pass. Flag for human review; this is an interior assessment section rather than the report's global executive-summary opening, and is followed immediately by concrete baseline/scope framing."
+    },
+    {
+      "severity": "minor",
+      "location": "02_th_draft.md line 18 and line 13 (previously flagged)",
+      "issue": "Prior review flagged (a) a stray extra closing parenthesis after '(Dataset)' at line 18, and (b) an awkward adverbial/nominal mix 'อย่างความต่อเนื่อง' at line 13.",
+      "status": "resolved",
+      "disposition": "Both incidentally fixed as part of this edit pass: line 18 now reads cleanly '(Dataset) จากระบบบัญชีข้อมูลของกรมฯ' with no stray parenthesis; line 13 now reads 'เพื่อรักษาความต่อเนื่องของกระบวนการพัฒนาแพลตฟอร์มเว็บไซต์', which is grammatically clean. Verified by direct inspection of both locations."
     }
   ],
   "mechanical_reviews": [
     {
+      "message": "[PARENTHETICAL] '(baseline)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "Non-blocking per linter; accepted as-is."
+    },
+    {
+      "message": "[PARENTHETICAL] '(sitemap)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "Non-blocking per linter; accepted as-is."
+    },
+    {
+      "message": "[PARENTHETICAL] '(www.dcce.go.th)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "Non-blocking per linter; accepted as-is (URL, not a term)."
+    },
+    {
+      "message": "[PARENTHETICAL] '(Open Data Catalog)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "Non-blocking per linter; accepted as-is."
+    },
+    {
       "message": "[PARENTHETICAL] '(T-PLAT)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
-      "disposition": "คงไว้ ชื่อเฉพาะของแพลตฟอร์มต่างประเทศ ไม่ใช่การแปลศัพท์เชิงมโนทัศน์ ผู้ตรวจอิสระเห็นชอบ"
+      "disposition": "Non-blocking per linter; accepted as-is (proper platform name)."
+    },
+    {
+      "message": "[PARENTHETICAL] '(Digital Asset)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "Non-blocking per linter; accepted as-is."
+    },
+    {
+      "message": "[PARENTHETICAL] '(Knowledge and Content Asset)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "Non-blocking per linter; accepted as-is."
+    },
+    {
+      "message": "[PARENTHETICAL] '(Dataset)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "Non-blocking per linter; accepted as-is."
+    },
+    {
+      "message": "[PARENTHETICAL] '(Data Product)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "Non-blocking per linter; accepted as-is."
+    },
+    {
+      "message": "[PARENTHETICAL] '(Shapefile)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "Non-blocking per linter; accepted as-is."
+    },
+    {
+      "message": "[PARENTHETICAL] '(analytical data)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "Non-blocking per linter; accepted as-is."
+    },
+    {
+      "message": "[PARENTHETICAL] '(Climate Change Information Center)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "Non-blocking per linter; accepted as-is."
+    },
+    {
+      "message": "[PARENTHETICAL] '(analytical datasets)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "Non-blocking per linter; accepted as-is."
+    },
+    {
+      "message": "[PARENTHETICAL] '(Explainer)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "Non-blocking per linter; accepted as-is."
+    },
+    {
+      "message": "[PARENTHETICAL] '(data pipeline)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "Non-blocking per linter; accepted as-is."
     }
   ],
   "verdict": "pass"

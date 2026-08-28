@@ -1,60 +1,99 @@
 {
   "schema_version": "1.0",
   "rubric_version": "5.0.0",
-  "draft_sha256": "4b4f375f43408950b7dd1a5686466cadb15f21addee71c08d963ced85b7e0611",
+  "draft_sha256": "ce3d4b1a024c86fb12147f2f99a2dc373ab002063ba9fb2d815fe7a2bc0cd148",
   "contract_sha256": "7202ccd215bcc33354c3359b5a89b97fe24ca5cb31676b478ed95b9dfbf60f37",
   "profile": "executive-summary",
   "reviewer_mode": "independent",
   "assurance": "standard",
-  "reviewer": "Antigravity (Independent Semantic Review)",
-  "reviewed_at": "2026-08-28T01:42:00+07:00",
+  "reviewer": "independent-general-purpose-agent-reverify",
+  "reviewed_at": "2026-08-28T14:31:13+07:00",
   "dimensions": {
     "section_job": {
       "verdict": "pass",
-      "evidence": "Section summarizes participatory activities and significant changes to NCAIF structure and data management as defined in contract."
+      "evidence": "Re-verified unchanged from prior review: section performs the approved job (summarize participatory activities + resulting changes to NCAIF/Data Management Framework), stays inside the contract's exclusions (no dates, locations, participant counts, or per-meeting minutes anywhere), and line 3 still frames the section as improving the structure 'ที่นำเสนอไว้ในหัวข้อก่อนหน้า'. The only change since the prior review (line 12) does not touch this dimension."
     },
     "audience_decision_value": {
       "verdict": "pass",
-      "evidence": "Focuses on providing DCCE executives with assurance that the framework is practical and validated by stakeholders."
+      "evidence": "Re-verified unchanged from prior review: each paragraph foregrounds what changed and why it matters (line 6 ties user-journey redesign to executive needs; line 15 closes with the decision-relevant payoff). The revised line 12 sentence is, if anything, more decision-relevant than before -- it now explicitly names which existing mechanism (Classification) addresses the participant's concern, which is more useful to a reader than the prior version's vague forward-looking proposal."
     },
     "evidence_payload": {
       "verdict": "pass",
-      "evidence": "Includes substantive findings: changes to website structure, full adaptation cycle coverage, risk data granularity, and central glossary."
+      "evidence": "Re-verified unchanged from prior review for all bullets except line 12, which is now stronger: it states the concern (claim), and the consequence is an already-evidenced mechanism (Classification, introduced with its own claim+mechanism+consequence in line 8) rather than an unsourced new proposal. Claim + mechanism + consequence chain is intact throughout."
     },
     "causal_logic": {
       "verdict": "pass",
-      "evidence": "Links feedback from internal FGDs and external hearings directly to the resulting changes in the framework."
+      "evidence": "Re-verified unchanged from prior review for lines 6-11 and 13. Line 12's revised sentence: concern (participants worried sensitive risk data could be misused without understanding its limitations) -> this concern is one of the reasons the already-mentioned Classification mechanism exists. This is a forward reference to line 8's already-established mechanism, not a new causal leap -- no reversed or decorative causality."
     },
     "reader_facing_appropriateness": {
       "verdict": "pass",
-      "evidence": "No internal artifacts, slide locators, or meeting logs are present. No raw metadata."
+      "evidence": "Re-scanned the full current draft (all 15 lines) for stray '%%...%%' review-annotation markers via grep -- none found. (The pre-fix git history shows this file previously carried two such markers, e.g. '%%This is not the first section%%' and '%%what is this? uncertainty governance? is it included?%%'; both are gone from the current text, along with the annotated passages they flagged.) No sourcing metadata or internal commentary appears in the current prose."
     },
     "terminology_agency": {
       "verdict": "pass",
-      "evidence": "Uses 'คณะที่ปรึกษา' as the actor designing/refining. Uses 'โครงสร้างข้อมูลฯ' as instructed."
+      "evidence": "Re-verified unchanged from prior review: short form 'โครงสร้างข้อมูลฯ' used consistently (lines 1, 3, 5, 7, 10, 15); คณะที่ปรึกษา remains the stable agent of design/analysis/synthesis actions, ผู้เข้าร่วม/ผู้บริหาร/ผู้ใช้ระดับปฏิบัติการ remain the stable source of feedback. Line 12's revision keeps this pattern: 'ผู้เข้าร่วมยกข้อกังวลว่า...' (participants as the concern-raisers, not the consultant)."
     },
     "source_fidelity": {
       "verdict": "pass",
-      "evidence": "Key insights from FGD 1, 2 and stakeholder hearings are accurately synthesized without loss of core meaning."
+      "evidence": "MAJOR FINDING F1 RESOLVED. Line 12 previously read '...คณะที่ปรึกษาเสนอให้มีการพัฒนาข้อกำหนดและเงื่อนไขกำกับชุดข้อมูลความเสี่ยงที่มีความอ่อนไหว...' -- asserting a specific consultant-proposed response with no traceable source in 5.2.6, 5.2.5, or 5.2.9. The bullet now reads: 'ผู้เข้าร่วมยกข้อกังวลว่าชุดข้อมูลความเสี่ยงที่มีความอ่อนไหวอาจถูกนำไปใช้ประกอบการตัดสินใจโดยไม่เข้าใจข้อจำกัดของข้อมูล ข้อกังวลนี้เป็นส่วนหนึ่งของเหตุผลที่โครงสร้างการบริหารจัดการข้อมูลกำหนดระดับชั้นความลับของข้อมูล (Classification) ไว้ตามที่กล่าวไว้ข้างต้น'. Verified against 5.2.6 line 10: 'ผู้เข้าร่วมยังมีข้อกังวลเกี่ยวกับการควบคุมข้อมูลที่มีความอ่อนไหวต่อสังคม เช่น การนำชุดข้อมูลความเสี่ยงไปใช้ประกอบการตัดสินใจโดยขาดการคำนึงถึงข้อจำกัดและเงื่อนไขของข้อมูล' -- the participant-concern half of the sentence is now a close, faithful paraphrase of this sourced line (concern -> sensitive risk data -> used in decisions -> without understanding limitations/conditions), attributed correctly to ผู้เข้าร่วม rather than to the consultant. The sentence no longer asserts any new, unsourced consultant decision -- it instead cross-references the Classification mechanism already established and evidenced two bullets earlier in this same draft (line 8: 'การกำหนดระดับชั้นความลับของข้อมูล (Classification)'), which is a legitimate within-document forward/back-reference, not a new factual claim requiring its own separate citation. This resolves the fail-driving claim. ASSURANCE CAVEAT (carried forward, not a blocker): this contract still has no dedicated evidence sidecar and only a one-line evidence_policy, so this dimension was verified against the two named source files, their immediate siblings (5.2.5, 5.2.9), and a full-corpus keyword search -- the same standing assurance ceiling the prior reviewer flagged. A reviewer with a full traceability sidecar could still tighten this further, but nothing in that gap currently supports a fail verdict."
     },
     "form_readability": {
       "verdict": "pass",
-      "evidence": "Uses logical bullet points for enumerating specific changes derived from internal and external participation."
+      "evidence": "Re-verified unchanged from prior review: matches the contract's required_structure (bulleted lists under lead-in sentences, bracketed by scene-setting opening and synthesizing closing paragraph). Line 12's revised bullet keeps the same bolded-label + sentence shape as its siblings."
     },
     "altitude": {
       "verdict": "pass",
-      "evidence": "Remains at decision-maker depth, avoiding chronological logs of meeting minutes."
+      "evidence": "Re-verified unchanged from prior review: stays at decision-maker depth throughout, no meeting-by-meeting log or slide/page citations. Line 12's revision stays at the same altitude as before -- it names the mechanism (Classification) without re-explaining its internal design (tiers, roles), which is correctly left in 5.2.5."
     },
     "headline_conclusion": {
       "verdict": "pass",
-      "evidence": "The introductory and concluding paragraphs clearly frame the process as validating practicality and ensuring stakeholder acceptance."
+      "evidence": "Re-verified unchanged from prior review: closing paragraph (line 15) states the governing conclusion directly without requiring reader inference."
     },
     "findings_over_process": {
       "verdict": "pass",
-      "evidence": "Prioritizes the actual changes to the NCAIF and data governance over describing the meeting logistics."
+      "evidence": "Re-verified unchanged from prior review: institutional/practical stakes dominate over process description; the only process clause (line 3) is subordinated to the outcome clause that follows it."
     }
   },
-  "findings": [],
-  "mechanical_reviews": [],
+  "findings": [
+    {
+      "severity": "major",
+      "location": "line 12, bullet 'การควบคุมและข้อจำกัดการใช้ข้อมูล'",
+      "issue": "Draft previously stated the consultant 'proposed to develop additional terms and conditions governing use of this dataset group' as a direct response to a participant concern, with no source for this specific proposed response found in 5.2.6, the adjacent design document 5.2.5, or a full-corpus search.",
+      "status": "resolved",
+      "disposition": "Draft edited: the bullet now attributes the concern to participants only (matching 5.2.6 line 10 closely: sensitive risk data being used in decisions without understanding its limitations/conditions) and ties that concern to the Classification mechanism already introduced and evidenced in line 8 of this same draft, rather than asserting a new, unsourced consultant-proposed instrument. No new unverified claim is introduced. Verified by direct comparison against 5.2.6 and against line 8 of the current draft."
+    },
+    {
+      "severity": "minor",
+      "location": "line 8, bullet 'การเพิ่มกลไกบริหารจัดการข้อมูล'",
+      "issue": "Attributes Data Owner role and data Classification levels to the internal FGD's outputs. Named source 5.2.4 lists the FGD's terminology/QA outputs as a central glossary, a cross-agency data-quality-check approach, and data previews -- it does not mention Data Owner roles or Classification tiers. Those concepts appear instead in the separate design-response document 5.2.5, without an explicit link back to this FGD as their origin.",
+      "status": "accepted",
+      "disposition": "Unchanged since prior review; text on this line was not touched by the fix. Substance is real and evidenced elsewhere in the project record (5.2.5); only the specific attribution of origin to this FGD is unconfirmed. Accepted for human review given the thin contract / no evidence sidecar."
+    },
+    {
+      "severity": "minor",
+      "location": "line 6, bullet 'การออกแบบเส้นทางผู้ใช้งาน'",
+      "issue": "The detail 'รองรับผู้ใช้งานที่มีความรู้พื้นฐาน และระดับผู้ทำนโยบายและแผน ในรายสาขาและรายพื้นที่ (เช่น องค์กรปกครองส่วนท้องถิ่น)' goes beyond what the named source 5.2.4 states for this FGD row. The per-sector/per-area/LAO framing matches the eventual sitemap design described in 5.2.9 but is not directly evidenced in the two sources named for this section.",
+      "status": "accepted",
+      "disposition": "Unchanged since prior review; text on this line was not touched by the fix. Consistent with broader project record (5.2.9) even though not traceable to the two named sources for this section specifically. Accepted for human review given the thin contract / no evidence sidecar."
+    }
+  ],
+  "mechanical_reviews": [
+    {
+      "message": "[PARENTHETICAL] '(Classification)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time. (now occurs x2, lines 8 and 12)",
+      "disposition": "English technical term retained alongside its Thai gloss (ระดับชั้นความลับของข้อมูล); no Thai equivalent registered in lexicon, non-blocking."
+    },
+    {
+      "message": "[PARENTHETICAL] '(Glossary)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "English technical term retained alongside its Thai gloss (อภิธานศัพท์); no Thai equivalent registered in lexicon, non-blocking."
+    },
+    {
+      "message": "[PARENTHETICAL] '(Data Owner)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "English technical role name retained alongside its Thai gloss (เจ้าของข้อมูล); no Thai equivalent registered in lexicon, non-blocking."
+    },
+    {
+      "message": "MECHANICAL GATE PASSED -- 55 lexicon rules active at scope 'report', 0 out of scope; 566 tokens, 19 sentences; 2 structural rules not applicable to this draft.",
+      "disposition": "Full mechanical lint re-run against ψ/memory/style/LEXICON_TH.json (TH v4.1) on the current draft text; no blocking issues."
+    }
+  ],
   "verdict": "pass"
 }

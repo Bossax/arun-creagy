@@ -1,60 +1,84 @@
 {
   "schema_version": "1.0",
   "rubric_version": "5.0.0",
-  "draft_sha256": "257bf577ad71a18884e1a23c3af8d40b3fca65c9ff83f8351f63b2e61ad02e9d",
-  "contract_sha256": "4401520c78581bf05e2a6b129879f52ec2a31a7539d2569dc509a2acdadcf83a",
+  "draft_sha256": "d80accfe8ba5eb78d0f863a4d719011362e7e81f804f3b2271f7c281001c2251",
+  "contract_sha256": "1778e10f83565d60adcb30de63119884b9bb188cb6495daca6f888ab130af16d",
   "profile": "executive-summary",
   "reviewer_mode": "independent",
   "assurance": "standard",
-  "reviewer": "Codex independent editorial reviewer /root/section14_editorial_review",
-  "reviewed_at": "2026-08-28T01:57:46.6904082+07:00",
+  "reviewer": "independent-general-purpose-agent-reverify-final",
+  "reviewed_at": "2026-08-28T07:34:11Z",
   "dimensions": {
     "section_job": {
       "verdict": "pass",
-      "evidence": "Draft lines 3-5 establish the logical blueprint and the web/data-governance relationship; lines 7-47 then cover the approved three-part job—user value, information architecture/readiness, and data-management/governance—without drifting into section 1.3 participation work or item-level specifications."
+      "evidence": "1.4.1-1.4.3 deliver exactly the section_job: vision/value to policymakers, planners, analysts, and department staff (line 8); the six-part information architecture organized by user mission (lines 14-23); and the three-part data-management framework with reliability/currency mechanisms (lines 31-37), closing with the pre-implementation conditions the department must ratify (line 47)."
     },
     "audience_decision_value": {
       "verdict": "pass",
-      "evidence": "Lines 3-5 immediately distinguish the designed blueprint from an operating system; line 26 turns the 16/26/33 readiness result into a content-prioritization decision; line 47 states the standards, appointments, and sequencing DCCE must approve before system development."
+      "evidence": "Closing paragraph (line 47) gives executives the exact decision list the contract's decision_use calls for: ratify the glossary/data model as mandatory standard, appoint data owner/steward/technical-custodian roles, and prioritize remaining content development before procurement of the next-phase system builder."
     },
     "evidence_payload": {
       "verdict": "pass",
-      "evidence": "The substantive units carry concrete payload: six user-facing areas at lines 15-24; 75 requirements split 16 full/26 partial/33 gap with interpretation and consequence at line 26; 74 glossary terms, 8 domains, and four governance-role classes at lines 30-36; and explicit pre-implementation actions at line 47. These figures and distinctions match the traceability sidecar and named primary sources."
+      "evidence": "Concrete, source-checkable figures are retained at exec-appropriate grain: 74 glossary terms (line 33) and 8 conceptual-model domains (line 34), both traced in evidence-traceability.md to WP5-Data-Management-Framework-Report.md §2.2/§3.2-3.3. No unsupported or invented figures found in the current draft."
     },
     "causal_logic": {
       "verdict": "pass",
-      "evidence": "Lines 5 and 30 connect front-end usefulness to shared meaning, quality controls, and ownership rather than treating website publication as sufficient; line 26 correctly distinguishes content-source coverage from software progress before deriving the prioritization implication; line 47 connects ratified standards and assigned roles to enforceable procurement and post-contract continuity."
+      "evidence": "The section's logic chain holds together: two linked components (line 5) -> vision/users (1.4.1) -> mission-based information architecture that reflects source-content readiness as design rationale, not a scored gap analysis (line 27) -> data-governance framework needed to make the web platform trustworthy (line 31) -> value table synthesizing the three named components (lines 43-45) -> pre-implementation conditions that follow causally from the framework just described (line 47)."
     },
     "reader_facing_appropriateness": {
       "verdict": "pass",
-      "evidence": "The audience-facing draft contains no source paths, internal artifact IDs, slide/page locators, drafting commentary, or section roadmap. The two requested visuals appear as genuine figure placeholders at lines 24 and 38, not inline pseudo-diagrams."
+      "evidence": "Grep of the full draft confirms zero `%%` review markers, zero internal node/pillar/requirement codes, and no x.x sitemap sub-labels (§1.4.2 now uses a plain-prose sentence at line 23 describing sub-content by user mission instead of exposing sitemap numbering). Matches contract exclusions on internal codes and file locators."
     },
     "terminology_agency": {
       "verdict": "pass",
-      "evidence": "The full term appears at line 3 and the approved short form at line 11; เว็บแพลตฟอร์ม and แพลตฟอร์มข้อมูล remain distinct at lines 3-5 and 30; lines 34-36 assign ratification, accountability, operating checks, infrastructure care, use conditions, and release approval to the correct actors. The corrected table wording at line 43 now clearly expresses cross-agency semantic consistency."
+      "evidence": "Contract terminology is used consistently: full form at first mention (line 3) then short form โครงสร้างข้อมูลฯ thereafter (lines 8, 10); กรมฯ, เว็บแพลตฟอร์ม, แพลตฟอร์มข้อมูล, บัญชีคำศัพท์ทางธุรกิจ, แบบจำลองข้อมูลเชิงแนวคิด, เจ้าของข้อมูล, บริกรข้อมูล, and ผู้ดูแลด้านเทคนิค all match the contract's terminology map exactly and are used as agents of the sentences that introduce them (lines 31-37)."
     },
     "source_fidelity": {
       "verdict": "pass",
-      "evidence": "Verified against the named sources and traceability sidecar: WP4 Node-Level Deep Dives v2 supports 16/26/33 across 75 and the gap clusters; WP5 supports 74 terms and the platform-only glossary caveat, 8 domains and ownership boundaries, governance actors, and ratification/assignment before development; the governance technical specification supports validation, staged approval, and archiving; the business-objective source supports the phase-one institutional/specialist audience. The draft preserves the blueprint-versus-live-system caveat and does not claim completed implementation."
+      "evidence": "evidence-traceability.md ties every remaining draft claim to a WP4/WP5 source with a fidelity note (blueprint-vs-platform distinction, glossary scope boundary at line 33, governance role split). The deleted table row's underlying claim (content-readiness assessment) is no longer asserted as a named core component anywhere in the draft, removing the prior source-fidelity risk of overstating it to contract-defined-component status; the surviving qualitative sentence at line 27 stays within the fidelity note's bound (design rationale only, no numeric gap figures)."
     },
     "form_readability": {
       "verdict": "pass",
-      "evidence": "The mandated three subsections are clear at lines 7, 13, and 28; the six-part architecture and three-part governance framework use lists suited to repeated categories; figure placeholders sit next to the structures they summarize; and the three-column table at lines 40-45 provides a compact user/DCCE value comparison. The three previously identified local copy defects are corrected."
+      "evidence": "Required structure present per writing-contract.json required_structures: three subsections (1.4.1/1.4.2/1.4.3), one value table, two figure placeholders (ภาพประกอบที่ 1 at line 25, ภาพประกอบที่ 2 at line 39). The value table (lines 41-45) now has exactly 3 data rows matching the three named core components (โครงสร้างสารสนเทศตามภารกิจ / บัญชีคำศัพท์และแบบจำลองข้อมูล / กลไกการกำกับดูแลและอนุมัติ) -- confirmed by direct read and by `grep -c \"^|\"` returning 5 (header + separator + 3 rows)."
     },
     "altitude": {
       "verdict": "pass",
-      "evidence": "The draft synthesizes the sitemap into six main areas (lines 15-24), reports readiness only as executive totals and gap concentrations (line 26), and summarizes governance at component/role/decision level (lines 30-47). It omits node codes, detailed subcategories, field lists, forms, activity procedures, and per-item requirements excluded by the contract."
+      "evidence": "Content stays at target_altitude throughout: six web-structure areas are each summarized in one line without page/field/requirement-code detail (lines 16-21), sub-content is acknowledged only at the 'divides by user mission' level (line 23) with detail explicitly deferred to the full sitemap, and content-readiness is mentioned only as qualitative design rationale (line 27) with no numeric readiness indicators anywhere in the draft (grep for 16/26/33-style figures returned zero hits)."
     },
     "headline_conclusion": {
       "verdict": "pass",
-      "evidence": "The opening at lines 3-5 makes the governing conclusion explicit without reconstruction: the current deliverable is a logical blueprint linking the user-facing web structure to governed data, not an operating platform. Line 47 closes with the concrete institutional decisions required to make that blueprint implementable."
+      "evidence": "Opening paragraph states the headline conclusion up front -- a blueprint built to inform future system requirements, not an operating platform (line 3, 'ให้เป็นแบบพิมพ์เขียว...โดยมีจุดประสงค์ในการใช้จัดทำข้อกำหนดให้ผู้พัฒนาระบบในระยะถัดไป'). The section closes on an equally clear, action-oriented conclusion (line 47) rather than trailing off in supporting detail."
     },
     "findings_over_process": {
       "verdict": "pass",
-      "evidence": "The draft prioritizes the blueprint's decision value, user missions, content readiness, semantic/governance controls, and DCCE's required actions. References to the consultant are limited to identifying what was produced at lines 3, 15, and 30; no methodology, workshop chronology, or consultant workflow displaces the findings."
+      "evidence": "The draft reports what was built and what it means for the department (findings: components, value, conditions) rather than narrating the consulting method. References to 'คณะที่ปรึกษา' (lines 3, 14, 27, 31) attribute authorship of a stated result in a single clause each and are not followed by process narration -- consistent with the house style of naming the consultant as the actor of a finished analysis/design, not describing how the work was done."
     }
   },
-  "findings": [],
-  "mechanical_reviews": [],
+  "findings": [
+    {
+      "severity": "major",
+      "location": "1.4.2, sub-content sentence (line 23) and figure caption area (formerly after line 21)",
+      "issue": "Round 1 finding: an unresolved review marker ('%%please include sub topics x.x. level%%') sat in the draft asking for sitemap x.x sub-labels to be added under §1.4.2, which would have pulled node-level sitemap codes into an executive-altitude section.",
+      "status": "resolved",
+      "disposition": "Resolved by replacing the marker with a plain-prose sentence (line 23) that explains each of the six areas divides into sub-content by user mission, with an explicit note that sub-category detail lives in the full sitemap and is not enumerated here. Re-verified in this pass: grep confirms zero `%%` markers and no x.x-style sitemap codes remain anywhere in the draft."
+    },
+    {
+      "severity": "major",
+      "location": "Value table, row 4 (formerly after the 'กลไกการกำกับดูแลและอนุมัติ' row, now removed)",
+      "issue": "Round 2 finding: the table still carried a fourth row -- 'ผลประเมินความพร้อมของเนื้อหา | เห็นชัดว่าบริการใดมีข้อมูลรองรับแล้วหรือยังมีข้อจำกัด | จัดลำดับงานพัฒนาเนื้อหาและระบบได้ตามหลักฐาน' -- which promoted content-readiness assessment to a 4th core component the contract does not name, and duplicated the qualitative design-rationale paragraph that already discharged the plan's allowance to mention readiness only as design justification.",
+      "status": "resolved",
+      "disposition": "Resolved: the row has been deleted. The value table now has exactly 3 rows matching the contract's three named core components (confirmed by direct read and by grep row-count = 5, i.e. header + separator + 3 data rows). The qualitative paragraph at line 27 remains and reads fine standalone, correctly discharging the readiness-as-design-rationale allowance without re-promoting it to a table-level component or reintroducing numeric gap figures."
+    }
+  ],
+  "mechanical_reviews": [
+    {
+      "message": "[PARENTHETICAL] '(Data Platform)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "accepted -- English gloss retained alongside the Thai term at first mention (line 5) for technical-platform-name clarity; no lexicon entry exists or is required, consistent with prior rounds' treatment of this term."
+    },
+    {
+      "message": "[PARENTHETICAL] '(web platform)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "accepted -- same rationale as the Data Platform parenthetical: English gloss for a named platform term at first mention (line 5), non-blocking and not requiring a lexicon addition."
+    }
+  ],
   "verdict": "pass"
 }
