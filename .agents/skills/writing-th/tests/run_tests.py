@@ -114,8 +114,19 @@ def main():
         print(argument_harness.stdout.rstrip())
     if argument_harness.stderr:
         print(argument_harness.stderr.rstrip())
-    sys.exit(argument_harness.returncode)
+    if argument_harness.returncode:
+        sys.exit(argument_harness.returncode)
+
+    subagent_harness = subprocess.run(
+        [child_python(), str(TESTS / "test_subagent_specs.py")],
+        capture_output=True, text=True, encoding="utf-8", errors="replace")
+    if subagent_harness.stdout:
+        print(subagent_harness.stdout.rstrip())
+    if subagent_harness.stderr:
+        print(subagent_harness.stderr.rstrip())
+    sys.exit(subagent_harness.returncode)
 
 
 if __name__ == "__main__":
     main()
+

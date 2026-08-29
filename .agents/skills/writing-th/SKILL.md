@@ -50,23 +50,33 @@ holds only paths, hashes, and gate verdicts — never content.
 
 ## Stage → agent → context map
 
+See [references/subagent-prompts.md](references/subagent-prompts.md) for canonical prompts, model tiers, and invocation snippets.
+
 | Stage | Runs as | Loads | Must never load |
 |---|---|---|---|
-| 0 Contract | Parent + `AskUserQuestion` | plan index, source paths | sources, style material |
-| 1 Argument map | `th-argument-mapper` | sources, writing plan (if any), argument schema | style pack, lexicon, rubric |
-| 2 Blueprint gate | Parent, plan mode | rendered map summary | everything else |
-| 3 Verbalization | `th-verbalizer` | `argument-map.json`, prose kernel | raw sources, full pack, rubric |
+| 0 Contract | Parent + `AskUserQuestion` / `ask_question` | plan index, source paths | sources, style material |
+| 1 Argument map | `th-argument-mapper` (`invoke_subagent` / `Agent`) | sources, writing plan (if any), argument schema | style pack, lexicon, rubric |
+| 2 Blueprint gate | Parent (Plan Mode / Markdown Artifact + `ask_question`) | rendered map summary | everything else |
+| 3 Verbalization | `th-verbalizer` (`invoke_subagent` / `Agent`) | `argument-map.json`, prose kernel | raw sources, full pack, rubric |
 | 4 Mechanical gate | CLI only | — | nothing enters a model context |
-| 5 Editorial review | `th-editorial-reviewer` | draft, argument map, rubric | sources, style pack |
+| 5 Editorial review | `th-editorial-reviewer` (`invoke_subagent` / `Agent`) | draft, argument map, rubric | sources, style pack |
 | 6 Merge | CLI + parent | hashes, verdicts | — |
 
 `LEXICON_TH.json` should never enter a model context at any stage —
 `lint_thai_writing.py` reads it; only violations need to reach a model.
 
+### Cross-Agent Runtime Mapping
+
+| Primitive | Google Antigravity (AGY) | Claude Code | Codex / Headless CLI |
+|---|---|---|---|
+| **Human Decision Gates** | `ask_question` modal + Markdown Artifact | `AskUserQuestion` / `ExitPlanMode` | Interactive stdin / prompt |
+| **Subagent Spawning** | `invoke_subagent(Role=..., Model="pro"|"flash")` | `Agent(subagent_type="...")` | Isolated prompt session |
+| **PreToolUse Hook Gate** | Tool-Execution Reflection Lock + Pre-check script | `PreToolUse` hook (`settings.local.json`) | Shell wrapper / pre-commit |
+
 ### Stage 0 — Contract: ask, don't assume
 
 A writing plan may or may not already exist for this unit. Use
-`AskUserQuestion` to establish whether one does, and its path — never assume.
+`AskUserQuestion` (Claude) or `ask_question` (Antigravity) to establish whether one does, and its path — never assume.
 
 - If one exists: it is the primary input to Stage 1. Use `oracle_search` /
   `oracle_trace` to retrieve the relevant slice rather than loading the file
@@ -85,7 +95,7 @@ approval in the contract.
 
 ### Stage 1 — Argument map
 
-Spawn `th-argument-mapper` with the approved contract, the source paths, and
+Spawn `th-argument-mapper` (Claude Code `Agent("th-argument-mapper")` or Antigravity `invoke_subagent(Role="TH Argument Mapper", Model="pro")`) with the approved contract, the source paths, and
 the writing plan if one exists. It produces `argument-map.json`: a Minto
 governing thought, an SCQA narrative arc, and ordered Toulmin argument units
 — each with `claim`, `grounds`, `warrant`, `application_to_design`, and a
@@ -100,18 +110,20 @@ thinking v5.0 skipped must actually happen.
 
 ### Stage 2 — Blueprint gate (human)
 
-Use plan mode: present the governing thought, the SCQA arc, and one line per
-argument unit, then `ExitPlanMode` for approval. Raw JSON is a poor review
-surface. Use `AskUserQuestion` for the bounded choice — approve, amend, or
-reject.
+- **In Claude Code**: Use plan mode: present the governing thought, the SCQA arc, and one line per
+  argument unit, then `ExitPlanMode` for approval via `AskUserQuestion`.
+- **In Antigravity**: Render the governing thought, SCQA arc, and argument units as a formatted Markdown Artifact in the workspace, then call `ask_question` with options:
+  1. "(Recommended) Approve argument map — proceed to Stage 3 verbalization"
+  2. "Amend argument map — request structural revision of warrants"
+  3. "Reject argument map — restart Stage 1 with new perspective"
 
 Only once approved does `approval.status` become `"approved"` in
-`argument-map.json`. This is the field the `PreToolUse` hook checks; nothing
+`argument-map.json`. This is the field the `PreToolUse` hook / reflection lock checks; nothing
 else unlocks Stage 3.
 
 ### Stage 3 — Verbalization
 
-Spawn `th-verbalizer` with the approved `argument-map.json` and
+Spawn `th-verbalizer` (Claude Code `Agent("th-verbalizer")` or Antigravity `invoke_subagent(Role="TH Verbalizer", Model="flash")`) with the approved `argument-map.json` and
 [references/prose-kernel.md](references/prose-kernel.md) only — never the
 raw sources, never the full `STYLE_PACK_TH.md`. Treat each argument unit's
 `claim` / `grounds` / `warrant` / `application_to_design` as the paragraph's
@@ -154,10 +166,10 @@ receipt with a disposition. A green result here means only **mechanical pass**.
 
 ### Stage 5 — Editorial review
 
-Default to `th-editorial-reviewer` run as an independent `Agent` call — never
-`subagent_type: "fork"`, which inherits the parent's full context and
+Default to `th-editorial-reviewer` run as an independent clean-context subagent call (Claude Code `Agent("th-editorial-reviewer")` or Antigravity `invoke_subagent(Role="TH Editorial Reviewer", Model="pro")`) — never
+a shared/forked context that inherits the parent's drafting history, which
 destroys the clean-context independence the rubric depends on. A genuinely
-independent reviewer is one `Agent` call away; the v5.0
+independent reviewer is one subagent call away; the v5.0
 `reviewer_mode: self, assurance: degraded` fallback should be unreachable in
 practice.
 
