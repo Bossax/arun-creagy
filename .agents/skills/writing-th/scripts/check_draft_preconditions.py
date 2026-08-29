@@ -10,6 +10,10 @@ Sibling gate file:    argument-map.json in the same directory as the draft.
 
 Usage (as a hook, not interactively):
     check_draft_preconditions.py < payload.json
+
+The same output contract works for Claude Code and Codex. Claude commonly
+provides `tool_input.file_path`; Codex's `apply_patch` hook provides the patch
+in `tool_input.command`, so patch paths are extracted before checking them.
 """
 from __future__ import annotations
 
@@ -41,9 +45,38 @@ def deny(reason: str) -> dict:
     return decision("deny", reason)
 
 
-def target_path(payload: dict) -> str | None:
+def patch_text(payload: dict) -> str:
     tool_input = payload.get("tool_input") or {}
-    return tool_input.get("file_path") or tool_input.get("path")
+    if isinstance(tool_input, str):
+        return tool_input
+    if not isinstance(tool_input, dict):
+        return ""
+    for key in ("command", "patch", "input"):
+        value = tool_input.get(key)
+        if isinstance(value, str):
+            return value
+    return ""
+
+
+def target_paths(payload: dict) -> list[str]:
+    tool_input = payload.get("tool_input") or {}
+    if isinstance(tool_input, dict):
+        direct = tool_input.get("file_path") or tool_input.get("path")
+        if isinstance(direct, str) and direct:
+            return [direct]
+
+    patch = patch_text(payload)
+    if not patch:
+        return []
+
+    paths = []
+    # OpenAI/Claude apply_patch format: *** Update File: path
+    for match in re.finditer(r"^\*\*\*\s+(?:Add|Update|Delete)\s+File:\s*(.+?)\s*$", patch, re.MULTILINE):
+        paths.append(match.group(1).strip())
+    # Unified diff format, retained for wrappers that serialize patches this way.
+    for match in re.finditer(r"^\+\+\+\s+b/(.+?)\s*$", patch, re.MULTILINE):
+        paths.append(match.group(1).strip())
+    return list(dict.fromkeys(paths))
 
 
 def check(path_str: str) -> dict:
@@ -84,12 +117,18 @@ def main() -> int:
         print(json.dumps(allow("could not parse hook payload; failing open")))
         return 0
 
-    path = target_path(payload)
-    if not path:
+    paths = target_paths(payload)
+    if not paths:
         print(json.dumps(allow()))
         return 0
 
-    print(json.dumps(check(path)))
+    for path in paths:
+        result = check(path)
+        if result["hookSpecificOutput"]["permissionDecision"] == "deny":
+            print(json.dumps(result))
+            return 0
+
+    print(json.dumps(allow()))
     return 0
 
 

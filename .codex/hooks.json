@@ -1,0 +1,33 @@
+{
+  "description": "Project-local writing-th v6 Codex hooks.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "^apply_patch$|^Edit$|^Write$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .agents/skills/writing-th/scripts/check_draft_preconditions.py",
+            "commandWindows": "py -3 .agents\\skills\\writing-th\\scripts\\check_draft_preconditions.py",
+            "timeout": 15,
+            "statusMessage": "Checking writing-th argument-map gate"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "^apply_patch$|^Edit$|^Write$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .agents/skills/writing-th/scripts/post_draft_lint.py",
+            "commandWindows": "py -3 .agents\\skills\\writing-th\\scripts\\post_draft_lint.py",
+            "timeout": 30,
+            "statusMessage": "Linting Thai draft"
+          }
+        ]
+      }
+    ]
+  }
+}
