@@ -15,6 +15,8 @@ PAIRS = [
     ("writing-th", "references/editorial-rubric.md"),
     ("writing-th", "references/artifact-schemas.md"),
     ("writing-th", "references/prose-kernel.md"),
+    ("writing-th", "references/subagent-prompts.md"),
+    ("writing-th", "references/revision-mode.md"),
     ("style-capture", "SKILL.md"),
 ]
 
