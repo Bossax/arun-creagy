@@ -1,0 +1,90 @@
+{
+  "context": "TH",
+  "version": "1.0",
+  "rules": [
+    {
+      "id": "STR-001",
+      "name": "high_altitude_deliverable_table",
+      "scope": "executive_summary",
+      "section_job": "intro_scope",
+      "trigger_condition": "เมื่อต้องสรุปวัตถุประสงค์ ขอบเขต หรือผลผลิตของโครงการในระดับผู้บริหาร (บทนำ/ภาพรวม)",
+      "mandatory_structure": {
+        "format": "markdown_table",
+        "required_columns": [
+          "คำถามหลัก",
+          "ผลผลิตของโครงการ"
+        ],
+        "minimum_rows": 4,
+        "questions_mapping": [
+          "1. อะไรที่จำเป็นต้องมี -> โครงสร้างข้อมูล (Information Architecture)",
+          "2. อะไรที่มีอยู่แล้ว -> บัญชีชุดข้อมูลและผลิตภัณฑ์ข้อมูล (Data Inventory)",
+          "3. อะไรที่ต้องพัฒนาใหม่ -> กรณีการใช้งานและความต้องการข้อมูล (Use Cases)",
+          "4. จะขับเคลื่อนและรักษาระบบนี้ไว้ได้อย่างไร -> การกำกับดูแลข้อมูล (Data Governance)"
+        ]
+      },
+      "counter_pattern": "ห้ามเขียนบรรยายวัตถุประสงค์และผลผลิตโครงการเป็นร้อยแก้วยาวเหยียด",
+      "status": "promoted"
+    },
+    {
+      "id": "STR-002",
+      "name": "parallel_framework_enumeration",
+      "scope": "literature_review",
+      "section_job": "compare",
+      "trigger_condition": "เมื่อทบทวนกรอบมาตรฐานสากลหรือแพลตฟอร์มต้นแบบ >= 3 รายการ",
+      "mandatory_structure": {
+        "format": "numbered_list_with_synthesis",
+        "list_item_pattern": "หัวข้อตัวหนา + ปีอ้างอิง + สาระสำคัญ",
+        "shared_cycle_synthesis": "ต้องสรุปจุดร่วมเป็นวงจร 4 ขั้นตอน (ประเมิน -> วางแผน -> ปฏิบัติ -> ติดตาม)",
+        "application_to_design": "ต้องระบุข้อสรุปเพื่อนำไปใช้เป็นแกนหลักของโครงสร้างข้อมูลฯ ในขั้นตอนถัดไป"
+      },
+      "counter_pattern": "ห้ามเขียนกรอบมาตรฐานหลายกรอบรวมกันเป็นย่อหน้าร้อยแก้วปนกัน",
+      "status": "promoted"
+    },
+    {
+      "id": "STR-003",
+      "name": "ux_friction_to_architecture_bridge",
+      "scope": "system_design",
+      "section_job": "diagnose",
+      "trigger_condition": "เมื่อนำเสนอข้อค้นพบด้านภาระทางความคิด พฤติกรรมผู้ใช้ หรือสถาปัตยกรรมสารสนเทศ",
+      "mandatory_structure": {
+        "format": "1_to_1_finding_to_design_pairing",
+        "requirement": "ทุกลำดับข้อค้นพบต้องตอบ 'So What?' และระบุผลต่องานออกแบบสถาปัตยกรรม NCAIF ทันที (เช่น สัญญาณนำทางลึก -> เมนูชั้นบนสุดต้องตื้น)",
+        "prohibited_content": "ห้ามตัดจบที่ข้อค้นพบเชิงจิตวิทยาหรือทฤษฎีลอย ๆ โดยไม่มีนัยต่องานออกแบบ"
+      },
+      "counter_pattern": "ข้อค้นพบทฤษฎีลอย ๆ หรือการอ้างเหตุผลกว้าง ๆ ที่ผู้อ่านถามว่า 'แล้วอย่างไรต่อ'",
+      "status": "promoted"
+    },
+    {
+      "id": "STR-004",
+      "name": "four_layer_system_architecture",
+      "scope": "architecture_overview",
+      "section_job": "define",
+      "trigger_condition": "เมื่ออธิบายภาพรวมสถาปัตยกรรมระบบข้อมูลหรือแพลตฟอร์ม",
+      "mandatory_structure": {
+        "format": "layered_stack",
+        "layers": [
+          "1. ฉากหน้า: แพลตฟอร์มเว็บไซต์ (Web Platform)",
+          "2. เข็มทิศนำทาง: โครงสร้างข้อมูล (Information Architecture)",
+          "3. ต้นทุนเดิม: ภูมิทัศน์ข้อมูล/บัญชีชุดข้อมูล (Information Landscape)",
+          "4. รากฐานเบื้องหลัง: แพลตฟอร์มข้อมูลและธรรมาภิบาลข้อมูล (Data Platform & Governance)"
+        ],
+        "modern_data_architecture_stages": "ระบุ 6 ขั้นตอน Modern Data Architecture และชี้ว่าโครงการนี้ครอบคลุมขั้นที่ 1-2 เพื่อส่งต่อขั้นที่ 3"
+      },
+      "counter_pattern": "อธิบายแพลตฟอร์มเป็นเพียงหน้ากากเว็บไซต์เดี่ยว ๆ โดยละเลยระบบจัดการข้อมูลหลังบ้าน",
+      "status": "promoted"
+    },
+    {
+      "id": "STR-005",
+      "name": "actionable_headline_conclusions",
+      "scope": "executive_summary",
+      "section_job": "conclude",
+      "trigger_condition": "เมื่อสรุปสาระสำคัญหรือข้อสรุปสำหรับการตัดสินใจในระดับผู้บริหาร",
+      "mandatory_structure": {
+        "format": "bold_headline_bullet_points",
+        "structure": "3 ข้อย่อยนำด้วยคำสำคัญตัวหนา สรุปความพร้อม จุดตั้งต้น และช่องว่างที่ต้องจัดทำเพิ่มเติม"
+      },
+      "counter_pattern": "ย่อหน้าร้อยแก้วสรุปความทั่วไป หรือคำลงท้ายแบบพิธีการ",
+      "status": "promoted"
+    }
+  ]
+}

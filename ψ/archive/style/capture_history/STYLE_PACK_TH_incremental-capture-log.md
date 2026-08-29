@@ -280,3 +280,21 @@ real `## 5. Lexicon & Diction` again.*
 - **Rule**: Do **not** use English translations in parentheses unless absolutely necessary for technical precision.
 - **Allowed**: Exact database schema names (`DISASTER_EVENT`), system keys, or official acronyms (`MVD`).
 - **Banned**: Translating conceptual terms or phrases (e.g., `(Data Availability)`, `(Temporal completeness)`, `(Bounded Application Test)`). If it's a concept, write it in strong Thai and leave it alone.
+
+### 2026-08-29 — Style-pack upgrade from CRDB Exec-Summary Section 1.1 Complete 14-Point Audit & Structural Capture
+
+**Source of delta**: `ψ/memory/style/evidence/2026-08-29_17-00_TH_exec-summary-1.1_diff-evidence.md` — Smart Diff Resolver comparison between pre-revision baseline and Boss's in-place edited/annotated version in `ψ/incubate/drafts/crdb-exec-summary-1.1/02_th_draft.md` (Commit `31a244c`).
+
+#### Multi-Layer Shifts Captured
+- **L1/L2 Syntactic (Anti-AI Negation Scaffolding)**:
+  - Struck through `ไม่ใช่เพื่อคัดลอก...` and WMO negation (`%%stop using this structure! explaining what something is not something%%`).
+  - Enforced direct positive assertion of functions before stating limitations.
+- **L3 Micro-Structure & Diction**:
+  - Removed artificial quotes around problem concepts.
+  - Eliminated high-level unspecific abstraction fluff (`%%as I said. you always fluff with high-level unspecific abstraction%%`).
+- **L4 Logical Argumentation**:
+  - `STR-002` (Parallel Framework Enumeration): Formatted 4 international standards as a numbered list with formal citations + 4-step shared cycle.
+  - `STR-003` (Finding-to-Design Bridge & So-What Answer): Every UX/cognitive finding must explicitly dictate NCAIF design; deleted generic light logic (`%%what the fuck does that mean? deleted. the logic of this finding is light and very generic. the reader will say so what?%%`).
+- **L5 Document Architecture**:
+  - `STR-001` (4-Question High-Altitude Table): Intro maps 4 core questions to project deliverables in a structured 2-column table.
+  - `STR-004` (4-Layer System Architecture): Explicit mapping of Web Platform (front) -> IA (nav) -> Data Landscape (assets) -> Data Platform & Governance (engine) + 6-step Modern Data Architecture context.

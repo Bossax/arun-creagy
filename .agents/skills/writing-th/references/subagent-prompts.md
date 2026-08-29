@@ -33,6 +33,7 @@ no matter how good the verbalization stage is.
 - The approved writing-contract.json beside your output path (note target_altitude and report_specific_rules).
 - The source evidence and any writing plan the contract names.
 - references/artifact-schemas.md for the exact argument-map.json shape.
+- ψ/memory/style/STRUCTURAL_RULES_TH.json — apply any mandatory structural transformations matching the contract's target_altitude, scope, or section_job (e.g. STR-001 for executive intro tables, STR-002 for framework enumeration, STR-003 for UX finding-to-design bridges).
 
 ## What you must never load
 - ψ/memory/style/STYLE_PACK_TH.md or LEXICON_TH.json — style material has
@@ -40,10 +41,10 @@ no matter how good the verbalization stage is.
   diction, you have drifted into the next stage's job.
 - The editorial rubric.
 
-## Altitude awareness
+## Altitude & Structural awareness
 When contract target_altitude is executive-summary, filter out raw internal
 operational acronyms and laundry lists from grounds — elevate to functional
-roles and institutional impacts.
+roles and institutional impacts. Enforce structural rules from STRUCTURAL_RULES_TH.json.
 
 ## What you produce
 argument-map.json at the path given in your task prompt, containing:

@@ -57,11 +57,13 @@ CREATE TABLE IF NOT EXISTS candidates (
     pattern  TEXT NOT NULL,
     source   TEXT,
     fix      TEXT,
-    note     TEXT
+    note     TEXT,
+    layer    TEXT DEFAULT 'lexical'
 );
 CREATE TABLE IF NOT EXISTS promotions (
     pattern  TEXT PRIMARY KEY,
-    ts       TEXT NOT NULL
+    ts       TEXT NOT NULL,
+    layer    TEXT DEFAULT 'lexical'
 );
 CREATE TABLE IF NOT EXISTS runs (
     id        INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -96,6 +98,15 @@ def connect(create=False):
     p.parent.mkdir(parents=True, exist_ok=True)
     con = sqlite3.connect(p)
     con.executescript(SCHEMA)
+    # Lightweight schema migration for existing DB
+    try:
+        con.execute("ALTER TABLE candidates ADD COLUMN layer TEXT DEFAULT 'lexical'")
+    except sqlite3.OperationalError:
+        pass
+    try:
+        con.execute("ALTER TABLE promotions ADD COLUMN layer TEXT DEFAULT 'lexical'")
+    except sqlite3.OperationalError:
+        pass
     return con
 
 
@@ -110,19 +121,21 @@ def cmd_init(_ns):
 
 def cmd_observe(ns):
     con = connect(create=True)
+    layer = getattr(ns, "layer", "lexical") or "lexical"
     con.execute(
-        "INSERT INTO candidates (ts, pattern, source, fix, note) VALUES (?,?,?,?,?)",
-        (now(), ns.pattern, ns.source, ns.fix, ns.note))
+        "INSERT INTO candidates (ts, pattern, source, fix, note, layer) VALUES (?,?,?,?,?,?)",
+        (now(), ns.pattern, ns.source, ns.fix, ns.note, layer))
     con.commit()
     n = con.execute("SELECT COUNT(*) FROM candidates WHERE pattern=?", (ns.pattern,)).fetchone()[0]
     promoted = con.execute("SELECT 1 FROM promotions WHERE pattern=?", (ns.pattern,)).fetchone()
     con.close()
 
-    print(f"observed: {ns.pattern!r}")
+    print(f"observed: {ns.pattern!r} (layer: {layer})")
     print(f"  seen {n} time(s)" + ("  [already promoted]" if promoted else ""))
     if n >= 2 and not promoted:
-        print(f"  >> AT THRESHOLD -- promote this into the style pack, then:")
-        print(f"     register.py promoted \"{ns.pattern}\"")
+        target = "STRUCTURAL_RULES_TH.json" if layer == "structural" else "LEXICON_TH.json / STYLE_PACK_TH.md"
+        print(f"  >> AT THRESHOLD -- promote this into {target}, then:")
+        print(f"     register.py promoted \"{ns.pattern}\" --layer {layer}")
 
 
 def log_run(draft, lexicon, scope, tokens, sentences, verdict, misses):
@@ -148,10 +161,11 @@ def cmd_promoted(ns):
     if con is None:
         print("no register yet -- run: register.py init")
         sys.exit(1)
-    con.execute("INSERT OR REPLACE INTO promotions (pattern, ts) VALUES (?,?)", (ns.pattern, now()))
+    layer = getattr(ns, "layer", "lexical") or "lexical"
+    con.execute("INSERT OR REPLACE INTO promotions (pattern, ts, layer) VALUES (?,?,?)", (ns.pattern, now(), layer))
     con.commit()
     con.close()
-    print(f"marked promoted: {ns.pattern!r}")
+    print(f"marked promoted: {ns.pattern!r} (layer: {layer})")
 
 
 # ---------- read side ----------
@@ -161,29 +175,38 @@ def cmd_ready(ns):
     if con is None:
         print("no register yet -- run: register.py init")
         sys.exit(0)
-    rows = con.execute("""
-        SELECT c.pattern, COUNT(*) AS n, MIN(c.ts), MAX(c.ts)
+    
+    where_clause = "WHERE p.pattern IS NULL"
+    params = []
+    if getattr(ns, "layer", None):
+        where_clause += " AND c.layer = ?"
+        params.append(ns.layer)
+    params.append(ns.threshold)
+
+    rows = con.execute(f"""
+        SELECT c.pattern, COUNT(*) AS n, MIN(c.ts), MAX(c.ts), c.layer
         FROM candidates c
         LEFT JOIN promotions p ON p.pattern = c.pattern
-        WHERE p.pattern IS NULL
+        {where_clause}
         GROUP BY c.pattern
         HAVING n >= ?
         ORDER BY n DESC, MAX(c.ts) DESC
-    """, (ns.threshold,)).fetchall()
+    """, params).fetchall()
 
     if not rows:
         pending = con.execute("""
             SELECT COUNT(DISTINCT c.pattern) FROM candidates c
             LEFT JOIN promotions p ON p.pattern = c.pattern
             WHERE p.pattern IS NULL""").fetchone()[0]
-        print(f"nothing at threshold {ns.threshold}. "
+        layer_txt = f" [{ns.layer}]" if getattr(ns, "layer", None) else ""
+        print(f"nothing at threshold {ns.threshold}{layer_txt}. "
               f"{pending} unpromoted pattern(s) seen fewer times.")
         con.close()
         sys.exit(0)
 
     print(f"{len(rows)} pattern(s) at or above threshold {ns.threshold} -- promote these:\n")
-    for pattern, n, first, last in rows:
-        print(f"  [{n}x]  {pattern}")
+    for pattern, n, first, last, layer in rows:
+        print(f"  [{n}x] [{layer or 'lexical'}]  {pattern}")
         print(f"         first {first[:10]}   last {last[:10]}")
         for (src, fix) in con.execute(
                 "SELECT source, fix FROM candidates WHERE pattern=? ORDER BY ts", (pattern,)):
@@ -247,15 +270,18 @@ def main():
     o.add_argument("pattern")
     o.add_argument("--source", help="file or evidence log the correction came from")
     o.add_argument("--fix", help="what it was changed to")
+    o.add_argument("--layer", choices=["lexical", "regex", "structural"], default="lexical", help="rule layer (lexical, regex, structural)")
     o.add_argument("--note")
     o.set_defaults(fn=cmd_observe)
 
     r = sub.add_parser("ready", help="patterns that have crossed the promotion threshold")
     r.add_argument("--threshold", type=int, default=2)
+    r.add_argument("--layer", choices=["lexical", "regex", "structural"], help="filter by layer")
     r.set_defaults(fn=cmd_ready)
 
-    p = sub.add_parser("promoted", help="mark a candidate as now living in the pack")
+    p = sub.add_parser("promoted", help="mark a candidate as now living in the pack or structural rules")
     p.add_argument("pattern")
+    p.add_argument("--layer", choices=["lexical", "regex", "structural"], default="lexical")
     p.set_defaults(fn=cmd_promoted)
 
     sub.add_parser("stats").set_defaults(fn=cmd_stats)

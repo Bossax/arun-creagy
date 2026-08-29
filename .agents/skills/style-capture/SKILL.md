@@ -25,11 +25,11 @@ description: Incrementally learns and refines writing styles from individual sam
 1) **Context**: (e.g., `Thai-Institutional`, `Tech-Blog`, `Executive-Summary`). This determines which `Style-Pack` to update.
 2) **Source Type**:
     - `Sample`: A single file path representing the target style.
-    - `In-Place (Git Diff)`: A single file path representing an in-place edit where the user modified the file directly in the workspace. The agent will compare the current dirty workspace copy against the latest committed version.
-    - `Refinement (Two-File)`: A pair of file paths (Draft vs. Edited) representing separate versions.
+    - `In-Place / Single File (Smart Diff Resolver)`: A single file path representing an edit. The agent automatically resolves the diff using the fallback ladder: working copy `git diff` → latest commit history (`git log -p -1` / `HEAD~1..HEAD`) → sibling baseline (`.pre-*.md`, `.draft.md`).
+    - `Refinement (Two-File)`: An explicit pair of file paths (Draft vs. Edited) representing separate versions.
 3) **Paths**:
     - For `Sample`: `sample_path`.
-    - For `In-Place (Git Diff)`: `file_path`.
+    - For `In-Place / Single File`: `file_path`.
     - For `Refinement`: `draft_path` and `edited_path`.
 4) (Optional) **Focus**: Specific stylistic area to focus on (e.g., "Hedging," "Paragraph transitions").
 
@@ -41,47 +41,51 @@ description: Incrementally learns and refines writing styles from individual sam
     - Check for existing artifacts in `ψ/memory/style/`:
         - `STYLE_PACK_<CONTEXT>.md`
         - `LEXICON_<CONTEXT>.json`
+        - `STRUCTURAL_RULES_<CONTEXT>.json`
     - If they do not exist, initialize them using the "Cold Start" template.
 
-2) **Reading & Pre-processing**
+2) **Reading & Pre-processing (Smart Diff Resolver)**
     - If `Sample` mode: Read the file.
-    - If `In-Place (Git Diff)` mode: Run `git diff <file_path>` to extract the uncommitted changes. Analyze the deleted lines (acting as the draft) and the added lines (acting as the edits).
-    - If `Refinement (Two-File)` mode: Read both files and perform a semantic comparison to identify specifically **what the human changed** (Word choice, re-ordering, tone shifts).
+    - If `In-Place / Single File` mode: Resolve the edit delta using this strict resolution ladder:
+        1. **Working Copy**: Run `git diff <file_path>`. If non-empty, use deleted lines as draft and added lines as human edits.
+        2. **Committed Revision**: If working copy diff is empty, inspect Git commit history: run `git log -p -1 <file_path>` or `git diff HEAD~1..HEAD -- <file_path>`. If changes were committed, extract the delta from that commit.
+        3. **Sibling Baseline**: If git history shows no recent edit, search the sibling directory for baseline files (e.g. `*.pre-*.md`, `*.draft.md`, `02_th_draft.pre-1.1-revision.md`). If found, run `git diff --no-index <sibling_baseline> <file_path>`.
+        4. **CRITICAL GUARD**: NEVER switch or wander off to an unrelated dirty file in `git status`. If no diff is found on the requested file across steps 1–3, halt and explicitly ask the user for the commit hash or baseline comparison path.
+    - If `Refinement (Two-File)` mode: Read both files and perform a semantic comparison to identify specifically **what the human changed** (Word choice, re-ordering, tone shifts, structural restructuring).
 
 3) **Intermediate Evidence Materialization (Diff Log)**
-    - If `In-Place (Git Diff)` or `Refinement` mode: Save a date-stamped diff evidence file to `ψ/memory/style/evidence/<YYYY-MM-DD>_<HH-MM>_<CONTEXT>_diff-evidence.md`.
+    - If `In-Place / Single File` or `Refinement` mode: Save a date-stamped diff evidence file to `ψ/memory/style/evidence/<YYYY-MM-DD>_<HH-MM>_<CONTEXT>_diff-evidence.md`.
     - This file records the specific delta of this run, preserving the project history for future statistical aggregation.
     - The file must document:
-        - **Metadata**: Timestamp, session ID, source mode (In-Place Git Diff or Two-File Refinement), file paths, and context.
-        - **Concrete Diff Log**: Direct word-for-word or phrase-for-phrase changes.
+        - **Metadata**: Timestamp, session ID, source mode (In-Place Single File or Two-File Refinement), file paths, and context.
+        - **Concrete Diff Log**: Direct line-by-line word-for-word changes, formatting transformations, and annotations (`%%...%%`).
         - **Linguistic Shift**: Specific grammar, tone, or structural changes observed.
-        - **Candidate Rules**: A list of suggested style rules hypothesized from this comparison.
-    - Separate evidence logs enable bulk analysis later, making it possible to trace recurring correction patterns and verify their statistical significance before cementing them into the master `STYLE_PACK`.
+        - **Candidate Rules**: Categorized by layer (`lexical`, `regex`, or `structural`).
 
 4) **Pattern Extraction (Research Phase)**
-    - Analyze the input for:
-        - **Structural DNA**: How are sections introduced? How is evidence linked to claims?
-        - **Linguistic Markers**: Sentence length, active/passive preference, use of connectors.
-        - **The Anti-AI Shield**: Identify phrases or structures that were removed/replaced (Counter-examples).
-        - **Lexicon**: Map specific terms to their preferred alternatives.
+    - Analyze the input across 3 layers:
+        - **L1/L2 Lexical & Surface Regex**: Specific term replacements and negative-contrast scaffolding.
+        - **L3 Micro-Structural / Tone**: Diction cleanup, Anti-AI Shield counter-examples.
+        - **L4/L5 Structural & Rhetorical**: Document architecture, high-altitude tables, framework enumeration, finding-to-design bridges.
 
 4b) **Miss Register (Promotion Threshold)**
     - A single correction is a local edit. The same correction twice is a rule -- learning 2026-06-27 fixed that threshold at two, and the register is what counts to it.
-    - For every candidate pattern found in step 4 that is **not already in the lexicon**, record it:
-      `python .agents/skills/writing-th/scripts/register.py observe "<pattern>" --source <file> --fix "<what you changed it to>"`
+    - For every candidate pattern found in step 4 that is **not already in the lexicon or structural rules**, record it:
+      `python .agents/skills/writing-th/scripts/register.py observe "<pattern>" --source <file> --layer <lexical|regex|structural> --fix "<what you changed it to>"`
     - Then ask what has earned promotion:
-      `python .agents/skills/writing-th/scripts/register.py ready`
-    - Only patterns listed by `ready` should be promoted into the pack in step 5. A pattern seen once stays in the register and waits -- promoting on a single sighting is how the pack accumulated rules that never earned their place.
-    - After writing a pattern into the pack, close it out:
-      `python .agents/skills/writing-th/scripts/register.py promoted "<pattern>"`
+      `python .agents/skills/writing-th/scripts/register.py ready [--layer <lexical|regex|structural>]`
+    - Only patterns listed by `ready` should be promoted in step 5. A pattern seen once stays in the register and waits.
+    - After writing a pattern into the pack, lexicon, or structural rules, close it out:
+      `python .agents/skills/writing-th/scripts/register.py promoted "<pattern>" --layer <lexical|regex|structural>`
     - Nothing is deleted. A promoted pattern keeps its full observation history; it simply stops appearing in `ready`.
 
 5) **Cumulative Merging (Update Phase)**
-    - **Merge Strategy**:
-        - Append new **Examples** and **Counter-examples** to the `STYLE_PACK`, limited to patterns that step 4b's `ready` reported at threshold.
-        - If a new pattern contradicts an existing rule, prioritize the new evidence as "Style Evolution" but keep a note of the change.
-        - **Rank Order**: Re-evaluate the hierarchy. Rules appearing in multiple samples move to "Highest Priority."
-    - Update the `LEXICON_<CONTEXT>.json` with new term pairings. **CRITICAL**: Every entry needs `banned`, `preferred`, `reason`, plus `kind` (`literal` | `regex` | `structural`) and `scope` (`universal` | `report` | `article` | `letter`). A `regex` entry also needs `pattern`. A rule that cannot be an exact string or a compiling pattern MUST be `kind: structural` -- writing its English description into `banned` makes it a silent no-op, which is how three rules from the 2026-08-05 round never fired. After any write, run: `python .agents/skills/writing-th/scripts/validate_lexicon.py ψ/memory/style/LEXICON_TH.json`
+    - **Merge Strategy by Layer**:
+        - **L1/L2 (Lexical & Regex)**: Update `LEXICON_<CONTEXT>.json`. Every entry needs `banned`, `preferred`, `reason`, `kind`, `scope`, and `pattern` (for regex). After write, run:
+          `python .agents/skills/writing-th/scripts/validate_lexicon.py ψ/memory/style/LEXICON_TH.json`
+        - **L4/L5 (Structural Rules)**: Update `STRUCTURAL_RULES_<CONTEXT>.json`. Every entry needs `id`, `name`, `scope`, `section_job`, `trigger_condition`, `mandatory_structure`, `counter_pattern`, and `status: "promoted"`. After write, run:
+          `python .agents/skills/writing-th/scripts/validate_structural_rules.py ψ/memory/style/STRUCTURAL_RULES_TH.json`
+        - **L3 (Anti-AI Shield)**: Append new **Examples** and **Counter-examples** to `STYLE_PACK_<CONTEXT>.md §7`.
 6) **Artifact Materialization**
     - Write/Update the `STYLE_PACK_<CONTEXT>.md`.
     - Format (as of the 2026-08-29 v6.0 harness overhaul — `STYLE_PACK_TH.md`
