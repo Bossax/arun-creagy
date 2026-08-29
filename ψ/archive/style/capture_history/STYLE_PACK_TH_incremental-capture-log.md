@@ -318,3 +318,26 @@ real `## 5. Lexicon & Diction` again.*
   - **Acronym Protocol**: Enforce Full English + Acronym + Thai Functional Definition on first occurrence.
   - **Root Cause Accuracy**: Disentangle data processing proxy misuse (relief budget misused as damage proxy) from semantic classification errors.
 
+### 2026-08-29 — Style-pack upgrade from CRDB Exec-Summary Section 2.2 Refinement
+
+**Source of delta**: `ψ/incubate/drafts/crdb-exec-summary-2.2/draft.md` under direct critique by Boss.
+
+#### Multi-Layer Shifts Captured
+- **L4/L5 Structural & Rhetorical**:
+  - **Elimination of Artificial Causal Linkage**: Strictly avoid inventing artificial causal links that claim general/demand-side data needs "determine" or "create" specific use cases (e.g. banning `ที่มีผลต่อการกำหนดกรณีการใช้งาน`). Keep demand-side interview findings (systemic data needs/readiness) clearly distinct from workshop use-case generation, combining them only at the final synthesis stage.
+- **L3 Micro-Structure & Parallelism**:
+  - **Nominal Parallelism in Multi-Item Lists**: Headings in bulleted requirement lists must maintain strict parallel structure using substantive nominal phrases denoting systemic attributes (`การมีข้อมูลอ้างอิงกลาง...`, `ความละเอียดเชิงพื้นที่...`, `รูปแบบข้อมูลที่เข้าถึง...`, `ความพร้อมในการนำไปใช้...`) rather than mixing clauses and nouns.
+  - **Decision-Ready Concrete Diction**: Ground abstract concepts like "decision-ready" with concrete operational dimensions (`ตัวเลข ภาษา หน่วยวัด และตัวแปร`) to prevent them from devolving into generic IT boilerplate.
+
+### 2026-08-29 — Style-pack upgrade from CRDB Exec-Summary Section 2.3 Refinement & A-BTR Strategic Integration
+
+**Source of delta**: `ψ/incubate/drafts/crdb-exec-summary-2.3/draft.md` under direct refactoring and critique by Boss.
+
+#### Multi-Layer Shifts Captured
+- **L4/L5 Structural & Strategic Rhetoric**:
+  - **Strategic Driver Framing over Passive Exclusion**: Transform cross-cutting mandates (such as A-BTR under UNFCCC) and complex technical items from administrative exclusions or deferred items (`ถูกเลื่อนออก`, `ไม่ใช่บริการลำดับที่ 9`) into proactive strategic drivers that determine platform integration scope across data domains and adaptation stages.
+  - **Streamlined Executive Architecture**: Eliminate redundant separate status summaries by embedding the development roadmap directly into the concluding strategic driver narrative.
+- **L4 Argumentation & Multi-Stakeholder Grounding**:
+  - Ground interdisciplinary requirements in named actor trinities (`ระหว่างนักวิทยาศาสตร์ วิศวกรและสถาปนิก และผู้ออกนโยบาย`) instead of vague "expert collaboration".
+- **L1/L2 Lexical & Diction**:
+  - Ban passive administrative deferral syntax (`ถูกเลื่อนออกด้วยข้อจำกัด`) in favor of positive-conditional developmental framing (`มีความสำคัญสูง แต่ยังต้องพัฒนาองค์ความรู้...`).
