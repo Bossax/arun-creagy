@@ -395,6 +395,42 @@
       "kind": "regex",
       "scope": "universal",
       "pattern": "(สไลด์ที่\\s*\\d+|หน้า(ที่)?\\s*\\d+|[Ss]lide\\s*\\d+)"
+    },
+    {
+      "banned": "เชิงประจักษ์",
+      "preferred": "ชี้ให้เห็นว่า / สังเกตการณ์ / ตามข้อมูลจริง",
+      "reason": "Empty pseudo-academic filler. When stating findings ('ผลการทดสอบชี้ให้เห็นว่า'), 'เชิงประจักษ์' adds zero informational value.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "อย่างสิ้นเชิง",
+      "preferred": "แตกต่างกัน / (cut dramatic exaggeration)",
+      "reason": "Avoids theatrical melodrama and dramatic exaggeration in technical/institutional reports.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "ฐานราคากลาง",
+      "preferred": "ฐานข้อมูลราคากลางสำหรับการซ่อมแซมและสร้างทดแทน",
+      "reason": "Inaccurate shorthand. Use the complete official catalog name: ฐานข้อมูลราคากลางสำหรับการซ่อมแซมและสร้างทดแทน (Standardized Replacement Cost Catalogs).",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "งานประจำวัน",
+      "preferred": "การปฏิบัติงานในพื้นที่ / การเผชิญเหตุ",
+      "reason": "Disaster response is not routine daily work ('งานประจำวัน'); collocation error in disaster management context.",
+      "kind": "literal",
+      "scope": "report"
+    },
+    {
+      "banned": "colon in Thai headings/subheadings",
+      "preferred": "integrated heading without colon",
+      "reason": "Colons (:) in Thai headings/subheadings feel unnatural and Western. Use clean integrated phrasing.",
+      "kind": "regex",
+      "scope": "universal",
+      "pattern": "^#{2,4}\\s+[^:\\n]+:[^\\n]+"
     }
   ],
   "technical_terms": [
@@ -457,6 +493,26 @@
     {
       "term": "เรื่องเล่าความเปลี่ยนแปลงที่สำคัญที่สุด",
       "definition": "Most Significant Change: MSC"
+    },
+    {
+      "term": "แบบจำลองข้อมูลเชิงตรรกะ",
+      "definition": "Logical Data Model"
+    },
+    {
+      "term": "แบบจำลองข้อมูลเชิงแนวคิด",
+      "definition": "Conceptual Data Model"
+    },
+    {
+      "term": "แบบฟอร์มการรายงานความสูญเสียและความเสียหาย",
+      "definition": "Loss and Damage Field Reporting Form"
+    },
+    {
+      "term": "เขตข้อมูล",
+      "definition": "Data Field"
+    },
+    {
+      "term": "ฐานข้อมูลราคากลางสำหรับการซ่อมแซมและสร้างทดแทน",
+      "definition": "Standardized Replacement Cost Catalogs"
     }
   ]
 }

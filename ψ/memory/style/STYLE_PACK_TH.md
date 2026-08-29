@@ -138,6 +138,11 @@ These rules matter, but they should not compete with the Core Kernel during earl
 | "ผู้สนับสนุนโครงการ" | "กรม สส." | Generic role noun for an already-named institutional actor; same typology as DCCE -> กรมฯ. |
 | "ที่ขยายผลได้" | "ที่ปรับขยายได้ในอนาคต" | Awkward modifier construction; more natural phrasing for extensibility. |
 | "ปิด[ผลงาน]" to mean "completed" (e.g. "ปิดผังเว็บไซต์", "ปิดพจนานุกรม") | "สรุป[ผลงาน]" or a concrete verb naming the actual action | "ปิด" reads as a literal translation of "close out." Reserve "ปิด"/"ผนึก" for an actual ledger Sealed status only. |
+| "เชิงประจักษ์" (when stating test results) | "ชี้ให้เห็นว่า" / "สังเกตการณ์" / "ตามข้อมูลจริง" | Empty pseudo-academic filler. When stating findings ('ผลการทดสอบชี้ให้เห็นว่า'), 'เชิงประจักษ์' adds zero value. |
+| "อย่างสิ้นเชิง" | "แตกต่างกัน" / (cut dramatic exaggeration) | Avoids theatrical melodrama and dramatic exaggeration in technical reports. |
+| "ฐานราคากลาง" | "ฐานข้อมูลราคากลางสำหรับการซ่อมแซมและสร้างทดแทน" | Inaccurate shorthand. Use full official title (Standardized Replacement Cost Catalogs). |
+| "งานประจำวัน" (in disaster management) | "การปฏิบัติงานในพื้นที่" / "การเผชิญเหตุ" | Disaster response is not routine daily work ('งานประจำวัน'); collocation error in disaster management. |
+| "แกน" (when referring to subsystem/module) | "องค์ประกอบ" / "ส่วนประกอบ" / "ข้อมูลหลัก" | "แกน" is awkward and rarely used for modular framework components. |
 
 ### Technical Terminology Mapping
 * **Climate Change** -> การเปลี่ยนแปลงสภาพภูมิอากาศ (Climate Change)
@@ -150,6 +155,11 @@ These rules matter, but they should not compete with the Core Kernel during earl
 * **Interoperability** -> การทำงานร่วมกันของระบบข้อมูล (Interoperability)
 * **Uncertainty Communication** -> การสื่อสารความไม่แน่นอน (Uncertainty Communication)
 * **Most Significant Change (MSC)** -> เรื่องเล่าความเปลี่ยนแปลงที่สำคัญที่สุด (Most Significant Change)
+* **Logical Data Model** -> แบบจำลองข้อมูลเชิงตรรกะ
+* **Conceptual Data Model** -> แบบจำลองข้อมูลเชิงแนวคิด
+* **Loss and Damage Field Reporting Form** -> แบบฟอร์มการรายงานความสูญเสียและความเสียหาย
+* **Data Field** -> เขตข้อมูล (Data Field)
+* **Standardized Replacement Cost Catalogs** -> ฐานข้อมูลราคากลางสำหรับการซ่อมแซมและสร้างทดแทน
 
 ## 6. Structural DNA
 - **Traceable Intro**: Start with the audit scale, named service, or concrete finding.
@@ -174,6 +184,15 @@ These rules matter, but they should not compete with the Core Kernel during earl
 - Example preferred transformation:
   - Avoid: "การออกแบบชุดข้อมูล...ไม่ได้เริ่มจาก...แต่เริ่มจาก..."
   - Prefer: "การออกแบบชุดข้อมูล...เริ่มจากข้อมูลที่ ปภ. มีอยู่จริงในระบบงานปัจจุบัน แล้วจึงพิจารณาว่าข้อมูลส่วนใดยังไม่เพียงพอสำหรับการประเมินความเสียหายและความสูญเสีย"
+- **Direct Forward Syntax Over Inverted Conditionals**:
+  - Avoid: "คณะที่ปรึกษาขอเน้นย้ำว่า โครงสร้าง... จะยังไม่สร้างคุณค่าในการใช้งานจริงจนกว่าจะถูกนำไปพัฒนาเป็น..." (Inverted, negative conditional, preachy tone)
+  - Prefer: "โครงสร้างฐานข้อมูลเชิงสัมพันธ์ของ (ร่าง) MVD ทั้ง 6 ตารางจะต้องถูกนำไปพัฒนาเป็นส่วนหนึ่งของโครงสร้างข้อมูลบนแพลตฟอร์ม..." (Direct, positive action)
+- **Domain Subject Anchoring in Titles**:
+  - Never drop core domain nouns in H1/H2 titles for brevity (e.g. `# 3.1 มาตรฐานสากลสำหรับการประเมินความสูญเสียและความเสียหายจากสาธารณภัยและปัญหาของระบบรายงานสาธารณภัยของประเทศไทย` not bare `# 3.1 มาตรฐานสากลและปัญหา...`).
+- **Strict Acronym First-Occurrence Protocol**:
+  - Every institutional acronym on first mention must carry: Full English Name + Acronym + Thai Functional Definition: `กรอบการประเมินความต้องการหลังเกิดภัยพิบัติ (Post-Disaster Needs Assessment: PDNA) สำหรับการประเมินความเสียหายและความต้องการในการฟื้นฟู`.
+- **Ban Colons (:) in Thai Headings**:
+  - Keep headings integrated without Western colon punctuation (`### การทบทวนมาตรฐานสากล` not `### การทบทวนมาตรฐานสากล: การประสาน...`).
 
 ## 7. Anti-AI Shield (Counter-examples)
 - **CRITICAL DON'T**: Start with "อย่างไรก็ตาม..." or "แม้ว่า..." unless the contrast is doing real analytical work.
@@ -191,6 +210,11 @@ These rules matter, but they should not compete with the Core Kernel during earl
 - **DON'T**: Use subjective superlatives like `ข้อเสนอเชิงยุทธศาสตร์ที่สุด` (use `ข้อเสนอเชิงยุทธศาสตร์ที่สำคัญ` instead).
 - **DON'T**: Use passive or pseudo-passive agency like `ถูกออกแบบให้...` when the institutional actor is already known and can be named directly.
 - **DON'T**: Compress by deleting governance content. Cut scaffolding first, not institutional duties, evidence, or conditions of use.
+- **DON'T**: Use inverted negative conditional sentences (`"จะยังไม่...จนกว่า..."`) which sound preachy and awkward in Thai. Use direct forward active phrasing.
+- **DON'T**: Assert empty semantic separations (`"แยกบทบาทระหว่าง X กับ Y"`) when X and Y are already inherently distinct concepts. Anchor the distinction to architectural components (`"ออกแบบองค์ประกอบที่แยกบทบาทชัดเจน"`).
+- **DON'T**: Mechanically append repetitive case study names (e.g. `"...ช่วยปิดช่องว่างที่พบในกรณี จ.พิจิตร"`) to universal recommendation lists. Let recommendations stand self-contained.
+- **DON'T**: Misdiagnose data processing proxy misuse as a semantic classification problem. Distinguish operational reality from vocabulary definitions.
+- **DON'T**: Overclaim national governance scope (`"โครงสร้างข้อมูลของประเทศ"`); strictly anchor deliverables to the commissioning entity (`"แพลตฟอร์มข้อมูลของกรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม"`).
 
 ## 8. Master Implementation Prompt
 > **Writing Mode**: TH-Institutional (v5.0 - Stage-Aware, Evidence-Dense, Institution-Led)

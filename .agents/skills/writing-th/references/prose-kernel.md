@@ -47,6 +47,10 @@ lint finding wins — it is checking the live lexicon, this file is a snapshot.
   at the source: state the actual function first, then the limitation or
   contrast in the next clause or sentence.
 - Avoid: `บริการนี้ถูกออกแบบให้ทำหน้าที่...` → Prefer: `บริการนี้ทำหน้าที่...`
+- Direct Forward Syntax: Never use inverted negative conditionals ("จะยังไม่...จนกว่า..."). State the direct active action ("โครงสร้างข้อมูล X จะต้องถูกนำไปพัฒนาเป็น...").
+- Domain Subject Anchoring in Titles: Never drop the core domain noun in H1/H2 headings for brevity ("...สำหรับการประเมินความสูญเสียและความเสียหาย..." not bare "...และปัญหา...").
+- Acronym First-Occurrence Protocol: Full English Name + Acronym + Thai Functional Definition on first mention.
+- Ban colons (`:`) in Thai headings/subheadings.
 
 ## Anti-AI Shield
 
@@ -55,10 +59,14 @@ lint finding wins — it is checking the live lexicon, this file is a snapshot.
 - Don't use "ระบบ" without naming which system.
 - Don't use hyperbolic marketing words ("ไร้รอยต่อ", "สมบูรณ์แบบ") — describe
   the actual operational workflow or constraint.
+- Don't use empty academic filler like "เชิงประจักษ์" when stating test results ("ผลการทดสอบชี้ให้เห็นว่า" is complete).
+- Don't use theatrical melodrama like "อย่างสิ้นเชิง" (use "แตกต่างกัน").
+- Don't use awkward framework term "แกน" when "องค์ประกอบ" or "ข้อมูลหลัก" is meant.
 - Don't write abstract gap statements without a concrete blocked task,
   service, or example.
 - Don't name only a direction in a recommendation — name the artifact, owner,
   or mechanism.
+- Don't append repetitive case study names to universal recommendation lists.
 - Don't compress multiple service gaps into one dense paragraph when the
   distinctions matter to the reader.
 - Don't pile up composite nouns ("ระดับโครงสร้างข้อมูล", "ชั้นข้อมูลส่วนขยาย")

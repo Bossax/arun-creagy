@@ -298,3 +298,23 @@ real `## 5. Lexicon & Diction` again.*
 - **L5 Document Architecture**:
   - `STR-001` (4-Question High-Altitude Table): Intro maps 4 core questions to project deliverables in a structured 2-column table.
   - `STR-004` (4-Layer System Architecture): Explicit mapping of Web Platform (front) -> IA (nav) -> Data Landscape (assets) -> Data Platform & Governance (engine) + 6-step Modern Data Architecture context.
+
+### 2026-08-29 — Style-pack upgrade from CRDB Exec-Summary Chapter 3 (Sections 3.1–3.4) Human Author Teach-In
+
+**Source of delta**: `chapter_3_human_edits_learning.md` and in-place diff analysis of `ψ/incubate/drafts/crdb-exec-summary-3.*/02_th_draft.md` under direct line-by-line critique by Boss.
+
+#### Multi-Layer Shifts Captured & Promoted
+- **L1/L2 Lexical & Surface Regex**:
+  - **Banned**: `เชิงประจักษ์` (empty filler when used with findings), `อย่างสิ้นเชิง` (dramatic exaggeration), `ฐานราคากลาง` (inaccurate shorthand -> `ฐานข้อมูลราคากลางสำหรับการซ่อมแซมและสร้างทดแทน`), `งานประจำวัน` (collocation error in disaster context), `แกน` (when referring to modular framework components -> `องค์ประกอบ`).
+  - **Regex Gate**: Strict ban on colon (`:`) in Thai headings/subheadings (`^#{2,4}\s+[^:\n]+:[^\n]+`).
+- **L3 Micro-Structure & Anti-AI Shield**:
+  - **Direct Forward Syntax**: Strict ban on inverted negative conditionals (`"จะยังไม่...จนกว่า..."`) which sound preachy and unnatural in Thai. Replaced with direct positive requirements (`"โครงสร้างข้อมูล X จะต้องถูกนำไปพัฒนาเป็น..."`).
+  - **Eliminating Tautological Self-Doubt**: Ban empty assertions of semantic separation (`"แยกบทบาทระหว่าง X กับ Y"`) when X and Y are already distinct words; anchor distinctions to architectural design components (`"ออกแบบองค์ประกอบที่แยกบทบาทชัดเจน"`).
+  - **Purging Repetitive Trailing Case Tags**: Recommendations in Section 3.4 must stand self-contained without mechanically attaching case study names to every bullet.
+- **L4/L5 Structural & Document Architecture**:
+  - `STR-006` (Domain Subject Anchoring in Titles): Strictly prohibit aggressive noun-dropping in H1/H2 headings. Keep full subject domain (`สำหรับการประเมินความสูญเสียและความเสียหายจากสาธารณภัย`).
+  - `STR-007` (Direct Forward Syntax): Structural enforcement of direct active statements over negative conditional syntax.
+  - `STR-008` (Educational Inset Boxes): Insertion of targeted blockquote callout definitions (`> เขตข้อมูล (Data Field) คือ...`) for executive clarity.
+  - **Acronym Protocol**: Enforce Full English + Acronym + Thai Functional Definition on first occurrence.
+  - **Root Cause Accuracy**: Disentangle data processing proxy misuse (relief budget misused as damage proxy) from semantic classification errors.
+
