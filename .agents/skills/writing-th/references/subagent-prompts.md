@@ -8,8 +8,8 @@ This reference defines the canonical system prompts, model tier requirements, co
 
 | Subagent | Primary Role | Recommended Model | Antigravity Model | Claude Model | Ingestion Allowed | Ingestion Prohibited |
 |---|---|---|---|---|---|---|
-| **`th-argument-mapper`** | Stage 1 Argument Construction | High Reasoning | `Model: "pro"` | `claude-sonnet-5` (high effort) | `writing-contract.json`, source evidence, writing plan, `references/artifact-schemas.md`, `STRUCTURAL_RULES_TH.json`; in revision mode also `references/revision-mode.md` and the contract's `prior_draft` | `STYLE_PACK_TH.md`, `LEXICON_TH.json`, `editorial-rubric.md` |
-| **`th-verbalizer`** | Stage 3 Thai Verbalization | Fast / Strong Idiom | `Model: "flash"` (or `"pro"`) | `claude-sonnet-5` | Approved `argument-map.json`, `references/prose-kernel.md`, contract `report_specific_rules`, `target_altitude`, `terminology` | Raw sources, full `STYLE_PACK_TH.md`, `LEXICON_TH.json`, `editorial-rubric.md` |
+| **`th-argument-mapper`** | Stage 1 Argument Construction | High Reasoning | `Model: "pro"` | `claude-sonnet-5` (high effort) | `writing-contract.json`, `plan_slice` sidecar if named (else full writing plan), source evidence, `references/artifact-schemas.md`, `STRUCTURAL_RULES_TH.json`; in revision mode also `references/revision-mode.md` and the contract's `prior_draft` | `STYLE_PACK_TH.md`, `LEXICON_TH.json`, `editorial-rubric.md` |
+| **`th-verbalizer`** | Stage 3 Thai Verbalization | Fast / Strong Idiom | `Model: "flash"` (or `"pro"`) | `claude-sonnet-5` (medium effort — transcription, not argument construction) | Approved `argument-map.json`, `references/prose-kernel.md`, contract `report_specific_rules`, `target_altitude`, `terminology` | Raw sources, full `STYLE_PACK_TH.md`, `LEXICON_TH.json`, `editorial-rubric.md` |
 | **`th-editorial-reviewer`** | Stage 5 Clean-Context Review | High Reasoning (Independent) | `Model: "pro"` | `claude-sonnet-5` (high effort) | Approved `writing-contract.json`, approved `argument-map.json`, drafted prose, `references/editorial-rubric.md` | Raw sources (unless spot-checking claim), full `STYLE_PACK_TH.md`, drafting reasoning |
 
 ---
@@ -31,7 +31,12 @@ no matter how good the verbalization stage is.
 
 ## What you read
 - The approved writing-contract.json beside your output path (note target_altitude and report_specific_rules).
-- The source evidence and any writing plan the contract names.
+- If the contract names a plan_slice, read that sidecar first — it already holds
+  the section's brief, the writing plan's global rules block, and the relevant
+  evidence-table rows. Fall back to the full writing plan only if the slice is
+  visibly insufficient for a unit.
+- The source evidence and, when no plan_slice is named, the full writing plan
+  the contract names.
 - references/artifact-schemas.md for the exact argument-map.json shape.
 - ψ/memory/style/STRUCTURAL_RULES_TH.json — apply any mandatory structural transformations matching the contract's target_altitude, scope, or section_job (e.g. STR-001 for executive intro tables, STR-002 for framework enumeration, STR-003 for UX finding-to-design bridges).
 - references/revision-mode.md AND the draft named in the contract's prior_draft —
@@ -215,15 +220,62 @@ In Antigravity, invoke each stage via `invoke_subagent`:
 
 ### Claude Code Invocation
 
-In Claude Code, invoke via pre-defined `.claude/agents/*.md`:
+In Claude Code, invoke via pre-defined `.claude/agents/*.md`. **Stage 1 and
+Stage 3 have three valid invocation modes, chosen per batch size at Stage 0 and
+recorded in the contract's `execution_tier`. Stage 5 has exactly one, always.**
+
+**Why three modes exist for Stage 1/3 but not Stage 5**: `th-argument-mapper`'s
+and `th-verbalizer`'s "must never load" lists (`STYLE_PACK_TH.md`,
+`LEXICON_TH.json`, `editorial-rubric.md`, raw sources for the verbalizer) are
+boundaries on *what content enters the stage*, not on whether the stage runs in
+a freshly-booted subagent. If the orchestrator's own context is already clean of
+that material, a `fork` — which inherits the parent's context and shares its
+prompt cache, but keeps its own tool output out of the parent — violates
+nothing, and running the stage directly in the orchestrator's own turn violates
+even less. `th-editorial-reviewer`'s isolation is different in kind: its system
+prompt states *"you have no memory of how this draft was produced and no access
+to the drafting agent's reasoning — that is the point."* A fork inherits exactly
+that reasoning by design, and inline execution shares it even more directly.
+Both are a Stage 5 violation, at every tier, no exception.
+
+**Tier table** (section count is the batch being run through Stage 1–3 in this
+pass, not the whole document):
+
+| Batch | Stage 1 | Stage 3 | Stage 5 |
+|---|---|---|---|
+| **Small** (1–2 sections) | orchestrator runs it directly — no subagent call | orchestrator runs it directly — no subagent call | fresh `Agent()` |
+| **Medium** (3–6 sections) | `fork` | `fork` | fresh `Agent()` |
+| **Large** (7+, or spanning sessions) | `fork`, checkpoint between sections | `fork` | fresh `Agent()` |
+
+Small stays inline because the v6 architecture treats the argument map as a
+compression boundary — the parent is meant to hold only paths, verdicts, and
+hashes, never content. A one- or two-section batch doesn't accumulate enough in
+the parent's context for that to matter; a larger one does, which is why medium
+and large use `fork` instead — same cache-reuse saving, but tool output stays
+out of the parent.
+
+**Precondition, checked before choosing fork or inline, every time**: the
+orchestrator's own context must be clean of `STYLE_PACK_TH.md`,
+`LEXICON_TH.json`, and `editorial-rubric.md`. If the orchestrator has read any of
+that material for its own reasoning during this session, Stage 1/3 fall back to
+fresh `Agent()` calls regardless of what the tier table says — record
+`orchestrator_clean: false` and `stage_1_3_mode: "fresh"` in `execution_tier`,
+and say so before proceeding.
 
 ```text
-// Stage 1
-Agent(subagent_type: "th-argument-mapper", prompt: "Build argument-map.json at ...")
+// Small batch (1-2 sections): orchestrator performs Stage 1 and Stage 3
+// directly in its own turn, using the same th-argument-mapper / th-verbalizer
+// system prompts as a self-instruction, not a subagent call. No Agent() call
+// for these two stages.
 
-// Stage 3
+// Medium/large batch, precondition met: fork
+Agent(subagent_type: "fork", prompt: "Build argument-map.json at ... following th-argument-mapper's system prompt.")
+Agent(subagent_type: "fork", prompt: "Draft prose from argument-map.json at ... following th-verbalizer's system prompt.")
+
+// Precondition failed (orchestrator's context is not clean): fresh, any tier
+Agent(subagent_type: "th-argument-mapper", prompt: "Build argument-map.json at ...")
 Agent(subagent_type: "th-verbalizer", prompt: "Draft prose from argument-map.json at ...")
 
-// Stage 5
+// Stage 5 — always, every tier, never fork, never inline
 Agent(subagent_type: "th-editorial-reviewer", prompt: "Review draft and argument-map at ...")
 ```

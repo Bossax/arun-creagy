@@ -29,6 +29,8 @@ be absolute or repository-relative. Timestamps use ISO 8601.
   "reference_samples": ["path/to/approved-sample.md"],
   "prior_draft": "path/to/existing-draft.md",
   "prior_approval": {"approved_by": "Boss", "basis": "what the earlier contract's approval rested on"},
+  "plan_slice": "path/to/plan-slice.md",
+  "execution_tier": {"tier": "medium", "stage_1_3_mode": "fork", "orchestrator_clean": true, "chosen_by": "Boss"},
   "approval": {"status": "approved", "approved_by": "Boss", "approved_at": "2026-08-28T01:00:00+07:00"}
 }
 ```
@@ -46,6 +48,24 @@ existing draft; its presence is what puts Stage 1 into revision mode (see
 [revision-mode.md](revision-mode.md)). `prior_approval` carries forward what the
 superseded contract's approval rested on, so earlier human decisions stay visible
 after `approval` is reset for the new run.
+
+`plan_slice` is optional: the path to a sidecar Stage 0 writes beside the contract,
+holding the section's brief, the writing plan's global rules block, and the
+relevant evidence-table rows it already extracted to populate
+`report_specific_rules`. `null` when no writing plan existed for this run. When
+present, Stage 1 reads it instead of re-deriving the same slice from the full
+writing plan on every call; Stage 1 still falls back to the full plan if the slice
+is visibly insufficient for a unit.
+
+`execution_tier` records how Stage 1/3 actually ran, decided at Stage 0 (see the
+Claude Code execution-tier table in `SKILL.md`) and confirmed with the human:
+`tier` is `small` (1–2 sections), `medium` (3–6), or `large` (7+, or spanning
+sessions); `stage_1_3_mode` is `inline`, `fork`, or `fresh`; `orchestrator_clean`
+records whether the orchestrator's context was free of `STYLE_PACK_TH.md`,
+`LEXICON_TH.json`, and `editorial-rubric.md` at the time of the decision —
+`orchestrator_clean: false` forces `stage_1_3_mode: "fresh"` regardless of what
+the tier alone would suggest. `stage_5_mode` is never a field here: Stage 5 is
+always a fresh, non-fork, non-inline subagent call, at every tier.
 
 ## `editorial-review.json`
 

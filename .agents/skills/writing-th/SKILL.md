@@ -1,7 +1,7 @@
 ---
 name: writing-th
 description: >
-  v6.0.0 L-SKLL | Draft, revise, and quality-gate Thai institutional writing.
+  v6.2.0 L-SKLL | Draft, revise, and quality-gate Thai institutional writing.
   Use for Thai policy reports, executive summaries, articles, and formal letters
   when source fidelity, audience fit, and explicit merge approval matter.
 metadata:
@@ -9,7 +9,7 @@ metadata:
   installer: project
 ---
 
-# /writing-th — Thai Institutional Writing Harness v6.0
+# /writing-th — Thai Institutional Writing Harness v6.2
 
 Turn technical evidence into decision-ready Thai prose without confusing a
 mechanical lint pass with editorial quality — and without asking one context
@@ -55,11 +55,11 @@ See [references/subagent-prompts.md](references/subagent-prompts.md) for canonic
 | Stage | Runs as | Loads | Must never load |
 |---|---|---|---|
 | 0 Contract | Parent + `AskUserQuestion` / `ask_question` | plan index, source paths, writing plan (if any) | sources, full style pack |
-| 1 Argument map | `th-argument-mapper` (`invoke_subagent` / `Agent`) | sources, writing plan (if any), argument schema, contract `target_altitude`, plus `prior_draft` + revision-mode reference when revising | style pack, lexicon, rubric |
+| 1 Argument map | Tier-dependent — orchestrator (small), `fork` (medium/large), or `th-argument-mapper` (`invoke_subagent` / fallback `Agent`) — see Claude Code execution tiers below | `plan_slice` sidecar if named (else writing plan), sources, argument schema, contract `target_altitude`, plus `prior_draft` + revision-mode reference when revising | style pack, lexicon, rubric |
 | 2 Blueprint gate | Parent (Plan Mode / Markdown Artifact + `ask_question`) | rendered map summary | everything else |
-| 3 Verbalization | `th-verbalizer` (`invoke_subagent` / `Agent`) | `argument-map.json`, prose kernel, contract `report_specific_rules` & `target_altitude` | raw sources, full pack, rubric |
+| 3 Verbalization | Tier-dependent — orchestrator (small), `fork` (medium/large), or `th-verbalizer` (`invoke_subagent` / fallback `Agent`) — see Claude Code execution tiers below | `argument-map.json`, prose kernel, contract `report_specific_rules` & `target_altitude` | raw sources, full pack, rubric |
 | 4 Mechanical gate | CLI only | — | nothing enters a model context |
-| 5 Editorial review | `th-editorial-reviewer` (`invoke_subagent` / `Agent`) | draft, argument map, contract, rubric | sources, style pack |
+| 5 Editorial review | `th-editorial-reviewer` (`invoke_subagent` / `Agent`) — fresh subagent, never fork, never inline, at every tier | draft, argument map, contract, rubric | sources, style pack, drafting reasoning |
 | 6 Merge | CLI + parent | hashes, verdicts | — |
 
 `LEXICON_TH.json` should never enter a model context at any stage —
@@ -73,6 +73,50 @@ See [references/subagent-prompts.md](references/subagent-prompts.md) for canonic
 | **Subagent Spawning** | `invoke_subagent(Role=..., Model="pro"|"flash")` | `Agent(subagent_type="...")` | Isolated prompt session |
 | **PreToolUse Hook Gate** | Tool-Execution Reflection Lock + Pre-check script | `PreToolUse` hook (`settings.local.json`) | Shell wrapper / pre-commit |
 
+### Claude Code execution tiers (Stage 1 / Stage 3 only)
+
+This subsection applies to the Claude Code lane only — Antigravity and Codex
+invocation is unchanged from the table above.
+
+Stage 1 and Stage 3's "must never load" restrictions are about *content*, not
+about whether the stage runs in a fresh subagent. Stage 5's restriction is about
+*not sharing the drafting agent's own reasoning* — a fork inherits that
+reasoning by design, so Stage 5 stays a fresh, non-fork `Agent()` call at every
+tier, no exception. Full detail and invocation snippets are in
+[references/subagent-prompts.md](references/subagent-prompts.md) §3.
+
+| Batch | Stage 1 | Stage 3 | Stage 5 |
+|---|---|---|---|
+| **Small** (1–2 sections) | orchestrator runs it directly, no subagent | orchestrator runs it directly, no subagent | fresh `Agent()` |
+| **Medium** (3–6 sections) | `fork` | `fork` | fresh `Agent()` |
+| **Large** (7+, or spanning sessions) | `fork`, checkpoint between sections | `fork` | fresh `Agent()` |
+
+At Stage 0, after the contract is approved: count the sections in this batch,
+recommend the matching tier, and present it via `AskUserQuestion` — recommended
+tier first, the other two as alternatives, each labelled with its expected
+subagent-call count. This is the pre-batch check-in — confirming with the human
+before launching an expensive multi-section run, not just picking silently.
+Record the answer in the contract's `execution_tier`.
+
+**Precondition, checked every time, overrides the tier**: fork or inline is only
+safe when the orchestrator's own context is clean of `STYLE_PACK_TH.md`,
+`LEXICON_TH.json`, and `editorial-rubric.md`. If the orchestrator has read any of
+that material for its own reasoning this session, Stage 1/3 fall back to fresh
+`Agent()` calls regardless of tier — record `orchestrator_clean: false` and say
+so before proceeding.
+
+**What this does not fix**: there is no way to check remaining 5-hour quota from
+inside a session — the tier table bounds the damage of a limit hit (a clean
+stopping point between sections instead of several simultaneous mid-write
+failures), it cannot predict one. And the large-batch checkpoint is guidance,
+not a mechanical gate — nothing stops every call firing in one burst except the
+Stage 0 prompt actually running and being honored.
+
+**Exploration scoping**: default to one Explore agent at moderate depth for
+pre-Stage-0 reconnaissance; escalate to more only if it returns insufficient.
+Three parallel maximum-thoroughness Explore agents before Stage 0 have been the
+single largest cost block in at least one prior run, before any drafting began.
+
 ### Stage 0 — Contract: ask, don't assume
 
 A writing plan may or may not already exist for this unit. Use
@@ -80,6 +124,11 @@ A writing plan may or may not already exist for this unit. Use
 
 - **If a writing plan exists**: it is the primary input to Stage 1. Use `oracle_search` /
   `oracle_trace` to retrieve the relevant slice. **MANDATORY**: Explicitly scan the writing plan for a global/section rules block (such as Section 10 / "ข้อกำหนดรูปแบบการเขียน"), active actor identity (e.g. "คณะที่ปรึกษา" as the analytical subject), and altitude constraints. Extract and record them in `report_specific_rules`.
+  **Also write this same extracted material** — the section's brief, the global
+  rules block, and the relevant evidence-table rows — to a `plan-slice.md`
+  sidecar beside the contract, and record its path in the contract's
+  `plan_slice` field. Stage 1 reads this instead of re-deriving the same slice
+  from the full multi-hundred-KB plan file on every call.
 - **If none exists (or writing plan has no rules section)**: Use `ask_question` / `AskUserQuestion` to explicitly clarify:
   1. Actor convention (e.g., "คณะที่ปรึกษา" vs "กรมฯ" as subject)
   2. Tone & Persona (authoritative institutional vs technical brief)
@@ -95,10 +144,23 @@ paths, and reference samples. Record which writing-plan path was taken in
 Present a compact contract summary and stop for human approval. Record that
 approval in the contract.
 
+**Claude Code only**: once approved, also decide the execution tier for Stage
+1/3 (see "Claude Code execution tiers" above) and record it in the contract's
+`execution_tier`. This is a separate confirmation from the contract approval —
+it is about how the batch runs, not what it says.
+
 ### Stage 1 — Argument map
 
-Spawn `th-argument-mapper` (Claude Code `Agent("th-argument-mapper")` or Antigravity `invoke_subagent(Role="TH Argument Mapper", Model="pro")`) with the approved contract, the source paths, and
-the writing plan if one exists. It produces `argument-map.json`: a Minto
+**Claude Code**: run per `execution_tier.stage_1_3_mode` — the orchestrator
+performs this stage directly (small), `Agent(subagent_type: "fork", ...)`
+(medium/large with a clean orchestrator context), or fall back to
+`Agent(subagent_type: "th-argument-mapper", ...)` when the precondition fails.
+See [references/subagent-prompts.md](references/subagent-prompts.md) §3 for the
+exact snippets. **Antigravity**: `invoke_subagent(Role="TH Argument Mapper",
+Model="pro")`, always fresh.
+
+Whichever mode runs, it works from the approved contract, the `plan_slice`
+sidecar if one exists (else the writing plan), and the source paths. It produces `argument-map.json`: a Minto
 governing thought, an SCQA narrative arc, and ordered Toulmin argument units
 — each with `claim`, `grounds`, `warrant`, `application_to_design`, and a
 `supports` value that must partition `governing_thought_components`.
@@ -135,7 +197,15 @@ else unlocks Stage 3.
 
 ### Stage 3 — Verbalization
 
-Spawn `th-verbalizer` (Claude Code `Agent("th-verbalizer")` or Antigravity `invoke_subagent(Role="TH Verbalizer", Model="flash")`) with the approved `argument-map.json`,
+**Claude Code**: run per the same `execution_tier.stage_1_3_mode` decided at
+Stage 0 — orchestrator direct (small), `fork` (medium/large, clean context), or
+`Agent(subagent_type: "th-verbalizer", ...)` when the precondition fails.
+Runs at medium reasoning effort — `references/prose-kernel.md` frames this stage
+as transcription of an already-approved argument, not argument construction, so
+Stage 1's "do not economize" instruction does not carry over here. **Antigravity**:
+`invoke_subagent(Role="TH Verbalizer", Model="flash")`, always fresh.
+
+Whichever mode runs, it works from the approved `argument-map.json`,
 [references/prose-kernel.md](references/prose-kernel.md), and the contract's `report_specific_rules`, `target_altitude`, and `terminology` — never the
 raw sources, never the full `STYLE_PACK_TH.md`. Treat each argument unit's
 `claim` / `grounds` / `warrant` / `application_to_design` as the paragraph's
@@ -178,9 +248,12 @@ receipt with a disposition. A green result here means only **mechanical pass**.
 
 ### Stage 5 — Editorial review
 
-Default to `th-editorial-reviewer` run as an independent clean-context subagent call (Claude Code `Agent("th-editorial-reviewer")` or Antigravity `invoke_subagent(Role="TH Editorial Reviewer", Model="pro")`) — never
-a shared/forked context that inherits the parent's drafting history, which
-destroys the clean-context independence the rubric depends on. A genuinely
+Always `th-editorial-reviewer` run as an independent clean-context subagent call (Claude Code `Agent("th-editorial-reviewer")` or Antigravity `invoke_subagent(Role="TH Editorial Reviewer", Model="pro")`) — at every
+batch-size tier, with no exception. Never a shared/forked context, and never run
+inline by the orchestrator: both inherit the parent's drafting history and
+reasoning, which destroys the clean-context independence the rubric depends on.
+This is the one stage the Claude Code execution-tier table above never touches —
+inline and fork are cost levers for Stage 1/3 only. A genuinely
 independent reviewer is one subagent call away; the v5.0
 `reviewer_mode: self, assurance: degraded` fallback should be unreachable in
 practice.
