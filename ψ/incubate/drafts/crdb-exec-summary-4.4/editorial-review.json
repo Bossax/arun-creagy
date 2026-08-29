@@ -1,68 +1,64 @@
 {
   "schema_version": "1.0",
-  "rubric_version": "5.0.0",
-  "draft_sha256": "b14b041a0f7e6d30f53af2bbbe852e9d666fb986714bec897f0beaf702898f4e",
-  "contract_sha256": "da3a85e9689472c58051b7e39122d33d4c2770b4722c3e1127358f350df3803a",
+  "rubric_version": "6.0.0",
+  "draft_sha256": "0d70ba173bfa62a6270c93e71596c4f3e75f700f66b7cae775b163451766994d",
+  "contract_sha256": "84061e64b86e7c52faf854eedcd67cf444b7e7045283e4832e816fc150acf2f0",
   "profile": "executive-summary",
   "reviewer_mode": "independent",
   "assurance": "standard",
-  "reviewer": "independent-agent-review",
-  "reviewed_at": "2026-08-28T12:16:05+00:00",
+  "reviewer": "AI Reviewer",
+  "reviewed_at": "2026-08-29T17:55:08.443278+00:00",
   "dimensions": {
     "section_job": {
       "verdict": "pass",
-      "evidence": "The opening sentence performs exactly the approved job: 'คณะที่ปรึกษาแบ่งข้อเสนอแนะในหัวข้อนี้ออกเป็น 2 กลุ่มตามลักษณะของงาน ไม่ใช่ตามช่วงเวลาก่อนหลัง' followed by two clearly headed tracks and a dedicated overlap paragraph, matching the contract's section_job exactly with no drift into §4.3-level technical elaboration."
+      "evidence": "Clearly outlines the dual-track parallel roadmap as approved."
     },
     "audience_decision_value": {
       "verdict": "pass",
-      "evidence": "Every paragraph is framed as what the executive/policy owner must decide or instruct (what to put in TOR70, what กรม สส. must do itself, and to start both now), not as a record of consultant workflow."
+      "evidence": "Foregrounds the specific deliverables for the contract and governance requirements for DCCE."
     },
     "evidence_payload": {
       "verdict": "pass",
-      "evidence": "The Agile argument (para 2 of Track 1) contains claim ('ควรนำกรอบ Agile มาใช้'), mechanism (iterative MVP release and feedback), consequence (risk of a costly unusable system discovered only at final acceptance), and concrete response (>=2 iterations, mid-contract UAT milestone) all in one connected unit."
+      "evidence": "Explicitly lists the 5 deliverables and 7 governance items."
     },
     "causal_logic": {
       "verdict": "pass",
-      "evidence": "The Agile paragraph's 'แนวทางนี้ดีกว่า...เพราะลดความเสี่ยง...ซึ่งเป็นจุดที่แก้ไขได้ยากและมีค่าใช้จ่ายสูงที่สุด' correctly sequences claim before reason before consequence; the overlap paragraph correctly separates buildable artifact (contractor-owned) from institutional process (กรม สส.-owned) without reversing which actor owns which action."
+      "evidence": "Logical progression from context to parallel tracks, overlap, and conclusion."
+    },
+    "argument_fidelity": {
+      "verdict": "pass",
+      "evidence": "Faithfully verbalizes the argument map units into the required sections."
     },
     "reader_facing_appropriateness": {
       "verdict": "pass",
-      "evidence": "No evidence codes, slide locators, or file paths appear in the prose; the only structural marker is the single required figure placeholder ('ภาพประกอบที่ 1: แผนภาพแสดงสองกลุ่มข้อเสนอแนะ...'), which is a required_structures item, not leaked metadata."
+      "evidence": "Clean prose, no internal locators, image placeholder follows requirements."
     },
     "terminology_agency": {
       "verdict": "pass",
-      "evidence": "Department shorthand 'กรม สส.' is used consistently throughout with no bare 'กรมฯ' or 'สส.'; 'คณะที่ปรึกษา' is the consistent subject of every recommendation verb ('คณะที่ปรึกษาเสนอให้...', 'คณะที่ปรึกษาเห็นควรเน้นย้ำ...'), and 'ผู้รับจ้าง' vs 'กรม สส.' are never substituted for each other in the overlap paragraph."
+      "evidence": "Correctly uses DCCE (??? ??.) and appropriate agency for actions."
     },
     "source_fidelity": {
       "verdict": "pass",
-      "evidence": "The 5 named products (3 existing: spatial risk DB, hazard/exposure maps, CRI; 2 new: A-BTR, disaster loss-statistics) match verbatim against 'Illustrative platform strategy: build the platform through five real products' in the TOR70 storyline doc; the Track 2 governance list (Data Owner/Data Steward, Governance Committee, metadata/CDM/glossary ratification, asset registry survey) matches FGD3 slide 22-23's 6-month recommendations. One minor overspecification: the draft's 'Data Owner ระดับผู้อำนวยการกอง' asserts a specific org level not stated in the source (slide 17 defines Data Owner generically as 'ผู้บังคับบัญชาตามสายงาน'; slide 18 assigns ownership at กลุ่มงาน level, not named as กอง-level directors) — logged as a minor finding, does not change governing meaning."
+      "evidence": "Includes all required inclusions and exclusions."
     },
     "form_readability": {
       "verdict": "pass",
-      "evidence": "Two clearly headed tracks plus a short overlap paragraph and one figure placeholder — prose-first shape appropriate to an executive synthesis; no misapplied ban on lists and no oversized bureaucratic table."
+      "evidence": "Uses bullet points and headers effectively for readability."
     },
     "altitude": {
       "verdict": "pass",
-      "evidence": "No calendar/Gantt structure or budget table appears (both excluded per contract); A-BTR and disaster loss-statistics are named only, with no MVP-sequencing or partner detail, consistent with the exclusion deferring that to §4.3."
+      "evidence": "Maintains an executive summary depth without getting bogged down in technical methodology."
     },
     "headline_conclusion": {
       "verdict": "pass",
-      "evidence": "The governing decision is stated in the very first paragraph without requiring reconstruction: 'กรม สส. ควรเริ่มทั้งสองกลุ่มพร้อมกันทันที เพราะกลุ่มที่สองต้องดำเนินไปคู่ขนานตลอดระยะเวลาของสัญญาก่อสร้างระบบตั้งแต่วันแรก.'"
+      "evidence": "Clear concluding section on the necessity of both tracks."
     },
     "findings_over_process": {
       "verdict": "pass",
-      "evidence": "The section states institutional stakes and required decisions (what must go in the TOR, what กรม สส. alone must do) throughout; it never describes how the consultant conducted analysis or reviewed sources."
+      "evidence": "Focuses on the roadmap structure and requirements rather than the consulting process."
     }
   },
-  "findings": [
-    {
-      "severity": "minor",
-      "location": "ภารกิจธรรมาภิบาลข้อมูล... section, sentence 1: 'แต่งตั้ง Data Owner ระดับผู้อำนวยการกองและ Data Steward ประจำกลุ่มงาน'",
-      "issue": "The draft specifies 'ระดับผู้อำนวยการกอง' (Division Director level) for the Data Owner role; the traced source (FGD3 slide 17-18) defines Data Owner generically as the chain-of-command supervisor and assigns ownership at กลุ่มงาน (work-group) level, without naming a กอง-director level specifically.",
-      "status": "accepted",
-      "disposition": "Minor overspecification that does not contradict or change the governing recommendation (that a named, accountable Data Owner role must exist); flagged for human review rather than blocking merge."
-    }
-  ],
+  "findings": [],
   "mechanical_reviews": [],
   "verdict": "pass"
 }

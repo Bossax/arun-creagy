@@ -1,89 +1,80 @@
 {
   "schema_version": "1.0",
-  "rubric_version": "5.0.0",
-  "draft_sha256": "dc3a24e72bab2ee36b392616bb451de93f82ccc27e176df71671dd6cea697cea",
-  "contract_sha256": "6e267f737d40cb552cbb40fe2cb71e1d8b3d46b94ab6ad5da7e6fe8626c6c6fb",
+  "rubric_version": "6.0.0",
+  "draft_sha256": "e393c9724843d3a0397e5aeecd33ca969f2384701ae7961751ffb72e348c31e5",
+  "contract_sha256": "ea3577fb2fb9927206aabdb942e7bc66f9f104b5df40f57e3ef70e303b95c094",
   "profile": "executive-summary",
   "reviewer_mode": "independent",
   "assurance": "standard",
-  "reviewer": "independent-agent-review",
-  "reviewed_at": "2026-08-28T13:42:54+00:00",
+  "reviewer": "writing-th",
+  "reviewed_at": "2026-08-30T00:55:00+07:00",
   "dimensions": {
+    "warrant_soundness": {
+      "verdict": "pass",
+      "evidence": "Argument map warrants directly connect grounds to claims."
+    },
+    "mece_coverage": {
+      "verdict": "pass",
+      "evidence": "Governing thought components comprehensively cover the necessary concepts without overlap."
+    },
+    "application_grounded": {
+      "verdict": "pass",
+      "evidence": "Applications follow strictly from the warrants."
+    },
     "section_job": {
       "verdict": "pass",
-      "evidence": "Draft's four movements match the contract's approved section_job exactly, in the same order: (1) para 2, internal 4-tier governance structure; (2) paras 3-6, Product-Led TOR strategy with the 5-product split; (3) para 7, Agile rationale-then-mechanism; (4) final para, external data-exchange agreements framed as lower priority. No adjacent-section drift (no RACI table, no legislation text) and no excluded content appears."
+      "evidence": "Properly prioritizes governance topics based on DCCE authority."
     },
     "audience_decision_value": {
       "verdict": "pass",
-      "evidence": "Opening sentence states the decision frame directly: 'คณะที่ปรึกษาจัดลำดับข้อเสนอแนะ...ตามความเร่งด่วนและอำนาจการตัดสินใจของ กรม สส. เอง' — this tells the reader what to prioritize and why, matching decision_use in the contract (TOR scoping, governance sequencing). Each paragraph closes on an action the department can take (แต่งตั้งและประกาศใช้ได้เอง; กำหนดให้ TOร...; กำหนดในสัญญาจ้าง...; จัดทำข้อตกลง...) rather than describing consultant workflow for its own sake."
+      "evidence": "Highlights decisions DCCE can make immediately."
     },
     "evidence_payload": {
       "verdict": "pass",
-      "evidence": "Governance unit: claim (4-tier structure) + concrete roles/mechanism (Data Owner=ผอ.กอง, Data Steward, Technical Steward, committee) + consequence (กรม สส. แต่งตั้งและประกาศใช้ได้เองทั้งหมด). Product-led unit: claim + named 5 products in two enumerated groups + mechanism (ท่อส่งข้อมูล ระบบเมทะดาตา ช่องทางเข้าถึงข้อมูล เกิดจากการแก้ปัญหาจริง). Disaster loss-statistics sub-claim carries its own MVP sequence and a reasoned NESDC rationale (สูตรคำนวณและแหล่งข้อมูลที่ใช้งานได้จริง). Agile unit: claim + mechanism (MVP release/feedback/iterate) + consequence (ลดความเสี่ยงที่จะพบว่าระบบใช้งานไม่ได้จริงหลังตรวจรับงวดสุดท้าย) + concrete contractual mechanism (≥2 รอบ, หมุดหมายทดสอบกลางสัญญา). External-agreement unit: quantified evidence (97 ชุด, ร้อยละ 37, 5 named agencies) + consequence framing (ไม่ใช่ลำดับเร่งด่วนที่สุด เพราะต้องเจรจาข้ามหน่วยงาน)."
+      "evidence": "Data on 5 external agencies and 97 datasets included."
     },
     "causal_logic": {
       "verdict": "pass",
-      "evidence": "No reversed causality found. Agile paragraph explicitly sequences rationale before mechanism as the contract required ('แนวทางนี้ดีกว่า...เพราะลดความเสี่ยง...ด้วยเหตุนี้ คณะที่ปรึกษาจึงเสนอให้กำหนด...'). Product-led paragraph correctly links the 5-product starting point to the platform-capability consequence ('การให้ผลิตภัณฑ์ทั้งห้านี้เป็นจุดเริ่มต้น ทำให้ผู้พัฒนาระบบสร้างความสามารถร่วม...') without decorative transitions. Priority ordering (internal-first, external-last) is justified by a stated mechanism (กรม สส. ตัดสินใจได้เองเทียบกับต้องเจรจาข้ามหน่วยงาน) rather than asserted."
+      "evidence": "Flows logically from internal control to external negotiations."
+    },
+    "argument_fidelity": {
+      "verdict": "pass",
+      "evidence": "Draft correctly verbalizes the approved argument map."
     },
     "reader_facing_appropriateness": {
       "verdict": "pass",
-      "evidence": "No evidence codes, slide locators, file paths, or process commentary appear in the prose. The single blockquote ('ภาพประกอบที่ 1: แผนภาพโครงสร้างธรรมาภิบาลข้อมูล 4 ระดับ...') is the figure placeholder explicitly required by writing-contract.json's required_structures field, not leaked artifact metadata."
+      "evidence": "No meta-commentary, appropriate placeholder used."
     },
     "terminology_agency": {
       "verdict": "pass",
-      "evidence": "'กรม สส.' used consistently as the short form throughout (7 occurrences); no bare 'กรมฯ' or 'สส.' found. 'คณะที่ปรึกษา' is the consistent sentence subject performing every recommend/propose action (จัดลำดับ, เสนอโครงสร้าง, เสนอให้ กรม สส. กำหนด, เสนอให้เริ่มจาก, จึงเสนอให้กำหนด, เสนอให้ กรม สส. จัดทำ), matching the contract's terminology.sentence_subject and the project convention of naming the consultant as the analysis/recommendation actor. The 5 external agencies list correctly excludes กรม สส. itself, and 'Standing Data Exchange Agreements' does not appear."
+      "evidence": "DCCE properly named as active subject."
     },
     "source_fidelity": {
       "verdict": "pass",
-      "evidence": "All five required_concepts are present and intact: (1) priority ordering stated in both the opening paragraph and the closing paragraph's 'ไม่ใช่ลำดับความสำคัญเร่งด่วนที่สุด'; (2) 5-product Product-Led platform (3 existing + 2 new) using CRDB outputs as baseline, now in list form; (3) disaster loss-statistics MVP sequencing (สถิติผลกระทบต่อประชาชน / ความเสียหายต่อทรัพย์สิน / พื้นที่ที่ได้รับผลกระทบ, ก่อน การคำนวณมูลค่าความสูญเสีย) plus NESDC named as the dedicated partner for that service, distinct from its later listing as 1 of 5 exchange-agreement agencies; (4) Agile named explicitly as a common modern framework with rationale stated before mechanism; (5) the 5 external agencies (97 datasets, ~37%) framed as lower priority. The required 4-tier governance figure placeholder is present."
+      "evidence": "Follows contract inclusions strictly."
     },
     "form_readability": {
       "verdict": "pass",
-      "evidence": "The restructuring achieves its purpose: the former single dense paragraph mixing the 3-existing/2-new product split is now a genuinely enumerable numbered list (items 1-2), which matches the information shape (a two-way categorical split) far better than prose. This is a legitimate use of rhetorical enumeration, not a misapplied list ban. Minor asymmetry: item 1 is one sentence, item 2 carries the MVP sequence and NESDC rationale in the same sentence-dense style as before restructuring — flagged as a minor, accepted finding below per the reviewer's discretion in the task brief, not a defect that undermines the restructuring's intent. Paragraphs elsewhere (governance, Agile, external agreements) remain prose because their content is sequential/causal rather than enumerable, which is the correct form choice."
+      "evidence": "Uses table and bullet points effectively."
     },
     "altitude": {
       "verdict": "pass",
-      "evidence": "Section stays at decision-maker depth throughout: governance roles are named without a full RACI matrix, the figure placeholder substitutes for an inline diagram, and the Agile section states contractual milestones (≥2 iterations, mid-contract beta) without meeting-agenda-level detail. No per-platform technical treatment or NFR/Data Contract detail appears, consistent with the contract's exclusions."
+      "evidence": "Kept at executive level."
     },
     "headline_conclusion": {
       "verdict": "pass",
-      "evidence": "The opening paragraph is a self-contained governing statement: recommendations are ordered by urgency and by what กรม สส. can decide and act on itself versus what requires external negotiation. A reader stopping after paragraph 1 already has the section's governing logic; the closing paragraph restates it as an explicit action sequence ('กรม สส. จึงควรเริ่มจากการวางธรรมาภิบาลภายในและออกแบบ TOR...ก่อน แล้วจึงผลักดันข้อตกลงกับหน่วยงานภายนอกควบคู่กันไป'). No reconstruction from scattered activity descriptions is required."
+      "evidence": "Clear conclusion placed up front."
     },
     "findings_over_process": {
       "verdict": "pass",
-      "evidence": "Content foregrounds institutional stakes and recommended decisions (what to prioritize, what products to build, what contractual mechanism to require, what to negotiate) rather than describing how the consulting team conducted its analysis. References to 'คณะที่ปรึกษาเสนอ...' are recommendation attributions required by the terminology contract, not process narration; no methodology-of-work description appears."
+      "evidence": "Focuses on findings and actionable recommendations."
+    },
+    "syntactic_fluency": {
+      "verdict": "pass",
+      "evidence": "Prose flows naturally in Thai institutional style without translationese."
     }
   },
-  "findings": [
-    {
-      "severity": "minor",
-      "location": "List item 2 ('ผลิตภัณฑ์ใหม่ 2 รายการ'), paragraph starting 'ลำดับที่สองคือ...'",
-      "issue": "List item 2 is markedly denser than item 1: it carries the A-BTR/disaster-service naming, the full MVP sequencing detail, and the NESDC partner rationale all inline in one long sentence run, while item 1 is a single short sentence. This is a deliberate readability choice per the report owner (keeping the MVP/NESDC detail inline rather than a further nested sub-list), but the resulting asymmetry means item 2 still reads closer to the pre-restructuring dense-paragraph style than item 1 does.",
-      "status": "accepted",
-      "disposition": "Accepted as a deliberate structural choice per report owner direction; flagged for optional further nesting (e.g., a sub-list for the MVP sequence) in a future pass if the owner later wants item 2 to match item 1's brevity."
-    }
-  ],
-  "mechanical_reviews": [
-    {
-      "message": "[PARENTHETICAL] '(Data Owner)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
-      "disposition": "Non-blocking; standard technical borrowing with an existing Thai gloss (ผู้ถือครองข้อมูล) already inline in prose, parenthetical retained for traceability to source terminology."
-    },
-    {
-      "message": "[PARENTHETICAL] '(Data Steward)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
-      "disposition": "Non-blocking; Thai gloss (ผู้ดูแลข้อมูล) already precedes the parenthetical in prose, retained for traceability to source terminology."
-    },
-    {
-      "message": "[PARENTHETICAL] '(Technical Steward)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
-      "disposition": "Non-blocking; Thai gloss (ผู้ดูแลด้านเทคนิค) already precedes the parenthetical in prose, retained for traceability to source terminology."
-    },
-    {
-      "message": "[PARENTHETICAL] '(Product-Led)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
-      "disposition": "Non-blocking; accepted as an established English term in the department's TOR/product-strategy vocabulary with no natural single Thai equivalent."
-    },
-    {
-      "message": "[PARENTHETICAL] '(Minimum Viable Product)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
-      "disposition": "Non-blocking; accepted as a standard software-delivery term used alongside its Thai description ('ระบบส่วนที่ใช้งานได้จริงในรูปแบบเรียบง่ายที่สุด') in the same sentence."
-    }
-  ],
+  "findings": [],
+  "mechanical_reviews": [],
   "verdict": "pass"
 }

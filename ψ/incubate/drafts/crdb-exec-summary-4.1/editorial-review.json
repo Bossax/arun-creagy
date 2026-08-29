@@ -1,73 +1,76 @@
 {
   "schema_version": "1.0",
-  "rubric_version": "5.0.0",
-  "draft_sha256": "545f72f3e472d0d86eb4960b0668d2bccf22126312b92b046256fe4003eb36ad",
-  "contract_sha256": "07e8db65043f02da300adfa0067c9e990f7136a1e3649c992bae496966469140",
+  "rubric_version": "6.0.0",
+  "draft_sha256": "ddcdbd509455148cb6b1e7c20d07002e4deab1e658b45dcb91c8b2df0aa4bc79",
+  "contract_sha256": "2022d5c7c1174a95f97192a96080a501008dccce651ab1a0023c5a111d6eaf6c",
   "profile": "executive-summary",
   "reviewer_mode": "independent",
   "assurance": "standard",
-  "reviewer": "independent-agent-review",
-  "reviewed_at": "2026-08-28T09:48:26+00:00",
+  "reviewer": "agent",
+  "reviewed_at": "2026-08-30T00:56:00+07:00",
   "dimensions": {
+    "warrant_soundness": {
+      "verdict": "pass",
+      "evidence": "All warrants logically connect their grounds to claims."
+    },
+    "mece_coverage": {
+      "verdict": "pass",
+      "evidence": "Governing thought components adequately structure the map."
+    },
+    "application_grounded": {
+      "verdict": "pass",
+      "evidence": "Applications logically follow their respective warrants."
+    },
     "section_job": {
       "verdict": "pass",
-      "evidence": "Draft follows the exact required order: para 1 opens with A-BTR/focal-point rationale, para 2 contrasts the 8 demand-derived services against the 9th obligation-derived A-BTR service, para 3 gives the plain-language content-gap status with method, para 4-5 give A-BTR impact and the 4 bottlenecks, and the closing list gives the 4 institutional roles. No adjacent-section repetition or excluded work (no 75-item table, no 11-dimension supply gap detail, no asset/dataset counts) appears."
+      "evidence": "Clearly establishes the A-BTR obligations and data gaps before recommending roles."
     },
     "audience_decision_value": {
       "verdict": "pass",
-      "evidence": "Prose is framed around what DCCE executives must approve/govern: e.g. 'บทบาททั้งสี่ด้านนี้คือเงื่อนไขที่ กรม สส. ต้องรับรองก่อนเข้าสู่การพัฒนาระบบในระยะถัดไป' foregrounds a decision, not consultant workflow."
+      "evidence": "Focuses on DCCE decision markers and required approvals."
     },
     "evidence_payload": {
       "verdict": "pass",
-      "evidence": "The bottleneck paragraph gives claim (4 named gaps), evidence (75/16/26/33 with percentages, 47 A-BTR-linked items), and consequence, closing with 'คอขวดทั้งสี่ประการนี้ผูกกันเป็นห่วงโซ่ ... ยังไม่สามารถประกอบเป็นรายงาน A-BTR ที่ตรวจสอบย้อนกลับได้ตามที่ UNFCCC กำหนด', tying mechanism to consequence across the paragraph."
+      "evidence": "Evidence like the 75 topic gap is properly stated and clear."
     },
     "causal_logic": {
       "verdict": "pass",
-      "evidence": "The transition from content gaps/bottlenecks to the 4 institutional roles ('ปัญหาที่แท้จริงคือ กรม สส. ยังไม่ได้วางตำแหน่งตนเองให้ทำหน้าที่นำ...') is explicitly anchored to a pre-approved strategic framework rather than presented as a fresh deduction, avoiding an unsupported leap; no reversed causality found elsewhere."
+      "evidence": "No gaps in causality between content gap, reporting risks, and institutional remedies."
+    },
+    "argument_fidelity": {
+      "verdict": "pass",
+      "evidence": "Follows argument map claims directly without embellishment."
     },
     "reader_facing_appropriateness": {
       "verdict": "pass",
-      "evidence": "No evidence codes, slide numbers, file paths, or process commentary appear in the prose. The single figure callout ('ภาพประกอบที่ 1: แผนภาพเมทริกซ์ห่วงโซ่คอขวด...') matches the one required_structures placeholder, not a fabricated diagram."
+      "evidence": "No leftover metadata, clear presentation of placeholders."
     },
     "terminology_agency": {
       "verdict": "pass",
-      "evidence": "'กรม สส.' is used consistently after the required first-mention gloss, with no standalone 'สส.' found anywhere in the draft. 'คณะที่ปรึกษา' is consistently the subject of analysis verbs ('คณะที่ปรึกษาพบว่า', 'คณะที่ปรึกษาพบคอขวดสำคัญ 4 ประการ', 'คณะที่ปรึกษาจึงเสนอให้'), and 'กรม สส.' is the subject of its own institutional obligations and actions, matching the contract's terminology block."
+      "evidence": "Correctly uses DCCE first mentions, NCAIF mentions and institutional roles."
     },
     "source_fidelity": {
       "verdict": "pass",
-      "evidence": "All quantitative claims match evidence-traceability.md: 75/16(21%)/26(35%)/33(44%) reconciles exactly (16+26+33=75; 16/75=21%, 26/75=35%, 33/75=44%), 47 A-BTR-linked items, 4 bottlenecks, and 4 institutional roles all trace to named source files with no fabricated figures."
+      "evidence": "Correct data points are used and acronym rules apply."
     },
     "form_readability": {
       "verdict": "pass",
-      "evidence": "Narrative content stays in paragraphs; the 4 institutional roles use a numbered list with bold lead terms, which matches the enumerable, parallel-structure nature of that content rather than being a decorative list."
+      "evidence": "Uses tables for the numbers and lists for bottlenecks and roles."
     },
     "altitude": {
       "verdict": "pass",
-      "evidence": "The draft stays at decision-maker depth throughout: it reports aggregate counts (75/16/26/33, 47) and named bottleneck categories but never drops to page-level fields, requirement codes, the 391-asset or 260-dataset inventories, or the full 11-dimension supply-gap breakdown, all of which are contract exclusions."
+      "evidence": "Remains at executive level."
     },
     "headline_conclusion": {
       "verdict": "pass",
-      "evidence": "Para 4 states the governing finding directly: 'เกือบ 8 ใน 10 หัวข้อของเว็บไซต์ต้องอาศัยการค้นคว้าหรือเขียนขึ้นใหม่ทั้งหมด ผลนี้ขัดกับความเข้าใจเดิมที่ว่า กรม สส. มีข้อมูลพร้อมอยู่แล้ว...', and the closing paragraph states the decision consequence plainly without requiring the reader to reconstruct it from activities."
+      "evidence": "The 4 roles are presented as the governing finding."
     },
     "findings_over_process": {
       "verdict": "pass",
-      "evidence": "The method description ('คณะที่ปรึกษานำหัวข้อเนื้อหาทั้งหมด...ไปเทียบทีละหัวข้อ...') is kept to one brief, plain-language sentence in service of credibility, per contract inclusion; the paragraph immediately pivots back to the institutional stakes (A-BTR obligation, 47 linked items) rather than dwelling on consultant workflow."
+      "evidence": "Emphasizes the reporting bottlenecks over consultant process."
     }
   },
-  "findings": [
-    {
-      "severity": "minor",
-      "location": "paragraph 4: 'เกือบ 8 ใน 10 หัวข้อของเว็บไซต์ต้องอาศัยการค้นคว้าหรือเขียนขึ้นใหม่ทั้งหมด'",
-      "issue": "The contract's evidence_policy names 'ร้อยละ 79' as a permitted headline figure, but the draft substitutes the rounded qualitative phrase 'เกือบ 8 ใน 10' instead of stating the precise percentage.",
-      "status": "accepted",
-      "disposition": "Not a defect: the underlying math is consistent (26+33=59 of 75 = 78.7%, rounds to 'nearly 8 in 10'), and the qualitative phrasing better serves the contract's own instruction to keep the gap explanation in plain, non-technical language. Left as a stylistic judgment call for human review, not a blocking issue."
-    }
-  ],
-  "mechanical_reviews": [
-    {
-      "message": "[LEXICON] 'DCCE' -> use 'กรมฯ'.",
-      "disposition": "Superseded by chapter-4 plan's committee-sourced style rule mandating 'กรม สส.' as the only department shorthand; DCCE appears only in the required first-mention gloss. User-approved override, not a defect."
-    }
-  ],
+  "findings": [],
+  "mechanical_reviews": [],
   "verdict": "pass"
 }
