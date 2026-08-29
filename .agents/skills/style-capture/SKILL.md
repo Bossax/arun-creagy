@@ -84,12 +84,29 @@ description: Incrementally learns and refines writing styles from individual sam
     - Update the `LEXICON_<CONTEXT>.json` with new term pairings. **CRITICAL**: Every entry needs `banned`, `preferred`, `reason`, plus `kind` (`literal` | `regex` | `structural`) and `scope` (`universal` | `report` | `article` | `letter`). A `regex` entry also needs `pattern`. A rule that cannot be an exact string or a compiling pattern MUST be `kind: structural` -- writing its English description into `banned` makes it a silent no-op, which is how three rules from the 2026-08-05 round never fired. After any write, run: `python .agents/skills/writing-th/scripts/validate_lexicon.py ψ/memory/style/LEXICON_TH.json`
 6) **Artifact Materialization**
     - Write/Update the `STYLE_PACK_<CONTEXT>.md`.
-    - Format:
-        - `## 1. Ranked Style Rules`
-        - `## 2. Structural DNA`
-        - `## 3. Lexicon & Diction (Dos/Don'ts Table)`
-        - `## 4. Anti-AI Shield (Counter-examples)`
-        - `## 5. Master Implementation Prompt`
+    - Format (as of the 2026-08-29 v6.0 harness overhaul — `STYLE_PACK_TH.md`
+      is the live example):
+        - `## 1. Core Kernel (80/20)`
+        - `## 2. Stage / Scale Activation Map`
+        - `## 3. Secondary Pass Rules`
+        - `## 4. Hierarchical Vetting Stack`
+        - `## 5. Lexicon & Diction (Dos/Don'ts Table)`
+        - `## 6. Structural DNA`
+        - `## 7. Anti-AI Shield (Counter-examples)`
+        - `## 8. Master Implementation Prompt`
+        - `## 9. Incremental Capture Log` — **archived, not active**. This
+          section grows unbounded and must never be loaded into a drafting or
+          review model's context. Append new capture entries directly to
+          `ψ/archive/style/capture_history/STYLE_PACK_TH_incremental-capture-log.md`,
+          not to `STYLE_PACK_TH.md` itself; leave the short pointer note in
+          §9 of the live pack undisturbed. Give every new entry its own
+          heading level below `##` so a capture entry can never again collide
+          with a real numbered section (this is what produced the stray
+          duplicate `## 5.` heading fixed on 2026-08-29).
+        - Sections 1–8 are what Stage 3 of `writing-th` v6.0 actually needs,
+          and only a compressed extract of them —
+          `.agents/skills/writing-th/references/prose-kernel.md` — is loaded
+          during drafting. Do not assume a drafting agent has read this file.
 
 7) **Master Prompt Synthesis**
     - Generate a concise, high-signal prompt that can be pasted into a new session to "activate" this style. It should include the Top 5 rules and a few critical Dos/Don'ts.
@@ -103,22 +120,22 @@ description: Incrementally learns and refines writing styles from individual sam
 
 ## Output Template: `STYLE_PACK_<CONTEXT>.md`
 
+Follow the actual 9-section structure listed under step 6 above — this
+template shows only the shape of the two sections a promotion round usually
+touches, not the whole file:
+
 ```markdown
 # Style-Pack: [Context]
-**Samples Learnt**: [N] | **Last Updated**: [Date]
+**Samples Learnt**: [N] | **Last Updated**: [Date] | **Lexicon**: LEXICON_[CONTEXT].json v[X], [N] rules
 
-## 1. Ranked Style Rules
-1. [Rule] - [Example]
-2. ...
-
-## 2. Lexicon & Diction
+## 5. Lexicon & Diction
 | Banned/Common | Preferred | Reason |
 | :--- | :--- | :--- |
 
-## 3. Anti-AI Shield
+## 7. Anti-AI Shield
 - **DON'T**: [AI-sounding phrase]
 - **DO**: [Human-sounding alternative]
-
-## 4. Master Implementation Prompt
-[Concise instructions for future sessions]
 ```
+
+A new capture entry belongs in the archived capture-history file (see step 6),
+never appended to `## 9` of the live pack itself.

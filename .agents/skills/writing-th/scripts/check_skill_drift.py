@@ -14,6 +14,7 @@ PAIRS = [
     ("writing-th", "SKILL.md"),
     ("writing-th", "references/editorial-rubric.md"),
     ("writing-th", "references/artifact-schemas.md"),
+    ("writing-th", "references/prose-kernel.md"),
     ("style-capture", "SKILL.md"),
 ]
 

@@ -19,7 +19,12 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 SCHEMA_VERSION = "1.0"
-RUBRIC_VERSION = "5.0.0"
+RUBRIC_VERSION = "6.0.0"
+LEGACY_RUBRIC_VERSIONS = {"5.0.0"}  # pre-v6.0 receipts, e.g. the 12 merged
+                                     # crdb-exec-summary-* reviews -- accepted
+                                     # read-only so verify does not retroactively
+                                     # break receipts written before argument-map
+                                     # gating existed.
 PROFILES = {"executive-summary", "report", "article", "letter"}
 MODES = {"rewrite", "synthesis", "new"}
 CORE_DIMENSIONS = (
@@ -27,11 +32,13 @@ CORE_DIMENSIONS = (
     "audience_decision_value",
     "evidence_payload",
     "causal_logic",
+    "argument_fidelity",
     "reader_facing_appropriateness",
     "terminology_agency",
     "source_fidelity",
     "form_readability",
 )
+LEGACY_CORE_DIMENSIONS = tuple(d for d in CORE_DIMENSIONS if d != "argument_fidelity")
 PROFILE_DIMENSIONS = {
     "executive-summary": ("altitude", "headline_conclusion", "findings_over_process"),
     "report": (),
@@ -119,8 +126,9 @@ def validate_contract(contract: dict) -> list[str]:
     return errors
 
 
-def required_dimensions(profile: str) -> tuple[str, ...]:
-    return CORE_DIMENSIONS + PROFILE_DIMENSIONS.get(profile, ())
+def required_dimensions(profile: str, rubric_version: str = RUBRIC_VERSION) -> tuple[str, ...]:
+    core = LEGACY_CORE_DIMENSIONS if rubric_version in LEGACY_RUBRIC_VERSIONS else CORE_DIMENSIONS
+    return core + PROFILE_DIMENSIONS.get(profile, ())
 
 
 def scaffold(draft_path: str, contract_path: str, reviewer_mode: str) -> dict:
@@ -165,8 +173,10 @@ def verify_review(
     errors.extend(validate_contract(contract))
     if review.get("schema_version") != SCHEMA_VERSION:
         errors.append(f"review schema_version must be {SCHEMA_VERSION}")
-    if review.get("rubric_version") != RUBRIC_VERSION:
-        errors.append(f"review rubric_version must be {RUBRIC_VERSION}")
+    review_rubric_version = review.get("rubric_version")
+    allowed_rubric_versions = {RUBRIC_VERSION} | LEGACY_RUBRIC_VERSIONS
+    if review_rubric_version not in allowed_rubric_versions:
+        errors.append(f"review rubric_version must be one of {sorted(allowed_rubric_versions)}")
     try:
         current_draft_hash = sha256_file(draft_path)
         current_contract_hash = sha256_file(contract_path)
@@ -197,7 +207,7 @@ def verify_review(
     if not isinstance(dimensions, dict):
         errors.append("review dimensions must be an object")
         dimensions = {}
-    for name in required_dimensions(contract.get("profile", "")):
+    for name in required_dimensions(contract.get("profile", ""), review_rubric_version or RUBRIC_VERSION):
         entry = dimensions.get(name)
         if not isinstance(entry, dict):
             errors.append(f"missing review dimension: {name}")

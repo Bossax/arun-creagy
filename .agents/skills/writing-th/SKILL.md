@@ -1,7 +1,7 @@
 ---
 name: writing-th
 description: >
-  v5.0.0 L-SKLL | Draft, revise, and quality-gate Thai institutional writing.
+  v6.0.0 L-SKLL | Draft, revise, and quality-gate Thai institutional writing.
   Use for Thai policy reports, executive summaries, articles, and formal letters
   when source fidelity, audience fit, and explicit merge approval matter.
 metadata:
@@ -9,10 +9,21 @@ metadata:
   installer: project
 ---
 
-# /writing-th — Thai Institutional Writing Harness v5
+# /writing-th — Thai Institutional Writing Harness v6.0
 
 Turn technical evidence into decision-ready Thai prose without confusing a
-mechanical lint pass with editorial quality.
+mechanical lint pass with editorial quality — and without asking one context
+to formulate arguments, retrieve facts, invent connective reasoning, and draft
+formal Thai prose all at once. That overload is what v5.0 got wrong: it went
+straight from a metadata contract to a one-shot prose pass, with no argument
+artifact in between, and the result was knowledge-telling — facts stitched
+together with no rhetorical tension, findings with no "so what."
+
+v6.0's core move: insert `argument-map.json` between scope and prose, and
+enforce it as a **context boundary**, not just an added file. Argument
+construction gets sources and no style material. Verbalization gets the
+approved map and a style kernel, never the raw sources. The parent session
+holds only paths, hashes, and gate verdicts — never content.
 
 ## Non-negotiable invariants
 
@@ -20,62 +31,105 @@ mechanical lint pass with editorial quality.
    scratch location, or the chat. Never overwrite the destination before the
    human explicitly says `Approve`, `Merge`, or `Execute`.
 2. **One scoped unit at a time** — do not batch unrelated sections.
-3. **Source fidelity** — preserve required evidence, distinctions, tables,
+3. **No prose before an approved argument map** — physically enforced by the
+   `PreToolUse` hook on `Write|Edit`: a write to `ψ/incubate/drafts/**/*draft*.md`
+   is denied when the sibling `argument-map.json` is missing or its
+   `approval.status` is not `approved`. This is not a convention to remember;
+   it cannot be skipped.
+4. **Source fidelity** — preserve required evidence, distinctions, tables,
    equations, and frameworks. Compression is governed by the transformation
    mode, not by a universal character ratio.
-4. **Two different assurances** — mechanical checks detect encoded patterns;
-   editorial review judges meaning, altitude, reader value, and form. Never call
-   a mechanical pass an editorial approval.
-5. **No ledger writes** — do not modify style memory, retrospectives, or the miss
+5. **Three different assurances** — mechanical checks detect encoded
+   patterns; Tier 1 review judges whether the argument map's reasoning
+   actually holds; Tier 2 review judges whether the prose faithfully
+   verbalizes that map. Never call a mechanical pass an editorial approval,
+   and never let a Tier 2 pass stand in for Tier 1.
+6. **No ledger writes** — do not modify style memory, retrospectives, or the miss
    register except through their own explicitly invoked maintenance skill. The
    ordinary linter may log runs only when repository policy permits it.
 
-## Required references
+## Stage → agent → context map
 
-- Read [references/editorial-rubric.md](references/editorial-rubric.md) before
-  creating the content contract or reviewing a draft. Apply the core rubric and
-  only the selected deliverable profile.
-- Read [references/artifact-schemas.md](references/artifact-schemas.md) before
-  creating `writing-contract.json` or `editorial-review.json`.
-- Load the writing plan and the style pack it names. If none is named, use
-  `ψ/memory/style/STYLE_PACK_TH.md` and `ψ/memory/style/LEXICON_TH.json`.
+| Stage | Runs as | Loads | Must never load |
+|---|---|---|---|
+| 0 Contract | Parent + `AskUserQuestion` | plan index, source paths | sources, style material |
+| 1 Argument map | `th-argument-mapper` | sources, writing plan (if any), argument schema | style pack, lexicon, rubric |
+| 2 Blueprint gate | Parent, plan mode | rendered map summary | everything else |
+| 3 Verbalization | `th-verbalizer` | `argument-map.json`, prose kernel | raw sources, full pack, rubric |
+| 4 Mechanical gate | CLI only | — | nothing enters a model context |
+| 5 Editorial review | `th-editorial-reviewer` | draft, argument map, rubric | sources, style pack |
+| 6 Merge | CLI + parent | hashes, verdicts | — |
 
-## Six-gate workflow
+`LEXICON_TH.json` should never enter a model context at any stage —
+`lint_thai_writing.py` reads it; only violations need to reach a model.
 
-### 1. Inspect sources and classify the transformation
+### Stage 0 — Contract: ask, don't assume
 
-Read the brief, source evidence, target section, applicable style material, and
-any approved sample. Select exactly one mode:
+A writing plan may or may not already exist for this unit. Use
+`AskUserQuestion` to establish whether one does, and its path — never assume.
 
-- `rewrite`: the source and draft are comparable in scope; preservation and the
-  size heuristic apply.
-- `synthesis`: the draft intentionally compresses or combines sources; the size
-  heuristic must not run.
-- `new`: no source text is being rewritten; the size heuristic must not run.
+- If one exists: it is the primary input to Stage 1. Use `oracle_search` /
+  `oracle_trace` to retrieve the relevant slice rather than loading the file
+  whole.
+- If none exists: Stage 1 builds the argument map directly from the approved
+  sources, and the map itself becomes the writing plan for this unit.
 
-Do not draft yet.
-
-### 2. Build one content contract and stop
-
-Create `writing-contract.json` beside the future isolated draft. It must lock the
-audience, decision use, section job, target altitude, inclusions, exclusions,
-evidence policy, required concepts, terminology, required structures, source
-paths, and reference samples.
+Read [references/artifact-schemas.md](references/artifact-schemas.md) before
+creating `writing-contract.json`. It must lock the audience, decision use,
+section job, target altitude, inclusions, exclusions, evidence policy, source
+paths, and reference samples. Record which writing-plan path was taken in
+`input_assets`, with an explicit `writing_plan: null` when none existed.
 
 Present a compact contract summary and stop for human approval. Record that
-approval in the contract. This replaces separate persona and density stops.
+approval in the contract.
 
-### 3. Draft in isolation
+### Stage 1 — Argument map
 
-Draft only the approved unit. Treat finding, concrete evidence, consequence,
-and mechanism as the payload of each **substantive argument unit**; do not force
-all four into every paragraph. Keep one dominant job per paragraph.
+Spawn `th-argument-mapper` with the approved contract, the source paths, and
+the writing plan if one exists. It produces `argument-map.json`: a Minto
+governing thought, an SCQA narrative arc, and ordered Toulmin argument units
+— each with `claim`, `grounds`, `warrant`, `application_to_design`, and a
+`supports` value that must partition `governing_thought_components`.
 
-Evidence-traceability notes, slide/page locators, prompt scaffolding, and report
-roadmaps belong outside audience-facing prose. A requested diagram becomes a
-figure placeholder or actual figure, never an inline arrow chain.
+The subagent validates its own output with
+`argument_gate.py validate <map>` before reporting done. Do not accept a map
+that hasn't passed this check.
 
-### 4. Run mechanical checks
+Do not economize on model or effort here — this is the stage where the
+thinking v5.0 skipped must actually happen.
+
+### Stage 2 — Blueprint gate (human)
+
+Use plan mode: present the governing thought, the SCQA arc, and one line per
+argument unit, then `ExitPlanMode` for approval. Raw JSON is a poor review
+surface. Use `AskUserQuestion` for the bounded choice — approve, amend, or
+reject.
+
+Only once approved does `approval.status` become `"approved"` in
+`argument-map.json`. This is the field the `PreToolUse` hook checks; nothing
+else unlocks Stage 3.
+
+### Stage 3 — Verbalization
+
+Spawn `th-verbalizer` with the approved `argument-map.json` and
+[references/prose-kernel.md](references/prose-kernel.md) only — never the
+raw sources, never the full `STYLE_PACK_TH.md`. Treat each argument unit's
+`claim` / `grounds` / `warrant` / `application_to_design` as the paragraph's
+payload; do not force a four-part structure onto paragraphs the map does not
+call for. One dominant job per paragraph, matching the unit's `paragraph_job`.
+
+**Bounded amendment path**: if verbalizing a unit reveals its `warrant`
+doesn't actually hold in real prose, the subagent halts and proposes an
+amendment rather than papering over it or silently deviating. The amendment
+returns to the Stage 2 human gate, gets logged, and the map is re-approved.
+One bounded loop, not free revision — "transcribe the approved map" is still
+transcription if a broken warrant just gets rendered faithfully.
+
+Evidence-traceability notes, slide/page locators, prompt scaffolding, and
+report roadmaps belong outside audience-facing prose. A requested diagram
+becomes a figure placeholder or actual figure, never an inline arrow chain.
+
+### Stage 4 — Mechanical checks
 
 For report prose, run:
 
@@ -86,23 +140,41 @@ python .agents/skills/writing-th/scripts/lint_thai_writing.py <draft> ψ/memory/
 For `rewrite` mode only, also run:
 
 ```text
-python .agents/skills/writing-th/scripts/check_density.py <source> <draft> 0.8
+python .agents/skills/writing-th/scripts/check_density.py <source> <draft>
 ```
+
+`check_density.py` now enforces both a floor (0.8, catches under-preservation)
+and a ceiling (1.6, catches padding that hides a thin argument). Override
+either with positional args if a section's transformation genuinely warrants
+it — that is a deliberate exception, not a default.
 
 Fix blocking failures. Carry every non-blocking `[STRUCTURAL]`,
 `[PARENTHETICAL]`, `[ARTIFACT]`, or `[META]` review item into the editorial
 receipt with a disposition. A green result here means only **mechanical pass**.
 
-### 5. Obtain editorial review
+### Stage 5 — Editorial review
 
-Default to an independent clean-context reviewer. Give the reviewer only the
-approved contract, draft, necessary sources or traceability sidecar, selected
-profile rubric, and reference sample. Do not provide the intended verdict or
-the drafting agent's self-justification.
+Default to `th-editorial-reviewer` run as an independent `Agent` call — never
+`subagent_type: "fork"`, which inherits the parent's full context and
+destroys the clean-context independence the rubric depends on. A genuinely
+independent reviewer is one `Agent` call away; the v5.0
+`reviewer_mode: self, assurance: degraded` fallback should be unreachable in
+practice.
 
-If an independent reviewer is unavailable, perform a structured self-review and
-mark it `reviewer_mode: self`, `assurance: degraded`. Degraded review may pass,
-but must be disclosed prominently.
+Give the reviewer only the approved contract, the approved argument map, the
+draft, the selected profile rubric, and a reference sample if one exists. Do
+not provide the intended verdict or the drafting agent's self-justification.
+
+Read [references/editorial-rubric.md](references/editorial-rubric.md)
+beforehand. Review runs in two tiers: **Tier 1** judges the argument map's
+own reasoning (does each `warrant` actually connect its `grounds` to its
+`claim`? does `governing_thought_components` genuinely partition the
+governing thought, not just satisfy the mechanical MECE check?) — this must
+pass before Tier 2 proceeds, or a passing editorial receipt ends up
+certifying a causal bridge that was never actually established. **Tier 2** is
+the familiar per-draft rubric, now including `argument_fidelity`: every
+approved unit's claim and warrant should appear in the draft, and no claim in
+the draft should be absent from the map.
 
 Create a receipt scaffold with:
 
@@ -110,10 +182,15 @@ Create a receipt scaffold with:
 python .agents/skills/writing-th/scripts/editorial_gate.py prepare <draft> <contract> --out <review> --reviewer-mode independent
 ```
 
-Complete every required rubric dimension and record located findings. A receipt
-passes only when its verdict is `pass`, all required dimensions pass (or source
-fidelity is legitimately `not_applicable` in `new` mode), and no critical or
-major finding remains unresolved.
+Complete every required rubric dimension and record located findings. A
+receipt passes only when its verdict is `pass`, all required dimensions pass
+(or `source_fidelity` is legitimately `not_applicable` in `new` mode), and no
+critical or major finding remains unresolved.
+
+Optionally, run `warrant_trace.py <map> <draft>` first for partial mechanical
+Tier 2 coverage — it checks that each approved warrant has a corresponding
+claim present in the draft. Genuine semantic judgment still belongs to the
+reviewer.
 
 Verify it with:
 
@@ -123,7 +200,7 @@ python .agents/skills/writing-th/scripts/editorial_gate.py verify <draft> <contr
 
 Any draft or contract change invalidates the receipt. Review the new hashes.
 
-### 6. Human bridge and merge
+### Stage 6 — Human bridge and merge
 
 Present the draft with its editorial assurance and unresolved minor findings.
 Merge only after explicit human approval:
@@ -132,15 +209,16 @@ Merge only after explicit human approval:
 python .agents/skills/writing-th/scripts/merge_draft.py <draft> <dest> --lexicon ψ/memory/style/LEXICON_TH.json --contract <contract> --review <review> [--source <source>]
 ```
 
-Merge reruns mechanical checks, verifies the exact receipt hashes, and confirms
-that all emitted review items have dispositions. `--skip-gates` remains a loud,
-deliberate override; never infer permission to use it.
+Merge reruns mechanical checks, verifies the exact receipt hashes, and
+confirms that all emitted review items have dispositions. `--skip-gates`
+remains a loud, deliberate override; never infer permission to use it.
 
 ## Maintenance
 
 - After a style-capture round, validate the lexicon with
   `validate_lexicon.py`; do not edit style memory from this skill.
-- After changing canonical `SKILL.md`, run `check_skill_drift.py --sync`.
+- After changing canonical `SKILL.md` or `references/`, run
+  `check_skill_drift.py --sync`.
 - Run `tests/run_tests.py` after any harness change.
 - A behaviorally significant revision requires a blind forward test in an
   isolated temporary workspace. Use an independent reviewer when delegation is

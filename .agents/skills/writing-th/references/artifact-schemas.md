@@ -75,3 +75,47 @@ Allowed finding statuses are `resolved`, `accepted`, and `unresolved`.
 Critical or major findings must be `resolved`. Mechanical review messages must
 match the current linter output exactly; merge checks coverage.
 
+## `argument-map.json` (v6.0)
+
+Create the initial file with `argument_gate.py prepare`; validate with
+`argument_gate.py validate` before reporting the stage done.
+
+```json
+{
+  "schema_version": "1.0",
+  "section_id": "crdb-exec-summary-1.2",
+  "governing_thought": "The single takeaway conclusion the reader should leave with (Minto top)",
+  "narrative_scqa": {
+    "situation": "Shared baseline reality",
+    "complication": "Tension, blocker, or institutional friction",
+    "question": "The governing question this section answers",
+    "answer": "The proposed direction (should echo governing_thought)"
+  },
+  "governing_thought_components": ["the distinct parts governing_thought breaks into"],
+  "argument_units": [
+    {
+      "unit_id": "arg-01",
+      "order": 1,
+      "paragraph_job": "diagnose",
+      "claim": "Central assertion of this unit",
+      "grounds": "Concrete evidence, benchmark, or cited parameter",
+      "warrant": "Connective reasoning: why do these grounds compel this claim?",
+      "application_to_design": "How this finding dictates the deliverable's design",
+      "supports": "must exactly match one entry in governing_thought_components"
+    }
+  ],
+  "approval": {"status": "pending", "approved_by": "", "approved_at": ""}
+}
+```
+
+`paragraph_job` is one of `define`, `diagnose`, `compare`, `conclude` — the
+same enum `STYLE_PACK_TH.md` rule 6 uses. `governing_thought_components` is
+the mechanical MECE check: every `argument_units[].supports` value must match
+one entry, and every entry must be supported by at least one unit.
+`argument_gate.py validate` enforces both directions.
+
+`approval.status` must be `approved` before any draft in the same directory
+may be written or revised — enforced by the `PreToolUse` hook on
+`Write|Edit`, not by this script. The script checks structure only; approval
+is a human decision made at the Stage 2 gate.
+

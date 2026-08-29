@@ -1,9 +1,41 @@
-# Editorial Rubric v5.0.0
+# Editorial Rubric v6.0.0
 
 This rubric governs semantic review. It is not a replacement for source
 verification or the mechanical linter.
 
-## Core dimensions
+As of v6.0 review has two tiers. Tier 1 judges the approved argument map
+itself — apply it before reading the draft, so a bad argument is not
+laundered by good prose. Tier 2 is the original per-draft rubric below,
+renamed but unchanged in substance, and now judges fidelity to the map rather
+than fidelity to a brief alone.
+
+## Tier 1 — Argument-map integrity (v6.0)
+
+`argument_gate.py validate` already checks structure (every `warrant`
+non-empty, `supports` values partition `governing_thought_components`, no
+duplicate `unit_id`). This tier checks what the script cannot: whether the
+reasoning actually holds.
+
+1. **warrant_soundness** — Read each unit's `claim`, `grounds`, and
+   `warrant`. Does the warrant actually connect the grounds to the claim, or
+   does it restate the claim in different words? A warrant that just repeats
+   its claim passes `argument_gate.py`'s non-empty check but fails this
+   dimension.
+2. **mece_coverage** — `governing_thought_components` are structurally
+   covered by `argument_gate.py`; confirm they are *substantively* covered —
+   the components genuinely partition the governing thought rather than
+   restating one idea under different names to satisfy the mechanical check.
+3. **application_grounded** — Each unit's `application_to_design` must follow
+   from its own `warrant`, not from a different unit's reasoning or from
+   background knowledge the map never states.
+
+A `pass` on Tier 1 is required before Tier 2 review proceeds. If Tier 1
+fails, return the map to the Stage 2 human gate rather than reviewing prose
+built on it — this is what stops a passing editorial receipt from certifying
+a causal bridge that was never actually established (see `STYLE_PACK_TH.md`'s
+2026-08-28 entry on the Section 1.2 ownership-distribution inference).
+
+## Tier 2 — Prose fidelity (core dimensions)
 
 Every review must decide each dimension with `pass`, `fail`, or, where allowed,
 `not_applicable` and cite a location or concrete reason.
@@ -19,16 +51,22 @@ Every review must decide each dimension with `pass`, `fail`, or, where allowed,
 4. **causal_logic** — Evidence, interpretation, consequence, and response are
    connected without reversed causality, unsupported leaps, or decorative
    transitions.
-5. **reader_facing_appropriateness** — No sourcing metadata, prompt residue,
+5. **argument_fidelity** (v6.0) — The draft verbalizes the approved
+   `argument-map.json` faithfully: every unit's claim and warrant appears in
+   the prose (not necessarily verbatim), no unit is silently dropped, and no
+   claim in the draft is absent from the map. `warrant_trace.py`, where run,
+   gives partial mechanical coverage of this dimension; the reviewer's own
+   read is still required for genuine fidelity, not just claim presence.
+6. **reader_facing_appropriateness** — No sourcing metadata, prompt residue,
    internal artifact locators, fake diagrams, or commentary about the document's
    upcoming structure remains in final prose.
-6. **terminology_agency** — Terms remain stable and comprehensible; named actors
+7. **terminology_agency** — Terms remain stable and comprehensible; named actors
    perform the actions they actually own; project, consultant, client, and system
    are not substituted for one another.
-7. **source_fidelity** — Required concepts, caveats, distinctions, quantitative
+8. **source_fidelity** — Required concepts, caveats, distinctions, quantitative
    values, and technical structures survive according to the contract. Only
    `new` mode may use `not_applicable`.
-8. **form_readability** — Paragraphs, lists, tables, and figure placeholders
+9. **form_readability** — Paragraphs, lists, tables, and figure placeholders
    match the information shape. No rule against rhetorical enumeration may be
    misapplied as a ban on useful lists.
 

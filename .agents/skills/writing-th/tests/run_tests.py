@@ -106,7 +106,15 @@ def main():
         print(harness.stderr.rstrip())
     if harness.returncode:
         sys.exit(harness.returncode)
-    sys.exit(0)
+
+    argument_harness = subprocess.run(
+        [child_python(), str(TESTS / "test_argument_gate.py")],
+        capture_output=True, text=True, encoding="utf-8", errors="replace")
+    if argument_harness.stdout:
+        print(argument_harness.stdout.rstrip())
+    if argument_harness.stderr:
+        print(argument_harness.stderr.rstrip())
+    sys.exit(argument_harness.returncode)
 
 
 if __name__ == "__main__":
