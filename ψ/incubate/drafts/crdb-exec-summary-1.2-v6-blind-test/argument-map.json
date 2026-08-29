@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "section_id": "crdb-exec-summary-1.2",
+  "governing_thought": "DCCE is not starting from zero: a departmental website, a predecessor platform, a 391-item digital asset base, and an 87-dataset catalog already exist. But because these were organized by division and project rather than by user need, the department's real strength turns out to be published knowledge content, while machine-readable datasets, integrated data products, and consistent data-management discipline remain thin and uneven across units. The national framework's job is therefore to benchmark this existing base against what each user group needs, reuse what already qualifies (knowledge content, the risk-map tool, the greenhouse-gas bureau's data pipeline, existing openness classifications), and target new investment at what is genuinely missing: consistent definitions, clear data-quality ownership, and an assured update cycle.",
+  "narrative_scqa": {
+    "situation": "DCCE already operates a functioning information environment for climate adaptation: a departmental website with a dedicated adaptation hub, a predecessor platform (T-PLAT and T-PLAT.INFO), a unified inventory of 391 digital assets, and a data catalog of 87 datasets, all built up across divisions and projects over several years.",
+    "complication": "This environment was organized around which division produced the content and which project funded it, not around what the users who need adaptation information -- central policymakers, regional and local officers, private sector, and the public -- actually need to accomplish. As a result, machine-readable datasets and integrated data products remain a thin slice of the asset base, data-management maturity varies sharply by division, the department's flagship risk-map tool carries a limitation it does not yet consistently flag at the point of use, and a documented predecessor platform already showed that continuity funded by a single project does not survive that project's end.",
+    "question": "Given what DCCE already has, how much of it already meets what a national climate adaptation information framework's users need, and where exactly is the gap?",
+    "answer": "DCCE's published knowledge content, its risk-map tool, the greenhouse-gas bureau's data pipeline, and its existing data-openness classifications are ready to be reused as the framework's starting base; the genuine gap is machine-readable datasets, integrated data products, and three specific governance problems staff themselves named: inconsistent definitions, no assigned data-quality ownership, and no assured update cycle."
+  },
+  "governing_thought_components": [
+    "existing_asset_base",
+    "analysis_method",
+    "asset_composition_imbalance",
+    "governance_maturity_variance",
+    "flagship_tool_limitation",
+    "platform_continuity_lesson",
+    "design_implications"
+  ],
+  "argument_units": [
+    {
+      "unit_id": "arg-01",
+      "order": 1,
+      "paragraph_job": "define",
+      "claim": "DCCE already operates a substantial digital information base for climate adaptation: a website with a dedicated adaptation hub, a documented predecessor platform, and a unified inventory of 391 catalogued digital assets spanning knowledge content, datasets, and data products.",
+      "grounds": "The DCCE website places adaptation content under ศูนย์ข้อมูลกลาง > การปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศ and publishes Thailand's National Adaptation Plan and the first Biennial Transparency Report; the site also links to a Data Catalog (CKAN) and a spatial risk-map system. Separately, the unified digital asset database that merges the Data Catalog and the sitemap counts 391 items in total, split into Knowledge Asset (315, 80.6%), Data Asset (47, 12.0%), and Data Product (29, 7.4%). The Data Catalog itself holds 87 registered datasets as of 8 July 2026.",
+      "warrant": "Because these assets already exist, are published, and are in active use, the design task facing NCAIF is integration and reorganization of what is there, not creation from nothing -- this is what grounds the report's opening claim that the department is not starting from zero, and it sets the baseline against which every later gap claim in this section must be read.",
+      "application_to_design": "Opens the subsection with the website-design overview and the quantitative landscape of the 391-item asset base, giving the reader the supply side of the comparison before any gap is named.",
+      "supports": "existing_asset_base"
+    },
+    {
+      "unit_id": "arg-02",
+      "order": 2,
+      "paragraph_job": "diagnose",
+      "claim": "Because DCCE's current content and navigation are organized by division and project rather than by user mission, the sound way to evaluate what the department has is to first define what each user group needs to accomplish, then check existing assets against that need -- not to start from the inventory and reason backward to a design.",
+      "grounds": "Users following the website's main entry points are routed through organizational and project structure first: the homepage leads to ศูนย์ข้อมูลกลาง, from which separate links lead to CCE Center, the Data Catalog, and the Risk MAP tool as independent subsystems, each with its own internal navigation. Central-government users get NAP publication but lack analytical or policy-decision tooling compared with international peer platforms. Regional and local users can filter provincial activity data but cannot follow a single path connecting climate hazard, risk, impact, and adaptation measures. Private-sector users have no adaptation-specific service beyond general e-learning content, and community/public users have no adaptation-focused lesson category despite a broader e-learning catalog existing. The source material states directly that a user tracking adaptation information must start by clicking through organizational or project names and then search for where climate, risk, measure, or case-study content sits within each subsystem, rather than following an entry path defined by the user's own question or task.",
+      "warrant": "A structure organized by who produced the content, rather than by what the user is trying to do, forces every user group to reassemble the picture themselves; benchmarking existing assets against explicit user need (rather than simply counting what already exists) is the only way to convert an inventory into an honest gap diagnosis, and it is the logic this section's comparison must follow.",
+      "application_to_design": "Justifies presenting the section as a three-part comparison (what users need against a reference standard, what DCCE has today, and the resulting gap) rather than as a standalone asset catalog, and grounds the sub-list of impacts on each of the four user groups.",
+      "supports": "analysis_method"
+    },
+    {
+      "unit_id": "arg-03",
+      "order": 3,
+      "paragraph_job": "diagnose",
+      "claim": "Within DCCE's digital asset base, published knowledge content is by far the thickest layer, while machine-readable datasets and integrated data products remain a thin slice -- so the department's strength and its structural gap sit at opposite ends of the same inventory.",
+      "grounds": "Of 391 unified digital assets, Knowledge Assets (media releases, central-data-center documents, multimedia, research reports, and PDF-format catalog records) account for 315 items (80.6%), Data Assets (machine-readable CSV/XLSX/XLS records) account for 47 items (12.0%), and Data Products (departmental information systems and CKAN-linked web applications or dashboards, such as the risk-map system) account for 29 items (7.4%). By access format, Documents alone make up 165 items (42.2%) and video content 56 items (14.3%), against 47 items classed as Dataset (12.0%) and 26 as Web Application (6.6%). The 87-dataset Data Catalog shows the same pattern from a different angle: PDF-tagged records outnumber genuinely structured formats such as CSV (28) and XLSX (11).",
+      "warrant": "A framework meant to support policy aggregation and analytical use needs structured, reusable data, not documents that must be read and re-keyed by hand; the composition imbalance in the existing base -- heavy on things to read, light on things a system can process -- points directly to where NCAIF's first-phase investment is most urgently needed, rather than requiring the report to guess at priorities.",
+      "application_to_design": "Grounds the ordered three-item classification of digital asset types (knowledge asset / data asset / data product) and the closing conclusion naming datasets and data products as the thinnest layer.",
+      "supports": "asset_composition_imbalance"
+    },
+    {
+      "unit_id": "arg-04",
+      "order": 4,
+      "paragraph_job": "compare",
+      "claim": "Data-management maturity is uneven across DCCE divisions: the Greenhouse Gas Reduction Bureau runs the most complete end-to-end data management chain in the department, while stewardship of the department-wide digital asset base is scattered and concentrated by administrative default rather than by designed governance role.",
+      "grounds": "Per FGD1, the Greenhouse Gas Accounting Group's national GHG platform documents a defined pipeline: focal points submit sector data, which passes QA/QC through AD&ADF, then DET, then Pre-calculation, then CRT review, on a fixed two-year reporting cycle, with an emissions API and dashboard integration into CKAN and CRT. By contrast, stewardship of the 391-item unified asset base is spread across dozens of units, with a single unit -- the Public Relations and Environmental Communication Group -- holding 214 of 391 items (54.8%) largely because it manages press media and video output, not because it was assigned a data-governance role; the next two units by volume (International Strategy and Cooperation Bureau, 57 items; Digital Technology Development Group, 25 items) bring the top three units to 296 of 391 items (75.7%). The Digital Technology Development Group's own CCIC Center project, described in FGD1 as still analyzing and grouping data from every division into one base, is the department's own in-progress attempt to fix this fragmentation.",
+      "warrant": "A division that already runs a full-cycle pipeline -- defined ownership, QA/QC, a fixed cadence, and system integration -- demonstrates the operating pattern that NCAIF's data governance can extend rather than invent, while a stewardship distribution driven mainly by who happens to publish the most PR media shows why simply reclassifying content by topic will not by itself fix responsibility gaps elsewhere in the department.",
+      "application_to_design": "Grounds the subsection describing the department's current data-management status, naming the greenhouse-gas bureau as a usable internal model and the CCIC Center project as the department's own attempted structural fix, feeding directly into the governance-framework design in the next chapter.",
+      "supports": "governance_maturity_variance"
+    },
+    {
+      "unit_id": "arg-05",
+      "order": 5,
+      "paragraph_job": "diagnose",
+      "claim": "Across separate focus-group discussions, DCCE staff from different divisions converged on the same underlying data-management problems: definitions are not consistent between the department and other agencies, no unit is clearly responsible for data quality, and data reaching the point of publication is often delayed, incomplete, or in the wrong format.",
+      "grounds": "FGD1's compiled feedback records, under ข้อมูลและคำศัพท์, that adaptation terminology and definitions do not match between DCCE and other agencies (such as the Ministry of Education) and that staff want a central unit to own the definitions; that QA/QC is performed differently by each working group with no shared standard operating procedure, and it is unclear who is responsible for QA/QC on either the input or output side; and that data is frequently late, incomplete, delivered in formats that do not match what is needed, and cannot be linked via API to provincial environment offices (ทสจ.).",
+      "warrant": "Because these problems were raised independently by staff working inside different divisions rather than identified from outside by the consultant team, they represent operational-level blockers that any content reorganization must actually solve -- rearranging menus or content categories will not resolve undefined terms, unassigned quality ownership, or irregular data delivery, so these three problems set the floor requirement for any governance design that follows.",
+      "application_to_design": "Grounds the ordered three-item list of data-management issues raised in the focus-group discussion and directly supports the required framing that content classification alone cannot fix a destination that lacks agreed definitions, an accountable quality owner, or a reliable update rhythm.",
+      "supports": "governance_maturity_variance"
+    },
+    {
+      "unit_id": "arg-06",
+      "order": 6,
+      "paragraph_job": "diagnose",
+      "claim": "DCCE's spatial risk-map system is the department's strongest existing analytical product and a natural anchor for the framework's spatial service, but it reports a relative risk index rather than an absolute risk value, and this limitation needs to travel with the tool wherever it is used.",
+      "grounds": "The risk-map system lets users filter by sector (6 categories), climate scenario (SSP2-4.5, SSP5-8.5), time period (five ranges from 1960 to 2100), hazard type (drought, heavy rainfall, high temperature), and province, and lets users build custom maps by combining exposure, vulnerability, and adaptive capacity filters; it is described in the source material as an established reference point in provincial-level discussion. The same source states plainly that the tool uses a relative index rather than an absolute risk value, that its spatial resolution does not yet cover every level of decision-making, and that without clear communication of metadata and interpretation caveats, the tool risks being used in contexts its underlying data cannot actually support.",
+      "warrant": "A relative-index output can be mistaken for a certain, absolute risk figure by a user who is not technical, if the limitation is not visible at the exact point where the map is used; the tool's greatest current risk is therefore silent misuse rather than technical failure, so the caveat must be carried forward as an explicit design requirement rather than treated as already solved by the tool's existing popularity.",
+      "application_to_design": "Requires that this subsection state the risk-map limitation explicitly alongside the tool's strengths, rather than only praising it as a flagship analytical asset, and carries the caveat requirement forward into the framework's spatial-service design.",
+      "supports": "flagship_tool_limitation"
+    },
+    {
+      "unit_id": "arg-07",
+      "order": 7,
+      "paragraph_job": "compare",
+      "claim": "T-PLAT and T-PLAT.INFO already proved that Thailand could build map-based adaptation risk information and reach provincial and local audiences, but both stalled once the project that funded them ended, showing that platform continuity cannot depend on a single project's lifespan.",
+      "grounds": "T-PLAT (studied from 2018) was modeled on Japan's AP-PLAT and A-PLAT, trained a Ministry of Natural Resources and Environment working group with support from Japan's Ministry of the Environment, and used data from the IMPACT-T project and the National Adaptation Plan as pilot content, but its development was not completed as originally planned. T-PLAT.INFO, built under a UNDP-funded coastal adaptation project covering Surat Thani, Songkhla, Phetchaburi, and Rayong from August 2020 to November 2024, delivered geospatial risk information and reports to provincial and local users; per FGD1, after the project ended there has been no update, with continuation only planned, not resourced or assigned to an owning unit.",
+      "warrant": "Two independent predecessor platforms following the identical pattern -- active while project-funded, then dormant once the project closes -- is enough repetition to generalize a structural lesson: durability has to be anchored in DCCE's own data-management structure rather than in a project's funding cycle, or the next platform will repeat the same stall regardless of how well it is designed at launch.",
+      "application_to_design": "Requires this subsection to name T-PLAT and T-PLAT.INFO explicitly as predecessor lessons rather than omit them, and requires the section's closing conclusions to state that continuity depends on DCCE's own governance structure, not on the next project's duration.",
+      "supports": "platform_continuity_lesson"
+    },
+    {
+      "unit_id": "arg-08",
+      "order": 8,
+      "paragraph_job": "conclude",
+      "claim": "Three conclusions follow from the evidence above: DCCE's existing knowledge content, NAP/BTR reporting, and risk-map tool are ready to be reused as the framework's starting content rather than rebuilt; the greenhouse-gas bureau's data pipeline and the department's existing openness classifications are ready governance scaffolding that can be extended rather than redesigned from zero; and the thinnest, most urgent gap is machine-readable datasets and integrated data products, together with the three staff-named governance problems, which content reclassification alone will not resolve.",
+      "grounds": "The source material's own closing synthesis states that DCCE already has data assets, products, and data-governance concepts that can be built upon, but that the current website structure and information layout still keep each user group's ability to discover, understand, and use that content less continuous than it should be; the same material explicitly identifies which content types can carry over into which framework component -- policy and national reports into a country-overview section, technical/methodology documents into explainer pages with usage caveats, scattered case studies into a searchable knowledge base, the risk-map system into the core spatial service, and existing data-openness/track concepts into governance scaffolding.",
+      "warrant": "Separating what can be reused immediately from what must be newly built is what turns a status inventory into a decision executives can act on when approving the scope and sequence of the next phase of investment -- this distinction is the entire decision value this section owes its reader.",
+      "application_to_design": "Grounds the required closing ordered list of three conclusions and directly answers the section's governing question about what qualifies against user need and where the gap sits.",
+      "supports": "design_implications"
+    }
+  ],
+  "approval": {
+    "status": "approved",
+    "approved_by": "Boss",
+    "approved_at": "2026-08-29T16:00:00+07:00"
+  }
+}

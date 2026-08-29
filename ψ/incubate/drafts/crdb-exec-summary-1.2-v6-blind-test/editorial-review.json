@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "rubric_version": "6.0.0",
+  "draft_sha256": "5e9360cb2ce76c14455a5ddb1ef01113d7329bb1c95aba82e035b9a9d115813b",
+  "contract_sha256": "ebd92a0a0d0c0c6a028de72ee41db87554662064c0c2a4ecdf0023b73721a432",
+  "profile": "executive-summary",
+  "reviewer_mode": "independent",
+  "assurance": "standard",
+  "reviewer": "th-editorial-reviewer (independent subagent)",
+  "reviewed_at": "2026-08-29T08:34:35+00:00",
+  "dimensions": {
+    "section_job": {
+      "verdict": "pass",
+      "evidence": "Draft covers all contract inclusions (site design/user paths, T-PLAT/T-PLAT.INFO, 391-item landscape, 87-dataset catalog and steward concentration, GHG bureau + CCIC status, 3 FGD issues, figure placeholder, 3 closing conclusions). No exclusions breached: no per-item asset inventory, no internal locators, no next-chapter self-reference, no unsourced April 2026 meeting reference, no roadmap content beyond the three synthesis conclusions."
+    },
+    "audience_decision_value": {
+      "verdict": "pass",
+      "evidence": "Closing line explicitly foregrounds decision_use from the contract: separating what can be reused now from what must be newly built, framed as what executives need to approve scope and investment priority."
+    },
+    "evidence_payload": {
+      "verdict": "pass",
+      "evidence": "Every argument unit's claim carries its grounds into the prose with concrete numbers (391/315/47/29, 87, 214/57/25, percentages, filter categories, project dates) matching the argument-map grounds field for field."
+    },
+    "causal_logic": {
+      "verdict": "pass",
+      "evidence": "No reversed causality found. Positive-then-negative contrast constructions (lines 3, 5, 25, 47) each trace directly to a contract required_concept or an approved unit's warrant -- evidence-grounded contrasts mandated by the approved artifacts, not decorative AI-tell."
+    },
+    "argument_fidelity": {
+      "verdict": "pass",
+      "evidence": "All 8 argument units traced to specific paragraphs: arg-01->line 3, arg-02->line 5 + user-impact list, arg-03->lines 17-25, arg-04->lines 29-33, arg-05->lines 37-41, arg-06->lines 45-47, arg-07->lines 49-51, arg-08->lines 57-61. No unit silently dropped; no claim in the draft absent from the map."
+    },
+    "reader_facing_appropriateness": {
+      "verdict": "pass",
+      "evidence": "No sourcing metadata, prompt residue, internal locators, or structural self-commentary found. Figure placeholder (line 7) is a bracketed placeholder tag, not an arrow-chain sentence."
+    },
+    "terminology_agency": {
+      "verdict": "pass",
+      "evidence": "Terminology is stable and correct throughout with one isolated exception: line 21 uses bare 'แดชบอร์ด', which the contract's terminology.banned_forms lists as 'แดชบอร์ด (เดี่ยว)' for this section. All other banned_forms (NCAIF, DCCE, สินทรัพย์ดิจิทัล, ประตูหลัก, Governance) are correctly avoided throughout. A single local word-choice defect that does not change governing meaning is a minor finding (see findings), not a dimension failure -- the section as a whole demonstrates stable, agentive terminology."
+    },
+    "source_fidelity": {
+      "verdict": "pass",
+      "evidence": "All 7 required_concepts appear in substance. Numeric counts preserved exactly (391, 315, 47, 29, 87, 214, 57, 25, 296, 165, 56, 26, 28, 11). Percentage rounding matches evidence_policy (80.6->81, 12.0->12, 7.4->7, 42.2->42, 14.3->14, 6.6->7, 54.8->55, 75.7->76). Date conversion correct (8 July 2026 -> 8 กรกฎาคม 2569)."
+    },
+    "form_readability": {
+      "verdict": "pass",
+      "evidence": "Four bold subheadings (lines 1, 27, 43, 53) match required_structures item 1. Ordered lists present for 3 asset types, 3 data-management issues, 3 closing conclusions, matching items 2, 4, 6. User-impact list matches required count of 3 bullets (see F2 finding on composition). Figure placeholder matches item 5."
+    },
+    "altitude": {
+      "verdict": "pass",
+      "evidence": "T-PLAT/T-PLAT.INFO paragraph is the most detail-dense passage but this specificity is explicitly pre-approved (contract inclusion #2, matches arg-07's grounds). No per-dataset inventory or implementation detail introduced beyond what contract and map authorized."
+    },
+    "headline_conclusion": {
+      "verdict": "pass",
+      "evidence": "Closing ordered list states the governing finding explicitly; the reader does not have to reconstruct it from narrative."
+    },
+    "findings_over_process": {
+      "verdict": "pass",
+      "evidence": "No consultant-workflow narration; FGD1 and website findings are cited as evidentiary sourcing, not team-process description."
+    }
+  },
+  "findings": [
+    {
+      "severity": "minor",
+      "location": "line 21",
+      "issue": "Bare 'แดชบอร์ด' violates contract terminology.banned_forms entry 'แดชบอร์ด (เดี่ยว)'. Not caught by lint_thai_writing.py, whose only แดชบอร์ด-related lexicon entry bans an unrelated metaphor ('หน้ากากแดชบอร์ดโดยไร้เครื่องยนต์ข้อมูล'). A genuine, unambiguous contract-terminology gap independent of mechanical coverage -- exactly what independent review exists to catch.",
+      "status": "accepted",
+      "disposition": "Flag for human correction before publication (e.g. 'เว็บแอปพลิเคชันหรือระบบแสดงผลข้อมูลที่เชื่อมกับระบบบัญชีข้อมูล'); does not block this pass verdict per rubric rule 5 since it is a single local word-choice defect that does not change governing meaning."
+    },
+    {
+      "severity": "minor",
+      "location": "lines 11-13 (user-impact list, item 3)",
+      "issue": "Contract required_structures specifies a 3-group user-impact list, but argument-map unit arg-02's own grounds and application_to_design commit to 4 distinct user groups (central policymakers; regional/local officers; private sector; public/community). The draft merges private-sector and public/community into one bullet to satisfy the contract's literal count. Both underlying findings are stated as separate clauses within the merged bullet -- nothing is dropped -- but they rest on different grounds and imply different design responses, so the merge flattens some legibility at the list-item level.",
+      "status": "accepted",
+      "disposition": "Defensible reconciliation of a genuine pre-existing contract/map inconsistency, executed transparently. Recommend reconciling the contract's required_structures text with the map's 4-group finding at the next writing-plan revision, rather than leaving this mismatch for future drafters to resolve unilaterally each time."
+    }
+  ],
+  "mechanical_reviews": [],
+  "verdict": "pass"
+}
