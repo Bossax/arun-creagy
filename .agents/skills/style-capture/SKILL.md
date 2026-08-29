@@ -59,18 +59,25 @@ description: Incrementally learns and refines writing styles from individual sam
     - The file must document:
         - **Metadata**: Timestamp, session ID, source mode (In-Place Single File or Two-File Refinement), file paths, and context.
         - **Concrete Diff Log**: Direct line-by-line word-for-word changes, formatting transformations, and annotations (`%%...%%`).
+        - **Exhaustive Word-by-Word Lexicon Table**: A structured markdown table enumerating EVERY changed token/phrase pair with columns: `Banned/Draft`, `Preferred/Edit`, `Category`, `Institutional Rationale`.
         - **Linguistic Shift**: Specific grammar, tone, or structural changes observed.
         - **Candidate Rules**: Categorized by layer (`lexical`, `regex`, or `structural`).
 
-4) **Pattern Extraction (Research Phase)**
-    - Analyze the input across 3 layers:
-        - **L1/L2 Lexical & Surface Regex**: Specific term replacements and negative-contrast scaffolding.
-        - **L3 Micro-Structural / Tone**: Diction cleanup, Anti-AI Shield counter-examples.
-        - **L4/L5 Structural & Rhetorical**: Document architecture, high-altitude tables, framework enumeration, finding-to-design bridges.
+4) **Pattern Extraction (Research Phase — Mandatory Zero-Drop Lexical Audit)**
+    - **CRITICAL DIRECTIVE: ZERO-DROP LEXICAL SCAN**
+      Never summarize only high-level structural patterns while ignoring granular word-by-word edits. The agent MUST scan the diff sentence-by-sentence and extract EVERY changed word, term, particle, or phrase across 5 lexical categories:
+        1. **Domain Collocation & Calque Banning**: Catch literal translations from English that sound awkward in institutional Thai (e.g., `กำหนดหลักร่วม` ➔ `กำหนดหลักการ`, `ขีดความสามารถรองรับ` ➔ `กลไกข้อมูลเพื่อสนับสนุน`).
+        2. **Institutional Domain Precision**: Catch domain terms used inappropriately in the agency's operational context (e.g., `ผู้รับคำเตือน` ➔ `ผู้รับการแจ้งเตือน`, `เลือกหลักฐาน` ➔ `เลือกใช้ข้อมูล`).
+        3. **Formality & Gravitas Elevation**: Elevate conversational or unspecific phrasing into precise policy/planning diction (e.g., `แจ้งค่า` ➔ `รายงานค่าหรือระดับความรุนแรง`, `งานวิเคราะห์` ➔ `ขั้นตอนการวิเคราะห์ข้อมูล`).
+        4. **Passive/Defeatist Syntax Elimination**: Convert passive or defeatist administrative phrases into positive-conditional development framing (e.g., `ถูกเลื่อนออกเนื่องจาก...` ➔ `มีความสำคัญสูง แต่ยังต้องพัฒนาองค์ความรู้...`).
+        5. **Filler & Redundant Particle Pruning**: Catch and eliminate unnecessary padding particles and connective fluff (e.g., stripping redundant `ร่วม`, `ในแง่ของ`).
+    - Analyze the higher layers:
+        - **L3 Micro-Structural / Tone**: Parallelism in bulleted lists (nominal parallel headings), Anti-AI Shield counter-examples (negation-first framing, double negatives).
+        - **L4/L5 Structural & Rhetorical**: Document architecture, high-altitude tables, framework enumeration, finding-to-design bridges, and strategic driver framing.
 
-4b) **Miss Register (Promotion Threshold)**
+4b) **Miss Register (Promotion Threshold & Zero-Drop Registration)**
     - A single correction is a local edit. The same correction twice is a rule -- learning 2026-06-27 fixed that threshold at two, and the register is what counts to it.
-    - For every candidate pattern found in step 4 that is **not already in the lexicon or structural rules**, record it:
+    - **MANDATORY**: Every candidate pattern extracted in Step 4 (especially ALL lexical pairs from the Zero-Drop scan) that is not already in the lexicon or structural rules MUST be registered:
       `python .agents/skills/writing-th/scripts/register.py observe "<pattern>" --source <file> --layer <lexical|regex|structural> --fix "<what you changed it to>"`
     - Then ask what has earned promotion:
       `python .agents/skills/writing-th/scripts/register.py ready [--layer <lexical|regex|structural>]`
