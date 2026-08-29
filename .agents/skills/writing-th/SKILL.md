@@ -54,12 +54,12 @@ See [references/subagent-prompts.md](references/subagent-prompts.md) for canonic
 
 | Stage | Runs as | Loads | Must never load |
 |---|---|---|---|
-| 0 Contract | Parent + `AskUserQuestion` / `ask_question` | plan index, source paths | sources, style material |
-| 1 Argument map | `th-argument-mapper` (`invoke_subagent` / `Agent`) | sources, writing plan (if any), argument schema | style pack, lexicon, rubric |
+| 0 Contract | Parent + `AskUserQuestion` / `ask_question` | plan index, source paths, writing plan (if any) | sources, full style pack |
+| 1 Argument map | `th-argument-mapper` (`invoke_subagent` / `Agent`) | sources, writing plan (if any), argument schema, contract `target_altitude` | style pack, lexicon, rubric |
 | 2 Blueprint gate | Parent (Plan Mode / Markdown Artifact + `ask_question`) | rendered map summary | everything else |
-| 3 Verbalization | `th-verbalizer` (`invoke_subagent` / `Agent`) | `argument-map.json`, prose kernel | raw sources, full pack, rubric |
+| 3 Verbalization | `th-verbalizer` (`invoke_subagent` / `Agent`) | `argument-map.json`, prose kernel, contract `report_specific_rules` & `target_altitude` | raw sources, full pack, rubric |
 | 4 Mechanical gate | CLI only | — | nothing enters a model context |
-| 5 Editorial review | `th-editorial-reviewer` (`invoke_subagent` / `Agent`) | draft, argument map, rubric | sources, style pack |
+| 5 Editorial review | `th-editorial-reviewer` (`invoke_subagent` / `Agent`) | draft, argument map, contract, rubric | sources, style pack |
 | 6 Merge | CLI + parent | hashes, verdicts | — |
 
 `LEXICON_TH.json` should never enter a model context at any stage —
@@ -78,15 +78,17 @@ See [references/subagent-prompts.md](references/subagent-prompts.md) for canonic
 A writing plan may or may not already exist for this unit. Use
 `AskUserQuestion` (Claude) or `ask_question` (Antigravity) to establish whether one does, and its path — never assume.
 
-- If one exists: it is the primary input to Stage 1. Use `oracle_search` /
-  `oracle_trace` to retrieve the relevant slice rather than loading the file
-  whole.
-- If none exists: Stage 1 builds the argument map directly from the approved
-  sources, and the map itself becomes the writing plan for this unit.
+- **If a writing plan exists**: it is the primary input to Stage 1. Use `oracle_search` /
+  `oracle_trace` to retrieve the relevant slice. **MANDATORY**: Explicitly scan the writing plan for a global/section rules block (such as Section 10 / "ข้อกำหนดรูปแบบการเขียน"), active actor identity (e.g. "คณะที่ปรึกษา" as the analytical subject), and altitude constraints. Extract and record them in `report_specific_rules`.
+- **If none exists (or writing plan has no rules section)**: Use `ask_question` / `AskUserQuestion` to explicitly clarify:
+  1. Actor convention (e.g., "คณะที่ปรึกษา" vs "กรมฯ" as subject)
+  2. Tone & Persona (authoritative institutional vs technical brief)
+  3. Altitude / Acronym policy (e.g. executive summary: ban internal acronym clutter)
+  Record these under `report_specific_rules`.
 
 Read [references/artifact-schemas.md](references/artifact-schemas.md) before
 creating `writing-contract.json`. It must lock the audience, decision use,
-section job, target altitude, inclusions, exclusions, evidence policy, source
+section job, target altitude, report-specific rules, inclusions, exclusions, evidence policy, source
 paths, and reference samples. Record which writing-plan path was taken in
 `input_assets`, with an explicit `writing_plan: null` when none existed.
 
@@ -100,6 +102,8 @@ the writing plan if one exists. It produces `argument-map.json`: a Minto
 governing thought, an SCQA narrative arc, and ordered Toulmin argument units
 — each with `claim`, `grounds`, `warrant`, `application_to_design`, and a
 `supports` value that must partition `governing_thought_components`.
+
+**Altitude filter**: When `target_altitude` is `executive-summary`, grounds must prioritize synthesized findings and operational impacts over raw internal acronyms or micro-activity lists.
 
 The subagent validates its own output with
 `argument_gate.py validate <map>` before reporting done. Do not accept a map
@@ -123,11 +127,11 @@ else unlocks Stage 3.
 
 ### Stage 3 — Verbalization
 
-Spawn `th-verbalizer` (Claude Code `Agent("th-verbalizer")` or Antigravity `invoke_subagent(Role="TH Verbalizer", Model="flash")`) with the approved `argument-map.json` and
-[references/prose-kernel.md](references/prose-kernel.md) only — never the
+Spawn `th-verbalizer` (Claude Code `Agent("th-verbalizer")` or Antigravity `invoke_subagent(Role="TH Verbalizer", Model="flash")`) with the approved `argument-map.json`,
+[references/prose-kernel.md](references/prose-kernel.md), and the contract's `report_specific_rules`, `target_altitude`, and `terminology` — never the
 raw sources, never the full `STYLE_PACK_TH.md`. Treat each argument unit's
 `claim` / `grounds` / `warrant` / `application_to_design` as the paragraph's
-payload; do not force a four-part structure onto paragraphs the map does not
+payload; enforce the contract's active actor identity and report rules. Do not force a four-part structure onto paragraphs the map does not
 call for. One dominant job per paragraph, matching the unit's `paragraph_job`.
 
 **Bounded amendment path**: if verbalizing a unit reveals its `warrant`

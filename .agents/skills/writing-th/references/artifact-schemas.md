@@ -14,6 +14,11 @@ be absolute or repository-relative. Timestamps use ISO 8601.
   "decision_use": "Understand the national information gap and approve the blueprint direction",
   "section_job": "Establish the problem, governing response, and decision value",
   "target_altitude": "Five-minute executive read; findings and implications, not full methods",
+  "report_specific_rules": [
+    "Use 'คณะที่ปรึกษา' as the active subject for analysis/design decisions",
+    "Keep executive altitude: avoid internal operational acronym clutter (AD&ADF, DET, CRT)",
+    "Paragraph rhythm and proportion should match Executive-Summary-Report-CRI-Project.md"
+  ],
   "inclusions": ["three information-use failures", "web/data platform distinction"],
   "exclusions": ["slide locators", "per-platform literature review", "section roadmap"],
   "evidence_policy": "Use verified facts in prose; keep internal locators in the traceability sidecar",
@@ -28,8 +33,9 @@ be absolute or repository-relative. Timestamps use ISO 8601.
 
 Required profiles are `executive-summary`, `report`, `article`, or `letter`.
 Required modes are `rewrite`, `synthesis`, or `new`. Every listed key is
-required; lists and terminology may be empty only when the contract explains why
-through the corresponding prose field. `approval.status` must be `approved`
+required; lists, rules, and terminology may be empty only when the contract explains why
+through the corresponding prose field. `report_specific_rules` must capture global
+writing plan conventions (e.g., Section 10 rules, active actor identity, altitude constraints). `approval.status` must be `approved`
 before review or merge.
 
 ## `editorial-review.json`

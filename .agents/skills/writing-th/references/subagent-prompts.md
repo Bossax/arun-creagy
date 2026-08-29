@@ -9,7 +9,7 @@ This reference defines the canonical system prompts, model tier requirements, co
 | Subagent | Primary Role | Recommended Model | Antigravity Model | Claude Model | Ingestion Allowed | Ingestion Prohibited |
 |---|---|---|---|---|---|---|
 | **`th-argument-mapper`** | Stage 1 Argument Construction | High Reasoning | `Model: "pro"` | `claude-sonnet-5` (high effort) | `writing-contract.json`, source evidence, writing plan, `references/artifact-schemas.md` | `STYLE_PACK_TH.md`, `LEXICON_TH.json`, `editorial-rubric.md` |
-| **`th-verbalizer`** | Stage 3 Thai Verbalization | Fast / Strong Idiom | `Model: "flash"` (or `"pro"`) | `claude-sonnet-5` | Approved `argument-map.json`, `references/prose-kernel.md` | Raw sources, full `STYLE_PACK_TH.md`, `LEXICON_TH.json`, `editorial-rubric.md` |
+| **`th-verbalizer`** | Stage 3 Thai Verbalization | Fast / Strong Idiom | `Model: "flash"` (or `"pro"`) | `claude-sonnet-5` | Approved `argument-map.json`, `references/prose-kernel.md`, contract `report_specific_rules`, `target_altitude`, `terminology` | Raw sources, full `STYLE_PACK_TH.md`, `LEXICON_TH.json`, `editorial-rubric.md` |
 | **`th-editorial-reviewer`** | Stage 5 Clean-Context Review | High Reasoning (Independent) | `Model: "pro"` | `claude-sonnet-5` (high effort) | Approved `writing-contract.json`, approved `argument-map.json`, drafted prose, `references/editorial-rubric.md` | Raw sources (unless spot-checking claim), full `STYLE_PACK_TH.md`, drafting reasoning |
 
 ---
@@ -30,7 +30,7 @@ Do not economize on thinking here. A weak argument map produces a weak draft
 no matter how good the verbalization stage is.
 
 ## What you read
-- The approved writing-contract.json beside your output path.
+- The approved writing-contract.json beside your output path (note target_altitude and report_specific_rules).
 - The source evidence and any writing plan the contract names.
 - references/artifact-schemas.md for the exact argument-map.json shape.
 
@@ -39,6 +39,11 @@ no matter how good the verbalization stage is.
   no place in argument construction. If you find yourself reasoning about Thai
   diction, you have drifted into the next stage's job.
 - The editorial rubric.
+
+## Altitude awareness
+When contract target_altitude is executive-summary, filter out raw internal
+operational acronyms and laundry lists from grounds — elevate to functional
+roles and institutional impacts.
 
 ## What you produce
 argument-map.json at the path given in your task prompt, containing:
@@ -83,6 +88,8 @@ warrants that are not already in the approved map.
   is not, stop and report that instead of drafting.
 - references/prose-kernel.md — the compressed style guidance for this
   stage. This replaces the full STYLE_PACK_TH.md; you do not need it.
+- writing-contract.json (specifically report_specific_rules, target_altitude,
+  and terminology) for report-level persona, active actor conventions, and altitude.
 
 ## What you must never load
 - The raw source documents. The grounds you need are already extracted into
@@ -104,6 +111,8 @@ yourself.
 
 ## Rules
 - One dominant job per paragraph, matching the unit's paragraph_job.
+- Enforce contract report_specific_rules and active actor naming (e.g. use
+  "คณะที่ปรึกษา" as the subject for analysis/synthesis/design decisions if prescribed).
 - State the actual function or finding first; only then state a limitation or
   contrast, if any — never open with what something is not.
 - Name the deliverable, owner, or mechanism directly. Do not compress by
@@ -147,6 +156,7 @@ and the argument survives a "so what?" test unit by unit.
 
 Tier 2 — prose fidelity. Does the draft faithfully verbalize the approved
 map? Every approved warrant should have a corresponding claim in the draft.
+Check compliance with contract report_specific_rules and target_altitude.
 Flag any drift, any dropped mechanism, any negation-contrast scaffolding
 (ไม่ได้...แต่..., ไม่ควรถูกมองเป็น...แต่ควรถูกมองเป็น...) or other reverted
 AI-tell, and any finding stated without its application to design.
@@ -177,7 +187,7 @@ In Antigravity, invoke each stage via `invoke_subagent`:
   "TypeName": "research",
   "Role": "TH Argument Mapper",
   "Model": "pro",
-  "Prompt": "Execute Stage 1 argument mapping for [SECTION]. Read contract at [PATH]/writing-contract.json and source files. Produce [PATH]/argument-map.json following references/artifact-schemas.md. Validate with argument_gate.py before reporting."
+  "Prompt": "Execute Stage 1 argument mapping for [SECTION]. Read contract at [PATH]/writing-contract.json (check target_altitude) and source files. Produce [PATH]/argument-map.json following references/artifact-schemas.md. Validate with argument_gate.py before reporting."
 }
 
 // Stage 3: TH Verbalizer
@@ -185,7 +195,7 @@ In Antigravity, invoke each stage via `invoke_subagent`:
   "TypeName": "self",
   "Role": "TH Verbalizer",
   "Model": "flash",
-  "Prompt": "Execute Stage 3 verbalization for [SECTION]. Read [PATH]/argument-map.json and references/prose-kernel.md. Draft Thai prose to [PATH]/draft.md. Follow bounded amendment protocol if warrant fails."
+  "Prompt": "Execute Stage 3 verbalization for [SECTION]. Read [PATH]/argument-map.json, references/prose-kernel.md, and [PATH]/writing-contract.json (report_specific_rules, target_altitude, terminology). Draft Thai prose to [PATH]/draft.md. Follow bounded amendment protocol if warrant fails."
 }
 
 // Stage 5: TH Editorial Reviewer
