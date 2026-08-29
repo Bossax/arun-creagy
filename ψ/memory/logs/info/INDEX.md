@@ -1,5 +1,8 @@
 # Info Log Index
 
+- [2026-08-29 13:00] 🚩 **Writing-TH Harness Architecture (Important)**: Closed loop between `writing-th` v5.0.0 (created 2026-03-13, upgraded 2026-08-28) and `style-capture` sharing one style pack — forward arc (7 stages, binding script + merge gates) drafts in isolation, return arc (6 stages) promotes hand-edit corrections back into the pack. Tranche 1 shipped/verified 2026-08-25; tranche 2 (11 items) proposed, not built.
+  - File: ψ/memory/logs/info/2026-08-29_13-00_writing-th-harness-architecture.md
+
 - [2026-08-28 11:59] 🟡 **CRDB §4.3 amendment pending: Loss & Damage MVP sequencing + NESDC partner**: Revisit the already-reviewed exec-summary §4.3 draft to add MVP sequencing (foundational disaster stats before full L&D calculation) and name NESDC as key partner for the disaster loss-statistics service, per verified NESDC methodology source. Requires re-running mechanical + editorial gates; do not touch §4.4 onward for this.
   - File: ψ/memory/logs/info/2026-08-28_11-59_crdb-4.3-loss-damage-mvp-nesdc-partner.md
 
