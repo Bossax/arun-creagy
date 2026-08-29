@@ -8,7 +8,7 @@ This reference defines the canonical system prompts, model tier requirements, co
 
 | Subagent | Primary Role | Recommended Model | Antigravity Model | Claude Model | Ingestion Allowed | Ingestion Prohibited |
 |---|---|---|---|---|---|---|
-| **`th-argument-mapper`** | Stage 1 Argument Construction | High Reasoning | `Model: "pro"` | `claude-sonnet-5` (high effort) | `writing-contract.json`, source evidence, writing plan, `references/artifact-schemas.md` | `STYLE_PACK_TH.md`, `LEXICON_TH.json`, `editorial-rubric.md` |
+| **`th-argument-mapper`** | Stage 1 Argument Construction | High Reasoning | `Model: "pro"` | `claude-sonnet-5` (high effort) | `writing-contract.json`, source evidence, writing plan, `references/artifact-schemas.md`, `STRUCTURAL_RULES_TH.json`; in revision mode also `references/revision-mode.md` and the contract's `prior_draft` | `STYLE_PACK_TH.md`, `LEXICON_TH.json`, `editorial-rubric.md` |
 | **`th-verbalizer`** | Stage 3 Thai Verbalization | Fast / Strong Idiom | `Model: "flash"` (or `"pro"`) | `claude-sonnet-5` | Approved `argument-map.json`, `references/prose-kernel.md`, contract `report_specific_rules`, `target_altitude`, `terminology` | Raw sources, full `STYLE_PACK_TH.md`, `LEXICON_TH.json`, `editorial-rubric.md` |
 | **`th-editorial-reviewer`** | Stage 5 Clean-Context Review | High Reasoning (Independent) | `Model: "pro"` | `claude-sonnet-5` (high effort) | Approved `writing-contract.json`, approved `argument-map.json`, drafted prose, `references/editorial-rubric.md` | Raw sources (unless spot-checking claim), full `STYLE_PACK_TH.md`, drafting reasoning |
 
@@ -34,6 +34,11 @@ no matter how good the verbalization stage is.
 - The source evidence and any writing plan the contract names.
 - references/artifact-schemas.md for the exact argument-map.json shape.
 - ψ/memory/style/STRUCTURAL_RULES_TH.json — apply any mandatory structural transformations matching the contract's target_altitude, scope, or section_job (e.g. STR-001 for executive intro tables, STR-002 for framework enumeration, STR-003 for UX finding-to-design bridges).
+- references/revision-mode.md AND the draft named in the contract's prior_draft —
+  but only when the contract has a prior_draft. That field means you are recovering
+  the argument of an existing draft rather than building one from scratch. Read
+  revision-mode.md before anything else, then the prior draft, then the sources.
+  Every unit you emit then carries a provenance tag of recovered, repaired, or new.
 
 ## What you must never load
 - ψ/memory/style/STYLE_PACK_TH.md or LEXICON_TH.json — style material has

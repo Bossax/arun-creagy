@@ -55,7 +55,7 @@ See [references/subagent-prompts.md](references/subagent-prompts.md) for canonic
 | Stage | Runs as | Loads | Must never load |
 |---|---|---|---|
 | 0 Contract | Parent + `AskUserQuestion` / `ask_question` | plan index, source paths, writing plan (if any) | sources, full style pack |
-| 1 Argument map | `th-argument-mapper` (`invoke_subagent` / `Agent`) | sources, writing plan (if any), argument schema, contract `target_altitude` | style pack, lexicon, rubric |
+| 1 Argument map | `th-argument-mapper` (`invoke_subagent` / `Agent`) | sources, writing plan (if any), argument schema, contract `target_altitude`, plus `prior_draft` + revision-mode reference when revising | style pack, lexicon, rubric |
 | 2 Blueprint gate | Parent (Plan Mode / Markdown Artifact + `ask_question`) | rendered map summary | everything else |
 | 3 Verbalization | `th-verbalizer` (`invoke_subagent` / `Agent`) | `argument-map.json`, prose kernel, contract `report_specific_rules` & `target_altitude` | raw sources, full pack, rubric |
 | 4 Mechanical gate | CLI only | — | nothing enters a model context |
@@ -111,6 +111,14 @@ that hasn't passed this check.
 
 Do not economize on model or effort here — this is the stage where the
 thinking v5.0 skipped must actually happen.
+
+**Revision branch**: when the contract names a `prior_draft` — an existing draft
+being upgraded rather than a section written for the first time — the subagent
+also loads [references/revision-mode.md](references/revision-mode.md) and follows
+it. Stage 1 then runs backward from the prior draft's prose before it runs forward
+from sources, and every unit carries a `recovered` / `repaired` / `new`
+`provenance` tag. Drafts predating v6.0 are frozen by the Stage 3 hook until this
+happens, so recovery is the only path that reaches them.
 
 ### Stage 2 — Blueprint gate (human)
 

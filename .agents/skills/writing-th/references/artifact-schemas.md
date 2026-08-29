@@ -27,6 +27,8 @@ be absolute or repository-relative. Timestamps use ISO 8601.
   "required_structures": ["four-question table", "figure placeholder for development process"],
   "source_paths": ["path/to/source.md"],
   "reference_samples": ["path/to/approved-sample.md"],
+  "prior_draft": "path/to/existing-draft.md",
+  "prior_approval": {"approved_by": "Boss", "basis": "what the earlier contract's approval rested on"},
   "approval": {"status": "approved", "approved_by": "Boss", "approved_at": "2026-08-28T01:00:00+07:00"}
 }
 ```
@@ -37,6 +39,13 @@ required; lists, rules, and terminology may be empty only when the contract expl
 through the corresponding prose field. `report_specific_rules` must capture global
 writing plan conventions (e.g., Section 10 rules, active actor identity, altitude constraints). `approval.status` must be `approved`
 before review or merge.
+
+`prior_draft` and `prior_approval` are optional and appear together when a section
+is being upgraded rather than written for the first time. `prior_draft` names the
+existing draft; its presence is what puts Stage 1 into revision mode (see
+[revision-mode.md](revision-mode.md)). `prior_approval` carries forward what the
+superseded contract's approval rested on, so earlier human decisions stay visible
+after `approval` is reset for the new run.
 
 ## `editorial-review.json`
 
@@ -107,7 +116,8 @@ Create the initial file with `argument_gate.py prepare`; validate with
       "grounds": "Concrete evidence, benchmark, or cited parameter",
       "warrant": "Connective reasoning: why do these grounds compel this claim?",
       "application_to_design": "How this finding dictates the deliverable's design",
-      "supports": "must exactly match one entry in governing_thought_components"
+      "supports": "must exactly match one entry in governing_thought_components",
+      "provenance": "recovered | repaired | new — revision mode only"
     }
   ],
   "approval": {"status": "pending", "approved_by": "", "approved_at": ""}
@@ -119,6 +129,13 @@ same enum `STYLE_PACK_TH.md` rule 6 uses. `governing_thought_components` is
 the mechanical MECE check: every `argument_units[].supports` value must match
 one entry, and every entry must be supported by at least one unit.
 `argument_gate.py validate` enforces both directions.
+
+`provenance` appears only in revision mode, when the contract names a
+`prior_draft`. It records whether a unit was recovered from that draft unchanged,
+repaired because the draft argued it incompletely, or built new because the
+writing plan required it and the draft skipped it. The gate script does not check
+it; the Stage 2 gate and the Stage 5 reviewer read it, and `warrant_trace.py` on a
+`recovered` unit is what catches a rewrite dropping approved substance.
 
 `approval.status` must be `approved` before any draft in the same directory
 may be written or revised — enforced by the `PreToolUse` hook on
