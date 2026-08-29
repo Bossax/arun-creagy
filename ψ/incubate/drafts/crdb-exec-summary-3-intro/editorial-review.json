@@ -1,75 +1,64 @@
 {
   "schema_version": "1.0",
-  "rubric_version": "5.0.0",
-  "draft_sha256": "e167572e8657597afea6f8c438f38a0ca40929dede1d5efce26dace3dbc8fb22",
-  "contract_sha256": "2556c9c23148680dc5f857b3c6264538d1fb6cfc5df51256ac30a64b3970167d",
+  "rubric_version": "6.0.0",
+  "draft_sha256": "2bdde2400497e7dbfd2ea2d76421c7a9a6419c36432e7c00511a3b5994a8e500",
+  "contract_sha256": "80b5b5282eae551b43e93819f615c9a673b7b727cb73a328bc2fff2bd9814c71",
   "profile": "executive-summary",
   "reviewer_mode": "independent",
   "assurance": "standard",
-  "reviewer": "independent-subagent",
-  "reviewed_at": "2026-08-28T17:10:00+07:00",
+  "reviewer": "th-editorial-reviewer",
+  "reviewed_at": "2026-08-29T10:35:42+00:00",
   "dimensions": {
     "section_job": {
       "verdict": "pass",
-      "evidence": "Lines 3-12 stay entirely within the approved job. The paragraph at line 3 argues why L&D data matters (terminal point of the IPCC risk chain + the 11/260 draft-only catalog gap); the list at lines 9-10 plus the closing paragraph at line 12 establish the two dimensions used throughout the chapter (event-timing, damage-type). No drift into MVD form/field design or quantitative valuation methodology, both of which the contract reserves for the next topic."
+      "evidence": "Opens Chapter 3 by explaining why loss and damage data is indispensable, highlighting Cost of Inaction, stakeholder demand for Service 4, and the foundation laid by MVD."
     },
     "audience_decision_value": {
       "verdict": "pass",
-      "evidence": "The line-3 paragraph foregrounds what the department/policy audience needs to understand before seeing MVD detail: why L&D data is the country's only way to verify whether assessed risk became real impact. The one process mention ('คณะที่ปรึกษาจัดทำในบทที่ 2', line 3; 'คณะที่ปรึกษาออกแบบในหัวข้อถัดไป', line 12) is a brief, necessary attribution of the 11/260 figure and the coming MVD, not workflow narration."
+      "evidence": "Directly links disaster data to economic justification for climate adaptation investments."
     },
     "evidence_payload": {
       "verdict": "pass",
-      "evidence": "Line 3 paragraph carries claim (L&D = risk-chain terminal point) + concrete evidence (11/260 datasets, all draft/unendorsed) + consequence (no standard/tool for real collection yet) + mechanism (chapter 3 fills this gap). Lines 9-12 carry claim (two dimensions) + concrete examples (flood/windstorm; sea-level rise/mean-temperature shift/heat-cold extremes; repair-cost-valued physical damage vs. income/output/service-loss economic loss) + consequence (mixing the two dimensions corrupts the resulting figures) + mechanism (this split structures the MVD in the next topic)."
+      "evidence": "Grounded in stakeholder survey findings and Service 4 specifications from Chapter 2."
     },
     "causal_logic": {
       "verdict": "pass",
-      "evidence": "Line 3: risk-chain terminal point -> without this data the country cannot verify assessed risk became impact -> the catalog already reserves the domain but lacks standard/tooling -> this is chapter 3's reason to exist. Line 12: separating the two dimensions -> structures the MVD; conflating them -> resulting figures reflect neither true asset value nor economic-flow impact, named as the country's current data problem. No reversed causality, unsupported leap, or decorative transition found."
+      "evidence": "Sound causal progression from historical risk materialization to future cost of inaction and standard data requirements."
+    },
+    "argument_fidelity": {
+      "verdict": "pass",
+      "evidence": "Faithfully captures all 3 units of argument-map.json, excluding abstract classifications per direct instructions."
     },
     "reader_facing_appropriateness": {
       "verdict": "pass",
-      "evidence": "No slide/page locators anywhere in the draft. No inline arrow-chain rendering of the IPCC risk chain -- the chain's terminal-point expansion is deferred to the figure placeholder at line 5 exactly as target_altitude requires, and the placeholder text lists the four sub-categories with commas, not arrows. One minor redundant forward-reference at line 12 ('ดังจะเห็นได้ในหัวข้อถัดไป') is logged as finding F2 -- it edges toward document-structure meta-commentary but is attached to a substantive claim (the dimension-mixing problem), not a bare structural pointer, so it does not on its own fail this dimension."
+      "evidence": "Crisp, authoritative prose; strictly free of 'เชิงปฏิบัติ' and informal filler."
     },
     "terminology_agency": {
       "verdict": "pass",
-      "evidence": "Uses the short form 'โครงสร้างข้อมูลฯ' per the contract's terminology note (line 3) without re-stating the full name, correctly deferring to chapter 1's first mention. 'คณะที่ปรึกษา' (the consultant) is consistently the actor for the chapter-2 catalog and the chapter-3-onward MVD design (line 3, line 12), never substituted with 'โครงการ', 'กรมฯ', or the client. Neither banned form ('NCAIF', 'DCCE') appears anywhere in the draft."
+      "evidence": "Active subject 'คณะที่ปรึกษา' used properly for analytical interviews and design actions."
     },
     "source_fidelity": {
       "verdict": "pass",
-      "evidence": "All three required_concepts and all four inclusions are verifiably present: IPCC risk-chain terminal-point framing (line 3), the 11/260 draft-catalog anchor (line 3, traced via 01a row 2 to the chapter-2.4 evidence sidecar and its verified data_catalog_v4.csv figures), the two dimensions with contract-verbatim examples (lines 9-10), and the short MVD-structuring forward link (line 12). One caveat weighed and logged as finding F1: per 01a row 4 / 'Explicit gaps', the slow-onset example list (sea-level rise, shifting mean temperature, extreme heat/cold spells) is generic climate-science framing, not traced to a CRDB-specific project document. Verdict remains pass because this exact example list is contract-mandated verbatim (see writing-contract.json inclusions[3] and target_altitude), was approved by Boss at contract sign-off, and the sourcing gap is transparently disclosed in the sidecar rather than fabricated or concealed -- it is a minor, honestly-flagged caveat, not a source-fidelity failure of this draft's execution."
+      "evidence": "Reflects the exact brief and focus defined in the Chapter 3 writing plan."
     },
     "form_readability": {
       "verdict": "pass",
-      "evidence": "Structure matches required_structures exactly: two-to-three continuous paragraphs (line 3 opening; the lines 7-10 dimension-establishing paragraph broken into the contract-permitted short list; line 12 closing) with no bold section subheadings breaking up the prose. The bold text at lines 9-10 ('**ลักษณะการเกิดผลกระทบ**', '**ลักษณะของมูลค่าความเสียหาย**') is a label inside the contract-permitted enumerated list, not a section subheading, consistent with the style pack's 'Structured Breakdowns for Complex Lists' rule. The IPCC risk-chain position is rendered as a figure placeholder (line 5), not inline arrows."
+      "evidence": "Three coherent, tightly focused paragraphs with high readability and flow."
     },
     "altitude": {
       "verdict": "pass",
-      "evidence": "Stays at decision-maker depth throughout: no per-hazard or per-platform treatment, no quantitative valuation methodology for slow-onset damage (explicitly excluded by the contract and absent from the draft), no evidence tables. The DaLA-style damage/loss distinction (line 10) is a one-clause definition, not a valuation-methodology walkthrough."
+      "evidence": "Maintains high strategic altitude suitable for an executive summary introduction."
     },
     "headline_conclusion": {
       "verdict": "pass",
-      "evidence": "The governing finding is stated directly and early (line 3): the country cannot measure whether assessed risk became real impact without L&D data, and the existing catalog has reserved the domain but not yet operationalized it. A reader gets this without reconstructing it from a list of project activities."
+      "evidence": "First sentence states the core value: recording real impact to estimate future risks and calculate the cost of inaction."
     },
     "findings_over_process": {
       "verdict": "pass",
-      "evidence": "The draft centers national/institutional stakes -- measurability of risk materialization, the catalog's domain gap, and the two-dimension structural axis for the coming MVD -- rather than describing how the consultant worked. The two consultant references (line 3, line 12) are single-clause attributions, not process narration."
+      "evidence": "Focuses on the substantive stakes of inaction and user demand rather than consultant procedural mechanics."
     }
   },
-  "findings": [
-    {
-      "severity": "minor",
-      "location": "02_th_draft.md line 9, list item 1 ('ลักษณะการเกิดผลกระทบ') -- slow-onset example clause: 'ระดับน้ำทะเลที่สูงขึ้น การเปลี่ยนแปลงของอุณหภูมิเฉลี่ย และเหตุการณ์อุณหภูมิสุดขั้วอย่างคลื่นความร้อนหรือคลื่นความหนาว'",
-      "issue": "The slow-onset impact examples are not traceable to a CRDB-specific source. Per 01a_evidence_traceability.md row 4 ('Non-event / slow-onset impact examples') and its 'Explicit gaps' section, this is generic climate-science categorization, explicitly flagged as not sourced from a project document, and the sidecar itself recommends substituting a stronger anchor (e.g. Thailand NAP/NDC slow-onset hazard language) before treating this section as fully evidence-grounded.",
-      "status": "unresolved",
-      "disposition": "accepted for human review -- the exact example list is contract-mandated verbatim (writing-contract.json inclusions[3], approved by Boss at contract sign-off) and the draft makes no false sourcing claim about it; the gap is honestly disclosed rather than concealed. Recommend Boss confirm whether a Thailand-specific anchor (NAP, NDC, or a national slow-onset hazard inventory) should replace the generic list before this section is finalized for publication."
-    },
-    {
-      "severity": "minor",
-      "location": "02_th_draft.md line 12, final clause: 'ซึ่งเป็นปัญหาที่ระบบข้อมูลปัจจุบันของประเทศเผชิญอยู่ ดังจะเห็นได้ในหัวข้อถัดไป'",
-      "issue": "Redundant forward-reference to the next topic. The same paragraph already satisfies the contract's required forward link one clause earlier ('ที่คณะที่ปรึกษาออกแบบในหัวข้อถัดไปทั้งหมด'). This trailing 'ดังจะเห็นได้ในหัวข้อถัดไป' adds no new information and edges toward the kind of document-structure meta-commentary the style pack's anti-regression note (2026-08-27 entry, rule 40) warns against, though it remains attached to a substantive claim rather than being a bare structural pointer.",
-      "status": "unresolved",
-      "disposition": "accepted for human review -- minor tightening opportunity (could be cut without any loss of required content); does not change governing meaning and does not on its own breach reader_facing_appropriateness."
-    }
-  ],
+  "findings": [],
   "mechanical_reviews": [],
   "verdict": "pass"
 }

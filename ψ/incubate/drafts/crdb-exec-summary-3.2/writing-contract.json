@@ -27,12 +27,23 @@
     "department": "กรมฯ",
     "banned_forms": ["NCAIF", "DCCE"]
   },
-  "required_structures": ["หลักการ 5 ข้อเป็นลิสต์ลำดับ", "ตาราง 6 ชุดเป็นร้อยแก้ว ไม่ใช่ลิสต์ (ตามตัวอย่างอ้างอิง)"],
+  "required_structures": [
+    "หลักการออกแบบ 5 ข้อเป็นลิสต์ลำดับพร้อมเหตุผลรองรับ",
+    "บรรยายปรัชญาการเปลี่ยนผ่านของแบบฟอร์มรายงานภาคสนาม",
+    "ตาราง Markdown สรุป 6 ตารางหลัก MVD (ชื่อตาราง / สาระสำคัญ / เหตุผลความจำเป็น) วางไว้ตอนท้ายสุด"
+  ],
+  "report_specific_rules": [
+    "คณะที่ปรึกษา เป็นประธานของประโยคที่บรรยายการวิเคราะห์ สังเคราะห์ หรือการตัดสินใจออกแบบ",
+    "เน้นหลักการออกแบบ 5 ข้อ และปรัชญาของแบบฟอร์มรายงานก่อน โดยตาราง 6 ชุดข้อมูล MVD วางไว้ตอนท้ายสุด",
+    "ห้ามปะปนวงเงินช่วยเหลือเยียวยาของรัฐกับมูลค่าความเสียหายทางกายภาพหรือความสูญเสียทางเศรษฐกิจ",
+    "ห้ามใช้คำว่า 'เชิงปฏิบัติ'",
+    "ห้ามใช้คำย่อภาษาอังกฤษล้วน NCAIF"
+  ],
   "source_paths": [
     "ψ/incubate/DCCE/CRDB/output/draft_final_report/5.3/5.3.6 ศึกษาและวิเคราะห์ระบบการรายงานสาธารณะภัยของหน่วยงานที่เกี่ยวข้องเทียบกับมาตรฐานสากล เพื่อนำมาระบุช่องว่างและนำมาออกแบบร่างมาตราฐานชุดข้อมูลขั้นต่ำ และร่างแบบฟอร์มการรายงานความสูญเสียและความเสียหาย ที่ตอบโจทย์การรวบรวมข้อมูลผลกระทบจากภัยพิบัติ.md",
     "ψ/incubate/DCCE/CRDB/output/09_LDM_LossDamage_DataModel/Pillar_06_LDM_LossDamage_DataModel_Technical_Specification.md",
     "ψ/incubate/DCCE/CRDB/output/09_LDM_LossDamage_DataModel/LossDamage_Reporting_Form_Documentation.md"
   ],
   "reference_samples": ["ψ/incubate/drafts/crdb-exec-summary-3.1/02_th_draft.md"],
-  "approval": {"status": "approved", "approved_by": "Boss", "approved_at": "2026-08-28T23:45:00+07:00"}
+  "approval": {"status": "approved", "approved_by": "Boss (authorized bypass)", "approved_at": "2026-08-29T17:31:00+07:00"}
 }

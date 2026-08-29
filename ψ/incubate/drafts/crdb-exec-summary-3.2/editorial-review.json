@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "rubric_version": "6.0.0",
+  "draft_sha256": "cb622202c1c33dae641128eb5bb4db2fa68b59818dfb19391bcdeee8e6fe77b0",
+  "contract_sha256": "24f7372457633a0cbab680b3d6f282523d4142085cd16be191bad03d9a3b9dfe",
+  "profile": "executive-summary",
+  "reviewer_mode": "independent",
+  "assurance": "standard",
+  "reviewer": "th-editorial-reviewer",
+  "reviewed_at": "2026-08-29T10:32:26+00:00",
+  "dimensions": {
+    "section_job": {
+      "verdict": "pass",
+      "evidence": "Presents the 5 MVD design principles, the reporting form philosophy, and the 6 relational database tables with operational clarity."
+    },
+    "audience_decision_value": {
+      "verdict": "pass",
+      "evidence": "Shows DCCE executives how MVD pragmatically bridges the gap between field burden and national reporting accuracy."
+    },
+    "evidence_payload": {
+      "verdict": "pass",
+      "evidence": "Directly enumerates all 5 principles, details the shift from monetary guesswork to physical counts, and tabulates all 6 relational entities."
+    },
+    "causal_logic": {
+      "verdict": "pass",
+      "evidence": "Explains why counting physical units and delegating monetary valuation to backend price catalogs eliminates local bias."
+    },
+    "argument_fidelity": {
+      "verdict": "pass",
+      "evidence": "All 3 argument units from argument-map.json are verbalized faithfully in the required structural sequence."
+    },
+    "reader_facing_appropriateness": {
+      "verdict": "pass",
+      "evidence": "Authoritative institutional Thai; tables formatted cleanly; free of informal conversational tells or 'เชิงปฏิบัติ'."
+    },
+    "terminology_agency": {
+      "verdict": "pass",
+      "evidence": "Active subject 'คณะที่ปรึกษา' used consistently for design assertions and technical framing."
+    },
+    "source_fidelity": {
+      "verdict": "pass",
+      "evidence": "Faithful to TOR 5.3.6 and Pillar_06 LDM Technical Specification."
+    },
+    "form_readability": {
+      "verdict": "pass",
+      "evidence": "Structured numbered list for 5 principles followed by analytical prose on form philosophy and ending with a clear Markdown summary table."
+    },
+    "altitude": {
+      "verdict": "pass",
+      "evidence": "Maintains executive altitude by describing table jobs and differentiation rather than listing every single data field."
+    },
+    "headline_conclusion": {
+      "verdict": "pass",
+      "evidence": "Opening sentence delivers a decisive takeaway on how MVD solves PDNA complexity and automates valuation."
+    },
+    "findings_over_process": {
+      "verdict": "pass",
+      "evidence": "Emphasizes architectural design logic and structural value over procedural drafting narrative."
+    }
+  },
+  "findings": [],
+  "mechanical_reviews": [
+    {"message": "[PARENTHETICAL] '(Minimum Viable Dataset: MVD)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.", "disposition": "Core technical deliverable acronym retained."},
+    {"message": "[PARENTHETICAL] '(Damage)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.", "disposition": "International terminology retained for distinction."},
+    {"message": "[PARENTHETICAL] '(Loss)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.", "disposition": "International terminology retained for distinction."},
+    {"message": "[PARENTHETICAL] '(Auditability)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.", "disposition": "Technical governance attribute retained."},
+    {"message": "[PARENTHETICAL] '(Recovery and Reconstruction Needs)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.", "disposition": "PDNA terminology retained."},
+    {"message": "[PARENTHETICAL] '(Build Back Better: BBB)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.", "disposition": "Standard international disaster recovery principle retained."},
+    {"message": "[PARENTHETICAL] '(Downtime)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.", "disposition": "Standard operational economic loss metric retained."},
+    {"message": "[PARENTHETICAL] '(Standardized Replacement Cost Catalogs)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.", "disposition": "Technical valuation mechanism terminology retained."}
+  ],
+  "verdict": "pass"
+}

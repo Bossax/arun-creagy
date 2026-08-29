@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "rubric_version": "6.0.0",
+  "draft_sha256": "344b1ec5115081369da86ba2d50551c3f90eee5fb8e9d0f5b363f2c8b9b66099",
+  "contract_sha256": "8324ee0fce720daa8545f799c608a397d0405b130a25fb344dc03648057ce780",
+  "profile": "executive-summary",
+  "reviewer_mode": "independent",
+  "assurance": "standard",
+  "reviewer": "th-editorial-reviewer",
+  "reviewed_at": "2026-08-29T10:31:10+00:00",
+  "dimensions": {
+    "section_job": {
+      "verdict": "pass",
+      "evidence": "Opening establishes the contrast between international disaster data standards and Thailand's current reporting system, setting up the rationale for MVD."
+    },
+    "audience_decision_value": {
+      "verdict": "pass",
+      "evidence": "Gives DCCE executives clear institutional context on why existing DDPM disaster data cannot evaluate real climate loss and damage."
+    },
+    "evidence_payload": {
+      "verdict": "pass",
+      "evidence": "Explicitly details DesInventar Data Cards, DaLA Asset-Flow model, 4 DRM phases, relief fund ceiling rules, and 3 specific PDNA rollout roadblocks."
+    },
+    "causal_logic": {
+      "verdict": "pass",
+      "evidence": "Clearly links the gap between rapid emergency spending and stalled full-scale PDNA to the compelling need for an operational MVD."
+    },
+    "argument_fidelity": {
+      "verdict": "pass",
+      "evidence": "All 4 argument units from argument-map.json are verbalized faithfully without omission or distortion."
+    },
+    "reader_facing_appropriateness": {
+      "verdict": "pass",
+      "evidence": "Professional Thai institutional prose, free of internal document pointers and free of negative conversational tells."
+    },
+    "terminology_agency": {
+      "verdict": "pass",
+      "evidence": "Active voice 'คณะที่ปรึกษา' used for analytical synthesis; official Thai terms accompanied by standard English citations on first mention."
+    },
+    "source_fidelity": {
+      "verdict": "pass",
+      "evidence": "Accurately represents primary TOR 5.3.6 and DDPM primary PDNA report findings."
+    },
+    "form_readability": {
+      "verdict": "pass",
+      "evidence": "Well-balanced three subsections with bold numbered list for parallel institutional bottlenecks."
+    },
+    "altitude": {
+      "verdict": "pass",
+      "evidence": "Appropriate executive summary altitude, omitting operational micro-acronyms while preserving core conceptual distinctions."
+    },
+    "headline_conclusion": {
+      "verdict": "pass",
+      "evidence": "Section opens with an authoritative takeaway conclusion summarizing the core tension and policy takeaway."
+    },
+    "findings_over_process": {
+      "verdict": "pass",
+      "evidence": "Focuses squarely on structural findings and empirical differences rather than procedural narration."
+    }
+  },
+  "findings": [],
+  "mechanical_reviews": [
+    {"message": "[PARENTHETICAL] '(United Nations Office for Disaster Risk Reduction: UNDRR)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.", "disposition": "Official UN agency designation retained for institutional precision."},
+    {"message": "[PARENTHETICAL] '(Data Card)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.", "disposition": "Technical terminology for DesInventar records retained."},
+    {"message": "[PARENTHETICAL] '(UNDRR, 2020)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.", "disposition": "Academic citation retained."},
+    {"message": "[PARENTHETICAL] '(United Nations Economic Commission for Latin America and the Caribbean: UNECLAC)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.", "disposition": "Official UN regional commission designation retained."},
+    {"message": "[PARENTHETICAL] '(Asset-Flow Model)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.", "disposition": "Standard macroeconomic modeling concept retained."},
+    {"message": "[PARENTHETICAL] '(Jovel & Mudahar, 2010)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.", "disposition": "Primary methodology citation retained."},
+    {"message": "[PARENTHETICAL] '(Post-Disaster Needs Assessment: PDNA)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.", "disposition": "Official international/national framework acronym retained."},
+    {"message": "[PARENTHETICAL] '(Build Back Better: BBB)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.", "disposition": "Standard international disaster recovery principle retained."}
+  ],
+  "verdict": "pass"
+}

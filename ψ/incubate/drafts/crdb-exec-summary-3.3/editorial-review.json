@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "rubric_version": "6.0.0",
+  "draft_sha256": "20b66d0608500cee7ff77651b730d2e2bcf8dd1f898bf155317fccc5f227cf82",
+  "contract_sha256": "c13d6384e20c635f4d6282ba703833c0a3acd0eb12962b9e023c848c3cc4294e",
+  "profile": "executive-summary",
+  "reviewer_mode": "independent",
+  "assurance": "standard",
+  "reviewer": "th-editorial-reviewer",
+  "reviewed_at": "2026-08-29T10:33:44+00:00",
+  "dimensions": {
+    "section_job": {
+      "verdict": "pass",
+      "evidence": "Clearly presents the 3-event pilot test results, the 3-level data availability framework, and the 3 systemic process gaps without intruding into recommendations."
+    },
+    "audience_decision_value": {
+      "verdict": "pass",
+      "evidence": "Provides executives with clear empirical evidence on what existing reporting currently supports and where structural blind spots persist."
+    },
+    "evidence_payload": {
+      "verdict": "pass",
+      "evidence": "Exact historical stats preserved (Phichit 31/48, Sisaket 22/57, Lampang 27/52) and tabulated cleanly."
+    },
+    "causal_logic": {
+      "verdict": "pass",
+      "evidence": "Directly links the empty fields to underlying procedural causes (household vs. individual basis, quick closure without end date, severed financial linkage)."
+    },
+    "argument_fidelity": {
+      "verdict": "pass",
+      "evidence": "All 3 argument units from argument-map.json are verbalized accurately and logically."
+    },
+    "reader_facing_appropriateness": {
+      "verdict": "pass",
+      "evidence": "Formal institutional style, non-judgmental wording regarding field staff, free of 'เชิงปฏิบัติ'."
+    },
+    "terminology_agency": {
+      "verdict": "pass",
+      "evidence": "Active subject 'คณะที่ปรึกษา' used for testing actions and analytical synthesis."
+    },
+    "source_fidelity": {
+      "verdict": "pass",
+      "evidence": "Strictly grounded in TOR 5.3.7 source documentation without blending with conflicting test archives."
+    },
+    "form_readability": {
+      "verdict": "pass",
+      "evidence": "Comparative Markdown table brings high legibility to the complex 3-case pilot comparison."
+    },
+    "altitude": {
+      "verdict": "pass",
+      "evidence": "Maintains executive altitude by highlighting field counts and operational causes rather than full raw CSV schemas."
+    },
+    "headline_conclusion": {
+      "verdict": "pass",
+      "evidence": "Opening takeaway clearly asserts the contrast between strong location data and weak human/economic casualty records."
+    },
+    "findings_over_process": {
+      "verdict": "pass",
+      "evidence": "Emphasizes empirical testing results and structural causes over procedural narrative."
+    }
+  },
+  "findings": [],
+  "mechanical_reviews": [
+    {"message": "[PARENTHETICAL] '(Field Mapping)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.", "disposition": "Standard technical methodology term retained."},
+    {"message": "[PARENTHETICAL] '(Event ID)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.", "disposition": "Database foreign/primary key technical identifier retained."}
+  ],
+  "verdict": "pass"
+}
