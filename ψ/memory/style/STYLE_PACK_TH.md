@@ -1,5 +1,5 @@
 # Style-Pack: TH (Thai institutional writing, repo-wide)
-**Samples Learnt**: 23 (Technical Precision, Readability, Analytical Density, and Structural Flow) | **Last Updated**: 2026-08-28 | **Lexicon**: LEXICON_TH.json v4.1, 52 rules
+**Samples Learnt**: 24 (Technical Precision, Readability, Analytical Density, and Structural Flow) | **Last Updated**: 2026-08-30 | **Lexicon**: LEXICON_TH.json v4.1, 62 rules
 
 ## 1. Core Kernel (80/20)
 
@@ -148,7 +148,7 @@ These rules matter, but they should not compete with the Core Kernel during earl
 * **Climate Change** -> การเปลี่ยนแปลงสภาพภูมิอากาศ (Climate Change)
 * **Non-Economic Loss and Damage** -> ความสูญเสียและความเสียหายที่ไม่ใช่เชิงเศรษฐกิจ (Non-Economic Loss and Damage: NELD)
 * **Data Catalog** -> บัญชีรายการข้อมูล (Data Catalog)
-* **Metadata Standard** -> มาตรฐานข้อมูลกำกับ (Metadata Standard)
+* **Metadata Standard** -> มาตรฐานข้อมูลอภิพันธ์ (Metadata Standard)
 * **Risk Methodology Catalog** -> บัญชีระเบียบวิธีความเสี่ยง (Risk Methodology Catalog)
 * **Service Portfolio** -> ชุดบริการข้อมูลสารสนเทศ (Service Portfolio)
 * **Workflow** -> ขั้นตอนปฏิบัติ (Workflow)
@@ -215,6 +215,8 @@ These rules matter, but they should not compete with the Core Kernel during earl
 - **DON'T**: Mechanically append repetitive case study names (e.g. `"...ช่วยปิดช่องว่างที่พบในกรณี จ.พิจิตร"`) to universal recommendation lists. Let recommendations stand self-contained.
 - **DON'T**: Misdiagnose data processing proxy misuse as a semantic classification problem. Distinguish operational reality from vocabulary definitions.
 - **DON'T**: Overclaim national governance scope (`"โครงสร้างข้อมูลของประเทศ"`); strictly anchor deliverables to the commissioning entity (`"แพลตฟอร์มข้อมูลของกรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม"`).
+- **DON'T**: Close a diagnostic sentence with a blunt absolute-negative conclusion (e.g. `"...จึงไม่มีระดับความละเอียดใดที่ให้บริการได้อย่างน่าเชื่อถือ"`, a dimension titled `"วิธีคำนวณที่ยังไม่มีอยู่จริง"`). Boss confirmed 2026-08-30 this is a tone correction, not a content one — cut the clause or reframe as a neutral institutional category (`"ระเบียบวิธีการในการวิเคราะห์ข้อมูล"`) only when the underlying claim itself is still accurate.
+- **DO** (unconfirmed, filed by analogy to the rule above — flag if wrong): Hedge a claim the evidence doesn't fully support — add `เป็นส่วนใหญ่` or `มัก` rather than stating it as absolute, when the underlying data only shows a majority/typical pattern rather than a universal one.
 
 ## 8. Master Implementation Prompt
 > **Writing Mode**: TH-Institutional (v5.0 - Stage-Aware, Evidence-Dense, Institution-Led)

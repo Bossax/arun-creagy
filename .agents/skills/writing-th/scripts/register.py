@@ -14,9 +14,40 @@ Two things are recorded, and they answer different questions.
 
 Nothing is ever deleted. Promotion marks a candidate, it does not remove it.
 
+Rationale gate (2026-08-30): a candidate also carries a `status`, separate
+from its sighting count. Not every repeated edit is a repeatable rule -- a
+correction can be tone (generalizes), a domain fact the editor happened to
+know (doesn't generalize -- promoting it risks teaching future drafts to
+invent detail), or a one-off scope decision for that document (doesn't
+generalize either). `ready` only surfaces a candidate once its status says
+it is allowed to:
+
+  unconfirmed          : default for anything new. Not eligible for `ready`
+                          until confirmed. Ask the user why the edit was made
+                          (see style-capture SKILL.md step 4c), then:
+                              register.py confirm "<pattern>" --status <...>
+  mechanical            : a pure token swap, no semantic content at stake
+                          (e.g. a consistent synonym preference). Eligible for
+                          `ready` on the FIRST sighting -- pass
+                          --status mechanical to `observe` directly, no need
+                          to wait for a second occurrence or call `confirm`.
+  confirmed_generalizable : user-confirmed as a repeatable rule (tone, or a
+                          genuine general style preference). Subject to the
+                          normal 2x threshold.
+  one_off               : user-confirmed as specific to one document (a scope
+                          decision, a domain fact, a factual correction).
+                          Logged for audit, never surfaces in `ready`.
+  content_correction    : same as one_off -- the edit fixed substance, not
+                          style. Never surfaces in `ready`.
+  legacy                : backfilled automatically onto every candidate that
+                          existed before this gate was added, so nothing
+                          already near promotion silently stalls. Treated the
+                          same as confirmed_generalizable for `ready`.
+
 Usage:
     register.py init
-    register.py observe "<pattern>" --source <file> [--note "..."] [--fix "..."]
+    register.py observe "<pattern>" --source <file> [--note "..."] [--fix "..."] [--status ...]
+    register.py confirm "<pattern>" --status <mechanical|confirmed_generalizable|one_off|content_correction>
     register.py ready [--threshold 2]
     register.py promoted "<pattern>"
     register.py stats
@@ -31,6 +62,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 SKILL_ROOT = Path(__file__).resolve().parent.parent
+
+STATUS_CHOICES = ["unconfirmed", "mechanical", "confirmed_generalizable", "one_off", "content_correction"]
+CONFIRM_STATUS_CHOICES = ["mechanical", "confirmed_generalizable", "one_off", "content_correction"]
+READY_STATUSES = {"legacy", "mechanical", "confirmed_generalizable"}
 
 
 def repo_root():
@@ -107,6 +142,17 @@ def connect(create=False):
         con.execute("ALTER TABLE promotions ADD COLUMN layer TEXT DEFAULT 'lexical'")
     except sqlite3.OperationalError:
         pass
+    try:
+        con.execute("ALTER TABLE candidates ADD COLUMN status TEXT DEFAULT 'unconfirmed'")
+        # First time this column exists: every row present right now predates
+        # the rationale gate (2026-08-30). Grandfather them in as 'legacy'
+        # rather than blocking candidates already near promotion -- see the
+        # module docstring. Rows inserted after this point pass their own
+        # status explicitly (cmd_observe defaults new rows to 'unconfirmed').
+        con.execute("UPDATE candidates SET status = 'legacy'")
+        con.commit()
+    except sqlite3.OperationalError:
+        pass
     return con
 
 
@@ -122,17 +168,28 @@ def cmd_init(_ns):
 def cmd_observe(ns):
     con = connect(create=True)
     layer = getattr(ns, "layer", "lexical") or "lexical"
+    status = getattr(ns, "status", None) or "unconfirmed"
     con.execute(
-        "INSERT INTO candidates (ts, pattern, source, fix, note, layer) VALUES (?,?,?,?,?,?)",
-        (now(), ns.pattern, ns.source, ns.fix, ns.note, layer))
+        "INSERT INTO candidates (ts, pattern, source, fix, note, layer, status) VALUES (?,?,?,?,?,?,?)",
+        (now(), ns.pattern, ns.source, ns.fix, ns.note, layer, status))
     con.commit()
     n = con.execute("SELECT COUNT(*) FROM candidates WHERE pattern=?", (ns.pattern,)).fetchone()[0]
     promoted = con.execute("SELECT 1 FROM promotions WHERE pattern=?", (ns.pattern,)).fetchone()
     con.close()
 
-    print(f"observed: {ns.pattern!r} (layer: {layer})")
+    print(f"observed: {ns.pattern!r} (layer: {layer}, status: {status})")
     print(f"  seen {n} time(s)" + ("  [already promoted]" if promoted else ""))
-    if n >= 2 and not promoted:
+
+    if promoted:
+        return
+
+    if status not in READY_STATUSES:
+        print(f"  not eligible for `ready` until confirmed -- ask the user why this edit was made, then:")
+        print(f"     register.py confirm \"{ns.pattern}\" --status <mechanical|confirmed_generalizable|one_off|content_correction>")
+        return
+
+    required = 1 if status == "mechanical" else 2
+    if n >= required:
         target = "STRUCTURAL_RULES_TH.json" if layer == "structural" else "LEXICON_TH.json / STYLE_PACK_TH.md"
         print(f"  >> AT THRESHOLD -- promote this into {target}, then:")
         print(f"     register.py promoted \"{ns.pattern}\" --layer {layer}")
@@ -156,6 +213,30 @@ def log_run(draft, lexicon, scope, tokens, sentences, verdict, misses):
         return None
 
 
+def cmd_confirm(ns):
+    """Set the rationale-gate status for every observation of a pattern.
+
+    This is the answer to "why was this edit made", asked via AskUserQuestion
+    per style-capture SKILL.md step 4c -- never inferred by the agent.
+    """
+    con = connect()
+    if con is None:
+        print("no register yet -- run: register.py init")
+        sys.exit(1)
+    cur = con.execute("UPDATE candidates SET status = ? WHERE pattern = ?", (ns.status, ns.pattern))
+    con.commit()
+    n = cur.rowcount
+    con.close()
+    if n == 0:
+        print(f"no candidate rows found for {ns.pattern!r} -- nothing to confirm (check `register.py stats` / `export`)")
+        sys.exit(1)
+    print(f"confirmed: {ns.pattern!r} -> status={ns.status} ({n} observation(s) updated)")
+    if ns.status in ("one_off", "content_correction"):
+        print("  logged for audit -- will not appear in `ready` regardless of sighting count.")
+    elif ns.status == "mechanical":
+        print("  eligible for `ready` immediately (mechanical bypasses the 2x threshold).")
+
+
 def cmd_promoted(ns):
     con = connect()
     if con is None:
@@ -175,38 +256,55 @@ def cmd_ready(ns):
     if con is None:
         print("no register yet -- run: register.py init")
         sys.exit(0)
-    
+
     where_clause = "WHERE p.pattern IS NULL"
     params = []
     if getattr(ns, "layer", None):
         where_clause += " AND c.layer = ?"
         params.append(ns.layer)
-    params.append(ns.threshold)
 
-    rows = con.execute(f"""
-        SELECT c.pattern, COUNT(*) AS n, MIN(c.ts), MAX(c.ts), c.layer
+    # status can't be filtered in SQL cleanly when a pattern's rows disagree
+    # (e.g. observed once before `confirm`, once after) -- pull candidates in
+    # Python and take the most recent status per pattern as authoritative.
+    all_rows = con.execute(f"""
+        SELECT c.pattern, c.ts, c.layer, c.status
         FROM candidates c
         LEFT JOIN promotions p ON p.pattern = c.pattern
         {where_clause}
-        GROUP BY c.pattern
-        HAVING n >= ?
-        ORDER BY n DESC, MAX(c.ts) DESC
+        ORDER BY c.ts
     """, params).fetchall()
 
-    if not rows:
+    by_pattern = {}
+    for pattern, ts, layer, status in all_rows:
+        entry = by_pattern.setdefault(pattern, {"n": 0, "first": ts, "last": ts, "layer": layer})
+        entry["n"] += 1
+        entry["last"] = ts
+        entry["status"] = status or "unconfirmed"  # last write wins -- most recent status
+
+    selected = []
+    for pattern, e in by_pattern.items():
+        if e["status"] not in READY_STATUSES:
+            continue
+        required = 1 if e["status"] == "mechanical" else ns.threshold
+        if e["n"] >= required:
+            selected.append((pattern, e["n"], e["first"], e["last"], e["layer"], e["status"]))
+    selected.sort(key=lambda r: (r[1], r[3]), reverse=True)  # n desc, then last-seen desc
+
+    if not selected:
         pending = con.execute("""
             SELECT COUNT(DISTINCT c.pattern) FROM candidates c
             LEFT JOIN promotions p ON p.pattern = c.pattern
             WHERE p.pattern IS NULL""").fetchone()[0]
         layer_txt = f" [{ns.layer}]" if getattr(ns, "layer", None) else ""
         print(f"nothing at threshold {ns.threshold}{layer_txt}. "
-              f"{pending} unpromoted pattern(s) seen fewer times.")
+              f"{pending} unpromoted pattern(s) seen fewer times or awaiting `confirm`.")
         con.close()
         sys.exit(0)
 
-    print(f"{len(rows)} pattern(s) at or above threshold {ns.threshold} -- promote these:\n")
-    for pattern, n, first, last, layer in rows:
-        print(f"  [{n}x] [{layer or 'lexical'}]  {pattern}")
+    print(f"{len(selected)} pattern(s) at or above threshold -- promote these:\n")
+    for pattern, n, first, last, layer, status in selected:
+        note = " (mechanical -- bypassed 2x threshold)" if status == "mechanical" else ""
+        print(f"  [{n}x] [{layer or 'lexical'}] [{status}]  {pattern}{note}")
         print(f"         first {first[:10]}   last {last[:10]}")
         for (src, fix) in con.execute(
                 "SELECT source, fix FROM candidates WHERE pattern=? ORDER BY ts", (pattern,)):
@@ -271,8 +369,17 @@ def main():
     o.add_argument("--source", help="file or evidence log the correction came from")
     o.add_argument("--fix", help="what it was changed to")
     o.add_argument("--layer", choices=["lexical", "regex", "structural"], default="lexical", help="rule layer (lexical, regex, structural)")
+    o.add_argument("--status", choices=STATUS_CHOICES, default="unconfirmed",
+                    help="rationale-gate status. Pass 'mechanical' directly for a pure token swap "
+                         "(bypasses the 2x threshold); leave as default and ask the user via "
+                         "`confirm` for anything else.")
     o.add_argument("--note")
     o.set_defaults(fn=cmd_observe)
+
+    c = sub.add_parser("confirm", help="set the rationale-gate status for a candidate, per the user's answer to why the edit was made")
+    c.add_argument("pattern")
+    c.add_argument("--status", required=True, choices=CONFIRM_STATUS_CHOICES)
+    c.set_defaults(fn=cmd_confirm)
 
     r = sub.add_parser("ready", help="patterns that have crossed the promotion threshold")
     r.add_argument("--threshold", type=int, default=2)

@@ -431,6 +431,20 @@
       "kind": "regex",
       "scope": "universal",
       "pattern": "^#{2,4}\\s+[^:\\n]+:[^\\n]+"
+    },
+    {
+      "banned": "สินทรัพย์",
+      "preferred": "ทรัพย์สิน",
+      "reason": "Boss's consistent swap across §4.1 edit (2026-08-30, 3x occurrences) when referring to physical/economic assets exposed to disaster impact.",
+      "kind": "literal",
+      "scope": "report"
+    },
+    {
+      "banned": "เมทะดาตา / มาตรฐานข้อมูลกำกับ",
+      "preferred": "ข้อมูลอภิพันธ์ / มาตรฐานข้อมูลอภิพันธ์",
+      "reason": "Boss confirmed 2026-08-30 that ข้อมูลอภิพันธ์ replaces the earlier มาตรฐานข้อมูลกำกับ mapping as the canonical Thai term for metadata. Older term still live in §4.3/§4.4/§3.2/§1.4/§1.1 drafts pending cleanup.",
+      "kind": "literal",
+      "scope": "universal"
     }
   ],
   "technical_terms": [
