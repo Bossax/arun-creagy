@@ -356,3 +356,18 @@ real `## 5. Lexicon & Diction` again.*
 - **L4/L5 Structural & Document Architecture**:
   - `STR-009` (Executive Summary Strategic Driver Prose): Replace isolated multi-stage taxonomy bullet lists with cohesive strategic driver prose linking mandates to platform data architecture and short-term development strategy.
 
+### 2026-08-30 — Style-pack upgrade from CRDB Exec-Summary Section 4.3 Human Edit
+
+**Source of delta**: `ψ/incubate/drafts/crdb-exec-summary-4.3/section-4.3-draft.md`, working-copy diff, direct line-by-line edit and critique by Boss.
+
+#### Multi-Layer Shifts Captured & Promoted (all confirmed via rationale gate, LEXICON_TH.json v4.2)
+- **L1/L2 Lexical & Surface Regex**:
+  - **Banned**: `ผลงาน` as the noun for a project's deliverables (-> `ผลผลิต`); `ฉบับ` as a counting classifier for deliverable/document items (-> `รายการ`); `ผู้จัดทำ` as a content-writer role noun (-> `ผู้เขียน`).
+  - **หมวดหลัก -> หัวข้อหลัก (supersedes prior rule)**: The 2026-06-xx `โหนด -> หมวด` sitemap rule is now superseded for the grouping-label sense — `หัวข้อ` is canonical for the sitemap's main-grouping term as of 2026-08-30. 11 stale `หมวดหลัก` usages remain across §1.4 and two WP11/§4.2 draft/archive files, flagged to Boss, not auto-fixed.
+  - **Internal Artifact Metadata Ban, broadened**: Boss's correction — "the rule bans leaking internal code, logic, artifact names" — extends the existing internal-artifact-locator rule (previously scoped to slide/page locators only) to internal deliverable version tags and abbreviation codenames (`DRD v2` -> `DRD`, `Node Content Storyboard...v2` -> `Content Storyboard...`, `CDM/DMF` -> dropped). New regex entry added rather than editing the narrower existing one, same underlying principle.
+  - **Mechanical grammar rule** (bypassed 2x threshold on first sighting, tagged `mechanical`): nominalize the verb after `รับผิดชอบ` — `รับผิดชอบยกร่าง...` -> `รับผิดชอบการยกร่าง...`.
+- **Corrective note for next capture round (structural, still below 2x threshold — logged, not yet promoted)**:
+  - **Don't restate self-evident premises as filler**: Boss's correction on the roles paragraph rewrite ("your original prose is unclear... roles are needed to be clear without stating out loud. it is common sense. you['re] just restating common sense") was *not* a generic passive->positive reframe as first hypothesized — it specifically targets declaring an obvious requirement (e.g. "clear role division is needed") before stating the substantive point. Narrower than the pack's existing Passive/Defeatist Syntax Elimination category; watch for a second occurrence before promoting as its own rule.
+  - Project-title-clause pruning (full official project name -> `โครงการนี้` once established) and inline-enumeration-to-line-broken-list reformatting were both confirmed generalizable by Boss but await a second sighting per the 2x structural-pattern threshold.
+- **Content-fidelity issue surfaced, not a style rule**: a coverage-percentage claim (35%->70%, 40%->80%) was cut entirely — Boss's annotation identified it as based on an unscoped future-project TOR he explicitly said not to assume knowledge of. Logged as `content_correction` in the miss register for audit, not a lexical/structural pattern.
+

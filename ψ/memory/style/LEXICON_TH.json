@@ -1,6 +1,6 @@
 {
   "context": "TH",
-  "version": "4.1",
+  "version": "4.2",
   "supersedes": [
     "NCAIF-Institutional v3.2",
     "TOR5.5-Articles v1.0"
@@ -284,9 +284,9 @@
       "scope": "universal"
     },
     {
-      "banned": "ผังเว็บไซต์ 15 โหนด",
-      "preferred": "ผังเว็บไซต์ 15 หมวด",
-      "reason": "Replaces graph-theory 'โหนด' with natural information architecture 'หมวด'.",
+      "banned": "หมวดหลัก",
+      "preferred": "หัวข้อหลัก",
+      "reason": "Supersedes the 2026-06-xx version of this rule (which preferred 'หมวด' over graph-theory 'โหนด'). Boss confirmed 2026-08-30 (§4.3 edit) that 'หัวข้อ' is now canonical for the sitemap's main-grouping label; 'โหนด' stays banned for the node count itself (see other entry), but 'หมวด' is superseded by 'หัวข้อ' for the grouping/category term.",
       "kind": "literal",
       "scope": "report"
     },
@@ -474,6 +474,43 @@
       "kind": "regex",
       "scope": "universal",
       "pattern": "(อย่างชัดเจน|อย่างแท้จริง|อย่างยิ่งยวด)"
+    },
+    {
+      "banned": "ผลงาน",
+      "preferred": "ผลผลิต",
+      "reason": "Boss's 2026-08-30 correction on §4.3, as the noun for what a project delivers: 'ผลผลิต' reads as the more institutional/technical term for a project's deliverables than generic 'ผลงาน'.",
+      "kind": "literal",
+      "scope": "report"
+    },
+    {
+      "banned": "ฉบับ",
+      "preferred": "รายการ",
+      "reason": "Boss's 2026-08-30 correction on §4.3, as a counting classifier for deliverable/document items (Service Briefs, Data Specs counts): 'รายการ' is the standard classifier for counted deliverable/document items, not 'ฉบับ'.",
+      "kind": "literal",
+      "scope": "report"
+    },
+    {
+      "banned": "ผู้จัดทำ",
+      "preferred": "ผู้เขียน",
+      "reason": "Boss's 2026-08-30 correction on §4.3: 'ผู้เขียน' is the standard role-noun for content-writing positions, not 'ผู้จัดทำ'.",
+      "kind": "literal",
+      "scope": "report"
+    },
+    {
+      "banned": "internal deliverable version tags / internal abbreviation codenames in reader-facing deliverable names (e.g. 'DRD v2', 'CDM/DMF', 'Node Content Storyboard')",
+      "preferred": "the deliverable's real descriptive name only, no internal version suffix or codename abbreviation",
+      "reason": "Same family as the existing internal-artifact-locator rule (slide/page numbers) below -- Boss's 2026-08-30 correction on §4.3: 'the rule bans leaking internal code, logic, artifact names.' Internal working-document version tags and abbreviation codenames are sourcing/production metadata for the writer, not content for the reader.",
+      "kind": "regex",
+      "scope": "universal",
+      "pattern": "\\b[A-Za-z]{2,6}\\s*v\\d+\\b|\\b[A-Za-z]{2,6}/[A-Za-z]{2,6}\\b"
+    },
+    {
+      "banned": "รับผิดชอบ + bare verb (e.g. 'รับผิดชอบยกร่าง...', 'รับผิดชอบสร้าง...')",
+      "preferred": "รับผิดชอบ + การ+verb (e.g. 'รับผิดชอบการยกร่าง...', 'รับผิดชอบการสร้าง...')",
+      "reason": "Mechanical grammatical regularization, meaning-invariant: nominalize the verb after 'รับผิดชอบ' rather than a bare verb. Observed 2x in §4.3 2026-08-30 edit, tagged mechanical (bypassed 2x threshold on first sighting per miss-register rule).",
+      "kind": "regex",
+      "scope": "universal",
+      "pattern": "รับผิดชอบ(?!การ)[ก-๙]+"
     }
   ],
   "technical_terms": [

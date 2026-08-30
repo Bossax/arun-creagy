@@ -1,5 +1,5 @@
 # Style-Pack: TH (Thai institutional writing, repo-wide)
-**Samples Learnt**: 25 (Technical Precision, Readability, Analytical Density, and Structural Flow) | **Last Updated**: 2026-08-30 | **Lexicon**: LEXICON_TH.json v4.1, 66 rules
+**Samples Learnt**: 26 (Technical Precision, Readability, Analytical Density, and Structural Flow) | **Last Updated**: 2026-08-30 | **Lexicon**: LEXICON_TH.json v4.2, 71 rules
 
 ## 1. Core Kernel (80/20)
 
