@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "section_id": "crdb-exec-summary-4.2",
+  "governing_thought": "CRDB's four ready-to-build artifacts (Sitemap v9, DRD v2, Storyboard v2, and the CDM/DMF) move the shared six-stage development lifecycle's first two stages from partially covered when TOR70 (2570) is scored alone (35% and 40%) to substantially complete once CRDB's output is counted as the baseline (70% and 80%); DCCE should therefore require TOR70's incoming contractor to adopt these four artifacts as the starting point for design rather than re-deriving them, split day-one work between a Content Writer and a Software Developer along the boundary those artifacts already define, and close the outstanding content gap before TOR70's own clause sequence locks content ahead of the design step meant to govern it.",
+  "narrative_scqa": {
+    "situation": "TOR70 (2570), the build contract that follows CRDB, will be staffed and scored against a shared six-stage development lifecycle that begins with requirements elicitation and functional/solution design — the two stages CRDB was commissioned to strengthen.",
+    "complication": "Read as a standalone contract, TOR70 cites no CRDB artifact and instructs its incoming contractor to re-derive information architecture, system requirements, and content structure from a blank page — inside a clause sequence that itself locks datasets and content (TOR70 Section 5.3, Data Curation) before the architecture and design work meant to constrain them (Section 5.4, Design).",
+    "question": "How far do CRDB's deliverables actually close TOR70's gap at the two earliest lifecycle stages, what specific artifacts does the next contractor receive to close it, how should the resulting work be divided between a Content Writer and a Software Developer, and what should each do before TOR70's own sequencing risk materializes?",
+    "answer": "CRDB's four ready-to-build artifacts lift Stage 1 coverage from 35% to 70% and Stage 2 coverage from 40% to 80%; DCCE should require TOR70's contractor to adopt them as the design baseline, hold the Content Writer to closing the 33 gap and 26 partial content topics named in Storyboard v2, hold the Software Developer to building from DRD v2, Sitemap v9 and the CDM/DMF rather than from zero, and sequence the Content Writer's work to finish before TOR70's Data Curation clause begins."
+  },
+  "governing_thought_components": [
+    "lifecycle_positioning",
+    "ready_to_build_artifacts",
+    "role_division",
+    "sequencing_next_steps"
+  ],
+  "argument_units": [
+    {
+      "unit_id": "arg-01",
+      "order": 1,
+      "paragraph_job": "define",
+      "claim": "The consultant positions CRDB's output on a shared six-stage Reference Integrated Data and Web Platform SDLC, which the consultant itself synthesized from converging data-architecture and web-development practice (drawing on the Australian National Archives' interoperability guidance, The Open Group's TOGAF architecture-development guidance, IBM's data-architecture guidance, and BrowserStack's web-application-lifecycle guidance) rather than adopting any single one of them as a named external standard.",
+      "grounds": "The TOR70 SDLC analysis lays out the six stages explicitly — Requirements Elicitation & Analysis; Functional Analysis & Solution Design; Implementation; System Integration, Verification & Validation; Deployment & Operational Transition; Operations, Maintenance & Continuous Improvement — and states plainly that this is a reference lifecycle synthesizing practices collected from the four named sources, not a canonical sequence borrowed wholesale from any one of them.",
+      "warrant": "Because the 35/40/70/80 percent figures that follow are only meaningful against a stated set of stage boundaries, and because attributing a specific named external standard to the consultant's own synthesis (without a confirmable publication date for any of the four source practices) would misstate its authority, the reader needs the framework named as the consultant's synthesis before the coverage figures can be read as anything more than a slogan.",
+      "application_to_design": "This framework is the organizing axis for the rest of section 4.2: every subsequent figure (stage coverage, artifact count, role split) is expressed against these six stages, and it must be introduced as the consultant's own synthesized reference point, not as a citation to TOGAF, IBM, the Australian National Archives, or BrowserStack individually — those four names may be mentioned as the practice basis the synthesis draws on, without publication years, consistent with the project's citation-integrity decision to drop unconfirmed dates for these four sources.",
+      "supports": "lifecycle_positioning",
+      "provenance": "repaired"
+    },
+    {
+      "unit_id": "arg-02",
+      "order": 2,
+      "paragraph_job": "diagnose",
+      "claim": "An independent re-scoring of TOR70 against the six-stage reference lifecycle shows that Stage 1 coverage rises from 35% (TOR70 alone) to 70% (with CRDB's deliverables counted as the baseline), and Stage 2 coverage rises from 40% to 80% — the two largest and only stage-level jumps CRDB produces.",
+      "grounds": "The TOR70 SDLC analysis's coverage re-scoring table scores TOR70 as written and then re-scores it with CRDB adopted as baseline: Stage 1 moves 35%→70%, driven by CRDB's stakeholder interviews, nine service business cases, demand analysis, digital asset catalog, and DRD requirement set; Stage 2 moves 40%→80%, driven by the CDM, glossary, metadata standard, Sitemap v9's UX-evaluated information architecture, and the WP5 governance framework.",
+      "warrant": "Because these are precisely the two stages the TOR70 analysis independently identifies as TOR70's weakest when read alone, and because CRDB was commissioned to produce exactly this planning-and-design work, a coverage jump concentrated at these two stages is not a general claim of usefulness — it is a specific, checkable substitution of otherwise-unfunded early-lifecycle work, which is the fact a reader deciding whether to fold CRDB into TOR70's contractual baseline needs stated as a number, not a qualitative assurance.",
+      "application_to_design": "Render this as a small table (Reference lifecycle stage | Coverage, TOR70 alone | Coverage, with CRDB adopted) rather than folding the four percentages into a sentence, per the report's rule that multiple simultaneous empirical figures belong in a table; keep the table to the two headline stages the contract requires as decision-relevant figures, leaving the per-activity scoring method itself out of the executive-summary altitude.",
+      "supports": "lifecycle_positioning",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-03",
+      "order": 3,
+      "paragraph_job": "define",
+      "claim": "Sitemap v9 supplies the finished, UX-tested information architecture (38 nodes across the site's six top-level sections, refined through nine iterations) that TOR70's own clause sequence would otherwise place after CMS backend construction rather than before it.",
+      "grounds": "NCAIF Detailed Sitemap v9 documents 38 addressable nodes organized under six top-level sections (Home, Country Overview, Policy Maker Information Center, Adaptation Cycle, Tools & Services, News and Contact); the TOR70 SDLC analysis independently confirms the same node count and nine-iteration UX-evaluation history and maps it to TOR70 clause 5.6.1 (sitemap, menu structure, and information architecture design).",
+      "warrant": "Because TOR70 places sitemap and information-architecture design (§5.6.1) inside §5.6, after the CMS backend is already built under §5.5, a validated sitemap delivered before contract award removes the specific defect the TOR70 analysis calls out — a developer no longer has to fix the CMS's content structure to a page layout that has not yet been designed.",
+      "application_to_design": "The incoming Software Developer can treat Sitemap v9 as a fixed input to the CMS content model from day one of §5.4/§5.6 design work, instead of drafting and testing an original sitemap mid-build while the backend schema is already locked.",
+      "supports": "ready_to_build_artifacts",
+      "provenance": "repaired"
+    },
+    {
+      "unit_id": "arg-04",
+      "order": 4,
+      "paragraph_job": "define",
+      "claim": "DRD v2 supplies a single technical source of truth (75 requirements, 13 deliverables, 9 service briefs, 12 data specifications) that TOR70's instruction to 'analyze and write the system requirements' (§5.4.1) would otherwise start from a blank page.",
+      "grounds": "The WP4 Developer-Ready Design Requirements Specification v2 documents 75 requirements resolving to 13 deliverables, 9 service briefs, and 12 data specifications, each requirement carrying a status of FULL, PARTIAL, or GAP and, where matched, a linked existing DCCE data asset; the TOR70 SDLC analysis independently confirms the requirement count and notes 30 of the 75 already labeled 'ready to build' with matched source assets.",
+      "warrant": "Because TOR70 names no CRDB artifact anywhere in its scope of work and instructs the incoming contractor to write system requirements as if none existed, and because the TOR70 analysis found nearly half of those requirements already resolved to a matched data asset, adopting DRD v2 as the requirements baseline converts what TOR70 currently scopes as an from-scratch analysis task into a verification task against 75 named, already-classified items.",
+      "application_to_design": "The Software Developer uses DRD v2's 13 deliverable definitions and 12 data specifications directly as the input contract for §5.4's architecture and database design and as the acceptance checklist for §5.8's testing, rather than producing an independent requirements document that a second team would then have to reconcile against DRD v2 after the fact.",
+      "supports": "ready_to_build_artifacts",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-05",
+      "order": 5,
+      "paragraph_job": "define",
+      "claim": "Storyboard v2 gives the Content Writer a page-by-page production brief — naming, for every one of the 38 sitemap nodes, what the page should say, in what order, and how ready its content already is — that turns the general instruction to 'close the content gap' into an assignable list of 33 unwritten and 26 partially-written topics.",
+      "grounds": "The WP4 Node Content Storyboard and Synthesis Guide v2 sets out per-node content structure and a source-content mapping table showing which DCCE document or dataset each page should draw from; the companion Content Source Gap Analysis v2 classifies all 75 DRD requirements as 16 FULL, 26 PARTIAL, and 33 GAP, naming the specific page and missing subtopic for each.",
+      "warrant": "Because the content gap is already located page by page and topic by topic in these two documents, a Content Writer starting from Storyboard v2 does not first need to run a fresh content audit — the 33 gap and 26 partial topics are already named, placed on a specific node, and matched (or explicitly not matched) to an existing DCCE document, so writing can start immediately instead of after a rediscovery pass.",
+      "application_to_design": "The Content Writer receives Storyboard v2 as the production brief: for each of the 33 gap and 26 partial topics, the exact page, required content type, and candidate source documents are already specified, so the deliverable is drafting against a named list rather than scoping what the list should contain.",
+      "supports": "ready_to_build_artifacts",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-06",
+      "order": 6,
+      "paragraph_job": "define",
+      "claim": "The CDM/DMF (8 functional data domains, a 12-field metadata standard, and a 74-term governed glossary) supplies the data-governance foundation that TOR70's data-architecture, database-design, and exchange-standard clauses (§5.4.8, §5.4.9, §5.4.13) would otherwise have to define from scratch.",
+      "grounds": "The WP5 Data Management Framework Report segments the database into 8 functional logical domains and defines a Glossary v5 of 74 canonically defined bilingual terms mapped to those domains; the TOR70 SDLC analysis independently confirms a 12-required-field metadata standard aligned to ISO 19115 and the national DGA guideline built on the same foundation.",
+      "warrant": "Because a data architecture built without agreed domain boundaries, field-level metadata rules, and a governed term list produces a schema that only its original builder can interpret, settling these three artifacts before build starts lets the incoming Software Developer derive the physical database directly from an already-agreed conceptual model instead of first negotiating what a 'domain' or a governed term means mid-contract.",
+      "application_to_design": "The Software Developer derives the physical database schema and the CMS's metadata validation rules directly from the CDM's 8 domains and 12-field metadata standard, and uses the 74-term glossary to keep the schema's field labels and the published website's terminology identical, closing off the risk of a second, incompatible term set emerging during build.",
+      "supports": "ready_to_build_artifacts",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-07",
+      "order": 7,
+      "paragraph_job": "compare",
+      "claim": "The four artifacts only close TOR70's early-lifecycle gap if the division of labor they imply is stated explicitly: the Content Writer closes the 33 gap and 26 partial content topics against Storyboard v2, while the Software Developer builds CMS validation rules, data pipelines, and interface components against DRD v2's 13 deliverables and 12 data specifications and the CDM/DMF's schema.",
+      "grounds": "The four artifacts' own scope divides cleanly along a content/system line — Storyboard v2 and the Content Source Gap Analysis address what pages should say, while DRD v2 and the CDM/DMF address what the system must build and validate — and this division matches the writing plan's explicit instruction to separate Content Writer and Software Developer responsibilities so the technical contractor does not invent content logic during construction.",
+      "warrant": "Because TOR70 names no CRDB artifact and places its own content-curation clause (§5.3) ahead of its design clause (§5.4) — the sequencing defect the TOR70 analysis diagnoses — a single incoming contractor left to interpret both content and system logic from the same clauses would recreate that same defect; stating the two-role division as part of the deliverable, each role tied to a named artifact, is what prevents the IT contractor from having to decide content questions it has no mandate to decide.",
+      "application_to_design": "TOR70's contract structuring should name each role's input and output explicitly — Content Writer's output is measured against Storyboard v2's source-content mapping, Software Developer's output is measured against DRD v2 and the CDM/DMF — so that review gates can check each side's work against a named artifact instead of a general design intent that leaves the boundary to be negotiated mid-contract.",
+      "supports": "role_division",
+      "provenance": "repaired"
+    },
+    {
+      "unit_id": "arg-08",
+      "order": 8,
+      "paragraph_job": "conclude",
+      "claim": "Because TOR70's review gates are pass-only with no rework allowance or schedule relief, the Content Writer should close the outstanding content gap before TOR70's Data Curation clause (§5.3) begins, and the Software Developer should adopt DRD v2 and Sitemap v9 as the starting baseline for the Design clause (§5.4) rather than re-deriving it — with the contract negotiated for at least two build iterations and a mid-contract test milestone, using capacity the existing 270-day, four-milestone structure already provides.",
+      "grounds": "The TOR70 SDLC analysis documents that §5.3 locks datasets and content, with categorization decided, before §5.4's data architecture and database design exist, and that TOR70's four review gates (§5.4, §5.5.13, §5.6.3, §5.8.8) are pass-only, with no rework allowance, re-baselining path, or schedule relief if a gate fails; the consultant's own TOR70 delivery-planning analysis shows the existing 270-day timeline and four payment milestones (days 30/120/210/270) can accommodate two build iterations and a public-beta test around day 210 without changing the budget or the milestone dates.",
+      "warrant": "Because a gate that can only pass has no contractual mechanism to absorb a gap discovered after it closes, the two roles must front-load exactly the work a later gate cannot accommodate — content before §5.3 locks it, and architecture and requirements before §5.4 approval closes design — and because the capacity for a mid-contract test already exists inside TOR70's stated timeline and budget, recommending it is a use of the TOR's own structure rather than a request for additional time or money.",
+      "application_to_design": "State the closing as three bold headline bullets, per the executive-summary convention for concluding units: readiness (CRDB lifts Stage 1/2 coverage from 35%/40% to 70%/80%), starting point (the Software Developer adopts DRD v2 and Sitemap v9 as the §5.4 design baseline instead of designing from zero), and remaining gap (the Content Writer closes the 33 gap and 26 partial content topics before §5.3 begins, and the contract is negotiated for two build iterations with a mid-contract beta test).",
+      "supports": "sequencing_next_steps",
+      "provenance": "repaired"
+    }
+  ],
+  "approval": {
+    "status": "approved",
+    "approved_by": "Boss (standing bypass, 2026-08-29)",
+    "approved_at": "2026-08-29T18:30:00+07:00",
+    "basis": "Boss authorized bypassing approval on the argument maps in the session of 2026-08-29, in these words: \"I allow you to bypass mu approval on argument map..I will wait to review the final drafts you produce\". Approved by the orchestrating session after a chapter-spine coherence check across all four maps; the human review point is Stage 6, on the finished drafts."
+  }
+}

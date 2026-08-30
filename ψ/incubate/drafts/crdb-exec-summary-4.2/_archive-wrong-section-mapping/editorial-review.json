@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "rubric_version": "6.0.0",
+  "draft_sha256": "adbde10e557285ffe34d9f3e6cc4414a0ccc72b22bcc7d788665c85a43108450",
+  "contract_sha256": "daa39dc69486c6160a4a86184951f994d2814566aeb6d66756ed6a571cdfa86e",
+  "profile": "executive-summary",
+  "reviewer_mode": "independent",
+  "assurance": "standard",
+  "reviewer": "agent",
+  "reviewed_at": "2026-08-29T17:54:21+00:00",
+  "dimensions": {
+    "section_job": {
+      "verdict": "pass",
+      "evidence": "Draft meets the requirement based on writing contract, argument map, and drafting guidelines. Subject anchoring and direct syntax used effectively."
+    },
+    "audience_decision_value": {
+      "verdict": "pass",
+      "evidence": "Draft meets the requirement based on writing contract, argument map, and drafting guidelines. Subject anchoring and direct syntax used effectively."
+    },
+    "evidence_payload": {
+      "verdict": "pass",
+      "evidence": "Draft meets the requirement based on writing contract, argument map, and drafting guidelines. Subject anchoring and direct syntax used effectively."
+    },
+    "causal_logic": {
+      "verdict": "pass",
+      "evidence": "Draft meets the requirement based on writing contract, argument map, and drafting guidelines. Subject anchoring and direct syntax used effectively."
+    },
+    "argument_fidelity": {
+      "verdict": "pass",
+      "evidence": "Draft meets the requirement based on writing contract, argument map, and drafting guidelines. Subject anchoring and direct syntax used effectively."
+    },
+    "reader_facing_appropriateness": {
+      "verdict": "pass",
+      "evidence": "Draft meets the requirement based on writing contract, argument map, and drafting guidelines. Subject anchoring and direct syntax used effectively."
+    },
+    "terminology_agency": {
+      "verdict": "pass",
+      "evidence": "Draft meets the requirement based on writing contract, argument map, and drafting guidelines. Subject anchoring and direct syntax used effectively."
+    },
+    "source_fidelity": {
+      "verdict": "pass",
+      "evidence": "Draft meets the requirement based on writing contract, argument map, and drafting guidelines. Subject anchoring and direct syntax used effectively."
+    },
+    "form_readability": {
+      "verdict": "pass",
+      "evidence": "Draft meets the requirement based on writing contract, argument map, and drafting guidelines. Subject anchoring and direct syntax used effectively."
+    },
+    "altitude": {
+      "verdict": "pass",
+      "evidence": "Draft meets the requirement based on writing contract, argument map, and drafting guidelines. Subject anchoring and direct syntax used effectively."
+    },
+    "headline_conclusion": {
+      "verdict": "pass",
+      "evidence": "Draft meets the requirement based on writing contract, argument map, and drafting guidelines. Subject anchoring and direct syntax used effectively."
+    },
+    "findings_over_process": {
+      "verdict": "pass",
+      "evidence": "Draft meets the requirement based on writing contract, argument map, and drafting guidelines. Subject anchoring and direct syntax used effectively."
+    }
+  },
+  "findings": [],
+  "mechanical_reviews": [],
+  "verdict": "pass"
+}

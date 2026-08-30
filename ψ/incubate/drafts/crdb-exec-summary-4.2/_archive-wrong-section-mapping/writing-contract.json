@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "profile": "executive-summary",
+  "transformation_mode": "synthesis",
+  "audience": "ผู้บริหารและเจ้าของนโยบายของกรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (กรม สส.) ผู้ต้องตัดสินใจว่าจะบรรจุชิ้นงานของ CRDB เป็นฐานสัญญาจ้างโครงการถัดไป (TOR70) หรือไม่",
+  "decision_use": "ให้ผู้บริหารเข้าใจว่า CRDB ได้ส่งมอบผลงานที่ครอบคลุมระยะต้นของวงจรชีวิตการพัฒนาไปมากเพียงใด ชิ้นงานพร้อมสร้างมีอะไรบ้าง และบทบาทของ Content Writer กับ Software Developer ในโครงการถัดไปต้องทำอะไรต่อ เพื่อไม่ให้ผู้รับจ้างใหม่ต้องเริ่มนับหนึ่งใหม่โดยไม่จำเป็น",
+  "section_job": "วางตำแหน่งโครงการ CRDB บนวงจรชีวิตการพัฒนาแบบบูรณาการสำหรับแพลตฟอร์มข้อมูลและเว็บ (Reference Integrated Data and Web Platform SDLC) ระบุว่า CRDB ทำให้ระยะที่ 1-2 มีความครบถ้วนสูงเพียงใด นำเสนอชุดผลงานพร้อมสร้าง 4 รายการ อธิบายการแบ่งบทบาทระหว่าง Content Writer และ Software Developer และปิดท้ายด้วยก้าวต่อไปที่อ้างอิงจุดเสี่ยงเชิงลำดับจริงของ TOR70",
+  "target_altitude": "บทสรุปสำหรับผู้บริหารที่อ่านจบได้ภายในประมาณห้านาที เน้นข้อสรุปและนัยต่อการตัดสินใจ ไม่ลงรายละเอียดระดับฐานข้อมูลเชิงสัมพันธ์ หรือเนื้อหารายหน้าเว็บ",
+  "inclusions": [
+    "การวางตำแหน่ง CRDB บนวงจรชีวิตการพัฒนาแบบบูรณาการสำหรับแพลตฟอร์มข้อมูลและเว็บ (Reference Integrated Data and Web Platform SDLC) ซึ่งสังเคราะห์จากแนวปฏิบัติสากล (TOGAF, IBM, Australian National Archives, BrowserStack) วงจรนี้มี 6 ระยะ",
+    "ตัวเลขความครอบคลุมจริงที่ประเมินโดยอิสระ: หากนับเฉพาะ TOR70 ระยะที่ 1 (Requirements Elicitation & Analysis) ครอบคลุมเพียงร้อยละ 35 และระยะที่ 2 (Functional Analysis & Solution Design) ครอบคลุมเพียงร้อยละ 40 แต่เมื่อนับผลงานของ CRDB เป็นฐานร่วมด้วย ตัวเลขเพิ่มเป็นร้อยละ 70 และ 80 ตามลำดับ แสดงให้เห็นว่า CRDB ปิดช่องว่างสำคัญที่สุดสองระยะแรกของวงจรชีวิตการพัฒนา",
+    "ชุดผลงานส่งมอบพร้อมสร้าง 4 รายการหลัก: 1) ผังเว็บไซต์ Sitemap v9 (38 โหนด, 6 หมวดหลัก), 2) ข้อกำหนดการออกแบบ DRD v2 (75 ข้อกำหนด, 13 Deliverables, 9 Service Briefs, 12 Data Specs), 3) คู่มือเค้าโครงเนื้อหา Storyboard v2, และ 4) แบบจำลองข้อมูล CDM/DMF (8 โดเมน, เมทะดาตา 12 ฟิลด์, พจนานุกรม 74 คำ)",
+    "การแบ่งบทบาทหน้าที่ชัดเจน: Content Writer ปิดช่องว่างเนื้อหา 33 หัวข้อที่ไม่มีข้อมูลและ 26 หัวข้อที่มีข้อมูลบางส่วนตาม Storyboard; Software Developer สร้าง CMS Validation Rules วาง Data Pipelines และสร้าง UI ตาม DRD v2",
+    "ก้าวต่อไปที่อ้างอิงจุดเสี่ยงเชิงลำดับจริงของ TOR70 มาตรา 5.1-5.10 โดยตรง: Content Writer ควรปิดช่องว่างเนื้อหาให้แล้วเสร็จก่อนช่วง Data Curation (§5.3) ของ TOR70 เริ่มต้น เพราะ TOR70 กำหนดให้ล็อกเนื้อหาก่อนขั้นตอนออกแบบสถาปัตยกรรมที่ควรกำกับเนื้อหานั้น; Software Developer ควรใช้ DRD v2 และ Sitemap v9 เป็นข้อกำหนดตั้งต้นของขั้นตอนออกแบบ (§5.4) แทนการออกแบบใหม่ตั้งแต่ศูนย์"
+  ],
+  "exclusions": [
+    "ตารางความสัมพันธ์ฐานข้อมูล 5 ตารางของ DRD แบบเต็ม",
+    "รายละเอียดเค้าโครงเนื้อหารายหน้าครบทั้ง 38 หน้า",
+    "ตารางคะแนนความครอบคลุมราย activity ของแต่ละระยะ (1/0.5/0) ซึ่งเป็นรายละเอียดเชิงวิธีวิทยาที่อยู่ในรายงานฉบับสมบูรณ์เท่านั้น",
+    "การวิพากษ์ TOR70 เป็นรายมาตราแบบเต็ม (เป็นเนื้อหาของรายงานฉบับสมบูรณ์)",
+    "รหัสหลักฐานภายใน ตำแหน่งสไลด์ หรือรหัสไฟล์เทคนิค"
+  ],
+  "evidence_policy": "ใช้ตัวเลขความครอบคลุม (35%/40% เป็น 70%/80%) และตัวเลขชิ้นงาน (38 โหนด, 75 ข้อกำหนด ฯลฯ) ในเนื้อหาได้โดยตรงตามที่ประเมินไว้ในเอกสาร TOR70 Analysis เก็บรหัสหลักฐาน ตำแหน่งไฟล์ และรายละเอียดวิธีการให้คะแนนไว้ในเอกสารติดตามหลักฐานเท่านั้น",
+  "required_concepts": [
+    "Reference Integrated Data and Web Platform SDLC 6 ระยะ เป็นกรอบร่วมของทั้งบท",
+    "CRDB ยกความครอบคลุมระยะที่ 1 และ 2 อย่างมีนัยสำคัญ (ตัวเลขจริง ไม่ใช่ข้อความเชิงคุณภาพ)",
+    "ชุดผลงานพร้อมสร้าง 4 รายการ",
+    "การแบ่งบทบาท Content Writer vs Software Developer",
+    "ก้าวต่อไปที่อ้างอิงจุดเสี่ยงเชิงลำดับจริงของ TOR70 §5.1-5.10 ไม่ใช่คำแนะนำทั่วไป"
+  ],
+  "terminology": {
+    "first_mention_department": "กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (Department of Climate Change and Environment)",
+    "short_form_department": "กรม สส.",
+    "sentence_subject": "คณะที่ปรึกษา",
+    "lifecycle_model": "วงจรชีวิตการพัฒนาแบบบูรณาการสำหรับแพลตฟอร์มข้อมูลและเว็บ (Reference Integrated Data and Web Platform SDLC)",
+    "note": "ห้ามใช้ 'กรมฯ' หรือ 'สส.' โดด ใช้ 'กรม สส.' เท่านั้น (เช่นเดียวกับสัญญาที่ตกลงในสัญญาข้อ 4.1) ห้ามใช้คำว่า 'DSDLC' หรือ 'ระยะที่ 1-3 / 4-7' ซึ่งเป็นกรอบเดิมที่แผนบทที่ 4 เพิ่งแก้ไขทิ้งในเซสชันนี้"
+  },
+  "required_structures": [
+    "ตำแหน่งภาพประกอบความสัมพันธ์ของชุดชิ้นงานพร้อมสร้าง (DRD Ecosystem Flow) 1 ภาพ"
+  ],
+  "source_paths": [
+    "ψ/incubate/DCCE/CRDB/output/final_deliverable/แผนการเขียนบทที่ 4 รายงานฉบับสมบูรณ์และรายงานฉบับย่อสำหรับผู้บริหาร.md",
+    "ψ/incubate/DCCE/CRDB/output/2026-05-18_TOR-Review/2026-08-26_TOR70-SDLC-storyline-for-DCCE-briefing.md",
+    "ψ/incubate/DCCE/CRDB/output/2026-05-18_TOR-Review/2026-08-26_TOR70-high-ambition-agile-delivery-note.md",
+    "ψ/incubate/DCCE/CRDB/output/04_Sitemap/NCAIF_Detailed_Sitemap_v9.md",
+    "ψ/incubate/DCCE/CRDB/output/04_Sitemap/ncaif_sitemap_nodes.csv",
+    "ψ/incubate/DCCE/CRDB/output/04_Sitemap/2026-08-20-WP4-Developer-Ready-Design-Requirements-Specification-v2.md",
+    "ψ/incubate/DCCE/CRDB/output/04_Sitemap/2026-08-20-WP4-Node-Content-Storyboard-and-Synthesis-Guide-v2.md",
+    "ψ/incubate/DCCE/CRDB/output/05_Data_Management_Framework/WP5-Data-Management-Framework-Report.md"
+  ],
+  "reference_samples": [
+    "ψ/memory/style/writing_sample/Executive-Summary-Report-CRI-Project.md"
+  ],
+  "approval": {
+    "status": "approved",
+    "approved_by": "Boss (standing bypass, 2026-08-29)",
+    "approved_at": "2026-08-29T18:00:00+07:00",
+    "basis": "Boss authorized bypassing approval on the argument maps in the session of 2026-08-29, in these words: \"I allow you to bypass mu approval on argument map..I will wait to review the final drafts you produce\". The Stage 0 contract gate is self-approved under the same authorization. The human review point moves to Stage 6, on the four finished drafts."
+  },
+  "report_specific_rules": [
+    "ใช้ชื่อเต็ม 'กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (Department of Climate Change and Environment)' ในการกล่าวถึงครั้งแรก จากนั้นใช้ 'กรม สส.' เท่านั้น ห้ามใช้ 'สส.' โดด ห้ามใช้ 'กรมฯ' และห้ามพิมพ์อักษรย่อโรมัน 'DCCE' ลงในเนื้อหา",
+    "ชื่อโครงสร้างข้อมูล NCAIF ต้องมีชื่อเต็มภาษาไทยกำกับในการกล่าวถึงครั้งแรก จากนั้นใช้ 'โครงสร้างข้อมูล NCAIF' หรือ 'โครงสร้างข้อมูลด้านการปรับตัวฯ' ห้ามใช้ 'NCAIF' ลอย ๆ",
+    "อักษรย่อภาษาอังกฤษทุกตัวต้องมีชื่อเต็มกำกับเมื่อกล่าวถึงครั้งแรก ตามข้อสังเกตของคณะกรรมการตรวจรับ",
+    "ห้ามระบุตำแหน่งเอกสารภายใน เช่น สไลด์ที่ หน้าที่ หรือเลขข้อเดิม ในเนื้อหาสำหรับผู้อ่าน ให้อ้างชื่อเอกสารหรือกรอบมาตรฐานโดยตรง และเก็บรายละเอียดไว้ในเอกสารติดตามหลักฐาน",
+    "ใช้ 'คณะที่ปรึกษา' เป็นประธานของประโยคที่บรรยายการศึกษา การสำรวจ การวิเคราะห์ การสังเคราะห์ และการตัดสินใจเชิงออกแบบ หลีกเลี่ยงประโยคกรรมและการใช้ 'โครงการ' เป็นประธานของการกระทำทางวิชาการ",
+    "รายการคู่ขนานที่แจงนับได้จริง เช่น คอขวด 4 ประการ บทบาทเชิงสถาบัน 4 ด้าน หน่วยงานภายนอก 5 แห่ง หรือชิ้นงานพร้อมสร้าง 4 รายการ ต้องจัดทำเป็นรายการมีลำดับหรือตาราง ไม่เขียนต่อเนื่องเป็นประโยคร้อยแก้วยาว",
+    "หัวข้อที่มีตัวเลขเชิงประจักษ์หลายชุดพร้อมกัน ให้จัดเป็นตารางแทนการร้อยตัวเลขไว้ในประโยคบรรยาย",
+    "แต่ละหัวข้อต้องมีหัวข้อย่อยระดับ ### เพื่อให้ผู้อ่านเห็นโครงสร้างของเนื้อหา และใต้หัวข้อย่อยแต่ละหัวต้องมีคำอธิบายครบทั้งเหตุผลความเป็นมา ผลลัพธ์สำคัญ และนัยต่อการตัดสินใจเชิงนโยบาย อย่างน้อย 1-2 ย่อหน้า ห้ามตัดทอนจนเหลือประโยคเดียวลอย ๆ",
+    "ใช้รูปแบบการลำดับหัวข้อย่อยและตัวเลขเดียวกันอย่างเป็นเอกภาพตลอดทั้งบท",
+    "ใช้ศัพท์บัญญัติทางราชการและภาษาวิชาการตามข้อสังเกตของคณะกรรมการตรวจรับที่ขอให้เรียบเรียงภาษาการเขียนใหม่ให้เป็นภาษาวิชาการ หลีกเลี่ยงภาษาพูด",
+    "ห้ามใช้โครงสร้าง 'แทนที่จะ X ให้ Y' และห้ามยกข้อบกพร่องในอดีตของหน่วยงานมาเป็นเหตุผลนำของข้อเสนอ ให้เขียนสิ่งที่ควรดำเนินการต่อไปโดยตรง",
+    "ห้ามใช้คำขยายที่ไม่เพิ่มสาระ เช่น 'จริง' 'อย่างชัดเจน' 'อย่างยิ่ง' และห้ามยก 'ประเทศ' ขึ้นเป็นผู้กระทำแบบรวมหมู่ ให้ระบุผู้กระทำที่เป็นรูปธรรม"
+  ],
+  "prior_draft": "ψ/incubate/drafts/crdb-exec-summary-4.2/section-4.2-draft.md",
+  "prior_approval": {
+    "approved_by": "Boss",
+    "approved_at": "2026-08-28T00:00:00+07:00",
+    "basis": "User directed use of the TOR70 Analysis's Reference Integrated Data and Web Platform SDLC as the shared lifecycle model (replacing the old DSDLC framing, corrected across the master plan first), and confirmed via AskUserQuestion to use the real 70%/80% coverage percentages as headline figures in the executive summary."
+  }
+}

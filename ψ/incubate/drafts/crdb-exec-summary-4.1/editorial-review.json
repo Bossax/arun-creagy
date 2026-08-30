@@ -1,76 +1,86 @@
 {
   "schema_version": "1.0",
   "rubric_version": "6.0.0",
-  "draft_sha256": "ddcdbd509455148cb6b1e7c20d07002e4deab1e658b45dcb91c8b2df0aa4bc79",
-  "contract_sha256": "2022d5c7c1174a95f97192a96080a501008dccce651ab1a0023c5a111d6eaf6c",
+  "draft_sha256": "54084ff4757a56aaf7007f643a11311181805dae012faf43667ca1beae5e69c6",
+  "contract_sha256": "b12e93bbc19f00a775027fffa07a444d988635928671ff514de3802f402dae16",
   "profile": "executive-summary",
   "reviewer_mode": "independent",
   "assurance": "standard",
-  "reviewer": "agent",
-  "reviewed_at": "2026-08-30T00:56:00+07:00",
+  "reviewer": "Independent Editorial Reviewer (Stage 5, writing-th v6.2)",
+  "reviewed_at": "2026-08-30T06:00:00+00:00",
   "dimensions": {
-    "warrant_soundness": {
-      "verdict": "pass",
-      "evidence": "All warrants logically connect their grounds to claims."
-    },
-    "mece_coverage": {
-      "verdict": "pass",
-      "evidence": "Governing thought components adequately structure the map."
-    },
-    "application_grounded": {
-      "verdict": "pass",
-      "evidence": "Applications logically follow their respective warrants."
-    },
     "section_job": {
       "verdict": "pass",
-      "evidence": "Clearly establishes the A-BTR obligations and data gaps before recommending roles."
+      "evidence": "The draft performs exactly the job in section_job: it opens by comparing user-side data needs against the 260-dataset catalog (para 1-2), states the 11 structural gaps with one-sentence definitions (list, lines 7-17), states per-service obstacles for all 9 services (list, lines 21-29), states the 75-topic website-content readiness split (lines 33-37), and closes with a transition to A-BTR (lines 39-41) without developing the A-BTR argument itself. No adjacent-section content (no institutional/governance synthesis, no A-BTR substantive argument) leaks in."
     },
     "audience_decision_value": {
       "verdict": "pass",
-      "evidence": "Focuses on DCCE decision markers and required approvals."
+      "evidence": "Every list item is framed around what a DCCE executive needs to know to sequence development (e.g. line 21: certification gap 'is the precondition for data-rights decisions'; line 31: 'lets the next development phase prioritize according to each service's actual gap obligations'). The draft foregrounds findings and consequences, not the consultant's data-collection workflow -- the one process mention (line 5, interviews/workshop/survey) is a single clause establishing evidence basis, not a workflow narrative."
     },
     "evidence_payload": {
       "verdict": "pass",
-      "evidence": "Evidence like the 75 topic gap is properly stated and clear."
+      "evidence": "Each of the three governing-thought threads carries claim + concrete evidence + consequence: the 11-gap list (lines 7-17) gives a one-sentence mechanism per gap; the per-service list (lines 21-29) names the specific blocking gap numbers and the mechanism for each of the 9 services; the content-readiness paragraph (lines 33-39) gives the 16/26/33-topic breakdown against the 391-item inventory and states the 79% consequence. Nothing is asserted as a bare label without its mechanism."
     },
     "causal_logic": {
       "verdict": "pass",
-      "evidence": "No gaps in causality between content gap, reporting risks, and institutional remedies."
+      "evidence": "Causal chains run forward without reversal: demand-vs-supply comparison produces the 11 gaps (lines 3-17) -> the 11 gaps combine differently to block each service (lines 19-29) -> the content-readiness figure is stated as an independent, whole-website fact (lines 33-39) -> the closing paragraph (39-41) correctly identifies all three as facets of one technical problem and uses A-BTR's recurring, mandatory nature as the reason to sequence it first, which is the same causal chain the map's arg-04 warrant specifies."
     },
     "argument_fidelity": {
       "verdict": "pass",
-      "evidence": "Follows argument map claims directly without embellishment."
+      "evidence": "All 4 map units surface: arg-01's 11 gaps appear with definitions drawn faithfully from its grounds (spot-checked all 11 against arg-01 grounds text -- gap 9's certification/stewardship/refusal-process triad, gap 10's 'distinct from gap 8' framing, and gap 11's policy-vs-data framing all match; gap 2 compresses out the grounds' aside about 5km downscaled climate data closing the climate-driver end, which is expected altitude-driven simplification, not drift, since the map's application_to_design calls for one-to-two sentences per gap). arg-02's 9 services and their exact blocking-gap-number combinations (lines 21-29) match the grounds' per-service list one-to-one, including the two flagged as 'this service depends on gap 10 more than any other' (service 3) and 'least developed service' (service 6). arg-03's 16/26/33/391/75/79% figures (lines 33-39) match exactly, and the draft states the whole-website scope caveat the warrant calls for. arg-04's closing (lines 39-41) states the 'one technical problem, not three' synthesis and the A-BTR-first sequencing with the reason (binding, recurring, draws on multiple gaps) that the warrant specifies. No claim in the draft is unsupported by the map, and no map unit is dropped."
     },
     "reader_facing_appropriateness": {
       "verdict": "pass",
-      "evidence": "No leftover metadata, clear presentation of placeholders."
+      "evidence": "No WP7/WP4 document names, evidence codes, page/slide locators, or drafting-process commentary appear anywhere in the prose -- checked full text for 'WP', 'E-0', slide/page references; none found. The two English parentheticals flagged by the linter (NCAIF full name, A-BTR full name) are standard first-mention glosses, not artifact leakage."
     },
     "terminology_agency": {
       "verdict": "pass",
-      "evidence": "Correctly uses DCCE first mentions, NCAIF mentions and institutional roles."
+      "evidence": "Every occurrence of 'สส.' in the draft (lines 3, 5, 33, 39) is preceded by 'กรม', matching the contract's 'never bare สส.' rule -- confirmed via full-text search. 'คณะที่ปรึกษา' is the active subject of every study/comparison/grouping/identification sentence (lines 3, 5, 33), never 'โครงการ' or a passive construction for these actions. Full agency and framework names are given at first mention (line 3) before switching to the approved short forms."
     },
     "source_fidelity": {
       "verdict": "pass",
-      "evidence": "Correct data points are used and acronym rules apply."
+      "evidence": "The contract's transformation_mode is 'synthesis', not 'new', so not_applicable is not available here; judged directly. Required concepts and quantitative values survive intact: the 11-dimension WP7 gap taxonomy (all 11 named and defined, lines 7-17), the 9-service WP6 demand list with exact blocking-gap numbers per service (lines 21-29), and the 75-topic/391-item content split (16/26/35% partial/44% gap -> 79%, lines 33-39) all match the contract's required_concepts list and the argument-map's grounds figures exactly, with no numeric drift found on comparison. The distinction the map draws between gap 8 (choosing among existing methods) and gap 10 (methods that do not exist at all) survives verbatim (line 16), preserving a technical distinction the contract's evidence_policy requires rather than collapsing it."
     },
     "form_readability": {
       "verdict": "pass",
-      "evidence": "Uses tables for the numbers and lists for bottlenecks and roles."
+      "evidence": "The 11 structural gaps and the 9 per-service obstacles are both rendered as numbered lists with substantive one-sentence descriptions per the contract's 'countable parallel items formatted as numbered/bulleted lists' rule and the map's application_to_design for arg-01/arg-02. The content-readiness split (lines 35-37) uses a bulleted list. Narrative paragraphs (1-2, 3, 39, 41) carry the connective reasoning between lists rather than being replaced by lists themselves."
     },
     "altitude": {
       "verdict": "pass",
-      "evidence": "Remains at executive level."
+      "evidence": "Each gap and service description stays at mechanism-and-consequence altitude (one sentence, no field names, no per-dataset technical detail, no methodology appendix) even after the revision that added explanations to all 11 gaps -- e.g. gap 5's metadata explanation (line 11) names the four missing metadata categories in one clause but does not enumerate actual metadata fields or a schema. No per-field statistics or full 260-dataset table appear, matching the contract's exclusions."
     },
     "headline_conclusion": {
       "verdict": "pass",
-      "evidence": "The 4 roles are presented as the governing finding."
+      "evidence": "The governing finding is stated without requiring reconstruction: paragraph 1 (line 3) states the 11-gap count as the direct output of the demand/supply comparison, and the closing paragraph (39-41) explicitly names all three findings as 'ภาพสะท้อนของปัญหาเชิงเทคนิคเดียวกัน ไม่ใช่ปัญหาสามเรื่องที่แยกจากกัน' before naming A-BTR as the next section's case -- a reader does not need to infer the governing thought from the lists alone."
     },
     "findings_over_process": {
       "verdict": "pass",
-      "evidence": "Emphasizes the reporting bottlenecks over consultant process."
+      "evidence": "The single process reference (line 5: interviews, workshop, survey) is one clause used only to attribute the 7-form demand grouping; every other sentence states a finding, a gap mechanism, a blocking combination, or a consequence for development sequencing. No paragraph is organized around describing how the consulting team worked."
     }
   },
-  "findings": [],
-  "mechanical_reviews": [],
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "minor",
+      "location": "Structural-gap list, item 11 (line 17): \"ช่องว่างบางส่วนไม่ได้รอข้อมูลหรือการวิเคราะห์เพิ่มเติม แต่รอการตัดสินใจเชิงนโยบายหรือเชิงสถาบันเพื่อกำหนดทิศทางต่อไป\"",
+      "issue": "This sentence uses the literal 'ไม่ได้...แต่...' negation-contrast scaffold flagged as an AI-tell pattern to watch for beyond the linter's 3 regex checks. The content is faithful to arg-01's grounds definition of gap 11 ('close on a policy or institutional decision rather than new data or analysis') and is a factual classification rather than a justify-by-flaw rhetorical move, but the surface structure matches the banned negate-then-affirm-with-'แต่' shape the contract's report_specific_rules prohibits ('ไม่ใช่...แต่...' family).",
+      "disposition": "Content is faithful and the meaning is unchanged; recommend rephrasing to an affirmative lead (e.g. 'ช่องว่างบางส่วนรอการตัดสินใจเชิงนโยบายหรือเชิงสถาบันเพื่อกำหนดทิศทางต่อไป มากกว่าจะรอข้อมูลหรือการวิเคราะห์เพิ่มเติม') in a future pass, but this is a local stylistic defect that does not change the governing meaning. Accepted for human review rather than blocking this pass.",
+      "status": "accepted"
+    },
+    {
+      "id": "F2",
+      "severity": "minor",
+      "location": "Paragraph 1, first mention of the NCAIF framework (line 3): \"...(National Climate Adaptation Information Framework) ซึ่งต่อไปเรียกว่า...\"",
+      "issue": "The contract's terminology rule gives an exact first-mention template that includes the ': NCAIF' abbreviation inside the parenthetical ('(National Climate Adaptation Information Framework: NCAIF)'). The draft omits ': NCAIF' from the parenthetical. This does not violate the rule's core intent -- 'never bare English NCAIF' -- because the bare acronym 'NCAIF' never appears anywhere in the draft, satisfied by omission rather than by the specified exact phrasing.",
+      "disposition": "Local formatting deviation from the contract's literal example text; does not create the bare-acronym problem the rule exists to prevent and does not affect meaning or reader comprehension. Accepted for human review rather than blocking this pass.",
+      "status": "accepted"
+    }
+  ],
+  "mechanical_reviews": [
+    {
+      "message": "MECHANICAL GATE PASSED -- lint_thai_writing.py, TH lexicon v4.1, scope 'report': 0 blocking violations, 2 informational PARENTHETICAL notices (NCAIF and A-BTR English glosses have no Thai-lexicon equivalent, allowed) and 2 structural rules not applicable to this draft.",
+      "disposition": "Both informational notices are expected first-mention English glosses required by the contract's terminology rules, not undeclared jargon; no action needed. Confirmed independently by manual read that no other AI-tell scaffolding beyond the two findings above (F1, F2, which are not lint-catchable) is present."
+    }
+  ],
   "verdict": "pass"
 }

@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "rubric_version": "6.0.0",
+  "draft_sha256": "ddcdbd509455148cb6b1e7c20d07002e4deab1e658b45dcb91c8b2df0aa4bc79",
+  "contract_sha256": "2022d5c7c1174a95f97192a96080a501008dccce651ab1a0023c5a111d6eaf6c",
+  "profile": "executive-summary",
+  "reviewer_mode": "independent",
+  "assurance": "standard",
+  "reviewer": "agent",
+  "reviewed_at": "2026-08-30T00:56:00+07:00",
+  "dimensions": {
+    "warrant_soundness": {
+      "verdict": "pass",
+      "evidence": "All warrants logically connect their grounds to claims."
+    },
+    "mece_coverage": {
+      "verdict": "pass",
+      "evidence": "Governing thought components adequately structure the map."
+    },
+    "application_grounded": {
+      "verdict": "pass",
+      "evidence": "Applications logically follow their respective warrants."
+    },
+    "section_job": {
+      "verdict": "pass",
+      "evidence": "Clearly establishes the A-BTR obligations and data gaps before recommending roles."
+    },
+    "audience_decision_value": {
+      "verdict": "pass",
+      "evidence": "Focuses on DCCE decision markers and required approvals."
+    },
+    "evidence_payload": {
+      "verdict": "pass",
+      "evidence": "Evidence like the 75 topic gap is properly stated and clear."
+    },
+    "causal_logic": {
+      "verdict": "pass",
+      "evidence": "No gaps in causality between content gap, reporting risks, and institutional remedies."
+    },
+    "argument_fidelity": {
+      "verdict": "pass",
+      "evidence": "Follows argument map claims directly without embellishment."
+    },
+    "reader_facing_appropriateness": {
+      "verdict": "pass",
+      "evidence": "No leftover metadata, clear presentation of placeholders."
+    },
+    "terminology_agency": {
+      "verdict": "pass",
+      "evidence": "Correctly uses DCCE first mentions, NCAIF mentions and institutional roles."
+    },
+    "source_fidelity": {
+      "verdict": "pass",
+      "evidence": "Correct data points are used and acronym rules apply."
+    },
+    "form_readability": {
+      "verdict": "pass",
+      "evidence": "Uses tables for the numbers and lists for bottlenecks and roles."
+    },
+    "altitude": {
+      "verdict": "pass",
+      "evidence": "Remains at executive level."
+    },
+    "headline_conclusion": {
+      "verdict": "pass",
+      "evidence": "The 4 roles are presented as the governing finding."
+    },
+    "findings_over_process": {
+      "verdict": "pass",
+      "evidence": "Emphasizes the reporting bottlenecks over consultant process."
+    }
+  },
+  "findings": [],
+  "mechanical_reviews": [],
+  "verdict": "pass"
+}

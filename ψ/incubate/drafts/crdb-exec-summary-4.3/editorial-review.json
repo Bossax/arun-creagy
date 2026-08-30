@@ -1,80 +1,94 @@
 {
   "schema_version": "1.0",
   "rubric_version": "6.0.0",
-  "draft_sha256": "e393c9724843d3a0397e5aeecd33ca969f2384701ae7961751ffb72e348c31e5",
-  "contract_sha256": "ea3577fb2fb9927206aabdb942e7bc66f9f104b5df40f57e3ef70e303b95c094",
+  "draft_sha256": "3fe841313652067592f94f3b22b00c4a8f663ae1a478c7e9253d8d6d4e0c965f",
+  "contract_sha256": "67301f2dcc0f6021d54830ed418a9a0441b4eae429e51687d37601c142decc73",
   "profile": "executive-summary",
   "reviewer_mode": "independent",
   "assurance": "standard",
-  "reviewer": "writing-th",
-  "reviewed_at": "2026-08-30T00:55:00+07:00",
+  "reviewer": "bossa.suan130@gmail.com",
+  "reviewed_at": "2026-08-30T05:10:00+00:00",
   "dimensions": {
-    "warrant_soundness": {
-      "verdict": "pass",
-      "evidence": "Argument map warrants directly connect grounds to claims."
-    },
-    "mece_coverage": {
-      "verdict": "pass",
-      "evidence": "Governing thought components comprehensively cover the necessary concepts without overlap."
-    },
-    "application_grounded": {
-      "verdict": "pass",
-      "evidence": "Applications follow strictly from the warrants."
-    },
     "section_job": {
       "verdict": "pass",
-      "evidence": "Properly prioritizes governance topics based on DCCE authority."
+      "evidence": "Para 1 (l.3) positions CRDB in the 6-phase SDLC with both coverage percentages; l.7-13 lists exactly the 4-5 ready-to-build artifacts as a numbered list; l.15 states the Content Writer/Software Developer role split and closes with a one-sentence scoping handoff to 4.4 ('ส่วนรายละเอียดเชิงธรรมาภิบาลและการบริหารจัดการจะกล่าวถึงในหัวข้อถัดไป'). No governance/RACI detail, no full storyboard/DRD-table content, no A-BTR content appears -- matches contract exclusions."
     },
     "audience_decision_value": {
       "verdict": "pass",
-      "evidence": "Highlights decisions DCCE can make immediately."
+      "evidence": "The section answers what a DCCE executive needs for a go/no-go on how to scope the next procurement: where the work already stands (coverage lift), what is concretely reusable (5 named artifacts with real scale), and how staffing/roles should be organized around them. It does not dwell on how the consultant produced the artifacts, only on what a decision-maker can now rely on."
     },
     "evidence_payload": {
       "verdict": "pass",
-      "evidence": "Data on 5 external agencies and 97 datasets included."
+      "evidence": "Each unit carries claim + concrete figures + consequence: l.3 gives the phase percentages and frames them as independently scored; l.5 states the concrete cost of not handing over (double cost, orphaned artifacts); l.9-13 give per-artifact scale numbers (38 nodes/4 categories, 75 requirements/13 deliverables/9 briefs/12 data specs, 38-page wireframes, 8 domains/12 fields/74 terms); l.15 ties each role to a named artifact as its reference. No unit is left as a bare assertion."
     },
     "causal_logic": {
       "verdict": "pass",
-      "evidence": "Flows logically from internal control to external negotiations."
+      "evidence": "The chain runs coverage-lift (why this baseline is real) -> discovery-trap cost of not using it (why it matters) -> the five artifacts (what is actually handed over) -> role split (how to use them) -> forward pointer to governance. No reversed causality; the 'หากไม่มี...จะต้อง...' conditional in l.5 is used to state a consequence, not to smuggle in an unsupported leap -- it is grounded in the double-cost mechanism named in arg-02's grounds."
     },
     "argument_fidelity": {
       "verdict": "pass",
-      "evidence": "Draft correctly verbalizes the approved argument map."
+      "evidence": "All 4 approved units are traceable: arg-01 -> l.3 (phases + percentages verbatim to the map's ~35%/~70%, ~40%/~80% figures); arg-02 -> l.5 (discovery-trap mechanism and double-cost, phrased generically per the plan constraint, matching the warrant's intent); arg-03 -> l.7-13 (numbered list, all five artifacts with the exact scale figures from the map's grounds); arg-04 -> l.15 (role split tied to Storyboard/DRD, plus the Logic Invention concept named explicitly). One soft gap: the map's required_concept 'Discovery Trap' is conveyed in full substance at l.5 but the analytical label itself is never named (English or Thai) -- logged as a minor finding below rather than a fidelity failure, since the mechanism and consequence are both present and the omission of an internal shorthand label is consistent with the contract's own preference for formal vocabulary over jargon."
     },
     "reader_facing_appropriateness": {
       "verdict": "pass",
-      "evidence": "No meta-commentary, appropriate placeholder used."
+      "evidence": "No page/slide/section locators, no document filenames, no drafting commentary, no 'this section will cover' scaffolding. Parenthetical English terms (Sitemap v9, DRD v2, CMS Validation Rules, etc.) are all first introduced with a Thai gloss, matching the report's bilingual-first-mention convention."
     },
     "terminology_agency": {
       "verdict": "pass",
-      "evidence": "DCCE properly named as active subject."
+      "evidence": "'คณะที่ปรึกษา' is the consistent grammatical subject for the positioning, delivery, and proposal sentences (l.3 'คณะที่ปรึกษา...วางตำแหน่ง', l.15 'คณะที่ปรึกษาเสนอให้'), matching the contract's sentence_subject rule. 'ผู้พัฒนาระบบ' and 'ผู้จัดทำเนื้อหา' are used consistently for the two roles throughout, not swapped with 'โครงการ' or 'ผู้รับจ้าง' except where the map's own grounds use 'ผู้รับจ้างรายเดียว' to describe the single-contractor failure mode being closed off (l.15), which is a distinct referent, not a substitution."
     },
     "source_fidelity": {
       "verdict": "pass",
-      "evidence": "Follows contract inclusions strictly."
+      "evidence": "All quantitative figures verified against the argument map's own grounds text (not the raw sources, per scope): coverage 35%->70% / 40%->80% (l.3, matches arg-01); Sitemap 38 nodes/4 categories (l.9, matches arg-03); DRD 75 requirements/13 deliverables/9 briefs/12 data specs (l.10, matches arg-03); Storyboard 38 pages + Source-Content Mapping (l.11, matches arg-03); CDM/DMF 8 domains/12-field metadata/74-term glossary (l.13, matches arg-03). No figure in the draft deviates from what the map's grounds attest. The excluded 33/75 content-gap breakdown and the WP4 doc's conflicting 16/34/25 figure do not appear anywhere in the draft -- confirmed by direct search."
     },
     "form_readability": {
       "verdict": "pass",
-      "evidence": "Uses table and bullet points effectively."
+      "evidence": "The five artifacts are rendered as the contract-required numbered list (l.9-13), each line self-contained with its scale figures, matching required_structures. The rest of the section is narrative paragraph form appropriate to Why/What/So-What executive prose; no table or figure placeholder is needed or missing."
     },
     "altitude": {
       "verdict": "pass",
-      "evidence": "Kept at executive level."
+      "evidence": "The draft stays at decision-maker depth: it names artifact scale (counts) but never reproduces the 38-page storyboard content or the DRD's 5-table relational structure, matching the contract's altitude description and exclusions verbatim."
     },
     "headline_conclusion": {
       "verdict": "pass",
-      "evidence": "Clear conclusion placed up front."
+      "evidence": "l.3's opening sentence states the governing finding directly (SDLC positioning + coverage lift) without requiring the reader to infer it from a list of project activities; the section closes (l.15) with the actionable conclusion (role split + proposed next-phase starting point) rather than trailing off in process description."
     },
     "findings_over_process": {
       "verdict": "pass",
-      "evidence": "Focuses on findings and actionable recommendations."
-    },
-    "syntactic_fluency": {
-      "verdict": "pass",
-      "evidence": "Prose flows naturally in Thai institutional style without translationese."
+      "evidence": "The section foregrounds the coverage-lift finding, the artifact inventory, and the role-split decision consequence throughout; it does not describe workshops, interviews, or drafting steps the consultant took to produce these deliverables."
     }
   },
-  "findings": [],
-  "mechanical_reviews": [],
+  "findings": [
+    {
+      "id": "f1",
+      "severity": "minor",
+      "dimension": "argument_fidelity",
+      "location": "l.5 (para 2, arg-02)",
+      "issue": "The map's required_concept 'Discovery Trap' names an analytical label for the risk described in this paragraph, but the draft never uses that label (Thai or English) -- it conveys the mechanism (double cost, orphaned artifacts) and the consequence in full, just without the shorthand name. This is a soft gap in literal concept coverage, not a substance loss.",
+      "status": "accepted",
+      "disposition": "Substance and consequence are both present and traceable to arg-02's grounds/warrant; omitting an internal analytical label is consistent with the contract's preference for formal official vocabulary over internal jargon shorthand. Accepted for human review; does not block pass."
+    },
+    {
+      "id": "f2",
+      "severity": "minor",
+      "dimension": "form_readability",
+      "location": "l.5, term 'สถาปัตยกรรมข้อมูล'",
+      "issue": "Mechanical lint flags 'สถาปัตยกรรม' as generally too abstract per the report-scope lexicon rule, suggesting grounded operational terms.",
+      "status": "accepted",
+      "disposition": "In context the term names one of several concrete redo-tasks a future developer would face without the baseline ('ออกแบบสถาปัตยกรรมข้อมูลใหม่ทั้งหมด'), not vague scene-setting; the lint itself marks this item non-blocking. Accepted as correct technical usage."
+    }
+  ],
+  "mechanical_reviews": [
+    {
+      "tool": "lint_thai_writing.py",
+      "message": "MECHANICAL GATE PASSED",
+      "disposition": "23 advisory items returned, all PARENTHETICAL (bilingual first-mention terms with no Thai lexicon equivalent registered, correctly allowed) or the single STRUCTURAL 'สถาปัตยกรรม' item addressed in finding f2. No blocking mechanical failures; contrastive/justify-by-flaw regex scan (แทนที่จะ, เพื่อป้องกัน, เพื่อลดความเสี่ยง, หลีกเลี่ยง, ไม่ได้...แต่, ไม่ใช่...แต่, ไม่ควรถูกมองเป็น...แต่) run separately by the reviewer returned zero matches in the draft."
+    },
+    {
+      "tool": "argument_gate.py validate",
+      "message": "ARGUMENT GATE PASSED (4 unit(s))",
+      "disposition": "Structural checks (non-empty warrants, supports partitioning governing_thought_components, no duplicate unit_id) pass; reviewer's own Tier 1 substantive read confirms the warrants are genuine reasoning (grounds-to-claim bridges), not restated claims, and that governing_thought_components (sdlc_positioning, ready_to_build_artifacts, role_split) genuinely partition the governing thought."
+    }
+  ],
   "verdict": "pass"
 }

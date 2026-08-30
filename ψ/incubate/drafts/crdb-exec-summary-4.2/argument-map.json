@@ -1,113 +1,75 @@
 {
   "schema_version": "1.0",
   "section_id": "crdb-exec-summary-4.2",
-  "governing_thought": "CRDB's four ready-to-build artifacts (Sitemap v9, DRD v2, Storyboard v2, and the CDM/DMF) move the shared six-stage development lifecycle's first two stages from partially covered when TOR70 (2570) is scored alone (35% and 40%) to substantially complete once CRDB's output is counted as the baseline (70% and 80%); DCCE should therefore require TOR70's incoming contractor to adopt these four artifacts as the starting point for design rather than re-deriving them, split day-one work between a Content Writer and a Software Developer along the boundary those artifacts already define, and close the outstanding content gap before TOR70's own clause sequence locks content ahead of the design step meant to govern it.",
+  "governing_thought": "A-BTR compilation is DCCE's own continuing institutional obligation, not external demand, and both the international report's own admitted knowledge/data gaps and CRDB's independent diagnosis of the reporting pipeline converge on the same underlying shortfall -- so a service designed to close it will strengthen the general data platform and the public website's content at the same time, not serve A-BTR reporting alone.",
   "narrative_scqa": {
-    "situation": "TOR70 (2570), the build contract that follows CRDB, will be staffed and scored against a shared six-stage development lifecycle that begins with requirements elicitation and functional/solution design — the two stages CRDB was commissioned to strengthen.",
-    "complication": "Read as a standalone contract, TOR70 cites no CRDB artifact and instructs its incoming contractor to re-derive information architecture, system requirements, and content structure from a blank page — inside a clause sequence that itself locks datasets and content (TOR70 Section 5.3, Data Curation) before the architecture and design work meant to constrain them (Section 5.4, Design).",
-    "question": "How far do CRDB's deliverables actually close TOR70's gap at the two earliest lifecycle stages, what specific artifacts does the next contractor receive to close it, how should the resulting work be divided between a Content Writer and a Software Developer, and what should each do before TOR70's own sequencing risk materializes?",
-    "answer": "CRDB's four ready-to-build artifacts lift Stage 1 coverage from 35% to 70% and Stage 2 coverage from 40% to 80%; DCCE should require TOR70's contractor to adopt them as the design baseline, hold the Content Writer to closing the 33 gap and 26 partial content topics named in Storyboard v2, hold the Software Developer to building from DRD v2, Sitemap v9 and the CDM/DMF rather than from zero, and sequence the Content Writer's work to finish before TOR70's Data Curation clause begins."
+    "situation": "DCCE is Thailand's national focal point for climate change adaptation, and Thailand's own BTR2 second interim report describes DCCE's institutional arrangement as coordinating, implementing, monitoring, and reporting adaptation progress on a continuing basis -- not as a request routed through DCCE from an outside party.",
+    "complication": "That same report names specific knowledge and data gaps it admits are blocking adequate reporting -- insufficient localized risk data, no standardized Loss and Damage assessment system, no outcome indicators, fragmented databases, weak translation of science into local practice -- and CRDB's own independent operational analysis of the reporting pipeline finds the same underlying problem from a different angle: hand-compiled figures with no shared definitions, poor traceability, and a missing calculation methodology rather than missing raw data.",
+    "question": "Given that the report's own self-assessment and CRDB's independent diagnosis agree on this gap, what should a platform service supporting A-BTR compilation actually be designed to do?",
+    "answer": "It should close both dimensions at once -- supply the content elements the report names as missing, and provide the shared definitions and traceable calculation methodology the reporting pipeline needs -- because the same underlying capability that closes the A-BTR gap also strengthens the general data platform and gives the public website real content to publish."
   },
   "governing_thought_components": [
-    "lifecycle_positioning",
-    "ready_to_build_artifacts",
-    "role_division",
-    "sequencing_next_steps"
+    "abtr_institutional_mandate",
+    "self_reported_knowledge_gap",
+    "reporting_pipeline_gap",
+    "why_abtr_is_strategically_complex",
+    "platform_response"
   ],
   "argument_units": [
     {
       "unit_id": "arg-01",
       "order": 1,
       "paragraph_job": "define",
-      "claim": "The consultant positions CRDB's output on a shared six-stage Reference Integrated Data and Web Platform SDLC, which the consultant itself synthesized from converging data-architecture and web-development practice (drawing on the Australian National Archives' interoperability guidance, The Open Group's TOGAF architecture-development guidance, IBM's data-architecture guidance, and BrowserStack's web-application-lifecycle guidance) rather than adopting any single one of them as a named external standard.",
-      "grounds": "The TOR70 SDLC analysis lays out the six stages explicitly — Requirements Elicitation & Analysis; Functional Analysis & Solution Design; Implementation; System Integration, Verification & Validation; Deployment & Operational Transition; Operations, Maintenance & Continuous Improvement — and states plainly that this is a reference lifecycle synthesizing practices collected from the four named sources, not a canonical sequence borrowed wholesale from any one of them.",
-      "warrant": "Because the 35/40/70/80 percent figures that follow are only meaningful against a stated set of stage boundaries, and because attributing a specific named external standard to the consultant's own synthesis (without a confirmable publication date for any of the four source practices) would misstate its authority, the reader needs the framework named as the consultant's synthesis before the coverage figures can be read as anything more than a slogan.",
-      "application_to_design": "This framework is the organizing axis for the rest of section 4.2: every subsequent figure (stage coverage, artifact count, role split) is expressed against these six stages, and it must be introduced as the consultant's own synthesized reference point, not as a citation to TOGAF, IBM, the Australian National Archives, or BrowserStack individually — those four names may be mentioned as the practice basis the synthesis draws on, without publication years, consistent with the project's citation-integrity decision to drop unconfirmed dates for these four sources.",
-      "supports": "lifecycle_positioning",
-      "provenance": "repaired"
+      "claim": "A-BTR compilation is a continuing institutional obligation DCCE itself holds, flowing from its role as national focal point for climate adaptation, not a discretionary service like the platform's other information offerings.",
+      "grounds": "BTR2 second interim report, Section A institutional baseline: A-REQ-011 (the report MUST identify the principal national policy and institutional framework for adaptation, including the lead national committee and the NAP); A-REQ-013 (MUST describe the institutional arrangement for adaptation across policy formulation, planning, implementation, monitoring, and reporting); A-REQ-018 (MUST identify the national focal point for adaptation and describe coordination across sectors and governance levels); A-REQ-021 (MUST describe how DCCE and sectoral focal points coordinate monitoring, evaluation, and regular progress reporting).",
+      "warrant": "Because these are DCCE's own reporting duties described in the report's own institutional baseline -- not requests routed through DCCE from an outside party -- the platform's justification for supporting A-BTR does not rest on demonstrated external demand the way its other services do; it rests on an obligation DCCE must fulfill regardless of demand.",
+      "application_to_design": "The section's opening states A-BTR's institutional status as DCCE's own mandate before describing any gap, so the platform's role reads as serving DCCE's own reporting duty, not a discretionary add-on.",
+      "supports": "abtr_institutional_mandate"
     },
     {
       "unit_id": "arg-02",
       "order": 2,
       "paragraph_job": "diagnose",
-      "claim": "An independent re-scoring of TOR70 against the six-stage reference lifecycle shows that Stage 1 coverage rises from 35% (TOR70 alone) to 70% (with CRDB's deliverables counted as the baseline), and Stage 2 coverage rises from 40% to 80% — the two largest and only stage-level jumps CRDB produces.",
-      "grounds": "The TOR70 SDLC analysis's coverage re-scoring table scores TOR70 as written and then re-scores it with CRDB adopted as baseline: Stage 1 moves 35%→70%, driven by CRDB's stakeholder interviews, nine service business cases, demand analysis, digital asset catalog, and DRD requirement set; Stage 2 moves 40%→80%, driven by the CDM, glossary, metadata standard, Sitemap v9's UX-evaluated information architecture, and the WP5 governance framework.",
-      "warrant": "Because these are precisely the two stages the TOR70 analysis independently identifies as TOR70's weakest when read alone, and because CRDB was commissioned to produce exactly this planning-and-design work, a coverage jump concentrated at these two stages is not a general claim of usefulness — it is a specific, checkable substitution of otherwise-unfunded early-lifecycle work, which is the fact a reader deciding whether to fold CRDB into TOR70's contractual baseline needs stated as a number, not a qualitative assurance.",
-      "application_to_design": "Render this as a small table (Reference lifecycle stage | Coverage, TOR70 alone | Coverage, with CRDB adopted) rather than folding the four percentages into a sentence, per the report's rule that multiple simultaneous empirical figures belong in a table; keep the table to the two headline stages the contract requires as decision-relevant figures, leaving the per-activity scoring method itself out of the executive-summary altitude.",
-      "supports": "lifecycle_positioning",
-      "provenance": "recovered"
+      "claim": "Thailand's own BTR2 second interim report names five specific knowledge/data gaps currently blocking adequate adaptation reporting: insufficient localized (sub-national/community) risk and vulnerability data; no standardized framework or integrated system for Loss and Damage assessment; absence of standardized outcome indicators, with monitoring relying on activity counts rather than resilience or vulnerability-reduction measures; fragmented, non-integrated databases across agencies; and weak translation of available scientific knowledge into practical tools at the provincial and local level.",
+      "grounds": "BTR2 Section C, \"Priorities, Barriers, and Strategy,\" section 1.3.2, theme data_and_knowledge_gaps (requirement items C-020 through C-031, source lines 455-459) -- a structured table in the report itself naming these five gaps and the technical, financial, and capacity-building support each would require.",
+      "warrant": "Because these gaps are stated by the report's own authors as the barriers currently preventing adequate reporting, they carry the standing of the country's own acknowledged baseline rather than an outside critique -- closing them addresses what the report itself says is missing, not a general improvement agenda.",
+      "application_to_design": "The platform's A-BTR-supporting service is scoped against these five named gaps specifically, with each proposed capability traceable to the gap it addresses.",
+      "supports": "self_reported_knowledge_gap"
     },
     {
       "unit_id": "arg-03",
       "order": 3,
-      "paragraph_job": "define",
-      "claim": "Sitemap v9 supplies the finished, UX-tested information architecture (38 nodes across the site's six top-level sections, refined through nine iterations) that TOR70's own clause sequence would otherwise place after CMS backend construction rather than before it.",
-      "grounds": "NCAIF Detailed Sitemap v9 documents 38 addressable nodes organized under six top-level sections (Home, Country Overview, Policy Maker Information Center, Adaptation Cycle, Tools & Services, News and Contact); the TOR70 SDLC analysis independently confirms the same node count and nine-iteration UX-evaluation history and maps it to TOR70 clause 5.6.1 (sitemap, menu structure, and information architecture design).",
-      "warrant": "Because TOR70 places sitemap and information-architecture design (§5.6.1) inside §5.6, after the CMS backend is already built under §5.5, a validated sitemap delivered before contract award removes the specific defect the TOR70 analysis calls out — a developer no longer has to fix the CMS's content structure to a page layout that has not yet been designed.",
-      "application_to_design": "The incoming Software Developer can treat Sitemap v9 as a fixed input to the CMS content model from day one of §5.4/§5.6 design work, instead of drafting and testing an original sitemap mid-build while the backend schema is already locked.",
-      "supports": "ready_to_build_artifacts",
-      "provenance": "repaired"
+      "paragraph_job": "diagnose",
+      "claim": "Beyond the content gaps the BTR2 report names, compiling the report today is itself a broken process: figures are hand-compiled from spreadsheets held across several agencies with no shared definitions for basic terms, and final figures cannot be reliably traced to source. Of 122 information items the report needs, roughly half return no supporting data, and where data exists, what is usually missing is not the raw measurement but the calculation methodology that turns it into a reportable figure.",
+      "grounds": "WP7 Gap Analysis Report, Section 5, \"Service 9 -- International climate reporting pipeline\": four structural conditions underlie the problem (gaps in data and shared definitions, cross-agency coordination, resourcing, monitoring); 122 report items were checked against the catalog, roughly half unmatched, six needing a judgment call; \"Gap 10\" specifically identifies the missing calculation methodology -- return periods, scenario-specific probabilities, the loss-and-damage assessment methodology, financial stress-test results -- as the actual bottleneck, not the absence of raw data.",
+      "warrant": "Because this finding was reached independently by CRDB's own operational analysis, checking actual reporting items against the data catalog rather than relying on the report's self-assessment, it converges on the same underlying shortfall from a different direction -- the content gap BTR2 names and the process gap CRDB found are two faces of one shortfall, not separate problems.",
+      "application_to_design": "The platform treats supplying raw data and supplying the calculation methodology and shared definitions that turn data into a reportable figure as two distinct, both-necessary design requirements.",
+      "supports": "reporting_pipeline_gap"
     },
     {
       "unit_id": "arg-04",
       "order": 4,
-      "paragraph_job": "define",
-      "claim": "DRD v2 supplies a single technical source of truth (75 requirements, 13 deliverables, 9 service briefs, 12 data specifications) that TOR70's instruction to 'analyze and write the system requirements' (§5.4.1) would otherwise start from a blank page.",
-      "grounds": "The WP4 Developer-Ready Design Requirements Specification v2 documents 75 requirements resolving to 13 deliverables, 9 service briefs, and 12 data specifications, each requirement carrying a status of FULL, PARTIAL, or GAP and, where matched, a linked existing DCCE data asset; the TOR70 SDLC analysis independently confirms the requirement count and notes 30 of the 75 already labeled 'ready to build' with matched source assets.",
-      "warrant": "Because TOR70 names no CRDB artifact anywhere in its scope of work and instructs the incoming contractor to write system requirements as if none existed, and because the TOR70 analysis found nearly half of those requirements already resolved to a matched data asset, adopting DRD v2 as the requirements baseline converts what TOR70 currently scopes as an from-scratch analysis task into a verification task against 75 named, already-classified items.",
-      "application_to_design": "The Software Developer uses DRD v2's 13 deliverable definitions and 12 data specifications directly as the input contract for §5.4's architecture and database design and as the acceptance checklist for §5.8's testing, rather than producing an independent requirements document that a second team would then have to reconcile against DRD v2 after the fact.",
-      "supports": "ready_to_build_artifacts",
-      "provenance": "recovered"
+      "paragraph_job": "diagnose",
+      "claim": "A-BTR reporting is strategically significant precisely because it is complex to deliver: making the service workable requires that the data domains and pipelines spanning all four stages of the adaptation cycle -- climate science, impact/vulnerability/risk assessment, adaptation planning and implementation, and monitoring/evaluation/learning -- are functional, and that the data feeding those pipelines is of consistently high quality. This complexity is why a data platform, not a single dataset or a content page, is the necessary supporting infrastructure: operating and implementing this level of data ingestion, processing, and management is what the A-BTR service actually demands. The public website, in turn, is the layer that draws on this same A-BTR-supporting material to disseminate adaptation information to the general public.",
+      "grounds": "NCAIF Sitemap v9, section 3 \"วงจรขับเคลื่อนการปรับตัว\" (Adaptation Cycle), which structures the platform's content around exactly these four stages (3.1 Climate Science, 3.2 Impact/Vulnerability/Risk Assessment, 3.3 Planning and Implementation, 3.4 Monitoring/Evaluation/Learning); cross-referenced with arg-01's institutional baseline (A-BTR reporting spans planning, implementation, monitoring, and reporting, per A-REQ-013) and arg-03's finding that A-BTR compilation already draws on data scattered across multiple agencies and domains (WP7 Service 9). The plan brief itself states that a service supporting A-BTR compilation elevates the data platform and website content together, not one or the other.",
+      "warrant": "Because A-BTR compilation is not a lookup against one dataset but a synthesis across all four adaptation-cycle stages, every domain's pipeline has to be operating and producing trustworthy data for the report to be assembled at all -- this is a data-platform-scale requirement (ingestion, processing, quality management across domains), not a single-service build. Once that backend capability exists, the website's role follows naturally: it is the audience-facing layer that consumes and presents this same underlying material, not a separate data problem.",
+      "application_to_design": "State the mechanism directly: name the four adaptation-cycle stages, explain why their pipelines and data quality must all hold for A-BTR compilation to work, and describe the data platform as the necessary infrastructure this creates -- with the website as the layer that then disseminates A-BTR-supporting content publicly. Do not frame this as a warning against an alternative (no \"otherwise the service fails\" scaffolding); state the requirement and its consequence directly.",
+      "supports": "why_abtr_is_strategically_complex"
     },
     {
       "unit_id": "arg-05",
       "order": 5,
-      "paragraph_job": "define",
-      "claim": "Storyboard v2 gives the Content Writer a page-by-page production brief — naming, for every one of the 38 sitemap nodes, what the page should say, in what order, and how ready its content already is — that turns the general instruction to 'close the content gap' into an assignable list of 33 unwritten and 26 partially-written topics.",
-      "grounds": "The WP4 Node Content Storyboard and Synthesis Guide v2 sets out per-node content structure and a source-content mapping table showing which DCCE document or dataset each page should draw from; the companion Content Source Gap Analysis v2 classifies all 75 DRD requirements as 16 FULL, 26 PARTIAL, and 33 GAP, naming the specific page and missing subtopic for each.",
-      "warrant": "Because the content gap is already located page by page and topic by topic in these two documents, a Content Writer starting from Storyboard v2 does not first need to run a fresh content audit — the 33 gap and 26 partial topics are already named, placed on a specific node, and matched (or explicitly not matched) to an existing DCCE document, so writing can start immediately instead of after a rediscovery pass.",
-      "application_to_design": "The Content Writer receives Storyboard v2 as the production brief: for each of the 33 gap and 26 partial topics, the exact page, required content type, and candidate source documents are already specified, so the deliverable is drafting against a named list rather than scoping what the list should contain.",
-      "supports": "ready_to_build_artifacts",
-      "provenance": "recovered"
-    },
-    {
-      "unit_id": "arg-06",
-      "order": 6,
-      "paragraph_job": "define",
-      "claim": "The CDM/DMF (8 functional data domains, a 12-field metadata standard, and a 74-term governed glossary) supplies the data-governance foundation that TOR70's data-architecture, database-design, and exchange-standard clauses (§5.4.8, §5.4.9, §5.4.13) would otherwise have to define from scratch.",
-      "grounds": "The WP5 Data Management Framework Report segments the database into 8 functional logical domains and defines a Glossary v5 of 74 canonically defined bilingual terms mapped to those domains; the TOR70 SDLC analysis independently confirms a 12-required-field metadata standard aligned to ISO 19115 and the national DGA guideline built on the same foundation.",
-      "warrant": "Because a data architecture built without agreed domain boundaries, field-level metadata rules, and a governed term list produces a schema that only its original builder can interpret, settling these three artifacts before build starts lets the incoming Software Developer derive the physical database directly from an already-agreed conceptual model instead of first negotiating what a 'domain' or a governed term means mid-contract.",
-      "application_to_design": "The Software Developer derives the physical database schema and the CMS's metadata validation rules directly from the CDM's 8 domains and 12-field metadata standard, and uses the 74-term glossary to keep the schema's field labels and the published website's terminology identical, closing off the risk of a second, incompatible term set emerging during build.",
-      "supports": "ready_to_build_artifacts",
-      "provenance": "recovered"
-    },
-    {
-      "unit_id": "arg-07",
-      "order": 7,
-      "paragraph_job": "compare",
-      "claim": "The four artifacts only close TOR70's early-lifecycle gap if the division of labor they imply is stated explicitly: the Content Writer closes the 33 gap and 26 partial content topics against Storyboard v2, while the Software Developer builds CMS validation rules, data pipelines, and interface components against DRD v2's 13 deliverables and 12 data specifications and the CDM/DMF's schema.",
-      "grounds": "The four artifacts' own scope divides cleanly along a content/system line — Storyboard v2 and the Content Source Gap Analysis address what pages should say, while DRD v2 and the CDM/DMF address what the system must build and validate — and this division matches the writing plan's explicit instruction to separate Content Writer and Software Developer responsibilities so the technical contractor does not invent content logic during construction.",
-      "warrant": "Because TOR70 names no CRDB artifact and places its own content-curation clause (§5.3) ahead of its design clause (§5.4) — the sequencing defect the TOR70 analysis diagnoses — a single incoming contractor left to interpret both content and system logic from the same clauses would recreate that same defect; stating the two-role division as part of the deliverable, each role tied to a named artifact, is what prevents the IT contractor from having to decide content questions it has no mandate to decide.",
-      "application_to_design": "TOR70's contract structuring should name each role's input and output explicitly — Content Writer's output is measured against Storyboard v2's source-content mapping, Software Developer's output is measured against DRD v2 and the CDM/DMF — so that review gates can check each side's work against a named artifact instead of a general design intent that leaves the boundary to be negotiated mid-contract.",
-      "supports": "role_division",
-      "provenance": "repaired"
-    },
-    {
-      "unit_id": "arg-08",
-      "order": 8,
       "paragraph_job": "conclude",
-      "claim": "Because TOR70's review gates are pass-only with no rework allowance or schedule relief, the Content Writer should close the outstanding content gap before TOR70's Data Curation clause (§5.3) begins, and the Software Developer should adopt DRD v2 and Sitemap v9 as the starting baseline for the Design clause (§5.4) rather than re-deriving it — with the contract negotiated for at least two build iterations and a mid-contract test milestone, using capacity the existing 270-day, four-milestone structure already provides.",
-      "grounds": "The TOR70 SDLC analysis documents that §5.3 locks datasets and content, with categorization decided, before §5.4's data architecture and database design exist, and that TOR70's four review gates (§5.4, §5.5.13, §5.6.3, §5.8.8) are pass-only, with no rework allowance, re-baselining path, or schedule relief if a gate fails; the consultant's own TOR70 delivery-planning analysis shows the existing 270-day timeline and four payment milestones (days 30/120/210/270) can accommodate two build iterations and a public-beta test around day 210 without changing the budget or the milestone dates.",
-      "warrant": "Because a gate that can only pass has no contractual mechanism to absorb a gap discovered after it closes, the two roles must front-load exactly the work a later gate cannot accommodate — content before §5.3 locks it, and architecture and requirements before §5.4 approval closes design — and because the capacity for a mid-contract test already exists inside TOR70's stated timeline and budget, recommending it is a use of the TOR's own structure rather than a request for additional time or money.",
-      "application_to_design": "State the closing as three bold headline bullets, per the executive-summary convention for concluding units: readiness (CRDB lifts Stage 1/2 coverage from 35%/40% to 70%/80%), starting point (the Software Developer adopts DRD v2 and Sitemap v9 as the §5.4 design baseline instead of designing from zero), and remaining gap (the Content Writer closes the 33 gap and 26 partial content topics before §5.3 begins, and the contract is negotiated for two build iterations with a mid-contract beta test).",
-      "supports": "sequencing_next_steps",
-      "provenance": "repaired"
+      "claim": "A service designed to close the A-BTR-specific gap -- supplying the localized, Loss-and-Damage, outcome-indicator, and integration content the BTR2 report names, and the shared definitions and calculation methodology the reporting pipeline needs, built on the cross-domain data platform arg-04 establishes as necessary -- strengthens the general data platform and gives the public website real content to publish, not A-BTR reporting alone.",
+      "grounds": "Follows directly from arg-02, arg-03, and arg-04: the capabilities BTR2 names as missing (integrated databases, standardized outcome indicators), the capabilities CRDB's pipeline analysis names as missing (shared definitions, traceable calculation methodology), and the cross-domain data platform arg-04 shows the service requires, are all general-purpose data-platform capabilities that outlast A-BTR reporting alone.",
+      "warrant": "Because the same underlying capability -- an integrated, well-defined, traceable, cross-domain data system -- is what both the international reporting obligation and the general public-facing platform require, investing to close the A-BTR gap is the same investment the platform needs regardless, applied first where the obligation is most binding.",
+      "application_to_design": "The section's closing states this dual benefit directly -- closing the A-BTR gap advances the data platform and the website together -- without listing the four institutional roles or reintroducing the whole-website content-gap statistic, both out of scope for this section.",
+      "supports": "platform_response"
     }
   ],
   "approval": {
     "status": "approved",
-    "approved_by": "Boss (standing bypass, 2026-08-29)",
-    "approved_at": "2026-08-29T18:30:00+07:00",
-    "basis": "Boss authorized bypassing approval on the argument maps in the session of 2026-08-29, in these words: \"I allow you to bypass mu approval on argument map..I will wait to review the final drafts you produce\". Approved by the orchestrating session after a chapter-spine coherence check across all four maps; the human review point is Stage 6, on the finished drafts."
+    "approved_by": "Boss",
+    "approved_at": "2026-08-30T13:00:00+07:00"
   }
 }

@@ -1,64 +1,84 @@
 {
   "schema_version": "1.0",
   "rubric_version": "6.0.0",
-  "draft_sha256": "adbde10e557285ffe34d9f3e6cc4414a0ccc72b22bcc7d788665c85a43108450",
-  "contract_sha256": "daa39dc69486c6160a4a86184951f994d2814566aeb6d66756ed6a571cdfa86e",
+  "draft_sha256": "feb7d6fe7e858b9b653d7989ef615cde7f4046dae33c47acaf65b72f11db170b",
+  "contract_sha256": "9eca01c9227fe787157e9882b71dcf4c8e14f3ec6ddcad6adf5ee7baf6a6d1a0",
   "profile": "executive-summary",
   "reviewer_mode": "independent",
   "assurance": "standard",
-  "reviewer": "agent",
-  "reviewed_at": "2026-08-29T17:54:21+00:00",
+  "reviewer": "independent-editorial-reviewer",
+  "reviewed_at": "2026-08-30T05:10:00+00:00",
   "dimensions": {
     "section_job": {
       "verdict": "pass",
-      "evidence": "Draft meets the requirement based on writing contract, argument map, and drafting guidelines. Subject anchoring and direct syntax used effectively."
+      "evidence": "The section stays A-BTR-scoped throughout: institutional mandate (para 1), the five BTR2-admitted gaps (para 2, numbered list), CRDB's own independently-found reporting-pipeline gap (para 3, 122-item catalog check), the strategic-complexity/data-platform rationale via the four adaptation-cycle stages (para 4), and the dual-benefit conclusion (para 5). Confirmed by full read that none of the three explicitly out-of-scope items appear: the four institutional roles (4.4's job), the whole-website 75-topic/79% statistic (4.1's job), or per-field/SDLC detail (4.3's job)."
     },
     "audience_decision_value": {
       "verdict": "pass",
-      "evidence": "Draft meets the requirement based on writing contract, argument map, and drafting guidelines. Subject anchoring and direct syntax used effectively."
+      "evidence": "Prose foregrounds what a DCCE executive needs to decide -- why A-BTR is the department's own obligation (not demand-driven), what specifically blocks quality reporting today, and why the fix requires platform-scale investment rather than a narrow fix -- without descending into per-field technical detail or consultant workflow narration."
     },
     "evidence_payload": {
       "verdict": "pass",
-      "evidence": "Draft meets the requirement based on writing contract, argument map, and drafting guidelines. Subject anchoring and direct syntax used effectively."
+      "evidence": "Each unit carries concrete evidence and consequence: para 1 cites the institutional-arrangement description (policy formulation through reporting, national focal point, cross-sector coordination); para 2 enumerates the five named gaps; para 3 gives the 122-item catalog check, ~half unmatched, and the named methodology bottleneck (return periods, scenario probabilities, L&D methodology, financial stress-test results); para 4 names the four adaptation-cycle stages and states the pipeline-must-all-hold mechanism; para 5 closes with the dual-benefit consequence for the platform and website."
     },
     "causal_logic": {
       "verdict": "pass",
-      "evidence": "Draft meets the requirement based on writing contract, argument map, and drafting guidelines. Subject anchoring and direct syntax used effectively."
+      "evidence": "Chain runs cleanly: obligation (para 1) -> content gap the report admits (para 2) -> independently-found process gap converging on the same shortfall, stated explicitly as 'ภาพสะท้อนของปัญหาเดียวกัน' (para 3) -> why the scale of the problem requires a platform, stated as a positive requirement ('ท่อส่งข้อมูล...ต้องทำงานได้จริง...รายงานจึงจะสามารถประกอบขึ้นได้ครบถ้วน') rather than an 'otherwise it fails' warning (para 4) -> conclusion that the same investment serves both A-BTR and the general platform (para 5). No reversed causality or decorative transitions found."
     },
     "argument_fidelity": {
       "verdict": "pass",
-      "evidence": "Draft meets the requirement based on writing contract, argument map, and drafting guidelines. Subject anchoring and direct syntax used effectively."
+      "evidence": "All five approved units verbalized with matching claim+warrant: arg-01 -> para 1 (obligation-vs-external-demand framing tracks the warrant); arg-02 -> para 2-para start of 3 (five gaps plus the 'ประเทศเองระบุไว้' line tracking the warrant's 'country's own acknowledged baseline'); arg-03 -> para 3 (hand-compiled figures, 122-item check, Gap-10 methodology items, and the explicit 'two faces of one shortfall' sentence directly verbalizing the warrant); arg-04 -> para 4 (four stages listed, pipeline-must-all-hold warrant stated directly, platform-not-single-dataset conclusion, website-as-disseminating-layer consequence) -- received the same depth of treatment (own list, own causal sentence, own consequence sentence) as the other four units, confirming it was not verbalized as a rushed afterthought despite being added late; arg-05 -> para 5 (dual-benefit close tracking 'applied first where the obligation is most binding'). No claim in the draft lacks grounding in the map, and no approved unit is silently dropped."
     },
     "reader_facing_appropriateness": {
       "verdict": "pass",
-      "evidence": "Draft meets the requirement based on writing contract, argument map, and drafting guidelines. Subject anchoring and direct syntax used effectively."
+      "evidence": "No internal locators appear in prose (no 'A-REQ-0xx', 'C-020', 'WP7', 'Gap 10', 'Service 9', line/page numbers); no prompt residue or structural commentary. Confirmed by mechanical lint (scope 'report'): MECHANICAL GATE PASSED, one non-blocking parenthetical note only."
     },
     "terminology_agency": {
       "verdict": "pass",
-      "evidence": "Draft meets the requirement based on writing contract, argument map, and drafting guidelines. Subject anchoring and direct syntax used effectively."
+      "evidence": "'กรม สส.' used consistently as short form after first mention; 'คณะที่ปรึกษา' used as the active subject for analysis sentences in para 3 ('คณะที่ปรึกษาพบด้วยว่า...', 'คณะที่ปรึกษาตรวจสอบกับบัญชีข้อมูลของกรม สส. พบว่า...', 'ข้อค้นพบนี้เป็นผลจากการวิเคราะห์ปฏิบัติการของคณะที่ปรึกษาเอง'), matching the contract's sentence_subject rule; no substitution of 'โครงการ' as actor. One terminology deviation from the contract's exact first-mention pattern logged as finding EDIT-01 (minor, does not affect governing meaning)."
     },
     "source_fidelity": {
       "verdict": "pass",
-      "evidence": "Draft meets the requirement based on writing contract, argument map, and drafting guidelines. Subject anchoring and direct syntax used effectively."
+      "evidence": "All four required_concepts present with intact quantitative values: five named BTR2 gaps (para 2), 122-item catalog check with ~half unmatched (para 3), Gap 10's named methodology items -- return periods, scenario-specific probabilities, L&D assessment methodology, financial stress-test results (para 3) -- and the four adaptation-cycle stages with the platform/website consequence (para 4). Confirmed absent from the full draft: the four institutional roles, the whole-website 75-topic statistic and its 79%/16-26-33 breakdown, and the unverified '47 of 75' A-BTR-linked figure -- all three explicitly excluded per contract, none appear anywhere in the text."
     },
     "form_readability": {
       "verdict": "pass",
-      "evidence": "Draft meets the requirement based on writing contract, argument map, and drafting guidelines. Subject anchoring and direct syntax used effectively."
+      "evidence": "The five knowledge/data gaps and the four adaptation-cycle stages are both rendered as numbered lists with substantive descriptions, matching the contract's 'countable parallel items' rule; surrounding paragraphs carry the why/what/so-what argumentative load in prose rather than being compressed into floating single sentences."
     },
     "altitude": {
       "verdict": "pass",
-      "evidence": "Draft meets the requirement based on writing contract, argument map, and drafting guidelines. Subject anchoring and direct syntax used effectively."
+      "evidence": "Draft stays at synthesis level: names the gap categories and the 122/half figure but does not reproduce WP7's per-field metadata, the 260-dataset table, or SDLC artifact detail; the four adaptation-cycle stages are named only to the depth needed to justify the platform conclusion, without importing NCAIF sitemap sub-item detail."
     },
     "headline_conclusion": {
       "verdict": "pass",
-      "evidence": "Draft meets the requirement based on writing contract, argument map, and drafting guidelines. Subject anchoring and direct syntax used effectively."
+      "evidence": "Closing paragraph states the governing finding directly without requiring reconstruction: closing the A-BTR gap is 'การลงทุนเดียวกับที่แพลตฟอร์มต้องการอยู่แล้ว เพียงแต่นำมาใช้ก่อนในจุดที่พันธกรณีมีความผูกพันสูงสุด' and benefits the platform and website together."
     },
     "findings_over_process": {
       "verdict": "pass",
-      "evidence": "Draft meets the requirement based on writing contract, argument map, and drafting guidelines. Subject anchoring and direct syntax used effectively."
+      "evidence": "National/institutional stakes (DCCE's own reporting obligation, the report's admitted gaps, the operational blockage CRDB found) drive the narrative throughout; the one process description present (para 3's catalog-check sentence) is stated as evidence supporting a finding, not as workflow narration."
     }
   },
-  "findings": [],
-  "mechanical_reviews": [],
+  "findings": [
+    {
+      "severity": "minor",
+      "status": "accepted",
+      "location": "Paragraph 1, opening sentence introducing the agency name",
+      "issue": "Contract's terminology.first_mention specifies the full pattern 'กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (Department of Climate Change and Environment: กรม สส.)'. The draft renders only 'กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (กรม สส.)', omitting the English department name.",
+      "disposition": "Accepted for human review: the Thai full name and short form are both correctly established and used consistently thereafter; the missing English gloss does not change governing meaning or cause reader confusion, but is flagged as a literal deviation from the approved terminology spec."
+    },
+    {
+      "severity": "minor",
+      "status": "accepted",
+      "location": "Paragraph 1 ('...ไม่ใช่บริการที่เกิดจากความต้องการของหน่วยงานภายนอก...') and paragraph 4 ('...ไม่ใช่ชุดข้อมูลเดียวหรือหน้าเว็บเนื้อหาเดียว...')",
+      "issue": "Given this section's documented history of justify-by-flaw scaffolding, both 'ไม่ใช่' occurrences were checked closely. Neither matches the banned pattern ('แทนที่จะ...', 'เพื่อป้องกัน...', 'เพื่อลดความเสี่ยง...', 'หลีกเลี่ยง...', or negation-first 'ไม่ใช่...แต่...' framing that justifies a choice by first negating a bad alternative). Both are affirmative-first, definitional contrasts required by the approved warrants themselves (arg-01: obligation vs. demand-driven framing; arg-04: platform vs. single-dataset/content-page framing), not decisions justified by avoiding a flaw. Confirmed no instance of 'แทนที่จะ', 'เพื่อป้องกัน', or 'เพื่อลดความเสี่ยง' anywhere in the draft; the one 'หลีกเลี่ยง' hit is inside the technical term 'ความสูญเสียที่หลีกเลี่ยงได้' (avoided loss), not scaffolding.",
+      "disposition": "Accepted: logged for transparency given the section's history; no rewrite required since both instances verbalize content the approved map requires, phrased as direct statements rather than flaw-avoidance justification."
+    }
+  ],
+  "mechanical_reviews": [
+    {
+      "message": "lint_thai_writing.py: MECHANICAL GATE PASSED (60 rules active, scope 'report'); 1 non-blocking item -- [PARENTHETICAL] '(Adaptation Biennial Transparency Report: A-BTR)' has no Thai equivalent in the lexicon, so it is allowed as-is.",
+      "disposition": "Accepted as-is. This is the report's own required full-form spellout of A-BTR at first mention per the writing contract; no lexicon entry is warranted since it is a one-time proper-noun gloss, not recurring terminology drift."
+    }
+  ],
   "verdict": "pass"
 }

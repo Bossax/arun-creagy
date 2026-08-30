@@ -1,114 +1,67 @@
 {
   "schema_version": "1.0",
   "section_id": "crdb-exec-summary-4.3",
-  "governing_thought": "กรม สส. ควรจัดลำดับข้อเสนอแนะธรรมาภิบาลและการบริหารจัดการแพลตฟอร์มตามสิ่งที่ตนเองตัดสินใจและลงมือทำได้ทันทีก่อนสิ่งที่ต้องรอหน่วยงานภายนอก: เริ่มจากการประกาศใช้โครงสร้างธรรมาภิบาลข้อมูลภายใน 4 ระดับ และกำหนด TOR โครงการถัดไปให้พัฒนาแบบเน้นผลิตภัณฑ์จริง 5 รายการที่ใช้ผลงาน CRDB เป็นฐาน พร้อมกลไกทดสอบใช้งานจริงกลางสัญญาแบบ Agile เพื่อลดความเสี่ยงของการตรวจรับเพียงครั้งเดียวเมื่อสัญญาสิ้นสุด จากนั้นจึงผลักดันข้อตกลงแลกเปลี่ยนข้อมูลกับหน่วยงานภายนอก 5 แห่งที่ถือครองข้อมูลร้อยละ 37 ของประเทศ ซึ่งใช้เวลาเจรจานานกว่าแต่ยังคงต้องดำเนินการคู่ขนานไป ไม่ใช่ทิ้งไว้ท้ายสุดโดยไม่ลงมือ",
+  "governing_thought": "CRDB positions its own output within a defined 6-phase Reference Integrated Data and Web Platform SDLC -- raising independently-scored coverage of phase 1 (Requirements Elicitation & Analysis) from roughly 35% to 70% and phase 2 (Functional Analysis & Solution Design) from roughly 40% to 80% -- and hands over five concrete, checkable ready-to-build artifacts plus a clear Content Writer / Software Developer role split, so that whoever builds next can begin implementation immediately instead of repeating discovery, without this section presuming what that next project's procurement will actually say.",
   "narrative_scqa": {
-    "situation": "กรม สส. เพิ่งได้รับพิมพ์เขียวโครงสร้างข้อมูลและชิ้นงานพร้อมสร้างจากโครงการ CRDB และกำลังเตรียมกำหนด TOR โครงการถัดไปเพื่อพัฒนาระบบจริง",
-    "complication": "ความสำเร็จของแพลตฟอร์มไม่ได้ขึ้นอยู่กับชิ้นงานทางเทคนิคเพียงอย่างเดียว แต่ขึ้นอยู่กับกลไกธรรมาภิบาล เงื่อนไขการจัดจ้างพัฒนาระบบ และความร่วมมือข้ามหน่วยงานที่ กรม สส. ยังไม่ได้วางไว้ ขณะที่แต่ละกลไกเหล่านี้มีอำนาจตัดสินใจและกรอบเวลาที่ควบคุมได้ไม่เท่ากัน",
-    "question": "กรม สส. ควรจัดลำดับความสำคัญของงานธรรมาภิบาลและการบริหารจัดการแพลตฟอร์มเหล่านี้อย่างไร จึงจะขับเคลื่อนแพลตฟอร์มได้เร็วที่สุดโดยไม่ให้แผนทั้งชุดติดขัดอยู่ที่จุดที่ช้าที่สุด",
-    "answer": "เริ่มจากสิ่งที่ กรม สส. ตัดสินใจและดำเนินการได้เองทันที คือโครงสร้างธรรมาภิบาลข้อมูลภายในและการออกแบบ TOR แบบเน้นผลิตภัณฑ์พร้อมกลไก Agile กลางสัญญา ก่อนผลักดันข้อตกลงแลกเปลี่ยนข้อมูลกับหน่วยงานภายนอกซึ่งใช้เวลาเจรจานานกว่า"
+    "situation": "The platform's development follows a recognized six-phase reference lifecycle -- Requirements Elicitation & Analysis, Functional Analysis & Solution Design, Implementation, System Integration Verification & Validation, Deployment & Operational Transition, and Operations/Maintenance/Continuous Improvement -- synthesized from established industry practice (TOGAF, IBM data architecture guidance, the Australian National Archives' interoperability guidance, and BrowserStack's web-application lifecycle guidance).",
+    "complication": "Scored independently against that reference lifecycle's own constituent activities, coverage of the first two phases is partial without CRDB's work counted (roughly 35% and 40%). Without a documented, checkable handoff, whoever builds the platform next would have to re-derive requirements analysis and solution design essentially from zero -- discovering only after starting that the foundational work already exists elsewhere, unattributed and unusable.",
+    "question": "What must this section establish so that CRDB's completed work functions as a real starting baseline for the next phase, rather than a set of documents nobody is required to use?",
+    "answer": "It must state CRDB's phase-by-phase coverage lift in the reference lifecycle (phase 1 to roughly 70%, phase 2 to roughly 80%), name the five ready-to-build artifacts that supply that lift with their real scale, and set out how Content Writer and Software Developer roles should use them -- all stated as risk-reducing groundwork for whichever project follows, never as a claim about what that project's own scope of work will say."
   },
   "governing_thought_components": [
-    "การจัดลำดับความสำคัญของข้อเสนอแนะตามอำนาจตัดสินใจและความเร็วในการดำเนินการของ กรม สส. เอง",
-    "โครงสร้างธรรมาภิบาลข้อมูลภายใน 4 ระดับที่ กรม สส. ดำเนินการได้เอง",
-    "การออกแบบ TOR โครงการถัดไปแบบ Product-Led โดยใช้ผลงาน CRDB เป็นฐาน",
-    "กลไกทดสอบใช้งานจริงกลางสัญญาแบบ Agile ในสัญญาจ้างโครงการถัดไป",
-    "ข้อตกลงแลกเปลี่ยนข้อมูลกับหน่วยงานภายนอก 5 แห่ง ในฐานะลำดับความสำคัญรอง"
+    "sdlc_positioning",
+    "ready_to_build_artifacts",
+    "role_split"
   ],
   "argument_units": [
     {
       "unit_id": "arg-01",
       "order": 1,
       "paragraph_job": "define",
-      "claim": "กรม สส. ควรเรียงลำดับข้อเสนอแนะในหัวข้อธรรมาภิบาลตามอำนาจการตัดสินใจและความเร็วในการดำเนินการของตนเอง โดยเริ่มจากสิ่งที่ทำได้ทันทีโดยไม่ต้องรอหน่วยงานภายนอก ไปสู่สิ่งที่ต้องอาศัยการเจรจาข้ามหน่วยงาน",
-      "grounds": "writing-contract.json (decision_use, section_job) กำหนดให้ผู้บริหาร กรม สส. เข้าใจการจัดลำดับความสำคัญนี้เป็นเป้าหมายหลักของหัวข้อ; ร่างเดิมของ 4.3 เปิดย่อหน้าแรกด้วยตรรกะการจัดลำดับเดียวกันนี้อยู่แล้ว (\"เริ่มจากสิ่งที่ กรม สส. ดำเนินการได้ทันทีโดยไม่ต้องรอหน่วยงานภายนอก ไปสู่สิ่งที่ต้องอาศัยการเจรจาข้ามหน่วยงานและใช้เวลานานกว่า\")",
-      "warrant": "งานที่ กรม สส. มีอำนาจตัดสินใจเบ็ดเสร็จ เช่น การแต่งตั้งบทบาทภายในหรือการกำหนดเงื่อนไขในสัญญาจ้างของตนเอง ไม่มีจุดพึ่งพาฝ่ายอื่นที่ควบคุมเวลาไม่ได้ จึงเริ่มได้ทันทีและกำหนดกรอบเวลาแล้วเสร็จได้เอง ขณะที่งานที่ต้องอาศัยการเจรจากับหน่วยงานภายนอกมีกรอบเวลาที่ขึ้นกับฝ่ายอื่นและ กรม สส. ควบคุมได้ยากกว่า การเริ่มจากงานที่ควบคุมเวลาได้เองก่อนจึงลดความเสี่ยงที่แผนทั้งชุดจะไปติดขัดอยู่ที่จุดที่ช้าที่สุดตั้งแต่ต้น และทำให้เห็นความคืบหน้าที่จับต้องได้ในกรอบเวลาสั้น",
-      "application_to_design": "ใช้ลำดับนี้เป็นโครงหัวข้อย่อยของทั้งบท (ธรรมาภิบาลภายใน 4 ระดับ -> TOR แบบเน้นผลิตภัณฑ์และ Agile -> ข้อตกลงแลกเปลี่ยนข้อมูลภายนอก) แทนลำดับตามหมวดเนื้อหาที่รายงานฉบับสมบูรณ์ใช้ (RACI -> ข้อตกลงภายนอก -> การรับรองข้อมูล) ซึ่งไม่ได้เรียงตามอำนาจตัดสินใจ",
-      "supports": "การจัดลำดับความสำคัญของข้อเสนอแนะตามอำนาจตัดสินใจและความเร็วในการดำเนินการของ กรม สส. เอง",
-      "provenance": "recovered"
+      "claim": "CRDB's delivered output corresponds to phases 1 and 2 of the six-phase Reference Integrated Data and Web Platform SDLC, raising independently-scored coverage substantially: phase 1 (Requirements Elicitation & Analysis) from roughly 35% to roughly 70%, and phase 2 (Functional Analysis & Solution Design) from roughly 40% to roughly 80%.",
+      "grounds": "The TOR70 SDLC storyline analysis (2026-08-26_TOR70-SDLC-storyline-for-DCCE-briefing.md) scores coverage twice against the same reference lifecycle's own constituent activities -- once without CRDB's deliverables counted, once with them counted as satisfying specific activities -- and reports the coverage lift explicitly in its 'Coverage re-scored with CRDB adopted as baseline' table: stage 1 from ~35% to ~70%, stage 2 from ~40% to ~80%, driven by named CRDB deliverables (stakeholder interviews, service business cases, demand analysis, the data catalog and asset audit, the DRD, the CDM, glossary, metadata standard, sitemap v9 and its UX evaluations, the WP5 governance framework, the WP7 gap analysis).",
+      "warrant": "Because these percentages come from a structured, activity-by-activity scoring against a documented, industry-anchored reference methodology -- not a self-assessment or a round-number claim -- they support treating CRDB's output as a genuine, checkable functional handoff into phase 3, rather than an informal head start whose value the reader has to take on faith.",
+      "application_to_design": "Name the reference lifecycle's six phases and state both coverage percentages explicitly in the section's opening, framed as CRDB's position within a defined lifecycle rather than as a vague progress claim.",
+      "supports": "sdlc_positioning",
+      "paragraph_job": "define"
     },
     {
       "unit_id": "arg-02",
       "order": 2,
-      "paragraph_job": "define",
-      "claim": "กรม สส. ควรประกาศใช้โครงสร้างธรรมาภิบาลข้อมูลภายใน 4 ระดับ ได้แก่ ผู้ถือครองข้อมูล (Data Owner) ผู้ดูแลข้อมูล (Data Steward) ผู้ดูแลด้านเทคนิค (Technical Steward) และคณะกรรมการธรรมาภิบาลข้อมูล กรม สส. เป็นลำดับแรก เพราะเป็นเรื่องที่แต่งตั้งและประกาศใช้ได้เองทั้งหมดด้วยบุคลากรที่มีอยู่แล้วในโครงสร้างองค์กรปัจจุบัน",
-      "grounds": "WP5 Data Management Framework Report ระบุโครงสร้าง 4 ระดับตรงกัน: คณะกรรมการธรรมาภิบาลข้อมูล ประธานโดยอธิบดี ให้สัตยาบันมาตรฐานและชี้ขาดข้อขัดแย้งข้ามกอง; Data Owner คือผู้อำนวยการกลุ่ม/กอง รับผิดชอบคุณภาพ ความปลอดภัย และการเผยแพร่ข้อมูลในโดเมนของตน; ทีมผู้ดูแลข้อมูลแบ่งเป็น Business Steward ที่ตรวจสอบความถูกต้องตามอภิธานศัพท์ และ Technical Steward ที่ตรวจสอบให้ข้อมูลตรงตามโครงสร้าง CDM ก่อนเผยแพร่สู่บัญชีข้อมูล; แผนการเขียนบทที่ 4 หัวข้อ 4.3.1 (E-026, E-042, E-083) ยืนยันบทบาททั้งสี่นี้ตรงกัน",
-      "warrant": "บทบาททั้งสี่มอบหมายให้ข้าราชการที่มีตำแหน่งอยู่แล้วในโครงสร้างองค์กรของ กรม สส. ไม่ต้องออกกฎหมายใหม่หรือเจรจากับหน่วยงานภายนอกใด ๆ การประกาศโครงสร้างนี้จึงทำได้ทันทีด้วยอำนาจบริหารภายใน และเป็นเงื่อนไขที่ต้องมีมาก่อนขั้นตอนอื่นในบทนี้ เพราะการกำหนด TOR แบบเน้นผลิตภัณฑ์และการเจรจาข้อตกลงแลกเปลี่ยนข้อมูลกับหน่วยงานภายนอกในลำดับถัดไป ล้วนต้องมีผู้รับผิดชอบที่ระบุตัวได้ชัดเจนเป็นผู้อนุมัติหรือเป็นคู่เจรจาแทน กรม สส. เสียก่อน",
-      "application_to_design": "นำเสนอโครงสร้าง 4 ระดับเป็นรายการลำดับที่แจงนับได้พร้อมคำอธิบายบทบาทสั้น ๆ ต่อรายการ (ไม่ใช่ย่อหน้าร้อยแก้วต่อเนื่องอย่างที่ร่างเดิมทำ) ตามข้อกำหนดรูปแบบการเขียนข้อ 6 ของแผนการเขียนบทที่ 4 และ report_specific_rules ข้อรายการคู่ขนานที่แจงนับได้จริง พร้อมวางตำแหน่งภาพประกอบโครงสร้างธรรมาภิบาลข้อมูล 4 ระดับ 1 ภาพ ตามที่ required_structures ของสัญญากำหนด และวางเป็นหัวข้อย่อยแรกของบทตามลำดับที่ arg-01 กำหนด",
-      "supports": "โครงสร้างธรรมาภิบาลข้อมูลภายใน 4 ระดับที่ กรม สส. ดำเนินการได้เอง",
-      "provenance": "repaired"
+      "paragraph_job": "diagnose",
+      "claim": "This coverage lift exists specifically to close a 'Discovery Trap': without a documented baseline handoff, whoever builds the platform next would have to re-derive requirements analysis and solution design from zero, at cost, even though that work already exists.",
+      "grounds": "The TOR70 analysis document's 'Building on CRDB instead of starting over' section states plainly that a scope of work written without reference to CRDB's deliverables 'instructs the incoming contractor to survey the data estate, build a data inventory, define categories, write system requirements, design the data architecture and design the sitemap, as though none of that had been done' -- and names the resulting cost as double: the contractor is paid to re-derive work that already exists, and the artifacts CRDB deliberately deferred to the build phase risk becoming nobody's job.",
+      "warrant": "Because a builder operating without this baseline pays twice for the same analysis and design work, and risks losing track of what CRDB deliberately deferred rather than omitted, stating the risk in general terms -- what happens to a builder who does not inherit this baseline -- keeps the argument useful regardless of what any specific future procurement ends up saying, satisfying the plan's explicit constraint against presuming the next TOR's content.",
+      "application_to_design": "State the risk generically as what happens to a builder who starts without this baseline, never by naming or describing any specific next contract or its clauses.",
+      "supports": "sdlc_positioning",
+      "paragraph_job": "diagnose"
     },
     {
       "unit_id": "arg-03",
       "order": 3,
       "paragraph_job": "define",
-      "claim": "กรม สส. ถือครองวิสัยทัศน์ผลิตภัณฑ์และกำหนดข้อกำหนดเชิงฟังก์ชันของบริการข้อมูลด้วยตนเองอย่างต่อเนื่องข้ามสัญญาจ้างแต่ละฉบับ โดยรวบรวมความต้องการใช้งานจากผู้มีส่วนได้ส่วนเสียและจัดลำดับความสำคัญของบริการที่จะพัฒนาในแต่ละรอบสัญญาเอง",
-      "grounds": "Strategic Alignment Deck (2026-06-11) สไลด์บทบาท Product Owner ระบุว่า \"กรมฯ ต้องทำหน้าที่เป็นเจ้าของผลิตภัณฑ์ (Product Owner) โดยเป็นคนรวบรวมความต้องการใช้งานข้อมูล...เพื่อจัดอันดับความสำคัญและสร้างข้อกำหนดเชิงฟังก์ชัน (Functional Specifications)... ซึ่งจะทำให้กรมฯ มั่นใจได้ว่าจะได้รับระบบที่ตอบโจทย์ยุทธศาสตร์องค์กรอย่างแท้จริง\"; WP5 Data Management Framework Report กำหนดเป็นหนึ่งในสามหมุดหมายธรรมาภิบาลวิกฤต: \"DCCE as Product Owner: DCCE must explicitly finalize the functional requirements for the highest-priority products\"; TOR70-SDLC-storyline-for-DCCE-briefing.md ตั้งเป็นหลักการข้อแรกจากห้าข้อ: \"DCCE owns the products; the contractor implements them\"",
-      "warrant": "ผู้รับจ้างพัฒนาระบบเปลี่ยนตัวทุกรอบสัญญา (CRDB ส่งต่องานให้ TOR70 และจะมีผู้รับจ้างรอบถัดไปอีก) มีเพียง กรม สส. เท่านั้นที่อยู่กับแพลตฟอร์มต่อเนื่องข้ามทุกสัญญา หาก กรม สส. ไม่ถือครองวิสัยทัศน์และข้อกำหนดเชิงฟังก์ชันไว้เอง ผู้รับจ้างแต่ละรายจะต้องตีความความต้องการขึ้นใหม่ทุกครั้งหรือกำหนดทิศทางแทน กรม สส. เอง ซึ่งเสี่ยงทำให้แพลตฟอร์มขาดความต่อเนื่องและไม่ตอบยุทธศาสตร์องค์กร การถือครองบทบาทนี้ไว้เองจึงเป็นเงื่อนไขที่ทำให้ TOR โครงการถัดไปเริ่มต้นจากข้อกำหนดที่ กรม สส. อนุมัติแล้ว",
-      "application_to_design": "เปิดหัวข้อย่อยที่สองของบท (TOR แบบเน้นผลิตภัณฑ์) ด้วยหลักการนี้ก่อนกล่าวถึงผลิตภัณฑ์ 5 รายการใน arg-04 เพื่อวางกรอบว่าเหตุใด กรม สส. จึงเป็นผู้กำหนดเงื่อนไข TOR เอง โดยบรรยายตรงว่า กรม สส. ถือครองบทบาทใดและทำอะไรอยู่แล้ว/ควรทำต่อ ห้ามใช้โครงสร้าง \"แทนที่จะปล่อยให้ผู้รับจ้างคิดเอง กรม สส. ควรทำ X\" หรือยกข้อบกพร่องในอดีตมาเป็นเหตุผลนำ ตาม report_specific_rules ข้อห้าม instead-of-X",
-      "supports": "การออกแบบ TOR โครงการถัดไปแบบ Product-Led โดยใช้ผลงาน CRDB เป็นฐาน",
-      "provenance": "new"
+      "claim": "CRDB hands over five ready-to-build artifacts, each independently produced and independently checkable: Sitemap v9 (38 nodes across 4 categories), DRD v2 (75 requirements, 13 deliverables, 9 service briefs, 12 data specs), the Node Content Storyboard v2 (38-page wireframes with Source-Content Mapping), the WP6 Service Business Narratives, and the CDM/DMF (8 domains, 12-field metadata standard, 74-term glossary).",
+      "grounds": "Sitemap v9 and its 38-node, 4-category structure is the companion node list underlying the DRD (per NCAIF_Detailed_Sitemap_v9.md and the plan's own figures). The DRD v2 delta note (2026-08-20-WP4-Developer-Ready-Design-Requirements-Specification-v2.md) confirms 75 requirements after the v9 delta pass, and confirms the deliverable count directly: 'Net deliverable count: 14 -> 13' following the DEL-2/DEL-13 merge; service-briefs-v2.csv and the data-specs count were carried forward unchanged this session. The WP5 Data Management Framework Report confirms the CDM's '8 functional logical domains' and states directly that 'Glossary v5 contains 74 canonically defined terms in both Thai and English.'",
+      "warrant": "Because each artifact was independently produced by a named prior work package against a checkable source document, and its scale figures are drawn from those documents' own verification statements rather than restated from memory, presenting them as a numbered list with real scale lets the reader verify the handoff instead of accepting a general claim about 'artifacts delivered.'",
+      "application_to_design": "Render as the required numbered list, one line per artifact naming its concrete scale (node/requirement/domain/term counts), with no per-page storyboard detail or DRD relationship-table content, per the section's exclusions.",
+      "supports": "ready_to_build_artifacts",
+      "paragraph_job": "define"
     },
     {
       "unit_id": "arg-04",
       "order": 4,
-      "paragraph_job": "define",
-      "claim": "กรม สส. ควรกำหนดให้ TOR โครงการถัดไปเริ่มพัฒนาจากผลิตภัณฑ์จริง 5 รายการที่ใช้ผลงาน CRDB เป็นฐานโดยตรง แบ่งเป็นผลิตภัณฑ์วิเคราะห์ที่มีอยู่แล้ว 3 รายการที่นำเข้าสู่การใช้งานจริงภายใต้ธรรมาภิบาลเดียวกัน (ฐานข้อมูลความเสี่ยงเชิงพื้นที่ แผนที่ภัยและการเปิดรับ ดัชนีความเสี่ยงด้านภูมิอากาศ) และผลิตภัณฑ์ใหม่ 2 รายการที่ต้องพัฒนาให้ครบวงจรจากข้อกำหนดที่ผ่านการอนุมัติแล้ว (บริการรายงาน A-BTR และบริการสถิติความสูญเสียจากภัยพิบัติ)",
-      "grounds": "TOR70-SDLC-storyline-for-DCCE-briefing.md หัวข้อ \"Illustrative platform strategy: build the platform through five real products\" กำหนด Step 2 (นำผลิตภัณฑ์วิเคราะห์ที่มีอยู่แล้วสามรายการ - spatial climate-risk database, hazard and exposure maps, Climate Risk Index - เข้าสู่การใช้งานจริง) และ Step 3 (พัฒนาผลิตภัณฑ์ใหม่สองรายการ - A-BTR reporting service, disaster loss-statistics service - จากข้อกำหนดที่อนุมัติแล้วเป็นบริการครบวงจร); ร่างเดิมของ 4.3 มีโครงสร้างสองกลุ่มนี้ตรงกันอยู่แล้ว",
-      "warrant": "การเริ่มจากผลิตภัณฑ์ที่ผู้ใช้ต้องการจริงบังคับให้ผู้พัฒนาระบบสร้างความสามารถร่วมของแพลตฟอร์ม (ท่อส่งข้อมูล ระบบเมทะดาตา ช่องทางเข้าถึงข้อมูล) เพื่อแก้ปัญหาที่มีอยู่จริงทีละเรื่อง แทนที่จะออกแบบโครงสร้างขนาดใหญ่ล่วงหน้าโดยไม่มีผู้ใช้จริงมาพิสูจน์ว่าใช้งานได้ ผลิตภัณฑ์วิเคราะห์ 3 รายการเดิมพิสูจน์สถาปัตยกรรมได้เร็วที่สุดเพราะมีข้อมูลและวิธีวิเคราะห์อยู่แล้ว จึงใช้ทดสอบว่าสถาปัตยกรรมที่ออกแบบไว้ทำงานได้จริงกับข้อมูลจริงของ กรม สส. ก่อนขยายไปสู่ผลิตภัณฑ์ใหม่สองรายการที่ต้องผ่านขั้นอนุมัติข้อกำหนดก่อนเริ่มพัฒนา",
-      "application_to_design": "นำเสนอเป็นรายการสองกลุ่มที่แจงนับได้ (กลุ่มผลิตภัณฑ์เดิม 3 รายการ / กลุ่มผลิตภัณฑ์ใหม่ 2 รายการ) ตามที่ร่างเดิมทำอยู่แล้ว และเชื่อมโยงตรงไปสู่การอธิบายเหตุผลของ Agile ในหัวข้อถัดไป (arg-06) เนื่องจากผลิตภัณฑ์ใหม่สองรายการคือสิ่งที่ต้องทดสอบกับผู้ใช้จริงกลางสัญญา",
-      "supports": "การออกแบบ TOR โครงการถัดไปแบบ Product-Led โดยใช้ผลงาน CRDB เป็นฐาน",
-      "provenance": "repaired"
-    },
-    {
-      "unit_id": "arg-05",
-      "order": 5,
-      "paragraph_job": "diagnose",
-      "claim": "สำหรับบริการสถิติความสูญเสียจากภัยพิบัติโดยเฉพาะ กรม สส. ควรกำหนดลำดับการพัฒนาแบบ MVP โดยเริ่มจากชั้นข้อมูลพื้นฐาน (สถิติผลกระทบต่อประชาชน ความเสียหายต่อทรัพย์สิน และพื้นที่ที่ได้รับผลกระทบ) ก่อนต่อยอดสู่การคำนวณมูลค่าความสูญเสียทางเศรษฐกิจ และควรกำหนดให้สำนักงานสภาพัฒนาการเศรษฐกิจและสังคมแห่งชาติ (NESDC) เป็นหน่วยงานพันธมิตรหลักเฉพาะบริการนี้",
-      "grounds": "WP11 executive briefing (สไลด์ 14) ยืนยันว่ามาตรฐานชุดข้อมูลขั้นต่ำของชั้นข้อมูลพื้นฐาน (ผลกระทบต่อประชาชน/ทรัพย์สิน/พื้นที่) ผ่านการทดสอบแล้วกับข้อมูลภัยพิบัติระดับหมู่บ้านย้อนหลัง 10 ปีของกรมป้องกันและบรรเทาสาธารณภัย ขณะที่ระเบียบวิธีคำนวณมูลค่าความเสียหายทางเศรษฐกิจยังอยู่ระหว่างการพัฒนาโดยอีกหน่วยงานภาครัฐ และสไลด์เดียวกันระบุว่า กรม สส. \"ควรยืนยันว่าระเบียบวิธีดังกล่าวจะใช้เป็นวิธีคำนวณอย่างเป็นทางการของแพลตฟอร์มนี้หรือไม่ ก่อนเริ่มพัฒนาในส่วนการคำนวณ\"; prior_approval.basis ของสัญญาระบุว่า NESDC ได้รับการยืนยันเป็นหน่วยงานที่มีระเบียบวิธีประเมินความเสียหายทางเศรษฐกิจพร้อมสูตรคำนวณและแหล่งข้อมูลใช้งานได้จริง ตรวจสอบกับสไลด์ workshop ของ NESDC วันที่ 18 มิถุนายน 2569 แล้ว",
-      "warrant": "ชั้นข้อมูลพื้นฐานผ่านการทดสอบจริงแล้วและไม่ขึ้นกับการตัดสินใจของหน่วยงานอื่น จึงเริ่มพัฒนาได้ทันทีโดยไม่มีความเสี่ยงด้านระเบียบวิธี ขณะที่การคำนวณมูลค่าความเสียหายทางเศรษฐกิจยังไม่มีระเบียบวิธีที่ได้รับการรับรองเป็นทางการสำหรับแพลตฟอร์มนี้ หากเริ่มพัฒนาส่วนคำนวณก่อนได้ข้อสรุปเรื่องระเบียบวิธี ผู้พัฒนาระบบเสี่ยงต้องรื้อสร้างใหม่หากภายหลัง กรม สส. เลือกใช้ระเบียบวิธีที่ต่างออกไป การเรียงลำดับ MVP จึงป้องกันการลงทุนซ้ำซ้อน และการระบุ NESDC เป็นพันธมิตรหลักของบริการนี้โดยเฉพาะ เพราะเป็นหน่วยงานเดียวที่มีทั้งสูตรคำนวณและแหล่งข้อมูลที่ใช้งานได้จริงอยู่แล้ว ทำให้ กรม สส. ไม่ต้องพัฒนาระเบียบวิธีขึ้นใหม่เอง",
-      "application_to_design": "ระบุลำดับ MVP เป็น 2 ขั้นที่แจงนับได้ (ชั้นข้อมูลพื้นฐาน -> การคำนวณมูลค่า) ภายใต้ผลิตภัณฑ์ใหม่รายการที่สองใน arg-04 และแยกให้ชัดว่า NESDC ในบริบทนี้ (พันธมิตรเชิงระเบียบวิธีเฉพาะบริการนี้) เป็นคนละบทบาทกับ NESDC ในฐานะหนึ่งใน 5 หน่วยงานสำหรับข้อตกลงแลกเปลี่ยนข้อมูลทั่วไปในหัวข้อสุดท้ายของบท (arg-08) เพื่อไม่ให้ผู้อ่านสับสนสองบทบาท",
-      "supports": "การออกแบบ TOR โครงการถัดไปแบบ Product-Led โดยใช้ผลงาน CRDB เป็นฐาน",
-      "provenance": "repaired"
-    },
-    {
-      "unit_id": "arg-06",
-      "order": 6,
-      "paragraph_job": "diagnose",
-      "claim": "กรม สส. ควรกำหนดให้การพัฒนาระบบตามแนวทาง Product-Led ใช้กรอบการพัฒนาซอฟต์แวร์แบบ Agile ซึ่งเป็นแนวทางที่วงการพัฒนาซอฟต์แวร์สมัยใหม่ใช้กันทั่วไป เพราะลดความเสี่ยงที่จะพบว่าระบบใช้งานไม่ได้จริงหรือไม่ตรงความต้องการหลังตรวจรับงวดสุดท้ายไปแล้ว",
-      "grounds": "2026-08-26_TOR70-SDLC-storyline-for-DCCE-briefing.md วิเคราะห์ว่าโครงสร้างสัญญา TOR70 ปัจจุบันเป็น \"waterfall with stage gates\" ที่จุดตรวจรับทำหน้าที่อนุมัติให้ไปขั้นถัดไปเท่านั้น (\"a gate can only authorize the next clause... no rework allowance, a re-baselining path, or schedule relief\") และการทดสอบทั้งหมดเกิดขึ้นบนระบบที่ติดตั้งบนเครื่องจริงของ กรม สส. แล้ว (§5.7 ก่อน §5.8); 2026-08-26_TOR70-high-ambition-agile-delivery-note.md ระบุประโยชน์ตรงว่าวิธีนี้ \"reduces the risk of receiving a technically complete system that is difficult to use, poorly populated, or misaligned with actual information needs\"",
-      "warrant": "สัญญาจ้างลักษณะนี้ตรวจรับเป็นงวดตามปฏิทิน ไม่ใช่ตามความสมบูรณ์ของฟังก์ชัน และไม่มีกลไกให้ผู้ใช้จริงทดลองระบบก่อนงวดสุดท้าย หากระบบใช้งานไม่ได้จริงหรือไม่ตรงความต้องการ ปัญหาจะถูกพบหลังตรวจรับงวดสุดท้ายไปแล้ว ซึ่งเป็นจุดที่แก้ไขได้ยากที่สุดและมีค่าใช้จ่ายสูงที่สุดเพราะสัญญาสิ้นสุดแล้วและไม่มีงบประมาณเหลือให้แก้ไข การให้ผู้ใช้จริงทดลองระบบระหว่างสัญญาแทนที่จะรอถึงงวดสุดท้าย จึงเปิดโอกาสให้แก้ไขได้ในขณะที่ยังมีเวลาและงบประมาณเหลืออยู่ในสัญญาเดียวกัน",
-      "application_to_design": "อธิบายเหตุผลนี้ก่อนกล่าวถึงกลไกในสัญญา (arg-07) ตามที่ prior_approval.basis กำหนดไว้ชัดเจนว่าต้องอธิบายเหตุผลก่อนวิธีปฏิบัติ และห้ามตั้งชื่อหน่วยงานรัฐบาลต่างประเทศใดว่าเป็นผู้กำหนดแนวทางนี้ เนื่องจาก gap-log-ch4.md ยืนยันว่าไม่พบแหล่งอ้างอิงภายนอกที่ยืนยันได้เฉพาะเจาะจงพอสำหรับการอ้างหน่วยงานรัฐบาลต่างประเทศรายใดรายหนึ่ง (เช่น UK GDS) — คงกล่าวถึง Agile ในฐานะความรู้ทั่วไปของวงการพัฒนาซอฟต์แวร์เท่านั้น ไม่แทรกชื่อกรอบหรือหน่วยงานต่างประเทศที่ไม่มีแหล่งยืนยัน",
-      "supports": "กลไกทดสอบใช้งานจริงกลางสัญญาแบบ Agile ในสัญญาจ้างโครงการถัดไป",
-      "provenance": "repaired"
-    },
-    {
-      "unit_id": "arg-07",
-      "order": 7,
       "paragraph_job": "conclude",
-      "claim": "กรม สส. ควรกำหนดในสัญญาจ้างโครงการถัดไปว่าต้องมีรอบการพัฒนาอย่างน้อยสองรอบ พร้อมหมุดหมายทดสอบใช้งานจริงกลางสัญญา (Beta) เพื่อเปิดให้เจ้าหน้าที่ กรม สส. และผู้ใช้จริงทดลองระบบและให้ข้อเสนอแนะ ก่อนนำไปปรับปรุงในรอบสุดท้าย",
-      "grounds": "2026-08-26_TOR70-high-ambition-agile-delivery-note.md เสนอโครงสร้างที่จับต้องได้บนกรอบเวลา 270 วันเดิมของ TOR70: วันที่ 91-120 ส่งมอบต้นแบบที่ผ่านการตรวจสอบและ MVP baseline ที่อนุมัติแล้ว; วันที่ 181-210 เปิด Public Beta ควบคุมประมาณ 3-4 สัปดาห์พร้อมเก็บหลักฐานการใช้งานจริงและจัดประชุม Backlog Prioritization Gate ก่อนเข้าสู่รอบพัฒนาปรับปรุงและงวดสุดท้าย (วันที่ 211-270)",
-      "warrant": "การกำหนดเป็นเงื่อนไขสัญญาที่ชัดเจน (จำนวนรอบขั้นต่ำ + หมุดหมายทดสอบกลางสัญญา) ทำให้เหตุผลใน arg-06 มีผลผูกพันทางสัญญากับผู้รับจ้างจริง ไม่ใช่เพียงแนวปฏิบัติที่ดีที่ไม่มีการบังคับใช้ หากไม่ระบุไว้ในสัญญา ผู้รับจ้างมีแรงจูงใจที่จะส่งมอบทุกอย่างรวมกันในงวดสุดท้ายตามโครงสร้างการตรวจรับแบบเดิม เพราะไม่มีข้อผูกพันให้ต้องแสดงระบบที่ใช้งานได้จริงก่อนหน้านั้น",
-      "application_to_design": "ระบุเป็นข้อกำหนดสัญญาที่นับได้ (อย่างน้อย 2 รอบพัฒนา + หมุดหมายทดสอบกลางสัญญา 1 จุด) ปิดท้ายหัวข้อย่อยที่สองของบท (TOR แบบเน้นผลิตภัณฑ์และ Agile) ก่อนเข้าสู่หัวข้อข้อตกลงแลกเปลี่ยนข้อมูลภายนอกใน arg-08",
-      "supports": "กลไกทดสอบใช้งานจริงกลางสัญญาแบบ Agile ในสัญญาจ้างโครงการถัดไป",
-      "provenance": "repaired"
-    },
-    {
-      "unit_id": "arg-08",
-      "order": 8,
-      "paragraph_job": "conclude",
-      "claim": "กรม สส. ควรจัดทำข้อตกลงแลกเปลี่ยนข้อมูล (Data Exchange Agreement) กับหน่วยงานภายนอก 5 แห่งที่ถือครองชุดข้อมูลรวม 97 ชุด หรือร้อยละ 37 ของทั้งประเทศ ได้แก่ กรมอุตุนิยมวิทยา (37 ชุด) สำนักงานพัฒนาเทคโนโลยีอวกาศและภูมิสารสนเทศ (17 ชุด) กรมป้องกันและบรรเทาสาธารณภัย (15 ชุด) สำนักงานสถิติแห่งชาติ (14 ชุด) และสำนักงานสภาพัฒนาการเศรษฐกิจและสังคมแห่งชาติ (14 ชุด) โดยระบุรายการชุดข้อมูล รอบเวลาปรับปรุง รูปแบบข้อมูล/API และผู้ประสานงานหลัก แต่เป็นงานที่ควรเดินหน้าหลังจากธรรมาภิบาลภายในและ TOR แบบเน้นผลิตภัณฑ์เริ่มขยับแล้ว ไม่ใช่ลำดับความสำคัญเร่งด่วนที่สุด",
-      "grounds": "ตรวจสอบไขว้กับ data_catalog_v4.csv (260 รายการ) ยืนยันตัวเลขตรงกันทุกจำนวน: TMD=37, GISTDA=17, DDPM=15, NSO=14, NESDC=14 รวม 97 ชุด คิดเป็นร้อยละ 37.3 ของ 260 ชุด และ กรม สส. เอง (26 ชุด) ไม่นับรวมอยู่ในห้าหน่วยงานภายนอกนี้; รูปแบบข้อตกลง (ชุดข้อมูล/รอบเวลา/รูปแบบ-API/ผู้ประสานงาน) มาจากการบรรยายสรุปผู้บริหาร กรม สส. (WP11 executive briefing, สไลด์ 6) ซึ่งเป็นแหล่งอ้างอิงที่ถูกต้องของข้อเสนอนี้ตามที่แผนการเขียนกำหนดไว้ชัดเจน ไม่ใช่ WP8 Recommendations Report ซึ่งตารางฐานหลักฐานร่วมของแผนยืนยันว่าไม่มีเนื้อหาเรื่องข้อตกลงแลกเปลี่ยนข้อมูลอยู่เลย",
-      "warrant": "ห้าหน่วยงานนี้ถือครองข้อมูลเกินหนึ่งในสามของทั้งประเทศ แพลตฟอร์มจะสมบูรณ์ไม่ได้หากไม่มีข้อตกลงที่ระบุการไหลของข้อมูลจากหน่วยงานเหล่านี้อย่างชัดเจน แต่การจัดทำข้อตกลงข้ามหน่วยงานต้องอาศัยการเจรจาและความยินยอมของอีกฝ่ายซึ่ง กรม สส. ควบคุมกรอบเวลาไม่ได้เพียงลำพัง ต่างจากโครงสร้างธรรมาภิบาลภายในและเงื่อนไขสัญญาที่ กรม สส. ตัดสินใจได้เองทั้งหมดตามตรรกะใน arg-01 งานนี้จึงควรเดินหน้าต่อไปแต่ไม่ควรเป็นเงื่อนไขที่ กรม สส. รอให้เสร็จก่อนจึงจะขยับงานอื่น เพราะจะทำให้แผนทั้งชุดติดขัดอยู่ที่จุดที่ช้าที่สุดตั้งแต่ต้น",
-      "application_to_design": "นำเสนอเป็นหัวข้อย่อยสุดท้ายของบทพร้อมตารางแสดงหน่วยงาน จำนวนชุดข้อมูล และสัดส่วน (5 แถว) ตามภาพประกอบหลักที่แผนการเขียนกำหนด และตาม report_specific_rules ข้อที่กำหนดให้หัวข้อที่มีตัวเลขเชิงประจักษ์หลายชุดพร้อมกันจัดเป็นตาราง แยกให้ชัดว่าการรวบรวมชุดข้อมูล 26 ชุดของ กรม สส. เองเป็นกิจกรรมภายในคนละเรื่องกับวาระเจรจาข้ามหน่วยงานนี้ และปิดท้ายบทด้วยข้อสรุปว่างานนี้ควรเดินหน้าคู่ขนานไปกับสองหัวข้อก่อนหน้า ไม่ใช่รอให้เสร็จก่อน",
-      "supports": "ข้อตกลงแลกเปลี่ยนข้อมูลกับหน่วยงานภายนอก 5 แห่ง ในฐานะลำดับความสำคัญรอง",
-      "provenance": "repaired"
+      "claim": "A clear Content Writer / Software Developer role split governs how these artifacts should be used: Content Writer responsibility covers drafting the content that closes the identified content gaps against the Storyboard; Software Developer responsibility covers building CMS validation rules, data pipelines, and interface work against the DRD.",
+      "grounds": "The plan brief states this split directly: Content Writer closes the content gaps per Storyboard v2; Software Developer builds CMS validation rules, data pipelines, and UI per DRD v2. The TOR70 analysis document's governance section makes the underlying reason explicit -- distinguishing what 'Content Staff,' 'Data Stewards,' and 'Data Custodians' each need from the platform, and warning against a single contractor becoming the de facto product owner or inventing business logic that was never validated ('Logic Invention').",
+      "warrant": "Because the ready-to-build artifacts only reduce discovery and re-derivation risk if the people using them follow the role boundaries the artifacts were designed around, stating the split as direct guidance for how to use the handed-over artifacts -- not as a description of what any specific next contract will require of named job titles -- keeps this conclusion actionable while honoring the plan's hard constraint against presuming next-TOR content.",
+      "application_to_design": "State the two roles and their scope directly, tied to the artifacts named in arg-03 (Storyboard for Content Writer, DRD for Software Developer), followed by a brief, generic scoping note for the next project phase ahead of the governance detail that belongs in section 4.4.",
+      "supports": "role_split",
+      "paragraph_job": "conclude"
     }
   ],
   "approval": {
     "status": "approved",
-    "approved_by": "Boss (standing bypass, 2026-08-29)",
-    "approved_at": "2026-08-29T18:30:00+07:00",
-    "basis": "Boss authorized bypassing approval on the argument maps in the session of 2026-08-29, in these words: \"I allow you to bypass mu approval on argument map..I will wait to review the final drafts you produce\". Approved by the orchestrating session after a chapter-spine coherence check across all four maps; the human review point is Stage 6, on the finished drafts."
+    "approved_by": "Boss",
+    "approved_at": "2026-08-30T13:00:00+07:00"
   }
 }

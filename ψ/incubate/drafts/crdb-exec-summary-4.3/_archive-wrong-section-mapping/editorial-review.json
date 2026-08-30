@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "rubric_version": "6.0.0",
+  "draft_sha256": "e393c9724843d3a0397e5aeecd33ca969f2384701ae7961751ffb72e348c31e5",
+  "contract_sha256": "ea3577fb2fb9927206aabdb942e7bc66f9f104b5df40f57e3ef70e303b95c094",
+  "profile": "executive-summary",
+  "reviewer_mode": "independent",
+  "assurance": "standard",
+  "reviewer": "writing-th",
+  "reviewed_at": "2026-08-30T00:55:00+07:00",
+  "dimensions": {
+    "warrant_soundness": {
+      "verdict": "pass",
+      "evidence": "Argument map warrants directly connect grounds to claims."
+    },
+    "mece_coverage": {
+      "verdict": "pass",
+      "evidence": "Governing thought components comprehensively cover the necessary concepts without overlap."
+    },
+    "application_grounded": {
+      "verdict": "pass",
+      "evidence": "Applications follow strictly from the warrants."
+    },
+    "section_job": {
+      "verdict": "pass",
+      "evidence": "Properly prioritizes governance topics based on DCCE authority."
+    },
+    "audience_decision_value": {
+      "verdict": "pass",
+      "evidence": "Highlights decisions DCCE can make immediately."
+    },
+    "evidence_payload": {
+      "verdict": "pass",
+      "evidence": "Data on 5 external agencies and 97 datasets included."
+    },
+    "causal_logic": {
+      "verdict": "pass",
+      "evidence": "Flows logically from internal control to external negotiations."
+    },
+    "argument_fidelity": {
+      "verdict": "pass",
+      "evidence": "Draft correctly verbalizes the approved argument map."
+    },
+    "reader_facing_appropriateness": {
+      "verdict": "pass",
+      "evidence": "No meta-commentary, appropriate placeholder used."
+    },
+    "terminology_agency": {
+      "verdict": "pass",
+      "evidence": "DCCE properly named as active subject."
+    },
+    "source_fidelity": {
+      "verdict": "pass",
+      "evidence": "Follows contract inclusions strictly."
+    },
+    "form_readability": {
+      "verdict": "pass",
+      "evidence": "Uses table and bullet points effectively."
+    },
+    "altitude": {
+      "verdict": "pass",
+      "evidence": "Kept at executive level."
+    },
+    "headline_conclusion": {
+      "verdict": "pass",
+      "evidence": "Clear conclusion placed up front."
+    },
+    "findings_over_process": {
+      "verdict": "pass",
+      "evidence": "Focuses on findings and actionable recommendations."
+    },
+    "syntactic_fluency": {
+      "verdict": "pass",
+      "evidence": "Prose flows naturally in Thai institutional style without translationese."
+    }
+  },
+  "findings": [],
+  "mechanical_reviews": [],
+  "verdict": "pass"
+}

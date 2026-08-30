@@ -2,83 +2,68 @@
   "schema_version": "1.0",
   "profile": "executive-summary",
   "transformation_mode": "synthesis",
-  "audience": "ผู้บริหารและเจ้าของนโยบายของกรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (กรม สส.) ผู้ต้องตัดสินใจรับรองบทบาทของแพลตฟอร์มต่อพันธกรณีการรายงานสากลและอนุมัติทิศทางการแก้ไขช่องว่างข้อมูล",
-  "decision_use": "ให้ผู้บริหารเข้าใจว่าเหตุใดพันธกรณีรายงาน A-BTR จึงเป็นตัวขับเคลื่อนสำคัญของบทนี้ ระดับความรุนแรงของช่องว่างเนื้อหาและข้อมูลที่แท้จริง และบทบาทเชิงสถาบัน 4 ด้านที่ กรม สส. ต้องรับรองก่อนเข้าสู่การพัฒนาระบบระยะถัดไป",
-  "section_job": "เปิดด้วยเหตุผลว่าเหตุใดพันธกรณี A-BTR จึงเป็นกรณีขับเคลื่อนหลักของบทนี้ (แยกจากบริการข้อมูลภูมิอากาศ 8 บริการที่มาจากความต้องการของผู้ใช้) จากนั้นสรุปสถานะช่องว่างเนื้อหาเว็บไซต์ด้วยภาษาที่เข้าใจง่ายพร้อมวิธีการตรวจสอบโดยย่อ อธิบายคอขวดที่กระทบพันธกรณี A-BTR และปิดท้ายด้วยบทบาทเชิงสถาบัน 4 ด้านของ กรม สส.",
-  "target_altitude": "บทสรุปสำหรับผู้บริหารที่อ่านจบได้ภายในประมาณห้านาที เน้นข้อสรุปและนัยต่อการตัดสินใจ ไม่ลงรายละเอียดระดับหน้าเว็บ ฟิลด์ข้อมูล หรือรหัสข้อกำหนดรายรายการ",
+  "audience": "DCCE (กรม สส.) executives and policy owners reading the Executive Summary Report",
+  "decision_use": "Understand, in brief, why the data ecosystem currently has gaps and obstacles, and what that means for developing each of the 9 climate information services and the department's website content",
+  "section_job": "Give a short, front-loaded summary of gaps and obstacles across the data ecosystem, per-service development obstacles, and website content gaps -- setting up the chapter's problem statement before section 4.2 develops the A-BTR-specific argument in full",
+  "target_altitude": "One to two paragraphs of policy-level summary; no per-field metadata or full dataset enumeration",
+  "report_specific_rules": [
+    "Full Thai+English agency name at first mention (\"กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม\"), then only \"กรม สส.\" thereafter -- never bare \"สส.\" without \"กรม\" leading it",
+    "Never bare English \"NCAIF\" -- give the full Thai name at first mention (\"โครงสร้างข้อมูลด้านการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศของประเทศ (National Climate Adaptation Information Framework: NCAIF)\"), then use \"โครงสร้างข้อมูลด้านการปรับตัวฯ\" or \"โครงสร้างข้อมูล NCAIF\"",
+    "No internal jargon abbreviations (TOR70, CRDB) without spelling out at first use",
+    "No internal document locators (slide numbers, page numbers, superseded internal section references) in narrative prose -- cite by document name, E-xxx evidence code, or named standard; locators live in evidence-traceability only",
+    "Use \"คณะที่ปรึกษา\" as the active subject for study/survey/interview/workshop/analysis/synthesis/design-decision sentences; avoid passive voice or \"โครงการ\" as actor except for contractual objective/scope statements",
+    "Countable parallel items formatted as numbered/bulleted lists with substantive descriptions, not run-on prose",
+    "Executive-summary substance retention: cut operational/technical detail but never reduce a point to one floating sentence; each subsection needs Why/What/So-What in 1-2 paragraphs",
+    "Formal official vocabulary (\"ข้อมูลอภิพันธ์\"/\"ข้อมูลกำกับ\", \"สถาปัตยกรรมสารสนเทศ\", \"ธรรมาภิบาลข้อมูล\"); avoid colloquial phrasing",
+    "No contrastive/justify-by-flaw scaffolding -- never justify a point by first negating a bad alternative (\"แทนที่จะ...\", \"เพื่อป้องกัน...\", \"เพื่อลดความเสี่ยง...\", \"หลีกเลี่ยง...\"); state findings and their implications directly"
+  ],
   "inclusions": [
-    "ย่อหน้านำอธิบายว่า กรม สส. เป็นหน่วยประสานงานหลัก (focal point) ด้านการปรับตัวภายใต้กรอบความโปร่งใสที่เพิ่มขึ้น (Enhanced Transparency Framework) ของกรอบอนุสัญญาสหประชาชาติว่าด้วยการเปลี่ยนแปลงสภาพภูมิอากาศ จึงมีพันธกรณีจัดทำรายงาน A-BTR ต่อ UNFCCC โดยตรง",
-    "คำอธิบายที่ตรงไปตรงมาว่าบริการข้อมูลภูมิอากาศ 8 บริการแรกกลั่นมาจากการสัมภาษณ์และประชุมเชิงปฏิบัติการกับหน่วยงานผู้ใช้จริง (อุปสงค์จากภายนอก) ในขณะที่บริการที่ 9 คือการรายงาน A-BTR มีที่มาต่างออกไปโดยสิ้นเชิง คือเกิดจากพันธกรณีของ กรม สส. เองต่อ UNFCCC ไม่ใช่ความต้องการที่หน่วยงานอื่นร้องขอ นี่คือเหตุผลที่ A-BTR ต้องมีย่อหน้าอธิบายที่มาแยกต่างหาก ไม่ปะปนไปกับการเล่าเรื่อง 8 บริการแรก",
-    "สรุปสถานะความพร้อมของเนื้อหาเว็บไซต์ด้วยภาษาที่เข้าใจง่าย (75 หัวข้อที่ต้องมีเนื้อหา แบ่งเป็นพร้อมเผยแพร่แล้ว 16 หัวข้อ มีเนื้อหาบางส่วน 26 หัวข้อ และยังไม่มีเนื้อหาเลย 33 หัวข้อ รวมแล้วเกือบ 8 ใน 10 หัวข้อต้องค้นคว้าหรือเขียนใหม่)",
-    "คำอธิบายวิธีตรวจสอบช่องว่างโดยย่อและเป็นภาษาที่ไม่เป็นเทคนิคจนเกินไป: คณะที่ปรึกษานำหัวข้อเนื้อหาที่ผังเว็บไซต์กำหนดไว้ทั้งหมด ไปเทียบกับสิ่งที่ กรม สส. มีอยู่จริงในคลังเอกสารและฐานข้อมูลปัจจุบัน แล้วจัดกลุ่มแต่ละหัวข้อว่าเผยแพร่ได้ทันที มีข้อมูลบางส่วนแต่ยังไม่พอ หรือไม่มีข้อมูลรองรับเลย",
-    "ผลกระทบของช่องว่างเนื้อหาต่อพันธกรณี A-BTR: จำนวนหัวข้อบนผังเว็บไซต์ที่ผูกกับการรายงาน A-BTR และคอขวดสำคัญ 4 ประการที่ขัดขวางการจัดทำรายงานจริง",
-    "บทบาทเชิงสถาบัน 4 ด้านของ กรม สส. ตามกรอบยุทธศาสตร์ที่ผู้บริหารเห็นชอบแล้ว"
+    "brief summary of gaps and obstacles across the data ecosystem",
+    "per-service development obstacles, stated briefly",
+    "website content gap summary, including the 75-topic readiness split (16 full / 26 partial / 33 gap -> 79% needs fresh synthesis) against the 391-item digital asset inventory -- this is a whole-website figure, not A-BTR-specific, and belongs here rather than in 4.2 (Boss correction, 2026-08-30)"
   ],
   "exclusions": [
-    "ตารางแจกแจงรายหัวข้อทั้ง 75 รายการ หรือรายชื่อไฟล์/ฐานข้อมูลที่ใช้เทียบ",
-    "รายละเอียดช่องว่างเชิงอุปทาน 11 มิติแบบเต็ม (เป็นเนื้อหาของรายงานฉบับสมบูรณ์)",
-    "ตารางเมทริกซ์ผลกระทบ 11 Gaps x 9 Services ฉบับเต็ม",
-    "รหัสหลักฐานภายใน ตำแหน่งสไลด์ หรือรหัสไฟล์เทคนิค",
-    "บัญชีรายชื่อสินทรัพย์ดิจิทัล 391 รายการ หรือบัญชีชุดข้อมูล 260 ชุด"
+    "per-field metadata technical statistics",
+    "full enumerated table of the 260 datasets",
+    "the full A-BTR argument (belongs to section 4.2)"
   ],
-  "evidence_policy": "ใช้เฉพาะข้อเท็จจริงที่ตรวจสอบได้จากแหล่งหลัก ระบุตัวเลขสำคัญในเนื้อหาได้ (75/33/26/16, ร้อยละ 79) แต่เก็บรหัสหลักฐาน ตำแหน่งไฟล์ และตำแหน่งสไลด์ไว้ในเอกสารติดตามหลักฐานเท่านั้น",
+  "evidence_policy": "Use verified figures from WP7 Gap Analysis Report, WP4 Content-Source Gap Analysis v2, DCCE Unified Digital Asset Database, and WP6 Service Intelligence v6.0 in prose; keep internal locators and per-source detail in the evidence-traceability sidecar",
   "required_concepts": [
-    "กรม สส. เป็นหน่วยประสานงานหลักด้านการปรับตัวภายใต้กรอบความโปร่งใสที่เพิ่มขึ้น (Enhanced Transparency Framework) ของกรอบอนุสัญญาสหประชาชาติว่าด้วยการเปลี่ยนแปลงสภาพภูมิอากาศ",
-    "ความแตกต่างของที่มาระหว่างบริการที่มาจากอุปสงค์ผู้ใช้ 8 บริการ กับบริการรายงาน A-BTR ที่มาจากพันธกรณีของ กรม สส. เอง",
-    "วิธีตรวจสอบช่องว่างเนื้อหาแบบย่อและเข้าใจง่าย",
-    "สถานะความพร้อมของเนื้อหา 75 หัวข้อ (16 พร้อม / 26 บางส่วน / 33 ไม่มี)",
-    "คอขวดที่กระทบพันธกรณี A-BTR",
-    "บทบาทเชิงสถาบัน 4 ด้านของ กรม สส."
+    "11-dimension supply-side data gap (WP7)",
+    "75-topic content readiness split (16 full / 26 partial / 33 gap) against the 391-item digital asset inventory -- the whole-website content-gap figure",
+    "9 climate information services demand gap (WP6)",
+    "website content gap"
   ],
   "terminology": {
-    "first_mention_department": "กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (Department of Climate Change and Environment)",
-    "short_form_department": "กรม สส.",
-    "first_mention_ncaif": "โครงสร้างข้อมูลด้านการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศของประเทศ (National Climate Adaptation Information Framework: NCAIF)",
-    "short_form_ncaif": "โครงสร้างข้อมูล NCAIF",
-    "sentence_subject": "คณะที่ปรึกษา",
-    "note": "ห้ามใช้ 'กรมฯ' หรือ 'สส.' โดด — ใช้ 'กรม สส.' เท่านั้นตามข้อกำหนดรูปแบบการเขียนของแผนบทที่ 4 (เปลี่ยนจากธรรมเนียมเดิมของบทที่ 1-2 ที่ใช้ 'กรมฯ')"
+    "first_mention": "กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (Department of Climate Change and Environment: กรม สส.)",
+    "short_form": "กรม สส.",
+    "sentence_subject": "คณะที่ปรึกษา"
   },
   "required_structures": [
-    "ย่อหน้านำอธิบายที่มาของพันธกรณี A-BTR แยกจากการเล่าเรื่อง 8 บริการแรก",
-    "ตำแหน่งภาพประกอบเมทริกซ์ห่วงโซ่คอขวด (Gap-to-Decision Bottleneck Chain) 1 ภาพ"
+    "brief numbered/bulleted list for the per-service obstacle summary"
   ],
   "source_paths": [
-    "ψ/incubate/DCCE/CRDB/output/final_deliverable/แผนการเขียนบทที่ 4 รายงานฉบับสมบูรณ์และรายงานฉบับย่อสำหรับผู้บริหาร.md",
-    "ψ/incubate/DCCE/CRDB/output/04_Sitemap/2026-08-20-WP4-Content-Source-Gap-Analysis-v2.md",
-    "ψ/incubate/DCCE/CRDB/output/06_Use_Case_Demand_Analysis/บทสรุปความต้องการใช้งานบริการข้อมูลสารสนเทศด้านภูมิอากาศ_v6.md",
-    "ψ/incubate/DCCE/CRDB/output/06_Use_Case_Demand_Analysis/2026-07-06_btr-me-reporting-pipeline-use-case.md",
     "ψ/incubate/DCCE/CRDB/output/07_Gap_Analysis/2026-08-16-WP7-Gap-Analysis-Report.md",
-    "ψ/incubate/DCCE/CRDB/output/06_Use_Case_Demand_Analysis/A-BTR_requirement_analysis/section_A_institutional_baseline.md",
-    "ψ/incubate/DCCE/CRDB/output/00_Strategy_Reports/2026-06-11-Strategic-Alignment-Deck-Final.md"
+    "ψ/incubate/DCCE/CRDB/output/04_Sitemap/2026-08-20-WP4-Content-Source-Gap-Analysis-v2.md",
+    "ψ/incubate/DCCE/CRDB/output/04_Sitemap/DCCE_Unified_Digital_Asset_Database.csv",
+    "ψ/incubate/DCCE/CRDB/output/06_Use_Case_Demand_Analysis/บทสรุปความต้องการใช้งานบริการข้อมูลสารสนเทศด้านภูมิอากาศ_v6.md",
+    "ψ/incubate/DCCE/CRDB/output/final_deliverable/แผนการเขียนบทที่ 4 รายงานฉบับสมบูรณ์และรายงานฉบับย่อสำหรับผู้บริหาร.md"
   ],
-  "reference_samples": [
-    "ψ/memory/style/writing_sample/Executive-Summary-Report-CRI-Project.md"
-  ],
+  "reference_samples": [],
+  "plan_slice": "ψ/incubate/drafts/crdb-exec-summary-4.1/plan-slice.md",
+  "input_assets": {
+    "writing_plan": "ψ/incubate/DCCE/CRDB/output/final_deliverable/แผนการเขียนบทที่ 4 รายงานฉบับสมบูรณ์และรายงานฉบับย่อสำหรับผู้บริหาร.md",
+    "writing_plan_section": "Executive Summary Chapter 4 plan, section 4.1 (lines 477-501) -- distinct from the Full Report Chapter 4 plan (lines 1-476); the prior run mistakenly drafted against the latter"
+  },
+  "execution_tier": {
+    "tier": "medium",
+    "stage_1_3_mode": "fork",
+    "orchestrator_clean": true,
+    "chosen_by": "Boss"
+  },
   "approval": {
     "status": "approved",
-    "approved_by": "Boss (standing bypass, 2026-08-29)",
-    "approved_at": "2026-08-29T18:00:00+07:00",
-    "basis": "Boss authorized bypassing approval on the argument maps in the session of 2026-08-29, in these words: \"I allow you to bypass mu approval on argument map..I will wait to review the final drafts you produce\". The Stage 0 contract gate is self-approved under the same authorization. The human review point moves to Stage 6, on the four finished drafts."
-  },
-  "report_specific_rules": [
-    "ใช้ชื่อเต็ม 'กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (Department of Climate Change and Environment)' ในการกล่าวถึงครั้งแรก จากนั้นใช้ 'กรม สส.' เท่านั้น ห้ามใช้ 'สส.' โดด ห้ามใช้ 'กรมฯ' และห้ามพิมพ์อักษรย่อโรมัน 'DCCE' ลงในเนื้อหา",
-    "ชื่อโครงสร้างข้อมูล NCAIF ต้องมีชื่อเต็มภาษาไทยกำกับในการกล่าวถึงครั้งแรก จากนั้นใช้ 'โครงสร้างข้อมูล NCAIF' หรือ 'โครงสร้างข้อมูลด้านการปรับตัวฯ' ห้ามใช้ 'NCAIF' ลอย ๆ",
-    "อักษรย่อภาษาอังกฤษทุกตัวต้องมีชื่อเต็มกำกับเมื่อกล่าวถึงครั้งแรก ตามข้อสังเกตของคณะกรรมการตรวจรับ",
-    "ห้ามระบุตำแหน่งเอกสารภายใน เช่น สไลด์ที่ หน้าที่ หรือเลขข้อเดิม ในเนื้อหาสำหรับผู้อ่าน ให้อ้างชื่อเอกสารหรือกรอบมาตรฐานโดยตรง และเก็บรายละเอียดไว้ในเอกสารติดตามหลักฐาน",
-    "ใช้ 'คณะที่ปรึกษา' เป็นประธานของประโยคที่บรรยายการศึกษา การสำรวจ การวิเคราะห์ การสังเคราะห์ และการตัดสินใจเชิงออกแบบ หลีกเลี่ยงประโยคกรรมและการใช้ 'โครงการ' เป็นประธานของการกระทำทางวิชาการ",
-    "รายการคู่ขนานที่แจงนับได้จริง เช่น คอขวด 4 ประการ บทบาทเชิงสถาบัน 4 ด้าน หน่วยงานภายนอก 5 แห่ง หรือชิ้นงานพร้อมสร้าง 4 รายการ ต้องจัดทำเป็นรายการมีลำดับหรือตาราง ไม่เขียนต่อเนื่องเป็นประโยคร้อยแก้วยาว",
-    "หัวข้อที่มีตัวเลขเชิงประจักษ์หลายชุดพร้อมกัน ให้จัดเป็นตารางแทนการร้อยตัวเลขไว้ในประโยคบรรยาย",
-    "แต่ละหัวข้อต้องมีหัวข้อย่อยระดับ ### เพื่อให้ผู้อ่านเห็นโครงสร้างของเนื้อหา และใต้หัวข้อย่อยแต่ละหัวต้องมีคำอธิบายครบทั้งเหตุผลความเป็นมา ผลลัพธ์สำคัญ และนัยต่อการตัดสินใจเชิงนโยบาย อย่างน้อย 1-2 ย่อหน้า ห้ามตัดทอนจนเหลือประโยคเดียวลอย ๆ",
-    "ใช้รูปแบบการลำดับหัวข้อย่อยและตัวเลขเดียวกันอย่างเป็นเอกภาพตลอดทั้งบท",
-    "ใช้ศัพท์บัญญัติทางราชการและภาษาวิชาการตามข้อสังเกตของคณะกรรมการตรวจรับที่ขอให้เรียบเรียงภาษาการเขียนใหม่ให้เป็นภาษาวิชาการ หลีกเลี่ยงภาษาพูด",
-    "ห้ามใช้โครงสร้าง 'แทนที่จะ X ให้ Y' และห้ามยกข้อบกพร่องในอดีตของหน่วยงานมาเป็นเหตุผลนำของข้อเสนอ ให้เขียนสิ่งที่ควรดำเนินการต่อไปโดยตรง",
-    "ห้ามใช้คำขยายที่ไม่เพิ่มสาระ เช่น 'จริง' 'อย่างชัดเจน' 'อย่างยิ่ง' และห้ามยก 'ประเทศ' ขึ้นเป็นผู้กระทำแบบรวมหมู่ ให้ระบุผู้กระทำที่เป็นรูปธรรม",
-    "ห้ามระบุเลขมาตรา \"ความตกลงปารีส ข้อ 13\" เป็นข้อเท็จจริงที่มีแหล่งอ้างอิง เนื่องจากเอกสารปฐมภูมิที่ตรวจสอบได้ (ร่างบท 5NC/2BTR ของประเทศไทย) ยืนยันเพียงสถานะหน่วยประสานงานหลักและพันธกรณีการรายงานต่อ UNFCCC ภายใต้กรอบความโปร่งใสที่เพิ่มขึ้น ไม่ได้ระบุเลขมาตรา"
-  ],
-  "prior_draft": "ψ/incubate/drafts/crdb-exec-summary-4.1/section-4.1-draft.md",
-  "prior_approval": {
     "approved_by": "Boss",
-    "approved_at": "2026-08-28T00:00:00+07:00",
-    "basis": "User approved contract with 'ok' after two requested revisions (A-BTR sourcing contrast vs 8 demand-derived services; plain-language content-gap explanation with method) were folded in."
+    "approved_at": "2026-08-30T12:00:00+07:00"
   }
 }
