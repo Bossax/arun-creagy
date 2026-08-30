@@ -6,11 +6,11 @@ This reference defines the canonical system prompts, model tier requirements, co
 
 ## 1. Subagent Specifications Matrix
 
-| Subagent | Primary Role | Recommended Model | Antigravity Model | Claude Model | Ingestion Allowed | Ingestion Prohibited |
-|---|---|---|---|---|---|---|
-| **`th-argument-mapper`** | Stage 1 Argument Construction | High Reasoning | `Model: "pro"` | `claude-sonnet-5` (high effort) | `writing-contract.json`, `plan_slice` sidecar if named (else full writing plan), source evidence, `references/artifact-schemas.md`, `STRUCTURAL_RULES_TH.json`; in revision mode also `references/revision-mode.md` and the contract's `prior_draft` | `STYLE_PACK_TH.md`, `LEXICON_TH.json`, `editorial-rubric.md` |
-| **`th-verbalizer`** | Stage 3 Thai Verbalization | Fast / Strong Idiom | `Model: "flash"` (or `"pro"`) | `claude-sonnet-5` (medium effort — transcription, not argument construction) | Approved `argument-map.json`, `references/prose-kernel.md`, contract `report_specific_rules`, `target_altitude`, `terminology` | Raw sources, full `STYLE_PACK_TH.md`, `LEXICON_TH.json`, `editorial-rubric.md` |
-| **`th-editorial-reviewer`** | Stage 5 Clean-Context Review | High Reasoning (Independent) | `Model: "pro"` | `claude-sonnet-5` (high effort) | Approved `writing-contract.json`, approved `argument-map.json`, drafted prose, `references/editorial-rubric.md` | Raw sources (unless spot-checking claim), full `STYLE_PACK_TH.md`, drafting reasoning |
+| Subagent | Primary Role | Recommended Model | Antigravity Model | Claude Model | Codex Mode | Ingestion Allowed | Ingestion Prohibited |
+|---|---|---|---|---|---|---|---|
+| **`th-argument-mapper`** | Stage 1 Argument Construction | High Reasoning | `Model: "pro"` | `claude-sonnet-5` (high effort) | In-line (Clean context) | `writing-contract.json`, `plan_slice` sidecar if named (else full writing plan), source evidence, trace logs in `trace_log_paths`, `references/artifact-schemas.md`, `STRUCTURAL_RULES_TH.json`; in revision mode also `references/revision-mode.md` and the contract's `prior_draft` | `STYLE_PACK_TH.md`, `LEXICON_TH.json`, `editorial-rubric.md` |
+| **`th-verbalizer`** | Stage 3 Thai Verbalization | Fast / Strong Idiom | `Model: "flash"` (or `"pro"`) | `claude-sonnet-5` (medium effort — transcription, not argument construction) | In-line (Map + Prose kernel) | Approved `argument-map.json`, `references/prose-kernel.md`, contract `report_specific_rules`, `target_altitude`, `terminology` | Raw sources, full `STYLE_PACK_TH.md`, `LEXICON_TH.json`, `editorial-rubric.md` |
+| **`th-editorial-reviewer`** | Stage 5 Clean-Context Review | High Reasoning (Independent) | `Model: "pro"` | `claude-sonnet-5` (high effort) | Clean session or self/degraded receipt | Approved `writing-contract.json`, approved `argument-map.json`, drafted prose, `references/editorial-rubric.md` | Raw sources (unless spot-checking claim), full `STYLE_PACK_TH.md`, drafting reasoning |
 
 ---
 
@@ -30,13 +30,13 @@ Do not economize on thinking here. A weak argument map produces a weak draft
 no matter how good the verbalization stage is.
 
 ## What you read
-- The approved writing-contract.json beside your output path (note target_altitude and report_specific_rules).
+- The approved writing-contract.json beside your output path (note target_altitude, report_specific_rules, and trace_log_paths).
 - If the contract names a plan_slice, read that sidecar first — it already holds
   the section's brief, the writing plan's global rules block, and the relevant
   evidence-table rows. Fall back to the full writing plan only if the slice is
   visibly insufficient for a unit.
-- The source evidence and, when no plan_slice is named, the full writing plan
-  the contract names.
+- The source evidence (to ground Toulmin grounds with verified data/quotes).
+- Trace logs in trace_log_paths or ψ/memory/traces/ (to extract problem triggers [T], technical lineage, and decision rationale [D] into Toulmin warrants and application_to_design).
 - references/artifact-schemas.md for the exact argument-map.json shape.
 - ψ/memory/style/STRUCTURAL_RULES_TH.json — apply any mandatory structural transformations matching the contract's target_altitude, scope, or section_job (e.g. STR-001 for executive intro tables, STR-002 for framework enumeration, STR-003 for UX finding-to-design bridges).
 - references/revision-mode.md AND the draft named in the contract's prior_draft —

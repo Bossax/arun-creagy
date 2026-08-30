@@ -117,111 +117,72 @@ pre-Stage-0 reconnaissance; escalate to more only if it returns insufficient.
 Three parallel maximum-thoroughness Explore agents before Stage 0 have been the
 single largest cost block in at least one prior run, before any drafting began.
 
-### Stage 0 — Contract: ask, don't assume
+### Stage 0 — Contract & Hard Triad Checklist: Ask, Don't Assume
 
-A writing plan may or may not already exist for this unit. Use
-`AskUserQuestion` (Claude) or `ask_question` (Antigravity) to establish whether one does, and its path — never assume.
+**Execution Boundary**: Stage 0 is executed strictly in the host's native **Plan Mode** (Claude Code `Plan Mode` / Antigravity `/plan` gating mode / Codex conversational plan-stop). No drafting subagents or state-mutating draft writes may run until the plan is frozen and approved.
 
-- **If a writing plan exists**: it is the primary input to Stage 1. Use `oracle_search` /
-  `oracle_trace` to retrieve the relevant slice. **MANDATORY**: Explicitly scan the writing plan for a global/section rules block (such as Section 10 / "ข้อกำหนดรูปแบบการเขียน"), active actor identity (e.g. "คณะที่ปรึกษา" as the analytical subject), and altitude constraints. Extract and record them in `report_specific_rules`.
-  **Also write this same extracted material** — the section's brief, the global
-  rules block, and the relevant evidence-table rows — to a `plan-slice.md`
-  sidecar beside the contract, and record its path in the contract's
-  `plan_slice` field. Stage 1 reads this instead of re-deriving the same slice
-  from the full multi-hundred-KB plan file on every call.
-- **If none exists (or writing plan has no rules section)**: Use `ask_question` / `AskUserQuestion` to explicitly clarify:
-  1. Actor convention (e.g., "คณะที่ปรึกษา" vs "กรมฯ" as subject)
-  2. Tone & Persona (authoritative institutional vs technical brief)
-  3. Altitude / Acronym policy (e.g. executive summary: ban internal acronym clutter)
-  Record these under `report_specific_rules`.
+Before advancing to Stage 1, the orchestrator MUST verify the **Stage 0 Hard Triad Checklist**:
+1. **The Outline**: Section scope, heading hierarchy, narrative arc, and paragraph jobs.
+2. **The Evidence Base (Macro Grounding)**: Bounded source files (reports, tables, data catalogs) and relevant **trace logs** in `ψ/memory/traces/` discovered via `/trace` or prior sessions.
+3. **The Session-Specific Rules**: Active actor (e.g. "คณะที่ปรึกษา" vs "กรมฯ"), target altitude (e.g. executive summary vs technical report), tone/register, and banned framing tropes.
 
-Read [references/artifact-schemas.md](references/artifact-schemas.md) before
-creating `writing-contract.json`. It must lock the audience, decision use,
-section job, target altitude, report-specific rules, inclusions, exclusions, evidence policy, source
-paths, and reference samples. Record which writing-plan path was taken in
-`input_assets`, with an explicit `writing_plan: null` when none existed.
+#### The Interactive Plan Co-Creation Protocol
+A writing plan may or may not already exist for this unit. Use `AskUserQuestion` (Claude), `ask_question` (Antigravity), or a conversational prompt (Codex) to establish whether one does, and its path — never assume.
 
-Present a compact contract summary and stop for human approval. Record that
-approval in the contract.
+- **If an existing writing plan satisfies all 3 checklist items**: It is the primary input. Use `/trace` or `oracle_search` / `oracle_trace` to retrieve the relevant slice and check corresponding trace logs. **MANDATORY**: Explicitly scan for global/section rules (e.g. Section 10 rules, active actor identity, altitude constraints).
+  **Write the extracted slice** — the section's brief, the global rules block, relevant trace logs, and evidence-table rows — to a `plan-slice.md` sidecar beside the contract, and record its path in the contract's `plan_slice` field.
+- **If missing or incomplete (any of the 3 items missing)**: The orchestrator MUST pause and lead a step-by-step interactive walkthrough:
+  1. *Step 1 (Outline)*: Agree on the section's job, core takeaway, and heading breakdown.
+  2. *Step 2 (Evidence Base & Trace)*: Run `/trace` or search `ψ/memory/traces/` to identify and verify the exact physical source files and technical ancestry.
+  3. *Step 3 (Session Rules)*: Clarify actor convention, target altitude, register, and specific exclusions.
+  Write the resulting agreement to `plan-slice.md` and `writing-contract.json`.
 
-**Claude Code only**: once approved, also decide the execution tier for Stage
-1/3 (see "Claude Code execution tiers" above) and record it in the contract's
-`execution_tier`. This is a separate confirmation from the contract approval —
-it is about how the batch runs, not what it says.
+Read [references/artifact-schemas.md](references/artifact-schemas.md) before creating `writing-contract.json`. It must lock the audience, decision use, section job, target altitude, report-specific rules, inclusions, exclusions, evidence policy, source paths, trace log paths, and reference samples.
+
+Present a compact contract summary and stop for human approval. Record that approval in the contract (`approval.status: "approved"`).
+
+**Claude Code only**: once approved, also decide the execution tier for Stage 1/3 (see "Claude Code execution tiers" above) and record it in the contract's `execution_tier`. This is a separate confirmation from the contract approval — it is about how the batch runs, not what it says. Once approved, exit Plan Mode to proceed to Stage 1.
 
 ### Stage 1 — Argument map
 
-**Claude Code**: run per `execution_tier.stage_1_3_mode` — the orchestrator
-performs this stage directly (small), `Agent(subagent_type: "fork", ...)`
-(medium/large with a clean orchestrator context), or fall back to
-`Agent(subagent_type: "th-argument-mapper", ...)` when the precondition fails.
-See [references/subagent-prompts.md](references/subagent-prompts.md) §3 for the
-exact snippets. **Antigravity**: `invoke_subagent(Role="TH Argument Mapper",
-Model="pro")`, always fresh.
+- **Claude Code**: run per `execution_tier.stage_1_3_mode` — the orchestrator performs this stage directly (small), `Agent(subagent_type: "fork", ...)` (medium/large with clean orchestrator context), or fall back to `Agent(subagent_type: "th-argument-mapper", ...)` when the precondition fails. See [references/subagent-prompts.md](references/subagent-prompts.md) §3.
+- **Antigravity**: `invoke_subagent(Role="TH Argument Mapper", Model="pro")`, always fresh.
+- **Codex**: execute directly in-line with strict context isolation (loading only contract, `plan_slice`, sources, trace logs, and argument schemas; never style files or lexicons).
 
-Whichever mode runs, it works from the approved contract, the `plan_slice`
-sidecar if one exists (else the writing plan), and the source paths. It produces `argument-map.json`: a Minto
-governing thought, an SCQA narrative arc, and ordered Toulmin argument units
-— each with `claim`, `grounds`, `warrant`, `application_to_design`, and a
-`supports` value that must partition `governing_thought_components`.
+**Argument Binding Model**:
+Whichever runtime runs, it works from the approved contract, the `plan_slice` sidecar if one exists (else the writing plan), the **bounded source files**, and the **trace logs**.
+- **Bounded Source Files**: Extract verified empirical metrics, table data, and quotes into Toulmin `grounds`.
+- **Trace Logs**: Extract problem triggers `[T]`, technical lineage, and strategic decisions `[D]` into Toulmin `warrants` (the connective reasoning answering "why do these grounds compel this action?") and `application_to_design`.
+
+It produces `argument-map.json`: a Minto governing thought, an SCQA narrative arc, and ordered Toulmin argument units — each with `claim`, `grounds`, `warrant`, `application_to_design`, and a `supports` value that must partition `governing_thought_components`.
 
 **Altitude filter**: When `target_altitude` is `executive-summary`, grounds must prioritize synthesized findings and operational impacts over raw internal acronyms or micro-activity lists.
 
-The subagent validates its own output with
-`argument_gate.py validate <map>` before reporting done. Do not accept a map
-that hasn't passed this check.
+The mapper validates its own output with `argument_gate.py validate <map>` before reporting done. Do not accept a map that hasn't passed this check.
 
-Do not economize on model or effort here — this is the stage where the
-thinking v5.0 skipped must actually happen.
+Do not economize on model or effort here — this is the stage where the thinking v5.0 skipped must actually happen.
 
-**Revision branch**: when the contract names a `prior_draft` — an existing draft
-being upgraded rather than a section written for the first time — the subagent
-also loads [references/revision-mode.md](references/revision-mode.md) and follows
-it. Stage 1 then runs backward from the prior draft's prose before it runs forward
-from sources, and every unit carries a `recovered` / `repaired` / `new`
-`provenance` tag. Drafts predating v6.0 are frozen by the Stage 3 hook until this
-happens, so recovery is the only path that reaches them.
+**Revision branch**: when the contract names a `prior_draft` — an existing draft being upgraded rather than a section written for the first time — the subagent also loads [references/revision-mode.md](references/revision-mode.md) and follows it. Stage 1 then runs backward from the prior draft's prose before it runs forward from sources, and every unit carries a `recovered` / `repaired` / `new` `provenance` tag. Drafts predating v6.0 are frozen by the Stage 3 hook until this happens, so recovery is the only path that reaches them.
 
 ### Stage 2 — Blueprint gate (human)
 
-- **In Claude Code**: Use plan mode: present the governing thought, the SCQA arc, and one line per
-  argument unit, then `ExitPlanMode` for approval via `AskUserQuestion`.
-- **In Antigravity**: Render the governing thought, SCQA arc, and argument units as a formatted Markdown Artifact in the workspace, then call `ask_question` with options:
-  1. "(Recommended) Approve argument map — proceed to Stage 3 verbalization"
-  2. "Amend argument map — request structural revision of warrants"
-  3. "Reject argument map — restart Stage 1 with new perspective"
+- **In Claude Code**: Use plan mode: present the governing thought, the SCQA arc, and one line per argument unit, then `ExitPlanMode` for approval via `AskUserQuestion`.
+- **In Antigravity**: Render the governing thought, SCQA arc, and argument units as a formatted Markdown Artifact in the workspace, then call `ask_question` with options (Approve, Amend, Reject).
+- **In Codex**: Render the governing thought, SCQA arc, and argument units with warrants and design applications directly in the chat, then halt and await explicit human response (`Approve`, `Amend`, `Reject`).
 
-Only once approved does `approval.status` become `"approved"` in
-`argument-map.json`. This is the field the `PreToolUse` hook / reflection lock checks; nothing
-else unlocks Stage 3.
+Only once approved does `approval.status` become `"approved"` in `argument-map.json`. This is the field the `PreToolUse` hook / reflection lock checks; nothing else unlocks Stage 3.
 
 ### Stage 3 — Verbalization
 
-**Claude Code**: run per the same `execution_tier.stage_1_3_mode` decided at
-Stage 0 — orchestrator direct (small), `fork` (medium/large, clean context), or
-`Agent(subagent_type: "th-verbalizer", ...)` when the precondition fails.
-Runs at medium reasoning effort — `references/prose-kernel.md` frames this stage
-as transcription of an already-approved argument, not argument construction, so
-Stage 1's "do not economize" instruction does not carry over here. **Antigravity**:
-`invoke_subagent(Role="TH Verbalizer", Model="flash")`, always fresh.
+- **Claude Code**: run per `execution_tier.stage_1_3_mode` decided at Stage 0 — orchestrator direct (small), `fork` (medium/large, clean context), or `Agent(subagent_type: "th-verbalizer", ...)`. Runs at medium reasoning effort.
+- **Antigravity**: `invoke_subagent(Role="TH Verbalizer", Model="flash")`, always fresh.
+- **Codex**: execute directly in-line, loading only approved `argument-map.json`, [references/prose-kernel.md](references/prose-kernel.md), and contract rules (never raw sources or full style pack).
 
-Whichever mode runs, it works from the approved `argument-map.json`,
-[references/prose-kernel.md](references/prose-kernel.md), and the contract's `report_specific_rules`, `target_altitude`, and `terminology` — never the
-raw sources, never the full `STYLE_PACK_TH.md`. Treat each argument unit's
-`claim` / `grounds` / `warrant` / `application_to_design` as the paragraph's
-payload; enforce the contract's active actor identity and report rules. Do not force a four-part structure onto paragraphs the map does not
-call for. One dominant job per paragraph, matching the unit's `paragraph_job`.
+Whichever runtime runs, it works from the approved `argument-map.json`, [references/prose-kernel.md](references/prose-kernel.md), and the contract's `report_specific_rules`, `target_altitude`, and `terminology` — never the raw sources, never the full `STYLE_PACK_TH.md`. Treat each argument unit's `claim` / `grounds` / `warrant` / `application_to_design` as the paragraph's payload; enforce the contract's active actor identity and report rules. Do not force a four-part structure onto paragraphs the map does not call for. One dominant job per paragraph, matching the unit's `paragraph_job`.
 
-**Bounded amendment path**: if verbalizing a unit reveals its `warrant`
-doesn't actually hold in real prose, the subagent halts and proposes an
-amendment rather than papering over it or silently deviating. The amendment
-returns to the Stage 2 human gate, gets logged, and the map is re-approved.
-One bounded loop, not free revision — "transcribe the approved map" is still
-transcription if a broken warrant just gets rendered faithfully.
+**Bounded amendment path**: if verbalizing a unit reveals its `warrant` doesn't actually hold in real prose, halt and propose an amendment rather than papering over it or silently deviating. The amendment returns to the Stage 2 human gate, gets logged, and the map is re-approved. One bounded loop, not free revision.
 
-Evidence-traceability notes, slide/page locators, prompt scaffolding, and
-report roadmaps belong outside audience-facing prose. A requested diagram
-becomes a figure placeholder or actual figure, never an inline arrow chain.
+Evidence-traceability notes, slide/page locators, prompt scaffolding, and report roadmaps belong outside audience-facing prose. A requested diagram becomes a figure placeholder or actual figure, never an inline arrow chain.
 
 ### Stage 4 — Mechanical checks
 
@@ -237,41 +198,19 @@ For `rewrite` mode only, also run:
 python .agents/skills/writing-th/scripts/check_density.py <source> <draft>
 ```
 
-`check_density.py` now enforces both a floor (0.8, catches under-preservation)
-and a ceiling (1.6, catches padding that hides a thin argument). Override
-either with positional args if a section's transformation genuinely warrants
-it — that is a deliberate exception, not a default.
+`check_density.py` now enforces both a floor (0.8, catches under-preservation) and a ceiling (1.6, catches padding that hides a thin argument). Override either with positional args if a section's transformation genuinely warrants it.
 
-Fix blocking failures. Carry every non-blocking `[STRUCTURAL]`,
-`[PARENTHETICAL]`, `[ARTIFACT]`, or `[META]` review item into the editorial
-receipt with a disposition. A green result here means only **mechanical pass**.
+Fix blocking failures. Carry every non-blocking `[STRUCTURAL]`, `[PARENTHETICAL]`, `[ARTIFACT]`, or `[META]` review item into the editorial receipt with a disposition. A green result here means only **mechanical pass**.
 
 ### Stage 5 — Editorial review
 
-Always `th-editorial-reviewer` run as an independent clean-context subagent call (Claude Code `Agent("th-editorial-reviewer")` or Antigravity `invoke_subagent(Role="TH Editorial Reviewer", Model="pro")`) — at every
-batch-size tier, with no exception. Never a shared/forked context, and never run
-inline by the orchestrator: both inherit the parent's drafting history and
-reasoning, which destroys the clean-context independence the rubric depends on.
-This is the one stage the Claude Code execution-tier table above never touches —
-inline and fork are cost levers for Stage 1/3 only. A genuinely
-independent reviewer is one subagent call away; the v5.0
-`reviewer_mode: self, assurance: degraded` fallback should be unreachable in
-practice.
+- **Claude Code**: Always `Agent("th-editorial-reviewer")` run as an independent clean-context subagent call at every batch-size tier.
+- **Antigravity**: Always `invoke_subagent(Role="TH Editorial Reviewer", Model="pro")` in a fresh conversation thread.
+- **Codex**: If a separate clean Codex session/context is available, run independent review there (`--reviewer-mode independent`). If restricted to single-session linear execution, perform structured self-review and explicitly record `reviewer_mode: self`, `assurance: degraded` in `editorial-review.json` — never representing self-review as independent.
 
-Give the reviewer only the approved contract, the approved argument map, the
-draft, the selected profile rubric, and a reference sample if one exists. Do
-not provide the intended verdict or the drafting agent's self-justification.
+Give the reviewer only the approved contract, the approved argument map, the draft, the selected profile rubric, and a reference sample if one exists. Do not provide the intended verdict or the drafting agent's self-justification.
 
-Read [references/editorial-rubric.md](references/editorial-rubric.md)
-beforehand. Review runs in two tiers: **Tier 1** judges the argument map's
-own reasoning (does each `warrant` actually connect its `grounds` to its
-`claim`? does `governing_thought_components` genuinely partition the
-governing thought, not just satisfy the mechanical MECE check?) — this must
-pass before Tier 2 proceeds, or a passing editorial receipt ends up
-certifying a causal bridge that was never actually established. **Tier 2** is
-the familiar per-draft rubric, now including `argument_fidelity`: every
-approved unit's claim and warrant should appear in the draft, and no claim in
-the draft should be absent from the map.
+Read [references/editorial-rubric.md](references/editorial-rubric.md) beforehand. Review runs in two tiers: **Tier 1** judges the argument map's own reasoning (warrant causality, partitioning MECE). **Tier 2** is the per-draft rubric, including `argument_fidelity`.
 
 Create a receipt scaffold with:
 

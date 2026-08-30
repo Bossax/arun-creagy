@@ -26,10 +26,18 @@ be absolute or repository-relative. Timestamps use ISO 8601.
   "terminology": {"first_mention": "โครงสร้างข้อมูลด้านการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศ", "short_form": "โครงสร้างข้อมูลฯ"},
   "required_structures": ["four-question table", "figure placeholder for development process"],
   "source_paths": ["path/to/source.md"],
+  "trace_log_paths": ["ψ/memory/traces/YYYY-MM-DD/HHMM_query.md"],
   "reference_samples": ["path/to/approved-sample.md"],
   "prior_draft": "path/to/existing-draft.md",
   "prior_approval": {"approved_by": "Boss", "basis": "what the earlier contract's approval rested on"},
   "plan_slice": "path/to/plan-slice.md",
+  "stage_0_checklist": {
+    "plan_mode_executed": true,
+    "outline_verified": true,
+    "evidence_base_verified": true,
+    "session_rules_verified": true,
+    "plan_source": "existing_plan"
+  },
   "execution_tier": {"tier": "medium", "stage_1_3_mode": "fork", "orchestrator_clean": true, "chosen_by": "Boss"},
   "approval": {"status": "approved", "approved_by": "Boss", "approved_at": "2026-08-28T01:00:00+07:00"}
 }
@@ -41,6 +49,10 @@ required; lists, rules, and terminology may be empty only when the contract expl
 through the corresponding prose field. `report_specific_rules` must capture global
 writing plan conventions (e.g., Section 10 rules, active actor identity, altitude constraints). `approval.status` must be `approved`
 before review or merge.
+
+`trace_log_paths` lists relevant trace markdown files in `ψ/memory/traces/` discovered during Stage 0 to ground technical ancestry and decisions.
+
+`stage_0_checklist` records the verification of the Triad Checklist (Outline, Evidence Base, Session Rules) executed under Plan Mode.
 
 `prior_draft` and `prior_approval` are optional and appear together when a section
 is being upgraded rather than written for the first time. `prior_draft` names the
