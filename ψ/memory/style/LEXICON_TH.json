@@ -445,6 +445,35 @@
       "reason": "Boss confirmed 2026-08-30 that ข้อมูลอภิพันธ์ replaces the earlier มาตรฐานข้อมูลกำกับ mapping as the canonical Thai term for metadata. Older term still live in §4.3/§4.4/§3.2/§1.4/§1.1 drafts pending cleanup.",
       "kind": "literal",
       "scope": "universal"
+    },
+    {
+      "banned": "ถือครองภารกิจ",
+      "preferred": "มีภารกิจในการ",
+      "reason": "Avoids awkward English calque ('holding the mission'); standard institutional Thai uses 'มีภารกิจในการ' for institutional mandate.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "ขัดขวาง",
+      "preferred": "เป็นอุปสรรคต่อ",
+      "reason": "'ขัดขวาง' is colloquial/confrontational in policy analysis; 'เป็นอุปสรรคต่อ' is standard formal institutional planning diction.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "ความทันเวลา",
+      "preferred": "ความทันสมัย",
+      "reason": "Baseline risk data quality is judged by currency/modernity ('ความทันสมัย'), not punctuality ('ความทันเวลา').",
+      "kind": "literal",
+      "scope": "report"
+    },
+    {
+      "banned": "อย่างชัดเจน / อย่างแท้จริง / อย่างยิ่งยวด",
+      "preferred": "(ตัดออก / แสดงข้อเท็จจริงเชิงประจักษ์)",
+      "reason": "Boss directive (2026-08-30 §4.2): Hyperbolic pseudo-formal intensifiers ('อย่างชัดเจน', 'อย่างแท้จริง', 'อย่างยิ่งยวด') must be eliminated altogether in favor of direct empirical evidence.",
+      "kind": "regex",
+      "scope": "universal",
+      "pattern": "(อย่างชัดเจน|อย่างแท้จริง|อย่างยิ่งยวด)"
     }
   ],
   "technical_terms": [

@@ -341,3 +341,18 @@ real `## 5. Lexicon & Diction` again.*
   - Ground interdisciplinary requirements in named actor trinities (`ระหว่างนักวิทยาศาสตร์ วิศวกรและสถาปนิก และผู้ออกนโยบาย`) instead of vague "expert collaboration".
 - **L1/L2 Lexical & Diction**:
   - Ban passive administrative deferral syntax (`ถูกเลื่อนออกด้วยข้อจำกัด`) in favor of positive-conditional developmental framing (`มีความสำคัญสูง แต่ยังต้องพัฒนาองค์ความรู้...`).
+
+### 2026-08-30 — Style-pack upgrade from CRDB Exec-Summary Section 4.2 Human Edit
+
+**Source of delta**: `ψ/incubate/drafts/crdb-exec-summary-4.2/section-4.2-draft.md` under direct line-by-line edit and critique by Boss.
+
+#### Multi-Layer Shifts Captured & Promoted
+- **L1/L2 Lexical & Surface Regex**:
+  - **Banned**: `ถือครองภารกิจ` (unnatural English calque -> `มีภารกิจในการ`), `ขัดขวาง` (colloquial/confrontational -> `เป็นอุปสรรคต่อ`), `ความทันเวลา` (when describing dataset baseline quality -> `ความทันสมัย`).
+  - **Hyperbolic Intensifier Regex Ban**: Complete ban on pseudo-formal intensifiers (`อย่างชัดเจน`, `อย่างแท้จริง`, `อย่างยิ่งยวด`) via regex `(อย่างชัดเจน|อย่างแท้จริง|อย่างยิ่งยวด)` per explicit Boss directive. Replace with direct empirical evidence or neutral quality framing.
+- **L3 Micro-Structure & Anti-AI Shield**:
+  - **Zero-Tolerance for Negation-First Contrast Scaffolding**: Absolute ban on `ไม่ใช่ [X] แต่ [Y]` or explaining services by contrasting against what they are not (`ไม่ใช่บริการที่เกิดจากความต้องการของหน่วยงานภายนอก...`). Affirmative-first institutional presentation is non-negotiable.
+  - **Pruning Bureaucratic Scaffolding**: Cut bureaucratic explanations that do not contribute to the core strategic significance of the mandate.
+- **L4/L5 Structural & Document Architecture**:
+  - `STR-009` (Executive Summary Strategic Driver Prose): Replace isolated multi-stage taxonomy bullet lists with cohesive strategic driver prose linking mandates to platform data architecture and short-term development strategy.
+

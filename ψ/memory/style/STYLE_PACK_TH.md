@@ -1,5 +1,5 @@
 # Style-Pack: TH (Thai institutional writing, repo-wide)
-**Samples Learnt**: 24 (Technical Precision, Readability, Analytical Density, and Structural Flow) | **Last Updated**: 2026-08-30 | **Lexicon**: LEXICON_TH.json v4.1, 62 rules
+**Samples Learnt**: 25 (Technical Precision, Readability, Analytical Density, and Structural Flow) | **Last Updated**: 2026-08-30 | **Lexicon**: LEXICON_TH.json v4.1, 66 rules
 
 ## 1. Core Kernel (80/20)
 
@@ -197,6 +197,8 @@ These rules matter, but they should not compete with the Core Kernel during earl
 ## 7. Anti-AI Shield (Counter-examples)
 - **CRITICAL DON'T**: Start with "อย่างไรก็ตาม..." or "แม้ว่า..." unless the contrast is doing real analytical work.
 - **CRITICAL DON'T**: Use "ระบบ" without identifying *which* system.
+- **CRITICAL DON'T**: Use hyperbolic pseudo-formal intensifiers like "อย่างชัดเจน", "อย่างแท้จริง", or "อย่างยิ่งยวด". Boss directive (2026-08-30 §4.2): this hyperbolic overclaim language must be eliminated altogether in favor of direct empirical evidence or neutral institutional quality requirements.
+- **CRITICAL DON'T**: Construct sentences with 'ไม่ใช่ [X] แต่ [Y]' or contrastive negative scaffolding. Boss confirmed 2026-08-30 (§4.2): affirmative-first institutional presentation is strictly required; do not explain by contrasting against what a service is not.
 - **CRITICAL DON'T**: Use hyperbolic marketing/commercial words like "ไร้รอยต่อ" or "สมบูรณ์แบบ". Describe actual operational workflows or technical constraints instead.
 - **DON'T**: Use high-precision decimals in summaries; round to nearest 10 or 5 unless the precision itself is essential.
 - **DON'T**: Write abstract gap statements without a concrete blocked task, service, or example.
