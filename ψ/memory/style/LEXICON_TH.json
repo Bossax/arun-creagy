@@ -1,6 +1,6 @@
 {
   "context": "TH",
-  "version": "4.2",
+  "version": "4.4",
   "supersedes": [
     "NCAIF-Institutional v3.2",
     "TOR5.5-Articles v1.0"
@@ -511,6 +511,41 @@
       "kind": "regex",
       "scope": "universal",
       "pattern": "รับผิดชอบ(?!การ)[ก-๙]+"
+    },
+    {
+      "banned": "ผู้ถือครองข้อมูล",
+      "preferred": "เจ้าของข้อมูล",
+      "reason": "Data Owner role gloss -- 'holder' (ถือครอง) softens the accountable-owner relationship; 'เจ้าของ' (owner) states it directly. Boss confirmed 2026-08-30 as his general preferred Thai gloss for this role, not section-specific.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "ผู้ดูแลข้อมูล",
+      "preferred": "บริกรข้อมูล",
+      "reason": "Data Steward role gloss -- reframes from generic caretaking (ผู้ดูแล) to an active, standards-conformance service function. Boss confirmed 2026-08-30 as his general preferred Thai gloss for this role, not section-specific.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "Technical Steward",
+      "preferred": "Data Custodian",
+      "reason": "Data governance role label -- aligns to Thailand DGA's standard three-tier governance framework (Data Owner / Data Steward / Data Custodian) instead of an ad hoc 'Technical Steward' label. Boss confirmed 2026-08-30 as DGA's standard terminology.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "Data Exchange Agreement",
+      "preferred": "Data Contract",
+      "reason": "Replaces generic legal-sounding term with the current data-engineering term of art for a producer/consumer data-sharing agreement. Boss confirmed 2026-08-30 as DGA's standard terminology.",
+      "kind": "literal",
+      "scope": "universal"
+    },
+    {
+      "banned": "หมุนรอบ",
+      "preferred": "ยึด",
+      "reason": "'หมุนรอบ' (orbit/revolve around) is a casual spatial metaphor unnatural in technical/professional report writing. Boss confirmed 2026-08-30: 'หมุนรอบ is unnatural in technical report/professional writing' -- use direct anchoring verbs like 'ยึด' instead, when describing a product or component defining/anchoring a work scope.",
+      "kind": "literal",
+      "scope": "universal"
     }
   ],
   "technical_terms": [
