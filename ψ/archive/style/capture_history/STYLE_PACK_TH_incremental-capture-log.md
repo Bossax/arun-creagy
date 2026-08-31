@@ -371,3 +371,23 @@ real `## 5. Lexicon & Diction` again.*
   - Project-title-clause pruning (full official project name -> `โครงการนี้` once established) and inline-enumeration-to-line-broken-list reformatting were both confirmed generalizable by Boss but await a second sighting per the 2x structural-pattern threshold.
 - **Content-fidelity issue surfaced, not a style rule**: a coverage-percentage claim (35%->70%, 40%->80%) was cut entirely — Boss's annotation identified it as based on an unscoped future-project TOR he explicitly said not to assume knowledge of. Logged as `content_correction` in the miss register for audit, not a lexical/structural pattern.
 
+
+### 2026-08-31 — CRDB Full-Report Spine Review (Boss's inline review of 00-โครงเรื่องฯ.md)
+
+**Source of delta**: `ψ/incubate/DCCE/CRDB/output/final_deliverable/Full report/00-โครงเรื่องและแผนการเขียนรายงานฉบับสมบูรณ์.md`, Obsidian `%%...%%` inline review comments plus direct edits, resolved and cleaned in-session. No clean draft/edit file pair existed for a computed `diff_word_table.py` pass — comments were already resolved into the file before capture ran, so this round is captured from the assistant's own structured transcript of Boss's stated corrections and rationale, not a mechanical diff. Rationale for every item below is Boss's own stated words, not inferred — treated as already satisfying the Stage 4c rationale gate without a redundant re-ask.
+
+#### Multi-Layer Shifts Captured & Promoted (LEXICON_TH.json v4.5, all `confirmed_generalizable`)
+
+- **L1/L2 Lexical**:
+  - `ความล้มเหลว` -> `อุปสรรค` (scope: universal). "never use ความล้มเหลว too negative and personal in technical report."
+  - `ชิ้นงาน` -> `ผลผลิต` (scope: report). Verified against `Final-report-redirect-plan.md`'s own phrase "Software Artifacts (ผลผลิตจากโครงการนี้)" — not asserted on Boss's word alone.
+  - `ห่วงโซ่` and `คอขวด` -> `อุปสรรค` (scope: report, both entries). "ban both and the metaphor" — bans the bare words and the ห่วงโซ่คอขวด construction. **Exception carried in the lexicon reason field**: does not block citing the established artifact title ห่วงโซ่คุณค่าข้อมูล / `DCCE Data Value Chain.md` verbatim as a document name — that is citation, not authored metaphor. Complements a pre-existing report-scoped entry mapping a คอขวด-phrase to an อุปสรรค-phrase (same direction, not a conflict — checked via `check_lexicon_conflict.py`).
+- **L1 Structural (STYLE_PACK_TH.md, Core Kernel #11 + Anti-AI Shield)**:
+  - **Elaborate, don't drop, clarifying nouns**: "Thai language loves to be repetitive, dropping nouns that elaborate other nouns is bad style." Instance: `...แสดงเงื่อนไข...` left เงื่อนไข unexplained — flagged "what is condition? did you drop something to elaborate on this noun?"
+  - **Ban metaphor in technical writing**: standalone generalization beyond the ห่วงโซ่/คอขวด lexicon ban — no metaphor at all in Thai technical/institutional report prose.
+  - **Bare/hyperbolic adjectives; conservative on เชิง-prefix reflex**: instance `บริการสารสนเทศจำนวนจำกัดชุดหนึ่ง` -> จำนวนจำกัด contributed nothing, told to cut it entirely.
+  - **Prefer helping/auxiliary verbs** (e.g. ช่วย) when an instrument enables rather than causes an outcome. Boss's own edit: `...แบบฟอร์มรายงานปิดช่องว่างนั้น` -> `...แบบฟอร์มรายงาน**ช่วย**ปิดช่องว่างนั้น`, rationale "Thai report loves helping verb, adding ช่วย is a preferred option."
+
+**Consistency note**: this project's own `01-ข้อกำหนดรูปแบบการเขียนรายงานฉบับสมบูรณ์.md` §6 independently bans `ได้จริง`, `อย่างต่อเนื่อง`, `เชิง...` outright — the เชิง item above generalizes that existing report-local instinct into the cross-project pack rather than duplicating it.
+
+**Not captured this round**: §§11–13 of the same project's `01-...md` (universal acronym-full-name mandate; Thai-naming for the 7 adaptation categories/6 NAP sectors; PDPA redaction in appendices) were deleted by Boss without an inline rationale comment. Checked: the acronym mandate substantially duplicates an existing rule already in this pack (§6 Structural DNA, "Strict Acronym First-Occurrence Protocol") — likely why it was cut as redundant. The sector-naming and PDPA items are content-compliance requirements tied to specific committee-sheet page references, not general style patterns, and Boss's own framing ("the plan should be taken as preliminary, writing sessions will need to work on outline details later") suggests these are deliberately left for the relevant chapter sessions to pull from the primary source (`ความเห็นต่อเล่มร่างรายงานฉบับสมบูรณ์ (Draft Final Report).md`) directly rather than pre-captured here. Not promoted to this pack; flagged so a future session doesn't assume the omission was accidental.
