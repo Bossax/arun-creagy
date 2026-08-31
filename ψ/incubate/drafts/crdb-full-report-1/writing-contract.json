@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "profile": "report",
+  "transformation_mode": "synthesis",
+  "audience": "DCCE executives, policy owners, and technical stakeholders",
+  "decision_use": "Understand the rationale, problem statement, and scope of the digital infrastructure blueprint",
+  "section_job": "Establish the background, three barriers, distinction between two platforms, four governing questions, and vision",
+  "target_altitude": "Full report: retain operational detail, preserve strategic context without acronym clutter",
+  "report_specific_rules": [
+    "Use 'คณะที่ปรึกษา' as the active subject for analysis/design decisions, avoid 'โครงการ' as the subject.",
+    "Use 'กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม' initially, then strictly 'กรม สส.' (Never use 'สส.' alone).",
+    "Use 'โครงสร้างข้อมูลด้านการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศของประเทศ (National Climate Adaptation Information Framework: NCAIF)' initially, then 'โครงสร้างข้อมูลด้านการปรับตัวฯ' or 'โครงสร้างข้อมูลฯ'.",
+    "Never use internal acronyms (e.g., TOR70, CRDB, Sitemap v9) in reader-facing prose.",
+    "Do not use internal file/slide locators in prose. Use proper citation names.",
+    "Use BE (พ.ศ.) for years; if CE (ค.ศ.) is needed, format as 'พ.ศ. 2569 (ค.ศ. 2026)'.",
+    "Use official academic language, avoiding spoken/informal phrasing (e.g., avoid 'อย่างต่อเนื่อง', 'ได้จริง', 'เชิง...')."
+  ],
+  "inclusions": [
+    "three barriers to information use",
+    "distinction between web platform and data platform",
+    "four governing questions of the project",
+    "use-case example",
+    "vision and primary user groups",
+    "data management framework components"
+  ],
+  "exclusions": [
+    "slide locators",
+    "internal acronyms",
+    "section roadmap"
+  ],
+  "evidence_policy": "Use verified facts in prose; keep internal locators in the traceability sidecar",
+  "required_concepts": ["findability", "trust", "usable form"],
+  "terminology": {
+    "first_mention": "โครงสร้างข้อมูลด้านการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศของประเทศ (National Climate Adaptation Information Framework: NCAIF)",
+    "short_form": "โครงสร้างข้อมูลด้านการปรับตัวฯ"
+  },
+  "required_structures": [
+    "four-question table",
+    "6-step modern data architecture framework",
+    "3 participation formats"
+  ],
+  "source_paths": [
+    "ψ/incubate/drafts/crdb-exec-summary-1.1/02_th_draft.md",
+    "ψ/incubate/DCCE/CRDB/output/01_Business_Objective_Platform_Rationale/2026-08-06-Business-Objective-Platform-Rationale.md",
+    "ψ/incubate/DCCE/CRDB/output/00_Strategy_Reports/Slide-deck-CRDB-26th-final-dissemination-event.md"
+  ],
+  "trace_log_paths": [
+    "ψ/memory/traces/2026-08-04/1533_crdb-9-pillar-status-vs-original-intent.md",
+    "ψ/memory/traces/2026-03-09/1959_how-are-the-minimum-viable-products-of-crdb-project-designed.md"
+  ],
+  "reference_samples": [],
+  "prior_draft": "ψ/incubate/drafts/crdb-exec-summary-1.1/02_th_draft.md",
+  "prior_approval": {
+    "approved_by": "Boss",
+    "basis": "Approved executive summary structure and spine"
+  },
+  "plan_slice": "ψ/incubate/drafts/crdb-full-report-1/plan-slice.md",
+  "stage_0_checklist": {
+    "plan_mode_executed": true,
+    "outline_verified": true,
+    "evidence_base_verified": true,
+    "session_rules_verified": true,
+    "plan_source": "existing_plan"
+  },
+  "execution_tier": {
+    "tier": "small",
+    "stage_1_3_mode": "inline",
+    "orchestrator_clean": true,
+    "chosen_by": "Boss"
+  },
+  "approval": {
+    "status": "approved",
+    "approved_by": "Boss",
+    "approved_at": "2026-08-31T16:48:22+07:00"
+  }
+}
