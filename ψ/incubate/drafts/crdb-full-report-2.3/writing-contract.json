@@ -88,8 +88,8 @@
     "chosen_by": "Boss"
   },
   "approval": {
-    "status": "pending",
-    "approved_by": "",
-    "approved_at": ""
+    "status": "approved",
+    "approved_by": "Boss",
+    "approved_at": "2026-09-01T00:32:03+07:00"
   }
 }

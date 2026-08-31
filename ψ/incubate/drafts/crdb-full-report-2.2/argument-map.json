@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0",
+  "section_id": "report-crdb-full-report-2.2",
+  "governing_thought": "DCCE already holds a substantial base for a national adaptation data structure to build on -- a documented body of institutional content, two prior platform attempts that proved real demand, and one working data-governance template in the GHG accounting platform -- but none of it currently functions as a governed foundation: the website organizes this content by internal producer rather than by user task, the digital-asset inventory is heavily weighted toward knowledge content and away from analysis-ready data, asset ownership is concentrated in communications and international-strategy units rather than in technical/domain units, and the department's closest attempt at a central data platform (CCIC) is not built for adaptation use cases. NCAIF therefore cannot be built by aggregating what already exists; it has to add the governance layer that is currently missing.",
+  "narrative_scqa": {
+    "situation": "DCCE already operates a public website with adaptation content spread across several linked subsystems, has attempted to build a dedicated adaptation platform twice before, and maintains a catalogued inventory of 391 digital assets alongside a working data-governance model in its GHG accounting platform.",
+    "complication": "These assets are organized around internal producers, projects, and document types rather than around user tasks or a shared governance framework; the inventory itself is skewed toward narrative content over analysis-ready data; ownership sits mostly with communications rather than technical units; and the department's own central-data effort (CCIC) is not adaptation-specific.",
+    "question": "What does DCCE's current baseline of information dissemination and data management actually provide for -- and withhold from -- a future national climate adaptation data structure?",
+    "answer": "DCCE holds real content, technical precedent, and one transferable governance template, but structural, inventory, ownership, and governance gaps mean this baseline can supply raw material and a design template, not a ready-made foundation -- NCAIF must add the governance layer, not simply consolidate what exists."
+  },
+  "governing_thought_components": [
+    "website_structure_and_user_access",
+    "platform_history_and_continuity_lesson",
+    "digital_asset_landscape",
+    "responsibility_distribution",
+    "data_management_governance_status"
+  ],
+  "argument_units": [
+    {
+      "unit_id": "arg-01",
+      "order": 1,
+      "paragraph_job": "define",
+      "claim": "DCCE's website organizes adaptation content by internal producer -- division, project, and document type -- across at least four linked subsystems, rather than by user task, so every user group must first identify which unit or project owns the content before it can be found.",
+      "grounds": "The department's website (www.dcce.go.th) surfaces adaptation content across four linked subsystems: ศูนย์ข้อมูลกลาง (central information center), ศูนย์ข้อมูลการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (CCIC), ระบบบัญชีข้อมูล (Data Catalog), and ระบบฐานข้อมูลความเสี่ยงเชิงพื้นที่ (Risk Map). The main menu and homepage are ordered by internal division, by project, and by document type. Central-government users receive the national adaptation plan (NAP) but no policy-analysis tooling comparable to peer-country platforms; regional/local users can filter provincial activity data but have no unified path linking hazard, risk, impact, and adaptation-measure content; private-sector and general-public users have no adaptation-specific service, and the department's existing e-learning system has no adaptation category despite covering other topics. (Full-report source 5.2.2; exec-summary draft 1.2)",
+      "warrant": "When a website's navigation mirrors the org chart and the project ledger rather than the tasks users are trying to complete, every user group is forced to reconstruct the full picture itself from scattered subsystems -- this single structural cause explains the three differentiated friction patterns observed across user groups.",
+      "application_to_design": "NCAIF's information architecture must organize its top layer around user tasks and stages of the adaptation cycle, with the four existing subsystems federated behind it as source systems rather than repeated as the navigation structure itself.",
+      "supports": "website_structure_and_user_access",
+      "provenance": "repaired"
+    },
+    {
+      "unit_id": "arg-02",
+      "order": 2,
+      "paragraph_job": "define",
+      "claim": "Beyond the four core subsystems, DCCE already operates a broader set of adaptation-relevant services and tools spanning eight functional categories, which represents real content capital even though it is not organized as one coherent product and two of the eight functions are genuinely missing.",
+      "grounds": "The full-report source enumerates eight functional categories under the department's services and tools: (1) planning and policy content (NAP, aligned with national strategy); (2) legal information (draft Climate Change Act with a summary document); (3) current climate data and projections (CCIC's climate-projection database plus a CMIP6-based high-resolution regional projection service, with an outbound link to the Meteorological Department for current conditions); (4) impact assessment -- currently absent, with no in-depth impact-assessment content or supporting spatial analysis tool; (5) risk assessment (CCIC's province-level risk-map database, filterable by sector, climate scenario, time period, hazard, exposure, sensitivity, and adaptive capacity); (6) case studies and best practice (a monthly case-study e-book series); (7) synthesized media (infographics and video); (8) glossary -- currently absent, with no dedicated definitions page.",
+      "warrant": "A functional inventory this granular shows the department's problem is not an absence of adaptation content -- six of eight functions already exist -- but that those six exist as disconnected, department-specific tools rather than a coherent, cross-referenced service catalog, while impact assessment and the glossary are genuine build gaps rather than assumed-to-exist functions.",
+      "application_to_design": "NCAIF should treat six of the eight functions as content to migrate and re-link under a shared taxonomy, and treat impact-assessment tooling and the glossary as work that must be built new rather than consolidated from an existing source.",
+      "supports": "website_structure_and_user_access",
+      "provenance": "new"
+    },
+    {
+      "unit_id": "arg-03",
+      "order": 3,
+      "paragraph_job": "diagnose",
+      "claim": "DCCE's two prior attempts to build a dedicated adaptation-information platform -- T-PLAT (2018) and T-PLAT.INFO (2020-2024) -- each proved real demand and technical feasibility but stalled once the funding project that carried them ended, establishing that platform continuity depends on an institutional data-governance structure, not renewed project budget alone.",
+      "grounds": "T-PLAT (2018) was modeled on Japan's AP-PLAT/A-PLAT platforms with support from Japan's Ministry of the Environment, using IMPACT-T and NAP data as pilot content, but did not complete development as planned. T-PLAT.INFO (August 2020-November 2024) was built under a UNDP-supported study of climate impacts on the Gulf of Thailand coast across four pilot provinces -- Surat Thani, Songkhla, Phetchaburi, and Rayong -- and did publish working reports and spatial risk maps with map layers, but updates stopped once the underlying project closed. (Full-report source 5.2.2; exec-summary draft 1.2)",
+      "warrant": "Two independently funded attempts producing the same failure mode -- real content delivered, then abandonment at project close -- rules out funding scarcity or technical infeasibility as the root cause and points instead to the absence of a standing data-governance structure that survives any single project's lifecycle.",
+      "application_to_design": "NCAIF's sustainability plan must rest on an institutional data-governance framework housed within DCCE itself, with ownership, update responsibility, and a budget line independent of any single project, following the model DCCE has already implemented for its GHG accounting platform.",
+      "supports": "platform_history_and_continuity_lesson",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-04",
+      "order": 4,
+      "paragraph_job": "diagnose",
+      "claim": "The department's digital assets are heavily weighted toward knowledge content and away from analysis-ready data: of 391 catalogued digital assets, 315 (80.6%) are knowledge assets, 47 (12.0%) are data assets, and only 29 (7.4%) are data products.",
+      "grounds": "DCCE_Unified_Digital_Asset_Database_Summary.md, cross-checked against DCCE_Unified_Digital_Asset_Database.csv (391 rows total): Knowledge Asset 315 (news, ศูนย์ข้อมูลกลาง documents, multimedia, research reports, and PDF-form catalog records); Data Asset 47 (machine-readable CSV/XLSX/XLS records in the Data Catalog); Data Product 29 (25 departmental information systems plus 4 catalog-linked web applications/dashboards, such as the risk map).",
+      "warrant": "An inventory this weighted toward narrative and documentary content, with data products under 8% of the total, shows the department's digital output is optimized for publication and communication, not for downstream analytical reuse -- exactly the gap a national adaptation data structure exists to close.",
+      "application_to_design": "NCAIF's data catalog and reference-data layer must be built substantially from new work rather than aggregation, since fewer than one in five existing assets are already in machine-usable or service form; content strategy should prioritize converting the highest-value knowledge assets, such as NAP content and case studies, into structured, filterable form rather than simply re-listing them.",
+      "supports": "digital_asset_landscape",
+      "provenance": "repaired"
+    },
+    {
+      "unit_id": "arg-05",
+      "order": 5,
+      "paragraph_job": "diagnose",
+      "claim": "Even within the department's structured data catalog, most registered datasets are openly published but not actually machine-readable, and only a small share carry a classification other than public -- meaning the catalog's governance discipline currently covers openness and confidentiality labeling, but not file format.",
+      "grounds": "DCCE_Data_Assets_Summary.md (data as of 8 July 2569 / 2026): 87 datasets are registered in the department's Data Catalog; approximately 90% (79 of 87) are labeled ข้อมูลสาธารณะ (public), with 3 labeled ข้อมูลใช้ภายใน (internal use), 3 ข้อมูลส่วนบุคคล (personal data), and 2 ข้อมูลความลับทางราชการ (official secret). The files attached to these 87 registered datasets are dominated by PDF (110 files) versus CSV (28) and XLSX (11).",
+      "warrant": "A catalog can be procedurally complete -- every dataset has an owner and a confidentiality label -- while remaining functionally unusable for automated analysis if the attached files are document-format rather than tabular; classification discipline and format discipline are two separate governance dimensions, and only the first is currently enforced.",
+      "application_to_design": "NCAIF's data catalog standard must add a format-readiness requirement -- a machine-readable file alongside any published PDF -- as a governance rule distinct from the existing classification requirement, since the two do not currently move together.",
+      "supports": "digital_asset_landscape",
+      "provenance": "repaired"
+    },
+    {
+      "unit_id": "arg-06",
+      "order": 6,
+      "paragraph_job": "diagnose",
+      "claim": "Ownership of the department's 391 digital assets is concentrated in communications and international-strategy units rather than in the technical or domain units that would need to govern adaptation-specific data: the top two stewards alone hold 271 of 391 items (69%), while the two units closest to technical and spatial data hold only 43 items (11%) between them.",
+      "grounds": "Verified directly against DCCE_Unified_Digital_Asset_Database.csv (391 rows) this session: #1 กลุ่มประชาสัมพันธ์และสื่อสารสิ่งแวดล้อม -- 214 items; #2 กองยุทธศาสตร์และความร่วมมือระหว่างประเทศ -- 57 items; #3 กลุ่มพัฒนาเทคโนโลยีดิจิทัล -- 26 items (corrected from 25 in DCCE_Unified_Digital_Asset_Database_Summary.md); #4 กองส่งเสริมการมีส่วนร่วมต่อการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม -- 17 items (the summary document mislabels this unit as กองขับเคลื่อนการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศ, a different unit that in fact holds only 5 items -- a name/count mix-up, not simply a stale figure); #5 ศูนย์วิจัยการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม -- 8 items (corrected from 11).",
+      "warrant": "When two-thirds of an organization's digital-asset inventory sits with units that publish and communicate content rather than units that define, validate, or maintain data quality, the existing ownership map cannot double as a data-stewardship map -- publishing responsibility and data-governance responsibility are being conflated by default, not by design.",
+      "application_to_design": "NCAIF's governance model must assign a distinct technical/domain data-steward role for adaptation data, separate from the communications units that will remain responsible for public-facing publication; this assignment cannot be inferred from current ownership counts, since those counts reflect who publishes, not who is positioned to govern.",
+      "supports": "responsibility_distribution",
+      "provenance": "repaired"
+    },
+    {
+      "unit_id": "arg-07",
+      "order": 7,
+      "paragraph_job": "compare",
+      "claim": "Of DCCE's current data-management efforts, the GHG accounting platform is the most complete governance model the department has, while the CCIC's ongoing effort to centralize data across divisions is the closest attempt at a shared central platform but is not built for adaptation use and cannot substitute for a dedicated adaptation data catalog.",
+      "grounds": "The GHG accounting platform and its activity-data calculation system, operated by กองขับเคลื่อนการลดก๊าซเรือนกระจก, run a defined workflow: sector coordinators collect activity data from data-owning units, the data passes through quality assurance and quality control, then calculation and reporting follow, on a two-year collection cycle matching the national reporting cycle, with outputs returned as connected services and dashboards that feed back into the department's data catalog. Separately, กลุ่มพัฒนาเทคโนโลยีดิจิทัล is developing the ศูนย์ข้อมูลการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (CCIC) as a cross-divisional central database, but its data collection is not led by a specific adaptation use case, it has no data model or defined data domain yet, and it currently follows สพร.'s broad government open-data standard rather than a climate-specific one. (Exec-summary draft 1.2; no independent full-report-level source found for this comparison)",
+      "warrant": "A governance model only transfers to a new domain if its workflow -- defined roles, a quality-assurance step, a fixed cadence, and a feedback loop back into the catalog -- is actually present; the GHG platform has all four, and CCIC currently has none of them beyond an intent to centralize, so the two are not interchangeable candidates for the same governance role in NCAIF's design.",
+      "application_to_design": "NCAIF should adapt the GHG platform's four-part workflow -- owner-unit collection, quality assurance/quality control, calculation and reporting, and catalog feedback -- as the template for adaptation-data governance, while treating CCIC's central database as a useful cross-departmental visibility layer to build alongside, not as a substitute for, an adaptation-specific data catalog built on its own data model.",
+      "supports": "data_management_governance_status",
+      "provenance": "recovered"
+    }
+  ],
+  "approval": {
+    "status": "approved",
+    "approved_by": "Boss",
+    "approved_at": "2026-09-01T01:38:59+07:00"
+  }
+}

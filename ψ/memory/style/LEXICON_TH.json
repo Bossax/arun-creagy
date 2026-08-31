@@ -656,6 +656,14 @@
     {
       "term": "ฐานข้อมูลราคากลางสำหรับการซ่อมแซมและสร้างทดแทน",
       "definition": "Standardized Replacement Cost Catalogs"
+    },
+    {
+      "term": "แพลตฟอร์มข้อมูล",
+      "definition": "Data Platform"
+    },
+    {
+      "term": "แพลตฟอร์มเว็บไซต์",
+      "definition": "Web Platform"
     }
   ]
 }

@@ -65,12 +65,12 @@
 | ภาคผนวก | — |
 
 ### §2.2
-| | |
-|---|---|
-| ร่างผู้บริหาร (prior draft) | `ψ/incubate/drafts/crdb-exec-summary-1.2/02_th_draft.md` |
-| ร่างรายงานฉบับสมบูรณ์เดิม | `output/draft_final_report/5.2/5.2.2 …` (65 KB) |
-| ผลผลิต WP | `output/04_Sitemap/DCCE_Information_System.md` (213 KB) · `DCCE_Data_Assets_Summary.md` · `DCCE_Unified_Digital_Asset_Database_Summary.md` · `DCCE_Metadata_Database_Summary.md` · `Reality_First_Asset_Audit_Report.md` · `Unified_Digital_Asset_Data_Dictionary.md` |
-| ภาคผนวก | — |
+|                             |                                                                                                                                                                                                                                                                       |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ร่างผู้บริหาร (prior draft) | `ψ/incubate/drafts/crdb-exec-summary-1.2/02_th_draft.md`                                                                                                                                                                                                              |
+| ร่างรายงานฉบับสมบูรณ์เดิม   | `output/draft_final_report/5.2/5.2.2 …` (65 KB)                                                                                                                                                                                                                       |
+| ผลผลิต WP                   | `output/04_Sitemap/DCCE_Information_System.md` (213 KB) · `DCCE_Data_Assets_Summary.md` · `DCCE_Unified_Digital_Asset_Database_Summary.md` · `DCCE_Metadata_Database_Summary.md` · `Reality_First_Asset_Audit_Report.md` · `Unified_Digital_Asset_Data_Dictionary.md` |
+| ภาคผนวก                     | —                                                                                                                                                                                                                                                                     |
 
 ### §2.3
 | | |
