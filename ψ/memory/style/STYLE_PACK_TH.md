@@ -1,5 +1,5 @@
 # Style-Pack: TH (Thai institutional writing, repo-wide)
-**Samples Learnt**: 26 (Technical Precision, Readability, Analytical Density, and Structural Flow) | **Last Updated**: 2026-08-30 | **Lexicon**: LEXICON_TH.json v4.2, 71 rules
+**Samples Learnt**: 27 (Technical Precision, Readability, Analytical Density, and Structural Flow) | **Last Updated**: 2026-08-31 | **Lexicon**: LEXICON_TH.json v4.5, 80 rules
 
 ## 1. Core Kernel (80/20)
 
@@ -15,6 +15,7 @@ These are the small set of rules that generate most of the desired NCAIF prose q
 8. **Active Institutional Agency When Actor Is Known** — When the actor is already known, state the duty directly. Prefer `กรมฯ จัดทำ...`, `บริการนี้ทำหน้าที่...`, `หน่วยงานใช้...` over passive or pseudo-passive framing such as `ถูกออกแบบให้...`.
 9. **Banish Direct English Jargon** — Never use direct English operational jargon in audience-facing Thai prose when a functional Thai equivalent exists.
 10. **Simplified Technical Prose** — Remove prestige descriptors like `ขั้นสูง`, `ที่สำคัญที่สุด`, or similar verbal inflation unless the distinction is materially necessary.
+11. **Elaborate, Don't Drop, Clarifying Nouns** — Thai prose keeps the noun that explains another noun rather than compressing it out. A bare abstract noun left unexplained (e.g. `แสดงเงื่อนไข...` with no statement of which conditions) reads as vague, not concise. Boss, 2026-08-31: "Thai language loves to be repetitive, dropping nouns that elaborate other nouns is bad style."
 
 ## 2. Stage / Scale Activation Map
 
@@ -219,6 +220,9 @@ These rules matter, but they should not compete with the Core Kernel during earl
 - **DON'T**: Overclaim national governance scope (`"โครงสร้างข้อมูลของประเทศ"`); strictly anchor deliverables to the commissioning entity (`"แพลตฟอร์มข้อมูลของกรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม"`).
 - **DON'T**: Close a diagnostic sentence with a blunt absolute-negative conclusion (e.g. `"...จึงไม่มีระดับความละเอียดใดที่ให้บริการได้อย่างน่าเชื่อถือ"`, a dimension titled `"วิธีคำนวณที่ยังไม่มีอยู่จริง"`). Boss confirmed 2026-08-30 this is a tone correction, not a content one — cut the clause or reframe as a neutral institutional category (`"ระเบียบวิธีการในการวิเคราะห์ข้อมูล"`) only when the underlying claim itself is still accurate.
 - **DO** (unconfirmed, filed by analogy to the rule above — flag if wrong): Hedge a claim the evidence doesn't fully support — add `เป็นส่วนใหญ่` or `มัก` rather than stating it as absolute, when the underlying data only shows a majority/typical pattern rather than a universal one.
+- **CRITICAL DON'T**: Use metaphor in technical/institutional writing (e.g. `ห่วงโซ่คอขวด` "bottleneck chain" for interlocking gaps). Boss, CRDB full-report spine review 2026-08-31: "ban metaphor in technical writing" — state the mechanism plainly instead of reaching for an image.
+- **DON'T**: Add a bare adjective or quantifier that contributes no information the reader needs (e.g. `บริการสารสนเทศจำนวนจำกัดชุดหนึ่ง` — `จำนวนจำกัด` "a limited number of" adds nothing; cut to `บริการสารสนเทศชุดหนึ่ง`). Be conservative about reflexively translating an English adjective into a `เชิง-` prefix; check whether the adjective is carrying real information first.
+- **DO**: Use a helping/auxiliary verb (e.g. `ช่วย`) when describing an instrument that enables an outcome rather than causes it outright (e.g. `แบบฟอร์มรายงาน**ช่วย**ปิดช่องว่างนั้น`, not the bare `แบบฟอร์มรายงานปิดช่องว่างนั้น`). Boss, 2026-08-31: "Thai report loves helping verb, adding ช่วย is a preferred option."
 
 ## 8. Master Implementation Prompt
 > **Writing Mode**: TH-Institutional (v5.0 - Stage-Aware, Evidence-Dense, Institution-Led)
