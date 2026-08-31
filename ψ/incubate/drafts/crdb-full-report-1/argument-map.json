@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0",
+  "section_id": "crdb-full-report-1",
+  "governing_thought": "The digital infrastructure blueprint is necessary to overcome three fundamental barriers to using climate data by distinguishing the foundational data platform from the web platform and answering four core project questions to achieve the national vision.",
+  "narrative_scqa": {
+    "situation": "Thailand faces increasing demand for climate change adaptation data from both public and private sectors.",
+    "complication": "Users face barriers in findability, trust, and usable form, and the country lacks a systematic data governance capability.",
+    "question": "How should the digital infrastructure be designed to overcome these barriers and support national adaptation planning?",
+    "answer": "By answering four governing questions to design a blueprint that distinguishes between a user-facing web platform and a robust underlying data platform, serving primary institutional users."
+  },
+  "governing_thought_components": [
+    "Three barriers to information use",
+    "Four governing questions of the project",
+    "6-step modern data architecture framework",
+    "Distinction between web platform and data platform",
+    "3 participation formats",
+    "Vision and primary user groups",
+    "Use-case example",
+    "Report structure"
+  ],
+  "argument_units": [
+    {
+      "unit_id": "arg-01",
+      "order": 1,
+      "paragraph_job": "diagnose",
+      "claim": "Users face three main barriers to using climate adaptation data: poor findability, lack of trust, and data not being in a usable form.",
+      "grounds": "Data is scattered across sources without a central hub, lacks verifiable quality assurance, and often isn't in a format ready for analysis or planning.",
+      "warrant": "Without addressing these specific information gaps, Thailand cannot systematically assess risks or update its adaptation strategies.",
+      "application_to_design": "The digital infrastructure must explicitly solve for findability, trust, and usable form.",
+      "supports": "Three barriers to information use",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-02",
+      "order": 2,
+      "paragraph_job": "define",
+      "claim": "The project must answer four governing questions to lay the foundation for the digital infrastructure.",
+      "grounds": "1. What is needed (Information Architecture). 2. What exists (Baseline Data Inventory). 3. What needs to be built (Use Cases). 4. How to drive it (Data Governance).",
+      "warrant": "These four questions systematically map the gap between the current fragmented state and the desired future capability.",
+      "application_to_design": "The blueprint structure directly mirrors the answers to these four questions.",
+      "supports": "Four governing questions of the project",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-03",
+      "order": 3,
+      "paragraph_job": "define",
+      "claim": "The project's scope covers the first two steps of the 6-step modern data architecture framework.",
+      "grounds": "The work focuses on Step 1 (Requirement Analysis) and Step 2 (Design and Functional Analysis), preparing for Step 3 (Software Development).",
+      "warrant": "Rigorous requirement and functional analysis are prerequisites for building sustainable software infrastructure.",
+      "application_to_design": "The deliverables form a blueprint for subsequent software development, rather than the final software itself.",
+      "supports": "6-step modern data architecture framework",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-04",
+      "order": 4,
+      "paragraph_job": "compare",
+      "claim": "The solution requires distinguishing between a user-facing web platform and a foundational data platform.",
+      "grounds": "The web platform handles user interaction (CMS, dashboards), while the underlying data platform and governance framework handle data storage, movement, and quality control.",
+      "warrant": "A web platform alone cannot resolve fragmented data sources; building it without a data platform results in a 'Frankenstein Dashboard' with conflicting information.",
+      "application_to_design": "The blueprint must design both the visible web interface and the invisible but critical data governance backend.",
+      "supports": "Distinction between web platform and data platform",
+      "provenance": "repaired"
+    },
+    {
+      "unit_id": "arg-05",
+      "order": 5,
+      "paragraph_job": "define",
+      "claim": "The blueprint was developed through a structured 3-format participatory process with actual data users.",
+      "grounds": "The process included agency interviews, internal DCCE focus groups, and multi-stakeholder brainstorming workshops between January and August 2026.",
+      "warrant": "Engaging real users and stakeholders ensures the resulting data architecture and use cases align with practical needs rather than theoretical assumptions.",
+      "application_to_design": "The identified priority datasets and tools are directly sourced from stakeholder consensus.",
+      "supports": "3 participation formats",
+      "provenance": "repaired"
+    },
+    {
+      "unit_id": "arg-06",
+      "order": 6,
+      "paragraph_job": "define",
+      "claim": "The platform's vision is to serve as the national climate adaptation information hub, primarily targeting institutional and policy users in Phase 1.",
+      "grounds": "The primary users are sectoral/area-based policymakers and DCCE staff, relying on it for high-level risk screening and compliance (like A-BTR).",
+      "warrant": "Focusing on institutional users first builds the necessary data maturity and governance capabilities before serving broader, simplified public needs.",
+      "application_to_design": "The site structure and terminology are designed for technical and policy professionals rather than lay audiences.",
+      "supports": "Vision and primary user groups",
+      "provenance": "new"
+    },
+    {
+      "unit_id": "arg-07",
+      "order": 7,
+      "paragraph_job": "diagnose",
+      "claim": "The platform must deliver data that maps directly to concrete risk management strategies.",
+      "grounds": "Users require data to decide whether to avoid risk (limit expansion), accept risk (maintain use), reduce risk (improve infrastructure), or transfer risk (insurance mechanisms).",
+      "warrant": "Data only holds value when it can be operationalized into one of these specific decision pathways.",
+      "application_to_design": "Information products must be structured to provide actionable insights for these four risk management strategies.",
+      "supports": "Use-case example",
+      "provenance": "new"
+    },
+    {
+      "order": 8,
+      "provenance": "new",
+      "warrant": "A linear progression from baseline to requirements to gaps ensures that the final roadmap is evidence-based and directly addresses the initial barriers.",
+      "claim": "The structure of this report directly follows the logical sequence of the project's four governing questions.",
+      "supports": "Report structure",
+      "unit_id": "arg-08",
+      "application_to_design": "Provides the reader with a clear navigational roadmap for the remainder of the document.",
+      "grounds": "Chapter 1 sets the stage, Chapter 2 defines requirements, Chapter 3 inventories the baseline, Chapter 4 deep-dives into L&D standards, and Chapter 5 synthesizes the gaps into actionable recommendations.",
+      "paragraph_job": "conclude"
+    }
+  ],
+  "approval": {
+    "status": "approved",
+    "approved_by": "Boss",
+    "approved_at": "2026-08-31T17:00:02+07:00"
+  }
+}
