@@ -1,0 +1,342 @@
+{
+  "schema_version": "1.0",
+  "section_id": "report-crdb-full-report-2.6",
+  "governing_thought": "This section presents the two finished deliverables that make up the adaptation data structure: a mission-based information architecture specified down to page and subpage minimum content, and a three-part data management framework that governs it. Both are final results, not process description -- the reasoning and design history that produced them belongs to §2.3, and the sequencing or rollout strategy for building them belongs to Chapter 5. The site's six top-level sections are organized by user mission rather than by departmental structure, and each carries detailed minimum-content specifications drawn from the full-report source material, remapped onto the six-section structure the platform's current sitemap actually uses -- which splits a stand-alone Country Overview section out of what an earlier draft had folded into the home page. The governance framework assigns data ownership by domain to named existing units within the department, adds steward and technical-custodian roles beneath ownership, and sets a publication workflow -- stated throughout as what must exist, not as a phased plan for getting there.",
+  "narrative_scqa": {
+    "situation": "The consultants had already worked out, through the process described in §2.3, a conceptual structure for the country's adaptation data system grounded in international frameworks, user-experience principles, and two rounds of stakeholder testing.",
+    "complication": "A validated design conclusion is not yet a specification a developer can build from: without page-level minimum content for every section and without a named, role-assigned data-management framework, the next-phase developer would still have to reinterpret intent on every page, and the department would have no basis for assigning accountability once data is published.",
+    "question": "What did this phase of work ultimately fix as the platform's information architecture and data-governance structure, in enough detail to hand over as system requirements?",
+    "answer": "Six mission-based site sections -- Home, Country Overview, the Policy-maker Data Center, the Adaptation Cycle, Tools and Information Services, and News and Contact -- each specified to page and subpage minimum content, paired with a three-part data management framework of a business glossary, a conceptual data model, and a governance model with named ownership, steward, and technical-custodian roles; how to sequence and build this blueprint is Chapter 5's separate concern."
+  },
+  "governing_thought_components": [
+    "system_framing",
+    "vision_and_users",
+    "home_navigation",
+    "country_overview",
+    "policy_data_center",
+    "adaptation_cycle",
+    "tools_and_services",
+    "news_and_contact",
+    "page_baseline_metadata",
+    "business_glossary",
+    "conceptual_data_model",
+    "governance_model",
+    "forward_pointer_chapter5"
+  ],
+  "approval": {
+    "status": "approved",
+    "approved_by": "Boss",
+    "approved_at": "2026-09-01",
+    "note": "Approved after dissemination-deck cross-check and arg-12 publication-workflow removal."
+  },
+  "argument_units": [
+    {
+      "unit_id": "arg-01",
+      "order": 1,
+      "paragraph_job": "define",
+      "claim": "The finished structure links two components that operate together under one data system: a data platform, carrying a baseline data-management framework, and a web platform built on top of it.",
+      "grounds": "Per the prior draft's framing: the data platform and its baseline data-management framework function as the underlying infrastructure -- ingesting data, checking its quality, processing it, and producing information, knowledge, and datasets that department staff can build on -- while the web platform pulls from the data platform to display content and is designed to route users to the data and services they need quickly and accurately. The full-report source's closing synthesis states the same pairing from the results side: the page-and-service structure that users access directly has, in this phase, been developed to a level of minimum-content detail ready for design and development, while the data-governance structure -- naming ownership, roles, standards, and development stages -- is what makes the data shown on the platform trustworthy, verifiable, and continuously improvable.",
+      "warrant": "If the section described only the visible site or only the backend governance framework in isolation, a reader would not see why the two cannot be evaluated separately: data displayed without a governance structure behind it cannot be trusted or audited, and a governance structure with no site structure to organize would have no scope to act on.",
+      "application_to_design": "State this pairing as the section's opening frame, then present the web-facing information architecture and the data management framework as two co-equal parts of the same result.",
+      "supports": "system_framing",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-02",
+      "order": 2,
+      "paragraph_job": "define",
+      "claim": "The consultants set the platform's long-term vision as a governed, credible, nationally-referenced source of adaptation data and knowledge, and scoped its first-phase primary users to match.",
+      "grounds": "The long-term vision is for the department to hold an adaptation data and knowledge source that is governed, trustworthy, and usable as a shared national reference. The primary users in the first phase are policy-makers and planners working by sector or by area, analysts who need to compile data from multiple sources, and department staff who will continue improving content and data products going forward. The information structure navigates users starting from their mission category -- understanding an area's risk, preparing an adaptation plan, selecting measures, or tracking results -- and then connects them to the relevant data, guides, tools, and case studies, so that a policy-maker can see the national picture and drill into area- or sector-level detail from the same starting point.",
+      "warrant": "Anchoring the site's navigation logic in named user missions, rather than in the department's internal division structure, is what lets the same structure serve a national policy-maker's overview need and a local planner's drill-down need without duplicating content for each audience.",
+      "application_to_design": "State the vision and the three primary user groups first, and carry the mission-based navigation logic forward into every section that follows.",
+      "supports": "vision_and_users",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-03",
+      "order": 3,
+      "paragraph_job": "define",
+      "claim": "The home page is specified as a navigational entry point built from task-based shortcuts, a data-catalog banner, and two role-based portals -- not as a stand-alone content page carrying the country's risk narrative.",
+      "grounds": "As presented to stakeholders at the project's final dissemination event, the home page (branded the National Climate Adaptation Portal) is built from three components: a row of quick shortcuts, a data-catalog banner, and two main role-based portals. The national risk-overview content that an earlier draft of the site structure had placed on the home page has since been reassigned to its own Country Overview section.",
+      "warrant": "Because the risk-summary content originally placed on the home page has since been assigned to a separate Country Overview section, the home page's specified job is routing through shortcuts and portals, not restating the country's risk narrative a second time.",
+      "application_to_design": "Describe the home page only as a router built from the three components below; do not restate Country Overview's content here.",
+      "supports": "home_navigation",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-03a",
+      "order": 4,
+      "paragraph_job": "define",
+      "claim": "The home page opens with a row of quick shortcuts to the platform's most frequently used services, plus a data-catalog banner surfacing the scale of the underlying data holdings.",
+      "grounds": "The quick-shortcut row gives one-click access to three services: searching adaptation funding sources (international and domestic), checking project progress and monitoring-and-evaluation status, and a guide to preparing a municipal or local-government adaptation plan. Beneath the shortcuts, a data-catalog banner surfaces the platform's data holdings and tools at a glance -- over 260 datasets, a climate risk map, and the economic-assessment tool -- as a single entry banner rather than a detailed listing.",
+      "warrant": "Naming the three specific shortcut services, rather than describing the shortcut row generically, is what keeps this component build-ready instead of leaving 'quick shortcuts' as an undefined placeholder.",
+      "application_to_design": "Carry the three shortcut services and the data-catalog banner as the home page's first content component.",
+      "supports": "home_navigation",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-03b",
+      "order": 5,
+      "paragraph_job": "define",
+      "claim": "The home page's second component is two main portals separating users by role: a Policy-maker portal and a Practitioner portal, corresponding to the Policy-maker Data Center and the Adaptation Cycle sections respectively.",
+      "grounds": "The home page is designed around role-based navigation, clearly directing users into one of two primary paths: entering as a policy-maker or planner, or entering as a practitioner developing and implementing adaptation projects. The two portals are labeled and lead directly into the Policy-maker Data Center and the Adaptation Cycle sections. The design brief for this page also calls for a minimalist information hierarchy -- keeping unnecessary technical detail off the home page to avoid overwhelming a first-time visitor.",
+      "warrant": "Splitting the home page into exactly two role-based portals, matching the two sections they lead to, is what lets a first-time visitor self-select the right depth of content within one click, instead of browsing a flat menu of six sections.",
+      "application_to_design": "Carry the two role-based portals as the home page's second content component, and note the minimalist-hierarchy design principle as the reason the page carries no further content beyond shortcuts, the catalog banner, and the two portals.",
+      "supports": "home_navigation",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-04",
+      "order": 6,
+      "paragraph_job": "define",
+      "claim": "Country Overview consolidates the national risk narrative that earlier design work had placed on the home page, now specified as its own section built from two content units.",
+      "grounds": "The platform's current site structure splits a stand-alone Country Overview section out of what an earlier sitemap draft had folded into the home page, a restructuring decision recorded as of 19 August 2026. The prior draft describes this section as bringing together the country's climate situation, risk, loss, and adaptation priorities in one place.",
+      "warrant": "Relocating the risk narrative to its own section keeps the home page's router role uncluttered, while giving the country-level risk story a stable, findable location that matches how the current site structure actually organizes it.",
+      "application_to_design": "Present Country Overview as the section carrying the two content units below, both drawn from the executive-summary content the earlier draft had placed on the home page.",
+      "supports": "country_overview",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-04a",
+      "order": 7,
+      "paragraph_job": "define",
+      "claim": "Country Overview's first content unit is a national risk overview covering the history of natural hazards, an IPCC-based risk framing, and a summary diagram of the country's risk profile.",
+      "grounds": "The minimum content required is: an overview of Thailand's climate-change risk covering the history of natural hazards, the IPCC's theoretical framework and risk definitions, the distinction between physical risk and transition risk, and a summary diagram of the country's risk profile. As presented to stakeholders, this unit carries: a 20-year cumulative damage panel (fiscal years 2005-2024) showing total damage of 544 billion baht, 68.2 million person-incidents affected, and 84.5 million rai of damaged agricultural land; the IPCC AR6 risk framework expressed as Risk = Hazard x Exposure x Vulnerability; the physical-risk / transition-risk distinction, with physical risk further split into acute hazards (flood, windstorm) and slow-onset hazards (rising temperature, sea-level rise), and transition risk covering policy and legal change (including the Climate Change Act and CBAM), financial-market shifts, and low-carbon technology; a set of major historical disaster events with figures -- the 2011 Great Flood (over 1.43 trillion baht in damage, concentrated in central-region industrial estates), the 2015-16 drought (Super El Nino), the 2019 Tropical Storm Pabuk, and the 2022 flooding in the Chao Phraya and Chi-Mun basins; and the seven adaptation sectors under the national plan -- water management, agriculture and food security, forestry and ecosystems, public health, tourism, human settlements and security, and risk management.",
+      "warrant": "Naming the specific risk categories the IPCC framework distinguishes, and requiring a summary diagram rather than leaving 'risk overview' undefined, is what keeps this unit at executive-briefing depth instead of a promotional page -- the same distinction the source material makes explicitly.",
+      "application_to_design": "Carry this itemized minimum content as Country Overview's first content unit.",
+      "supports": "country_overview",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-04b",
+      "order": 8,
+      "paragraph_job": "define",
+      "claim": "Country Overview's second content unit sets out the country's key risks and adaptation priorities: hotspots by hazard and sector, a national adaptation plan summary, and flagship measures.",
+      "grounds": "The minimum content required is: Thailand's key risks and adaptation priorities, showing risk hotspots by hazard and by sector, a summary of the national adaptation plan, and examples of major or flagship adaptation measures and projects. As presented to stakeholders, this unit carries: a regional hotspot breakdown -- North and Northeast (drought, wildfire/PM2.5, landslide), Central and the Chao Phraya basin (flash flood, land subsidence, saltwater intrusion), and South and East (tropical storms, coastal erosion, coral bleaching); the national adaptation plan's 20-year vision statement (Thailand resilient and adaptation-ready against climate impacts) with sector-specific goals for each of the six main sectors (integrated flood-drought basin management for water; cropping-calendar adjustment, drought-tolerant varieties, and precision agriculture for agriculture; upstream forest and mangrove restoration for forestry; heat-stress and emerging-disease surveillance for public health; sustainable tourism-site management for tourism; and proactive urban planning, building retrofit, and vulnerable-group protection for human settlements); and a measures library organized into three categories -- grey infrastructure (structural engineering such as seawater barrier gates, riverbank protection, diversion channels), nature-based solutions (wetland restoration, mangrove replanting, urban water-retention areas), and soft measures (early-warning systems, climate-risk insurance, local ordinances).",
+      "warrant": "This page was never meant to function as a public-relations page; requiring hotspot-level and national-plan-level content is what keeps it at the depth an executive audience needs to act on.",
+      "application_to_design": "Carry this itemized minimum content as Country Overview's second content unit.",
+      "supports": "country_overview",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-05",
+      "order": 9,
+      "paragraph_job": "define",
+      "claim": "The Policy-maker Data Center is specified as the operational core of policy-facing use, built from four required content sets.",
+      "grounds": "The section connects area- and sector-level risk profiles with policy, legal, and financial tools, and with planning services. Specifying its minimum content in four named sets is significant for development because it makes clear the page must support strategic summary, spatial comparison, the layout of policy instruments, and links to data services together on one page, not as a collection of separate document links; it also fixes that the datasets and data products displayed here must already be structured for direct distillation into policy-facing information.",
+      "warrant": "Naming exactly four content sets, rather than leaving the page as a generic policy-resources link list, is what lets a developer scope the page as one integrated view rather than a set of loosely related pages.",
+      "application_to_design": "Present the four content sets below as the Policy-maker Data Center's structure.",
+      "supports": "policy_data_center",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-05a",
+      "order": 10,
+      "paragraph_job": "define",
+      "claim": "The first content set is the national climate situation: historical-to-current extreme weather statistics, impact and damage data, and a national risk-and-vulnerability summary.",
+      "grounds": "Minimum content: statistics on extreme weather events from the past to the present, data on impacts and damage, and a summary of climate risk and vulnerability at the national level. As presented to stakeholders, this set carries: national climatic-trend indicators -- maximum temperature rising 1.8 to 2.5 degrees Celsius, average temperature up 1.2 degrees against the pre-industrial baseline, days above 35 degrees increasing by 30-45 per year, precipitation up 5 to 15 percent with more extreme rainfall alternating with drought, and sea-level rise of 1.2 to 1.8 centimeters per decade concentrated in the upper Gulf of Thailand; Thailand's two climatic zones (tropical savanna in the North and Northeast, tropical monsoon in the South and East); population-exposure trend analysis, including a named list of provinces with high exposure index (among them Nong Khai, Phichit, Phra Nakhon Si Ayutthaya, Ang Thong, Uttaradit, Nakhon Phanom, Udon Thani, Suphan Buri, Kamphaeng Phet, Lop Buri, Saraburi, and Ubon Ratchathani); and the same 20-year cumulative loss-and-damage figures carried in Country Overview (544 billion baht total damage, 68.2 million person-incidents affected, 84.5 million rai of agricultural land damaged).",
+      "warrant": "Fixing these three components as the minimum for the section's first content set keeps the national-situation summary comparable across the sets that follow, rather than left to page-by-page discretion.",
+      "application_to_design": "Carry as the Policy-maker Data Center's first content set.",
+      "supports": "policy_data_center",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-05b",
+      "order": 11,
+      "paragraph_job": "define",
+      "claim": "The second content set is area- and sector-level risk profiles, broken out clearly by region, province, local administrative organization, and sector.",
+      "grounds": "Minimum content: summary risk profiles distinguishing the regional, provincial, local-administrative-organization, and sector levels clearly from one another. As presented to stakeholders, this set carries: a multi-hazard risk database built with a development partner (the CCIC Multi-Hazard Map, developed with GIZ) covering all 77 provinces under climate scenario SSP2-4.5 for the period 2001-2100, giving examples such as a named multi-hazard index score for Chiang Mai (0.66) and hazard patterns for the Chao Phraya basin and the Gulf of Thailand; sector-specific risk summaries for the six target sectors -- agriculture (declining rice and cash-crop yield outside irrigated areas), water management (reservoirs approaching critical capacity, saline intrusion into piped water, flash flooding), public health (severe heat-wave exposure, vector-borne disease), tourism (coral bleaching, seasonal degradation of natural attractions), forestry and ecosystems (wildfire, PM2.5 haze, biodiversity loss), and human settlements and energy (urban heat-island effect, power-grid security); and a synthesis of provincial and district plans and local-government (subdistrict-organization) data, analyzing capacity gaps and linking to local adaptation-planning guides.",
+      "warrant": "Requiring all four administrative and sector breakdowns in the same content set is what lets a policy-maker compare across levels on one page rather than reassembling the comparison from separate pages.",
+      "application_to_design": "Carry as the Policy-maker Data Center's second content set.",
+      "supports": "policy_data_center",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-05c",
+      "order": 12,
+      "paragraph_job": "define",
+      "claim": "The third content set is policy, legal, and financial instruments: implementation status of the national adaptation plan, legal and policy tool summaries, financial tools and funding sources with case studies, and a national monitoring-and-evaluation framework.",
+      "grounds": "Minimum content: at minimum, the implementation status of the national adaptation plan; a summary of legal and policy instruments; financial instruments and funding sources; a list of funding sources together with case studies; and a monitoring-and-evaluation framework for Thailand's adaptation projects. As presented to stakeholders, this set carries: a legislative timeline for the draft Climate Change Act (drafting and public consultation completed in 2024; submission to parliament and enactment under consideration in 2025-2026; financial mechanisms and enforcement planned from 2027 onward), alongside related instruments such as the Disaster Prevention and Mitigation Act, proactive flood-response town planning, and water-allocation law under the Water Resources Act; an institutional-mechanism description naming the department as national focal point, coordinating with the national policy committee, six sectoral subcommittees, government agencies, local administrative organizations, and the private sector; a named Economics of Climate Adaptation (ECA) tool for cost-benefit analysis and avoided-loss valuation, used to rank the cost-effectiveness of adaptation projects; a named Adaptation Finance Tracker covering international funds (GCF, AF, GEF), the domestic DCCE environment fund, and financing case studies; and cumulative national adaptation-budget figures of 75.7 billion baht across 142 projects, broken down by measure type (56 percent grey infrastructure, 24 percent nature-based, 20 percent soft measures), by funding source (56 percent state budget, 24 percent international funds, 20 percent private co-investment), and by target sector (43.4 billion baht for water management and flooding, 18.7 billion baht for sustainable agriculture and nature-based solutions, 13.6 billion baht for human settlements and other sectors).",
+      "warrant": "Bundling implementation status, legal/policy tools, and financial tools with an M&E framework in one content set is what lets this page function as the policy toolkit it is meant to be, rather than a set of disconnected references.",
+      "application_to_design": "Carry as the Policy-maker Data Center's third content set.",
+      "supports": "policy_data_center",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-05d",
+      "order": 13,
+      "paragraph_job": "define",
+      "claim": "The fourth content set is planning services, functioning as a direct link-through into the Tools and Information Services section rather than a separately detailed content set.",
+      "grounds": "As presented to stakeholders, this fourth set is described only as a direct connection point into the spatial analysis tools and information services covered in the Tools and Information Services section -- it carries no further itemized minimum content of its own beyond that link-through.",
+      "warrant": "Closing the Policy-maker Data Center with a link-through rather than a duplicated content list is what keeps risk maps, indices, and data-use guides specified once (under Tools and Information Services) instead of twice.",
+      "application_to_design": "Carry as the Policy-maker Data Center's fourth and closing content set, described briefly as a link-through into Tools and Information Services rather than restating that section's content here.",
+      "supports": "policy_data_center",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-06",
+      "order": 14,
+      "paragraph_job": "define",
+      "claim": "The Adaptation Cycle section organizes the platform's full knowledge sequence from climate science through monitoring and evaluation, the richest of the six sections and the only one specified to subpage-level detail throughout.",
+      "grounds": "The section is organized as four categories in cycle order -- climate science; impact, risk and vulnerability analysis; planning and implementation; and monitoring, evaluation and lessons learned -- each with its own minimum-content subpages. Fixing this level of subpage detail is what turns the adaptation cycle from a concept framework into a page structure and system-development item list ready to build directly.",
+      "warrant": "Because this section carries forward the four-stage adaptation cycle validated against international frameworks earlier in the chapter, specifying it here to subpage depth is what actually turns that validated conceptual axis into a buildable site section, rather than restating the concept a second time.",
+      "application_to_design": "Present the four categories below in cycle order, each with its full subpage list.",
+      "supports": "adaptation_cycle",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-06a",
+      "order": 15,
+      "paragraph_job": "define",
+      "claim": "The Climate Science category requires at least three subpages: observational data, climate drivers, and future climate scenarios.",
+      "grounds": "(1) Observational data -- short- and medium-term weather data, satellite observation data covering forest area, land use, water sources, coral reefs, and ecosystems, plus explanations of key climate phenomena such as ENSO and AMOC. (2) Climate drivers -- Thailand's climatology, statistics on key climate variables, an explainer on climate scenarios, and Thailand's downscaled climate data. (3) Future climate scenarios -- an explainer on how climate scenarios are used, their data sources, and application examples in strategic planning and risk assessment. As presented to stakeholders: observational data names its two named source systems -- ground-station data from the Thai Meteorological Department, and satellite observation from GISTDA covering forest cover, land use, soil moisture, water sources, and coral-bleaching monitoring -- plus tracked global climate indices (ENSO, the Indian Ocean Dipole, and ocean-circulation patterns). Climate drivers are built on a 1991-2020 climatology baseline and named climatic impact-driver variables (mean, maximum, and minimum temperature; heavy-rainfall indices Rx1day, consecutive dry days, and consecutive wet days), plus a national archive of downscaled climate projections. Future climate scenarios follow the CMIP6 standard (scenarios SSP1-2.6, SSP2-4.5, and SSP5-8.5), with guidance on uncertainty management and on selecting an appropriate ensemble and model set to the department's own standard.",
+      "warrant": "Requiring satellite-observation coverage across five named domains and both short- and medium-term weather data, rather than a general 'observation data' subpage, is what keeps this category matched to what the risk analyses later in the cycle actually depend on.",
+      "application_to_design": "Carry as the Climate Science category's three subpages.",
+      "supports": "adaptation_cycle",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-06b",
+      "order": 16,
+      "paragraph_job": "define",
+      "claim": "The Impact, Risk and Vulnerability Analysis category requires at least five subpages.",
+      "grounds": "(1) Vulnerability and exposure analysis -- explaining exposure, sensitivity, and adaptive capacity, plus damage function and resilience. (2) Risk analysis -- explainers on risk-assessment frameworks, area and sector risk summaries, and other risk-assessment data sources. (3) Cascading impacts -- explaining chain-impact concepts, impact-analysis concepts, and impact-chain analysis. (4) Loss and damage -- explaining loss and damage, the UNFCCC framework, an overview of climate-disaster statistics, a loss-and-damage overview, and a loss-and-damage dashboard. (5) Theoretical framework and reference documents -- methodology documents for risk assessment, impact assessment, and loss-and-damage calculation, letting users check the academic basis and calculation methods for themselves. As presented to stakeholders: the vulnerability/risk framework follows IPCC definitions of exposure, sensitivity, adaptive capacity, and resilience, backed by a library of sector-specific damage-function curves (rice, orchard crops, buildings, infrastructure); a named slow-onset-hazard tracking subset covers sea-level rise (1.2-1.8 millimeters per year along the Gulf coast), land subsidence and saline intrusion in the Bangkok metropolitan area and the Chao Phraya river, and coastal erosion tracked across 23 coastal provinces; the impact-chain subpage illustrates a worked example (severe drought to reservoir-capacity crisis to crop-yield loss to household debt to displacement); loss and damage compiles 20 years of continuous economic-loss statistics (2005-2024) classified under the National Economic and Social Development Council's five-sector standard (agriculture, transport, housing, public health, business and services), peaking in 2011 at 1.4 trillion baht, plus a non-economic-loss recording system (mental-health impact, biodiversity loss, cultural-heritage loss) under the UNFCCC loss-and-damage framework.",
+      "warrant": "Closing this category with a subpage of methodology documents, alongside the four analytical subpages, is what lets a technical user verify the basis of every risk and loss figure shown elsewhere in the category rather than taking it on faith.",
+      "application_to_design": "Carry as this category's five subpages.",
+      "supports": "adaptation_cycle",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-06c",
+      "order": 17,
+      "paragraph_job": "define",
+      "claim": "The Planning and Implementation category requires at least five items, including the adaptation-measures library and case studies.",
+      "grounds": "(1) An adaptation-planning approach covering both sector-level planning and financial analysis. (2) The country's adaptation strategy roadmap. (3) An adaptation-measures library organized by sector, structured as a database with explanations and case studies. (4) Adaptation-planning case studies drawn from other organizations. (5) Ongoing projects tracked as project-tracking status. As presented to stakeholders: the planning approach names its legal grounding (the Climate Change Act, the Disaster Prevention and Mitigation Act, town-planning regulation, and environmental/health impact assessment criteria), applies cost-benefit analysis together with the Economics of Climate Adaptation tool, and explicitly integrates gender, equality, and social-inclusion considerations alongside local and traditional knowledge; the national strategy roadmap distinguishes incremental measures (such as planting new tree varieties or improving existing water management) from transformational measures (such as designing urban ventilation corridors), set against planning lead times of 3-5 years and measure lifetimes of 20-50 years; the measures library holds over 250 searchable measures classified by hazard type and target sector, split between grey infrastructure (riverbank protection dams, water-diversion tunnels, saltwater sluice gates) and nature-based solutions (wetland restoration, upstream reforestation, mangrove restoration); ongoing project tracking links forward into the monitoring category and into Tools and Information Services' finance tracker.",
+      "warrant": "Placing the measures library and case studies inside this category, rather than in a separate top-level section, matches the platform's current six-section structure, which has no stand-alone measures-library section of its own.",
+      "application_to_design": "Carry as this category's five items, keeping the measures library and case studies here rather than treating them as a separate section.",
+      "supports": "adaptation_cycle",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-06d",
+      "order": 18,
+      "paragraph_job": "define",
+      "claim": "The Monitoring, Evaluation and Lessons Learned category requires at least three items, closing the adaptation cycle.",
+      "grounds": "(1) An M&E approach covering M&E theory and Global Goal on Adaptation (GGA) indicators. (2) Thailand's adaptation M&E database system, the Adaptation M&E Platform. (3) Case studies of successful adaptation projects, organized as a lessons-learned library. As presented to stakeholders: the M&E approach sets outcome and impact assessment criteria across the national plan's six sectors, applies a Technology Readiness Level scale (TRL 1 through 9) to gauge how ready an adaptation technology or innovation is for use, and links Thailand's indicators to the 59 international Belem indicators under the Global Goal on Adaptation, in support of the Biennial Transparency Report; the Adaptation M&E Platform is a live online dashboard tracking progress and reduced vulnerability across sectors and all 77 provinces through 25 core indicators, such as the share of provinces with a water-management center (70 percent), early-warning-system coverage, and an infrastructure-readiness index; the lessons-learned library compiles flagship successful projects with analysis of community participation, budget efficiency, and obstacles encountered, plus recommendations for applying and scaling the lesson to areas with similar risk contexts.",
+      "warrant": "Closing the adaptation cycle with a dedicated M&E and lessons-learned category is what completes the cycle rather than leaving monitoring and evaluation underrepresented relative to the science, analysis, and planning categories before it.",
+      "application_to_design": "Carry as the Adaptation Cycle's closing category.",
+      "supports": "adaptation_cycle",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-07",
+      "order": 19,
+      "paragraph_job": "define",
+      "claim": "Tools and Information Services is specified as a single filterable catalog of three core pages, rather than fixed subcategories, absorbing the catalog and dashboard content named for this section.",
+      "grounds": "The section is built as one catalog searchable and filterable by category -- for example data catalog, hazard risk maps, impact, economics and finance, and measures -- rather than divided into fixed subcategories, so that new tools can be added without restructuring the section. This single catalog is built from three core pages.",
+      "warrant": "Because the platform's current structure has no stand-alone measures-library section, a filterable-catalog model that can add new tools without restructuring is what lets this section absorb the tools-and-services content without contradicting the confirmed six-section structure.",
+      "application_to_design": "Present the three subpages below as what the filterable catalog is built from.",
+      "supports": "tools_and_services",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-07a",
+      "order": 20,
+      "paragraph_job": "define",
+      "claim": "The first core page is a data catalog for searching and filtering raw datasets and derived data products.",
+      "grounds": "A searchable and filterable system covering both raw datasets and in-depth data products.",
+      "warrant": "Covering both raw datasets and derived products in one catalog page, rather than splitting them, keeps the entry point single regardless of how technical the user's need is.",
+      "application_to_design": "Carry as the section's first core page.",
+      "supports": "tools_and_services",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-07b",
+      "order": 21,
+      "paragraph_job": "define",
+      "claim": "The second core page is dashboards and analysis tools, supporting sector-specific analysis dashboards or applications.",
+      "grounds": "A display-and-analysis system supporting dashboards or analysis applications organized by sector.",
+      "warrant": "n/a",
+      "application_to_design": "Carry as the section's second core page.",
+      "supports": "tools_and_services",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-07c",
+      "order": 22,
+      "paragraph_job": "define",
+      "claim": "The third core page is an external tool and data hub, connecting to national and international climate tools and data centers.",
+      "grounds": "A hub of tools and external data sources functioning as a connection point to national and international climate tools and data centers. Specifying this category's minimum content matters for front-end/back-end integration, because every page in it depends on metadata, access rights, and API or data-connection mechanisms that must be manageable systematically later.",
+      "warrant": "Flagging the metadata, access-rights, and API dependencies here, rather than leaving them implicit, is what carries this section's requirements forward into technical scoping rather than stopping at a content description.",
+      "application_to_design": "Carry all three subpages as Tools and Information Services' content, framed throughout as one filterable catalog rather than three separate pages.",
+      "supports": "tools_and_services",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-08",
+      "order": 23,
+      "paragraph_job": "define",
+      "claim": "News and Contact is a light section communicating data updates, capacity-building activities, and channels for receiving user feedback or needs.",
+      "grounds": "The section communicates updates to the data, capacity-building activities, and channels for hearing user problems or needs; this section has no counterpart in the earlier full-report source and exists only in the more recent site structure.",
+      "warrant": "n/a",
+      "application_to_design": "Carry as the sixth and final section of the information architecture, briefly, without further expansion.",
+      "supports": "news_and_contact",
+      "provenance": "new"
+    },
+    {
+      "unit_id": "arg-09",
+      "order": 24,
+      "paragraph_job": "define",
+      "claim": "Every major page across all six sections must carry a common baseline of trust metadata, treated as a foundational requirement rather than an optional addition.",
+      "grounds": "At minimum, every major page needs: the date of last update, the owning unit or content custodian, usage constraints or conditions on the data, and a contact channel for further clarification. These are described as a baseline requirement for pages supporting government decision-making, not an after-the-fact addition, because they let a user judge the data's suitability, currency, and scope of use.",
+      "warrant": "Because this requirement is described as foundational rather than supplementary, every page-level unit specified above inherits the same metadata requirement without needing it restated section by section.",
+      "application_to_design": "State this once, as a cross-cutting requirement applying to every page in the sections above, rather than repeating it per section.",
+      "supports": "page_baseline_metadata",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-10",
+      "order": 25,
+      "paragraph_job": "define",
+      "claim": "The data management framework's first component is a business glossary standardizing 74 key terms, scoped specifically to the adaptation data platform.",
+      "grounds": "The glossary defines standard meanings for 74 key terms so that policy documents, website content, governing metadata, and database structure all use consistent terminology. Its scope is specific to the adaptation data platform, and it is explicitly not an official department-wide glossary.",
+      "warrant": "n/a",
+      "application_to_design": "State as the first of the data management framework's three components.",
+      "supports": "business_glossary",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-11",
+      "order": 26,
+      "paragraph_job": "define",
+      "claim": "The second component is a conceptual data model organizing data relationships into 8 domains, letting the department assign data ownership matched to each work unit's actual mandate.",
+      "grounds": "The eight domains are: area and administration; climate and hazard; exposure and vulnerability; impact and loss; adaptation measures; policy and strategy; knowledge; and platform administration. This domain boundary is what lets the department assign data ownership to match each work unit's actual authority.",
+      "warrant": "Naming eight bounded domains, rather than leaving data relationships undifferentiated, is what makes the domain-based ownership assignment in the governance model possible in the first place.",
+      "application_to_design": "State as the second component, feeding directly into the domain-based ownership assignment that follows.",
+      "supports": "conceptual_data_model",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-12",
+      "order": 27,
+      "paragraph_job": "define",
+      "claim": "The third component is a governance model that assigns data ownership by domain to named existing units within the department, and adds steward and technical-custodian roles beneath ownership.",
+      "grounds": "Roles: a data-governance committee certifies standards and resolves cross-unit issues; the data owner is responsible for quality, security, and publication; the Data Steward checks completeness, contextual accuracy, and continuity of updates at the operational level in routine work; the Technical Custodian is responsible for back-end systems, infrastructure, data connections, and technical services; and data users must follow the stated purpose and conditions of use. Splitting ownership from stewardship and technical custody in this way is what lets the department act as the platform's product owner -- setting rules, requirements, and standards -- while future system developers or contractors build and deliver under the department's framework. Domain ownership: physical-climate data to the Research and Development Group / Research Center; risk-and-impact-assessment data to the Risk Data Development Group; adaptation-planning and measures data to the Adaptation Approach Development Group; finance- and policy-related adaptation data to the Policy and Adaptation-Driving Group; and monitoring-and-evaluation data to the Adaptation M&E Group. This domain-to-unit assignment does not map one-to-one onto the eight domains of the conceptual data model in arg-11 -- both are carried as stated by their respective sources, by Boss's decision.",
+      "warrant": "Naming specific existing department units against the domain structure, rather than leaving ownership generic, is what gives the assignment institutional traction; layering steward and technical-custodian roles beneath it is what keeps day-to-day data quality and technical operation from falling on the same person who is only accountable for domain-level content responsibility.",
+      "application_to_design": "Present this component in two parts -- roles, then the domain-to-unit ownership assignment -- stated as what must exist, with no publication workflow and no phased rollout sequence attached.",
+      "supports": "governance_model",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-13",
+      "order": 28,
+      "paragraph_job": "define",
+      "claim": "The section closes by pointing to Chapter 5 for how this blueprint gets implemented -- sequencing, phased rollout, and next-phase build strategy -- rather than prescribing it here.",
+      "grounds": "The phased governance rollout plan present in the earlier full-report source is excluded from this section's scope by this session's writing contract, and assigned instead to Chapter 5, per Boss's explicit decision.",
+      "warrant": "Because this section's job is to state the finished blueprint, not to plan its execution, closing with a forward pointer keeps the section within its stated boundary and avoids duplicating content that is Chapter 5's responsibility.",
+      "application_to_design": "End the section with a brief statement that implementation planning, sequencing, and next-phase development strategy for this blueprint are addressed in Chapter 5.",
+      "supports": "forward_pointer_chapter5",
+      "provenance": "recovered"
+    }
+  ]
+}
