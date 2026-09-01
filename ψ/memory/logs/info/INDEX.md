@@ -1,5 +1,8 @@
 # Info Log Index
 
+- [2026-09-01 08:44] 🚩 **Stage 1 `grounds` must carry full supporting detail, not a compressed claim (Important)**: Lane B (verbalize-from-argument-map) still loses fidelity if Stage 1's `grounds` field is written as a condensed core claim instead of real supporting material (numbers, findings, framework contents, design rationale) — Stage 3 has nothing to expand from. Fix belongs at Stage 1 (still gated by Stage 2 approval), not by reopening raw-source access at Stage 3. Applies immediately to CRDB full-report §2.3.
+  - File: ψ/memory/logs/info/2026-09-01_08-44_stage1-grounds-must-carry-full-supporting-detail.md
+
 - [2026-08-29 13:00] 🚩 **Writing-TH Harness Architecture (Important)**: Closed loop between `writing-th` v5.0.0 (created 2026-03-13, upgraded 2026-08-28) and `style-capture` sharing one style pack — forward arc (7 stages, binding script + merge gates) drafts in isolation, return arc (6 stages) promotes hand-edit corrections back into the pack. Tranche 1 shipped/verified 2026-08-25; tranche 2 (11 items) proposed, not built.
   - File: ψ/memory/logs/info/2026-08-29_13-00_writing-th-harness-architecture.md
 

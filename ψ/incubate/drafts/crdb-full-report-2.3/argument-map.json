@@ -1,0 +1,203 @@
+{
+  "schema_version": "1.0",
+  "section_id": "report-crdb-full-report-2.3",
+  "governing_thought": "The consultants did not design NCAIF's conceptual structure by translating requirements straight into a sitemap; they built it as a layered, testable argument. A governance-first platform vision, four internationally validated risk/adaptation frameworks, and cognitive-load-reducing UX design principles set the initial design criteria. Two rounds of stakeholder participation -- internal, then external -- refined the scope, pathway, and governance mechanisms against real operational and use constraints. Two rounds of independent evaluation, plus a forensic evidence audit, then confirmed the resulting navigation was sound while precisely locating where the underlying content was not yet ready to support it. Each stage's findings fed the next, so the final structure carries a documented chain of reasoning rather than a single design pass.",
+  "narrative_scqa": {
+    "situation": "The consultants set out to draft a conceptual data structure for national climate-adaptation information, grounded first in DCCE's own governance-vs-display platform vision, in four international risk and adaptation frameworks, and in established user-experience design principles.",
+    "complication": "A structure built only from top-down frameworks and principles risks not matching how Thai users actually make decisions, not surfacing data-governance needs the frameworks do not name on their own, and not revealing whether the department's existing assets can actually support the structure once it is built.",
+    "question": "How did the drafting process test and refine the initial structure against real user needs, real operational constraints, and real content readiness before it was finalized?",
+    "answer": "Through two stakeholder-participation rounds -- internal focus groups, then an external public hearing -- that refined the pathway, scope, and governance mechanisms, followed by two evaluation rounds plus a forensic evidence audit that validated the navigation design while precisely identifying which sections lacked ready content -- turning the draft from a principled hypothesis into a structure with a documented, testable basis."
+  },
+  "governing_thought_components": [
+    "platform_vision_grounding",
+    "international_frameworks_and_adaptation_cycle",
+    "ux_and_architecture_decisions",
+    "initial_draft_scope",
+    "internal_participation_refinement",
+    "external_participation_refinement",
+    "evaluation_and_maturation"
+  ],
+  "approval": {
+    "status": "approved",
+    "approved_by": "Boss",
+    "approved_at": "2026-09-01T09:15:00+07:00"
+  },
+  "argument_units": [
+    {
+      "unit_id": "arg-01",
+      "order": 1,
+      "paragraph_job": "define",
+      "claim": "The drafting process was grounded in the department's own established distinction between a web platform -- the visible layer people interact with -- and a data platform -- the governance and storage layer beneath it -- so the consultants designed the structural data model as the platform's underlying support before designing the visible navigation and content.",
+      "grounds": "Per the Business Objective / Platform Rationale (work package 1): the department's own commissioning documents describe a public-facing 'Data Hub dashboard' ask, which is in substance a web-platform ask -- a display and interaction surface. The department's separately named problem, that climate-adaptation data is scattered across sources with no shared inventory or ownership model, is a data-platform-shaped problem that a well-designed dashboard cannot resolve on its own: a web platform is a producer and consumer of data, not a system of record or governance layer, so feeding a well-designed dashboard from still-fragmented, still-ungoverned sources faithfully displays that fragmentation. This is the exact 'Frankenstein Dashboard' failure mode the department's own gap-analysis work had already named, where the same indicator disagrees across enhanced tools because it is not computed once in a shared data layer -- named as phase-1 success criterion 4 at the department's own internal focus-group session (FGD3). The department's long-term vision is a governed, authoritative national source of climate-adaptation data and knowledge, in direct service of its own core mandate as the country's climate information and knowledge hub (FGD3: 'the department's core output is information and knowledge'); phase-1 success criteria set alongside that vision include closing the governance-capability gap through a ratified divisional data-governance committee, and closing a metadata-coverage gap so the standard explicitly covers PDF, web content, and infographic formats.",
+      "warrant": "If the drafting process had designed navigation and content categories without first anchoring to this governance-versus-display distinction, the resulting structure would risk becoming another visible layer sitting on ungoverned data -- repeating the Frankenstein-Dashboard failure the department had already diagnosed in its own existing tools.",
+      "application_to_design": "The structural draft was therefore built data-first: a governed conceptual model and shared data layer positioned as the foundation, with navigation and content design following from that layer rather than preceding it.",
+      "supports": "platform_vision_grounding",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-02",
+      "order": 2,
+      "paragraph_job": "define",
+      "claim": "To set the boundaries of what the conceptual data model needed to capture, the consultants reviewed four international frameworks and derived a shared four-stage adaptation cycle that became one of the structure's two organizing axes.",
+      "grounds": "IPCC (2022) provides a risk framework decomposing risk into hazard, exposure, and vulnerability, paired with an iterative risk-management process of risk assessment, planning and implementation, and monitoring, evaluation, and adjustment. The World Meteorological Organization (2014) Climate Services framework sequences from observation and forecasting through to user-responsive information services, built through continuous co-development with users. UNFCCC's National Adaptation Plan reporting logic covers the context of hazard, impact, and vulnerability; prioritization of adaptation actions; progress of implementation; and monitoring and evaluation. ISO 14090/14091 (International Organization for Standardization, 2019) sets out an adaptation-management cycle -- establishing context, assessing risk, appraising options, implementing, and monitoring and reviewing -- with explicit emphasis on traceable method and accountability. Despite differing origins (a science body, a meteorological-service body, a UN reporting mechanism, and a management-systems standard), all four converge on the same four-stage structure: risk and impact assessment; adaptation planning; implementation; and monitoring and evaluation.",
+      "warrant": "Four frameworks from different institutional traditions -- risk science, meteorological-service design, UNFCCC reporting practice, and management-systems standardization -- converging independently on the same four-stage cycle gives that cycle cross-domain legitimacy as an organizing structure, rather than reflecting one team's ad hoc categorization.",
+      "application_to_design": "The consultants adopted this four-stage adaptation cycle as one core axis of the conceptual data model, so that any climate-adaptation dataset or service can be located by which stage of the cycle it serves.",
+      "supports": "international_frameworks_and_adaptation_cycle",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-03",
+      "order": 3,
+      "paragraph_job": "define",
+      "claim": "Because a scientifically accurate categorization alone does not guarantee usability, the consultants paired the adaptation-cycle axis with user-experience design principles, and translated both into concrete architecture decisions governing how sensitive content would be organized and disclosed.",
+      "grounds": "Two UX principles were applied. Information Scent, drawn from Information Foraging Theory (Chi, Pirolli, Chen and Pitkow, 2001), holds that users choose their search path based on cues such as labels, contextual descriptions, and grouping that match their own mental model of the problem; when that scent is buried under multiple layers or expressed in unfamiliar technical terms, users hesitate, become confused, and abandon the search. Progressive Disclosure (Nielsen, 2006) reduces cognitive load by presenting necessary, easily understood summary information first, then allowing users to drill into deeper detail, advanced parameters, or raw datasets as needed, without diminishing the value or completeness of the underlying data for expert users. These principles were carried into three locked architecture decisions from the design-decision record: a 'mandate-first' information architecture, reserving the top navigation level strictly for the national adaptation narrative rather than user-specific silos, justified by benchmark analysis against peer platforms (Japan's A-PLAT, Germany's Klimadapt) showing that silo-first navigation causes structural fragmentation over time; a 'transparency with armor' principle, requiring every high-impact, sensitive data asset -- such as a future flood-risk map -- to be structurally bundled with its scientific caveats and methodology and with its corresponding adaptation options, rather than presented as a standalone map; and a tiered-access decision distinguishing open visualizations from registration-gated raw-data downloads, preventing ungoverned reuse of raw risk data while keeping the risk information itself fully visible and undisclosed by nothing.",
+      "warrant": "Pairing a scientifically grounded axis with cognitive-load-reducing UX principles, then hard-coding sensitivity handling into structural rules -- bundling caveats with high-impact data, tiering downloads -- rather than leaving it to case-by-case editorial judgment, is what let the draft address a usability requirement and a disclosure-risk requirement with the same structural decision.",
+      "application_to_design": "NCAIF's information architecture combines the adaptation-cycle axis with a simplified summary layer for general users and a fuller scientific layer immediately beneath it, and applies the caveat-bundling and tiered-access rules to every sensitive dataset by structural default rather than by ad hoc review.",
+      "supports": "ux_and_architecture_decisions",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-04",
+      "order": 4,
+      "paragraph_job": "define",
+      "claim": "Drawing on the frameworks above together with early demand-gathering through in-depth interviews and the first internal focus group, the consultants scoped the first draft of the conceptual data model into four content domains built around what users said they needed to make decisions, not simply around what data already existed.",
+      "grounds": "Early demand-gathering found that users wanted the structure to function as a decision-support tool, not simply a document archive or raw-data repository: they asked for ready-to-use summarized datasets, concrete adaptation-measure use cases matched to their local context, a space to check verified reference datasets, and plain-language explanations of data limitations and uncertainty. The same process surfaced structural problems in the existing data landscape -- inconsistent terminology and definitions across agencies, delayed and incomplete datasets, and a need to communicate the same underlying data differently for policymakers, operational staff, and the public. From these findings, the consultants set three design criteria -- organize information around the user's decision mission, communicate uncertainty transparently, and keep a path open to connect technical data services under one shared data core -- and grouped the first-phase content into four domains: foundational climate data (climate conditions, drivers of change, future projections, and the underlying science needed to understand risk); sector- and area-level risk and adaptation data (linking risk assessment, impact, and adaptation measures through maps, risk profiles, and accessible narratives); loss-and-damage data (connecting events, impacts, and losses across dimensions to close the gap between projected risk and what actually occurred); and decision-support datasets and knowledge products (summarizing the other three domains into decision-ready material, policy documents, and case studies for non-technical users).",
+      "warrant": "Grounding the first draft's scope in what users said they needed to decide, cross-checked against documented structural problems such as terminology inconsistency and dataset delay, rather than in an inventory of what data the department already held, is what let the draft break from a traditional document-archive-style website toward a decision-oriented information structure from its first iteration.",
+      "application_to_design": "This four-domain grouping became the first-phase content scope carried into the subsequent drafting and refinement rounds, distinct from -- and earlier than -- the finalized structure produced later in the chapter.",
+      "supports": "initial_draft_scope",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-05",
+      "order": 5,
+      "paragraph_job": "define",
+      "claim": "The consultants tested the first draft against the department's own operational reality through an internal focus-group round with operational staff and executives, producing three specific refinements addressed in the units that follow.",
+      "grounds": "The round convened the department's own operational staff, who use its current systems daily, alongside executives who set organizational direction -- a deliberate pairing intended to surface both day-to-day usability gaps and mandate-level scope gaps in the same session, neither of which the literature review or the initial demand interviews had reason to catch on their own.",
+      "warrant": "Because this round drew on operational staff who use the department's current systems daily and on executives who set organizational direction, it surfaced gaps that neither the literature review nor the initial demand interviews had caught -- specifically, usability across a wider range of user sophistication, and the absence of any data-quality or ownership mechanism in the first draft.",
+      "application_to_design": "The three refinements below were carried forward as structural requirements for the next design iteration, not treated as optional feedback.",
+      "supports": "internal_participation_refinement",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-05a",
+      "order": 6,
+      "paragraph_job": "diagnose",
+      "claim": "The internal round redesigned the user pathway to match executives' expectation that the platform serve as a direct, clearly navigable channel for both basic-background users and sector- or area-level policy and planning staff.",
+      "grounds": "The site structure was adjusted so that it directly supports users with only basic background knowledge, as well as sector- or area-level policy and planning staff such as officials at local administrative organizations -- widening the pathway's target range rather than designing it around a single assumed sophistication level.",
+      "warrant": "A pathway designed for only one sophistication level would have left either general staff or specialist local-administration planners without a workable route through the platform.",
+      "application_to_design": "The broadened, staged navigation path from this refinement was carried forward as a structural requirement for the next design iteration.",
+      "supports": "internal_participation_refinement",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-05b",
+      "order": 7,
+      "paragraph_job": "diagnose",
+      "claim": "The internal round expanded the draft's content scope to cover the full adaptation cycle, from risk assessment through to monitoring and evaluation, rather than a partial slice of it.",
+      "grounds": "The draft structure was widened to cover the full adaptation cycle so that it could serve the department's mandate completely, rather than leaving stages such as monitoring and evaluation underrepresented relative to risk assessment and planning.",
+      "warrant": "A structure covering only part of the adaptation cycle would not fully serve the department's own mandate, which the four-stage cycle adopted from the international frameworks was meant to represent in full.",
+      "application_to_design": "Full-cycle content coverage was carried forward as a structural requirement for the next design iteration.",
+      "supports": "internal_participation_refinement",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-05c",
+      "order": 8,
+      "paragraph_job": "diagnose",
+      "claim": "The internal round added data-governance mechanisms that the first draft had not included: a shared glossary, a joint inter-agency data-quality process, defined governance roles, and a data-classification scheme.",
+      "grounds": "The consultants developed a glossary and a joint inter-agency approach to checking data quality, defined governance-specific roles such as a data owner, and introduced a data classification scheme to support both open and restricted data exchange.",
+      "warrant": "None of these governance mechanisms existed in the first draft, which had been scoped from user demand and international frameworks alone; only operational staff and executives working with the department's existing data landscape surfaced the absence of ownership, quality, and classification mechanisms.",
+      "application_to_design": "An explicit governance layer -- glossary, data ownership, classification -- was integrated into the structure itself as a structural requirement, rather than treated as a separate later addition.",
+      "supports": "internal_participation_refinement",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-06",
+      "order": 9,
+      "paragraph_job": "define",
+      "claim": "The consultants then tested the refined draft against external operating constraints through a public-hearing round with external agencies and specialists, producing three further refinements addressed in the units that follow.",
+      "grounds": "This round drew participants from outside the department -- the eventual data suppliers and consultation partners who would need to operate against the resulting standard -- so it tested the draft against real operating constraints such as capacity and risk literacy, distinct from the internal round's test against the department's own expectations.",
+      "warrant": "This round's contributions are distinct from the internal round's because they came from the eventual data suppliers and consultation partners outside the department, so they tested the draft against real operating constraints -- capacity and risk literacy -- rather than against the department's own internal expectations.",
+      "application_to_design": "The three refinements below were incorporated into the structure without reopening the governance mechanisms the internal round had already established.",
+      "supports": "external_participation_refinement",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-06a",
+      "order": 10,
+      "paragraph_job": "diagnose",
+      "claim": "The external round preserved the analytical detail needed for area-level risk assessment while simplifying complexity specifically within the policy-level user pathway, rather than reducing detail uniformly across all users.",
+      "grounds": "The consultants preserved the level of detail necessary for area-level risk assessment while simplifying complexity specifically within the policy-level user pathway, so that the level of detail matched the intended use rather than being uniformly reduced across all users.",
+      "warrant": "Uniformly reducing detail across all users would have undermined area-level risk assessment for technical users to serve policy-level users who did not need that depth in the first place.",
+      "application_to_design": "The resulting structure retains full analytical depth in the technical pathway while keeping the policy-level pathway calibrated to its own decision-making needs.",
+      "supports": "external_participation_refinement",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-06b",
+      "order": 11,
+      "paragraph_job": "diagnose",
+      "claim": "External participants raised a risk-literacy concern -- that sensitive risk datasets could be used in decisions without their limitations being understood -- which reinforced the access-control classification scheme already introduced in the internal round.",
+      "grounds": "Participants raised the concern that sensitive risk datasets could be used to support decisions without their limitations being understood, which fed directly into the data classification scheme already introduced in the internal round.",
+      "warrant": "An external, independent concern landing on the same classification mechanism the internal round had already proposed is confirming evidence that the mechanism addresses a real risk, not a mechanism invented without an identified need.",
+      "application_to_design": "The access-control concern reinforces, rather than duplicates, the classification mechanism introduced in the internal round.",
+      "supports": "external_participation_refinement",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-06c",
+      "order": 12,
+      "paragraph_job": "diagnose",
+      "claim": "The external round scaled back the minimum data-management standard to match the staffing and budget capacity of partner network agencies, starting from the minimum metadata set needed in the first phase.",
+      "grounds": "The consultants scaled back the minimum data-management rules to fit the staffing and budget constraints of partner network agencies, beginning from the minimum metadata set needed in the first phase, so that data exchange would actually occur in practice rather than remain a standard no partner agency could meet.",
+      "warrant": "A minimum standard partner agencies cannot practically meet would not produce actual data exchange, regardless of how complete it looked on paper.",
+      "application_to_design": "The resulting structure balances retained analytical depth against a minimum viable data standard calibrated to partner capacity, rather than a maximal standard that would go unmet.",
+      "supports": "external_participation_refinement",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-07",
+      "order": 13,
+      "paragraph_job": "define",
+      "claim": "The consultants tested the refined structure's maturity through two evaluation rounds against a shared set of representative personas, plus an independent forensic audit of the evidence behind each drafted section, using two different evaluation methods to test two different dimensions of readiness.",
+      "grounds": "The three personas were not department officials interviewed directly; they were literature- and benchmark-derived archetypes -- drawn from real-world use cases at organizations such as the Asian Development Bank and the EU's Copernicus Climate Change Service -- deliberately chosen to represent distinct information needs: a policy maker needing budget- and risk-justification evidence, a scientist needing clean data access, model-grade quality control, and uncertainty transparency, and a field-level practitioner needing pre-calculated, sector-specific indicators rather than raw data to interpret herself. The first evaluation round applied a 'User Journey Architecture Audit' method against an early draft, testing whether the sitemap's navigation gave each persona the information scent to find what they needed. The second, later evaluation round applied a 'Persona-Capability Friction Analysis' method against a more advanced draft, using the same three personas but shifting the test from navigation to whether the actual content and data behind each destination page were ready to support it. A separate, independent forensic audit checked how much of the drafted section content was traceable to real, verified project evidence rather than placeholder text.",
+      "warrant": "Testing the same three personas twice, once for navigation and once for content readiness, plus checking the underlying evidence independently of either persona-based method, is what let the evaluation phase distinguish a navigation problem from a content-production problem rather than conflating the two.",
+      "application_to_design": "The results of these three evaluation passes are set out in the units that follow.",
+      "supports": "evaluation_and_maturation",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-07a",
+      "order": 14,
+      "paragraph_job": "diagnose",
+      "claim": "The first evaluation round found strong navigational fit across all three personas, confirming that the sitemap successfully separates technical climate science from decision-ready content.",
+      "grounds": "All three personas registered high information scent and strong structural fit against the early draft, producing an overall persona-fit rating in the high range. The evaluation confirmed the navigation design correctly separates technical climate science from decision-ready content, with one minor refinement flagged: the draft's adaptation-measures section needed a case-studies and community-forum element to fully match the field-level practitioner's need for peer co-creation.",
+      "warrant": "A high persona-fit score across three personas representing distinct information needs -- executive-summary, technical-data, and sector-specific -- indicates the navigation design, not just one persona's path through it, was sound.",
+      "application_to_design": "The navigation structure was treated as validated at this stage, with only the case-studies/forum refinement carried into the next draft.",
+      "supports": "evaluation_and_maturation",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-07b",
+      "order": 15,
+      "paragraph_job": "diagnose",
+      "claim": "The second evaluation round, applying the same three personas to a more advanced draft, found the navigation itself remained sound but surfaced a 'grounding gap': specific sections were structurally planned for but not yet backed by web-ready content.",
+      "grounds": "The second round shifted its test from navigation to content and data readiness behind each page. It found that budget and legal evidence, sector-specific derived indicators, and provincial-level narrative content for all 77 provinces were structurally planned for but not yet backed by web-ready content -- creating a risk of empty or broken-feeling pages if the structure were built as drafted. This round produced a prioritized remediation list rather than a structural redesign: harvesting internal finance and legal documents into a structured database, synthesizing derived sector indicators, and commissioning narrative content for the provincial pages.",
+      "warrant": "Because the same navigation structure that scored well in the first round was retested and again found sound in the second round, the gap identified here is a content-production gap, not evidence that the navigation design itself needed revision.",
+      "application_to_design": "This evaluation phase converted into a content-production and data-harvesting workplan attached to the structure, redirecting effort to closing the specific, evidence-confirmed content gaps rather than to redesigning navigation.",
+      "supports": "evaluation_and_maturation",
+      "provenance": "recovered"
+    },
+    {
+      "unit_id": "arg-07c",
+      "order": 16,
+      "paragraph_job": "diagnose",
+      "claim": "An independent forensic audit of the evidence behind each drafted section found roughly 95 percent of the structure grounded in verified project assets, and identified the same specific content gap the second evaluation round had found through an entirely separate method.",
+      "grounds": "The forensic audit checked the mapping between draft sections and their supporting evidence, finding it approximately 95 percent grounded in verified project assets and replacing earlier generic placeholders with specific technical-report citations. It confirmed the department already possessed much of the technical groundwork needed, including province-level risk indices for all 77 provinces, but flagged that narrative prose to accompany that data did not yet exist for the provincial-profile sections -- the same gap the second evaluation round had independently identified through persona-based testing rather than evidence auditing.",
+      "warrant": "Two independent evaluation methods -- persona-based usability testing and evidence-traceability auditing -- converging on the same specific gap, the absence of provincial narrative content, is a stronger signal than either method alone, and shows the evaluation process was diagnosing a genuine content-readiness limit rather than surfacing method-specific noise.",
+      "application_to_design": "The convergence across both methods confirmed the provincial-narrative gap as a real, prioritized item in the content-production workplan, rather than an artifact of one evaluation method's particular framing.",
+      "supports": "evaluation_and_maturation",
+      "provenance": "recovered"
+    }
+  ]
+}
