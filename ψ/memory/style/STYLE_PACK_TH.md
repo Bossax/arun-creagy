@@ -1,5 +1,5 @@
 # Style-Pack: TH (Thai institutional writing, repo-wide)
-**Samples Learnt**: 27 (Technical Precision, Readability, Analytical Density, and Structural Flow) | **Last Updated**: 2026-08-31 | **Lexicon**: LEXICON_TH.json v4.5, 80 rules
+**Samples Learnt**: 28 (Technical Precision, Readability, Analytical Density, and Structural Flow) | **Last Updated**: 2026-09-02 | **Lexicon**: LEXICON_TH.json v4.6, 84 rules
 
 ## 1. Core Kernel (80/20)
 
@@ -12,7 +12,7 @@ These are the small set of rules that generate most of the desired NCAIF prose q
 5. **Product Naming** — Describe the deliverable, owner, or service artifact, not only the activity.
 6. **One Paragraph, One Main Job** — Each paragraph should mainly define, diagnose, compare, or conclude. Do not mix multiple jobs unless the section explicitly requires it.
 7. **Thai Institutional Voice Over Design-Memo Tone** — Rewrite any sentence that sounds like a translated design memo, software spec, or English argumentative skeleton.
-8. **Active Institutional Agency When Actor Is Known** — When the actor is already known, state the duty directly. Prefer `กรมฯ จัดทำ...`, `บริการนี้ทำหน้าที่...`, `หน่วยงานใช้...` over passive or pseudo-passive framing such as `ถูกออกแบบให้...`.
+8. **Active Institutional Agency When Actor Is Known** — When the actor is already known, state the duty directly. Prefer `กรมฯ จัดทำ...`, `บริการนี้ทำหน้าที่...`, `หน่วยงานใช้...` over passive or pseudo-passive framing such as `ถูกออกแบบให้...`. **Nuance, Boss confirmed 2026-09-02**: this does not mean naming the actor at the start of every single sentence in a run — when the same actor (e.g. `คณะที่ปรึกษา`) already opens the topic, repeating the name at the head of every following sentence in that run reads mechanical. Name it once per topic/paragraph-run, then let subsequent sentences in the same run drop or pronoun-reference it.
 9. **Banish Direct English Jargon** — Never use direct English operational jargon in audience-facing Thai prose when a functional Thai equivalent exists.
 10. **Simplified Technical Prose** — Remove prestige descriptors like `ขั้นสูง`, `ที่สำคัญที่สุด`, or similar verbal inflation unless the distinction is materially necessary.
 11. **Elaborate, Don't Drop, Clarifying Nouns** — Thai prose keeps the noun that explains another noun rather than compressing it out. A bare abstract noun left unexplained (e.g. `แสดงเงื่อนไข...` with no statement of which conditions) reads as vague, not concise. Boss, 2026-08-31: "Thai language loves to be repetitive, dropping nouns that elaborate other nouns is bad style."
@@ -144,6 +144,10 @@ These rules matter, but they should not compete with the Core Kernel during earl
 | "ฐานราคากลาง" | "ฐานข้อมูลราคากลางสำหรับการซ่อมแซมและสร้างทดแทน" | Inaccurate shorthand. Use full official title (Standardized Replacement Cost Catalogs). |
 | "งานประจำวัน" (in disaster management) | "การปฏิบัติงานในพื้นที่" / "การเผชิญเหตุ" | Disaster response is not routine daily work ('งานประจำวัน'); collocation error in disaster management. |
 | "แกน" (when referring to subsystem/module) | "องค์ประกอบ" / "ส่วนประกอบ" / "ข้อมูลหลัก" | "แกน" is awkward and rarely used for modular framework components. |
+| "ระดับภาค" / "ระดับสาขา" (when the referent is a category, not a geographic level) | "รายภาค" / "รายสาขา" | "ระดับ" wrongly implies a hierarchical/geographic level; "ราย-" is the correct Thai collocation for "per-category". Does not apply to genuine geographic levels (ระดับจังหวัด, ระดับภูมิภาค). Boss, 2026-09-02. |
+| "การนำทาง" | "เส้นทางการใช้งาน" | Literal UX/software-spec jargon (navigation); Thai institutional prose names the user's path instead. Boss, 2026-09-02. |
+| "โครงสร้างสารสนเทศของเว็บไซต์" (when meaning the sitemap artifact) | "ผังเว็บไซต์" | Abstracted paraphrase drifted from the project's established plain term for this artifact. Boss, 2026-09-02. |
+| "ประตูทางเข้า" | "จุดเริ่มต้นของเส้นทางการใช้งาน" | Extension of the existing "ประตูหลัก" rule (front-door/gateway metaphor) to the role-based-entry-point sense. Does not apply to real engineering structures like "ประตูระบายน้ำ" (floodgate), which is a literal technical term, not a metaphor. Boss, 2026-09-02. |
 
 ### Technical Terminology Mapping
 * **Climate Change** -> การเปลี่ยนแปลงสภาพภูมิอากาศ (Climate Change)

@@ -1,6 +1,6 @@
 {
   "context": "TH",
-  "version": "4.5",
+  "version": "4.6",
   "supersedes": [
     "NCAIF-Institutional v3.2",
     "TOR5.5-Articles v1.0"
@@ -464,6 +464,35 @@
       "banned": "ความทันเวลา",
       "preferred": "ความทันสมัย",
       "reason": "Baseline risk data quality is judged by currency/modernity ('ความทันสมัย'), not punctuality ('ความทันเวลา').",
+      "kind": "literal",
+      "scope": "report"
+    },
+    {
+      "banned": "ระดับภาค / ระดับสาขา (เมื่อหมายถึงหมวดหมู่หรือสาขางาน ไม่ใช่พื้นที่ภูมิศาสตร์)",
+      "preferred": "รายภาค / รายสาขา",
+      "reason": "Boss confirmed 2026-09-02 (ch2 §2.3/§2.6 revision pass): 'ระดับ' wrongly implies a hierarchical/geographic level when the referent is a category like สาขา (sector); 'ราย-' is the correct Thai collocation for 'per-category'. Does not apply when the noun is genuinely a geographic level (e.g. ระดับจังหวัด, ระดับภูมิภาค).",
+      "kind": "regex",
+      "scope": "universal",
+      "pattern": "ระดับ(ภาค|สาขา)"
+    },
+    {
+      "banned": "การนำทาง",
+      "preferred": "เส้นทางการใช้งาน",
+      "reason": "Boss confirmed 2026-09-02 (ch2 §2.6 revision pass): 'การนำทาง' reads as literal UX/software-spec jargon (navigation); 'เส้นทางการใช้งาน' is the natural Thai institutional phrasing for the same concept. Same family as the existing English-jargon-ban rules.",
+      "kind": "literal",
+      "scope": "report"
+    },
+    {
+      "banned": "โครงสร้างสารสนเทศของเว็บไซต์",
+      "preferred": "ผังเว็บไซต์",
+      "reason": "Boss confirmed 2026-09-02 (ch2 §2.6 revision pass): the draft drifted from the project's established plain term ('ผังเว็บไซต์' -- sitemap) when referring to the sitemap artifact; restore the correct term rather than the abstracted paraphrase.",
+      "kind": "literal",
+      "scope": "report"
+    },
+    {
+      "banned": "ประตูทางเข้า",
+      "preferred": "จุดเริ่มต้นของเส้นทางการใช้งาน",
+      "reason": "Extension of the existing 'ประตูหลัก' -> 'โครงสร้างหลัก, ศูนย์กลาง...' rule (same literal front-door/gateway metaphor) to the role-based-entry-point sense seen in ch2 §2.6 (2026-09-02). Does not apply to real engineering structures such as 'ประตูระบายน้ำ' (floodgate) -- that is a literal technical term, not a metaphor.",
       "kind": "literal",
       "scope": "report"
     },
