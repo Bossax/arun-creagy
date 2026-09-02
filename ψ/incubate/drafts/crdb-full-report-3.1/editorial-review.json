@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "rubric_version": "6.0.0",
+  "draft_sha256": "c6be1058d02ee5cf10e1e65ac472f86878208f2aa65419201971b63f304119e6",
+  "contract_sha256": "67c38a6ca092560cbc6d27a3dc8f02c9f9a9c7377e000eb46100e3fb8474d2a3",
+  "profile": "report",
+  "reviewer_mode": "independent",
+  "assurance": "standard",
+  "reviewer": "independent-editorial-reviewer (Stage 5, writing-th v6.2 harness)",
+  "reviewed_at": "2026-09-02T08:39:50Z",
+  "dimensions": {
+    "section_job": {
+      "verdict": "pass",
+      "evidence": "Draft stays inside the approved 5.3.1 job: it reviews and synthesizes existing data assets/products (dept risk-map system para 19, dept website para 21, external-agency systems para 23), states the three systemic gaps (para 25), and closes on design implications (para 27). No interview/workshop process detail (excluded to 3.2), no synthesis of the 8 core information services (excluded to 3.3), and no detailed dataset/dictionary inventory (excluded to 3.4) appears anywhere in the draft."
+    },
+    "audience_decision_value": {
+      "verdict": "pass",
+      "evidence": "Every asset category is tied back to a design consequence for the acceptance committee/department/system-developer audience: Table 3's 'นัยยะต่อโครงการ' column, and prose paragraphs 19/21/23/25 each end on what the finding means for โครงสร้างข้อมูลฯ design (scope boundary for the risk-map index, discovery-path design for the website, metadata/access-rights design for external systems, and the closing paragraph's explicit list of downstream design moves: reference-dataset registry, minimum metadata standard, discovery paths, existing-infrastructure-as-rail)."
+    },
+    "evidence_payload": {
+      "verdict": "pass",
+      "evidence": "Each substantive unit carries claim + concrete evidence + consequence + mechanism, e.g. para 19: claim (risk-map system is a mature, accepted asset) + evidence (provincial level, 25x25km grid, relative not absolute index) + consequence (suited to overview/prioritization, not fine-grained decisions) + mechanism/application (scope-boundary and interlinkage design). Para 23 similarly chains differing update cadence/access rules across external systems to a concrete misuse risk and a metadata/governance response."
+    },
+    "causal_logic": {
+      "verdict": "pass",
+      "evidence": "Evidence -> interpretation -> consequence -> design response chains hold without reversed causality across paragraphs 17, 19, 21, 23, 25, 27; no decorative transition connects unrelated claims. E.g. para 25's three-part gap synthesis is explicitly traced back to evidence already established in paras 19/21/23 rather than asserted fresh."
+    },
+    "argument_fidelity": {
+      "verdict": "pass",
+      "evidence": "No argument-map.json exists for this section; transformation_mode is 'synthesis' and Stage 2 was correctly skipped per the writing-th skill's pure-polish rule, per the task brief for this review. In its absence, the contract's required_concepts function as the governing-thought anchor: all three (Thailand not starting from zero; the core problem is absence of a discovery/interpretation framework, not absence of data; the section's role is making the landscape visible/auditable, not declaring integration complete) appear near-verbatim in the prose (paras 15, 17, 27 respectively), and no claim in the draft is unsupported by the contract's inclusions."
+    },
+    "reader_facing_appropriateness": {
+      "verdict": "pass",
+      "evidence": "No prompt residue or fake diagrams found. However, internal artifact locators that the contract explicitly bans do survive into reader-facing prose -- see finding EDIT-1 (TOR clause numbers in the opening sentence, para 21, and the closing paragraph). This is recorded as an unresolved major finding rather than failing the dimension."
+    },
+    "terminology_agency": {
+      "verdict": "pass",
+      "evidence": "โครงสร้างข้อมูลฯ / NCAIF short-form substitution is applied correctly and consistently in all prose paragraphs (NCAIF only survives inside Table 3, which the contract explicitly exempts from editing). 'รายงานฉบับกลาง' is used correctly and consistently (never corrupted to 'รายงานระหว่างกลาง'). However, three other terminology/agency rules are not honored -- see findings EDIT-2 (consultant never named as sentence subject of review/synthesis/gap-analysis actions), EDIT-4 (banned intensifier 'อย่างต่อเนื่อง' survives once), and EDIT-5 ('กรม สส.' short form never used; 'กรมฯ' used instead throughout prose). Recorded as findings rather than a dimension fail."
+    },
+    "source_fidelity": {
+      "verdict": "pass",
+      "evidence": "Checked against output/draft_final_report/5.3/5.3.1 ทบทวนและสังเคราะห์....md (contract source_paths entry) with a full sequence diff. Table 3 is byte-identical to the source (compliant with the 'copy verbatim' rule). All required concepts, the quantitative grid detail (25x25km, provincial level, relative index), the three systemic gaps, and the strategic-role framing survive. Divergences from source are limited to sanctioned style normalizations already covered elsewhere (NCAIF->โครงสร้างข้อมูลฯ in prose, passive->active voice, dropped 'อย่างชัดเจน' intensifiers, curly->straight quotes, one negation-contrast sentence in para 21 rewritten to remove 'ไม่ใช่เพียง...แต่คือ' AI-tell scaffolding) plus the unresolved carry-overs captured in the findings below (TOR locators, 'กรมฯ', 'อย่างต่อเนื่อง' all pre-existed in source and were not corrected during polish despite the contract requiring it)."
+    },
+    "form_readability": {
+      "verdict": "pass",
+      "evidence": "Table 3 is placed and formatted correctly. However, the three systemic gaps in paragraph 25 are rendered as one continuous prose paragraph ('ด้านแรกคือ...ด้านที่สองคือ...ด้านที่สามคือ...') rather than the ordered/numbered list the contract explicitly requires (report_specific_rules item 6 and required_structures item 2) -- see finding EDIT-3. Recorded as an unresolved major finding rather than a dimension fail."
+    }
+  },
+  "findings": [
+    {
+      "severity": "major",
+      "status": "unresolved",
+      "location": "Line 1 ('จุดประสงค์ของกิจกรรมตาม TOR ข้อ 5.3.1 คือ...'), line 21 ('...สอดคล้องกับข้อค้นพบใน TOR ข้อ 5.2.2...'), line 27 ('บทบาทเชิงยุทธศาสตร์ของข้อ 5.3.1 จึง...')",
+      "issue": "Internal TOR clause locators remain in reader-facing prose, including the opening sentence of the whole section. The contract's report_specific_rules item 4 and evidence_policy explicitly prohibit citing internal document positions such as TOR clause numbers, and the exclusions list separately excludes 'ตำแหน่งเอกสารภายใน เลขข้อ TOR และเลขหน้าของร่างเดิม'. These three instances are carried over unchanged from the source document; the polish did not remove them despite the explicit contract instruction.",
+      "disposition": "Return to drafting for a targeted fix: replace 'ตาม TOR ข้อ 5.3.1' with a direct description of the section's purpose (no locator needed, since the contract's section_job already states it plainly), replace 'TOR ข้อ 5.2.2' with a direct reference to whatever finding/document is being invoked, and replace 'ข้อ 5.3.1' in the closing paragraph with 'งานทบทวนและสังเคราะห์นี้' or equivalent. Re-run Stage 5 on the corrected draft."
+    },
+    {
+      "severity": "major",
+      "status": "unresolved",
+      "location": "Entire draft (paras 1, 15, 17, 19, 21, 23, 25, 27) -- 'คณะที่ปรึกษา' does not appear anywhere in the document",
+      "issue": "report_specific_rules item 1 (the first-listed rule in the contract) requires 'คณะที่ปรึกษา' to be the grammatical subject of sentences describing the review, synthesis, and gap analysis, and explicitly says to avoid passive/agentless constructions and 'โครงการ' as the actor of academic work. The draft complies with the second half (no 'โครงการ' misused as an actor) but never satisfies the first half: every analytical sentence uses an impersonal/topic-fronted subject instead (e.g. 'ภาพรวมของภูมิทัศน์...สะท้อนชัดว่า...', 'ข้อค้นพบที่สำคัญประการแรกคือ...', 'การออกแบบโครงสร้างข้อมูลฯ...จึงจำเป็นต้องยืนยัน...'). This matches a previously flagged, named project-level pattern (consultant-as-actor) that this draft does not apply even once.",
+      "disposition": "Return to drafting to recast the review/synthesis/gap-analysis sentences with 'คณะที่ปรึกษา' as subject in at least the topic sentences of paras 15, 17, 19, 21, 23, 25, and 27 (e.g. 'คณะที่ปรึกษาพบว่า...', 'คณะที่ปรึกษาสังเคราะห์ว่า...'), consistent with the contract rule and existing project style guidance. Re-run Stage 5 on the corrected draft."
+    },
+    {
+      "severity": "major",
+      "status": "unresolved",
+      "location": "Line 25 (paragraph beginning 'สถานะและช่องว่างเชิงระบบที่ปรากฏซ้ำจากหลักฐานมีอย่างน้อยสามด้านที่สำคัญ...')",
+      "issue": "The contract's report_specific_rules item 6 and required_structures item 2 both explicitly require the three systemic gaps (metadata/dictionary standard, update-frequency/spatial-level differences, access and governance limits) to be presented as an ordered list with evidence-backed explanation, not as continuous prose. The draft renders all three inside a single unbroken paragraph using 'ด้านแรกคือ... ด้านที่สองคือ... ด้านที่สามคือ...' prose connectors rather than a numbered/ordered list -- unchanged from the source document's own prose treatment.",
+      "disposition": "Return to drafting to convert paragraph 25 into a numbered list of three items (metadata/dictionary standard; update-frequency and spatial-level differences; access and governance limits), each retaining its existing evidence and consequence, per required_structures item 2. Re-run Stage 5 on the corrected draft."
+    },
+    {
+      "severity": "minor",
+      "status": "accepted",
+      "location": "Line 17 ('...เชื่อมโยงกับระดับการตัดสินใจจริงได้อย่างต่อเนื่อง')",
+      "issue": "report_specific_rules item 9 explicitly bans 'อย่างต่อเนื่อง' (along with 'ได้จริง' and vague 'เชิง...' filler). This single instance survives unchanged from the source. It does not change the governing meaning of the sentence.",
+      "disposition": "Accepted for human review / low-priority copy-edit: drop 'อย่างต่อเนื่อง' or replace with a concrete qualifier at the next revision pass; does not block use of this draft."
+    },
+    {
+      "severity": "minor",
+      "status": "accepted",
+      "location": "Lines 15 (x2), 19, 21 -- all prose uses of 'กรมฯ' outside Table 3",
+      "issue": "report_specific_rules item 2 requires 'กรม สส.' as the short form after the first full mention ('กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม', which does appear once in para 15). Instead, the draft uses the generic 'กรมฯ' short form throughout, unchanged from the source, and never uses 'กรม สส.' anywhere in the document. Reader comprehension is not affected -- 'กรมฯ' unambiguously refers back to the department already named -- but the explicit contract terminology rule is not honored.",
+      "disposition": "Accepted for human review / low-priority copy-edit: swap 'กรมฯ' for 'กรม สส.' in the four prose occurrences (Table 3's two header uses of 'กรมฯ' are exempt as verbatim table content) at the next revision pass; does not block use of this draft."
+    }
+  ],
+  "mechanical_reviews": [],
+  "verdict": "fail"
+}

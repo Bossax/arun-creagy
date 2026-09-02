@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0",
+  "rubric_version": "6.0.0",
+  "draft_sha256": "3eb97a37551a3e1800c8e333e2e7c9fa88c96813b43a1c7a911f4d5df81ebf2e",
+  "contract_sha256": "785d95f917f2ff4a574da4a2e9faeb684751e558a1603abdb610c70c1d616031",
+  "profile": "report",
+  "reviewer_mode": "independent",
+  "assurance": "standard",
+  "reviewer": "independent-reviewer-stage5-round3",
+  "reviewed_at": "2026-09-02T00:00:00+00:00",
+  "tier1_argument_map_review": {
+    "warrant_soundness": "pass -- spot-checked arg-01, arg-02, arg-05, arg-06, arg-08, arg-10. Each warrant supplies reasoning distinct from its claim (e.g. arg-01: agency-specific use cases are not procurable/governable as platform commitments, so abstraction is what converts fragmented demand into an ownable service -- this is a mechanism, not a restatement of 'the consultant abstracted 8 services'; arg-06: a service requiring long-term external discipline-by-discipline partnership cannot be resourced the way an internally buildable service can, which is why 'deferred' rather than 'in progress' is the honest status -- again a mechanism, not a repeat of the claim; arg-10: the same integrated cross-domain capability both discharges DCCE's own reporting duty and strengthens the general platform, so building A-BTR support separately would duplicate Service 7's existing work -- a real inference, not a restated claim).",
+    "mece_coverage": "pass -- governing_thought_components = [synthesis_methodology, eight_core_services, abtr_enabling_pipeline, priority_tier]. arg-01 supports synthesis_methodology (1 unit); arg-02..arg-09 support eight_core_services (8 units, one per service, no overlap or duplication); arg-10 supports abtr_enabling_pipeline; arg-11 supports priority_tier. The four components address genuinely different questions (how services were built / what each service is / where A-BTR sits / which services go first) rather than restating one idea under different labels.",
+    "application_grounded": "pass -- spot-checked arg-06 and arg-08. arg-06's application_to_design (state deferred status, name both institutional entry points, avoid conflating with Service 2's index) follows directly from its own warrant about external-partnership resourcing, not borrowed reasoning. arg-08's application_to_design (name the existing platform, its 18-agency/6-sector adoption, the documented critique, and present A-BTR as Service 7's enabling extension) follows from its own warrant about build-vs-carry-forward decisions differing from build-from-zero decisions (arg-07/Service 6). No unit's application field imports another unit's warrant.",
+    "verdict": "pass -- Tier 1 confirmed sound; Tier 2 review proceeded."
+  },
+  "dimensions": {
+    "section_job": {
+      "verdict": "pass",
+      "evidence": "The section performs exactly the approved job: methodology paragraph (line 3), 8 parallel service subsections (lines 5-63), high-priority-urgent tier (lines 65-81). It does not restate the 3.2 interview roster, the 11-agency list, or the 26/20/6 workshop-concept breakdown reserved for 3.2 (verified by direct comparison against ψ/incubate/drafts/crdb-full-report-3.2/polished-5.3.2-merged.md line 52, which contains that breakdown and is not reproduced here -- confirms EF-1 has not regressed). Line 3 references 3.2 only by pointer ('กรณีการใช้งานที่หัวข้อ 3.2 บันทึกไว้กว่า 40 กรณี'), not by restating its content."
+    },
+    "audience_decision_value": {
+      "verdict": "pass",
+      "evidence": "Each service subsection foregrounds what the approval committee/DCCE leadership need to decide: problem, value, blocker, and a named next step (e.g. lines 7-9 Service 1's single-dataset pilot ask; lines 33 Service 5's deferred status framed as a readiness decision). The closing tier (lines 69-81) states which three services should be resourced first and explicitly notes the other five remain in scope, directly serving decision_use in the contract."
+    },
+    "evidence_payload": {
+      "verdict": "pass",
+      "evidence": "Every service carries problem + concrete evidence + value + blocker + next step across its two paragraphs, e.g. Service 2 (lines 13-15): named user groups, bank-sector evidence about needing exact-location flood probability, the two independent structural causes of the province floor, the two unresourced fixes, and the one-province pilot ask."
+    },
+    "causal_logic": {
+      "verdict": "pass",
+      "evidence": "Causal chains are not reversed: e.g. line 15 correctly attributes the resolution ceiling to the index's calculation structure (province fixed before calculation, irreversible multiplicative math) rather than treating it as a data-quality issue -- matching arg-03's warrant. Line 21 correctly sequences Service 3's institutional-acceptance work as parallel to, not after, methodology work, matching arg-04's warrant."
+    },
+    "argument_fidelity": {
+      "verdict": "pass",
+      "evidence": "All 11 argument-map units are verbalized: arg-01 (line 3, abstraction-not-wishlist methodology), arg-02..arg-09 (Services 1-8, lines 5-63), arg-10 (A-BTR as Service 7's enabling pipeline, lines 47-51), arg-11 (priority tier, lines 65-81). EF-4 (round 2 major finding) is now resolved: arg-06's application_to_design required naming both institutional entry points for Service 5 -- 'the town-planning agency, the 76-province working group.' Draft line 31 now names both: 'กรมโยธาธิการและผังเมือง...' and 'คณะทำงานที่ครอบคลุมทั้ง 76 จังหวัดซึ่งจัดทำแผนความเสี่ยงและการปรับตัวระดับพื้นที่อยู่แล้ว,' followed by 'ทั้งสองหน่วยงานจึงเป็นจุดเชื่อมโยงเชิงสถาบันที่มีอยู่จริง' -- matching the map's grounds and required application. No unit is silently dropped and no claim in the draft is absent from the map."
+    },
+    "reader_facing_appropriateness": {
+      "verdict": "pass",
+      "evidence": "Grepped the full draft for slide numbers and internal artifact locators ('สไลด์', '5.3.3') -- zero matches. No internal document positions, prompt residue, or fake diagrams found in the prose."
+    },
+    "terminology_agency": {
+      "verdict": "pass",
+      "evidence": "\"คณะที่ปรึกษา\" is consistently the subject of analysis/synthesis/prioritization verbs throughout (lines 3, 33, 37, 45, 63, 81: สังเคราะห์, จัดลำดับ, ประเมิน, วิเคราะห์, กำหนด), not 'โครงการ' or passive framing. Standard bilingual service names are used per contract (first English + full Thai, e.g. line 5), with 'Governance' in the Service 8 heading correctly carried per the accepted Stage-4 lint exception (lint-exceptions.md) and not re-flagged. Banned forms 'สส.' alone and 'กรมฯ' do not appear (grepped, zero matches). A terminology-sequencing defect (full department name appearing after, not before, its short form) is recorded as finding NF-1 below rather than failing this dimension."
+    },
+    "source_fidelity": {
+      "verdict": "pass",
+      "evidence": "Spot-checked two quantitative/structural claims against the approved map (not the raw source, per scope): (1) arg-10's A-BTR figures -- '122 รายการ...ประมาณครึ่งหนึ่งไม่พบข้อมูลสนับสนุน' at draft line 49 matches the map's grounds verbatim in substance. (2) arg-06's Service 5 institutional entry points -- both the town-planning agency (with its wind-load standard update, nature-based heat program, and 2019 planning-law basis) and the 76-province working group are now named at draft line 31, closing the gap EF-4 identified in round 2. required_concepts (use cases as empirical base not pre-set requirements; one service serving many agencies; prioritization as sequencing not scope-cutting) all appear -- e.g. line 81's explicit 'ยังคงรักษาสภาพการดำเนินงานของบริการอีกห้ารายการที่เหลือไว้ในขอบเขตของโครงการอย่างครบถ้วน.'"
+    },
+    "form_readability": {
+      "verdict": "pass",
+      "evidence": "8 services presented as parallel headed subsections (####), each with 2 paragraphs covering Why/What/So-What per required_structures; the A-BTR pipeline is a subordinate heading under Service 7 (lines 47-51) rather than a 9th parallel item, matching the report_specific_rules mandate; the priority tier is a numbered list (lines 69-80) with a closing synthesis paragraph, matching the required list/table structure for the 3-service tier."
+    }
+  },
+  "findings": [
+    {
+      "severity": "major",
+      "status": "resolved",
+      "location": "draft.md line 31 (Service 5 paragraph 1); argument-map.json arg-06.application_to_design",
+      "issue": "EF-4 (round 2): arg-06's application_to_design requires naming both institutional entry points for Service 5 -- the town-planning agency and the 76-province working group -- but the draft previously named only the town-planning agency, dropping the 76-province working group despite it being present in both the approved map's grounds and the source document.",
+      "disposition": "Verified resolved against the current draft text: line 31 now reads '...กรมโยธาธิการและผังเมือง...ภายใต้พระราชบัญญัติการผังเมือง พ.ศ. 2562...และคณะทำงานที่ครอบคลุมทั้ง 76 จังหวัดซึ่งจัดทำแผนความเสี่ยงและการปรับตัวระดับพื้นที่อยู่แล้ว ทั้งสองหน่วยงานจึงเป็นจุดเชื่อมโยงเชิงสถาบันที่มีอยู่จริงสำหรับระยะถัดไปของบริการนี้' -- both entities are now named and explicitly framed as the two concrete entry points, matching arg-06's application_to_design and grounds."
+    },
+    {
+      "severity": "major",
+      "status": "resolved",
+      "location": "draft.md line 3 (paragraph 1) vs. ψ/incubate/drafts/crdb-full-report-3.2/polished-5.3.2-merged.md line 52",
+      "issue": "EF-1 (round 1): paragraph 1 previously restated the 26/20/6 interview-concept breakdown reserved for section 3.2.",
+      "disposition": "Verified no regression: draft line 3 references 3.2 only by pointer ('กรณีการใช้งานที่หัวข้อ 3.2 บันทึกไว้กว่า 40 กรณีได้ระบุผู้ใช้งาน...') and does not restate the 26 total / 20 confirmed / 6 new workshop-concept breakdown, which remains exclusively in 3.2 (polished-5.3.2-merged.md line 52). Confirmed still resolved in this round."
+    },
+    {
+      "severity": "minor",
+      "status": "accepted",
+      "location": "draft.md lines 15, 21, 45 (e.g. 'มิใช่ปัญหาของการแสดงผล', 'มิใช่ทำหลังจากนั้น', 'มิใช่การสร้างใหม่ตั้งแต่เริ่มต้นเหมือนบริการที่ 6')",
+      "issue": "EF-2 (round 1): repeated negation-contrast phrasing ('X มิใช่ Y...') that reads as a reverted AI-tell scaffold.",
+      "disposition": "Per task brief, this is a known accepted minor finding: several 'มิใช่...' instances remain by design, accepted for a later copyedit pass, not a Stage 5 gate blocker. Confirmed still present at the cited locations; not re-litigated as blocking."
+    },
+    {
+      "severity": "minor",
+      "status": "unresolved",
+      "location": "draft.md line 3 ('กรม สส.' first appears) vs. line 31 ('กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม' first full-name appearance)",
+      "issue": "writing-contract.json report_specific_rules item 2 requires the full department name on first mention, with 'กรม สส.' used only thereafter. In the current draft, the short form 'กรม สส.' is used repeatedly starting at line 3, while the full name 'กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม' (added to resolve EF-3's missing-terminology finding) does not appear until line 31, embedded mid-sentence in the Service 5 paragraph rather than as a deliberate first mention. This inverts the mandated sequence within this section.",
+      "disposition": "Minor terminology-sequencing defect that does not change governing meaning (the short form is unambiguous and not a banned form). Flag for the copyedit pass: either relocate the full-name first mention to paragraph 1, or, if the full name was already established earlier in the assembled full report (chapters 1-3.1), confirm that continuity and note it in this section's evidence-traceability record so future independent reviewers are not left to guess. Not a blocker for this section's pass verdict."
+    },
+    {
+      "severity": "minor",
+      "status": "unresolved",
+      "location": "draft.md line 15 ('อุปสรรคเชิงโครงสร้าง') and line 31 ('จุดเชื่อมโยงเชิงสถาบัน')",
+      "issue": "writing-contract.json report_specific_rules item 8 bans the 'เชิง...' construction. Two instances outside the mandated bilingual service names ('เชิงพื้นที่' in 'High-Resolution Spatial Risk Analytics (การวิเคราะห์ความเสี่ยงเชิงพื้นที่ความละเอียดสูง)', which is required terminology and correctly exempt) use the banned construction: 'อุปสรรคเชิงโครงสร้าง' (line 15) and 'จุดเชื่อมโยงเชิงสถาบัน' (line 31).",
+      "disposition": "Local, easily fixable wording defect (e.g. 'อุปสรรคด้านโครงสร้าง', 'จุดเชื่อมโยงด้านสถาบัน') that does not change governing meaning. Flag for copyedit; not a blocker for this section's pass verdict."
+    }
+  ],
+  "mechanical_reviews": [],
+  "verdict": "pass"
+}

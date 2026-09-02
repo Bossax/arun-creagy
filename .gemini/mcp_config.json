@@ -11,6 +11,14 @@
       ],
       "cwd": "C:/Users/sitth/OracleWorkspace/engine",
       "description": "Local Oracle Registry (Registry of Form)"
+    },
+    "qwen": {
+      "command": "uv",
+      "args": [
+        "run",
+        "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\tools\\qwen-mcp\\server.py"
+      ],
+      "env": {}
     }
   }
 }

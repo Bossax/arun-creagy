@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "rubric_version": "6.0.0",
+  "draft_sha256": "54b5d1adb44dadc838ed7d22d441fa8488c47dfc54a12667a318dc074e352838",
+  "contract_sha256": "f39bb8f026a0c28d6ffc5cae5717c47b24ac38266a6aa41b347f58132d668734",
+  "profile": "report",
+  "reviewer_mode": "independent",
+  "assurance": "standard",
+  "reviewer": "research_subagent",
+  "reviewed_at": "2026-09-02T15:58:00+07:00",
+  "dimensions": {
+    "section_job": {
+      "verdict": "pass",
+      "evidence": "The draft clearly presents the final results of the IA and governance framework without explaining the design process, matching the section job."
+    },
+    "audience_decision_value": {
+      "verdict": "pass",
+      "evidence": "Foregrounds the site structure and governance setup effectively for decision-makers."
+    },
+    "evidence_payload": {
+      "verdict": "pass",
+      "evidence": "All content units and data governance roles are specified with adequate concrete detail."
+    },
+    "causal_logic": {
+      "verdict": "pass",
+      "evidence": "The narrative flows logically from vision to structural components."
+    },
+    "argument_fidelity": {
+      "verdict": "pass",
+      "evidence": "Draft perfectly verbalizes all argument map units from arg-01 through arg-13, omitting no required details."
+    },
+    "reader_facing_appropriateness": {
+      "verdict": "pass",
+      "evidence": "No prompt residue or internal locator numbers remain."
+    },
+    "terminology_agency": {
+      "verdict": "pass",
+      "evidence": "Terminology matches the contract's specified short form exactly."
+    },
+    "source_fidelity": {
+      "verdict": "pass",
+      "evidence": "Concepts are maintained properly according to the contract's inclusions/exclusions."
+    },
+    "form_readability": {
+      "verdict": "pass",
+      "evidence": "Well formatted with clear lists and subsections matching the structural requirements."
+    }
+  },
+  "findings": [],
+  "mechanical_reviews": [],
+  "verdict": "pass"
+}
