@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "profile": "report",
+  "transformation_mode": "synthesis",
+  "audience": "ผู้บริหารและผู้ปฏิบัติงานที่ต้องใช้อ้างอิงโครงสร้างข้อมูลของ CRDB",
+  "decision_use": "ใช้ทำความเข้าใจขอบเขตของโดเมนข้อมูล ความหมายของหน่วยข้อมูล และความสัมพันธ์ระหว่างหน่วยข้อมูล",
+  "section_job": "นำเสนอข้อเท็จจริงของ CDM อย่างตรงไปตรงมา โดยไม่เปิดเผยกระบวนการจัดทำหรือเหตุผลภายในของผู้เขียน",
+  "target_altitude": "รายงานเชิงเทคนิคที่อ่านได้เป็นธรรมชาติและใช้เป็นเอกสารอ้างอิง",
+  "report_specific_rules": [
+    "ใช้คำว่า โดเมนข้อมูล หรือ เขตข้อมูล ตามบริบท",
+    "ใช้คำว่า หน่วยข้อมูล แทน Entity ในคำอธิบายภาษาไทย",
+    "คง Domain_ID, Entity_Name, PK_Type และ cardinality ตาม CSV",
+    "เขียนประโยคภาษาไทยใหม่ตามโครงสร้างภาษาไทย ห้ามแทนศัพท์แบบคำต่อคำ",
+    "อธิบายเฉพาะขอบเขต ความหมาย และความสัมพันธ์ที่ปรากฏใน CSV",
+    "ห้ามกล่าวถึงชื่อไฟล์ เวอร์ชัน ลำดับความน่าเชื่อถือของแหล่งข้อมูล trace การตรวจสอบ หรือกระบวนการจัดทำ",
+    "ห้ามนำ warrant, application_to_design, เหตุผลระหว่างออกแบบ หรือคำแนะนำต่อผู้พัฒนามาใส่ในรายงาน",
+    "ห้ามใช้คำว่า คณะที่ปรึกษา ในเนื้อหารายงาน",
+    "ไม่เสนอขั้นตอนถัดไปและไม่อธิบายว่ารายงานเลือกนำเสนอเนื้อหาอย่างไร",
+    "ใช้ย่อหน้าสั้นและให้ตารางทำหน้าที่เป็นข้อมูลอ้างอิง"
+  ],
+  "inclusions": [
+    "ภาพรวม 8 โดเมนข้อมูล",
+    "หน่วยข้อมูล 45 รายการพร้อมความหมายและประเภทคีย์หลัก",
+    "ความสัมพันธ์ 51 รายการพร้อม cardinality และกฎทางธุรกิจ",
+    "คำอธิบายความเชื่อมโยงระหว่างโดเมนข้อมูลในระดับที่จำเป็นต่อความเข้าใจ"
+  ],
+  "exclusions": [
+    "ชื่อไฟล์ต้นทางและ metadata การผลิตเอกสาร",
+    "ประวัติการแก้แบบจำลองและการเปรียบเทียบรุ่น",
+    "เหตุผลภายใน กระบวนการคิด และตรรกะของผู้เขียน",
+    "คำแนะนำการพัฒนาฐานข้อมูล API หรือแบบข้อมูลเชิงตรรกะ",
+    "ข้อสรุปที่ไม่มีใน CSV",
+    "สำนวนแปลตรงหรือคำประสมที่ผิดธรรมชาติ"
+  ],
+  "evidence_policy": "ใช้เฉพาะข้อเท็จจริงใน CSV ทั้งสามชุด เนื้อหาสำหรับผู้อ่านต้องไม่เปิดเผยแหล่งงานภายในหรือกระบวนการสังเคราะห์",
+  "required_concepts": ["โดเมนข้อมูล", "หน่วยข้อมูล", "ความสัมพันธ์", "cardinality", "กฎทางธุรกิจ"],
+  "terminology": {
+    "first_mention": "แบบจำลองข้อมูลเชิงแนวคิด (Conceptual Data Model: CDM)",
+    "short_form": "CDM",
+    "entity_th": "หน่วยข้อมูล",
+    "domain_th": "โดเมนข้อมูล"
+  },
+  "required_structures": [
+    "บทนำสั้น",
+    "ตารางสรุปโดเมนข้อมูล",
+    "ตารางหน่วยข้อมูลแยกตามโดเมน",
+    "ตารางความสัมพันธ์แยกตามกลุ่มเนื้อหา",
+    "บทสรุปสั้น"
+  ],
+  "source_paths": [
+    "ψ/incubate/DCCE/CRDB/output/05_Data_Management_Framework/CDM_EARCatalog/Domains-v3.csv",
+    "ψ/incubate/DCCE/CRDB/output/05_Data_Management_Framework/CDM_EARCatalog/Entities-v3.csv",
+    "ψ/incubate/DCCE/CRDB/output/05_Data_Management_Framework/CDM_EARCatalog/Relationships-v4.csv"
+  ],
+  "trace_log_paths": [],
+  "reference_samples": [],
+  "prior_draft": "ψ/incubate/drafts/crdb-cdm-domain-entity-relationship-report/draft-report.md",
+  "prior_approval": {
+    "approved_by": "Boss",
+    "basis": "The prior blueprint was approved, but the resulting prose was rejected for internal-reasoning leakage and incorrect Thai grammar"
+  },
+  "plan_slice": "ψ/incubate/drafts/crdb-cdm-domain-entity-relationship-report-v2/plan-slice.md",
+  "stage_0_checklist": {
+    "plan_mode_executed": true,
+    "outline_verified": true,
+    "evidence_base_verified": true,
+    "session_rules_verified": true,
+    "plan_source": "Boss-directed rewrite from scratch following rejection of prior prose"
+  },
+  "execution_tier": {
+    "tier": "medium",
+    "stage_1_3_mode": "inline",
+    "orchestrator_clean": false,
+    "chosen_by": "Boss"
+  },
+  "approval": {
+    "status": "approved",
+    "approved_by": "Boss",
+    "approved_at": "2026-09-03T00:00:00+07:00",
+    "basis": "Boss explicitly instructed rewrite from scratch"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "rubric_version": "6.0.0",
+  "draft_sha256": "be264b7270a4e1221cb056fd897789b3d5db6d2b0895bbb641b95744bd02f4a4",
+  "contract_sha256": "cfba83d8eeb54a3e98dc1180f52cb59c6024e4eef7ab1fc88533b329d015e477",
+  "profile": "report",
+  "reviewer_mode": "self",
+  "assurance": "degraded",
+  "reviewer": "Codex structured self-review",
+  "reviewed_at": "2026-09-03T12:40:00+07:00",
+  "tier_1_argument_map": {
+    "warrant_soundness": {"verdict": "pass", "evidence": "The map limits the report to catalog description and does not use internal design reasoning as reader-facing claims."},
+    "mece_coverage": {"verdict": "pass", "evidence": "The components separately cover the domain overview, three groups of data units, and relationships."},
+    "application_grounded": {"verdict": "pass", "evidence": "Each application specifies a reader-facing table or concise description and explicitly excludes process commentary."}
+  },
+  "dimensions": {
+    "section_job": {
+      "verdict": "pass",
+      "evidence": "The report describes domains, data units, relationships, cardinalities, and business rules only."
+    },
+    "audience_decision_value": {
+      "verdict": "pass",
+      "evidence": "Readers can locate each domain, data unit, key type, relationship, and business rule directly."
+    },
+    "evidence_payload": {
+      "verdict": "pass",
+      "evidence": "Coverage checks confirm all 45 Entity_Name values and all 51 relationship rows are present."
+    },
+    "causal_logic": {
+      "verdict": "pass",
+      "evidence": "The report states catalog relationships without adding causal explanations or design claims beyond the recorded business rules."
+    },
+    "argument_fidelity": {
+      "verdict": "pass",
+      "evidence": "All five approved units appear in the report; warrant trace reports 89–100% term overlap."
+    },
+    "reader_facing_appropriateness": {
+      "verdict": "pass",
+      "evidence": "A targeted scan found no filenames, version notes, trace references, source-ranking notes, consultant language, design rationale, or implementation recommendations."
+    },
+    "terminology_agency": {
+      "verdict": "pass",
+      "evidence": "Thai prose uses 'โดเมนข้อมูล' and 'หน่วยข้อมูล'; English catalog identifiers are retained only as technical reference labels."
+    },
+    "source_fidelity": {
+      "verdict": "pass",
+      "evidence": "The report preserves 8 domains, 45 data units, key types, 51 cardinalities, and the corresponding business rules."
+    },
+    "form_readability": {
+      "verdict": "pass",
+      "evidence": "Short introductory text and grouped tables match the approved technical-reference form."
+    }
+  },
+  "findings": [
+    {"severity": "minor", "location": "sections 3 and 4", "issue": "Complete catalog coverage makes the report table-heavy.", "status": "accepted", "disposition": "Retain because the report is required to cover all domains, data units, and relationships."}
+  ],
+  "mechanical_reviews": [
+    {"message": "[PARENTHETICAL] '(Conceptual Data Model: CDM)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.", "disposition": "Retained for first-mention definition of the technical term."},
+    {"message": "[PARENTHETICAL] '(Climate Resilience Database: CRDB)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.", "disposition": "Retained for first-mention definition of the system name."},
+    {"message": "[PARENTHETICAL] '(cardinality)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.", "disposition": "Retained once to map the Thai explanation to the catalog field name."}
+  ],
+  "verdict": "pass"
+}

@@ -241,7 +241,7 @@
       "unit_id": "arg-09",
       "order": 21,
       "paragraph_job": "define",
-      "claim": "ขอบเขตงานจ้างของโครงการถัดไปควรยึดบริการ 5 รายการ แบ่งเป็นกลุ่มบริการวิเคราะห์ที่มีอยู่แล้ว 3 รายการ และกลุ่มบริการใหม่ 2 รายการ พร้อมกำหนดให้ระบบแค็ตตาล็อกข้อมูลเป็นผลงานส่งมอบแยกต่างหากอีกหนึ่งรายการ บริการ 5 รายการนี้เป็นขอบเขตที่เสนอสำหรับโครงการถัดไปโดยเฉพาะ แยกจากองค์ประกอบข้อมูลสนับสนุนการพัฒนา 8 รายการของหน่วยที่ 1 และแยกจากบริการสารสนเทศ 9 รายการที่บทที่ 3 หัวข้อ 3.3 ระบุไว้",
+      "claim": "ขอบเขตงานจ้างของโครงการถัดไปควรยึดบริการ 5 รายการ แบ่งเป็นกลุ่มบริการวิเคราะห์ที่มีอยู่แล้ว 3 รายการ และกลุ่มบริการใหม่ 2 รายการ พร้อมกำหนดให้ระบบแค็ตตาล็อกข้อมูลเป็นผลงานส่งมอบแยกต่างหากอีกหนึ่งรายการ บริการ 5 รายการนี้เป็นขอบเขตที่เสนอสำหรับโครงการถัดไปโดยเฉพาะ แยกจากองค์ประกอบข้อมูลสนับสนุนการพัฒนา 8 รายการของหน่วยที่ 1 และแยกจากบริการสารสนเทศ 8 รายการที่บทที่ 3 หัวข้อ 3.3 ระบุไว้",
       "grounds": "บริการทั้ง 5 รายการคัดมาจากการวิเคราะห์ความต้องการใช้งานในบทที่ 3 หัวข้อ 3.3 โดยเลือกเฉพาะบริการที่มีความต้องการสูงและมีความเป็นไปได้ที่จะเริ่มพัฒนาในทันที รายละเอียดของแต่ละกลุ่มบริการอยู่ในหน่วยย่อยที่ตามมา",
       "warrant": "การเริ่มจากบริการที่กรม สส. มีอยู่แล้วสามรายการและบริการใหม่ที่มีความต้องการสูงและเริ่มพัฒนาได้ทันทีอีกสองรายการ รับประกันว่าโครงสร้างพื้นฐานดิจิทัลที่ลงทุนพัฒนาจะถูกสร้างขึ้นเพื่อแก้ปัญหาที่มีอยู่จริง ไม่ใช่โครงสร้างเปล่าที่รอเนื้อหามาเติมภายหลังโดยไม่รู้ว่าจะใช้งานได้หรือไม่ และยังผลักดันขอบเขตของหน่วยข้อมูลที่นำเข้าสู่ระบบให้ครอบคลุมมากขึ้นไปพร้อมกัน",
       "application_to_design": "เปิดข้อเสนอแนะข้อที่ 3 ส่วนบริการด้วยหลักการคัดเลือกและการแยกจากรายการอื่น อ้างอิงไปยังบทที่ 3 หัวข้อ 3.3 สำหรับที่มาของการวิเคราะห์ความต้องการ แทนการอ้างถึงหัวข้อที่ไม่มีอยู่จริงในรายงานฉบับสมบูรณ์ แล้วให้หน่วยย่อยที่ตามมาระบุรายละเอียดแต่ละกลุ่มบริการ",
@@ -360,9 +360,9 @@
     }
   ],
   "approval": {
-    "status": "pending",
-    "approved_by": null,
-    "approved_at": null,
-    "basis": "Stage 0 approval (2026-09-03) covered the plan-slice and writing-contract, not this argument map. Spine §7 leaves the Stage 2 bypass question open for the full report; no standing bypass has been granted for §5.2. Expanded to 31 units (2026-09-03) per spine §6's subargument rule: arg-02 (8 handover components), arg-06 (4 governance tiers), arg-09 (5 services/2 groups), and arg-14 (8 governance tasks/2 timeframes) were each split into an overview unit plus lettered subunits, one subunit per separable component/role/service-group/timeframe-group, each with full claim/grounds/warrant/application_to_design. This map awaits explicit Stage 2 review before Stage 3 verbalization begins."
+    "status": "approved",
+    "approved_by": "Boss",
+    "approved_at": "2026-09-03",
+    "basis": "Stage 0 approval (2026-09-03) covered the plan-slice and writing-contract. Expanded to 31 units (2026-09-03) per spine §6's subargument rule: arg-02 (8 handover components), arg-06 (4 governance tiers), arg-09 (5 services/2 groups), and arg-14 (8 governance tasks/2 timeframes) were each split into an overview unit plus lettered subunits, one subunit per separable component/role/service-group/timeframe-group, each with full claim/grounds/warrant/application_to_design. Boss reviewed the full 31-unit layout (units grouped by hierarchy under each governing_thought_component) and approved as-is, including the deliberately thin arg-09a (no source detail beyond service names, not padded) and arg-15's synthesized closing coordination-gap point."
   }
 }
