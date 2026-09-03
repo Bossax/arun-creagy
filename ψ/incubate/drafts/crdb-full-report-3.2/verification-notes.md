@@ -15,11 +15,11 @@ Investigated a discrepancy where EX 2.2 states "12 หน่วยงาน" but
 5. **"ผู้ดูแลข้อมูล" → "บริกรข้อมูล"** (Boss's Data Steward gloss, project-wide) — applied in the composed intro.
 6. **"รับผิดชอบ + bare noun/verb" nominalization** (mechanical rule) — fixed 2 occurrences: "รับผิดชอบระบบรายงานภัยพิบัติระดับชาติ" → "รับผิดชอบการรายงานภัยพิบัติระดับชาติ", and "รับผิดชอบสายรายงานเหตุภัยพิบัติ" (×2) → "รับผิดชอบการรายงานเหตุภัยพิบัติ".
 
-## Accepted lint exceptions (not fixed — table content, copied verbatim)
+## Accepted lint exceptions (Post-Polish)
 
-- `NCAIF` × 5 (table cells, ตาราง 4)
-- `สินทรัพย์` × 2 (table cells: "สินทรัพย์รายจุด", "พอร์ตสินทรัพย์")
-- `ฉบับ` — the `รายงานฉบับกลาง` proper-name exception, same as §3.1 (this document name, not a counting classifier)
+- **Resolved**: `NCAIF` × 5 in Table 4 regularized to `โครงสร้างข้อมูลฯ`.
+- **Resolved**: `สินทรัพย์` × 2 in Table 4 regularized to `ทรัพย์สินรายจุด` and `พอร์ตทรัพย์สิน`.
+- **Preserved exception**: `ฉบับ` — the `รายงานฉบับกลาง` proper document name exception per `writing-contract.json`, same as §3.1 (contractual document name, not a counting classifier).
 
 ## Structural decisions carried out per Boss's scope
 

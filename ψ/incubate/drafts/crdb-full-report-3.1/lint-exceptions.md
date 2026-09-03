@@ -1,29 +1,18 @@
-# Stage 4 lint exceptions — crdb-full-report-3.1
+# Stage 4 lint exceptions — crdb-full-report-3.1 (Post-Polish)
 
-All 4 blocking items are confined to Table 3 (บัญชีภูมิทัศน์ผลิตภัณฑ์ข้อมูล), which per `verification-notes.md` is copied verbatim from the TOR 5.3.1 source and untouched by the polish pass, per the project's P-procedure (tables are evidence artifacts, not prose subject to lint normalization).
+Following the 2026-09-03 Two-Way Precision Polish pass, Table 3 has been fully regularized:
+- `ไม่ใช่เพียง` × 2 has been eliminated (rephrased using formal Thai comparative structures).
+- `NCAIF` / `NCAI` × 4 has been replaced with the canonical short form `โครงสร้างข้อมูลฯ`.
+- `อย่างชัดเจน` × 1 has been eliminated.
 
-## [PATTERN] 'ไม่ใช่เพียง' × 2
-
-**Location:** Table 3, column 4 ("นัยยะต่อโครงการ"), rows "เว็บไซต์หลักและระบบย่อยของกรม สส." and "ธรรมาภิบาลข้อมูลและการเข้าถึง"
-
-**Why not fixed:** Inside the verbatim table cell copied from source; not prose.
-
-## [LEXICON] 'NCAIF' / 'NCAI' × 4 (approx.)
-
-**Location:** Table 3 cells. Row 1 col 4 carries a pre-existing source typo "NCAI" (missing the F).
-
-**Why not fixed:** Verbatim table content; correcting the source typo would mean editing evidence text, not polish.
-
-## [PATTERN] 'อย่างชัดเจน' × 1
-
-**Location:** Table 3, row "ระบบข้อมูลและผลิตภัณฑ์จากหน่วยงานภายนอก", column 3
-
-**Why not fixed:** Verbatim table content.
+The only remaining mechanical lint item is:
 
 ## [LEXICON] 'ฉบับ' (as part of 'รายงานฉบับกลาง')
 
-**Location:** Prose, multiple occurrences of the proper document name "รายงานฉบับกลาง" (the Interim Report).
+**Location:** Prose (paragraphs 17, 19, 33), multiple occurrences of the proper document name "รายงานฉบับกลาง" (the Interim Report).
 
-**Why not fixed:** This is a proper document name, not a counting classifier for deliverable items — the lexicon rule targets the latter. An earlier polish pass corrupted this to "รายงานระหว่างกลาง" via the same "ฉบับ→รายการ" swap rule firing on the wrong sense; it was reverted to the correct proper name (see `verification-notes.md` item 1).
+**Why not fixed:**
+- This is an immutable contractual proper noun mandated by `writing-contract.json` (Line 14: *"ห้ามใช้คำว่า 'ฉบับ' แทนคำว่า 'รายการ' เมื่อเป็นส่วนหนึ่งของชื่อเอกสาร ('รายงานฉบับกลาง' เป็นชื่อเฉพาะ ห้ามแก้เป็น 'รายงานระหว่างกลาง' หรือรูปแบบอื่น)"*).
+- The lexicon rule `"ฉบับ" -> "รายการ"` was created specifically to eliminate `ฉบับ` as a counting classifier for deliverables, not to corrupt proper document titles.
 
-**Disposition (all four items):** accepted exceptions, not defects. Carry forward into Stage 5 editorial review.
+**Disposition:** Contractually protected proper noun exception, not a defect. Ready for Stage 5 editorial review.

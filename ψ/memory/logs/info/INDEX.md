@@ -1,5 +1,8 @@
 # Info Log Index
 
+- [2026-09-03 00:00] 🚩 **Settings.json permission edits blocked by auto-mode classifier (Important)**: Adding a Bash allowlist rule (e.g. for `python -c` JSON checks) via the `update-config` skill was denied twice by the Claude Code auto-mode classifier, even with explicit in-chat user confirmation ("do it"). This is a hard environment gate — Claude cannot self-serve permission edits regardless of approval given in conversation. User must edit `.claude/settings.json` / `settings.local.json` directly.
+  - File: ψ/memory/logs/info/2026-09-03_settings-permission-edits-blocked-by-classifier.md
+
 - [2026-09-01 08:44] 🚩 **Stage 1 `grounds` must carry full supporting detail, not a compressed claim (Important)**: Lane B (verbalize-from-argument-map) still loses fidelity if Stage 1's `grounds` field is written as a condensed core claim instead of real supporting material (numbers, findings, framework contents, design rationale) — Stage 3 has nothing to expand from. Fix belongs at Stage 1 (still gated by Stage 2 approval), not by reopening raw-source access at Stage 3. Applies immediately to CRDB full-report §2.3.
   - File: ψ/memory/logs/info/2026-09-01_08-44_stage1-grounds-must-carry-full-supporting-detail.md
 
