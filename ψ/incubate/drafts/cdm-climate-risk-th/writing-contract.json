@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "profile": "report",
+  "transformation_mode": "rewrite",
+  "audience": "ผู้อ่านรายงานและผู้รับผิดชอบการพัฒนาระบบข้อมูลด้านความเสี่ยงภูมิอากาศและการปรับตัว",
+  "decision_use": "ใช้เป็นภาคผนวกเพื่ออธิบายโครงสร้าง แนวคิด เหตุผลเชิงแบบจำลอง และขอบเขตของแบบจำลองข้อมูลเชิงแนวคิด",
+  "section_job": "ถ่ายทอดเอกสารแบบจำลองข้อมูลเชิงแนวคิดเป็นภาษาไทย โดยรักษาเอนทิตี ความสัมพันธ์ กฎทางธุรกิจ และตรรกะทางเทคนิคครบถ้วน",
+  "target_altitude": "รายงานเชิงเทคนิคสำหรับการอ้างอิงในภาคผนวก",
+  "report_specific_rules": [
+    "คงชื่อเอนทิตี ชื่อตาราง ชื่อฟิลด์ และรหัสมาตรฐานภาษาอังกฤษตามต้นฉบับ",
+    "แปลคำอธิบายเป็นภาษาไทยทางการ อ่านได้โดยผู้บริหารและผู้ปฏิบัติงานด้านข้อมูล",
+    "คงตาราง รายการ Mermaid และ URL ที่เป็นส่วนหนึ่งของหลักฐานทางเทคนิค",
+    "ใช้คำว่า แบบจำลองข้อมูลเชิงแนวคิด (Conceptual Data Model: CDM) ในการกล่าวถึงครั้งแรก",
+    "ไม่เพิ่มข้อเท็จจริงหรือข้อสรุปที่ไม่มีอยู่ในต้นฉบับ"
+  ],
+  "inclusions": ["เนื้อหาทั้งหมดในต้นฉบับ", "ตาราง TOR", "กฎทางธุรกิจ", "ERD และคำอธิบายเอนทิตี", "กรณีทดสอบการใช้งาน"],
+  "exclusions": ["การตีความเพิ่มเติมนอกต้นฉบับ", "การเปลี่ยนชื่อเอนทิตีเพื่อความเป็นภาษาไทย", "การแก้ไขแบบจำลองเชิงสาระ"],
+  "evidence_policy": "รักษาความหมาย ตัวเลข สูตร มาตรฐาน ตัวอย่าง และ cardinality ตามต้นฉบับ",
+  "required_concepts": ["hazard", "exposure", "vulnerability", "loss and damage", "attribution", "resilience", "adaptation"],
+  "terminology": {"first_mention": "แบบจำลองข้อมูลเชิงแนวคิด (Conceptual Data Model: CDM)", "short_form": "แบบจำลองข้อมูลฯ"},
+  "required_structures": ["หัวข้อหลักและหัวข้อย่อย", "ตาราง", "บล็อกโค้ด Mermaid", "รายการเอนทิตี"],
+  "source_paths": ["ψ/archive/Conceptual Data Model for climate risk and adaptation data system_2026-02-11_080240.md"],
+  "trace_log_paths": [],
+  "reference_samples": [],
+  "plan_slice": null,
+  "stage_0_checklist": {"plan_mode_executed": true, "outline_verified": true, "evidence_base_verified": true, "session_rules_verified": true, "plan_source": "source_document_and_user_instruction"},
+  "execution_tier": {"tier": "medium", "stage_1_3_mode": "inline", "orchestrator_clean": true, "chosen_by": "Boss"},
+  "approval": {"status": "approved", "approved_by": "Boss", "approved_at": "2026-09-02T00:00:00+07:00", "basis": "User instruction: go ahead"}
+}

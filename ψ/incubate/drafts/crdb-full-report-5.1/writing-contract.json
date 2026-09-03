@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0",
+  "profile": "report",
+  "transformation_mode": "synthesis",
+  "audience": "คณะกรรมการตรวจรับ ผู้บริหารและเจ้าหน้าที่กรม สส. และผู้พัฒนาระบบในระยะถัดไป",
+  "decision_use": "เข้าใจขนาดและโครงสร้างของช่องว่างระหว่างอุปทานและอุปสงค์ของข้อมูล เพื่อประเมินว่าข้อเสนอแนะในบทที่ 5 หัวข้อ 5.2 ตอบสนองช่องว่างที่แท้จริงเพียงใด",
+  "section_job": "นำเสนอผลการวิเคราะห์ช่องว่างระหว่างสิ่งที่จำเป็นต้องมี (บทที่ 2) กับสิ่งที่มีอยู่จริง (บทที่ 3) ใน 3 ส่วน: (1) ช่องว่างเชิงโครงสร้าง 11 ประการและอุปสรรคเฉพาะของบริการสารสนเทศทั้ง 9 รายการ (2) ช่องว่างด้านความพร้อมของเนื้อหาเว็บไซต์ (3) กรณีศึกษาการจัดทำรายงาน A-BTR ในฐานะกรณีที่ผูกพันที่สุดของแพลตฟอร์ม ไม่นำเสนอข้อเสนอแนะเชิงนโยบายหรือทางออก ซึ่งเป็นสาระของหัวข้อ 5.2",
+  "target_altitude": "ระดับรายงานฉบับสมบูรณ์ ตามหลักการ \"ระดับความละเอียดกลับด้าน\" คงรายละเอียดทางเทคนิคที่ระดับผู้บริหารตัดออกไว้ในบทหลัก ส่งเฉพาะตารางหรือรายการยาวไปภาคผนวก",
+  "report_specific_rules": [
+    "ใช้ 'คณะที่ปรึกษา' เป็นประธานของประโยคที่บรรยายการวิเคราะห์และการเปรียบเทียบอุปทาน-อุปสงค์ หลีกเลี่ยงประโยคกรรมและการใช้ 'โครงการ' เป็นประธานของการกระทำทางวิชาการ",
+    "ครั้งแรกใช้ 'กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม' หลังจากนั้นใช้ 'กรม สส.' เท่านั้น ห้ามใช้ 'สส.' โดด และห้ามใช้ 'กรมฯ'",
+    "ห้ามใช้ตัวย่อภายในโครงการ (TOR70, CRDB, WP7, A-BTR requirement analysis เป็นต้น) หรือชื่อรุ่นเอกสารในเนื้อหาที่ผู้อ่านเห็น ยกเว้น 'A-BTR' ซึ่งเป็นชื่อรายงานทางการที่ประเทศไทยต้องจัดส่งจริง ใช้ชื่อเต็ม 'รายงานความโปร่งใสรายสองปีด้านการปรับตัว (Adaptation Biennial Transparency Report: A-BTR)' ในครั้งแรก",
+    "ห้ามระบุตำแหน่งเอกสารภายใน เช่น เลขข้อ WP7 หรือเลขหน้าของร่างเดิม ในเนื้อหาสำหรับผู้อ่าน ให้อ้างชื่อผลผลิตหรือกรอบมาตรฐานโดยตรง",
+    "รายการคู่ขนานที่แจงนับได้ เช่น ช่องว่างเชิงโครงสร้าง 11 ประการ บริการสารสนเทศ 9 รายการ ช่องว่างที่ A-BTR ระบุเอง 5 ประการ จัดเป็นรายการมีลำดับพร้อมสาระขั้นต่ำที่มีหลักฐานรองรับ ไม่เขียนเป็นร้อยแก้วยาวต่อเนื่อง",
+    "ใช้ศัพท์บัญญัติทางราชการ หลีกเลี่ยงภาษาพูด ห้ามใช้ 'ได้จริง' 'อย่างต่อเนื่อง' และ 'เชิง...'",
+    "ปีศักราชใช้พุทธศักราชเป็นหลัก เมื่อต้องกำกับคริสต์ศักราชใช้รูปแบบ 'พ.ศ. 2569 (ค.ศ. 2026)' ตลอดทั้งเล่ม",
+    "ตารางทุกตารางมีชื่อรูปแบบ 'ตารางที่ N: ...' พร้อมคำอธิบายชื่อคอลัมน์และนิยามศัพท์",
+    "เรียบเรียงเป็นภาษาวิชาการตามเกณฑ์ตรวจรับของคณะกรรมการ",
+    "หัวข้อนี้ต้องอ้างอิงผลลัพธ์จากบทที่ 2 (สิ่งที่จำเป็นต้องมี) และบทที่ 3 (สิ่งที่มีอยู่จริง) โดยตรง ไม่อนุมานหรือคำนวณช่องว่างขึ้นใหม่ด้วยตนเอง",
+    "ห้ามเสนอข้อเสนอแนะเชิงนโยบายหรือแนวทางแก้ไขปัญหา ให้ปิดท้ายด้วยการชี้ไปที่หัวข้อ 5.2 แทน",
+    "ตัวเลขที่ใช้ต้องยึดตามกรอบ 11 ช่องว่าง/9 บริการของ WP7 Gap Analysis Report ซึ่งเป็นฉบับล่าสุดที่ผ่านการอนุมัติในร่างฉบับผู้บริหาร ห้ามใช้ตัวเลขเดิมจากร่างรายงานฉบับสมบูรณ์เดิม (8 บริการ, ร้อยละ 20/80) ซึ่งล้าสมัยแล้ว"
+  ],
+  "inclusions": [
+    "หน่วยที่ 1: ช่องว่างเชิงโครงสร้าง 11 ประการ (นิยามสั้นราย ประการ) และตารางอุปสรรคเฉพาะของบริการสารสนเทศทั้ง 9 รายการ",
+    "หน่วยที่ 2: ช่องว่างด้านความพร้อมของเนื้อหาเว็บไซต์ (16 หัวข้อพร้อมใช้ / 26 หัวข้อมีบางส่วน / 33 หัวข้อไม่มีแหล่งเนื้อหา จากทั้งหมด 75 หัวข้อ รวมร้อยละ 79 ที่ยังต้องค้นคว้าหรือยกร่างใหม่)",
+    "หน่วยที่ 3: กรณีศึกษา A-BTR — สถานะภารกิจต่อเนื่องของกรม สส., ช่องว่างที่รายงาน A-BTR ยอมรับเอง 5 ประการ, ปัญหากระบวนการจัดทำรายงานที่คณะที่ปรึกษาวินิจฉัยเอง (ตัวเลขคีย์ข้อมูล 122 รายการ, ประมาณครึ่งไม่มีข้อมูลรองรับ), ความซับซ้อนเชิงยุทธศาสตร์ที่โยงกับวงจรขับเคลื่อนการปรับตัวทั้ง 4 ระยะ, และผลลัพธ์ที่บริการซึ่งปิดช่องว่าง A-BTR ยกระดับแพลตฟอร์มข้อมูลและเว็บไซต์สาธารณะไปพร้อมกัน",
+    "การเชื่อมโยงย้อนกลับไปยังบทที่ 2 และบทที่ 3 อย่างชัดเจนในจุดที่เกี่ยวข้อง"
+  ],
+  "exclusions": [
+    "ข้อเสนอแนะเชิงนโยบาย เทคนิค หรือแผนที่นำทาง ซึ่งเป็นสาระของหัวข้อ 5.2 ทั้งหมด",
+    "บัญชีรายการชุดข้อมูลและบริการสารสนเทศ ซึ่งเป็นงานของบทที่ 3",
+    "รายละเอียดโครงสร้างสารสนเทศและกรอบการบริหารจัดการข้อมูล ซึ่งเป็นงานของบทที่ 2",
+    "ตำแหน่งเอกสารภายใน เลขข้อ WP7 หรือเลขหน้าของร่างเดิม"
+  ],
+  "evidence_policy": "อ้างผลผลิตและกรอบมาตรฐานด้วยชื่อจริงในร้อยแก้ว ไม่อ้างเลขข้อหรือชื่อรุ่นภายในในเนื้อหาสำหรับผู้อ่าน เก็บตำแหน่งเอกสารภายในไว้ในตาราง evidence-traceability เท่านั้น ตัวเลขทุกตัวต้องตรวจสอบย้อนกลับไปยัง WP7 Gap Analysis Report หรือ WP4 Content-Source Gap Analysis v2 ได้",
+  "required_concepts": [
+    "ช่องว่างเป็นปัญหาเชิงโครงสร้างที่ระบุได้จำเพาะเจาะจง ไม่ใช่การขาดแคลนข้อมูลทั่วไป",
+    "แต่ละบริการสารสนเทศติดขัดด้วยชุดช่องว่างเฉพาะของตนเอง ไม่ใช่ช่องว่างเดียวกันทั้งหมด",
+    "A-BTR เป็นภารกิจผูกพันของกรม สส. เอง ไม่ใช่บริการทางเลือกเหมือนบริการอื่น และการปิดช่องว่างของ A-BTR ยกระดับแพลตฟอร์มข้อมูลโดยรวม ไม่ใช่ประโยชน์เฉพาะการจัดทำรายงานเท่านั้น"
+  ],
+  "terminology": {
+    "first_mention": "โครงสร้างข้อมูลด้านการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศของประเทศ",
+    "short_form": "โครงสร้างข้อมูลฯ"
+  },
+  "required_structures": [
+    "รายการมีลำดับสำหรับช่องว่างเชิงโครงสร้าง 11 ประการ พร้อมนิยามสั้น",
+    "ตารางอุปสรรคเฉพาะของบริการสารสนเทศ 9 รายการ",
+    "รายการหรือตารางสำหรับช่องว่างที่ A-BTR ระบุเอง 5 ประการ",
+    "รายการแจงสัดส่วนความพร้อมของเนื้อหาเว็บไซต์ (16/26/33 จาก 75 หัวข้อ)"
+  ],
+  "source_paths": [
+    "ψ/incubate/drafts/crdb-exec-summary-4.1/argument-map.json",
+    "ψ/incubate/drafts/crdb-exec-summary-4.1/section-4.1-draft.md",
+    "ψ/incubate/drafts/crdb-exec-summary-4.2/argument-map.json",
+    "ψ/incubate/drafts/crdb-exec-summary-4.2/section-4.2-draft.md",
+    "ψ/incubate/DCCE/CRDB/output/07_Gap_Analysis/2026-08-16-WP7-Gap-Analysis-Report.md",
+    "ψ/incubate/DCCE/CRDB/output/07_Gap_Analysis/รายงานการวิเคราะห์ช่องว่างข้อมูลและข้อเสนอแนะเชิงนโยบาย_v5.0.md",
+    "ψ/incubate/DCCE/CRDB/output/draft_final_report/5.3/2026-06-25_draft_section-5.3.8.md",
+    "ψ/incubate/DCCE/CRDB/output/04_Sitemap/2026-08-20-WP4-Content-Source-Gap-Analysis-v2.md",
+    "ψ/incubate/DCCE/CRDB/output/02_Data_Inventory/2026-03-12-DCCE_Website_Content_Gap_Inventory.md",
+    "ψ/incubate/DCCE/CRDB/output/02_Data_Inventory/2026-03-12-DCCE_Website_Content_Gap_Matrix.md",
+    "ψ/incubate/DCCE/CRDB/output/02_Data_Inventory/2026-03-12-DCCE_Website_Content_Gap_Report_Insert.md",
+    "ψ/incubate/DCCE/CRDB/output/02_Data_Inventory/2026-03-12-DCCE_Website_Content_Gap_Summary.md",
+    "ψ/incubate/DCCE/CRDB/output/06_Use_Case_Demand_Analysis/A-BTR_requirement_analysis/section_A_institutional_baseline.md",
+    "ψ/incubate/DCCE/CRDB/output/06_Use_Case_Demand_Analysis/A-BTR_requirement_analysis/section_C_priorities_barriers_and_strategy.md",
+    "ψ/incubate/DCCE/CRDB/output/06_Use_Case_Demand_Analysis/A-BTR_requirement_analysis/a_btr_dissection_master_joined.csv",
+    "ψ/incubate/DCCE/CRDB/output/06_Use_Case_Demand_Analysis/A-BTR_requirement_analysis/a_btr_to_sitemap_gap_analysis.md"
+  ],
+  "trace_log_paths": [
+    "ψ/memory/traces/2026-08-26/1547_tor70-previous-criticism-and-dcce-recommendations.md",
+    "ψ/memory/traces/2026-08-26/1602_crdb-final-sprint-precode-dcce-approval-gates.md",
+    "ψ/memory/traces/2026-08-26/1921_director-toey-persona-and-tor70-briefing-critique.md",
+    "ψ/memory/traces/2026-07-09/1026_tor70_content_gap_analysis.md",
+    "ψ/memory/traces/2026-08-04/1443_tor70-analysis-timeline-reconstruction.md",
+    "ψ/memory/traces/2026-07-13/1715_a-btr-requirement-analysis.md",
+    "ψ/memory/traces/2026-07-06/1700_crdb-btr-me-integration-trace.md",
+    "ψ/memory/traces/2026-07-06/1600_adaptation-me-evidence-base-trace.md",
+    "ψ/memory/traces/2026-08-24/1053_thai-line-agencies-institutional-mental-model.md",
+    "ψ/memory/traces/2026-08-24/1208_crdb-evidence-merl-platform-feasibility.md"
+  ],
+  "reference_samples": [],
+  "prior_draft": [
+    "ψ/incubate/drafts/crdb-exec-summary-4.1/argument-map.json",
+    "ψ/incubate/drafts/crdb-exec-summary-4.2/argument-map.json"
+  ],
+  "prior_approval": {
+    "approved_by": "Boss",
+    "basis": "ทั้งสองแผนภาพข้อโต้แย้งอนุมัติแล้ว 2026-08-30 หน่วยที่ 1 และ 2 ของหัวข้อนี้กู้ข้อโต้แย้งจากแผนภาพของหัวข้อ 4.1 (arg-01/02/03) ส่วนหน่วยที่ 3 กู้จากแผนภาพของหัวข้อ 4.2 ทั้งหมด (arg-01 ถึง arg-05) มติเซสชันนี้ (2026-09-02) ให้ยกระดับความละเอียดขึ้นสู่ระดับรายงานฉบับสมบูรณ์ด้วยหลักฐานเต็มจาก WP7 Gap Analysis Report และ A-BTR requirement analysis โดยไม่ใช้ตัวเลขล้าสมัยจากร่างรายงานฉบับสมบูรณ์เดิม (5.3.8)"
+  },
+  "plan_slice": "ψ/incubate/drafts/crdb-full-report-5.1/plan-slice.md",
+  "stage_0_checklist": {
+    "plan_mode_executed": true,
+    "outline_verified": true,
+    "evidence_base_verified": true,
+    "session_rules_verified": true,
+    "plan_source": "new_interactive_walkthrough"
+  },
+  "execution_tier": {
+    "tier": "small",
+    "stage_1_3_mode": "orchestrator_direct",
+    "orchestrator_clean": true,
+    "chosen_by": "Boss"
+  },
+  "approval": {
+    "status": "approved",
+    "approved_by": "Boss",
+    "approved_at": "2026-09-02"
+  }
+}

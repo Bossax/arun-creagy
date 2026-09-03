@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "rubric_version": "6.0.0",
+  "draft_sha256": "38f0a48d8f57290344d2d705a8926fded9fe743bd945c279a3a2c3a5539d2fff",
+  "contract_sha256": "9364e262c6eb43866a600dc8621fcddf3ad8e30d51410a975de192b76178d8d1",
+  "profile": "report",
+  "reviewer_mode": "self",
+  "assurance": "degraded",
+  "reviewer": "Codex structured self-review",
+  "reviewed_at": "2026-09-03T07:00:00+07:00",
+  "tier_1_argument_map": {
+    "warrant_soundness": {"verdict": "pass", "evidence": "Each unit explains why the catalog structure supports the stated domain role or integration consequence; no warrant merely repeats its claim."},
+    "mece_coverage": {"verdict": "pass", "evidence": "The five components separate domain boundaries, risk inputs, realized impacts, adaptation and MEL, and cross-domain integration without substantive duplication."},
+    "application_grounded": {"verdict": "pass", "evidence": "Each proposed report section follows from the corresponding evidence and warrant in the map."}
+  },
+  "dimensions": {
+    "section_job": {
+      "verdict": "pass",
+      "evidence": "Sections 1–6 explain the CDM through domains, data entities, and relationships without introducing physical-schema attributes or SQL."
+    },
+    "audience_decision_value": {
+      "verdict": "pass",
+      "evidence": "The summary and section 6 identify how the catalog supports data governance, logical modeling, APIs, quality rules, traceability, and adaptation reporting."
+    },
+    "evidence_payload": {
+      "verdict": "pass",
+      "evidence": "The report records 8 domains, all 45 data entities, all 51 numbered relationships, their cardinalities, and the central integration mechanisms."
+    },
+    "causal_logic": {
+      "verdict": "pass",
+      "evidence": "Sections 3–5 connect climate inputs to hazard products, risk outputs, realized impacts, adaptation decisions, and MEL results without reversing cause and effect."
+    },
+    "argument_fidelity": {
+      "verdict": "pass",
+      "evidence": "Warrant trace finds all five approved units present, with term overlap from 71% to 100%; manual review confirms each claim and design application is represented."
+    },
+    "reader_facing_appropriateness": {
+      "verdict": "pass",
+      "evidence": "The report contains no prompt residue, internal page locators, or drafting commentary; source filenames appear only in the scope statement to establish evidence precedence."
+    },
+    "terminology_agency": {
+      "verdict": "pass",
+      "evidence": "Thai prose consistently uses 'โดเมนข้อมูล' and 'หน่วยข้อมูล', while Domain_ID, Entity_Name, key types, and cardinalities remain in their catalog forms."
+    },
+    "source_fidelity": {
+      "verdict": "pass",
+      "evidence": "Automated coverage checks found 45 of 45 Entity_Name values and 51 numbered relationship rows; domain counts total 45 and match the source catalogs."
+    },
+    "form_readability": {
+      "verdict": "pass",
+      "evidence": "The information is divided into a domain overview, eight entity tables, five grouped relationship tables, cross-domain synthesis, and implementation implications."
+    }
+  },
+  "findings": [
+    {"severity":"minor","location":"sections 3 and 4","issue":"The report is table-dense because the approved contract requires complete coverage of 45 data entities and 51 relationships.","status":"accepted","disposition":"Retain the tables as technical reference material; surrounding prose provides the interpretive layer."}
+  ],
+  "mechanical_reviews": [
+    {"message":"[PARENTHETICAL] '(Conceptual Data Model: CDM)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.","disposition":"Retained to define the official English term and acronym on first mention."},
+    {"message":"[PARENTHETICAL] '(Climate Resilience Database: CRDB)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.","disposition":"Retained to define the system name and acronym on first mention."},
+    {"message":"[PARENTHETICAL] '(Entity–Attribute–Relationship Catalog: EAR Catalog)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.","disposition":"Retained to map the approved Thai term to the source catalog name."}
+  ],
+  "verdict": "pass"
+}

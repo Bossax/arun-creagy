@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "profile": "report",
+  "transformation_mode": "synthesis",
+  "audience": "ผู้บริหารและผู้ปฏิบัติงานของกรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อมที่เกี่ยวข้องกับระบบข้อมูล CRDB",
+  "decision_use": "ทำความเข้าใจขอบเขตของแบบจำลองข้อมูลเชิงแนวคิดและใช้เป็นฐานสำหรับกำกับการออกแบบข้อมูล การเชื่อมโยงข้อมูล และการพัฒนาระบบ",
+  "section_job": "อธิบายโครงสร้าง CDM ผ่านโดเมนข้อมูล หน่วยข้อมูล และความสัมพันธ์ โดยสังเคราะห์รายละเอียดจาก EAR Catalog รุ่นปัจจุบัน",
+  "target_altitude": "รายงานเชิงเทคนิคระดับสถาปัตยกรรมข้อมูล อธิบายตรรกะทางธุรกิจโดยไม่ลงรายละเอียดระดับแอตทริบิวต์หรือแบบจำลองฐานข้อมูลกายภาพ",
+  "report_specific_rules": [
+    "ใช้ CSV ทั้งสามชุดเป็นแหล่งรายละเอียดหลัก",
+    "ใช้ Pillar_05_CDM_EARCatalog_Deliverable.md เป็นเพียงโครงและบริบทเชิงสถาปัตยกรรม",
+    "ใช้ คณะที่ปรึกษา เมื่อกล่าวถึงการวิเคราะห์หรือการออกแบบ และใช้ กรมฯ เมื่อกล่าวถึงเจ้าของระบบหรือการนำไปใช้",
+    "ใช้คำว่า หน่วยข้อมูล แทน Entity ในคำอธิบายภาษาไทย และคง Entity_Name ภาษาอังกฤษตาม EAR Catalog",
+    "ใช้คำว่า โดเมนข้อมูล หรือ เขตข้อมูล ตามบริบท และไม่ใช้คำว่า สายข้อมูล",
+    "คง Domain_ID ชื่อหน่วยข้อมูล และ cardinality ภาษาอังกฤษตาม EAR Catalog",
+    "แปลคำอธิบายและกฎทางธุรกิจเป็นภาษาไทยทางการ",
+    "แยกข้อเท็จจริงปัจจุบันออกจากคำอธิบายวิวัฒนาการของแบบจำลอง",
+    "ไม่ใช้ชื่อหน่วยข้อมูลรุ่นเก่าจาก Markdown เมื่อขัดกับ CSV ปัจจุบัน"
+  ],
+  "inclusions": [
+    "ภาพรวม 8 โดเมนและเจ้าของเชิงหน้าที่",
+    "หน่วยข้อมูลทั้งหมด 45 รายการโดยจัดกลุ่มตามโดเมนข้อมูล",
+    "ความสัมพันธ์ทั้งหมด 51 รายการโดยสังเคราะห์เป็นกลุ่มความสัมพันธ์และตารางอ้างอิง",
+    "บทบาทของ SPATIAL_UNIT, INSTITUTIONAL_BODY และ VULNERABILITY_DETERMINANT ในฐานะจุดเชื่อมข้ามโดเมน",
+    "ความเชื่อมโยงระหว่างโดเมนข้อมูลภูมิอากาศและภัยอันตรายกับความเสี่ยง ผลกระทบ ความยืดหยุ่น การปรับตัว และ MEL",
+    "ข้อสังเกตเรื่องการแยกชั้นข้อมูลวิทยาศาสตร์ด้วย ENVIRONMENTAL_DATA และสะพานผลผลิตสู่ผลลัพธ์การปรับตัว"
+  ],
+  "exclusions": [
+    "รายละเอียดแอตทริบิวต์ที่ไม่มีใน CSV",
+    "โครงสร้างฐานข้อมูลกายภาพและคำสั่ง SQL",
+    "หน่วยข้อมูลระดับแพลตฟอร์มที่ถูกแยกออกจาก CDM",
+    "ตัวเลขหรือความสัมพันธ์รุ่นเก่าที่ขัดกับ CSV ปัจจุบัน"
+  ],
+  "evidence_policy": "ใช้จำนวน ชื่อ คำจำกัดความ cardinality และกฎทางธุรกิจจาก CSV ปัจจุบันเป็นหลัก ใช้ Markdown และ trace เพื่ออธิบายเหตุผลเชิงออกแบบเท่านั้น",
+  "required_concepts": [
+    "domain architecture",
+    "data entity roles",
+    "relationship cardinality",
+    "cross-domain integration",
+    "spatial anchor",
+    "loss and damage",
+    "resilience assessment",
+    "adaptation planning",
+    "monitoring evaluation and learning"
+  ],
+  "terminology": {
+    "first_mention": "แบบจำลองข้อมูลเชิงแนวคิด (Conceptual Data Model: CDM)",
+    "short_form": "CDM",
+    "catalog": "บัญชีรายการหน่วยข้อมูล–คุณลักษณะ–ความสัมพันธ์ (Entity–Attribute–Relationship Catalog: EAR Catalog)"
+  },
+  "required_structures": [
+    "บทนำและขอบเขต",
+    "ตารางภาพรวมโดเมน",
+    "คำอธิบายหน่วยข้อมูลแยกตามโดเมนข้อมูล",
+    "คำอธิบายความสัมพันธ์ข้ามโดเมนข้อมูล",
+    "ตารางความสัมพันธ์พร้อม cardinality และกฎทางธุรกิจ",
+    "ข้อสรุปเชิงการนำไปใช้"
+  ],
+  "source_paths": [
+    "ψ/incubate/DCCE/CRDB/output/05_Data_Management_Framework/CDM_EARCatalog/Domains-v3.csv",
+    "ψ/incubate/DCCE/CRDB/output/05_Data_Management_Framework/CDM_EARCatalog/Entities-v3.csv",
+    "ψ/incubate/DCCE/CRDB/output/05_Data_Management_Framework/CDM_EARCatalog/Relationships-v4.csv",
+    "ψ/incubate/DCCE/CRDB/output/05_Data_Management_Framework/CDM_EARCatalog/Pillar_05_CDM_EARCatalog_Deliverable.md"
+  ],
+  "trace_log_paths": [
+    "ψ/memory/traces/2026-07-13/1745_cdm-development-evolution.md"
+  ],
+  "reference_samples": [],
+  "plan_slice": "ψ/incubate/drafts/crdb-cdm-domain-entity-relationship-report/plan-slice.md",
+  "stage_0_checklist": {
+    "plan_mode_executed": true,
+    "outline_verified": true,
+    "evidence_base_verified": true,
+    "session_rules_verified": true,
+    "plan_source": "interactive agreement with Boss; CSV catalogs are authoritative"
+  },
+  "execution_tier": {
+    "tier": "medium",
+    "stage_1_3_mode": "inline",
+    "orchestrator_clean": true,
+    "chosen_by": "Boss"
+  },
+  "approval": {
+    "status": "approved",
+    "approved_by": "Boss",
+    "approved_at": "2026-09-02T00:00:00+07:00",
+    "basis": "Boss approved the report frame, clarified that CSV files are the main detailed references, and set Thai terms for domain and entity"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "rubric_version": "6.0.0",
+  "draft_sha256": "12dcb548443c96b778eedeebf3bed3dbe297ef4a620c688423a7693a32547634",
+  "contract_sha256": "0ac214ba3200f39000608a90a87771a460c281023f34fcc8615c00b9e444d93b",
+  "profile": "report",
+  "reviewer_mode": "self",
+  "assurance": "degraded",
+  "reviewer": "Codex self-review",
+  "reviewed_at": "2026-09-02T12:30:00+07:00",
+  "dimensions": {
+    "section_job": {
+      "verdict": "pass",
+      "evidence": "The draft translates the complete source document for use as a technical appendix and retains its major sections."
+    },
+    "audience_decision_value": {
+      "verdict": "pass",
+      "evidence": "The Thai wording is formal and explains the operational value of the entities, relationships, and business rules."
+    },
+    "evidence_payload": {
+      "verdict": "pass",
+      "evidence": "TOR clauses, formulas, standards, examples, cardinalities, domains, and use cases are retained."
+    },
+    "causal_logic": {
+      "verdict": "pass",
+      "evidence": "The translation preserves the causal chain from continuous drivers and discrete events through attribution, vulnerability, resilience, and action."
+    },
+    "argument_fidelity": {
+      "verdict": "pass",
+      "evidence": "All five approved argument units are represented in the translated sections."
+    },
+    "reader_facing_appropriateness": {
+      "verdict": "pass",
+      "evidence": "Internal drafting commentary is removed from audience-facing prose while technical names and Mermaid blocks remain."
+    },
+    "terminology_agency": {
+      "verdict": "pass",
+      "evidence": "Entity names remain stable; Thai functional terms are used consistently and institutional agency is expressed directly."
+    },
+    "source_fidelity": {
+      "verdict": "pass",
+      "evidence": "The source distinctions between hazard events, climate drivers, attribution, vulnerability strategies, resilience scoring, and action domains are preserved."
+    },
+    "form_readability": {
+      "verdict": "pass",
+      "evidence": "Headings, tables, lists, formulas, and Mermaid diagrams match the information shape of the source."
+    }
+  },
+  "findings": [
+    {"severity":"minor","location":"section ข, source references","issue":"Some internal wiki-link targets were rendered as descriptive Thai links rather than preserving the original vault paths.","status":"accepted","disposition":"Accept for appendix readability; entity names, technical identifiers, source URLs, and substantive content remain preserved."},
+    {"severity":"minor","location":"frontmatter and inline technical notation","issue":"The mechanical linter reports one non-applicable structural style note and technical parenthetical notices.","status":"accepted","disposition":"Retain because the source metadata, formulas, standards, and technical English names are required for traceability."}
+  ],
+  "mechanical_reviews": [
+    {"message":"[STRUCTURAL] 'สถาปัตยกรรม' present -> consider 'ระบบรายงาน, ฐานข้อมูล, ระบบสารสนเทศ, ระบบบันทึกข้อมูล (เว้นแต่จะหมายถึง Enterprise Architecture ในภาพรวม)'. (Too abstract and academic; use grounded operational terms.)","disposition":"Retained only in the source-faithful phrase 'สถาปัตยกรรมองค์กรแบบผสม', where it explicitly means Enterprise Architecture."},
+    {"message":"[PARENTHETICAL] technical notation and standards are retained as required by the report contract.","disposition":"Accepted; these are technical identifiers rather than prose filler."}
+  ],
+  "verdict": "pass"
+}

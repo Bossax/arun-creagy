@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "rubric_version": "6.0.0",
+  "draft_sha256": "9fa7feabe41b786feb7f0f0d54d5bf0c7efe976b8f692e771904dd7107797fc4",
+  "contract_sha256": "bdf7c19cb05c6062517284618f8fa2f4f3fde10f5b6dec215b2ecb8dbdd8d260",
+  "profile": "report",
+  "reviewer_mode": "independent",
+  "assurance": "standard",
+  "reviewer": "",
+  "reviewed_at": "2026-09-02T11:19:50+00:00",
+  "dimensions": {
+    "section_job": {
+      "verdict": "pending",
+      "evidence": ""
+    },
+    "audience_decision_value": {
+      "verdict": "pending",
+      "evidence": ""
+    },
+    "evidence_payload": {
+      "verdict": "pending",
+      "evidence": ""
+    },
+    "causal_logic": {
+      "verdict": "pending",
+      "evidence": ""
+    },
+    "argument_fidelity": {
+      "verdict": "pending",
+      "evidence": ""
+    },
+    "reader_facing_appropriateness": {
+      "verdict": "pending",
+      "evidence": ""
+    },
+    "terminology_agency": {
+      "verdict": "pending",
+      "evidence": ""
+    },
+    "source_fidelity": {
+      "verdict": "pending",
+      "evidence": ""
+    },
+    "form_readability": {
+      "verdict": "pending",
+      "evidence": ""
+    }
+  },
+  "findings": [],
+  "mechanical_reviews": [],
+  "verdict": "fail"
+}
