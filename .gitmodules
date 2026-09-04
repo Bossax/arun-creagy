@@ -1,0 +1,3 @@
+[submodule ".oracle-shared-skills"]
+	path = .oracle-shared-skills
+	url = https://github.com/Bossax/oracle-shared-skills.git

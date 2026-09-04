@@ -96,3 +96,7 @@ venv_clean/
 
 # CRI Deployment Bundle
 ψ/outbox/cri_deploy/
+
+# Shared skills: junctioned into .oracle-shared-skills/ submodule, not tracked directly here
+.agents/skills/style-capture/
+.agents/skills/writing-th/
