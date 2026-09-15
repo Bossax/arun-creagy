@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "rubric_version": "6.0.0",
+  "draft_sha256": "e110a90b3b13e6dd3a6840475d8cce40504b1777f342ad3cc8f7b12091ce7118",
+  "contract_sha256": "4e877c7e948d274a8066ba6ce9581bf49cace9d3f612c4d6ea2e0188ef958c98",
+  "profile": "letter",
+  "reviewer_mode": "independent",
+  "assurance": "standard",
+  "reviewer": "Codex Stage 5 independent editorial reviewer",
+  "reviewed_at": "2026-09-15T08:34:10Z",
+  "dimensions": {
+    "warrant_soundness": {
+      "verdict": "pass",
+      "evidence": "argument-map.json > argument_units[arg-01..arg-03]: arg-01 connects the participant-data requirements to the need to anchor the instrument in TOR 5.6; arg-02 connects the evaluation uses of the data dimensions to a concise statement of instrument scope; arg-03 connects the sample letter's decision structure to separating the high-level purpose from the attached full questionnaire. None merely repeats its claim."
+    },
+    "mece_coverage": {
+      "verdict": "pass",
+      "evidence": "argument-map.json > governing_thought_components and argument_units[*].supports: the three non-duplicative components cover (1) the TOR/project basis, (2) the instrument's purpose and scope, and (3) the requested approval before use; together they partition the governing thought without substantive overlap."
+    },
+    "application_grounded": {
+      "verdict": "pass",
+      "evidence": "argument-map.json > argument_units[arg-01].application_to_design, [arg-02].application_to_design, and [arg-03].application_to_design: each design instruction follows its own warrant respectively by establishing the TOR context, summarising scope without reproducing questions, and placing the full instrument in the attachment before requesting approval."
+    },
+    "section_job": {
+      "verdict": "pass",
+      "evidence": "letter-draft.md:11-17 links the engagement and TOR 5.6 to preparation of the evaluation form, then asks the Department to approve that form before use; it does not drift into later evaluation results or system-wide evaluation detail excluded by the contract."
+    },
+    "audience_decision_value": {
+      "verdict": "pass",
+      "evidence": "letter-draft.md:13-17 gives the decision-maker the instrument's purpose, high-level data scope, attachment locator, and the exact action requested; consultant workflow is not foregrounded beyond the context needed for the decision."
+    },
+    "evidence_payload": {
+      "verdict": "pass",
+      "evidence": "letter-draft.md:11 establishes the project/contract/TOR basis; line 13 identifies participant feedback, satisfaction, perception/understanding, quantitative information, qualitative suggestions, and their evaluation/improvement use; lines 15-17 identify the attached instrument and approval action. This is sufficient payload at the contract's short-letter altitude."
+    },
+    "causal_logic": {
+      "verdict": "pass",
+      "evidence": "letter-draft.md:11-17 progresses without reversal from contractual context, to the evaluation information the form is intended to collect and use, to submission of that form for approval before deployment."
+    },
+    "argument_fidelity": {
+      "verdict": "pass",
+      "evidence": "letter-draft.md:11 verbalizes arg-01; line 13 verbalizes arg-02; lines 15-17 verbalize arg-03. The quantitative/qualitative sentence is a contract-required elaboration of arg-02's approved data-scope unit, not a new governing claim, and no argument unit is silently dropped."
+    },
+    "reader_facing_appropriateness": {
+      "verdict": "pass",
+      "evidence": "letter-draft.md:1-23 contains only conventional letter fields, audience-facing prose, the attachment reference, closing, and explicit fill-in placeholders; it contains no source paths, prompt residue, internal artifact references, drafting commentary, or fake diagrams."
+    },
+    "terminology_agency": {
+      "verdict": "pass",
+      "evidence": "letter-draft.md:11-17 assigns the technical preparation to 'คณะที่ปรึกษา', the submission/request to 'บริษัทฯ', and the approval decision to the Department. The local connector issue at line 13 is recorded as finding ER-002 but does not destabilize actor identity or the governing request."
+    },
+    "source_fidelity": {
+      "verdict": "pass",
+      "evidence": "Against writing-contract.json only, letter-draft.md:11-17 preserves TOR 5.6, participant opinions, satisfaction, perception/understanding, quantitative information with qualitative suggestions, use for evaluation/improvement, and approval before use; it introduces no scores, respondent characteristics, analysis methods, future results, or premature endorsement. The 'และ/หรือ' distinction at line 13 is a localized minor finding (ER-002), not loss of the letter's governing substance."
+    },
+    "form_readability": {
+      "verdict": "pass",
+      "evidence": "letter-draft.md:1-23 follows a readable formal-letter sequence: date/reference fields, subject, recipient, attachment, contractual context, proposed substance, requested action, formal closing, and signatory fields. The missing project-name slot in the context paragraph is separately located as minor finding ER-001."
+    },
+    "letter_profile": {
+      "verdict": "pass",
+      "evidence": "letter-draft.md:5 states the purpose; lines 7 and 11 provide recipient-relevant context; lines 15-17 state the requested action; lines 13 and 15 distinguish the responsible technical and submitting actors; and 'ก่อนนำไปใช้' at line 15 supplies the applicable timing/next-step condition."
+    }
+  },
+  "findings": [
+    {
+      "finding_id": "ER-001",
+      "severity": "minor",
+      "status": "unresolved",
+      "dimension": "form_readability",
+      "location": "letter-draft.md:11, phrase 'โครงการ “พัฒนาชุดข้อมูล องค์ความรู้ ความเสี่ยง และผลกระทบจากการเปลี่ยนแปลงสภาพภูมิอากาศของประเทศไทย”'",
+      "issue": "The project name is hard-coded in the contractual-context paragraph even though writing-contract.json > report_specific_rules[5] requires a fill-in slot for the project name. This is a local template-readiness issue; the name itself is consistent with the contracted attachment title.",
+      "disposition": "accepted_for_human_review; replace the contextual project title with [ชื่อโครงการ] before issue if the letter is intended to remain a fill-in template"
+    },
+    {
+      "finding_id": "ER-002",
+      "severity": "minor",
+      "status": "unresolved",
+      "dimension": "source_fidelity",
+      "location": "letter-draft.md:13, phrase 'การรับรู้และความเข้าใจ'",
+      "issue": "The draft uses the conjunction 'และ', while writing-contract.json > inclusions[1] and required_concepts[2] preserve the distinction as 'การรับรู้หรือความเข้าใจ'. Both concepts remain present, so the approval request is unchanged, but the connector should be confirmed against the intended instrument scope.",
+      "disposition": "accepted_for_human_review; prefer 'การรับรู้หรือความเข้าใจ' before issue unless the attached instrument expressly measures both as cumulative dimensions"
+    }
+  ],
+  "mechanical_reviews": [],
+  "verdict": "pass"
+}
