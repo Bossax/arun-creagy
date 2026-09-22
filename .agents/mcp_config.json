@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "oracle-v2": {
-      "command": "docker",
+      "env": {},
       "args": [
         "exec",
         "-i",
@@ -9,8 +9,9 @@
         "bun",
         "src/index.ts"
       ],
+      "command": "docker",
       "cwd": "C:/Users/sitth/OracleWorkspace/engine",
-      "description": "Local Oracle Registry (Registry of Form)"
+      "description": "Local Oracle Registry (Registry of Form) - per-project vector/trace store"
     }
   }
 }

@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "profile": "report",
+  "transformation_mode": "rewrite",
+  "audience": "NAP Action Plan team, GGGI counterparts, and Thai sector agencies working on adaptation indicators",
+  "decision_use": "Read the GGA thematic and dimensional targets in Thai alongside the already-translated GGA indicator set, so target wording and indicator wording can be cited as one coherent reference",
+  "section_job": "Render the GGA target text of draft decision -/CMA.7 into Thai with clause-level fidelity, matching the terminology already established in GGA_indicator_TH.csv",
+  "target_altitude": "Reference document. Full clause preservation; no summarisation, no executive compression, no interpretive gloss.",
+  "report_specific_rules": [
+    "This is a TRANSLATION unit, not an argued-prose unit. Stages 1-3 of the harness (argument map, blueprint gate, verbalization) are deliberately not run: treaty text carries no governing thought or SCQA arc to construct, and fidelity is the controlling requirement rather than synthesis. transformation_mode is recorded as 'rewrite' because the schema admits only rewrite/synthesis/new; the operative mode is translate.",
+    "Register: formal Thai official, matching GGA_indicator_TH.csv",
+    "Key English term retained in parentheses on first use, per the CSV convention",
+    "No clause may be dropped, merged, or summarised; no content may be added",
+    "Standardise 'Indigenous Peoples' to ชนเผ่าพื้นเมือง (CSV uses both ชนพื้นเมือง and ชนเผ่าพื้นเมือง; the latter is more frequent)",
+    "Heading levels: all targets sit at a single uniform level (###) beneath the two ## section headers for thematic and dimensional targets, replacing the source's inconsistent mix of # and ##",
+    "No active-actor convention applies: the targets have no consultant voice. Subject is ภาคี (Parties) where the source says so."
+  ],
+  "inclusions": [
+    "Targets 9(a), 9(b), 9(c), 9(d), 9(e), 9(f), 9(g)",
+    "Targets 10(a), 10(b), 10(c), 10(d)",
+    "Parallel English source text above each Thai rendering",
+    "Provenance header naming draft decision -/CMA.7, Belem, 10-21 November 2025, agenda item 8(a)",
+    "Translator's note recording the 9(f) gap and terminology decisions"
+  ],
+  "exclusions": [
+    "Indicator text (already covered by GGA_indicator_TH.csv)",
+    "Commentary, analysis, or implications for Thailand's NAP",
+    "Any edit to the source file"
+  ],
+  "evidence_policy": "The English source text is the sole evidence base and is reproduced verbatim beside each Thai rendering so fidelity can be checked line by line. Terminology is anchored to GGA_indicator_TH.csv rather than chosen fresh.",
+  "required_concepts": [
+    "clause-level fidelity to the decision text",
+    "terminology continuity with the existing Thai indicator set"
+  ],
+  "terminology": {
+    "resilience": "ความยืดหยุ่น",
+    "climate-resilient": "ที่มีความยืดหยุ่นต่อสภาพภูมิอากาศ",
+    "adaptation": "การปรับตัว",
+    "Parties": "ภาคี",
+    "national adaptation plans": "แผนการปรับตัวระดับชาติ (NAPs)",
+    "policy instruments": "เครื่องมือเชิงนโยบาย",
+    "vulnerability": "ความเปราะบาง",
+    "hazards": "ภัยอันตราย",
+    "human settlements": "ถิ่นฐานมนุษย์",
+    "ecosystem-based adaptation": "การปรับตัวโดยอาศัยระบบนิเวศ",
+    "nature-based solutions": "แนวทางอิงธรรมชาติ",
+    "sanitation": "สุขาภิบาล",
+    "potable water": "น้ำดื่ม",
+    "monitoring, evaluation and learning": "การติดตามประเมินผลและการเรียนรู้",
+    "gender-responsive": "มีความไวต่อมิติทางเพศ",
+    "traditional knowledge": "ภูมิปัญญาท้องถิ่น",
+    "Indigenous Peoples' knowledge": "ความรู้ของชนเผ่าพื้นเมือง",
+    "local knowledge systems": "ระบบความรู้ท้องถิ่น",
+    "cultural heritage": "มรดกทางวัฒนธรรม",
+    "multi-hazard early warning systems": "ระบบเตือนภัยล่วงหน้าสำหรับภัยหลายประเภท",
+    "climate information services": "บริการสารสนเทศด้านภูมิอากาศ",
+    "systematic observation": "ระบบสังเกตการณ์อย่างเป็นระบบ",
+    "exposure": "การเปิดรับ",
+    "poverty eradication": "การขจัดความยากจน",
+    "livelihoods": "การดำรงชีพ",
+    "social protection": "การคุ้มครองทางสังคม",
+    "adaptive social protection measures": "มาตรการคุ้มครองทางสังคมเชิงปรับตัว"
+  },
+  "required_structures": [
+    "Two-part structure mirroring the source: Thematic targets (9) then Dimensional targets (10)",
+    "Per target: English block, then Thai block",
+    "Closing translator's note"
+  ],
+  "source_paths": [
+    "ψ/incubate/GGGI/NAP_AP/inbox_source/GGA_Target_phrases.md"
+  ],
+  "trace_log_paths": [],
+  "reference_samples": [
+    "ψ/incubate/GGGI/NAP_AP/inbox_source/GGA_indicator_TH.csv"
+  ],
+  "prior_draft": null,
+  "plan_slice": null,
+  "stage_0_checklist": {
+    "plan_mode_executed": true,
+    "outline_verified": true,
+    "evidence_base_verified": true,
+    "session_rules_verified": true,
+    "plan_source": "interactive_walkthrough"
+  },
+  "execution_tier": {
+    "tier": "small",
+    "stage_1_3_mode": "inline",
+    "orchestrator_clean": true,
+    "chosen_by": "Boss"
+  },
+  "translation_notes": {
+    "source_gap": "RESOLVED 2026-09-11. Target 9(f) was absent from the source on the first pass; Boss added its wording to the source file and it was translated in a second pass. The gap section that stood in its place has been replaced by the translation. The theme inferred from indicators GGA-9f(a)/(b)/(c) during the first pass — poverty and social protection — matched the actual target text.",
+    "divergence_from_reference_sample": "Two declared divergences from GGA_indicator_TH.csv, both decided by Boss rather than silently propagated. (1) 'exposure to risks': the CSV row 10a(b) renders it การเปิดเผยต่อความเสี่ยง (เปิดเผย = to disclose); this translation uses การเปิดรับ, the correct sense for risk exposure. (2) 'traditional knowledge': the CSV uses ความรู้ดั้งเดิม and never uses ภูมิปัญญา; Boss edited this draft to ภูมิปัญญาท้องถิ่น on 2026-09-11 and confirmed it should stand. Scope of that decision is THIS DOCUMENT ONLY — GGA_indicator_TH.csv and LEXICON_TH.json are deliberately left unchanged. Known effect: ท้องถิ่น now serves both 'traditional knowledge' (ภูมิปัญญาท้องถิ่น) and 'local knowledge systems' (ระบบความรู้ท้องถิ่น) in target 9(g); Boss judged ภูมิปัญญาท้องถิ่น a settled compound that Thai policy readers parse as a unit.",
+    "reference_sample_defects": "CSV rows GGA-10a(c) and GGA-10a(f) carry PDF-extraction corruption (การจัดตัhง, เฝhาระวัง, สนบั สนุน). Not corrected here; out of scope."
+  },
+  "approval": {
+    "status": "approved",
+    "approved_by": "Boss",
+    "approved_at": "2026-09-11T14:30:00+07:00"
+  }
+}

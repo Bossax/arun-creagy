@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "rubric_version": "6.0.0",
+  "draft_sha256": "78b3fad8554a30dbcb10da4c22da6e4251781e2f554155df00efe6fad167165d",
+  "contract_sha256": "28b5d438f1a5b20661332a7195fce2c870bee2ffa003a558ae01c3e065aa5859",
+  "profile": "report",
+  "reviewer_mode": "independent",
+  "assurance": "standard",
+  "reviewer": "bossa.suan130@gmail.com (independent editorial reviewer, writing-th v6.0 harness, Stage 5 third pass)",
+  "reviewed_at": "2026-09-11T15:40:00+07:00",
+  "dimensions": {
+    "section_job": {
+      "verdict": "pass",
+      "evidence": "Unchanged from prior pass, re-confirmed on the current file: parallel EN/TH clause-level rendering of the 11 GGA targets (9(a)-9(g), 10(a)-10(d)), terminology anchored to GGA_indicator_TH.csv, no indicator text reproduced, no commentary or Thailand-specific implication anywhere in the target blocks or translator's notes."
+    },
+    "audience_decision_value": {
+      "verdict": "pass",
+      "evidence": "Unchanged: provenance header (draft decision -/CMA.7, Belem, 10-21 Nov 2025, agenda item 8(a)) and parallel EN/TH blocks let the NAP Action Plan team cite Thai target wording directly alongside the indicator set, as the contract's decision_use requires."
+    },
+    "evidence_payload": {
+      "verdict": "pass",
+      "evidence": "Unchanged: each target block carries its full EN clause, full TH rendering, and a first-use English parenthetical gloss for technical terms, e.g. Target 9(g) line 55 now reads '...ภูมิปัญญาท้องถิ่น (traditional knowledge) ความรู้ของชนเผ่าพื้นเมือง (Indigenous Peoples' knowledge) และระบบความรู้ท้องถิ่น (local knowledge systems) เป็นแนวทาง' -- all three glosses present, correctly spelled, in source order."
+    },
+    "causal_logic": {
+      "verdict": "pass",
+      "evidence": "Unchanged: judged as preservation of the source's own causal connectors without reversal. Target 10(c) EN '...have progressed in implementing... and, as a result, have reduced the social and economic impacts...' is rendered '...มีความคืบหน้าในการดำเนินการ...และผลจากการดำเนินการดังกล่าวทำให้ผลกระทบทางสังคมและเศรษฐกิจ...ลดลง' -- cause precedes effect exactly as in the source."
+    },
+    "argument_fidelity": {
+      "verdict": "pass",
+      "evidence": "No argument-map.json exists or is expected for this unit (contract report_specific_rules item 1). Reinterpreted as clause fidelity to the English source: all 11 targets have a 1:1 EN-clause-to-TH-clause correspondence, no clause silently dropped, no clause added that is absent from the source. The Target 9(g) clause that previously carried a terminology defect now renders faithfully with no residual disturbance to the surrounding sentence."
+    },
+    "reader_facing_appropriateness": {
+      "verdict": "pass",
+      "evidence": "Unchanged: no prompt residue, fake diagrams, or stray internal artifact locators. Provenance header and translator's notes remain contract-sanctioned inclusions."
+    },
+    "terminology_agency": {
+      "verdict": "pass",
+      "evidence": "RESOLVED STATE CONFIRMED INDEPENDENTLY. Read line 55 directly: 'ความรู้ของชนเผ่าพื้นเมือง (Indigenous Peoples' knowledge)' now matches the contract terminology table exactly. Full-document scan confirms zero occurrences of the transposed form 'ชนพื้นเผ่าเมือง' and three occurrences of the correct 'ชนเผ่าพื้นเมือง' (one in Target 9(g) itself, two within translator's note 4, which both quotes the CSV's alternate spelling and asserts this document's own consistent usage). Note 4's claim that the document uses 'ชนเผ่าพื้นเมือง' throughout is now true. All other locked terms remain stable and match GGA_indicator_TH.csv except the two declared, disclosed divergences (exposure -> การเปิดรับ; traditional knowledge -> ภูมิปัญญาท้องถิ่น). No undeclared divergence remains."
+    },
+    "source_fidelity": {
+      "verdict": "pass",
+      "evidence": "All 11 targets re-checked clause-by-clause against GGA_Target_phrases.md; no change found anywhere outside the corrected span in Target 9(g). Target 9(f)'s 'substantially reducing' vs 9(a)/9(c)'s 'significantly reducing' distinction still holds (ลงอย่างมาก vs ลงอย่างมีนัยสำคัญ). Target 9(g)'s corrected clause was spot-checked in full: the three knowledge terms appear in source order (traditional knowledge, Indigenous Peoples' knowledge, local knowledge systems), each with its correct Thai rendering and English gloss, and the clause still closes with 'เป็นแนวทาง' -- no collateral disturbance from the fix. All previously-verified notes (1, 3, 5, 6) remain accurate descriptions of the current file."
+    },
+    "form_readability": {
+      "verdict": "pass",
+      "evidence": "Unchanged: uniform two-part structure, every target at a single normalized ### level, EN block immediately above TH block throughout, translator's note intact as seven numbered items."
+    }
+  },
+  "findings": [
+    {
+      "severity": "major",
+      "status": "resolved",
+      "location": "Target 9(g), Thai rendering, line 55 of GGA_Target_phrases_TH.md",
+      "issue": "The Thai term for 'Indigenous Peoples' knowledge' was previously rendered 'ชนพื้นเผ่าเมือง', a transposed/garbled form of the contract-locked term 'ชนเผ่าพื้นเมือง', contradicting both the contract terminology table and translator's note 4's own claim of document-wide consistency.",
+      "disposition": "Fixed and independently confirmed on this pass. Line 55 now reads 'ความรู้ของชนเผ่าพื้นเมือง (Indigenous Peoples' knowledge)', matching the contract terminology table. Full-document scan confirms zero remaining occurrences of the transposed form. The surrounding clause (three knowledge terms in source order, closing with 'เป็นแนวทาง') was spot-checked and is undisturbed by the fix. Translator's note 4's 'throughout' claim is accurate again. No further action needed."
+    }
+  ],
+  "mechanical_reviews": [
+    {
+      "message": "[PARENTHETICAL] first-use English term retained in parentheses",
+      "disposition": "Non-blocking by contract design (report_specific_rules item 3). Spot-checked across all 11 targets, including the corrected Target 9(g) span, and confirmed consistent with the CSV's own parenthetical convention. Accepted as-is. Coordinator reports Stage 4 lint was rerun after the fix and passed (2,719 tokens, 61 sentences); this reviewer's independent spot-check of the parenthetical convention corroborates that result."
+    }
+  ],
+  "verdict": "pass"
+}

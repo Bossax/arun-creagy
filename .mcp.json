@@ -11,15 +11,6 @@
         "src/index.ts"
       ],
       "env": {}
-    },
-    "qwen": {
-      "type": "stdio",
-      "command": "uv",
-      "args": [
-        "run",
-        "C:\\Users\\sitth\\OracleWorkspace\\Arun_Creagy\\tools\\qwen-mcp\\server.py"
-      ],
-      "env": {}
     }
   }
 }
