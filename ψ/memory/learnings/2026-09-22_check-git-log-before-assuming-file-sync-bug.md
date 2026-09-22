@@ -1,0 +1,9 @@
+# Check git log/status before assuming a file-sync bug
+
+**Pattern**: When a tracked file's on-disk content doesn't match what was just written by a tool call in the same session, check `git log` and `git status` for concurrent commits before assuming a sync bug, a stale read, or a tool malfunction.
+
+**Context**: During a writing-th argument-map session, `argument-map.json` kept showing reverted content — fixes that had just been applied (tense corrections, citation fixes, negation-pattern removal) disappeared between turns. The first instinct was to re-read the file and reapply the fixes, treating it as a mysterious sync issue. The actual cause: the user was committing his own direct edits to the same file via git throughout the session, in parallel with the session's own tool-based edits — three separate commits landed mid-session without the session initiating them. This was only discovered by running `git log --oneline -3 -- <path>` and `git diff --stat HEAD -- <path>`, which should have been the first diagnostic step, not a late one.
+
+**Why it matters**: Guessing at a mechanism and re-doing work is slower and riskier than a two-command check. It also risks silently clobbering a user's own concurrent edits if the "fix" is reapplied blindly without first understanding why the state changed. The instinct to distrust the file and re-verify is correct — but the tool of first resort should be version-control history, not another read-and-rewrite cycle.
+
+**How to apply**: When a file's content is surprising (reverted, unexpectedly different, or the notification says "changed on disk since you last read it"), run `git log --oneline -3 -- <path>` and `git diff --stat HEAD -- <path>` before forming a hypothesis. If the file is tracked and clean against HEAD, the explanation is almost certainly a concurrent commit, not a tool bug.
