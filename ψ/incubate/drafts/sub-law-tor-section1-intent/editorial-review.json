@@ -1,71 +1,94 @@
 {
   "schema_version": "1.0",
   "rubric_version": "6.0.0",
-  "draft_sha256": "6bc6ac8dde548b42fc461f76d23139014d043c466623a472119920e7662ede26",
-  "contract_sha256": "c5979ca7d670da3f90652d354ca5fa6c55f81081cbe80b244c2bef6f781c08d0",
+  "draft_sha256": "95ff04a407f72f11ed8ba2a3a1114b7848e01ee77ec57f0cd68d70848857e4f9",
+  "contract_sha256": "ad1b7fb3eadeb99c6089e967bd91568067bc2af32836e009fa8dc02fab0dfd74",
   "profile": "report",
   "reviewer_mode": "independent",
   "assurance": "standard",
   "reviewer": "bossa.suan130@gmail.com",
-  "reviewed_at": "2026-09-22T07:15:00+00:00",
+  "reviewed_at": "2026-09-22T08:10:00+00:00",
   "dimensions": {
     "section_job": {
       "verdict": "pass",
-      "evidence": "Draft covers exactly the approved section_job: the institutional gap (para 1), the roles/actors assigned by Chapter 12 (para 2), how Part 1 closes the gap (para 3), how Part 2 closes it (para 4), and why the two parts are one integrated fix via the UNFCCC Decision 3/CMA.4 cycle (paras 5-6). No SOP/process detail and no consultant operating-framework naming intrude -- both are correctly left out per the contract's exclusions."
+      "evidence": "Draft performs exactly the approved section_job: the adaptation-cycle premise (paras 1-3), the documented institutional gap (para 4), the roles Chapter 12 assigns to close it (para 5), why the two parts are one integrated fix (para 6), and the consultant's plain closing principle (para 7). No SOP/process-design detail and no named consultant operating framework intrude -- both correctly withheld per contract exclusions."
     },
     "audience_decision_value": {
       "verdict": "pass",
-      "evidence": "The prose foregrounds what DCCE needs to understand before the methodology section follows: the legal basis for the department's mandate and the reason the two parts are inseparable. No consultant-workflow framing appears."
+      "evidence": "Prose foregrounds what DCCE needs before the methodology section follows: why the chapter exists, what gap it closes, and why its two parts cannot be read as separate topics. No consultant-workflow content is foregrounded without reader-facing purpose."
     },
     "evidence_payload": {
       "verdict": "pass",
-      "evidence": "Each argument unit is developed with claim + grounds + mechanism/consequence across its paragraph (e.g. para 3 ties each of the five มาตรา it cites to a specific gap named in para 1). See findings for two citation-accuracy defects that do not change the dimension's overall pass but must be tracked."
+      "evidence": "Each argument unit carries claim + grounds + mechanism within its paragraph: para 4 names the specific mechanism of the gap (ad hoc per-agency requests, no repeatable channel, no recourse) rather than asserting the gap abstractly; para 5 ties each named actor (department, Met Dept, Committee, Cabinet) to a specific power rather than a generic role label. See F1 for a structural note on how the six downstream-use items in para 3 are packaged."
     },
     "causal_logic": {
       "verdict": "pass",
-      "evidence": "Diagnose (paras 1-2) -> remedy mapped 1:1 to each diagnosed gap (paras 3-4) -> integration argument grounded in an external, binding reference point (paras 5-6). No reversed causality or decorative transitions found."
+      "evidence": "Premise (paras 1-3: the cycle needs data at every stage) -> diagnosis (para 4: Thailand's general data infrastructure does not cover climate coordination) -> remedy (para 5: Chapter 12 assigns the missing roles) -> integration claim grounded in the provisions' own cross-reference, not just assertion (para 6: the adaptation plan must be built directly from the risk-assessment results) -> stated consultant principle (para 7). No reversed causality. See F2 for one added clarity-claim phrase not present in the approved map."
     },
     "argument_fidelity": {
       "verdict": "pass",
-      "evidence": "All six argument_units are verbalized: arg-01/02 merged into para 1 (gap), arg-03 into para 2 (actor_scope), arg-04 into para 3 (part1_fix), arg-05 into para 4 (part2_fix), arg-06 into paras 5-6 (unity). No unit is dropped and no draft claim lacks a map source. The map's own negation-contrast phrasing in arg-06's claim (ไม่ใช่...แต่) was correctly NOT carried into the prose -- para 6 states the integration finding as a direct positive claim instead."
+      "evidence": "All seven argument units are verbalized in approved order: arg-01/02/03 -> paras 1-3 (cycle premise), arg-04 -> para 4 (gap), arg-05 -> para 5 (part1_fix and part2_fix roles together), arg-06 -> para 6 (unity), arg-07 -> para 7 (principle). No unit is dropped and no draft claim is absent from the map. See F3: this dimension's prose-level pass sits on top of a Tier 1 structural defect in the map itself (arg-05 substantively carries both part1_fix and part2_fix content but its `supports` field only names part1_fix, leaving `actor_scope` and `part2_fix` with no unit formally supporting them -- confirmed by `argument_gate.py validate` failing on this file). The prose is faithful to what the map contains; the defect is in the map's own tagging, not in how the draft renders it."
     },
     "reader_facing_appropriateness": {
       "verdict": "pass",
-      "evidence": "No internal artifact locators, prompt residue, or commentary about the document's own upcoming structure. Clean reader-facing prose throughout."
+      "evidence": "Scanned for %%comment%% blocks, HTML comments, strikethrough, [หมายเหตุที่ปรึกษา] notes, and bracketed self-instructions -- none found. draft.md contains only final clean Thai prose (plus one English parenthetical flagged separately as F4), as report_specific_rules requires re: no trace of the drafting process."
     },
     "terminology_agency": {
       "verdict": "pass",
-      "evidence": "ผู้ประสานและขับเคลื่อน appears at first mention exactly as required by contract terminology; named actors (กรม, กรมอุตุนิยมวิทยา, คณะกรรมการ, คณะรัฐมนตรี) each perform only the powers their cited มาตรา actually assign them; department is explicitly framed as ผู้ประสานและขับเคลื่อน among three named co-actors, not sole owner."
+      "evidence": "ผู้ประสานและขับเคลื่อน appears at first mention (para 5) exactly per contract terminology. Named actors perform only the powers the map's grounds trail assigns them: กรม as coordinator/driver (not sole owner, stated explicitly), กรมอุตุนิยมวิทยา as independent holder of the national climate database, คณะกรรมการ approving risk-assessment results and adjudicating disputes, คณะรัฐมนตรี as final authority when no agency holds legal power or a conflict is unresolved. ที่ปรึกษา is the named actor for the closing design-principle sentence (para 7), per contract rule."
     },
     "source_fidelity": {
       "verdict": "pass",
-      "evidence": "All five required_concepts (institutional gap, standard-setter, data-authenticator, recourse mechanism, coordinator not sole owner) are present and traceable to the map. มาตรา numbering throughout the draft stays within the corrected ๑๕๖–๑๗๒ range (no reversion to the old +2-offset ๑๕๘–๑๗๔ numbering). NFCS/WMO framework naming is absent; UNFCCC Decision 3/CMA.4 is correctly cited by name per the contract's explicit exception. Two citation-accuracy defects were found on spot-check against Chapter12-CC-Act-Original.md and are logged as findings rather than failing this dimension."
+      "evidence": "Zero มาตรา numbers appear anywhere in the draft body -- fully compliant with the instruction to minimize/omit มาตรา numbers in the Part 1/Part 2 description; this matches arg-05's own application_to_design, which explicitly permits omitting inline citations since the map's grounds field serves as the audit trail. Spot-checked against source_paths: the GDX/Digital Government Act claim in para 4 matches CRDB Interview Summaries §1.1-1.4 line 16 and line 28 (per-agency request/approval, not automatic) word-for-sense; the institutional-gap claim (no coordinating role, no repeatable channel, no recourse, standard-setter/data-authenticator roles) matches WP7 Gap Analysis Report §7 (lines 169-177) closely, including the three named roles. UNFCCC Decision 3/CMA.4's four-stage cycle is cited by name per the contract's explicit exception; no NFCS/WMO-framework naming appears. All five required_concepts (institutional gap, standard-setter, data-authenticator, recourse mechanism, coordinator not sole owner) are present and traceable."
     },
     "form_readability": {
       "verdict": "pass",
-      "evidence": "The one 3+ item enumeration that names discrete parallel items (the UNFCCC four-stage cycle) renders as a real numbered list per the contract rule against inline (๑)(๒)(๓) prose. The three-actor enumeration in para 2 is left as flowing prose because each actor's description carries a distinct relational clause (which power it holds), not a bare item name -- appropriate use of prose over a list for that content shape."
+      "evidence": "The four-stage UNFCCC cycle (3+ named parallel items) correctly renders as a real numbered list, not inline (๑)(๒)(๓) prose. See F1: the six downstream-use items in para 3 are instead written as a connected prose chain; this is a defensible reading of the rule (the items are not run through parenthesized numeral markers, and the prose shape mirrors the cycle's sequential logic) but is close enough to the list-enumeration rule to flag for the record."
     }
   },
   "findings": [
     {
       "id": "F1",
-      "severity": "major",
-      "dimension": "source_fidelity",
-      "location": "draft.md paragraph 3: \"มาตรา ๑๕๘–๑๕๙ กำหนดให้ผลการประเมินความเสี่ยงต้องผ่านความเห็นชอบของคณะกรรมการและเผยแพร่ต่อสาธารณะ\"; sourced from argument-map.json arg-04 grounds field.",
-      "issue": "Spot-check against Chapter12-CC-Act-Original.md (line 15) shows มาตรา ๑๕๘ assigns the Meteorological Department's duty to compile the national climate database per มาตรา ๑๕๖(๑) -- a topic unrelated to risk-assessment committee approval and publication. The committee-approval/publication content the draft attributes to \"๑๕๘–๑๕๙\" belongs to มาตรา ๑๕๙ alone. This misattribution originates in argument-map.json's arg-04 grounds field and the draft faithfully (but incorrectly) reproduces it. Meanwhile มาตรา ๑๕๘'s actual content -- the Meteorological Department's independent database authority, asserted uncited in draft paragraph 2 -- never receives a citation anywhere in the draft.",
-      "disposition": "Correct arg-04's grounds field and draft paragraph 3 to cite มาตรา ๑๕๙ alone for the committee-approval/publication mechanism, and attach a มาตรา ๑๕๘ citation to paragraph 2's claim about the Meteorological Department's independent database authority. Route back through Stage 2 (map correction) before Stage 3 re-draft, since the error sits in the approved map's grounds field, not only in the prose.",
+      "severity": "minor",
+      "dimension": "form_readability",
+      "location": "draft.md paragraph 3 (line 10): \"ทั้งการวางแผนมาตรการลดความเสี่ยงของภัยแต่ละประเภท การคาดการณ์ผลกระทบของมาตรการ การวิเคราะห์ต้นทุนและผลประโยชน์ (Cost Benefit Analysis) การทำฉากทัศน์การปรับตัว และการสนับสนุนทางงบประมาณเพื่อการลงมือปฏิบัติ ไปจนถึงการติดตาม ประเมินผล และถอดบทเรียนของมาตรการเพื่อนำไปปรับปรุง\"",
+      "issue": "Six named downstream uses of stage-1 risk data are packaged into one flowing sentence rather than a real numbered list. report_specific_rules requires any named-item enumeration of 3+ to render as a real list rather than inline enumeration. The items here are not marked with (๑)(๒)(๓) so the rule is not violated on its literal wording, but the item count and bare-noun-phrase shape are close to the pattern the rule targets.",
+      "disposition": "Accepted for human review -- does not change governing meaning; leave as author's stylistic choice (the prose shape plausibly mirrors the cycle's sequential flow, unlike the four-stage list in para 1 which the map explicitly calls out as a numbered list in arg-01's application_to_design).",
       "status": "unresolved"
     },
     {
       "id": "F2",
+      "severity": "minor",
+      "dimension": "causal_logic",
+      "location": "draft.md paragraph 6 (line 16): \"ความสอดคล้องนี้ปรากฏชัดในบทบัญญัติเอง\"",
+      "issue": "\"ปรากฏชัด\" (appears clearly) is an unearned-clarity-claim phrase not present in arg-06's approved claim text in argument-map.json (which states the consistency as a plain fact and cites the specific cross-reference as grounds, without asserting how visible/clear it is). This is a small addition drifting toward the AI-tell pattern of asserting clarity rather than demonstrating it, though the sentence that follows does supply the concrete mechanism (the adaptation plan must be built directly from the risk-assessment results), so the claim is still earned by content.",
+      "disposition": "Accepted for human review -- does not change governing meaning; a future revision could cut \"ปรากฏชัด\" and let the cited mechanism carry the point unassisted.",
+      "status": "unresolved"
+    },
+    {
+      "id": "F3",
       "severity": "major",
-      "dimension": "evidence_payload",
-      "location": "draft.md paragraph 2: \"คณะรัฐมนตรีซึ่งเป็นผู้มีอำนาจสั่งการขั้นสุดท้ายเมื่อไม่มีหน่วยงานใดมีอำนาจตามกฎหมายหรือเมื่อเกิดข้อขัดแย้งที่ยังไม่ยุติ\", and the paragraph's other two institutional-authority claims (Met Dept independence, Committee approval/adjudication).",
-      "issue": "This claim corresponds to มาตรา ๑๖๐ per argument-map.json arg-03's grounds field -- confirmed accurate on spot-check against Chapter12-CC-Act-Original.md (line 23: Cabinet orders when no agency holds legal authority, on the department's referral with Committee consent). The draft never cites มาตรา ๑๖๐ anywhere in the section, and none of paragraph 2's three institutional-role claims carries a citation, despite the contract's evidence_policy requiring a มาตรา citation for every legal claim (\"No claim without a source in source_paths\").",
-      "disposition": "Add มาตรา citations to paragraph 2's institutional-role claims, matching arg-03's grounds field: มาตรา ๑๕๘ (Met Dept), มาตรา ๑๕๙ วรรคท้าย (Committee approval), มาตรา ๑๖๐ (Cabinet default authority), มาตรา ๑๖๔/๑๗๒ (Cabinet dispute adjudication).",
+      "dimension": "argument_fidelity",
+      "location": "argument-map.json: governing_thought_components (line 11) lists [\"cycle_premise\", \"gap\", \"actor_scope\", \"part1_fix\", \"part2_fix\", \"unity\", \"principle\"]; no argument_unit's `supports` field equals \"actor_scope\" or \"part2_fix\" (units' supports values are: cycle_premise x3, gap, part1_fix, unity, principle).",
+      "issue": "This is a Tier 1 (argument-map integrity) defect, not a prose defect. `argument_gate.py validate` fails on this exact file with: \"governing_thought_components not supported by any unit: ['actor_scope', 'part2_fix'] -- MECE coverage is incomplete.\" In substance, arg-05's claim text does cover part2_fix content (the ส่วนที่สอง role assignment) and actor_scope content (Met Dept, Committee, Cabinet powers), and draft paragraph 5 faithfully renders all of that content -- so the prose itself is not missing anything the map argues. But the map's own `supports` tagging only credits arg-05 to part1_fix, meaning two of the seven components the governing_thought claims to be built from (actor_scope, part2_fix) have no unit of record formally supporting them. Per the rubric, Tier 1 should pass before Tier 2 review proceeds; this file did not pass the mechanical MECE check.",
+      "disposition": "Route back to the Stage 2 human gate to correct argument-map.json: either split arg-05 into two units (one tagged part1_fix, one tagged part2_fix, with actor_scope content distributed to whichever unit it substantively belongs to) or change arg-05's `supports` to reflect its actual multi-component coverage, then re-run `argument_gate.py validate` before this section is re-reviewed. The prose does not need to change if the map is corrected to match what para 5 already says.",
+      "status": "unresolved"
+    },
+    {
+      "id": "F4",
+      "severity": "minor",
+      "dimension": "terminology_agency",
+      "location": "draft.md paragraph 3 (line 10): \"การวิเคราะห์ต้นทุนและผลประโยชน์ (Cost Benefit Analysis)\"",
+      "issue": "This English parenthetical does not appear in argument-map.json's arg-03 claim (which reads \"การวิเคราะห์ต้นทุนและผลประโยชน์\" with no English gloss) and was added to the draft after this review's scaffold was first prepared -- confirmed by a draft_sha256 change detected mid-review (file mtime and byte count both changed during this session). \"Cost Benefit Analysis\" is not one of the contract's accepted loanwords (SOP/Template/Checklist/TOR only) and reads as an untranslated English methodology gloss the contract's report_specific_rules bars.",
+      "disposition": "Cut the \"(Cost Benefit Analysis)\" parenthetical; the Thai term \"การวิเคราะห์ต้นทุนและผลประโยชน์\" already carries the full meaning and matches the approved map without an English gloss.",
       "status": "unresolved"
     }
   ],
-  "mechanical_reviews": [],
+  "mechanical_reviews": [
+    {
+      "message": "argument_gate.py validate argument-map.json -- FAILED: governing_thought_components not supported by any unit: ['actor_scope', 'part2_fix'] -- MECE coverage is incomplete",
+      "disposition": "Logged as finding F3; routed back to Stage 2 human gate for map correction, not resolved within this review"
+    }
+  ],
   "verdict": "fail"
 }
