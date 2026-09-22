@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "rubric_version": "6.0.0",
+  "draft_sha256": "6bc6ac8dde548b42fc461f76d23139014d043c466623a472119920e7662ede26",
+  "contract_sha256": "c5979ca7d670da3f90652d354ca5fa6c55f81081cbe80b244c2bef6f781c08d0",
+  "profile": "report",
+  "reviewer_mode": "independent",
+  "assurance": "standard",
+  "reviewer": "",
+  "reviewed_at": "2026-09-22T06:33:17+00:00",
+  "dimensions": {
+    "section_job": {
+      "verdict": "pending",
+      "evidence": ""
+    },
+    "audience_decision_value": {
+      "verdict": "pending",
+      "evidence": ""
+    },
+    "evidence_payload": {
+      "verdict": "pending",
+      "evidence": ""
+    },
+    "causal_logic": {
+      "verdict": "pending",
+      "evidence": ""
+    },
+    "argument_fidelity": {
+      "verdict": "pending",
+      "evidence": ""
+    },
+    "reader_facing_appropriateness": {
+      "verdict": "pending",
+      "evidence": ""
+    },
+    "terminology_agency": {
+      "verdict": "pending",
+      "evidence": ""
+    },
+    "source_fidelity": {
+      "verdict": "pending",
+      "evidence": ""
+    },
+    "form_readability": {
+      "verdict": "pending",
+      "evidence": ""
+    }
+  },
+  "findings": [],
+  "mechanical_reviews": [],
+  "verdict": "fail"
+}

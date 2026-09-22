@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "profile": "report",
+  "transformation_mode": "new",
+  "audience": "DCCE (กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม) reviewing the Sub-law TOR technical proposal",
+  "decision_use": "Give the reader the strategic 'why this chapter exists' background before the proposal's own methodology framing, so the operating-framework naming that follows is earned rather than asserted",
+  "section_job": "Interpret Chapter 12's intent: the institutional gap it closes, the roles it assigns, and how its two parts form one integrated fix -- filling the missing background the original draft's opening section never stated",
+  "target_altitude": "Technical proposal opening section (๑. หลักการและกรอบการดำเนินงาน) -- grounded and specific, not executive-summary compressed",
+  "report_specific_rules": [
+    "Use ที่ปรึกษา as the active actor for analysis/design sentences",
+    "Cite มาตรา numbers per the Original Act text (๑๕๖–๑๗๒), not the ๑๕๘–๑๗๔ numbering used elsewhere in the existing draft -- Boss confirmed Original is authoritative (2026-09-22); existing draft citations need a -2 correction, tracked separately",
+    "Do not name NFCS or any WMO-style service framework -- state the substantive necessity without that acronym. Exception: UNFCCC Decision 3/CMA.4's iterative adaptation cycle (impact/vulnerability/risk assessment -> planning -> implementation -> monitoring/evaluation/learning) IS citable by name -- it is a binding Paris Agreement decision, not a service-framework label, and Chapter 12's two parts map directly onto its four stages (Boss-directed, 2026-09-22, after web-search verification)",
+    "Name the department's role as ผู้ประสานและขับเคลื่อน (coordinator/driver), not sole owner -- explicitly name Met Dept, the Committee, and Cabinet as other actors holding specific powers",
+    "No decorative/hyperbolic adjectives (e.g. cut 'connected' tacked onto an item count with no informational content)",
+    "No untranslated English consulting-methodology brand names (see LEXICON_TH.json v4.7 entries) -- SOP/Template/Checklist/TOR are the only accepted loanwords",
+    "Any named-item enumeration of 3+ renders as a real numbered list, never inline (๑)(๒)(๓) prose",
+    "Cut throat-clearing subject+verb lead-ins immediately before a ดังนี้ list"
+  ],
+  "inclusions": [
+    "Chapter 12's two-part structure stated plainly (Part 1 data/knowledge, Part 2 adaptation planning)",
+    "The documented institutional gap (WP7 Gap Analysis Report §7) as grounds for why the chapter exists",
+    "The three roles the chapter assigns (standard-setter, data-authenticator, science-to-decision facilitator) without naming them as such if that reads as jargon -- describe the function",
+    "Explicit naming of Met Dept / Committee / Cabinet as co-actors, not just the department",
+    "Why the two parts are one integrated fix, not two bolted-together topics"
+  ],
+  "exclusions": [
+    "The consultant's own operating-framework naming (belongs after this section, not inside it)",
+    "SOP/process-design detail (belongs in §3-§5 of the existing draft)",
+    "The NFCS acronym or any WMO-style service-framework attribution (UNFCCC Decision 3/CMA.4's adaptation cycle is the one permitted exception -- see report_specific_rules)"
+  ],
+  "evidence_policy": "Cite Act text (Chapter12-CC-Act-Original.md) by มาตรา number for every legal claim; cite WP7 Gap Analysis Report §7 by name for the institutional-gap claim. No claim without a source in source_paths.",
+  "required_concepts": ["institutional gap", "standard-setter", "data-authenticator", "recourse mechanism", "coordinator not sole owner"],
+  "terminology": {"first_mention": "ผู้ประสานและขับเคลื่อน", "short_form": "ผู้ประสาน"},
+  "required_structures": [],
+  "source_paths": [
+    "ψ/lab/Sub-law_TOR/Chapter12-CC-Act-Original.md",
+    "ψ/incubate/DCCE/CRDB/output/07_Gap_Analysis/2026-08-16-WP7-Gap-Analysis-Report.md",
+    "ψ/lab/Sub-law_TOR/CC-Act-Chapter12-link-to-NFCS.md",
+    "https://unfccc.int/topics/adaptation-and-resilience/resources/publications/technical-guidelines-for-the-national-adaptation-plan-process (UNFCCC Decision 3/CMA.4, iterative adaptation cycle -- web-verified 2026-09-22)"
+  ],
+  "trace_log_paths": [
+    "ψ/memory/traces/2026-09-22/1309_chapter12-pre-law-problem-framing.md"
+  ],
+  "reference_samples": [],
+  "plan_slice": null,
+  "stage_0_checklist": {
+    "plan_mode_executed": true,
+    "outline_verified": true,
+    "evidence_base_verified": true,
+    "session_rules_verified": true,
+    "plan_source": "interactive_walkthrough"
+  },
+  "execution_tier": {"tier": "small", "stage_1_3_mode": "inline", "orchestrator_clean": true, "chosen_by": "orchestrator (1 section, no fork needed)"},
+  "approval": {"status": "approved", "approved_by": "Boss", "approved_at": "2026-09-22T13:30:00+07:00"}
+}

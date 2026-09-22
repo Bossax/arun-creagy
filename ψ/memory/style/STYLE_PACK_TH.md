@@ -148,6 +148,16 @@ These rules matter, but they should not compete with the Core Kernel during earl
 | "การนำทาง" | "เส้นทางการใช้งาน" | Literal UX/software-spec jargon (navigation); Thai institutional prose names the user's path instead. Boss, 2026-09-02. |
 | "โครงสร้างสารสนเทศของเว็บไซต์" (when meaning the sitemap artifact) | "ผังเว็บไซต์" | Abstracted paraphrase drifted from the project's established plain term for this artifact. Boss, 2026-09-02. |
 | "ประตูทางเข้า" | "จุดเริ่มต้นของเส้นทางการใช้งาน" | Extension of the existing "ประตูหลัก" rule (front-door/gateway metaphor) to the role-based-entry-point sense. Does not apply to real engineering structures like "ประตูระบายน้ำ" (floodgate), which is a literal technical term, not a metaphor. Boss, 2026-09-02. |
+| "Step-by-step" | "เป็นลำดับขั้น" | Untranslated English consulting-methodology brand-name in Thai prose. Boss, 2026-09-22. |
+| "Process Flow" | "ผังกระบวนการทำงาน" | Same category. Boss, 2026-09-22. |
+| "RACI Matrix" | "ตารางความรับผิดชอบ" | Same category. Boss, 2026-09-22. |
+| "Process Architecture" | "โครงสร้างกระบวนงาน" | Same category. Boss, 2026-09-22. |
+| "Legal Obligation Mapping" | "แผนผังภารผูกพันธ์ทางกฎหมายของหน่วยงาน" | Same category. Boss, 2026-09-22. |
+| "Institutional Mapping" | "การทำแผนผังหน่วยงานที่เกี่ยวข้อง" | Same category. Boss, 2026-09-22. |
+| "Gap Analysis" (generic methodology reference) | "การวิเคราะห์ช่องว่างเชิงสถาบันและกฎหมาย" | Same category. **Does not apply to a proper-noun document title** (e.g. "WP7 Gap Analysis Report", "WP4 Content-Source Gap Analysis") — those are the artifact's actual name and must not be translated. Boss, 2026-09-22. |
+| "Readiness Assessment" | "การประเมินความพร้อม" | Same category. Boss, 2026-09-22. |
+| "Target Operating Model" | "แบบจำลองเป้าหมายการดำเนินงาน" | Same category. Boss, 2026-09-22. |
+| "Regulatory Roadmap" | "แผนที่นำทางการใช้ข้อกำหนด" | Same category. Boss, 2026-09-22. |
 
 ### Technical Terminology Mapping
 * **Climate Change** -> การเปลี่ยนแปลงสภาพภูมิอากาศ (Climate Change)

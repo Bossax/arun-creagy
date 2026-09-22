@@ -1,9 +1,10 @@
 {
   "context": "TH",
-  "version": "4.6",
+  "version": "4.7",
   "supersedes": [
     "NCAIF-Institutional v3.2",
-    "TOR5.5-Articles v1.0"
+    "TOR5.5-Articles v1.0",
+    "TH v4.6"
   ],
   "lexicon": [
     {
@@ -601,6 +602,76 @@
       "banned": "คอขวด",
       "preferred": "อุปสรรค (or plain descriptive language -- do not substitute another metaphor)",
       "reason": "Boss, CRDB full-report spine review 2026-08-31: ban both the word and the bottleneck-chain metaphor construction in report prose. Complements the existing report-scoped entry mapping a คอขวด-phrase to an อุปสรรค-phrase (same direction).",
+      "kind": "literal",
+      "scope": "report"
+    },
+    {
+      "banned": "Step-by-step",
+      "preferred": "เป็นลำดับขั้น",
+      "reason": "Avoid untranslated English consulting-methodology brand-name embedded in Thai institutional prose. (Boss's 2026-09-22 correction on Sub-law TOR draft: use plain Thai description, not English consulting-methodology brand names.)",
+      "kind": "literal",
+      "scope": "report"
+    },
+    {
+      "banned": "Process Flow",
+      "preferred": "ผังกระบวนการทำงาน",
+      "reason": "Avoid untranslated English consulting-methodology brand-name embedded in Thai institutional prose. (Boss's 2026-09-22 correction on Sub-law TOR draft: use plain Thai description, not English consulting-methodology brand names.)",
+      "kind": "literal",
+      "scope": "report"
+    },
+    {
+      "banned": "RACI Matrix",
+      "preferred": "ตารางความรับผิดชอบ",
+      "reason": "Avoid untranslated English consulting-methodology brand-name embedded in Thai institutional prose. (Boss's 2026-09-22 correction on Sub-law TOR draft: use plain Thai description, not English consulting-methodology brand names.)",
+      "kind": "literal",
+      "scope": "report"
+    },
+    {
+      "banned": "Process Architecture",
+      "preferred": "โครงสร้างกระบวนงาน",
+      "reason": "Avoid untranslated English consulting-methodology brand-name embedded in Thai institutional prose. (Boss's 2026-09-22 correction on Sub-law TOR draft: use plain Thai description, not English consulting-methodology brand names.)",
+      "kind": "literal",
+      "scope": "report"
+    },
+    {
+      "banned": "Legal Obligation Mapping",
+      "preferred": "แผนผังภารผูกพันธ์ทางกฎหมายของหน่วยงาน",
+      "reason": "Avoid untranslated English consulting-methodology brand-name embedded in Thai institutional prose. (Boss's 2026-09-22 correction on Sub-law TOR draft: use plain Thai description, not English consulting-methodology brand names.)",
+      "kind": "literal",
+      "scope": "report"
+    },
+    {
+      "banned": "Institutional Mapping",
+      "preferred": "การทำแผนผังหน่วยงานที่เกี่ยวข้อง",
+      "reason": "Avoid untranslated English consulting-methodology brand-name embedded in Thai institutional prose. (Boss's 2026-09-22 correction on Sub-law TOR draft: use plain Thai description, not English consulting-methodology brand names.)",
+      "kind": "literal",
+      "scope": "report"
+    },
+    {
+      "banned": "Gap Analysis",
+      "preferred": "การวิเคราะห์ช่องว่างเชิงสถาบันและกฎหมาย",
+      "reason": "Avoid untranslated English consulting-methodology brand-name embedded in Thai institutional prose. (Boss's 2026-09-22 correction on Sub-law TOR draft: use plain Thai description, not English consulting-methodology brand names.) Does not apply to a proper-noun document title (e.g. 'WP7 Gap Analysis Report') -- only generic methodology references.",
+      "kind": "literal",
+      "scope": "report"
+    },
+    {
+      "banned": "Readiness Assessment",
+      "preferred": "การประเมินความพร้อม",
+      "reason": "Avoid untranslated English consulting-methodology brand-name embedded in Thai institutional prose. (Boss's 2026-09-22 correction on Sub-law TOR draft: use plain Thai description, not English consulting-methodology brand names.)",
+      "kind": "literal",
+      "scope": "report"
+    },
+    {
+      "banned": "Target Operating Model",
+      "preferred": "แบบจำลองเป้าหมายการดำเนินงาน",
+      "reason": "Avoid untranslated English consulting-methodology brand-name embedded in Thai institutional prose. (Boss's 2026-09-22 correction on Sub-law TOR draft: use plain Thai description, not English consulting-methodology brand names.)",
+      "kind": "literal",
+      "scope": "report"
+    },
+    {
+      "banned": "Regulatory Roadmap",
+      "preferred": "แผนที่นำทางการใช้ข้อกำหนด",
+      "reason": "Avoid untranslated English consulting-methodology brand-name embedded in Thai institutional prose. (Boss's 2026-09-22 correction on Sub-law TOR draft: use plain Thai description, not English consulting-methodology brand names.)",
       "kind": "literal",
       "scope": "report"
     }
