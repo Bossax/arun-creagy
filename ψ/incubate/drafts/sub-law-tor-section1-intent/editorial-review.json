@@ -6,47 +6,66 @@
   "profile": "report",
   "reviewer_mode": "independent",
   "assurance": "standard",
-  "reviewer": "",
-  "reviewed_at": "2026-09-22T06:33:17+00:00",
+  "reviewer": "bossa.suan130@gmail.com",
+  "reviewed_at": "2026-09-22T07:15:00+00:00",
   "dimensions": {
     "section_job": {
-      "verdict": "pending",
-      "evidence": ""
+      "verdict": "pass",
+      "evidence": "Draft covers exactly the approved section_job: the institutional gap (para 1), the roles/actors assigned by Chapter 12 (para 2), how Part 1 closes the gap (para 3), how Part 2 closes it (para 4), and why the two parts are one integrated fix via the UNFCCC Decision 3/CMA.4 cycle (paras 5-6). No SOP/process detail and no consultant operating-framework naming intrude -- both are correctly left out per the contract's exclusions."
     },
     "audience_decision_value": {
-      "verdict": "pending",
-      "evidence": ""
+      "verdict": "pass",
+      "evidence": "The prose foregrounds what DCCE needs to understand before the methodology section follows: the legal basis for the department's mandate and the reason the two parts are inseparable. No consultant-workflow framing appears."
     },
     "evidence_payload": {
-      "verdict": "pending",
-      "evidence": ""
+      "verdict": "pass",
+      "evidence": "Each argument unit is developed with claim + grounds + mechanism/consequence across its paragraph (e.g. para 3 ties each of the five มาตรา it cites to a specific gap named in para 1). See findings for two citation-accuracy defects that do not change the dimension's overall pass but must be tracked."
     },
     "causal_logic": {
-      "verdict": "pending",
-      "evidence": ""
+      "verdict": "pass",
+      "evidence": "Diagnose (paras 1-2) -> remedy mapped 1:1 to each diagnosed gap (paras 3-4) -> integration argument grounded in an external, binding reference point (paras 5-6). No reversed causality or decorative transitions found."
     },
     "argument_fidelity": {
-      "verdict": "pending",
-      "evidence": ""
+      "verdict": "pass",
+      "evidence": "All six argument_units are verbalized: arg-01/02 merged into para 1 (gap), arg-03 into para 2 (actor_scope), arg-04 into para 3 (part1_fix), arg-05 into para 4 (part2_fix), arg-06 into paras 5-6 (unity). No unit is dropped and no draft claim lacks a map source. The map's own negation-contrast phrasing in arg-06's claim (ไม่ใช่...แต่) was correctly NOT carried into the prose -- para 6 states the integration finding as a direct positive claim instead."
     },
     "reader_facing_appropriateness": {
-      "verdict": "pending",
-      "evidence": ""
+      "verdict": "pass",
+      "evidence": "No internal artifact locators, prompt residue, or commentary about the document's own upcoming structure. Clean reader-facing prose throughout."
     },
     "terminology_agency": {
-      "verdict": "pending",
-      "evidence": ""
+      "verdict": "pass",
+      "evidence": "ผู้ประสานและขับเคลื่อน appears at first mention exactly as required by contract terminology; named actors (กรม, กรมอุตุนิยมวิทยา, คณะกรรมการ, คณะรัฐมนตรี) each perform only the powers their cited มาตรา actually assign them; department is explicitly framed as ผู้ประสานและขับเคลื่อน among three named co-actors, not sole owner."
     },
     "source_fidelity": {
-      "verdict": "pending",
-      "evidence": ""
+      "verdict": "pass",
+      "evidence": "All five required_concepts (institutional gap, standard-setter, data-authenticator, recourse mechanism, coordinator not sole owner) are present and traceable to the map. มาตรา numbering throughout the draft stays within the corrected ๑๕๖–๑๗๒ range (no reversion to the old +2-offset ๑๕๘–๑๗๔ numbering). NFCS/WMO framework naming is absent; UNFCCC Decision 3/CMA.4 is correctly cited by name per the contract's explicit exception. Two citation-accuracy defects were found on spot-check against Chapter12-CC-Act-Original.md and are logged as findings rather than failing this dimension."
     },
     "form_readability": {
-      "verdict": "pending",
-      "evidence": ""
+      "verdict": "pass",
+      "evidence": "The one 3+ item enumeration that names discrete parallel items (the UNFCCC four-stage cycle) renders as a real numbered list per the contract rule against inline (๑)(๒)(๓) prose. The three-actor enumeration in para 2 is left as flowing prose because each actor's description carries a distinct relational clause (which power it holds), not a bare item name -- appropriate use of prose over a list for that content shape."
     }
   },
-  "findings": [],
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "major",
+      "dimension": "source_fidelity",
+      "location": "draft.md paragraph 3: \"มาตรา ๑๕๘–๑๕๙ กำหนดให้ผลการประเมินความเสี่ยงต้องผ่านความเห็นชอบของคณะกรรมการและเผยแพร่ต่อสาธารณะ\"; sourced from argument-map.json arg-04 grounds field.",
+      "issue": "Spot-check against Chapter12-CC-Act-Original.md (line 15) shows มาตรา ๑๕๘ assigns the Meteorological Department's duty to compile the national climate database per มาตรา ๑๕๖(๑) -- a topic unrelated to risk-assessment committee approval and publication. The committee-approval/publication content the draft attributes to \"๑๕๘–๑๕๙\" belongs to มาตรา ๑๕๙ alone. This misattribution originates in argument-map.json's arg-04 grounds field and the draft faithfully (but incorrectly) reproduces it. Meanwhile มาตรา ๑๕๘'s actual content -- the Meteorological Department's independent database authority, asserted uncited in draft paragraph 2 -- never receives a citation anywhere in the draft.",
+      "disposition": "Correct arg-04's grounds field and draft paragraph 3 to cite มาตรา ๑๕๙ alone for the committee-approval/publication mechanism, and attach a มาตรา ๑๕๘ citation to paragraph 2's claim about the Meteorological Department's independent database authority. Route back through Stage 2 (map correction) before Stage 3 re-draft, since the error sits in the approved map's grounds field, not only in the prose.",
+      "status": "unresolved"
+    },
+    {
+      "id": "F2",
+      "severity": "major",
+      "dimension": "evidence_payload",
+      "location": "draft.md paragraph 2: \"คณะรัฐมนตรีซึ่งเป็นผู้มีอำนาจสั่งการขั้นสุดท้ายเมื่อไม่มีหน่วยงานใดมีอำนาจตามกฎหมายหรือเมื่อเกิดข้อขัดแย้งที่ยังไม่ยุติ\", and the paragraph's other two institutional-authority claims (Met Dept independence, Committee approval/adjudication).",
+      "issue": "This claim corresponds to มาตรา ๑๖๐ per argument-map.json arg-03's grounds field -- confirmed accurate on spot-check against Chapter12-CC-Act-Original.md (line 23: Cabinet orders when no agency holds legal authority, on the department's referral with Committee consent). The draft never cites มาตรา ๑๖๐ anywhere in the section, and none of paragraph 2's three institutional-role claims carries a citation, despite the contract's evidence_policy requiring a มาตรา citation for every legal claim (\"No claim without a source in source_paths\").",
+      "disposition": "Add มาตรา citations to paragraph 2's institutional-role claims, matching arg-03's grounds field: มาตรา ๑๕๘ (Met Dept), มาตรา ๑๕๙ วรรคท้าย (Committee approval), มาตรา ๑๖๐ (Cabinet default authority), มาตรา ๑๖๔/๑๗๒ (Cabinet dispute adjudication).",
+      "status": "unresolved"
+    }
+  ],
   "mechanical_reviews": [],
   "verdict": "fail"
 }
