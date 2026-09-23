@@ -1,0 +1,11 @@
+# Verify the live file and its scoped style rules before deep editorial work
+
+**Context**: CRDB project has gone through at least one folder restructuring (`output/draft_final_report/` → `ψ/incubate/drafts/crdb-full-report-*`), and each generation had its own citation/formatting rules. Asked to fix citations in "ข้อ 5.3.1," I found a file with that exact TOR number and title under the old folder, did two rounds of research against it, wrote a plan, and executed — all correctly, except the file was superseded. The live copy lived in a different, newer folder with a different writing programme that had its own explicit style-rules document (`01-ข้อกำหนดรูปแบบการเขียนรายงานฉบับสมบูรณ์.md`) — one that directly banned the citation format (page/section locators) I'd just written, having inferred that style from sibling files in the wrong folder.
+
+**Lesson**: Two checks are cheap up front and expensive to skip:
+1. **Is this the live file?** Before deep work on a file found by title/clause-number match, check for a parallel/newer drafting location (grep the distinctive title text repo-wide, not just in the folder you found it in) and check git log recency. A project's own AGENTS.md or writing-plan docs often say outright that an older location is superseded ("ถือว่าถูกแทนที่แล้ว") — read those before trusting a plausible match.
+2. **What style rules govern this specific programme?** A sibling file's citation convention is a hint, not a rule. Look for an explicit format/style-requirements document scoped to the folder or drafting programme before adopting a convention — especially when the file was found in one folder but the "correct" convention might live in a different, newer one.
+
+Skipping either check meant a full research-and-writing cycle got redone from a second plan-mode round trip. The underlying evidence tracing was reusable; only the target file and citation format needed to change — which is exactly the kind of rework that verification up front would have prevented.
+
+**How to apply**: Before starting deep editorial/citation work on any "found" file in a project known to have had structural reorganizations (check AGENTS.md/CLAUDE.md for such warnings), spend one extra tool call confirming (a) recency/liveness of the file and (b) the existence of a scoped style/format document — before writing anything that depends on either.
