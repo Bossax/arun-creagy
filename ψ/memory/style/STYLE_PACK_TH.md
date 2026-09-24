@@ -1,5 +1,5 @@
 # Style-Pack: TH (Thai institutional writing, repo-wide)
-**Samples Learnt**: 28 (Technical Precision, Readability, Analytical Density, and Structural Flow) | **Last Updated**: 2026-09-02 | **Lexicon**: LEXICON_TH.json v4.6, 84 rules
+**Samples Learnt**: 29 (Technical Precision, Readability, Analytical Density, and Structural Flow) | **Last Updated**: 2026-09-25 | **Lexicon**: LEXICON_TH.json v4.6, 84 rules
 
 ## 1. Core Kernel (80/20)
 
@@ -183,6 +183,7 @@ These rules matter, but they should not compete with the Core Kernel during earl
 - **Service-by-Service Discrimination**: When multiple services differ, separate them into bullets or a table rather than compressing them into one dense paragraph.
 - **Audit Risk**: Frame technical hurdles as a threat to **"ความชอบธรรมในการใช้งบประมาณ"** and to decision usefulness.
 - **Product Naming**: Recommendations should resolve into named artifacts, owners, or standards, not only verbs.
+- **Reader Onboarding Before Technical Detail**: When a section introduces an unfamiliar model, framework, or data classification, establish the reader-visible function or problem first; explain why the immediately available artifact or list cannot resolve it alone; then introduce the next concept by the work it performs. Only then define its components or technical detail. The bridge may span paragraphs, but each step must make the next necessary.
 
 ### Thai Sentence Shape Guardrails
 - Start with the real subject, institution, dataset, or finding whenever possible.
