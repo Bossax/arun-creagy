@@ -1,0 +1,3 @@
+[mcp_servers.oracle-v2]
+command = "docker"
+args = ["exec", "-i", "oracle-arun-creagy", "bun", "src/index.ts"]

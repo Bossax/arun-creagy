@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "rubric_version": "6.0.0",
+  "draft_sha256": "2cdecec7389ab5747052c0be0b95d19a8ee2abd7aefccc1d1d7815654954bf37",
+  "contract_sha256": "f1cbd0ec9d2d3ec3116a5c1d6c7c9b84db16b5630e6fa34c9892700aaa857205",
+  "profile": "report",
+  "reviewer_mode": "independent",
+  "assurance": "standard",
+  "reviewer": "Codex Stage 5 independent editorial reviewer",
+  "reviewed_at": "2026-09-24T18:52:31.1120159+07:00",
+  "dimensions": {
+    "warrant_soundness": {
+      "verdict": "pass",
+      "evidence": "Tier 1: argument-map.json arg-01–arg-14 each supplies a causal or classificatory bridge rather than merely repeating its claim. Representative bridges include arg-03 (convergence of four international frameworks warrants the four-step cycle), arg-05 (distributed custody warrants role, metadata, and publication controls), arg-10 (role types are distinguished from institutional appointment), and arg-12 (scientific uncertainty is distinguished from access rights)."
+    },
+    "mece_coverage": {
+      "verdict": "pass",
+      "evidence": "Tier 1: the eight governing components are substantively partitioned across the three TOR stages and two product streams: sequence (arg-01), initial information framework (arg-02–04), initial management framework (arg-05–06), FGD2 validation (arg-07–08), first revision (arg-09–10), external validation (arg-11), further revision (arg-12–13), and comparative conclusion (arg-14). The components are distinct in time or function and together cover the governing thought."
+    },
+    "application_grounded": {
+      "verdict": "pass",
+      "evidence": "Tier 1: every application_to_design follows its unit's own warrant. Examples are arg-02's four-column coverage table, arg-07's presentation of FGD2 as validation rather than origin, arg-10's restrained role wording, arg-12's separate uncertainty and access layers, and arg-14's two-stream comparison table. No application depends on an unstated premise from another unit."
+    },
+    "section_job": {
+      "verdict": "pass",
+      "evidence": "The opening defines the two parallel products and the TOR 5.2.3 → 5.2.5 → 5.2.7 sequence; §§2.3.1–2.3.3 then track the initial draft, first revision, and further revision separately. Tables 2.3-2, 2.3-3, and 2.3-4 explicitly connect each consultation input to changes in both product streams without drifting into the contract exclusions."
+    },
+    "audience_decision_value": {
+      "verdict": "pass",
+      "evidence": "The prose repeatedly gives the acceptance reader an auditable distinction among initial proposal, stakeholder input, and consultant revision (opening, Figure 2.3-1, Tables 2.3-2–2.3-4). It foregrounds what existed before FGD2, what each round tested, what changed, and what remained undecided, including the explicit non-appointment of domain owners."
+    },
+    "evidence_payload": {
+      "verdict": "pass",
+      "evidence": "Each substantive unit carries claim, concrete basis, consequence, and mechanism. Table 2.3-1 connects the four TOR data groups to model elements and decision uses; §2.3.1 explains the four-framework basis, hybrid information architecture, distributed governance, metadata, controls, and channels; §§2.3.2–2.3.3 and Tables 2.3-2–2.3-3 connect consultation findings to specific revisions."
+    },
+    "causal_logic": {
+      "verdict": "pass",
+      "evidence": "The draft preserves the map's causal direction. International frameworks justify the four-step cycle; stable content categories plus task paths justify the hybrid structure; distributed custody necessitates metadata, role, and publication controls; FGD2 validates and sharpens existing elements; external review drives usability, credibility, and institutional-feasibility refinements. It does not reverse consultation input into the origin of pre-existing design elements."
+    },
+    "argument_fidelity": {
+      "verdict": "pass",
+      "evidence": "All 14 approved units are verbalized in order: arg-01 in the opening and Figure 2.3-1; arg-02–06 in §2.3.1; arg-07–10 in §2.3.2 and Table 2.3-2; arg-11–13 in §2.3.3 and Table 2.3-3; arg-14 in the concluding synthesis and Table 2.3-4. The warrant trace independently found all 14 units present, and the semantic read found no silently dropped warrant or draft claim that contradicts or exceeds the map."
+    },
+    "reader_facing_appropriateness": {
+      "verdict": "pass",
+      "evidence": "The draft contains no source paths, prompt residue, drafting-agent commentary, internal artifact locators, or roadmap promises. Figure 2.3-1 is a titled block diagram required by the contract, and each of Tables 2.3-1–2.3-4 has a reader-facing title and explanatory role in the surrounding prose."
+    },
+    "terminology_agency": {
+      "verdict": "pass",
+      "evidence": "The opening gives the full name of โครงสร้างข้อมูลด้านการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศของประเทศ before using โครงสร้างข้อมูลฯ; the first agency mention gives กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม before กรม สส. Consultant actions consistently use คณะที่ปรึกษา, while source agencies retain custody/approval roles. Data Owner and Data Steward are defined as role types, not falsely presented as appointed domain owners."
+    },
+    "source_fidelity": {
+      "verdict": "pass",
+      "evidence": "Against the approved contract and argument map, the draft preserves every required concept and distinction: the three TOR stages; two parallel products; four minimum data groups; IPCC/WMO/UNFCCC/ISO basis and four-step cycle; pre-FGD2 hybrid architecture and governance; FGD2 as validation/refinement; NCAIF–CCIC/CKAN role separation; external testing; and separate scientific-uncertainty and access-control mechanisms. It also observes the exclusions and avoids claiming a final permanent sitemap or completed domain-owner appointment."
+    },
+    "form_readability": {
+      "verdict": "pass",
+      "evidence": "Three numbered subsections match the chronological argument, Figure 2.3-1 makes the TOR sequence scannable, and four tables carry repeated comparisons better than prose alone. Surrounding paragraphs interpret rather than merely duplicate the tables; headings, paragraph jobs, and the final synthesis provide a coherent report-level reading path."
+    }
+  },
+  "findings": [],
+  "mechanical_reviews": [
+    {
+      "review": "mechanical_gate",
+      "status": "passed",
+      "message": "Stage 4 mechanical gate reported PASSED.",
+      "disposition": "accepted; no blocking mechanical issue carried into editorial review"
+    },
+    {
+      "review": "warrant_trace",
+      "status": "passed",
+      "message": "All 14 approved argument units were reported present in the draft.",
+      "disposition": "confirmed by independent semantic argument-fidelity review"
+    },
+    {
+      "review": "structural_advisory",
+      "status": "accepted",
+      "message": "The term 'สถาปัตยกรรม' appears where needed to distinguish information-architecture levels and the hybrid design.",
+      "disposition": "retain as a necessary technical term; it is explained in context"
+    },
+    {
+      "review": "parenthetical_advisory",
+      "status": "accepted",
+      "message": "Parenthetical first mentions are used for IPCC, WMO, UNFCCC, Information Scent, Progressive Disclosure, Data Owner, Data Steward, Open Data, G2G, Internal, and GDX.",
+      "disposition": "retain; each parenthetical establishes an acronym or technical term on first mention and does not impair readability"
+    }
+  ],
+  "verdict": "pass"
+}
