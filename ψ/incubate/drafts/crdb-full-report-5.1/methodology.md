@@ -215,13 +215,18 @@ flowchart TD
 
 Two supply-side facts come straight out of this table and belong in the report as findings. First, the catalog merges Sensitivity and Adaptive Capacity into one VULNERABILITY tag, so it cannot show which side it covers. Second, the catalog holds combined risk outputs (RISK_METRIC, COMPOSITE_INDEX) that have no slot among the TOR's 8 categories (see §7, D4).
 
-### Step 4. Assign a status
+### Step 4. Assign a status (Two-stage Evaluation Funnel)
 
-Decision tree, applied to each data content need:
+The intersection evaluates each requirement through a **Two-stage Evaluation Funnel (เกณฑ์กรอง 2 ขั้นตอน)**:
 
-1. No inventory entry covers the need → **ยังไม่มี**
-2. An entry covers the need and no barrier below applies → **มีและใช้ได้**
-3. An entry covers the need and at least one barrier applies → **มีแต่ใช้ประโยชน์ได้ยาก**, with every applicable reason code
+**Stage 1: Availability Gate (การตรวจสอบการมีอยู่จริงของข้อมูลในระบบ — วัดระดับ Coverage)**:
+1. No inventory entry covers the need → **ยังไม่มี (Missing / No Coverage)** (44 dataset items, 40 product items).
+2. An inventory entry covers the need → **มีข้อมูลในระบบ (Covered by Inventory)** (121 dataset items / 73.3% coverage; 8 product items / 15.4% coverage).
+
+**Stage 2: Readiness Assessment among Available Data (การประเมินสถานะความพร้อมใช้งานจริงในบรรดาข้อมูลที่มี)**:
+Among the covered items:
+1. Entry covers the need and no usability barrier applies → **มีและใช้ได้ (Ready to Use)** (24 dataset items, 4 product items).
+2. Entry covers the need and at least one usability barrier applies → **มีแต่ใช้ประโยชน์ได้ยาก (Usability Bottleneck)** (97 dataset items, 4 product items), assigned with every applicable reason code.
 
 | Reason code | Thai label | Triggered when | Catalog field checked |
 |---|---|---|---|
