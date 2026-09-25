@@ -1,0 +1,13 @@
+# Lesson: reader_bridge on every argument unit doesn't stop self-narrating prose
+
+The writing-th pipeline's `reader_bridge` field (assumed_knowledge, opening_link, concept_explanation, project_application, transition_to_next) was added to every argument unit specifically to fix the failure a §2.3 rewrite showed: mechanical lint and the editorial rubric can pass while a human still reads the prose as abrupt AI writing.
+
+Running this safeguard on a fresh section (CRDB full-report §5.1, 25 argument units, all with complete reader_bridge objects) still produced the same failure class on independent cold-read: sentences like "หัวข้อนี้จะกล่าวถึง..." and "ก่อนถึงหัวข้อ 5.1.5 ต้องผ่านหัวข้อ 5.1.4 ซึ่ง..." — visible meta-commentary about the document's own structure, plus a forecast-then-restate pattern repeated at nearly every subsection boundary (paragraph ends by naming what the next paragraph will cover, then the next paragraph opens by restating the same fact).
+
+**Root cause**: reader_bridge tells the verbalizer what connective tissue a paragraph needs (what the reader already knows, what question this paragraph answers, how it hands off to the next), but nothing in the field's contract says that connective tissue must be dissolved into the substance of the sentences, never surfaced as a sentence about the document itself. The verbalizer treated `opening_link` and `transition_to_next` as content to state rather than a brief to write from.
+
+**Fix for next time**: add an explicit contract/map rule alongside reader_bridge: "reader_bridge fields shape a paragraph's content and ordering; none of the five fields may appear as a sentence describing what this section/paragraph does or will do." Also worth a lint check: flag sentences matching a "หัวข้อ...จะ/กล่าวถึง/ปิดท้ายด้วย/ก่อนถึง...ต้องผ่าน" pattern as candidate meta-commentary, separate from the existing STRUCTURAL_RULES_TH checks.
+
+A second, independent finding from the same run: a mechanical rubric review and a fresh cold-reader roleplay review, run in parallel with no shared context, caught different things. The mechanical review found a formal number-reconciliation defect (three inconsistent item-count totals: 214, 162, 266, for the same population). Only the cold reader caught the self-narration pattern and a genuine unreconciled label contradiction (40 product items called both a "quantitative" and a "methodological" gap in different subsections). Neither review alone was sufficient — worth keeping both as a standing Stage 5 pattern, not just for this section.
+
+Full session context: [[project_crdb_5_3_8_inventory_centred_reanalysis]] and `ψ/memory/retrospectives/2026-09/25/09.00_crdb-5-1-full-pipeline-run-editorial-fail.md`.

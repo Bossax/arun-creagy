@@ -1,52 +1,98 @@
 {
   "schema_version": "1.0",
   "rubric_version": "6.0.0",
-  "draft_sha256": "9fa7feabe41b786feb7f0f0d54d5bf0c7efe976b8f692e771904dd7107797fc4",
-  "contract_sha256": "bdf7c19cb05c6062517284618f8fa2f4f3fde10f5b6dec215b2ecb8dbdd8d260",
+  "draft_sha256": "582cb42ab5162a80cf9321aa8e37e127d59f585381a5310a37cc108d9645669a",
+  "contract_sha256": "fb0a25f117b1ce600aad21f1bc2dc78376f5162eb45951305c3a7055a3de4eff",
   "profile": "report",
   "reviewer_mode": "independent",
   "assurance": "standard",
-  "reviewer": "",
-  "reviewed_at": "2026-09-02T11:19:50+00:00",
+  "reviewer": "independent-editorial-reviewer",
+  "reviewed_at": "2026-09-25T00:00:00+00:00",
   "dimensions": {
     "section_job": {
-      "verdict": "pending",
-      "evidence": ""
+      "verdict": "pass",
+      "evidence": "Draft answers exactly the contract's section_job: it compares agency demand (consultation + A-BTR) against both inventories, organised by the 8 risk components, reports quantitative and qualitative gaps, and defers all recommendations to 5.2 (closing paragraph, line 105: 'หัวข้อ 5.1 ไม่เสนอแนวทางแก้ไขหรือลำดับความสำคัญของช่องว่างเหล่านี้ หัวข้อ 5.2 นำภาพรวมนี้ไปจัดลำดับความสำคัญ...'). No drift into the excluded 8-service framing, A-BTR case-study narrative, or product-catalog agency-concentration analysis (all correctly absent per exclusions list)."
     },
     "audience_decision_value": {
-      "verdict": "pending",
-      "evidence": ""
+      "verdict": "pass",
+      "evidence": "Prose consistently foregrounds what the committee reader needs (status counts, reason codes, which components are thin) rather than consultant process narration. Terms (สามสถานะ, รหัสเหตุผล, องค์ประกอบความเสี่ยง) are defined before use per the reader_bridge concept_explanation fields. See minor finding F4 on residual structural signposting."
     },
     "evidence_payload": {
-      "verdict": "pending",
-      "evidence": ""
+      "verdict": "pass",
+      "evidence": "Each argument unit (qty-02..qty-05, qual-02..qual-08) pairs a claim with a concrete count, an interpretation, and a consequence/link forward, matching the map's grounds/warrant. Local defect in the 5.1.2 opening's dataset-count reconciliation is captured as finding F1 rather than failing this dimension wholesale."
     },
     "causal_logic": {
-      "verdict": "pending",
-      "evidence": ""
+      "verdict": "pass",
+      "evidence": "Transitions between quantitative gap -> qualitative gap -> methodological gap -> synthesis follow the approved 4-step method and do not reverse cause and effect (e.g., Hazard's large 'ยังไม่มี' count is correctly read against its large base, not presented as an isolated absolute). The one identified logic gap (dataset total 214 vs 162 vs 266, see F1) is a traceability/reconciliation defect, not a reversed-causality defect, and is recorded there."
     },
     "argument_fidelity": {
-      "verdict": "pending",
-      "evidence": ""
+      "verdict": "pass",
+      "evidence": "All 25 approved argument-map units are verbalized in order and content: open-01/02 -> paragraphs 3-7; dem-01..03 -> paragraphs 13-15, 30; cmp-01..03 -> paragraphs 34-36; qty-01..06 -> paragraphs 67-77; qual-01..08 -> paragraphs 81-95; meth-01/02 -> paragraphs 99-101; close-01 -> paragraphs 105-120. No unit is dropped and no claim in the draft is absent from the map. Every unit's numeric grounds appear in the corresponding paragraph."
     },
     "reader_facing_appropriateness": {
-      "verdict": "pending",
-      "evidence": ""
+      "verdict": "pass",
+      "evidence": "No sourcing metadata, prompt residue, internal artifact locators, or fake diagrams found (the [ภาพที่ 5-1 ...] line is the approved required figure placeholder, not leakage). Minor residual meta-commentary about the prose's own ordering logic is recorded as finding F4, accepted rather than blocking."
     },
     "terminology_agency": {
-      "verdict": "pending",
-      "evidence": ""
+      "verdict": "pass",
+      "evidence": "'คณะที่ปรึกษา' is consistently the subject of analysis/matching/synthesis verbs (paragraphs 5, 15, 34, 36, etc.), never 'โครงการ'. 'กรม สส.' short form used correctly after first mention (para 3). 'ขอบเขตงานข้อ 5.3.8/5.3.5/5.3.4' used in prose; 'TOR' reserved for the verbatim quotation. The unused contract terminology.first_mention item is recorded as finding F3, accepted rather than blocking."
     },
     "source_fidelity": {
-      "verdict": "pending",
-      "evidence": ""
+      "verdict": "pass",
+      "evidence": "Every number checked (83, 238, 122, 125/32, 260/44, 114/56, 214, 52, 266, 8/117/85/4, the 162-row and 52-row status tables, the 6 reason codes, 72-row VULNERABILITY tag, A090/DDPM_2_1/2_3) traces to a fidelity_ledger entry. Tables 5-1, 5-3, and 5-4's reduced axes, and the retained 'Gap Analysis' inside the verbatim TOR quotation, match the four deviations the verbalizer already flagged (confirmed acceptable, see summary). The 214-vs-162 dataset-count gap (F1) and the missing one-sentence website-readiness pointer (F2) are recorded as unresolved major findings rather than failing this dimension outright, per the rubric's instruction to route defects to findings."
     },
     "form_readability": {
-      "verdict": "pending",
-      "evidence": ""
+      "verdict": "pass",
+      "evidence": "All four tables carry the 'ตารางที่ 5-N:' format with explanatory prose preceding them (paras 15, 34-36, 63, 105-107), satisfying the required_structures rule against showing a table before its explanation. Single-axis reductions in Tables 5-1/5-3/5-4 are flagged with footnotes explaining the missing axis, which is adequate given no underlying data exists for the fuller cross-tab."
     }
   },
-  "findings": [],
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "major",
+      "status": "unresolved",
+      "location": "Paragraph 34 (5.1.2 opening: '...214 รายการ (113 รายการจากกรณีใช้งาน และ 101 รายการจาก A-BTR) ไปตรวจกับบัญชีรายการข้อมูลพื้นฐาน') vs. paragraph 36 ('จากการจับคู่ 266 รายการ (214 รายการประเภทชุดข้อมูล และ 52 รายการประเภทผลิตภัณฑ์) ผลลัพธ์แบ่งเป็น...8...117...85...4') vs. Table 5-2's own caption and total ('162 รายการที่ตรวจสอบกับบัญชีรายการข้อมูลพื้นฐาน', line 17-28) vs. Table 5-1's caption ('162 รายการที่ตรวจสอบกับบัญชีรายการข้อมูลพื้นฐาน', line 17).",
+      "issue": "The draft asserts 214 dataset-type demand items were checked against the baseline inventory and that 266 items total (214 dataset + 52 product) were matched, but the status breakdown that follows (8+117+85+4=214, not 266) and Table 5-2's own dataset total (162, i.e. 4+113+45) show that only 162 dataset items actually received a risk-component/status classification. The 52-item gap between the claimed 214 and the demonstrated 162 is never explained to the reader. This mirrors an unreconciled discrepancy already present in plan-slice.md §2 (demand-supply-register.csv described as '214 non-Response items... matched dataset-type against the 260-row catalog' vs. the '162 items -- the core Table 5-2 data' cross-tab), which the draft inherited without flagging or reconciling. A committee reader checking the numbers will find '214' and '162' both asserted as 'the dataset items checked' without any stated relationship between them, and will find the section's own '266 total matched' claim arithmetically unsupported by the status tally that immediately follows it.",
+      "disposition": "Either correct the 5.1.2 opening (and the '266' framing) to state 162 as the dataset-side item count actually carried into Table 5-2 and explain that 52 of the 214 register-matched items could not be classified into any of the 8 risk components (mirroring plan-slice.md §2's own unresolved gap), or provide the missing reconciliation sentence. This is drafting-team work, not something the reviewer can silently correct.",
+      "resolution_note": "Not resolved by the reviewer; requires a return to the verbalizer or Stage 2 owner to reconcile the 214/162/266 figures before this can pass."
+    },
+    {
+      "id": "F2",
+      "severity": "major",
+      "status": "unresolved",
+      "location": "Entire draft body (expected near the end of 5.1.2 or the closing section, per plan-slice.md §3's chapter-flow outline, which places the website-readiness check under 'Moved out of §5.1: ... the 75-topic website-readiness check (does not compare against the TOR inventories -- appendix + one sentence)').",
+      "issue": "writing-contract.json's report_specific_rules requires: 'การตรวจสอบความพร้อมเนื้อหาเว็บไซต์ 75 หัวข้อ ไม่เปรียบเทียบกับบัญชีรายการทั้งสองชุด จึงกล่าวถึงในเนื้อหาหลักด้วยหนึ่งประโยคเท่านั้น รายละเอียดเต็มอยู่ในภาคผนวก' and inclusions lists it as a required appendix pointer. The draft contains zero mentions of the website-readiness check anywhere in the main body -- the required one-sentence pointer is entirely absent.",
+      "disposition": "Add the required one-sentence pointer to the website-readiness appendix in the appropriate location (5.1.2 or the closing section), or obtain and record Boss's explicit sign-off dropping this requirement -- plan-slice.md §6 (Open items for Boss, item O3) shows this placement was still an open question as of the plan date and may not have been finally resolved before drafting.",
+      "resolution_note": "Not resolved by the reviewer; requires either a one-sentence addition or confirmation that Boss dropped this requirement."
+    },
+    {
+      "id": "F3",
+      "severity": "minor",
+      "status": "accepted",
+      "location": "writing-contract.json terminology block ('first_mention': 'โครงสร้างข้อมูลด้านการปรับตัวต่อการเปลี่ยนแปลงสภาพภูมิอากาศของประเทศ', 'short_form': 'โครงสร้างข้อมูลฯ') vs. entire draft body.",
+      "issue": "This required terminology entry is never introduced anywhere in the draft, and no argument-map unit assigns it a first-use paragraph either. It appears to be boilerplate carried over from a different section's contract template rather than a genuine 5.1 requirement, since 5.1's actual vocabulary (บัญชีรายการข้อมูลพื้นฐาน / บัญชีรายการผลิตภัณฑ์สารสนเทศ) covers the section's needs without it.",
+      "disposition": "Does not change the governing meaning of 5.1. Accepted for human review: confirm with Boss whether this terminology field is dead metadata that should be removed from the contract, or a real omission.",
+      "resolution_note": "Accepted; no prose change required for this draft."
+    },
+    {
+      "id": "F4",
+      "severity": "minor",
+      "status": "accepted",
+      "location": "Paragraph 67 ('ย่อหน้าต่อจากนี้ไล่อธิบายทีละกลุ่มองค์ประกอบความเสี่ยงโดยเริ่มจากกลุ่มที่มีจำนวนมากที่สุดก่อน เพื่อให้ผู้อ่านเห็นลำดับความสำคัญของช่องว่างตามน้ำหนักของหลักฐานเอง') and paragraph 81 ('ย่อหน้าต่อจากนี้ไล่อธิบายตามรหัสเหตุผลจากมากไปน้อย เพราะรหัสเหตุผลแต่ละแบบต้องการวิธีแก้ไขคนละแบบในหัวข้อ 5.2').",
+      "issue": "These sentences describe the prose's own forthcoming ordering, bordering on the meta-commentary that report_specific_rules bans ('ห้ามบรรยายตรรกะภายในของเอกสารแก่ผู้อ่าน (meta-commentary) เมื่อเนื้อหาได้แสดงความสัมพันธ์นั้นแล้ว'). Each instance also states a substantive reason (evidentiary weight, differentiated remedies in 5.2) rather than being pure self-reference, and is directly called for by the approved argument map's application_to_design instructions for units qty-01 and qual-01.",
+      "disposition": "Accepted as map-compliant and substantively motivated rather than pure structural narration; recommend a lighter touch in any future revision pass, not blocking for this draft.",
+      "resolution_note": "Accepted; no prose change required for this draft."
+    },
+    {
+      "id": "F5",
+      "severity": "minor",
+      "status": "accepted",
+      "location": "Table 5-1 (lines 17-28), Table 5-3 and its footnote (lines 51-61), Table 5-4 and its footnote (lines 107-120), and the TOR quotation in paragraph 3 containing '(Gap Analysis)'.",
+      "issue": "Four deviations from the writing-contract's literal required_structures/lint rules, all pre-flagged by the verbalizer rather than newly discovered here: (1) Table 5-1 is a single-column per-component total instead of the two-axis component x target-group cross-tab the contract describes, because no target-group column data exists in the source; (2) Table 5-3 is status-only with no risk-component breakdown, for the same reason; (3) Table 5-4 reuses existing per-component dataset counts and collapses the product side into one aggregate row, since no component-level split exists for the product methodological gap; (4) the lexicon's 'Gap Analysis' flag inside the verbatim Thai-TOR quotation in the opening paragraph was left unfixed under the proper-noun/quotation exception.",
+      "disposition": "Confirmed acceptable on independent review: all four are genuine data-availability limits (not drafting shortcuts), each is disclosed to the reader via footnote or the quotation context itself, and none conceals a gap the contract otherwise required to be shown. No further action needed.",
+      "resolution_note": "Accepted; verbalizer's original disposition affirmed."
+    }
+  ],
   "mechanical_reviews": [],
   "verdict": "fail"
 }

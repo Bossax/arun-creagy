@@ -1,254 +1,495 @@
 {
   "schema_version": "1.0",
   "section_id": "crdb-full-report-5.1",
-  "governing_thought": "The distance between what Thailand's climate adaptation platform needs and what it currently holds is not a general shortage of data but eleven named structural gaps that combine into a different obstacle for each of the platform's eight planned services, a website content base only 21 percent ready to publish outright, and -- in its most binding and self-evident form -- a continuing international reporting obligation DCCE already holds and cannot yet compile without hand-assembled, untraceable effort; establishing the shape of this shortfall precisely, built by subtracting Chapter 3's inventory from Chapter 2's requirements, is what makes the recommendations in section 5.2 actionable rather than aspirational.",
+  "governing_thought": "หัวข้อ 5.1 ตอบคำถามของขอบเขตงานข้อ 5.3.8 โดยตรงว่าความต้องการใช้ข้อมูลของหน่วยงาน ซึ่งรวบรวมจากการรับฟังความคิดเห็น 83 กรณีใช้งานและพันธกรณีการรายงาน A-BTR 122 สัญญาณ ตรงกับสิ่งที่บัญชีรายการข้อมูลพื้นฐาน (ขอบเขตงานข้อ 5.3.5) และบัญชีรายการผลิตภัณฑ์สารสนเทศ (ขอบเขตงานข้อ 5.3.4) มีอยู่จริงเพียงใด โดยจัดกลุ่มการเปรียบเทียบตามองค์ประกอบความเสี่ยงทั้ง 8 ด้านที่บัญชีรายการข้อมูลพื้นฐานใช้อยู่แล้ว ไม่ใช่คำถามว่าอะไรขัดขวางบริการสารสนเทศ 8 รายการที่คณะที่ปรึกษาออกแบบขึ้นเอง ผลการจับคู่แสดงช่องว่างสองประเภทที่ต้องการคำตอบต่างกันในหัวข้อ 5.2: ช่องว่างเชิงปริมาณ (ยังไม่มี) ฝั่งชุดข้อมูลกระจุกตัวที่องค์ประกอบ Hazard เป็นหลัก ช่องว่างเชิงคุณภาพ (มีแต่ใช้ประโยชน์ได้ยาก) กระจุกตัวที่รหัสเหตุผลด้านการเข้าถึงและข้อมูลอภิพันธ์ ขณะที่ฝั่งผลิตภัณฑ์สารสนเทศมีช่องว่างคนละลักษณะ คือส่วนใหญ่ยังไม่เคยถูกพัฒนาขึ้นเป็นระเบียบวิธีหรือดัชนีเลย",
   "narrative_scqa": {
-    "situation": "Chapter 2 established what the platform's information architecture and data management framework require; Chapter 3 established what Thailand's data ecosystem, information services, and website content currently supply. This section places the two side by side.",
-    "complication": "The subtraction does not yield one generic shortage. It yields eleven named structural gaps that combine differently to block each of the platform's eight planned services; a website content base where only 21 percent of required topics are publication-ready outright and 44 percent have no source at all; and, sharpest of all, DCCE's own continuing obligation to compile an international adaptation transparency report, which is blocked today not by missing raw data so much as by a compilation process with no shared definitions and no traceable calculation method.",
-    "question": "How large and how structured is this shortfall, and what does it require of the platform being designed to close it?",
-    "answer": "The shortfall is precise enough to act on: eleven gaps, each addressable on its own terms; a website content base whose weakest quarter needs fresh research rather than republishing; and a reporting obligation that proves, in miniature, that the platform's task is to make an existing but fragmented data ecosystem trustworthy and traceable, not to accumulate more of it. What that requires in practice -- policy, technical, and governance recommendations -- is the subject of section 5.2."
+    "situation": "บทที่ 3 แนะนำผู้อ่านให้รู้จักบัญชีรายการทั้งสองชุดแล้วในภาพรวม คือบัญชีรายการข้อมูลพื้นฐานตามขอบเขตงานข้อ 5.3.5 (260 ชุดข้อมูล จาก 44 หน่วยงาน) และบัญชีรายการผลิตภัณฑ์สารสนเทศตามขอบเขตงานข้อ 5.3.4 (114 ผลิตภัณฑ์ จาก 56 หน่วยงาน) และกรม สส. มีเป้าหมายให้ผลิตภัณฑ์เหล่านี้ตอบความต้องการใช้ข้อมูลของหน่วยงานจริง",
+    "complication": "เมื่อนำความต้องการที่รวบรวมจากการรับฟังความคิดเห็น (83 กรณีใช้งาน) และจากพันธกรณีการรายงาน A-BTR ของกรม สส. เอง (122 สัญญาณ) มาจับคู่กับบัญชีรายการทั้งสองชุดทีละรายการ โดยจัดกลุ่มตามองค์ประกอบความเสี่ยง 8 ด้านที่บัญชีรายการข้อมูลพื้นฐานใช้จัดหมวดอยู่แล้ว ผลที่ได้ไม่ใช่ช่องว่างเดียวที่กระจายสม่ำเสมอ แต่แยกเป็นช่องว่างเชิงปริมาณ (รายการที่ยังไม่มีในบัญชีรายการเลย) กับช่องว่างเชิงคุณภาพ (รายการที่มีอยู่แต่ใช้ประโยชน์ได้ยาก) ซึ่งกระจุกตัวต่างจุดกันระหว่างองค์ประกอบความเสี่ยง และมีลักษณะต่างกันมากระหว่างฝั่งชุดข้อมูลกับฝั่งผลิตภัณฑ์สารสนเทศ",
+    "question": "ความต้องการใช้ข้อมูลของหน่วยงานตรงกับสิ่งที่บัญชีรายการข้อมูลพื้นฐานและบัญชีรายการผลิตภัณฑ์สารสนเทศมีอยู่จริงเพียงใด และช่องว่างที่เหลืออยู่มีรูปร่างอย่างไรเมื่อจัดตามองค์ประกอบความเสี่ยง 8 ด้าน",
+    "answer": "การจับคู่รายการต่อรายการแสดงว่าฝั่งชุดข้อมูล มีรายการที่ใช้ได้จริงเพียง 8 จาก 266 รายการที่จับคู่ได้ ส่วนใหญ่ตกอยู่ในสถานะมีแต่ใช้ประโยชน์ได้ยาก (117 รายการ ซึ่งรหัสเหตุผลด้านการเข้าถึงและข้อมูลอภิพันธ์ครอบคลุมมากที่สุด) และยังไม่มี (85 รายการ ซึ่งฝั่งชุดข้อมูลกระจุกที่องค์ประกอบ Hazard ส่วนฝั่งผลิตภัณฑ์ส่วนใหญ่ต้องการระเบียบวิธีหรือดัชนีที่ยังไม่เคยถูกพัฒนา) การจัดกลุ่มช่องว่างทั้งสองประเภทตามองค์ประกอบความเสี่ยงนี้เองที่ทำให้ข้อเสนอแนะในหัวข้อ 5.2 ตอบช่องว่างจริงแทนที่จะเป็นข้อเสนอทั่วไป"
   },
   "governing_thought_components": [
-    "structural_gap",
-    "content_readiness_gap",
-    "abtr_case_study"
+    "section_purpose",
+    "demand_profile",
+    "inventory_comparison",
+    "quantitative_gap",
+    "qualitative_gap",
+    "methodological_gap",
+    "gap_synthesis"
   ],
   "argument_units": [
     {
-      "unit_id": "arg-01",
+      "unit_id": "open-01",
       "order": 1,
       "paragraph_job": "define",
-      "claim": "Comparing the seven forms of demand established in Chapter 2 against the 260-dataset national catalog established in Chapter 3 separates the shortfall into eleven named structural gaps, not one undifferentiated shortage of data.",
-      "grounds": "SUPPLY-SIDE PROFILE. The national catalog holds 260 datasets. Ownership concentrates in six agencies -- Thai Meteorological Department 37, DCCE 26, GISTDA 17, Department of Disaster Prevention and Mitigation 15, National Statistical Office 14, Office of the National Economic and Social Development Council 14 -- which together hold roughly half the catalog. By subject, the catalog holds 72 vulnerability datasets, 68 exposure datasets, 49 covering the physical climate signals that drive hazard models, and 36 finished hazard products such as flood and drought maps; the remainder covers loss and damage records, composite indices, risk metrics, and spatial reference layers. About 17% is openly published and the rest is available only on request. About half the catalog is recorded as CSV, with raster, vector, and document formats making up most of the balance. On resolution, 122 datasets are held at province level, 41 at a local grain (sub-district, municipality, village, or individual monitoring point), and 36 as gridded surfaces, while for 59 datasets -- close to a quarter of the catalog -- resolution is not recorded at all, so the grain is not knowable from the catalog alone. All 260 entries carry draft status and none has completed a verification step, because that step does not yet exist as a process; this describes a stage the catalog has not reached, not the quality of the underlying data, much of which is sound. One recent addition changes the resolution picture materially: DCCE's Climate Change Research Center has produced statistically downscaled climate data at 5km resolution covering precipitation and maximum, minimum, and mean temperature under both the SSP2-4.5 and SSP5-8.5 scenarios, a substantially better foundation than the 25km grid available when this analysis was first run.\n\nIMPORTANT READING NOTE FOR GAP 1 (do not let the prose contradict itself): the subject counts above show more vulnerability and exposure datasets than hazard-side ones by raw count. Gap 1's imbalance is therefore NOT a claim that exposure and vulnerability data is scarcer in total. It is a claim about coherence and fitness -- hazard information arrives model-ready and internally consistent, while the exposure and vulnerability holdings are scattered across many owners at mismatched resolutions and are thin precisely where infrastructure, economic assets, and social vulnerability are concerned. State the imbalance in those terms, never as a raw-count comparison.\n\nTHE ELEVEN GAPS, as named in the WP7 Gap Analysis Report of 16 August 2026, which supersedes all earlier versions of this analysis. (1) Balance between hazard, exposure, and vulnerability data -- the catalog describes hazards well, drawing on climate models, meteorological records, and satellite observation, while information describing the people, assets, and services that hazards affect is more scattered and thinner in the subdomains that matter most, particularly infrastructure, economic assets, and social vulnerability; work requiring several of these layers at once (identifying which vulnerable groups sit inside a risk area, ranking adaptation projects, assessing risk across an asset portfolio) needs that side of the catalog to grow. Even where hazard data is strong, it is mostly delivered as a single deterministic map or figure, with the probabilistic detail -- the range a projection covers, the assumptions a model rests on -- rarely exposed alongside it, which limits how safely that hazard information can be reused inside someone else's risk calculation. (2) Spatial resolution -- province-level figures support national strategy, but deciding where to build a drain or how high to set a seawall needs sub-district or asset grain; the new 5km downscaled data closes much of this at the climate-driver end, while the environmental layers needed alongside it (digital elevation models, stream and sub-basin routing) still come from several sources at resolutions that do not align with each other, and population and asset data broken down by social and economic category is not yet available at a matching grain. (3) Compatibility between spatial units -- hazard data arrives as grids, population and social data bounded by administrative areas, asset data as points and lines, and some economic data at province or regional level; without an agreed method for relating these to one another, each user converts and overlays them independently, which costs time, introduces error, and leaves results from different organizations that cannot be compared. The practical consequence is that no single scale can be served reliably: a risk figure at a given resolution needs its hazard, exposure, and vulnerability inputs all available at that resolution together, and that alignment does not yet exist for most combinations. (4) Access -- most of the catalog is available on request rather than published, driven by three causes: internal rules at data-holding agencies with no systematic cross-ministry sharing policy; personal data protection requirements, sometimes read as preventing release of an entire dataset where aggregation would resolve the concern; and limited budget and technical staffing for building and maintaining automated data connections. The effect is sharpest on work that needs current information -- impact-based warning, periodic financial analysis, risk assessment on a refresh cycle, and policy monitoring drawing on many sources. (5) Metadata standards -- there is not yet an agreed national standard covering the descriptive information that travels with a dataset: discovery metadata for finding it, technical metadata for using it, a data dictionary for interpreting its fields, and lineage for tracing where it came from; update frequency and expected lag between an event and its appearance in the data are also generally unstated. Without these a user cannot judge whether a dataset is suitable before relying on it, and which of these fields matter most for a given product's credibility is not settled either -- until metadata is named as an official, enforced requirement rather than a general expectation, its quality will keep varying by how much each data holder chooses to provide. (6) Format of products and services -- a finished information product delivers less than it could when it can only be viewed; a crop suitability map published solely through a web interface can be read on screen but cannot be taken as input to further analysis, which matters most for work that treats a product as an ingredient (financial risk assessment, conversion of climate data into engineering variables, macroeconomic impact analysis, infrastructure risk modelling, warning systems drawing several sources together). This overlaps Gap 4: a data owner who would allow a document or map to be viewed is often unwilling to release the same information as a downloadable analytical file, because a file that leaves their control is a file whose downstream use they can no longer answer for. (7) Time coverage and delay -- different uses need different time horizons: comparing risk against a stable reference needs 10 to 20 years of history, planning national infrastructure needs projections 20 to 50 years out, and warning systems need information arriving close to real time; the catalog does not yet cover all three consistently. (8) Risk methodology and data selection -- Thailand does not yet have a national approach to defining risk, nor a catalog of risk methods matched to the purposes they suit; without that guidance data can be applied outside the context it was built for, as when a single-scenario long-range projection is used directly as an engineering design value without accounting for model uncertainty, or when comparing relative risk between areas would be better served by an index-based map than by asset-level financial loss statistics. This carries a real risk of maladaptation. (9) Certification and stewardship -- no step currently exists in which a dataset is checked, endorsed, and marked as an official reference, which is why all 260 entries sit in draft; no dataset yet has a named person or office responsible for keeping it current, and there is no agreed process when a holding agency declines to share. (10) Calculation methods that do not yet exist -- distinct from Gap 8, which concerns choosing among available methods, several services need a method that has not been built: there is no agreed approach to weighing costs against benefits for a resilience investment, no standard for classifying government spending as climate-related, no accepted way to value losses avoided by an investment, and no reference library relating a hazard to the damage it typically causes. National economic planners have commissioned a university-led effort to build an economic loss and damage methodology aligned to international practice, which addresses part of this. (11) Decisions awaiting a determination -- several gaps close on a decision rather than on new data or analysis: the scope of the non-financial loss record, whether the commissioned loss methodology becomes the official calculation manual, dataset classification for licensing, whether to build on or replace the existing policy monitoring platform, where the impact-based warning service belongs on the site, and whether the catalog's recorded formats describe current delivery or an intended target.",
-      "warrant": "Because each gap names a specific, addressable shortfall rather than a general sense that more data is needed, the platform's next development phase can be planned against a concrete inventory instead of an open-ended research agenda -- this precision is what lets section 5.2's recommendations be scoped against named problems rather than a vague call for more data.",
-      "application_to_design": "Open with the demand-supply comparison method and the supply-side profile above, then present the eleven gaps as a numbered list, each with its full definition rather than only its name. Full report altitude means the technical detail the executive summary compressed belongs back in the main text here -- the probabilistic-detail point in Gap 1, the elevation and stream-routing detail in Gap 2, the three causes in Gap 4, the commissioned costing effort in Gap 10 -- not in an appendix. Observe the Gap 1 reading note above: the imbalance is about coherence and fitness, never about raw dataset counts.",
-      "supports": "structural_gap",
-      "provenance": "repaired"
+      "claim": "กรม สส. มีเป้าหมายให้บัญชีรายการข้อมูลพื้นฐานและบัญชีรายการผลิตภัณฑ์สารสนเทศตอบความต้องการใช้ข้อมูลของหน่วยงานได้จริง และขอบเขตงานข้อ 5.3.8 กำหนดไม้บรรทัดสองอันสำหรับวัดว่าตอบได้จริงหรือไม่ คือ 'ข้อมูลที่ยังขาด' (ช่องว่างเชิงปริมาณ) และ 'ข้อมูลที่มีแต่ใช้ประโยชน์ได้ยาก' (ช่องว่างเชิงคุณภาพ)",
+      "grounds": "ขอบเขตงานข้อ 5.3.8 ของ TOR ต้นฉบับภาษาไทยระบุว่า 'วิเคราะห์ช่องว่างระหว่างอุปทานและอุปสงค์ของข้อมูล โดยการนำผลการสังเคราะห์ความต้องการใช้ข้อมูล มาเปรียบเทียบกับบัญชีรายการผลิตภัณฑ์ข้อมูลสารสนเทศและชุดข้อมูลที่มีอยู่ เพื่อวิเคราะห์หาช่องว่าง (Gap Analysis) ทั้งในเชิงปริมาณ (ข้อมูลที่ยังขาด) และเชิงคุณภาพ (ข้อมูลที่มีแต่ใช้ประโยชน์ได้ยาก)'",
+      "warrant": "เมื่อ TOR กำหนดไม้บรรทัดสองอันไว้เองเป็นถ้อยคำตายตัว การนิยามคำทั้งสองก่อนใช้จึงเป็นเงื่อนไขที่ทำให้ผู้อ่านตรวจสอบได้ว่าทุกรายการที่กล่าวถึงในหัวข้อนี้ถูกจัดเข้าไม้บรรทัดใดไม้บรรทัดหนึ่งอย่างสอดคล้องกันตลอดทั้งหัวข้อ ไม่ใช่ตามดุลยพินิจของคณะที่ปรึกษาเป็นรายกรณี",
+      "application_to_design": "เปิดหัวข้อ 5.1 ด้วยประโยคเป้าหมายของกรม สส. แล้วยกคำจาก TOR 5.3.8 มานิยาม 'ยังไม่มี' และ 'มีแต่ใช้ประโยชน์ได้ยาก' เป็นสองสถานะที่หัวข้อนี้ใช้วัดตลอดทั้งบท ก่อนกล่าวถึงวิธีวิเคราะห์ในย่อหน้าถัดไป",
+      "supports": "section_purpose",
+      "provenance": "new",
+      "reader_bridge": {
+        "assumed_knowledge": "ผู้อ่านผ่านบทที่ 3 และ 4 มาแล้ว รู้จักบัญชีรายการทั้งสองชุดและข้อมูลขั้นต่ำด้านความสูญเสียเสียหายในภาพรวม แต่ยังไม่รู้ว่าหัวข้อ 5.1 จะวัดความสำเร็จของบัญชีรายการทั้งสองชุดด้วยเกณฑ์ใด",
+        "opening_link": "จากที่ผู้อ่านทราบแล้วว่าบัญชีรายการทั้งสองชุดมีอยู่ ต้องเริ่มด้วยคำถามว่าบัญชีรายการเหล่านั้น 'พอ' หรือไม่ ซึ่งเป็นคำถามที่ขอบเขตงานข้อ 5.3.8 กำหนดคำตอบไว้เป็นสองแบบ",
+        "concept_explanation": "ข้อมูลที่ยังขาดหมายถึงรายการที่ไม่ปรากฏในบัญชีรายการทั้งสองชุดเลย ส่วนข้อมูลที่มีแต่ใช้ประโยชน์ได้ยากหมายถึงรายการที่ปรากฏอยู่แล้วแต่หน่วยงานนำไปใช้ไม่ได้ในทางปฏิบัติ",
+        "project_application": "ใช้สองสถานะนี้เป็นเกณฑ์วัดทุกรายการที่นำมาเปรียบเทียบตลอดหัวข้อ 5.1 ตั้งแต่ตารางที่ 5-2 ถึงตารางที่ 5-4",
+        "transition_to_next": "เมื่อทราบว่าจะวัดด้วยอะไรแล้ว ผู้อ่านยังต้องทราบว่าคณะที่ปรึกษาวัดด้วยวิธีใด จึงจะเข้าใจตารางและข้อสรุปที่ตามมา"
+      }
     },
     {
-      "unit_id": "arg-02",
+      "unit_id": "open-02",
       "order": 2,
       "paragraph_job": "define",
-      "claim": "Each of the platform's eight planned information services meets its own distinct combination of these eleven gaps, so a single blanket response -- collecting more data in general -- would not unblock most of them. Chapter 3 (section 3.3) already established these as eight services, not nine, with the platform's support for A-BTR compilation placed as a mechanism attached to Service 7 rather than as a service of its own; this section holds that placement and does not reopen it.",
-      "grounds": "Cross-referencing the WP7 Gap Analysis Report's gap-to-service mapping against the eight services Chapter 3 defined: Service 1, the certified climate data catalog, meets Gaps 4, 5, 6, and 9. Service 2, high-resolution spatial risk analytics, meets Gaps 1, 2, and 3. Service 3, finance and budget decision support, meets Gaps 6, 7, 8, and 10. Service 4, historical loss and damage assessment, meets Gaps 1, 3, 7, and 10. Service 5, climate design parameters, meets Gaps 2, 7, 8, and 10. Service 6, multi-hazard impact-based early warning, meets Gaps 4, 6, and 7. Service 7, adaptation monitoring and evaluation, meets Gaps 1, 3, 5, and 11 directly, and additionally carries the platform's A-BTR-compilation mechanism, which meets Gaps 5 and 10 on its own account -- WP7's separately numbered ninth service maps onto this same mechanism, not onto a ninth platform service, matching how Chapter 3 already placed it. Service 8, uncertainty governance, meets Gaps 5 and 8. No two services carry the same combination, and no single gap blocks all eight.",
-      "warrant": "Because different services fail for different structural reasons, sequencing their development requires naming each service's specific blocking combination first; an aggregate count of gaps would obscure exactly the information section 5.2 needs in order to prioritize which gap to close for which service.",
-      "application_to_design": "This unit produces the summary table only -- one row per service against the gaps that block it, using the exact Thai service names Chapter 3 section 3.3 already established, with the table title and column definitions the report's table rule requires. Service 7's row notes that it additionally carries the A-BTR mechanism (Gaps 5, 10); do not add a ninth row for it. Do not carry any service's mechanism here -- each service's mechanism and consequence is developed in its own subsection immediately following, so this unit must not duplicate that detail.",
-      "supports": "structural_gap",
-      "provenance": "repaired"
+      "claim": "คณะที่ปรึกษาวิเคราะห์ช่องว่างด้วยวิธี 4 ขั้นตอน คือ แจงรายการความต้องการทั้งหมดออกเป็นรายการย่อย จัดกลุ่มรายการย่อยตามองค์ประกอบความเสี่ยง 8 ด้าน ตรวจสอบแต่ละรายการกับบัญชีรายการทั้งสองชุด แล้วจึงกำหนดสถานะ และเหตุที่ใช้องค์ประกอบความเสี่ยงเป็นกรอบจัดกลุ่มคือบัญชีรายการข้อมูลพื้นฐานจัดหมวดข้อมูลด้วยกรอบเดียวกันนี้อยู่แล้ว",
+      "grounds": "แหล่งความต้องการทั้งสอง (83 กรณีใช้งาน ที่แยกเป็น 238 รายการย่อย และพันธกรณี A-BTR 122 สัญญาณ) ถูกแจงและติดป้ายตามองค์ประกอบความเสี่ยงในขั้น Phase A ก่อนนำไปตรวจสอบกับบัญชีรายการข้อมูลพื้นฐาน ซึ่งใช้ฟิลด์ cdm_sub_domain เป็นตัวจัดกลุ่มองค์ประกอบความเสี่ยงอยู่แล้วตามที่บทที่ 3 แนะนำไว้",
+      "warrant": "เมื่อบัญชีรายการข้อมูลพื้นฐานจัดหมวดข้อมูลด้วยองค์ประกอบความเสี่ยงอยู่แล้ว การจัดกลุ่มความต้องการด้วยกรอบเดียวกันก่อนเปรียบเทียบทำให้จับคู่รายการต่อรายการได้โดยตรง แทนที่จะต้องแปลงหมวดหมู่ไปมาระหว่างสองระบบ ซึ่งเป็นเหตุผลเชิงวิธีวิทยาที่ทำให้ผลการเปรียบเทียบในหัวข้อถัดไปน่าเชื่อถือ",
+      "application_to_design": "แสดงภาพที่ 5-1 เป็นผังวิธีวิเคราะห์ 4 ขั้นตอน (แจงรายการ → จัดกลุ่มตามองค์ประกอบความเสี่ยง → ตรวจสอบกับบัญชีรายการทั้งสองชุด → กำหนดสถานะ) หลังร้อยแก้วอธิบายเหตุผลที่เลือกองค์ประกอบความเสี่ยงเป็นกรอบจัดกลุ่ม",
+      "supports": "section_purpose",
+      "provenance": "new",
+      "reader_bridge": {
+        "assumed_knowledge": "ผู้อ่านทราบสองสถานะที่ใช้วัดแล้ว แต่ยังไม่ทราบว่าคณะที่ปรึกษาไล่ตรวจความต้องการนับร้อยรายการอย่างเป็นระบบได้อย่างไร",
+        "opening_link": "เมื่อมีไม้บรรทัดสองอันแล้ว ขั้นต่อไปคือแสดงว่าคณะที่ปรึกษานำไม้บรรทัดนั้นไปวัดความต้องการแต่ละรายการอย่างไร",
+        "concept_explanation": "วิธีวิเคราะห์ 4 ขั้นตอนคือการแจงความต้องการเป็นรายการย่อยที่ตรวจสอบได้ทีละรายการ จัดกลุ่มด้วยองค์ประกอบความเสี่ยงเดียวกับที่บัญชีรายการข้อมูลพื้นฐานใช้ ตรวจสอบกับบัญชีรายการทั้งสองชุด แล้วกำหนดสถานะตามไม้บรรทัดที่นิยามไว้ก่อนหน้า",
+        "project_application": "ใช้ 4 ขั้นตอนนี้เป็นโครงเรื่องของหัวข้อ 5.1 ทั้งหมด ตั้งแต่ 5.1.1 (แจงและจัดกลุ่มความต้องการ) 5.1.2 (ตรวจสอบและกำหนดสถานะ) ไปจนถึง 5.1.3–5.1.5 (อ่านผลตามประเภทช่องว่าง)",
+        "transition_to_next": "เมื่อทราบวิธีแล้ว ผู้อ่านพร้อมเข้าสู่ขั้นแรกของวิธีนี้ คือความต้องการใช้ข้อมูลของหน่วยงานมาจากแหล่งใดบ้าง"
+      }
     },
     {
-      "unit_id": "arg-02a",
+      "unit_id": "dem-01",
       "order": 3,
-      "paragraph_job": "diagnose",
-      "claim": "The certified climate data repository is blocked less by the volume of data available than by the absence of any step that marks a dataset as checked and official, which is a prerequisite for sharing a meaningful share of the catalog at all.",
-      "grounds": "Fragmentation was the most frequently raised difficulty across every stakeholder group consulted, and there is currently no consistent way to distinguish a checked dataset from an unchecked one. The certified catalog is planned as a system separate from DCCE's general open data service, built specifically for the sourcing and trust information that climate data requires, and currently holds a starting seed of content with its full scope still to be set. Gap 9 is the central obstacle: how datasets should be classified for licensing remains an open decision, and that classification is a prerequisite for sharing a substantial share of the catalog. Gaps 4, 5, and 6 compound it, since a repository whose contents are mostly request-only, undescribed by any agreed metadata standard, and published in view-only form cannot function as a citable reference even once certification exists.",
-      "warrant": "Because certification is what gives a dataset the standing to be cited in a funding decision or a policy, and because the licensing classification that certification depends on is a decision rather than a research task, this service is blocked at a governance step that no amount of additional data collection would clear.",
-      "application_to_design": "State the certification gap as the binding constraint, name the licensing classification as an open decision rather than an unfinished analysis, and note the separation between the certified catalog and the department's general open data service as a design fact established in Chapter 2.",
-      "supports": "structural_gap",
-      "provenance": "repaired"
+      "paragraph_job": "define",
+      "claim": "ความต้องการใช้ข้อมูลของหน่วยงานมาจากสองแหล่งอิสระกัน คือการรับฟังความคิดเห็น (83 กรณีใช้งาน แยกเป็น 238 รายการย่อย) และพันธกรณีการรายงาน A-BTR ของกรม สส. เอง (122 สัญญาณ) และในจำนวน 238 รายการย่อยนั้น 125 รายการ (ร้อยละ 53) เป็นความต้องการประเภทการตอบสนองเชิงธรรมาภิบาล ไม่ใช่ข้อมูลความเสี่ยงทางกายภาพ จึงกล่าวถึงในที่นี้เพียงย่อหน้าเดียวโดยไม่แยกเป็นหัวข้อย่อย",
+      "grounds": "การรับฟังความคิดเห็นตามที่บทที่ 3.2–3.3 บันทึกไว้ให้กรณีใช้งาน 83 กรณี ซึ่ง Phase A แจงเป็น 238 รายการย่อย พันธกรณี A-BTR ให้สัญญาณเพิ่มอีก 122 รายการ ในจำนวน 238 รายการย่อยนั้น 125 รายการ (ร้อยละ 53) เป็นคำขอด้านธรรมาภิบาล บัญชีรายการ หรือพอร์ทัล ไม่ใช่ข้อมูลความเสี่ยงทางกายภาพ และกระจุกตัวอยู่ในกลุ่มที่ 5 ของการรับฟังความคิดเห็น (32 จาก 83 กรณีใช้งาน) ซึ่งตีความเรื่องธรรมาภิบาลข้อมูลเป็นหลัก",
+      "warrant": "เพราะพันธกรณี A-BTR เป็นภาระผูกพันที่กรม สส. ต้องปฏิบัติอยู่แล้วโดยไม่ขึ้นกับความต้องการของหน่วยงานอื่น การนับเป็นแหล่งความต้องการที่สองจึงไม่ใช่การเพิ่มน้ำหนักให้ตัวเลขเกินจริง และเพราะรายการประเภทการตอบสนองเชิงธรรมาภิบาลถามหาความสามารถของระบบ ไม่ใช่ชุดข้อมูลหรือผลิตภัณฑ์ที่จับคู่กับบัญชีรายการได้ การกล่าวถึงในฐานะรูปแบบหนึ่งของความต้องการโดยไม่บังคับให้เข้ากรอบองค์ประกอบความเสี่ยง 8 ด้าน จึงรักษาความซื่อตรงของฐานความต้องการไว้ได้โดยไม่ยืดกรอบการจับคู่จนเสียความหมาย",
+      "application_to_design": "เปิด 5.1.1 ด้วยสองแหล่งความต้องการ อ้างอิงบทที่ 3.2–3.3 โดยไม่สังเคราะห์ซ้ำ แล้วปิดย่อหน้าด้วยข้อสังเกตเรื่อง 125 รายการประเภทการตอบสนองเชิงธรรมาภิบาลในย่อหน้าเดียวตามที่ Boss อนุมัติ ไม่นำเข้าตารางเปรียบเทียบระดับรายการ",
+      "supports": "demand_profile",
+      "provenance": "new",
+      "reader_bridge": {
+        "assumed_knowledge": "ผู้อ่านทราบวิธีวิเคราะห์ 4 ขั้นตอนแล้ว และทราบจากบทที่ 3 ว่ามีการรับฟังความคิดเห็นจากหน่วยงานต่าง ๆ มาก่อน แต่ยังไม่ทราบว่าความต้องการเหล่านั้นถูกนับและแบ่งประเภทอย่างไร",
+        "opening_link": "ขั้นแรกของวิธีวิเคราะห์คือการแจงรายการความต้องการ จึงต้องเริ่มจากแหล่งที่มาของความต้องการเหล่านั้น",
+        "concept_explanation": "ความต้องการมาจากสองแหล่งที่ต่างลักษณะกัน คือความต้องการของหน่วยงานภายนอกที่รวบรวมผ่านการรับฟังความคิดเห็น และภาระผูกพันของกรม สส. เองในการรายงาน A-BTR ส่วนความต้องการประเภทการตอบสนองเชิงธรรมาภิบาลเป็นรูปแบบที่ถามหาความสามารถของระบบมากกว่าถามหาข้อมูล",
+        "project_application": "ใช้ 238 รายการย่อยและ 122 สัญญาณเป็นฐานความต้องการที่นำไปจัดกลุ่มตามองค์ประกอบความเสี่ยงในตารางที่ 5-1 โดยตัด 125 รายการประเภทการตอบสนองออกจากการจับคู่ระดับรายการ",
+        "transition_to_next": "เมื่อทราบที่มาและขนาดของความต้องการแล้ว ผู้อ่านพร้อมเห็นว่าความต้องการเหล่านี้กระจายตัวอย่างไรเมื่อจัดตามองค์ประกอบความเสี่ยงและกลุ่มเป้าหมาย ซึ่งเป็นสิ่งที่ตารางที่ 5-1 แสดง"
+      }
     },
     {
-      "unit_id": "arg-02b",
+      "unit_id": "dem-02",
       "order": 4,
-      "paragraph_job": "diagnose",
-      "claim": "High-resolution spatial risk analysis is blocked by two structural properties of the existing risk index that no additional input data can undo, compounded by the misalignment of the layers that would have to be combined with it.",
-      "grounds": "Banks assessing loan exposure and infrastructure planners both need flood depth and duration for a specific site rather than a single province-wide value. Two properties of the current risk index stand in the way. Its unit of analysis is fixed at province before the calculation begins, so a finer result cannot be recovered afterward. Its inputs are multiplied and normalized into a single score, which cannot be worked backward to the detail that went into it. Two routes forward have been identified -- extracting detail from the country's 77 provincial risk reduction plans, and reworking municipal boundary data -- and both await a decision to resource them. This service also shows how the gaps compound: even with rainfall projections in hand, a model that is coarse relative to the decision (Gap 2) and stored on a grid that cuts across administrative boundaries (Gap 3) cannot be combined with community-level vulnerability data (Gap 1), and local risk mapping does not become possible. The new 5km downscaled data materially improves the first of those three conditions and leaves the other two untouched.",
-      "warrant": "Because the index's province-level unit of analysis and its normalized single score are decisions taken before any data enters the calculation, finer results require rebuilding the method rather than sourcing better inputs -- which is why this service is a methodology problem wearing the appearance of a data problem.",
-      "application_to_design": "Explain both structural properties of the index plainly, since a reader who assumes finer data alone would solve this will misread the recommendation that follows in section 5.2. Name the two identified routes forward as awaiting a resourcing decision, and use this service as the worked example of how gaps compound.",
-      "supports": "structural_gap",
-      "provenance": "repaired"
+      "paragraph_job": "define",
+      "claim": "ตารางที่ 5-1 จัดความต้องการที่แจงไว้แล้วให้อยู่ในรูปที่ตรวจสอบได้ โดยแถวคือองค์ประกอบความเสี่ยง 8 ด้านเดียวกับที่บัญชีรายการข้อมูลพื้นฐานใช้ และคอลัมน์คือกลุ่มเป้าหมายที่การรับฟังความคิดเห็นและพันธกรณี A-BTR ระบุไว้ ตัวเลขในแต่ละช่องคือจำนวนรายการย่อยที่ตกอยู่ในองค์ประกอบและกลุ่มนั้น",
+      "grounds": "การติดป้ายรายการย่อยทั้ง 238 รายการและ 122 สัญญาณในขั้น Phase A บันทึกทั้งองค์ประกอบความเสี่ยงและหน่วยงาน/กลุ่มผู้ใช้ที่เกี่ยวข้องของแต่ละรายการไว้แล้ว ตารางที่ 5-1 จึงเป็นการนำผลการติดป้ายนั้นมาเรียงเป็นตารางไขว้โดยไม่ต้องประมวลผลใหม่",
+      "warrant": "เนื่องจากหัวคอลัมน์และหัวแถวของตารางเป็นคำศัพท์ทางเทคนิคที่ผู้อ่านยังไม่คุ้น การอธิบายความหมายของแถวและคอลัมน์ก่อนแสดงตัวเลขจึงจำเป็น เพื่อไม่ให้ผู้อ่านต้องเดาความหมายของตัวเลขในตารางย้อนหลัง ซึ่งเป็นกฎที่ writing-contract กำหนดไว้สำหรับทุกตารางในหัวข้อนี้",
+      "application_to_design": "อธิบายความหมายของแถว (องค์ประกอบความเสี่ยง 8 ด้าน) คอลัมน์ (กลุ่มเป้าหมาย) และตัวเลขในช่อง (จำนวนรายการย่อย) เป็นร้อยแก้วก่อน จากนั้นจึงแสดงตารางที่ 5-1 ทันทีต่อจากย่อหน้านี้",
+      "supports": "demand_profile",
+      "provenance": "new",
+      "reader_bridge": {
+        "assumed_knowledge": "ผู้อ่านทราบแหล่งและขนาดของความต้องการแล้ว แต่ยังไม่เคยเห็นตารางไขว้องค์ประกอบความเสี่ยง × กลุ่มเป้าหมายมาก่อน",
+        "opening_link": "ก่อนแสดงตัวเลข ต้องอธิบายว่าตารางที่กำลังจะปรากฏจัดข้อมูลด้วยแกนใด",
+        "concept_explanation": "แถวของตารางคือองค์ประกอบความเสี่ยง 8 ด้านที่บัญชีรายการข้อมูลพื้นฐานใช้จัดหมวดอยู่แล้ว คอลัมน์คือกลุ่มเป้าหมายที่ความต้องการแต่ละรายการเชื่อมโยงถึง และตัวเลขในช่องคือจำนวนรายการย่อยที่ตกอยู่ในองค์ประกอบและกลุ่มนั้นร่วมกัน",
+        "project_application": "ใช้ตารางนี้เป็นภาพรวมของความต้องการก่อนนำไปเทียบกับบัญชีรายการทั้งสองชุดในหัวข้อ 5.1.2",
+        "transition_to_next": "เมื่อเห็นตัวเลขในตารางแล้ว ต้องอ่านว่าองค์ประกอบและกลุ่มใดมีความต้องการมากหรือน้อย และจุดที่บางเบาสอดคล้องหรือขัดกับเป้าหมายของโครงการหรือไม่"
+      }
     },
     {
-      "unit_id": "arg-02c",
+      "unit_id": "dem-03",
       "order": 5,
       "paragraph_job": "diagnose",
-      "claim": "Finance and budget decision support depends on Gap 10 more than any other service, because every calculation it would need to perform rests on a method that has not yet been built.",
-      "grounds": "Climate-resilient infrastructure costs more than historical comparisons suggest, and officials need a defensible way to explain that difference to auditors and budget reviewers. This service requires a cost-benefit method for resilience investment, a standard for classifying government spending as climate-related, an accepted way to value losses avoided by an investment, and a damage function library -- none of which exists. Records of international climate finance and technology transfer show funds moving but reveal little about the capability that resulted. Which figures would actually persuade different audiences is not yet established, so direct research with the intended users will be needed before the service can be specified.",
-      "warrant": "Because the missing element is the calculation method rather than the underlying financial or hazard data, this service cannot be unblocked by improving the catalog; it requires methodological work commissioned as work in its own right, which is why it appears in section 5.2 as a development recommendation rather than a data recommendation.",
-      "application_to_design": "Name all four missing methods explicitly, and state that which figures would persuade budget and audit audiences is itself an open research question -- the service cannot be fully specified until that is settled.",
-      "supports": "structural_gap",
-      "provenance": "repaired"
+      "claim": "ความต้องการที่แจงไว้กระจุกตัวอยู่ที่องค์ประกอบด้านความเสี่ยงทางกายภาพและปัจจัยขับเคลื่อนภูมิอากาศเป็นหลัก ขณะที่องค์ประกอบด้านศักยภาพในการปรับตัวและความสูญเสียเสียหายมีรายการความต้องการบางเบากว่า ซึ่งควรกล่าวอย่างตรงไปตรงมาแทนการมองข้าม",
+      "grounds": "ในกลุ่มรายการที่นำไปตรวจสอบกับบัญชีรายการข้อมูลพื้นฐานต่อในหัวข้อ 5.1.2 (162 รายการ) องค์ประกอบ Hazard มีรายการมากที่สุด (79 รายการ) รองลงมาคือ Climatic Driver (24 รายการ) และ Impact (18 รายการ) ขณะที่ Adaptive Capacity มีเพียง 5 รายการ และ Loss and Damage มีเพียง 10 รายการ ซึ่งเป็นองค์ประกอบที่มีรายการความต้องการน้อยที่สุดในกลุ่มนี้",
+      "warrant": "เพราะวัตถุประสงค์ 2.1–2.2 ของโครงการมุ่งให้หน่วยงานประเมินความเสี่ยงและวางแผนปรับตัวได้ครบทั้งวงจร ความกระจุกตัวที่องค์ประกอบด้านความเสี่ยงทางกายภาพจึงสอดคล้องกับความต้องการเร่งด่วนของหน่วยงานในการประเมินภัย แต่ความบางเบาที่องค์ประกอบด้านศักยภาพในการปรับตัวและความสูญเสียเสียหายเป็นจุดที่ต้องระบุไว้อย่างตรงไปตรงมา เพราะสะท้อนว่าหน่วยงานอาจยังไม่ได้ตั้งคำถามด้านนี้มากเท่าด้านความเสี่ยง ไม่ใช่ว่าไม่มีความจำเป็น",
+      "application_to_design": "อ่านตารางที่ 5-1 ด้วยประเด็นความกระจุกตัวและจุดบางเบา เชื่อมกับวัตถุประสงค์ 2.1–2.2 โดยไม่สรุปเกินหลักฐานว่าจุดบางเบาคือช่องว่างที่ต้องแก้ไข เพราะการตัดสินเรื่องนั้นเป็นหน้าที่ของหัวข้อ 5.1.3–5.1.5 ที่ตามมา",
+      "supports": "demand_profile",
+      "provenance": "new",
+      "reader_bridge": {
+        "assumed_knowledge": "ผู้อ่านเห็นตารางที่ 5-1 และเข้าใจความหมายของแถวกับคอลัมน์แล้ว",
+        "opening_link": "ตัวเลขในตารางเพียงอย่างเดียวยังไม่บอกความหมาย ต้องอ่านว่าองค์ประกอบใดมีน้ำหนักมากหรือน้อยและทำไม",
+        "concept_explanation": "ความกระจุกตัวของความต้องการสะท้อนสิ่งที่หน่วยงานถามหาบ่อยที่สุดในการรับฟังความคิดเห็นและพันธกรณี A-BTR ไม่ใช่การประเมินความสำคัญของแต่ละองค์ประกอบโดยคณะที่ปรึกษาเอง",
+        "project_application": "ใช้ผลการอ่านนี้เป็นบริบทตั้งต้นก่อนเข้าสู่การเปรียบเทียบกับบัญชีรายการทั้งสองชุดในหัวข้อ 5.1.2 ซึ่งจะแสดงว่าความต้องการที่กระจุกตัวเหล่านี้มีของรองรับอยู่แล้วหรือไม่",
+        "transition_to_next": "เมื่อทราบว่าความต้องการมาจากไหนและกระจุกตัวอย่างไรแล้ว คำถามถัดไปคือบัญชีรายการทั้งสองชุดมีของรองรับความต้องการเหล่านี้มากน้อยเพียงใด"
+      }
     },
     {
-      "unit_id": "arg-02d",
+      "unit_id": "cmp-01",
       "order": 6,
-      "paragraph_job": "diagnose",
-      "claim": "Historical loss and damage assessment has its method question partly answered by a commissioned national methodology, leaving the remaining distance in the source data itself and in four build elements that stay blocked until the methodology's official standing is settled.",
-      "grounds": "Relief and recovery spending records what was paid out, which is a different quantity from what disasters cost the economy. The commissioned national methodology noted under Gap 10 addresses the method side: focused initially on agricultural losses and running through mid-2026, it has produced a first estimate of roughly 1.62 trillion baht in cumulative loss and damage between 2006 and 2024. Whether it can also serve as the platform's official calculation manual is a strong possibility that has not been confirmed. With the method in view, the remaining distance is data. Disaster agency records capture who was affected and what relief was paid, without a monetary damage figure or a breakdown by sector and province, and with recorded zeros that may mean either that no event occurred or that no collection took place. Releasing the more detailed records raises a personal data question, since some are held at household level, and the timeline for that release is not yet known. Of the six specific figures this service needs, three have supporting data in the catalog; the other three are requests for improved accuracy, for adopting an international disclosure practice, and for stress-testing capability -- needs that no dataset alone would meet. Four elements of the finished product were recorded as blocked pending the methodology: a national economic loss database, a public dashboard of that history, a record of losses that do not appear on a balance sheet, and the calculation manual itself. Of the three loss categories in that third element -- mental health, biodiversity, and cultural heritage -- only biodiversity currently has supporting material, and the commissioned economic methodology does not extend to any of them.",
-      "warrant": "Because the recorded zeros in disaster data cannot be distinguished between a genuine absence of loss and an absence of collection, and because relief payments measure a different quantity from economic loss, this service's baseline cannot be assembled from existing records even once the methodology is confirmed -- the data question outlives the method question.",
-      "application_to_design": "Give the commissioned methodology and its first estimate, then state clearly that its standing as the official calculation manual is unconfirmed. Name the four blocked build elements and the three non-financial loss categories, noting that only biodiversity currently has material behind it. Do not resolve the open questions here; they belong to section 5.2 and to the decisions list.",
-      "supports": "structural_gap",
-      "provenance": "repaired"
+      "paragraph_job": "define",
+      "claim": "คณะที่ปรึกษานำความต้องการที่แจงไว้ไปตรวจสอบกับบัญชีรายการสองชุดที่ TOR กำหนดแยกจากกัน คือบัญชีรายการข้อมูลพื้นฐานตามขอบเขตงานข้อ 5.3.5 (260 ชุดข้อมูล จาก 44 หน่วยงาน) และบัญชีรายการผลิตภัณฑ์สารสนเทศตามขอบเขตงานข้อ 5.3.4 (114 ผลิตภัณฑ์ จาก 56 หน่วยงาน)",
+      "grounds": "บทที่ 3.4 ได้แนะนำบัญชีรายการทั้งสองชุดไว้แล้วด้วยตัวเลขเดียวกันนี้ (260/44 และ 114/56) ในการจับคู่รอบนี้ คณะที่ปรึกษานำรายการความต้องการประเภทชุดข้อมูล 214 รายการ (113 รายการจากกรณีใช้งานและ 101 รายการจาก A-BTR) ไปตรวจกับบัญชีรายการข้อมูลพื้นฐาน และนำรายการความต้องการประเภทผลิตภัณฑ์ 52 รายการไปตรวจกับบัญชีรายการผลิตภัณฑ์สารสนเทศแยกกัน",
+      "warrant": "เพราะ TOR กำหนดให้จัดทำบัญชีรายการสองชุดที่มีขอบเขตงานคนละข้อ (5.3.4 และ 5.3.5) การตรวจสอบความต้องการแยกตามประเภท (ชุดข้อมูลกับผลิตภัณฑ์) ให้ตรงกับบัญชีรายการที่ถูกต้องจึงจำเป็นก่อนอ่านผล มิฉะนั้นผลการเปรียบเทียบจะปะปนบัญชีรายการที่มีลักษณะต่างกันเข้าด้วยกัน",
+      "application_to_design": "เปิด 5.1.2 ด้วยการเรียกชื่อเต็มของบัญชีรายการทั้งสองชุดตาม TOR อีกครั้งพร้อมตัวเลข แล้วอธิบายว่ารายการความต้องการประเภทชุดข้อมูลกับประเภทผลิตภัณฑ์ถูกตรวจสอบแยกกัน",
+      "supports": "inventory_comparison",
+      "provenance": "new",
+      "reader_bridge": {
+        "assumed_knowledge": "ผู้อ่านรู้จักบัญชีรายการทั้งสองชุดจากบทที่ 3.4 แล้วในภาพรวม และเพิ่งเห็นความต้องการที่แจงไว้ในหัวข้อ 5.1.1",
+        "opening_link": "ขั้นที่สามของวิธีวิเคราะห์คือนำรายการความต้องการไปตรวจสอบกับบัญชีรายการทั้งสองชุด จึงต้องยืนยันก่อนว่าบัญชีรายการชุดใดใช้ตรวจกับความต้องการประเภทใด",
+        "concept_explanation": "บัญชีรายการข้อมูลพื้นฐานตรวจกับความต้องการประเภทชุดข้อมูล ส่วนบัญชีรายการผลิตภัณฑ์สารสนเทศตรวจกับความต้องการประเภทผลิตภัณฑ์ เพราะเป็นบัญชีรายการคนละลักษณะที่ TOR แยกขอบเขตงานไว้ตั้งแต่ต้น",
+        "project_application": "ใช้ 214 รายการประเภทชุดข้อมูลและ 52 รายการประเภทผลิตภัณฑ์เป็นฐานของตารางที่ 5-2 และ 5-3 ตามลำดับ",
+        "transition_to_next": "ก่อนแสดงผลการตรวจสอบ ต้องนิยามก่อนว่าผลการตรวจสอบแต่ละรายการจะถูกจัดเข้าสถานะใดได้บ้าง"
+      }
     },
     {
-      "unit_id": "arg-02e",
+      "unit_id": "cmp-02",
       "order": 7,
-      "paragraph_job": "diagnose",
-      "claim": "Engineering design variables are absent at every resolution rather than merely too coarse, which is why this service has been set aside for the current phase.",
-      "grounds": "Design standards still rest on historical statistics that no longer describe current conditions. The variables this service needs -- rainfall intensity-duration-frequency curves adjusted for climate scenario, runoff coefficients, peak flow, temperature extremes, and wind gust -- are not held anywhere, at any grain. The general risk index serves hazard awareness rather than plot-level design, so it cannot substitute for them. Closing this gap will take a sustained working relationship with engineering specialists alongside the data work, which is why the service has been set aside for the current phase rather than partially specified.",
-      "warrant": "Because these variables must be derived through domain expertise rather than extracted from an existing dataset, this service is blocked on specialist collaboration that the platform cannot supply on its own, which is a different kind of dependency from every other service in this list and justifies deferring it explicitly rather than leaving it nominally in scope.",
-      "application_to_design": "State the deferral plainly and give the reason -- specialist derivation work, not a missing dataset. Name the specific variables so the reader understands what deferral covers.",
-      "supports": "structural_gap",
-      "provenance": "repaired"
+      "paragraph_job": "define",
+      "claim": "ผลการตรวจสอบแต่ละรายการจัดเข้าสามสถานะ คือ มีและใช้ได้ มีแต่ใช้ประโยชน์ได้ยาก และยังไม่มี และรายการที่ตกในสถานะมีแต่ใช้ประโยชน์ได้ยากทุกรายการมีรหัสเหตุผลกำกับไว้ว่าใช้ยากเพราะอะไร ซึ่งรายการหนึ่งอาจมีได้มากกว่าหนึ่งรหัส",
+      "grounds": "การจับคู่ 266 รายการ (214 ประเภทชุดข้อมูล และ 52 ประเภทผลิตภัณฑ์) ให้ผลลัพธ์แบ่งเป็นมีและใช้ได้ 8 รายการ มีแต่ใช้ประโยชน์ได้ยาก 117 รายการ ยังไม่มี 85 รายการ และไม่สามารถจับคู่ได้ (เฉพาะฝั่งผลิตภัณฑ์) 4 รายการ รหัสเหตุผลของ 113 รายการฝั่งชุดข้อมูลที่ใช้ยาก ได้แก่ การเข้าถึง 70 รายการ ข้อมูลอภิพันธ์ 42 รายการ ข้อมูลความไม่แน่นอน 13 รายการ ความละเอียดเชิงพื้นที่ 10 รายการ รูปแบบไฟล์ 6 รายการ และความทันสมัยของข้อมูล 5 รายการ",
+      "warrant": "เพราะหัวตารางที่ 5-2 และ 5-3 ใช้คำว่าสถานะและรหัสเหตุผลเป็นศัพท์เฉพาะที่ผู้อ่านยังไม่เคยเห็น การนิยามความหมายของสามสถานะและอธิบายว่ารหัสเหตุผลนับซ้ำได้ (รายการหนึ่งอาจมีหลายรหัส) ก่อนแสดงตาราง จึงป้องกันไม่ให้ผู้อ่านพยายามรวมตัวเลขรหัสเหตุผลแล้วคาดหวังให้เท่ากับจำนวนรายการทั้งหมด",
+      "application_to_design": "อธิบายสามสถานะและรหัสเหตุผลเป็นร้อยแก้วก่อน ระบุชัดว่ารหัสเหตุผลนับซ้ำได้ในรายการเดียว แล้วจึงแสดงตารางที่ 5-2 (ชุดข้อมูล) และตารางที่ 5-3 (ผลิตภัณฑ์) ต่อจากย่อหน้านี้",
+      "supports": "inventory_comparison",
+      "provenance": "new",
+      "reader_bridge": {
+        "assumed_knowledge": "ผู้อ่านทราบแล้วว่าบัญชีรายการชุดใดตรวจกับความต้องการประเภทใด แต่ยังไม่เคยเห็นคำว่าสถานะหรือรหัสเหตุผลมาก่อน",
+        "opening_link": "ก่อนแสดงตัวเลขผลการตรวจสอบ ต้องนิยามว่าผลการตรวจสอบแต่ละรายการจัดออกมาเป็นกี่แบบและแต่ละแบบหมายความว่าอย่างไร",
+        "concept_explanation": "มีและใช้ได้คือรายการที่ปรากฏในบัญชีรายการและหน่วยงานนำไปใช้ได้จริง มีแต่ใช้ประโยชน์ได้ยากคือรายการที่ปรากฏอยู่แต่ติดข้อจำกัดตามรหัสเหตุผล และยังไม่มีคือรายการที่ไม่ปรากฏในบัญชีรายการเลย",
+        "project_application": "ใช้สามสถานะและรหัสเหตุผลนี้เป็นหัวคอลัมน์ของตารางที่ 5-2 และ 5-3 และเป็นฐานของการอ่านผลในย่อหน้าถัดไป",
+        "transition_to_next": "เมื่อเข้าใจความหมายของสถานะและรหัสเหตุผลแล้ว ผู้อ่านพร้อมเห็นตัวเลขจริงในตารางที่ 5-2 และ 5-3 และอ่านว่าองค์ประกอบความเสี่ยงใดตกอยู่ในสถานะใดมากที่สุด"
+      }
     },
     {
-      "unit_id": "arg-02f",
+      "unit_id": "cmp-03",
       "order": 8,
       "paragraph_job": "diagnose",
-      "claim": "Multi-hazard impact-based warning is the least developed of the eight, blocked by an access model that cannot deliver information on the timescale a warning requires.",
-      "grounds": "Practitioners want a warning that states what to do -- open cooling centers, estimate likely business interruption -- rather than a forecast value alone. No product exists yet, and the only related material is a static diagram showing how hazards cascade into impacts. Gaps 4 and 7 are decisive: a warning service needs automated connections to sensors, models, and operating agencies on a timescale that the current request-based access model cannot support. Where this service belongs on the site is also unsettled, since it is an operational tool rather than a page of reference material.",
-      "warrant": "Because a warning service's value depends entirely on the speed at which information reaches it, request-based access is not a slower version of the required capability but an incompatible one -- which makes this service dependent on automated data connections being built first, rather than on any content being written.",
-      "application_to_design": "State that this is the least developed service and why. Name the placement question as an open decision, and note that the existing cascade diagram is the only current material, so the reader does not assume a partial build exists.",
-      "supports": "structural_gap",
-      "provenance": "repaired"
+      "claim": "ผลการเปรียบเทียบแสดงรูปแบบที่ชัดเจนสามอย่าง คือ รายการที่ยังไม่มีกระจุกตัวหนักที่องค์ประกอบ Hazard ฝั่งชุดข้อมูล รายการที่ใช้ประโยชน์ได้ยากกระจายอยู่ทั่วเกือบทุกองค์ประกอบของฝั่งชุดข้อมูล และฝั่งผลิตภัณฑ์มีสัดส่วนรายการที่จับคู่ไม่ได้เลยสูงกว่าฝั่งชุดข้อมูลมาก",
+      "grounds": "ในตารางองค์ประกอบความเสี่ยง × สถานะฝั่งชุดข้อมูล (162 รายการ) องค์ประกอบ Hazard มีรายการยังไม่มีถึง 17 รายการจากทั้งหมด 79 รายการของ Hazard และมีรายการใช้ยากถึง 62 รายการ ซึ่งสูงกว่าทุกองค์ประกอบอื่นทั้งสองสถานะ ขณะที่องค์ประกอบอื่นแทบทุกองค์ประกอบมีรายการมีแต่ใช้ประโยชน์ได้ยากเป็นสถานะเด่น (เช่น Climatic Driver 15 จาก 24 รายการ, Exposure 12 จาก 14 รายการ, Impact 12 จาก 18 รายการ) ส่วนฝั่งผลิตภัณฑ์ มีเพียง 8 จาก 52 รายการที่จับคู่ได้ในสถานะใดสถานะหนึ่งเลย ต่างจากฝั่งชุดข้อมูลที่จับคู่ได้เกือบทั้งหมด",
+      "warrant": "เพราะจำนวนรายการที่ยังไม่มีกับจำนวนรายการที่ใช้ยากต้องการคำตอบคนละแบบในหัวข้อ 5.2 (การพัฒนาข้อมูลใหม่ กับ การปรับปรุงการเข้าถึงข้อมูลที่มีอยู่แล้ว) และเพราะสัดส่วนการจับคู่ไม่ได้ที่ต่างกันมากระหว่างชุดข้อมูลกับผลิตภัณฑ์บ่งชี้ว่าทั้งสองฝั่งมีปัญหาคนละประเภทกันตั้งแต่ต้น การชี้แจงรูปแบบทั้งสามนี้ก่อนเข้าสู่หัวข้อ 5.1.3–5.1.5 จึงทำให้ผู้อ่านเห็นเหตุผลของการแบ่งหัวข้อย่อยตามมาด้วย",
+      "application_to_design": "อ่านตารางที่ 5-2 และ 5-3 ด้วยสามประเด็นนี้ ปิดย่อหน้าด้วยประโยคที่ชี้ให้เห็นว่าหัวข้อ 5.1.3 จะขยายความรายการที่ยังไม่มี และ 5.1.4 จะขยายความรายการที่ใช้ยาก โดยยังไม่เสนอทางแก้",
+      "supports": "inventory_comparison",
+      "provenance": "new",
+      "reader_bridge": {
+        "assumed_knowledge": "ผู้อ่านเข้าใจความหมายของสามสถานะและรหัสเหตุผลแล้ว และเห็นตารางที่ 5-2 และ 5-3",
+        "opening_link": "ตัวเลขในตารางบอกจำนวน แต่ยังไม่บอกว่ารูปแบบใดสำคัญที่สุดสำหรับการอ่านต่อ",
+        "concept_explanation": "การอ่านตารางต้องแยกสองมิติ คือองค์ประกอบความเสี่ยงใดมีรายการยังไม่มีมากที่สุด และองค์ประกอบใดมีรายการใช้ยากมากที่สุด ซึ่งอาจเป็นองค์ประกอบเดียวกันหรือคนละองค์ประกอบก็ได้ พร้อมทั้งเทียบว่าฝั่งชุดข้อมูลกับฝั่งผลิตภัณฑ์มีรูปร่างของปัญหาต่างกันเพียงใด",
+        "project_application": "ใช้ผลการอ่านนี้เป็นสะพานไปยังหัวข้อ 5.1.3 (ขยายความรายการยังไม่มีตามองค์ประกอบ) และ 5.1.4 (ขยายความรายการใช้ยากตามรหัสเหตุผล) โดยไม่ปนกัน",
+        "transition_to_next": "เมื่อทราบว่าองค์ประกอบใดมีรายการยังไม่มีมากที่สุดแล้ว หัวข้อ 5.1.3 จะไล่อธิบายรายการเหล่านั้นทีละกลุ่มว่าขาดอะไร ใครต้องการ และปิดกั้นอะไร"
+      }
     },
     {
-      "unit_id": "arg-02g",
+      "unit_id": "qty-01",
       "order": 9,
-      "paragraph_job": "diagnose",
-      "claim": "Adaptation monitoring and evaluation is the one service where a working system already exists, which turns its central question into a decision about that system rather than an assessment of missing data -- and this same system is where Chapter 3 placed the platform's mechanism for supporting A-BTR compilation, developed in full in the next part of this section.",
-      "grounds": "A national monitoring platform already operates here, collecting manually entered progress data from eighteen agencies across the national plan's six sectors and holding a few hundred rows a year with no automated feed. The open question is whether the platform being designed builds on that system or replaces it, which is a Gap 11 decision rather than a research task. Two details about the existing system remain unclear: whether it already assesses technology readiness, and where individual project status is held, which currently appears to rest on staff knowledge rather than in the system. Comparing results across agencies is additionally limited by vulnerability data scattered on differing spatial units (Gaps 1 and 3) and by update cycles that are not stated (Gap 5). Chapter 3 established that this same eighteen-agency reporting pipeline is the mechanism the platform reuses to support DCCE's A-BTR compilation obligation, rather than building a separate reporting tool -- meeting Gaps 5 and 10 on that account, beyond the four gaps blocking the service's core monitoring function.",
-      "warrant": "Because an operating system already holds this ground, the risk here is not an empty capability but a duplicated one, and the build-or-replace decision has to be taken before requirements can be written -- which is why this service's obstacle is recorded as a pending determination rather than a technical gap. And because A-BTR compilation reuses this same pipeline rather than requiring a new one, its blocking gaps belong to this service's diagnosis, not to a service of their own.",
-      "application_to_design": "Describe the existing platform concretely -- eighteen agencies, six sectors, manual entry, a few hundred rows a year -- so the build-or-replace question reads as a real choice. Name the two unclear details as items requiring confirmation, and note that project status resting on staff knowledge is itself a finding. Close with a short bridge naming the A-BTR mechanism and its two blocking gaps, then hand off to the extended case study that follows -- do not develop the A-BTR diagnosis here.",
-      "supports": "structural_gap",
-      "provenance": "repaired"
+      "paragraph_job": "define",
+      "claim": "ช่องว่างเชิงปริมาณในหัวข้อนี้มีขอบเขตชัดเจน คือ 45 รายการฝั่งชุดข้อมูลและ 40 รายการฝั่งผลิตภัณฑ์ที่ไม่ปรากฏในบัญชีรายการทั้งสองชุดเลย และจะไล่อธิบายทีละกลุ่มองค์ประกอบความเสี่ยงโดยเริ่มจากกลุ่มที่มีจำนวนมากที่สุดก่อน",
+      "grounds": "จากตารางองค์ประกอบความเสี่ยง × สถานะฝั่งชุดข้อมูล รายการยังไม่มีรวม 45 รายการ แบ่งเป็น Hazard 17, Impact 6, Loss and Damage 6, Climatic Driver 7, Sensitivity 5, Adaptive Capacity 3 และ Exposure 1 ฝั่งผลิตภัณฑ์มีรายการยังไม่มี 40 รายการจาก 52 รายการที่ตรวจสอบ",
+      "warrant": "เพราะจำนวนรายการยังไม่มีในแต่ละองค์ประกอบต่างกันมาก การไล่อธิบายจากกลุ่มที่มีจำนวนมากที่สุดไปหาน้อยที่สุดทำให้ผู้อ่านเห็นลำดับความสำคัญของช่องว่างตามน้ำหนักของหลักฐานเอง ไม่ใช่ตามลำดับที่คณะที่ปรึกษาเลือกเล่าเอง",
+      "application_to_design": "เปิด 5.1.3 ด้วยขอบเขตตัวเลขรวมของช่องว่างเชิงปริมาณทั้งสองฝั่ง แล้วระบุว่าย่อหน้าต่อจากนี้จะไล่ตามกลุ่มองค์ประกอบความเสี่ยงจากมากไปน้อย ก่อนแยกกล่าวถึงฝั่งผลิตภัณฑ์ในย่อหน้าสุดท้ายของหัวข้อนี้",
+      "supports": "quantitative_gap",
+      "provenance": "new",
+      "reader_bridge": {
+        "assumed_knowledge": "ผู้อ่านเพิ่งเห็นจากหัวข้อ 5.1.2 ว่ารายการยังไม่มีกระจุกตัวที่ Hazard เป็นหลัก",
+        "opening_link": "ก่อนไล่อธิบายทีละกลุ่ม ต้องบอกขอบเขตรวมของช่องว่างเชิงปริมาณและลำดับการนำเสนอก่อน",
+        "concept_explanation": "ช่องว่างเชิงปริมาณคือรายการที่ไม่ปรากฏในบัญชีรายการทั้งสองชุดเลย ต่างจากช่องว่างเชิงคุณภาพที่ปรากฏอยู่แล้วแต่ใช้ยาก",
+        "project_application": "ใช้ตัวเลข 45 และ 40 เป็นขอบเขตของหัวข้อ 5.1.3 ทั้งหมด และใช้ลำดับมากไปน้อยเป็นโครงของย่อหน้าถัดไป",
+        "transition_to_next": "กลุ่มที่มีจำนวนรายการยังไม่มีมากที่สุดคือ Hazard จึงเป็นกลุ่มแรกที่ต้องขยายความ"
+      }
     },
     {
-      "unit_id": "arg-02h",
+      "unit_id": "qty-02",
       "order": 10,
       "paragraph_job": "diagnose",
-      "claim": "Uncertainty management standards face a methodology and confidence gap rather than a data gap, and closing it is institutional learning work rather than a feature of another service.",
-      "grounds": "Financial institutions and infrastructure planners are cautious about using probabilistic projections in decisions that carry liability, and some currently treat a flood probability map as a certainty map. Uncertainty in a projection remains an unfamiliar concept for many intended users, and building shared institutional understanding of how to read it is work in its own right rather than something delivered incidentally alongside another service. A place for this content has already been identified on the site, so the shortfall is in the standard and the shared understanding, not in the platform's capacity to publish them.",
-      "warrant": "Because misreading a probability map as a certainty map produces confident wrong decisions rather than visible failures, this gap is more dangerous than an empty page would be, and it closes through an agreed standard for communicating confidence rather than through additional data.",
-      "application_to_design": "State that this is a methodology and shared-understanding gap explicitly, since the reader will otherwise expect a data recommendation. Use the flood-probability-read-as-certainty example, which makes the risk concrete without naming any organization.",
-      "supports": "structural_gap",
-      "provenance": "repaired"
+      "claim": "องค์ประกอบ Hazard เป็นกลุ่มที่มีรายการยังไม่มีมากที่สุด (17 รายการ) ซึ่งขัดกับภาพที่บัญชีรายการข้อมูลพื้นฐานมักถูกมองว่าครอบคลุมข้อมูลภัยพิบัติดีอยู่แล้ว เพราะรายการที่ยังไม่มีในกลุ่มนี้เป็นรายละเอียดเฉพาะที่หน่วยงานถามหา ไม่ใช่ข้อมูลภัยพิบัติพื้นฐานที่ขาดหายไปทั้งหมด",
+      "grounds": "จากตารางองค์ประกอบความเสี่ยง × สถานะ Hazard มีรายการความต้องการรวม 79 รายการ ในจำนวนนี้ 62 รายการมีอยู่แล้วแต่ใช้ยาก และ 17 รายการยังไม่มีเลย ซึ่งเป็นจำนวนรายการยังไม่มีสูงสุดในบรรดาองค์ประกอบความเสี่ยงทั้ง 7 ด้านที่ปรากฏในตาราง",
+      "warrant": "เพราะ Hazard เป็นองค์ประกอบที่มีทั้งฐานข้อมูลมากที่สุดและช่องว่างเชิงปริมาณมากที่สุดพร้อมกัน การอธิบายว่าช่องว่างนี้เป็นความต้องการรายละเอียดเฉพาะที่ซ้อนอยู่บนฐานข้อมูลที่มีอยู่แล้วมาก จึงป้องกันไม่ให้ผู้อ่านเข้าใจผิดว่าบัญชีรายการข้อมูลพื้นฐานไม่มีข้อมูลภัยพิบัติเลย",
+      "application_to_design": "อธิบาย Hazard เป็นกลุ่มแรกและกลุ่มใหญ่ที่สุดของช่องว่างเชิงปริมาณ ระบุจำนวน 17 รายการเทียบกับฐาน 79 รายการเพื่อไม่ให้ตัวเลขถูกอ่านผิดสัดส่วน",
+      "supports": "quantitative_gap",
+      "provenance": "new",
+      "reader_bridge": {
+        "assumed_knowledge": "ผู้อ่านทราบขอบเขตรวมของช่องว่างเชิงปริมาณและลำดับการนำเสนอจากย่อหน้าก่อนแล้ว",
+        "opening_link": "กลุ่มแรกที่ต้องขยายความคือกลุ่มที่มีจำนวนรายการยังไม่มีมากที่สุด",
+        "concept_explanation": "รายการยังไม่มีในองค์ประกอบ Hazard คือรายละเอียดเฉพาะที่ยังไม่ปรากฏในบัญชีรายการ แม้องค์ประกอบนี้จะมีฐานข้อมูลรวมมากที่สุดในบัญชีรายการก็ตาม",
+        "project_application": "ระบุจำนวน 17 รายการเป็นกลุ่มเปิดของหัวข้อ 5.1.3 พร้อมสัดส่วนเทียบกับฐาน 79 รายการเพื่อกันการอ่านผิด",
+        "transition_to_next": "กลุ่มถัดไปที่มีจำนวนรายการยังไม่มีรองลงมาคือ Climatic Driver และ Exposure ซึ่งมีลักษณะร่วมกันในฐานะข้อมูลต้นทางของการประเมินความเสี่ยง"
+      }
     },
     {
-      "unit_id": "arg-03",
+      "unit_id": "qty-03",
       "order": 11,
       "paragraph_job": "diagnose",
-      "claim": "Checked against DCCE's digital asset inventory, only 21 percent (16 of 75) of the website's required content topics are publication-ready outright, 35 percent (26) are partially populated, and 44 percent (33) have no current source at all -- together 79 percent still needing fresh research, synthesis, or drafting before the site defined in Chapter 2 can be published.",
-      "grounds": "The WP4 Content Source Gap Analysis v2 of 20 August 2026 checked all 75 sitemap-mandated content topics against DCCE's full digital asset inventory and, for pages needing structured data, against the 260-dataset catalog, yielding 16 FULL, 26 PARTIAL, and 33 GAP. The item count moved from 73 to 75 because the v9 restructuring collapsed one section into a router link, removing its three content requirements, and added five new items. This version supersedes the 10 August analysis, whose totals are carried in some earlier readings of this material and should not be used.",
-      "warrant": "Because this figure covers the whole website rather than any single service or reporting obligation, stating it before any service-specific finding corrects an assumption that DCCE already holds most of the content it needs to publish -- an assumption that would otherwise make the content recommendations in section 5.2 look disproportionate to the problem.",
-      "application_to_design": "State the three-way split as a short numbered breakdown with the 79 percent headline. The per-node breakdown across the 27 sitemap nodes stays out of the main text and is noted as available in the underlying analysis. Three findings underneath this figure follow as their own short passages; do not fold them into this paragraph.",
-      "supports": "content_readiness_gap",
-      "provenance": "recovered"
+      "claim": "องค์ประกอบ Climatic Driver (7 รายการ) และ Exposure (1 รายการ) รวมกันเป็นช่องว่างเชิงปริมาณกลุ่มที่สอง ทั้งสองเป็นข้อมูลต้นทางที่ใช้ประกอบการประเมินความเสี่ยงร่วมกับองค์ประกอบอื่น จึงกล่าวถึงร่วมกันแม้ขนาดจะต่างกันมาก",
+      "grounds": "Climatic Driver มีรายการความต้องการรวม 24 รายการ ยังไม่มี 7 รายการ ขณะที่ Exposure มีรายการความต้องการรวม 14 รายการ ยังไม่มีเพียง 1 รายการ รวมทั้งสององค์ประกอบเป็นรายการยังไม่มี 8 รายการ",
+      "warrant": "เพราะ Climatic Driver และ Exposure ทำหน้าที่เป็นข้อมูลนำเข้าของการประเมินความเสี่ยงร่วมกับ Hazard เสมอ ไม่ใช่ผลลัพธ์ปลายทาง การขาดรายการในสององค์ประกอบนี้จึงส่งผลถึงความสมบูรณ์ของการประเมินความเสี่ยงโดยรวม แม้จำนวนรายการที่ขาดจะไม่มากเท่า Hazard",
+      "application_to_design": "รวม Climatic Driver และ Exposure ไว้ในย่อหน้าเดียวกัน ระบุจำนวนของแต่ละองค์ประกอบแยกกันแต่อธิบายบทบาทร่วมกันในฐานะข้อมูลนำเข้าของการประเมินความเสี่ยง",
+      "supports": "quantitative_gap",
+      "provenance": "new",
+      "reader_bridge": {
+        "assumed_knowledge": "ผู้อ่านเพิ่งอ่านกลุ่ม Hazard ซึ่งเป็นกลุ่มที่ใหญ่ที่สุดไปแล้ว",
+        "opening_link": "กลุ่มถัดไปมีขนาดเล็กกว่ามากแต่มีบทบาทเชื่อมโยงกับ Hazard โดยตรงในฐานะข้อมูลนำเข้า",
+        "concept_explanation": "Climatic Driver คือปัจจัยขับเคลื่อนทางภูมิอากาศที่ทำให้เกิดภัย ส่วน Exposure คือสิ่งที่ตั้งอยู่ในพื้นที่เสี่ยง ทั้งสองเป็นข้อมูลที่ต้องใช้ร่วมกับ Hazard เพื่อประเมินความเสี่ยงให้ครบ",
+        "project_application": "ระบุ 7 และ 1 รายการเป็นกลุ่มที่สอง เชื่อมกับบทบาทของทั้งสององค์ประกอบในการประเมินความเสี่ยงร่วมกับ Hazard",
+        "transition_to_next": "กลุ่มถัดไปคือ Sensitivity และ Adaptive Capacity ซึ่งมีข้อจำกัดร่วมกันอีกแบบหนึ่งในการจำแนกข้อมูลของบัญชีรายการเอง"
+      }
     },
     {
-      "unit_id": "arg-03a",
+      "unit_id": "qty-04",
       "order": 12,
       "paragraph_job": "diagnose",
-      "claim": "Wherever a page promises financial support, technology transfer, and capacity building together, the financial material is reliably present and the other two are not -- a pattern that recurs on several pages independently.",
-      "grounds": "The content check found this combination repeating across pages that were drafted separately, which points to what the department actually tracks rather than to how any single page was written: financial support is recorded systematically, while technology transfer and capacity building are not captured in a form that can be published.",
-      "warrant": "Because the pattern appears on pages written independently of one another, it reflects a gap in what is recorded institutionally rather than an oversight in drafting, so closing it requires a change to what gets tracked rather than a round of content writing.",
-      "application_to_design": "State the pattern and its interpretation -- what is tracked, not how pages were written. This is a finding about institutional record-keeping and should read that way.",
-      "supports": "content_readiness_gap",
-      "provenance": "repaired"
+      "claim": "องค์ประกอบ Sensitivity (5 รายการ) และ Adaptive Capacity (3 รายการ) รวมกันเป็นช่องว่างเชิงปริมาณกลุ่มที่สาม และกล่าวถึงร่วมกันด้วยเหตุผลเพิ่มเติมนอกเหนือจากขนาด คือบัญชีรายการข้อมูลพื้นฐานเองยังไม่มีฟิลด์ที่แยกสององค์ประกอบนี้ออกจากกัน",
+      "grounds": "Sensitivity มีรายการความต้องการรวม 12 รายการ ยังไม่มี 5 รายการ Adaptive Capacity มีรายการความต้องการรวม 5 รายการ ยังไม่มี 3 รายการ รวมทั้งสององค์ประกอบเป็นรายการยังไม่มี 8 รายการ ขณะที่ฟิลด์ cdm_sub_domain ของบัญชีรายการข้อมูลพื้นฐานมีป้ายกำกับรวมเป็น VULNERABILITY เพียงป้ายเดียว (72 แถว) ไม่ได้แยก Sensitivity ออกจาก Adaptive Capacity",
+      "warrant": "เพราะทุกการตรวจสอบสถานะของ Sensitivity และ Adaptive Capacity ต้องอาศัยการเทียบกับกลุ่ม VULNERABILITY ที่รวมกันอยู่ 72 แถวเดียวกัน ตัวเลขของทั้งสององค์ประกอบจึงต้องอ่านคู่กันเสมอ การแยกกล่าวถึงทีละองค์ประกอบโดยไม่บอกข้อจำกัดนี้จะทำให้ผู้อ่านเข้าใจผิดว่าตัวเลขทั้งสองมาจากการตรวจสอบที่แม่นยำเท่ากับองค์ประกอบอื่น",
+      "application_to_design": "รวม Sensitivity และ Adaptive Capacity ไว้ในย่อหน้าเดียวกัน ระบุตัวเลขแยกแต่ละองค์ประกอบ พร้อมข้อสังเกตสั้น ๆ ว่าบัญชีรายการยังไม่แยกฟิลด์นี้ และชี้ว่าหัวข้อ 5.1.4 จะขยายความข้อจำกัดนี้ในฐานะช่องว่างเชิงคุณภาพของบัญชีรายการเอง",
+      "supports": "quantitative_gap",
+      "provenance": "new",
+      "reader_bridge": {
+        "assumed_knowledge": "ผู้อ่านทราบว่า Climatic Driver และ Exposure เป็นข้อมูลนำเข้าของการประเมินความเสี่ยงแล้ว",
+        "opening_link": "กลุ่มถัดไปมีขนาดใกล้เคียงกับกลุ่มก่อน แต่มีข้อจำกัดเพิ่มเติมที่มาจากตัวบัญชีรายการเอง ไม่ใช่จากความต้องการ",
+        "concept_explanation": "Sensitivity คือความอ่อนไหวของระบบต่อภัย ส่วน Adaptive Capacity คือศักยภาพในการรับมือ ทั้งสองเป็นแนวคิดต่างกันแต่บัญชีรายการข้อมูลพื้นฐานยังจัดเก็บรวมอยู่ในป้ายกำกับเดียว",
+        "project_application": "ระบุ 5 และ 3 รายการเป็นกลุ่มที่สาม พร้อมข้อสังเกตเรื่องป้ายกำกับรวมที่จะขยายความต่อในหัวข้อ 5.1.4",
+        "transition_to_next": "กลุ่มสุดท้ายของฝั่งชุดข้อมูลคือ Impact และ Loss and Damage ซึ่งเชื่อมโยงกับข้อมูลขั้นต่ำด้านความสูญเสียเสียหายที่บทที่ 4 อธิบายไว้แล้ว"
+      }
     },
     {
-      "unit_id": "arg-03b",
+      "unit_id": "qty-05",
       "order": 13,
       "paragraph_job": "diagnose",
-      "claim": "For raw climate science content, the underlying data exists but not in publishable form, which a check against publications alone would have missed entirely.",
-      "grounds": "Checking the publication inventory alone suggested a complete absence of climate science content. The fuller check against the dataset catalog found historical climate grids and downscaled projections that do exist -- but as restricted, unprocessed national-grid data rather than as the finished trend figures the pages describe.",
-      "warrant": "Because the distance here is processing and release rather than acquisition, this part of the content gap closes through a different kind of work from the topics that have no source at all, and treating the two as one undifferentiated backlog would misdirect effort.",
-      "application_to_design": "Make the distinction explicit: the data exists, the publishable figure does not. This matters for section 5.2's sequencing and should not be blurred into the general content gap.",
-      "supports": "content_readiness_gap",
-      "provenance": "repaired"
+      "claim": "องค์ประกอบ Impact (6 รายการ) และ Loss and Damage (6 รายการ) รวมกันเป็นช่องว่างเชิงปริมาณกลุ่มสุดท้ายฝั่งชุดข้อมูล และเชื่อมโยงโดยตรงกับงานด้านข้อมูลขั้นต่ำและความสูญเสียเสียหายที่บทที่ 4 วางฐานไว้แล้ว",
+      "grounds": "Impact มีรายการความต้องการรวม 18 รายการ ยังไม่มี 6 รายการ Loss and Damage มีรายการความต้องการรวม 10 รายการ ยังไม่มี 6 รายการ รวมทั้งสององค์ประกอบเป็นรายการยังไม่มี 12 รายการ ซึ่งเป็นกลุ่มที่มีจำนวนรวมมากเป็นอันดับสองรองจาก Hazard",
+      "warrant": "เพราะบทที่ 4 ได้วางมาตรฐานชุดข้อมูลขั้นต่ำและแบบฟอร์มความสูญเสียเสียหายไว้แล้วเป็นงานเฉพาะ การขาดรายการในองค์ประกอบ Impact และ Loss and Damage ของบัญชีรายการข้อมูลพื้นฐานจึงเป็นหลักฐานเชิงปริมาณที่ยืนยันความจำเป็นของงานบทที่ 4 จากอีกมุมหนึ่ง ไม่ใช่ประเด็นใหม่ที่ไม่เกี่ยวข้องกัน",
+      "application_to_design": "รวม Impact และ Loss and Damage ไว้ในย่อหน้าเดียวกัน ระบุตัวเลขแยกแต่ละองค์ประกอบ และเชื่อมโยงไปยังบทที่ 4 อย่างชัดเจนโดยไม่สังเคราะห์เนื้อหาบทที่ 4 ซ้ำ",
+      "supports": "quantitative_gap",
+      "provenance": "new",
+      "reader_bridge": {
+        "assumed_knowledge": "ผู้อ่านทราบข้อจำกัดของป้ายกำกับ VULNERABILITY จากกลุ่ม Sensitivity/Adaptive Capacity แล้ว",
+        "opening_link": "กลุ่มสุดท้ายฝั่งชุดข้อมูลเชื่อมกับเนื้อหาที่ผู้อ่านผ่านมาแล้วจากบทที่ 4 โดยตรง",
+        "concept_explanation": "Impact คือผลกระทบที่เกิดขึ้นจริง ส่วน Loss and Damage คือความสูญเสียเสียหายที่วัดได้ ทั้งสองเป็นข้อมูลปลายทางของวงจรการประเมินความเสี่ยงที่บทที่ 4 ได้วางมาตรฐานขั้นต่ำไว้แล้ว",
+        "project_application": "ระบุ 6 และ 6 รายการเป็นกลุ่มปิดท้ายฝั่งชุดข้อมูล พร้อมโยงกลับไปยังบทที่ 4 เพื่อไม่ให้ผู้อ่านมองว่าเป็นประเด็นแยกขาดจากกัน",
+        "transition_to_next": "เมื่อครบทั้งสี่กลุ่มของฝั่งชุดข้อมูลแล้ว ยังเหลือฝั่งผลิตภัณฑ์สารสนเทศซึ่งมีรายการยังไม่มีจำนวนมากกว่าฝั่งชุดข้อมูลเสียอีก"
+      }
     },
     {
-      "unit_id": "arg-03c",
+      "unit_id": "qty-06",
       "order": 14,
       "paragraph_job": "diagnose",
-      "claim": "Narrative and explanatory pages are in reasonable shape while pages designed as live data features have little structured material behind them, which is Gap 6 reappearing on the web layer.",
-      "grounds": "Background pages, policy summaries, and case studies are comparatively well supported. Pages designed as dashboards, maps, and calculators have little structured material behind them -- including pages counted as partially covered only because a document discusses the topic in prose, without the underlying data that would make the feature work.",
-      "warrant": "Because a page counted as partially covered on the strength of a prose document cannot actually be built as a dashboard or a calculator, the readiness figure understates the distance for exactly the pages that carry the platform's distinctive value, and the same view-only limitation that constrains the data layer reappears here.",
-      "application_to_design": "Name this as the same structural gap appearing on the web layer rather than as a separate finding, so the reader sees one problem with two faces. Note the counting caveat, since it qualifies the headline figure stated above.",
-      "supports": "content_readiness_gap",
-      "provenance": "repaired"
+      "claim": "ฝั่งผลิตภัณฑ์สารสนเทศมีรายการยังไม่มีถึง 40 จาก 52 รายการที่ตรวจสอบ ซึ่งเป็นสัดส่วนสูงกว่าฝั่งชุดข้อมูลมาก แต่รายละเอียดว่าเหตุใดจึงยังไม่มีนั้นเป็นคำถามคนละแบบจากฝั่งชุดข้อมูล จึงขยายความเต็มที่ในหัวข้อ 5.1.5 แทนที่จะขยายความในที่นี้",
+      "grounds": "จากรายการความต้องการประเภทผลิตภัณฑ์ 52 รายการที่ตรวจสอบกับบัญชีรายการผลิตภัณฑ์สารสนเทศ มีเพียง 8 รายการที่จับคู่ได้ในสถานะใดสถานะหนึ่ง ส่วนอีก 40 รายการอยู่ในสถานะยังไม่มี",
+      "warrant": "เพราะสัดส่วน 40 ใน 52 สูงกว่าสัดส่วนรายการยังไม่มีฝั่งชุดข้อมูล (45 ใน 214) มาก การกล่าวถึงในที่นี้เพียงสั้น ๆ พร้อมชี้ไปยังหัวข้อ 5.1.5 ป้องกันไม่ให้ผู้อ่านสับสนว่าเหตุผลเบื้องหลังตัวเลขทั้งสองฝั่งเหมือนกัน ทั้งที่โครงสร้างของปัญหาต่างกัน",
+      "application_to_design": "ปิดหัวข้อ 5.1.3 ด้วยตัวเลข 40 จาก 52 ของฝั่งผลิตภัณฑ์ ระบุสั้น ๆ ว่าลักษณะของช่องว่างนี้ต่างจากฝั่งชุดข้อมูล และชี้ไปยังหัวข้อ 5.1.5 สำหรับรายละเอียด โดยไม่ขยายความในที่นี้",
+      "supports": "quantitative_gap",
+      "provenance": "new",
+      "reader_bridge": {
+        "assumed_knowledge": "ผู้อ่านผ่านช่องว่างเชิงปริมาณฝั่งชุดข้อมูลครบทั้งสี่กลุ่มแล้ว",
+        "opening_link": "นอกจากฝั่งชุดข้อมูลแล้ว ฝั่งผลิตภัณฑ์สารสนเทศก็มีรายการยังไม่มีเช่นกัน และมีจำนวนมากกว่าฝั่งชุดข้อมูลเสียอีก",
+        "concept_explanation": "รายการยังไม่มีฝั่งผลิตภัณฑ์หมายถึงความต้องการที่ไม่ปรากฏในบัญชีรายการผลิตภัณฑ์สารสนเทศเลย เช่นเดียวกับฝั่งชุดข้อมูล แต่สัดส่วนสูงกว่ามาก",
+        "project_application": "ใช้ตัวเลข 40 จาก 52 เป็นตัวเลขปิดหัวข้อ 5.1.3 และเป็นจุดเชื่อมไปยังหัวข้อ 5.1.5",
+        "transition_to_next": "ก่อนถึงหัวข้อ 5.1.5 ต้องผ่านหัวข้อ 5.1.4 ซึ่งขยายความรายการที่มีอยู่แล้วแต่ใช้ประโยชน์ได้ยากก่อน"
+      }
     },
     {
-      "unit_id": "arg-04",
+      "unit_id": "qual-01",
       "order": 15,
       "paragraph_job": "define",
-      "claim": "A-BTR compilation is a continuing institutional obligation DCCE itself holds, flowing from its role as Thailand's national focal point for climate adaptation. Chapter 3 already placed the platform's support for it as a mechanism attached to Service 7 rather than a service of its own; this part of the section develops that mechanism in full, as the sharpest, most binding instance of the structural and content gaps just established.",
-      "grounds": "Thailand's own BTR2 second interim report, institutional baseline: the report must identify the principal national policy and institutional framework for adaptation including the lead national committee and the National Adaptation Plan; must describe the institutional arrangement for adaptation across policy formulation, planning, implementation, monitoring, and reporting, with clear allocation of roles and responsibilities; must identify the national focal point for adaptation and describe coordination across sectors and governance levels; and must describe how DCCE and sectoral focal points coordinate monitoring, evaluation, and regular progress reporting. The same report separately identifies DCCE as the national focal point coordinating adaptation policy formulation, inter-agency coordination, and reporting, implementing measures under the National Adaptation Plan in collaboration with sectoral ministries, provincial and local authorities, academic institutions, and development partners.",
-      "warrant": "Because these are DCCE's own reporting duties stated in the report's own institutional baseline rather than requests routed through DCCE from an outside party, justifying platform support for A-BTR does not rest on demonstrated external demand the way the other eight services do; it rests on an obligation DCCE must fulfil regardless of demand, which is why it is the platform's most binding proof case rather than one more service among eight.",
-      "application_to_design": "Open this part of the section by naming A-BTR's institutional status before describing any gap, so the platform's role reads as serving DCCE's own continuing duty. Note in one sentence that this elaborates on the Service 7 mechanism named just above, per Chapter 3 -- not a new service. State directly why the case is developed at length: it draws on the same structural and content gaps already established, in their most acute form.",
-      "supports": "abtr_case_study",
-      "provenance": "recovered"
+      "claim": "ช่องว่างเชิงคุณภาพครอบคลุม 117 รายการที่มีอยู่ในบัญชีรายการแล้วแต่หน่วยงานนำไปใช้ประโยชน์ได้ยาก และจะไล่อธิบายตามรหัสเหตุผลจากมากไปน้อย โดยรายการหนึ่งอาจมีมากกว่าหนึ่งรหัสเหตุผลพร้อมกัน",
+      "grounds": "รายการมีแต่ใช้ประโยชน์ได้ยากรวม 117 รายการ (113 รายการฝั่งชุดข้อมูล และ 4 รายการฝั่งผลิตภัณฑ์) รหัสเหตุผลของ 113 รายการฝั่งชุดข้อมูล เรียงจากมากไปน้อยคือ การเข้าถึง 70 รายการ ข้อมูลอภิพันธ์ 42 รายการ ข้อมูลความไม่แน่นอน 13 รายการ ความละเอียดเชิงพื้นที่ 10 รายการ รูปแบบไฟล์ 6 รายการ และความทันสมัยของข้อมูล 5 รายการ",
+      "warrant": "เพราะรหัสเหตุผลแต่ละแบบต้องการวิธีแก้ไขคนละแบบในหัวข้อ 5.2 (เช่น ปัญหาการเข้าถึงต้องการนโยบายเปิดเผยข้อมูล ขณะที่ปัญหาข้อมูลอภิพันธ์ต้องการมาตรฐานอภิพันธ์) การไล่อธิบายทีละรหัสจากมากไปน้อยทำให้น้ำหนักของแต่ละปัญหาปรากฏชัดก่อนที่หัวข้อ 5.2 จะเสนอทางแก้",
+      "application_to_design": "เปิด 5.1.4 ด้วยขอบเขตตัวเลขรวมของช่องว่างเชิงคุณภาพ นิยามว่ารหัสเหตุผลนับซ้ำได้ในรายการเดียว แล้วระบุว่าย่อหน้าต่อจากนี้ไล่ตามรหัสเหตุผลจากมากไปน้อย",
+      "supports": "qualitative_gap",
+      "provenance": "new",
+      "reader_bridge": {
+        "assumed_knowledge": "ผู้อ่านเพิ่งผ่านช่องว่างเชิงปริมาณครบทั้งฝั่งชุดข้อมูลและผลิตภัณฑ์แล้ว",
+        "opening_link": "นอกจากรายการที่ไม่มีเลย ยังมีรายการที่มีอยู่แล้วแต่ใช้ประโยชน์ไม่ได้จริง ซึ่งเป็นช่องว่างเชิงคุณภาพตามนิยามใน TOR 5.3.8",
+        "concept_explanation": "รหัสเหตุผลคือสาเหตุเฉพาะที่ทำให้รายการหนึ่งใช้ยาก และรายการเดียวอาจมีได้หลายรหัสพร้อมกัน เช่น รายการหนึ่งอาจเข้าถึงยากและขาดข้อมูลอภิพันธ์พร้อมกัน",
+        "project_application": "ใช้ 6 รหัสเหตุผลนี้เป็นโครงของหัวข้อ 5.1.4 ทั้งหมด เรียงจากมากไปน้อย",
+        "transition_to_next": "รหัสเหตุผลที่พบมากที่สุดคือการเข้าถึง จึงเป็นรหัสแรกที่ต้องขยายความ"
+      }
     },
     {
-      "unit_id": "arg-05",
+      "unit_id": "qual-02",
       "order": 16,
       "paragraph_job": "diagnose",
-      "claim": "Thailand's own BTR2 second interim report groups its adaptation barriers into four themes -- data and knowledge, institutional and coordination, financial and resource, and implementation, reporting, and monitoring and evaluation -- and names five specific data and knowledge gaps it identifies as currently blocking adequate reporting.",
-      "grounds": "The report's barriers section organizes its findings into those four thematic groups; this section develops the data and knowledge theme, which is where the platform's remit lies, and does not extend into the other three. Within that theme the report states five gaps and the support each would require. First, limitations in area-based risk and vulnerability data -- insufficient spatial resolution, timeliness, and coverage for vulnerable groups, sector-specific risks, and socio-economic conditions -- which cause adaptation planning to rely on generalized rather than location-specific interventions and risk maladaptation; the support named is high-resolution area-based datasets, local data collection systems, and local-agency capacity building. Second, the absence of a standardized framework, methodologies, and integrated information system for Loss and Damage assessment, with data dispersed across agencies producing methodological inconsistency, limited interoperability, and difficulty generating comprehensive assessments of economic and non-economic loss. Third, the absence of standardized outcome indicators, with monitoring relying mainly on output measures such as the number of activities carried out, which limits assessment of resilience, vulnerability reduction, adaptive capacity, national aggregation, and alignment with the Global Goal on Adaptation. Fourth, fragmentation of climate-related databases across agencies with no centralized integration platform; the support named is an integrated national climate data platform with interoperable systems, data-sharing protocols, and the legal or institutional frameworks for inter-agency exchange. Fifth, limited translation of available scientific knowledge into practical and operational tools, especially at provincial and local level, contributing to reactive rather than proactive adaptation; the support named is practical toolkits, guidelines, decision-support tools, and training.",
-      "warrant": "Because these gaps are stated by the report's own authors as the barriers currently preventing adequate reporting, they carry the standing of the country's own acknowledged baseline rather than an outside critique -- closing them addresses what the report itself says is missing, not an improvement agenda the platform invents on its own authority.",
-      "application_to_design": "Name the four thematic groups in one sentence and state plainly that this section develops the data and knowledge theme only, so the scope boundary is visible rather than silent. Then present the five gaps as a numbered list with their named support requirements. Do not propose the platform's response yet; that belongs to the concluding unit.",
-      "supports": "abtr_case_study",
-      "provenance": "repaired"
+      "claim": "การเข้าถึงเป็นรหัสเหตุผลที่พบมากที่สุด ครอบคลุมรายการที่มีแต่ใช้ประโยชน์ได้ยากถึง 70 จาก 113 รายการ ซึ่งหมายความว่าข้อมูลจำนวนมากมีอยู่ในบัญชีรายการแล้วแต่หน่วยงานเข้าไม่ถึงในทางปฏิบัติ",
+      "grounds": "รหัสเหตุผลการเข้าถึงครอบคลุม 70 จาก 113 รายการฝั่งชุดข้อมูล ซึ่งเป็นรหัสเหตุผลที่มีจำนวนสูงสุดในบรรดารหัสเหตุผลทั้ง 6 แบบ",
+      "warrant": "เพราะการเข้าถึงเป็นรหัสเหตุผลที่ครอบคลุมรายการมากกว่าครึ่งของรายการที่ใช้ยากทั้งหมด การระบุว่านี่คือรหัสเหตุผลเด่นที่สุดจึงเป็นข้อเท็จจริงที่ต้องกล่าวไว้ก่อน ก่อนขยายความรหัสเหตุผลอื่นที่มีน้ำหนักน้อยกว่า",
+      "application_to_design": "ระบุตัวเลข 70 จาก 113 เป็นรหัสเหตุผลแรกและใหญ่ที่สุด โดยไม่ขยายความสาเหตุเชิงนโยบายเบื้องหลังการเข้าถึง เพราะนั่นเป็นเนื้อหาของหัวข้อ 5.2",
+      "supports": "qualitative_gap",
+      "provenance": "new",
+      "reader_bridge": {
+        "assumed_knowledge": "ผู้อ่านทราบว่ารหัสเหตุผลจะถูกไล่อธิบายจากมากไปน้อยแล้ว",
+        "opening_link": "รหัสเหตุผลแรกที่ต้องขยายความคือรหัสที่มีจำนวนรายการมากที่สุด",
+        "concept_explanation": "การเข้าถึงหมายถึงรายการที่ปรากฏในบัญชีรายการแล้ว แต่หน่วยงานไม่สามารถขอหรือรับข้อมูลนั้นมาใช้ได้จริงในทางปฏิบัติ",
+        "project_application": "ระบุ 70 จาก 113 รายการเป็นตัวเลขเปิดของหัวข้อ 5.1.4 โดยไม่เสนอทางแก้",
+        "transition_to_next": "รหัสเหตุผลรองลงมาคือข้อมูลอภิพันธ์ ซึ่งเป็นปัญหาคนละแบบจากการเข้าถึง"
+      }
     },
     {
-      "unit_id": "arg-06",
+      "unit_id": "qual-03",
       "order": 17,
       "paragraph_job": "diagnose",
-      "claim": "Beyond the content gaps BTR2 names about itself, compiling the report today is a broken process resting on four structural conditions, none of which is a shortage of raw data.",
-      "grounds": "Producing Thailand's international adaptation report currently means compiling figures by hand from spreadsheets held across several agencies, without a shared definition of terms such as avoided loss or adaptation coverage, and with final figures difficult to trace back to source. Four structural conditions sit underneath this: gaps in the underlying data and in shared definitions; coordination across the agencies holding each piece; resourcing for the compilation work itself; and a consistent means of monitoring progress between reporting rounds.",
-      "warrant": "Because a figure that cannot be traced to its source cannot be defended when questioned, and because the same term means different things to different contributing agencies, the compilation problem persists independently of how much data the catalog holds -- which is why it is described here as a process failure rather than a data shortage.",
-      "application_to_design": "State the four structural conditions as the frame for the two findings that follow. Keep the hand-compilation description concrete -- spreadsheets across agencies, no shared definitions, figures that cannot be traced -- without naming any individual agency as at fault.",
-      "supports": "abtr_case_study",
-      "provenance": "repaired"
+      "claim": "ข้อมูลอภิพันธ์เป็นรหัสเหตุผลที่พบมากเป็นอันดับสอง ครอบคลุม 42 จาก 113 รายการ ซึ่งหมายความว่าแม้หน่วยงานจะเข้าถึงข้อมูลได้ ข้อมูลจำนวนมากยังขาดคำอธิบายที่จำเป็นต่อการตัดสินใจว่าจะนำไปใช้ได้อย่างไร",
+      "grounds": "รหัสเหตุผลข้อมูลอภิพันธ์ครอบคลุม 42 จาก 113 รายการฝั่งชุดข้อมูล เป็นรหัสเหตุผลที่มีจำนวนสูงเป็นอันดับสองรองจากการเข้าถึง",
+      "warrant": "เพราะการเข้าถึงกับข้อมูลอภิพันธ์เป็นปัญหาคนละชั้น (ได้รับข้อมูลมา กับ เข้าใจข้อมูลที่ได้รับมา) การแยกอธิบายทั้งสองรหัสเป็นคนละย่อหน้าป้องกันไม่ให้ผู้อ่านเข้าใจว่าการแก้ปัญหาการเข้าถึงเพียงอย่างเดียวจะทำให้ข้อมูลใช้ได้จริงทั้งหมด",
+      "application_to_design": "ระบุตัวเลข 42 จาก 113 เป็นรหัสเหตุผลอันดับสอง อธิบายว่าเป็นปัญหาคนละชั้นจากการเข้าถึงโดยไม่เสนอทางแก้",
+      "supports": "qualitative_gap",
+      "provenance": "new",
+      "reader_bridge": {
+        "assumed_knowledge": "ผู้อ่านทราบขนาดของปัญหาการเข้าถึงแล้ว",
+        "opening_link": "รองจากการเข้าถึง รหัสเหตุผลที่พบมากรองลงมาคือข้อมูลอภิพันธ์ ซึ่งเป็นปัญหาคนละชั้นกัน",
+        "concept_explanation": "ข้อมูลอภิพันธ์คือคำอธิบายกำกับชุดข้อมูล เช่น แหล่งที่มา วิธีการจัดเก็บ ข้อจำกัดการใช้ ซึ่งจำเป็นต่อการตัดสินใจว่าจะนำข้อมูลไปใช้ได้อย่างไร",
+        "project_application": "ระบุ 42 จาก 113 รายการเป็นรหัสเหตุผลอันดับสองของหัวข้อ 5.1.4",
+        "transition_to_next": "รหัสเหตุผลรองลงมาคือข้อมูลความไม่แน่นอน ซึ่งมีจำนวนน้อยกว่าสองรหัสแรกมาก"
+      }
     },
     {
-      "unit_id": "arg-06a",
+      "unit_id": "qual-04",
       "order": 18,
       "paragraph_job": "diagnose",
-      "claim": "Checked item by item against the catalog, roughly half of the 122 information items the report requires return no supporting data at all.",
-      "grounds": "The information the report needs was broken into 122 individual items and checked against the 260-dataset catalog. Roughly half have supporting data, some ready to use and some needing further work. Roughly half return nothing. Six items need a judgment rather than a search, the most consequential being whether a dataset DCCE already maintains is the same measure that the reporting framework refers to under a different name.",
-      "warrant": "Because the check was made against actual reporting items rather than against a general impression of coverage, the resulting figure states the reporting gap in terms that can be worked through one item at a time, and the six judgment calls identify where a decision rather than a data search would close the gap fastest.",
-      "application_to_design": "Give the 122-item figure, the roughly-half result, and the six judgment calls. Name the most consequential judgment call -- the same measure under a different name -- since it illustrates why shared definitions are load-bearing rather than administrative.",
-      "supports": "abtr_case_study",
-      "provenance": "repaired"
+      "claim": "ข้อมูลความไม่แน่นอนเป็นรหัสเหตุผลอันดับสาม ครอบคลุม 13 จาก 113 รายการ ซึ่งหมายความว่าชุดข้อมูลจำนวนหนึ่งไม่ได้ระบุขอบเขตความคลาดเคลื่อนหรือสมมติฐานของแบบจำลองไว้ให้ผู้ใช้ประเมินความเสี่ยงจากการนำไปใช้",
+      "grounds": "รหัสเหตุผลข้อมูลความไม่แน่นอนครอบคลุม 13 จาก 113 รายการฝั่งชุดข้อมูล",
+      "warrant": "เพราะจำนวนรายการของรหัสนี้ต่างจากสองรหัสแรกมาก การระบุตัวเลขให้ชัดก่อนอธิบายความหมายป้องกันไม่ให้ผู้อ่านเข้าใจว่าปัญหานี้มีน้ำหนักเท่ากับการเข้าถึงหรือข้อมูลอภิพันธ์",
+      "application_to_design": "ระบุตัวเลข 13 จาก 113 เป็นรหัสเหตุผลอันดับสาม พร้อมอธิบายความหมายสั้น ๆ โดยไม่เสนอทางแก้",
+      "supports": "qualitative_gap",
+      "provenance": "new",
+      "reader_bridge": {
+        "assumed_knowledge": "ผู้อ่านทราบขนาดของการเข้าถึงและข้อมูลอภิพันธ์แล้ว",
+        "opening_link": "รหัสเหตุผลที่พบรองลงมามีจำนวนลดลงอย่างชัดเจนจากสองรหัสแรก",
+        "concept_explanation": "ข้อมูลความไม่แน่นอนหมายถึงชุดข้อมูลที่ไม่ได้ระบุขอบเขตความคลาดเคลื่อนหรือสมมติฐานของการคาดการณ์ไว้ให้ผู้ใช้ประเมินก่อนนำไปใช้",
+        "project_application": "ระบุ 13 จาก 113 รายการเป็นรหัสเหตุผลอันดับสาม",
+        "transition_to_next": "รหัสเหตุผลรองลงมาคือความละเอียดเชิงพื้นที่"
+      }
     },
     {
-      "unit_id": "arg-06b",
+      "unit_id": "qual-05",
       "order": 19,
       "paragraph_job": "diagnose",
-      "claim": "Where the unmatched items concentrate is the more useful finding: raw hazard data is rarely the missing piece, and what is missing is the calculated figure the report cites.",
-      "grounds": "The unmatched items cluster around figures that must be derived rather than measured -- return periods, scenario-specific probabilities, the loss and damage assessment methodology international reporting expects, and financial stress test results. The ingredients for these are often present in the catalog; the method that turns them into a reportable number is Gap 10.",
-      "warrant": "Because the shortfall sits in derivation rather than measurement, an investment in collecting more data would leave the reporting obligation exactly as blocked as it is today -- which is the single most consequential correction this section makes to an intuitive reading of the problem.",
-      "application_to_design": "State this as the section's sharpest finding about A-BTR. Name the four kinds of missing calculated figure, and connect the conclusion back to Gap 10 explicitly so the reader sees the structural gap and the reporting obligation as one problem.",
-      "supports": "abtr_case_study",
-      "provenance": "repaired"
+      "claim": "ความละเอียดเชิงพื้นที่เป็นรหัสเหตุผลอันดับสี่ ครอบคลุม 10 จาก 113 รายการ ซึ่งหมายความว่าข้อมูลมีอยู่แต่มีความละเอียดหยาบเกินกว่าที่หน่วยงานจะนำไปใช้ตัดสินใจในระดับพื้นที่ที่ต้องการได้",
+      "grounds": "รหัสเหตุผลความละเอียดเชิงพื้นที่ครอบคลุม 10 จาก 113 รายการฝั่งชุดข้อมูล",
+      "warrant": "เพราะรหัสนี้มีจำนวนใกล้เคียงกับข้อมูลความไม่แน่นอน การระบุตัวเลขต่อเนื่องกันช่วยให้ผู้อ่านเห็นว่ารหัสเหตุผลอันดับสามถึงหกมีน้ำหนักลดหลั่นกันไม่มาก ต่างจากช่องว่างขนาดใหญ่ระหว่างสองรหัสแรกกับรหัสที่เหลือ",
+      "application_to_design": "ระบุตัวเลข 10 จาก 113 เป็นรหัสเหตุผลอันดับสี่ พร้อมอธิบายความหมายสั้น ๆ",
+      "supports": "qualitative_gap",
+      "provenance": "new",
+      "reader_bridge": {
+        "assumed_knowledge": "ผู้อ่านทราบขนาดของข้อมูลความไม่แน่นอนแล้ว",
+        "opening_link": "รหัสเหตุผลถัดไปมีจำนวนใกล้เคียงกับรหัสก่อนหน้า",
+        "concept_explanation": "ความละเอียดเชิงพื้นที่หมายถึงระดับพื้นที่ที่ข้อมูลจัดเก็บไว้ เช่น ระดับจังหวัดหรือระดับตำบล ซึ่งหากหยาบเกินไปจะนำไปใช้ตัดสินใจในระดับพื้นที่เล็กไม่ได้",
+        "project_application": "ระบุ 10 จาก 113 รายการเป็นรหัสเหตุผลอันดับสี่",
+        "transition_to_next": "รหัสเหตุผลที่เหลือสองแบบมีจำนวนน้อยที่สุด จึงกล่าวถึงร่วมกันในย่อหน้าเดียว"
+      }
     },
     {
-      "unit_id": "arg-07",
+      "unit_id": "qual-06",
       "order": 20,
       "paragraph_job": "diagnose",
-      "claim": "A-BTR reporting is strategically significant precisely because it is complex to deliver: assembling the report requires that data domains and pipelines spanning all four stages of the adaptation cycle -- climate science, impact and vulnerability and risk assessment, adaptation planning and implementation, and monitoring, evaluation and learning -- are functional and consistently high quality, which is why a data platform, not a single dataset or content page, is the necessary supporting infrastructure.",
-      "grounds": "The information architecture established in Chapter 2 structures platform content around exactly these four adaptation-cycle stages. Read together with the institutional finding that A-BTR reporting spans planning, implementation, monitoring, and reporting, and with the finding that A-BTR compilation already draws on data scattered across multiple agencies and domains, assembling a report of this kind is a synthesis across all four stages rather than a lookup against one dataset, so every domain's pipeline has to be producing trustworthy data for the report to be assembled at all.",
-      "warrant": "Because A-BTR compilation requires all four adaptation-cycle pipelines to hold simultaneously, this is a data-platform-scale requirement covering ingestion, processing, and quality management across domains, not a single-service build; once that backend capability exists the public website follows as the audience-facing layer drawing on the same underlying material, rather than as a separate data problem.",
-      "application_to_design": "Name the four adaptation-cycle stages, explain why their pipelines and data quality must all hold for compilation to work, and state the data-platform conclusion directly. Do not frame this as a warning against an alternative -- no scaffolding of the form that the service would otherwise fail.",
-      "supports": "abtr_case_study",
-      "provenance": "recovered"
+      "claim": "รูปแบบไฟล์ (6 รายการ) และความทันสมัยของข้อมูล (5 รายการ) เป็นรหัสเหตุผลที่มีจำนวนน้อยที่สุดสองแบบ จึงกล่าวถึงร่วมกันในย่อหน้าเดียวเพื่อปิดการไล่รหัสเหตุผลทั้งหมด",
+      "grounds": "รหัสเหตุผลรูปแบบไฟล์ครอบคลุม 6 จาก 113 รายการ และความทันสมัยของข้อมูลครอบคลุม 5 จาก 113 รายการ ซึ่งเป็นสองรหัสเหตุผลที่มีจำนวนน้อยที่สุดในบรรดา 6 รหัส (รหัสเหตุผลด้านการรับรองไม่พบเลยในชุดข้อมูลที่ตรวจสอบ)",
+      "warrant": "เพราะทั้งสองรหัสมีจำนวนน้อยและใกล้เคียงกันมาก การกล่าวถึงร่วมกันในย่อหน้าเดียวรักษาสัดส่วนความยาวของเนื้อหาให้สอดคล้องกับน้ำหนักของหลักฐาน แทนที่จะแยกเป็นสองย่อหน้าซึ่งจะทำให้ดูมีน้ำหนักเกินจริงเมื่อเทียบกับรหัสเหตุผลหลักสองแบบแรก",
+      "application_to_design": "ระบุตัวเลข 6 และ 5 จาก 113 รวมไว้ในย่อหน้าเดียว ปิดท้ายการไล่รหัสเหตุผลทั้ง 6 แบบ",
+      "supports": "qualitative_gap",
+      "provenance": "new",
+      "reader_bridge": {
+        "assumed_knowledge": "ผู้อ่านทราบขนาดของความละเอียดเชิงพื้นที่แล้ว และผ่านรหัสเหตุผลสี่แบบแรกมาแล้ว",
+        "opening_link": "รหัสเหตุผลที่เหลือมีจำนวนน้อยที่สุด จึงรวบมากล่าวถึงพร้อมกันเพื่อปิดการไล่รหัสเหตุผล",
+        "concept_explanation": "รูปแบบไฟล์หมายถึงข้อมูลที่เผยแพร่ในรูปแบบที่นำไปวิเคราะห์ต่อไม่ได้ เช่น ดูได้เฉพาะบนหน้าเว็บ ส่วนความทันสมัยของข้อมูลหมายถึงข้อมูลที่ไม่ได้ปรับปรุงให้ทันต่อการใช้งาน",
+        "project_application": "ระบุ 6 และ 5 จาก 113 รายการเป็นรหัสเหตุผลปิดท้ายของหัวข้อ 5.1.4",
+        "transition_to_next": "นอกจากรหัสเหตุผลทั้ง 6 แบบแล้ว บัญชีรายการข้อมูลพื้นฐานเองยังมีข้อจำกัดเชิงโครงสร้างที่ส่งผลต่อความแม่นยำของการตรวจสอบสององค์ประกอบความเสี่ยงโดยเฉพาะ"
+      }
     },
     {
-      "unit_id": "arg-08",
+      "unit_id": "qual-07",
       "order": 21,
+      "paragraph_job": "diagnose",
+      "claim": "บัญชีรายการข้อมูลพื้นฐานมีข้อจำกัดเชิงโครงสร้างของตัวเอง คือฟิลด์ cdm_sub_domain ที่ใช้จัดหมวดองค์ประกอบความเสี่ยงมีป้ายกำกับรวมเป็น VULNERABILITY เพียงป้ายเดียว ไม่แยก Sensitivity ออกจาก Adaptive Capacity ซึ่งเป็นช่องว่างเชิงคุณภาพของฝั่งอุปทานเอง ไม่ใช่ข้อจำกัดของการจับคู่ที่คณะที่ปรึกษาทำ",
+      "grounds": "ฟิลด์ cdm_sub_domain ของบัญชีรายการข้อมูลพื้นฐานมีป้ายกำกับ VULNERABILITY รวมกัน 72 แถว ทุกผลการตรวจสอบสถานะของ Sensitivity และ Adaptive Capacity ในหัวข้อ 5.1.2 และ 5.1.3 จึงอ้างอิงจากกลุ่ม 72 แถวนี้ร่วมกันทั้งหมด",
+      "warrant": "เพราะข้อจำกัดนี้อยู่ที่ตัวบัญชีรายการเอง ไม่ใช่วิธีจับคู่ของคณะที่ปรึกษา การระบุไว้อย่างตรงไปตรงมาในฐานะช่องว่างเชิงคุณภาพของฝั่งอุปทานจึงรักษาความน่าเชื่อถือของผลการวิเคราะห์ทั้งหมด และเป็นข้อมูลที่หัวข้อ 5.2 ต้องนำไปพิจารณาเมื่อเสนอปรับปรุงมาตรฐานอภิพันธ์ของบัญชีรายการ",
+      "application_to_design": "ระบุข้อจำกัดของฟิลด์ cdm_sub_domain เป็นย่อหน้าแยกหลังรหัสเหตุผลทั้ง 6 แบบ เชื่อมกลับไปยังตัวเลข Sensitivity และ Adaptive Capacity ที่กล่าวถึงแล้วในหัวข้อ 5.1.3",
+      "supports": "qualitative_gap",
+      "provenance": "new",
+      "reader_bridge": {
+        "assumed_knowledge": "ผู้อ่านเห็นตัวเลข Sensitivity และ Adaptive Capacity ในหัวข้อ 5.1.3 มาแล้ว และผ่านรหัสเหตุผลทั้ง 6 แบบมาแล้ว",
+        "opening_link": "นอกจากรหัสเหตุผลระดับรายการแล้ว บัญชีรายการข้อมูลพื้นฐานเองยังมีข้อจำกัดระดับโครงสร้างที่ส่งผลต่อความแม่นยำของการตรวจสอบบางองค์ประกอบ",
+        "concept_explanation": "ฟิลด์ cdm_sub_domain คือฟิลด์ที่บัญชีรายการข้อมูลพื้นฐานใช้จัดหมวดองค์ประกอบความเสี่ยง แต่สำหรับ Sensitivity และ Adaptive Capacity ฟิลด์นี้รวมทั้งสองไว้เป็นป้าย VULNERABILITY เดียว",
+        "project_application": "ใช้ข้อสังเกตนี้เป็นคำเตือนสำหรับการอ่านตัวเลข Sensitivity และ Adaptive Capacity ทุกจุดในหัวข้อ 5.1 และเป็นข้อมูลตั้งต้นสำหรับข้อเสนอปรับปรุงมาตรฐานอภิพันธ์ในหัวข้อ 5.2",
+        "transition_to_next": "นอกจากข้อจำกัดเชิงโครงสร้างแล้ว ยังมีตัวอย่างหนึ่งที่หลักฐานสองแหล่งอิสระกันยืนยันจุดอ่อนเดียวกัน ซึ่งเป็นหลักฐานที่หนักแน่นเป็นพิเศษ"
+      }
+    },
+    {
+      "unit_id": "qual-08",
+      "order": 22,
+      "paragraph_job": "diagnose",
+      "claim": "สัญญาณ A090 จากพันธกรณี A-BTR และคำอธิบายข้อจำกัดการใช้งานของชุดข้อมูล DDPM_2_1 และ DDPM_2_3 ในบัญชีรายการข้อมูลพื้นฐาน ต่างอธิบายจุดอ่อนเดียวกันโดยอิสระต่อกัน คือการรายงานข้อมูลภัยพิบัติเป็นแบบทางเดียว ไม่มีการตรวจสอบยืนยันจากส่วนกลาง และไม่สอดคล้องกับกรอบการจำแนกภัยพิบัติสากลของ UNDRR",
+      "grounds": "สัญญาณ A090 จากทะเบียนความต้องการ A-BTR และฟิลด์ use_limitations ของชุดข้อมูล DDPM_2_1 และ DDPM_2_3 ในบัญชีรายการข้อมูลพื้นฐาน ต่างระบุจุดอ่อนเดียวกันคือการรายงานทางเดียวโดยไม่มีการตรวจสอบยืนยันจากส่วนกลาง และไม่สอดคล้องกับกรอบการจำแนกภัยพิบัติของ UNDRR",
+      "warrant": "เพราะแหล่งข้อมูลทั้งสองมาจากกระบวนการที่แยกจากกันโดยสิ้นเชิง (ฝั่งความต้องการของกรม สส. เอง กับฝั่งคำอธิบายข้อจำกัดที่หน่วยงานเจ้าของข้อมูลบันทึกไว้ในบัญชีรายการ) การที่ทั้งสองยืนยันจุดอ่อนเดียวกันโดยไม่ได้นัดหมายกันจึงเป็นหลักฐานที่หนักแน่นกว่าการอ้างจากแหล่งเดียว และควรยกเป็นตัวอย่างเฉพาะเจาะจงแทนการกล่าวลอย ๆ ว่าข้อมูลภัยพิบัติมีปัญหาคุณภาพ",
+      "application_to_design": "ยกตัวอย่าง A090 คู่กับ DDPM_2_1/2_3 เป็นย่อหน้าปิดท้ายหัวข้อ 5.1.4 ระบุชัดว่าเป็นหลักฐานสองแหล่งอิสระที่ยืนยันจุดอ่อนเดียวกัน โดยไม่เสนอทางแก้",
+      "supports": "qualitative_gap",
+      "provenance": "new",
+      "reader_bridge": {
+        "assumed_knowledge": "ผู้อ่านทราบข้อจำกัดของฟิลด์ cdm_sub_domain แล้ว และผ่านรหัสเหตุผลเชิงคุณภาพทั้งหมดมาแล้ว",
+        "opening_link": "ปิดหัวข้อ 5.1.4 ด้วยตัวอย่างเฉพาะเจาะจงหนึ่งตัวอย่างที่แสดงว่ารหัสเหตุผลข้างต้นไม่ใช่เพียงตัวเลขนามธรรม",
+        "concept_explanation": "หลักฐานสองแหล่งอิสระที่ยืนยันจุดอ่อนเดียวกันคือเมื่อทั้งความต้องการของผู้ใช้และคำอธิบายข้อจำกัดของเจ้าของข้อมูลเองต่างชี้ไปที่ปัญหาเดียวกัน ซึ่งหนักแน่นกว่าการอ้างแหล่งใดแหล่งหนึ่งเพียงแหล่งเดียว",
+        "project_application": "ใช้ตัวอย่าง A090/DDPM เป็นภาพประกอบที่จับต้องได้สำหรับรหัสเหตุผลข้อมูลความไม่แน่นอนและข้อมูลอภิพันธ์ที่กล่าวถึงไปแล้ว",
+        "transition_to_next": "เมื่อครบช่องว่างเชิงปริมาณและเชิงคุณภาพฝั่งชุดข้อมูลแล้ว ยังเหลือช่องว่างฝั่งผลิตภัณฑ์สารสนเทศที่มีลักษณะต่างออกไปโดยสิ้นเชิง ซึ่งเป็นสิ่งที่หัวข้อ 5.1.3 ได้ชี้ไว้ล่วงหน้าแล้ว"
+      }
+    },
+    {
+      "unit_id": "meth-01",
+      "order": 23,
+      "paragraph_job": "diagnose",
+      "claim": "ช่องว่างฝั่งผลิตภัณฑ์สารสนเทศส่วนใหญ่ไม่ใช่ปัญหาการเข้าถึงหรือข้อมูลอภิพันธ์แบบฝั่งชุดข้อมูล แต่เป็นความต้องการระเบียบวิธี ดัชนี หรือกรอบวิเคราะห์ที่ยังไม่เคยถูกพัฒนาขึ้นเป็นผลิตภัณฑ์เลย",
+      "grounds": "จากรายการความต้องการประเภทผลิตภัณฑ์ 52 รายการที่ตรวจสอบกับบัญชีรายการผลิตภัณฑ์สารสนเทศ มีเพียง 8 รายการที่จับคู่ได้ ส่วนอีก 40 รายการต้องการระเบียบวิธี ดัชนี หรือกรอบวิเคราะห์ที่ยังไม่เคยถูกสร้างเป็นผลิตภัณฑ์มาก่อน",
+      "warrant": "เพราะฝั่งชุดข้อมูลส่วนใหญ่มีข้อมูลอยู่แล้วเพียงแต่เข้าถึงหรือใช้ประโยชน์ยาก ขณะที่ฝั่งผลิตภัณฑ์ส่วนใหญ่ไม่มีสิ่งใดให้เข้าถึงเลยเพราะยังไม่เคยถูกสร้างขึ้น การชี้ให้เห็นว่าโครงสร้างของช่องว่างทั้งสองฝั่งต่างกันโดยพื้นฐานจึงเป็นข้อเท็จจริงที่ต้องระบุไว้ก่อนหัวข้อ 5.2 จะพิจารณาว่าจะตอบสนองอย่างไร",
+      "application_to_design": "เปิด 5.1.5 ด้วยตัวเลข 40 จาก 52 ซ้ำจากหัวข้อ 5.1.3 แล้วอธิบายว่าลักษณะของช่องว่างนี้ต่างจากฝั่งชุดข้อมูลอย่างไร โดยเทียบคำว่า 'มีอยู่แต่เข้าถึงยาก' กับ 'ยังไม่เคยมี'",
+      "supports": "methodological_gap",
+      "provenance": "new",
+      "reader_bridge": {
+        "assumed_knowledge": "ผู้อ่านทราบตัวเลข 40 จาก 52 ของฝั่งผลิตภัณฑ์จากหัวข้อ 5.1.3 มาแล้ว แต่ยังไม่ทราบว่าเหตุใดจึงยังไม่มี",
+        "opening_link": "หัวข้อ 5.1.3 ได้ชี้ไว้แล้วว่าฝั่งผลิตภัณฑ์มีรายการยังไม่มีจำนวนมากและลักษณะต่างจากฝั่งชุดข้อมูล หัวข้อนี้ขยายความว่าต่างกันอย่างไร",
+        "concept_explanation": "ช่องว่างเชิงระเบียบวิธีหมายถึงความต้องการที่ไม่มีวิธีคำนวณ ดัชนี หรือกรอบวิเคราะห์รองรับเลย ต่างจากช่องว่างเชิงปริมาณของฝั่งชุดข้อมูลซึ่งเป็นข้อมูลดิบที่ยังไม่ถูกเก็บ",
+        "project_application": "ใช้ความต่างนี้เป็นเหตุผลที่หัวข้อ 5.1.5 ต้องแยกออกจาก 5.1.3 แม้ทั้งสองจะอยู่ในสถานะยังไม่มีเหมือนกัน",
+        "transition_to_next": "ความต่างเชิงโครงสร้างนี้หมายความว่าการตอบสนองในหัวข้อ 5.2 ต้องแยกแนวทางสำหรับสองฝั่งออกจากกันด้วย"
+      }
+    },
+    {
+      "unit_id": "meth-02",
+      "order": 24,
       "paragraph_job": "conclude",
-      "claim": "A service designed to close the A-BTR gap -- supplying the localized, Loss-and-Damage, outcome-indicator, and integration content the report names as missing, and the shared definitions and calculation methodology the pipeline needs, built on the cross-domain data platform this case establishes as necessary -- strengthens the general data platform and gives the public website real content to publish, so closing the most binding case also closes a meaningful share of the structural and content gaps established earlier in this section.",
-      "grounds": "Follows from the preceding units: the capabilities BTR2 names as missing (integrated databases, standardized outcome indicators), the capabilities the pipeline check names as missing (shared definitions, traceable calculation methodology), and the cross-domain platform the case requires are general-purpose data-platform capabilities that outlast A-BTR reporting alone. They close Gaps 5 and 10 directly, reach Gaps 1, 3, and 7 through the underlying data domains, and supply part of the website content shortfall stated at the start of this section.",
-      "warrant": "Because the same underlying capability -- an integrated, well-defined, traceable, cross-domain data system -- is what both the international reporting obligation and the general public platform require, investing to close the A-BTR gap is the same investment the platform needs regardless, applied first where the obligation is most binding.",
-      "application_to_design": "Close the section by stating the dual benefit directly and naming which structural gaps and which slice of the content gap this closes. Then point the reader to section 5.2 for the policy, technical, and governance recommendations that follow. Do not develop any recommendation here.",
-      "supports": "abtr_case_study",
-      "provenance": "recovered"
+      "claim": "เพราะช่องว่างฝั่งผลิตภัณฑ์เป็นเรื่องของการพัฒนาระเบียบวิธีและการตัดสินใจเชิงนโยบายที่ยังไม่เกิดขึ้น ไม่ใช่เรื่องของการเปิดเผยสิ่งที่มีอยู่แล้ว การตอบสนองในหัวข้อ 5.2 จึงต้องเป็นคนละแนวทางจากการตอบสนองต่อช่องว่างเชิงปริมาณและเชิงคุณภาพฝั่งชุดข้อมูล แม้หัวข้อนี้จะยังไม่ระบุแนวทางนั้นก็ตาม",
+      "grounds": "40 ใน 52 รายการความต้องการฝั่งผลิตภัณฑ์ต้องการระเบียบวิธี ดัชนี หรือกรอบวิเคราะห์ที่ยังไม่เคยถูกสร้างขึ้น ซึ่งเป็นข้อเท็จจริงที่ต่างจากฝั่งชุดข้อมูลซึ่งข้อมูลส่วนใหญ่มีอยู่แล้วในบัญชีรายการเพียงแต่เข้าถึงหรือใช้ยาก",
+      "warrant": "เพราะการเปิดเผยข้อมูลที่มีอยู่แล้วกับการพัฒนาวิธีวิเคราะห์ที่ไม่เคยมีมาก่อนเป็นงานคนละประเภทที่ต้องใช้ทรัพยากรและกระบวนการตัดสินใจต่างกัน การระบุความต่างนี้ไว้ให้ชัดในหัวข้อ 5.1 จึงเป็นเงื่อนไขที่ทำให้หัวข้อ 5.2 ออกแบบข้อเสนอแนะสองแนวทางที่แยกจากกันได้อย่างตรงจุด โดยหัวข้อนี้เองยังไม่ก้าวไปเสนอแนวทางนั้น",
+      "application_to_design": "ปิดหัวข้อ 5.1.5 ด้วยประโยคสรุปที่ระบุว่าช่องว่างฝั่งผลิตภัณฑ์เป็นเรื่องการพัฒนาระเบียบวิธีและการตัดสินใจเชิงนโยบาย ไม่ใช่การเข้าถึง แล้วส่งต่อไปยังหัวข้อ 5.2 โดยไม่ระบุแนวทางแก้ไขเอง",
+      "supports": "methodological_gap",
+      "provenance": "new",
+      "reader_bridge": {
+        "assumed_knowledge": "ผู้อ่านทราบแล้วว่าฝั่งผลิตภัณฑ์ต้องการระเบียบวิธีที่ยังไม่เคยมี ไม่ใช่ปัญหาการเข้าถึง",
+        "opening_link": "เมื่อรู้ว่าโครงสร้างของช่องว่างต่างกันแล้ว ต้องสรุปว่าความต่างนี้มีนัยอย่างไรต่อขั้นตอนถัดไปของรายงาน",
+        "concept_explanation": "การพัฒนาระเบียบวิธีต้องอาศัยการตัดสินใจเชิงนโยบายว่าจะยอมรับวิธีคำนวณแบบใดเป็นมาตรฐาน ซึ่งเป็นกระบวนการที่ต่างจากการเจรจาเปิดเผยข้อมูลที่มีอยู่แล้ว",
+        "project_application": "ระบุไว้เป็นข้อสรุปปิดหัวข้อ 5.1.5 ว่าฝั่งผลิตภัณฑ์ต้องการแนวทางตอบสนองที่ต่างจากฝั่งชุดข้อมูล โดยไม่ลงรายละเอียดแนวทางนั้น",
+        "transition_to_next": "เมื่อครบทั้งช่องว่างเชิงปริมาณ เชิงคุณภาพ และเชิงระเบียบวิธีแล้ว หัวข้อ 5.1 ต้องปิดด้วยภาพรวมที่รวมทั้งสามประเภทไว้ในที่เดียวก่อนส่งต่อไปยังหัวข้อ 5.2"
+      }
+    },
+    {
+      "unit_id": "close-01",
+      "order": 25,
+      "paragraph_job": "conclude",
+      "claim": "ตารางที่ 5-4 รวมช่องว่างทั้งสามประเภท (เชิงปริมาณ เชิงคุณภาพ และเชิงระเบียบวิธี) เข้ากับองค์ประกอบความเสี่ยงและประเภทการตอบสนองที่จำเป็น เพื่อส่งต่อภาพรวมทั้งหมดให้หัวข้อ 5.2 นำไปออกแบบข้อเสนอแนะ โดยหัวข้อนี้เองไม่เสนอแนวทางแก้ไข",
+      "grounds": "ช่องว่างที่กล่าวถึงตลอดหัวข้อ 5.1 แบ่งเป็นสามประเภทตามที่นิยามไว้ตั้งแต่ต้น คือช่องว่างเชิงปริมาณ (45 รายการฝั่งชุดข้อมูล และ 40 รายการฝั่งผลิตภัณฑ์) ช่องว่างเชิงคุณภาพ (117 รายการ แบ่งตามรหัสเหตุผล 6 แบบ) และช่องว่างเชิงระเบียบวิธี (40 ใน 52 รายการฝั่งผลิตภัณฑ์ที่ต้องการวิธีวิเคราะห์ใหม่) แต่ละประเภทต้องการประเภทการตอบสนองต่างกัน คือ เก็บข้อมูลเพิ่ม ปรับปรุงข้อมูลที่มีอยู่ พัฒนาระเบียบวิธีใหม่ หรือรอการตัดสินใจเชิงนโยบาย",
+      "warrant": "เพราะผู้อ่านผ่านช่องว่างแต่ละประเภททีละองค์ประกอบมาตลอดหัวข้อ 5.1 การรวมทั้งหมดไว้ในตารางเดียวก่อนจบหัวข้อทำให้เห็นภาพรวมที่ตรวจสอบย้อนกลับไปยังรายละเอียดที่อธิบายไว้ก่อนหน้าได้ทุกจุด และเป็นข้อมูลนำเข้าที่มีโครงสร้างพร้อมสำหรับหัวข้อ 5.2 จะจัดลำดับความสำคัญของข้อเสนอแนะโดยไม่ต้องย้อนกลับไปประมวลผลใหม่",
+      "application_to_design": "ปิดหัวข้อ 5.1 ด้วยร้อยแก้วอธิบายความหมายของหัวคอลัมน์ตารางที่ 5-4 (ประเภทช่องว่าง × องค์ประกอบความเสี่ยง × ประเภทการตอบสนอง) ก่อนแสดงตาราง แล้วจบด้วยประโยคที่ชี้ไปยังหัวข้อ 5.2 โดยไม่ระบุแนวทางแก้ไขหรือลำดับความสำคัญเอง",
+      "supports": "gap_synthesis",
+      "provenance": "new",
+      "reader_bridge": {
+        "assumed_knowledge": "ผู้อ่านผ่านช่องว่างทั้งสามประเภทครบทุกองค์ประกอบความเสี่ยงมาแล้วตลอดหัวข้อ 5.1",
+        "opening_link": "ก่อนจบหัวข้อ ต้องรวมสิ่งที่อธิบายแยกกันทั้งหมดไว้ในภาพเดียวที่ตรวจสอบได้",
+        "concept_explanation": "ตารางที่ 5-4 จัดแถวตามองค์ประกอบความเสี่ยง คอลัมน์ตามประเภทช่องว่างและประเภทการตอบสนองที่จำเป็น (เก็บ ปรับปรุง พัฒนาระเบียบวิธี หรือตัดสินใจเชิงนโยบาย) โดยไม่ระบุว่าควรทำอะไรก่อนหลัง",
+        "project_application": "ใช้ตารางนี้เป็นจุดส่งต่อที่มีโครงสร้างชัดเจนให้หัวข้อ 5.2 นำไปออกแบบข้อเสนอแนะเชิงนโยบายและเชิงเทคนิคต่อ",
+        "transition_to_next": "หัวข้อ 5.2 จะนำภาพรวมนี้ไปจัดลำดับความสำคัญและเสนอแนวทางตอบสนองสำหรับแต่ละช่องว่างที่ระบุไว้"
+      }
     }
+  ],
+  "fidelity_ledger": [
+    {"item": "คำจำกัดความ TOR 5.3.8: 'วิเคราะห์ช่องว่างระหว่างอุปทานและอุปสงค์ของข้อมูล โดยการนำผลการสังเคราะห์ความต้องการใช้ข้อมูล มาเปรียบเทียบกับบัญชีรายการผลิตภัณฑ์ข้อมูลสารสนเทศและชุดข้อมูลที่มีอยู่ เพื่อวิเคราะห์หาช่องว่าง (Gap Analysis) ทั้งในเชิงปริมาณ (ข้อมูลที่ยังขาด) และเชิงคุณภาพ (ข้อมูลที่มีแต่ใช้ประโยชน์ได้ยาก)'", "used_in": ["open-01"], "source": "inbox_source/260106_DCCE_Climate risk database_inception report_vfinal.md, line 295 (ตารางขอบเขตงาน 5.3.8, ต้นฉบับภาษาไทย)"},
+    {"item": "83 กรณีใช้งาน → 238 รายการย่อย", "used_in": ["open-02", "dem-01"], "source": "plan-slice.md §1 (แหล่งความต้องการ: agencies) และ §2 บรรทัด 'demand-items-extracted.md: 238 items from 83 use cases'"},
+    {"item": "122 สัญญาณ A-BTR", "used_in": ["open-02", "dem-01"], "source": "plan-slice.md §1 (แหล่งความต้องการ: DCCE's own reporting duty) และ §2 บรรทัด 'demand-items-abtr.md: 122 A-BTR signals'"},
+    {"item": "125 จาก 238 รายการ (ร้อยละ 53) เป็นประเภท Response กระจุกที่กลุ่มที่ 5 (32 จาก 83 กรณีใช้งาน)", "used_in": ["dem-01"], "source": "plan-slice.md §2, 'Key structural finding'"},
+    {"item": "260 ชุดข้อมูล / 44 หน่วยงาน ตามขอบเขตงานข้อ 5.3.5", "used_in": ["cmp-01"], "source": "writing-contract.json inclusions (5.1.2) และ plan-slice.md §1 (data_catalog_v4.csv, 260/262 rows); ตัวเลขหน่วยงานยืนยันจาก crdb-full-report-3.4/draft.md ตามที่ plan-slice.md §1 อ้างอิง"},
+    {"item": "114 ผลิตภัณฑ์ / 56 หน่วยงาน ตามขอบเขตงานข้อ 5.3.4", "used_in": ["cmp-01"], "source": "plan-slice.md §1 (260904_TOR5.3.4_Information Product Inventory.xlsx, 114 products, 56 owner orgs) และ writing-contract.json inclusions (5.1.2)"},
+    {"item": "214 รายการประเภทชุดข้อมูล (113 D-series + 101 A-series) ตรวจกับบัญชีรายการ 260 แถว", "used_in": ["cmp-01"], "source": "plan-slice.md §1, แถว demand-supply-register.csv"},
+    {"item": "52 รายการประเภทผลิตภัณฑ์ ตรวจกับบัญชีรายการ 114 แถว", "used_in": ["cmp-01", "qty-06", "meth-01", "meth-02"], "source": "plan-slice.md §1, แถว product-matches.md"},
+    {"item": "ผลรวมสถานะ 266 รายการ: มีและใช้ได้ 8, มีแต่ใช้ประโยชน์ได้ยาก 117, ยังไม่มี 85, ไม่สามารถจับคู่ได้ 4 (แยกเป็นชุดข้อมูล 4/113/45/— และผลิตภัณฑ์ 4/4/40/4)", "used_in": ["cmp-02", "qual-01"], "source": "plan-slice.md §2, ตาราง 'Combined matched-item totals (266 items, both passes)'"},
+    {"item": "ตารางองค์ประกอบความเสี่ยง × สถานะ ฝั่งชุดข้อมูล (162 รายการ): Climatic Driver 2/15/7/24, Hazard 0/62/17/79, Exposure 1/12/1/14, Sensitivity 1/6/5/12, Adaptive Capacity 0/2/3/5, Impact 0/12/6/18, Loss and Damage 0/4/6/10", "used_in": ["cmp-03", "qty-01", "qty-02", "qty-03", "qty-04", "qty-05"], "source": "plan-slice.md §2, ตาราง 'Dataset-side risk_component × status'"},
+    {"item": "รหัสเหตุผลใช้ยาก 113 รายการ (นับซ้ำได้): access 70, metadata 42, uncertainty_info 13, spatial_detail 10, format 6, update_currency 5, certification 0", "used_in": ["cmp-02", "qual-01", "qual-02", "qual-03", "qual-04", "qual-05", "qual-06"], "source": "plan-slice.md §2, ย่อหน้า 'Hard-to-use reason codes'"},
+    {"item": "ฝั่งผลิตภัณฑ์: มีเพียง 8 จาก 52 รายการจับคู่ได้ อีก 40 รายการต้องการระเบียบวิธี/ดัชนี/กรอบวิเคราะห์ที่ไม่เคยมี", "used_in": ["cmp-03", "qty-06", "meth-01", "meth-02"], "source": "plan-slice.md §2, ย่อหน้า 'Product-side finding'"},
+    {"item": "ฟิลด์ cdm_sub_domain มีป้ายกำกับรวม VULNERABILITY 72 แถว ไม่แยก Sensitivity จาก Adaptive Capacity", "used_in": ["qty-04", "qual-07"], "source": "plan-slice.md §2, ย่อหน้า 'Known caveat to carry into prose'"},
+    {"item": "สัญญาณ A090 (A-BTR) และฟิลด์ use_limitations ของ DDPM_2_1/DDPM_2_3 ยืนยันจุดอ่อนเดียวกันโดยอิสระ (รายงานทางเดียว ไม่มีการตรวจสอบยืนยันจากส่วนกลาง ไม่สอดคล้องกรอบ UNDRR)", "used_in": ["qual-08"], "source": "plan-slice.md §2, ย่อหน้า 'One finding worth flagging to committee-review sensibility'"},
+    {"item": "45 รายการยังไม่มีฝั่งชุดข้อมูล + 40 รายการยังไม่มีฝั่งผลิตภัณฑ์ = ขอบเขตของหัวข้อ 5.1.3", "used_in": ["qty-01"], "source": "plan-slice.md §2, ตาราง 'Combined matched-item totals' แถว ยังไม่มี (dataset 45, product 40)"}
   ],
   "approval": {
     "status": "approved",
     "approved_by": "Boss",
-    "approved_at": "2026-09-02"
+    "approved_at": "2026-09-25",
+    "basis": "Boss pre-approved all stages (0-5) in the 2026-09-25 session per writing-contract.json prior_approval and approval fields; will review at Stage 5 output."
   }
 }
