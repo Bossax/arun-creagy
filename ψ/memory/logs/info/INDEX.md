@@ -135,3 +135,4 @@
 | 2026-04-17 | important | [reflection-on-evidence-triggers-and-project-change](?/memory/logs/info/2026-04-17_16-31_reflection-on-evidence-triggers-and-project-change.md) |
 | 2026-04-17 | interesting | [future-recommendation-headless-cms-and-uml](?/memory/logs/info/2026-04-17_17-08_future-recommendation-headless-cms-and-uml.md) |
 | 2026-04-17 | important | [dcce-practice-knowledge-assets-and-media-synthesis](?/memory/logs/info/2026-04-17_17-23_dcce-practice-knowledge-assets-and-media-synthesis.md) |
+| 2026-09-25 | important | [method-section-must-state-what-why-how](ψ/memory/logs/info/2026-09-25_10-30_method-section-must-state-what-why-how.md) |
