@@ -136,8 +136,8 @@ flowchart TD
         REQ_PR -.->|ตรวจสอบความพร้อมใช้| INV_PR
 
         subgraph GAP_RESULT ["ขั้นตอนที่ 4: ผลการประเมินสถานะช่องว่าง (Readiness Status)"]
-            RES_DS["<b>ผลวิเคราะห์ช่องว่างชุดข้อมูล (165 รายการ)</b><br/>• มีและใช้ได้: <b>24</b> (15%)<br/>• มีแต่ใช้ประโยชน์ได้ยาก: <b>97</b> (59%)<br/>• ยังไม่มีในระบบ: <b>44</b> (27%)"]
-            RES_PR["<b>ผลวิเคราะห์ช่องว่างผลิตภัณฑ์ (52 รายการ)</b><br/>• มีและใช้ได้: <b>4</b><br/>• มีแต่ใช้ประโยชน์ได้ยาก: <b>4</b><br/>• ยังไม่มีในระบบ: <b>40</b><br/>• ข้อกำหนดเชิงคุณลักษณะ: <b>4</b>"]
+            RES_DS["<b>ผลวิเคราะห์ช่องว่างชุดข้อมูล (165 รายการ)</b><br/>• มีและใช้ได้: <b>24</b> (14.5%)<br/>• มีแต่ใช้ประโยชน์ได้ยาก: <b>97</b> (58.8%)<br/>• ยังไม่มีในระบบ: <b>44</b> (26.7%)"]
+            RES_PR["<b>ผลวิเคราะห์ช่องว่างผลิตภัณฑ์ (52 รายการ)</b><br/>• มีอยู่แล้วและเปิดให้บริการ: <b>8</b> (15.4%)<br/>• ยังไม่เคยสร้างขึ้นในประเทศ: <b>40</b> (76.9%)<br/>• ข้อกำหนดเชิงคุณลักษณะ: <b>4</b> (7.7%)"]
         end
 
         INV_DS --> RES_DS
@@ -215,18 +215,18 @@ flowchart TD
 
 Two supply-side facts come straight out of this table and belong in the report as findings. First, the catalog merges Sensitivity and Adaptive Capacity into one VULNERABILITY tag, so it cannot show which side it covers. Second, the catalog holds combined risk outputs (RISK_METRIC, COMPOSITE_INDEX) that have no slot among the TOR's 8 categories (see §7, D4).
 
-### Step 4. Assign a status (Two-stage Evaluation Funnel)
+### Step 4. Assign a status (Two-track Evaluation: Dataset Usability vs. Product Capability)
 
-The intersection evaluates each requirement through a **Two-stage Evaluation Funnel (เกณฑ์กรอง 2 ขั้นตอน)**:
+The intersection evaluates requirements through two distinct, objectively grounded tracks:
 
-**Stage 1: Availability Gate (การตรวจสอบการมีอยู่จริงของข้อมูลในระบบ — วัดระดับ Coverage)**:
-1. No inventory entry covers the need → **ยังไม่มี (Missing / No Coverage)** (44 dataset items, 40 product items).
-2. An inventory entry covers the need → **มีข้อมูลในระบบ (Covered by Inventory)** (121 dataset items / 73.3% coverage; 8 product items / 15.4% coverage).
-
-**Stage 2: Readiness Assessment among Available Data (การประเมินสถานะความพร้อมใช้งานจริงในบรรดาข้อมูลที่มี)**:
-Among the covered items:
-1. Entry covers the need and no usability barrier applies → **มีและใช้ได้ (Ready to Use)** (24 dataset items, 4 product items).
-2. Entry covers the need and at least one usability barrier applies → **มีแต่ใช้ประโยชน์ได้ยาก (Usability Bottleneck)** (97 dataset items, 4 product items), assigned with every applicable reason code.
+**Track 1: Dataset Requirements (165 items) — Two-stage Usability Evaluation Funnel (เกณฑ์กรอง 2 ขั้นตอน)**:
+- **Stage 1: Availability Gate (การตรวจสอบการมีอยู่จริงของข้อมูลในระบบ — วัดระดับ Coverage)**:
+  1. No inventory entry covers the need → **ยังไม่มี (Missing / No Coverage)** (44 items / 26.7%).
+  2. An inventory entry covers the need → **มีข้อมูลในระบบ (Covered by Inventory)** (121 items / 73.3% coverage).
+- **Stage 2: Readiness Assessment among Available Data (การประเมินสถานะความพร้อมใช้งานจริงในบรรดาข้อมูลที่มี)**:
+  Among the 121 covered items:
+  1. Entry covers the need and no usability barrier applies → **มีและใช้ได้ (Ready to Use)** (24 items / 19.8% of covered, 14.5% of dataset demand).
+  2. Entry covers the need and at least one usability barrier applies → **มีแต่ใช้ประโยชน์ได้ยาก (Usability Bottleneck)** (97 items / 80.2% of covered, 58.8% of dataset demand), assigned with every applicable reason code.
 
 | Reason code | Thai label | Triggered when | Catalog field checked |
 |---|---|---|---|
@@ -238,42 +238,45 @@ Among the covered items:
 | uncertainty_info | ข้อมูลความไม่แน่นอน | No error range or model assumptions given for data the user must weigh | `use_limitations`, `notes` |
 | certification | การรับรองคุณภาพ | Defined, but **0 hits**: every catalog row shares `endorsement_status=Baseline-Draft` / `validation_flag=Unverified-Baseline`, so Phase A treated this as a caveat on the whole catalog. State it once as a catalog-wide condition, not as a reason code. |
 
+**Track 2: Information Product Requirements (52 items) — Capability Existence & Operational Scaling (การมีอยู่ของขีดความสามารถและพรมแดนการขยายผล)**:
+Instead of subjective usability grading on operational government platforms, products are evaluated against objective institutional capability:
+1. **Existing & Operational Products (ผลิตภัณฑ์ที่มีอยู่แล้วในระบบและเปิดให้บริการ)**: **8 items (15.4%)** — Operational and ready for their designed mandate (e.g. DCCE CCIC for provincial policy, GISTDA/DDPM/DWR for short-term disaster alerts). They face *Operational Scaling Frontiers* (needs plot-level resolution and SSP long-term scenarios), not raw data delivery failures.
+2. **Capabilities Never Built (ขีดความสามารถและระเบียบวิธีที่ยังไม่เคยสร้างขึ้นในประเทศ)**: **40 items (76.9%)** — The true core capability gap of Thailand (Damage functions, Urban InVest, Standard vulnerability index, CBA, NELD, PDNA). These require methodological R&D and national policy decisions.
+3. **Standard Specifications (ข้อกำหนดเชิงคุณลักษณะและมาตรฐานกลาง)**: **4 items (7.7%)** — Technical standards (grid criteria, baseline period selection, spatial reference boundaries) transferred to Chapter 2 and Section 5.2.
+
 **A-BTR needs** reuse the item-by-item catalog matching already done in the A-BTR requirement analysis (§4.1 of `wp2-data-domain-highlight-draft.md`), translated by a fixed rule: Direct match with no caveat → มีและใช้ได้; Direct or Partial match with a caveat → มีแต่ใช้ประโยชน์ได้ยาก; Inferred match → มีแต่ใช้ประโยชน์ได้ยาก, flagged; No match → ยังไม่มี (`counts.md` methodology note 2).
 
 ### Step 5. Count and report
 
-Counts per category × status (Table 5-2 datasets, Table 5-3 products), reason codes per category (for §5.1.4), and the funnel below (candidate content for Figure 5-1).
+Counts per category × status (Table 5-2/5-4 datasets, Table 5-3/5-5 products), reason codes per category (for §5.1.4), and synthesis cross-tabulation (Table 5-6).
 
 ---
 
 ## 4. The numbers at each step (reconciled)
 
-| Step | D-series (use cases) | A-series (A-BTR) | Total | Source |
+| Step / Layer | D-series (Use Cases) | A-series (A-BTR) | Total | Status / Destination |
 |---|---|---|---|---|
-| 1. Needs itemized | 238 | 122 | **360** | `demand-items-extracted.md`, `demand-items-abtr.md` |
-| 2. Tagged "Response" and set aside in Phase A | 125 | 21 | **146** | same |
-| 3. Matched against an inventory | 113 | 101 | **214** | `counts.md` |
-| of which dataset needs → Baseline Data Inventory | 73 | 89 | **162** | `counts.md` |
-| of which product needs → Information Product Inventory | 40 | 12 | **52** | `product-matches.md` |
+| **1. Total Requirements Itemized** | **238** | **122** | **360** | Master register (`output/07_Gap_Analysis/2026-09-demand-supply-register/`) |
+| **2. Scope Filtering** | | | | |
+| • System & Governance Requirements | 122 | 21 | **143** | Carried to Chapter 2 (Architecture) & Section 5.2 (System Recommendations) |
+| • Content Requirements (to Gap Analysis) | 116 | 101 | **217** | Tested against supply inventories |
+| **3. Content Type Split** | | | | |
+| • Dataset Requirements | 76 | 89 | **165** | Matched against Baseline Data Inventory (260 datasets) |
+| • Product Requirements | 40 | 12 | **52** | Matched against Information Product Inventory (114 products) |
 
-| Result | Datasets (162) | Products (52) | Total (214) |
-|---|---|---|---|
-| มีและใช้ได้ | 4 | 4 | 8 |
-| มีแต่ใช้ประโยชน์ได้ยาก | 113 | 4 | 117 |
-| ยังไม่มี | 45 | 40 | 85 |
-| ไม่สามารถจับคู่ได้ | — | 4 | 4 |
+**Final Reconciled Gap Assessment Results:**
 
-**Errors in the current draft and plan-slice that this table corrects:**
-
-1. **"266 matched items" is a double count.** 214 already includes the 52 product needs; plan-slice §2 added them again. The correct total is **214** (8 + 117 + 85 + 4 = 214). This resolves editorial finding F1.
-2. **Draft §5.1.2 calls the 214 "รายการความต้องการประเภทชุดข้อมูล".** The 214 are datasets *and* products. Dataset needs are 162.
-3. **The 4 "ไม่สามารถจับคู่ได้" items (D007, D061, D090, D156) are specifications, not products**: a resolution-disclosure spec, a guidance note on choosing the historical period, a reference-geography definition, and a presentation format. Under Step 2a they are system needs and leave the matched set. The status "ไม่สามารถจับคู่ได้" then disappears from the tables, and the matched content needs become 210 (8 / 117 / 85). This also answers the cold reader's question about what separates "ยังไม่มี" from "ไม่สามารถจับคู่ได้".
-
-**File-level discrepancies to fix before the register goes into the appendix:**
-
-4. `demand-supply-register.csv` has **211 rows** (110 D + 101 A; 49 product rows). `counts.md` and `product-matches.md` cover 113 D and 52 products. Three D-series product rows are missing from the CSV.
-5. A-series type split: the tagging file gives 85 dataset / 16 product among non-Response items; the register gives 89 / 12. Four items changed type between the two files without a note.
-6. 9 register rows have more columns than the header (unquoted commas in text fields). The CSV needs repair before anyone opens it in a spreadsheet.
+| Evaluation Track | Status / Category | Count | Percentage | Key Characteristics & Action |
+|---|---|:---:|:---:|---|
+| **Datasets (165)** | **มีและใช้ได้ (Ready to Use)** | **24** | 14.5% | Fully open, standardized, immediate modeling input |
+| | **มีแต่ใช้ประโยชน์ได้ยาก (Usability Bottleneck)** | **97** | 58.8% | In catalog (121 total covered = 73.3%), restricted by access, metadata, format |
+| | **ยังไม่มี (Missing / No Coverage)** | **44** | 26.7% | Needs new raw surveys, sensors, or downscaled modeling |
+| **Products (52)** | **มีอยู่แล้วและเปิดให้บริการ (Existing & Operational)** | **8** | 15.4% | Fit for purpose for original mandate; needs operational scaling (grid/SSP) |
+| | **ยังไม่เคยสร้างขึ้นในประเทศ (Capabilities Never Built)** | **40** | 76.9% | True core capability gap; needs methodological R&D and national policy adoption |
+| | **ข้อกำหนดเชิงคุณลักษณะ (Standard Specifications)** | **4** | 7.7% | Technical standards; transferred to Chapter 2 & Section 5.2 |
+| **Total Content** | | **217** | 100.0% | |
+| **System & Gov** | | **143** | — | Platform, APIs, and data governance frameworks |
+| **Total Requirements**| | **360** | — | Complete demand portfolio across all 83 use cases & A-BTR |
 
 ---
 
