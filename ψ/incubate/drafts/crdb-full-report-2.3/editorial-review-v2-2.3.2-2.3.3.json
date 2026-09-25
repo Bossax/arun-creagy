@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "rubric_version": "6.0.0",
+  "draft_sha256": "5743153b23cf734ee50678f1ffcc8b3a9f3867b9bb4b687e59dc61ff44d75f61",
+  "contract_sha256": "84ebe0381bfff9ec9052a6d5bf315fa411563011a17f6828cb37f00554b01388",
+  "profile": "report",
+  "reviewer_mode": "independent",
+  "assurance": "standard",
+  "reviewer": "Codex Stage 5 independent editorial reviewer",
+  "reviewed_at": "2026-09-25T01:16:50.3789769+07:00",
+  "dimensions": {
+    "warrant_soundness": {
+      "verdict": "pass",
+      "evidence": "Tier 1, arg-12–arg-26: each warrant supplies a causal bridge rather than restating its claim. In particular, arg-13 uses pre-meeting chronology to distinguish validation from origination; arg-17 connects a shallow multi-entry structure and separated tool/data paths to lower user burden; arg-18 distinguishes role design from institutional appointment; arg-23 separates scientific interpretation from access control; and arg-26 derives draft status from the continuing TOR sequence."
+    },
+    "mece_coverage": {
+      "verdict": "pass",
+      "evidence": "Tier 1, arg-12–arg-26: the units substantively partition the two reviewed phases. Arg-12–arg-16 cover second-focus-group validation; arg-15 and arg-17–arg-19 cover the first revision and its boundary; arg-20 covers external validation; arg-21–arg-26 cover the further revision. Overlap at arg-15 is a necessary bridge from validated information-flow requirements to the revised service design, not duplicate coverage."
+    },
+    "application_grounded": {
+      "verdict": "pass",
+      "evidence": "Tier 1, arg-12–arg-26: every application follows its unit's own warrant. Examples include labeling meeting inputs separately from consultant synthesis (arg-12, arg-16–arg-17), retaining role types without asserting appointments (arg-18), linking NCAIF and CCIC/CKAN through metadata while retaining source governance (arg-19), separating uncertainty metadata from access classification (arg-23), and retaining draft/blueprint status (arg-26)."
+    },
+    "section_job": {
+      "verdict": "pass",
+      "evidence": "Sections 2.3.2 and 2.3.3 perform the approved jobs for the 5.2.5 and 5.2.7 phases: each identifies the preceding draft, the feedback used as input, the consultant's resulting revision, and the status boundary of the output. The prose stays within arg-12–arg-26 and does not introduce Chapter 3 recommendations or excluded implementation claims."
+    },
+    "audience_decision_value": {
+      "verdict": "pass",
+      "evidence": "For acceptance reviewers and later system developers, 2.3.2 makes it directly checkable which concepts predated the second focus-group meeting, which comments came from participants, what the consultant synthesized afterward, and what remained undecided. Section 2.3.3 likewise ties external feedback to access layering, reliability metadata, access controls, user pathways, and draft status."
+    },
+    "evidence_payload": {
+      "verdict": "pass",
+      "evidence": "All 15 target units have a concrete prose payload. Section 2.3.2 covers the pre-existing hybrid arrangement and governance framework, cycle/data-flow findings, operational governance feedback, consultant synthesis, role boundaries, and NCAIF–CCIC/CKAN relationship. Section 2.3.3 covers the three external-test dimensions, two user depths, reliability metadata, scientific uncertainty versus access rights, four substantive pathways plus the fifth contact/news area, internal path ordering, and draft status."
+    },
+    "causal_logic": {
+      "verdict": "pass",
+      "evidence": "The sequence consistently moves from prior draft to feedback, consequence, and revision. In 2.3.2 paragraphs 1–2 establish that the meeting validated an existing design; paragraphs 3–5 explain the meeting findings; paragraph 6 explicitly marks the consultant's later synthesis; paragraph 7 bounds role claims; and the final paragraph separately explains NCAIF–CCIC/CKAN. In 2.3.3 each feedback dimension leads to a corresponding design response before the final status limitation."
+    },
+    "argument_fidelity": {
+      "verdict": "pass",
+      "evidence": "Arg-12–arg-19 are verbalized in order across the eight prose paragraphs of 2.3.2, with Table 2.3-2 placed between arg-18 and the arg-19 transition paragraph. Arg-20–arg-26 are verbalized in order across the seven prose paragraphs of 2.3.3, with Table 2.3-3 between arg-25 and the arg-26 status paragraph. No target claim or warrant is silently dropped, and no substantive draft claim falls outside these approved units."
+    },
+    "reader_facing_appropriateness": {
+      "verdict": "pass",
+      "evidence": "Both sections are audience-facing report prose. They contain no source locators, drafting commentary, prompt residue, fake diagrams, or narration of an unseen artifact. References to the TOR sequence and tables serve traceability and comparison functions required by the contract."
+    },
+    "terminology_agency": {
+      "verdict": "pass",
+      "evidence": "Agency is explicit throughout: participants propose or validate, while 'คณะที่ปรึกษา' synthesizes, designs, and revises. The draft distinguishes role types from appointments in 2.3.2 paragraph 7, and distinguishes NCAIF governance from CCIC/CKAN discovery/publication in the final paragraph. The acronym 'FGD2' occurs zero times; the full phrase 'การประชุมกลุ่มย่อยครั้งที่ 2' is used consistently."
+    },
+    "source_fidelity": {
+      "verdict": "pass",
+      "evidence": "Against the approved contract and argument map supplied for independent review, all required distinctions for arg-12–arg-26 survive: the hybrid arrangement and governance framework predate the meeting; meeting feedback is not conflated with consultant synthesis; role definitions are not presented as appointments; uncertainty/limitations are separate from access rights; NCAIF retains its governance while CCIC/CKAN is a discovery/publication channel; and the 5.2.7 product remains a draft/blueprint."
+    },
+    "form_readability": {
+      "verdict": "pass",
+      "evidence": "Both headings use Markdown level 3. Section 2.3.2 contains exactly eight prose paragraphs plus Table 2.3-2; section 2.3.3 contains exactly seven prose paragraphs plus Table 2.3-3. Each table follows the explanatory prose and precedes its section's final transition/status paragraph. Table 2.3-2 does not attribute the NCAIF–CCIC/CKAN design principle to the meeting; that relationship appears afterward as the resulting draft arrangement. Neither table introduces an unexplained concept. Sentences retain explicit actors, objects, and connective relations."
+    },
+    "reader_onboarding_and_transition": {
+      "verdict": "pass",
+      "evidence": "In 2.3.2 the reader is first told what was already in the draft, then what the meeting tested, then why cycle coverage and shared data matter, before the service-design concept is named and operationally unpacked. The transition from meeting feedback to consultant synthesis is explicit at paragraph 6. In 2.3.3 the three evaluation dimensions are introduced before access layering, reliability metadata, rights separation, and user pathways are developed in sequence. Every table term has been introduced in preceding prose, and both final paragraphs carry the argument into the next phase/status question."
+    }
+  },
+  "findings": [],
+  "mechanical_reviews": [
+    {
+      "message": "[STRUCTURAL] 'สถาปัตยกรรม' present -> consider 'ระบบรายงาน, ฐานข้อมูล, ระบบสารสนเทศ, ระบบบันทึกข้อมูล (เว้นแต่จะหมายถึง Enterprise Architecture ในภาพรวม)'. (Too abstract and academic; use grounded operational terms.)",
+      "location": "2.3.2 paragraphs 2 and 4, Table 2.3-2 row 1, and the final paragraph",
+      "disposition": "accepted_no_change",
+      "reason": "The occurrences are not unexplained stand-alone abstractions: 'การจัดวางสารสนเทศแบบผสม' is immediately defined as stable data categories plus task-based entry paths; 'สถาปัตยกรรมบริการสารสนเทศ' is unpacked through source systems, data models, catalogs, reference datasets, review, and user-facing products; and the final paragraph names system architecture and data architecture only to delimit what NCAIF retains versus the CCIC/CKAN discovery channel. Replacing these terms wholesale with a single operational noun would erase distinctions required by arg-13, arg-15, and arg-19."
+    }
+  ],
+  "verdict": "pass"
+}
