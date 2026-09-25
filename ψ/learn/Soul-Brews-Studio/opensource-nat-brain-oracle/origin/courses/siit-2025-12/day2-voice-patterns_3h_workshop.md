@@ -1,6 +1,6 @@
 # Day 2: Voice + Knowledge Patterns
 
-**ต่อจาก**: [draft.md](draft.md) (Day 1: Agentic AI Foundations)
+**ต่อจาก**: [draft.md](ψ/incubate/drafts/crdb-full-report-2.6/draft.md) (Day 1: Agentic AI Foundations)
 **วันที่ร่าง**: 2025-12-12
 
 ---

@@ -30,9 +30,37 @@ So the analysis answers three concrete questions, in order:
 
 ## 2. Why the method takes this shape
 
-### 2.1 Why break use cases into single needs first
+### 2.1 Why break use cases into data requirements (Deconstruction: Requirement of what? To make what?)
 
-A use case is a story about a task. For example, a commercial bank wants to price flood risk into a mortgage portfolio. One story contains several separate data needs: a flood probability map at asset level, flood depth and duration, damage functions that convert depth into asset loss, and so on. An inventory entry is one dataset or one product. A story cannot be looked up in an inventory; a single need can. So step 1 turns 83 stories into 238 needs, each tied to the agency that asked and to the line in the interview record where the need appears.
+A **Use Case** is an operational narrative about a stakeholder's mission or decision task. In practice, operational stakeholders do not speak in database catalog names; they describe their business challenges, decision workflows, and analytical bottlenecks. 
+
+For example, a commercial bank states its use case:
+> *"The bank needs to assess climate physical flood risk across its residential mortgage loan portfolio to price loan conditions, estimate expected losses and capital reserves under central bank guidelines, and design property insurance requirements."*
+
+An inventory entry (supply side) is a single, specific dataset or information product. A multi-faceted mission narrative cannot be directly looked up in an inventory. The consultant must therefore **deconstruct (ถอดรหัส)** the narrative into explicit **Data Requirements (ข้อกำหนดข้อมูล)**.
+
+#### What is a "Requirement"? (Requirement of what? To make what?)
+
+1. **Requirement of what?**: It is a **Data Specification (ข้อกำหนดคุณลักษณะของข้อมูล)** defining:
+   - **Entity/Variable**: What physical, socioeconomic, or hazard phenomenon is measured (e.g. flood depth in cm, hourly precipitation, property coordinates).
+   - **Resolution & Detail**: The spatial grid (e.g. 10m–100m, subdistrict) and temporal resolution (e.g. hourly, return periods 10/50/100 years).
+   - **Format & Structure**: The machine-readable data container (e.g. spatial GeoTIFF raster, tabular CSV, GIS vector shapefile).
+
+2. **To make what?**: Each requirement serves an explicit **functional purpose**:
+   - **To process & model (สำหรับการนำไปคำนวณ/ใส่แบบจำลองต่อ)** $\rightarrow$ Deconstructed as a **Dataset Requirement (ข้อกำหนดระดับชุดข้อมูล)**.
+   - **To make immediate management/policy decisions (สำหรับการตัดสินใจหรือสั่งการทันที)** $\rightarrow$ Deconstructed as a **Product Requirement (ข้อกำหนดระดับผลิตภัณฑ์สารสนเทศ)**.
+   - **To deliver, connect, and govern data (สำหรับการส่งผ่าน เชื่อมโยง และกำกับดูแลข้อมูล)** $\rightarrow$ Deconstructed as a **System & Governance Requirement (ข้อกำหนดเชิงระบบและธรรมาภิบาล)**.
+
+#### Concrete Example: Deconstructing the Banking Mortgage Use Case
+
+| Step / Question | Deconstructed Data Requirement | To make what? (Functional Purpose) | Requirement Class |
+|---|---|---|---|
+| 1. What/who stands in harm's way? | Asset coordinates and assessed property values | Identify exposed mortgage assets on a GIS map (Exposure) | Dataset Requirement (165 pool) |
+| 2. What is the hazard severity? | Flood inundation depth and duration grid by 10-, 50-, 100-year return periods | Provide physical depth inputs to simulate water height at each building (Hazard) | Dataset Requirement (165 pool) |
+| 3. What damage does water cause? | Depth-damage curves (functions) classified by building structural type | Convert physical water depth (meters) into financial asset damage percentage (Impact) | Product Requirement (52 pool) |
+| 4. How is data delivered to workflow? | Automated API endpoints connecting to the bank's core loan approval system | Enable automated loan risk screening at underwriting without manual downloads | System Requirement (143 pool) |
+
+Through this deconstruction mechanism, 83 Use Cases yielded **238 Data Requirements** (D001–D238), and the international Biennial Transparency Report (A-BTR) yielded **122 Data Requirements** (A001–A122), totaling **360 Data Requirements**. The complete master register is recorded in `output/07_Gap_Analysis/2026-09-demand-supply-register/` and presented in Appendix A.
 
 ### 2.2 Why sort needs into TOR 5.3.5's 8 categories
 
@@ -62,6 +90,71 @@ TOR 5.3.8 asks for quality gaps as well as quantity gaps, so "an entry exists" h
 ### 2.5 Why datasets and products are matched separately
 
 A dataset need asks for data the user will analyze themselves (rainfall records, a population grid). A product need asks for a finished output that answers a question directly (a risk map, a vulnerability index, a damage function, a calculation method, a dashboard). The TOR keeps these in two inventories (5.3.4 products, 5.3.5 datasets), so each need is searched in the inventory that holds its type.
+
+### 2.6 Analytical Funnel Schematic Diagram (Figure 5-1)
+
+```mermaid
+flowchart TD
+    %% Source Node
+    subgraph S1 ["แหล่งที่มาของข้อกำหนดความต้องการ (Demand Sources)"]
+        UC["กรณีการใช้งานของผู้มีส่วนเกี่ยวข้อง<br/>(83 Use Cases)<br/><b>238 ข้อกำหนด</b>"]
+        BTR["พันธกรณีรายงานสากล<br/>(A-BTR ภายใต้ UNFCCC)<br/><b>122 ข้อกำหนด</b>"]
+    end
+
+    TOTAL["<b>ข้อกำหนดความต้องการทั้งหมด (Total Requirements)</b><br/><b>360 รายการ</b>"]
+    UC --> TOTAL
+    BTR --> TOTAL
+
+    %% Step 1: Screening
+    TOTAL --> STEP1{"<b>ขั้นตอนที่ 1: คัดกรองขอบเขตความต้องการ (Scope Filtering)</b>"}
+
+    subgraph TRACK_SYS ["สายที่ 1: เชิงระบบและธรรมาภิบาล"]
+        SYS["<b>ข้อกำหนดเชิงระบบและธรรมาภิบาลข้อมูล</b><br/>(System & Governance Requirements)<br/><b>143 รายการ</b><br/><i>(เช่น API, Web Portal, มาตรฐาน Metadata, กฎหมายแชร์ข้อมูล)</i>"]
+        SYS_TARGET["ส่งต่อไปกำหนด:<br/>• สถาปัตยกรรมข้อมูล (บทที่ 2)<br/>• ข้อเสนอแนะเชิงระบบและธรรมาภิบาล (หัวข้อ 5.2)"]
+        SYS --> SYS_TARGET
+    end
+
+    subgraph TRACK_DATA ["สายที่ 2: เชิงเนื้อหาข้อมูลเข้าสู่กระบวนการวิเคราะห์ช่องว่าง (Gap Analysis)"]
+        CONTENT["<b>ข้อกำหนดเชิงเนื้อหาข้อมูล</b><br/>(Data Content Requirements)<br/><b>217 รายการ</b><br/><i>(ระบุตัวแปรทางวิทยาศาสตร์/กายภาพ/เศรษฐกิจสังคม)</i>"]
+        
+        STEP2{"<b>ขั้นตอนที่ 2: จำแนกตาม 8 หมวดข้อมูล และระดับการใช้งาน</b>"}
+        CONTENT --> STEP2
+
+        subgraph SPLIT_TYPE ["การจำแนกระดับข้อมูลที่ต้องการ (Data Level)"]
+            REQ_DS["<b>ข้อกำหนดระดับชุดข้อมูล (Dataset Needs)</b><br/><b>165 รายการ</b><br/>(76 จาก Use Cases + 89 จาก A-BTR)<br/><i>เน้นข้อมูลดิบ / สถิติตาราง / ชั้นข้อมูล GIS<br/>เพื่อนำไปคำนวณหรือใส่โมเดลต่อ</i>"]
+            REQ_PR["<b>ข้อกำหนดระดับผลิตภัณฑ์ (Product Needs)</b><br/><b>52 รายการ</b><br/>(40 จาก Use Cases + 12 จาก A-BTR)<br/><i>เน้นแผนที่ความเสี่ยงสำเร็จรูป / แดชบอร์ด<br/>เพื่อใช้ตัดสินใจเชิงบริหารทันที</i>"]
+        end
+        STEP2 --> REQ_DS
+        STEP2 --> REQ_PR
+
+        subgraph INVENTORY ["ขั้นตอนที่ 3: จับคู่ตรวจสอบกับบัญชีข้อมูลประเทศ (Supply Matching)"]
+            INV_DS[("<b>บัญชีรายการข้อมูลพื้นฐาน</b><br/>(TOR ข้อ 5.3.5)<br/><b>260 ชุดข้อมูล</b><br/>(จาก 44 หน่วยงาน)")]
+            INV_PR[("<b>บัญชีรายการผลิตภัณฑ์สารสนเทศ</b><br/>(TOR ข้อ 5.3.4)<br/><b>114 ผลิตภัณฑ์</b><br/>(จาก 56 หน่วยงาน)")]
+        end
+
+        REQ_DS -.->|ตรวจสอบความพร้อมใช้| INV_DS
+        REQ_PR -.->|ตรวจสอบความพร้อมใช้| INV_PR
+
+        subgraph GAP_RESULT ["ขั้นตอนที่ 4: ผลการประเมินสถานะช่องว่าง (Readiness Status)"]
+            RES_DS["<b>ผลวิเคราะห์ช่องว่างชุดข้อมูล (165 รายการ)</b><br/>• มีและใช้ได้: <b>24</b> (15%)<br/>• มีแต่ใช้ประโยชน์ได้ยาก: <b>97</b> (59%)<br/>• ยังไม่มีในระบบ: <b>44</b> (27%)"]
+            RES_PR["<b>ผลวิเคราะห์ช่องว่างผลิตภัณฑ์ (52 รายการ)</b><br/>• มีและใช้ได้: <b>4</b><br/>• มีแต่ใช้ประโยชน์ได้ยาก: <b>4</b><br/>• ยังไม่มีในระบบ: <b>40</b><br/>• ข้อกำหนดเชิงคุณลักษณะ: <b>4</b>"]
+        end
+
+        INV_DS --> RES_DS
+        INV_PR --> RES_PR
+    end
+
+    STEP1 -->|แยกออก ไม่ตรวจกับบัญชีข้อมูล| SYS
+    STEP1 -->|ส่งเข้าวิเคราะห์ช่องว่าง| CONTENT
+
+    style TOTAL fill:#f9f,stroke:#333,stroke-width:2px
+    style CONTENT fill:#bbf,stroke:#333,stroke-width:2px
+    style SYS fill:#fee,stroke:#333,stroke-width:1px
+    style REQ_DS fill:#dfd,stroke:#333,stroke-width:1px
+    style REQ_PR fill:#ffd,stroke:#333,stroke-width:1px
+    style INV_DS fill:#dff,stroke:#333,stroke-width:1px
+    style INV_PR fill:#dff,stroke:#333,stroke-width:1px
+```
 
 ---
 
