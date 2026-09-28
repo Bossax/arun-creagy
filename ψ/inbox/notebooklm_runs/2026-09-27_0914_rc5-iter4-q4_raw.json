@@ -1,0 +1,107 @@
+{
+  "answer": "The source reveals that the Nordic pEWMS approach is **still largely in the pilot, prototype, and experimental stage** regarding full operational integration and proven societal outcomes [1-4]. However, the paper does provide **concrete technical and engagement evidence** from specific field trials and modeling projects demonstrating its feasibility [5-8].\n\n---\n\n### 1. Concrete Evidence of Feasibility Provided by the Source\n\n* **High Volume of Public Engagement (Finland)**: A 2017 pilot by the Finnish Meteorological Institute (FMI) integrating citizen observation tools into its mobile weather app generated **17,412 observations** (89% regarding rainfall) from **7,810 individual users** in its first two months alone [7]. An earlier high-school education initiative mobilized over 200 students across 12 schools to collect environmental data [9].\n* **Filling Spatial Monitoring Gaps in Remote Areas (Iceland)**: The Icelandic Meteorological Office (IMO) launched a GIS-based notification portal during a prolonged rainfall and flooding event in October 2016, as well as an ESRI cloud-based portal during the 2014 Holuhraun eruption [1, 6, 10]. The portal successfully extended monitoring coverage into remote highlands (e.g., via snow-scooter and jeep tour operators reporting early snow-melt) where static government sensors were absent [11-13].\n* **Improved Hydrological Forecast Accuracy (WeSenseIt Project)**: Citing modeling studies by Mazzoleni et al. across European catchments (Italy, UK, Luxembourg), the source highlights mathematical proof that assimilating crowdsourced data—even if asynchronous or imperfect—**complements sparse sensor networks and directly improves flood forecast accuracy** [5, 8].\n\n---\n\n### 2. Limitations, Gaps, and Conceptual Constraints\n\nDespite these promising technical pilots, the authors explicitly highlight that the approach has **not yet demonstrated proven, operational improvements in public safety or response outcomes**:\n\n* **Lack of Operational Warning Integration**: FMI’s pilot showed that while large volumes of crowdsourced data can be gathered, **systematic integration into operational early warning triggers has not yet been achieved** [3, 14].\n* **Unproven Behavioral and Psychological Impact**: The authors state that whether participating in data collection actually alters public risk perception or encourages better emergency preparedness behavior **remains an open question requiring further research** [3].\n* **Cultural and Geographical Friction**: In Northern European countries, citizens generally expect public authorities and scientists to handle hazard monitoring, creating a cultural barrier to uploading photos or collecting data during dangerous events [15]. Furthermore, European workshop findings showed **mixed results**, noting that while citizen observatories work well for ecological monitoring, operational success for complex hazards like flooding and groundwater remains rare [16].\n\n---\n\n📊 Would you like to create a visual comparison table or chart summarizing the pEWMS pilot initiatives across Denmark, Finland, Iceland, Sweden, and Norway?",
+  "conversation_id": "01b3f4c3-4b51-471e-935a-c0aaba9ccd2d",
+  "sources_used": [
+    "58161714-02e0-4120-91fc-a378e2852d30"
+  ],
+  "citations": {
+    "1": "58161714-02e0-4120-91fc-a378e2852d30",
+    "2": "58161714-02e0-4120-91fc-a378e2852d30",
+    "3": "58161714-02e0-4120-91fc-a378e2852d30",
+    "4": "58161714-02e0-4120-91fc-a378e2852d30",
+    "5": "58161714-02e0-4120-91fc-a378e2852d30",
+    "6": "58161714-02e0-4120-91fc-a378e2852d30",
+    "7": "58161714-02e0-4120-91fc-a378e2852d30",
+    "8": "58161714-02e0-4120-91fc-a378e2852d30",
+    "9": "58161714-02e0-4120-91fc-a378e2852d30",
+    "10": "58161714-02e0-4120-91fc-a378e2852d30",
+    "11": "58161714-02e0-4120-91fc-a378e2852d30",
+    "12": "58161714-02e0-4120-91fc-a378e2852d30",
+    "13": "58161714-02e0-4120-91fc-a378e2852d30",
+    "14": "58161714-02e0-4120-91fc-a378e2852d30",
+    "15": "58161714-02e0-4120-91fc-a378e2852d30",
+    "16": "58161714-02e0-4120-91fc-a378e2852d30"
+  },
+  "references": [
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 1,
+      "cited_text": "4.2 Iceland  In Iceland, the Icelandic Meteorological Office (IMO) has developed an experimental pEWMS, including web-based solutions for the upload archival and visualisation of photographs taken by the public and other stakeholders such as the emergency services. Publicly uploaded photographs that assist with flood assessment are paramount to timely responses. GIS-based web-pages are used to display the latest incoming photographs for use in continuous round-the-clock monitoring at IMO. The system has been trialled for"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 2,
+      "cited_text": "system LUOVA [46] for all kinds of natural risks. Recently, FMI has taken steps towards 13 pEMWS development as well. FMI’s current online services reach hundreds of thousands of daily users, so the prospects for large-scale participation are good. Firstly, FMI analysed user trends and user behaviour in online and mobile weather and climate services [47], and in April 2016, an online survey was conducted that collected 321 responses from FMI web and mobile application users. The behaviour analysis showed that"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 3,
+      "cited_text": "observations relevant for flood risk management. These observations can be used in developing early warnings, although this integration is yet to be done systematically. They could also be helpful in retrospective verification of issued warnings. The social and psychological impacts of the participatory mode of action require further research to find out if the participatory component affects risk perception or preparatory behaviour. 14 4.4 Sweden In Sweden, the national hydrological early warning and monitoring infrastructure is based on"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 4,
+      "cited_text": "building and convincing narratives that help people understand their opportunities and risks and prepare them for their role in the new information age [37]. 7. Conclusion  A review of recent initiatives in Europe and the Nordic countries regarding early warning and monitoring systems in relation to flood risk management and implementation of the Sendai framework, suggests that there is great potential for adding more participatory approaches to EWMS, including citizens’ observations. It is argued that an added value of pEWMS is"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 5,
+      "cited_text": "different goals of such a system may also be complicated. Dealing with new sources of information and understanding the way citizens provide information or become part of the risk communication are among the issues that deserve more attention. This includes the development of sensors to be used by citizens [e.g. 16, 13]. Recent research has demonstrated the usefulness of assimilating crowd-sourced data in hydrological models to improve flood hazard knowledge and forecasts [14, 15]. Mazzoleni et al. [16,61] have also"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 6,
+      "cited_text": "date when the photograph was taken, the photograph itself and an optional comment. The design of the page allows it to be used in real-time or retrospectively; this greatly expands the potential for public notifications about flooding. Uploaded images are stored in a database at IMO where a separate map-based display at IMO indicating the location and public notifications can be created and viewed. The page was put into full operational use in October 2016 during a period of prolonged, heavy rainfall which caused widespread flooding in the south and south-west of the country."
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 7,
+      "cited_text": "observations on rain, thunder, hail, floods, tornadoes and damage caused by winds. The observations include estimates of the intensity on a fixed scale and the possibility to enter free-form comments. Location and time are also included. During the first two months, 17,412 observations were recorded, of which 89% were observations of rain. Observations were collected from 7,810 individual users, of which 167 made more than 10 observations. The experience of FMI to date shows that it can collect large amounts of participatory"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 8,
+      "cited_text": "stakeholders improves. Mazzoleni et al [16] argue that in spite of this, data collected by citizens, characterised by being asynchronous and inaccurate, can still complement traditional networks formed by few accurate, static sensors and improve the accuracy of flood forecasts. This was demonstrated for four different catchments varying from 135 km 2  to 822 km 2  in Luxemburg, UK and Italy. Catchments in the Nordic countries can be much larger and are also typically more sparsely populated and government networks less dense, both of which can have implications for the"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 9,
+      "cited_text": "mobile use of weather services differs from desktop use, as it is accessible to people throughout the day. The survey results indicated that there was potential in collecting a broad range of citizen observations, and that pEMWS were considered potentially helpful as long as the user interface is simple enough and users can tailor the warnings according to their needs. Secondly, FMI piloted citizens’ observations in a science education project aimed at high schools [48]. Within the project, over 200 high-school and primary school students from 12"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 10,
+      "cited_text": "observations of flooding. Another example of pEWMS is crowdsourcing SO2 pollution modelling and reporting which was implemented for the Holuhraun eruption 2014 using a cloud-based registration page from ESRI (Figure 3). The GIS-based web-page uses cloud-managed GIS services to provide an interactive map of Iceland, allowing users to pinpoint the location of a flood via three alternative methods. First, users can simply enter the beginning of an address into a search command, from where 12 address details are retrieved. Second, mobile users may enable auto-location based on their"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 11,
+      "cited_text": "The first version of the notification page was in Icelandic, accessible from IMO’s home-page (see: https://vatnsflod.vedur.is/). The page was made available to foreign tourists via a short press-release on the English version of IMO’s site; see: http://en.vedur.is/about- imo/news/reporting-floods-well-appreciated. By receiving updates from potentially remote locations, this notification page helps to extend IMO’s flood monitoring network to cover more possible flood locations. People involved in"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 12,
+      "cited_text": "recreational activities, such as jeep tours or snow-scooter trips, cover large, often remote, areas and can upload photographs and observations of potentially hazardous conditions, such as the beginning of intense snow-melt. Thus, real-time flood monitoring can be expanded via public participation in the recognition and documentation of hydrological hazards. 4.3 Finland  In Finland, the Finnish Meteorological Institute (FMI) is responsible for weather-related early warnings for public and professional users. FMI also coordinates the national early warning"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 13,
+      "cited_text": "groundwater are rare or non-existing. However, upload of photos of water level during hazard events is a possible option, especially in remote areas (e.g. parts of Iceland, Sweden, Norway and Finland) with difficult access by authorities. This may be a good option for collecting additional data where present knowledge is limited in cases of flooding events. 6.4 Multiple flood hazard-aware response behaviours  Multiple flood hazards and risks require a targeted preparedness and response that address the"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 14,
+      "cited_text": "schools around the country participated in collecting and analysing environmental observations. Although these observations were not integrated into operational warning products, the project showed that there is potential in mobilising targeted groups for environmental data gathering. This participatory work was also considered a success in terms of science communication and education. Finally, in 2017 FMI launched a pilot project that integrated participatory citizen observation elements with the existing FMI mobile app. The system enables users to report their"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 15,
+      "cited_text": "with varying expertise and skills. In many Northern European countries, there is not a very supportive culture among citizens for taking photos and uploading to web portals, since there is a general expectation that this is something that authorities and trained scientists should do, especially if there is a physical danger involved in collecting such data. The transferability of citizens’ observations to a Nordic context is therefore not straight forward. In urban areas, there is also potential for"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 16,
+      "cited_text": "applicability and added value of crowdsourced data in hydrological modelling of flooding. Findings from European workshops show somewhat mixed results regarding the value of Citizen Observatories when dealing with flooding and complex systems like groundwater. There are many Citizen Observatories in other areas which seem to work well (observations of rare species, plants, animals etc.) but for flooding and groundwater management, the results are not very clear, and good examples for dealing with Citizen Observatories for"
+    }
+  ]
+}

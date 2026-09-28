@@ -1,0 +1,137 @@
+{
+  "answer": "**Yes, the source explicitly advocates for integrating citizen-generated data into existing national early warning infrastructures rather than replacing them [1, 2].** The paper defines participatory early warning and monitoring systems (pEWMS) as an adaptation and extension of classic expert-led frameworks, adding network-based public participation to strengthen the existing system's monitoring coverage, model accuracy, and public trust [1, 3, 4].\n\nBased on the paper's review of national agencies—such as the Finnish Meteorological Institute (FMI), the Icelandic Meteorological Office (IMO), and Denmark's GEUS—the source outlines several mechanisms for how this integration operates:\n\n---\n\n### 1. Module-Based Mobile and Web Integration\nNational agencies incorporate participatory tools directly into their existing public-facing platforms rather than building standalone systems:\n* **FMI (Finland)**: Integrated a citizen observation feature directly into the existing, widely used FMI mobile weather application, enabling users to report rain, hail, floods, and wind damage alongside receiving official forecasts [5-7].\n* **IMO (Iceland)**: Built a GIS-based notification portal linked directly to IMO’s homepage and internal monitoring database [8-10]. Geotagged photographs and smartphone reports uploaded by the public feed into IMO's 24/7 internal monitoring displays to extend coverage into remote areas where static official sensors are absent [8-11].\n\n---\n\n### 2. Assimilating Crowdsourced Data into Scientific Models\nRather than replacing expert scientific modeling, citizen observations serve as an additional data layer:\n* **Data Assimilation**: Crowdsourced inputs (e.g., local river water levels or smartphone weather reports) are mathematically assimilated into the agency's core physically based hydrological and meteorological models [12, 13].\n* **Complementing Sparse Sensor Networks**: Research cited in the paper demonstrates that even asynchronous or less precise citizen observations complement sparse static sensor networks, improving overall forecast calibration, validation, and prediction accuracy [4, 13, 14].\n\n---\n\n### 3. Two-Way Hydroinformatics Interfaces\nThe source describes a \"two-way\" knowledge exchange platform built on top of the national agency's core modeling \"fact engine\" [12, 15, 16]:\n* **Top-Down Stream**: The national agency pushes open-access scientific predictions, satellite imagery, interactive flood maps, and long-term climate scenarios down to local authorities and the public [15-18].\n* **Bottom-Up Stream**: Citizens send real-time local observations, photos, and situation awareness reports back up to agency forecasters, helping experts verify issued warnings and tailor response plans [12, 19, 20].\n\n---\n\n### 4. Differentiated User Access Tiers\nExisting agencies maintain structural authority through tiered system design [21]:\n* **Public Level**: Online map interfaces and simplified warning alerts tailored for citizens [21].\n* **Expert/Authority Level**: Off-line scenario modeling, raw data feeds, and administrative decision-support tools reserved for agency meteorologists, hydrologists, and municipal emergency managers [21].\n\n---\n\n📊 Would you like to explore the specific technical challenges the paper highlights regarding data quality control and privacy concerns when integrating public data into official agency databases?",
+  "conversation_id": "01b3f4c3-4b51-471e-935a-c0aaba9ccd2d",
+  "sources_used": [
+    "58161714-02e0-4120-91fc-a378e2852d30"
+  ],
+  "citations": {
+    "1": "58161714-02e0-4120-91fc-a378e2852d30",
+    "2": "58161714-02e0-4120-91fc-a378e2852d30",
+    "3": "58161714-02e0-4120-91fc-a378e2852d30",
+    "4": "58161714-02e0-4120-91fc-a378e2852d30",
+    "5": "58161714-02e0-4120-91fc-a378e2852d30",
+    "6": "58161714-02e0-4120-91fc-a378e2852d30",
+    "7": "58161714-02e0-4120-91fc-a378e2852d30",
+    "8": "58161714-02e0-4120-91fc-a378e2852d30",
+    "9": "58161714-02e0-4120-91fc-a378e2852d30",
+    "10": "58161714-02e0-4120-91fc-a378e2852d30",
+    "11": "58161714-02e0-4120-91fc-a378e2852d30",
+    "12": "58161714-02e0-4120-91fc-a378e2852d30",
+    "13": "58161714-02e0-4120-91fc-a378e2852d30",
+    "14": "58161714-02e0-4120-91fc-a378e2852d30",
+    "15": "58161714-02e0-4120-91fc-a378e2852d30",
+    "16": "58161714-02e0-4120-91fc-a378e2852d30",
+    "17": "58161714-02e0-4120-91fc-a378e2852d30",
+    "18": "58161714-02e0-4120-91fc-a378e2852d30",
+    "19": "58161714-02e0-4120-91fc-a378e2852d30",
+    "20": "58161714-02e0-4120-91fc-a378e2852d30",
+    "21": "58161714-02e0-4120-91fc-a378e2852d30"
+  },
+  "references": [
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 1,
+      "cited_text": "on risk knowledge and monitoring and warning services, participatory EWMS (pEWMS), 3 according to Basher [1], make up the public part of EWMS.  Basher’s elements of pEWMS can be summarised as [1]: (i) risk knowledge; (ii) monitoring and warning services; (iii) dissemination and communication; and (iv) response capability. Transitioning EWMS towards pEWMS is about adding network-based, public participation to one or all of the four elements in order to provide more accurate warnings, more comprehensive damage"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 2,
+      "cited_text": "The paper is structured as follows: Key concepts of participatory early warning and monitoring systems are described in Section 2. The methodology is described in Section 3. Section 4 summarises the Nordic survey for piloting results in Finland, Iceland and Denmark. Section 5 describes the knowledge elicitation results from European workshops. Section 6 discusses the findings and Section 7 presents the conclusions. 2. Key concepts of participatory early warning and monitoring systems (pEWMS)  Under the pEWMS, “top-down” and “bottom-up” processes can be bridged and better"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 3,
+      "cited_text": "harmonised [30,31,32,33,34] to support stakeholder risk awareness and risk perception among local individuals and communities affected by flood. Adding “bottom-up” approaches [36] to classical EWMS allows stakeholders with access to local knowledge of environments and local networks to play a stronger role in decision-making and risk management. In addition, transparency in stakeholder participation, reflecting conflicting claims and views, may increase trust among stakeholders. Good risk communication holds the potential to build"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 4,
+      "cited_text": "stakeholders improves. Mazzoleni et al [16] argue that in spite of this, data collected by citizens, characterised by being asynchronous and inaccurate, can still complement traditional networks formed by few accurate, static sensors and improve the accuracy of flood forecasts. This was demonstrated for four different catchments varying from 135 km 2  to 822 km 2  in Luxemburg, UK and Italy. Catchments in the Nordic countries can be much larger and are also typically more sparsely populated and government networks less dense, both of which can have implications for the"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 5,
+      "cited_text": "system LUOVA [46] for all kinds of natural risks. Recently, FMI has taken steps towards 13 pEMWS development as well. FMI’s current online services reach hundreds of thousands of daily users, so the prospects for large-scale participation are good. Firstly, FMI analysed user trends and user behaviour in online and mobile weather and climate services [47], and in April 2016, an online survey was conducted that collected 321 responses from FMI web and mobile application users. The behaviour analysis showed that"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 6,
+      "cited_text": "schools around the country participated in collecting and analysing environmental observations. Although these observations were not integrated into operational warning products, the project showed that there is potential in mobilising targeted groups for environmental data gathering. This participatory work was also considered a success in terms of science communication and education. Finally, in 2017 FMI launched a pilot project that integrated participatory citizen observation elements with the existing FMI mobile app. The system enables users to report their"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 7,
+      "cited_text": "observations on rain, thunder, hail, floods, tornadoes and damage caused by winds. The observations include estimates of the intensity on a fixed scale and the possibility to enter free-form comments. Location and time are also included. During the first two months, 17,412 observations were recorded, of which 89% were observations of rain. Observations were collected from 7,810 individual users, of which 167 made more than 10 observations. The experience of FMI to date shows that it can collect large amounts of participatory"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 8,
+      "cited_text": "4.2 Iceland  In Iceland, the Icelandic Meteorological Office (IMO) has developed an experimental pEWMS, including web-based solutions for the upload archival and visualisation of photographs taken by the public and other stakeholders such as the emergency services. Publicly uploaded photographs that assist with flood assessment are paramount to timely responses. GIS-based web-pages are used to display the latest incoming photographs for use in continuous round-the-clock monitoring at IMO. The system has been trialled for"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 9,
+      "cited_text": "date when the photograph was taken, the photograph itself and an optional comment. The design of the page allows it to be used in real-time or retrospectively; this greatly expands the potential for public notifications about flooding. Uploaded images are stored in a database at IMO where a separate map-based display at IMO indicating the location and public notifications can be created and viewed. The page was put into full operational use in October 2016 during a period of prolonged, heavy rainfall which caused widespread flooding in the south and south-west of the country."
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 10,
+      "cited_text": "The first version of the notification page was in Icelandic, accessible from IMO’s home-page (see: https://vatnsflod.vedur.is/). The page was made available to foreign tourists via a short press-release on the English version of IMO’s site; see: http://en.vedur.is/about- imo/news/reporting-floods-well-appreciated. By receiving updates from potentially remote locations, this notification page helps to extend IMO’s flood monitoring network to cover more possible flood locations. People involved in"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 11,
+      "cited_text": "recreational activities, such as jeep tours or snow-scooter trips, cover large, often remote, areas and can upload photographs and observations of potentially hazardous conditions, such as the beginning of intense snow-melt. Thus, real-time flood monitoring can be expanded via public participation in the recognition and documentation of hydrological hazards. 4.3 Finland  In Finland, the Finnish Meteorological Institute (FMI) is responsible for weather-related early warnings for public and professional users. FMI also coordinates the national early warning"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 12,
+      "cited_text": "network-based participation, improve risk alertness and provide novel opportunities for risk management and disaster risk reduction [5]. As such, pEWMS could act as a potential hydroinformatics platform for knowledge-exchange among involved stakeholders, such as experts, citizens and the decision-makers [26], whereby the vital feedback pathways can be mobilised. Hydrologic/hydraulic model developers can benefit from more available real-time monitoring data for validating and updating their models, more efficient calibration and data"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 13,
+      "cited_text": "different goals of such a system may also be complicated. Dealing with new sources of information and understanding the way citizens provide information or become part of the risk communication are among the issues that deserve more attention. This includes the development of sensors to be used by citizens [e.g. 16, 13]. Recent research has demonstrated the usefulness of assimilating crowd-sourced data in hydrological models to improve flood hazard knowledge and forecasts [14, 15]. Mazzoleni et al. [16,61] have also"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 14,
+      "cited_text": "found that data collected by citizens, while being asynchronous and inaccurate, can still complement traditional monitoring networks composed of few static (traditional) sensors and improve the accuracy of flood forecasts. At the same time, current Information Technology (IT) products, such as social media, provide bigger data, different decision spaces, new uncertainties and unintended consequences. We need to be more critical about how data are collected, analysed and shared. The negative side of the Information Age includes potential"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 15,
+      "cited_text": "the EWMS approach by the UK [23]. For pEWMS, a timely and meaningful (near) real-time- access to the state of the hydrological cycle (in terms of groundwater level and flow, soil moisture and river discharge), is useful for stakeholders and citizens to continuously update their information on the state of river flow, groundwater levels and visualised flooding risks [24,25]. Furthermore, this awareness and knowledge can be used to provide information 6 about possible consequences and risks. Such pEWMS can, if properly enhanced with"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 16,
+      "cited_text": "groundwater management. 6.3 Web-based access to flood risk data and model simulations  At the stakeholders’ end, when presenting in local pEWMS in a “two-way” information system, a web-based (or App-based) graphic interface provides information which is supported by complex physically based models (the national EWMS fact engine or by local complex hydrological models of flooding risks like MIKE SHE/MIKE 11, Mike Urban, Mike Flood, Mike 21 etc.) presented in intuitive manners that can be understood by stakeholders"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 17,
+      "cited_text": "mobile technologies and their applications (including SMS and apps) have demonstrated even more advantages for reaching and engaging the wider public and a broader group of stakeholders [35]. When dealing with various flooding events, early warnings need to provide forecasts for different time scales, from long-term climate projections and hydrological/hydraulic predictions, down to seasonal and monthly outlooks, 10-day forecasts, three-day forecasts, daily forecasts and all the way to hourly or immediate short-term warnings. Section 5 outlines"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 18,
+      "cited_text": "Government, local governments (98 municipalities) and Danish regions. As part of this Danish Digital Strategy, a national pEWMS: HIP (Hydrological Information and Prognosis system) scenario has been designed with six elements: (i) Historical data and real-time observations; (ii) nationwide hydrological simulations and prognosis for the past, present and future; (iii) calculated indices (saturation degree, drought and flow indices) for various water management issues; (iv) EC Copernicus Emergency Management Services of flooded areas"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 19,
+      "cited_text": "observations relevant for flood risk management. These observations can be used in developing early warnings, although this integration is yet to be done systematically. They could also be helpful in retrospective verification of issued warnings. The social and psychological impacts of the participatory mode of action require further research to find out if the participatory component affects risk perception or preparatory behaviour. 14 4.4 Sweden In Sweden, the national hydrological early warning and monitoring infrastructure is based on"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 20,
+      "cited_text": "influencing the actions of the local authority and provide peer-to-peer information for their fellow citizens. For the local authority, the benefit is a significant increase in the amount of real-time information and improved situation awareness. For the citizen, the benefit is the availability of a much richer, up-to-date status of their locality, capturing not only environmental data but also information and discussion from their neighbours and fellow citizens. Therefore, pEWMS tailored to local communities and management needs are"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 21,
+      "cited_text": "(Slovenia and Croatia) that involves flood forecasting with a focus on emergency management and preparedness (e.g. equipment, relief work and sand bags). The DHI Gudenaa experience in Denmark reveals several factors worth considering in the system design and application: a web-based river model with EWMS allowed for decision- support in relation to flooding, targeting different user levels: online warning for citizens and the public, off-line scenarios for experts and authorities (three municipalities) and river"
+    }
+  ]
+}

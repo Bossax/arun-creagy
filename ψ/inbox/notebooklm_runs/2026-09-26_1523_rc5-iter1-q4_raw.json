@@ -1,0 +1,144 @@
+{
+  "answer": "The selected sources describe official early warning systems (EWS) as institutions historically built around **centralized, top-down, and expert-driven architectures** that heavily prioritize technical capabilities over non-technical, societal processes [1-3].\n\n---\n\n### 1. Division Between Technical and Non-Technical Components\n\nThe sources divide Early Warning Systems into two distinct spheres [1, 4, 5]:\n\n* **Technical Components**: Comprise **(1) Risk Knowledge** (data collection and risk mapping), **(2) Monitoring** (precipitation, stream gauges, sensors), and **(3) Forecasting** (hydrologic/hydraulic modeling) [4-6]. These technical elements are generally handled by specialized institutions—such as national Flood Forecasting Centres, meteorological institutes, or hydrological services—and are well-established and heavily funded globally [1, 7-10].\n* **Non-Technical Components**: Comprise **(1) Warning Dissemination and Communication**, **(2) Preparedness to Respond** (contingency planning, drills, risk awareness), and **(3) Response Capabilities** (evacuation options, resources, shelters) [1, 4, 5, 11]. \n\nThe literature highlights that system developers—typically from engineering or atmospheric science backgrounds—focus primarily on technical forecasting, leaving the non-technical components severely underdeveloped and underfunded [1, 7]. As a result, even technically accurate forecasts frequently fail to prevent disasters because warnings are not effectively communicated or acted upon at the community level [1, 11].\n\n---\n\n### 2. Agency Roles and the Dissemination Cascade\n\nIn official warning governance, institutional roles operate along a sequential administrative chain [1, 2]:\n\n1. **Forecast Generation**: Specialized technical agencies (e.g., national weather services or flood forecasting centers) monitor environmental variables and run predictive models [1, 2].\n2. **Administrative Pass-Through**: Once predefined physical thresholds are reached, technical agencies issue warnings to national administrative authorities [2, 6].\n3. **Sequential Cascading**: National authorities relay alerts downward through regional, district, and local administrative tiers, disaster management committees, and civil society organizations [1, 2].\n4. **Public Dissemination**: Mass media outlets (TV, radio, websites), police, and volunteer groups are contacted last to broadcast alerts to at-risk populations [2, 12].\n\nA key institutional challenge identified is the **weak inter-agency coordination** between the technical producers of forecasts and the administrative bodies responsible for alerting the public, often caused by a lack of formal dedicated structures or ill-defined organizational roles [13].\n\n---\n\n### 3. The Top-Down (\"Command-and-Control\") Posture\n\nThe institutional posture behind official disaster warnings is characterized as a linear, **\"command-and-control\" or \"expert-led\" model** [2, 3, 14]:\n\n* **Linear \"Expert-to-Expert\" Communication**: Information historically flows one way from scientific experts to municipal officials, excluding citizens and non-professionals from knowledge production or warning design [3, 10, 14, 15].\n* **Institutional \"Duty Fulfilled\" Assumption**: Government officials often operate under the assumption that their institutional responsibility ends as soon as information is passed down to lower administrative tiers, without verifying whether at-risk communities actually receive, comprehend, or have the resources to respond to the alert [14].\n* **Generic Mass Broadcasting**: Warnings are issued as broad, untargeted broadcasts intended for the general population, lacking community-specific context, local language translation, or actionable instructions tailored to marginalized social groups [2, 14].\n\n---\n\n### 4. Reforming the Institutional Posture (The Participatory Shift)\n\nTo overcome the failures of pure top-down governance, newer frameworks—such as the Nordic participatory Early Warning and Monitoring System (pEWMS) framework—advocate for **bridging \"top-down\" scientific modeling with \"bottom-up\" community engagement** [16-19]. By integrating web-based data access, crowdsourced citizen observations, and social sensors into early warning architectures, institutions can move from rigid linear alerting to interactive, multi-stakeholder risk management [20-22].\n\n🌊 Would you like to delve into how citizen observatories and mobile apps (such as those piloted in Denmark, Finland, and Iceland) feed crowdsourced data back into these formal forecasting models?",
+  "conversation_id": "01b3f4c3-4b51-471e-935a-c0aaba9ccd2d",
+  "sources_used": [
+    "7918d74d-245c-494e-a511-50baceedad4a",
+    "58161714-02e0-4120-91fc-a378e2852d30"
+  ],
+  "citations": {
+    "1": "7918d74d-245c-494e-a511-50baceedad4a",
+    "2": "7918d74d-245c-494e-a511-50baceedad4a",
+    "3": "58161714-02e0-4120-91fc-a378e2852d30",
+    "4": "7918d74d-245c-494e-a511-50baceedad4a",
+    "5": "7918d74d-245c-494e-a511-50baceedad4a",
+    "6": "7918d74d-245c-494e-a511-50baceedad4a",
+    "7": "7918d74d-245c-494e-a511-50baceedad4a",
+    "8": "58161714-02e0-4120-91fc-a378e2852d30",
+    "9": "58161714-02e0-4120-91fc-a378e2852d30",
+    "10": "58161714-02e0-4120-91fc-a378e2852d30",
+    "11": "7918d74d-245c-494e-a511-50baceedad4a",
+    "12": "7918d74d-245c-494e-a511-50baceedad4a",
+    "13": "7918d74d-245c-494e-a511-50baceedad4a",
+    "14": "7918d74d-245c-494e-a511-50baceedad4a",
+    "15": "58161714-02e0-4120-91fc-a378e2852d30",
+    "16": "58161714-02e0-4120-91fc-a378e2852d30",
+    "17": "58161714-02e0-4120-91fc-a378e2852d30",
+    "18": "58161714-02e0-4120-91fc-a378e2852d30",
+    "19": "58161714-02e0-4120-91fc-a378e2852d30",
+    "20": "58161714-02e0-4120-91fc-a378e2852d30",
+    "21": "58161714-02e0-4120-91fc-a378e2852d30",
+    "22": "58161714-02e0-4120-91fc-a378e2852d30"
+  },
+  "references": [
+    {
+      "source_id": "7918d74d-245c-494e-a511-50baceedad4a",
+      "citation_number": 1,
+      "cited_text": "time upstream river monitoring and prediction of downstream floods based on simple regression analysis or past experiences, can be as effective as a sophisticated flood forecasting method [48,50]. Risk knowledge, monitoring, and flood forecasting elements of the FEWS are generally carried out by a formal technical institution equivalent to Flood Forecasting Centres (FFCs). Sometimes, flood forecasting responsibility lies with different institutions such as the department of agriculture, conservation authorities, or the national hydrological service. There have been many technological advances in the production of timely and accurate flood forecasts thanks to investments in data collection, monitoring, training, and promotion of new technologies, especially in the developing world [9]. Yet, the three non-technical components of FEWS (Fig. 2) have not received similar attention [9]. These components involve collaboration between a variety of stakeholders, including disaster management committees, local authorities, CSOs, and communities at risk. This collaboration remains limited because of a range of barriers. The lack of cooperation, in turn, is a frequently invoked reason for the failure of the entire FEWS [3,4,11]. These factors tend to receive less attention from FEWS developers and operators who are generally from technical backgrounds such as engineering and atmospheric sciences. Advances in the non-technical components of FEWS are not as decisive as in the technical components. This is a serious problem for the ‘end-to-end’ effectiveness of FEWS, which’s fundamental goal is to prevent human, property, and economic losses. Some examples of low-income countries such as in Bangladesh and Cuba exist where end-to-end FEWS have been effective [43,44]. Even a technically sound flood alert is ineffective if the intended recipient does not receive the warnings, does not understand it, or is not able to take actions promptly. Gaps in non-technical components of FEWS are identified in this paper through a literature survey and experiential knowledge. The gaps are then categorized into gaps in dissemination and communication, preparedness, and response capabilities, and discussed in detail hereafter."
+    },
+    {
+      "source_id": "7918d74d-245c-494e-a511-50baceedad4a",
+      "citation_number": 2,
+      "cited_text": "In technology-based FEWS, a “top-down approach” is usually used, where a national (or international) technical agency issues warnings and communicates them to the national authorities. The alerts are then channeled through to the regional, district, and local government authorities, disaster management agencies, CSOs involved to flood risk management. Media organizations such as newspapers, TV and local radio stations, security forces, and local police are contacted last and tasked to convey the warnings to the vulnerable population. Unfortu-nately, the warnings does not reach all the people-at-risk [10] equally and timely, particularly those in remote and/or coastal areas, illiterate and/or impoverished people, highly vulnerable groups such as women, children, and elderly in developing and least developed countries [9]. The reason is that warning messages are generally broadcasted on national or local media (television, radio, or website), and such vulnerable groups lack access to basic amenities required to receive these warnings [21]. The reasons for low access to the broadcasted messages include power outages, lack of access to TV and radio, limited signal for mobile phones during natural hazards, and limited knowledge of using the emergency websites for flood warnings and updates."
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 3,
+      "cited_text": "4 evolved gradually from exclusive communication between experts into an inclusive engagement of risk managers and the public, instead of the previous expert-to-expert, linear communication, without public participation. This paper aims to identify strengths, weaknesses, opportunities and threats of web-based access to data and model simulations and to add insight into participatory forms of early warnings and monitoring to reduce disaster risks. It also proposes a framework to reformulate the classic view of Early Warning and Monitoring Systems towards a participatory one."
+    },
+    {
+      "source_id": "7918d74d-245c-494e-a511-50baceedad4a",
+      "citation_number": 4,
+      "cited_text": "1. Introduction Floods accounted for over half of the total water-related disasters that occurred from 2001 to 2018 and were responsible for about 94,000 casualties and USD ~504 billion financial losses globally [1]. The Sendai Framework for Disaster Risk Reduction 2015–2030 has seven targets and four priorities for action. Target 7 of the framework focuses explicitly on “substantially increasing the availability of and access to multi-hazard early warning systems and disaster risk information and assessments to people.” UNDRR [2] states that effective “end-to-end” and “people-centered” early warning system comprises four interrelated components: (1) disaster risk knowledge based on the systematic collection of data and disaster risk assessments; (2) detection, monitoring, analysis and forecasting of the hazards and possible consequences; (3) dissemination and communication, by an official source, of authoritative, timely, accurate and actionable warnings and associated information on likelihood and impact; and (4) preparedness at all levels"
+    },
+    {
+      "source_id": "7918d74d-245c-494e-a511-50baceedad4a",
+      "citation_number": 5,
+      "cited_text": "Fig. 2. Technical and Non-Technical Components of a Flood Early Warning System. D. Perera et al. International Journal of Disaster Risk Reduction 51 (2020) 101794 extensive independent global review of DRR at the local level. It aims to strengthen the inclusion and collaboration among the people at-risk, civil society, and governments in the design and implementation of policies and practices to reduce risks and strengthen resilience. The VFL program has received nearly 100,000 survey responses, and CSOs appeared as “DRR champions” at the commune level in closing FEWS gaps."
+    },
+    {
+      "source_id": "7918d74d-245c-494e-a511-50baceedad4a",
+      "citation_number": 6,
+      "cited_text": "Accordingly, the focus and objectives of this paper are to: 1. Identify societal challenges in flood warning communication, preparedness to respond, and response capabilities 2. Discuss the role of Civil Society Organizations (CSOs) in addressing the gaps outlined above, particularly at the community level 3. Formulate policy recommendations that may help strengthen governance and institutional capacity at all levels 2. Flood early warning systems Fig. 2 describes the typical components of a FEWS, where risk assessment forms the foundation of the system and includes risk mapping and assessing the population, land-use, and assets. It is followed by data collection (generally, precipitation and temperature), to force a hydrologic model that simulates river discharges. A hydraulic/hydro-dynamic modeling would then be used to predict water levels and floodplain extent. If a pre-set threshold is exceeded or is likely to be exceeded in the near future, a flood warning is issued. The warning information is then disseminated through various media to the communities at risk, and potential flood victims would be required to take appropriate action, such as evacuating to higher safe grounds. In some cases, an intermediate flood forecasting system, which involves real-"
+    },
+    {
+      "source_id": "7918d74d-245c-494e-a511-50baceedad4a",
+      "citation_number": 7,
+      "cited_text": "The ability of FEWS to mitigate flood risks and impacts on communities is widely acknowledged [3–8]. It was found in Ref. [9] that developing and developed countries often have similarly well-established flood forecasting and early warning components in their FEWS. In contrast, communication and response components are * Corresponding author. United Nations University Institute for Water, Health and Environment (UNU-INWEH), Hamilton, ON, Canada. E-mail address: duminda.perera@unu.edu (D. Perera)."
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 8,
+      "cited_text": "system LUOVA [46] for all kinds of natural risks. Recently, FMI has taken steps towards 13 pEMWS development as well. FMI’s current online services reach hundreds of thousands of daily users, so the prospects for large-scale participation are good. Firstly, FMI analysed user trends and user behaviour in online and mobile weather and climate services [47], and in April 2016, an online survey was conducted that collected 321 responses from FMI web and mobile application users. The behaviour analysis showed that"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 9,
+      "cited_text": "to historical data, model forecasts and climate change effects. However, participatory elements, groundwater and sea level data and infrastructure risk data are not incorporated. 4.5 Norway Norway also has an established national early warning and monitoring system based on a national model to visualise hydrological conditions and forecast results (run by Norges Vassdrags- og Energidiroktorat), Met office and Kartverket. Hydrological cycle simulations are available on varying time-scales, including information on soil moisture for assessment of"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 10,
+      "cited_text": "with hydrometeorologial guidance provide improved risk communication to citizens when flooding risks are high [23]. The UK EWMS is mainly a national top-down driven hydrological early warning system for issuing hazard flood warnings. Risk knowledge is mainly provided by researchers and modellers, while the role of communities and feedbacks is not really covered by the EWMS. However, risk communication and emergency messages are disseminated and communicated on web-interface in meaningful ways."
+    },
+    {
+      "source_id": "7918d74d-245c-494e-a511-50baceedad4a",
+      "citation_number": 11,
+      "cited_text": "Contents lists available at ScienceDirect International Journal of Disaster Risk Reduction journal homepage: http://www.elsevier.com/locate/ijdrr https://doi.org/10.1016/j.ijdrr.2020.101794 Received 24 February 2020; Received in revised form 26 July 2020; Accepted 29 July 2020 International Journal of Disaster Risk Reduction 51 (2020) 101794 less developed. Moreover, casualties and economic losses are found to be higher in developing nations, suggesting that warning communication and ability of the community to timely respond to the flood alerts are those parts of FEWS that need to be strengthened in the developing world. This issue is present in the developed world as well, though [42, 43]. It is well-documented that the production of technically sound early warnings is meaningless if it does not translate into emergency response action. Failure to respond to flood alerts can result from misunderstanding of the warnings and an inefficient of coordination between stakeholders and actors at all levels of FEWS. It may also be due to a lack of resources, knowledge, or contingency plans [3,4,7,10–14]. Yet, most of the FEWS-related literature either focus on purely technical aspects of FEWS (i.e., risk knowledge and flood forecasting components) [15–18] or describe the entire FEWS with limited attention to communication and preparedness components [4,19,20]."
+    },
+    {
+      "source_id": "7918d74d-245c-494e-a511-50baceedad4a",
+      "citation_number": 12,
+      "cited_text": "Even when the warning reaches a particular community, many fail to heed the warning because of to a lack of risk awareness, and doubts about the credibility of the warning [22,23]. It is possible to improve the credibility of the early warnings: for instance, the Cuban Institute of Meteorology was able to regain the trust of the people by using enhanced communication, improving forecast accuracy, and replacing TV broadcasters by trained meteorologists to communicate warning information [43]. To circumvent the limited access to media, alternative modes of communication such as sirens and loudspeakers can be used to reach low-income vulnerable people. However, this may result in delayed response since early warning passes through a chain of actors before reaching volunteer groups responsible for disseminating the alerts via megaphones and suchlike. By that time, evacuation routes may have"
+    },
+    {
+      "source_id": "7918d74d-245c-494e-a511-50baceedad4a",
+      "citation_number": 13,
+      "cited_text": "An interactive and effective warning-communication chain is essential to a successful FEWS since multiple stakeholders are involved at all levels, and across sectors. However, there are often weak inter- personal and Inter-Agency relationships between producers and consumers of early warnings [11]. In most cases, there is a limited or inefficient coordination and, thus, ineffective communication between specialized agencies generating warnings and communicating authorities assigned to alert the public [10]. The lack of clarity in the roles played by each institution involved in the warning-communication chain is, in part, a consequence of the absence of formal dedicated institutional structures with authority to issue and communicate warnings to those at risk [27]. The problem is more pronounced in transboundary river basins. For instance, Zahmatkesh et al. [29] mentioned that the absence of an active network of communication and"
+    },
+    {
+      "source_id": "7918d74d-245c-494e-a511-50baceedad4a",
+      "citation_number": 14,
+      "cited_text": "Even when they are delivered, warnings are often incomplete due to the lack of standardized nomenclature, protocols, and standards for issuing the warnings. This leads to inadequate, irrelevant or missing information [10,27]. Further, warnings are often perceived as confusing if they are issued by multiple institutions (technical agencies, local authorities, disaster managers, non-government organizations) unless the communication is done in a coordinated and responsible manner. Mul-tiple sources of communication paths have to be encouraged to ensure various channels to reach the vulnerable communities. Unless otherwise coordinated properly, multiple sources of warning may lead to a lack of clarity and misinterpretation of the warnings [10]. To trigger a responsive action, warning needs to be tailored to the local communities’ interests, needs, and values. This involves the use of local language and content that targets the understanding of the recipient and contains an appropriately tailored course of action. However, in a ‘command and control’ type of FEWS, most warnings are communicated to the entire population through media organizations, rather than tai-lored/targeted warnings generated for individual groups [10,27,28]. For example, key informant interviews in Pakistan suggest that let alone targeted warnings and engaging communities in formulating flood risk message, government officials’ stated and unstated assumptions reveal that they played their part only by passing the information to lower revenue officials without actually knowing if the potential victims received the warning in time [21]."
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 15,
+      "cited_text": "evaluations and improved public risk perception and hazard awareness. Traditionally, scientists and engineers have provided relevant parties in municipalities with reports or information on flood risks. Recently, however, web-based access to data and model simulations, as well as interactive tools have become available to support decision-making in flood risk management [2,3,4,5,6,7]. In this way, problems such as the consequences of measures pertaining to infrastructure or to the establishment of water retention can be"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 16,
+      "cited_text": "systems and proposes a framework to reformulate the classic view of Early Warning and Monitoring Systems towards a participatory one. The new framework is developed for flood risks (from multiple flood hazards), using examples from selected Nordic and other European countries. The study shows a potential for public participation in all stages of the Disaster Risk Reduction (DRR) cycle, with enhanced risk communication and awareness. Web-based access to hydrological data and nationwide modelling results can support adaptive and"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 17,
+      "cited_text": "The paper is structured as follows: Key concepts of participatory early warning and monitoring systems are described in Section 2. The methodology is described in Section 3. Section 4 summarises the Nordic survey for piloting results in Finland, Iceland and Denmark. Section 5 describes the knowledge elicitation results from European workshops. Section 6 discusses the findings and Section 7 presents the conclusions. 2. Key concepts of participatory early warning and monitoring systems (pEWMS)  Under the pEWMS, “top-down” and “bottom-up” processes can be bridged and better"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 18,
+      "cited_text": "harmonised [30,31,32,33,34] to support stakeholder risk awareness and risk perception among local individuals and communities affected by flood. Adding “bottom-up” approaches [36] to classical EWMS allows stakeholders with access to local knowledge of environments and local networks to play a stronger role in decision-making and risk management. In addition, transparency in stakeholder participation, reflecting conflicting claims and views, may increase trust among stakeholders. Good risk communication holds the potential to build"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 19,
+      "cited_text": "pEWMS for natural hazards has been developed. The new framework, which is an extension of the framework proposed by Basher [1], comprises the following four functional components: 18 (i) participatory flood risk knowledge assessment of socio-technical system- dynamics (flood hazard knowledge, research/education, institutional commitment and mechanisms, disaster risk reduction measures/mitigation and preparedness) (ii) participatory flood risk early warning and monitoring system providing historical"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 20,
+      "cited_text": "on risk knowledge and monitoring and warning services, participatory EWMS (pEWMS), 3 according to Basher [1], make up the public part of EWMS.  Basher’s elements of pEWMS can be summarised as [1]: (i) risk knowledge; (ii) monitoring and warning services; (iii) dissemination and communication; and (iv) response capability. Transitioning EWMS towards pEWMS is about adding network-based, public participation to one or all of the four elements in order to provide more accurate warnings, more comprehensive damage"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 21,
+      "cited_text": "monitoring data, system-dynamics models and effects of climate change with probabilistic predictions and what if stress tests flood risk consequences (iii) web based access to flood risk data and model simulations that can properly handle “top-down” and “bottom-up” communication lines and feedbacks between system components, with a community-centred dissemination and communication, constantly informing all actors involved in the DRR cycle about preparedness and response actions (iv) multiple flood hazard aware response behaviours performance indicators and"
+    },
+    {
+      "source_id": "58161714-02e0-4120-91fc-a378e2852d30",
+      "citation_number": 22,
+      "cited_text": "Sheffield WeSenseIt The notion of social sensors contributes to mining / crowdsourcing local knowledge from citizens to authorities. Behavioural models can help understanding responses from citizens Citizens provide information (social sensors) via e.g. social media using physical sensor on risk related hydrologic variables. Social- and physical sensors are integrated in web based platform / API to communicate warnings. Response capability when using “two-way” communication (social and physical sensors) is"
+    }
+  ]
+}
