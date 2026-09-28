@@ -1,6 +1,6 @@
 {
   "context": "TH",
-  "version": "4.7",
+  "version": "4.9",
   "supersedes": [
     "NCAIF-Institutional v3.2",
     "TOR5.5-Articles v1.0",
@@ -371,9 +371,10 @@
     {
       "banned": "Governance",
       "preferred": "การกำกับดูแล",
-      "reason": "Conceptual term with a settled Thai equivalent; no reason to carry the English.",
+      "reason": "Conceptual term with a settled Thai equivalent; no reason to carry the English. Exceptions added 2026-09-28 (Boss-approved): these are the English half of a fixed bilingual category/service label (TOR category name or numbered service title), not loose jargon usage.",
       "kind": "literal",
-      "scope": "universal"
+      "scope": "universal",
+      "exceptions": ["System & Governance Requirements", "Uncertainty Governance"]
     },
     {
       "banned": "ส่งมอบขีดความสามารถ",
@@ -508,23 +509,26 @@
     {
       "banned": "ผลงาน",
       "preferred": "ผลผลิต",
-      "reason": "Boss's 2026-08-30 correction on §4.3, as the noun for what a project delivers: 'ผลผลิต' reads as the more institutional/technical term for a project's deliverables than generic 'ผลงาน'.",
+      "reason": "Boss's 2026-08-30 correction on §4.3, as the noun for what a project delivers: 'ผลผลิต' reads as the more institutional/technical term for a project's deliverables than generic 'ผลงาน'. Exception (Boss-approved 2026-09-28): 'ตรวจรับผลงาน' is the fixed procurement phrase used in the TOR.",
       "kind": "literal",
-      "scope": "report"
+      "scope": "report",
+      "exceptions": ["ตรวจรับผลงาน"]
     },
     {
-      "banned": "ฉบับ",
+      "banned": "[จำนวน] ฉบับ (counting classifier)",
       "preferred": "รายการ",
-      "reason": "Boss's 2026-08-30 correction on §4.3, as a counting classifier for deliverable/document items (Service Briefs, Data Specs counts): 'รายการ' is the standard classifier for counted deliverable/document items, not 'ฉบับ'.",
-      "kind": "literal",
-      "scope": "report"
+      "reason": "Boss's 2026-08-30 correction on §4.3, as a counting classifier for deliverable/document items (Service Briefs, Data Specs counts): 'รายการ' is the standard classifier for counted deliverable/document items, not 'ฉบับ'. Converted literal->regex 2026-09-28 (Boss-approved): the literal fired on non-counting uses (ฉบับที่ 5, ทั้งฉบับ, ฉบับก่อนหน้า, รายงานฉบับกลาง), 109 hits across drafts; the regex matches only a number directly before ฉบับ.",
+      "kind": "regex",
+      "scope": "report",
+      "pattern": "(\\d+|หนึ่ง|สอง|สาม|สี่|ห้า|หก|เจ็ด|แปด|เก้า|สิบ)\\s*ฉบับ(?!ที่|ทางการ|ถัดไป|สมบูรณ์|ก่อน|ล่าสุด|ร่าง|ปรับปรุง|แก้ไข|กลาง|นี้|ดังกล่าว|ภาษา|ใหม่|เดิม)"
     },
     {
       "banned": "ผู้จัดทำ",
       "preferred": "ผู้เขียน",
-      "reason": "Boss's 2026-08-30 correction on §4.3: 'ผู้เขียน' is the standard role-noun for content-writing positions, not 'ผู้จัดทำ'.",
+      "reason": "Boss's 2026-08-30 correction on §4.3: 'ผู้เขียน' is the standard role-noun for content-writing positions, not 'ผู้จัดทำ'. Exception (Boss-approved 2026-09-28): 'ผู้จัดทำแผน' (plan makers) is not about authorship.",
       "kind": "literal",
-      "scope": "report"
+      "scope": "report",
+      "exceptions": ["ผู้จัดทำแผน"]
     },
     {
       "banned": "internal deliverable version tags / internal abbreviation codenames in reader-facing deliverable names (e.g. 'DRD v2', 'CDM/DMF', 'Node Content Storyboard')",
@@ -594,9 +598,10 @@
     {
       "banned": "ห่วงโซ่",
       "preferred": "อุปสรรค (or plain descriptive language -- do not substitute another metaphor)",
-      "reason": "Boss, CRDB full-report spine review 2026-08-31: ban both the word and the bottleneck-chain metaphor construction (ห่วงโซ่คอขวด) in report prose. EXCEPTION: does not block citing the established artifact title 'ห่วงโซ่คุณค่าข้อมูล' / DCCE Data Value Chain.md verbatim as a document name -- that is a citation, not authored metaphor.",
+      "reason": "Boss, CRDB full-report spine review 2026-08-31: ban both the word and the bottleneck-chain metaphor construction (ห่วงโซ่คอขวด) in report prose. EXCEPTION: does not block citing the established artifact title 'ห่วงโซ่คุณค่าข้อมูล' / DCCE Data Value Chain.md verbatim as a document name -- that is a citation, not authored metaphor. Exceptions enforced mechanically 2026-09-28 (Boss-approved): 'ห่วงโซ่ผลกระทบ' (Impact Chain, a standard technical term listed as preferred in writing-style-th.md) and the citation 'ห่วงโซ่คุณค่าข้อมูล' named above. Exception added 2026-09-28 (Boss-approved): 'ห่วงโซ่อุปทาน' (supply chain) is the standard logistics term, not the banned metaphor.",
       "kind": "literal",
-      "scope": "report"
+      "scope": "report",
+      "exceptions": ["ห่วงโซ่ผลกระทบ", "ห่วงโซ่คุณค่าข้อมูล", "ห่วงโซ่อุปทาน"]
     },
     {
       "banned": "คอขวด",
