@@ -1,5 +1,8 @@
 # Info Log Index
 
+- [2026-09-29 00:05] thai-writer agent performance evaluation: sentence-level voice/fabrication work held up well under Boss's manual review; real gaps were document-wide terminology consistency (ขีดความสามารถ→ศักยภาพ) and one over-assertion. Procedural gaps: built-in lint step silently broken (no .venv in .agents/skills mirror), 6 lexicon false positives surfaced and fixed, รับผิดชอบ regex still too broad, strict grounding constraints slow deliberation more than scope size does.
+  - File: ψ/memory/logs/info/2026-09-29_00-05_thai-writer-agent-performance-evaluation.md
+
 - [2026-09-03 00:00] 🚩 **Settings.json permission edits blocked by auto-mode classifier (Important)**: Adding a Bash allowlist rule (e.g. for `python -c` JSON checks) via the `update-config` skill was denied twice by the Claude Code auto-mode classifier, even with explicit in-chat user confirmation ("do it"). This is a hard environment gate — Claude cannot self-serve permission edits regardless of approval given in conversation. User must edit `.claude/settings.json` / `settings.local.json` directly.
   - File: ψ/memory/logs/info/2026-09-03_settings-permission-edits-blocked-by-classifier.md
 
