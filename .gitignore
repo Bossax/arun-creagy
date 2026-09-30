@@ -101,3 +101,4 @@ venv_clean/
 .agents/skills/style-capture/
 .agents/skills/writing-th/
 .agents/skills/shared-skill-release/
+.agents/skills/oracle-bootstrap/
