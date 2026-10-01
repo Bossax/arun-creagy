@@ -1,0 +1,69 @@
+# Plan slice — 3.1 ทบทวนและสังเคราะห์ข้อมูลพื้นฐานและสารสนเทศ ณ ปัจจุบัน (full report, chapter 3) — rewrite v3
+
+## Why this rewrite exists
+Boss reviewed `polished-5.3.1-v2.md` (2026-09-30) and ruled it "entirely inaccurate and off topic". v2 restated DCCE's own picture already covered by `crdb-full-report-2.2/draft-1.md` and went agency by agency. v1 and v2 stay untouched in `crdb-full-report-3.1/`. This run starts from scope, not from either draft (mode `new`, no `prior_draft`).
+
+## Section brief (Boss, 2026-09-30)
+- **Job**: an overview of the datasets and information products of DCCE and other line agencies that relate to climate risk, climate impact, and loss and damage, with sources referenced properly. The value added over 2.2 is the overview of other line agencies' datasets and products.
+- **Why it reads this way**: the TOR item precedes the cataloguing and product surveying (3.4 and the catalogs). The section therefore draws on the content of 3.4 and its catalogs, but carries **no specific numbers** (counts and statistics belong to 3.4).
+- **Method content**: the section lays out how the desk review was carried out. It was mainly web search, and each domain follows the definition in the project glossary.
+- **Outline** — an overview of datasets and products for:
+  1. climate risk assessment
+  2. climate impact
+  3. loss and damage
+  Each subsection reviews the datasets and products that fall within the category.
+- **Climate impact is thin, and that is fine** (Boss). The datasets available are mostly DDPM's.
+- **Impact vs loss-and-damage line (Boss)**: there is little true damage data. Most DDPM data is human impact plus some asset impact, so it sits under climate impact. Loss and damage keeps only what records actual loss, and the text says honestly that these holdings are few.
+- **Citation form (Boss)**: sources are cited in line with the text (no source tables). Each named dataset or product carries its full name and owning agency, and its URL where the catalog has one.
+- **Execution (Boss)**: Stage 1 by `th-argument-mapper`; Thai written by the `thai-writer` agent (not `th-verbalizer`, not the orchestrator); Stage 5 by a fresh `th-editorial-reviewer`.
+
+## Evidence base (source → supplies)
+| Source                                                                                                                                           | Supplies                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ψ/incubate/DCCE/CRDB/output/02_Data_Inventory/data_catalog_v5.csv`                                                                              | Full names, owners, URLs, `cdm_domain` / `cdm_sub_domain`, `related_hazards`, `sectors` for the line-agency and DCCE datasets. **Superseded by `data_catalog_v5.csv` as of the 2026-09-30 round-3 steer — see below; `writing-contract.json`'s `evidence_policy`/`source_paths` still name v4 per Boss's explicit "keep everything else" instruction for that file, so v4 stays the file of record there even though the map and sidecar were re-verified against v5** |
+| `ψ/incubate/DCCE/CRDB/output/03_Data_Product_Inventory/260904_TOR5.3.4_Information Product Inventory.xlsx` (sheet `all_datasets`)                | Product titles, owners, developers, use cases, sectors, URLs. It has no risk / impact / loss-and-damage tag, so the mapper classifies from title, notes and use case                                                                                                                                                                                                                                                                                                   |
+| `ψ/incubate/DCCE/CRDB/output/04_Sitemap/DCCE_Data_Assets.csv`, `DCCE_Unified_Digital_Asset_Database.csv`, `DCCE_Information_System_Database.csv` | DCCE datasets, content and systems with names and URLs                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `ψ/incubate/DCCE/CRDB/output/05_Data_Management_Framework/Glossary/Glossary-v5.csv`                                                              | Domain definitions: Risk (TERM_005), Hazard (TERM_027), Exposure (TERM_003), Vulnerability (TERM_004), Loss & Damage (TERM_006), Disaster Record (TERM_045), Impact Function (TERM_012/039), Impact Chain (TERM_019), IVRA (TERM_053), Climate Impact Driver (TERM_026)                                                                                                                                                                                                |
+| `ψ/incubate/drafts/crdb-full-report-2.2/draft-1.md`                                                                                              | Read only to avoid overlap. DCCE's internal picture (391 assets, website structure, T-PLAT history, holder distribution) stays in 2.2                                                                                                                                                                                                                                                                                                                                  |
+| `ψ/incubate/drafts/crdb-full-report-3.4/draft.md` and its `plan-slice.md`                                                                        | Global rules for chapter 3 and the statistics that stay in 3.4                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `ψ/memory/traces/2026-08-03/2214_data-domains-climate-risk-assessment.md`                                                                        | Ancestry of the risk-domain framing and the CDM (impact vs loss-and-damage attribution)                                                                                                                                                                                                                                                                                                                                                                                |
+
+Web search is part of the method being described. The mapper may use it to confirm a name or URL, and any claim not found in the files above must be marked in the sidecar as web-sourced with its URL.
+
+## Session rules
+- Active actor: คณะที่ปรึกษา. First mention กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม, then กรม สส. only.
+- Altitude: full report.
+- IPCC risk framework may be named directly (as in 3.4).
+- **No counts and no percentages.** Statistics belong to 3.4.
+- **No gap or demand framing.** Chapter 5 owns it. Describe what exists.
+- No restatement of 2.2 (DCCE's internal picture) or of 4.1 (the disaster reporting system). Point to them by report section number, never by TOR number.
+- Sources inline: owning agency and the agency's or system's website. Full dataset names are not required (Boss, 2026-09-30). No tables.
+- Carry forward Boss's earlier rulings if the topic arises: ฿1.62 trillion out; DDPM northern 17-province assessment without procurement status or dates; NESDC's closed status rests on Boss's statement.
+- Writing feedback in force: plain words, no consultant jargon, no colon-driven sentences, no "instead of X, do Y" contrasts, no audit tone, no empty intensifiers.
+- Ledgers are not touched.
+- Do not cite internal artifacts/ notes/ interim reports. This is final audience-facing report
+
+## Open items for the mapper to surface at Stage 2
+1. The classification of each named dataset and product into the three domains, with the glossary term that justifies it.
+2. Any DCCE or line-agency source with no URL in the catalogs.
+3. Sources that fit two domains, and which subsection carries them.
+
+## Boss's steer, 2026-09-30 (after reading the first map)
+- **Method**: desk review, mainly internet search, plus the outputs of other chapters of this report.
+- **Climate impact and real loss and damage are thin.** Say so briefly.
+- **Risk assessment is the richest set, so keep it short and do not go into detail.** Key message: many relevant datasets exist, but climate risk data products in the strict sense are only DCCE's risk map (the risk database). The rest are mostly for disaster response and warning of extreme events, not for long-term adaptation. Describe it as the character of what exists, without gap wording.
+
+## Boss's steer, round 3, 2026-09-30 (editing §3.1 in place, after `draft.md` existed)
+Boss read `draft.md` (not touched by this round — Stage 1 only) and gave four rulings:
+
+1. **Forest area is out.** RFD's province-level forest-area dataset is neither impact nor loss-and-damage data (it is a baseline area figure, not a loss record). Removed from `arg-05` and from every other unit; added to `writing-contract.json`'s `exclusions` and to `source-classification.md`'s excluded-sources list with this reason.
+2. **DDPM splits across two domains, not one.**
+   - Climate impact (`arg-04`) keeps DDPM's disaster-occurrence statistics and locally reported (LAO) damage counts, plus Department of Health illness statistics. Unchanged in substance from the prior round.
+   - Loss and damage (`arg-05`) now covers three things: (a) DMCR coral bleaching monitoring; (b) DDPM's hazard-specific datasets that carry an actual damage *value* — landslide damage, flood damage, drought damage area — published as open data on `catalog.disaster.go.th`; (c) government relief and advance-payment mechanisms, which attach a monetary value to a realized loss when a payment is authorized. Loss and damage stays thin overall; the unit says so plainly. No counts, baht amounts, or household numbers in any payload.
+3. **The two relief mechanisms, verified by Boss via public search** (the repo only had this in internal notes, which cannot be cited in an audience-facing report):
+   - **Advance by the responsible agency, under Ministry of Finance regulation**: ระเบียบกระทรวงการคลังว่าด้วยเงินทดรองราชการเพื่อช่วยเหลือผู้ประสบภัยพิบัติกรณีฉุกเฉิน พ.ศ. 2562, in force from 14 May 2562, made under the Public Financial Management Act 2561. Royal Gazette PDF (found by search, not opened): https://www.ratchakitcha.soc.go.th/DATA/PDF/2562/E/120/T_0036.PDF. DDPM's operating manual for paying it: https://backofficeminisite.disaster.go.th/apiv1/apps/minisite_cco/204/sitedownload/32432/download?TypeMenu=MainMenu&filename=9e04f4dc2c7eeb675fc27762fa4373e3.pdf.
+   - **Cabinet-approved payment from the central budget's emergency reserve** (งบกลาง รายการเงินสำรองจ่ายเพื่อกรณีฉุกเฉินหรือจำเป็น): example verified by opening the page — Government Public Relations Department, https://saraburi.prd.go.th/th/content/category/detail/id/516/iid/433646 (cabinet approved direct bank-transfer payment to flood-affected households from that budget line). Explanatory page not opened (403 error): https://library.parliament.go.th/en/radioscript-rr2564-jan1.
+   - These are two different mechanisms (agency advance under the Finance rule; Cabinet-approved payment from the central reserve). The specific claim that DDPM itself keeps records of these payments rests on Boss's own knowledge and interview notes only — **not publicly documented** — so it does not appear in `argument-map.json`'s `claim`/`grounds`/`warrant` or in any `verbalization_payload`; the payloads describe the two mechanisms and that a payment under either one carries a monetary value, without asserting who archives the record. See `source-classification.md` for the full flag.
+4. **Verify every named source against `data_catalog_v5.csv`, which replaces v4 as the basis** for this round's classification work. Confirmed matches and the URL changes found are logged in `source-classification.md`'s "v5 differences" section, including one unresolved owner/URL mismatch (DOHealth_1_2's v5 URL points to what looks like the Division of Epidemiology, Department of Disease Control, not กรมอนามัย/Department of Health) that is flagged for Boss's decision rather than guessed at — the map keeps the existing wording (Department of Health, https://www.anamai.moph.go.th) until Boss rules on it.
+
+`argument-map.json`'s `approval.status` stayed `"approved"` through this round — Boss directed these changes directly, this was not a fresh Stage 1 draft needing a new Stage 2 gate.

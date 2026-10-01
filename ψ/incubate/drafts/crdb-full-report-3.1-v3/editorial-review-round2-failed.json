@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0",
+  "rubric_version": "6.0.0",
+  "draft_sha256": "6e72175edaeced1153eae24d31851cd6e8e1227007dd2c00e6d59aa9c19c40cc",
+  "contract_sha256": "07e24a4fb905fc0617bdc778fb3bc813b5e3d6016ced37b48581d5c412aa5a02",
+  "profile": "report",
+  "reviewer_mode": "independent",
+  "assurance": "standard",
+  "reviewer": "independent-editorial-reviewer",
+  "reviewed_at": "2026-09-30T12:38:41+00:00",
+  "dimensions": {
+    "section_job": {
+      "verdict": "pass",
+      "evidence": "Draft still opens (line 3) with the required method paragraph -- web search primary, 3.4/2.2 used only to confirm names and URLs, domain assignment by definition match not ownership -- then runs the three required subsections in order (3.1.1 risk line 5-11, 3.1.2 impact line 13-15, 3.1.3 loss and damage line 17-19), each opening with the domain definition. Forest data is gone (matches the intended edit), the DDPM split (occurrence/damage-count under impact vs. damage-value and payment mechanisms under loss and damage) is carried through, and the 3.1.2 repeated boundary sentence found in round 1 (old F5) is now merged into one clause. No TOR numbers, no 2.2/chapter-4 content restated."
+    },
+    "audience_decision_value": {
+      "verdict": "pass",
+      "evidence": "Prose stays at landscape level: what exists in each domain and what it is for, ahead of the 3.4 catalogue. No process narration beyond the one required opening paragraph."
+    },
+    "evidence_payload": {
+      "verdict": "pass",
+      "evidence": "Each subsection carries claim + concrete agency/URL evidence + mechanism + consequence: 3.1.1 (lines 7,9,11), 3.1.2 (line 15), 3.1.3 (line 19, now a complete paragraph covering coral bleaching, DDPM damage-value data, and the two payment mechanisms). See finding F7 for a precision problem in how 3.1.3 characterizes the payment records, which affects source_fidelity rather than this dimension's structural completeness."
+    },
+    "causal_logic": {
+      "verdict": "pass",
+      "evidence": "Definitions precede classification, classification precedes landscape description; the risk/response distinction and the impact/loss-and-damage boundary are both stated as differences in kind, not deficiencies. No reversed causality or decorative transitions found."
+    },
+    "argument_fidelity": {
+      "verdict": "pass",
+      "evidence": "All five units' claims and mechanisms are verbalized: arg-01 (line 3), arg-02+arg-03 (lines 7,9,11), arg-04 (line 15), arg-05 (line 19, now complete with coral bleaching, damage-value data, and both payment mechanisms). Tier 1 re-check: every unit's warrant does real connective work rather than restating its claim (e.g. arg-03's warrant turns 'purpose' into the basis for a difference-not-deficiency reading; arg-05's warrant distinguishes a completed valuation from a mere occurrence count); supports values partition governing_thought_components (method / risk / impact / loss_and_damage) with no overlap or restatement; each unit's verbalization_payload is a faithful, if occasionally incomplete, distillation of its own claim/grounds/warrant (see F1, F2 for the two accepted omissions carried from round 1, unchanged by this revision). No unit is dropped, no draft claim is absent from the map."
+    },
+    "reader_facing_appropriateness": {
+      "verdict": "pass",
+      "evidence": "No internal codes, file names, TERM_xxx references, dataset row IDs, or TOR clause numbers. References to other sections use report section numbers only (3.4, 2.2, บทที่ 4)."
+    },
+    "terminology_agency": {
+      "verdict": "pass",
+      "evidence": "'คณะที่ปรึกษา' is the consistent subject of every review/classification action (lines 3, 7, 15, 19). Full department name at first mention (line 3), 'กรม สส.' thereafter; no bare 'สส.' or 'กรมฯ' anywhere."
+    },
+    "source_fidelity": {
+      "verdict": "pass",
+      "evidence": "All agency names and URLs trace to the argument map (arg-03/04/05). No counts, percentages, or tables anywhere -- contract's numeric ban holds. The DDPM portal (https://catalog.disaster.go.th/) is cited once in 3.1.2 for occurrence statistics and once in 3.1.3 for hazard-specific damage-value data; the contract's inclusions section itself places these as two different datasets in two different domains on the same portal, so this is not a same-source-twice violation. See F7 (major, unresolved): 3.1.3's characterization of the government payment records overstates what the map's own grounds/payload support -- flagged rather than passed through silently."
+    },
+    "form_readability": {
+      "verdict": "pass",
+      "evidence": "Continuous prose, no tables, no bullets. The round-1 double statement of the impact/loss-and-damage boundary in 3.1.2 (old F5) is now a single clause -- resolved."
+    }
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "minor",
+      "location": "argument-map.json arg-03 (grounds vs. verbalization_payload); draft.md line 9",
+      "issue": "arg-03's grounds name the Hydro-Informatics Institute (https://www.thaiwater.net) alongside the Royal Irrigation Department under water-resource monitoring, but the unit's verbalization_payload key_facts list only the Royal Irrigation Department. The draft (line 9) accordingly names only the Royal Irrigation Department. Tier 1 payload_fidelity gap, unchanged since round 1.",
+      "disposition": "Not load-bearing -- the risk-domain landscape sentence already carries six representative agencies across five kinds of data; dropping one additional water-monitoring source does not change the classification or the strict-risk-product finding. Accepted for human review; fold the missing agency into the payload if this unit is re-verbalized.",
+      "status": "accepted"
+    },
+    {
+      "id": "F2",
+      "severity": "minor",
+      "location": "argument-map.json arg-04 (grounds vs. verbalization_payload); draft.md line 15",
+      "issue": "arg-04's grounds name a Department of Health system compiling hospital locations together with climate-disease data (https://gis-health.moph.go.th/) in addition to general illness statistics, but the verbalization_payload key_facts mention only the illness statistics. The draft (line 15) accordingly omits the hospital-location system. Tier 1 payload_fidelity gap, unchanged since round 1.",
+      "disposition": "Does not change the governing finding that climate impact data is thin. Accepted for human review; add the missing system back into the payload if this unit is re-verbalized.",
+      "status": "accepted"
+    },
+    {
+      "id": "F3",
+      "severity": "minor",
+      "location": "draft.md line 11: 'ผลลัพธ์จึงมองไปข้างหน้าและใช้ประกอบการวางแผนการปรับตัวระยะยาวได้'",
+      "issue": "This forward-looking/long-term-planning claim for the Climate Risk Database module is not in arg-03's verbalization_payload (claim/mechanism/consequence); it traces instead to arg-03's warrant ('a forward-looking risk output') and to the contract's report_specific_rules (line 23). Unchanged since round 1.",
+      "disposition": "Faithful, not fabricated -- licensed by approved material the drafting agent had access to, even though it goes beyond the strict payload text. Accepted; note for future payload authoring to pull this framing into the payload itself.",
+      "status": "accepted"
+    },
+    {
+      "id": "F4",
+      "severity": "minor",
+      "location": "draft.md line 11 (current draft no longer contains the sentence); contract writing-contract.json required_concepts item 3",
+      "issue": "Round 1's F4 flagged the sentence 'ข้อมูลของหน่วยงานอื่นข้างต้นทำหน้าที่เสริมระบบนี้...' as traceable only to the contract's required_concepts, not to arg-03's verbalization_payload, and as risking an unsupported 'feeder pipeline' reading. That sentence has since been removed entirely. The removal resolves the round-1 reading risk, but the contract's required_concepts item ('ข้อมูลของกรม สส. และของหน่วยงานอื่นเสริมกันในส่วนการประเมินความเสี่ยง') no longer has any literal counterpart in the draft.",
+      "disposition": "Judged as an improvement, not a defect: the core risk-domain finding required by the contract's report_specific_rules (many related datasets, one strict risk product, the rest for response/warning) is fully present in lines 9 and 11 without it, and the removed framing was the weaker-sourced of the two claims. Accepted; flagged so the contract's required_concepts list can be reconciled with this intentional cut in a future contract revision, not because the draft needs to change.",
+      "status": "accepted"
+    },
+    {
+      "id": "F5",
+      "severity": "minor",
+      "location": "draft.md line 15 (3.1.2)",
+      "issue": "Round 1 found the impact/loss-and-damage boundary stated twice in close succession in the same paragraph.",
+      "disposition": "Resolved in this revision: the paragraph now states the boundary once ('โดยยังไม่มีการประเมินมูลค่าความสูญเสียที่สมบูรณ์'). Confirmed by direct read of line 15.",
+      "status": "resolved"
+    },
+    {
+      "id": "F6",
+      "severity": "minor",
+      "location": "draft.md line 19: 'ตามระเบียบกระทรวงการคลังว่าด้วยเงินทดรองราชการเพื่อช่วยเหลือผู้ประสบภัยพิบัติกรณีฉุกเฉิน พ.ศ. 2562'",
+      "issue": "arg-05's verbalization_payload describes this mechanism only as 'an advance payment made directly by the responsible agency under a Ministry of Finance regulation', with no regulation title or year. The draft states the regulation's full title and the year 2562. This detail is present in arg-05's grounds ('a Ministry of Finance regulation ... has been in force since 2562') but not in the payload Stage 3 was scoped to.",
+      "disposition": "Same pattern as round 1's F3/F4: traces to the map's own approved grounds, is independently verifiable as a real, named public regulation, and does not misstate anything -- not a fabrication. Accepted; note for future payload authoring to fold the regulation name/year into the payload if precision at this level is wanted downstream.",
+      "status": "accepted"
+    },
+    {
+      "id": "F7",
+      "severity": "major",
+      "location": "draft.md line 19: '...และบันทึกการจ่ายเงินช่วยเหลือผู้ประสบภัยของรัฐ ซึ่งระบุมูลค่าเป็นตัวเงินของความสูญเสียที่เกิดขึ้นจริง'",
+      "issue": "This clause reads as claiming the government relief/advance-payment records state the monetary value of the realized loss itself. Both mechanisms the same sentence goes on to name are rule-bound and capped -- the advance-fund payment follows the Ministry of Finance regulation's fixed criteria and limits, and the central-budget emergency-reserve payment is a Cabinet-approved allocation -- so the amount paid is a bounded relief entitlement, not a valuation of the full loss. Even the argument map's own language is more careful than the draft: arg-05's payload mechanism says the payments 'put an actual, already-realized value on a loss' and its claim says they 'attach an actual monetary figure to a realized loss' -- both stop short of saying the payment states or measures the loss's value. The draft's 'ระบุมูลค่าเป็นตัวเงินของความสูญเสียที่เกิดขึ้นจริง' goes further than even the payload's own careful phrasing and could lead a reader to think these records are a loss valuation rather than a capped relief amount.",
+      "disposition": "Needs softening before this subsection can be taken as an accurate account of what these records hold. Proposed neutral Thai wording, for the drafting agent to apply (this review does not edit draft.md): 'และบันทึกการจ่ายเงินช่วยเหลือผู้ประสบภัยของรัฐ ซึ่งติดมูลค่าเป็นตัวเงินไว้กับความสูญเสียที่เกิดขึ้นจริงบางส่วน ตามหลักเกณฑ์และวงเงินที่ระเบียบกำหนด' -- this keeps the payload's 'attaches a monetary value to a realized loss' claim while dropping the implication that the payment equals or fully states the loss's value, and avoids any 'ไม่ใช่...แต่' contrast scaffolding.",
+      "status": "unresolved"
+    }
+  ],
+  "mechanical_reviews": [],
+  "verdict": "fail"
+}

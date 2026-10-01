@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0",
+  "rubric_version": "6.0.0",
+  "draft_sha256": "e6cf2346c73f06c1ca12baf7b1ac3df2e3f1692b04a99c97b778afe4f64e2bca",
+  "contract_sha256": "fc8861a1cabc5bdbc6ac027ddda0bc400fda85301717d89e090a06a791ba4a6e",
+  "profile": "report",
+  "reviewer_mode": "independent",
+  "assurance": "standard",
+  "reviewer": "bossa.suan130@gmail.com",
+  "reviewed_at": "2026-09-30T17:31:12+00:00",
+  "dimensions": {
+    "section_job": {
+      "verdict": "pass",
+      "evidence": "Draft performs exactly the approved job: 7.1 summarizes the two inventories, 7.2 summarizes the MVD/form design and pilot, 7.3 summarizes the four recommendations and roadmap, each ending in a key-points paragraph (lines 15, 27, 37). No drift into chapter 2 data-governance structures or chapter 5 demand/supply gap analysis beyond the two named gaps in 7.1 (line 13). No chapter 3.1-3.4 detail is repeated; only chapters 4 and 6 are cross-referenced by chapter number (lines 27, 35)."
+    },
+    "audience_decision_value": {
+      "verdict": "pass",
+      "evidence": "Prose foregrounds findings and decision consequences for กรม สส. (e.g. line 33: the sequencing lets the whole plan proceed without waiting on external agencies; line 37: the department can approve both tracks at once), not consultant workflow narration."
+    },
+    "evidence_payload": {
+      "verdict": "pass",
+      "evidence": "Each of the three parts carries claim, concrete numbers, mechanism, and consequence across its paragraphs, matching the six units' verbalization_payloads (e.g. 7.1 lines 7-15 carry crdb7-01/02's claim+key_facts+mechanism+consequence; 7.2 lines 19-27 carry crdb7-03/04; 7.3 lines 31-37 carry crdb7-05/06)."
+    },
+    "causal_logic": {
+      "verdict": "pass",
+      "evidence": "No reversed causality found. Line 9 correctly reasons from re-aggregation/web-channel concentration to the lineage/search gap; line 25 correctly reasons from five recurring causes across three hazard types to a systemic (not event-specific) diagnosis; line 33 correctly reasons from decision-authority location to the recommended sequencing."
+    },
+    "argument_fidelity": {
+      "verdict": "pass",
+      "evidence": "All six units' claims and mechanisms appear in the draft with matching numbers (114/56, 246/46, six MVD tables, three pilot events with field counts, four recommendations, short/medium-term task lists). No claim in the draft is traceable to anything outside the six units. Two content selections reduce payload key_facts detail without changing any unit's governing claim: (1) unit crdb7-01's source-type ranking is cut to only the top source (41, re-aggregated) at line 9, dropping the subsidiary counts (36/31/28/26) -- detail only, the claim ('source concentration undermines lineage/search') survives; (2) unit crdb7-06's medium-term task list keeps only 2 of the payload's 4 items (data catalogue launch, folding governance into future TORs) and drops 'develop high-demand information services... and pursue the data-sharing agreements from recommendation 4' and 'expand analytical methodologies' (line 35) -- this narrows the roadmap's evidentiary base but the chapter's own governing claim for this unit (both tracks, internal governance and the next development contract, can start in parallel) does not depend on the dropped items, so the omission is detail-level, not message-level. Filed as minor finding F1."
+    },
+    "reader_facing_appropriateness": {
+      "verdict": "pass",
+      "evidence": "No TOR numbers, source file names, internal database codes (e.g. DISASTER_EVENT), or drafting notes appear anywhere; MVD tables are named only in Thai (line 21). No commentary on the chapter's own upcoming structure. Cross-references use chapter numbers only (บทที่ 4, บทที่ 6, lines 27 and 35)."
+    },
+    "terminology_agency": {
+      "verdict": "pass",
+      "evidence": "คณะที่ปรึกษา is the consistent subject of every synthesis/design/piloting/recommending sentence (lines 3, 7, 13, 19, 23, 31, 35). กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม is spelled out once (line 3) and abbreviated to กรม สส. thereafter, with no bare 'สส.' or 'กรมฯ' found. MVD's full first-mention form matches the contract's required phrasing exactly (line 19)."
+    },
+    "source_fidelity": {
+      "verdict": "pass",
+      "evidence": "All four required_concepts appear: scattered/unlinked inventories (line 15), dataset concentration at exposure/vulnerability vs. thin response/loss/indicator coverage (line 11), MVD/form as piloted draft with lessons for real use (lines 19-27), and the four-part recommendation set with a timed roadmap (lines 31-37). The two named gaps (content, technical) appear exactly once, in 7.1 only (line 13), matching the contract's 'once only' rule. Numbers checked against payloads: 114/56, UNEP 13, TMD/กรม สส. 8 each, 107/17/5, sector counts 67/19/19/12/9/7/0, 246/46, TMD 35/กรม สส. 27/GISTDA 17, risk-component counts 67/57/49/35/9/6/4 and 19 (7.7%), access 118 (48.8%)/124 (51.2%) of 242, six MVD table names, สศช. five-sector framework, three pilot events with exact day counts and field counts (31/79, 22/79, 27/79), five recurring causes, four recommendations, named external agencies, four short-term tasks, and the 70%/80%/phase-3 figures -- every one traces to a unit's verbalization_payload; none is computed or invented. File-format sub-counts for the dataset inventory (CSV 99/vector 49/'other' 36/unspecified 27) are dropped from the draft even though the contract's inclusions list names 'รูปแบบไฟล์' for this inventory; the qualitative point survives via the technical-gap sentence ('คำอธิบายรูปแบบไฟล์...ยังไม่เป็นมาตรฐานเดียวกัน', line 13) but the counts themselves are absent. Filed as minor finding F2 (detail lost, not the governing gap statement)."
+    },
+    "form_readability": {
+      "verdict": "pass",
+      "evidence": "Pure paragraph form throughout, no tables or figure placeholders, consistent with the contract's ban on tables/figures in this synthesis chapter. Each subsection closes with a distinct key-points paragraph (lines 15, 27, 37)."
+    }
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "tier": 2,
+      "dimension": "argument_fidelity",
+      "severity": "minor",
+      "location": "7.3, line 35 (medium-term task list) vs. unit crdb7-06 verbalization_payload key_facts",
+      "disposition": "accepted for human review; detail-level cut does not change the unit governing claim",
+      "issue": "The draft's medium-term (1-3 year) task list names only 2 of the payload's 4 items -- launching the internal data catalogue and folding governance into future data-project TORs. It omits 'develop high-demand information services with partner agencies and pursue the data-sharing agreements named in recommendation 4' and 'expand analytical methodologies to broaden service coverage'. This narrows the explicit tie between the medium-term roadmap and recommendation 4's external data-sharing track, but the chapter's own governing point for this unit -- that internal governance work and the next development contract can both start in parallel without waiting on each other -- does not rest on the dropped items, so the cut changes supporting detail, not the unit's message.",
+      "status": "accepted"
+    },
+    {
+      "id": "F2",
+      "tier": 2,
+      "dimension": "source_fidelity",
+      "severity": "minor",
+      "location": "7.1, line 13 vs. unit crdb7-02 verbalization_payload key_facts and contract inclusions list",
+      "disposition": "accepted for human review; detail-level cut does not change the unit governing claim",
+      "issue": "The contract's inclusions list names 'รูปแบบไฟล์' (file format) as a required element of the baseline dataset inventory summary, and the payload's key_facts give the counts (CSV 99, vector 49, 'other' 36, unspecified 27). The draft keeps the access-condition figures (118/124 of 242) but drops the file-format counts entirely, carrying only the qualitative technical-gap sentence that format metadata is 'not yet standardised'. The gap statement itself (the governing point) survives; only the supporting count is lost, consistent with the chapter's length constraint.",
+      "status": "accepted"
+    },
+    {
+      "id": "F3",
+      "tier": 1,
+      "dimension": "application_grounded",
+      "severity": "minor",
+      "location": "argument-map.json unit crdb7-05, application_to_design vs. verbalization_payload key_facts",
+      "disposition": "accepted for human review; map-approved framing, faithfully verbalized in the draft",
+      "issue": "Unit crdb7-05's application_to_design states the draft should name the recommendation-3 product set 'only at the level of the two most stably named examples', but the unit's own verbalization_payload key_facts (and the draft, faithfully following the payload) name three: a spatial risk database, a disaster loss-and-damage statistics service, and a biennial adaptation transparency report service (7.3, line 31). This is an internal inconsistency inside the approved map between the application_to_design instruction and the payload/draft it produced, not a drafting-stage drift -- the draft is faithful to the payload as approved.",
+      "status": "accepted"
+    },
+    {
+      "id": "F4",
+      "tier": 1,
+      "dimension": "warrant_soundness",
+      "severity": "minor",
+      "location": "argument-map.json unit crdb7-04, verbalization_payload.consequence",
+      "disposition": "accepted for human review; map-approved framing, faithfully verbalized in the draft",
+      "issue": "The payload's consequence states '...the draft MVD and form work as designed...'. The unit's own grounds and warrant establish that the pilot exposed recurring data-capture gaps across three hazard types rooted in agency recording practice, not a separate line of evidence that the MVD schema itself performed correctly as a structure. The 'works as designed' framing is a reasonable but not explicitly grounded interpretive step baked into the approved payload; the draft (line 27: 'ผลการทดลองยืนยันว่า MVD และแบบฟอร์มใช้งานได้ตามที่ออกแบบ') verbalizes it faithfully, so this is a map-level observation rather than a prose defect.",
+      "status": "accepted"
+    }
+  ],
+  "mechanical_reviews": [
+    {
+      "message": "[PARENTHETICAL] '(Minimum Viable Dataset: MVD)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "accepted",
+      "note": "Contract requires this exact bilingual first-mention form; no action needed."
+    },
+    {
+      "message": "[PARENTHETICAL] '(Data Owner)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "accepted",
+      "note": "Standard governance-role gloss retained from chapter 6 source; no Thai equivalent mandated."
+    },
+    {
+      "message": "[PARENTHETICAL] '(Data Steward)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "accepted",
+      "note": "Same governance-role gloss pattern as Data Owner; no Thai equivalent mandated."
+    },
+    {
+      "message": "[PARENTHETICAL] '(Data Custodian)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "accepted",
+      "note": "Same governance-role gloss pattern; no Thai equivalent mandated."
+    },
+    {
+      "message": "[PARENTHETICAL] '(Data Catalog)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "accepted",
+      "note": "Consistent with chapter 6 usage; no Thai equivalent mandated."
+    },
+    {
+      "message": "[PARENTHETICAL] '(Agile)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "disposition": "accepted",
+      "note": "Standard industry term retained as in chapter 6 source; no Thai equivalent mandated."
+    }
+  ],
+  "verdict": "pass"
+}

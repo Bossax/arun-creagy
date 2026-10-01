@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "rubric_version": "6.0.0",
+  "draft_sha256": "d4e36df71649d615f8f44e38d59fbb930c62c5479e0af3483e83c25877827bb2",
+  "contract_sha256": "93bd5444b3db00cf5e399aa421f7b24e66229d5c16d0df79423ebd06a6ca5788",
+  "profile": "report",
+  "reviewer_mode": "independent",
+  "assurance": "standard",
+  "reviewer": "independent-editorial-reviewer",
+  "reviewed_at": "2026-09-30T09:20:51+00:00",
+  "dimensions": {
+    "section_job": {
+      "verdict": "pass",
+      "evidence": "Draft opens (para 1, line 3) with the method exactly as the contract's opening requirement specifies -- web search primary, section 3.4 inventory and section 2.2 asset list used only to confirm names/URLs, domain assignment by definition-match not ownership -- then runs the three required subsections in the required order (3.1.1 risk, 3.1.2 impact, 3.1.3 loss and damage), each opening with the domain definition before the landscape description, matching required_structures. No TOR numbers, no digital-asset/website-structure content from 2.2, no restatement of chapter 4's disaster-reporting methodology (only a pointer 'อธิบายไว้ในบทที่ 4', line 15) -- exclusions honored."
+    },
+    "audience_decision_value": {
+      "verdict": "pass",
+      "evidence": "Prose stays at landscape level appropriate to a committee/management reader ahead of the item-level catalogue in 3.4: it foregrounds what exists and what each domain's data is actually for (response/warning vs. strict risk product; thin impact; thinner loss-and-damage), not the consultant's search process beyond the one required opening paragraph."
+    },
+    "evidence_payload": {
+      "verdict": "pass",
+      "evidence": "Each subsection carries claim + concrete agency/URL evidence + mechanism + consequence: 3.1.1 (lines 7,9,11) names IPCC H-E-V definitions, lists hazard/exposure/vulnerability sources by agency and URL, and states the response/warning vs. strict-risk-product distinction; 3.1.2 (line 15) and 3.1.3 (line 19) do the same at proportionately shorter length."
+    },
+    "causal_logic": {
+      "verdict": "pass",
+      "evidence": "No reversed causality: definitions precede classification, classification precedes the landscape description, and the risk/response distinction is stated as a difference in purpose rather than a deficiency -- consistent with argument-map arg-03's warrant. No decorative transitions or unsupported leaps found."
+    },
+    "argument_fidelity": {
+      "verdict": "pass",
+      "evidence": "All five units' claims and mechanisms are verbalized: arg-01 in para 1 (line 3), arg-02+arg-03 in 3.1.1 (lines 7,9,11), arg-04 in 3.1.2 (line 15), arg-05 in 3.1.3 (line 19). No unit is dropped and no claim in the draft is absent from the map. Two passages in line 11 extend slightly past the strict payload wording -- see findings F3 and F4 -- but both trace to approved material (the map's own warrant and the contract's required_concepts) rather than to invented content, so fidelity holds; recorded as minor findings rather than as fidelity failures."
+    },
+    "reader_facing_appropriateness": {
+      "verdict": "pass",
+      "evidence": "No internal codes (no TERM_xxx, no dataset row IDs, no TOR clause numbers), no file names, no session/workflow commentary, no sourcing metadata beyond the public agency name + website pattern the contract requires. References to other parts of the report use report section numbers only (3.4, 2.2, บทที่ 4)."
+    },
+    "terminology_agency": {
+      "verdict": "pass",
+      "evidence": "'คณะที่ปรึกษา' is the consistent subject of every review/classification action (lines 3, 7, 15, 19). 'กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม' is given in full at first mention (line 3) and 'กรม สส.' thereafter; no bare 'สส.' or 'กรมฯ' anywhere in the draft."
+    },
+    "source_fidelity": {
+      "verdict": "pass",
+      "evidence": "Every agency name and URL cited in the draft matches an agency/URL present in the approved argument-map units (arg-03, arg-04, arg-05 grounds/payloads); no uncitable or invented source names appear. Two agency-level facts present in the map's grounds (Hydro-Informatics Institute for arg-03, and the Department of Health's hospital-location/climate-disease system for arg-04) do not appear in the corresponding verbalization_payloads and consequently do not appear in the draft -- flagged as findings F1 and F2 (Tier 1 payload_fidelity) rather than as a draft-vs-payload fidelity failure, since the draft is faithful to the payloads it was given. No quantitative values, percentages, or catalogue counts appear anywhere, matching the contract's ban."
+    },
+    "form_readability": {
+      "verdict": "pass",
+      "evidence": "Continuous prose throughout, no tables, no bullet checklist structure -- reads as report prose a committee would accept. One paragraph (3.1.2, line 15) restates the impact/loss-and-damage boundary ('ยังไม่มีการประเมินมูลค่าความสูญเสียที่สมบูรณ์' / 'โดยยังไม่ได้ประเมินมูลค่าความสูญเสียให้ครบถ้วน') twice in close succession -- flagged as finding F5 (minor, local wordiness, does not change governing meaning)."
+    }
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "minor",
+      "location": "argument-map.json arg-03 (grounds vs. verbalization_payload); draft.md line 9",
+      "issue": "arg-03's grounds name the Hydro-Informatics Institute (https://www.thaiwater.net) alongside the Royal Irrigation Department under water-resource monitoring, but the unit's verbalization_payload key_facts list only the Royal Irrigation Department. The draft (line 9) accordingly names only the Royal Irrigation Department. This is a Tier 1 payload_fidelity gap: the payload silently drops one of the grounds' named sources before Stage 3 ever saw it.",
+      "disposition": "Not load-bearing -- the risk-domain landscape sentence already carries six representative agencies across five kinds of hazard/exposure/vulnerability data, and dropping one additional water-monitoring source does not change the classification, the strict-risk-product finding, or any reader decision. Accepted for human review rather than requiring a redraft; worth folding the missing agency into the payload if this unit is ever re-verbalized.",
+      "status": "accepted"
+    },
+    {
+      "id": "F2",
+      "severity": "minor",
+      "location": "argument-map.json arg-04 (grounds vs. verbalization_payload); draft.md line 15",
+      "issue": "arg-04's grounds name a Department of Health system compiling hospital locations together with climate-disease data (https://gis-health.moph.go.th/) in addition to general illness statistics (https://www.anamai.moph.go.th), but the unit's verbalization_payload key_facts mention only the illness statistics and drop the hospital-location system entirely. The draft (line 15) accordingly mentions only 'กรมอนามัย...มีสถิติการเจ็บป่วยที่เชื่อมโยงกับสภาพภูมิอากาศ' with no reference to the hospital-location/climate-disease system. Tier 1 payload_fidelity gap.",
+      "disposition": "Does not change the governing finding that climate impact data is thin and mostly DDPM's; the dropped system is a secondary example within an already-minor supporting sentence. Accepted for human review; the missing system should be added back into the payload if this unit is re-verbalized, since it is a distinct, nameable holding.",
+      "status": "accepted"
+    },
+    {
+      "id": "F3",
+      "severity": "minor",
+      "location": "draft.md line 11: 'ผลลัพธ์จึงมองไปข้างหน้าและใช้ประกอบการวางแผนการปรับตัวระยะยาวได้'",
+      "issue": "The claim that the Climate Risk Database module's output is forward-looking and usable for long-term adaptation planning is not stated in arg-03's verbalization_payload (claim/mechanism/consequence), which only says the module combines hazard, exposure and vulnerability into a risk output. The phrase traces instead to arg-03's warrant ('a forward-looking risk output') and to the writing-contract's own report_specific_rules (line 23: the surrounding data is for response/warning, 'ไม่ใช่ข้อมูลเพื่อการปรับตัวระยะยาว', implying by contrast that the module itself is for long-term adaptation).",
+      "disposition": "Faithful, not a fabrication: the content is licensed by material the drafting agent legitimately had access to (the contract), even though it goes beyond the strict payload text Stage 3 was scoped to. Accepted; no redraft required, but note for future payload authoring that this framing should be pulled forward into the payload itself so downstream verbalization is fully payload-scoped.",
+      "status": "accepted"
+    },
+    {
+      "id": "F4",
+      "severity": "minor",
+      "location": "draft.md line 11: 'ข้อมูลของหน่วยงานอื่นข้างต้นทำหน้าที่เสริมระบบนี้ในฐานะข้อมูลภัยอันตราย การเปิดรับภัย และความเปราะบางแต่ละด้าน'",
+      "issue": "This 'other agencies' data complements/supplements this system' framing is not present in arg-03's verbalization_payload, which frames the surrounding landscape only by purpose (monitoring/early warning) and explicitly warns against treating it as a shortfall to the risk product. Read alone, 'เสริมระบบนี้' risks implying a technical feeder relationship into the Climate Risk Database module that the map never establishes.",
+      "disposition": "Faithful to the writing-contract, not an invented claim: contract required_concepts (line 46) explicitly mandates the concept that DCCE's and other agencies' data 'เสริมกัน' in the risk assessment section. Read in context -- immediately following the purpose distinction in the same paragraph -- the sentence is reasonably understood as thematic complementarity within the H-E-V framework (each agency supplies one component) rather than a claim that the module ingests these other holdings. Accepted; recommend a small wording tightening in a future revision ('เกี่ยวข้องกับองค์ประกอบเดียวกัน' or similar) to remove the feeder-pipeline reading, but not required for this verdict.",
+      "status": "accepted"
+    },
+    {
+      "id": "F5",
+      "severity": "minor",
+      "location": "draft.md line 15 (3.1.2), two clauses in the same paragraph",
+      "issue": "The paragraph states the impact/loss-and-damage boundary twice in close succession ('...โดยยังไม่มีการประเมินมูลค่าความสูญเสียที่สมบูรณ์' near the opening, and '...โดยยังไม่ได้ประเมินมูลค่าความสูญเสียให้ครบถ้วน คณะที่ปรึกษาจึงจัดไว้ในส่วนผลกระทบ' later in the same paragraph), which reads as redundant restatement rather than added information.",
+      "disposition": "Local wordiness only; does not change the governing meaning or violate any contract rule. Accepted for human review; a light trim would improve flow but is not required for a pass.",
+      "status": "accepted"
+    }
+  ],
+  "mechanical_reviews": [],
+  "verdict": "pass"
+}

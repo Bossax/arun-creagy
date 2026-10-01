@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.1",
+  "section_id": "report-crdb-full-report-3.1-v3",
+  "governing_thought": "A desk review -- done mainly through internet search, together with this report's own dataset, product and digital-asset inventories used only to confirm names and websites -- finds that DCCE's and other line agencies' data relating to climate risk is extensive, but only DCCE's Climate Risk Database module is a climate-risk data product in the strict sense; the rest of that landscape serves response to and warning of extreme weather events rather than long-term risk assessment. Climate impact and loss and damage both remain thin, and loss and damage's few sources now include two government payment mechanisms that attach an actual value to a realized loss.",
+  "narrative_scqa": {
+    "situation": "DCCE commissioned this review of existing climate data and information products ahead of the item-level cataloguing that section 3.4 carries out, and ahead of the gap analysis chapter 5 carries out.",
+    "complication": "The material this section needs already sits split across other places -- DCCE's own asset inventory and website structure belong to section 2.2, disaster-reporting methodology belongs to chapter 4, and the item counts belong to 3.4 -- and a dataset's domain cannot simply be read off which agency holds it, since risk, impact, and loss and damage each have their own definition and their own bar for inclusion.",
+    "question": "What datasets and products, held by DCCE and by other line agencies, actually fall within climate risk assessment, climate impact, and loss and damage, and how rich is each part in practice?",
+    "answer": "A desk review conducted mainly through internet search, supported by this report's own dataset, product and digital-asset inventories to confirm names and websites, finds a wide but uneven picture: climate risk assessment has abundant related data, yet only DCCE's Climate Risk Database module meets the strict definition of a risk product, with the rest serving disaster response and early warning; climate impact is thin and mostly DDPM's; and loss and damage is thinner still, holding coral bleaching monitoring, a handful of hazard-specific damage-value datasets, and two relief and advance-payment mechanisms that attach a monetary value to a realized loss."
+  },
+  "governing_thought_components": [
+    "method",
+    "risk_assessment_domain",
+    "climate_impact_domain",
+    "loss_and_damage_domain"
+  ],
+  "argument_units": [
+    {
+      "unit_id": "arg-01",
+      "order": 1,
+      "paragraph_job": "define",
+      "claim": "The consultant carried out this review mainly through internet search of agency websites and data services, together with the outputs already produced elsewhere in this report -- the dataset and product inventory (section 3.4) and DCCE's digital-asset records (section 2.2) -- used to confirm names and web addresses. An item was placed in a domain only when its actual content matched that domain's definition, not because of which agency held it.",
+      "grounds": "The project's own definitions of risk, hazard, exposure, vulnerability, and loss and damage were the test applied to each source. This report's dataset and product inventory (section 3.4) and DCCE's digital-asset records (section 2.2) supplied the names and web addresses used to confirm what internet search had already found.",
+      "warrant": "Because the report's own inventories exist to establish what an item is called and where it lives, not which domain it belongs to, a defensible domain assignment still has to come from reading each source's actual content against the domain definitions directly, rather than from the inventories' own categorisation or from which agency holds it.",
+      "application_to_design": "This unit is the section's opening paragraph, stated before any source is named, and it is what licenses every classification decision that follows: the reader is told up front that domain membership was judged against the definitions, not assumed from ownership or from the inventories' own categorisation.",
+      "supports": "method",
+      "verbalization_payload": {
+        "claim": "The consultant reviewed DCCE's and other line agencies' climate data mainly through internet search, used this report's own dataset, product and digital-asset inventories only to confirm names and web addresses, and sorted each item into a domain by matching its content against the project's domain definitions.",
+        "key_facts": [
+          "The review defines risk, hazard, exposure, vulnerability, and loss and damage, and these definitions were the test applied to each source."
+        ],
+        "mechanism": "Classification follows the domain definitions rather than an inventory's own categorisation or the identity of the owning agency.",
+        "consequence": "The reader is told, before any source is named, that every domain placement in the section rests on these definitions -- which is what makes the three-part split that follows defensible rather than arbitrary."
+      }
+    },
+    {
+      "unit_id": "arg-02",
+      "order": 2,
+      "paragraph_job": "define",
+      "claim": "Climate risk assessment datasets and products are those whose content supplies a hazard, an exposure, a vulnerability, or a combined risk or composite-index output, following the Intergovernmental Panel on Climate Change (IPCC) framing that risk is a function of hazard, exposure and vulnerability together.",
+      "grounds": "The review defines hazard as the potential occurrence of a natural or human-induced event that may cause loss of life or damage to property and infrastructure; exposure as the presence of people, livelihoods and assets in places that could be adversely affected; vulnerability as the predisposition to be adversely affected; and risk as the potential consequences calculated by combining hazard, exposure and vulnerability. This follows the IPCC's own hazard-exposure-vulnerability framing, which the project's underlying data model was itself built on. Citation added by Boss's instruction: IPCC (2022) AR6 WGII Annex II Glossary, https://www.ipcc.ch/report/ar6/wg2/chapter/annex-ii/ (wording of risk, vulnerability, exposure and hazard confirmed against IPCC materials by web search 2026-09-30; the Annex page itself returned 403 to the fetch tool); framework: Chapter 1, https://www.ipcc.ch/report/ar6/wg2/chapter/chapter-1/. The loss-and-damage definition is not attributed to the IPCC.",
+      "warrant": "Stating the domain's definition before any source name lets the reader judge for themselves why a given dataset belongs in this part rather than another; it is also the actual test the classification work was held to, so stating it first is not decoration but the section's own working method made visible.",
+      "application_to_design": "Opens the climate risk assessment subsection with the definition and the IPCC hazard-exposure-vulnerability framing (IPCC named in full at first mention, per the contract's terminology rule), before the risk-domain landscape is described.",
+      "supports": "risk_assessment_domain",
+      "verbalization_payload": {
+        "claim": "Climate risk assessment covers data on hazard, exposure, vulnerability, and combined risk or index outputs, following the IPCC's risk-equals-hazard-times-exposure-times-vulnerability framing.",
+        "key_facts": [
+          "Hazard, exposure, vulnerability and risk are four linked terms that together make up a risk assessment.",
+          "The definitions of risk, hazard, exposure and vulnerability follow the glossary of the Intergovernmental Panel on Climate Change (IPCC) Sixth Assessment Report, Working Group II, 'Climate Change 2022: Impacts, Adaptation and Vulnerability' (2022), Annex II Glossary (https://www.ipcc.ch/report/ar6/wg2/chapter/annex-ii/).",
+          "The framing that risk arises from the interaction of hazard, exposure and vulnerability is set out in Chapter 1 of the same report, 'Point of Departure and Key Concepts' (https://www.ipcc.ch/report/ar6/wg2/chapter/chapter-1/)."
+        ],
+        "mechanism": "A dataset qualifies for this domain when its content is a hazard, exposure, vulnerability, or risk-output record in this sense -- not because of which agency produced it.",
+        "consequence": "Sets the definition the reader can check the rest of this subsection against."
+      }
+    },
+    {
+      "unit_id": "arg-03",
+      "order": 3,
+      "paragraph_job": "diagnose",
+      "claim": "A wide range of DCCE and line-agency data relates to climate risk, but only one holding meets the strict definition of a climate-risk data product: DCCE's Climate Risk Database module, published on the Climate Change Information Center portal (https://ccic.dcce.go.th/riskarea), which combines hazard, exposure and vulnerability content, including sectoral composite risk indices, into a risk output. The rest of what exists in this space -- weather and satellite hazard monitoring, geological and coastal hazard mapping, population and asset exposure baselines, water-resource monitoring, and social vulnerability registries -- is data built to support response to and warning of extreme weather events as they happen, not to assess climate risk over a planning horizon.",
+      "grounds": "DCCE's Climate Risk Database module (https://ccic.dcce.go.th/riskarea) is the one holding whose stated content is a combined hazard-exposure-vulnerability risk output. Around it, line agencies hold related data grouped by kind: weather and satellite hazard monitoring, from the Thai Meteorological Department (https://hpc.tmd.go.th/imgda) and the Geo-Informatics and Space Technology Development Agency (https://gistdaportal.gistda.or.th/portal/home/index.html); geological and coastal hazard mapping, from the Department of Mineral Resources (https://gis.dmr.go.th/DMR-GIS/) and the Department of Marine and Coastal Resources (https://tcs.dmcr.go.th); population and asset exposure baselines, from the National Statistical Office (https://nsodw.nso.go.th/dwportal/Home.aspx); water-resource monitoring, from the Royal Irrigation Department (https://telehydro.rid.go.th/) and the Hydro-Informatics Institute (https://www.thaiwater.net); and social vulnerability registries, from the Ministry of Social Development and Human Security (https://www.m-society.go.th).",
+      "warrant": "The Climate Risk Database module is the only identified holding whose stated purpose is to combine hazard, exposure and vulnerability into a forward-looking risk output; the rest, judged by their own stated purpose -- monitoring, early warning, situational data, baseline registries -- serve response to and warning of events already unfolding rather than the assessment of risk over a planning horizon. This is a difference in what each holding is for, not a shortfall to be filled.",
+      "application_to_design": "Tells the writer to keep this subsection short and characterise the pattern rather than list holdings one by one: name the Climate Risk Database module as the strict risk product, then describe the surrounding landscape by kind of data with a small number of representative agency names and websites, in the character-of-what-exists framing the contract requires.",
+      "supports": "risk_assessment_domain",
+      "verbalization_payload": {
+        "claim": "Many datasets across DCCE and line agencies relate to climate risk, but only DCCE's Climate Risk Database module is a climate-risk data product in the strict sense; the rest serves response to and warning of extreme weather events rather than long-term climate risk assessment.",
+        "key_facts": [
+          "DCCE's Climate Risk Database module, on the Climate Change Information Center portal (https://ccic.dcce.go.th/riskarea), combines hazard, exposure and vulnerability into a risk output.",
+          "The surrounding landscape -- weather and satellite hazard monitoring, geological and coastal hazard mapping, population and asset baselines, water-resource monitoring, and social vulnerability registries -- comes from agencies such as the Thai Meteorological Department, GISTDA, the Department of Mineral Resources, the Department of Marine and Coastal Resources, the National Statistical Office, the Royal Irrigation Department, and the Ministry of Social Development and Human Security, each reachable through its own website."
+        ],
+        "mechanism": "The distinction rests on what each holding is built to do: the Climate Risk Database module combines hazard, exposure and vulnerability into a risk output, while the surrounding holdings serve monitoring and early warning of events as they occur.",
+        "consequence": "Tells the reader plainly what a climate-risk data product means in the strict sense in Thailand today, without listing every dataset and without implying anything is missing."
+      }
+    },
+    {
+      "unit_id": "arg-04",
+      "order": 4,
+      "paragraph_job": "diagnose",
+      "claim": "Climate impact data -- records of an effect on people or property that has already occurred, rather than a hazard forecast -- is limited, and comes mainly from the Department of Disaster Prevention and Mitigation, covering disaster-occurrence statistics and locally reported damage counts; a smaller set from the Department of Health covers climate-linked illness.",
+      "grounds": "The Department of Disaster Prevention and Mitigation publishes disaster-occurrence statistics as open data (https://catalog.disaster.go.th/) and damage counts reported by local administrative organizations on its own site (https://www.disaster.go.th). The Department of Health (https://www.anamai.moph.go.th; https://gis-health.moph.go.th/) holds climate-linked illness statistics and a system compiling hospital locations together with climate-disease data.",
+      "warrant": "These records register a realized human or asset effect rather than a completed valuation of loss, which is what places them under climate impact rather than loss and damage; the Department of Health's illness statistics meet the same test, since they register a realized health effect rather than a loss valuation.",
+      "application_to_design": "Tells the writer to keep this subsection short and state plainly that climate impact data is thin, without expanding it to match the other subsections' length; it should not restate chapter 4.1's disaster-reporting methodology, which covers DDPM's systems separately.",
+      "supports": "climate_impact_domain",
+      "verbalization_payload": {
+        "claim": "Climate impact data is thin, and what exists comes mainly from disaster-occurrence and damage-count records, with a smaller set of climate-linked illness data.",
+        "key_facts": [
+          "The Department of Disaster Prevention and Mitigation publishes disaster-occurrence statistics as open data (https://catalog.disaster.go.th/) and locally reported damage counts on its own website (https://www.disaster.go.th).",
+          "The Department of Health (https://www.anamai.moph.go.th) holds climate-linked illness statistics."
+        ],
+        "mechanism": "These sources register a realized human or asset effect without a completed loss valuation, which is what places them under climate impact rather than loss and damage.",
+        "consequence": "Tells the reader plainly that this domain's holdings are thin, without stretching the text to match the other subsections."
+      }
+    },
+    {
+      "unit_id": "arg-05",
+      "order": 5,
+      "paragraph_job": "diagnose",
+      "claim": "Loss and damage data -- records of an actual, already-realized loss rather than an impact statistic -- is the thinnest of the three domains. It covers three things: coral bleaching monitoring from the Department of Marine and Coastal Resources; open data from the Department of Disaster Prevention and Mitigation that puts a value on damage from specific hazards, including landslide, flood and drought; and the two separate government mechanisms that pay disaster victims and, in doing so, attach an actual monetary figure to a realized loss -- an advance payment made directly by the responsible agency under a Ministry of Finance regulation, and a cabinet-approved payment from the central government budget's emergency reserve.",
+      "grounds": "The Department of Marine and Coastal Resources publishes coral bleaching monitoring (https://thailandcoralbleaching.dmcr.go.th/). The Department of Disaster Prevention and Mitigation publishes hazard-specific damage-value datasets -- covering landslide, flood and drought -- as open data (https://catalog.disaster.go.th/). Separately, a Ministry of Finance regulation on the government's advance fund for urgent disaster relief has been in force since 2562, made under the Public Financial Management Act; and the central government budget's emergency reserve (งบกลาง) can pay disaster-affected households directly once the Cabinet approves it, as reported by the Government Public Relations Department.",
+      "warrant": "Coral bleaching monitoring and the hazard-specific damage-value datasets each record an ecological or physical loss that has already occurred and been quantified. The two relief mechanisms go further: once a payment under either one is authorized, that payment carries an actual monetary value attached to a loss that has already happened. All four clear a stricter bar than a disaster-occurrence count or an impact statistic, which is what places them under loss and damage rather than climate impact.",
+      "application_to_design": "Tells the writer to name all three things this domain now covers -- coral bleaching, DDPM's hazard-specific damage-value open data, and the two relief and advance-payment mechanisms -- and still say plainly that the domain is thin; the two payment mechanisms should be described as mechanisms, not turned into a numbers-heavy digression, and no baht amounts, counts, or household figures belong in this subsection.",
+      "supports": "loss_and_damage_domain",
+      "verbalization_payload": {
+        "claim": "Loss and damage data that records an actual, already-realized loss is the thinnest of the three domains, and now covers coral bleaching monitoring, hazard-specific damage-value data, and the payment records created when government relief and advance funds compensate disaster victims.",
+        "key_facts": [
+          "Coral bleaching monitoring comes from the Department of Marine and Coastal Resources (https://thailandcoralbleaching.dmcr.go.th/), and hazard-specific damage-value data covering landslide, flood and drought is published as open data by the Department of Disaster Prevention and Mitigation (https://catalog.disaster.go.th/).",
+          "Disaster victims can also receive relief through two separate government mechanisms: an advance payment made directly by the responsible agency under a Ministry of Finance regulation, and a cabinet-approved payment from the central budget's emergency reserve."
+        ],
+        "mechanism": "Each of these puts an actual, already-realized value on a loss -- an ecological loss, a hazard-specific damage value, or a monetary relief payment -- which is a stricter test than a disaster-occurrence count or an impact statistic.",
+        "consequence": "The reader should be told this domain's holdings are thin even with these additions, stated directly rather than expanded to match the other subsections."
+      }
+    }
+  ],
+  "approval": {
+    "status": "approved",
+    "approved_by": "Boss",
+    "approved_at": "2026-09-30T16:30:00+07:00"
+  }
+}

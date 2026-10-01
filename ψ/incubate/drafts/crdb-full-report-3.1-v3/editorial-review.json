@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0",
+  "rubric_version": "6.0.0",
+  "draft_sha256": "be465cad033fc06e2a07e13f917bd56735f2c494b4d7707fc1c283a5827445e6",
+  "contract_sha256": "5b32646b26cf56c5b447a0567c225e37eae336b6a3865a56c63613c92dd40ce8",
+  "profile": "report",
+  "reviewer_mode": "independent",
+  "assurance": "standard",
+  "reviewer": "independent-editorial-reviewer",
+  "reviewed_at": "2026-09-30T13:25:11+00:00",
+  "dimensions": {
+    "section_job": {
+      "verdict": "pass",
+      "evidence": "Draft still opens (line 3) with the required method paragraph, then runs the three required subsections in order (3.1.1 risk, lines 5-11; 3.1.2 impact, lines 13-15; 3.1.3 loss and damage, lines 17-19), each opening with the domain definition. The new IPCC citation sits entirely inside 3.1.1's opening definitional paragraph (line 7), where the contract's terminology rule places it ('เอ่ยชื่อกรอบการประเมินความเสี่ยงของ IPCC โดยตรงได้'); it does not spill into 3.1.2 or 3.1.3 and does not turn the paragraph into a literature review. No forest data, no TOR clause numbers, no 2.2/chapter-4 content restated, no account/percentage figures anywhere."
+    },
+    "audience_decision_value": {
+      "verdict": "pass",
+      "evidence": "The citation serves the reader's own ability to check the domain definitions against a named public source, which is the function arg-02's warrant assigns it ('lets the reader judge for themselves'); it does not turn into a literature-review digression or a process narration about how the consultant found the source. Prose otherwise stays at report-landscape altitude throughout."
+    },
+    "evidence_payload": {
+      "verdict": "pass",
+      "evidence": "3.1.1's opening paragraph (line 7) now carries claim (risk = hazard x exposure x vulnerability), concrete evidence (IPCC AR6 WGII, Chapter 1 and Annex II Glossary, both with URLs), mechanism (classification follows content match to these definitions, not agency ownership -- final sentence of line 7), and consequence (this is why datasets in 3.1.1 are grouped as they are). 3.1.2 (line 15) and 3.1.3 (line 19) are unchanged from the round-3-passed draft and remain complete."
+    },
+    "causal_logic": {
+      "verdict": "pass",
+      "evidence": "Definition (with its IPCC citation) precedes classification, classification precedes landscape description, consistent with round 3. The citation is placed as grounds for the definition, not as a rhetorical flourish disconnected from the argument -- the paragraph moves from citation to framing (hazard x exposure x vulnerability) to definitions (Annex II Glossary) to the classification rule that follows from them, with no reversed order and no decorative transition."
+    },
+    "argument_fidelity": {
+      "verdict": "pass",
+      "evidence": "Tier 1: arg-02's warrant ('stating the domain's definition before any source name lets the reader judge for themselves... it is also the actual test the classification work was held to') does real connective work between its grounds (the definitions plus the IPCC framing) and its claim (what counts as risk-domain data), not a restatement. supports values still partition governing_thought_components with no overlap. Payload fidelity for arg-02 specifically: the payload's claim ('following the IPCC's risk-equals-hazard-times-exposure-times-vulnerability framing'), both key_facts (Annex II Glossary for the four term definitions; Chapter 1, 'Point of Departure and Key Concepts,' for the hazard-exposure-vulnerability framing) and mechanism (content match, not agency) are all present in line 7 with no invented material and nothing load-bearing dropped -- this is the payload Stage 3 was scoped to, and it reads faithfully. Tier 2: arg-01 (line 3), arg-02+arg-03 (lines 7, 9, 11), arg-04 (line 15), arg-05 (line 19) are all verbalized. No negation-contrast scaffolding ('ไม่ได้...แต่...', 'ไม่ควรถูกมองเป็น...แต่ควรถูกมองเป็น...') anywhere in the draft, including the new citation sentence."
+    },
+    "reader_facing_appropriateness": {
+      "verdict": "pass",
+      "evidence": "The citation cites only public IPCC report material (report title, chapter, glossary annex, and their public URLs) -- no internal artifact locators, file names, TERM_xxx codes, dataset row IDs, or TOR clause numbers. Cross-references elsewhere in the draft still use report section numbers only (\"หัวข้อ 3.4\", \"หัวข้อ 2.2\", \"บทที่ 4\"). No commentary about the document's own drafting process or upcoming structure."
+    },
+    "terminology_agency": {
+      "verdict": "pass",
+      "evidence": "IPCC is named in full at first mention with the abbreviation in parentheses ('คณะกรรมการระหว่างรัฐบาลว่าด้วยการเปลี่ยนแปลงสภาพภูมิอากาศ (IPCC)', line 7), matching the contract's terminology rule. 'คณะที่ปรึกษา' remains the consistent subject of every review/classification action (lines 3, 7, 15, 19); no 'โครงการ' or passive construction fronting these acts. Full department name at first mention (line 3), 'กรม สส.' thereafter; no bare 'สส.' and no 'กรมฯ' anywhere."
+    },
+    "source_fidelity": {
+      "verdict": "pass",
+      "evidence": "Both citation URLs and the report title, chapter, and glossary-annex names trace directly to arg-02's grounds and verbalization_payload. Per this review's scope, the underlying IPCC pages were not independently re-fetched (the argument map's own grounds already record that the Annex II URL returned 403 to the drafting agent's fetch tool and that the wording was instead confirmed by web search on 2026-09-30 under Boss's instruction to add the citation) -- that provenance decision was made at the approved-map stage, not introduced by the draft, so it is recorded here rather than re-litigated. The loss-and-damage definition in 3.1.3 (line 19) carries no IPCC attribution, matching arg-02's grounds note ('The loss-and-damage definition is not attributed to the IPCC') and the contract's glossary list, which sources loss and damage from the project's own glossary term (TERM_006, not IPCC-facing in the draft). No counts, percentages, or tables anywhere. No forest-data regression, no reintroduced gap-analysis wording ('ช่องว่าง', 'ยังขาด', 'ต้องพัฒนาเพิ่ม')."
+    },
+    "form_readability": {
+      "verdict": "pass",
+      "evidence": "Continuous prose throughout, no tables, no bullets. See F8 below: the new opening sentence of 3.1.1 (line 7) is long and carries five bracketed/quoted insertions before its main verb, which is a real density cost for a committee reader, but it stays grammatically coherent, matches the citation style already used elsewhere in the draft (name plus parenthetical URL), and does not break comprehension of the definitional content that follows -- judged a minor, not major, defect."
+    }
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "minor",
+      "location": "argument-map.json arg-03 (grounds vs. verbalization_payload); draft.md line 9",
+      "issue": "arg-03's grounds name the Hydro-Informatics Institute (https://www.thaiwater.net) alongside the Royal Irrigation Department under water-resource monitoring, but the unit's verbalization_payload key_facts list only the Royal Irrigation Department. The draft (line 9) accordingly names only the Royal Irrigation Department. Tier 1 payload_fidelity gap, unchanged since round 1.",
+      "disposition": "Not load-bearing -- the risk-domain landscape sentence already carries six representative agencies across five kinds of data; dropping one additional water-monitoring source does not change the classification or the strict-risk-product finding. Carried forward as accepted; fold the missing agency into the payload if this unit is re-verbalized.",
+      "status": "accepted"
+    },
+    {
+      "id": "F2",
+      "severity": "minor",
+      "location": "argument-map.json arg-04 (grounds vs. verbalization_payload); draft.md line 15",
+      "issue": "arg-04's grounds name a Department of Health system compiling hospital locations together with climate-disease data (https://gis-health.moph.go.th/) in addition to general illness statistics, but the verbalization_payload key_facts mention only the illness statistics. The draft (line 15) accordingly omits the hospital-location system. Tier 1 payload_fidelity gap, unchanged since round 1.",
+      "disposition": "Does not change the governing finding that climate impact data is thin. Carried forward as accepted; add the missing system back into the payload if this unit is re-verbalized.",
+      "status": "accepted"
+    },
+    {
+      "id": "F3",
+      "severity": "minor",
+      "location": "draft.md line 11: 'ผลลัพธ์จึงมองไปข้างหน้าและใช้ประกอบการวางแผนการปรับตัวระยะยาวได้'",
+      "issue": "This forward-looking/long-term-planning claim for the Climate Risk Database module is not in arg-03's verbalization_payload (claim/mechanism/consequence); it traces instead to arg-03's warrant ('a forward-looking risk output') and to the contract's report_specific_rules. Unchanged since round 1.",
+      "disposition": "Faithful, not fabricated -- licensed by approved material the drafting agent had access to, even though it goes beyond the strict payload text. Carried forward as accepted; note for future payload authoring to pull this framing into the payload itself.",
+      "status": "accepted"
+    },
+    {
+      "id": "F4",
+      "severity": "minor",
+      "location": "contract writing-contract.json required_concepts item 3; draft.md (no counterpart sentence present)",
+      "issue": "Round 1's F4 flagged a sentence about other agencies' data 'feeding' the risk database as traceable only to the contract's required_concepts, not to arg-03's verbalization_payload. That sentence was removed by round 2 and remains absent. The contract's required_concepts item ('ข้อมูลของกรม สส. และของหน่วยงานอื่นเสริมกันในส่วนการประเมินความเสี่ยง') still has no literal counterpart in the draft.",
+      "disposition": "Judged an improvement, not a defect: the core risk-domain finding required by report_specific_rules is fully present in lines 9 and 11 without it, and the removed framing was the weaker-sourced of the two claims. Carried forward as accepted; flagged so the contract's required_concepts list can be reconciled with this intentional cut in a future contract revision.",
+      "status": "accepted"
+    },
+    {
+      "id": "F5",
+      "severity": "minor",
+      "location": "draft.md line 15 (3.1.2)",
+      "issue": "Round 1 found the impact/loss-and-damage boundary stated twice in close succession in the same paragraph.",
+      "disposition": "Confirmed still resolved: the paragraph states the boundary once ('โดยยังไม่มีการประเมินมูลค่าความสูญเสียที่สมบูรณ์'). Direct read of line 15 in this round confirms no regression.",
+      "status": "resolved"
+    },
+    {
+      "id": "F6",
+      "severity": "minor",
+      "location": "draft.md line 19: 'ตามระเบียบกระทรวงการคลังว่าด้วยเงินทดรองราชการเพื่อช่วยเหลือผู้ประสบภัยพิบัติกรณีฉุกเฉิน พ.ศ. 2562'",
+      "issue": "arg-05's verbalization_payload describes this mechanism only as 'an advance payment made directly by the responsible agency under a Ministry of Finance regulation', with no regulation title or year. The draft states the regulation's full title and the year 2562. This detail is present in arg-05's grounds but not in the payload Stage 3 was scoped to.",
+      "disposition": "Same pattern as round 1's F3/F4: traces to the map's own approved grounds, is independently verifiable as a real, named public regulation, and does not misstate anything -- not a fabrication. Carried forward as accepted; note for future payload authoring to fold the regulation name/year into the payload if precision at this level is wanted downstream.",
+      "status": "accepted"
+    },
+    {
+      "id": "F7",
+      "severity": "major",
+      "location": "draft.md line 19: '...และบันทึกการจ่ายเงินช่วยเหลือผู้ประสบภัยของรัฐ ซึ่งระบุมูลค่าเป็นตัวเงินของความสูญเสียที่เกิดขึ้นจริงบางส่วน ตามหลักเกณฑ์และวงเงินที่ทางราชการกำหนด'",
+      "issue": "Round 2 found the prior wording overstated the record by implying the government payment records value the realized loss in full, when both mechanisms are rule-bound and capped.",
+      "disposition": "Resolved in round 3 and unchanged in this round: 'บางส่วน' (partial) plus 'ตามหลักเกณฑ์และวงเงินที่ทางราชการกำหนด' (per government-set criteria and payment limits) together tell the reader the figure is a bounded, rule-set relief amount, not a full appraisal of the loss -- faithful to arg-05's payload ('attach a monetary figure to a realized loss') without implying valuation. Direct read of line 19 in this round confirms no regression.",
+      "status": "resolved"
+    },
+    {
+      "id": "F8",
+      "severity": "minor",
+      "location": "draft.md line 7, opening sentence of 3.1.1: 'รายงานการประเมินฉบับที่หก (Sixth Assessment Report) ของคณะกรรมการระหว่างรัฐบาลว่าด้วยการเปลี่ยนแปลงสภาพภูมิอากาศ (IPCC) ส่วนของคณะทำงานที่ 2 (Working Group II) เรื่อง \"Climate Change 2022: Impacts, Adaptation and Vulnerability\" พ.ศ. 2565 (ค.ศ. 2022) อธิบายไว้ในบทที่ 1 ว่าความเสี่ยงเกิดจากภัยอันตราย การเปิดรับภัย และความเปราะบางร่วมกัน (https://www.ipcc.ch/report/ar6/wg2/chapter/chapter-1/)'",
+      "issue": "The sentence stacks five bracketed or quoted insertions (the English report title, the IPCC full-name/abbreviation pair, the Working Group II gloss, the paper's English title in quotes, and the dual-era year) into the subject before the reader reaches the main verb ('อธิบายไว้'), then closes with a bare URL after the object clause. For a committee reader this is a real density cost at the very opening of the subsection -- the new element introduced this round -- even though each insertion is individually required by the contract's terminology and citation rules and the sentence remains grammatically well-formed and unambiguous.",
+      "disposition": "Not a factual or fidelity defect and matches the citation style already used elsewhere in the draft (name plus parenthetical URL); does not block a pass verdict. Accepted for human review; if revised further, consider splitting into a short sentence naming the report and its two parts, followed by a separate sentence stating the Chapter 1 framing and its URL.",
+      "status": "accepted"
+    }
+  ],
+  "mechanical_reviews": [
+    {
+      "message": "[PARENTHETICAL] '(Sixth Assessment Report)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "location": "draft.md line 7",
+      "disposition": "New this round, from the added IPCC citation. Accepted as non-blocking per the linter's own determination; a Thai equivalent could be added to the lexicon later via /style-capture but is not required now."
+    },
+    {
+      "message": "[PARENTHETICAL] '(Working Group II)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "location": "draft.md line 7",
+      "disposition": "New this round, from the added IPCC citation. Accepted as non-blocking per the linter's own determination."
+    },
+    {
+      "message": "[PARENTHETICAL] '(Annex II Glossary)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "location": "draft.md line 7",
+      "disposition": "New this round, from the added IPCC citation. Accepted as non-blocking per the linter's own determination."
+    },
+    {
+      "message": "[PARENTHETICAL] '(DMR GIS)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "location": "draft.md line 9",
+      "disposition": "Pre-existing, unrelated to this round's change (Department of Mineral Resources hazard map). Accepted as non-blocking per the linter's own determination."
+    },
+    {
+      "message": "[PARENTHETICAL] '(telehydro)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "location": "draft.md line 9",
+      "disposition": "Pre-existing, unrelated to this round's change (Royal Irrigation Department water monitoring). Accepted as non-blocking per the linter's own determination."
+    },
+    {
+      "message": "[PARENTHETICAL] '(Data Warehouse)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "location": "draft.md line 9",
+      "disposition": "Pre-existing, unrelated to this round's change (National Statistical Office data warehouse). Accepted as non-blocking per the linter's own determination."
+    },
+    {
+      "message": "[PARENTHETICAL] '(Thailand Coral Bleaching Assessment System)' -- no Thai equivalent in the lexicon, so it is allowed. If it should have one, add it via /style-capture and it will block next time.",
+      "location": "draft.md line 19",
+      "disposition": "Pre-existing, unrelated to this round's change (coral bleaching monitoring system). Accepted as non-blocking per the linter's own determination."
+    }
+  ],
+  "verdict": "pass"
+}
