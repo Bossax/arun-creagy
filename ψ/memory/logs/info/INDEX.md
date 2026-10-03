@@ -1,5 +1,8 @@
 # Info Log Index
 
+- [2026-10-02 00:40] 🟡 **Knowledge isolation and Oracle splitting lifecycle**: End-to-end retrospective on splitting monolithic Arun into Jiu and Lauren; establishes the 5 core principles (zero-loss asymmetric staging, knowledge vs. build separation, verifiable provenance, selective rescue gate, cold archiving), analyzes the 3 Jiu verification gates, and blueprints an automated `/oracle-split` skill.
+  - File: ψ/memory/logs/info/2026-10-02_00-40_knowledge-isolation-and-oracle-splitting-lifecycle.md
+
 - [2026-09-29 00:05] thai-writer agent performance evaluation: sentence-level voice/fabrication work held up well under Boss's manual review; real gaps were document-wide terminology consistency (ขีดความสามารถ→ศักยภาพ) and one over-assertion. Procedural gaps: built-in lint step silently broken (no .venv in .agents/skills mirror), 6 lexicon false positives surfaced and fixed, รับผิดชอบ regex still too broad, strict grounding constraints slow deliberation more than scope size does.
   - File: ψ/memory/logs/info/2026-09-29_00-05_thai-writer-agent-performance-evaluation.md
 
