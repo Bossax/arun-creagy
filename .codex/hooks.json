@@ -1,5 +1,5 @@
 {
-  "description": "Project-local writing-th v6 Codex hooks.",
+  "description": "Project-local writing-th v7 Codex hooks.",
   "hooks": {
     "PreToolUse": [
       {
@@ -7,10 +7,10 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .agents/skills/writing-th/scripts/check_draft_preconditions.py",
-            "commandWindows": "py -3 .agents\\skills\\writing-th\\scripts\\check_draft_preconditions.py",
+            "command": "node .agents/skills/writing-th/scripts/check_draft_preconditions.mjs",
+            "commandWindows": "node .agents\\skills\\writing-th\\scripts\\check_draft_preconditions.mjs",
             "timeout": 15,
-            "statusMessage": "Checking writing-th argument-map gate"
+            "statusMessage": "Checking writing-th blueprint gate & ledger guard"
           }
         ]
       }
@@ -21,8 +21,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .agents/skills/writing-th/scripts/post_draft_lint.py",
-            "commandWindows": "py -3 .agents\\skills\\writing-th\\scripts\\post_draft_lint.py",
+            "command": "node .agents/skills/writing-th/scripts/post_draft_lint.mjs",
+            "commandWindows": "node .agents\\skills\\writing-th\\scripts\\post_draft_lint.mjs",
             "timeout": 30,
             "statusMessage": "Linting Thai draft"
           }
