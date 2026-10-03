@@ -35,17 +35,23 @@ Checked on the host machine as of 2 October 2026:
 
 | Component | Current State | Operational Assessment |
 | :--- | :--- | :--- |
-| **`maw` in WSL (Ubuntu)** | v26.5.21 installed in Ubuntu distro | Present. Needs configuration (`maw.config.json`). |
-| **Engine Agnosticism** | `maw` is CLI/engine-agnostic | **Does NOT require Claude Code in WSL.** Can drive `codex`, `agy` (Antigravity), or custom CLI/scripts via `commands.default`. |
-| **Oracle Workspaces** | `/mnt/c/Users/sitth/OracleWorkspace/` | Visible directly from WSL. No redundant WSL-side git clones needed. |
-| **Memory Containers** | Jiu (47784) & Lauren (47785) running | `oracle-arun-creagy` and `oracle-keth` are currently powered off. They are **not broken**; they simply need `docker start`. |
+| **`maw` in WSL (Ubuntu)** | v26.5.21 installed in Ubuntu distro (`~/.bun/bin/maw`) | **Operational.** Configured via `~/.config/maw/maw.config.json`. |
+| **Engine Agnosticism** | `maw` is CLI/engine-agnostic | **Does NOT require Claude Code in WSL.** Drives `agy` (Antigravity CLI 1.2.14) via `/home/sitth/.bun/bin/agy`. |
+| **Oracle Workspaces** | `/mnt/c/Users/sitth/OracleWorkspace/` | Linked via canonical `-oracle` symlinks in `~/Code/github.com/local/`. |
+| **Memory Containers** | All 4 Running (`Up`) | `oracle-arun-creagy` (47778), `oracle-keth` (47783), `oracle-jiu` (47784), `oracle-lauren` (47785) all active. |
+| **Discovery Tool (`ghq`)** | Installed at `~/.bun/bin/ghq` (v1.7.1) | Configured with `ghq.root = /home/sitth/Code`. `maw oracle scan` works cleanly. |
 | **Specialist MCP Access** | Configured per oracle | Arun can be granted read-only MCP access to Keth, Jiu, and Lauren for fast vector search. |
 | **`/talk-to` Skill** | Installed | Supports `--inbox` and `--maw`. Needs a standard `ψ/contacts.json`. |
 
-### Critical Technical Findings
-1. **`oracle_thread` is Not a Task Queue**: In `oracle-v2` (`engine/src/forum/handler.ts`), posting to a thread automatically returns the first 300 characters of the top vector hit and sets status to `answered`. It does not notify or spawn an active agent.
-2. **`oracle_ask` is Extractive Only**: Without `ORACLE_ASK_LLM` environment variables configured in Docker, `oracle_ask` extracts text snippets but does not run an LLM synthesis step.
-3. **`/talk-to --inbox` vs `--maw`**: Writing to `ψ/inbox/` drops a file into a mailbox, but nobody is home until Boss opens the session. Adding `maw` rings the doorbell, triggering the specialist in tmux.
+### 2.1 Critical Technical Discoveries (From Source Code Audit & Live Setup)
+1. **The Mandatory `-oracle` Folder Suffix**: In `maw-js` (`src/core/resolve.ts`, line 48), `oracleRefFromPath` specifically checks whether the folder ends in `-oracle`. Any repository without `-oracle` in its folder name is ignored during resolution. Symlinks must be `keth-oracle`, `jiu-oracle`, `lauren-oracle`, `arun-oracle`.
+2. **`ghq` Discovery Requirement**: `maw oracle scan` invokes `ghq list --full-path` under the hood. `ghq` was installed in WSL at `~/.bun/bin/ghq` and anchored to `/home/sitth/Code`.
+3. **Mandatory Config Schema (`config.node`)**: `maw.config.json` must contain `"node": "local"` and `"host": "local"`. Without `"node"`, message dispatch logging in `comm-log-feed.ts` crashes.
+4. **`v26.5.21` Version Limitation**: The installed binary does not support `maw config set` (added in later releases); configuring `~/.config/maw/maw.config.json` directly via UNC path (`\\wsl.localhost\Ubuntu\...`) is required.
+5. **Cross-Platform Engine Wrapper**: WSL invokes Windows `agy.exe` seamlessly via an executable shell script at `/home/sitth/.bun/bin/agy`.
+6. **`oracle_thread` is Not a Task Queue**: In `oracle-v2` (`engine/src/forum/handler.ts`), posting to a thread automatically returns the first 300 characters of the top vector hit and sets status to `answered`. It does not notify or spawn an active agent.
+7. **`oracle_ask` is Extractive Only**: Without `ORACLE_ASK_LLM` environment variables configured in Docker, `oracle_ask` extracts text snippets but does not run an LLM synthesis step.
+8. **`/talk-to --inbox` vs `--maw`**: Writing to `ψ/inbox/` drops a file into a mailbox, but nobody is home until Boss opens the session. Adding `maw` rings the doorbell, triggering the specialist in tmux.
 
 ---
 
@@ -145,71 +151,82 @@ Checked on the host machine as of 2 October 2026:
 
 Follow these precise steps to validate Workflow 2 end-to-end.
 
-### Phase 1: Pre-Flight Environment Setup
+### Phase 1: Environment Setup & Infrastructure (100% COMPLETE & VERIFIED)
 
-1. **Power on Oracle Docker Containers (in Windows PowerShell)**:
-   ```powershell
-   docker start oracle-arun-creagy oracle-keth
-   docker ps --filter "name=oracle-"
-   ```
-   *Verify that `oracle-arun-creagy`, `oracle-keth`, `oracle-jiu`, and `oracle-lauren` are all status `Up`.*
+All prerequisites have been provisioned, tested, and verified on the local host as of 2 October 2026:
 
-2. **Configure `maw` & Link Oracles in WSL Ubuntu**:
-   `maw` scans for repos under `~/Code/github.com/<org>/<repo>` containing a `ψ/` folder. In your WSL Ubuntu terminal, run these exact commands:
-   ```bash
-   # Create the maw config pointing default runner engine to agy
-   mkdir -p ~/.config/maw
-   echo '{"host":"local","port":3456,"commands":{"default":"agy"}}' > ~/.config/maw/maw.config.json
+1. **Docker Memory Containers**: All 4 containers are running and healthy:
+   - `oracle-arun-creagy` (`localhost:47778`)
+   - `oracle-keth` (`localhost:47783`)
+   - `oracle-jiu` (`localhost:47784`)
+   - `oracle-lauren` (`localhost:47785`)
 
-   # Link your Windows OracleWorkspace repos into maw's expected discovery path
-   mkdir -p ~/Code/github.com/local
-   ln -s /mnt/c/Users/sitth/OracleWorkspace/Keth-goverment-agent ~/Code/github.com/local/keth
-   ln -s /mnt/c/Users/sitth/OracleWorkspace/Jiu-climate-risk-and-resilience ~/Code/github.com/local/jiu
-   ln -s /mnt/c/Users/sitth/OracleWorkspace/Lauren-data-architect ~/Code/github.com/local/lauren
-   ln -s /mnt/c/Users/sitth/OracleWorkspace/Arun_Creagy ~/Code/github.com/local/arun
-   ```
+2. **WSL Tooling & Configuration**:
+   - `ghq` (v1.7.1) installed at `/home/sitth/.bun/bin/ghq` with `ghq.root = /home/sitth/Code`.
+   - `agy` shim installed at `/home/sitth/.bun/bin/agy` pointing directly to Windows `agy.exe` (v1.2.14).
+   - Config file created at `~/.config/maw/maw.config.json`:
+     ```json
+     {
+       "node": "local",
+       "host": "local",
+       "port": 3456,
+       "commands": {
+         "default": "agy"
+       }
+     }
+     ```
+   - Canonical `-oracle` symlinks established in `~/Code/github.com/local/`:
+     - `keth-oracle` -> `/mnt/c/Users/sitth/OracleWorkspace/Keth-goverment-agent`
+     - `jiu-oracle` -> `/mnt/c/Users/sitth/OracleWorkspace/Jiu-climate-risk-and-resilience`
+     - `lauren-oracle` -> `/mnt/c/Users/sitth/OracleWorkspace/Lauren-data-architect`
+     - `arun-oracle` -> `/mnt/c/Users/sitth/OracleWorkspace/Arun_Creagy`
 
-3. **Discover & Verify Your Fleet**:
-   In WSL Ubuntu, trigger the discovery scan:
-   ```bash
-   # Scan and cache all local oracles
-   maw oracle scan
-
-   # Verify the active fleet is registered
-   maw oracle ls
-   ```
-   *Verify that `local/keth`, `local/jiu`, `local/lauren`, and `local/arun` appear in the output with their `ψ/` badges.*
+3. **Fleet Registry & Initial Wake**:
+   - `maw oracle scan` verified 4 local oracles with 0 errors.
+   - `maw wake keth` executed successfully: created session `01-keth` in tmux, auto-registered agent `keth` -> `local` in `config.agents`, and initialized Antigravity CLI 1.2.14 inside Keth's repository.
+   - `maw oracle ls` reports `Oracle Fleet (1 awake / 4 total)`.
 
 ---
 
-### Phase 2: Smoke Test Execution (The Sub-law TOR Query)
+### Phase 2: Smoke Test Execution — Option A (Hands-On Boss Walkthrough)
 
-* **Objective**: Have Arun query Keth to resolve the DCCE vs. TMD statutory database authority question from the 22 September Sub-law TOR session without Boss manually opening Keth's repo.
+Follow these exact steps in your WSL terminal to run the statutory audit and observe the multi-oracle workflow:
 
-1. **Dispatch from Arun (or WSL Terminal)**:
-   Run the task dispatch:
-   ```bash
-   maw hey local:keth "Perform a statutory audit: Under the draft Climate Change Act Chapter 12 and current Thai bureaucratic mandates, what is the exact database authority boundary between DCCE and the Thai Meteorological Department (TMD)? Check bureaucrazy.sqlite and existing governance notes. Output your findings as a structured brief to /mnt/c/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/inbox/from-keth/2026-10-02_tmd-authority-test.md"
-   ```
+#### Step 1: Open WSL Terminal & Verify Fleet
+Open Windows Terminal (Ubuntu profile) and run:
+```bash
+export PATH="$HOME/.bun/bin:$PATH"
+maw oracle ls
+```
+*Expected Output:* Shows all 4 oracles (`arun`, `keth`, `jiu`, `lauren`), with `keth` marked awake (`1 awake / 4 total`).
 
-2. **Autonomous Background Run**:
-   * Keth receives the prompt in its dedicated tmux session.
-   * Keth queries `bureaucrazy.sqlite` and its internal knowledge base.
-   * Keth formats the brief and saves it directly to:
-     `C:\Users\sitth\OracleWorkspace\Arun_Creagy\ψ\inbox\from-keth\2026-10-02_tmd-authority-test.md`
+#### Step 2: Dispatch the Statutory Audit Task
+Run this single command to dispatch the audit asynchronously to Keth:
+```bash
+maw hey local:keth "Perform a statutory audit: Under the draft Climate Change Act Chapter 12 and current Thai bureaucratic mandates, what is the exact database authority boundary between DCCE and the Thai Meteorological Department (TMD)? Check bureaucrazy.sqlite and existing governance notes. Output your findings as a structured brief to /mnt/c/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/inbox/from-keth/2026-10-02_tmd-authority-test.md"
+```
+*What happens:* 
+- `maw hey` sends the prompt directly into Keth's running session `01-keth`.
+- Your command returns immediately. You are not locked or blocked.
 
-3. **Human Inspection Gate in Obsidian**:
-   * Open **Obsidian** in the `Arun_Creagy` vault.
-   * Navigate to `ψ/inbox/from-keth/2026-10-02_tmd-authority-test.md`.
-   * **Review Criteria**:
-     - Did Keth cite specific laws/mandates accurately?
-     - Did Keth answer without asking unnecessary clarifying questions?
-     - Is the output clear and ready for Arun to incorporate?
+#### Step 3: (Optional) Peek inside Keth's Session
+If you want to watch Keth query `bureaucrazy.sqlite` and draft the brief in real time:
+```bash
+tmux attach -t 01-keth
+```
+*(To detach at any time without interrupting Keth, press `Ctrl+b` then `d`)*.
 
-4. **Loop Closure in Arun**:
-   * Return to Arun's session.
-   * Arun reads `ψ/inbox/from-keth/2026-10-02_tmd-authority-test.md`.
-   * Arun summarizes the key findings and drafts the TOR clause.
+#### Step 4: The Inspection Gate in Obsidian
+Once Keth finishes, switch to **Obsidian** in the `Arun_Creagy` vault and open:
+[`ψ/inbox/from-keth/2026-10-02_tmd-authority-test.md`](file:///C:/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/inbox/from-keth/2026-10-02_tmd-authority-test.md)
+
+*Review Criteria:*
+- Did Keth isolate the legal boundary between DCCE (National Climate Center) and TMD (meteorological observation/records)?
+- Did Keth identify jurisdictional overlaps or friction points?
+- Is the document structured and citation-backed?
+
+#### Step 5: Conductor Synthesis in Arun
+Return to your conversational session with Arun. Arun will read the newly arrived brief from `ψ/inbox/from-keth/2026-10-02_tmd-authority-test.md` and integrate the statutory findings directly into your active project deliverable.
 
 ---
 
