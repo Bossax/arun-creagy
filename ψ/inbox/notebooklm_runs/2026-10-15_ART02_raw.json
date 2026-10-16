@@ -1,0 +1,221 @@
+{
+  "answer": "Extracted scientific evidence from 'Exploring the impacts of climate change and identifying potential adaptation strategies for sustainable rice production in Thailand’s Lower Chao Phraya Basin through crop simulation modeling' (Vilavan et al., 2024, Environ Monit Assess 196:1192).",
+  "paper_metadata": {
+    "title": "Exploring the impacts of climate change and identifying potential adaptation strategies for sustainable rice production in Thailand’s Lower Chao Phraya Basin through crop simulation modeling",
+    "authors": [
+      "Sakron Vilavan",
+      "Debesh Das",
+      "Hayat Ullah",
+      "Shubham Anil Gade",
+      "Sheikh Faruk Ahmed",
+      "Suriyan Cha-um",
+      "Patchara Praseartkul",
+      "Avishek Datta",
+      "Sushil Kumar Himanshu"
+    ],
+    "author_affiliations": [
+      "Asian Institute of Technology (AIT), Pathum Thani, Thailand",
+      "Khulna University, Khulna, Bangladesh",
+      "National Center for Genetic Engineering and Biotechnology (BIOTEC), NSTDA, Pathum Thani, Thailand"
+    ],
+    "journal": "Environmental Monitoring and Assessment",
+    "publication_date": "12 November 2024",
+    "doi": "10.1007/s10661-024-13362-y"
+  },
+  "section_1_crop_model_and_experimental_setup": {
+    "crop_simulation_model": "DSSAT v4.8 CSM CERES-Rice",
+    "study_location": {
+      "region": "Lower Chao Phraya River Basin (CPRB), Pathum Thani Province, Thailand",
+      "representative_site": "Asian Institute of Technology (AIT) Agricultural Research Farm",
+      "coordinates": "14.083165°N, 100.608427°E"
+    },
+    "cultivar": {
+      "name": "RD57",
+      "source": "Pathum Thani Rice Research Center",
+      "photoperiod_sensitivity": "Photoperiod-insensitive",
+      "maturity_duration": "110–120 days (broadcasting / WDS); 115–125 days (transplanting)"
+    },
+    "baseline_weather_period": "2010–2022 (AIT onsite weather station; missing data supplemented from Mueang, Pathum Thani station)",
+    "climate_models_used": [
+      {
+        "gcm_id": "ACCESS-ESM1-5",
+        "institution": "CSIRO",
+        "country": "Australia",
+        "resolution": "0.25° × 0.25°"
+      },
+      {
+        "gcm_id": "CNRM-CM6-1",
+        "institution": "CNRM-CERFACS",
+        "country": "France",
+        "resolution": "0.25° × 0.25°"
+      },
+      {
+        "gcm_id": "EC-Earth3-Veg",
+        "institution": "EC-Earth-Consortium",
+        "country": "Europe",
+        "resolution": "0.25° × 0.25°"
+      },
+      {
+        "gcm_id": "MPI-ESM1-2-LR",
+        "institution": "MPI-M",
+        "country": "Germany",
+        "resolution": "0.25° × 0.25°"
+      },
+      {
+        "gcm_id": "MRI-ESM2-0",
+        "institution": "MRI",
+        "country": "Japan",
+        "resolution": "0.25° × 0.25°"
+      }
+    ],
+    "calibrated_genetic_coefficients": {
+      "P1_basic_vegetative_phase_GDD": 310.0,
+      "P2R_photoperiod_sensitivity_GDD": 120.5,
+      "P5_grain_filling_duration_GDD": 720.4,
+      "P2O_critical_photoperiod_hours": 12.0,
+      "G1_potential_spikelet_number_coeff": 65.0,
+      "G2_single_grain_weight_g": 0.027,
+      "G3_tillering_coefficient": 1.0,
+      "THOT_high_temp_tolerance_coeff_C": 30.0,
+      "TCLDP_low_temp_panicle_initiation_C": 15.0,
+      "TCLDF_low_temp_spikelet_sterility_C": 15.0
+    },
+    "calibration_performance_metrics": {
+      "dataset_period": "2017–2018 field experiment (Dec 2017 – Apr 2018)",
+      "d_index": 0.85,
+      "r2": 0.73,
+      "percent_RMSE": 17.91,
+      "percent_error_PE": 11.73
+    },
+    "validation_performance_metrics": {
+      "dataset_period": "2021–2022 field experiment (Oct 2021 – Feb 2022)",
+      "d_index": 0.85,
+      "r2": 0.75,
+      "percent_RMSE": 9.95,
+      "percent_error_PE": 8.49
+    }
+  },
+  "section_2_quantitative_climate_change_impacts": {
+    "baseline_figures_10yr_avg": {
+      "historical_period": "2010–2022",
+      "baseline_yield_kg_per_ha": 4749.77,
+      "baseline_irrigation_demand_mm": 121.08,
+      "baseline_annual_rainfall_mm": 1345.0,
+      "baseline_mean_Tmax_C": 33.75,
+      "baseline_mean_Tmin_C": 25.30
+    },
+    "yield_projections_across_time_horizons": {
+      "SSP1-2.6": {
+        "near_future_2023_2040": {"yield_kg_per_ha": 4378.0, "change_pct": -7.83, "z_score": -1.25},
+        "mid_century_2041_2070": {"yield_kg_per_ha": 4423.0, "change_pct": -6.88, "z_score": -1.10},
+        "late_century_2071_2100": {"yield_kg_per_ha": 4335.0, "change_pct": -8.73, "z_score": -1.40}
+      },
+      "SSP2-4.5": {
+        "near_future_2023_2040": {"yield_kg_per_ha": 4595.0, "change_pct": -3.26, "z_score": -0.52},
+        "mid_century_2041_2070": {"yield_kg_per_ha": 4375.0, "change_pct": -7.89, "z_score": -1.26},
+        "late_century_2071_2100": {"yield_kg_per_ha": 4238.0, "change_pct": -10.78, "z_score": -1.72}
+      },
+      "SSP5-8.5": {
+        "near_future_2023_2040": {"yield_kg_per_ha": 4477.0, "change_pct": -5.74, "z_score": -0.92},
+        "mid_century_2041_2070": {"yield_kg_per_ha": 4191.0, "change_pct": -11.76, "z_score": -1.88},
+        "late_century_2071_2100": {"yield_kg_per_ha": 3194.0, "change_pct": -32.76, "z_score": -5.24}
+      }
+    },
+    "irrigation_demand_projections_across_time_horizons": {
+      "SSP1-2.6": {
+        "near_future_2023_2040": {"demand_mm": 143.56, "change_pct": 18.57, "z_score": 0.68},
+        "mid_century_2041_2070": {"demand_mm": 139.38, "change_pct": 15.11, "z_score": 0.56},
+        "late_century_2071_2100": {"demand_mm": 143.91, "change_pct": 18.85, "z_score": 0.69}
+      },
+      "SSP2-4.5": {
+        "near_future_2023_2040": {"demand_mm": 159.98, "change_pct": 32.13, "z_score": 1.18},
+        "mid_century_2041_2070": {"demand_mm": 158.00, "change_pct": 30.49, "z_score": 1.12},
+        "late_century_2071_2100": {"demand_mm": 157.63, "change_pct": 30.19, "z_score": 1.11}
+      },
+      "SSP5-8.5": {
+        "near_future_2023_2040": {"demand_mm": 145.73, "change_pct": 20.36, "z_score": 0.75},
+        "mid_century_2041_2070": {"demand_mm": 174.69, "change_pct": 44.28, "z_score": 1.63},
+        "late_century_2071_2100": {"demand_mm": 185.66, "change_pct": 53.34, "z_score": 1.96}
+      }
+    }
+  },
+  "section_3_physiological_mechanisms": {
+    "temperature_trends": "Daily Tmax and Tmin increase by ~2°C under SSP2-4.5 and ~4°C under SSP5-8.5 in the late century, with peak Tmax exceeding 40°C in April.",
+    "day_vs_night_temperature_impacts": "Both daytime Tmax and nighttime Tmin show sustained upward trends. Tmax increases noticeably from February to June (peaking in April), accelerating phenological growth while reducing biomass accumulation due to elevated maintenance respiration.",
+    "pollen_and_spikelet_sterility": "Heat stress during panicle initiation, booting, and flowering stages impairs photosynthetic capacity and inhibits swelling of pollen grains and thecae dehiscence, causing high pollen sterility and poor grain set.",
+    "grain_filling_curtailment": "Exposure to high temperatures shortens the grain-filling period (P5), restricting photosynthate accumulation in grains and driving up crop evapotranspiration and irrigation water demand."
+  },
+  "section_4_field_management_adaptation_strategies": {
+    "planting_date_shift": {
+      "baseline_date": "20 July",
+      "early_shift_1_2_weeks": "Shifting planting date 1–2 weeks earlier (to 13 July or 6 July) improves yield and reduces irrigation water demand.",
+      "late_shift_1_2_weeks": "Shifting planting date 1–2 weeks later (to 27 July or 3 August) negatively impacts yield and increases water use across all scenarios."
+    },
+    "fertilizer_management": {
+      "baseline_schedule": "60 kg P/ha and 49 kg N/ha on 20 July (planting); 25 kg N/ha on 20 September (panicle initiation)",
+      "timing_shift": "Shifting panicle initiation fertilizer application 1–2 weeks earlier (to 13 September or 6 September) increases yield by at least 5.6% to 6.6% under SSP5-8.5 without increasing water input.",
+      "dosage_optimization": {
+        "half_dose_0.5x": "Drastically reduces yield.",
+        "standard_plus_50pct_1.5x": "N: 112.5 kg/ha, P: 90 kg/ha. Substantially increases yield across all scenarios with negligible water demand increase.",
+        "higher_doses_2.0x_to_4.0x": "Yield plateaus at 1.5x due to genetic potential limits."
+      }
+    },
+    "irrigation_threshold_optimization": {
+      "baseline_threshold": "50% remaining soil water",
+      "threshold_45pct": "Saves ~30% irrigation water while maintaining yield stability.",
+      "threshold_40pct": "Saves ~55% irrigation water while maintaining yield stability.",
+      "threshold_30pct": "Saves up to 90% irrigation water while maintaining yield stability."
+    }
+  },
+  "section_5_genetic_adaptation_and_ideotype_simulations": {
+    "heat_tolerance_trait_THOT": {
+      "parameter": "THOT (high-temperature tolerance coefficient, baseline 30°C)",
+      "impact": "Increasing THOT by 5%–15% (to 32°C–36°C) delivers the largest single yield gain, up to +37.9% under SSP5-8.5 in the late century."
+    },
+    "high_yield_potential_G1": {
+      "parameter": "G1 (potential spikelet number coefficient, baseline 65)",
+      "impact": "Increasing G1 by 15% (to 74) increases grain yield by +8.3% under SSP5-8.5 late century (yielding 3.46 t/ha vs. 3.19 t/ha baseline)."
+    },
+    "grain_filling_extension_P5": {
+      "parameter": "P5 (grain filling duration in GDD, baseline 720.4 GDD)",
+      "impact": "Extending P5 by 15% (to 828.5 GDD) increases late-century SSP5-8.5 yield by +1.1% (yielding 3.23 t/ha), but involves trade-offs of increased seasonal irrigation water demand."
+    },
+    "early_flowering_trade_offs_P1": {
+      "parameter": "P1 (basic vegetative phase GDD, baseline 310 GDD)",
+      "impact": "Decreasing P1 (265–295 GDD) reduces irrigation water demand slightly but causes yield losses due to insufficient vegetative biomass accumulation. Increasing P1 by 10% (340 GDD) yields no significant gain."
+    },
+    "drought_tolerance_RWUMX": {
+      "parameter": "RWUMX (maximum root water uptake per unit root length)",
+      "impact": "Under fully irrigated basin conditions, adjusting RWUMX shows negligible impact on overall yield or water savings."
+    }
+  },
+  "section_6_policy_conclusions_and_nap_mapping": {
+    "figures_and_tables_mapping": {
+      "Fig_1": "Study area map showing Lower Chao Phraya Basin and AIT weather station in Pathum Thani.",
+      "Fig_2": "Monthly average climate variable projections (rainfall, solar radiation, Tmin, Tmax) under CMIP6 scenarios.",
+      "Fig_3": "Annual projected trends (2010–2100) for weather variables across SSPs.",
+      "Fig_4": "Observed vs simulated yield comparison during calibration (2017–2018) and evaluation (2021–2022).",
+      "Table_1": "Field experiment datasets used for model calibration and evaluation.",
+      "Table_2": "Mechanical analysis and chemical properties of soil profile (6 layers, 0–120 cm).",
+      "Table_3": "Selected 5 GCMs from NEX-GDDP-CMIP6.",
+      "Table_4": "Selected management and virtual cultivar adaptation strategies.",
+      "Table_5": "Weather parameter projections under SSP126, SSP245, and SSP585 across time horizons.",
+      "Table_6": "Adjusted genetic coefficients for RD57 cultivar.",
+      "Table_7": "Observed and simulated anthesis, maturity, and yield values.",
+      "Table_8": "Model performance evaluation statistics (d-index, r2, %RMSE, PE).",
+      "Table_9": "Baseline rice yield projections across scenarios and time periods.",
+      "Table_10": "Baseline irrigation water requirement projections across scenarios and time periods.",
+      "Table_11": "Impact of management strategy changes on rice yield (%).",
+      "Table_12": "Impact of management strategy changes on irrigation water use (%).",
+      "Table_13": "Impact of virtual cultivar trait modifications on rice yield (%).",
+      "Table_14": "Impact of virtual cultivar trait modifications on irrigation water use (%)."
+    },
+    "policy_recommendations_for_DCCE_and_NAP": [
+      "Integrate Genotype-by-Management (G×M) package recommendations into Thailand's National Adaptation Plan (NAP) for agriculture.",
+      "Prioritize genetic breeding programs for heat-tolerant cultivars (enhancing the THOT trait) to insulate rice against extreme warming beyond mid-century.",
+      "Promote low-cost agronomic adjustments: advance planting by 1–2 weeks (early July), advance panicle initiation N application by 1–2 weeks (early September), and adjust N rate to 1.5x recommended dose (112.5 kg N/ha).",
+      "Institutionalize Alternate Wetting and Drying (AWD) irrigation guidelines by lowering soil moisture thresholds to 30%–40%, capturing 55%–90% irrigation water savings while maintaining yield.",
+      "Strengthen local extension networks to overcome cultural inertia and facilitate farmer adoption of shifted planting and irrigation schedules."
+    ]
+  }
+}

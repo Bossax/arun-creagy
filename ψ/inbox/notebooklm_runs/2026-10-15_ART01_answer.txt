@@ -1,0 +1,156 @@
+Here is the detailed research evidence extracted directly from **"1-Climate-change-impact-on-major-crop-yield-and-water-footprint-under-CMIP6-climate-projections.pdf"**:
+
+---
+
+### **1. Core Models, Equations, and Calibration/Validation Metrics**
+
+* **Core Models**:
+  * **EPIC (Environmental Policy Integrated Climate) Model (v0810)**: Used to simulate crop growth, crop yield, and stress responses under changing atmospheric and climatic conditions [1].
+  * **CROPWAT 8.0 Model**: Used to calculate reference evapotranspiration (\\(ET_0\\)), crop evapotranspiration (\\(ET_c\\)), and effective rainfall (\\(P_{eff}\\)) to determine crop water footprints [2-4].
+
+* **Core Equations**:
+  1. **EPIC Crop Yield (\\(YLD\\))** [1]:
+     \\[YLD = HI \cdot \sum_{i=1}^n \left[ WA \cdot RA_i \left(1 - \exp(-0.65 \cdot LAI_i)\right) \cdot 5000 \right]\\]
+     *(where \\(HI\\) = harvest index, \\(WA\\) = biomass-energy ratio / radiation-use efficiency, \\(RA\\) = solar radiation, \\(LAI\\) = leaf area index)* [1].
+  2. **Biomass Regulation under Stress** [5]:
+     \\[\Delta B = \Delta B_p \cdot REG\\]
+     *(where \\(\Delta B_p\\) is potential biomass and \\(REG\\) is the minimum stress factor among water, temperature, nutrient, and aeration stress)* [5].
+  3. **Temperature Stress (\\(TS_i\\))** [6]:
+     \\[TS_i = \sin\left(\frac{\pi}{2} \cdot \frac{TG_i - Tb_j}{To_j - Tb_j}\right)\\]
+     *(where \\(TG\\) is average soil surface temperature, \\(Tb\\) is base crop temperature, and \\(To\\) is optimal crop temperature)* [6].
+  4. **CROPWAT 8.0 Reference Evapotranspiration (\\(ET_0\\), FAO Penman–Monteith)** [3]:
+     \\[ET_0 = \frac{0.408 \Delta (R_n - G) + \gamma \frac{900}{T + 273} U_2 (e_s - e_a)}{\Delta + \gamma (1 + 0.34 U_2)}\\]
+  5. **Water Footprint (\\(WF_{total}\\)) Calculation** [2, 7, 8]:
+     \\[WF_{total} = WF_{green} + WF_{blue} + WF_{grey} = \frac{CWU_{green}}{Y} + \frac{CWU_{blue}}{Y} + WF_{grey}\\]
+     \\[WF_{grey} = \frac{\alpha \cdot \sum (N + ON) / (C_{max} - C_{nat})}{Y}\\]
+     *(where \\(\alpha = 0.1\\) for nitrogen leaching/runoff, \\(C_{max} < 5\text{ mg L}^{-1}\\) \\(\text{NO}_3\text{-N}\\), \\(C_{nat} = 0\text{ kg m}^{-3}\\), and \\(Y\\) is crop yield in \\(\text{ton ha}^{-1}\\))* [8].
+
+* **Calibration & Validation Performance Metrics**:
+  * *Note on PBIAS*: The study evaluated EPIC model performance using \\(R^2\\) (coefficient of determination, threshold \\(> 0.5\\)) and \\(NSE\\) (Nash–Sutcliffe efficiency, threshold \\(\ge 0.60\\)) [9]; **PBIAS was not evaluated or reported** in this study.
+  * **Model Calibration (2013–2014 field data)** [10, 11]:
+    * **Rice** (\\(n=12\\)): Observed \\(5170 \pm 241\\) kg/ha | Simulated \\(5024 \pm 225\\) kg/ha | **\\(R^2 = 0.73\\)**, **\\(NSE = 0.67\\)** [11]
+    * **Maize** (\\(n=11\\)): Observed \\(3714 \pm 544\\) kg/ha | Simulated \\(3676 \pm 588\\) kg/ha | **\\(R^2 = 0.67\\)**, **\\(NSE = 0.65\\)** [11]
+    * **Soybean** (\\(n=10\\)): Observed \\(1444 \pm 134\\) kg/ha | Simulated \\(1451 \pm 105\\) kg/ha | **\\(R^2 = 0.65\\)**, **\\(NSE = 0.63\\)** [11]
+    * **Mung bean** (\\(n=10\\)): Observed \\(418 \pm 77\\) kg/ha | Simulated \\(425 \pm 72\\) kg/ha | **\\(R^2 = 0.65\\)**, **\\(NSE = 0.62\\)** [11]
+    * **Cassava** (\\(n=10\\)): Observed \\(13,250 \pm 1399\\) kg/ha | Simulated \\(13,465 \pm 1083\\) kg/ha | **\\(R^2 = 0.64\\)**, **\\(NSE = 0.63\\)** [11]
+  * **Model Validation (2021 field data)** [10, 11]:
+    * **Rice** (\\(n=18\\)): Observed \\(5722 \pm 253\\) kg/ha | Simulated \\(5872 \pm 237\\) kg/ha | **\\(R^2 = 0.75\\)**, **\\(NSE = 0.66\\)** [11]
+    * **Maize** (\\(n=15\\)): Observed \\(4378 \pm 530\\) kg/ha | Simulated \\(4418 \pm 578\\) kg/ha | **\\(R^2 = 0.68\\)**, **\\(NSE = 0.63\\)** [11]
+    * **Soybean** (\\(n=10\\)): Observed \\(1647 \pm 152\\) kg/ha | Simulated \\(1638 \pm 135\\) kg/ha | **\\(R^2 = 0.66\\)**, **\\(NSE = 0.62\\)** [11]
+    * **Mung bean** (\\(n=10\\)): Observed \\(491 \pm 81\\) kg/ha | Simulated \\(480 \pm 88\\) kg/ha | **\\(R^2 = 0.64\\)**, **\\(NSE = 0.61\\)** [11]
+    * **Cassava** (\\(n=12\\)): Observed \\(12,732 \pm 1433\\) kg/ha | Simulated \\(12,500 \pm 1248\\) kg/ha | **\\(R^2 = 0.63\\)**, **\\(NSE = 0.62\\)** [11]
+
+---
+
+### **2. Study Area Specifics**
+
+* **Location & Geomorphology**:
+  * **Province**: Phichit Province, Lower Northern Thailand [12].
+  * **Hydrology**: Yom and Nan rivers flow parallel through the province before merging into the Chao Phraya Basin [12].
+  * **Geomorphological Zones**:
+    1. **Alluvial Fan** (West side): Sand and gravelly sand; prone to **repeated drought** [12].
+    2. **Flood Plain** (Middle): Fine-grained clay and sandy clay; prone to **repeated floods** [12].
+    3. **Alluvial Plain** (East side): Gravel, sand, silt, and clay; prone to **repeated drought** [12].
+* **Districts, Sub-districts, and Topsoil Properties (0–10 cm)** [13]:
+  * **RRR** (Triple Rice, Irrigated): Sam Ngam District (Rang Nok Sub-district) — **Clay**, pH 5.3–5.6, Organic Matter (OM) 2.38–2.73% [13].
+  * **RR** (Double Rice, Rainfed): Taphan Hin District (Thap Man Sub-district) — **Sandy clay**, pH 5.1–5.2, OM 1.02–2.18% [13].
+  * **RM** (Rice–Maize): Wang Sai Phun District (Nong Phra Sub-district) — **Sandy clay**, pH 4.9–5.9, OM 1.55–2.05% [13].
+  * **RS** (Rice–Soybean): Pho Prathap Chang District (Phai Tha Pho Sub-district) — **Sandy clay**, pH 4.8–5.6, OM 2.01–2.15% [13].
+  * **RB** (Rice–Mungbean): Bueng Na Rang District (Pho Sai Ngam Sub-district) — **Silty clay**, pH 5.7–6.0, OM 0.69–1.35% [13].
+  * **MM** (Double Maize): Dong Charoen District (Samnak Kun Nen Sub-district) — **Silty clay**, pH 5.2–5.6, OM 2.24–2.34% [13].
+  * **CS** (Cassava): Thap Khlo District (Thap Khlo Sub-district) — **Sandy clay loam**, pH 5.7–5.9, OM 0.99–1.83% [13].
+* **Historical Baseline (1981–2014 Climate Data)** [14, 15]:
+  * Annual precipitation: **1648.4 mm/year** [15] (1983–2013 average: 1314.6 mm, wettest month = September at 321.3 mm) [16].
+  * Mean maximum temperature (\\(T_{max}\\)): **32.6 °C** (hottest month = April at 36.1 °C) [15, 16].
+  * Mean minimum temperature (\\(T_{min}\\)): **22.8 °C** (coldest month = January at 18.8 °C) [15, 16].
+
+---
+
+### **3. CMIP6 Climate Scenarios**
+
+The study utilized an ensemble of **5 CMIP6 GCMs** (CESM2, MRI-ESM2-0, BCC-CSM2-MR, GFDL-ESM4, CanESM) downscaled and bias-corrected for Phichit [17].
+
+| Variable | Scenario | Baseline (1981–2014) | Near Future (2015–2039) | Mid Future (2040–2069) | Far Future (2070–2100) |
+| :--- | :--- | :---: | :---: | :---: | :---: |
+| **Precipitation** *(mm/yr)* [15] | **SSP2-4.5** | 1648.4 | 1685.3 (+2.2%) | 1685.0 (+2.2%) | 1712.2 (+3.9%) |
+| | **SSP5-8.5** | 1648.4 | 1677.8 (+1.8%) | 1719.1 (+4.3%) | 1744.6 (+5.8%) |
+| **\\(T_{max}\\)** *(°C)* [15] | **SSP2-4.5** | 32.6 | 33.3 (+0.7 °C) | 34.2 (+1.5 °C) | 34.8 (+2.2 °C) |
+| | **SSP5-8.5** | 32.6 | 33.4 (+0.7 °C) | 34.8 (+2.1 °C) | 36.5 (+3.9 °C) |
+| **\\(T_{min}\\)** *(°C)* [15] | **SSP2-4.5** | 22.8 | 23.5 (+0.7 °C) | 24.3 (+1.5 °C) | 24.9 (+2.1 °C) |
+| | **SSP5-8.5** | 22.8 | 23.6 (+0.8 °C) | 24.9 (+2.1 °C) | 26.6 (+3.8 °C) |
+
+* *Seasonal extremes*: Peak \\(T_{max}\\) reaches **40.2 °C in April** by 2070–2100 under SSP5-8.5 [18]. High rainfall concentrates in September and October, while May receives lower rainfall than baseline [18].
+
+---
+
+### **4. Exact Yield Changes for Rice Cropping Systems**
+
+#### **A. Irrigated Area — Rapid Rice Rotation (RRR: Triple Rice)** [19]
+* **Baseline Yields**: 1st Rice = 6300 kg/ha | 2nd Rice = 5850 kg/ha | 3rd Rice = 6150 kg/ha [19]
+* **SSP2-4.5 Projections** [19]:
+  * **2015–2039**: 1st Rice = **6937 kg/ha** (+637 kg/ha; **+10.1%**) | 2nd Rice = **7000 kg/ha** (+1150 kg/ha; **+19.7%**) | 3rd Rice = **6585 kg/ha** (+435 kg/ha; **+7.1%**)
+  * **2040–2069**: 1st Rice = **7055 kg/ha** (+755 kg/ha; **+12.0%**) | 2nd Rice = **7395 kg/ha** (+1545 kg/ha; **+26.4%**) | 3rd Rice = **6909 kg/ha** (+759 kg/ha; **+12.3%**)
+  * **2070–2100**: 1st Rice = **7093 kg/ha** (+793 kg/ha; **+12.6%**) | 2nd Rice = **7780 kg/ha** (+1930 kg/ha; **+33.0%**) | 3rd Rice = **7097 kg/ha** (+947 kg/ha; **+15.4%**)
+* **SSP5-8.5 Projections** [19]:
+  * **2015–2039**: 1st Rice = **6327 kg/ha** (+27 kg/ha; **+0.4%**) | 2nd Rice = **5910 kg/ha** (+60 kg/ha; **+1.0%**) | 3rd Rice = **6214 kg/ha** (+64 kg/ha; **+1.0%**)
+  * **2040–2069**: 1st Rice = **5580 kg/ha** (-720 kg/ha; **-11.4%**) | 2nd Rice = **5330 kg/ha** (-520 kg/ha; **-8.9%**) | 3rd Rice = **5530 kg/ha** (-620 kg/ha; **-10.1%**)
+  * **2070–2100**: 1st Rice = **5264 kg/ha** (-1036 kg/ha; **-16.4%**) | 2nd Rice = **5112 kg/ha** (-738 kg/ha; **-12.6%**) | 3rd Rice = **5012 kg/ha** (-1138 kg/ha; **-18.5%**)
+
+#### **B. Rainfed Area — Double Rice (RR)** [19]
+* **Baseline Yields**: 1st Rice = 5930 kg/ha | 2nd Rice = 5850 kg/ha [19]
+* **SSP2-4.5 Projections** [19]:
+  * **2015–2039**: 1st Rice = **6106 kg/ha** (+176 kg/ha; **+3.0%**) | 2nd Rice = **6100 kg/ha** (+250 kg/ha; **+4.3%**)
+  * **2040–2069**: 1st Rice = **5975 kg/ha** (+45 kg/ha; **+0.8%**) | 2nd Rice = **5795 kg/ha** (-55 kg/ha; **-0.9%**)
+  * **2070–2100**: 1st Rice = **5804 kg/ha** (-127 kg/ha; **-2.1%**) | 2nd Rice = **5780 kg/ha** (-70 kg/ha; **-1.2%**)
+* **SSP5-8.5 Projections** [19]:
+  * **2015–2039**: 1st Rice = **5576 kg/ha** (-355 kg/ha; **-6.0%**) | 2nd Rice = **5417 kg/ha** (-433 kg/ha; **-7.4%**)
+  * **2040–2069**: 1st Rice = **5185 kg/ha** (-745 kg/ha; **-12.6%**) | 2nd Rice = **5130 kg/ha** (-720 kg/ha; **-12.3%**)
+  * **2070–2100**: 1st Rice = **5075 kg/ha** (-855 kg/ha; **-14.4%**) | 2nd Rice = **4812 kg/ha** (-1038 kg/ha; **-17.7%**)
+
+---
+
+### **5. Water Footprint (WF) Breakdown for Rice Seasons**
+
+* **Baseline Total WF for Rice**: **1206 to 1467 \\(\text{m}^3/\text{ton}\\)** [20].
+* **Irrigated Areas (RRR System Breakdown)** [20]:
+  * **1st Rice** (Rainy season): **Green WF dominates** (758–1318 \\(\text{m}^3/\text{ton}\\)); Blue WF is low (55.4–95 \\(\text{m}^3/\text{ton}\\)); Grey WF ranges from 223–349 \\(\text{m}^3/\text{ton}\\) [20].
+  * **2nd Rice** (Dry season): Green WF = 287–371 \\(\text{m}^3/\text{ton}\\); **Blue WF increases** (628–790 \\(\text{m}^3/\text{ton}\\)); Grey WF = 223–349 \\(\text{m}^3/\text{ton}\\) [20].
+  * **3rd Rice** (Dry season): Green WF = 153–194 \\(\text{m}^3/\text{ton}\\); **Blue WF highest** (803–1194 \\(\text{m}^3/\text{ton}\\)); Grey WF = 223–349 \\(\text{m}^3/\text{ton}\\) [20].
+* **Rainfed Areas (RR System Breakdown)** [21]:
+  * **1st Rice**: Green WF dominated (~800–1400 \\(\text{m}^3/\text{ton}\\) across scenarios) [21].
+  * **2nd Rice**: Blue WF dominated (~800–1200 \\(\text{m}^3/\text{ton}\\) across scenarios) [21].
+  * **Grey WF**: **258 to 350 \\(\text{m}^3/\text{ton}\\)**, which is higher than in irrigated areas due to lower average rainfed yields [21].
+
+---
+
+### **6. Performance of Alternative Crops in Rainfed Adaptation Systems**
+
+Non-rice alternative crops consume **roughly half the water footprint** of rice production [22, 23].
+
+| Crop System & Crop | Baseline Yield (kg/ha) [24] | Future Yield Changes across Scenarios [24-27] | Baseline Total WF (\\(\text{m}^3/\text{ton}\\)) [20, 23] | Future Water Footprint Behavior [23, 28] |
+| :--- | :---: | :--- | :---: | :--- |
+| **Mung bean** *(RB System)* | **480** | **+2.1% to +7.9%** (490–518 kg/ha) across ALL periods & scenarios [24, 25]. | **437** | **Lowest WF overall**. Average Green = 269, Blue = 88, Grey = 70 \\(\text{m}^3/\text{ton}\\). WF decreases across all periods [23]. |
+| **Cassava** *(CS System)* | **12,500** | **+1.0% to +5.7%** (12,630–13,210 kg/ha) across ALL periods & scenarios [24, 27]. | **575** | Average Green = 178, Blue = 261, Grey = 104 \\(\text{m}^3/\text{ton}\\). Total WF steadily declines to ~525–565 \\(\text{m}^3/\text{ton}\\) [23]. |
+| **Maize** *(RM & MM Systems)* | RM: 4485 <br> MM1: 4485 <br> MM2: 4285 | **RM**: +0.2% to +1.2% in near/mid future; drops -1.3% to -1.6% in far future [25]. <br>**MM1**: **+0.5% to +15.8%** [26]. <br>**MM2**: +2.6% to +6.0% in near/mid future; drops -6.0% to -6.3% in far future [26, 29]. | **682 – 866** | WF decreases in near/mid future due to yield gains, but increases slightly in far future due to thermal stress [23, 28]. |
+| **Soybean** *(RS System)* | **1638** | **+0.2% to +1.5%** in near/mid future (1641–1663 kg/ha); drops -0.9% to -1.3% in far future [24, 25]. | **542** | WF decreases in near/mid future (~495–500 \\(\text{m}^3/\text{ton}\\)) and increases in far future (~595–620 \\(\text{m}^3/\text{ton}\\)) [23, 28]. |
+
+---
+
+### **7. Key Scientific Conclusions, Counter-Intuitive Facts, and Policy Recommendations**
+
+1. **Inverse Yield–Water Footprint Relationship (Core Scientific Principle)**:
+   * Water footprint per unit mass (\\(\text{m}^3/\text{ton}\\)) is **inversely proportional to crop yield** (\\(Y\\)) because \\(WF = \frac{CWU}{Y}\\) [2, 30]. When yields increase under moderate CO2 fertilization and precipitation gains, the unit water footprint drops—and vice versa [30].
+2. **CO2 Fertilization Threshold Paradox**:
+   * Under moderate emissions (**SSP2-4.5**), increased rainfall and elevated CO2 concentration offset temperature increases, leading to yield gains in irrigated rice (+10.1% to +33.0%) [31, 32].
+   * Under extreme emissions (**SSP5-8.5**), excessive temperatures exceed optimal thresholds during flowering, triggering severe heat and water stress that overwhelms CO2 fertilization benefits, causing rice yields to collapse by up to **-18.5%** [31, 32].
+3. **Mung Bean & Cassava High Climate Resilience**:
+   * **Mung bean** thrives in the dry season because optimal temperatures (28–30 °C) fit dry-season conditions, and high dry-season temperatures suppress biotic stressors like Mungbean Yellow Mosaic Virus [29].
+   * **Cassava** exhibits exceptional drought tolerance and water-use efficiency, consistently increasing yields (+1.0% to +5.7%) across all scenarios [27, 33].
+4. **Policy Recommendations**:
+   * **Irrigated Areas**: Continue **Triple Rice Cropping (RRR)** under moderate warming scenarios, as guaranteed irrigation buffers heat stress [34, 35].
+   * **Rainfed Areas**: **Abolish double rice cropping (RR)** due to severe future yield losses (-6.0% to -17.7%) [31, 36]. Replace the 2nd rice crop with low water-consuming crops (**Mung bean, Maize, or Soybean**) [34-36].
+   * **Land-Use Conversion**: Transitioning rainfed lands to **Double Maize (MM)** or **Cassava (CS)** cuts total agricultural water consumption by **~50%** while maintaining agricultural stability against severe flood/drought cycles [22, 23, 35].
+
+---
+
+💡 *Next step: Would you like me to generate a comparative summary table or help you draft an adaptation policy brief based on these findings?*

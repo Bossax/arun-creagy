@@ -1,0 +1,30 @@
+# [ORACLE TICKET] 2026-10-15_ART02_ChaoPhraya_Rice
+- From: arun
+- Target: samart
+- Topic: DCCE Article 2 Greenfield Rewrite: การปรับตัวของการปลูกข้าวในพื้นที่ลุ่มแม่น้ำเจ้าพระยา (RD57, DSSAT CERES-Rice, SSPs)
+- Research Dossier: /mnt/c/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/inbox/research_dossiers/ART02_Research_Dossier.md
+- Base Text / DCCE Redlines: /mnt/c/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/incubate/DCCE/CRDB/inbox_note/บทความ-edit.md (บรรทัดที่ 10–25)
+- Deliverable Path: /mnt/c/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/incubate/DCCE/CRDB/output/TOR5.5_article_and_infoghraphic/ART02_ChaoPhraya_Rice_Adaptation/05_DCCE_Calibrated_Final.md
+- Delivery Receipt: /mnt/c/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/inbox/from-samart/2026-10-15_ART02_ChaoPhraya_Rice.md
+- Wire Signal: maw hey arun 'DONE: 2026-10-15_ART02_ChaoPhraya_Rice'
+
+### คำสั่งปฏิบัติการและข้อกำหนดเข้มงวด (Strict Editorial Directives):
+1. **[NEW DIRECTIVE] ถอดรหัสคำศัพท์และตัวย่อสำหรับบุคคลทั่วไป (Jargon & Acronym Demystification)**:
+   - ทุกครั้งที่กล่าวถึงชื่อแบบจำลอง ตัวย่อ หรือศัพท์เทคนิคเฉพาะทางเป็นครั้งแรก (เช่น DSSAT CSM CERES-Rice, ข้าวพันธุ์ กข57 / RD57, GCMs, SSP1-2.6/SSP2-4.5/SSP5-8.5, ภาวะเกสรเป็นหมัน / Spikelet Sterility, เกณฑ์ความชื้นดินเพื่อการให้น้ำ / Irrigation Threshold, สายพันธุ์จำลอง / Virtual Cultivar, ค่าสัมประสิทธิ์ความทนทานต่อความร้อน / THOT) **ต้องมีคำอธิบายขยายความภาษาไทยแบบเข้าใจง่ายกำกับไว้ในวงเล็บหรือในประโยคเสมอ** เพื่อให้ผู้อ่านระดับนโยบายหรือประชาชนทั่วไปที่ไม่มีพื้นฐานวิทยาศาสตร์เข้าใจได้ทันที
+   - ให้อ้างอิงและนำนิยามภาษาไทยสำเร็จรูปใน "ส่วนที่ 3 (De-obfuscated Conceptual Glossary)" ของ ART02_Research_Dossier.md ไปใช้เรียบเรียงได้โดยตรง
+
+2. **[Pilot Lesson 1] แยกชั้นตรรกะ ไม่คัดลอกตาราง Toulmin (No Toulmin Copy-Paste)**:
+   - ตาราง Toulmin (Claim, Grounds, Warrant) ใน drafting-plan.md เป็นเพียง "ผังตรรกะสำหรับการคิด"
+   - ห้ามคัดลอกข้อความในช่อง Claim มาเป็นประโยคเปิดย่อหน้าอย่างทื่อๆ หรือแยกส่วนเป็นท่อนๆ โดยเด็ดขาด ให้นำตรรกะมาเรียบเรียงเป็นความเรียงต่อเนื่อง (continuous narrative) ที่สละสลวย
+
+3. **[Pilot Lesson 2] ทุกย่อหน้าต้องมีประธานเชิงสถาบันที่ชัดเจน (Explicit Institutional Subjects)**:
+   - ห้ามขึ้นต้นย่อหน้าบทวิเคราะห์ด้วยคำช่วยหรือกริยาลอยๆ เช่น ห้ามเปิดด้วย "ควร..." หรือ "ต้อง..."
+   - ทุกย่อหน้าต้องเปิดด้วยบริบทเชิงวิเคราะห์ หรือประธานหน่วยงานที่รับผิดชอบ เช่น กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม (สส.), กรมการข้าว, กรมชลประทาน, สถาบันวิจัยการเกษตร
+
+4. **[Pilot Lesson 3] รักษาความลื่นไหลของเนื้องานเดิม และตัดถ้อยคำตัดสินเชิงอารมณ์**:
+   - ปรับแก้ถ้อยคำตามข้อสังเกตของ สส. ใน บทความ-edit.md (บรรทัด 10–25) โดยตัดถ้อยคำสไตล์เอ็นจีโอหรือวาทกรรมอารมณ์ (เช่น ตัด "ภาวะโลกร้อน", "วาทกรรม", "ทรัพยากรวิกฤต") ให้เป็นภาษาทางวิชาการและราชการที่มีอำนาจ น่าเชื่อถือ และเน้นทางออกเชิงยุทธศาสตร์
+
+5. **[Telemetry Loop] ช่องทางส่งต่อข้อผิดพลาดให้ creagy-writing**:
+   - หากพบข้อผิดพลาด ความติดขัด (hiccup) ปัญหาเครื่องมือ หรือการตอบสนองที่เบี่ยงเบนจากคำสั่ง ให้บันทึกรายงานสรุปสั้นๆ วางไว้ที่ `/mnt/c/Users/sitth/OracleWorkspace/creagy-writing/ψ/inbox/2026-10-15_ART02_incident.md` เพื่อให้ creagy-writing นำไปเรียนรู้และปรับปรุงระบบ
+
+กรุณาเริ่มดำเนินการ creagy-section-planning และยกร่างบทความฉบับสมบูรณ์ (~1,200–1,500 คำ) ตามแนวทางข้างต้นได้ทันที

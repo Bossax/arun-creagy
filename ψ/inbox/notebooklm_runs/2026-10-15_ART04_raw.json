@@ -1,0 +1,158 @@
+{
+  "answer": "Extracted scientific evidence from 'Influence of El Niño southern oscillation on precipitation variability in Northeast Thailand' (Chueasa et al., 2024, MethodsX 13, 102954).",
+  "paper_metadata": {
+    "title": "Influence of El Niño southern oscillation on precipitation variability in Northeast Thailand",
+    "authors": [
+      "Bunthid Chueasa",
+      "Usa Wannasingha Humphries",
+      "Muhammad Waqas"
+    ],
+    "author_affiliations": [
+      "Department of Mathematics, Faculty of Science, King Mongkut’s University of Technology Thonburi (KMUTT), Bangkok, Thailand",
+      "The Joint Graduate School of Energy and Environment (JGSEE), King Mongkut’s University of Technology Thonburi (KMUTT), Bangkok, Thailand"
+    ],
+    "journal": "MethodsX",
+    "volume_issue_year": "Volume 13, 2024, 102954",
+    "doi": "10.1016/j.mex.2024.102954"
+  },
+  "section_1_meteorological_dataset_and_imputation": {
+    "study_region": {
+      "name": "Northeast Thailand (Isan / Korat Plateau)",
+      "geographic_coordinates": "14°N–18°N, 101°E–105°E",
+      "area_extent_km2": 170000,
+      "topography": "Plateau landscape bounded by Mekong River (North/East) and Phetchabun Mountains (West)"
+    },
+    "dataset_details": {
+      "data_source": "Thai Meteorological Department (TMD)",
+      "number_of_stations": 27,
+      "historical_period": "1993–2022 (30 years, 360 monthly records per station)",
+      "data_type": "Monthly precipitation (PPT) and precipitation anomaly (PPTA)"
+    },
+    "missing_data_imputation": {
+      "method": "Multiple Linear Regression (MLR)",
+      "reference_methodology": "Wangwongchai et al. (2023)",
+      "imputation_process": "Missing daily/monthly precipitation records were estimated using linear regression models built from surrounding neighboring stations"
+    }
+  },
+  "section_2_ssta_regions_and_oceanic_indices": {
+    "ssta_data_source": "NOAA Extended Reconstructed Sea Surface Temperature version 5 (ERSST.v5)",
+    "analyzed_nino_regions": [
+      {
+        "region_name": "Niño 1+2",
+        "coordinates": "0°–10°S, 90°W–80°W",
+        "description": "Easternmost and smallest equatorial Pacific region off coastal South America; exhibits highest SSTA variance"
+      },
+      {
+        "region_name": "Niño 3",
+        "coordinates": "5°N–5°S, 150°W–90°W",
+        "description": "Eastern equatorial Pacific region key for ocean-atmosphere interaction monitoring"
+      },
+      {
+        "region_name": "Niño 3.4",
+        "coordinates": "5°N–5°S, 170°W–120°W",
+        "description": "Central equatorial Pacific region representing average equatorial Pacific SSTA"
+      },
+      {
+        "region_name": "Niño 4",
+        "coordinates": "5°N–5°S, 160°E–150°W",
+        "description": "Central-western equatorial Pacific region capturing maximum warm SSTA pool"
+      }
+    ]
+  },
+  "section_3_quantitative_lag_time_responses": {
+    "lag_response_summary": "Precipitation anomaly (PPTA) response to ENSO SSTA exhibits a 4–5 month lag period across Northeast Thailand",
+    "regional_peak_lags": {
+      "nino_1_2": {
+        "peak_lag_months": 5,
+        "correlation_r": -0.09,
+        "p_value": 0.09
+      },
+      "nino_3": {
+        "peak_lag_months": 5,
+        "correlation_r": -0.14,
+        "p_value": 0.01
+      },
+      "nino_3_4": {
+        "peak_lag_months": 4,
+        "correlation_r": -0.14,
+        "p_value": 0.01
+      },
+      "nino_4": {
+        "peak_lag_months": 4,
+        "correlation_r": -0.16,
+        "p_value": 0.00
+      }
+    },
+    "wave_propagation_mechanism": "The 4–5 month delay is governed by the slow propagation of oceanic Kelvin and Rossby waves across the equatorial Pacific, which takes several months to modulate atmospheric Walker Circulation and alter monsoon moisture delivery to Indochina"
+  },
+  "section_4_asymmetrical_impact_el_nino_vs_la_nina": {
+    "strong_la_nina_correlations": {
+      "nino_1_2": 0.76,
+      "nino_3": -0.64,
+      "nino_3_4": -0.50,
+      "nino_4": -0.65
+    },
+    "weak_and_moderate_correlations": {
+      "el_nino_events": "-0.01 to -0.32 across weak, moderate, and strong phases",
+      "weak_moderate_la_nina": "0.01 to 0.29 across weak and moderate phases"
+    },
+    "physical_mechanisms_for_asymmetry": {
+      "central_pacific_regions_nino_3_34_4": "During Strong La Niña (SSTA < -1.5°C), enhanced trade winds and strengthened Walker Circulation shift deep atmospheric convection westward into Southeast Asia, driving sharp rainfall increases across Northeast Thailand",
+      "coastal_region_nino_1_2_positive_correlation": "Localized oceanic-atmospheric feedbacks near coastal South America cause reduced cooling or localized warming during Strong La Niña, producing a local weakening of the eastern Walker Circulation branch that results in a positive correlation (+0.76) with Northeast Thailand rainfall"
+    }
+  },
+  "section_5_precipitation_baseline_statistics": {
+    "historical_period": "1993–2022",
+    "mean_annual_rainfall_mm": 1470.80,
+    "minimum_annual_rainfall": {
+      "year": 1993,
+      "rainfall_mm": 1112.30,
+      "deficit_mm": -358.50,
+      "percentage_deviation": -24.38
+    },
+    "maximum_annual_rainfall": {
+      "year": 2017,
+      "rainfall_mm": 1972.80,
+      "surplus_mm": 502.00,
+      "percentage_deviation": 34.13
+    },
+    "seasonal_distribution": {
+      "rainy_season": "Mid-May to mid-October (peaking in July, August, and September)",
+      "dry_season": "November to April (minimum rainfall in December and January)"
+    }
+  },
+  "section_6_wavelet_transform_coherence_wtc_analysis": {
+    "mother_wavelet": "Morlet wavelet (central frequency omega_0 = 6 radians/unit time)",
+    "identified_periodicities": [
+      {
+        "period_band": "2–7 years",
+        "description": "Dominant interannual coherence mode matching the 2–7 year primary cycle of ENSO recurrence, with highest power during 1993–2003 and 2013–2018"
+      },
+      {
+        "period_band": "0.5–1.0 year",
+        "description": "High intra-annual coherence during 2003–2013 reflecting semi-annual to annual seasonal modulations driven by ENSO"
+      }
+    ]
+  },
+  "section_7_policy_and_water_management_recommendations": {
+    "early_warning_window": "4–5 months lead time based on Pacific SSTA index monitoring",
+    "figures_and_tables_map": {
+      "Fig_1": "Geographic location map of Southeast Asia and 20 provinces of Northeast Thailand",
+      "Fig_2": "Spatial boundaries of Pacific Ocean Niño regions (Niño 1+2, 3, 3.4, 4)",
+      "Fig_3": "Monthly time series (1993–2022) of Niño indices categorized by severity",
+      "Fig_4": "Monthly precipitation distribution boxplots showing seasonal cycle (Jan–Dec)",
+      "Fig_5": "Annual percentage precipitation anomaly (PPTA) bar chart (1993–2022)",
+      "Fig_6": "Pearson correlation bar graphs by ENSO severity (Weak, Moderate, Strong)",
+      "Fig_7": "Wavelet transform coherence (WTC) spectra between Niño indices and PPTA",
+      "Fig_8": "Spatial precipitation anomaly maps comparing El Niño (2015, 2019) and La Niña (2017, 2022) years",
+      "Table_1": "Descriptive statistics (min, max, mean, std) for monthly PPT across 27 weather stations",
+      "Table_2": "Pearson correlation matrix between Niño indices and PPTA across 0–12 month time lags"
+    },
+    "recommendations_for_dcce_and_rid": [
+      "Incorporate the 4–5 month early warning window into the Royal Irrigation Department (RID) seasonal water allocation and reservoir management models.",
+      "Issue advance agricultural notices 4–5 months prior to crop planting to guide rice, rubber, and sugarcane farmers on cropping choices and irrigation schedules.",
+      "Establish proactive flood retention and drainage management protocols in advance of Strong La Niña phases to handle precipitation surpluses of up to +34.13%.",
+      "Implement dry-season drought contingency planning, water rationing, and forest fire suppression measures 4 months ahead of El Niño onset."
+    ]
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "answer": "Complete scientific evidence from 'Projecting long-term excess risks of major infectious diseases associated with future extreme weather events in Thailand' (Choo et al., 2026, PLOS Negl Trop Dis 20(1): e0013896).",
+  "paper_metadata": {
+    "title": "Projecting long-term excess risks of major infectious diseases associated with future extreme weather events in Thailand",
+    "authors": [
+      "Esther Li Wen Choo",
+      "Pei Ma",
+      "Jo Yi Chow",
+      "Steve Hung-Lam Yim",
+      "Oliver Brady",
+      "Borame Lee Dickens",
+      "Jue Tao Lim"
+    ],
+    "author_affiliations": [
+      "Lee Kong Chian School of Medicine, Nanyang Technological University, Singapore",
+      "Saw Swee Hock School of Public Health, National University of Singapore, Singapore",
+      "Centre for Climate Change and Environmental Health, NTU, Singapore",
+      "London School of Hygiene & Tropical Medicine, London, United Kingdom"
+    ],
+    "journal": "PLOS Neglected Tropical Diseases",
+    "publication_date": "January 5, 2026",
+    "doi": "10.1371/journal.pntd.0013896"
+  },
+  "section_1_methodology_and_analytical_framework": {
+    "statistical_model": {
+      "model_type": "Generalized Additive Models (GAMs) with Negative Binomial distribution",
+      "distribution_rationale": "Overdispersed disease case count data based on Cameron and Trivedi tests",
+      "covariates": [
+        "Lagged monthly Standardised Precipitation Index (SPI-1)",
+        "Lagged monthly number of extreme heat days",
+        "Population density",
+        "Contemporaneous relative humidity",
+        "Province spatial random effects (gamma_l)",
+        "Calendar month smooths (thin-plate splines) for seasonality"
+      ],
+      "disease_lag_structures": {
+        "dengue_and_jev": "2–3 months lag (extrinsic incubation period & vector reproduction)",
+        "malaria": "1 month heat lag / 3 months SPI lag (EIP vs habitat accumulation)",
+        "pneumonia_influenza_leptospirosis": "3 months lag (cumulative weather impact on host immunity & exposure)",
+        "melioidosis": "Immediate heat lag / 3 months SPI lag (soil bacterium exposure dynamics)"
+      }
+    },
+    "historical_baseline_data": {
+      "disease_surveillance_period": "2003–2019 (Thailand Ministry of Public Health, 77 provinces)",
+      "meteorological_baseline_period": "2003–2021 (ERA5 hourly reanalysis spatially averaged to provinces)",
+      "extreme_heat_definition": "Daily maximum temperature > 34.9°C (90th percentile national threshold) for ≥3 consecutive days",
+      "drought_and_wetness_definition": "SPI-1 ≤ -1.5 (extreme dry / drought) and SPI-1 ≥ 1.5 (extreme wet / heavy precipitation)"
+    },
+    "climate_change_scenarios_and_gcms": {
+      "ssps_evaluated": ["SSP1-2.6", "SSP2-4.5", "SSP3-7.0", "SSP5-8.5"],
+      "projection_horizons": ["2021–2040", "2041–2060", "2061–2080", "2081–2100"],
+      "primary_gcm": "MIROC6 (tailored for Asian monsoon systems and ocean-atmosphere interactions)",
+      "sensitivity_gcms": ["CMCC-ESM2", "IPSL-CM6A-LR", "Multi-model ensemble"]
+    }
+  },
+  "section_2_evaluated_diseases_and_baseline_burdens": {
+    "number_of_diseases": 7,
+    "diseases_evaluated": [
+      {
+        "disease_name": "Dengue",
+        "transmission_category": "Vector-borne (Aedes aegypti)",
+        "historical_heat_association": "Positive IRR under moderate extreme heat; negative under prolonged extreme dry/wet conditions"
+      },
+      {
+        "disease_name": "Japanese Encephalitis Virus (JEV)",
+        "transmission_category": "Vector-borne (Culex spp. / amplifying pig hosts)",
+        "historical_heat_association": "Positive IRR with extreme heat days"
+      },
+      {
+        "disease_name": "Malaria",
+        "transmission_category": "Vector-borne (Anopheles spp.)",
+        "historical_heat_association": "Negative IRR with extreme heat; positive IRR with extreme dry weather"
+      },
+      {
+        "disease_name": "Influenza",
+        "transmission_category": "Air-borne / Respiratory virus",
+        "historical_heat_association": "Positive IRR under extreme heat (>8 days/month); negative during extreme wet weather"
+      },
+      {
+        "disease_name": "Pneumonia",
+        "transmission_category": "Air-borne / Respiratory infection",
+        "historical_heat_association": "Positive IRR with extreme heat"
+      },
+      {
+        "disease_name": "Leptospirosis",
+        "transmission_category": "Water-borne / Zoonotic bacterial",
+        "historical_heat_association": "Negative IRR with extreme heat; positive IRR with extreme wet weather"
+      },
+      {
+        "disease_name": "Melioidosis",
+        "transmission_category": "Environmental bacterial (Burkholderia pseudomallei)",
+        "historical_heat_association": "Strong positive IRR under extreme heat (>20 days/month) and extreme wet weather"
+      }
+    ]
+  },
+  "section_3_quantitative_excess_risk_projections": {
+    "dengue_projections": {
+      "nationwide_late_century_change": "-24.9% (95% CI: -40.0%, -9.68%) risk reduction during 2061–2080 overall",
+      "ssp245_near_term_spike_2021_2040": "+26.2% (95% CI: 0.90%, 51.7%) increase driven by moderate extreme heat",
+      "provincial_variations_ssp245": {
+        "bangkok": "+42.2% (95% CI: 13.6%, 70.7%) increase in 2021–2040",
+        "chiang_mai": "-24.6% (95% CI: -40.1%, -9.00%) reduction in 2021–2040",
+        "chiang_rai": "+44.36% increase in 2021–2040, dropping to -34.2% (95% CI: -47.2%, -21.1%) in 2061–2080"
+      }
+    },
+    "influenza_projections": {
+      "ssp245_near_term_trend": "Peaks in 2021–2060 under moderate warming driven by heat and dry spells",
+      "nakhon_ratchasima_ssp245": "+36.8% (95% CI: 9.83%, 63.8%) increase in 2021–2040",
+      "late_century_trend": "Declines due to increased heavy precipitation flushing/reduced social mixing"
+    },
+    "other_disease_trends": {
+      "melioidosis": "Steeply increases under extreme heat (+27.8% by 2100 under SSP585) and extreme wet weather (+25.4% in 2041–2060)",
+      "pneumonia": "Sustained increase during extreme weather periods under SSP585",
+      "malaria": "Increases during extreme dry weather across climate scenarios",
+      "leptospirosis_and_jev": "General risk reduction during extreme dry/heat conditions"
+    }
+  },
+  "section_4_biological_and_ecological_mechanisms": {
+    "vector_borne_mechanisms": {
+      "aedes_aegypti_eip": "Moderate heat shortens the Extrinsic Incubation Period (EIP), accelerating viral replication and transmission in early century under SSP245",
+      "drought_disruption": "Severe dry weather shrinks artificial and natural water containers, restricting egg-laying breeding sites",
+      "rain_flushing_effect": "Extreme wet weather flushes out mosquito larvae and breeding containers",
+      "humidity_impact": "Lower relative humidity reduces adult mosquito lifespan and oviposition rates, acting as a primary driver for late-century dengue decline"
+    },
+    "respiratory_mechanisms": {
+      "heat_and_dehydration_stress": "High ambient temperatures and dehydration weaken respiratory epithelial integrity and mucosal immunity, elevating influenza and pneumonia susceptibility",
+      "social_mixing_reduction": "Extreme rainfall suppresses human outdoor mobility, leading to reduced contact rates and lower respiratory transmission"
+    },
+    "bacterial_environmental_mechanisms": {
+      "burkholderia_pseudomallei": "Extreme heat accelerates bacterial multiplication in surface soil, while flooding and heavy rainfall disperse bacteria into surface water and air"
+    }
+  },
+  "section_5_policy_implications_and_nap_recommendations": {
+    "precision_public_health": "Move away from uniform national public health planning toward province-specific early warning triggers reflecting regional climate heterogeneity",
+    "operational_triggers_under_ssp245": {
+      "northern_and_central_thailand": "Target Bangkok, Chiang Rai, and Central provinces with vector control and hospital surge capacity during heatwaves accompanied by normal rainfall",
+      "northeastern_thailand": "Target Nakhon Ratchasima, Buri Ram, and Ubon Ratchathani with influenza vaccination drives and respiratory surveillance during heatwaves coupled with extended dry periods"
+    },
+    "integration_with_dcce_and_nap": [
+      "Incorporate climate-disease risk maps directly into Thailand's National Adaptation Plan (NAP) health sector guidelines",
+      "Establish automated provincial warning thresholds combining 3-day temperature spikes (>34.9°C) and SPI drought/flood indices to allocate public health resources dynamically"
+    ],
+    "figures_and_tables_map": {
+      "Table_1": "Description of SSP scenarios (SSP126, SSP245, SSP370, SSP585)",
+      "Fig_1": "Historical and projected monthly SPI and extreme heat days",
+      "Fig_2": "National IRR and PAF for all 7 diseases across extreme heat and SPI",
+      "Fig_3": "Excess risk projections for all 7 diseases across SSPs and horizons (2021–2100)",
+      "Fig_4": "Stratified excess risks for vector-borne diseases (Dengue, JEV, Malaria)",
+      "Fig_5": "Stratified excess risks for respiratory and water-borne diseases (Influenza, Pneumonia, Leptospirosis, Melioidosis)",
+      "Fig_6": "Provincial Dengue excess risk maps and top 5 province trajectories under SSP245",
+      "Fig_7": "Provincial Influenza excess risk maps and top 5 province trajectories under SSP245"
+    }
+  }
+}

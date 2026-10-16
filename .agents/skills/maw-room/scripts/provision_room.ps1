@@ -18,7 +18,7 @@ param(
 )
 
 function Invoke-WslBash([string]$BashCommand) {
-    wsl -d Ubuntu -e bash -c "export PATH=`$HOME/.bun/bin:`$PATH; $BashCommand"
+    wsl -d Ubuntu -e bash -c "export PATH=`$HOME/.bun/bin:`$PATH; ($BashCommand) < /dev/null"
 }
 
 if ($Teardown) {
