@@ -1,0 +1,12 @@
+[
+  "/mnt/c/Users/sitth/.local/bin/nlm.exe",
+  "query",
+  "notebook",
+  "bb0355f2-1119-4385-b3bc-6b7cfa189296",
+  "Use only the supplied Arunrat et al. 2022 PDF. For irrigated rice crop 1 blue water footprint 55.4–95 m3/t and crop 3 803–1194 m3/t: exactly what observations or simulations does EACH minimum–maximum range cover? Determine separately whether the range includes baseline 1981–2014, each future period 2015–2039, 2040–2069, 2070–2100, both SSP2-4.5 and SSP5-8.5, and all five GCMs. Distinguish individual GCM extrema from ensemble means and annual observations from period averages. Map each of the four endpoints to period, SSP and GCM if explicitly available. Cite exact section, figure/panel, table and PDF page; quote brief exact source wording and relevant figure caption. Check any figure-panel typo. Do not infer scope solely from general study design or assume endpoint mapping. Mark each unsupported detail UNKNOWN explicitly.",
+  "-s",
+  "ac09eff0-ebf1-4104-9736-620bb838ffe9",
+  "--json",
+  "--timeout",
+  "120"
+]

@@ -1,0 +1,1 @@
+NotebookLM source-restricted query launched; daemon recovery interrupted execution. Original exec session 87818 is unavailable (Unknown process id); no stdout/stderr response files were persisted. No query result can be verified. Research stopped under notebooklm-rules source-fidelity gate.

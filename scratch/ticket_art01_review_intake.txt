@@ -1,0 +1,40 @@
+# [ORACLE TICKET] 2026-10-17_ART01_supervisor_intake
+- From: arun
+- Target: samart
+- Topic: DCCE Article 1 Draft 2 Human Review Capture & Supervisor Analysis
+- Reviewed File: /mnt/c/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/incubate/DCCE/CRDB/output/TOR5.5_article_and_infoghraphic/ART01_CMIP6_Water_Crop/06_DCCE_Calibrated_Draft2.md
+- Baseline File: /mnt/c/Users/sitth/OracleWorkspace/Samart-writer-oracle/ψ/writing/2026-10-15_ART01_pilot/08_ART01_Draft2_20261016.md
+- Deliverable Path: /mnt/c/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/inbox/from-samart/2026-10-17_ART01_supervisor_review.md
+- Supervisor Archive Dir: /mnt/c/Users/sitth/OracleWorkspace/Samart-writer-oracle/ψ/archive/ART01-supervisor/
+- Wire Signal: maw hey arun 'DONE: 2026-10-17_ART01_supervisor_intake'
+
+---
+
+### Directive for Samart (Creagy Senior Writer & Writing Supervisor):
+
+Boss (He/Him) has reviewed Article 1 Draft 2 (`06_DCCE_Calibrated_Draft2.md`), directly performing inline rewrites, grammar fixes, word choices, and adding extensive explicit critique comments enclosed in `%%...%%`.
+
+Please execute the following steps under your `writing-supervisor` workflow:
+
+1. **S1 Intake**:
+   - Copy/ingest Boss's reviewed draft from `/mnt/c/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/incubate/DCCE/CRDB/output/TOR5.5_article_and_infoghraphic/ART01_CMIP6_Water_Crop/06_DCCE_Calibrated_Draft2.md` into your local workspace at `ψ/writing/2026-10-15_ART01_pilot/09_ART01_Draft2_Boss_Reviewed.md`.
+   - Verify file contents and calculate SHA-256.
+
+2. **S2 Baseline & S3 Compare**:
+   - Set baseline as `ψ/writing/2026-10-15_ART01_pilot/08_ART01_Draft2_20261016.md`.
+   - Run paragraph-by-paragraph comparison between baseline and Boss's reviewed file.
+
+3. **S4 Observations & S5 Stated Reasons**:
+   - Extract every observation across all paragraphs (P1 through P10).
+   - Capture exact before/after diffs and record Boss's stated rationale directly from the `%%...%%` comments (e.g. premature detail/floating antecedents in P1, noun nominalizer omissions in P2, literal calques/collocations like "ผลจำลองข้าว" and "คนละด้าน" in P3/P4, attributing agency to scenarios in P4, unexplained CO2 benefits, missing transitions in P5/P7, banned "หลักฐานชุดนี้" and "รายงาน" as command line reporter, empty topic sentence in P9, ungrounded uncertainty analysis in P8).
+   - Label all comment-backed rationales as `stated`.
+
+4. **S6 Local Archive & Rule Proposals**:
+   - Create directory `ψ/archive/ART01-supervisor/`.
+   - Save the comprehensive supervisor analysis report, observations, and candidate rule proposals in:
+     `ψ/archive/ART01-supervisor/ART01-recurring-errors-and-rule-proposal.md`.
+   - Formulate explicit, enforceable writing rules for the remaining 9 articles (ART02–ART10).
+
+5. **S7 Delivery**:
+   - Deposit the complete supervisor summary brief to `/mnt/c/Users/sitth/OracleWorkspace/Arun_Creagy/ψ/inbox/from-samart/2026-10-17_ART01_supervisor_review.md`.
+   - Fire the wire signal: `maw hey arun 'DONE: 2026-10-17_ART01_supervisor_intake'`.
