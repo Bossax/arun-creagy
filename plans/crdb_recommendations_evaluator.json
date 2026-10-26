@@ -1,0 +1,536 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "metadata": {
+    "title": "CRDB Recommendations Semantic Dissection & Evaluation Matrix",
+    "description": "Authoritative semantic breakdown of CRDB recommendations dissected to fit the TOR contractual framing. Serves as the machine-readable evaluation benchmark for verifying Chapter 6 (Draft) and Chapter 7.3 (Final).",
+    "version": "1.0.0",
+    "date": "2026-10-26",
+    "oracle": "Arun",
+    "human": "Boss",
+    "tor_reference": {
+      "clause": "Scope Item 5.3.9 & Installment 4 Deliverable 4",
+      "canonical_wording_th": "ข้อมูลเสนอแนะเชิงนโยบายและเชิงเทคนิคในการพัฒนารายการชุดข้อมูลพื้นฐาน รายการผลิตภัณฑ์ข้อมูลและสารสนเทศและการบริหารจัดการข้อมูลในระยะยาว",
+      "canonical_wording_en": "Policy and Technical Recommendations for developing Baseline Data Inventory, Information Product Inventory, and Long-Term Data Management",
+      "primary_axes": [
+        "policy",
+        "technical"
+      ],
+      "target_components": [
+        "baseline_data_inventory",
+        "information_product_inventory",
+        "long_term_data_management"
+      ]
+    }
+  },
+  "dissection_rationale": {
+    "recommendation_3_dissection": {
+      "original_form": "Section 6.2 Recommendation 3 originally bundled 'Product & Service Led Strategy' together with 'Agile Software Development Cycle'.",
+      "dissection_action": "Dissected into two distinct operational segments: (1) 'Product & Service Led Strategy' (prioritizing 5 core services + Data Catalog, DCCE as Product Owner) is allocated strictly to 'information_product_inventory'; (2) 'Agile Development & Iterative Delivery Cycle' (2-cycle build, mid-contract beta testing, vendor backlog governance) is allocated strictly to 'long_term_data_management' as modern software delivery governance."
+    },
+    "recommendation_1_and_2_allocation": {
+      "governance_4_tiers": "Allocated to 'long_term_data_management' (Policy: 4-tier structure; Technical: verification rules and steward workflows).",
+      "in_house_data_talent": "Allocated to 'long_term_data_management' (Policy: building Data Engineers, Analysts, and Managers distinct from traditional IT infrastructure staff)."
+    },
+    "recommendation_4_allocation": {
+      "data_exchange_agreements": "Allocated to 'baseline_data_inventory' (Policy: bilateral SLAs with 5 key agencies holding 37% of data, demand-driven intake; Technical: API endpoints, schema mapping, and update cadences)."
+    },
+    "blueprint_and_roadmap_allocation": {
+      "sdlc_6_phases_and_8_handover_elements": "Allocated to 'information_product_inventory' (Technical Blueprint for build-phase execution).",
+      "parallel_2_track_roadmap": "Allocated to 'long_term_data_management' (Technical Implementation Roadmap coordinating vendor contracts and 8 internal governance tasks)."
+    }
+  },
+  "dissected_recommendations": [
+    {
+      "id": "REC-BASE-POL-01",
+      "title_th": "นโยบายการจัดทำข้อตกลงแลกเปลี่ยนข้อมูลเชิงรุกและกำหนดชั้นการเข้าถึงข้อมูล",
+      "title_en": "Proactive Bilateral Data Exchange Agreement & Access Classification Policy",
+      "tor_component": "baseline_data_inventory",
+      "tor_axis": "policy",
+      "source_origins": [
+        "Section 6.2 Recommendation 4",
+        "June 2026 Pillar 4 (Technical Partnerships)",
+        "WP8 Recommendations Report Section 2"
+      ],
+      "core_arguments": {
+        "claim": "กรม สส. ต้องจัดทำข้อตกลงแลกเปลี่ยนข้อมูล (Data Exchange Agreements / SLAs) ทวิภาคีกับ 5 หน่วยงานหลัก โดยยึดความต้องการเชิงยุทธศาสตร์ของ กรม สส. เป็นตัวตั้ง ไม่ใช่ปริมาณข้อมูลที่หน่วยงานภายนอกถือครอง",
+        "grounds": "หน่วยงาน 5 แห่ง (กรมอุตุนิยมวิทยา, GISTDA, ปภ., สสช., สศช.) ถือครองชุดข้อมูล 97 ชุดจาก 260 ชุด (ร้อยละ 37 ของบัญชีข้อมูลทั้งหมด) และข้อมูลกว่าร้อยละ 51 ในปัจจุบันยังถูกจำกัดการเข้าถึง การขอข้อมูลเป็นรายครั้งสร้างความล่าช้าและขาดความแน่นอน",
+        "warrant": "การยึดความต้องการของ กรม สส. เป็นตัวตั้ง ป้องกันไม่ให้แพลตฟอร์มกลายเป็นที่ทิ้งข้อมูลดิบที่ไม่มีผู้ใช้ และการทำข้อตกลงล่วงหน้าทำให้การไหลของข้อมูลมีความแน่นอนตามรอบเวลา",
+        "so_what": "เปลี่ยนบทบาทของ กรม สส. จากผู้รอรับข้อมูล เป็นผู้กำหนดความต้องการข้อมูล และปลดล็อกชุดข้อมูลสำคัญเข้าสู่แพลตฟอร์มได้อย่างต่อเนื่อง"
+      },
+      "chapter6_draft_stance": {
+        "framing": "กรอบความร่วมมือเชิงสถาบันและการกำหนดตำแหน่ง (Institutional Partnership & Access Policy)",
+        "key_concepts": [
+          "ความร่วมมือเชิงเทคนิคและสถาบัน 3 รูปแบบ (Data Sharing, Method Co-creation, Service Co-design)",
+          "นโยบายการเปิดเผยข้อมูลสาธารณะ (Open Data Policy)",
+          "การปลดล็อกอุปสรรค PDPA และระเบียบความปลอดภัยผ่านการสร้างกติการ่วม"
+        ]
+      },
+      "chapter7_final_stance": {
+        "framing": "ข้อกำหนดการเจรจาทวิภาคีเชิงปฏิบัติการ (Actionable Bilateral SLA Mandate)",
+        "key_specifications": [
+          "เป้าหมาย 5 หน่วยงานชัดเจน (อม., GISTDA, ปภ., สสช., สศช.)",
+          "ตัวเลขชัดเจน: ครอบคลุม 97 ชุดข้อมูลจาก 260 ชุดข้อมูล (ร้อยละ 37)",
+          "หลักการดำเนินงานคู่ขนาน (Parallel Execution): เดินหน้าโดยไม่ตั้งเงื่อนไขให้การเจรจาเสร็จสิ้นก่อนเริ่มพัฒนาระบบ"
+        ]
+      },
+      "evaluator_criteria_for_chapter_7_3": {
+        "must_contain_keywords": [
+          "ข้อตกลงแลกเปลี่ยนข้อมูล",
+          "5 หน่วยงาน",
+          "กรมอุตุนิยมวิทยา",
+          "GISTDA",
+          "กรมป้องกันและบรรเทาสาธารณภัย",
+          "สำนักงานสถิติแห่งชาติ",
+          "สศช.",
+          "97 ชุดข้อมูล",
+          "ยุทธศาสตร์ข้อมูลของกรม สส. เป็นตัวตั้ง"
+        ],
+        "must_preserve_invariants": [
+          "ต้องระบุชัดเจนว่ายึดความต้องการของ กรม สส. ไม่ใช่รับตามปริมาณที่ภายนอกมี",
+          "ต้องระบุว่าดำเนินงานคู่ขนาน ไม่รอให้การเจรจาเสร็จก่อนเริ่มสร้างระบบ"
+        ],
+        "anti_patterns_to_reject": [
+          "การเสนอให้ขอข้อมูลเป็นรายครั้ง (ad-hoc manual requests)",
+          "การตั้งเงื่อนไขให้หน่วยงานภายนอกพร้อมก่อนจึงเริ่มพัฒนาแพลตฟอร์ม"
+        ]
+      },
+      "ledger_anchors": [
+        "CH-029",
+        "CH-038",
+        "CH-044",
+        "D-060",
+        "D-074",
+        "T-043"
+      ]
+    },
+    {
+      "id": "REC-BASE-TECH-01",
+      "title_th": "มาตรฐานคำอธิบายข้อมูล (Metadata), แบบจำลองข้อมูลเชิงแนวคิด (CDM) และพจนานุกรมข้อมูลกลาง",
+      "title_en": "Standardized Metadata, Conceptual Data Model (CDM), and Common Data Dictionary",
+      "tor_component": "baseline_data_inventory",
+      "tor_axis": "technical",
+      "source_origins": [
+        "Section 6.1 Handover Components 4, 7, 8",
+        "June 2026 Pillar 3 (Technical Standards Layer 1 & 2)",
+        "WP5 Data Management Framework Synthesis"
+      ],
+      "core_arguments": {
+        "claim": "ชุดข้อมูลพื้นฐานทุกชุดต้องถูกกำกับด้วยมาตรฐานคำอธิบายข้อมูล (Metadata) ขั้นต่ำ 12 ฟิลด์หลัก เชื่อมโยงเข้ากับแบบจำลองข้อมูลเชิงแนวคิด (CDM) ครอบคลุม 8 โดเมน และอภิธานศัพท์เทคนิค 74 คำ",
+        "grounds": "บัญชีชุดข้อมูลพื้นฐานมี 246-260 ชุดข้อมูลที่คำอธิบายรูปแบบไฟล์และโครงสร้างข้อมูลยังกระจัดกระจายและขาดมาตรฐานเดียวกัน ทำให้ไม่สามารถเชื่อมโยงข้ามหน่วยงานได้แบบอัตโนมัติ",
+        "warrant": "แบบจำลองข้อมูลเชิงแนวคิด (CDM) ทำหน้าที่เป็นโครงสร้างข้อมูลกลาง (Interoperability Glue) ที่ทำให้ฐานข้อมูลของต่างหน่วยงานสามารถสืบค้นและเชื่อมโยงความสัมพันธ์ระหว่างกันได้",
+        "so_what": "สร้างมาตรฐานกลางที่ทำให้ระบบฐานข้อมูลจริงในสัญญาถัดไปมีข้อกำหนดโครงสร้างข้อมูลที่ชัดเจนตั้งแต่วันแรก โดยไม่ต้องออกแบบใหม่"
+      },
+      "chapter6_draft_stance": {
+        "framing": "มาตรฐานทางเทคนิคชั้นโครงสร้างข้อมูล (Data Structure Technical Standards)",
+        "key_concepts": [
+          "Metadata Standard ตามมาตรฐานสากลและแนวทาง สพร. (DGA)",
+          "Data Dictionary กลางสำหรับตัวแปรภัย ความเปราะบาง และความสูญเสีย",
+          "แบบจำลองข้อมูลเชิงแนวคิด (CDM) 8 ขอบเขตข้อมูล (Domains)"
+        ]
+      },
+      "chapter7_final_stance": {
+        "framing": "ข้อกำหนดทางเทคนิคพร้อมส่งมอบในสัญญาจ้าง (Technical Handover Specification)",
+        "key_specifications": [
+          "แบบจำลองข้อมูลเชิงแนวคิดครอบคลุม 8 ขอบเขตข้อมูล (องค์ประกอบที่ 7 ในภาคผนวก ฌ)",
+          "อภิธานศัพท์ 74 คำ (องค์ประกอบที่ 8 ในภาคผนวก ฌ)",
+          "การรับรองมาตรฐาน Metadata และ CDM เป็นนโยบายภายในของ กรม สส. ภายใน 6 เดือน (ภารกิจธรรมาภิบาลข้อ 3)"
+        ]
+      },
+      "evaluator_criteria_for_chapter_7_3": {
+        "must_contain_keywords": [
+          "แบบจำลองข้อมูลเชิงแนวคิด",
+          "8 ขอบเขตข้อมูล",
+          "Metadata",
+          "อภิธานศัพท์ 74 คำ",
+          "รับรองมาตรฐานข้อมูลอภิพันธ์"
+        ],
+        "must_preserve_invariants": [
+          "ต้องระบุว่าแบบจำลอง CDM ครอบคลุม 8 โดเมนข้อมูล",
+          "ต้องระบุว่าอภิธานศัพท์มี 74 คำ และระบุการเชื่อมโยงกับภาคผนวก ฌ"
+        ],
+        "anti_patterns_to_reject": [
+          "การปล่อยให้ผู้รับจ้างระบบในสัญญาถัดไปออกแบบโครงสร้างข้อมูลกลางเองตามอำเภอใจ"
+        ]
+      },
+      "ledger_anchors": [
+        "CH-017",
+        "CH-032",
+        "CH-040",
+        "D-010",
+        "D-051",
+        "D-074"
+      ]
+    },
+    {
+      "id": "REC-PROD-POL-01",
+      "title_th": "ยุทธศาสตร์ผลิตภัณฑ์นำและการจัดลำดับความสำคัญของบริการสารสนเทศ 5 รายการ",
+      "title_en": "Product-Led Strategy and Prioritization of 5 Core Information Services",
+      "tor_component": "information_product_inventory",
+      "tor_axis": "policy",
+      "source_origins": [
+        "Section 6.2 Recommendation 3 (Dissected Segment A: Product Strategy)",
+        "June 2026 Pillar 2 (Service Portfolio Management) & Pillar 5 (Competitive Positioning)",
+        "WP6 Business Narratives & WP8 Recommendations Section 1 & 3"
+      ],
+      "core_arguments": {
+        "claim": "กรม สส. ต้องเป็นผู้นำยุทธศาสตร์ด้านข้อมูลและทำหน้าที่เป็น Product Owner (PO) โดยกำหนดให้ขอบเขตงานจ้างระยะถัดไปยึดบริการสารสนเทศที่มีความสำคัญสูง 5 รายการและระบบแค็ตตาล็อกข้อมูลเป็นแกนกลาง",
+        "grounds": "หาก กรม สส. ขาดยุทธศาสตร์ผลิตภัณฑ์ โครงการดิจิทัลจะถูกจำกัดด้วยข้อมูลที่มีอยู่เดิม และผลผลิตจะขึ้นกับความเข้าใจของผู้รับจ้างที่เปลี่ยนตัวไปในแต่ละสัญญา การเริ่มจาก 5 บริการ (3 บริการเดิมที่มีความพร้อม + 2 บริการใหม่ที่มีพันธกรณีและความต้องการสูง) ช่วยให้การลงทุนแก้ปัญหาที่มีอยู่จริง",
+        "warrant": "การรวมศูนย์ที่บริการที่มีผู้ใช้รออยู่จริง ทำให้การพัฒนาโครงสร้างพื้นฐานดิจิทัลมีทิศทางที่ชัดเจนและเกิดการใช้งานอย่างเป็นรูปธรรม",
+        "so_what": "เปลี่ยน กรม สส. จากผู้ซื้อซอฟต์แวร์ เป็นเจ้าของผลิตภัณฑ์ (Product Owner) ที่รักษาความต่อเนื่องข้ามสัญญาได้"
+      },
+      "chapter6_draft_stance": {
+        "framing": "นโยบายการบริหารระบบข้อมูลในฐานะ Service Portfolio และบทบาทเชิงยุทธศาสตร์",
+        "key_concepts": [
+          "การบริหารแบบ Service Portfolio แทนการมองเป็นโครงการไอทีซื้อครั้งเดียวจบ",
+          "บริการแกนกลาง 4 กลุ่ม (ข้อมูลอ้างอิง, วิเคราะห์เชิงพื้นที่, หลักฐานการเงิน, มาตรฐานความไม่แน่นอน)",
+          "การวางตำแหน่งองค์กร: National Certifier, Translator, Integrator, Institutional Shield Provider"
+        ]
+      },
+      "chapter7_final_stance": {
+        "framing": "การกำหนดขอบเขตงานจ้างโดยยึด 5 ผลิตภัณฑ์/บริการสารสนเทศเป็นแกนกลาง",
+        "key_specifications": [
+          "กลุ่มที่ 1 บริการเดิม 3 รายการ: ฐานข้อมูลความเสี่ยงเชิงพื้นที่, แผนที่ภัยและการเปิดรับ, ดัชนีความเสี่ยงด้านภูมิอากาศ",
+          "กลุ่มที่ 2 บริการใหม่ 2 รายการ: บริการรายงานความโปร่งใสรายสองปี (A-BTR), บริการสถิติความสูญเสียและความเสียหายจากภัยพิบัติ (MVP 2 ขั้น ร่วมกับ สศช.)",
+          "ระบบแค็ตตาล็อกข้อมูล (Data Catalog) ส่งมอบแยกต่างหากอีก 1 รายการ"
+        ]
+      },
+      "evaluator_criteria_for_chapter_7_3": {
+        "must_contain_keywords": [
+          "เจ้าของผลิตภัณฑ์",
+          "Product Owner",
+          "5 รายการ",
+          "ฐานข้อมูลความเสี่ยงเชิงพื้นที่",
+          "แผนที่ภัยและการเปิดรับ",
+          "ดัชนีความเสี่ยงด้านภูมิอากาศ",
+          "รายงานความโปร่งใสรายสองปี",
+          "A-BTR",
+          "ความสูญเสียและความเสียหายจากภัยพิบัติ",
+          "สศช.",
+          "แค็ตตาล็อกข้อมูล"
+        ],
+        "must_preserve_invariants": [
+          "ต้องระบุบริการครบทั้ง 5 รายการ แบ่งเป็นกลุ่มเดิม 3 และกลุ่มใหม่ 2",
+          "ต้องระบุว่าบริการสถิติความสูญเสียฯ มี สศช. เป็นพันธมิตรด้านระเบียบวิธี",
+          "ต้องระบุระบบแค็ตตาล็อกข้อมูลเป็นรายการส่งมอบคู่ขนาน"
+        ],
+        "anti_patterns_to_reject": [
+          "การระบุบริการลอยๆ โดยไม่มี 5 รายชื่อนี้",
+          "การรวมบริการวิเคราะห์เข้ากับงานโครงสร้างพื้นฐานทั่วไปโดยไม่มีการแยกแยะ"
+        ]
+      },
+      "ledger_anchors": [
+        "CH-016",
+        "CH-022",
+        "CH-042",
+        "CH-044",
+        "D-071",
+        "D-074"
+      ]
+    },
+    {
+      "id": "REC-PROD-TECH-01",
+      "title_th": "พิมพ์เขียวสถาปัตยกรรมระบบ, ชุดข้อมูลสนับสนุน 8 องค์ประกอบ และมาตรฐานวิธีวิทยา",
+      "title_en": "System Architectural Blueprint, 8 Handover Elements, and Methodology Standards",
+      "tor_component": "information_product_inventory",
+      "tor_axis": "technical",
+      "source_origins": [
+        "Section 6.1 Blueprint & 8 Handover Components",
+        "June 2026 Pillar 3 (Layers 3, 4, 5 Standards: Risk Catalog, Science-to-Decision, Uncertainty)",
+        "WP4 Developer-Ready Design (DRD v2)"
+      ],
+      "core_arguments": {
+        "claim": "การพัฒนาผลิตภัณฑ์ข้อมูลในระยะถัดไปต้องตั้งอยู่บนฐานพิมพ์เขียวสถาปัตยกรรมระบบบนกรอบ SDLC 6 ระยะ และชุดข้อมูลสนับสนุนการพัฒนา 8 องค์ประกอบ พร้อมมาตรฐานวิธีวิทยาและคู่มือการสังเคราะห์เนื้อหา",
+        "grounds": "ผลผลิตโครงการนี้ครอบคลุมระยะ 1 (~70%) และระยะ 2 (~80%) ของวงจร SDLC สัญญาถัดไปจึงเริ่มจากระยะ 3 (ออกแบบและพัฒนาระบบ) ได้ทันที นอกจากนี้ ข้อมูลสนับสนุน 8 รายการ (ผังเว็บ 38 หัวข้อย่อย, ข้อกำหนด 75 ข้อ, สิ่งส่งมอบ 14 รายการ ฯลฯ) ถูกออกแบบและทดสอบกับผู้ใช้แล้ว",
+        "warrant": "การมีพิมพ์เขียวและข้อกำหนดเนื้อหาที่ชัดเจน ทำให้ผู้รับจ้างไม่ต้องเริ่มศึกษาความต้องการใหม่ทั้งหมด (Zero-Discovery Handoff) และป้องกันไม่ให้ผู้เขียนเนื้อหาแต่ละคนตีความขอบเขตต่างกัน",
+        "so_what": "ประหยัดงบประมาณและเวลาในสัญญาถัดไปอย่างมีนัยสำคัญ และควบคุมคุณภาพของผลิตภัณฑ์ข้อมูลให้ตรงตามมาตรฐานทางวิชาการ"
+      },
+      "chapter6_draft_stance": {
+        "framing": "มาตรฐานเทคนิคด้านระเบียบวิธีและการแปลงข้อมูลสู่นโยบาย (Methodology & Translation Standards)",
+        "key_concepts": [
+          "ระบบสารบัญระเบียบวิธีวิเคราะห์ความเสี่ยงระดับประเทศ (Catalog of Risk Methodologies)",
+          "มาตรฐานการแปลงข้อมูลวิทยาศาสตร์สู่ข้อมูลเชิงตัดสินใจ (Science-to-Decision Translation)",
+          "มาตรฐานการสื่อสารความไม่แน่นอน (Uncertainty Communication Standard: Probabilistic vs Scenario-based)"
+        ]
+      },
+      "chapter7_final_stance": {
+        "framing": "พิมพ์เขียวทางเทคนิคและข้อมูลสนับสนุนการพัฒนา 8 องค์ประกอบ (ภาคผนวก ฌ)",
+        "key_specifications": [
+          "กรอบวงจรชีวิต SDLC 6 ระยะ (ครอบคลุมระยะ 1 ร้อยละ 70 และระยะ 2 ร้อยละ 80)",
+          "ข้อมูลสนับสนุน 8 องค์ประกอบในภาคผนวก ฌ (ผังเว็บ 38 หัวข้อ, ข้อกำหนด 75 ข้อ, สิ่งส่งมอบ 14 รายการ, บัญชีทรัพย์สิน, เค้าโครงเนื้อหา, สาระธุรกิจ, CDM 8 โดเมน, อภิธาน 74 คำ)",
+          "การแยกบทบาทเด็ดขาดระหว่าง ผู้เขียนเนื้อหา (Content Writer) และ ผู้พัฒนาระบบ (System Developer)",
+          "หลักการออกแบบแบบวนซ้ำ (Iterative Design Cycle)"
+        ]
+      },
+      "evaluator_criteria_for_chapter_7_3": {
+        "must_contain_keywords": [
+          "กรอบวงจรชีวิตการพัฒนา",
+          "SDLC",
+          "ระยะที่ 1 ประมาณร้อยละ 70",
+          "ระยะที่ 2 ประมาณร้อยละ 80",
+          "8 องค์ประกอบ",
+          "ภาคผนวก ฌ",
+          "ผู้เขียนเนื้อหา",
+          "ผู้พัฒนาระบบ",
+          "Iterative Design"
+        ],
+        "must_preserve_invariants": [
+          "ต้องระบุตัวเลขความคืบหน้าระยะที่ 1 (~70%) และระยะที่ 2 (~80%) อย่างถูกต้อง",
+          "ต้องอ้างอิงข้อมูลสนับสนุน 8 องค์ประกอบในภาคผนวก ฌ",
+          "ต้องระบุบทบาทผู้เขียนเนื้อหาแยกจากผู้พัฒนาระบบ"
+        ],
+        "anti_patterns_to_reject": [
+          "การสรุปเนื้อหาในภาคผนวก ฌ ลงในตัวบท (ต้องระบุเฉพาะวัตถุประสงค์ตาม Boss's ruling)"
+        ]
+      },
+      "ledger_anchors": [
+        "CH-013",
+        "CH-014",
+        "CH-046",
+        "D-031",
+        "D-076",
+        "D-077",
+        "D-078",
+        "D-079"
+      ]
+    },
+    {
+      "id": "REC-MGMT-POL-01",
+      "title_th": "โครงสร้างธรรมาภิบาลข้อมูลภายใน 4 ระดับและการสถาปนาเกราะป้องกันทางสถาบัน",
+      "title_en": "4-Tier Internal Data Governance Structure and Institutional Shield",
+      "tor_component": "long_term_data_management",
+      "tor_axis": "policy",
+      "source_origins": [
+        "Section 6.2 Recommendation 1",
+        "June 2026 Pillar 1 (Data Governance) & Pillar 5 (Institutional Shield)",
+        "WP8 Recommendations Report Section 2"
+      ],
+      "core_arguments": {
+        "claim": "กรม สส. ต้องประกาศใช้โครงสร้างธรรมาภิบาลข้อมูลภายใน 4 ระดับเป็นข้อเสนอแนะลำดับแรก เพื่อให้มีเจ้าภาพตัดสินใจที่ชัดเจนในการรับรองข้อมูลและมาตรฐานเทคนิค",
+        "grounds": "เป็นงานที่ กรม สส. มีอำนาจตัดสินใจและแต่งตั้งได้เอง 100% ด้วยบุคลากรปัจจุบันโดยไม่ต้องรอภายนอก และมีบัญชีข้อมูล 260 ชุดข้อมูลรอรับรอง การไม่มีธรรมาภิบาลทำให้การตัดสินใจค้างระหว่างกลุ่มงาน และผู้ปฏิบัติงานขาดความมั่นใจในการเผยแพร่ข้อมูล",
+        "warrant": "การวางโครงสร้างธรรมาภิบาลสร้างเกราะป้องกันทางสถาบัน (Institutional Shield) ให้ผู้บริหารและเจ้าหน้าที่ ลดความเสี่ยงจากการถูกตรวจสอบย้อนหลัง",
+        "so_what": "สร้างความพร้อมทางองค์กรตั้งแต่วันแรกที่สัญญาก่อสร้างระบบเริ่มดำเนินการ ทำให้การอนุมัติมาตรฐานข้อมูลมีผู้ตัดสินใจที่ระบุตัวได้ทันที"
+      },
+      "chapter6_draft_stance": {
+        "framing": "การสถาปนาธรรมาภิบาลข้อมูลภายในให้เป็นต้นแบบและสร้างเกราะป้องกันทางสถาบัน",
+        "key_concepts": [
+          "องค์ประกอบพื้นฐาน 6 ประการของ Data Governance",
+          "คณะทำงานกำกับดูแลข้อมูลภายในที่มีอำนาจชี้ขาด",
+          "บทบาท Institutional Shield Provider เพื่อคุ้มครองเจ้าหน้าที่ในการใช้ข้อมูลที่มีความไม่แน่นอน"
+        ]
+      },
+      "chapter7_final_stance": {
+        "framing": "การประกาศใช้โครงสร้างธรรมาภิบาลข้อมูลภายใน 4 ระดับ (ข้อเสนอแนะลำดับที่ 1)",
+        "key_specifications": [
+          "ระดับ 1: คณะกรรมการธรรมาภิบาลข้อมูล กองขับเคลื่อนการปรับตัวฯ (ผอ.กอง เป็นประธาน)",
+          "ระดับ 2: เจ้าของข้อมูล (Data Owner) ระดับ ผอ.กลุ่ม",
+          "ระดับ 3: บริกรข้อมูล (Data Steward) ระดับปฏิบัติการประจำกลุ่มงาน",
+          "ระดับ 4: ผู้ดูแลด้านเทคนิค (Data Custodian) ดูแลความสอดคล้องเชิงเทคนิค"
+        ]
+      },
+      "evaluator_criteria_for_chapter_7_3": {
+        "must_contain_keywords": [
+          "โครงสร้างธรรมาภิบาลข้อมูล",
+          "4 ระดับ",
+          "คณะกรรมการธรรมาภิบาลข้อมูล",
+          "เจ้าของข้อมูล",
+          "Data Owner",
+          "บริกรข้อมูล",
+          "Data Steward",
+          "ผู้ดูแลด้านเทคนิค",
+          "Data Custodian"
+        ],
+        "must_preserve_invariants": [
+          "ต้องระบุครบทั้ง 4 ระดับ พร้อมระบุบทบาท ผอ.กอง เป็นประธาน",
+          "ต้องจัดวางเป็นข้อเสนอแนะลำดับแรกเนื่องจากอยู่ในอำนาจตัดสินใจของ กรม สส. เอง"
+        ],
+        "anti_patterns_to_reject": [
+          "การข้ามบทบาทใดบทบาทหนึ่งใน 4 ระดับ",
+          "การวางโครงสร้างที่พึ่งพาหน่วยงานภายนอกในการแต่งตั้ง"
+        ]
+      },
+      "ledger_anchors": [
+        "CH-029",
+        "CH-040",
+        "CH-044",
+        "D-011",
+        "D-074",
+        "T-001"
+      ]
+    },
+    {
+      "id": "REC-MGMT-POL-02",
+      "title_th": "นโยบายการสร้างกำลังคนด้านข้อมูลภายในองค์กร (วิศวกรข้อมูล, นักวิเคราะห์ข้อมูล, บริหารจัดการข้อมูล)",
+      "title_en": "In-House Data Capability Building Policy (Engineers, Analysts, Managers)",
+      "tor_component": "long_term_data_management",
+      "tor_axis": "policy",
+      "source_origins": [
+        "Section 6.2 Recommendation 2",
+        "plan-slice.md Section 4 (Boss Mandate, 2026-09-03)",
+        "crdb-exec-summary-4.4"
+      ],
+      "core_arguments": {
+        "claim": "กรม สส. ต้องสร้างกำลังคนด้านข้อมูลภายในองค์กร ได้แก่ วิศวกรข้อมูล นักวิเคราะห์ข้อมูล และเจ้าหน้าที่บริหารจัดการข้อมูล แยกขาดจากภารกิจของฝ่ายเทคโนโลยีสารสนเทศ (ไอที) เดิม",
+        "grounds": "ฝ่ายไอทีเดิมดูแลระบบ เครือข่าย และโครงสร้างพื้นฐาน แต่ไม่มีความเชี่ยวชาญด้านเนื้อหาข้อมูล (Data Content) ท่อส่งข้อมูล แบบจำลองข้อมูล และการวิเคราะห์ ในขณะที่แพลตฟอร์มมี 260 ชุดข้อมูลที่ต้องตรวจสอบและปรับปรุงซ้ำตามรอบเวลา",
+        "warrant": "สัญญาจ้างสร้างแพลตฟอร์มขึ้นมาได้ แต่ตัวสัญญาเองรักษาแพลตฟอร์มให้ทำงานต่อไปไม่ได้ หากไม่มีกำลังคนภายใน ทุกการเปลี่ยนแปลงจะต้องพึ่งพาผู้รับจ้างผ่านรอบจัดซื้อจัดจ้าง ซึ่งบั่นทอนความยั่งยืน",
+        "so_what": "ทำให้โครงสร้างธรรมาภิบาลและบทบาท Data Steward/Custodian มีบุคลากรที่มีความสามารถจริงมารับหน้าที่ และทำให้ กรม สส. มีความพร้อมในการประเมินผลผลิตตามรอบ Agile"
+      },
+      "chapter6_draft_stance": {
+        "framing": "ข้อเสนอด้านทรัพยากร โครงสร้างพื้นฐาน และกำลังคนเฉพาะทางรายสาขา",
+        "key_concepts": [
+          "ผู้เชี่ยวชาญเฉพาะทางรายสาขา (Domain/Sectoral Experts)",
+          "การลงทุนใน IT Infrastructure และ Cloud Computing",
+          "การเข้าหาแหล่งทุนภูมิอากาศสากล (GCF, GEF) เพื่อขับเคลื่อนระยะยาว"
+        ]
+      },
+      "chapter7_final_stance": {
+        "framing": "การสร้างกำลังคนด้านข้อมูลภายในองค์กร (ข้อเสนอแนะลำดับที่ 2)",
+        "key_specifications": [
+          "บทบาทเฉพาะด้าน: วิศวกรข้อมูล (Data Engineers), นักวิเคราะห์ข้อมูล (Data Analysts), เจ้าหน้าที่บริหารจัดการข้อมูล (Data Managers)",
+          "การแยกแยะเด็ดขาดระหว่าง ภารกิจโครงสร้างพื้นฐานไอทีเดิม vs ภารกิจบริหารจัดการเนื้อหาข้อมูล",
+          "การรองรับภาระงานตรวจสอบ 260 ชุดข้อมูลตามกระบวนการธรรมาภิบาล",
+          "ระบุชัดเจนว่าเป็นข้อประเมินของคณะที่ปรึกษาจากการสังเกตในทางปฏิบัติ"
+        ]
+      },
+      "evaluator_criteria_for_chapter_7_3": {
+        "must_contain_keywords": [
+          "กำลังคนด้านข้อมูลภายในองค์กร",
+          "วิศวกรข้อมูล",
+          "นักวิเคราะห์ข้อมูล",
+          "เจ้าหน้าที่บริหารจัดการข้อมูล",
+          "หน่วยงานเทคโนโลยีสารสนเทศเดิม",
+          "260 ชุดข้อมูล",
+          "สัญญาจ้างสร้างแพลตฟอร์มขึ้นมาได้ แต่ตัวสัญญาเองรักษาแพลตฟอร์มให้ทำงานต่อไปไม่ได้"
+        ],
+        "must_preserve_invariants": [
+          "ต้องระบุความแตกต่างระหว่างไอทีโครงสร้างพื้นฐานเดิม vs งานเนื้อหาข้อมูลอย่างชัดเจน",
+          "ต้องระบุว่า 260 ชุดข้อมูลต้องการการตรวจสอบต่อเนื่อง",
+          "ต้องวางไว้ที่ตำแหน่งข้อเสนอแนะลำดับที่ 2"
+        ],
+        "anti_patterns_to_reject": [
+          "การยุบงานข้อมูลรวมเข้าไปเป็นงานของฝ่ายไอทีเดิม",
+          "การตัดวลีสำคัญเรื่อง 'สัญญาจ้างสร้างได้แต่รักษาไม่ได้' ออก"
+        ]
+      },
+      "ledger_anchors": [
+        "plan-slice.md §4",
+        "crdb-exec-summary-4.4",
+        "CH-029 §6"
+      ]
+    },
+    {
+      "id": "REC-MGMT-POL-03",
+      "title_th": "กรอบการบริหารสัญญาจ้างพัฒนาระบบแบบคล่องตัว (Agile) และการทดสอบ Beta กลางสัญญา",
+      "title_en": "Agile Contract Governance Framework and Mid-Contract Beta Validation",
+      "tor_component": "long_term_data_management",
+      "tor_axis": "policy",
+      "source_origins": [
+        "Section 6.2 Recommendation 3 (Dissected Segment B: Agile Governance)",
+        "Section 6.3 Group 1 Roadmap",
+        "WP8 Recommendations Report Section 1 (UK GDS Delivery Precedent E-088)"
+      ],
+      "core_arguments": {
+        "claim": "สัญญาจ้างพัฒนาระบบในระยะถัดไปต้องกำหนดกรอบการทำงานแบบคล่องตัว (Agile) โดยมีรอบการพัฒนาอย่างน้อย 2 รอบ และกำหนดหมุดหมายทดสอบใช้งานจริงของผลิตภัณฑ์ต้นแบบ (Beta Milestone) ในช่วงกลางสัญญา",
+        "grounds": "การพัฒนาแบบเดิมที่ตรวจรับครั้งเดียวเมื่อสิ้นสุดสัญญา มักพบข้อผิดพลาดเมื่อหมดเวลาและงบประมาณแล้ว การทดสอบกับผู้ใช้จริงกลางสัญญาช่วยให้ได้รับ feedback ตรงจุดและนำมาปรับปรุงในรอบการพัฒนาที่สอง",
+        "warrant": "แนวปฏิบัตินี้เป็นมาตรฐานสากลของการจัดซื้อจัดจ้างภาครัฐยุคใหม่ (เช่น UK Government Digital Service - GDS) ซึ่งช่วยลดความเสี่ยงของการส่งมอบระบบที่ถูกต้องตามเอกสารแต่ไม่ตอบสนองการใช้งานจริง",
+        "so_what": "เพิ่มความยืดหยุ่นและรับประกันว่าระบบที่พัฒนาขึ้นจะตรงกับความต้องการของผู้ใช้งานจริงอย่างแท้จริง"
+      },
+      "chapter6_draft_stance": {
+        "framing": "กรอบแนวทางการบริหารโครงการดิจิทัลสมัยใหม่แบบวนซ้ำ (Iterative Digital Governance)",
+        "key_concepts": [
+          "วงจรการออกแบบแบบวนซ้ำ (Iterative Design Cycle)",
+          "การลดความเสี่ยงของการส่งมอบแบบน้ำตก (Waterfall Risk Mitigation)",
+          "การนำ feedback จากผู้ใช้มาเป็นตัวขับเคลื่อนรอบการพัฒนาถัดไป"
+        ]
+      },
+      "chapter7_final_stance": {
+        "framing": "ข้อกำหนดกรอบการพัฒนาแบบคล่องตัว (Agile) ในเงื่อนไขสัญญาจ้างและแผนที่นำทางกลุ่มที่ 1",
+        "key_specifications": [
+          "กำหนดรอบการพัฒนาอย่างน้อยสองรอบ (Two Build Cycles)",
+          "หมุดหมายทดสอบใช้งานจริงของผลิตภัณฑ์ต้นแบบขั้นต่ำ (Beta Milestone) ช่วงกลางสัญญา",
+          "การนำข้อเสนอแนะจากแบบสำรวจและ workshop กลางสัญญา มาเป็น backlog สำหรับรอบที่สอง"
+        ]
+      },
+      "evaluator_criteria_for_chapter_7_3": {
+        "must_contain_keywords": [
+          "กรอบการพัฒนาซอฟต์แวร์แบบคล่องตัว",
+          "Agile",
+          "อย่างน้อยสองรอบ",
+          "หมุดหมายทดสอบใช้งานจริง",
+          "ผลิตภัณฑ์ต้นแบบขั้นต่ำ",
+          "กลางสัญญา"
+        ],
+        "must_preserve_invariants": [
+          "ต้องระบุว่ามีอย่างน้อย 2 รอบการพัฒนา",
+          "ต้องระบุการทดสอบ Beta กลางสัญญาเพื่อปรับปรุงในรอบที่สอง"
+        ],
+        "anti_patterns_to_reject": [
+          "การยอมรับการตรวจรับระบบเพียงครั้งเดียวเมื่อสิ้นสุดสัญญา (Waterfall single-point acceptance)"
+        ]
+      },
+      "ledger_anchors": [
+        "CH-044",
+        "D-074",
+        "E-088"
+      ]
+    },
+    {
+      "id": "REC-MGMT-TECH-01",
+      "title_th": "แผนที่นำทางแบบ 2 กลุ่มงานคู่ขนาน และจุดบรรจบระหว่างสัญญาก่อสร้างกับภารกิจธรรมาภิบาล",
+      "title_en": "2-Track Parallel Implementation Roadmap and Contract-Governance Convergence Gates",
+      "tor_component": "long_term_data_management",
+      "tor_axis": "technical",
+      "source_origins": [
+        "Section 6.3 Roadmap & 8 Governance Tasks",
+        "June 2026 Section 7 Implementation Sequencing",
+        "WP8 Recommendations Report Section 5"
+      ],
+      "core_arguments": {
+        "claim": "แผนงานขับเคลื่อนต้องแบ่งเป็น 2 กลุ่มงานคู่ขนานที่เริ่มดำเนินการได้ทันที ได้แก่ กลุ่มที่ 1 สัญญาจ้างพัฒนาระบบซอฟต์แวร์และเนื้อหา และกลุ่มที่ 2 ภารกิจธรรมาภิบาลข้อมูล 8 งานของ กรม สส. (ระยะสั้น 4 งาน 6 เดือน, ระยะกลาง 4 งาน 1-3 ปี) โดยต้องระบุจุดบรรจบของทั้งสองกลุ่มงานให้ชัดเจนก่อนลงนามสัญญา",
+        "grounds": "กลุ่มภารกิจธรรมาภิบาลไม่มีเงื่อนไขภายนอกที่ต้องรอ สามารถเริ่มได้ทันที ส่วนกลุ่มสัญญาจ้างมีขอบเขตที่ชัดเจนจากผลผลิตโครงการนี้ จุดเสี่ยงเดียวคือการที่ผู้รับจ้างเริ่มงานโดยไม่มีมาตรฐานที่ผ่านการรับรองรองรับ",
+        "warrant": "การกำหนดจุดบรรจบ (เช่น การรับรองมาตรฐาน Metadata, CDM, และอภิธานศัพท์ต้องเสร็จทันจังหวะที่ผู้รับจ้างนำไปสร้างกฎตรวจสอบในระบบ) ช่วยป้องกันความล่าช้าและการทำงานซ้ำซ้อน",
+        "so_what": "ทำให้ กรม สส. บริหารจัดการโครงการได้อย่างเป็นรูปธรรมและควบคุมความเสี่ยงของสัญญาได้อย่างสมบูรณ์"
+      },
+      "chapter6_draft_stance": {
+        "framing": "กรอบลำดับการดำเนินงานเชิงวิเคราะห์ 3 ขอบฟ้า (3 Horizons Implementation Framework)",
+        "key_concepts": [
+          "ระยะที่ 1 (สร้างฐานความน่าเชื่อถือ): Data Governance ภายใน, Metadata Minimum, ทะเบียนชุดข้อมูล",
+          "ระยะที่ 2 (สร้างการเชื่อมต่อและบริการ): API, Data Package, บริการเชิงพื้นที่นำร่อง",
+          "ระยะที่ 3 (ยกระดับสู่บริการเชิงระบบเต็มรูปแบบ): Interoperability เต็มรูปแบบ, มาตรฐานความไม่แน่นอน"
+        ]
+      },
+      "chapter7_final_stance": {
+        "framing": "แผนที่นำทางแบบ 2 กลุ่มงานคู่ขนาน และจุดบรรจบของสัญญา (Section 7.3.3)",
+        "key_specifications": [
+          "กลุ่มที่ 1: สัญญาจ้างพัฒนาระบบ (5 บริการ + แค็ตตาล็อก + Agile 2 รอบ)",
+          "กลุ่มที่ 2 ระยะสั้น 6 เดือน 4 งาน: 1. ตั้งคณะกรรมการ, 2. แต่งตั้ง Owner/Steward, 3. รับรองมาตรฐาน Metadata/CDM/อภิธาน, 4. สำรวจทรัพย์สินดิจิทัล",
+          "กลุ่มที่ 2 ระยะกลาง 1-3 ปี 4 งาน: 5. เปิดใช้แค็ตตาล็อกภายใน, 6. ผนวกธรรมาภิบาลในทุก TOR, 7. ผลักดันข้อตกลง 5 หน่วยงาน, 8. ขยายระเบียบวิธีวิเคราะห์",
+          "การระบุจุดบรรจบ (Convergence Gate): มาตรฐานต้องรับรองก่อนผู้รับจ้างสร้างกฎตรวจสอบใน CMS"
+        ]
+      },
+      "evaluator_criteria_for_chapter_7_3": {
+        "must_contain_keywords": [
+          "แผนที่นำทาง",
+          "2 กลุ่ม",
+          "ระยะสั้น (6 เดือน)",
+          "ระยะกลาง (1-3 ปี)",
+          "จุดที่งานทั้งสองกลุ่มต้องบรรจบกัน",
+          "กฎการตรวจสอบข้อมูลในระบบ"
+        ],
+        "must_preserve_invariants": [
+          "ต้องระบุครบทั้ง 8 ภารกิจธรรมาภิบาล แบ่งเป็น 4 ระยะสั้น (6 เดือน) และ 4 ระยะกลาง (1-3 ปี)",
+          "ต้องระบุจุดบรรจบของสัญญาระหว่างการรับรองมาตรฐานของ กรม สส. กับการสร้างกฎ CMS ของผู้รับจ้าง"
+        ],
+        "anti_patterns_to_reject": [
+          "การจัดลำดับตามเวลาเพียงอย่างเดียวโดยไม่คำนึงถึงเงื่อนไขความพร้อม",
+          "การละเลยจุดบรรจบของสัญญากับงานธรรมาภิบาล"
+        ]
+      },
+      "ledger_anchors": [
+        "CH-029 §7",
+        "CH-044",
+        "D-074 §5",
+        "crdb-exec-summary-4.5"
+      ]
+    }
+  ]
+}

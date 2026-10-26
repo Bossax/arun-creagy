@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โครงสร้างข้อเสนอแนะ บทที่ 6 (ฉบับส่งมอบครั้งแรก) และการปรับเข้าสู่กรอบ TOR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-canvas: #0b0f19;
+            --bg-card: #131b2e;
+            --bg-card-hover: #1a243d;
+            --border-subtle: #233154;
+            --border-accent: #3b82f6;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --text-accent: #60a5fa;
+            --color-policy: #10b981;
+            --color-tech: #06b6d4;
+            --color-mgmt: #8b5cf6;
+            --color-pillar: #f59e0b;
+            --tag-bg: rgba(59, 130, 246, 0.15);
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --shadow-glow: 0 10px 25px -5px rgba(15, 23, 42, 0.8), 0 0 20px 0 rgba(59, 130, 246, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background-color: var(--bg-canvas);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 32px 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 32px;
+            border-bottom: 1px solid var(--border-subtle);
+            padding-bottom: 24px;
+        }
+
+        .badge-tor {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 4px 14px;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            max-width: 900px;
+        }
+
+        /* View Toggle Tabs */
+        .tabs {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 28px;
+        }
+
+        .tab-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-muted);
+            padding: 10px 22px;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+
+        .tab-btn:hover {
+            border-color: var(--text-accent);
+            color: var(--text-main);
+        }
+
+        .tab-btn.active {
+            background: var(--border-accent);
+            border-color: var(--border-accent);
+            color: #ffffff;
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Grid Layouts */
+        .section-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 1024px) {
+            .section-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            border-color: rgba(59, 130, 246, 0.5);
+            box-shadow: var(--shadow-glow);
+            transform: translateY(-2px);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 18px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .card-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-accent);
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 10px;
+            border-radius: 6px;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .sub-unit {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-md);
+            padding: 14px 16px;
+            margin-bottom: 12px;
+        }
+
+        .sub-unit:last-child {
+            margin-bottom: 0;
+        }
+
+        .sub-unit-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #93c5fd;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-unit-desc {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        .pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .pill {
+            font-size: 0.75rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: #cbd5e1;
+        }
+
+        /* Matrix View */
+        .matrix-container {
+            display: none;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .matrix-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .matrix-table th, .matrix-table td {
+            padding: 16px 20px;
+            border: 1px solid var(--border-subtle);
+            vertical-align: top;
+        }
+
+        .matrix-table th {
+            background: rgba(15, 23, 42, 0.9);
+            font-weight: 700;
+            color: #e2e8f0;
+            font-size: 0.95rem;
+        }
+
+        .matrix-header-col {
+            background: rgba(59, 130, 246, 0.08) !important;
+            width: 18%;
+        }
+
+        .cell-item {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 8px;
+            border-left: 3px solid var(--border-accent);
+        }
+
+        .cell-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .cell-item-title {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .cell-item-desc {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        .tag-pillar {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            background: rgba(245, 158, 11, 0.15);
+            color: #fbbf24;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            padding: 1px 6px;
+            border-radius: 4px;
+            margin-bottom: 6px;
+        }
+
+        .callout {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9));
+            border: 1px solid var(--border-subtle);
+            border-left: 4px solid var(--color-policy);
+            border-radius: var(--radius-md);
+            padding: 18px 24px;
+            margin-top: 24px;
+        }
+
+        .callout-title {
+            font-weight: 700;
+            font-size: 1rem;
+            color: #34d399;
+            margin-bottom: 6px;
+        }
+
+        .callout-body {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="badge-tor">TOR Scope Item 5.3.9 Mapping</div>
+            <h1>พิมพ์เขียวและข้อเสนอแนะ บทที่ 6 (First Submission)</h1>
+            <p class="subtitle">แสดงองค์ประกอบของบทที่ 6 ฉบับส่งมอบครั้งแรก และการปรับกระชับ (Tweak & Twist) ให้เข้ากับกรอบสัญญา TOR: <strong>"ข้อมูลเสนอแนะเชิงนโยบายและเชิงเทคนิคในการพัฒนารายการชุดข้อมูลพื้นฐาน รายการผลิตภัณฑ์ข้อมูลและสารสนเทศและการบริหารจัดการข้อมูลในระยะยาว"</strong></p>
+        </header>
+
+        <!-- View Switcher -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchView('sections')">มุมมอง 3 หัวข้อหลักในบทที่ 6 (As Submitted)</button>
+            <button class="tab-btn" onclick="switchView('matrix')">มุมมอง Matrix: ปรับเข้ากรอบ TOR (Policy/Tech × 3 Components)</button>
+        </div>
+
+        <!-- VIEW 1: As Submitted Sections -->
+        <div id="view-sections" class="section-grid">
+            <!-- 6.1 Blueprint -->
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">6.1 พิมพ์เขียวการพัฒนาระบบระยะถัดไป</div>
+                        <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 4px;">System SDLC Blueprint & Handoff</div>
+                    </div>
+                    <div class="card-number">§6.1</div>
+                </div>
+
+                <div class="sub-unit">
+                    <div class="sub-unit-title">📍 กรอบวงจรชีวิตระบบ 6 ระยะ (SDLC)</div>
+                    <div class="sub-unit-desc">ประเมินผลผลิตโครงการครอบคลุมระยะ 1 (~70%) และระยะ 2 (~80%) ทำให้สัญญาถัดไปเริ่มที่ระยะ 3 ได้ทันทีอย่างมีหลักฐานรองรับ</div>
+                </div>
+
+                <div class="sub-unit">
+                    <div class="sub-unit-title">📦 ข้อมูลสนับสนุนการพัฒนา 8 องค์ประกอบ</div>
+                    <div class="sub-unit-desc">ระบุเฉพาะวัตถุประสงค์ในเนื้อหาหลัก รายละเอียดเต็มอยู่ใน <strong>ภาคผนวก ฌ</strong> (ผังเว็บ 38 หัวข้อ, ข้อกำหนด 75 ข้อ, สิ่งส่งมอบ 14 รายการ, บัญชีทรัพย์สิน, เค้าโครงเนื้อหา, สาระธุรกิจ, CDM 8 โดเมน, อภิธาน 74 คำ)</div>
+                </div>
+
+                <div class="sub-unit">
+                    <div class="sub-unit-title">👥 การแยกบทบาทหน้าที่คู่ขนาน</div>
+                    <div class="sub-unit-desc">แบ่งหน้าที่เด็ดขาดระหว่าง <strong>ผู้เขียนเนื้อหา (Content Writer)</strong> กับ <strong>ผู้พัฒนาระบบ (System Developer)</strong> ป้องกันงานทับซ้อนหรือเกิดช่องว่างในสัญญาถัดไป</div>
+                </div>
+
+                <div class="sub-unit">
+                    <div class="sub-unit-title">🔄 วงจรการออกแบบแบบวนซ้ำ (Iterative Cycle)</div>
+                    <div class="sub-unit-desc">ตรรกะทางธุรกิจถูกวิเคราะห์และล็อกไว้ ส่วนการออกแบบระบบทางเทคนิคให้ยืดหยุ่นตามรอบวนซ้ำของผู้พัฒนา</div>
+                </div>
+            </div>
+
+            <!-- 6.2 Recommendations -->
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">6.2 ข้อเสนอแนะเชิงนโยบายและเทคนิค</div>
+                        <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 4px;">4 Prioritized Recommendations</div>
+                    </div>
+                    <div class="card-number">§6.2</div>
+                </div>
+
+                <div class="sub-unit">
+                    <div class="sub-unit-title">🏛️ 1. โครงสร้างธรรมาภิบาลข้อมูลภายใน 4 ระดับ</div>
+                    <div class="sub-unit-desc">ลำดับสูงสุดเพราะอยู่ในอำนาจเต็มของ กรม สส. ประกอบด้วย คณะกรรมการธรรมาภิบาลข้อมูล, Data Owner, Data Steward และ Data Custodian</div>
+                    <div class="pill-list">
+                        <span class="pill">อำนาจเต็ม 100%</span>
+                        <span class="pill">260 ชุดข้อมูลรอรับรอง</span>
+                    </div>
+                </div>
+
+                <div class="sub-unit">
+                    <div class="sub-unit-title">💡 2. การสร้างกำลังคนด้านข้อมูลภายในองค์กร</div>
+                    <div class="sub-unit-desc">สร้าง Data Engineer, Data Analyst, Data Manager แยกขาดจากฝ่ายไอทีเดิมซึ่งดูแลโครงสร้างพื้นฐาน เพราะสัญญาจ้างสร้างระบบได้ แต่รักษาระบบให้ยั่งยืนไม่ได้</div>
+                    <div class="pill-list">
+                        <span class="pill">Content vs Infra</span>
+                        <span class="pill">ลดพึ่งพาผู้รับจ้าง</span>
+                    </div>
+                </div>
+
+                <div class="sub-unit">
+                    <div class="sub-unit-title">⚡ 3. ขอบเขตงานจ้าง 5 บริการ + Agile 2 รอบ</div>
+                    <div class="sub-unit-desc">กรม สส. ถือบทบาท Product Owner; โฟกัส 5 บริการ (3 เดิม: เสี่ยงเชิงพื้นที่, แผนที่ภัย, ดัชนีความเสี่ยง + 2 ใหม่: A-BTR, Loss&Damage MVP ร่วมกับ สศช.) กำหนดรอบตรวจรับแบบวนซ้ำและทดสอบ Beta กลางสัญญา</div>
+                </div>
+
+                <div class="sub-unit">
+                    <div class="sub-unit-title">🤝 4. ข้อตกลงแลกเปลี่ยนข้อมูล 5 หน่วยงาน</div>
+                    <div class="sub-unit-desc">ทำข้อตกลงกับ อม., GISTDA, ปภ., สสช., สศช. ซึ่งถือครองข้อมูล 37% (97 ชุด) โดยยึดความจำเป็นตามยุทธศาสตร์ของ กรม สส. เป็นตัวตั้ง</div>
+                </div>
+            </div>
+
+            <!-- 6.3 Roadmap -->
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">6.3 แผนที่นำทางและธรรมาภิบาล</div>
+                        <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 4px;">2 Parallel Implementation Tracks</div>
+                    </div>
+                    <div class="card-number">§6.3</div>
+                </div>
+
+                <div class="sub-unit">
+                    <div class="sub-unit-title">📑 กลุ่มที่ 1: สัญญาจ้างพัฒนาระบบซอฟต์แวร์</div>
+                    <div class="sub-unit-desc">แปลงผลผลิตเป็น TOR สัญญาจ้างพัฒนาระบบถัดไป ยึดผลิตภัณฑ์ 5 รายการ + แค็ตตาล็อกข้อมูล + กรอบ Agile อย่างน้อย 2 รอบพร้อมหมุดหมาย Beta กลางสัญญา</div>
+                </div>
+
+                <div class="sub-unit">
+                    <div class="sub-unit-title">⏱️ กลุ่มที่ 2: ภารกิจธรรมาภิบาลระยะสั้น (6 เดือน)</div>
+                    <div class="sub-unit-desc">
+                        1. ตั้งคณะกรรมการธรรมาภิบาลข้อมูลกองฯ<br>
+                        2. แต่งตั้ง Data Owner และ Data Steward<br>
+                        3. รับรองมาตรฐาน Metadata, CDM, และอภิธานศัพท์<br>
+                        4. สำรวจทะเบียนทรัพย์สินดิจิทัลภายในกอง
+                    </div>
+                </div>
+
+                <div class="sub-unit">
+                    <div class="sub-unit-title">📅 กลุ่มที่ 2: ภารกิจธรรมาภิบาลระยะกลาง (1-3 ปี)</div>
+                    <div class="sub-unit-desc">
+                        5. เปิดใช้ระบบแค็ตตาล็อกข้อมูลภายในกอง<br>
+                        6. ผนวกธรรมาภิบาลเข้ากับการเขียน TOR ทุกโครงการ<br>
+                        7. ผลักดันข้อตกลงแลกเปลี่ยนข้อมูล 5 หน่วยงาน<br>
+                        8. ขยายและปรับปรุงระเบียบวิธีวิเคราะห์เพิ่มเติม
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIEW 2: Matrix View (Tucked into TOR Frame) -->
+        <div id="view-matrix" class="matrix-container">
+            <table class="matrix-table">
+                <thead>
+                    <tr>
+                        <th class="matrix-header-col">มิติข้อเสนอแนะตาม TOR</th>
+                        <th style="width: 27%;">1. การพัฒนารายการชุดข้อมูลพื้นฐาน<br><span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">(Baseline Data Inventory)</span></th>
+                        <th style="width: 27%;">2. การพัฒนารายการผลิตภัณฑ์ข้อมูลและสารสนเทศ<br><span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">(Information Product Inventory)</span></th>
+                        <th style="width: 28%;">3. การบริหารจัดการข้อมูลในระยะยาว<br><span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">(Long-Term Data Management)</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Policy Row -->
+                    <tr>
+                        <td class="matrix-header-col">
+                            <strong style="color: var(--color-policy); font-size: 1.05rem;">ก. ข้อเสนอแนะเชิงนโยบาย</strong>
+                            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">(Policy Recommendations)</div>
+                        </td>
+                        <td>
+                            <div class="cell-item">
+                                <span class="tag-pillar">Pillar 4: Institutional Partnership</span>
+                                <div class="cell-item-title">นโยบายข้อตกลงแลกเปลี่ยนข้อมูลเชิงรุก</div>
+                                <div class="cell-item-desc">ทำข้อตกลงกับ 5 หน่วยงานหลัก (อม., GISTDA, ปภ., สสช., สศช.) ที่ถือครองข้อมูล 37% (97 ชุด) โดยยึดความต้องการของ กรม สส. เป็นตัวนำ ไม่รับข้อมูลตามความสะดวกของผู้ให้</div>
+                            </div>
+                            <div class="cell-item">
+                                <span class="tag-pillar">Pillar 1: Data Certification</span>
+                                <div class="cell-item-desc">นโยบายเปิดเผยข้อมูลและกำหนดชั้นความลับ เพื่อปลดล็อกชุดข้อมูลที่ถูกจำกัดการเข้าถึงกว่าร้อยละ 51</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cell-item">
+                                <span class="tag-pillar">Pillar 2: Service Portfolio Policy</span>
+                                <div class="cell-item-title">การบริหารในฐานะ Service Portfolio</div>
+                                <div class="cell-item-desc">เปลี่ยนการจัดซื้อระบบแบบครั้งเดียวจบ เป็นการบริหารชุดบริการที่มี Product Owner ดูแลต่อเนื่อง โดยเริ่มจาก 5 บริการสำคัญ (3 เดิม + 2 ใหม่: A-BTR และ Loss & Damage MVP)</div>
+                            </div>
+                            <div class="cell-item">
+                                <span class="tag-pillar">Pillar 5: Competitive Positioning</span>
+                                <div class="cell-item-title">การวางบทบาท National Certifier & Translator</div>
+                                <div class="cell-item-desc">ไม่แข่งผลิตข้อมูลดิบ แต่เป็นผู้วินิจฉัย รับรอง และแปลข้อมูลวิทยาศาสตร์สู่การตัดสินใจเชิงนโยบาย</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cell-item">
+                                <span class="tag-pillar">Pillar 1: Internal Governance Structure</span>
+                                <div class="cell-item-title">สถาปนาธรรมาภิบาลข้อมูลภายใน 4 ระดับ</div>
+                                <div class="cell-item-desc">จัดตั้ง คณะกรรมการธรรมาภิบาลข้อมูลกองฯ, แต่งตั้ง Data Owner, Data Steward และ Data Custodian เป็นกลไกตัดสินใจและเป็นเกราะป้องกันทางสถาบัน (Institutional Shield)</div>
+                            </div>
+                            <div class="cell-item">
+                                <span class="tag-pillar">Pillar 6: In-House Talent</span>
+                                <div class="cell-item-title">นโยบายสร้างกำลังคนด้านข้อมูลภายในองค์กร</div>
+                                <div class="cell-item-desc">สร้าง Data Engineer, Data Analyst, Data Manager ภายในหน่วยงานเพื่อรับผิดชอบ 260 ชุดข้อมูล แยกขาดจากภารกิจไอทีโครงสร้างพื้นฐาน</div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Tech Row -->
+                    <tr>
+                        <td class="matrix-header-col">
+                            <strong style="color: var(--color-tech); font-size: 1.05rem;">ข. ข้อเสนอแนะเชิงเทคนิค</strong>
+                            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">(Technical Recommendations)</div>
+                        </td>
+                        <td>
+                            <div class="cell-item">
+                                <span class="tag-pillar">Pillar 3: Layer 1 & 2 Standards</span>
+                                <div class="cell-item-title">มาตรฐาน Metadata และแบบจำลองข้อมูลเชิงแนวคิด (CDM)</div>
+                                <div class="cell-item-desc">บังคับใช้มาตรฐาน Metadata 12 ฟิลด์หลักตามมาตรฐาน DGA/ISO 19115 พร้อมแบบจำลอง CDM 8 โดเมน และอภิธานศัพท์ 74 คำ เพื่อให้ข้อมูลทุกชุดเชื่อมโยงข้ามหน่วยงานได้จริง</div>
+                            </div>
+                            <div class="cell-item">
+                                <span class="tag-pillar">Pillar 3: Data Dictionary</span>
+                                <div class="cell-item-desc">การจัดทำพจนานุกรมข้อมูลกลางสำหรับตัวแปรภัย ความเปราะบาง และความสูญเสีย</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cell-item">
+                                <span class="tag-pillar">Pillar 3: Layers 3, 4, 5 Standards</span>
+                                <div class="cell-item-title">มาตรฐานแปลงวิทยาศาสตร์สู่การตัดสินใจ & แค็ตตาล็อกวิธีวิทยา</div>
+                                <div class="cell-item-desc">จัดทำระบบสารบัญระเบียบวิธีวิเคราะห์ความเสี่ยง (Risk Methodology Catalog), มาตรฐานการแปลงข้อมูลสู่การปฏิบัติการ (Science-to-Decision), และมาตรฐานการสื่อสารความไม่แน่นอน (Uncertainty Communication)</div>
+                            </div>
+                            <div class="cell-item">
+                                <span class="tag-pillar">Pillar 2: Technical Blueprint</span>
+                                <div class="cell-item-title">พิมพ์เขียว SDLC และขอบเขตจ้างงานแบบ Agile</div>
+                                <div class="cell-item-desc">กำหนดสัญญาจ้างถัดไปให้อ้างอิงผลผลิตระยะที่ 1 (~70%) และ 2 (~80%) พร้อมพัฒนาแบบ Agile อย่างน้อย 2 รอบ และมีหมุดหมาย Beta กลางสัญญา</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cell-item">
+                                <span class="tag-pillar">Pillar 3: Automated CMS Validation</span>
+                                <div class="cell-item-title">การฝังกฎตรวจสอบอัตโนมัติในระบบจัดการข้อมูล</div>
+                                <div class="cell-item-desc">เปลี่ยนมาตรฐานเอกสารให้เป็น validation rules ฝังใน CMS และ Data Pipeline เพื่อให้การนำเข้าข้อมูล 260 ชุดถูกตรวจสอบคุณภาพโดยอัตโนมัติ</div>
+                            </div>
+                            <div class="cell-item">
+                                <span class="tag-pillar">Roadmap Convergence</span>
+                                <div class="cell-item-title">แผนที่นำทางแบบ 2 กลุ่มงานคู่ขนาน</div>
+                                <div class="cell-item-desc">เชื่อมโยงจุดบรรจบระหว่างสัญญาก่อสร้างระบบภายนอก กับภารกิจธรรมาภิบาลข้อมูล 8 งานภายใน (ระยะสั้น 4 งาน / ระยะกลาง 4 งาน)</div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout">
+            <div class="callout-title">📌 สรุปหลักการ Tweak & Twist ตามมติคณะกรรมการ</div>
+            <div class="callout-body">
+                เดิมทีทีมที่ปรึกษาจัดโครงสร้างตามความพร้อมในการตัดสินใจ (Internal Control $\rightarrow$ Procurement $\rightarrow$ External) ซึ่งล้ำหน้าไปสู่พิมพ์เขียวจัดซื้อจัดจ้างจริง แต่คณะกรรมการตรวจรับต้องการเห็นโครงสร้างที่สะท้อนข้อความสัญญา TOR โดยตรง ดังนั้นจึงทำการ <strong>"พับและร้อยเรียง" (Tuck & Map)</strong> เสาหลักทั้ง 6 ด้านและข้อเสนอแนะจัดซื้อจัดจ้างทั้งหมด ให้ลงสู่ตาราง <strong>2 แกนหลัก (นโยบาย/เทคนิค) × 3 องค์ประกอบเป้าหมาย (ชุดข้อมูลพื้นฐาน / ผลิตภัณฑ์ข้อมูล / การบริหารระยะยาว)</strong> อย่างสมบูรณ์และไร้รอยต่อ
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchView(view) {
+            const sections = document.getElementById('view-sections');
+            const matrix = document.getElementById('view-matrix');
+            const btns = document.querySelectorAll('.tab-btn');
+
+            if (view === 'sections') {
+                sections.style.display = 'grid';
+                matrix.style.display = 'none';
+                btns[0].classList.add('active');
+                btns[1].classList.remove('active');
+            } else {
+                sections.style.display = 'none';
+                matrix.style.display = 'block';
+                btns[0].classList.remove('active');
+                btns[1].classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
