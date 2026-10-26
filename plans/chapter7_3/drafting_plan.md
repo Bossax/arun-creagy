@@ -13,9 +13,37 @@
 
 ```mermaid
 flowchart TD
-    U1["Unit 1: Section 7.3.1<br/>Policy Recommendations<br/>(3 Subsections / ~1,500 words)"] --> U2["Unit 2: Section 7.3.2<br/>Technical Recommendations<br/>(3 Subsections / ~1,800 words)"]
+    U0["Unit 0: Section 7.3.0<br/>Contextual Evolution & New Evidence<br/>(~600 words)"] --> U1["Unit 1: Section 7.3.1<br/>Policy Recommendations<br/>(3 Subsections / ~1,500 words)"]
+    U1 --> U2["Unit 2: Section 7.3.2<br/>Technical Recommendations<br/>(3 Subsections / ~1,800 words)"]
     U2 --> U3["Unit 3: Section 7.3.3<br/>Overarching 2-Track Roadmap<br/>& Convergence Gates (~800 words)"]
 ```
+
+---
+
+## Unit 0: Section 7.3.0 บริบทวิวัฒนาการ ข้อมูลประจักษ์ใหม่ และแนวทางการกำหนดข้อเสนอแนะ (Contextual Evolution, New Empirical Findings & Analytical Framing)
+
+- **Target Size**: 3–4 paragraphs (~600 words).
+- **Core Stance**: Explicitly document the new empirical findings gained in the latter project phase and establish the SDLC continuity bridge, framing the updated recommendations without mentioning external TOR reviews or creating philosophical drama.
+
+### Paragraph Blueprint:
+1. **Paragraph 1: Project Phase Continuity & The SDLC Lens**:
+   - *Claim*: ข้อเสนอแนะในส่วนที่ 7.3 ได้รับการยกระดับจากฉบับร่างในบทที่ 6 เพื่อรองรับความต่อเนื่องในการนำผลลัพธ์ของโครงการไปประยุกต์ใช้ในการจัดหาและพัฒนาระบบจริงในระยะถัดไปอย่างราบรื่น
+   - *Grounds*: คณะที่ปรึกษาใช้กรอบวงจรการพัฒนาระบบสารสนเทศ (Software Development Life Cycle - SDLC) มาเป็นเลนส์ในการจัดทำข้อเสนอแนะ โดยตระหนักว่าขอบเขตงานของโครงการนี้คือการส่งมอบผลงานในระยะการวางแผน (Phase 1: Planning ~70%) และระยะการออกแบบสถาปัตยกรรมระบบ (Phase 2: System Design ~80%) อย่างเป็นรูปธรรม
+   - *Warrant*: การมองผ่านเลนส์ SDLC ทำให้ข้อเสนอแนะในส่วนนี้เปลี่ยนสถานะจากการแนะแนวทางเชิงวิชาการทั่วไป มาเป็นข้อกำหนดทางเทคนิคและสถาปัตยกรรมข้อมูลที่ส่งมอบให้ผู้รับจ้างช่วงพัฒนาระบบเริ่มงานก่อสร้าง (Phase 3: Coding) ได้ทันทีโดยไม่ต้องเริ่มต้นศึกษาความต้องการซ้ำซ้อน
+2. **Paragraph 2: The 4 Critical New Information & Evidence Streams**:
+   - *Claim*: ข้อเสนอแนะฉบับสมบูรณ์ได้ผสาน 4 ชุดข้อมูลเชิงประจักษ์ใหม่ที่ได้จากการตรวจสอบและวิเคราะห์เชิงลึกในช่วงครึ่งหลังของโครงการ:
+     1. *ผลการเอกซเรย์บัญชีข้อมูล 260 ชุด*: พบว่า 5 หน่วยงานหลัก (อม., GISTDA, ปภ., สสช., สศช.) ถือครองชุดข้อมูลถึง 97 ชุด (ร้อยละ 37.3 ของประเทศ) และกว่าร้อยละ 51 เผชิญอุปสรรคการเข้าถึง ทำให้ต้องมุ่งเน้นการเจรจาข้อตกลงแลกเปลี่ยนข้อมูลทวิภาคี (SLAs) กับ 5 หน่วยงานนี้โดยตรง
+     2. *ความพร้อมของผลงานสถาปัตยกรรมระบบ (ภาคผนวก ฌ)*: โครงการได้จัดทำข้อกำหนดเนื้อหา 75 รายการ ผังเว็บไซต์ 38 โหนด แบบจำลอง CDM 8 โดเมน และพจนานุกรมศัพท์ 74 คำ จนเสร็จสมบูรณ์ พร้อมส่งมอบเป็นพิมพ์เขียวเชิงเทคนิค
+     3. *พันธกรณีการรายงาน A-BTR ตามความตกลงปารีส*: ผลการวิเคราะห์ตัวชี้วัดความโปร่งใสด้านการปรับตัว 147 ตัวชี้วัด ทำให้ต้องกำหนดให้มีบริการข้อมูลเพื่อการรายงาน A-BTR เป็นบริการเร่งด่วนในสัญญาถัดไป
+     4. *ความพร้อมจริงของข้อมูลความสูญเสียและเสียหาย (Loss & Damage)*: การตรวจสอบความพร้อมข้อมูลพบว่า ปภ. มีข้อมูลความเสียหายทางกายภาพพร้อมใช้งานทันที ขณะที่การประเมินมูลค่าทางเศรษฐกิจต้องพัฒนาระเบียบวิธีร่วมกับ สศช. จึงต้องวางกรอบเป็น 2-Step MVP
+3. **Paragraph 3: Analytical Approach & Key Upgrades Summary**:
+   - *Approach Description*: คณะที่ปรึกษาใช้แนวทางการกำหนดข้อเสนอแนะที่ยึด 4 มิติปฏิบัติการ: (1) การจัดลำดับความสำคัญตามอำนาจการตัดสินใจภายในของ กรม สส. (2) การแยกบทบาทการบริหารจัดการเนื้อหาข้อมูล (Data Management) ออกจากงานโครงสร้างพื้นฐานไอทีทั่วไป (3) การยึดความต้องการเชิงยุทธศาสตร์ของ กรม สส. เป็นตัวตั้ง (Demand-driven), และ (4) การดำเนินงานคู่ขนานระหว่างสัญญาพัฒนาระบบกับการขับเคลื่อนธรรมาภิบาลภายใน
+   - *Summary of Key Upgrades (สรุปประเด็นการยกระดับในฉบับสมบูรณ์)*:
+     - **ด้านธรรมาภิบาล**: แปลงแนวคิดทั่วไปสู่โครงสร้าง 4 ระดับ (คณะกรรมการกองฯ, Data Owner, Data Steward, Data Custodian) จัดเป็นข้อเสนอแนะอันดับที่ 1 เพื่อดูแลข้อมูล 260 ชุด
+     - **ด้านบริการข้อมูล**: ปรับจากหมวดหมู่วามคิดกว้างๆ เป็น 5 บริการสำคัญที่มีความต้องการสูง (รวม A-BTR และ Loss & Damage MVP) พร้อมแยกส่งมอบระบบบัญชีข้อมูล (Data Catalog) อย่างอิสระ
+     - **ด้านเทคนิค**: ตกผลึกมาตรฐานข้อมูลสู่พิมพ์เขียวภาคผนวก ฌ และการเขียนกฎตรวจสอบความถูกต้องอัตโนมัติ (Automated CMS Validation Rules)
+     - **ด้านกำลังคน**: ปรับจากการของบระบบคลาวด์ทั่วไป สู่การบังคับสร้างบุคลากรสายวิชาชีพข้อมูล (Data Talent: Data Engineers, Analysts, Managers) ประจำองค์กร
+     - **ด้านแผนที่นำทาง**: พัฒนาจากขอบฟ้าเวลา 3 ระยะเชิงแนวคิด สู่แผนที่นำทางแบบ 2 กลุ่มงานคู่ขนาน (สัญญาพัฒนาระบบ + ธรรมาภิบาลข้อมูล 8 ภารกิจ) พร้อมจุดบรรจบของสัญญา (Convergence Gates)
 
 ---
 
@@ -89,7 +117,7 @@ flowchart TD
 - **Primary Dissected Recommendations**: `REC-PROD-TECH-01` (System SDLC 6-Phase Blueprint & Appendix ฌ Handover) and `REC-PROD-TECH-02` (Role Separation & Iterative Design Cycle Principle).
 - **Paragraph 3: System SDLC Blueprint & Readiness Transition**:
   - *Claim*: วางกรอบการพัฒนาระบบเทคโนโลยีสารสนเทศตามวงจรการพัฒนาระบบ 6 ระยะ (System Development Life Cycle - SDLC) โดยรับรองว่าผลการดำเนินงานในสัญญาปัจจุบันได้ส่งมอบความพร้อมของระยะที่ 1 ไปแล้วร้อยละ 70 และระยะที่ 2 ไปแล้วร้อยละ 80
-  - *Grounds*: การส่งมอบการออกแบบเชิงสถาปัตยกรรม ความต้องการระบบ และแบบจำลองข้อมูลล่วงหน้า ทำให้สัญญาจ้างถัดไปสามารถเริ่มต้นที่ระยะที่ 3 (การออกแบบและพัฒนาระบบ - System Design & Development) ได้ทันที ลดเวลาการศึกษาซ้ำซ้อน
+  - *Grounds*: การส่งมอบการออกแบบเชิงสถาปัตยกรรม ความต้องการระบบ และแบบจำลองข้อมูลล่วงหน้า ทำให้สัญญาจ้างถัดไปสามารถเริ่มต้นที่ระยะที่ 3 (การออกแบบและพัฒนาระบบ - System Design & Development) ได้ทันที ลดเวลาการศึกษาซ้ำซ้อนและสร้างความต่อเนื่อง
 - **Paragraph 4: Handover of the 8 Technical Support Elements (Appendix ฌ)**:
   - *Claim*: กำหนดให้ผู้รับจ้างในสัญญาถัดไปต้องใช้ข้อมูลสนับสนุนทางเทคนิค 8 รายการที่ส่งมอบในภาคผนวก ฌ เป็นข้อกำหนดพื้นฐานบังคับ
   - *Grounds & Elements*:
@@ -151,6 +179,7 @@ flowchart TD
 
 | Dissected Recommendation ID | Evaluator Keywords (Must Contain) | Preserved Invariants | Anti-Patterns to Reject |
 |---|---|---|---|
+| `REC-INTRO-EVOL-01` | บริบทวิวัฒนาการ, เลนส์ SDLC, ความต่อเนื่องในการประยุกต์ใช้, 260 ชุดข้อมูล, 5 หน่วยงาน (อม., GISTDA, ปภ., สสช., สศช.), ร้อยละ 37.3, A-BTR 147 ตัวชี้วัด, Loss & Damage 2-Step MVP, สรุปประเด็นยกระดับ | ยึดการมองผ่านเลนส์ SDLC เพื่อความต่อเนื่อง, ระบุ 4 ชุดข้อมูลใหม่ชัดเจน | การอ้างอิงว่าเห็น TOR โครงการถัดไปโดยตรง, การเขียนเป็นบทเรียนเชิงปรัชญาฟุ่มเฟือย |
 | `REC-BASE-POL-01` | ข้อตกลงแลกเปลี่ยนข้อมูล, 5 หน่วยงาน, อม., GISTDA, ปภ., สสช., สศช., 97 ชุดข้อมูล, ร้อยละ 37, ยึดความต้องการของ กรม สส. เป็นตัวตั้ง | ดำเนินการคู่ขนาน ไม่รอเจรจาเสร็จก่อนเริ่มสร้างระบบ | การขอข้อมูลเป็นรายครั้ง (ad-hoc), การตั้งเงื่อนไขให้ภายนอกพร้อมก่อน |
 | `REC-PROD-POL-01` | ยุทธศาสตร์ผลิตภัณฑ์นำ, เจ้าของผลิตภัณฑ์ (Product Owner), บริการ 5 รายการ, A-BTR, สถิติความเสียหายและการสูญเสีย, 2 ระยะ (MVP), บัญชีข้อมูลแยกอิสระ | กรม สส. เป็น Product Owner เอง, Loss & Damage แบ่ง 2 ระยะ | การปล่อยให้ผู้รับจ้างคิดฟังก์ชันเอง, การยุบบัญชีข้อมูลรวมกับระบบอื่น |
 | `REC-MGMT-POL-01` | ธรรมาภิบาลข้อมูล 4 ระดับ, คณะกรรมการระดับกอง, ผู้รับผิดชอบข้อมูล (Data Owner), ผู้บริบาลข้อมูล (Data Steward), ผู้ดูแลข้อมูลทางเทคนิค (Data Custodian), อันดับที่ 1 | เป็นภารกิจที่ กรม สส. ทำได้เอง 100% ทันที | การรอจัดตั้งคณะกรรมการระดับกระทรวง, การขาดผู้รับผิดชอบระดับบุคคล |
@@ -166,8 +195,10 @@ flowchart TD
 
 ## Transition & Evidence Verification Checklist
 - [x] Strictly uses TOR contractual title and 2 primary axes $\times$ 3 target components.
+- [x] Includes Section 7.3.0 establishing the SDLC continuity lens and documenting the 4 new empirical evidence streams without mentioning external TOR reviews.
+- [x] Summarizes the key upgrades in clean bullet points without elaborate transition diagrams or philosophical drama.
 - [x] Dissects Recommendation 3 cleanly across Information Products (Product-Led & 5 Services) and Long-Term Data Management (Agile Dev Lifecycle).
 - [x] Reflects Boss's September 3 ruling on in-house data talent.
 - [x] Positions Section 7.3.3 as the overarching concluding roadmap and contract convergence mechanism.
-- [x] Maps all 8 ledger anchors (`CH-029`, `CH-038`, `CH-044`, `D-074`, etc.).
+- [x] Maps all ledger anchors (`CH-029`, `CH-030`, `CH-038`, `CH-044`, `D-074`, etc.).
 - [x] Fully ready for verbalization via `/writing-th` upon human approval.

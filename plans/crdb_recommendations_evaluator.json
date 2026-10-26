@@ -2,8 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "metadata": {
     "title": "CRDB Recommendations Semantic Dissection & Evaluation Matrix",
-    "description": "Authoritative semantic breakdown of CRDB recommendations dissected to fit the TOR contractual framing. Serves as the machine-readable evaluation benchmark for verifying Chapter 6 (Draft) and Chapter 7.3 (Final).",
-    "version": "1.0.0",
+    "description": "Authoritative semantic breakdown of CRDB recommendations dissected to fit the TOR contractual framing. Serves as the machine-readable evaluation benchmark for verifying Chapter 6 (Draft) and Chapter 7.3 (Final). Companion evaluator for Chapter 4 (Loss and Damage) is maintained at plans/chapter4/chapter4_evaluator.json.",
+    "version": "1.1.0",
     "date": "2026-10-26",
     "oracle": "Arun",
     "human": "Boss",
@@ -40,6 +40,78 @@
     }
   },
   "dissected_recommendations": [
+    {
+      "id": "REC-INTRO-EVOL-01",
+      "title_th": "บริบทวิวัฒนาการ ข้อมูลประจักษ์ใหม่ และแนวทางการกำหนดข้อเสนอแนะ",
+      "title_en": "Contextual Evolution: New Empirical Findings & SDLC Continuity Framing",
+      "tor_component": "contextual_bridge",
+      "tor_axis": "introductory_synthesis",
+      "source_origins": [
+        "CH-030 (SDLC Continuity & Procurement Framing)",
+        "CH-038 (WP2 Forensic Catalog Audit of 260 datasets)",
+        "CH-031/CH-032 (A-BTR 147 Indicators)",
+        "CH-004/CH-018/CH-038 (Loss & Damage 2-Step MVP)"
+      ],
+      "core_arguments": {
+        "claim": "ข้อเสนอแนะในส่วนที่ 7.3 ได้รับการยกระดับจากบทที่ 6 เพื่อให้เกิดความต่อเนื่องในการนำผลลัพธ์ของโครงการไปประยุกต์ใช้ในการจัดหาและพัฒนาระบบจริงในระยะถัดไปอย่างราบรื่น ผ่านเลนส์วงจรการพัฒนาระบบ (SDLC)",
+        "grounds": "โครงการได้ทำการตรวจสอบเชิงลึกจนได้ข้อมูลประจักษ์ใหม่ 4 มิติ: (1) บัญชีข้อมูล 260 ชุดพบว่า 5 หน่วยงานถือครอง 97 ชุด (ร้อยละ 37.3) และร้อยละ 51 จำกัดการเข้าถึง (2) ความพร้อมพิมพ์เขียวภาคผนวก ฌ พิสูจน์ว่าระยะ 1 สำเร็จแล้วร้อยละ 70 และระยะ 2 สำเร็จแล้วร้อยละ 80 (3) ตัวชี้วัด A-BTR 147 ตัวชี้วัดสร้างความต้องการบริการ A-BTR และ (4) ความพร้อมข้อมูล Loss & Damage ระหว่าง ปภ. และ สศช. บังคับให้ใช้ 2-Step MVP",
+        "warrant": "การประยุกต์ใช้เลนส์ SDLC ช่วยเปลี่ยนสถานะของรายงานจากการเป็นเพียงข้อคิดเห็นทางวิชาการ มาเป็นข้อกำหนดและพิมพ์เขียวเชิงเทคนิคที่ส่งมอบต่อให้ระยะก่อสร้าง (Phase 3: Coding) เริ่มงานได้ทันทีโดยไม่เกิดสุญญากาศหรือศึกษาซ้ำซ้อน",
+        "so_what": "สร้างความต่อเนื่องเชิงสถาบันและทางเทคนิค ทำให้ กรม สส. และผู้รับจ้างช่วงพัฒนาระบบสามารถดำเนินงานต่อได้ทันทีบนฐานข้อกำหนดที่ผ่านการพิสูจน์แล้ว"
+      },
+      "chapter6_draft_stance": {
+        "framing": "การวิเคราะห์ช่องว่างทั่วไปและการแนะแนวทางเชิงวิชาการ (Diagnostic Gap Analysis & Capability Ideation)",
+        "key_concepts": [
+          "ช่องว่างเชิงข้อมูล 5 ประการจาก Gap Analysis",
+          "แนวคิดเสาหลัก 6 ด้านเชิงวิชาการ",
+          "กรอบเวลา 3 ขอบฟ้าเชิงทฤษฎี"
+        ]
+      },
+      "chapter7_final_stance": {
+        "framing": "การเชื่อมโยงความต่อเนื่องผ่านเลนส์ SDLC และการยกระดับด้วยข้อมูลประจักษ์ใหม่ (SDLC Continuity & Empirical Upgrades)",
+        "key_specifications": [
+          "การมองโครงการเป็นส่วนหนึ่งของ SDLC (Phase 1 ~70%, Phase 2 ~80%)",
+          "การผสาน 4 ชุดข้อมูลเชิงประจักษ์ใหม่ (260 ชุด/5 หน่วยงาน, พิมพ์เขียว ฌ, A-BTR 147 ตัวชี้วัด, Loss & Damage 2-Step MVP)",
+          "การสรุปประเด็นยกระดับสำคัญ 5 มิติเป็นหัวข้อกระชับ"
+        ]
+      },
+      "evaluator_criteria_for_chapter_7_3": {
+        "must_contain_keywords": [
+          "บริบทวิวัฒนาการ",
+          "เลนส์ SDLC",
+          "ความต่อเนื่องในการประยุกต์ใช้",
+          "260 ชุดข้อมูล",
+          "5 หน่วยงาน",
+          "กรมอุตุนิยมวิทยา",
+          "GISTDA",
+          "กรมป้องกันและบรรเทาสาธารณภัย",
+          "สำนักงานสถิติแห่งชาติ",
+          "สศช.",
+          "ร้อยละ 37.3",
+          "A-BTR",
+          "147 ตัวชี้วัด",
+          "2 ระยะ (MVP)"
+        ],
+        "must_preserve_invariants": [
+          "ต้องระบุว่ามองผ่านเลนส์ SDLC เพื่อให้การประยุกต์ใช้ผลงานมีความต่อเนื่องในการพัฒนาระบบจริง",
+          "ต้องไม่ระบุหรืออ้างอิงว่าได้เห็น TOR ของโครงการพัฒนาระบบจริง",
+          "ต้องสรุปประเด็นการยกระดับเป็นหัวข้อกระชับ ไม่เยิ่นเย้อ"
+        ],
+        "anti_patterns_to_reject": [
+          "การอ้างอิงการตรวจหรือเห็น TOR ของโครงการจ้างพัฒนาระบบถัดไปโดยตรง",
+          "การบรรยายปรัชญาหรือทฤษฎีฟุ่มเฟือยโดยขาดข้อมูลเชิงประจักษ์รองรับ",
+          "การวาดแผนภาพแสดงการเปลี่ยนผ่านที่ซ้ำซ้อน"
+        ]
+      },
+      "ledger_anchors": [
+        "CH-030",
+        "CH-031",
+        "CH-032",
+        "CH-038",
+        "CH-041",
+        "D-060",
+        "D-074"
+      ]
+    },
     {
       "id": "REC-BASE-POL-01",
       "title_th": "นโยบายการจัดทำข้อตกลงแลกเปลี่ยนข้อมูลเชิงรุกและกำหนดชั้นการเข้าถึงข้อมูล",

@@ -1,0 +1,164 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "metadata": {
+    "title": "CRDB Full Report Chapter 4 Semantic Dissection & Verification Evaluator",
+    "description": "Machine-readable evaluation benchmark for verifying Chapter 4 (Loss and Damage Data Architecture and Operational Strategy) against contractual TOR §5.3.6 and §5.3.7, empirical pilot data, and Boss's governing decisions.",
+    "version": "1.0.0",
+    "date": "2026-10-26",
+    "oracle": "Arun",
+    "human": "Boss",
+    "tor_reference": {
+      "clause": "Scope Items 5.3.6 & 5.3.7",
+      "canonical_wording_th": "การพัฒนากรอบและสถาปัตยกรรมข้อมูลความสูญเสียและความเสียหายจากสภาพภูมิอากาศ และการทดสอบความพร้อมร่วมกับหน่วยงานเจ้าของข้อมูล",
+      "canonical_wording_en": "Development of Loss and Damage Data Architecture and Pilot Data Readiness Testing with Custodian Agencies"
+    }
+  },
+  "evaluation_criteria": [
+    {
+      "id": "EVAL-CH4-01",
+      "title_th": "ความสมบูรณ์ทางคณิตศาสตร์ของการจัดกลุ่ม 79 เขตข้อมูล (MVD Triage Integrity)",
+      "title_en": "79-Field MVD Mathematical Integrity & 3-Tier Triage",
+      "section_anchor": "Section 4.2",
+      "must_contain_keywords": [
+        "79 เขตข้อมูล",
+        "6 ตาราง",
+        "Tier 1",
+        "Tier 2",
+        "Tier 3",
+        "23 เขตข้อมูล",
+        "29 เขตข้อมูล",
+        "27 เขตข้อมูล",
+        "Zero-New-Survey"
+      ],
+      "must_preserve_invariants": [
+        "ผลรวมของเขตข้อมูลต้องเท่ากับ 79 เขตข้อมูลตาม Pillar 06 LDM Specification เสมอ",
+        "Tier 1 (Mandatory Core) ต้องมี 23 เขตข้อมูล (ร้อยละ 29.1) และต้องได้มาจากระบบเดิมโดยไม่สร้างภาระการสำรวจใหม่",
+        "Tier 2 (Enrichment/RS) ต้องมี 29 เขตข้อมูล (ร้อยละ 36.7) คำนวณผ่านอัลกอริทึมส่วนกลาง",
+        "Tier 3 (Catastrophic PDNA) ต้องมี 27 เขตข้อมูล (ร้อยละ 34.2) อยู่ในสถานะพักใช้งานสำหรับภัยปกติ"
+      ],
+      "anti_patterns_to_reject": [
+        "การบังคับให้เจ้าหน้าที่ระดับพื้นที่ต้องกรอกข้อมูลทั้ง 79 เขตข้อมูลพร้อมกันในระยะแรก",
+        "การระบุจำนวนเขตข้อมูลที่ไม่สอดคล้องกับตัวเลข 79 (เช่น 65 หรือ 80 โดยไม่มีคำอธิบาย)"
+      ]
+    },
+    {
+      "id": "EVAL-CH4-02",
+      "title_th": "ความถูกต้องแม่นยำของข้อมูลนำร่องเชิงประจักษ์ (Empirical Pilot Data Fidelity)",
+      "title_en": "Empirical Pilot Benchmark Fidelity & Frontline Diagnosis",
+      "section_anchor": "Section 4.3",
+      "must_contain_keywords": [
+        "อุทกภัยพิจิตร",
+        "ภัยแล้งศรีสะเกษ",
+        "วาตภัยลำปาง",
+        "ร้อยละ 60.8",
+        "ร้อยละ 72.2",
+        "ร้อยละ 65.8",
+        "วิกฤตกำลังพล",
+        "ขาดแคลนบุคลากร"
+      ],
+      "must_preserve_invariants": [
+        "ต้องอ้างอิงสถิติการทดลองจริง 3 กรณีอย่างแม่นยำ: พิจิตร 31/79 (ขาด 60.8%), ศรีสะเกษ 22/79 (ขาด 72.2%), ลำปาง 27/79 (ขาด 65.8%)",
+        "ต้องวินิจฉัยว่าสาเหตุของข้อมูลสูญหายเกิดจากข้อจำกัดเชิงโครงสร้างและภาวะขาดแคลนกำลังพลของ ปภ. และ อปท. ในพื้นที่ มิใช่ความบกพร่องของตัวบุคคล"
+      ],
+      "anti_patterns_to_reject": [
+        "การสรุปว่าปัญหาข้อมูลขาดหายเกิดจากเจ้าหน้าที่ไม่ยอมกรอกข้อมูลหรือขาดการอบรมเพียงอย่างเดียว",
+        "การอ้างอิงชุดข้อมูลนำร่องอื่นนอกเหนือจาก 3 เหตุการณ์ในบทที่ 4.3 ฉบับร่าง"
+      ]
+    },
+    {
+      "id": "EVAL-CH4-03",
+      "title_th": "เส้นแบ่งทางเทคนิคระหว่างตัวแทนทางการคลังกับความสูญเสียทางเศรษฐกิจ (Fiscal Proxy Boundary Gate)",
+      "title_en": "Strict Boundary between Fiscal Relief Proxy and True Economic Loss",
+      "section_anchor": "Section 4.1 & Section 4.4",
+      "must_contain_keywords": [
+        "เงินทดรองราชการ",
+        "ตัวแทนทางการคลัง",
+        "Fiscal Proxy",
+        "government_relief_allocated_thb",
+        "ความสูญเสียทางเศรษฐกิจที่แท้จริง",
+        "Economic Loss"
+      ],
+      "must_preserve_invariants": [
+        "ต้องระบุอย่างชัดเจนว่ายอดเงินทดรองราชการ (ระเบียบกระทรวงการคลังฯ) เป็นเพียงตัวแทนทางการคลัง (Fiscal-Response Proxy) มิใช่มูลค่าความสูญเสียทางเศรษฐกิจที่แท้จริง",
+        "ต้องไม่นำยอดเงินสงเคราะห์เยียวยามาตัดทอนเป้าหมายการประเมินมูลค่าความสูญเสียทางเศรษฐกิจในระยะยาว"
+      ],
+      "anti_patterns_to_reject": [
+        "การสรุปว่างบประมาณช่วยเหลือเยียวยาผู้ประสบภัยคือมูลค่าความเสียหายทางเศรษฐกิจของภัยพิบัติ (Equating Relief Outlay with Economic Loss)"
+      ]
+    },
+    {
+      "id": "EVAL-CH4-04",
+      "title_th": "ความถูกต้องตามกฎหมายปกครองของระบบนิเวศกระทรวงมหาดไทย (MOI Institutional Ecosystem Accuracy)",
+      "title_en": "Administrative Accuracy of the Ministry of Interior Ecosystem",
+      "section_anchor": "Section 4.4",
+      "must_contain_keywords": [
+        "กระทรวงมหาดไทย",
+        "กรมป้องกันและบรรเทาสาธารณภัย",
+        "กรมการปกครอง",
+        "กรมส่งเสริมการปกครองท้องถิ่น",
+        "องค์กรปกครองส่วนท้องถิ่น",
+        "ผู้อำนวยการท้องถิ่น",
+        "งบกลาง"
+      ],
+      "must_preserve_invariants": [
+        "ต้องระบุว่ากรมส่งเสริมการปกครองท้องถิ่น (สถ.) เป็นหน่วยงานสนับสนุนขีดความสามารถและมาตรฐานทางการเงินแก่องค์กรปกครองส่วนท้องถิ่น (อปท.) มิใช่หน่วยงานบังคับบัญชา",
+        "สายการบังคับบัญชาการจัดการภัยพิบัติไหลผ่านผู้ว่าราชการจังหวัดและนายอำเภอตาม พ.ร.บ. ป้องกันและบรรเทาสาธารณภัย พ.ศ. 2550 มาตรา 20 และ 21",
+        "ต้องระบุว่ากระทรวงมหาดไทยเป็นระบบเดียวที่สามารถเชื่อมโยงงบกลางที่ ครม. อนุมัติ เข้ากับรหัสเหตุการณ์ภัยของ ปภ. ได้อย่างเป็นรูปธรรม"
+      ],
+      "anti_patterns_to_reject": [
+        "การระบุว่า สถ. มีอำนาจสั่งการหรือบังคับบัญชา อปท. ในการเผชิญเหตุภัยพิบัติ",
+        "การมองข้ามบทบาทของผู้ว่าราชการจังหวัดและ ก.ช.ภ.จ. ในการรับรองพื้นที่ภัยพิบัติ"
+      ]
+    },
+    {
+      "id": "EVAL-CH4-05",
+      "title_th": "จุดยืนการประยุกต์ใช้ดาวเทียมและระเบียบวิธีที่ยึดโยงกับฐานข้อมูลรัฐ (Remote Sensing Stance & G2G Methods)",
+      "title_en": "Remote Sensing Policy Stance and Line-Agency Grounded Methods",
+      "section_anchor": "Section 4.4",
+      "must_contain_keywords": [
+        "เกณฑ์ตรวจสอบอัตโนมัติ",
+        "Automated QA Gate",
+        "Lower-Bound",
+        "Sentinel-1 SAR",
+        "GISTDA",
+        "กรมส่งเสริมการเกษตร",
+        "กรมพัฒนาที่ดิน",
+        "สำนักงานเศรษฐกิจการเกษตร",
+        "GRADE",
+        "ธนาคารโลก",
+        "ร้อยละ 88-90"
+      ],
+      "must_preserve_invariants": [
+        "ต้องวางตำแหน่งข้อมูลดาวเทียมเป็นเกณฑ์ตรวจสอบอัตโนมัติ (QA Gate) และข้อมูลฐานขั้นต่ำ (Lower-Bound) โดยไม่แทนที่รายงานทางการของราชการ (Option 2)",
+        "แนวทางที่ 1 ด้านเกษตรกรรมต้องผสานข้อมูล GISTDA SAR + กสก./พด. + สศก. อย่างชัดเจน",
+        "แนวทางที่ 2 ด้านสิ่งปลูกสร้างต้องอ้างอิงระเบียบวิธี GRADE ของธนาคารโลก พร้อมระบุสถิติความแม่นยำร้อยละ 88–90 (ความคลาดเคลื่อน +-10-12% จาก 66 เหตุการณ์)"
+      ],
+      "anti_patterns_to_reject": [
+        "การเสนอแอปพลิเคชันหรือแพลตฟอร์มดาวเทียมเชิงพาณิชย์ที่ไม่ยึดโยงกับฐานข้อมูลทะเบียนของหน่วยงานรัฐ",
+        "การกำหนดให้ข้อมูลดาวเทียมมีอำนาจทางกฎหมายเหนือกว่ารายงานการเบิกจ่ายของกระทรวงการคลัง"
+      ]
+    },
+    {
+      "id": "EVAL-CH4-06",
+      "title_th": "ยุทธศาสตร์บันได 3 ขั้นและความสอดคล้องกับบทที่ 7.3 (3-Step Staircase & Chapter 7.3 SDLC Harmony)",
+      "title_en": "3-Step Incremental Staircase & Harmonization with Chapter 7.3",
+      "section_anchor": "Section 4.4",
+      "must_contain_keywords": [
+        "บันได 3 ขั้น",
+        "ขั้นที่ 1",
+        "ขั้นที่ 2",
+        "ขั้นที่ 3",
+        "L&D 2-Step MVP",
+        "REC-PROD-POL-01",
+        "รอบการพัฒนาระบบ"
+      ],
+      "must_preserve_invariants": [
+        "ต้องระบุยุทธศาสตร์บันได 3 ขั้น: ขั้นที่ 1 บัญชีเหตุการณ์และงบเยียวยา (ทันที / 23 เขตข้อมูล), ขั้นที่ 2 การประเมินมูลค่าอัตโนมัติ (ระยะกลาง / 52 เขตข้อมูล), และขั้นที่ 3 การประเมินเต็มรูปแบบเฉพาะภัยพิบัติร้ายแรง (ระยะยาว / 79 เขตข้อมูล)",
+        "ต้องสอดคล้องกับข้อเสนอแนะบริการหลักที่ 4 (Loss & Damage 2-Step MVP) ในบทที่ 7.3 และการส่งมอบในรอบการพัฒนา Cycle 1 และ 2"
+      ],
+      "anti_patterns_to_reject": [
+        "ความขัดแย้งเชิงโครงสร้างระหว่างการดำเนินงานในบทที่ 4 กับข้อเสนอแนะเชิงนโยบายและเทคนิคในบทที่ 7.3"
+      ]
+    }
+  ]
+}
